@@ -70,6 +70,23 @@ AoA currently consists of current and emerging layers with different ownership b
 
 See [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) and [docs/LAYERS](docs/LAYERS.md) for the fuller version.
 
+## Local validation
+
+This repository now includes a compact machine-readable ecosystem registry at:
+- `generated/ecosystem_registry.min.json`
+
+To validate the current center-layer surface locally, run:
+
+```bash
+python scripts/validate_ecosystem.py
+```
+
+Use this check when changing:
+- the ecosystem registry
+- repository roles
+- center-layer ownership assumptions
+- other compact federation surfaces that should stay coherent
+
 ## Relationship to Tree of Sophia
 
 AoA is the operational and agentic side of the broader ecosystem.
