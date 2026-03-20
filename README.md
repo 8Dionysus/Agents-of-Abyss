@@ -28,6 +28,20 @@ For the shortest next route by intent:
 - if you need the runtime body beneath AoA, go to [`abyss-stack`](https://github.com/8Dionysus/abyss-stack)
 - if you need the knowledge architecture counterpart, go to [`Tree-of-Sophia`](https://github.com/8Dionysus/Tree-of-Sophia)
 
+## Quick route table
+
+| repository | owns | go here when |
+|---|---|---|
+| `Agents-of-Abyss` | ecosystem identity, layer map, federation rules, program-level direction | you need the center, the map, or the constitutional view of AoA |
+| `aoa-techniques` | reusable engineering practice | you need durable techniques rather than one-off fixes |
+| `aoa-skills` | bounded agent-facing execution workflows | you need an executable workflow built from reusable techniques |
+| `aoa-evals` | portable proof surfaces for bounded claims | you need to check quality, boundaries, regressions, or defensible claims |
+| `aoa-routing` | navigation and dispatch surfaces | you need the smallest next object or route across AoA surfaces |
+| `aoa-memo` | explicit memory and recall surfaces | you need reviewable memory, provenance, or recall posture |
+| `aoa-agents` | role contracts, persona boundaries, handoff posture | you need to define who acts and under what role contract |
+| `abyss-stack` | runtime, deployment, storage, and service substrate | you need the body the system runs on |
+| `Tree-of-Sophia` | living knowledge architecture for philosophy and world thought | you need the knowledge world AoA helps build and maintain |
+
 ## What this repository is for
 
 `Agents-of-Abyss` exists to keep the AoA ecosystem intelligible.
