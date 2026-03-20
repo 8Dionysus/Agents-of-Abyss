@@ -18,6 +18,16 @@ If you are new to AoA, use this path:
 4. Read [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline.
 5. Read [ROADMAP](ROADMAP.md) for program-level direction.
 
+For the shortest next route by intent:
+- if you need reusable practice, go to [`aoa-techniques`](https://github.com/8Dionysus/aoa-techniques)
+- if you need bounded execution workflows, go to [`aoa-skills`](https://github.com/8Dionysus/aoa-skills)
+- if you need portable proof surfaces, go to [`aoa-evals`](https://github.com/8Dionysus/aoa-evals)
+- if you need navigation and dispatch, go to [`aoa-routing`](https://github.com/8Dionysus/aoa-routing)
+- if you need memory and recall surfaces, go to [`aoa-memo`](https://github.com/8Dionysus/aoa-memo)
+- if you need explicit agent roles and handoff posture, go to [`aoa-agents`](https://github.com/8Dionysus/aoa-agents)
+- if you need the runtime body beneath AoA, go to [`abyss-stack`](https://github.com/8Dionysus/abyss-stack)
+- if you need the knowledge architecture counterpart, go to [`Tree-of-Sophia`](https://github.com/8Dionysus/Tree-of-Sophia)
+
 ## What this repository is for
 
 `Agents-of-Abyss` exists to keep the AoA ecosystem intelligible.
