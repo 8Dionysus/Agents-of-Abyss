@@ -1,35 +1,64 @@
 # AGENTS.md
 
-## Repository role
-This repository is the constitutional center of Agents of Abyss (AoA).
+## Project identity
 
-It owns the high-level truth of the AoA federation:
-- ecosystem identity
-- charter and principles
-- layer map
-- federation rules
-- program-level direction
-- compact registry surfaces that describe the ecosystem
+Agents of Abyss (AoA) is an evolving ecosystem for long-horizon agentic work.
 
-Treat this repository as the canonical entrypoint into AoA, not as the place that absorbs the primary content of every neighboring layer.
+It is not one bot, one workflow, or one narrow automation project.
+It is a modular federation of reusable practice, bounded execution, portable proof, memory, routing, agent roles, and supporting infrastructure.
 
-## Priority of instructions
-- Follow direct maintainer instructions first.
-- Then follow this file.
-- Prefer the source-of-truth repository for each layer over convenience edits in the ecosystem center.
-- When a task clearly belongs to another repository, route there instead of recreating its meaning here.
+This repository is the constitutional and ecosystem-center repository of AoA.
+It is the canonical high-level statement of what AoA is, how its layers relate, and how the federation should grow without collapsing into monolith or confusion.
+
+## Current repository role
+
+Treat `Agents-of-Abyss` as:
+- public landing page
+- canonical project identity
+- ecosystem map
+- federation-rule surface
+- stable high-level entrypoint for humans and coding agents
+
+This repository is not the full implementation home of AoA.
+Its job is not to absorb the ecosystem.
+Its job is to keep the ecosystem intelligible.
+
+## Ecosystem map
+
+- `Agents-of-Abyss` = ecosystem identity, layer map, federation rules, program-level direction
+- `Tree-of-Sophia` = living knowledge architecture that AoA helps build and operationalize
+- `abyss-stack` = runtime, deployment, storage, and service substrate
+- `aoa-techniques` = reusable practice canon
+- `aoa-skills` = bounded execution canon
+- `aoa-evals` = portable proof canon
+- `aoa-routing` = navigation and dispatch layer
+- `aoa-memo` = memory and recall layer
+- `aoa-agents` = role and handoff layer
+
+## Working assumptions
+
+When editing or extending AoA-related material:
+- preserve the distinction between ecosystem truth and layer truth
+- preserve the distinction between agent operations and knowledge architecture
+- prefer reusable patterns over one-off hacks
+- prefer modularity over monolithic fusion
+- maintain source-of-truth discipline
+- keep changes reviewable, explicit, and well-scoped
+- make assumptions and uncertainty visible
 
 ## What belongs here
-Use this repository for changes to:
-- the public explanation of what AoA is
-- ecosystem-level terminology and boundaries
-- repository roles across the AoA federation
-- layer definitions and their relationships
-- federation rules and ownership discipline
-- roadmap-level direction
-- compact generated or machine-readable registry surfaces that summarize the ecosystem
+
+Use this repository for:
+- charter and principles
+- ecosystem map
+- layer definitions and relationships
+- federation rules and ownership boundaries
+- program-level roadmap
+- compact registry surfaces that summarize the ecosystem
+- contributor and coding-agent entrypoint guidance
 
 ## What does not belong here
+
 Do not turn this repository into the primary home of specialized layer content.
 
 Avoid adding or expanding as primary truth:
@@ -42,95 +71,71 @@ Avoid adding or expanding as primary truth:
 - infrastructure implementation details
 - large knowledge corpora that belong in Tree of Sophia or another owning layer
 
-AoA should grow by adding clear layers, not by swelling this repository into a monolith.
+## Routing guidance
 
-## Current reference surfaces
-When orienting yourself, review the center-layer documents first:
-- `README.md`
-- `CHARTER`
-- `ECOSYSTEM_MAP`
-- `docs/LAYERS`
-- `docs/FEDERATION_RULES`
-- `ROADMAP`
-- `generated/ecosystem_registry.min.json`
-- `scripts/validate_ecosystem.py`
+If you need implementation or layer-owned detail, check adjacent repositories first:
+- `aoa-techniques`
+- `aoa-skills`
+- `aoa-evals`
+- `aoa-routing`
+- `aoa-memo`
+- `aoa-agents`
+- `abyss-stack`
+- `Tree-of-Sophia`
 
-If a change touches ecosystem meaning, check whether more than one of these surfaces must move together.
-
-## Working posture
-- Preserve the distinction between ecosystem truth and layer truth.
-- Prefer clear ownership boundaries over convenience duplication.
-- Prefer modular growth over premature fusion.
-- Keep the system legible to both humans and smaller models.
-- Make assumptions, tradeoffs, and uncertainty explicit.
-- Keep public artifacts public-safe. Do not add secrets, sensitive operational details, or private assumptions.
-- Favor reviewable, reproducible edits over clever but opaque wording.
-
-## Repository routing guidance
-Use the smallest correct destination.
-
-- `Agents-of-Abyss`: ecosystem identity, federation rules, layer map, program-level direction
-- `aoa-techniques`: reusable engineering practice
-- `aoa-skills`: bounded execution workflows
-- `aoa-evals`: portable proof surfaces for bounded claims
-- `aoa-routing`: navigation and dispatch surfaces
-- `aoa-memo`: memory and recall surfaces
-- `aoa-agents`: role contracts and handoff posture
-- `aoa-playbooks`: recurring scenario compositions
-- `aoa-kag`: derived provenance-aware knowledge substrate
-- `abyss-stack`: runtime, deployment, storage, and service substrate
-- `Tree-of-Sophia`: living knowledge architecture for philosophy and world thought
-
-If the requested change primarily strengthens a neighboring layer, do not keep it here just because this repository is the center.
+If a task mainly strengthens a neighboring layer, route there instead of recreating its meaning here.
+Do not invent implementation claims that are not yet public in this repository.
 
 ## Editing rules
+
 When changing ecosystem definitions or boundaries:
-- update all affected center-layer documents coherently
+- update affected center-layer documents coherently
 - keep terminology stable unless there is a strong reason to rename
-- prefer links, references, and routing guidance over copying layer-owned detail
-- keep generated surfaces derived from authoritative documents rather than silently replacing them
-- avoid introducing vague umbrella language that blurs distinct layers
+- prefer links and routing guidance over copying layer-owned detail
+- keep derived surfaces clearly derived
+- avoid vague umbrella language that blurs ownership
 
 When creating new files:
-- ask whether the file clarifies the center or whether it actually belongs in another repository
-- keep new coordination surfaces compact and justified
-- make machine-readable artifacts clearly generated and reviewable
+- ask whether the file clarifies the center or belongs in another repository
+- prefer compact coordination surfaces over sprawl
 
 ## Validation
-Run local validation when changing the center-layer surface:
+
+When changing the center-layer surface, review:
+- `README.md`
+- `CHARTER.md`
+- `ECOSYSTEM_MAP.md`
+- `docs/LAYERS.md`
+- `docs/FEDERATION_RULES.md`
+- `ROADMAP.md`
+- `generated/ecosystem_registry.min.json`
+
+Run local validation when relevant:
 
 ```bash
 python scripts/validate_ecosystem.py
 ```
 
-Use this especially when changing:
-- ecosystem registry data
-- repository roles
-- layer ownership assumptions
-- compact federation surfaces that should remain coherent
-
-Also perform a consistency pass across the human-facing center documents so they do not drift apart.
-
 ## Definition of done
+
 A change is done when:
-- AoA is more intelligible after the edit, not less
-- source-of-truth boundaries remain explicit
-- routing to neighboring layers is clearer
-- validation passes, or any missing validation is clearly disclosed
+- AoA is more intelligible after the edit
+- source-of-truth boundaries are clearer, not blurrier
+- routing to neighboring layers is easier
 - no specialized layer was silently absorbed into the ecosystem center
+- validation passes, or missing validation is disclosed honestly
 
 ## Style for this repository
-Write with precision and architectural clarity.
 
 Prefer:
-- short declarative statements
+- clear declarative writing
 - explicit boundaries
-- concrete repository ownership
-- durable terminology
+- compact but durable terminology
+- readable maps over abstract grandeur
 
 Avoid:
-- mythic vagueness that hides responsibility
-- inflated manifesto language where operational clarity is needed
-- generic summaries that erase layer distinctions
+- mythic vagueness where operational clarity is needed
+- inflated manifesto language that hides ownership
+- generic summaries that flatten layer distinctions
 
 Human meaning, agent acceleration.
