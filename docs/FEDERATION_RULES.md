@@ -103,3 +103,27 @@ AoA may use a shared maturity ladder across repos:
 
 Repository-local ladders may stay narrower or more specialized.
 But ecosystem-level claims should map back to the shared ladder explicitly rather than disguising local statuses as universal canon.
+
+## Rule 14: counterpart mappings stay derived and non-identity
+
+Counterpart mappings between `Tree-of-Sophia` concepts and AoA operational forms may exist.
+
+They should stay:
+- derived
+- optional
+- suggestive
+- explicitly non-identity
+
+Counterpart mappings should not be read as philosophical proof.
+They should not rewrite conceptual meaning into operational repositories or operational meaning into ToS source nodes.
+
+## Rule 15: KAG stays a bounded substrate, not a source empire
+
+`aoa-kag` may hold counterpart-edge views and bridge-ready projections.
+
+It should remain a bounded derived layer:
+- source repositories still own authored meaning
+- KAG projections still point back to stronger sources
+- graph readiness still does not grant semantic sovereignty
+
+When KAG counterpart work grows, the bridge doctrine in `docs/COUNTERPART_BRIDGE.md` should stay the governing policy.

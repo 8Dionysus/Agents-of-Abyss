@@ -21,10 +21,11 @@ Adjacent system anchors include:
 - `Tree-of-Sophia`
 - `abyss-stack`
 
-The current growth move after the trunk-first structural wave is method-centered:
+The current growth move after the trunk-first structural wave is method-centered and then counterpart-bridge oriented:
 - give scenario-level method a real home in `aoa-playbooks`
 - keep donor intake source-first and refinement-shaped
 - keep ecosystem maturity claims evidence-backed and cross-repo legible
+- keep KAG bounded while counterpart mappings become explicit, optional, and non-identity
 
 ## Phase 1: center realignment
 
@@ -66,6 +67,15 @@ Goals:
 - mature `aoa-kag` as a provenance-aware derived layer
 - keep its relationship to authoritative sources explicit
 - prevent source meaning from being silently re-authored in derived structures
+- allow bounded counterpart-edge views without turning KAG into a graph-sovereign source empire
+
+## Phase 5a: counterpart bridge doctrine
+
+Goals:
+- make counterpart mapping between ToS and AoA explicit, optional, and reviewable
+- keep conceptual origin in `Tree-of-Sophia`
+- keep operational meaning in the source AoA repositories that own it
+- let `aoa-kag` materialize only bounded derived projections of those bridges
 
 ## Phase 6: ecosystem registry v2
 
