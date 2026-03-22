@@ -26,6 +26,7 @@ The current growth move after the trunk-first structural wave is method-centered
 - keep donor intake source-first and refinement-shaped
 - keep ecosystem maturity claims evidence-backed and cross-repo legible
 - keep KAG bounded while counterpart mappings become explicit, optional, and non-identity
+- make witness and compost public and reviewable before any deeper runtime instrumentation wave
 
 ## Phase 1: center realignment
 
@@ -76,6 +77,14 @@ Goals:
 - keep conceptual origin in `Tree-of-Sophia`
 - keep operational meaning in the source AoA repositories that own it
 - let `aoa-kag` materialize only bounded derived projections of those bridges
+
+## Phase 5b: witness and compost pilot
+
+Goals:
+- make a public witness contract explicit before runtime trace machinery expands
+- make a public compost-cycle doctrine explicit before ToS growth seeds reopen
+- bind the pair through one playbook-owned route and bounded proof surfaces
+- keep `abyss-stack` out of scope until the contracts are stable
 
 ## Phase 6: ecosystem registry v2
 

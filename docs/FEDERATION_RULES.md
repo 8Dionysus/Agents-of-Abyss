@@ -127,3 +127,16 @@ It should remain a bounded derived layer:
 - graph readiness still does not grant semantic sovereignty
 
 When KAG counterpart work grows, the bridge doctrine in `docs/COUNTERPART_BRIDGE.md` should stay the governing policy.
+
+## Rule 16: witness and compost stay contract-first before runtime
+
+AoA may name a public witness contract and a public compost-cycle doctrine before a full runtime trace pipeline exists.
+
+That pilot should keep:
+- scenario routing in `aoa-playbooks`
+- witness-facing memory contracts in `aoa-memo`
+- proof of integrity and provenance in `aoa-evals`
+- compost doctrine in `Tree-of-Sophia`
+
+Full runtime instrumentation belongs later in `abyss-stack`.
+This wave should not smuggle runtime implementation claims into the center.
