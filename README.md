@@ -18,7 +18,8 @@ If you are new to AoA, use this path:
 4. Read [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline.
 5. Read [docs/ROOTLINE](docs/ROOTLINE.md) for the current AoA x ToS first-wave planting spine.
 6. Read [docs/METHOD_SPINE](docs/METHOD_SPINE.md) for the current second-wave doctrine around method, donor refinement, and maturity.
-7. Read [ROADMAP](ROADMAP.md) for program-level direction.
+7. Read [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md) for the current third-wave doctrine around counterpart bridges and KAG restraint.
+8. Read [ROADMAP](ROADMAP.md) for program-level direction.
 
 For the shortest next route by intent:
 
@@ -70,6 +71,17 @@ After the trunk-first structural wave, AoA now treats the next planting wave as 
 - maturation must stay evidence-backed rather than collapsing into score theater
 
 See [docs/METHOD_SPINE](docs/METHOD_SPINE.md) for the compact doctrine and shared maturity crosswalk.
+
+## Third-wave counterpart bridge
+
+After the method-centered wave, AoA now treats the next planting move as a tight counterpart bridge:
+
+- `aoa-kag` stays a bounded substrate, not a new empire
+- counterpart edges stay derived bridges, not identity claims
+- conceptual origin stays in `Tree-of-Sophia`
+- operational meaning stays in source AoA repositories
+
+See [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md) for the compact bridge doctrine and anti-collapse policy.
 
 ## What this repository is for
 
