@@ -14,10 +14,12 @@ ALLOWED_STATUS = {
     "bootstrap",
     "planned",
     "active-private",
+    "active-conceptual",
     "related",
     "experimental",
     "deprecated",
 }
+ALLOWED_SHARED_MATURITY = {"seed", "proven", "promoted", "canonical", "deprecated"}
 ALLOWED_KIND = {"meta", "source", "derived", "related"}
 
 
@@ -80,13 +82,14 @@ def validate_registry() -> None:
         if not isinstance(repo, dict):
             fail(f"{location} must be an object")
 
-        for key in ("name", "role", "status", "kind"):
+        for key in ("name", "role", "status", "shared_maturity", "kind"):
             if key not in repo:
                 fail(f"{location} is missing required key '{key}'")
 
         name = repo["name"]
         role = repo["role"]
         status = repo["status"]
+        shared_maturity = repo["shared_maturity"]
         kind = repo["kind"]
 
         if not isinstance(name, str) or len(name) < 3:
@@ -99,6 +102,8 @@ def validate_registry() -> None:
             fail(f"{location}.role must be a string of length >= 3")
         if status not in ALLOWED_STATUS:
             fail(f"{location}.status '{status}' is not allowed")
+        if shared_maturity not in ALLOWED_SHARED_MATURITY:
+            fail(f"{location}.shared_maturity '{shared_maturity}' is not allowed")
         if kind not in ALLOWED_KIND:
             fail(f"{location}.kind '{kind}' is not allowed")
 

@@ -20,7 +20,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["name", "role", "status", "kind"],
+        "required": ["name", "role", "status", "shared_maturity", "kind"],
         "properties": {
           "name": {
             "type": "string",
@@ -37,10 +37,15 @@
               "bootstrap",
               "planned",
               "active-private",
+              "active-conceptual",
               "related",
               "experimental",
               "deprecated"
             ]
+          },
+          "shared_maturity": {
+            "type": "string",
+            "enum": ["seed", "proven", "promoted", "canonical", "deprecated"]
           },
           "kind": {
             "type": "string",
