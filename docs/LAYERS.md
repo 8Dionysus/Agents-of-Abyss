@@ -2,29 +2,29 @@
 
 This document defines the current and emerging conceptual layers of the AoA ecosystem.
 
-## Practice layer
+## Practice canon
 
 Repository: `aoa-techniques`
 
 Purpose:
-- store reusable engineering practices
-- preserve their contracts, risks, validation paths, and adaptation boundaries
+- store reusable engineering practice
+- preserve contracts, risks, validation paths, and adaptation boundaries
 
 Main question:
 - what practice is genuinely reusable?
 
-## Execution layer
+## Execution canon
 
 Repository: `aoa-skills`
 
 Purpose:
 - package techniques into bounded agent-facing workflows
-- expose trigger boundaries, procedures, contracts, risks, and verification in an operational form
+- expose trigger boundaries, procedures, contracts, risks, and verification in operational form
 
 Main question:
 - how should an agent execute bounded work?
 
-## Proof layer
+## Proof canon
 
 Repository: `aoa-evals`
 
@@ -35,7 +35,7 @@ Purpose:
 Main question:
 - what bounded claim can we honestly support?
 
-## Routing layer
+## Navigation layer
 
 Repository: `aoa-routing`
 
@@ -48,53 +48,64 @@ Main question:
 
 ## Memory layer
 
-Emerging repository: `aoa-memo`
+Repository: `aoa-memo`
 
 Purpose:
 - store memory and recall surfaces
-- manage provenance, temporal relevance, and recall discipline
+- make retention, retrieval, and provenance legible
 
 Main question:
-- what should be remembered and how should it be recalled?
+- what should be remembered, and how should it return?
 
 ## Agent layer
 
-Emerging repository: `aoa-agents`
+Repository: `aoa-agents`
 
 Purpose:
-- define role-bearing agents, profiles, boundaries, and handoff postures
-- connect agents to skills, memory access, and evaluation expectations
+- define role contracts, personas, and handoff posture
+- keep explicit who acts and under what constraints
 
 Main question:
-- who acts here, and under what role contract?
+- who acts, and under what role contract?
 
-## Infrastructure layer
+## Scenario-composition layer
 
-Related repository: `abyss-stack`
+Repository: `aoa-playbooks`
 
 Purpose:
-- provide the operational substrate for running AoA-oriented systems locally or in hybrid form
+- package recurring, cross-layer operational scenarios
+- compose techniques, skills, roles, routing, and proof into repeatable patterns
+
+Main question:
+- what recurring multi-layer scenario should be packaged?
+
+## Derived knowledge substrate
+
+Repository: `aoa-kag`
+
+Purpose:
+- transform authoritative sources into graph-ready or retrieval-ready derived structures
+- preserve provenance while remaining clearly downstream of source-owned repositories
+
+Main question:
+- how should authoritative sources be lifted without replacing them?
+
+## Infrastructure substrate
+
+Repository: `abyss-stack`
+
+Purpose:
+- run the services, storage, orchestration, and local or hybrid substrate beneath the system
 
 Main question:
 - on what body does the system run?
 
-## Knowledge-architecture counterpart
+## Source-first knowledge architecture counterpart
 
-Related repository: `Tree-of-Sophia`
-
-Purpose:
-- act as the living knowledge architecture that AoA helps build, maintain, and operationalize
-
-Main question:
-- what knowledge world is being cultivated?
-
-## Ecosystem center
-
-Repository: `Agents-of-Abyss`
+Repository: `Tree-of-Sophia`
 
 Purpose:
-- define the federation itself
-- keep the layer map, charter, and ownership rules coherent
+- own the source-first living knowledge architecture for philosophy and world thought
 
 Main question:
-- what is AoA as a whole, and how do its layers remain intelligible together?
+- what source-linked knowledge world is being cultivated?

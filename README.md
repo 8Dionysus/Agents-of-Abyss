@@ -1,9 +1,9 @@
 # Agents of Abyss (AoA)
 
-Agents of Abyss (AoA) is an evolving ecosystem for long-horizon agentic work.
+Agents of Abyss (AoA) is the operational federation of explicit layers used to build, route, validate, and run long-horizon agentic systems.
 
 It is not one bot, one workflow, or one narrow automation project.
-It is a modular federation of layers for reusable practice, bounded execution, portable proof, memory, routing, and agent roles.
+It is a modular federation with distinct public layers for reusable practice, bounded execution, portable proof, navigation, memory, agent roles, scenario composition, derived knowledge substrate work, and infrastructure.
 
 This repository is the constitutional and ecosystem-center repository of AoA.
 It should remain the canonical high-level statement of what AoA is, how its layers relate, and how the federation should grow without collapsing into monolith or confusion.
@@ -12,19 +12,22 @@ It should remain the canonical high-level statement of what AoA is, how its laye
 
 If you are new to AoA, use this path:
 
-1. Read [CHARTER](CHARTER.md) for the mission and ownership boundaries.
-2. Read [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current repository roles.
+1. Read [CHARTER](CHARTER.md) for mission and ownership boundaries.
+2. Read [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for current repository roles.
 3. Read [docs/LAYERS](docs/LAYERS.md) for the layer model.
 4. Read [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline.
 5. Read [ROADMAP](ROADMAP.md) for program-level direction.
 
 For the shortest next route by intent:
+
 - if you need reusable practice, go to [`aoa-techniques`](https://github.com/8Dionysus/aoa-techniques)
 - if you need bounded execution workflows, go to [`aoa-skills`](https://github.com/8Dionysus/aoa-skills)
 - if you need portable proof surfaces, go to [`aoa-evals`](https://github.com/8Dionysus/aoa-evals)
 - if you need navigation and dispatch, go to [`aoa-routing`](https://github.com/8Dionysus/aoa-routing)
 - if you need memory and recall surfaces, go to [`aoa-memo`](https://github.com/8Dionysus/aoa-memo)
 - if you need explicit agent roles and handoff posture, go to [`aoa-agents`](https://github.com/8Dionysus/aoa-agents)
+- if you need scenario composition, go to [`aoa-playbooks`](https://github.com/8Dionysus/aoa-playbooks)
+- if you need derived knowledge substrate work, go to [`aoa-kag`](https://github.com/8Dionysus/aoa-kag)
 - if you need the runtime body beneath AoA, go to [`abyss-stack`](https://github.com/8Dionysus/abyss-stack)
 - if you need the knowledge architecture counterpart, go to [`Tree-of-Sophia`](https://github.com/8Dionysus/Tree-of-Sophia)
 
@@ -39,8 +42,10 @@ For the shortest next route by intent:
 | `aoa-routing` | navigation and dispatch surfaces | you need the smallest next object or route across AoA surfaces |
 | `aoa-memo` | explicit memory and recall surfaces | you need reviewable memory, provenance, or recall posture |
 | `aoa-agents` | role contracts, persona boundaries, handoff posture | you need to define who acts and under what role contract |
+| `aoa-playbooks` | scenario-composition layer | you need repeatable cross-layer operational scenarios |
+| `aoa-kag` | derived knowledge substrate | you need provenance-aware, retrieval-ready or graph-ready derived structures |
 | `abyss-stack` | runtime, deployment, storage, and service substrate | you need the body the system runs on |
-| `Tree-of-Sophia` | living knowledge architecture for philosophy and world thought | you need the knowledge world AoA helps build and maintain |
+| `Tree-of-Sophia` | source-first living knowledge architecture for philosophy and world thought | you need the knowledge world AoA helps build and maintain |
 
 ## What this repository is for
 
@@ -89,6 +94,8 @@ AoA currently consists of current and emerging layers with different ownership b
 | navigation layer | `aoa-routing` | where should a model or human go next? |
 | memory layer | `aoa-memo` | what should be remembered and how should it be recalled? |
 | agent layer | `aoa-agents` | who acts under what role contract? |
+| scenario-composition layer | `aoa-playbooks` | what recurring multi-layer scenario should be packaged? |
+| derived knowledge substrate | `aoa-kag` | how should authoritative sources be lifted into graph-ready or retrieval-ready structures? |
 | infrastructure substrate | `abyss-stack` | on what body does the system run? |
 | knowledge architecture counterpart | `Tree-of-Sophia` | what knowledge world is being cultivated? |
 
@@ -115,11 +122,11 @@ Use this check when changing:
 
 AoA is the operational and agentic side of the broader ecosystem.
 
-Tree of Sophia (ToS) is the living knowledge architecture that AoA helps build, maintain, and operationalize.
+Tree of Sophia (ToS) is the source-first living knowledge architecture that AoA helps build, maintain, validate, route around, and operationalize.
 
 In short:
-- **AoA** = agents, techniques, workflows, proof, memory, routing, infrastructure
-- **ToS** = living knowledge architecture, texts, concepts, lineages, interpretation layers
+- **AoA** = agents, techniques, workflows, proof, memory, routing, roles, scenario composition, derived knowledge substrate, infrastructure
+- **ToS** = source-first living knowledge architecture, texts, concepts, lineages, context layers, interpretation layers
 
 ## Core principles
 
@@ -132,22 +139,21 @@ In short:
 
 ## Related repositories
 
-### Current public pillars
+### Current public AoA layers
 
 - `aoa-techniques` — reusable techniques for coding agents and humans
 - `aoa-skills` — bounded agent-facing execution workflows
 - `aoa-evals` — bounded proof surfaces for agent quality and behavior
 - `aoa-routing` — emerging navigation and dispatch layer
+- `aoa-memo` — memory and recall layer
+- `aoa-agents` — role and persona layer
+- `aoa-playbooks` — scenario-composition layer
+- `aoa-kag` — derived provenance-aware knowledge substrate
 
-### Related system repositories
+### Adjacent system anchors
 
 - `abyss-stack` — modular local and hybrid infrastructure substrate
-- `Tree-of-Sophia` — living knowledge architecture counterpart
-
-### Emerging repositories
-
-- `aoa-memo` — planned memory and recall layer
-- `aoa-agents` — planned role and persona layer
+- `Tree-of-Sophia` — source-first living knowledge architecture counterpart
 
 ## For contributors and coding agents
 

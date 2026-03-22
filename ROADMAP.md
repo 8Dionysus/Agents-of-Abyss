@@ -1,78 +1,78 @@
 # AoA Ecosystem Roadmap
 
-This roadmap tracks the growth of the AoA ecosystem at the program level.
-It is not the roadmap of any one specialized repository.
+This roadmap tracks the growth of the AoA ecosystem at the program level. It is not the roadmap of any one specialized repository.
 
 ## Current phase
 
-AoA is moving from a loose project cluster toward a clearer public federation.
+AoA is moving from center bootstrap into federation alignment.
 
-Existing public pillars already include:
+The public federation now includes:
+- `Agents-of-Abyss`
 - `aoa-techniques`
 - `aoa-skills`
 - `aoa-evals`
-- `Agents-of-Abyss`
-- `aoa-routing` as a newly created navigation-layer placeholder
+- `aoa-routing`
+- `aoa-memo`
+- `aoa-agents`
+- `aoa-playbooks`
+- `aoa-kag`
 
-## Phase 1: ecosystem center stabilization
+Adjacent system anchors include:
+- `Tree-of-Sophia`
+- `abyss-stack`
+
+## Phase 1: center realignment
 
 Goals:
-- clarify what `Agents-of-Abyss` owns
-- publish the ecosystem map and federation rules
-- establish a compact machine-readable ecosystem registry
-- prevent the root repo from drifting into corpus duplication
+- align `Agents-of-Abyss` with the public federation that already exists
+- update the README, charter, ecosystem map, layers, and federation rules
+- correct the ecosystem registry without breaking the current validator surface
+- make AoA legible again from the center outward
 
 Exit signals:
-- ecosystem roles are documented clearly
-- source-of-truth boundaries are explicit
-- a reader can tell where to go first for each kind of question
+- center docs no longer contradict the profile or layer repositories
+- all current public AoA layers are named in the center
+- `generated/ecosystem_registry.min.json` reflects the public federation accurately enough for v1
 
-## Phase 2: routing layer birth
-
-Goals:
-- shape `aoa-routing` into a lightweight cross-repo entry layer
-- generate minimal dispatch surfaces for models
-- support small-model entrypoints without bloating source repos
-
-Desired outputs:
-- cross-repo registry
-- task-to-surface hints
-- recommended paths
-- tiny-model routing surfaces
-
-## Phase 3: capsule surfaces across source repos
+## Phase 2: center discipline and routing alignment
 
 Goals:
-- add compact capsule surfaces to `aoa-techniques`, `aoa-skills`, and `aoa-evals`
-- make section-level expansion easier for small models
-- keep markdown bundles authoritative while derived surfaces stay bounded
+- keep `aoa-routing` thin while the federation broadens
+- prevent the center from becoming a duplicate home of layer-owned detail
+- preserve explicit handoff boundaries between practice, execution, proof, memory, roles, playbooks, and derived knowledge substrate work
 
-## Phase 4: memory layer emergence
-
-Goals:
-- define `aoa-memo` as the memory and recall layer
-- separate memory truth from proof truth and workflow truth
-- establish provenance, recall, and temporal surfaces without flattening the ecosystem
-
-## Phase 5: agent layer embodiment
+## Phase 3: memory and role maturation
 
 Goals:
-- define `aoa-agents` as the role and persona layer
-- introduce reusable agent profiles and role contracts
-- connect agents to skills, eval expectations, routing entrypoints, and memory access postures
+- mature `aoa-memo` into a clearer public memory layer
+- mature `aoa-agents` into explicit role-contract and handoff surfaces
+- ensure both remain distinct from routing and evaluation layers
 
-## Phase 6: federation maturity
+## Phase 4: scenario composition maturity
 
 Goals:
-- keep all layers distinct while improving interoperation
-- strengthen the bridge between AoA and ToS
-- strengthen the bridge between AoA and `abyss-stack`
-- make the ecosystem intelligible to both humans and smaller models
+- mature `aoa-playbooks` as the home of recurring multi-layer scenarios
+- keep it distinct from primary skill canon and primary eval canon
 
-## Standing discipline
+## Phase 5: derived substrate discipline
+
+Goals:
+- mature `aoa-kag` as a provenance-aware derived layer
+- keep its relationship to authoritative sources explicit
+- prevent source meaning from being silently re-authored in derived structures
+
+## Phase 6: ecosystem registry v2
+
+Goals:
+- split visibility, maturity, and relation into clearer axes
+- update schema and validator
+- migrate machine-readable registry surfaces without breaking the center’s role as public map
+
+## Standing direction
 
 Across all phases:
-- prefer compact trustworthy layers over vague expansion
-- prefer new layers over accidental monoliths
-- keep source-of-truth boundaries explicit
-- keep the ecosystem comprehensible as it grows
+- protect source-of-truth boundaries
+- keep growth modular
+- keep the center legible
+- make routing clearer as the ecosystem expands
+- let AoA and ToS strengthen each other without collapsing into one vague object
