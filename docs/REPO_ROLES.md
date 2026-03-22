@@ -23,6 +23,8 @@ Use it when the question is not only "what exists?" but also:
 |---|---|---|---|
 | `aoa-memo` | memory and recall layer | memory objects, provenance threads, temporal relevance, recall policies, salience-oriented retrieval surfaces | proof canon, workflow canon, or routing center |
 | `aoa-agents` | role and persona layer | agent profiles, role contracts, preferred skill families, handoff rules, model-fit notes | duplicate skill corpus, routing layer, or memory store |
+| `aoa-playbooks` | scenario-composition layer | recurring multi-layer routes, handoff-aware scenarios, fallback posture, expected evidence posture | single-skill home, hidden orchestration sprawl, or proof canon |
+| `aoa-kag` | derived knowledge substrate | provenance-aware lifts, chunk maps, node and edge projections, retrieval-ready surfaces | authored source truth, routing center, or hidden graph empire |
 
 ## Related repositories
 

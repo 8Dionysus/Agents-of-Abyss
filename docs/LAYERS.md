@@ -74,7 +74,7 @@ Repository: `aoa-playbooks`
 
 Purpose:
 - package recurring, cross-layer operational scenarios
-- compose techniques, skills, roles, routing, and proof into repeatable patterns
+- compose techniques, skills, roles, routing, proof, and memory posture into repeatable scenario-level methods
 
 Main question:
 - what recurring multi-layer scenario should be packaged?
