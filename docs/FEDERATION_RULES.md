@@ -155,3 +155,13 @@ When this support is named in the center:
 - route readers back to `Tree-of-Sophia`
 - keep the human-reviewed boundary explicit
 - avoid turning support language into substitute authorship
+
+## Rule 18: ToS corpus scaffold stays ToS-owned even when AoA routes to it
+
+`Tree-of-Sophia` owns:
+- stable public node IDs
+- source-node and concept-node templates
+- corpus-facing scaffold example discipline
+
+AoA may route readers toward those surfaces and support neighboring implementation work.
+It does not become the author of ToS node identity, template meaning, or corpus-facing examples.

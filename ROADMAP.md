@@ -28,6 +28,7 @@ The current growth move after the trunk-first structural wave is method-centered
 - keep KAG bounded while counterpart mappings become explicit, optional, and non-identity
 - make witness and compost public and reviewable before any deeper runtime instrumentation wave
 - support ToS growth law explicitly without letting AoA author ToS meaning
+- support ToS corpus scaffold work explicitly without letting AoA author template or node identity meaning
 
 ## Phase 1: center realignment
 
@@ -93,6 +94,13 @@ Goals:
 - route readers and contributors toward ToS-owned calibration, curation, and growth-law doctrine
 - keep AoA support reviewable without turning the center into a second home of ToS meaning
 - preserve the human-reviewed boundary as AI-amplified ToS growth becomes explicit
+
+## Phase 5d: ToS corpus scaffold support
+
+Goals:
+- route readers and contributors toward ToS-owned stable IDs, node templates, and scaffold examples
+- keep AoA support lightweight and reviewable rather than turning the center into a second template home
+- preserve the source-of-truth boundary as ToS opens its first public corpus scaffold
 
 ## Phase 6: ecosystem registry v2
 

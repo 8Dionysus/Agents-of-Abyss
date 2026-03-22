@@ -21,7 +21,8 @@ If you are new to AoA, use this path:
 7. Read [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md) for the current third-wave doctrine around counterpart bridges and KAG restraint.
 8. Read [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md) for the current fourth-wave witness and compost pilot doctrine.
 9. Read [docs/TOS_GROWTH_SUPPORT](docs/TOS_GROWTH_SUPPORT.md) for the current fifth-wave doctrine on how AoA supports ToS growth without authoring ToS meaning.
-10. Read [ROADMAP](ROADMAP.md) for program-level direction.
+10. Read [docs/TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md) for the current sixth-wave doctrine on how AoA supports ToS corpus scaffold work without owning template meaning.
+11. Read [ROADMAP](ROADMAP.md) for program-level direction.
 
 For the shortest next route by intent:
 
@@ -105,6 +106,16 @@ After the witness and compost pilot, AoA now treats the next planting move as a 
 - the center should route readers into ToS growth doctrine without absorbing it
 
 See [docs/TOS_GROWTH_SUPPORT](docs/TOS_GROWTH_SUPPORT.md) for the compact support doctrine and ownership boundary.
+
+## Sixth-wave ToS corpus scaffold support
+
+After the ToS-owned growth law wave, AoA now treats the next planting move as a ToS-owned corpus scaffold wave with explicit AoA support:
+
+- `Tree-of-Sophia` owns stable node IDs, node templates, and corpus-facing example discipline
+- AoA may route and support, but does not author ToS node meaning
+- the center should point readers into ToS template work without absorbing it
+
+See [docs/TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md) for the compact support doctrine and template boundary.
 
 ## What this repository is for
 
