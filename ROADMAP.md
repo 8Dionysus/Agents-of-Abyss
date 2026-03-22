@@ -21,6 +21,11 @@ Adjacent system anchors include:
 - `Tree-of-Sophia`
 - `abyss-stack`
 
+The current growth move after the trunk-first structural wave is method-centered:
+- give scenario-level method a real home in `aoa-playbooks`
+- keep donor intake source-first and refinement-shaped
+- keep ecosystem maturity claims evidence-backed and cross-repo legible
+
 ## Phase 1: center realignment
 
 Goals:
@@ -53,6 +58,7 @@ Goals:
 Goals:
 - mature `aoa-playbooks` as the home of recurring multi-layer scenarios
 - keep it distinct from primary skill canon and primary eval canon
+- let scenario-level method become an authored object instead of a scattered folklore route
 
 ## Phase 5: derived substrate discipline
 

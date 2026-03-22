@@ -16,7 +16,9 @@ If you are new to AoA, use this path:
 2. Read [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for current repository roles.
 3. Read [docs/LAYERS](docs/LAYERS.md) for the layer model.
 4. Read [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline.
-5. Read [ROADMAP](ROADMAP.md) for program-level direction.
+5. Read [docs/ROOTLINE](docs/ROOTLINE.md) for the current AoA x ToS first-wave planting spine.
+6. Read [docs/METHOD_SPINE](docs/METHOD_SPINE.md) for the current second-wave doctrine around method, donor refinement, and maturity.
+7. Read [ROADMAP](ROADMAP.md) for program-level direction.
 
 For the shortest next route by intent:
 
@@ -46,6 +48,28 @@ For the shortest next route by intent:
 | `aoa-kag` | derived knowledge substrate | you need provenance-aware, retrieval-ready or graph-ready derived structures |
 | `abyss-stack` | runtime, deployment, storage, and service substrate | you need the body the system runs on |
 | `Tree-of-Sophia` | source-first living knowledge architecture for philosophy and world thought | you need the knowledge world AoA helps build and maintain |
+
+## First-wave rootline
+
+The current first planting wave is trunk-first:
+
+- fix the ontology spine before repo meanings drift
+- fix authored/core memory before derived retrieval surfaces expand
+- fix ToS node law and lineage before archive growth
+- fix self-agent checkpoint posture before autonomy rhetoric
+- fix AoA-ToS bridge contracts before heavier protocol work
+
+See [docs/ROOTLINE](docs/ROOTLINE.md) for the compact coordination version of that order.
+
+## Second-wave method spine
+
+After the trunk-first structural wave, AoA now treats the next planting wave as method-centered:
+
+- method lives in playbooks
+- donor refinement follows `donor -> technique/skill -> playbook -> eval`
+- maturation must stay evidence-backed rather than collapsing into score theater
+
+See [docs/METHOD_SPINE](docs/METHOD_SPINE.md) for the compact doctrine and shared maturity crosswalk.
 
 ## What this repository is for
 
