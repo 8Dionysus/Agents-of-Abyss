@@ -19,7 +19,8 @@ If you are new to AoA, use this path:
 5. Read [docs/ROOTLINE](docs/ROOTLINE.md) for the current AoA x ToS first-wave planting spine.
 6. Read [docs/METHOD_SPINE](docs/METHOD_SPINE.md) for the current second-wave doctrine around method, donor refinement, and maturity.
 7. Read [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md) for the current third-wave doctrine around counterpart bridges and KAG restraint.
-8. Read [ROADMAP](ROADMAP.md) for program-level direction.
+8. Read [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md) for the current fourth-wave witness and compost pilot doctrine.
+9. Read [ROADMAP](ROADMAP.md) for program-level direction.
 
 For the shortest next route by intent:
 
@@ -82,6 +83,17 @@ After the method-centered wave, AoA now treats the next planting move as a tight
 - operational meaning stays in source AoA repositories
 
 See [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md) for the compact bridge doctrine and anti-collapse policy.
+
+## Fourth-wave witness and compost pilot
+
+After the counterpart bridge, AoA now treats the next planting move as a contract-first pilot pair:
+
+- AoA leaves a reviewable witness
+- ToS composts that witness into layered knowledge
+- memory and proof stay explicit
+- runtime instrumentation stays later and belongs in `abyss-stack`, not in this wave
+
+See [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md) for the compact pilot doctrine and ownership chain.
 
 ## What this repository is for
 
