@@ -11,7 +11,8 @@ The current second-wave method spine is:
 
 1. **method lives in playbooks**
 2. **donor refinement stays source-first**
-3. **maturation must be evidence-backed**
+3. **practice lineage gains conceptual legitimacy without collapsing into ToS source nodes**
+4. **maturation stays evidence-backed rather than score-driven**
 
 ## Method lives in playbooks
 
@@ -36,6 +37,16 @@ That refinery is strict about what gets extracted:
 - keep provenance readable
 - reject contamination that widens the contract carelessly
 - reject foreign doctrine when it tries to arrive as canon instead of as bounded evidence or governance pattern
+
+## Practice-lineage legitimacy
+
+AoA may name practice lineage as a real operational concern without pretending it is identical to ToS source-node lineage.
+
+This means:
+
+- practice lineage may describe how reusable method moves across donors, techniques, skills, and playbooks
+- it does not authorize execution layers or the center to rewrite ToS node identity
+- it should stay explicit, reviewable, and explicitly non-identity
 
 ## Evidence-backed maturity
 
