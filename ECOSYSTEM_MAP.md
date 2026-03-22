@@ -1,48 +1,44 @@
 # AoA Ecosystem Map
 
-This file is the human-first map of the current and emerging AoA ecosystem.
+This file is the human-first map of the current public AoA federation and its adjacent system anchors.
 
-## Core public repositories
+## Center
 
-| repository | role | owns | does not own |
-|---|---|---|---|
-| `Agents-of-Abyss` | constitutional center | ecosystem identity, layer map, federation rules, program-level direction | technique truth, skill truth, eval truth, memory truth, runtime infrastructure |
-| `aoa-techniques` | practice canon | reusable techniques, evidence, examples, checks, technique-level derived surfaces | skill bundles, eval bundles, global routing, memory objects |
-| `aoa-skills` | execution canon | bounded agent-facing workflows, trigger boundaries, verification guidance, technique composition | primary technique truth, proof doctrine, memory objects |
-| `aoa-evals` | proof canon | portable eval bundles, bounded claims, verdict logic, blind spots, comparison surfaces | workflow execution truth, memory objects, ecosystem routing |
-| `aoa-routing` | navigation layer | cross-repo entrypoints, dispatch hints, recommended paths, lightweight registry surfaces | primary technique, skill, eval, or memory truth |
+| repository | role | owns | does not own | maturity |
+|---|---|---|---|---|
+| `Agents-of-Abyss` | constitutional center | ecosystem identity, layer map, federation rules, program-level direction | technique truth, skill truth, eval truth, memory truth, agent truth, playbook truth, KAG truth, runtime infrastructure, ToS authored corpus | active |
 
-## Emerging repositories
+## Public source-owned AoA layers
 
-| repository | intended role | likely owned surfaces |
-|---|---|---|
-| `aoa-memo` | memory and recall layer | memory objects, provenance trails, recall policies, temporal and salience surfaces |
-| `aoa-agents` | role and persona layer | agent profiles, role contracts, preferred skills, handoff rules, model-fit notes |
+| repository | role | owns | does not own | maturity |
+|---|---|---|---|---|
+| `aoa-techniques` | practice canon | reusable techniques, evidence, examples, checks, and technique-level derived surfaces | skill bundles, eval bundles, global routing, memory objects | active |
+| `aoa-skills` | execution canon | bounded agent-facing workflows, trigger boundaries, verification guidance, and technique composition | primary technique truth, proof doctrine, memory objects | active |
+| `aoa-evals` | proof canon | portable eval bundles, bounded claims, verdict logic, blind spots, and comparison surfaces | workflow execution truth, memory objects, ecosystem routing truth | active |
+| `aoa-memo` | memory layer | memory objects, recall posture, memory interfaces, retention and retrieval conventions | eval canon, global routing truth, infrastructure internals | bootstrap |
+| `aoa-agents` | role layer | role definitions, persona boundaries, agent posture, handoff contracts | eval canon, infrastructure internals, ToS-authored corpus truth | bootstrap |
+| `aoa-playbooks` | scenario-composition layer | recurring multi-layer scenarios, composition patterns, orchestration recipes with explicit boundaries | primary technique canon, primary skill canon, infrastructure internals | bootstrap |
 
-## Related repositories
+## Public derived or routing-oriented AoA layers
 
-| repository | relationship to AoA |
-|---|---|
-| `abyss-stack` | infrastructure backbone and implementation substrate for AoA-oriented agent systems |
-| `Tree-of-Sophia` | living knowledge architecture that AoA helps build, maintain, and operationalize |
+| repository | role | owns | does not own | maturity |
+|---|---|---|---|---|
+| `aoa-routing` | navigation and dispatch layer | cross-repo routing hints, dispatch surfaces, navigation posture, lightweight indexes | primary authored truth of other layers | bootstrap |
+| `aoa-kag` | derived knowledge substrate | provenance-aware lifts, graph-ready projections, retrieval-ready structures derived from authoritative sources | source-authored truth of ToS or other layer-owned corpora | bootstrap |
 
-## Layer questions
+## Adjacent system anchors
 
-Each repository should answer a different kind of question.
+| repository | role | owns | does not own | maturity |
+|---|---|---|---|---|
+| `Tree-of-Sophia` | source-first knowledge architecture counterpart | ToS-authored knowledge architecture, source-first structural meaning, lineage-aware conceptual discipline | AoA center truth, infrastructure internals | active-conceptual |
+| `abyss-stack` | infrastructure substrate | runtime, storage, deployment, service composition, system body | AoA constitutional truth, ToS-authored corpus truth | active |
 
-| layer | main question |
-|---|---|
-| techniques | what practice is genuinely reusable? |
-| skills | how should an agent execute bounded work? |
-| evals | what bounded claim can we honestly defend? |
-| routing | where should a model go next? |
-| memo | what should be remembered and how should it be recalled? |
-| agents | who acts, with what role, boundaries, and handoff posture? |
-| infrastructure | on what substrate does the system run? |
+## Reading rule
 
-## Ownership rule
+When there is ambiguity:
 
-Source repositories own meaning.
-Coordination repositories own maps.
-
-That distinction must remain stable as AoA grows.
+- the center names the federation
+- source-owned layers own their primary object class
+- derived layers stay derived
+- routing layers stay routing
+- substrate layers run the system but do not author meaning
