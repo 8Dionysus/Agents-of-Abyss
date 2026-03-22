@@ -175,3 +175,15 @@ It does not become the author of ToS node identity, template meaning, or corpus-
 
 AoA may route readers toward those surfaces and keep support reviewable.
 It does not become the author of the pilot branch or its conceptual force.
+
+## Rule 20: ToS soil prep stays ToS-owned even when AoA supports it
+
+`Tree-of-Sophia` owns:
+
+- context-node template meaning
+- manual corpus-entry gating
+- pre-expansion soil doctrine
+- the judgment of when wider world-thought expansion is actually active
+
+AoA may route readers toward those surfaces and keep support reviewable.
+It does not become the author of ToS preparation doctrine, and it should not rename preparation into active expansion.

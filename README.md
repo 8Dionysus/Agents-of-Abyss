@@ -23,7 +23,8 @@ If you are new to AoA, use this path:
 9. Read [docs/TOS_GROWTH_SUPPORT](docs/TOS_GROWTH_SUPPORT.md) for the current fifth-wave doctrine on how AoA supports ToS growth without authoring ToS meaning.
 10. Read [docs/TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md) for the current sixth-wave doctrine on how AoA supports ToS corpus scaffold work without owning template meaning.
 11. Read [docs/TOS_LINEAGE_PILOT_SUPPORT](docs/TOS_LINEAGE_PILOT_SUPPORT.md) for the current seventh-wave doctrine on how AoA supports the first ToS lineage pilot without authoring it.
-12. Read [ROADMAP](ROADMAP.md) for program-level direction.
+12. Read [docs/TOS_SOIL_PREP_SUPPORT](docs/TOS_SOIL_PREP_SUPPORT.md) for the current eighth-wave doctrine on how AoA supports ToS preparation work without renaming it into active expansion.
+13. Read [ROADMAP](ROADMAP.md) for program-level direction.
 
 For the shortest next route by intent:
 
@@ -127,6 +128,16 @@ After the ToS corpus scaffold, AoA now treats the next planting move as a ToS-ow
 - the center should point readers into the bounded pilot without restating it as AoA-owned doctrine
 
 See [docs/TOS_LINEAGE_PILOT_SUPPORT](docs/TOS_LINEAGE_PILOT_SUPPORT.md) for the compact support doctrine and branch boundary.
+
+## Eighth-wave ToS soil prep support
+
+After the first ToS lineage pilot, AoA now treats the next planting move as a ToS-owned soil-prep wave with explicit AoA support:
+
+- `Tree-of-Sophia` owns context-node law, manual corpus-entry gating, and pre-expansion soil doctrine
+- AoA may route and support, but does not author tree motion or rename preparation into active expansion
+- the center should point readers into ToS-owned preparation surfaces while wider world-thought expansion remains later
+
+See [docs/TOS_SOIL_PREP_SUPPORT](docs/TOS_SOIL_PREP_SUPPORT.md) for the compact support doctrine and preparation boundary.
 
 ## What this repository is for
 

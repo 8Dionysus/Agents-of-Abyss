@@ -30,6 +30,7 @@ The current growth move after the trunk-first structural wave is method-centered
 - support ToS growth law explicitly without letting AoA author ToS meaning
 - support ToS corpus scaffold work explicitly without letting AoA author template or node identity meaning
 - support the first ToS lineage pilot explicitly without letting AoA author the branch itself
+- support ToS soil preparation explicitly without letting AoA rename it into active expansion
 
 ## Phase 1: center realignment
 
@@ -109,6 +110,13 @@ Goals:
 - route readers and contributors toward the first ToS-owned bounded lineage pilot
 - keep AoA support narrow, reviewable, and non-authoring
 - preserve the branch boundary so the pilot does not silently become wider world-thought expansion
+
+## Phase 5f: ToS soil prep support
+
+Goals:
+- route readers and contributors toward ToS-owned context-node law, manual entry gating, and pre-expansion soil doctrine
+- keep AoA support narrow, reviewable, and non-authoring while tree motion remains paused
+- preserve the boundary between preparation work and active wider world-thought expansion
 
 ## Phase 6: ecosystem registry v2
 
