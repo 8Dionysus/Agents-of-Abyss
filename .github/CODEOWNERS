@@ -1,0 +1,10 @@
+# Narrow ownership map for governance-critical ecosystem surfaces.
+/.github/ @8Dionysus
+/scripts/ @8Dionysus
+/docs/ @8Dionysus
+/generated/ @8Dionysus
+/schemas/ @8Dionysus
+/README.md @8Dionysus
+/CHARTER.md @8Dionysus
+/ECOSYSTEM_MAP.md @8Dionysus
+/ROADMAP.md @8Dionysus
