@@ -140,3 +140,18 @@ That pilot should keep:
 
 Full runtime instrumentation belongs later in `abyss-stack`.
 This wave should not smuggle runtime implementation claims into the center.
+
+## Rule 17: ToS growth law stays ToS-owned even when AoA assists
+
+`Tree-of-Sophia` owns:
+- calibration of meaning
+- human-reviewed curation judgment
+- growth law for deepening, node creation, and branch formation
+
+AoA may assist with reviewable support around those surfaces.
+It does not become the author of philosophical stance or the owning home of ToS growth doctrine.
+
+When this support is named in the center:
+- route readers back to `Tree-of-Sophia`
+- keep the human-reviewed boundary explicit
+- avoid turning support language into substitute authorship
