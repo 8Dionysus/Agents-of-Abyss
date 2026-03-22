@@ -165,3 +165,13 @@ When this support is named in the center:
 
 AoA may route readers toward those surfaces and support neighboring implementation work.
 It does not become the author of ToS node identity, template meaning, or corpus-facing examples.
+
+## Rule 19: ToS lineage pilots stay ToS-owned even when AoA supports them
+
+`Tree-of-Sophia` owns:
+- bounded lineage pilots
+- the node meanings inside those pilots
+- the branch-facing example discipline those pilots rely on
+
+AoA may route readers toward those surfaces and keep support reviewable.
+It does not become the author of the pilot branch or its conceptual force.

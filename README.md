@@ -22,7 +22,8 @@ If you are new to AoA, use this path:
 8. Read [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md) for the current fourth-wave witness and compost pilot doctrine.
 9. Read [docs/TOS_GROWTH_SUPPORT](docs/TOS_GROWTH_SUPPORT.md) for the current fifth-wave doctrine on how AoA supports ToS growth without authoring ToS meaning.
 10. Read [docs/TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md) for the current sixth-wave doctrine on how AoA supports ToS corpus scaffold work without owning template meaning.
-11. Read [ROADMAP](ROADMAP.md) for program-level direction.
+11. Read [docs/TOS_LINEAGE_PILOT_SUPPORT](docs/TOS_LINEAGE_PILOT_SUPPORT.md) for the current seventh-wave doctrine on how AoA supports the first ToS lineage pilot without authoring it.
+12. Read [ROADMAP](ROADMAP.md) for program-level direction.
 
 For the shortest next route by intent:
 
@@ -116,6 +117,16 @@ After the ToS-owned growth law wave, AoA now treats the next planting move as a 
 - the center should point readers into ToS template work without absorbing it
 
 See [docs/TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md) for the compact support doctrine and template boundary.
+
+## Seventh-wave ToS lineage pilot support
+
+After the ToS corpus scaffold, AoA now treats the next planting move as a ToS-owned lineage-pilot wave with explicit AoA support:
+
+- `Tree-of-Sophia` owns the lineage pilot, its node meanings, and its branch-facing example discipline
+- AoA may route and support, but does not author the pilot branch or its conceptual force
+- the center should point readers into the bounded pilot without restating it as AoA-owned doctrine
+
+See [docs/TOS_LINEAGE_PILOT_SUPPORT](docs/TOS_LINEAGE_PILOT_SUPPORT.md) for the compact support doctrine and branch boundary.
 
 ## What this repository is for
 

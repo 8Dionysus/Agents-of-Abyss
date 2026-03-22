@@ -29,6 +29,7 @@ The current growth move after the trunk-first structural wave is method-centered
 - make witness and compost public and reviewable before any deeper runtime instrumentation wave
 - support ToS growth law explicitly without letting AoA author ToS meaning
 - support ToS corpus scaffold work explicitly without letting AoA author template or node identity meaning
+- support the first ToS lineage pilot explicitly without letting AoA author the branch itself
 
 ## Phase 1: center realignment
 
@@ -101,6 +102,13 @@ Goals:
 - route readers and contributors toward ToS-owned stable IDs, node templates, and scaffold examples
 - keep AoA support lightweight and reviewable rather than turning the center into a second template home
 - preserve the source-of-truth boundary as ToS opens its first public corpus scaffold
+
+## Phase 5e: ToS lineage pilot support
+
+Goals:
+- route readers and contributors toward the first ToS-owned bounded lineage pilot
+- keep AoA support narrow, reviewable, and non-authoring
+- preserve the branch boundary so the pilot does not silently become wider world-thought expansion
 
 ## Phase 6: ecosystem registry v2
 
