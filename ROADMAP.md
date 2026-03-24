@@ -32,6 +32,11 @@ The current growth move after the trunk-first structural wave is method-centered
 - support the first ToS lineage pilot explicitly without letting AoA author the branch itself
 - support ToS soil preparation explicitly without letting AoA rename it into active expansion
 
+The federation now also carries its first bounded cross-repo entry and readiness alignment surfaces:
+- keep the thin federation entry ABI in `aoa-routing` additive and non-authoritative
+- keep the experimental federation spine and export-readiness posture in `aoa-kag` bounded and derived
+- keep the public ToS tiny-entry seam source-owned even when downstream layers consume it
+
 ## Phase 1: center realignment
 
 Goals:

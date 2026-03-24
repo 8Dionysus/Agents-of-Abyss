@@ -20,12 +20,14 @@ Examples:
 `aoa-routing` should remain a navigation and dispatch surface.
 
 It may aggregate, compress, and route.
+It may also publish thin federation entry cards or ABI surfaces as additive orientation layers.
 
 It should not become the primary authoring home of techniques, skills, evals, memory objects, playbooks, or ToS corpus material.
 
 ## Rule 3: derived knowledge substrate is not authored source truth
 
 `aoa-kag` may hold provenance-aware lifts, graph-ready projections, and retrieval-ready structures.
+It may also publish bounded federation-readiness spines or export contracts as derived surfaces.
 
 It must not silently replace source-authored meaning from `Tree-of-Sophia` or other source repositories.
 
@@ -187,3 +189,10 @@ It does not become the author of the pilot branch or its conceptual force.
 
 AoA may route readers toward those surfaces and keep support reviewable.
 It does not become the author of ToS preparation doctrine, and it should not rename preparation into active expansion.
+
+## Rule 21: ToS tiny-entry seams stay ToS-owned even when downstream layers consume them
+
+`Tree-of-Sophia` may publish source-owned tiny-entry seams for human and small-model entry.
+
+`aoa-routing` may hand off into those seams, and `aoa-kag` may derive bounded readiness surfaces from them.
+Neither downstream layer becomes ToS authority by doing so.

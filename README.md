@@ -47,13 +47,13 @@ For the shortest next route by intent:
 | `aoa-techniques` | reusable engineering practice | you need durable techniques rather than one-off fixes |
 | `aoa-skills` | bounded agent-facing execution workflows | you need an executable workflow built from reusable techniques |
 | `aoa-evals` | portable proof surfaces for bounded claims | you need to check quality, boundaries, regressions, or defensible claims |
-| `aoa-routing` | navigation and dispatch surfaces | you need the smallest next object or route across AoA surfaces |
+| `aoa-routing` | navigation and dispatch surfaces plus a thin federation entry ABI | you need the smallest next object or route across AoA surfaces without promoting routing into authority |
 | `aoa-memo` | explicit memory and recall surfaces | you need reviewable memory, provenance, or recall posture |
 | `aoa-agents` | role contracts, persona boundaries, handoff posture | you need to define who acts and under what role contract |
 | `aoa-playbooks` | scenario-composition layer | you need repeatable cross-layer operational scenarios |
-| `aoa-kag` | derived knowledge substrate | you need provenance-aware, retrieval-ready or graph-ready derived structures |
+| `aoa-kag` | derived knowledge substrate and bounded federation readiness surfaces | you need provenance-aware, retrieval-ready or graph-ready derived structures without replacing source-owned meaning |
 | `abyss-stack` | runtime, deployment, storage, and service substrate | you need the body the system runs on |
-| `Tree-of-Sophia` | source-first living knowledge architecture for philosophy and world thought | you need the knowledge world AoA helps build and maintain |
+| `Tree-of-Sophia` | source-first living knowledge architecture for philosophy and world thought | you need the knowledge world AoA helps build and maintain, including the current tree-first tiny-entry seam |
 
 ## First-wave rootline
 
@@ -236,16 +236,16 @@ In short:
 - `aoa-techniques` — reusable techniques for coding agents and humans
 - `aoa-skills` — bounded agent-facing execution workflows
 - `aoa-evals` — bounded proof surfaces for agent quality and behavior
-- `aoa-routing` — emerging navigation and dispatch layer
+- `aoa-routing` — thin navigation and dispatch layer with a separate federation entry ABI
 - `aoa-memo` — memory and recall layer
 - `aoa-agents` — role and persona layer
 - `aoa-playbooks` — scenario-composition layer
-- `aoa-kag` — derived provenance-aware knowledge substrate
+- `aoa-kag` — bounded derived provenance-aware knowledge substrate with an experimental federation spine
 
 ### Adjacent system anchors
 
 - `abyss-stack` — modular local and hybrid infrastructure substrate
-- `Tree-of-Sophia` — source-first living knowledge architecture counterpart
+- `Tree-of-Sophia` — source-first living knowledge architecture counterpart with a public tree-first tiny-entry seam
 
 ## For contributors and coding agents
 
@@ -261,6 +261,7 @@ When in doubt:
 
 AoA is moving from a loose project cluster toward a clearer public federation.
 The specialized layers are maturing in parallel, while this repository becomes the stable center that names the whole.
+The federation now also exposes its first bounded cross-repo entry and readiness alignment surfaces: a thin federation entry ABI in `aoa-routing`, an experimental federation spine in `aoa-kag`, and a source-owned tiny-entry seam in `Tree-of-Sophia`.
 
 ## Maintainer
 

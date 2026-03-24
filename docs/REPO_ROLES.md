@@ -15,7 +15,7 @@ Use it when the question is not only "what exists?" but also:
 | `aoa-techniques` | practice canon | reusable techniques, origin evidence, checks, examples, technique-level derived surfaces | skill truth, eval truth, memory truth, cross-repo routing truth | `TECHNIQUE.md`, notes, checks, examples, technique catalogs | what practice is genuinely reusable? |
 | `aoa-skills` | execution canon | bounded agent-facing workflows, trigger boundaries, verification guidance, technique composition manifests | primary technique meaning, proof doctrine, memory objects, ecosystem-center governance | `SKILL.md`, `techniques.yaml`, agent policy files, skill support artifacts | how should an agent execute bounded work? |
 | `aoa-evals` | proof canon | bounded proof surfaces, verdict logic, scoring guidance, comparison modes, blind spots | workflow execution truth, technique truth, memory truth, ecosystem routing truth | `EVAL.md`, `eval.yaml`, evidence/support artifacts | what bounded claim can we honestly defend? |
-| `aoa-routing` | navigation layer | cross-repo dispatch, lightweight entrypoints, recommended paths, model-facing access surfaces | authored technique, skill, eval, or memory truth | router manifests, path surfaces, dispatch registries | where should a model or human go next? |
+| `aoa-routing` | navigation layer | cross-repo dispatch, lightweight entrypoints, recommended paths, model-facing access surfaces | authored technique, skill, eval, or memory truth | router manifests, path surfaces, dispatch registries, `generated/federation_entrypoints.min.json`, `docs/FEDERATION_ENTRY_ABI.md` | where should a model or human go next? |
 
 ## Emerging repositories
 
@@ -24,14 +24,14 @@ Use it when the question is not only "what exists?" but also:
 | `aoa-memo` | memory and recall layer | memory objects, provenance threads, temporal relevance, recall policies, salience-oriented retrieval surfaces | proof canon, workflow canon, or routing center |
 | `aoa-agents` | role and persona layer | agent profiles, role contracts, preferred skill families, handoff rules, model-fit notes | duplicate skill corpus, routing layer, or memory store |
 | `aoa-playbooks` | scenario-composition layer | recurring multi-layer routes, handoff-aware scenarios, fallback posture, expected evidence posture | single-skill home, hidden orchestration sprawl, or proof canon |
-| `aoa-kag` | derived knowledge substrate | provenance-aware lifts, chunk maps, node and edge projections, retrieval-ready surfaces | authored source truth, routing center, or hidden graph empire |
+| `aoa-kag` | derived knowledge substrate | provenance-aware lifts, chunk maps, node and edge projections, retrieval-ready surfaces, bounded federation readiness surfaces | authored source truth, routing center, or hidden graph empire |
 
 ## Related repositories
 
 | repository | role in the wider system |
 |---|---|
 | `abyss-stack` | infrastructure substrate and implementation body for AoA-oriented systems |
-| `Tree-of-Sophia` | living knowledge architecture that AoA helps build and operationalize |
+| `Tree-of-Sophia` | living knowledge architecture that AoA helps build and operationalize, including source-authored node law and the public tiny-entry seam |
 
 ## Routing rule of thumb
 
