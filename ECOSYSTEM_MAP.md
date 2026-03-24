@@ -23,14 +23,14 @@ This file is the human-first map of the current public AoA federation and its ad
 
 | repository | role | owns | does not own | maturity crosswalk |
 |---|---|---|---|---|
-| `aoa-routing` | navigation and dispatch layer | cross-repo routing hints, dispatch surfaces, navigation posture, lightweight indexes | primary authored truth of other layers | bootstrap -> seed |
-| `aoa-kag` | derived knowledge substrate | provenance-aware lifts, graph-ready projections, retrieval-ready structures derived from authoritative sources | source-authored truth of ToS or other layer-owned corpora | bootstrap -> seed |
+| `aoa-routing` | navigation and dispatch layer | cross-repo routing hints, dispatch surfaces, navigation posture, lightweight indexes, and a separate federation entry ABI | primary authored truth of other layers | bootstrap -> seed |
+| `aoa-kag` | derived knowledge substrate | provenance-aware lifts, graph-ready projections, retrieval-ready structures, and bounded federation readiness surfaces derived from authoritative sources | source-authored truth of ToS or other layer-owned corpora | bootstrap -> seed |
 
 ## Adjacent system anchors
 
 | repository | role | owns | does not own | maturity crosswalk |
 |---|---|---|---|---|
-| `Tree-of-Sophia` | source-first knowledge architecture counterpart | ToS-authored knowledge architecture, source-first structural meaning, lineage-aware conceptual discipline | AoA center truth, infrastructure internals | active-conceptual -> seed |
+| `Tree-of-Sophia` | source-first knowledge architecture counterpart | ToS-authored knowledge architecture, source-first structural meaning, lineage-aware conceptual discipline, and the public tree-first tiny-entry seam | AoA center truth, infrastructure internals | active-conceptual -> seed |
 | `abyss-stack` | infrastructure substrate | runtime, storage, deployment, service composition, system body | AoA constitutional truth, ToS-authored corpus truth | active -> proven |
 
 ## Reading rule

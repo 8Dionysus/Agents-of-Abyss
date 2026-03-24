@@ -42,6 +42,7 @@ Repository: `aoa-routing`
 Purpose:
 - route models and humans toward the right next surface
 - keep dispatch lightweight and cross-repo
+- publish thin federation entry cards and ABI surfaces without becoming authority
 
 Main question:
 - where should the next step go?
@@ -86,6 +87,7 @@ Repository: `aoa-kag`
 Purpose:
 - transform authoritative sources into graph-ready or retrieval-ready derived structures
 - preserve provenance while remaining clearly downstream of source-owned repositories
+- materialize bounded federation-readiness surfaces without claiming source sovereignty
 
 Main question:
 - how should authoritative sources be lifted without replacing them?
@@ -106,6 +108,7 @@ Repository: `Tree-of-Sophia`
 
 Purpose:
 - own the source-first living knowledge architecture for philosophy and world thought
+- keep source-owned tiny-entry seams and authored node law inside ToS rather than downstream layers
 
 Main question:
 - what source-linked knowledge world is being cultivated?
