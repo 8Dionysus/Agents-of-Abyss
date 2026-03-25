@@ -5,6 +5,8 @@ import json
 import sys
 from pathlib import Path
 
+import validate_nested_agents
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = REPO_ROOT / "generated" / "ecosystem_registry.min.json"
 SCHEMA_PATH = REPO_ROOT / "schemas" / "ecosystem-registry.schema.json"
@@ -112,16 +114,27 @@ def validate_registry() -> None:
         fail(f"ecosystem registry is missing required core repos: {', '.join(missing_core)}")
 
 
+def validate_nested_agents_surface() -> None:
+    issues = validate_nested_agents.run_validation(REPO_ROOT)
+    if issues:
+        formatted = "; ".join(
+            f"{location}: {message}" for location, message in issues
+        )
+        fail(f"nested AGENTS docs check failed: {formatted}")
+
+
 def main() -> int:
     try:
         validate_schema_surface()
         validate_registry()
+        validate_nested_agents_surface()
     except ValidationError as exc:
         print(f"[error] {exc}", file=sys.stderr)
         return 1
 
     print("[ok] validated ecosystem registry schema surface")
     print("[ok] validated generated/ecosystem_registry.min.json")
+    print("[ok] validated nested AGENTS directory guidance")
     return 0
 
 

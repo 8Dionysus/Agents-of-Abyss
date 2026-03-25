@@ -195,6 +195,12 @@ See [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) and [docs/LAYERS](docs/LAYERS.md) for the 
 
 ## Local validation
 
+If you are editing a center-layer working surface rather than just reading it, check the nearest local guide first:
+- `docs/AGENTS.md`
+- `generated/AGENTS.md`
+- `schemas/AGENTS.md`
+- `scripts/AGENTS.md`
+
 This repository now includes a compact machine-readable ecosystem registry at:
 - `generated/ecosystem_registry.min.json`
 
