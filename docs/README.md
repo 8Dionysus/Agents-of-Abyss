@@ -4,6 +4,8 @@ This file is the human-first entrypoint for the `docs/` surface of `Agents-of-Ab
 
 Use it when you want to understand the AoA ecosystem as a whole rather than one specialized repository.
 
+If you are editing files under `docs/`, read [`AGENTS.md`](AGENTS.md) in this directory first.
+
 ## Start here
 
 - Read [CHARTER](../CHARTER.md) for the ecosystem constitution.

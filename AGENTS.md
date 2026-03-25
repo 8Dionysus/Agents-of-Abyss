@@ -99,6 +99,17 @@ When creating new files:
 - ask whether the file clarifies the center or belongs in another repository
 - prefer compact coordination surfaces over sprawl
 
+## Directory guidance
+
+When working inside a specific center-layer surface, read the nearest local guide first:
+
+- `docs/AGENTS.md`
+- `generated/AGENTS.md`
+- `schemas/AGENTS.md`
+- `scripts/AGENTS.md`
+
+These nested guides tighten the root rules for their directory without replacing them.
+
 ## Validation
 
 When changing the center-layer surface, review:
@@ -109,6 +120,8 @@ When changing the center-layer surface, review:
 - `docs/FEDERATION_RULES.md`
 - `ROADMAP.md`
 - `generated/ecosystem_registry.min.json`
+
+If you are editing `docs/`, `generated/`, `schemas/`, or `scripts/`, read the local `AGENTS.md` in that directory before changing files.
 
 Run local validation when relevant:
 
