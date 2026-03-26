@@ -14,6 +14,7 @@ Important documents here include:
 - `REPO_ROLES.md` for compact ownership routing
 - `FEDERATION_RULES.md` for source-of-truth boundaries
 - `ROOTLINE.md` for the trunk-first planting spine
+- `RECURRENCE_PRINCIPLE.md` for the standing recovery law when a route loses axis and must regain a valid anchor
 - `METHOD_SPINE.md` for the second-wave method doctrine
 - `COUNTERPART_BRIDGE.md` for bounded counterpart and KAG restraint
 - `WITNESS_COMPOST.md` for the witness and compost pilot
