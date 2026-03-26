@@ -14,6 +14,7 @@ If you are editing files under `docs/`, read [`AGENTS.md`](AGENTS.md) in this di
 - Read [REPO_ROLES](REPO_ROLES.md) for the compact operational ownership guide.
 - Read [FEDERATION_RULES](FEDERATION_RULES.md) for source-of-truth boundaries.
 - Read [ROOTLINE](ROOTLINE.md) for the current first-wave AoA x ToS planting spine.
+- Read [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) for the standing recovery law that governs how AoA regains a valid anchor when continuity fails.
 - Read [ROADMAP](../ROADMAP.md) for ecosystem-level direction.
 
 ## Docs in this repository
@@ -22,6 +23,7 @@ If you are editing files under `docs/`, read [`AGENTS.md`](AGENTS.md) in this di
 - [REPO_ROLES](REPO_ROLES.md) — what each current or emerging repository owns and should not absorb
 - [FEDERATION_RULES](FEDERATION_RULES.md) — the stable ownership boundaries across the AoA federation
 - [ROOTLINE](ROOTLINE.md) — the current trunk-first coordination spine for AoA x ToS planting
+- [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) - the standing recovery law for long-horizon routes across the federation
 
 ## Recommended reading paths
 

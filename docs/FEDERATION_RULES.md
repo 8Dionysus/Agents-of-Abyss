@@ -79,6 +79,7 @@ They must not quietly replace authored/core memory with opaque retrieval substra
 Writeback, retrieval-axis returns, and other AoA-ToS bridge surfaces should be named as contracts.
 
 They should remain reviewable and reversible rather than hiding inside one layer as accidental glue.
+When continuity fails across those seams, [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) governs the bounded return to a valid anchor without transferring source ownership to routing, infrastructure, or derived layers.
 
 ## Rule 12: donor refinement stays source-first
 

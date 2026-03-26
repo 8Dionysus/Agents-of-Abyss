@@ -24,6 +24,7 @@ AoA keeps these distinctions:
 
 When a route spans skills, roles, memory posture, fallback posture, and proof hooks, it should not stay smeared across neighboring layers.
 It should become a readable playbook-owned route.
+When return becomes a recurring multi-layer route rather than a one-off recovery move, it should become playbook-owned method.
 
 ## Source-first donor refinement
 
