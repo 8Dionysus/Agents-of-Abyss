@@ -1,6 +1,6 @@
 # Repository Roles
 
-This file is the compact operational guide to repository ownership across the AoA ecosystem.
+This file is the compact operational guide to repository ownership across the AoA ecosystem, distinguishing ecosystem-level stewardship from specialized corpus and runtime artifacts.
 
 Use it when the question is not only "what exists?" but also:
 - where should this change go?
