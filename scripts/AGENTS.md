@@ -8,7 +8,7 @@ This file applies to validator tooling under `scripts/`.
 
 Current scripts include:
 
-- `validate_ecosystem.py` for schema and registry integrity checks
+- `validate_ecosystem.py` for schema, registry, and center-level `QUESTBOOK` surface checks
 - `validate_nested_agents.py` for required local directory guidance under `docs/`, `generated/`, `schemas/`, and `scripts/`
 
 ## Editing posture
