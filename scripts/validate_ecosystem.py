@@ -7,9 +7,19 @@ from pathlib import Path
 
 import validate_nested_agents
 
+try:
+    import yaml
+except ModuleNotFoundError:
+    yaml = None
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = REPO_ROOT / "generated" / "ecosystem_registry.min.json"
 SCHEMA_PATH = REPO_ROOT / "schemas" / "ecosystem-registry.schema.json"
+QUESTBOOK_PATH = REPO_ROOT / "QUESTBOOK.md"
+QUESTBOOK_MODEL_PATH = REPO_ROOT / "docs" / "QUESTBOOK_MODEL.md"
+QUESTBOOK_FIRST_WAVE_PATH = REPO_ROOT / "docs" / "QUESTBOOK_FIRST_WAVE.md"
+QUESTS_PATH = REPO_ROOT / "quests"
+REQUIRED_QUEST_IDS = ("AOA-Q-0001", "AOA-Q-0002", "AOA-Q-0003")
 
 ALLOWED_STATUS = {
     "active",
@@ -40,6 +50,30 @@ def read_json(path: Path) -> object:
         fail(f"missing required file: {path.relative_to(REPO_ROOT).as_posix()}")
     except json.JSONDecodeError as exc:
         fail(f"invalid JSON in {path.relative_to(REPO_ROOT).as_posix()}: {exc}")
+
+
+def read_text(path: Path) -> str:
+    try:
+        return path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        fail(f"missing required file: {path.relative_to(REPO_ROOT).as_posix()}")
+
+
+def read_yaml(path: Path) -> dict[str, object]:
+    if yaml is None:
+        fail("PyYAML is required to validate QUESTBOOK surfaces")
+
+    try:
+        payload = yaml.safe_load(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        fail(f"missing required file: {path.relative_to(REPO_ROOT).as_posix()}")
+    except yaml.YAMLError as exc:
+        fail(f"invalid YAML in {path.relative_to(REPO_ROOT).as_posix()}: {exc}")
+
+    if not isinstance(payload, dict):
+        fail(f"{path.relative_to(REPO_ROOT).as_posix()} must contain a YAML object")
+
+    return payload
 
 
 def validate_schema_surface() -> None:
@@ -123,10 +157,75 @@ def validate_nested_agents_surface() -> None:
         fail(f"nested AGENTS docs check failed: {formatted}")
 
 
+def validate_questbook_surface() -> None:
+    questbook_text = read_text(QUESTBOOK_PATH)
+    read_text(QUESTBOOK_MODEL_PATH)
+    first_wave_text = read_text(QUESTBOOK_FIRST_WAVE_PATH)
+
+    expected_paths = {
+        quest_id: QUESTS_PATH / f"{quest_id}.yaml" for quest_id in REQUIRED_QUEST_IDS
+    }
+    actual_ids = {
+        path.stem for path in QUESTS_PATH.glob("AOA-Q-*.yaml") if path.is_file()
+    }
+    expected_ids = set(REQUIRED_QUEST_IDS)
+    if actual_ids != expected_ids:
+        missing = sorted(expected_ids - actual_ids)
+        extra = sorted(actual_ids - expected_ids)
+        details: list[str] = []
+        if missing:
+            details.append(f"missing: {', '.join(missing)}")
+        if extra:
+            details.append(f"extra: {', '.join(extra)}")
+        joined = "; ".join(details) if details else "unexpected quest set"
+        fail(f"foundation quest set must match expected center quests ({joined})")
+
+    for quest_id, path in expected_paths.items():
+        payload = read_yaml(path)
+
+        schema_version = payload.get("schema_version")
+        if schema_version != "work_quest_v1":
+            fail(
+                f"{path.relative_to(REPO_ROOT).as_posix()} has unsupported "
+                f"schema_version '{schema_version}'"
+            )
+
+        repo = payload.get("repo")
+        if repo != "Agents-of-Abyss":
+            fail(
+                f"{path.relative_to(REPO_ROOT).as_posix()} must target "
+                "repo 'Agents-of-Abyss'"
+            )
+
+        payload_id = payload.get("id")
+        if payload_id != quest_id:
+            fail(
+                f"{path.relative_to(REPO_ROOT).as_posix()} id '{payload_id}' "
+                f"does not match filename '{quest_id}'"
+            )
+
+        if payload.get("public_safe") is not True:
+            fail(f"{path.relative_to(REPO_ROOT).as_posix()} must set public_safe: true")
+
+        if quest_id not in questbook_text:
+            fail(f"QUESTBOOK.md must reference quest id '{quest_id}'")
+
+    if "ATM10-Agent" in first_wave_text:
+        fail("docs/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")
+
+    required_phrase = "It is a foundation pass, not a new numbered AoA wave."
+    if required_phrase not in first_wave_text:
+        fail(
+            "docs/QUESTBOOK_FIRST_WAVE.md must state that the contour is not "
+            "a new numbered AoA wave"
+        )
+
+
 def main() -> int:
     try:
         validate_schema_surface()
         validate_registry()
+        validate_questbook_surface()
         validate_nested_agents_surface()
     except ValidationError as exc:
         print(f"[error] {exc}", file=sys.stderr)
@@ -134,6 +233,7 @@ def main() -> int:
 
     print("[ok] validated ecosystem registry schema surface")
     print("[ok] validated generated/ecosystem_registry.min.json")
+    print("[ok] validated questbook center surface")
     print("[ok] validated nested AGENTS directory guidance")
     return 0
 
