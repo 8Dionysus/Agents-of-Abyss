@@ -15,16 +15,17 @@ If you are new to AoA, use this path:
 1. Read [CHARTER](CHARTER.md) for mission and ownership boundaries.
 2. Read [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for current repository roles.
 3. Read [docs/LAYERS](docs/LAYERS.md) for the layer model.
-4. Read [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline.
-5. Read [docs/ROOTLINE](docs/ROOTLINE.md) for the current AoA x ToS first-wave planting spine.
-6. Read [docs/METHOD_SPINE](docs/METHOD_SPINE.md) for the current second-wave doctrine around method, donor refinement, and maturity.
-7. Read [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md) for the current third-wave doctrine around counterpart bridges and KAG restraint.
-8. Read [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md) for the current fourth-wave witness and compost pilot doctrine.
-9. Read [docs/TOS_GROWTH_SUPPORT](docs/TOS_GROWTH_SUPPORT.md) for the current fifth-wave doctrine on how AoA supports ToS growth without authoring ToS meaning.
-10. Read [docs/TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md) for the current sixth-wave doctrine on how AoA supports ToS corpus scaffold work without owning template meaning.
-11. Read [docs/TOS_LINEAGE_PILOT_SUPPORT](docs/TOS_LINEAGE_PILOT_SUPPORT.md) for the current seventh-wave doctrine on how AoA supports the first ToS lineage pilot without authoring it.
-12. Read [docs/TOS_SOIL_PREP_SUPPORT](docs/TOS_SOIL_PREP_SUPPORT.md) for the current eighth-wave doctrine on how AoA supports ToS preparation work without renaming it into active expansion.
-13. Read [ROADMAP](ROADMAP.md) for program-level direction.
+4. Read [docs/RPG_LAYER_MODEL](docs/RPG_LAYER_MODEL.md) for the adjunct RPG reflection contour over the live AoA questbook surface.
+5. Read [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline.
+6. Read [docs/ROOTLINE](docs/ROOTLINE.md) for the current AoA x ToS first-wave planting spine.
+7. Read [docs/METHOD_SPINE](docs/METHOD_SPINE.md) for the current second-wave doctrine around method, donor refinement, and maturity.
+8. Read [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md) for the current third-wave doctrine around counterpart bridges and KAG restraint.
+9. Read [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md) for the current fourth-wave witness and compost pilot doctrine.
+10. Read [docs/TOS_GROWTH_SUPPORT](docs/TOS_GROWTH_SUPPORT.md) for the current fifth-wave doctrine on how AoA supports ToS growth without authoring ToS meaning.
+11. Read [docs/TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md) for the current sixth-wave doctrine on how AoA supports ToS corpus scaffold work without owning template meaning.
+12. Read [docs/TOS_LINEAGE_PILOT_SUPPORT](docs/TOS_LINEAGE_PILOT_SUPPORT.md) for the current seventh-wave doctrine on how AoA supports the first ToS lineage pilot without authoring it.
+13. Read [docs/TOS_SOIL_PREP_SUPPORT](docs/TOS_SOIL_PREP_SUPPORT.md) for the current eighth-wave doctrine on how AoA supports ToS preparation work without renaming it into active expansion.
+14. Read [ROADMAP](ROADMAP.md) for program-level direction.
 
 For the shortest next route by intent:
 
