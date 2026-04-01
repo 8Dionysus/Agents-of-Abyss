@@ -5,7 +5,6 @@ It does not absorb repo-local quest detail from sibling repositories.
 
 ## Frontier
 
-- `AOA-Q-0001` — publish the common QUESTBOOK model and first contour scope
 - `AOA-Q-0002` — define the source-owned quest dispatch seam without promoting routing into authority
 
 ## Near

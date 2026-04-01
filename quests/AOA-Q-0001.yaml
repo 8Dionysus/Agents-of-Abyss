@@ -7,7 +7,7 @@ owner_surface: center/questbook-model
 theme_ref: ''
 milestone_ref: ''
 kind: doctrine
-state: ready
+state: done
 band: frontier
 difficulty: d4_architecture
 risk: r2_contract
@@ -43,5 +43,6 @@ tags:
   - federation
   - questbook
   - foundation
-notes: ''
+notes: Closed in the Phase 2 manual-first hygiene pass after the center questbook
+  model, first contour scope, and federation-only boundary were all visibly landed.
 public_safe: true
