@@ -95,6 +95,28 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
         validate_ecosystem.validate_questbook_surface()
 
+    def test_valid_second_wave_extra_quest_file_is_allowed(self) -> None:
+        self.write_valid_surface()
+        write_text(
+            self.quests_dir / "AOA-Q-0005.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0005",
+                    "repo: Agents-of-Abyss",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0005`\n",
+        )
+
+        validate_ecosystem.validate_questbook_surface()
+
     def test_missing_required_foundation_quest_fails(self) -> None:
         self.write_valid_surface()
         (self.quests_dir / "AOA-Q-0003.yaml").unlink()
