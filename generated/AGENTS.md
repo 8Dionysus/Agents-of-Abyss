@@ -28,6 +28,7 @@ If that changes later, update this guide and `scripts/validate_ecosystem.py` tog
 After changing the registry, run:
 
 ```bash
+python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
 ```
 

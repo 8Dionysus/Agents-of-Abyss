@@ -207,6 +207,7 @@ This repository now includes a compact machine-readable ecosystem registry at:
 To validate the current center-layer surface locally, run:
 
 ```bash
+python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
 ```
 

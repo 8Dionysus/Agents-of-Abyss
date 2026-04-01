@@ -126,6 +126,7 @@ If you are editing `docs/`, `generated/`, `schemas/`, or `scripts/`, read the lo
 Run local validation when relevant:
 
 ```bash
+python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
 ```
 

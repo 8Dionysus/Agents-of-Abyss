@@ -13,7 +13,7 @@ Current scripts include:
 
 ## Editing posture
 
-Keep this script surface small, zero-dependency, repo-relative, and deterministic.
+Keep this script surface small, repo-relative, deterministic, and limited to the documented dependencies in `requirements-dev.txt`.
 
 When changing script logic:
 
@@ -30,6 +30,7 @@ If a validation rule becomes complicated enough to need a broader contract, enco
 After changing validator logic, run:
 
 ```bash
+python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
 ```
 
