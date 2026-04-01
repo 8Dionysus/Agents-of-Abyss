@@ -47,6 +47,7 @@ After changing docs here, review the connected center-layer surfaces:
 Then run:
 
 ```bash
+python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
 ```
 

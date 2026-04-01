@@ -37,7 +37,7 @@ REQUIRED_AGENTS: dict[str, tuple[str, ...]] = {
     "scripts/AGENTS.md": (
         "validate_ecosystem.py",
         "validate_nested_agents.py",
-        "zero-dependency",
+        "requirements-dev.txt",
         "repo-relative",
         "Python 3.12",
         "python scripts/validate_ecosystem.py",

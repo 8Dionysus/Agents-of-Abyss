@@ -27,6 +27,7 @@ If the schema changes, the docs and registry should explain why.
 After changing `ecosystem-registry.schema.json`, run:
 
 ```bash
+python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
 ```
 
