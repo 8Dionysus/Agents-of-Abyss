@@ -20,6 +20,7 @@ QUESTBOOK_MODEL_PATH = REPO_ROOT / "docs" / "QUESTBOOK_MODEL.md"
 QUESTBOOK_FIRST_WAVE_PATH = REPO_ROOT / "docs" / "QUESTBOOK_FIRST_WAVE.md"
 QUESTS_PATH = REPO_ROOT / "quests"
 REQUIRED_QUEST_IDS = ("AOA-Q-0001", "AOA-Q-0002", "AOA-Q-0003")
+CLOSED_QUEST_STATES = {"done", "dropped"}
 
 ALLOWED_STATUS = {
     "active",
@@ -180,6 +181,8 @@ def validate_questbook_surface() -> None:
         joined = "; ".join(details) if details else "unexpected quest set"
         fail(f"foundation quest set must match expected center quests ({joined})")
 
+    active_quest_ids: list[str] = []
+    closed_quest_ids: list[str] = []
     for quest_id, path in expected_paths.items():
         payload = read_yaml(path)
 
@@ -206,9 +209,17 @@ def validate_questbook_surface() -> None:
 
         if payload.get("public_safe") is not True:
             fail(f"{path.relative_to(REPO_ROOT).as_posix()} must set public_safe: true")
+        if payload.get("state") in CLOSED_QUEST_STATES:
+            closed_quest_ids.append(quest_id)
+        else:
+            active_quest_ids.append(quest_id)
 
+    for quest_id in active_quest_ids:
         if quest_id not in questbook_text:
-            fail(f"QUESTBOOK.md must reference quest id '{quest_id}'")
+            fail(f"QUESTBOOK.md must reference active quest id '{quest_id}'")
+    for quest_id in closed_quest_ids:
+        if quest_id in questbook_text:
+            fail(f"QUESTBOOK.md must not list closed quest id '{quest_id}'")
 
     if "ATM10-Agent" in first_wave_text:
         fail("docs/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")
