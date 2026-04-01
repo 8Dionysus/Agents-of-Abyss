@@ -11,6 +11,7 @@ It does not absorb repo-local quest detail from sibling repositories.
 
 - `AOA-Q-0003` — shape the next contour after foundation proof without widening too early
 - `AOA-Q-0004` — define the first adjunct RPG reflection layer without mutating quest or role canon
+- `AOA-Q-0005` — define the second RPG reflection wave for skills as abilities and techniques as feats
 
 ## Blocked / reanchor
 
