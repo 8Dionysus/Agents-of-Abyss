@@ -10,6 +10,7 @@ It does not absorb repo-local quest detail from sibling repositories.
 ## Near
 
 - `AOA-Q-0003` — shape the next contour after foundation proof without widening too early
+- `AOA-Q-0004` — define the first adjunct RPG reflection layer without mutating quest or role canon
 
 ## Blocked / reanchor
 
