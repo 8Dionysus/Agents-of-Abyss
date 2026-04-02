@@ -23,3 +23,6 @@ jobs:
 
       - name: Run ecosystem validator
         run: python scripts/validate_ecosystem.py
+
+      - name: Run tests
+        run: python -m pytest -q
