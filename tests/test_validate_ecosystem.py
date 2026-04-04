@@ -59,6 +59,11 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
                 "DUAL_VOCABULARY_EXAMPLE_PATH",
                 self.repo_root / "examples" / "dual_vocabulary_overlay.example.json",
             ),
+            patch.object(
+                validate_ecosystem,
+                "RPG_BRIDGE_WAVE_PATH",
+                self.repo_root / "docs" / "RPG_BRIDGE_WAVE.md",
+            ),
         )
         for patcher in self.patches:
             patcher.start()
@@ -129,6 +134,15 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             '}\n',
         )
 
+    def write_rpg_bridge_wave_surface(self) -> None:
+        write_text(
+            self.repo_root / "docs" / "RPG_BRIDGE_WAVE.md",
+            "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership.\n"
+            "`aoa-routing` may orient. It does not own proof, party doctrine, or quest meaning.\n"
+            "do not create a universal rank or power score here\n"
+            "This wave is a bridge, not a throne.\n",
+        )
+
     def test_valid_extra_quest_file_is_allowed(self) -> None:
         self.write_valid_surface()
         write_text(
@@ -194,6 +208,60 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         )
 
         validate_ecosystem.validate_questbook_surface()
+
+    def test_valid_rpg_bridge_wave_extra_quest_is_allowed(self) -> None:
+        self.write_valid_surface()
+        self.write_rpg_bridge_wave_surface()
+        write_text(
+            self.quests_dir / "AOA-Q-0007.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0007",
+                    "repo: Agents-of-Abyss",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0007`\n",
+        )
+
+        validate_ecosystem.validate_questbook_surface()
+
+    def test_rpg_bridge_wave_surface_missing_rule_fails(self) -> None:
+        self.write_valid_surface()
+        self.write_rpg_bridge_wave_surface()
+        write_text(
+            self.quests_dir / "AOA-Q-0007.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0007",
+                    "repo: Agents-of-Abyss",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0007`\n",
+        )
+        write_text(
+            self.repo_root / "docs" / "RPG_BRIDGE_WAVE.md",
+            "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership.\n",
+        )
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "routing non-authority explicit|anti-throne rule explicit",
+        ):
+            validate_ecosystem.validate_questbook_surface()
 
     def test_missing_required_foundation_quest_fails(self) -> None:
         self.write_valid_surface()

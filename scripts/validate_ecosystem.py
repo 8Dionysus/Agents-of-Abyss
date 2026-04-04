@@ -26,6 +26,7 @@ RPG_CANONICAL_TERMINOLOGY_PATH = REPO_ROOT / "docs" / "RPG_CANONICAL_TERMINOLOGY
 RPG_BOUNDARY_MAP_PATH = REPO_ROOT / "docs" / "RPG_BOUNDARY_MAP.md"
 DUAL_VOCABULARY_SCHEMA_PATH = REPO_ROOT / "schemas" / "dual_vocabulary_overlay.schema.json"
 DUAL_VOCABULARY_EXAMPLE_PATH = REPO_ROOT / "examples" / "dual_vocabulary_overlay.example.json"
+RPG_BRIDGE_WAVE_PATH = REPO_ROOT / "docs" / "RPG_BRIDGE_WAVE.md"
 
 ALLOWED_STATUS = {
     "active",
@@ -250,6 +251,17 @@ def validate_questbook_surface() -> None:
             fail("examples/dual_vocabulary_overlay.example.json schema_version must equal 'dual_vocabulary_overlay_v1'")
         if example_payload.get("public_safe") is not True:
             fail("examples/dual_vocabulary_overlay.example.json public_safe must be true")
+
+    if "AOA-Q-0007" in actual_ids:
+        bridge_wave_text = read_text(RPG_BRIDGE_WAVE_PATH)
+        if "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership." not in bridge_wave_text:
+            fail("docs/RPG_BRIDGE_WAVE.md must keep the bridge-purpose law explicit")
+        if "`aoa-routing` may orient. It does not own proof, party doctrine, or quest meaning." not in bridge_wave_text:
+            fail("docs/RPG_BRIDGE_WAVE.md must keep routing non-authority explicit")
+        if "do not create a universal rank or power score here" not in bridge_wave_text:
+            fail("docs/RPG_BRIDGE_WAVE.md must keep the anti-power-score bridge rule explicit")
+        if "This wave is a bridge, not a throne." not in bridge_wave_text:
+            fail("docs/RPG_BRIDGE_WAVE.md must keep the anti-throne rule explicit")
 
     if "ATM10-Agent" in first_wave_text:
         fail("docs/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")

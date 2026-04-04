@@ -1,0 +1,55 @@
+schema_version: work_quest_v1
+id: AOA-Q-0007
+title: Define the RPG bridge wave for unlock proof, party composition, and derived navigation
+summary: Stage the narrow bridge that lets proof, playbook composition, and routing orientation interoperate without collapsing repo ownership or runtime boundaries.
+repo: Agents-of-Abyss
+owner_surface: center/rpg-bridge-wave
+theme_ref: ''
+milestone_ref: ''
+kind: doctrine
+state: triaged
+band: frontier
+difficulty: d4_architecture
+risk: r2_contract
+control_mode: human_codex_copilot
+delegate_tier: conductor
+fallback_tier: deep
+wrapper_class: codex_primary
+write_scope: cross_repo_request
+split_required: true
+complexity_basis:
+  scope: 3
+  ambiguity: 2
+  boundary: 3
+  verification: 2
+parent: null
+depends_on:
+  - AOA-Q-0004
+  - AOA-Q-0005
+  - AOA-Q-0006
+activation:
+  mode: manual
+  note: open when the bridge between proof, composition, and navigation is ready to be staged
+anchor_ref:
+  artifact: rpg_bridge_wave
+  ref: docs/RPG_BRIDGE_WAVE.md
+  note: the bridge must stay narrow, cited, and non-authoritative
+handoff_role: federation-maintainer
+evidence:
+  - unlock proof is explicit
+  - party-template posture is explicit
+  - routing remains orientation-only
+harvest:
+  target: none
+opened_at: '2026-04-04'
+touched_at: '2026-04-04'
+tags:
+  - rpg
+  - bridge-wave
+  - unlocks
+  - party
+  - navigation
+notes: >
+  Do not let this contour create a hidden reward engine, live router authority, or runtime inventory system.
+  Keep proof cited, composition scenario-owned, and routing thin.
+public_safe: true
