@@ -26,7 +26,9 @@ RPG_CANONICAL_TERMINOLOGY_PATH = REPO_ROOT / "docs" / "RPG_CANONICAL_TERMINOLOGY
 RPG_BOUNDARY_MAP_PATH = REPO_ROOT / "docs" / "RPG_BOUNDARY_MAP.md"
 DUAL_VOCABULARY_SCHEMA_PATH = REPO_ROOT / "schemas" / "dual_vocabulary_overlay.schema.json"
 DUAL_VOCABULARY_EXAMPLE_PATH = REPO_ROOT / "examples" / "dual_vocabulary_overlay.example.json"
+DUAL_VOCABULARY_GENERATED_PATH = REPO_ROOT / "generated" / "dual_vocabulary_overlay.json"
 RPG_BRIDGE_WAVE_PATH = REPO_ROOT / "docs" / "RPG_BRIDGE_WAVE.md"
+RPG_RUNTIME_PROJECTION_WAVE_PATH = REPO_ROOT / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md"
 
 ALLOWED_STATUS = {
     "active",
@@ -262,6 +264,25 @@ def validate_questbook_surface() -> None:
             fail("docs/RPG_BRIDGE_WAVE.md must keep the anti-power-score bridge rule explicit")
         if "This wave is a bridge, not a throne." not in bridge_wave_text:
             fail("docs/RPG_BRIDGE_WAVE.md must keep the anti-throne rule explicit")
+
+    if "AOA-Q-0008" in actual_ids:
+        runtime_projection_text = read_text(RPG_RUNTIME_PROJECTION_WAVE_PATH)
+        if "This document defines the first body-facing rollout for the AoA RPG reflection contour." not in runtime_projection_text:
+            fail("docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the body-facing role explicit")
+        if "It is the pass where the contour stops being only a federation of ideas and gains runtime-owned read models, generated transport collections, and a bounded projection seam." not in runtime_projection_text:
+            fail("docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the body-facing transition explicit")
+        if "Let the body carry the contour." not in runtime_projection_text:
+            fail("docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the body-carries-the-contour rule explicit")
+        if "Do not let it rewrite the soul." not in runtime_projection_text:
+            fail("docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the anti-rewrite rule explicit")
+
+        generated_payload = read_json(DUAL_VOCABULARY_GENERATED_PATH)
+        if not isinstance(generated_payload, dict):
+            fail("generated/dual_vocabulary_overlay.json must be a JSON object")
+        if generated_payload.get("schema_version") != "dual_vocabulary_overlay_v1":
+            fail("generated/dual_vocabulary_overlay.json schema_version must equal 'dual_vocabulary_overlay_v1'")
+        if generated_payload.get("public_safe") is not True:
+            fail("generated/dual_vocabulary_overlay.json public_safe must be true")
 
     if "ATM10-Agent" in first_wave_text:
         fail("docs/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")

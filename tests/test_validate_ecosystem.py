@@ -61,8 +61,18 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             ),
             patch.object(
                 validate_ecosystem,
+                "DUAL_VOCABULARY_GENERATED_PATH",
+                self.repo_root / "generated" / "dual_vocabulary_overlay.json",
+            ),
+            patch.object(
+                validate_ecosystem,
                 "RPG_BRIDGE_WAVE_PATH",
                 self.repo_root / "docs" / "RPG_BRIDGE_WAVE.md",
+            ),
+            patch.object(
+                validate_ecosystem,
+                "RPG_RUNTIME_PROJECTION_WAVE_PATH",
+                self.repo_root / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md",
             ),
         )
         for patcher in self.patches:
@@ -141,6 +151,22 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             "`aoa-routing` may orient. It does not own proof, party doctrine, or quest meaning.\n"
             "do not create a universal rank or power score here\n"
             "This wave is a bridge, not a throne.\n",
+        )
+
+    def write_rpg_runtime_projection_surface(self) -> None:
+        write_text(
+            self.repo_root / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md",
+            "This document defines the first body-facing rollout for the AoA RPG reflection contour.\n"
+            "It is the pass where the contour stops being only a federation of ideas and gains runtime-owned read models, generated transport collections, and a bounded projection seam.\n"
+            "Let the body carry the contour.\n"
+            "Do not let it rewrite the soul.\n",
+        )
+        write_text(
+            self.repo_root / "generated" / "dual_vocabulary_overlay.json",
+            '{\n'
+            '  "schema_version": "dual_vocabulary_overlay_v1",\n'
+            '  "public_safe": true\n'
+            '}\n',
         )
 
     def test_valid_extra_quest_file_is_allowed(self) -> None:
@@ -232,6 +258,29 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
         validate_ecosystem.validate_questbook_surface()
 
+    def test_valid_rpg_runtime_projection_extra_quest_is_allowed(self) -> None:
+        self.write_valid_surface()
+        self.write_rpg_runtime_projection_surface()
+        write_text(
+            self.quests_dir / "AOA-Q-0008.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0008",
+                    "repo: Agents-of-Abyss",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
+        )
+
+        validate_ecosystem.validate_questbook_surface()
+
     def test_rpg_bridge_wave_surface_missing_rule_fails(self) -> None:
         self.write_valid_surface()
         self.write_rpg_bridge_wave_surface()
@@ -260,6 +309,34 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
             "routing non-authority explicit|anti-throne rule explicit",
+        ):
+            validate_ecosystem.validate_questbook_surface()
+
+    def test_rpg_runtime_projection_surface_missing_generated_twin_fails(self) -> None:
+        self.write_valid_surface()
+        self.write_rpg_runtime_projection_surface()
+        write_text(
+            self.quests_dir / "AOA-Q-0008.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0008",
+                    "repo: Agents-of-Abyss",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
+        )
+        (self.repo_root / "generated" / "dual_vocabulary_overlay.json").unlink()
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "missing required file: generated/dual_vocabulary_overlay.json",
         ):
             validate_ecosystem.validate_questbook_surface()
 
