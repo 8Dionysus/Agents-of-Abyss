@@ -21,6 +21,11 @@ QUESTBOOK_FIRST_WAVE_PATH = REPO_ROOT / "docs" / "QUESTBOOK_FIRST_WAVE.md"
 QUESTS_PATH = REPO_ROOT / "quests"
 REQUIRED_QUEST_IDS = ("AOA-Q-0001", "AOA-Q-0002", "AOA-Q-0003")
 CLOSED_QUEST_STATES = {"done", "dropped"}
+RPG_ARCHITECTURE_RFC_PATH = REPO_ROOT / "docs" / "RPG_ARCHITECTURE_RFC.md"
+RPG_CANONICAL_TERMINOLOGY_PATH = REPO_ROOT / "docs" / "RPG_CANONICAL_TERMINOLOGY.md"
+RPG_BOUNDARY_MAP_PATH = REPO_ROOT / "docs" / "RPG_BOUNDARY_MAP.md"
+DUAL_VOCABULARY_SCHEMA_PATH = REPO_ROOT / "schemas" / "dual_vocabulary_overlay.schema.json"
+DUAL_VOCABULARY_EXAMPLE_PATH = REPO_ROOT / "examples" / "dual_vocabulary_overlay.example.json"
 
 ALLOWED_STATUS = {
     "active",
@@ -212,6 +217,39 @@ def validate_questbook_surface() -> None:
     for quest_id in closed_quest_ids:
         if quest_id in questbook_text:
             fail(f"QUESTBOOK.md must not list closed quest id '{quest_id}'")
+
+    if "AOA-Q-0006" in actual_ids:
+        architecture_rfc_text = read_text(RPG_ARCHITECTURE_RFC_PATH)
+        if "The RPG layer MUST remain a reflection and orchestration layer." not in architecture_rfc_text:
+            fail("docs/RPG_ARCHITECTURE_RFC.md must keep the reflection-layer core rule explicit")
+        if "One universal power score MUST NOT become authoritative." not in architecture_rfc_text:
+            fail("docs/RPG_ARCHITECTURE_RFC.md must keep the anti-power-score law explicit")
+
+        canonical_terms_text = read_text(RPG_CANONICAL_TERMINOLOGY_PATH)
+        if "the machine vocabulary stays stable" not in canonical_terms_text:
+            fail("docs/RPG_CANONICAL_TERMINOLOGY.md must keep machine vocabulary stability explicit")
+        if "dual_vocabulary_overlay_v1" not in canonical_terms_text:
+            fail("docs/RPG_CANONICAL_TERMINOLOGY.md must reference dual_vocabulary_overlay_v1")
+
+        boundary_map_text = read_text(RPG_BOUNDARY_MAP_PATH)
+        if "The repo that already owns meaning keeps owning meaning." not in boundary_map_text:
+            fail("docs/RPG_BOUNDARY_MAP.md must keep the ownership law explicit")
+        if "1. source meaning wins" not in boundary_map_text:
+            fail("docs/RPG_BOUNDARY_MAP.md must keep the precedence rule explicit")
+
+        schema_payload = read_json(DUAL_VOCABULARY_SCHEMA_PATH)
+        if not isinstance(schema_payload, dict):
+            fail("schemas/dual_vocabulary_overlay.schema.json must be a JSON object")
+        if schema_payload.get("title") != "dual_vocabulary_overlay_v1":
+            fail("schemas/dual_vocabulary_overlay.schema.json title must equal 'dual_vocabulary_overlay_v1'")
+
+        example_payload = read_json(DUAL_VOCABULARY_EXAMPLE_PATH)
+        if not isinstance(example_payload, dict):
+            fail("examples/dual_vocabulary_overlay.example.json must be a JSON object")
+        if example_payload.get("schema_version") != "dual_vocabulary_overlay_v1":
+            fail("examples/dual_vocabulary_overlay.example.json schema_version must equal 'dual_vocabulary_overlay_v1'")
+        if example_payload.get("public_safe") is not True:
+            fail("examples/dual_vocabulary_overlay.example.json public_safe must be true")
 
     if "ATM10-Agent" in first_wave_text:
         fail("docs/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")

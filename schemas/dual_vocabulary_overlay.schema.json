@@ -1,0 +1,529 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://8dionysus.github.io/schemas/dual_vocabulary_overlay_v1.schema.json",
+  "title": "dual_vocabulary_overlay_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "overlay_id",
+    "theme_id",
+    "language",
+    "entries",
+    "public_safe"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "dual_vocabulary_overlay_v1"
+    },
+    "overlay_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "theme_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "type": "string",
+      "minLength": 2
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 26,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "canonical_key",
+          "canonical_label",
+          "presentation_label",
+          "presentation_group"
+        ],
+        "properties": {
+          "canonical_key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "canonical_label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "presentation_label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "presentation_group": {
+            "type": "string",
+            "enum": [
+              "identity",
+              "attribute",
+              "derived_stat",
+              "resource",
+              "loadout",
+              "quest",
+              "reputation",
+              "campaign",
+              "action",
+              "status"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": "string"
+    },
+    "public_safe": {
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "class_archetype"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "execution_origin"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "rank"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "boundary_integrity"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "execution_reliability"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "change_legibility"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "review_sharpness"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "proof_discipline"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "provenance_hygiene"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "deep_readiness"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "integrity_budget"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "focus_budget"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "deep_budget"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "recall_budget"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "autonomy_budget"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "inspect"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "expand"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "handoff"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "verify"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "reanchor"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "proof_trust"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "handoff_trust"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "provenance_trust"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "campaign_discipline"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "boundary_trust"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "entries": {
+          "contains": {
+            "type": "object",
+            "properties": {
+              "canonical_key": {
+                "const": "review_trust"
+              }
+            },
+            "required": [
+              "canonical_key"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
