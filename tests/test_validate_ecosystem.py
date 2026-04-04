@@ -34,6 +34,31 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             patch.object(validate_ecosystem, "QUESTBOOK_MODEL_PATH", self.questbook_model_path),
             patch.object(validate_ecosystem, "QUESTBOOK_FIRST_WAVE_PATH", self.first_wave_path),
             patch.object(validate_ecosystem, "QUESTS_PATH", self.quests_dir),
+            patch.object(
+                validate_ecosystem,
+                "RPG_ARCHITECTURE_RFC_PATH",
+                self.repo_root / "docs" / "RPG_ARCHITECTURE_RFC.md",
+            ),
+            patch.object(
+                validate_ecosystem,
+                "RPG_CANONICAL_TERMINOLOGY_PATH",
+                self.repo_root / "docs" / "RPG_CANONICAL_TERMINOLOGY.md",
+            ),
+            patch.object(
+                validate_ecosystem,
+                "RPG_BOUNDARY_MAP_PATH",
+                self.repo_root / "docs" / "RPG_BOUNDARY_MAP.md",
+            ),
+            patch.object(
+                validate_ecosystem,
+                "DUAL_VOCABULARY_SCHEMA_PATH",
+                self.repo_root / "schemas" / "dual_vocabulary_overlay.schema.json",
+            ),
+            patch.object(
+                validate_ecosystem,
+                "DUAL_VOCABULARY_EXAMPLE_PATH",
+                self.repo_root / "examples" / "dual_vocabulary_overlay.example.json",
+            ),
         )
         for patcher in self.patches:
             patcher.start()
@@ -74,6 +99,36 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
                 + "\n",
             )
 
+    def write_rpg_architecture_surface(self) -> None:
+        write_text(
+            self.repo_root / "docs" / "RPG_ARCHITECTURE_RFC.md",
+            "The RPG layer MUST remain a reflection and orchestration layer.\n"
+            "One universal power score MUST NOT become authoritative.\n",
+        )
+        write_text(
+            self.repo_root / "docs" / "RPG_CANONICAL_TERMINOLOGY.md",
+            "the machine vocabulary stays stable\n"
+            "dual_vocabulary_overlay_v1\n",
+        )
+        write_text(
+            self.repo_root / "docs" / "RPG_BOUNDARY_MAP.md",
+            "The repo that already owns meaning keeps owning meaning.\n"
+            "1. source meaning wins\n",
+        )
+        write_text(
+            self.repo_root / "schemas" / "dual_vocabulary_overlay.schema.json",
+            '{\n'
+            '  "title": "dual_vocabulary_overlay_v1"\n'
+            '}\n',
+        )
+        write_text(
+            self.repo_root / "examples" / "dual_vocabulary_overlay.example.json",
+            '{\n'
+            '  "schema_version": "dual_vocabulary_overlay_v1",\n'
+            '  "public_safe": true\n'
+            '}\n',
+        )
+
     def test_valid_extra_quest_file_is_allowed(self) -> None:
         self.write_valid_surface()
         write_text(
@@ -113,6 +168,29 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         write_text(
             self.questbook_path,
             self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0005`\n",
+        )
+
+        validate_ecosystem.validate_questbook_surface()
+
+    def test_valid_rpg_architecture_extra_quest_is_allowed(self) -> None:
+        self.write_valid_surface()
+        self.write_rpg_architecture_surface()
+        write_text(
+            self.quests_dir / "AOA-Q-0006.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0006",
+                    "repo: Agents-of-Abyss",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0006`\n",
         )
 
         validate_ecosystem.validate_questbook_surface()
@@ -171,6 +249,32 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
             "QUESTBOOK.md must not list closed quest id 'AOA-Q-0004'",
+        ):
+            validate_ecosystem.validate_questbook_surface()
+
+    def test_rpg_architecture_quest_requires_rfc_docs(self) -> None:
+        self.write_valid_surface()
+        write_text(
+            self.quests_dir / "AOA-Q-0006.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0006",
+                    "repo: Agents-of-Abyss",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0006`\n",
+        )
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "missing required file: docs/RPG_ARCHITECTURE_RFC.md",
         ):
             validate_ecosystem.validate_questbook_surface()
 

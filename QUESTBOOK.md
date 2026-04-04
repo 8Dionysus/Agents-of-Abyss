@@ -6,6 +6,7 @@ It does not absorb repo-local quest detail from sibling repositories.
 ## Frontier
 
 - `AOA-Q-0002` — define the source-owned quest dispatch seam without promoting routing into authority
+- `AOA-Q-0006` — fix the runtime/frontend architecture law for the AoA RPG layer
 
 ## Near
 
