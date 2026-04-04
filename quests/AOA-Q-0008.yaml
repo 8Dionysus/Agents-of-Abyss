@@ -1,0 +1,54 @@
+schema_version: work_quest_v1
+id: AOA-Q-0008
+title: Define the RPG runtime/projection wave for the first body-facing AoA slice
+summary: Stage the runtime-owned collection and projection pass so the AoA RPG contour can become readable to services and frontend layers without mutating upstream meaning.
+repo: Agents-of-Abyss
+owner_surface: center/rpg-runtime-projection-wave
+theme_ref: ''
+milestone_ref: ''
+kind: doctrine
+state: triaged
+band: frontier
+difficulty: d4_architecture
+risk: r2_contract
+control_mode: human_codex_copilot
+delegate_tier: conductor
+fallback_tier: deep
+wrapper_class: codex_primary
+write_scope: cross_repo_request
+split_required: true
+complexity_basis:
+  scope: 3
+  ambiguity: 2
+  boundary: 3
+  verification: 2
+parent: null
+depends_on:
+  - AOA-Q-0006
+  - AOA-Q-0007
+activation:
+  mode: manual
+  note: open when the RPG contour needs a runtime body and frontend-readable bundles
+anchor_ref:
+  artifact: rpg_runtime_projection_wave
+  ref: docs/RPG_RUNTIME_PROJECTION_WAVE.md
+  note: the runtime body must stay downstream of upstream meaning
+handoff_role: federation-maintainer
+evidence:
+  - runtime ownership is explicit
+  - route-api remains read-only and advisory
+  - frontend bundles remain derived and cited
+harvest:
+  target: none
+opened_at: '2026-04-04'
+touched_at: '2026-04-04'
+tags:
+  - rpg
+  - runtime
+  - frontend
+  - collections
+  - projections
+notes: >
+  Do not let this pass collapse AoA into ToS or treat runtime projections as source doctrine.
+  Keep ability and feat ids pass-through until reviewed runtime mirrors exist.
+public_safe: true
