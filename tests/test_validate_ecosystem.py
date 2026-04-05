@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import shutil
 import sys
 import tempfile
@@ -18,6 +19,13 @@ import validate_ecosystem
 def write_text(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
+
+
+def copy_repo_text(repo_root: Path, relative_path: str) -> None:
+    source = Path(__file__).resolve().parents[1] / relative_path
+    destination = repo_root / relative_path
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
 
 
 class ValidateQuestbookSurfaceTests(unittest.TestCase):
@@ -130,19 +138,8 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             "The repo that already owns meaning keeps owning meaning.\n"
             "1. source meaning wins\n",
         )
-        write_text(
-            self.repo_root / "schemas" / "dual_vocabulary_overlay.schema.json",
-            '{\n'
-            '  "title": "dual_vocabulary_overlay_v1"\n'
-            '}\n',
-        )
-        write_text(
-            self.repo_root / "examples" / "dual_vocabulary_overlay.example.json",
-            '{\n'
-            '  "schema_version": "dual_vocabulary_overlay_v1",\n'
-            '  "public_safe": true\n'
-            '}\n',
-        )
+        copy_repo_text(self.repo_root, "schemas/dual_vocabulary_overlay.schema.json")
+        copy_repo_text(self.repo_root, "examples/dual_vocabulary_overlay.example.json")
 
     def write_rpg_bridge_wave_surface(self) -> None:
         write_text(
@@ -161,13 +158,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             "Let the body carry the contour.\n"
             "Do not let it rewrite the soul.\n",
         )
-        write_text(
-            self.repo_root / "generated" / "dual_vocabulary_overlay.json",
-            '{\n'
-            '  "schema_version": "dual_vocabulary_overlay_v1",\n'
-            '  "public_safe": true\n'
-            '}\n',
-        )
+        copy_repo_text(self.repo_root, "generated/dual_vocabulary_overlay.json")
 
     def test_valid_extra_quest_file_is_allowed(self) -> None:
         self.write_valid_surface()
@@ -260,6 +251,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
     def test_valid_rpg_runtime_projection_extra_quest_is_allowed(self) -> None:
         self.write_valid_surface()
+        self.write_rpg_architecture_surface()
         self.write_rpg_runtime_projection_surface()
         write_text(
             self.quests_dir / "AOA-Q-0008.yaml",
@@ -337,6 +329,83 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
             "missing required file: generated/dual_vocabulary_overlay.json",
+        ):
+            validate_ecosystem.validate_questbook_surface()
+
+    def test_rpg_runtime_projection_surface_rejects_missing_overlay_id(self) -> None:
+        self.write_valid_surface()
+        self.write_rpg_architecture_surface()
+        self.write_rpg_runtime_projection_surface()
+        write_text(
+            self.quests_dir / "AOA-Q-0008.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0008",
+                    "repo: Agents-of-Abyss",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
+        )
+        write_text(
+            self.repo_root / "generated" / "dual_vocabulary_overlay.json",
+            json.dumps(
+                {
+                    key: value
+                    for key, value in json.loads(
+                        (self.repo_root / "generated" / "dual_vocabulary_overlay.json").read_text(
+                            encoding="utf-8"
+                        )
+                    ).items()
+                    if key != "overlay_id"
+                },
+                indent=2,
+            )
+            + "\n",
+        )
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "missing required keys: overlay_id",
+        ):
+            validate_ecosystem.validate_questbook_surface()
+
+    def test_rpg_runtime_projection_surface_rejects_duplicate_canonical_key(self) -> None:
+        self.write_valid_surface()
+        self.write_rpg_architecture_surface()
+        self.write_rpg_runtime_projection_surface()
+        write_text(
+            self.quests_dir / "AOA-Q-0008.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0008",
+                    "repo: Agents-of-Abyss",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
+        )
+
+        generated_path = self.repo_root / "generated" / "dual_vocabulary_overlay.json"
+        payload = json.loads(generated_path.read_text(encoding="utf-8"))
+        payload["entries"][0]["canonical_key"] = payload["entries"][1]["canonical_key"]
+        generated_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "must not duplicate canonical_key values",
         ):
             validate_ecosystem.validate_questbook_surface()
 

@@ -95,6 +95,134 @@ def validate_schema_surface() -> None:
         fail(f"schema is missing required top-level keys: {', '.join(missing)}")
 
 
+def dual_vocabulary_required_canonical_keys(schema: dict[str, object]) -> set[str]:
+    required_keys: set[str] = set()
+    for rule in schema.get("allOf", []):
+        if not isinstance(rule, dict):
+            continue
+        properties = rule.get("properties")
+        if not isinstance(properties, dict):
+            continue
+        entries = properties.get("entries")
+        if not isinstance(entries, dict):
+            continue
+        contains = entries.get("contains")
+        if not isinstance(contains, dict):
+            continue
+        contains_properties = contains.get("properties")
+        if not isinstance(contains_properties, dict):
+            continue
+        canonical_key = contains_properties.get("canonical_key")
+        if not isinstance(canonical_key, dict):
+            continue
+        const_value = canonical_key.get("const")
+        if isinstance(const_value, str):
+            required_keys.add(const_value)
+    return required_keys
+
+
+def validate_dual_vocabulary_generated_payload(payload: object, schema: dict[str, object]) -> None:
+    if not isinstance(payload, dict):
+        fail("generated/dual_vocabulary_overlay.json must be a JSON object")
+
+    required_top_level = schema.get("required")
+    if not isinstance(required_top_level, list):
+        fail("schemas/dual_vocabulary_overlay.schema.json must declare top-level required fields")
+    missing_top_level = [key for key in required_top_level if key not in payload]
+    if missing_top_level:
+        fail(
+            "generated/dual_vocabulary_overlay.json is missing required keys: "
+            + ", ".join(missing_top_level)
+        )
+
+    properties = schema.get("properties")
+    if not isinstance(properties, dict):
+        fail("schemas/dual_vocabulary_overlay.schema.json must declare properties")
+    entries_schema = properties.get("entries")
+    if not isinstance(entries_schema, dict):
+        fail("schemas/dual_vocabulary_overlay.schema.json must define entries")
+
+    for field_name in ("overlay_id", "theme_id", "language"):
+        value = payload.get(field_name)
+        if not isinstance(value, str) or not value:
+            fail(f"generated/dual_vocabulary_overlay.json {field_name} must be a non-empty string")
+
+    if payload.get("schema_version") != "dual_vocabulary_overlay_v1":
+        fail("generated/dual_vocabulary_overlay.json schema_version must equal 'dual_vocabulary_overlay_v1'")
+    if payload.get("public_safe") is not True:
+        fail("generated/dual_vocabulary_overlay.json public_safe must be true")
+
+    entries = payload.get("entries")
+    if not isinstance(entries, list):
+        fail("generated/dual_vocabulary_overlay.json entries must be a list")
+
+    min_items = entries_schema.get("minItems")
+    if isinstance(min_items, int) and len(entries) < min_items:
+        fail(f"generated/dual_vocabulary_overlay.json entries must contain at least {min_items} items")
+    max_items = entries_schema.get("maxItems")
+    if isinstance(max_items, int) and len(entries) > max_items:
+        fail(f"generated/dual_vocabulary_overlay.json entries must contain at most {max_items} items")
+
+    item_schema = entries_schema.get("items")
+    if not isinstance(item_schema, dict):
+        fail("schemas/dual_vocabulary_overlay.schema.json entries.items must be an object")
+    required_entry_fields = item_schema.get("required")
+    if not isinstance(required_entry_fields, list):
+        fail("schemas/dual_vocabulary_overlay.schema.json entries.items must declare required fields")
+    item_properties = item_schema.get("properties")
+    if not isinstance(item_properties, dict):
+        fail("schemas/dual_vocabulary_overlay.schema.json entries.items must declare properties")
+    presentation_group_schema = item_properties.get("presentation_group")
+    if not isinstance(presentation_group_schema, dict) or not isinstance(
+        presentation_group_schema.get("enum"),
+        list,
+    ):
+        fail("schemas/dual_vocabulary_overlay.schema.json must constrain presentation_group")
+    allowed_groups = {value for value in presentation_group_schema["enum"] if isinstance(value, str)}
+
+    seen_canonical_keys: set[str] = set()
+    duplicate_canonical_keys: list[str] = []
+    for index, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            fail(f"generated/dual_vocabulary_overlay.json entries[{index}] must be an object")
+        missing_entry_fields = [key for key in required_entry_fields if key not in entry]
+        if missing_entry_fields:
+            fail(
+                "generated/dual_vocabulary_overlay.json "
+                f"entries[{index}] is missing required keys: {', '.join(missing_entry_fields)}"
+            )
+        for field_name in ("canonical_key", "canonical_label", "presentation_label"):
+            value = entry.get(field_name)
+            if not isinstance(value, str) or not value:
+                fail(
+                    "generated/dual_vocabulary_overlay.json "
+                    f"entries[{index}].{field_name} must be a non-empty string"
+                )
+        presentation_group = entry.get("presentation_group")
+        if presentation_group not in allowed_groups:
+            fail(
+                "generated/dual_vocabulary_overlay.json "
+                f"entries[{index}].presentation_group must stay within the schema enum"
+            )
+        canonical_key = entry["canonical_key"]
+        if canonical_key in seen_canonical_keys:
+            duplicate_canonical_keys.append(canonical_key)
+        seen_canonical_keys.add(canonical_key)
+
+    if duplicate_canonical_keys:
+        fail(
+            "generated/dual_vocabulary_overlay.json must not duplicate canonical_key values "
+            f"(first duplicate: {duplicate_canonical_keys[0]})"
+        )
+
+    missing_canonical_keys = sorted(dual_vocabulary_required_canonical_keys(schema) - seen_canonical_keys)
+    if missing_canonical_keys:
+        fail(
+            "generated/dual_vocabulary_overlay.json is missing required canonical_key values: "
+            + ", ".join(missing_canonical_keys)
+        )
+
+
 def validate_registry() -> None:
     payload = read_json(REGISTRY_PATH)
     if not isinstance(payload, dict):
@@ -277,12 +405,10 @@ def validate_questbook_surface() -> None:
             fail("docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the anti-rewrite rule explicit")
 
         generated_payload = read_json(DUAL_VOCABULARY_GENERATED_PATH)
-        if not isinstance(generated_payload, dict):
-            fail("generated/dual_vocabulary_overlay.json must be a JSON object")
-        if generated_payload.get("schema_version") != "dual_vocabulary_overlay_v1":
-            fail("generated/dual_vocabulary_overlay.json schema_version must equal 'dual_vocabulary_overlay_v1'")
-        if generated_payload.get("public_safe") is not True:
-            fail("generated/dual_vocabulary_overlay.json public_safe must be true")
+        schema_payload = read_json(DUAL_VOCABULARY_SCHEMA_PATH)
+        if not isinstance(schema_payload, dict):
+            fail("schemas/dual_vocabulary_overlay.schema.json must be a JSON object")
+        validate_dual_vocabulary_generated_payload(generated_payload, schema_payload)
 
     if "ATM10-Agent" in first_wave_text:
         fail("docs/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")

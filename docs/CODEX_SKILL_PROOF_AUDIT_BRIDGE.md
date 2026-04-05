@@ -54,26 +54,31 @@ If both are moving, execution meaning should be reviewed first and proof meaning
 4. Public chooser wording must stay weaker than the bundle contract.
 5. Thin overlays may adapt commands, paths, approval posture, and verification notes, but they must not become downstream authority.
 
-## Current pairing map
+## Current pairings live in source repos
 
-### Change workflow to workflow-proof pairings
+This bridge does not own a static workflow-to-proof pairing table.
 
-- `aoa-change-protocol` is the core bounded change workflow surface.
-- `aoa-bounded-change-quality` is the current process-side proof surface for that workflow class.
-- `aoa-verification-honesty`, `aoa-scope-drift-detection`, and `aoa-ambiguity-handling` are the narrower diagnostic neighbors when the main question is a specific failure class rather than one end-to-end workflow signal.
+If a seam review needs the current live pairing, read the owner surfaces first:
 
-### Artifact / process split
+### Workflow-side current state
 
-- `aoa-bounded-change-quality` is the process-side reading.
-- `aoa-artifact-review-rubric` is the artifact-side reading.
-- `aoa-output-vs-process-gap` is the bridge only after both standalone readings are already visible.
+- `aoa-skills/SKILL_INDEX.md`
+- the target `skills/*/SKILL.md`
+- the target `skills/*/techniques.yaml`
+- `aoa-skills/AUDIT.md`
 
-### Comparison spine
+### Proof-side current state
 
-- `aoa-regression-same-task` is the only current public default baseline surface.
-- `aoa-output-vs-process-gap` remains the draft peer-comparison bridge.
-- `aoa-longitudinal-growth-snapshot` remains the draft repeated-window movement surface.
-- `aoa-eval-integrity-check` travels as the bounded integrity sidecar when wording, routing, or maturity waves could otherwise imply more than the evidence carries.
+- `aoa-evals/EVAL_INDEX.md`
+- `aoa-evals/EVAL_SELECTION.md`
+- the target `bundles/*/EVAL.md`
+- the target `bundles/*/eval.yaml`
+- `generated/comparison_spine.json` when baseline or comparison posture matters
+
+Derive the current pairing from those source-owned surfaces instead of storing it here.
+
+If the bridge needs a new standing seam rule, add that rule here.
+If only a concrete pairing changed, update the owning repo instead.
 
 ## Cross-repo wave order
 
