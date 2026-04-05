@@ -33,6 +33,12 @@ Use it when the question is not only "what exists?" but also:
 | `abyss-stack` | infrastructure substrate and implementation body for AoA-oriented systems |
 | `Tree-of-Sophia` | living knowledge architecture that AoA helps build and operationalize, including source-authored node law and the public tiny-entry seam |
 
+## Supporting consumer surfaces
+
+| repository | role in the wider system | compact registry v1 note |
+|---|---|---|
+| `aoa-sdk` | typed local-first consumer and orchestration surface for source-owned AoA repositories | routed from the center, but intentionally outside compact registry v1 |
+
 ## Routing rule of thumb
 
 When deciding where something belongs:
@@ -50,3 +56,6 @@ When deciding where something belongs:
 Source repositories own meaning.
 Meta repositories own maps.
 Derived repositories own access layers.
+
+Compact registry v1 covers the center, the public AoA layers, and the adjacent system anchors listed in the ecosystem map.
+Supporting consumer surfaces stay routable from the center but remain outside compact registry v1 until a later map version says otherwise.

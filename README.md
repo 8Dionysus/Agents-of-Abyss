@@ -16,6 +16,18 @@ Read in this order:
 4. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline
 5. [ROADMAP](ROADMAP.md) for program-level direction
 
+If you only need the shortest outsider overview, stop after step 4 and return here for the route table below.
+
+## How to verify center claims
+
+Read in this order when you need to check a public claim coming from the center:
+
+1. [CHARTER](CHARTER.md) for what this repository owns and does not own
+2. [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current documented public federation contour
+3. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline
+4. [ROADMAP](ROADMAP.md) for declared direction and current phase
+5. [generated/ecosystem_registry.min.json](generated/ecosystem_registry.min.json) and `python scripts/validate_ecosystem.py` for the compact machine-readable v1 surface the center currently validates
+
 Then branch by need:
 
 - **structural trunk**: [docs/ROOTLINE](docs/ROOTLINE.md)
@@ -43,16 +55,16 @@ Then branch by need:
 
 ## Current contour
 
-The current center-level contour is:
+The current center-level framing and declared near-term direction are:
 
-- **trunk-first structure** before meaning drift, archive inflation, or autonomy rhetoric
-- **method-centered growth** with scenario-level method living in `aoa-playbooks`
-- **source-first donor refinement** following `donor -> technique/skill -> playbook -> eval`
-- **bounded counterpart bridges** where `aoa-kag` stays derived and conceptual origin stays in `Tree-of-Sophia`
-- **contract-first witness and compost** before deeper runtime instrumentation
-- **explicit ToS support** for growth law, corpus scaffold, lineage pilot, and soil prep without AoA authoring ToS meaning
+- **trunk-first structure** to reduce meaning drift, archive inflation, and autonomy rhetoric
+- **method-centered growth** with scenario-level method routed into `aoa-playbooks`
+- **source-first donor refinement** along `donor -> technique/skill -> playbook -> eval`
+- **bounded counterpart bridges** with `aoa-kag` remaining derived and conceptual origin remaining in `Tree-of-Sophia`
+- **contract-first witness and compost** before any deeper runtime instrumentation wave
+- **explicit, reviewable ToS support** for growth law, corpus scaffold, lineage pilot, and soil prep without AoA authoring ToS meaning
 
-The linked wave notes above hold the compact doctrine for each move.
+The linked wave notes above hold the compact doctrine for each declared move.
 
 ## What this repository owns
 
@@ -78,6 +90,6 @@ The linked wave notes above hold the compact doctrine for each move.
 
 - [`abyss-stack`](https://github.com/8Dionysus/abyss-stack) owns runtime, deployment, storage, and service posture
 - [`Tree-of-Sophia`](https://github.com/8Dionysus/Tree-of-Sophia) owns source-first knowledge architecture and authored ToS meaning
-- [`aoa-sdk`](https://github.com/8Dionysus/aoa-sdk) is the typed local-first consumer and orchestration spine for source-owned AoA surfaces; it is a consumer surface, not the constitutional center
+- [`aoa-sdk`](https://github.com/8Dionysus/aoa-sdk) is the typed local-first consumer and orchestration spine for source-owned AoA surfaces; it is a supporting consumer surface, not the constitutional center, and it stays outside the compact registry v1 by design
 
 AoA should grow by adding clear, reviewable layers rather than collapsing everything into the center.

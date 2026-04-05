@@ -42,6 +42,19 @@ ALLOWED_STATUS = {
 }
 ALLOWED_SHARED_MATURITY = {"seed", "proven", "promoted", "canonical", "deprecated"}
 ALLOWED_KIND = {"meta", "source", "derived", "related"}
+DOCUMENTED_REGISTRY_V1 = {
+    "Agents-of-Abyss": {"role": "ecosystem-center", "kind": "meta"},
+    "aoa-techniques": {"role": "practice-canon", "kind": "source"},
+    "aoa-skills": {"role": "execution-canon", "kind": "source"},
+    "aoa-evals": {"role": "proof-canon", "kind": "source"},
+    "aoa-routing": {"role": "navigation-layer", "kind": "derived"},
+    "aoa-memo": {"role": "memory-layer", "kind": "source"},
+    "aoa-agents": {"role": "agent-layer", "kind": "source"},
+    "aoa-playbooks": {"role": "scenario-composition-layer", "kind": "source"},
+    "aoa-kag": {"role": "derived-knowledge-substrate", "kind": "derived"},
+    "abyss-stack": {"role": "infrastructure-substrate", "kind": "related"},
+    "Tree-of-Sophia": {"role": "knowledge-architecture-counterpart", "kind": "related"},
+}
 
 
 class ValidationError(RuntimeError):
@@ -242,13 +255,7 @@ def validate_registry() -> None:
         fail("registry 'repos' must be a non-empty list")
 
     seen_names: set[str] = set()
-    required_core = {
-        "Agents-of-Abyss",
-        "aoa-techniques",
-        "aoa-skills",
-        "aoa-evals",
-        "aoa-routing",
-    }
+    expected_names = set(DOCUMENTED_REGISTRY_V1)
 
     for index, repo in enumerate(repos):
         location = f"repos[{index}]"
@@ -280,9 +287,34 @@ def validate_registry() -> None:
         if kind not in ALLOWED_KIND:
             fail(f"{location}.kind '{kind}' is not allowed")
 
-    missing_core = sorted(required_core - seen_names)
-    if missing_core:
-        fail(f"ecosystem registry is missing required core repos: {', '.join(missing_core)}")
+        expected_entry = DOCUMENTED_REGISTRY_V1.get(name)
+        if expected_entry is not None:
+            expected_role = expected_entry["role"]
+            expected_kind = expected_entry["kind"]
+            if role != expected_role:
+                fail(
+                    f"{location}.role for '{name}' must equal "
+                    f"'{expected_role}'"
+                )
+            if kind != expected_kind:
+                fail(
+                    f"{location}.kind for '{name}' must equal "
+                    f"'{expected_kind}'"
+                )
+
+    missing_expected = sorted(expected_names - seen_names)
+    if missing_expected:
+        fail(
+            "ecosystem registry is missing documented v1 repos: "
+            + ", ".join(missing_expected)
+        )
+
+    unexpected_repos = sorted(seen_names - expected_names)
+    if unexpected_repos:
+        fail(
+            "ecosystem registry contains repos outside compact v1 scope: "
+            + ", ".join(unexpected_repos)
+        )
 
 
 def validate_nested_agents_surface() -> None:

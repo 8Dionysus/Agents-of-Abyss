@@ -6,7 +6,7 @@ This roadmap tracks the growth of the AoA ecosystem at the program level. It is 
 
 AoA is moving from center bootstrap into federation alignment.
 
-The public federation now includes:
+The current documented public federation contour includes:
 - `Agents-of-Abyss`
 - `aoa-techniques`
 - `aoa-skills`
@@ -21,7 +21,7 @@ Adjacent system anchors include:
 - `Tree-of-Sophia`
 - `abyss-stack`
 
-The current growth move after the trunk-first structural wave is method-centered and then counterpart-bridge oriented:
+The current center-declared growth move after the trunk-first structural wave is method-centered and then counterpart-bridge oriented:
 - give scenario-level method a real home in `aoa-playbooks`
 - keep donor intake source-first and refinement-shaped
 - keep ecosystem maturity claims evidence-backed and cross-repo legible
@@ -32,7 +32,7 @@ The current growth move after the trunk-first structural wave is method-centered
 - support the first ToS lineage pilot explicitly without letting AoA author the branch itself
 - support ToS soil preparation explicitly without letting AoA rename it into active expansion
 
-The federation now also carries its first bounded cross-repo entry and readiness alignment surfaces:
+The current center framing also includes its first bounded cross-repo entry and readiness-alignment surfaces:
 - keep the thin federation entry ABI in `aoa-routing` additive and non-authoritative
 - keep the experimental federation spine and export-readiness posture in `aoa-kag` bounded and derived
 - keep the public ToS tiny-entry seam source-owned even when downstream layers consume it
@@ -40,7 +40,7 @@ The federation now also carries its first bounded cross-repo entry and readiness
 ## Phase 1: center realignment
 
 Goals:
-- align `Agents-of-Abyss` with the public federation that already exists
+- align `Agents-of-Abyss` with the documented public federation contour that already exists
 - update the README, charter, ecosystem map, layers, and federation rules
 - correct the ecosystem registry without breaking the current validator surface
 - make AoA legible again from the center outward
