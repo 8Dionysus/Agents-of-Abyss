@@ -493,5 +493,100 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             validate_ecosystem.validate_questbook_surface()
 
 
+class ValidateRegistryTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="aoa_center_registry_"))
+        self.repo_root = self.temp_dir / "Agents-of-Abyss"
+        self.registry_path = self.repo_root / "generated" / "ecosystem_registry.min.json"
+        self.patches = (
+            patch.object(validate_ecosystem, "REPO_ROOT", self.repo_root),
+            patch.object(validate_ecosystem, "REGISTRY_PATH", self.registry_path),
+        )
+        for patcher in self.patches:
+            patcher.start()
+            self.addCleanup(patcher.stop)
+        self.addCleanup(shutil.rmtree, self.temp_dir)
+
+    def write_valid_registry(self) -> None:
+        copy_repo_text(self.repo_root, "generated/ecosystem_registry.min.json")
+
+    def read_registry(self) -> dict[str, object]:
+        return json.loads(self.registry_path.read_text(encoding="utf-8"))
+
+    def write_registry(self, payload: dict[str, object]) -> None:
+        write_text(self.registry_path, json.dumps(payload, indent=2) + "\n")
+
+    def test_valid_documented_v1_registry_passes(self) -> None:
+        self.write_valid_registry()
+
+        validate_ecosystem.validate_registry()
+
+    def test_missing_documented_v1_repo_fails(self) -> None:
+        self.write_valid_registry()
+        payload = self.read_registry()
+        payload["repos"] = [
+            repo
+            for repo in payload["repos"]
+            if isinstance(repo, dict) and repo.get("name") != "aoa-kag"
+        ]
+        self.write_registry(payload)
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "missing documented v1 repos: aoa-kag",
+        ):
+            validate_ecosystem.validate_registry()
+
+    def test_wrong_role_for_documented_repo_fails(self) -> None:
+        self.write_valid_registry()
+        payload = self.read_registry()
+        for repo in payload["repos"]:
+            if isinstance(repo, dict) and repo.get("name") == "aoa-agents":
+                repo["role"] = "persona-layer"
+                break
+        self.write_registry(payload)
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            r"role for 'aoa-agents' must equal 'agent-layer'",
+        ):
+            validate_ecosystem.validate_registry()
+
+    def test_wrong_kind_for_documented_repo_fails(self) -> None:
+        self.write_valid_registry()
+        payload = self.read_registry()
+        for repo in payload["repos"]:
+            if isinstance(repo, dict) and repo.get("name") == "abyss-stack":
+                repo["kind"] = "derived"
+                break
+        self.write_registry(payload)
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            r"kind for 'abyss-stack' must equal 'related'",
+        ):
+            validate_ecosystem.validate_registry()
+
+    def test_supporting_consumer_surface_is_out_of_scope_for_compact_v1(self) -> None:
+        self.write_valid_registry()
+        payload = self.read_registry()
+        payload["repos"].append(
+            {
+                "name": "aoa-sdk",
+                "role": "consumer-surface",
+                "status": "active",
+                "shared_maturity": "seed",
+                "kind": "related",
+            }
+        )
+        self.write_registry(payload)
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "outside compact v1 scope: aoa-sdk",
+        ):
+            validate_ecosystem.validate_registry()
+
+
 if __name__ == "__main__":
     unittest.main()

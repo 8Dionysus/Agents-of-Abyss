@@ -8,31 +8,46 @@ If you are editing files under `docs/`, read [`AGENTS.md`](AGENTS.md) in this di
 
 ## Start here
 
-- Read [CHARTER](../CHARTER.md) for the ecosystem constitution.
-- Read [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md) for the current repository roles.
-- Read [LAYERS](LAYERS.md) for the conceptual layer model.
-- Read [REPO_ROLES](REPO_ROLES.md) for the compact operational ownership guide.
-- Read [FEDERATION_RULES](FEDERATION_RULES.md) for source-of-truth boundaries.
-- Read [ROOTLINE](ROOTLINE.md) for the current first-wave AoA x ToS planting spine.
-- Read [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) for the standing recovery law that governs how AoA regains a valid anchor when continuity fails.
-- Read [ROADMAP](../ROADMAP.md) for ecosystem-level direction.
-
-## Docs in this repository
-
-- [LAYERS](LAYERS.md) — what each AoA layer is for
-- [REPO_ROLES](REPO_ROLES.md) — what each current or emerging repository owns and should not absorb
-- [FEDERATION_RULES](FEDERATION_RULES.md) — the stable ownership boundaries across the AoA federation
-- [ROOTLINE](ROOTLINE.md) — the current trunk-first coordination spine for AoA x ToS planting
-- [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) - the standing recovery law for long-horizon routes across the federation
-
-## Recommended reading paths
-
-### I need the fastest overview of AoA
+For the shortest outsider overview, read in this order:
 
 1. [README](../README.md)
 2. [CHARTER](../CHARTER.md)
 3. [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md)
-4. [LAYERS](LAYERS.md)
+4. [FEDERATION_RULES](FEDERATION_RULES.md)
+5. [ROADMAP](../ROADMAP.md)
+
+Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need conceptual or routing detail rather than the first-pass center view.
+
+## How to verify center claims
+
+1. [CHARTER](../CHARTER.md)
+2. [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md)
+3. [FEDERATION_RULES](FEDERATION_RULES.md)
+4. [ROADMAP](../ROADMAP.md)
+5. [generated/ecosystem_registry.min.json](../generated/ecosystem_registry.min.json) and `python scripts/validate_ecosystem.py`
+
+## Entry docs
+
+- [LAYERS](LAYERS.md) — what each AoA layer is for
+- [REPO_ROLES](REPO_ROLES.md) — what each current or emerging repository owns and should not absorb
+- [FEDERATION_RULES](FEDERATION_RULES.md) — the stable ownership boundaries across the AoA federation
+
+## Doctrine docs
+
+- [ROOTLINE](ROOTLINE.md) — the current trunk-first coordination spine for AoA x ToS planting
+- [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) — the standing recovery law for long-horizon routes across the federation
+- [METHOD_SPINE](METHOD_SPINE.md) — the center-level doctrine for method placement and maturity language
+- [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md) — the boundary doctrine for AoA x ToS counterpart work and KAG restraint
+- [WITNESS_COMPOST](WITNESS_COMPOST.md) — the paired public-contract doctrine for witness and compost
+- [TOS_GROWTH_SUPPORT](TOS_GROWTH_SUPPORT.md), [TOS_TEMPLATE_SUPPORT](TOS_TEMPLATE_SUPPORT.md), [TOS_LINEAGE_PILOT_SUPPORT](TOS_LINEAGE_PILOT_SUPPORT.md), [TOS_SOIL_PREP_SUPPORT](TOS_SOIL_PREP_SUPPORT.md) — narrow AoA support doctrine for ToS-owned work
+
+## Support and maintenance docs
+
+- [AGENTS.md](AGENTS.md) — local editing and maintenance instructions for the `docs/` surface
+- [QUESTBOOK_MODEL](QUESTBOOK_MODEL.md) and [QUESTBOOK_FIRST_WAVE](QUESTBOOK_FIRST_WAVE.md) — the current center questbook contour and first-wave guardrails
+- [RPG layer and bridge docs](RPG_LAYER_MODEL.md) plus the related `RPG_*` documents — adjunct reflection-contour support docs, not the main center entry path
+
+## Recommended reading paths
 
 ### I need to decide where a change belongs
 
@@ -40,11 +55,11 @@ If you are editing files under `docs/`, read [`AGENTS.md`](AGENTS.md) in this di
 2. [FEDERATION_RULES](FEDERATION_RULES.md)
 3. [CONTRIBUTING](../CONTRIBUTING.md)
 
-### I need to understand future growth directions
+### I need to understand doctrine after the overview
 
 1. [ROADMAP](../ROADMAP.md)
-2. [LAYERS](LAYERS.md)
-3. [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md)
+2. [METHOD_SPINE](METHOD_SPINE.md)
+3. [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md)
 
 ## Notes
 

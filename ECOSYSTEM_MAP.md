@@ -1,6 +1,6 @@
 # AoA Ecosystem Map
 
-This file is the human-first map of the current public AoA federation and its adjacent system anchors.
+This file is the human-first map of the current documented public AoA federation contour and its adjacent system anchors.
 
 ## Center
 
@@ -32,6 +32,11 @@ This file is the human-first map of the current public AoA federation and its ad
 |---|---|---|---|---|
 | `Tree-of-Sophia` | source-first knowledge architecture counterpart | ToS-authored knowledge architecture, source-first structural meaning, lineage-aware conceptual discipline, and the public tree-first tiny-entry seam | AoA center truth, infrastructure internals | active-conceptual -> seed |
 | `abyss-stack` | infrastructure substrate | runtime, storage, deployment, service composition, system body | AoA constitutional truth, ToS-authored corpus truth | active -> proven |
+
+## Scope note
+
+Compact registry v1 follows the center + public AoA layers + adjacent anchors contour in this file.
+Supporting consumer surfaces, such as `aoa-sdk`, remain routable from the center but stay outside compact registry v1 by design.
 
 ## Reading rule
 
