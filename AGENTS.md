@@ -73,6 +73,31 @@ python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
 ```
 
+## Audit protocol
+
+For repository audits and GitHub review, also read:
+
+- `ECOSYSTEM_AUDIT_INDEX.md`
+- `docs/CODEX_AUDIT_PROTOCOL.md`
+
+## Skill / proof audit bridge
+
+When a task touches `aoa-skills` or `aoa-evals`, also read:
+
+- `docs/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md`
+
+## Review guidelines
+
+For GitHub review in this repository, treat the following as P1:
+
+- contradictions across `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, `ROADMAP.md`, and `generated/ecosystem_registry.min.json`
+- changes that blur source-of-truth boundaries or silently absorb layer-owned meaning into the center
+- routing changes that point readers to the wrong owning repository
+- generated registry changes without corresponding source updates or without running `python scripts/validate_ecosystem.py`
+- semantic changes hidden under "docs-only" or "metadata-only" wording
+
+Ignore trivial wording nits unless the task explicitly asks for copyediting.
+
 ## Definition of done
 
 A change is done when:
