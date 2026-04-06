@@ -54,7 +54,7 @@ Use this short check path before you widen a center claim or move material into 
 2. Read [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current documented public federation contour.
 3. Read [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline.
 4. Read [ROADMAP](ROADMAP.md) for declared direction and current phase.
-5. Check [generated/ecosystem_registry.min.json](generated/ecosystem_registry.min.json) and run `python scripts/validate_ecosystem.py` for the current compact machine-readable v1 surface.
+5. Check [generated/ecosystem_registry.min.json](generated/ecosystem_registry.min.json) and run `python scripts/validate_ecosystem.py` plus `python -m pytest -q tests` for the current compact machine-readable v1 surface and bounded center battery.
 
 ## How to decide where a change belongs
 

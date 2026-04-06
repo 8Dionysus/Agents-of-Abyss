@@ -26,7 +26,7 @@ Read in this order when you need to check a public claim coming from the center:
 2. [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current documented public federation contour
 3. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline
 4. [ROADMAP](ROADMAP.md) for declared direction and current phase
-5. [generated/ecosystem_registry.min.json](generated/ecosystem_registry.min.json) and `python scripts/validate_ecosystem.py` for the compact machine-readable v1 surface the center currently validates
+5. [generated/ecosystem_registry.min.json](generated/ecosystem_registry.min.json), `python scripts/validate_ecosystem.py`, and `python -m pytest -q tests` for the compact machine-readable v1 surface and the current bounded center battery
 
 Then branch by need:
 
