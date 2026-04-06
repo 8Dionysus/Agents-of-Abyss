@@ -24,7 +24,7 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 2. [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md)
 3. [FEDERATION_RULES](FEDERATION_RULES.md)
 4. [ROADMAP](../ROADMAP.md)
-5. [generated/ecosystem_registry.min.json](../generated/ecosystem_registry.min.json) and `python scripts/validate_ecosystem.py`
+5. [generated/ecosystem_registry.min.json](../generated/ecosystem_registry.min.json), `python scripts/validate_ecosystem.py`, and `python -m pytest -q tests`
 
 ## Entry docs
 

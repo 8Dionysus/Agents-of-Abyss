@@ -49,6 +49,7 @@ Then run:
 ```bash
 python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
+python -m pytest -q tests
 ```
 
 If you changed ownership, routing, or maturity language, confirm the machine-readable registry still matches the prose.

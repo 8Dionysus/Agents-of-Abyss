@@ -30,6 +30,7 @@ After changing the registry, run:
 ```bash
 python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
+python -m pytest -q tests
 ```
 
 A registry edit is only done when the JSON, the schema, and the center-layer prose still agree.

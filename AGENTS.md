@@ -71,6 +71,7 @@ Run local validation when relevant:
 ```bash
 python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
+python -m pytest -q tests
 ```
 
 ## Audit protocol
