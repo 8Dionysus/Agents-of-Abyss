@@ -32,6 +32,7 @@ Read in this order when you need to check a public claim coming from the center:
 Then branch by need:
 
 - **structural trunk**: [docs/ROOTLINE](docs/ROOTLINE.md)
+- **antifragility doctrine and first-wave boundary**: [docs/ANTIFRAGILITY](docs/ANTIFRAGILITY.md) and [docs/ANTIFRAGILITY_FIRST_WAVE](docs/ANTIFRAGILITY_FIRST_WAVE.md)
 - **method and maturity**: [docs/METHOD_SPINE](docs/METHOD_SPINE.md)
 - **counterpart bridge and KAG restraint**: [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md)
 - **witness and compost pilot**: [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md)
