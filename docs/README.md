@@ -15,6 +15,7 @@ For the shortest outsider overview, read in this order:
 3. [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md)
 4. [FEDERATION_RULES](FEDERATION_RULES.md)
 5. [ROADMAP](../ROADMAP.md)
+6. [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md)
 
 Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need conceptual or routing detail rather than the first-pass center view.
 
@@ -44,6 +45,7 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 ## Support and maintenance docs
 
 - [AGENTS.md](AGENTS.md) — local editing and maintenance instructions for the `docs/` surface
+- [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md) — the public onboarding, support, release, and CI posture for the AoA center
 - [QUESTBOOK_MODEL](QUESTBOOK_MODEL.md) and [QUESTBOOK_FIRST_WAVE](QUESTBOOK_FIRST_WAVE.md) — the current center questbook contour and first-wave guardrails
 - [RPG layer and bridge docs](RPG_LAYER_MODEL.md) plus the related `RPG_*` documents — adjunct reflection-contour support docs, not the main center entry path
 
