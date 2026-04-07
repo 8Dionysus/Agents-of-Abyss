@@ -6,18 +6,20 @@ This file applies to compact machine-readable publication surfaces under `genera
 
 `generated/ecosystem_registry.min.json` is the current compact machine-readable registry for AoA center-layer routing.
 It summarizes repository names, roles, statuses, shared maturity, and kind for the public ecosystem map.
+`generated/federation_supporting_inventory.min.json` is the companion machine-readable inventory for supporting consumer/control-plane surfaces that stay outside compact registry v1.
 
 This directory is derived in purpose, but the registry is currently maintained as a tracked JSON artifact inside this repository.
 Treat it as a published summary surface, not a hidden second charter.
 
 ## Editing posture
 
-When editing `ecosystem_registry.min.json`:
+When editing `ecosystem_registry.min.json` or `federation_supporting_inventory.min.json`:
 
 - keep it aligned with `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, and `docs/FEDERATION_RULES.md`
 - preserve the current field contract around `name`, `role`, `status`, `shared_maturity`, and `kind`
 - keep entries compact, explicit, and reviewable
 - do not smuggle layer-owned implementation detail, speculative repos, or private assumptions into the registry
+- keep compact registry v1 and supporting inventory boundaries explicit instead of blurring them together
 - prefer the smallest coherent change that keeps the center more legible
 
 There is no builder script for this file today.
@@ -25,7 +27,7 @@ If that changes later, update this guide and `scripts/validate_ecosystem.py` tog
 
 ## Validation
 
-After changing the registry, run:
+After changing a generated center inventory surface, run:
 
 ```bash
 python -m pip install -r requirements-dev.txt

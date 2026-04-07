@@ -498,9 +498,17 @@ class ValidateRegistryTests(unittest.TestCase):
         self.temp_dir = Path(tempfile.mkdtemp(prefix="aoa_center_registry_"))
         self.repo_root = self.temp_dir / "Agents-of-Abyss"
         self.registry_path = self.repo_root / "generated" / "ecosystem_registry.min.json"
+        self.supporting_inventory_path = (
+            self.repo_root / "generated" / "federation_supporting_inventory.min.json"
+        )
         self.patches = (
             patch.object(validate_ecosystem, "REPO_ROOT", self.repo_root),
             patch.object(validate_ecosystem, "REGISTRY_PATH", self.registry_path),
+            patch.object(
+                validate_ecosystem,
+                "SUPPORTING_INVENTORY_PATH",
+                self.supporting_inventory_path,
+            ),
         )
         for patcher in self.patches:
             patcher.start()
@@ -509,6 +517,10 @@ class ValidateRegistryTests(unittest.TestCase):
 
     def write_valid_registry(self) -> None:
         copy_repo_text(self.repo_root, "generated/ecosystem_registry.min.json")
+        copy_repo_text(
+            self.repo_root,
+            "generated/federation_supporting_inventory.min.json",
+        )
 
     def read_registry(self) -> dict[str, object]:
         return json.loads(self.registry_path.read_text(encoding="utf-8"))
@@ -586,6 +598,73 @@ class ValidateRegistryTests(unittest.TestCase):
             "outside compact v1 scope: aoa-sdk",
         ):
             validate_ecosystem.validate_registry()
+
+
+class ValidateSupportingInventoryTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="aoa_supporting_inventory_"))
+        self.repo_root = self.temp_dir / "Agents-of-Abyss"
+        self.supporting_inventory_path = (
+            self.repo_root / "generated" / "federation_supporting_inventory.min.json"
+        )
+        self.patches = (
+            patch.object(validate_ecosystem, "REPO_ROOT", self.repo_root),
+            patch.object(
+                validate_ecosystem,
+                "SUPPORTING_INVENTORY_PATH",
+                self.supporting_inventory_path,
+            ),
+        )
+        for patcher in self.patches:
+            patcher.start()
+            self.addCleanup(patcher.stop)
+        self.addCleanup(shutil.rmtree, self.temp_dir)
+
+    def write_valid_supporting_inventory(self) -> None:
+        copy_repo_text(
+            self.repo_root,
+            "generated/federation_supporting_inventory.min.json",
+        )
+
+    def read_supporting_inventory(self) -> dict[str, object]:
+        return json.loads(self.supporting_inventory_path.read_text(encoding="utf-8"))
+
+    def write_supporting_inventory(self, payload: dict[str, object]) -> None:
+        write_text(
+            self.supporting_inventory_path,
+            json.dumps(payload, indent=2) + "\n",
+        )
+
+    def test_valid_supporting_inventory_passes(self) -> None:
+        self.write_valid_supporting_inventory()
+
+        validate_ecosystem.validate_supporting_inventory()
+
+    def test_missing_documented_supporting_repo_fails(self) -> None:
+        self.write_valid_supporting_inventory()
+        payload = self.read_supporting_inventory()
+        payload["repos"] = []
+        self.write_supporting_inventory(payload)
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "supporting inventory 'repos' must be a non-empty list",
+        ):
+            validate_ecosystem.validate_supporting_inventory()
+
+    def test_wrong_kind_for_supporting_repo_fails(self) -> None:
+        self.write_valid_supporting_inventory()
+        payload = self.read_supporting_inventory()
+        repos = payload["repos"]
+        assert isinstance(repos, list)
+        repos[0]["kind"] = "related"
+        self.write_supporting_inventory(payload)
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            r"kind for 'aoa-sdk' must equal 'supporting-consumer'",
+        ):
+            validate_ecosystem.validate_supporting_inventory()
 
 
 if __name__ == "__main__":

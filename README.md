@@ -26,7 +26,7 @@ Read in this order when you need to check a public claim coming from the center:
 2. [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current documented public federation contour
 3. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline
 4. [ROADMAP](ROADMAP.md) for declared direction and current phase
-5. [generated/ecosystem_registry.min.json](generated/ecosystem_registry.min.json), `python scripts/validate_ecosystem.py`, and `python -m pytest -q tests` for the compact machine-readable v1 surface and the current bounded center battery
+5. [generated/ecosystem_registry.min.json](generated/ecosystem_registry.min.json), [generated/federation_supporting_inventory.min.json](generated/federation_supporting_inventory.min.json), `python scripts/validate_ecosystem.py`, and `python -m pytest -q tests` for the compact v1 registry, the companion supporting inventory, and the current bounded center battery
 
 Then branch by need:
 
@@ -90,6 +90,6 @@ The linked wave notes above hold the compact doctrine for each declared move.
 
 - [`abyss-stack`](https://github.com/8Dionysus/abyss-stack) owns runtime, deployment, storage, and service posture
 - [`Tree-of-Sophia`](https://github.com/8Dionysus/Tree-of-Sophia) owns source-first knowledge architecture and authored ToS meaning
-- [`aoa-sdk`](https://github.com/8Dionysus/aoa-sdk) is the typed local-first consumer and orchestration spine for source-owned AoA surfaces; it is a supporting consumer surface, not the constitutional center, and it stays outside the compact registry v1 by design
+- [`aoa-sdk`](https://github.com/8Dionysus/aoa-sdk) is the typed local-first consumer and orchestration spine for source-owned AoA surfaces; it is a supporting consumer surface, not the constitutional center, and it stays outside the compact registry v1 by design while remaining visible in the supporting machine-readable inventory
 
 AoA should grow by adding clear, reviewable layers rather than collapsing everything into the center.

@@ -36,7 +36,7 @@ This file is the human-first map of the current documented public AoA federation
 ## Scope note
 
 Compact registry v1 follows the center + public AoA layers + adjacent anchors contour in this file.
-Supporting consumer surfaces, such as `aoa-sdk`, remain routable from the center but stay outside compact registry v1 by design.
+Supporting consumer surfaces, such as `aoa-sdk`, remain outside compact registry v1 by design, but they now appear in the companion machine-readable supporting inventory at `generated/federation_supporting_inventory.min.json`.
 
 ## Reading rule
 
