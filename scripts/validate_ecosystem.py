@@ -15,6 +15,8 @@ except ModuleNotFoundError:
 REPO_ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = REPO_ROOT / "generated" / "ecosystem_registry.min.json"
 SCHEMA_PATH = REPO_ROOT / "schemas" / "ecosystem-registry.schema.json"
+SUPPORTING_INVENTORY_PATH = REPO_ROOT / "generated" / "federation_supporting_inventory.min.json"
+SUPPORTING_SCHEMA_PATH = REPO_ROOT / "schemas" / "federation-supporting-inventory.schema.json"
 QUESTBOOK_PATH = REPO_ROOT / "QUESTBOOK.md"
 QUESTBOOK_MODEL_PATH = REPO_ROOT / "docs" / "QUESTBOOK_MODEL.md"
 QUESTBOOK_FIRST_WAVE_PATH = REPO_ROOT / "docs" / "QUESTBOOK_FIRST_WAVE.md"
@@ -54,6 +56,12 @@ DOCUMENTED_REGISTRY_V1 = {
     "aoa-kag": {"role": "derived-knowledge-substrate", "kind": "derived"},
     "abyss-stack": {"role": "infrastructure-substrate", "kind": "related"},
     "Tree-of-Sophia": {"role": "knowledge-architecture-counterpart", "kind": "related"},
+}
+DOCUMENTED_SUPPORTING_SURFACES = {
+    "aoa-sdk": {
+        "role": "typed-consumer-and-control-plane",
+        "kind": "supporting-consumer",
+    }
 }
 
 
@@ -106,6 +114,16 @@ def validate_schema_surface() -> None:
     missing = sorted(required_top_level - set(schema))
     if missing:
         fail(f"schema is missing required top-level keys: {', '.join(missing)}")
+
+    supporting_schema = read_json(SUPPORTING_SCHEMA_PATH)
+    if not isinstance(supporting_schema, dict):
+        fail("supporting inventory schema file must contain a JSON object")
+    missing = sorted(required_top_level - set(supporting_schema))
+    if missing:
+        fail(
+            "supporting inventory schema is missing required top-level keys: "
+            + ", ".join(missing)
+        )
 
 
 def dual_vocabulary_required_canonical_keys(schema: dict[str, object]) -> set[str]:
@@ -317,6 +335,78 @@ def validate_registry() -> None:
         )
 
 
+def validate_supporting_inventory() -> None:
+    payload = read_json(SUPPORTING_INVENTORY_PATH)
+    if not isinstance(payload, dict):
+        fail("supporting inventory must be a JSON object")
+
+    for key in ("version", "inventory", "center_registry_ref", "repos"):
+        if key not in payload:
+            fail(f"supporting inventory is missing required key '{key}'")
+
+    if not isinstance(payload["version"], int) or payload["version"] < 1:
+        fail("supporting inventory 'version' must be an integer >= 1")
+    if payload["inventory"] != "AoA-supporting-surfaces":
+        fail("supporting inventory 'inventory' must equal 'AoA-supporting-surfaces'")
+    if payload["center_registry_ref"] != "generated/ecosystem_registry.min.json":
+        fail(
+            "supporting inventory 'center_registry_ref' must equal "
+            "'generated/ecosystem_registry.min.json'"
+        )
+
+    repos = payload["repos"]
+    if not isinstance(repos, list) or not repos:
+        fail("supporting inventory 'repos' must be a non-empty list")
+
+    seen_names: set[str] = set()
+    expected_names = set(DOCUMENTED_SUPPORTING_SURFACES)
+
+    for index, repo in enumerate(repos):
+        location = f"supporting_inventory.repos[{index}]"
+        if not isinstance(repo, dict):
+            fail(f"{location} must be an object")
+
+        for key in ("name", "role", "status", "shared_maturity", "kind", "boundary"):
+            if key not in repo:
+                fail(f"{location} is missing required key '{key}'")
+
+        name = repo["name"]
+        role = repo["role"]
+        status = repo["status"]
+        shared_maturity = repo["shared_maturity"]
+        kind = repo["kind"]
+        boundary = repo["boundary"]
+
+        if not isinstance(name, str) or len(name) < 3:
+            fail(f"{location}.name must be a string of length >= 3")
+        if name in seen_names:
+            fail(f"duplicate repository name in supporting inventory: '{name}'")
+        seen_names.add(name)
+        if not isinstance(role, str) or len(role) < 3:
+            fail(f"{location}.role must be a string of length >= 3")
+        if status not in ALLOWED_STATUS:
+            fail(f"{location}.status '{status}' is not allowed")
+        if shared_maturity not in ALLOWED_SHARED_MATURITY:
+            fail(f"{location}.shared_maturity '{shared_maturity}' is not allowed")
+        if not isinstance(boundary, str) or len(boundary) < 12:
+            fail(f"{location}.boundary must be a string of length >= 12")
+
+        expected_entry = DOCUMENTED_SUPPORTING_SURFACES.get(name)
+        if expected_entry is None:
+            fail(f"supporting inventory contains undocumented repo '{name}'")
+        if role != expected_entry["role"]:
+            fail(f"{location}.role for '{name}' must equal '{expected_entry['role']}'")
+        if kind != expected_entry["kind"]:
+            fail(f"{location}.kind for '{name}' must equal '{expected_entry['kind']}'")
+
+    missing_expected = sorted(expected_names - seen_names)
+    if missing_expected:
+        fail(
+            "supporting inventory is missing documented supporting repos: "
+            + ", ".join(missing_expected)
+        )
+
+
 def validate_nested_agents_surface() -> None:
     issues = validate_nested_agents.run_validation(REPO_ROOT)
     if issues:
@@ -457,6 +547,7 @@ def main() -> int:
     try:
         validate_schema_surface()
         validate_registry()
+        validate_supporting_inventory()
         validate_questbook_surface()
         validate_nested_agents_surface()
     except ValidationError as exc:
@@ -465,6 +556,7 @@ def main() -> int:
 
     print("[ok] validated ecosystem registry schema surface")
     print("[ok] validated generated/ecosystem_registry.min.json")
+    print("[ok] validated generated/federation_supporting_inventory.min.json")
     print("[ok] validated questbook center surface")
     print("[ok] validated nested AGENTS directory guidance")
     return 0

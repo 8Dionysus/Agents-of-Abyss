@@ -26,10 +26,11 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
                 self.assertIn("python scripts/validate_ecosystem.py", text)
                 self.assertIn("python -m pytest -q tests", text)
 
-    def test_readme_keeps_aoa_sdk_outside_compact_registry_v1(self) -> None:
+    def test_readme_keeps_aoa_sdk_outside_compact_registry_v1_but_routes_to_supporting_inventory(self) -> None:
         readme = read_text("README.md")
         self.assertIn("aoa-sdk", readme)
         self.assertIn("outside the compact registry v1 by design", readme)
+        self.assertIn("supporting machine-readable inventory", readme)
 
     def test_generated_agents_keeps_registry_as_publication_surface(self) -> None:
         generated_agents = read_text("generated/AGENTS.md")
