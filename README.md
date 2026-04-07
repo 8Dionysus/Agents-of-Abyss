@@ -15,6 +15,7 @@ Read in this order:
 3. [docs/LAYERS](docs/LAYERS.md) for the layer model
 4. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline
 5. [ROADMAP](ROADMAP.md) for program-level direction
+6. [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md) for the current public onboarding, support, release, and CI posture of the center
 
 If you only need the shortest outsider overview, stop after step 4 and return here for the route table below.
 
@@ -36,6 +37,7 @@ Then branch by need:
 - **witness and compost pilot**: [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md)
 - **ToS support waves**: [docs/TOS_GROWTH_SUPPORT](docs/TOS_GROWTH_SUPPORT.md), [docs/TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md), [docs/TOS_LINEAGE_PILOT_SUPPORT](docs/TOS_LINEAGE_PILOT_SUPPORT.md), [docs/TOS_SOIL_PREP_SUPPORT](docs/TOS_SOIL_PREP_SUPPORT.md)
 - **adjunct RPG reflection contour**: [docs/RPG_LAYER_MODEL](docs/RPG_LAYER_MODEL.md), [docs/RPG_FIRST_WAVE](docs/RPG_FIRST_WAVE.md), [docs/RPG_SECOND_WAVE](docs/RPG_SECOND_WAVE.md), [docs/RPG_SKILLS_AND_FEATS](docs/RPG_SKILLS_AND_FEATS.md), [docs/RPG_ARCHITECTURE_RFC](docs/RPG_ARCHITECTURE_RFC.md), [docs/RPG_CANONICAL_TERMINOLOGY](docs/RPG_CANONICAL_TERMINOLOGY.md), [docs/RPG_BOUNDARY_MAP](docs/RPG_BOUNDARY_MAP.md)
+- **public onboarding, support, release, and CI posture**: [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md)
 
 ## Quick route table
 
@@ -73,6 +75,10 @@ The linked wave notes above hold the compact doctrine for each declared move.
 - federation rules
 - program-level direction
 - compact ecosystem-level registry surfaces
+
+## Public support and release posture
+
+For the shortest public statement of what the center may claim, how those claims are verified, and which CI tiers reinforce them, use [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md).
 
 ## What this repository does not own
 
