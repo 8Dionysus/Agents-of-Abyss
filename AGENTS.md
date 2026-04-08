@@ -2,7 +2,13 @@
 
 ## Purpose
 
-`Agents-of-Abyss` is the constitutional and ecosystem-center repository of AoA. It owns ecosystem identity, layer map, federation rules, program-level direction, and compact ecosystem-level registry surfaces. It is not the full implementation home of AoA.
+`Agents-of-Abyss` is the constitutional and ecosystem-center repository of AoA.
+It owns ecosystem identity, layer map, federation rules, program-level direction,
+and compact ecosystem-level registry surfaces.
+
+It is not the full implementation home of AoA.
+It may name long-arc federation direction, but it does not own the specialized
+surfaces where that direction becomes operational.
 
 ## Read first
 
@@ -12,6 +18,12 @@
 4. `docs/FEDERATION_RULES.md`
 5. `ROADMAP.md`
 6. `README.md`
+
+Then branch by task:
+
+- method-centered growth or scenario-home questions: `docs/METHOD_SPINE.md`
+- adjunct RPG reflection or canonical vocabulary questions: `docs/RPG_LAYER_MODEL.md` and `docs/RPG_CANONICAL_TERMINOLOGY.md`
+- witness / compost, counterpart bridge, or ToS support waves: the relevant compact doctrine note under `docs/`
 
 Nearest-file precedence applies inside:
 
@@ -28,8 +40,33 @@ Keep these distinctions explicit:
 - AoA operational federation vs ToS authored meaning
 - routing or derived surfaces vs source-owned meaning
 - center-level guidance vs runtime implementation detail
+- long-arc direction vs owner-layer contract
 
-Use this repository for charter, map, rules, roadmaps, and compact center surfaces. Route technique, skill, eval, memo, role, playbook, KAG, runtime, and ToS source detail back to the owning repositories.
+Use this repository for charter, map, rules, roadmaps, and compact center
+surfaces.
+
+Route specialized detail back to the owning repositories:
+
+- role progression, recurrence, and self-agent checkpoint posture -> `aoa-agents`
+- questline, campaign, raid, reanchor, and harvest posture -> `aoa-playbooks`
+- typed loading, compatibility, surface detection, and reviewed handoff helpers -> `aoa-sdk`
+- skill meaning, proof meaning, routing meaning, memory meaning, and KAG meaning -> their owning repos
+- runtime budgets, runtime state, and frontend presentation -> `abyss-stack` and its owner docs
+
+## Direction posture
+
+The center may name federation arcs, first-wave scope, and boundary law.
+
+It may describe bounded, reviewable agency as a discipline, method-centered
+composition as a growth move, and RPG / quest language as an adjunct reflection
+layer.
+
+It must not quietly absorb:
+
+- skill, role, playbook, eval, memo, or KAG source truth
+- quest state, progression state, or runtime checkpoint state
+- frontend theming as a replacement for canonical machine vocabulary
+- helper-layer implementation detail as if it were constitutional doctrine
 
 ## Editing priorities
 
@@ -39,6 +76,8 @@ Use this repository for charter, map, rules, roadmaps, and compact center surfac
 - keep generated surfaces clearly derived
 - keep public claims bounded and reviewable
 - mention `aoa-sdk` only as a consumer or integration surface unless deeper center docs are updated in the same change
+- keep adjunct RPG reflection clearly adjunct
+- keep program direction honest without implying owner-layer implementation that is not yet documented upstream
 
 ## Hard no
 
@@ -47,6 +86,9 @@ Use this repository for charter, map, rules, roadmaps, and compact center surfac
 - do not let runtime details from `abyss-stack` drift into constitutional ownership
 - do not turn the root README into an archive of every wave note
 - do not let routing tables or generated registries masquerade as ecosystem authority
+- do not let questline or campaign language imply runtime ledger ownership in the center
+- do not let canonical RPG vocabulary blur owner-layer boundaries or runtime ownership
+- do not let long-arc direction harden into implementation claims without updating the owning repositories in the same change
 
 ## Workflow
 
@@ -64,7 +106,10 @@ When changing the center layer, review:
 - `ROADMAP.md`
 - `generated/ecosystem_registry.min.json`
 
-If you edit `docs/`, `generated/`, `schemas/`, or `scripts/`, read the local `AGENTS.md` first.
+If the task touches method, quest reflection, or canonical vocabulary, also review the relevant compact doctrine note under `docs/`.
+
+If you edit `docs/`, `generated/`, `schemas/`, or `scripts/`, read the local
+`AGENTS.md` first.
 
 Run local validation when relevant:
 
@@ -94,6 +139,7 @@ For GitHub review in this repository, treat the following as P1:
 - contradictions across `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, `ROADMAP.md`, and `generated/ecosystem_registry.min.json`
 - changes that blur source-of-truth boundaries or silently absorb layer-owned meaning into the center
 - routing changes that point readers to the wrong owning repository
+- center-level claims about quest, progression, checkpoint, or runtime state that should live in owner repos instead
 - generated registry changes without corresponding source updates or without running `python scripts/validate_ecosystem.py`
 - semantic changes hidden under "docs-only" or "metadata-only" wording
 
@@ -106,5 +152,6 @@ A change is done when:
 - AoA is more intelligible after the edit
 - source-of-truth boundaries are clearer, not blurrier
 - routing to neighboring layers is easier
+- long-arc direction is easier to read without being overclaimed
 - no specialized layer was silently absorbed into the center
 - validation passes, or any missing validation is disclosed honestly
