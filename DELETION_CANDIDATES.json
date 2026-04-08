@@ -1,0 +1,335 @@
+{
+  "schema_version": "deletion_candidate_list_v1",
+  "generated_at_utc": "2026-04-08T12:00:00Z",
+  "scope": {
+    "workspace": "8Dionysus public AoA surface touched by antifragility waves 1 through 4",
+    "pass_kind": "via_negativa_pruning",
+    "candidate_mode": "inspect_first",
+    "notes": "Candidates are pattern-level prompts for Codex and maintainers. They are not assertions that the pattern exists exactly as written."
+  },
+  "guardrails": [
+    "Preserve source receipts, provenance anchors, and bounded proof artifacts.",
+    "Prefer merge or move over delete when a better canonical home already exists.",
+    "Do not let cleanup grant more authority to routing, stats, memo, SDK, or KAG.",
+    "Use owner-local source-of-truth docs before acting on any candidate."
+  ],
+  "candidates": [
+    {
+      "candidate_id": "workspace-duplicate-antifragility-doctrine",
+      "repo": "workspace",
+      "path_glob": "**/*ANTIFRAGILITY*.md",
+      "candidate_kind": "workspace_surface",
+      "fragility_family": "duplicate_meaning",
+      "why_fragile": "Repeated doctrine files across repos invite drift and contradictory phrasing.",
+      "detection_hints": [
+        "multiple docs restate the same guardrails with no repo-local ownership reason",
+        "seed language copied verbatim into several tracked files"
+      ],
+      "preferred_action": "merge",
+      "preferred_keep_surface": "Agents-of-Abyss/docs/VIA_NEGATIVA.md or existing owner-local canonical docs",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "a surviving canonical doctrine surface",
+        "a check that no source-of-truth doc depends on the removed file"
+      ],
+      "status": "inspect_first",
+      "priority": "high",
+      "notes": "This is the main via negativa cleanup target after four additive waves."
+    },
+    {
+      "candidate_id": "agents-center-shadow-charters",
+      "repo": "Agents-of-Abyss",
+      "path_glob": "docs/**/*.md",
+      "candidate_kind": "doc_or_readme",
+      "fragility_family": "authority_drift",
+      "why_fragile": "Center docs become brittle when they restate repository-local semantics instead of routing to owners.",
+      "detection_hints": [
+        "center doc starts defining repo-local command behavior",
+        "layer descriptions expand into owner-local policy"
+      ],
+      "preferred_action": "merge",
+      "preferred_keep_surface": "short center rules plus links to owner repos",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "a surviving center map of layer roles"
+      ],
+      "status": "inspect_first",
+      "priority": "high",
+      "notes": null
+    },
+    {
+      "candidate_id": "atm10-runbook-archived-command-blocks",
+      "repo": "ATM10-Agent",
+      "path_glob": "docs/RUNBOOK.md",
+      "candidate_kind": "doc_or_readme",
+      "fragility_family": "active_surface_contamination",
+      "why_fragile": "Rollback, historical, or restore-only paths inside the active runbook blur the public operator surface.",
+      "detection_hints": [
+        "blocked or archived tracks mixed with current setup and smoke commands",
+        "rollback-only commands in active sections"
+      ],
+      "preferred_action": "move",
+      "preferred_keep_surface": "docs/ARCHIVED_TRACKS.md",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "a confirmed active replacement path for any moved operator flow"
+      ],
+      "status": "safe_to_move_if_misplaced",
+      "priority": "critical",
+      "notes": "This candidate is directly shaped by ATM10-Agent's existing source-of-truth rules."
+    },
+    {
+      "candidate_id": "atm10-public-surface-status-duplication",
+      "repo": "ATM10-Agent",
+      "path_glob": "README.md|MANIFEST.md|ROADMAP.md|docs/PRODUCT_EDGE_POSTURE.md|docs/ECOSYSTEM_CONTEXT.md",
+      "candidate_kind": "doc_or_readme",
+      "fragility_family": "surface_inflation",
+      "why_fragile": "Public status, direction, support claims, and ecosystem context become noisy when repeated across too many docs.",
+      "detection_hints": [
+        "same status paragraph appears in README, MANIFEST, and ROADMAP",
+        "support boundary repeated outside product-edge posture"
+      ],
+      "preferred_action": "merge",
+      "preferred_keep_surface": "MANIFEST.md, ROADMAP.md, docs/PRODUCT_EDGE_POSTURE.md, docs/ECOSYSTEM_CONTEXT.md according to canonical role",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "alignment with SOURCE_OF_TRUTH.md"
+      ],
+      "status": "inspect_first",
+      "priority": "high",
+      "notes": null
+    },
+    {
+      "candidate_id": "aoa-techniques-near-duplicate-patterns",
+      "repo": "aoa-techniques",
+      "path_glob": "techniques/**/TECHNIQUE.md",
+      "candidate_kind": "technique_or_skill",
+      "fragility_family": "bundle_proliferation",
+      "why_fragile": "Reusable practice weakens when the catalog grows by wording variations instead of materially distinct patterns.",
+      "detection_hints": [
+        "two techniques with the same trigger, same steps, and different names",
+        "repo-local examples dominate a supposedly reusable technique"
+      ],
+      "preferred_action": "merge",
+      "preferred_keep_surface": "one canonical technique with optional repo-local examples",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "a surviving reusable technique for the pattern family"
+      ],
+      "status": "safe_to_merge_if_duplicate",
+      "priority": "medium",
+      "notes": null
+    },
+    {
+      "candidate_id": "aoa-skills-shadow-techniques-or-runbooks",
+      "repo": "aoa-skills",
+      "path_glob": "skills/**",
+      "candidate_kind": "technique_or_skill",
+      "fragility_family": "wrapper_policy_capture",
+      "why_fragile": "A skill that mostly restates a technique or owner runbook adds surface without adding a bounded execution contract.",
+      "detection_hints": [
+        "skill has fuzzy trigger boundary",
+        "skill steps are copied from a repo-local source-of-truth or technique without additional execution semantics"
+      ],
+      "preferred_action": "merge",
+      "preferred_keep_surface": "the owner skill or technique with the clearer execution boundary",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "a retained bounded workflow surface where one is materially needed"
+      ],
+      "status": "inspect_first",
+      "priority": "medium",
+      "notes": null
+    },
+    {
+      "candidate_id": "aoa-routing-route-hints-owning-meaning",
+      "repo": "aoa-routing",
+      "path_glob": "schemas/**/*.json|docs/**/*.md|examples/**/*.json",
+      "candidate_kind": "route_hint",
+      "fragility_family": "unsourced_routing",
+      "why_fragile": "Routing becomes fragile when hints encode owner truth, workflow meaning, or confidence not grounded in receipts and bounded proof.",
+      "detection_hints": [
+        "route hint answers what happened instead of where to go next",
+        "hint depends on memo-only recall or broad subjective confidence"
+      ],
+      "preferred_action": "suppress",
+      "preferred_keep_surface": "thin navigation hints grounded in source receipts and bounded proof",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "replacement navigation path for active consumers"
+      ],
+      "status": "inspect_first",
+      "priority": "high",
+      "notes": null
+    },
+    {
+      "candidate_id": "aoa-memo-live-health-objects",
+      "repo": "aoa-memo",
+      "path_glob": "schemas/**/*.json|examples/**/*.json|docs/**/*.md",
+      "candidate_kind": "memory_object_kind",
+      "fragility_family": "memory_as_proof",
+      "why_fragile": "Memo objects that imply live readiness or current truth erode the line between recall and proof.",
+      "detection_hints": [
+        "object field names imply health, readiness, or certainty without evidence split",
+        "memory object triggers action without owner receipt or eval backing"
+      ],
+      "preferred_action": "deprecate",
+      "preferred_keep_surface": "reviewed recall objects with explicit trust posture and evidence refs",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "migration notes for any consumer expecting the old object shape"
+      ],
+      "status": "inspect_first",
+      "priority": "high",
+      "notes": null
+    },
+    {
+      "candidate_id": "aoa-agents-role-clones",
+      "repo": "aoa-agents",
+      "path_glob": "**/*agent*|**/*profile*",
+      "candidate_kind": "profile_or_playbook",
+      "fragility_family": "persona_inflation",
+      "why_fragile": "Profiles that differ only by tone or vocabulary multiply handoff and memory posture ambiguity.",
+      "detection_hints": [
+        "two profiles share the same role contract, handoff boundary, and evaluation posture",
+        "profile distinction is mostly narrative flavor"
+      ],
+      "preferred_action": "merge",
+      "preferred_keep_surface": "one explicit role contract with optional stylistic notes",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "a surviving role contract for active handoffs"
+      ],
+      "status": "safe_to_merge_if_duplicate",
+      "priority": "medium",
+      "notes": null
+    },
+    {
+      "candidate_id": "aoa-playbooks-scenario-clones",
+      "repo": "aoa-playbooks",
+      "path_glob": "**/*playbook*|**/*lane*|**/*gate*",
+      "candidate_kind": "profile_or_playbook",
+      "fragility_family": "bundle_proliferation",
+      "why_fragile": "Scenario clones make recurring operations harder to audit and harder to route into correctly.",
+      "detection_hints": [
+        "two playbooks differ only by example names",
+        "stress lane added without distinct threshold or fallback semantics"
+      ],
+      "preferred_action": "merge",
+      "preferred_keep_surface": "one scenario family with explicit forks only where thresholds truly differ",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "a retained path for materially distinct operator flows"
+      ],
+      "status": "safe_to_merge_if_duplicate",
+      "priority": "medium",
+      "notes": null
+    },
+    {
+      "candidate_id": "aoa-kag-low-value-source-copies",
+      "repo": "aoa-kag",
+      "path_glob": "**/*.json|**/*.md|**/*.yaml",
+      "candidate_kind": "projection_pack",
+      "fragility_family": "derived_substrate_as_source",
+      "why_fragile": "Generated packs that merely copy source text or lack strong provenance become stale shadow canon.",
+      "detection_hints": [
+        "projection duplicates source with little added retrieval value",
+        "pack has weak provenance or unclear freshness"
+      ],
+      "preferred_action": "quarantine",
+      "preferred_keep_surface": "provenance-rich packs with real retrieval or aggregation value",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "a check that active retrieval still has a source-first path"
+      ],
+      "status": "inspect_first",
+      "priority": "high",
+      "notes": null
+    },
+    {
+      "candidate_id": "aoa-evals-overlapping-bundles-and-prestige-scores",
+      "repo": "aoa-evals",
+      "path_glob": "bundles/**|schemas/**/*.json|docs/**/*.md",
+      "candidate_kind": "eval_bundle",
+      "fragility_family": "score_sovereignty",
+      "why_fragile": "Overlapping bundles and composite prestige metrics invite evals to behave like workflow authority or scoreboard canon.",
+      "detection_hints": [
+        "bundle set differs only by manifest shape",
+        "single composite score stands in for split-axis proof"
+      ],
+      "preferred_action": "merge",
+      "preferred_keep_surface": "bounded bundles with explicit blind spots and split-axis outputs",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "coverage for any still-needed bounded claim family"
+      ],
+      "status": "inspect_first",
+      "priority": "high",
+      "notes": null
+    },
+    {
+      "candidate_id": "aoa-stats-unused-or-sovereign-derived-views",
+      "repo": "aoa-stats",
+      "path_glob": "schemas/**/*.json|examples/**/*.json|docs/**/*.md",
+      "candidate_kind": "generated_view",
+      "fragility_family": "low_evidence_permanence",
+      "why_fragile": "Derived views that are thin, stale, or scalar-heavy linger as dashboard theater and invite false certainty.",
+      "detection_hints": [
+        "view exists without clear downstream consumer",
+        "view compresses many signals into one score",
+        "low-evidence summaries are not suppressible"
+      ],
+      "preferred_action": "suppress",
+      "preferred_keep_surface": "derived summaries with bounded meaning, suppression semantics, and clear consumers",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "replacement access to any still-used summary signal"
+      ],
+      "status": "inspect_first",
+      "priority": "high",
+      "notes": null
+    },
+    {
+      "candidate_id": "aoa-sdk-shadow-policy-wrappers",
+      "repo": "aoa-sdk",
+      "path_glob": "**/*.py|docs/**/*.md|tests/fixtures/**",
+      "candidate_kind": "runtime_or_helper",
+      "fragility_family": "wrapper_policy_capture",
+      "why_fragile": "Helpers become dangerous when they embed routing or mutation policy that should stay source-owned and explicit.",
+      "detection_hints": [
+        "wrapper makes hidden fallback or mutation decisions",
+        "helper convenience obscures which layer owns the decision"
+      ],
+      "preferred_action": "deprecate",
+      "preferred_keep_surface": "typed helper seams with explicit caller-supplied posture",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "migration path for any consumer using the wrapper"
+      ],
+      "status": "inspect_first",
+      "priority": "medium",
+      "notes": null
+    },
+    {
+      "candidate_id": "abyss-stack-hidden-auto-repair-paths",
+      "repo": "abyss-stack",
+      "path_glob": "docs/**/*.md|scripts/**|**/*.service|**/*.timer",
+      "candidate_kind": "runtime_or_helper",
+      "fragility_family": "unbounded_retry_and_auto_repair",
+      "why_fragile": "Repair shortcuts without clear stop rules and receipts increase tail risk during operator stress.",
+      "detection_hints": [
+        "repair loop retries without explicit threshold",
+        "runtime surface mutates state without a reviewable closeout or degradation receipt"
+      ],
+      "preferred_action": "deprecate",
+      "preferred_keep_surface": "repair-safe closeout and explicit degradation receipts",
+      "owner_review_required": true,
+      "never_delete_without": [
+        "a manual or bounded repair path that still works"
+      ],
+      "status": "inspect_first",
+      "priority": "high",
+      "notes": null
+    }
+  ]
+}
