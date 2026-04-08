@@ -36,6 +36,7 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 ## Doctrine docs
 
 - [ANTIFRAGILITY](ANTIFRAGILITY.md) and [ANTIFRAGILITY_FIRST_WAVE](ANTIFRAGILITY_FIRST_WAVE.md) — the center doctrine and bounded first-wave scope for source-owned stress, degraded continuation, proof, and derived-vector posture
+- [VIA_NEGATIVA](VIA_NEGATIVA.md), [ANTI_AUTHORITY_RULES](ANTI_AUTHORITY_RULES.md), and [ONE_IN_ONE_OUT](ONE_IN_ONE_OUT.md) — the center subtraction posture, anti-authority rails, and sprawl pressure rule for post-wave pruning
 - [ROOTLINE](ROOTLINE.md) — the current trunk-first coordination spine for AoA x ToS planting
 - [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) — the standing recovery law for long-horizon routes across the federation
 - [METHOD_SPINE](METHOD_SPINE.md) — the center-level doctrine for method placement and maturity language
