@@ -18,6 +18,7 @@ Read in this order:
 6. [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md) for the current public onboarding, support, release, and CI posture of the center
 
 If you only need the shortest outsider overview, stop after step 4 and return here for the route table below.
+For low-context agents and machine-facing entry, inspect `generated/center_entry_map.min.json`.
 
 ## How to verify center claims
 
@@ -27,7 +28,8 @@ Read in this order when you need to check a public claim coming from the center:
 2. [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current documented public federation contour
 3. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline
 4. [ROADMAP](ROADMAP.md) for declared direction and current phase
-5. [generated/ecosystem_registry.min.json](generated/ecosystem_registry.min.json), [generated/federation_supporting_inventory.min.json](generated/federation_supporting_inventory.min.json), `python scripts/validate_ecosystem.py`, and `python -m pytest -q tests` for the compact v1 registry, the companion supporting inventory, and the current bounded center battery
+5. [generated/center_entry_map.min.json](generated/center_entry_map.min.json), `python scripts/build_center_entry_map.py --check`, and `python scripts/validate_center_entry_map.py` for the compact machine-facing center-entry capsule
+6. [generated/ecosystem_registry.min.json](generated/ecosystem_registry.min.json), [generated/federation_supporting_inventory.min.json](generated/federation_supporting_inventory.min.json), `python scripts/validate_ecosystem.py`, and `python -m pytest -q tests` for the compact v1 registry, the companion supporting inventory, and the current bounded center battery
 
 Then branch by need:
 
@@ -76,6 +78,7 @@ The linked wave notes above hold the compact doctrine for each declared move.
 - layer map
 - federation rules
 - program-level direction
+- compact center-entry capsule surfaces
 - compact ecosystem-level registry surfaces
 
 ## Public support and release posture

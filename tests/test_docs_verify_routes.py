@@ -37,6 +37,17 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("published summary surface", generated_agents)
         self.assertIn("not a hidden second charter", generated_agents)
 
+    def test_readme_and_public_support_posture_expose_center_entry_capsule(self) -> None:
+        readme = read_text("README.md")
+        posture = read_text("docs/PUBLIC_SUPPORT_POSTURE.md")
+
+        self.assertIn("generated/center_entry_map.min.json", readme)
+        self.assertIn("python scripts/build_center_entry_map.py --check", readme)
+        self.assertIn("python scripts/validate_center_entry_map.py", readme)
+        self.assertIn("generated/center_entry_map.min.json", posture)
+        self.assertIn("python scripts/build_center_entry_map.py --check", posture)
+        self.assertIn("python scripts/validate_center_entry_map.py", posture)
+
 
 if __name__ == "__main__":
     unittest.main()
