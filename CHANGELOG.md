@@ -7,9 +7,24 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-04-10
+
+### Added
+
+- `generated/center_entry_map.min.json` as the center-owned zero-entry capsule
+  plus `generated/federation_supporting_inventory.min.json` and the matching
+  validation lane
+- first-wave antifragility and via negativa center doctrine together with
+  `docs/PUBLIC_SUPPORT_POSTURE.md` for bounded public onboarding, support, and
+  release posture
+- repo-local project-foundation, session-harvest, and automation-opportunity
+  skill surfaces for center-owned review and closeout follow-through
+
 ### Changed
 
 - promoted `aoa-stats` into the documented public federation contour and aligned the compact registry, center maps, and validator-backed documentation around that boundary
+- tightened questbook and center validation around unmapped bullets, quest-band
+  placement, JSON-schema-backed center-entry checks, and current verify routes
 
 ## [0.1.0] - 2026-04-01
 
