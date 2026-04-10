@@ -9,6 +9,20 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [0.2.0] - 2026-04-10
 
+### Summary
+
+- this release adds center entry capsules, public support posture, and center-owned project-foundation/session-harvest follow-through surfaces
+- center validation is tighter around `aoa-stats` promotion, questbook placement, and machine-readable federation support maps
+- `Agents-of-Abyss` remains the center doctrine and routing home without absorbing specialized layer truth
+
+### Validation
+
+- `python scripts/release_check.py`
+
+### Notes
+
+- detailed corpus, documentation, and generated-surface coverage for this release remains enumerated below under `Added`, `Changed`, and `Included in this release`
+
 ### Added
 
 - `generated/center_entry_map.min.json` as the center-owned zero-entry capsule
