@@ -36,6 +36,8 @@ QUESTBOOK_SECTION_TO_BAND = {
     "Frontier": "frontier",
     "Near": "near",
 }
+QUEST_ID_RE = re.compile(r"`(AOA-Q-\d{4})`")
+MARKDOWN_BULLET_RE = re.compile(r"^[*+-]\s+")
 
 ALLOWED_STATUS = {
     "active",
@@ -125,12 +127,12 @@ def parse_questbook_bands(text: str) -> tuple[dict[str, str], set[str]]:
             current_band = QUESTBOOK_SECTION_TO_BAND.get(stripped[3:].strip())
             current_heading_mapped = current_band is not None
             continue
-        match = re.search(r"`(AOA-Q-\d{4})`", stripped)
+        match = QUEST_ID_RE.search(stripped)
         if match is None:
             continue
         if current_heading_mapped and current_band is not None:
             bands_by_id[match.group(1)] = current_band
-        elif current_heading_seen and stripped.startswith("- `"):
+        elif current_heading_seen and MARKDOWN_BULLET_RE.match(stripped):
             ids_in_unmapped_sections.add(match.group(1))
     return bands_by_id, ids_in_unmapped_sections
 

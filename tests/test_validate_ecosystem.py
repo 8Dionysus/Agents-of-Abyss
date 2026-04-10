@@ -267,6 +267,52 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         ):
             validate_ecosystem.validate_questbook_surface()
 
+    def test_questbook_rejects_non_dash_bullets_under_unmapped_section(self) -> None:
+        for bullet in ("*", "+"):
+            with self.subTest(bullet=bullet):
+                self.write_valid_surface()
+                write_text(
+                    self.quests_dir / "AOA-Q-0004.yaml",
+                    "\n".join(
+                        (
+                            "schema_version: work_quest_v1",
+                            "id: AOA-Q-0004",
+                            "repo: Agents-of-Abyss",
+                            "band: frontier",
+                            "public_safe: true",
+                        )
+                    )
+                    + "\n",
+                )
+                write_text(
+                    self.questbook_path,
+                    "\n".join(
+                        (
+                            "# QUESTBOOK.md — Agents-of-Abyss",
+                            "",
+                            "## Frontier",
+                            "",
+                            "- `AOA-Q-0001`",
+                            "- `AOA-Q-0002`",
+                            "",
+                            "## Near",
+                            "",
+                            "- `AOA-Q-0003`",
+                            "",
+                            "## Blocked / reanchor",
+                            "",
+                            f"{bullet} `AOA-Q-0004`",
+                        )
+                    )
+                    + "\n",
+                )
+
+                with self.assertRaisesRegex(
+                    validate_ecosystem.ValidationError,
+                    "QUESTBOOK.md must list quest id 'AOA-Q-0004' under the section for band 'frontier', not only under an unmapped section",
+                ):
+                    validate_ecosystem.validate_questbook_surface()
+
     def test_valid_second_wave_extra_quest_file_is_allowed(self) -> None:
         self.write_valid_surface()
         write_text(
