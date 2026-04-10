@@ -169,6 +169,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0004",
                     "repo: Agents-of-Abyss",
+                    "band: frontier",
                     "public_safe: true",
                 )
             )
@@ -180,6 +181,47 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         )
 
         validate_ecosystem.validate_questbook_surface()
+
+    def test_questbook_rejects_band_section_mismatch(self) -> None:
+        self.write_valid_surface()
+        write_text(
+            self.quests_dir / "AOA-Q-0004.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0004",
+                    "repo: Agents-of-Abyss",
+                    "band: frontier",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            "\n".join(
+                (
+                    "# QUESTBOOK.md — Agents-of-Abyss",
+                    "",
+                    "## Frontier",
+                    "",
+                    "- `AOA-Q-0001`",
+                    "- `AOA-Q-0002`",
+                    "",
+                    "## Near",
+                    "",
+                    "- `AOA-Q-0003`",
+                    "- `AOA-Q-0004`",
+                )
+            )
+            + "\n",
+        )
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "QUESTBOOK.md must list quest id 'AOA-Q-0004' under the section for band 'frontier', not 'near'",
+        ):
+            validate_ecosystem.validate_questbook_surface()
 
     def test_valid_second_wave_extra_quest_file_is_allowed(self) -> None:
         self.write_valid_surface()
@@ -539,13 +581,13 @@ class ValidateRegistryTests(unittest.TestCase):
         payload["repos"] = [
             repo
             for repo in payload["repos"]
-            if isinstance(repo, dict) and repo.get("name") != "aoa-kag"
+            if isinstance(repo, dict) and repo.get("name") != "aoa-stats"
         ]
         self.write_registry(payload)
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
-            "missing documented v1 repos: aoa-kag",
+            "missing documented v1 repos: aoa-stats",
         ):
             validate_ecosystem.validate_registry()
 
@@ -553,14 +595,14 @@ class ValidateRegistryTests(unittest.TestCase):
         self.write_valid_registry()
         payload = self.read_registry()
         for repo in payload["repos"]:
-            if isinstance(repo, dict) and repo.get("name") == "aoa-agents":
-                repo["role"] = "persona-layer"
+            if isinstance(repo, dict) and repo.get("name") == "aoa-stats":
+                repo["role"] = "stats-layer"
                 break
         self.write_registry(payload)
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
-            r"role for 'aoa-agents' must equal 'agent-layer'",
+            r"role for 'aoa-stats' must equal 'derived-observability-layer'",
         ):
             validate_ecosystem.validate_registry()
 

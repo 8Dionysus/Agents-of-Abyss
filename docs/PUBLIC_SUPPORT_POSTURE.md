@@ -30,7 +30,7 @@ The center may publicly support:
 
 The center does not publicly support:
 
-- layer-owned truth that belongs in `aoa-techniques`, `aoa-skills`, `aoa-evals`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, or `aoa-kag`
+- layer-owned truth that belongs in `aoa-techniques`, `aoa-skills`, `aoa-evals`, `aoa-stats`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, or `aoa-kag`
 - runtime guarantees that belong in `abyss-stack`
 - ToS-authored meaning that belongs in `Tree-of-Sophia`
 - typed consumer or control-plane guarantees that belong in `aoa-sdk`

@@ -16,6 +16,7 @@ Use it when the question is not only "what exists?" but also:
 | `aoa-skills` | execution canon | bounded agent-facing workflows, trigger boundaries, verification guidance, technique composition manifests | primary technique meaning, proof doctrine, memory objects, ecosystem-center governance | `SKILL.md`, `techniques.yaml`, agent policy files, skill support artifacts | how should an agent execute bounded work? |
 | `aoa-evals` | proof canon | bounded proof surfaces, verdict logic, scoring guidance, comparison modes, blind spots | workflow execution truth, technique truth, memory truth, ecosystem routing truth | `EVAL.md`, `eval.yaml`, evidence/support artifacts | what bounded claim can we honestly defend? |
 | `aoa-routing` | navigation layer | cross-repo dispatch, lightweight entrypoints, recommended paths, model-facing access surfaces | authored technique, skill, eval, or memory truth | router manifests, path surfaces, dispatch registries, `generated/federation_entrypoints.min.json`, `docs/FEDERATION_ENTRY_ABI.md` | where should a model or human go next? |
+| `aoa-stats` | derived observability layer | machine-first summaries, derived windows, shared stats event envelope, and bounded summary builders | workflow meaning, proof meaning, live route authority, quest-state authority | `generated/*.json`, `generated/summary_surface_catalog.min.json`, `schemas/stats-event-envelope.schema.json`, stats builders and validators | what movement is visible across owner-local evidence without turning stats into authority? |
 
 ## Emerging repositories
 
@@ -49,13 +50,14 @@ When deciding where something belongs:
 4. If it defines recall, provenance, or temporal memory, it probably belongs in `aoa-memo`.
 5. If it defines role-bearing agents, it probably belongs in `aoa-agents`.
 6. If it defines dispatch across layers, it probably belongs in `aoa-routing`.
-7. If it defines ecosystem-level identity or federation boundaries, it belongs here.
+7. If it defines machine-first summary surfaces or derived observability windows, it probably belongs in `aoa-stats`.
+8. If it defines ecosystem-level identity or federation boundaries, it belongs here.
 
 ## Compact rule
 
 Source repositories own meaning.
 Meta repositories own maps.
-Derived repositories own access layers.
+Derived repositories own bounded lifts, views, and access layers.
 
 Compact registry v1 covers the center, the public AoA layers, and the adjacent system anchors listed in the ecosystem map.
 Supporting consumer surfaces stay routable from the center but remain outside compact registry v1 until a later map version says otherwise.

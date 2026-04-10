@@ -24,12 +24,15 @@ It may also publish thin federation entry cards or ABI surfaces as additive orie
 
 It should not become the primary authoring home of techniques, skills, evals, memory objects, playbooks, or ToS corpus material.
 
-## Rule 3: derived knowledge substrate is not authored source truth
+## Rule 3: derived layers stay derived and non-sovereign
 
 `aoa-kag` may hold provenance-aware lifts, graph-ready projections, and retrieval-ready structures.
 It may also publish bounded federation-readiness spines or export contracts as derived surfaces.
 
-It must not silently replace source-authored meaning from `Tree-of-Sophia` or other source repositories.
+`aoa-stats` may hold machine-first summary surfaces, derived windows, and evidence-linked observability views built from owner-local receipts and bounded eval outputs.
+
+Neither derived layer must silently replace source-authored meaning from `Tree-of-Sophia` or other source repositories.
+`aoa-stats` must not become proof, route, score, or quest authority.
 
 ## Rule 4: scenario composition is not execution canon
 

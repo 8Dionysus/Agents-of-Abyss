@@ -13,7 +13,7 @@ def test_deletion_candidates_surface_stays_owner_aware() -> None:
         (REPO_ROOT / "schemas" / "deletion_candidate_list_v1.json").read_text()
     )
 
-    assert candidates["schema_version"] == schema["title"]
+    assert candidates["schema_version"] == schema["properties"]["schema_version"]["const"]
     assert candidates["scope"]["pass_kind"] == "via_negativa_pruning"
     assert candidates["scope"]["candidate_mode"] == "inspect_first"
     assert candidates["guardrails"]

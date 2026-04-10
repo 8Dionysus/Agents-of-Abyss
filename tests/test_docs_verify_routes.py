@@ -32,6 +32,22 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("outside the compact registry v1 by design", readme)
         self.assertIn("supporting machine-readable inventory", readme)
 
+    def test_center_surfaces_name_aoa_stats_as_public_layer(self) -> None:
+        readme = read_text("README.md")
+        charter = read_text("CHARTER.md")
+        ecosystem_map = read_text("ECOSYSTEM_MAP.md")
+        roadmap = read_text("ROADMAP.md")
+
+        self.assertIn("`aoa-stats` | derived observability and machine-first summary layer", readme)
+        self.assertIn("- `aoa-stats`", charter)
+        self.assertIn("`aoa-stats` | derived observability layer", ecosystem_map)
+        self.assertIn("- `aoa-stats`", roadmap)
+
+    def test_docs_readme_routes_to_aoa_stats_public_layer_decision(self) -> None:
+        docs_readme = read_text("docs/README.md")
+        self.assertIn("decisions/2026-04-09-aoa-stats-public-layer.md", docs_readme)
+        self.assertIn("public federation contour", docs_readme)
+
     def test_generated_agents_keeps_registry_as_publication_surface(self) -> None:
         generated_agents = read_text("generated/AGENTS.md")
         self.assertIn("published summary surface", generated_agents)

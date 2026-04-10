@@ -6,6 +6,7 @@ It does not absorb repo-local quest detail from sibling repositories.
 ## Frontier
 
 - `AOA-Q-0002` — define the source-owned quest dispatch seam without promoting routing into authority
+- `AOA-Q-0004` — define the first adjunct RPG reflection layer without mutating quest or role canon
 - `AOA-Q-0006` — fix the runtime/frontend architecture law for the AoA RPG layer
 - `AOA-Q-0007` — define the RPG bridge wave for unlock proof, party composition, and derived navigation
 - `AOA-Q-0008` — define the RPG runtime/projection wave for the first body-facing AoA slice
@@ -13,7 +14,6 @@ It does not absorb repo-local quest detail from sibling repositories.
 ## Near
 
 - `AOA-Q-0003` — shape the next contour after foundation proof without widening too early
-- `AOA-Q-0004` — define the first adjunct RPG reflection layer without mutating quest or role canon
 - `AOA-Q-0005` — define the second RPG reflection wave for skills as abilities and techniques as feats
 
 ## Blocked / reanchor

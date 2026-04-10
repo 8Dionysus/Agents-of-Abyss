@@ -11,6 +11,7 @@ The current documented public federation contour includes:
 - `aoa-techniques`
 - `aoa-skills`
 - `aoa-evals`
+- `aoa-stats`
 - `aoa-routing`
 - `aoa-memo`
 - `aoa-agents`
@@ -33,6 +34,7 @@ The current center-declared growth move after the trunk-first structural wave is
 - support ToS soil preparation explicitly without letting AoA rename it into active expansion
 
 The current center framing also includes its first bounded cross-repo entry and readiness-alignment surfaces:
+- keep `aoa-stats` public as a derived observability layer that summarizes movement without becoming proof, route, or score authority
 - keep the thin federation entry ABI in `aoa-routing` additive and non-authoritative
 - keep the experimental federation spine and export-readiness posture in `aoa-kag` bounded and derived
 - keep the public ToS tiny-entry seam source-owned even when downstream layers consume it
