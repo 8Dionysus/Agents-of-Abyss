@@ -48,6 +48,10 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 
 - [AGENTS.md](AGENTS.md) — local editing and maintenance instructions for the `docs/` surface
 - [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md) — the public onboarding, support, release, and CI posture for the AoA center
+- [FEDERATION_RELEASE_PROTOCOL](FEDERATION_RELEASE_PROTOCOL.md) — the shared cadence and release completeness contract for public owner repos
+- [RELEASING](RELEASING.md) — the center-owned release runbook and audit path
+- [postmortem: 2026-04-10 federation release rollout](postmortems/2026-04-10-federation-release-rollout-retrospective.md) — the no-blame retrospective behind the new release contract
+- [ADR: federation release contract](decisions/2026-04-10-federation-release-contract.md) — why the new federation release path exists
 - [decision note: aoa-stats public layer](decisions/2026-04-09-aoa-stats-public-layer.md) — why `aoa-stats` now belongs inside the documented public federation contour rather than only the supporting inventory
 - [QUESTBOOK_MODEL](QUESTBOOK_MODEL.md) and [QUESTBOOK_FIRST_WAVE](QUESTBOOK_FIRST_WAVE.md) — the current center questbook contour and first-wave guardrails
 - [RPG layer and bridge docs](RPG_LAYER_MODEL.md) plus the related `RPG_*` documents — adjunct reflection-contour support docs, not the main center entry path
