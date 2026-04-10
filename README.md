@@ -2,7 +2,7 @@
 
 Agents of Abyss (AoA) is the operational federation of explicit layers used to build, route, validate, and run long-horizon agentic systems.
 
-It is not one bot, one workflow, or one narrow automation project. It is a modular federation with distinct public layers for reusable practice, bounded execution, portable proof, navigation, memory, agent roles, scenario composition, derived knowledge substrate work, and infrastructure.
+It is not one bot, one workflow, or one narrow automation project. It is a modular federation with distinct public layers for reusable practice, bounded execution, portable proof, derived observability, navigation, memory, agent roles, scenario composition, derived knowledge substrate work, and infrastructure.
 
 This repository is the constitutional and ecosystem-center repository of AoA. It names the federation, maps its layers, states the growth rules, and routes readers toward the repositories that own specialized meaning. It should keep the ecosystem intelligible without absorbing it.
 
@@ -51,6 +51,7 @@ Then branch by need:
 | `aoa-techniques` | reusable engineering practice | you need durable techniques rather than one-off fixes |
 | `aoa-skills` | bounded agent-facing execution workflows | you need an executable workflow built from reusable techniques |
 | `aoa-evals` | portable proof surfaces for bounded claims | you need to check quality, boundaries, regressions, or defensible claims |
+| `aoa-stats` | derived observability and machine-first summary layer | you need evidence-linked summaries of movement without promoting stats into workflow, proof, or quest authority |
 | `aoa-routing` | navigation and dispatch surfaces plus a thin federation entry ABI | you need the smallest next route across AoA surfaces without promoting routing into authority |
 | `aoa-memo` | explicit memory and recall surfaces | you need reviewable memory, provenance, or recall posture |
 | `aoa-agents` | role contracts, persona boundaries, handoff posture | you need to define who acts and under what role contract |
@@ -90,6 +91,7 @@ For the shortest public statement of what the center may claim, how those claims
 - technique truth
 - skill truth
 - eval truth
+- stats-layer derived view truth
 - memo truth
 - agent-role truth
 - playbook truth

@@ -7,6 +7,10 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+### Changed
+
+- promoted `aoa-stats` into the documented public federation contour and aligned the compact registry, center maps, and validator-backed documentation around that boundary
+
 ## [0.1.0] - 2026-04-01
 
 First public baseline release of `Agents-of-Abyss` as the constitutional and ecosystem-center repository of AoA.

@@ -13,6 +13,7 @@ AoA exists to support sustained intellectual and technical work through:
 - reusable techniques
 - bounded agent workflows
 - portable evaluation surfaces
+- derived observability and machine-first summary surfaces
 - routing and navigation layers
 - memory and recall layers
 - explicit role contracts
@@ -41,6 +42,7 @@ It does not own:
 - technique truth
 - skill truth
 - eval truth
+- stats-layer derived-view truth
 - playbook truth
 - memory truth
 - agent-role truth
@@ -56,6 +58,7 @@ The current public AoA federation includes:
 - `aoa-techniques`
 - `aoa-skills`
 - `aoa-evals`
+- `aoa-stats`
 - `aoa-routing`
 - `aoa-memo`
 - `aoa-agents`

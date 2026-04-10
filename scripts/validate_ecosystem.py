@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -31,6 +32,10 @@ DUAL_VOCABULARY_EXAMPLE_PATH = REPO_ROOT / "examples" / "dual_vocabulary_overlay
 DUAL_VOCABULARY_GENERATED_PATH = REPO_ROOT / "generated" / "dual_vocabulary_overlay.json"
 RPG_BRIDGE_WAVE_PATH = REPO_ROOT / "docs" / "RPG_BRIDGE_WAVE.md"
 RPG_RUNTIME_PROJECTION_WAVE_PATH = REPO_ROOT / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md"
+QUESTBOOK_SECTION_TO_BAND = {
+    "Frontier": "frontier",
+    "Near": "near",
+}
 
 ALLOWED_STATUS = {
     "active",
@@ -49,13 +54,14 @@ DOCUMENTED_REGISTRY_V1 = {
     "aoa-techniques": {"role": "practice-canon", "kind": "source"},
     "aoa-skills": {"role": "execution-canon", "kind": "source"},
     "aoa-evals": {"role": "proof-canon", "kind": "source"},
-    "aoa-routing": {"role": "navigation-layer", "kind": "derived"},
     "aoa-memo": {"role": "memory-layer", "kind": "source"},
     "aoa-agents": {"role": "agent-layer", "kind": "source"},
     "aoa-playbooks": {"role": "scenario-composition-layer", "kind": "source"},
+    "aoa-stats": {"role": "derived-observability-layer", "kind": "derived"},
+    "aoa-routing": {"role": "navigation-layer", "kind": "derived"},
     "aoa-kag": {"role": "derived-knowledge-substrate", "kind": "derived"},
-    "abyss-stack": {"role": "infrastructure-substrate", "kind": "related"},
     "Tree-of-Sophia": {"role": "knowledge-architecture-counterpart", "kind": "related"},
+    "abyss-stack": {"role": "infrastructure-substrate", "kind": "related"},
 }
 DOCUMENTED_SUPPORTING_SURFACES = {
     "aoa-sdk": {
@@ -104,6 +110,22 @@ def read_yaml(path: Path) -> dict[str, object]:
         fail(f"{path.relative_to(REPO_ROOT).as_posix()} must contain a YAML object")
 
     return payload
+
+
+def parse_questbook_bands(text: str) -> dict[str, str]:
+    current_band: str | None = None
+    bands_by_id: dict[str, str] = {}
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("## "):
+            current_band = QUESTBOOK_SECTION_TO_BAND.get(stripped[3:].strip())
+            continue
+        if current_band is None:
+            continue
+        match = re.search(r"`(AOA-Q-\d{4})`", stripped)
+        if match is not None:
+            bands_by_id[match.group(1)] = current_band
+    return bands_by_id
 
 
 def validate_schema_surface() -> None:
@@ -420,6 +442,7 @@ def validate_questbook_surface() -> None:
     questbook_text = read_text(QUESTBOOK_PATH)
     read_text(QUESTBOOK_MODEL_PATH)
     first_wave_text = read_text(QUESTBOOK_FIRST_WAVE_PATH)
+    questbook_bands = parse_questbook_bands(questbook_text)
 
     quest_paths = {
         path.stem: path for path in QUESTS_PATH.glob("AOA-Q-*.yaml") if path.is_file()
@@ -455,6 +478,13 @@ def validate_questbook_surface() -> None:
             fail(
                 f"{path.relative_to(REPO_ROOT).as_posix()} id '{payload_id}' "
                 f"does not match filename '{quest_id}'"
+            )
+        quest_band = payload.get("band")
+        listed_band = questbook_bands.get(quest_id)
+        if isinstance(quest_band, str) and listed_band is not None and listed_band != quest_band:
+            fail(
+                f"QUESTBOOK.md must list quest id '{quest_id}' under the section for band "
+                f"'{quest_band}', not '{listed_band}'"
             )
 
         if payload.get("public_safe") is not True:

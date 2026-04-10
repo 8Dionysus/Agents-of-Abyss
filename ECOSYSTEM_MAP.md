@@ -23,6 +23,7 @@ This file is the human-first map of the current documented public AoA federation
 
 | repository | role | owns | does not own | maturity crosswalk |
 |---|---|---|---|---|
+| `aoa-stats` | derived observability layer | machine-first summary surfaces, derived windows, shared stats receipt envelope, and evidence-linked federation read models | workflow meaning, proof meaning, or live route / quest authority | bootstrap -> seed |
 | `aoa-routing` | navigation and dispatch layer | cross-repo routing hints, dispatch surfaces, navigation posture, lightweight indexes, and a separate federation entry ABI | primary authored truth of other layers | bootstrap -> seed |
 | `aoa-kag` | derived knowledge substrate | provenance-aware lifts, graph-ready projections, retrieval-ready structures, and bounded federation readiness surfaces derived from authoritative sources | source-authored truth of ToS or other layer-owned corpora | bootstrap -> seed |
 

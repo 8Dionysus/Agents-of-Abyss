@@ -41,6 +41,7 @@ Examples:
 - `aoa-techniques` owns technique truth
 - `aoa-skills` owns skill truth
 - `aoa-evals` owns eval truth
+- `aoa-stats` owns derived observability and machine-first summary truth
 - `aoa-routing` should own navigation surfaces
 - `aoa-memo` should own memory truth
 - `aoa-agents` should own role and persona truth

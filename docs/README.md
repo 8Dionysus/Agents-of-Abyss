@@ -48,6 +48,7 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 
 - [AGENTS.md](AGENTS.md) — local editing and maintenance instructions for the `docs/` surface
 - [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md) — the public onboarding, support, release, and CI posture for the AoA center
+- [decision note: aoa-stats public layer](decisions/2026-04-09-aoa-stats-public-layer.md) — why `aoa-stats` now belongs inside the documented public federation contour rather than only the supporting inventory
 - [QUESTBOOK_MODEL](QUESTBOOK_MODEL.md) and [QUESTBOOK_FIRST_WAVE](QUESTBOOK_FIRST_WAVE.md) — the current center questbook contour and first-wave guardrails
 - [RPG layer and bridge docs](RPG_LAYER_MODEL.md) plus the related `RPG_*` documents — adjunct reflection-contour support docs, not the main center entry path
 
