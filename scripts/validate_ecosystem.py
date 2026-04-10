@@ -112,20 +112,27 @@ def read_yaml(path: Path) -> dict[str, object]:
     return payload
 
 
-def parse_questbook_bands(text: str) -> dict[str, str]:
+def parse_questbook_bands(text: str) -> tuple[dict[str, str], set[str]]:
     current_band: str | None = None
+    current_heading_seen = False
+    current_heading_mapped = False
     bands_by_id: dict[str, str] = {}
+    ids_in_unmapped_sections: set[str] = set()
     for line in text.splitlines():
         stripped = line.strip()
         if stripped.startswith("## "):
+            current_heading_seen = True
             current_band = QUESTBOOK_SECTION_TO_BAND.get(stripped[3:].strip())
-            continue
-        if current_band is None:
+            current_heading_mapped = current_band is not None
             continue
         match = re.search(r"`(AOA-Q-\d{4})`", stripped)
-        if match is not None:
+        if match is None:
+            continue
+        if current_heading_mapped and current_band is not None:
             bands_by_id[match.group(1)] = current_band
-    return bands_by_id
+        elif current_heading_seen and stripped.startswith("- `"):
+            ids_in_unmapped_sections.add(match.group(1))
+    return bands_by_id, ids_in_unmapped_sections
 
 
 def validate_schema_surface() -> None:
@@ -442,7 +449,7 @@ def validate_questbook_surface() -> None:
     questbook_text = read_text(QUESTBOOK_PATH)
     read_text(QUESTBOOK_MODEL_PATH)
     first_wave_text = read_text(QUESTBOOK_FIRST_WAVE_PATH)
-    questbook_bands = parse_questbook_bands(questbook_text)
+    questbook_bands, ids_in_unmapped_sections = parse_questbook_bands(questbook_text)
 
     quest_paths = {
         path.stem: path for path in QUESTS_PATH.glob("AOA-Q-*.yaml") if path.is_file()
@@ -481,6 +488,11 @@ def validate_questbook_surface() -> None:
             )
         quest_band = payload.get("band")
         listed_band = questbook_bands.get(quest_id)
+        if isinstance(quest_band, str) and listed_band is None and quest_id in ids_in_unmapped_sections:
+            fail(
+                f"QUESTBOOK.md must list quest id '{quest_id}' under the section for band "
+                f"'{quest_band}', not only under an unmapped section"
+            )
         if isinstance(quest_band, str) and listed_band is not None and listed_band != quest_band:
             fail(
                 f"QUESTBOOK.md must list quest id '{quest_id}' under the section for band "
