@@ -26,6 +26,17 @@ Tracking starts with the community-docs baseline for this repository.
 - tightened questbook and center validation around unmapped bullets, quest-band
   placement, JSON-schema-backed center-entry checks, and current verify routes
 
+### Included in this release
+
+- center doctrine, audit, and contributor-safety refreshes across `README.md`,
+  `CHARTER.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md`,
+  `ECOSYSTEM_AUDIT_INDEX.md`,
+  `FRAGILITY_BLACKLIST.md`, `DELETION_CANDIDATES.json`, `AGENTS.md`, and
+  `docs/`, including the RPG architecture, bridge, and runtime projection wave
+- regenerated center-entry and federation-supporting machine surfaces plus CI
+  and validation support under `.agents/`, `.github/`, `QUESTBOOK.md`,
+  `quests/`, `generated/`, `schemas/`, `examples/`, `scripts/`, and `tests/`
+
 ## [0.1.0] - 2026-04-01
 
 First public baseline release of `Agents-of-Abyss` as the constitutional and ecosystem-center repository of AoA.
