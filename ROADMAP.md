@@ -24,6 +24,7 @@ Adjacent system anchors include:
 
 The current center-declared growth move after the trunk-first structural wave is method-centered and then counterpart-bridge oriented:
 - give scenario-level method a real home in `aoa-playbooks`
+- make one reviewable growth-refinery route explicit without creating a new lineage layer
 - keep donor intake source-first and refinement-shaped
 - keep ecosystem maturity claims evidence-backed and cross-repo legible
 - keep KAG bounded while counterpart mappings become explicit, optional, and non-identity

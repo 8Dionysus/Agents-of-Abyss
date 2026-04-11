@@ -40,6 +40,7 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 - [ROOTLINE](ROOTLINE.md) — the current trunk-first coordination spine for AoA x ToS planting
 - [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) — the standing recovery law for long-horizon routes across the federation
 - [METHOD_SPINE](METHOD_SPINE.md) — the center-level doctrine for method placement and maturity language
+- [REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md) and [CANDIDATE_LINEAGE_CROSSWALK](CANDIDATE_LINEAGE_CROSSWALK.md) — the center-level route and boundary crosswalk for `cluster_ref -> candidate_ref -> seed_ref -> object_ref`
 - [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md) — the boundary doctrine for AoA x ToS counterpart work and KAG restraint
 - [WITNESS_COMPOST](WITNESS_COMPOST.md) — the paired public-contract doctrine for witness and compost
 - [TOS_GROWTH_SUPPORT](TOS_GROWTH_SUPPORT.md), [TOS_TEMPLATE_SUPPORT](TOS_TEMPLATE_SUPPORT.md), [TOS_LINEAGE_PILOT_SUPPORT](TOS_LINEAGE_PILOT_SUPPORT.md), [TOS_SOIL_PREP_SUPPORT](TOS_SOIL_PREP_SUPPORT.md) — narrow AoA support doctrine for ToS-owned work
@@ -52,6 +53,7 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 - [RELEASING](RELEASING.md) — the center-owned release runbook and audit path
 - [postmortem: 2026-04-10 federation release rollout](postmortems/2026-04-10-federation-release-rollout-retrospective.md) — the no-blame retrospective behind the new release contract
 - [ADR: federation release contract](decisions/2026-04-10-federation-release-contract.md) — why the new federation release path exists
+- [decision note: growth refinery lineage route](decisions/2026-04-11-growth-refinery-lineage-route.md) — why AoA now names one narrow reviewable route across checkpoint carry, reviewed candidate identity, seed staging, and owner landing without creating a new sovereign layer
 - [decision note: aoa-stats public layer](decisions/2026-04-09-aoa-stats-public-layer.md) — why `aoa-stats` now belongs inside the documented public federation contour rather than only the supporting inventory
 - [QUESTBOOK_MODEL](QUESTBOOK_MODEL.md) and [QUESTBOOK_FIRST_WAVE](QUESTBOOK_FIRST_WAVE.md) — the current center questbook contour and first-wave guardrails
 - [RPG layer and bridge docs](RPG_LAYER_MODEL.md) plus the related `RPG_*` documents — adjunct reflection-contour support docs, not the main center entry path
