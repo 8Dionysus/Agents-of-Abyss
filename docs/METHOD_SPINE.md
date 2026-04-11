@@ -11,8 +11,9 @@ The current second-wave method spine is:
 
 1. **method lives in playbooks**
 2. **donor refinement stays source-first**
-3. **practice lineage gains conceptual legitimacy without collapsing into ToS source nodes**
-4. **maturation stays evidence-backed rather than score-driven**
+3. **growth refinery stays reviewable through narrow candidate lineage**
+4. **practice lineage gains conceptual legitimacy without collapsing into ToS source nodes**
+5. **maturation stays evidence-backed rather than score-driven**
 
 ## Method lives in playbooks
 
@@ -38,6 +39,29 @@ That refinery is strict about what gets extracted:
 - keep provenance readable
 - reject contamination that widens the contract carelessly
 - reject foreign doctrine when it tries to arrive as canon instead of as bounded evidence or governance pattern
+
+## Reviewable growth refinery
+
+When one growth object survives checkpoint carry, reviewed donor harvest, seed
+staging, and later owner landing, AoA should keep that route legible through a
+narrow explicit chain:
+
+`cluster_ref -> candidate_ref -> seed_ref -> object_ref`
+
+That route stays reviewable only if it remains split across existing owners:
+
+- `aoa-sdk` carries provisional `cluster_ref`
+- `aoa-skills` mints reviewed `candidate_ref`
+- `Dionysus` mints `seed_ref`
+- the final owner repo mints or resolves `object_ref`
+
+This is not a new lineage layer.
+It is one bounded refinery route that keeps the same object biography readable
+without moving authorship into the center, routing, stats, memo, or KAG.
+
+For the center-level route and owner crosswalk, see
+`docs/REVIEWABLE_GROWTH_REFINERY.md` and
+`docs/CANDIDATE_LINEAGE_CROSSWALK.md`.
 
 ## Practice-lineage legitimacy
 
