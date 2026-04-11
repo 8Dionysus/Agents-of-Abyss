@@ -44,6 +44,23 @@ Keep each stage in its existing owner:
 The center names the chain and its boundaries.
 It does not mint the identities inside that chain.
 
+## Validation witness
+
+The center keeps one witness-shaped validator for the live example chain:
+
+```bash
+python scripts/validate_candidate_lineage_contract.py --workspace-root /srv
+```
+
+That check reads owner-repo examples in `aoa-sdk`, `aoa-skills`, and
+`Dionysus`.
+It may detect drift in the chain, but it does not make this repository the
+owner of checkpoint carry, reviewed candidate identity, seed identity, or final
+object identity.
+
+The center-level example at `examples/lineage_contract_chain.example.json` is
+a crosswalk witness only.
+
 ## Owner-first route
 
 The honest owner-first route is:
