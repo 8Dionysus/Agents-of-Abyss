@@ -26,6 +26,7 @@ The current center-declared growth move after the trunk-first structural wave is
 - give scenario-level method a real home in `aoa-playbooks`
 - make one reviewable growth-refinery route explicit without creating a new lineage layer
 - keep self-agency continuity bounded through explicit anchors, bounded revision windows, and governed reanchor rather than runtime-autonomy mythology
+- keep component refresh owner-owned through reviewed drift hints, owner receipts, and explicit refresh boundaries rather than mystical self-healing
 - keep donor intake source-first and refinement-shaped
 - keep ecosystem maturity claims evidence-backed and cross-repo legible
 - keep KAG bounded while counterpart mappings become explicit, optional, and non-identity

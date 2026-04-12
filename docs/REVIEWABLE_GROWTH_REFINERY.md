@@ -117,5 +117,7 @@ Use this doctrine when a growth object must stay legible across:
 
 For the tracked owner-status and pruning law after reviewed candidate identity
 already exists, use `docs/OWNER_LANDING_AND_PRUNING.md`.
+For owner-owned maintenance of one drifting internal technical surface, use
+`docs/COMPONENT_REFRESH_LAW.md`.
 
 Use narrower owner docs when the question is already local to one layer.

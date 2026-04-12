@@ -86,6 +86,20 @@ posture and owner boundaries stay explicit.
 
 For the center-level continuity law, see `docs/SELF_AGENCY_CONTINUITY.md`.
 
+## Component refresh stays owner-owned
+
+When internal technical surfaces drift across source-authored inputs and
+generated or projected outputs, AoA may name one component-refresh route:
+
+`owner refresh law -> control-plane drift hint -> reviewed refresh decision -> owner refresh receipt -> derived refresh summary -> optional bounded memory`
+
+The center may name that route and its stop-lines.
+It does not turn the center, `aoa-sdk`, `aoa-stats`, `aoa-playbooks`, or
+`aoa-memo` into the owner of the drifting component.
+
+For the center-level component refresh law, see
+`docs/COMPONENT_REFRESH_LAW.md`.
+
 ## Practice-lineage legitimacy
 
 AoA may name practice lineage as a real operational concern without pretending it is identical to ToS source-node lineage.
