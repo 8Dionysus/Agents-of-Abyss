@@ -62,6 +62,8 @@ without moving authorship into the center, routing, stats, memo, or KAG.
 For the center-level route and owner crosswalk, see
 `docs/REVIEWABLE_GROWTH_REFINERY.md` and
 `docs/CANDIDATE_LINEAGE_CROSSWALK.md`.
+For the post-candidate landing and pruning doctrine, see
+`docs/OWNER_LANDING_AND_PRUNING.md`.
 
 ## Practice-lineage legitimacy
 

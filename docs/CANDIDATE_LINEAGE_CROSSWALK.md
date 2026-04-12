@@ -14,6 +14,11 @@ new sovereign object classes.
 | seed staging | `seed_ref` | `Dionysus` | seed staging, dispatch, planting trace | seed-garden and dispatch identity only | replace final owner object identity |
 | owner landing | `object_ref` | final owning repo | landed source-owned object | final owner truth for that object class | retroactively rewrite earlier stage meaning |
 
+After `candidate_ref` exists, tracked owner status surfaces may record whether
+the route landed, reanchored, merged, deferred, or dropped.
+Those surfaces stay weaker than landed objects; see
+`docs/OWNER_LANDING_AND_PRUNING.md`.
+
 ## Metadata that should survive or update across stages
 
 Each stronger stage should preserve or explicitly update:
