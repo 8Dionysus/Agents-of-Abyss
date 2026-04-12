@@ -48,6 +48,22 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("decisions/2026-04-09-aoa-stats-public-layer.md", docs_readme)
         self.assertIn("public federation contour", docs_readme)
 
+    def test_growth_refinery_routes_include_owner_landing_and_pruning_doctrine(self) -> None:
+        readme = read_text("README.md")
+        docs_readme = read_text("docs/README.md")
+        refinery_doc = read_text("docs/REVIEWABLE_GROWTH_REFINERY.md")
+        crosswalk = read_text("docs/CANDIDATE_LINEAGE_CROSSWALK.md")
+        owner_landing = read_text("docs/OWNER_LANDING_AND_PRUNING.md")
+
+        self.assertIn("docs/OWNER_LANDING_AND_PRUNING", readme)
+        self.assertIn("OWNER_LANDING_AND_PRUNING.md", docs_readme)
+        self.assertIn("docs/OWNER_LANDING_AND_PRUNING.md", refinery_doc)
+        self.assertIn("docs/OWNER_LANDING_AND_PRUNING.md", crosswalk)
+        self.assertIn("weaker than a landed owner object", owner_landing)
+        self.assertIn("let `aoa-stats` infer owner truth", owner_landing)
+        self.assertIn("let `aoa-memo` turn prune or recovery writeback into landing authority", owner_landing)
+        self.assertIn("let `aoa-routing` treat owner-status hints as stronger than owner-local review", owner_landing)
+
     def test_generated_agents_keeps_registry_as_publication_surface(self) -> None:
         generated_agents = read_text("generated/AGENTS.md")
         self.assertIn("published summary surface", generated_agents)

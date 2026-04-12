@@ -40,7 +40,7 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 - [ROOTLINE](ROOTLINE.md) — the current trunk-first coordination spine for AoA x ToS planting
 - [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) — the standing recovery law for long-horizon routes across the federation
 - [METHOD_SPINE](METHOD_SPINE.md) — the center-level doctrine for method placement and maturity language
-- [REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md) and [CANDIDATE_LINEAGE_CROSSWALK](CANDIDATE_LINEAGE_CROSSWALK.md) — the center-level route and boundary crosswalk for `cluster_ref -> candidate_ref -> seed_ref -> object_ref`
+- [REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md), [CANDIDATE_LINEAGE_CROSSWALK](CANDIDATE_LINEAGE_CROSSWALK.md), and [OWNER_LANDING_AND_PRUNING](OWNER_LANDING_AND_PRUNING.md) — the center-level route, stage-ownership crosswalk, and post-candidate landing/pruning doctrine
 - [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md) — the boundary doctrine for AoA x ToS counterpart work and KAG restraint
 - [WITNESS_COMPOST](WITNESS_COMPOST.md) — the paired public-contract doctrine for witness and compost
 - [TOS_GROWTH_SUPPORT](TOS_GROWTH_SUPPORT.md), [TOS_TEMPLATE_SUPPORT](TOS_TEMPLATE_SUPPORT.md), [TOS_LINEAGE_PILOT_SUPPORT](TOS_LINEAGE_PILOT_SUPPORT.md), [TOS_SOIL_PREP_SUPPORT](TOS_SOIL_PREP_SUPPORT.md) — narrow AoA support doctrine for ToS-owned work
