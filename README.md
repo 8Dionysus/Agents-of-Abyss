@@ -39,7 +39,7 @@ Then branch by need:
 - **antifragility doctrine and first-wave boundary**: [docs/ANTIFRAGILITY](docs/ANTIFRAGILITY.md) and [docs/ANTIFRAGILITY_FIRST_WAVE](docs/ANTIFRAGILITY_FIRST_WAVE.md)
 - **via negativa and anti-authority pruning posture**: [docs/VIA_NEGATIVA.md](docs/VIA_NEGATIVA.md), [docs/ANTI_AUTHORITY_RULES.md](docs/ANTI_AUTHORITY_RULES.md), [docs/ONE_IN_ONE_OUT.md](docs/ONE_IN_ONE_OUT.md), [FRAGILITY_BLACKLIST.md](FRAGILITY_BLACKLIST.md), and [DELETION_CANDIDATES.json](DELETION_CANDIDATES.json)
 - **method and maturity**: [docs/METHOD_SPINE](docs/METHOD_SPINE.md)
-- **growth refinery and candidate lineage**: [docs/REVIEWABLE_GROWTH_REFINERY](docs/REVIEWABLE_GROWTH_REFINERY.md), [docs/CANDIDATE_LINEAGE_CROSSWALK](docs/CANDIDATE_LINEAGE_CROSSWALK.md), and [docs/OWNER_LANDING_AND_PRUNING](docs/OWNER_LANDING_AND_PRUNING.md)
+- **growth refinery and candidate lineage**: [docs/REVIEWABLE_GROWTH_REFINERY](docs/REVIEWABLE_GROWTH_REFINERY.md), [docs/CANDIDATE_LINEAGE_CROSSWALK](docs/CANDIDATE_LINEAGE_CROSSWALK.md), [docs/OWNER_LANDING_AND_PRUNING](docs/OWNER_LANDING_AND_PRUNING.md), `python scripts/validate_candidate_lineage_contract.py --workspace-root /srv`, and `python scripts/validate_wave4_kernel_automation.py --workspace-root /srv`
 - **self-agency continuity and bounded long-arc return**: [docs/SELF_AGENCY_CONTINUITY](docs/SELF_AGENCY_CONTINUITY.md)
 - **counterpart bridge and KAG restraint**: [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md)
 - **witness and compost pilot**: [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md)
