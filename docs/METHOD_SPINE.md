@@ -65,6 +65,27 @@ For the center-level route and owner crosswalk, see
 For the post-candidate landing and pruning doctrine, see
 `docs/OWNER_LANDING_AND_PRUNING.md`.
 
+## Continuity stays anchor-bound
+
+When a reviewed route must preserve duration across bounded revision, explicit
+return, memo support, derived refresh, and proof, AoA may name a
+self-agency-continuity arc.
+
+That arc stays smaller than autonomy mythology.
+It remains honest only when it keeps an explicit chain:
+
+`continuity_ref -> revision_window_ref -> reanchor_ref -> anchor_artifact_ref`
+
+The center may name this law and its stop-lines.
+It does not become the owner of role posture, playbook composition, memo
+support, stats, proof, or runtime behavior.
+
+If continuity becomes a recurring multi-layer route rather than a one-off
+recovery note, scenario composition belongs in `aoa-playbooks` while anchor
+posture and owner boundaries stay explicit.
+
+For the center-level continuity law, see `docs/SELF_AGENCY_CONTINUITY.md`.
+
 ## Practice-lineage legitimacy
 
 AoA may name practice lineage as a real operational concern without pretending it is identical to ToS source-node lineage.

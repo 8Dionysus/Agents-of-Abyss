@@ -200,3 +200,27 @@ It does not become the author of ToS preparation doctrine, and it should not ren
 
 `aoa-routing` may hand off into those seams, and `aoa-kag` may derive bounded readiness surfaces from them.
 Neither downstream layer becomes ToS authority by doing so.
+
+## Rule 22: self-agency continuity stays bounded by anchors and owner splits
+
+AoA may name a long-arc self-agency continuity route.
+
+That route stays valid only when:
+
+- it preserves an inspectable anchor artifact
+- revision remains inside a named bounded window
+- reanchor is explicit when drift appears
+- continuity does not transfer authority away from the owning repositories
+
+`Agents-of-Abyss` may name this law and its stop-lines.
+It must not treat doctrine as permission to absorb:
+
+- role-facing continuity meaning from `aoa-agents`
+- recurring continuity choreography from `aoa-playbooks`
+- continuity support writeback from `aoa-memo`
+- derived continuity summaries from `aoa-stats`
+- continuity proof doctrine from `aoa-evals`
+- hint-carry or runtime implementation from `aoa-sdk` or `abyss-stack`
+
+Continuity is bounded duration with explicit anchors and governed return, not
+runtime autonomy.

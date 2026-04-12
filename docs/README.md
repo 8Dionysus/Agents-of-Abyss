@@ -41,6 +41,7 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 - [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) — the standing recovery law for long-horizon routes across the federation
 - [METHOD_SPINE](METHOD_SPINE.md) — the center-level doctrine for method placement and maturity language
 - [REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md), [CANDIDATE_LINEAGE_CROSSWALK](CANDIDATE_LINEAGE_CROSSWALK.md), and [OWNER_LANDING_AND_PRUNING](OWNER_LANDING_AND_PRUNING.md) — the center-level route, stage-ownership crosswalk, and post-candidate landing/pruning doctrine
+- [SELF_AGENCY_CONTINUITY](SELF_AGENCY_CONTINUITY.md) — the center-level law for bounded long-arc continuity with explicit anchors and governed reanchor
 - [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md) — the boundary doctrine for AoA x ToS counterpart work and KAG restraint
 - [WITNESS_COMPOST](WITNESS_COMPOST.md) — the paired public-contract doctrine for witness and compost
 - [TOS_GROWTH_SUPPORT](TOS_GROWTH_SUPPORT.md), [TOS_TEMPLATE_SUPPORT](TOS_TEMPLATE_SUPPORT.md), [TOS_LINEAGE_PILOT_SUPPORT](TOS_LINEAGE_PILOT_SUPPORT.md), [TOS_SOIL_PREP_SUPPORT](TOS_SOIL_PREP_SUPPORT.md) — narrow AoA support doctrine for ToS-owned work
@@ -70,7 +71,8 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 
 1. [ROADMAP](../ROADMAP.md)
 2. [METHOD_SPINE](METHOD_SPINE.md)
-3. [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md)
+3. [SELF_AGENCY_CONTINUITY](SELF_AGENCY_CONTINUITY.md)
+4. [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md)
 
 ## Notes
 

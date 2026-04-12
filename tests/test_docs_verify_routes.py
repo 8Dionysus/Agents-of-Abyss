@@ -64,6 +64,22 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("let `aoa-memo` turn prune or recovery writeback into landing authority", owner_landing)
         self.assertIn("let `aoa-routing` treat owner-status hints as stronger than owner-local review", owner_landing)
 
+    def test_self_agency_continuity_routes_stay_center_bounded(self) -> None:
+        readme = read_text("README.md")
+        docs_readme = read_text("docs/README.md")
+        method_spine = read_text("docs/METHOD_SPINE.md")
+        federation_rules = read_text("docs/FEDERATION_RULES.md")
+        continuity = read_text("docs/SELF_AGENCY_CONTINUITY.md")
+
+        self.assertIn("docs/SELF_AGENCY_CONTINUITY", readme)
+        self.assertIn("SELF_AGENCY_CONTINUITY.md", docs_readme)
+        self.assertIn("docs/SELF_AGENCY_CONTINUITY.md", method_spine)
+        self.assertIn("continuity_ref -> revision_window_ref -> reanchor_ref -> anchor_artifact_ref", continuity)
+        self.assertIn("`aoa-agents` owns role-facing continuity", continuity)
+        self.assertIn("`aoa-playbooks` owns recurring continuity choreography", continuity)
+        self.assertIn("runtime autonomy", federation_rules)
+        self.assertIn("continuity does not transfer authority away from the owning repositories", federation_rules)
+
     def test_generated_agents_keeps_registry_as_publication_surface(self) -> None:
         generated_agents = read_text("generated/AGENTS.md")
         self.assertIn("published summary surface", generated_agents)
