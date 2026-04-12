@@ -11,6 +11,7 @@ Current scripts include:
 - `validate_ecosystem.py` for schema, registry, and center-level `QUESTBOOK` surface checks
 - `validate_nested_agents.py` for required local directory guidance under `docs/`, `generated/`, `schemas/`, and `scripts/`
 - `validate_candidate_lineage_contract.py` for the narrow cross-repo Growth Refinery example-chain witness
+- `validate_wave4_kernel_automation.py` for the reviewed wave 4 next-kernel and automation follow-through seam across sibling repos
 
 ## Editing posture
 

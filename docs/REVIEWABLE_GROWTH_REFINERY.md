@@ -61,6 +61,19 @@ object identity.
 The center-level example at `examples/lineage_contract_chain.example.json` is
 a crosswalk witness only.
 
+For the wave-four next-kernel and reviewed automation seam, the center keeps a
+second witness-shaped validator:
+
+```bash
+python scripts/validate_wave4_kernel_automation.py --workspace-root /srv
+```
+
+That check confirms the reviewed closeout hint in `aoa-sdk`, the kernel
+maturity example set in `aoa-skills`, the review-governed playbook home in
+`aoa-playbooks`, and the derived branch/follow-through summaries in
+`aoa-stats` still line up without giving the center scheduler or owner
+authority.
+
 ## Owner-first route
 
 The honest owner-first route is:

@@ -56,8 +56,12 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         owner_landing = read_text("docs/OWNER_LANDING_AND_PRUNING.md")
 
         self.assertIn("docs/OWNER_LANDING_AND_PRUNING", readme)
+        self.assertIn("python scripts/validate_candidate_lineage_contract.py --workspace-root /srv", readme)
+        self.assertIn("python scripts/validate_wave4_kernel_automation.py --workspace-root /srv", readme)
         self.assertIn("OWNER_LANDING_AND_PRUNING.md", docs_readme)
         self.assertIn("docs/OWNER_LANDING_AND_PRUNING.md", refinery_doc)
+        self.assertIn("python scripts/validate_candidate_lineage_contract.py --workspace-root /srv", refinery_doc)
+        self.assertIn("python scripts/validate_wave4_kernel_automation.py --workspace-root /srv", refinery_doc)
         self.assertIn("docs/OWNER_LANDING_AND_PRUNING.md", crosswalk)
         self.assertIn("weaker than a landed owner object", owner_landing)
         self.assertIn("let `aoa-stats` infer owner truth", owner_landing)
