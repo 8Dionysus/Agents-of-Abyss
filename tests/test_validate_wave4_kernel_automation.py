@@ -111,6 +111,24 @@ class Wave4KernelAutomationValidatorTests(unittest.TestCase):
             ):
                 validate_wave4_kernel_automation(root)
 
+    def test_rejects_playbook_that_positively_claims_scheduler_authority(self) -> None:
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write_valid_workspace(root)
+            write_text(
+                root / "aoa-playbooks" / "playbooks" / "reviewed-automation-followthrough" / "PLAYBOOK.md",
+                (
+                    "This playbook is not a scheduler and does not claim scheduler authority.\n"
+                    "This playbook has scheduler authority.\n"
+                ),
+            )
+
+            with self.assertRaisesRegex(
+                ValueError,
+                "reviewed automation follow-through playbook must not positively claim scheduler authority",
+            ):
+                validate_wave4_kernel_automation(root)
+
     def test_rejects_automation_summary_schedule_activation_claim(self) -> None:
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
