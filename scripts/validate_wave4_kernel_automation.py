@@ -26,6 +26,22 @@ REQUIRED_SKILL_EXAMPLE_REFS = (
     "progression_delta.wave4.json",
     "automation_candidate.wave4.json",
 )
+NEGATIVE_SCHEDULER_AUTHORITY_MARKERS = (
+    "not a scheduler",
+    "does not claim scheduler authority",
+    "without granting scheduler authority",
+    "must not claim scheduler authority",
+    "without scheduler authority",
+    "no scheduler authority",
+)
+POSITIVE_SCHEDULER_AUTHORITY_MARKERS = (
+    "has scheduler authority",
+    "claims scheduler authority",
+    "grants scheduler authority",
+    "owns scheduler authority",
+    "owns the scheduler authority",
+    "holds scheduler authority",
+)
 
 
 @dataclass(frozen=True)
@@ -69,6 +85,14 @@ def require_text(payload: dict[str, Any], key: str, label: str) -> str:
     value = payload.get(key)
     require(isinstance(value, str) and bool(value.strip()), f"{label} must carry non-empty {key}")
     return value
+
+
+def playbook_disclaims_scheduler_authority(playbook_text: str) -> bool:
+    return any(marker in playbook_text for marker in NEGATIVE_SCHEDULER_AUTHORITY_MARKERS)
+
+
+def playbook_claims_scheduler_authority(playbook_text: str) -> bool:
+    return any(marker in playbook_text for marker in POSITIVE_SCHEDULER_AUTHORITY_MARKERS)
 
 
 def resolve_wave4_paths(workspace_root: Path) -> Wave4Paths:
@@ -119,8 +143,12 @@ def validate_wave4_kernel_automation(workspace_root: Path) -> Wave4Summary:
 
     playbook_text = paths.playbook_path.read_text(encoding="utf-8").lower()
     require(
-        "scheduler authority" in playbook_text or "not a scheduler" in playbook_text,
+        playbook_disclaims_scheduler_authority(playbook_text),
         "reviewed automation follow-through playbook must explicitly disclaim scheduler authority",
+    )
+    require(
+        not playbook_claims_scheduler_authority(playbook_text),
+        "reviewed automation follow-through playbook must not positively claim scheduler authority",
     )
 
     manifest = read_json_object(paths.playbook_manifest)
