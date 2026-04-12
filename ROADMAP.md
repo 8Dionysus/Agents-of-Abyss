@@ -22,9 +22,10 @@ Adjacent system anchors include:
 - `Tree-of-Sophia`
 - `abyss-stack`
 
-The current center-declared growth move after the trunk-first structural wave is method-centered and then counterpart-bridge oriented:
+The current center-declared growth move after the trunk-first structural wave is method-centered, continuity-aware, and then counterpart-bridge oriented:
 - give scenario-level method a real home in `aoa-playbooks`
 - make one reviewable growth-refinery route explicit without creating a new lineage layer
+- keep self-agency continuity bounded through explicit anchors, bounded revision windows, and governed reanchor rather than runtime-autonomy mythology
 - keep donor intake source-first and refinement-shaped
 - keep ecosystem maturity claims evidence-backed and cross-repo legible
 - keep KAG bounded while counterpart mappings become explicit, optional, and non-identity
