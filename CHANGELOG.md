@@ -7,6 +7,34 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-04-12
+
+### Summary
+
+- this patch lands lineage validator work, owner-landing doctrine, and
+  self-agency continuity updates in the center repo
+- roadmap continuity and scheduler authority checks are tightened for the
+  current kernel wave
+- `Agents-of-Abyss` remains the center doctrine and route map, not a sink for
+  specialized layer truth
+
+### Added
+
+- growth-refinery doctrine and lineage crosswalk surfaces, a candidate-lineage
+  contract validator, owner-landing center doctrine, and self-agency
+  continuity center doctrine.
+- a wave-4 kernel automation validator for the center-owned automation
+  posture.
+
+### Changed
+
+- roadmap continuity direction and scheduler-authority checks are tightened
+  around the current kernel wave.
+
+### Validation
+
+- `python scripts/release_check.py`
+
 ## [0.2.0] - 2026-04-10
 
 ### Summary
