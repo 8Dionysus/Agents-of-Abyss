@@ -224,3 +224,28 @@ It must not treat doctrine as permission to absorb:
 
 Continuity is bounded duration with explicit anchors and governed return, not
 runtime autonomy.
+
+## Rule 23: component refresh stays owner-owned and reviewable
+
+AoA may name a component-refresh route when one internal technical surface
+shows repeated drift, staleness, or hand-patched maintenance pressure.
+
+That route stays valid only when:
+
+- one owner repository remains responsible for the component
+- source-authored inputs stay stronger than generated or deploy-local outputs
+- reviewed hints and follow-through stay additive rather than sovereign
+- rollback anchors and refresh receipts remain owner-owned
+
+`Agents-of-Abyss` may name this law and its stop-lines.
+It must not treat that as permission to absorb:
+
+- source inputs, generated output meaning, proof commands, or refresh receipts
+  from the owner repository
+- typed hint carry or follow-through carry from `aoa-sdk`
+- recurring coordination from `aoa-playbooks`
+- derived refresh summaries from `aoa-stats`
+- bounded lessons or recovery patterns from `aoa-memo`
+
+Component refresh is owner-owned maintenance with explicit drift evidence, not
+mystical self-healing.

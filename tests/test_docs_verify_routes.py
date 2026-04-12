@@ -84,6 +84,24 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("runtime autonomy", federation_rules)
         self.assertIn("continuity does not transfer authority away from the owning repositories", federation_rules)
 
+    def test_component_refresh_routes_stay_owner_owned(self) -> None:
+        readme = read_text("README.md")
+        docs_readme = read_text("docs/README.md")
+        roadmap = read_text("ROADMAP.md")
+        method_spine = read_text("docs/METHOD_SPINE.md")
+        federation_rules = read_text("docs/FEDERATION_RULES.md")
+        refinery = read_text("docs/REVIEWABLE_GROWTH_REFINERY.md")
+        component_refresh = read_text("docs/COMPONENT_REFRESH_LAW.md")
+
+        self.assertIn("docs/COMPONENT_REFRESH_LAW", readme)
+        self.assertIn("COMPONENT_REFRESH_LAW.md", docs_readme)
+        self.assertIn("component refresh owner-owned", roadmap)
+        self.assertIn("docs/COMPONENT_REFRESH_LAW.md", method_spine)
+        self.assertIn("mystical self-healing", federation_rules)
+        self.assertIn("docs/COMPONENT_REFRESH_LAW.md", refinery)
+        self.assertIn("owner refresh law", component_refresh)
+        self.assertIn("the shared-root Codex plane in `8Dionysus`", component_refresh)
+
     def test_generated_agents_keeps_registry_as_publication_surface(self) -> None:
         generated_agents = read_text("generated/AGENTS.md")
         self.assertIn("published summary surface", generated_agents)
