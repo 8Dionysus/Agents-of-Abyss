@@ -6,13 +6,14 @@ It exists so cross-repo alignment work can distinguish between:
 
 - repositories whose direction canon is a `ROADMAP.md`
 - repositories whose direction lives in another repo-owned surface
-- profile, seed, or derived layers that should not be forced into roadmap-shaped status docs
+- the narrow cases where a non-roadmap surface remains the more honest entry door
 
 ## Rules
 
 - Treat the listed direction surface as the first repo-owned statement of current course.
 - Keep `README.md` and docs-entry maps short and link-driven toward that surface.
-- Do not force profile, seed-garden, or derived repos to invent a `ROADMAP.md` when another surface already owns direction more honestly.
+- Prefer a root `ROADMAP.md` for mature owner repos when it can summarize current phase without replacing stronger repo-local truth.
+- Keep profile-only route maps on narrower non-roadmap posture docs when a roadmap would imply false center authority.
 - When an entry doc names a direction surface, avoid stale counts or duplicated phase snapshots there.
 
 ## Current map
@@ -27,11 +28,11 @@ It exists so cross-repo alignment work can distinguish between:
 | `aoa-agents` | `ROADMAP.md` | canonical role-contract and handoff direction surface |
 | `aoa-playbooks` | `ROADMAP.md` | canonical scenario-layer direction surface |
 | `aoa-routing` | `ROADMAP.md` | canonical routing-layer direction surface |
-| `aoa-stats` | `README.md#current-v0-surface` and `docs/README.md` | the derived layer currently names its active contour through the committed v0 summary surface rather than a separate roadmap |
+| `aoa-stats` | `ROADMAP.md` | the derived layer now keeps one root-level current-direction door while still routing shipped summary families through `README.md#current-v0-surface` and `docs/README.md` |
 | `aoa-kag` | `ROADMAP.md` | canonical derived-knowledge direction surface |
-| `aoa-sdk` | `docs/blueprint.md`, read with `README.md` as the current-state gate | the blueprint still carries repo direction, while current-state truth stays in the current tree and repo docs |
+| `aoa-sdk` | `ROADMAP.md` | the control-plane repo now keeps one root-level current-direction door while leaving `docs/blueprint.md` as seed history and `README.md` plus repo docs as current-state gates |
 | `Tree-of-Sophia` | `ROADMAP.md` | canonical knowledge-architecture direction surface |
-| `Dionysus` | `seed-registry.yaml`, `seed_expansion/`, and `docs/SEED_SURFACE_MAP.md` | the seed garden is directed by the live registry and staged seed surfaces, not by a standalone roadmap |
+| `Dionysus` | `ROADMAP.md` | the seed garden now keeps one root-level direction door that explicitly stays weaker than manifests, closure notes, `seed-registry.yaml`, and owner-repo reality |
 | `8Dionysus` | `docs/PUBLIC_ENTRY_POSTURE.md` | this is a profile and route-map repo, so a standalone roadmap would be a misleading center-claim |
 | `abyss-stack` | `~/src/abyss-stack/ROADMAP.md` | runtime and infrastructure direction belongs to the source checkout, not the deployed `/srv/abyss-stack` mirror |
 

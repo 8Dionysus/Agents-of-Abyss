@@ -48,6 +48,14 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("decisions/2026-04-09-aoa-stats-public-layer.md", docs_readme)
         self.assertIn("public federation contour", docs_readme)
 
+    def test_direction_surfaces_map_routes_sdk_stats_and_seed_garden_through_root_roadmaps(self) -> None:
+        direction_surfaces = read_text("docs/DIRECTION_SURFACES.md")
+
+        self.assertIn("| `aoa-stats` | `ROADMAP.md` |", direction_surfaces)
+        self.assertIn("| `aoa-sdk` | `ROADMAP.md` |", direction_surfaces)
+        self.assertIn("| `Dionysus` | `ROADMAP.md` |", direction_surfaces)
+        self.assertIn("| `8Dionysus` | `docs/PUBLIC_ENTRY_POSTURE.md` |", direction_surfaces)
+
     def test_growth_refinery_routes_include_owner_landing_and_pruning_doctrine(self) -> None:
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
