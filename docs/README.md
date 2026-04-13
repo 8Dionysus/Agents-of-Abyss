@@ -18,6 +18,7 @@ For the shortest outsider overview, read in this order:
 6. [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md)
 
 Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need conceptual or routing detail rather than the first-pass center view.
+Use [DIRECTION_SURFACES](DIRECTION_SURFACES.md) when you need to check which repos currently use `ROADMAP.md` and which rely on another direction surface.
 
 ## How to verify center claims
 
@@ -51,6 +52,7 @@ Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need
 
 - [AGENTS.md](AGENTS.md) — local editing and maintenance instructions for the `docs/` surface
 - [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md) — the public onboarding, support, release, and CI posture for the AoA center
+- [DIRECTION_SURFACES](DIRECTION_SURFACES.md) — the current cross-repo map of roadmap and non-roadmap direction surfaces
 - [FEDERATION_RELEASE_PROTOCOL](FEDERATION_RELEASE_PROTOCOL.md) — the shared cadence and release completeness contract for public owner repos
 - [RELEASING](RELEASING.md) — the center-owned release runbook and audit path
 - [postmortem: 2026-04-10 federation release rollout](postmortems/2026-04-10-federation-release-rollout-retrospective.md) — the no-blame retrospective behind the new release contract
