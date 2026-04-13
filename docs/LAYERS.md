@@ -125,7 +125,7 @@ Purpose:
 Main question:
 - what source-linked knowledge world is being cultivated?
 
-## Pre-Agon protocol posture
+## Agon preparation protocol posture
 
 Repository: `Agents-of-Abyss` for the center-owned preparation note.
 

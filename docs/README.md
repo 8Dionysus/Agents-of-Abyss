@@ -19,7 +19,7 @@ For the shortest outsider overview, read in this order:
 
 Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need conceptual or routing detail rather than the first-pass center view.
 Use [DIRECTION_SURFACES](DIRECTION_SURFACES.md) when you need to check which repos currently use `ROADMAP.md` and which rely on another direction surface.
-Use [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) when you need the provisional pre-Agon holding boundary without starting Agon or minting a new repository.
+Use [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) when you need the provisional Agon preparation holding boundary without starting Agon or minting a new repository.
 
 ## How to verify center claims
 
@@ -48,7 +48,7 @@ Use [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) when you need the pr
 - [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md) — the boundary doctrine for AoA x ToS counterpart work and KAG restraint
 - [WITNESS_COMPOST](WITNESS_COMPOST.md) — the paired public-contract doctrine for witness and compost
 - [TOS_GROWTH_SUPPORT](TOS_GROWTH_SUPPORT.md), [TOS_TEMPLATE_SUPPORT](TOS_TEMPLATE_SUPPORT.md), [TOS_LINEAGE_PILOT_SUPPORT](TOS_LINEAGE_PILOT_SUPPORT.md), [TOS_SOIL_PREP_SUPPORT](TOS_SOIL_PREP_SUPPORT.md) — narrow AoA support doctrine for ToS-owned work
-- [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) — the provisional pre-Agon holding boundary that keeps Agon center-owned for now, not a new sibling repo, not ToS canon, and not runtime substrate
+- [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) — the provisional Agon preparation holding boundary that keeps Agon center-owned for now, not a new sibling repo, not ToS canon, and not runtime substrate
 
 ## Support and maintenance docs
 

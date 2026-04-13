@@ -1,6 +1,6 @@
 # Agon Preparation Posture
 
-This note captures a conservative pre-Agon holding boundary for the AoA center.
+This note captures a conservative Agon preparation holding boundary for the AoA center.
 It prepares the ground for Agon without starting Agon, creating a new sibling
 repository, or claiming that a runtime protocol already exists.
 It is intentionally provisional: later reviewed agent-formation and Agon
@@ -44,7 +44,7 @@ Until narrower reviewed surfaces supersede it, use this holding map:
 | durable runtime body once Agon becomes a service contour | `abyss-stack` | runtime implementation only |
 | slow source-linked canonization after reviewable survival | `Tree-of-Sophia` | no direct arena write path |
 
-## Pre-Agon wave contour
+## Preparation contour
 
 One conservative preparation contour is:
 

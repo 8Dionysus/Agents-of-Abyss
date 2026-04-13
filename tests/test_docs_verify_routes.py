@@ -110,7 +110,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("owner refresh law", component_refresh)
         self.assertIn("the shared-root Codex plane in `8Dionysus`", component_refresh)
 
-    def test_pre_agon_preparation_routes_stay_center_bounded(self) -> None:
+    def test_agon_preparation_routes_stay_center_bounded(self) -> None:
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
         roadmap = read_text("ROADMAP.md")
@@ -120,8 +120,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
 
         self.assertIn("docs/AGON_PREPARATION_POSTURE", readme)
         self.assertIn("AGON_PREPARATION_POSTURE.md", docs_readme)
-        self.assertIn("pre-Agon holding boundary", roadmap)
-        self.assertIn("Pre-Agon protocol posture", layers)
+        self.assertIn("Agon preparation holding boundary", roadmap)
+        self.assertIn("Agon preparation protocol posture", layers)
         self.assertIn("future Agon law", repo_roles)
         self.assertIn("Agon is not a live implementation layer yet", posture)
         self.assertIn("holding boundary", posture)
