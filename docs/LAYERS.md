@@ -133,9 +133,10 @@ Current surface:
 - `docs/AGON_PREPARATION_POSTURE.md`
 
 Purpose:
-- keep the future Agon landing boundary explicit before any protocol package or
+- keep the future Agon holding boundary explicit before any protocol package or
   runtime body exists
-- keep Agon inside the center as a future bounded constitutional protocol
+- keep Agon inside the center as a provisional future bounded constitutional
+  protocol contour unless a later reviewed center decision narrows it
 - prevent a premature new sibling repository, ToS arena drift, or runtime
   substrate ownership drift
 - route future actor form, routing gates, trial playbooks, eval verdicts,

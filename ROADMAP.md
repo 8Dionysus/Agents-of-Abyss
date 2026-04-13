@@ -39,7 +39,7 @@ The current center-declared growth move after the trunk-first structural wave is
 - support ToS corpus scaffold work explicitly without letting AoA author template or node identity meaning
 - support the first ToS lineage pilot explicitly without letting AoA author the branch itself
 - support ToS soil preparation explicitly without letting AoA rename it into active expansion
-- prepare the Agon landing boundary explicitly without starting Agon, minting a
+- prepare the Agon holding boundary explicitly without starting Agon, minting a
   new sibling repository, turning ToS into an arena, or pushing protocol law into
   runtime and control-plane layers
 
@@ -72,7 +72,7 @@ hardening, not a new implementation layer. Its current checked surface is:
 - self-agency continuity and component refresh stop-lines:
   `docs/SELF_AGENCY_CONTINUITY.md` and
   `docs/COMPONENT_REFRESH_LAW.md`
-- pre-Agon landing boundary:
+- pre-Agon holding boundary:
   `docs/AGON_PREPARATION_POSTURE.md`
 - current kernel-wave automation boundary checks:
   `scripts/validate_wave4_kernel_automation.py`
