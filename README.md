@@ -36,6 +36,7 @@ Read in this order when you need to check a public claim coming from the center:
 Then branch by need:
 
 - **structural trunk**: [docs/ROOTLINE](docs/ROOTLINE.md)
+- **cross-repo direction surfaces and roadmap alternatives**: [docs/DIRECTION_SURFACES](docs/DIRECTION_SURFACES.md)
 - **antifragility doctrine and first-wave boundary**: [docs/ANTIFRAGILITY](docs/ANTIFRAGILITY.md) and [docs/ANTIFRAGILITY_FIRST_WAVE](docs/ANTIFRAGILITY_FIRST_WAVE.md)
 - **via negativa and anti-authority pruning posture**: [docs/VIA_NEGATIVA.md](docs/VIA_NEGATIVA.md), [docs/ANTI_AUTHORITY_RULES.md](docs/ANTI_AUTHORITY_RULES.md), [docs/ONE_IN_ONE_OUT.md](docs/ONE_IN_ONE_OUT.md), [FRAGILITY_BLACKLIST.md](FRAGILITY_BLACKLIST.md), and [DELETION_CANDIDATES.json](DELETION_CANDIDATES.json)
 - **method and maturity**: [docs/METHOD_SPINE](docs/METHOD_SPINE.md)
