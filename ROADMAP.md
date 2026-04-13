@@ -39,6 +39,9 @@ The current center-declared growth move after the trunk-first structural wave is
 - support ToS corpus scaffold work explicitly without letting AoA author template or node identity meaning
 - support the first ToS lineage pilot explicitly without letting AoA author the branch itself
 - support ToS soil preparation explicitly without letting AoA rename it into active expansion
+- prepare the Agon landing boundary explicitly without starting Agon, minting a
+  new sibling repository, turning ToS into an arena, or pushing protocol law into
+  runtime and control-plane layers
 
 The current center framing also includes its first bounded cross-repo entry and readiness-alignment surfaces:
 - keep `aoa-stats` public as a derived observability layer that summarizes movement without becoming proof, route, or score authority
@@ -69,12 +72,15 @@ hardening, not a new implementation layer. Its current checked surface is:
 - self-agency continuity and component refresh stop-lines:
   `docs/SELF_AGENCY_CONTINUITY.md` and
   `docs/COMPONENT_REFRESH_LAW.md`
+- pre-Agon landing boundary:
+  `docs/AGON_PREPARATION_POSTURE.md`
 - current kernel-wave automation boundary checks:
   `scripts/validate_wave4_kernel_automation.py`
 
 This contour lets the center name the route, validators, and stop-lines while
 leaving checkpoint carry, candidate identity, seed staging, owner landing,
-derived summaries, and recurring method in their owning repositories.
+derived summaries, recurring method, and future Agon-related handoffs in their
+owning repositories.
 
 ## Phase 1: center realignment
 

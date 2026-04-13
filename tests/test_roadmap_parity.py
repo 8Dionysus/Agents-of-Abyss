@@ -67,6 +67,7 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
         "scripts/validate_candidate_lineage_contract.py",
         "docs/SELF_AGENCY_CONTINUITY.md",
         "docs/COMPONENT_REFRESH_LAW.md",
+        "docs/AGON_PREPARATION_POSTURE.md",
         "scripts/validate_wave4_kernel_automation.py",
     ]
     for surface in current_release_surfaces:
