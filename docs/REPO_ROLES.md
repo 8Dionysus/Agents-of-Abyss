@@ -53,9 +53,10 @@ When deciding where something belongs:
 7. If it defines machine-first summary surfaces or derived observability windows, it probably belongs in `aoa-stats`.
 8. If it defines ecosystem-level identity or federation boundaries, it belongs here.
 9. If it defines future Agon law, arena lifecycle, lawful moves,
-   contradiction-ledger posture, or promotion discipline, it belongs here first
-   as center-owned protocol preparation. If it defines agonic or assistant
-   actor form, routing gates, trial scenarios, verdicts, scars, derived
+   contradiction-ledger posture, or promotion discipline, route it here first as
+   center-owned protocol preparation unless a later reviewed center decision
+   narrows that contour. If it defines agonic actor form, civil/service
+   assistant variants, routing gates, trial scenarios, verdicts, scars, derived
    summaries, SDK helpers, runtime services, or ToS canonization, route that
    slice to the owning layer named in `docs/AGON_PREPARATION_POSTURE.md`.
 
