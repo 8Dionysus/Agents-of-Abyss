@@ -124,3 +124,24 @@ Purpose:
 
 Main question:
 - what source-linked knowledge world is being cultivated?
+
+## Pre-Agon protocol posture
+
+Repository: `Agents-of-Abyss` for the center-owned preparation note.
+
+Current surface:
+- `docs/AGON_PREPARATION_POSTURE.md`
+
+Purpose:
+- keep the future Agon landing boundary explicit before any protocol package or
+  runtime body exists
+- keep Agon inside the center as a future bounded constitutional protocol
+- prevent a premature new sibling repository, ToS arena drift, or runtime
+  substrate ownership drift
+- route future actor form, routing gates, trial playbooks, eval verdicts,
+  memory scars, derived summaries, KAG lifts, SDK helpers, and runtime services
+  back to their owning layers
+
+Main question:
+- how can AoA prepare the arena without starting it or absorbing neighboring
+  owner truth?

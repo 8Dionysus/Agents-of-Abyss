@@ -46,6 +46,7 @@ Then branch by need:
 - **counterpart bridge and KAG restraint**: [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md)
 - **witness and compost pilot**: [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md)
 - **ToS support waves**: [docs/TOS_GROWTH_SUPPORT](docs/TOS_GROWTH_SUPPORT.md), [docs/TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md), [docs/TOS_LINEAGE_PILOT_SUPPORT](docs/TOS_LINEAGE_PILOT_SUPPORT.md), [docs/TOS_SOIL_PREP_SUPPORT](docs/TOS_SOIL_PREP_SUPPORT.md)
+- **pre-Agon landing posture**: [docs/AGON_PREPARATION_POSTURE](docs/AGON_PREPARATION_POSTURE.md)
 - **adjunct RPG reflection contour**: [docs/RPG_LAYER_MODEL](docs/RPG_LAYER_MODEL.md), [docs/RPG_FIRST_WAVE](docs/RPG_FIRST_WAVE.md), [docs/RPG_SECOND_WAVE](docs/RPG_SECOND_WAVE.md), [docs/RPG_SKILLS_AND_FEATS](docs/RPG_SKILLS_AND_FEATS.md), [docs/RPG_ARCHITECTURE_RFC](docs/RPG_ARCHITECTURE_RFC.md), [docs/RPG_CANONICAL_TERMINOLOGY](docs/RPG_CANONICAL_TERMINOLOGY.md), [docs/RPG_BOUNDARY_MAP](docs/RPG_BOUNDARY_MAP.md)
 - **public onboarding, support, release, and CI posture**: [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md)
 
@@ -79,6 +80,7 @@ The current center-level framing and declared near-term direction are:
 - **bounded counterpart bridges** with `aoa-kag` remaining derived and conceptual origin remaining in `Tree-of-Sophia`
 - **contract-first witness and compost** before any deeper runtime instrumentation wave
 - **explicit, reviewable ToS support** for growth law, corpus scaffold, lineage pilot, and soil prep without AoA authoring ToS meaning
+- **pre-Agon preparation** that keeps Agon inside the center as a future bounded protocol, not a new sibling repo, not ToS canon, and not runtime substrate
 
 The linked wave notes above hold the compact doctrine for each declared move.
 
