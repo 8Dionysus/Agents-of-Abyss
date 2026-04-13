@@ -47,6 +47,35 @@ The current center framing also includes its first bounded cross-repo entry and 
 - keep `aoa-sdk` visible in `generated/federation_supporting_inventory.min.json` as a typed supporting consumer and control-plane surface without collapsing it into compact registry v1 or center authority
 - keep the public ToS tiny-entry seam source-owned even when downstream layers consume it
 
+### Current release contour
+
+The live center contour for `v0.2.1` is roadmap continuity and owner-boundary
+hardening, not a new implementation layer. Its current checked surface is:
+
+- center public route and support posture:
+  `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`,
+  `docs/FEDERATION_RULES.md`, `docs/PUBLIC_SUPPORT_POSTURE.md`, and
+  `docs/DIRECTION_SURFACES.md`
+- compact center and support capsules:
+  `generated/center_entry_map.min.json`,
+  `generated/ecosystem_registry.min.json`, and
+  `generated/federation_supporting_inventory.min.json`
+- reviewable growth-refinery and post-candidate owner followthrough doctrine:
+  `docs/REVIEWABLE_GROWTH_REFINERY.md`,
+  `docs/CANDIDATE_LINEAGE_CROSSWALK.md`,
+  `docs/OWNER_LANDING_AND_PRUNING.md`,
+  `examples/lineage_contract_chain.example.json`, and
+  `scripts/validate_candidate_lineage_contract.py`
+- self-agency continuity and component refresh stop-lines:
+  `docs/SELF_AGENCY_CONTINUITY.md` and
+  `docs/COMPONENT_REFRESH_LAW.md`
+- current kernel-wave automation boundary checks:
+  `scripts/validate_wave4_kernel_automation.py`
+
+This contour lets the center name the route, validators, and stop-lines while
+leaving checkpoint carry, candidate identity, seed staging, owner landing,
+derived summaries, and recurring method in their owning repositories.
+
 ## Phase 1: center realignment
 
 Goals:
