@@ -72,7 +72,7 @@ hardening, not a new implementation layer. Its current checked surface is:
 - self-agency continuity and component refresh stop-lines:
   `docs/SELF_AGENCY_CONTINUITY.md` and
   `docs/COMPONENT_REFRESH_LAW.md`
-- pre-Agon holding boundary:
+- Agon preparation holding boundary:
   `docs/AGON_PREPARATION_POSTURE.md`
 - current kernel-wave automation boundary checks:
   `scripts/validate_wave4_kernel_automation.py`
