@@ -22,6 +22,10 @@ Adjacent system anchors include:
 - `Tree-of-Sophia`
 - `abyss-stack`
 
+Supporting inventory surfaces currently kept outside compact registry v1
+include:
+- `aoa-sdk` as the typed local-first consumer and control-plane support layer
+
 The current center-declared growth move after the trunk-first structural wave is method-centered, continuity-aware, and then counterpart-bridge oriented:
 - give scenario-level method a real home in `aoa-playbooks`
 - make one reviewable growth-refinery route explicit without creating a new lineage layer
@@ -40,6 +44,7 @@ The current center framing also includes its first bounded cross-repo entry and 
 - keep `aoa-stats` public as a derived observability layer that summarizes movement without becoming proof, route, or score authority
 - keep the thin federation entry ABI in `aoa-routing` additive and non-authoritative
 - keep the experimental federation spine and export-readiness posture in `aoa-kag` bounded and derived
+- keep `aoa-sdk` visible in `generated/federation_supporting_inventory.min.json` as a typed supporting consumer and control-plane surface without collapsing it into compact registry v1 or center authority
 - keep the public ToS tiny-entry seam source-owned even when downstream layers consume it
 
 ## Phase 1: center realignment
