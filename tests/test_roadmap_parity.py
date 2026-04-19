@@ -45,6 +45,7 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
         assert f"`{name}`" in roadmap
 
     assert "aoa-sdk" in supporting_names
+    assert "aoa-sdk" not in registry_names
     assert "`aoa-sdk`" in roadmap
     assert "supporting inventory" in roadmap_lower
     assert "compact registry v1" in roadmap_lower
