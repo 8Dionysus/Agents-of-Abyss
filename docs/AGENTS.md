@@ -26,6 +26,10 @@ Important documents here include:
 - `AGON_LAWFUL_MOVE_LANGUAGE.md`, `AGON_MOVE_REGISTRY_MODEL.md`,
   `AGON_MOVE_OWNER_HANDOFFS.md`, and `AGON_WAVE3_LANDING.md` for the first
   pre-protocol lawful move vocabulary and its owner-handoff stop-lines
+- `AGON_MOVE_OWNER_BINDING.md`, `AGON_MOVE_BINDING_MATRIX_MODEL.md`,
+  `AGON_OWNER_REPO_REQUESTS.md`, `AGON_PRE_PROTOCOL_STOP_LINES.md`, and
+  `AGON_WAVE4_LANDING.md` for the first owner-binding turn, its compact
+  binding matrix, cross-repo request law, stop-lines, and landing order
 - `TOS_GROWTH_SUPPORT.md`, `TOS_TEMPLATE_SUPPORT.md`, `TOS_LINEAGE_PILOT_SUPPORT.md`, and `TOS_SOIL_PREP_SUPPORT.md` for current AoA support doctrine around `Tree-of-Sophia`
 
 ## Editing posture
@@ -74,6 +78,14 @@ If you changed the Agon lawful move language surfaces, also run:
 python scripts/build_agon_lawful_move_registry.py --check
 python scripts/validate_agon_lawful_moves.py
 python -m pytest -q tests/test_agon_lawful_moves.py
+```
+
+If you changed the Agon move owner binding surfaces, also run:
+
+```bash
+python scripts/build_agon_move_owner_binding_registry.py --check
+python scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q tests/test_agon_move_owner_bindings.py
 ```
 
 If you changed ownership, routing, or maturity language, confirm the machine-readable registry still matches the prose.

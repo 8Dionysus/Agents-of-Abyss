@@ -10,8 +10,12 @@ This file applies to JSON schema contracts under `schemas/`.
 `generated/agon_imposition_readiness.min.json`.
 `agon-lawful-move.schema.json` and `agon-lawful-move-registry.schema.json`
 define the contracts for the Wave III lawful move vocabulary and registry.
+`agon-move-owner-binding.schema.json` and
+`agon-move-owner-binding-registry.schema.json` define the contracts for the
+Wave IV owner-binding seed and registry.
 These files are the boundary surfaces for tracked machine-readable center
-publication, Wave 0 Agon readiness, and Wave III lawful move language.
+publication, Wave 0 Agon readiness, Wave III lawful move language, and Wave IV
+owner binding law.
 
 ## Editing posture
 
@@ -52,6 +56,14 @@ After changing the Wave III lawful move schemas, also run:
 python scripts/build_agon_lawful_move_registry.py --check
 python scripts/validate_agon_lawful_moves.py
 python -m pytest -q tests/test_agon_lawful_moves.py
+```
+
+After changing the Wave IV owner-binding schemas, also run:
+
+```bash
+python scripts/build_agon_move_owner_binding_registry.py --check
+python scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q tests/test_agon_move_owner_bindings.py
 ```
 
 If a schema change is intentional, mention the contract shift clearly in the

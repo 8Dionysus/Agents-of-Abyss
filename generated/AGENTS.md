@@ -10,6 +10,8 @@ It summarizes repository names, roles, statuses, shared maturity, and kind for t
 `generated/agon_imposition_readiness.min.json` is the tracked Wave 0 readiness capsule for the center-owned Agon imposition gate.
 `generated/agon_lawful_move_registry.min.json` is the tracked Wave III lawful
 move registry for the center-owned pre-protocol legal vocabulary.
+`generated/agon_move_owner_binding_registry.min.json` is the tracked Wave IV
+owner-binding registry for the center-owned pre-protocol owner-binding law.
 
 This directory is derived in purpose, but the registry is currently maintained as a tracked JSON artifact inside this repository.
 Treat it as a published summary surface, not a hidden second charter.
@@ -49,6 +51,22 @@ When editing `agon_lawful_move_registry.min.json`:
 - keep every move explicitly pre-protocol; the registry must not become a
   shadow arena runtime, verdict government, scar ledger, or retention engine
 
+When editing `agon_move_owner_binding_registry.min.json`:
+
+- keep it aligned with `docs/AGON_MOVE_OWNER_BINDING.md`,
+  `docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`,
+  `docs/AGON_OWNER_REPO_REQUESTS.md`,
+  `docs/AGON_PRE_PROTOCOL_STOP_LINES.md`, and
+  `config/agon_move_owner_bindings.seed.json`
+- treat `scripts/build_agon_move_owner_binding_registry.py` as the canonical
+  builder and `scripts/validate_agon_move_owner_bindings.py` as the explicit
+  Wave IV validator
+- keep `Agents-of-Abyss` as the legal owner on every binding while all
+  non-center owner references stay `requested_not_landed`
+- keep every binding explicitly pre-protocol; the registry must not become a
+  shadow owner-landing ledger, live arena runtime, verdict government, scar
+  ledger, retention engine, or ToS promotion path
+
 There is no builder script for the compact registry or supporting inventory
 surfaces today. If that changes later, update this guide and
 `scripts/validate_ecosystem.py` together.
@@ -77,6 +95,14 @@ After changing the Agon lawful move registry, also run:
 python scripts/build_agon_lawful_move_registry.py --check
 python scripts/validate_agon_lawful_moves.py
 python -m pytest -q tests/test_agon_lawful_moves.py
+```
+
+After changing the Agon move owner binding registry, also run:
+
+```bash
+python scripts/build_agon_move_owner_binding_registry.py --check
+python scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q tests/test_agon_move_owner_bindings.py
 ```
 
 A registry edit is only done when the JSON, the schema, and the center-layer prose still agree.

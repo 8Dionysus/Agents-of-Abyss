@@ -23,6 +23,10 @@ Then branch by task:
 
 - method-centered growth or scenario-home questions: `docs/METHOD_SPINE.md`
 - adjunct RPG reflection or canonical vocabulary questions: `docs/RPG_LAYER_MODEL.md` and `docs/RPG_CANONICAL_TERMINOLOGY.md`
+- move-owner binding, owner-request, or pre-protocol stop-line questions:
+  `docs/AGON_MOVE_OWNER_BINDING.md`,
+  `docs/AGON_OWNER_REPO_REQUESTS.md`, and
+  `docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
 - witness / compost, counterpart bridge, or ToS support waves: the relevant compact doctrine note under `docs/`
 
 Nearest-file precedence applies inside:
@@ -108,6 +112,15 @@ When changing the center layer, review:
 
 If the task touches method, quest reflection, or canonical vocabulary, also review the relevant compact doctrine note under `docs/`.
 
+If the task touches the Agon move owner binding turn, also review:
+
+- `docs/AGON_MOVE_OWNER_BINDING.md`
+- `docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`
+- `docs/AGON_OWNER_REPO_REQUESTS.md`
+- `docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
+- `docs/AGON_WAVE4_LANDING.md`
+- `generated/agon_move_owner_binding_registry.min.json`
+
 If you edit `docs/`, `generated/`, `schemas/`, or `scripts/`, read the local
 `AGENTS.md` first.
 
@@ -117,6 +130,14 @@ Run local validation when relevant:
 python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
+```
+
+If you changed the Agon move owner binding surfaces, also run:
+
+```bash
+python scripts/build_agon_move_owner_binding_registry.py --check
+python scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q tests/test_agon_move_owner_bindings.py
 ```
 
 ## Audit protocol
@@ -141,6 +162,9 @@ For GitHub review in this repository, treat the following as P1:
 - routing changes that point readers to the wrong owning repository
 - center-level claims about quest, progression, checkpoint, or runtime state that should live in owner repos instead
 - generated registry changes without corresponding source updates or without running `python scripts/validate_ecosystem.py`
+- move owner binding registry changes without corresponding doctrine or without
+  running `python scripts/build_agon_move_owner_binding_registry.py --check`
+  plus `python scripts/validate_agon_move_owner_bindings.py`
 - semantic changes hidden under "docs-only" or "metadata-only" wording
 
 Ignore trivial wording nits unless the task explicitly asks for copyediting.
