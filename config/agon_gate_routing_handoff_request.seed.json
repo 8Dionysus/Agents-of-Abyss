@@ -30,6 +30,8 @@
     "write_scar",
     "schedule_retention",
     "mutate_rank",
+    "grant_closure",
+    "grant_summon_authority",
     "promote_to_tree_of_sophia",
     "author_agon_law"
   ],

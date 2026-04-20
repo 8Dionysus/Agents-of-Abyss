@@ -2,7 +2,7 @@
 
 This landing sits between Wave VI and Wave VII.
 
-Wave VI produced trial playbooks. Wave VII will prepare court, memory, and stats. R4 ensures those later layers receive reviewable recurrence surfaces rather than raw fragments.
+Wave VI issued the center-owned trial-playbook handoff to `aoa-playbooks`. Wave VII will prepare court, memory, and stats. R4 ensures those later layers receive reviewable recurrence surfaces rather than raw fragments.
 
 ## Why now
 

@@ -1,14 +1,24 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import json, subprocess, sys
+
+import json
+import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REQ = ROOT / "generated" / "agon_trial_playbook_request.min.json"
 REQUIRED_STOP_LINES = {
-    "no_arena_session_creation", "no_live_move_execution", "no_verdict_authority",
-    "no_scar_write", "no_retention_schedule", "no_rank_mutation",
-    "no_tos_promotion", "no_hidden_assistant_contestant",
+    "no_arena_session_creation",
+    "no_sealed_commit_runtime",
+    "no_live_move_execution",
+    "no_verdict_authority",
+    "no_scar_write",
+    "no_retention_schedule",
+    "no_rank_mutation",
+    "no_tos_promotion",
+    "no_hidden_assistant_contestant",
+    "no_runtime_substrate_claim",
 }
 
 def fail(msg: str) -> int:
@@ -21,6 +31,8 @@ def main() -> int:
     if result.returncode != 0:
         return result.returncode
     data = json.loads(REQ.read_text(encoding="utf-8"))
+    if data.get("schema_version") != "agon-trial-playbook-request-v1":
+        return fail("schema_version must be agon-trial-playbook-request-v1")
     if data.get("wave") != "VI":
         return fail("wave must be VI")
     if data.get("target_repo") != "aoa-playbooks":
