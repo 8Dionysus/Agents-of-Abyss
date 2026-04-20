@@ -33,6 +33,25 @@ OPTIONAL_WAVE0_FILES = [
     "generated/agon_imposition_readiness.min.json",
 ]
 
+REQUIRED_MOVE_KEYS = {
+    "move_id",
+    "name",
+    "move_class",
+    "intent",
+    "allowed_actor_forms",
+    "allowed_seats",
+    "preconditions",
+    "must_not",
+    "produces",
+    "future_owner_handoffs",
+    "status",
+    "wave",
+    "live_protocol",
+    "runtime_effect",
+    "center_owns",
+    "not_owned_here",
+}
+
 
 def load_builder():
     spec = importlib.util.spec_from_file_location("build_agon_lawful_move_registry", BUILDER_PATH)
@@ -95,6 +114,9 @@ def validate_registry_shape(registry: dict[str, Any]) -> None:
 
     for move in moves:
         move_id = move.get("move_id", "<unknown>")
+        unexpected_keys = sorted(set(move) - REQUIRED_MOVE_KEYS)
+        if unexpected_keys:
+            fail(f"{move_id}: unexpected move keys present: {unexpected_keys}")
         if move.get("live_protocol") is not False:
             fail(f"{move_id}: live_protocol must remain false")
         if move.get("runtime_effect") != "none":
@@ -116,6 +138,11 @@ def validate_registry_shape(registry: dict[str, Any]) -> None:
             seat_overlap = forbidden_seats.intersection(move.get("allowed_seats", []))
             if seat_overlap:
                 fail(f"{move_id}: assistant actor received forbidden seat(s): {sorted(seat_overlap)}")
+        if move.get("move_class") == "summon":
+            if move.get("allowed_actor_forms") != ["agonic_contestant_candidate"]:
+                fail(f"{move_id}: summon allowed_actor_forms must remain contestant-only")
+            if move.get("allowed_seats") != ["contestant"]:
+                fail(f"{move_id}: summon allowed_seats must remain contestant-only")
 
     non_goals = " ".join(registry.get("non_goals", []))
     for phrase in ["live arena sessions", "verdict logic", "scar writes", "retention scheduling", "Tree-of-Sophia canonization"]:

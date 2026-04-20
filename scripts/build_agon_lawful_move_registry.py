@@ -57,6 +57,25 @@ NON_GOALS = [
     "Tree-of-Sophia canonization",
 ]
 
+EXPECTED_MOVE_KEYS = {
+    "move_id",
+    "name",
+    "move_class",
+    "intent",
+    "allowed_actor_forms",
+    "allowed_seats",
+    "preconditions",
+    "must_not",
+    "produces",
+    "future_owner_handoffs",
+    "status",
+    "wave",
+    "live_protocol",
+    "runtime_effect",
+    "center_owns",
+    "not_owned_here",
+}
+
 
 def load_json(path: Path) -> Any:
     try:
@@ -96,6 +115,9 @@ def validate_move(move: dict[str, Any]) -> None:
     move_id = require_string(move, "move_id")
     if not re.match(r"^agon\.move\.[a-z_]+\.[a-z0-9_]+$", move_id):
         fail(f"{move_id}: move_id must match agon.move.<class>.<slug>")
+    unexpected_keys = sorted(set(move) - EXPECTED_MOVE_KEYS)
+    if unexpected_keys:
+        fail(f"{move_id}: unexpected keys present: {unexpected_keys}")
 
     name = require_string(move, "name")
     move_class = require_string(move, "move_class")
@@ -161,7 +183,7 @@ def validate_move(move: dict[str, Any]) -> None:
             fail(f"{move_id}: assistant_service_actor must not participate in summon moves")
 
     if move_class == "summon":
-        if "service_actor" in seats or "assistant_service_actor" in actor_forms:
+        if actor_forms != ["agonic_contestant_candidate"] or seats != ["contestant"]:
             fail(f"{move_id}: summon vocabulary is contestant-only in Wave III")
         if "hidden summon" not in " ".join(must_not).lower():
             fail(f"{move_id}: summon moves must explicitly forbid hidden summon")
