@@ -123,3 +123,29 @@ def test_roadmap_names_unreleased_agon_lawful_move_language_surfaces() -> None:
     for surface in unreleased_surfaces:
         assert (REPO_ROOT / surface).exists(), surface
         assert surface in roadmap
+
+
+def test_roadmap_names_unreleased_agon_move_owner_binding_surfaces() -> None:
+    roadmap = read_text("ROADMAP.md")
+
+    assert "### Unreleased follow-on turn: Agon move owner binding" in roadmap
+    assert "explicit Wave IV validation commands" in roadmap
+
+    unreleased_surfaces = [
+        "docs/AGON_MOVE_OWNER_BINDING.md",
+        "docs/AGON_MOVE_BINDING_MATRIX_MODEL.md",
+        "docs/AGON_OWNER_REPO_REQUESTS.md",
+        "docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
+        "docs/AGON_WAVE4_LANDING.md",
+        "config/agon_move_owner_bindings.seed.json",
+        "generated/agon_move_owner_binding_registry.min.json",
+        "schemas/agon-move-owner-binding.schema.json",
+        "schemas/agon-move-owner-binding-registry.schema.json",
+        "examples/agon_move_owner_binding.example.json",
+        "scripts/build_agon_move_owner_binding_registry.py",
+        "scripts/validate_agon_move_owner_bindings.py",
+        "tests/test_agon_move_owner_bindings.py",
+    ]
+    for surface in unreleased_surfaces:
+        assert (REPO_ROOT / surface).exists(), surface
+        assert surface in roadmap

@@ -22,6 +22,10 @@ Current scripts include:
   of `generated/agon_lawful_move_registry.min.json`
 - `validate_agon_lawful_moves.py` for the explicit Wave III lawful move
   vocabulary contract check
+- `build_agon_move_owner_binding_registry.py` for deterministic rebuild or
+  stale-check of `generated/agon_move_owner_binding_registry.min.json`
+- `validate_agon_move_owner_bindings.py` for the explicit Wave IV move owner
+  binding contract check
 
 ## Editing posture
 
@@ -61,6 +65,14 @@ After changing the Agon Wave III builder or validator, also run:
 python scripts/build_agon_lawful_move_registry.py --check
 python scripts/validate_agon_lawful_moves.py
 python -m pytest -q tests/test_agon_lawful_moves.py
+```
+
+After changing the Agon Wave IV builder or validator, also run:
+
+```bash
+python scripts/build_agon_move_owner_binding_registry.py --check
+python scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q tests/test_agon_move_owner_bindings.py
 ```
 
 A script change is done when the failure mode is clearer, not more mysterious.

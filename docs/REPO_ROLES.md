@@ -52,15 +52,16 @@ When deciding where something belongs:
 6. If it defines dispatch across layers, it probably belongs in `aoa-routing`.
 7. If it defines machine-first summary surfaces or derived observability windows, it probably belongs in `aoa-stats`.
 8. If it defines ecosystem-level identity or federation boundaries, it belongs here.
-9. If it defines future Agon law, imposition audit, arena lifecycle, lawful
-   moves, contradiction-ledger posture, or promotion discipline, route it here
-   first as center-owned protocol preparation and imposition unless a later
-   reviewed center decision narrows that contour. If it defines agonic actor
-   form, civil/service assistant variants, routing gates, trial scenarios,
-   verdicts, scars, derived summaries, SDK helpers, runtime services, or ToS
-   canonization, route that slice to the owning layer named in
-   `docs/AGON_PREPARATION_POSTURE.md`, `docs/AGON_IMPOSITION_POSTURE.md`, and
-   `docs/AGON_LAWFUL_MOVE_LANGUAGE.md`.
+9. If it defines future Agon law, imposition audit, owner binding law, arena
+   lifecycle, lawful moves, contradiction-ledger posture, or promotion
+   discipline, route it here first as center-owned protocol preparation and
+   imposition unless a later reviewed center decision narrows that contour. If
+   it defines agonic actor form, civil/service assistant variants, requested
+   owner landings, routing gates, trial scenarios, verdicts, scars, derived
+   summaries, SDK helpers, runtime services, or ToS canonization, route that
+   slice to the owning layer named in `docs/AGON_PREPARATION_POSTURE.md`,
+   `docs/AGON_IMPOSITION_POSTURE.md`, `docs/AGON_LAWFUL_MOVE_LANGUAGE.md`,
+   `docs/AGON_MOVE_OWNER_BINDING.md`, and `docs/AGON_OWNER_REPO_REQUESTS.md`.
 
 ## Compact rule
 

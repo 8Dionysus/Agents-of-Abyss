@@ -196,3 +196,31 @@ Main question:
 - which legal move names can the center publish now without falsely claiming
   live session authority, verdict logic, scars, retention, runtime packets, or
   ToS canonization?
+
+## Agon move owner binding
+
+Repository: `Agents-of-Abyss` for the center-owned Wave IV turn.
+
+Current surfaces:
+- `docs/AGON_MOVE_OWNER_BINDING.md`
+- `docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`
+- `docs/AGON_OWNER_REPO_REQUESTS.md`
+- `docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
+- `docs/AGON_WAVE4_LANDING.md`
+- `generated/agon_move_owner_binding_registry.min.json`
+
+Purpose:
+- bind each lawful move to the owner repositories that must later carry
+  practice, bounded execution, proof, routing, scenario choreography,
+  memory intake, derived observability, or actor-form constraints
+- keep `Agents-of-Abyss` as the center owner of legal move vocabulary and
+  owner-binding law while neighboring repositories remain only requested,
+  not landed, companions
+- keep every owner request pre-protocol so the center does not smuggle live
+  arena behavior, verdicts, scars, retention, or ToS promotion into a
+  binding matrix
+
+Main question:
+- which future owner obligations can the center publish now without falsely
+  claiming that practice, workflows, proof, routing, scenario, memory,
+  stats, or actor slices have already landed in their owning repositories?

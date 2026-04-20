@@ -177,6 +177,26 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("\"live_protocol\":false", registry)
         self.assertIn("\"runtime_effect\":\"none\"", registry)
 
+    def test_agon_move_owner_binding_routes_stay_center_bounded(self) -> None:
+        readme = read_text("README.md")
+        docs_readme = read_text("docs/README.md")
+        roadmap = read_text("ROADMAP.md")
+        layers = read_text("docs/LAYERS.md")
+        repo_roles = read_text("docs/REPO_ROLES.md")
+        binding = read_text("docs/AGON_MOVE_OWNER_BINDING.md")
+        landing = read_text("docs/AGON_WAVE4_LANDING.md")
+        registry = read_text("generated/agon_move_owner_binding_registry.min.json")
+
+        self.assertIn("docs/AGON_MOVE_OWNER_BINDING", readme)
+        self.assertIn("AGON_MOVE_OWNER_BINDING.md", docs_readme)
+        self.assertIn("Agon move owner binding", roadmap)
+        self.assertIn("Agon move owner binding", layers)
+        self.assertIn("docs/AGON_MOVE_OWNER_BINDING.md", repo_roles)
+        self.assertIn("owner gravity", binding)
+        self.assertIn("requested_not_landed", landing)
+        self.assertIn("\"status\":\"pre_protocol_owner_binding\"", registry)
+        self.assertIn("\"readiness\":\"owner_binding_seeded\"", registry)
+
     def test_generated_agents_keeps_registry_as_publication_surface(self) -> None:
         generated_agents = read_text("generated/AGENTS.md")
         self.assertIn("published summary surface", generated_agents)

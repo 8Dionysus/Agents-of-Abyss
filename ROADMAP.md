@@ -48,6 +48,9 @@ The current center-declared growth move after the trunk-first structural wave is
 - plant the first lawful move vocabulary as center-owned pre-protocol legal
   language without turning move names into live sessions, runtime packets,
   verdict law, scars, retention, or ToS authority
+- bind each lawful move to future owner repositories without turning owner
+  requests into landed practice, workflow, proof, routing, scenario,
+  memory, stats, actor, or ToS authority
 
 The current center framing also includes its first bounded cross-repo entry and readiness-alignment surfaces:
 - keep `aoa-stats` public as a derived observability layer that summarizes movement without becoming proof, route, or score authority
@@ -141,6 +144,34 @@ live arena execution. Every move stays explicitly pre-protocol with
 `live_protocol: false` and `runtime_effect: none`, while execution, proof,
 memory, routing, scenario, and runtime follow-through remain routed to their
 owning repositories.
+
+### Unreleased follow-on turn: Agon move owner binding
+
+The next unreleased center turn after Wave III is the Agon move owner binding.
+Its checked surface is:
+
+- center-owned Wave IV owner-binding docs:
+  `docs/AGON_MOVE_OWNER_BINDING.md`,
+  `docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`,
+  `docs/AGON_OWNER_REPO_REQUESTS.md`,
+  `docs/AGON_PRE_PROTOCOL_STOP_LINES.md`, and
+  `docs/AGON_WAVE4_LANDING.md`
+- Wave IV publication and contract surfaces:
+  `config/agon_move_owner_bindings.seed.json`,
+  `generated/agon_move_owner_binding_registry.min.json`,
+  `schemas/agon-move-owner-binding.schema.json`,
+  `schemas/agon-move-owner-binding-registry.schema.json`, and
+  `examples/agon_move_owner_binding.example.json`
+- explicit Wave IV validation commands:
+  `scripts/build_agon_move_owner_binding_registry.py`,
+  `scripts/validate_agon_move_owner_bindings.py`, and
+  `tests/test_agon_move_owner_bindings.py`
+
+This turn keeps owner binding center-owned as pre-protocol binding law, not
+live owner landing. Every move keeps `Agents-of-Abyss` as the legal owner while
+practice, workflow, proof, routing, scenario, memory, stats, and actor slices
+remain only `requested_not_landed` companion requests until their owner
+repositories review them under their own boundaries.
 
 ## Phase 1: center realignment
 
