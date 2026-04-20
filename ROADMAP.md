@@ -51,6 +51,10 @@ The current center-declared growth move after the trunk-first structural wave is
 - bind each lawful move to future owner repositories without turning owner
   requests into landed practice, workflow, proof, routing, scenario,
   memory, stats, actor, or ToS authority
+- hand one bounded choreography slice to `aoa-playbooks` so the first
+  mechanical Agon trials become repeatable without turning scenario
+  composition into live arena law, verdict authority, scars, retention,
+  runtime substrate, or ToS promotion
 
 The current center framing also includes its first bounded cross-repo entry and readiness-alignment surfaces:
 - keep `aoa-stats` public as a derived observability layer that summarizes movement without becoming proof, route, or score authority
@@ -198,6 +202,33 @@ not live arena activation. `aoa-routing` may emit gate candidates, missing-
 context hints, owner-review hints, and quarantine hints, while verdicts,
 scars, retention, rank mutation, runtime dispatch, and ToS promotion remain
 outside routing and outside a live arena.
+
+### Unreleased follow-on turn: Agon trial playbook handoff
+
+The next unreleased center turn after Wave V is the Agon trial playbook handoff.
+Its checked surface is:
+
+- center-owned Wave VI handoff docs:
+  `docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md`,
+  `docs/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md`,
+  `docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md`, and
+  `docs/AGON_WAVE6_CENTER_HANDOFF.md`
+- Wave VI publication and contract surfaces:
+  `config/agon_trial_playbook_request.seed.json`,
+  `generated/agon_trial_playbook_request.min.json`,
+  `schemas/agon-trial-playbook-request.schema.json`, and
+  `examples/agon_trial_playbook_request.example.json`
+- explicit Wave VI validation commands:
+  `scripts/build_agon_trial_playbook_request.py`,
+  `scripts/validate_agon_trial_playbook_request.py`, and
+  `tests/test_agon_trial_playbook_request.py`
+
+This turn keeps trial-playbook handoff center-owned as a pre-protocol owner
+request, not live arena activation. `aoa-playbooks` may land recurring
+mechanical trial choreography, expected evidence posture, owner-review
+artifacts, and fallback posture, while Agon law, verdicts, scars, retention,
+rank mutation, runtime substrate, and ToS promotion remain outside the
+playbook layer and outside a live arena.
 
 ## Phase 1: center realignment
 

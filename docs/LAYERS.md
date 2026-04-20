@@ -248,3 +248,28 @@ Purpose:
 Main question:
 - which routing conditions can honestly emit a center-facing Agon gate
   candidate without falsely claiming arena activation or routing-owned law?
+
+## Agon trial playbook handoff
+
+Repository: `Agents-of-Abyss` for the center-owned Wave VI turn.
+
+Current surfaces:
+- `docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md`
+- `docs/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md`
+- `docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md`
+- `docs/AGON_WAVE6_CENTER_HANDOFF.md`
+- `generated/agon_trial_playbook_request.min.json`
+
+Purpose:
+- hand one bounded Agon slice to `aoa-playbooks`: recurring mechanical trial
+  choreography for pressure families that now need repeatable scenario routes
+- keep `Agents-of-Abyss` as the owner of Agon law, lawful move vocabulary,
+  owner boundaries, and stop-lines while `aoa-playbooks` owns only trial
+  choreography
+- keep every trial route explicitly pre-protocol so the center does not smuggle
+  live session, verdict, scar, retention, rank, runtime, or ToS authority into
+  scenario composition
+
+Main question:
+- which recurring mechanical Agon trials can honestly become playbook-owned
+  choreography now without falsely claiming live arena authority?

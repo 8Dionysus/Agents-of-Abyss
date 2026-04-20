@@ -173,3 +173,27 @@ def test_roadmap_names_unreleased_agon_gate_routing_handoff_surfaces() -> None:
     for surface in unreleased_surfaces:
         assert (REPO_ROOT / surface).exists(), surface
         assert surface in roadmap
+
+
+def test_roadmap_names_unreleased_agon_trial_playbook_handoff_surfaces() -> None:
+    roadmap = read_text("ROADMAP.md")
+
+    assert "### Unreleased follow-on turn: Agon trial playbook handoff" in roadmap
+    assert "explicit Wave VI validation commands" in roadmap
+
+    unreleased_surfaces = [
+        "docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
+        "docs/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md",
+        "docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md",
+        "docs/AGON_WAVE6_CENTER_HANDOFF.md",
+        "config/agon_trial_playbook_request.seed.json",
+        "generated/agon_trial_playbook_request.min.json",
+        "schemas/agon-trial-playbook-request.schema.json",
+        "examples/agon_trial_playbook_request.example.json",
+        "scripts/build_agon_trial_playbook_request.py",
+        "scripts/validate_agon_trial_playbook_request.py",
+        "tests/test_agon_trial_playbook_request.py",
+    ]
+    for surface in unreleased_surfaces:
+        assert (REPO_ROOT / surface).exists(), surface
+        assert surface in roadmap
