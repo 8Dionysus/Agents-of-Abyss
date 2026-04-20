@@ -1,0 +1,1008 @@
+{
+  "schema_version": "agon-lawful-moves.seed/0.1",
+  "wave": "III",
+  "title": "Agon lawful move language",
+  "status": "pre_protocol_language_seed",
+  "scope": "center-owned lawful move vocabulary only; no live arena runtime",
+  "moves": [
+    {
+      "move_id": "agon.move.stance.assert_position",
+      "name": "assert_position",
+      "move_class": "stance",
+      "intent": "State a bounded thesis, confidence, and revision posture before contest pressure.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate"
+      ],
+      "allowed_seats": [
+        "contestant"
+      ],
+      "preconditions": [
+        "actor has agonic formation",
+        "actor has a declared office overlay",
+        "future charter admits stance moves"
+      ],
+      "must_not": [
+        "claim final verdict",
+        "write scars",
+        "promote to Tree-of-Sophia",
+        "mutate base role profile"
+      ],
+      "produces": [
+        "stance_marker"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "stance construction practice"
+        ],
+        "aoa-skills": [
+          "bounded stance authoring workflow"
+        ],
+        "aoa-evals": [
+          "stance completeness check"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.stance.challenge_claim",
+      "name": "challenge_claim",
+      "move_class": "stance",
+      "intent": "Contest a claim by naming the vulnerable locus without issuing a verdict.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate"
+      ],
+      "allowed_seats": [
+        "contestant"
+      ],
+      "preconditions": [
+        "target claim exists",
+        "challenge locus is named",
+        "future charter admits challenge moves"
+      ],
+      "must_not": [
+        "replace evidence with tone",
+        "claim adjudication authority",
+        "hide proof doctrine in role posture"
+      ],
+      "produces": [
+        "challenge_marker"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "claim challenge practice"
+        ],
+        "aoa-skills": [
+          "bounded challenge workflow"
+        ],
+        "aoa-evals": [
+          "challenge relevance check"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.evidence.request_evidence",
+      "name": "request_evidence",
+      "move_class": "evidence",
+      "intent": "Ask for the support needed to keep a claim alive under a future evidence floor.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "agonic_witness_candidate",
+        "assistant_service_actor"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "witness",
+        "service_actor"
+      ],
+      "preconditions": [
+        "claim or closure request exists",
+        "missing support is named"
+      ],
+      "must_not": [
+        "fabricate evidence",
+        "decide proof sufficiency as final verdict",
+        "turn assistant request into contestant authority"
+      ],
+      "produces": [
+        "evidence_request"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "evidence request practice"
+        ],
+        "aoa-skills": [
+          "evidence request workflow"
+        ],
+        "aoa-evals": [
+          "evidence floor evaluation"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.evidence.offer_evidence_reference",
+      "name": "offer_evidence_reference",
+      "move_class": "evidence",
+      "intent": "Provide a reviewable reference or artifact pointer without claiming final proof.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "assistant_service_actor"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "service_actor"
+      ],
+      "preconditions": [
+        "evidence source or artifact exists",
+        "reference can be reviewed"
+      ],
+      "must_not": [
+        "launder unsupported claims",
+        "treat reference as verdict",
+        "write to canon directly"
+      ],
+      "produces": [
+        "evidence_reference"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "evidence reference practice"
+        ],
+        "aoa-skills": [
+          "reference packaging workflow"
+        ],
+        "aoa-evals": [
+          "reference adequacy check"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.trace.probe_trace",
+      "name": "probe_trace",
+      "move_class": "trace",
+      "intent": "Inspect whether an action or claim has a continuous reviewable trace.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "agonic_witness_candidate",
+        "assistant_service_actor"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "witness",
+        "service_actor"
+      ],
+      "preconditions": [
+        "action, artifact, or closure candidate exists",
+        "trace gap suspicion is named"
+      ],
+      "must_not": [
+        "invent missing trace",
+        "treat absence of trace as final moral judgment",
+        "store durable scar"
+      ],
+      "produces": [
+        "trace_question"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "trace reconstruction practice"
+        ],
+        "aoa-skills": [
+          "trace probe workflow"
+        ],
+        "aoa-evals": [
+          "trace integrity proof"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.trace.deny_trace_closure",
+      "name": "deny_trace_closure",
+      "move_class": "trace",
+      "intent": "Block closure when the trace needed by a future charter is broken or absent.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "agonic_witness_candidate"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "witness"
+      ],
+      "preconditions": [
+        "closure attempt exists",
+        "trace gap is reviewably identified"
+      ],
+      "must_not": [
+        "issue full verdict",
+        "rewrite history",
+        "be used by assistant actor as arena authority"
+      ],
+      "produces": [
+        "closure_block",
+        "trace_gap_marker"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "trace closure discipline"
+        ],
+        "aoa-skills": [
+          "closure block workflow"
+        ],
+        "aoa-evals": [
+          "closure legality check"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.contradiction.mark_contradiction",
+      "name": "mark_contradiction",
+      "move_class": "contradiction",
+      "intent": "Name a material contradiction that a future arena must not bury under smooth closure.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "agonic_witness_candidate"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "witness"
+      ],
+      "preconditions": [
+        "two claims, traces, or obligations conflict",
+        "conflict locus can be named"
+      ],
+      "must_not": [
+        "force consensus",
+        "claim resolution before localization",
+        "write contradiction ledger entry here"
+      ],
+      "produces": [
+        "contradiction_marker"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "contradiction analysis practice"
+        ],
+        "aoa-skills": [
+          "contradiction marking workflow"
+        ],
+        "Agents-of-Abyss": [
+          "future contradiction ledger law"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.contradiction.localize_contradiction",
+      "name": "localize_contradiction",
+      "move_class": "contradiction",
+      "intent": "Narrow an open contradiction to its source, scope, and blocking consequence.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "agonic_witness_candidate",
+        "agonic_judge_candidate"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "witness",
+        "judge_candidate"
+      ],
+      "preconditions": [
+        "contradiction has been marked",
+        "candidate locus or scope can be stated"
+      ],
+      "must_not": [
+        "pretend localization is resolution",
+        "issue canonical branch law",
+        "bypass eval proof"
+      ],
+      "produces": [
+        "localized_contradiction_marker"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "localization practice"
+        ],
+        "aoa-skills": [
+          "localization workflow"
+        ],
+        "aoa-evals": [
+          "localization adequacy check"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.closure.deny_closure",
+      "name": "deny_closure",
+      "move_class": "closure",
+      "intent": "Reject a closure attempt when a future charter-blocking condition remains live.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "agonic_witness_candidate",
+        "agonic_judge_candidate"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "witness",
+        "judge_candidate"
+      ],
+      "preconditions": [
+        "closure attempt exists",
+        "blocking reason is explicitly named"
+      ],
+      "must_not": [
+        "turn denial into final verdict unless future judge law permits",
+        "hide unresolved contradiction",
+        "claim scar write authority"
+      ],
+      "produces": [
+        "closure_block"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "closure discipline practice"
+        ],
+        "aoa-skills": [
+          "closure denial workflow"
+        ],
+        "aoa-evals": [
+          "closure legality proof"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.closure.request_closure_review",
+      "name": "request_closure_review",
+      "move_class": "closure",
+      "intent": "Ask a future judge or eval route to determine whether closure is lawful.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "agonic_witness_candidate",
+        "assistant_service_actor"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "witness",
+        "service_actor"
+      ],
+      "preconditions": [
+        "candidate closure exists",
+        "review reason is stated"
+      ],
+      "must_not": [
+        "grant closure",
+        "forge eval result",
+        "treat assistant service request as judge authority"
+      ],
+      "produces": [
+        "closure_review_request"
+      ],
+      "future_owner_handoffs": {
+        "aoa-evals": [
+          "closure review verdict bundle"
+        ],
+        "aoa-routing": [
+          "route to eval or future arena gate"
+        ],
+        "aoa-playbooks": [
+          "closure trial choreography"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.summon.request_summon_intent",
+      "name": "request_summon_intent",
+      "move_class": "summon",
+      "intent": "Declare why another actor may be needed, without performing a live summon.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate"
+      ],
+      "allowed_seats": [
+        "contestant"
+      ],
+      "preconditions": [
+        "local actor limit is named",
+        "requested force type is named",
+        "future charter permits summon request"
+      ],
+      "must_not": [
+        "perform hidden summon",
+        "spend runtime budget",
+        "assign summoned authority here"
+      ],
+      "produces": [
+        "summon_intent"
+      ],
+      "future_owner_handoffs": {
+        "Agents-of-Abyss": [
+          "future summon law"
+        ],
+        "aoa-routing": [
+          "future summon route hint"
+        ],
+        "aoa-evals": [
+          "summon justification check"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.witness.request_witness",
+      "name": "request_witness",
+      "move_class": "witness",
+      "intent": "Ask for a witness-bearing actor or service support before a contested step continues.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "assistant_service_actor"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "service_actor"
+      ],
+      "preconditions": [
+        "claim, contradiction, trace probe, or closure attempt needs reviewable witnessing"
+      ],
+      "must_not": [
+        "write durable memory",
+        "issue judge verdict",
+        "transform assistant into contestant"
+      ],
+      "produces": [
+        "witness_request"
+      ],
+      "future_owner_handoffs": {
+        "aoa-agents": [
+          "witness-capable actor forms"
+        ],
+        "aoa-routing": [
+          "witness route hint"
+        ],
+        "aoa-memo": [
+          "future chronicle write surface"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.revision.revise_position",
+      "name": "revise_position",
+      "move_class": "revision",
+      "intent": "Explicitly change stance, confidence, boundary, or revision posture after pressure.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate"
+      ],
+      "allowed_seats": [
+        "contestant"
+      ],
+      "preconditions": [
+        "prior stance exists",
+        "pressure or evidence changed the actor posture"
+      ],
+      "must_not": [
+        "simulate learning without before/after",
+        "write durable delta history here",
+        "claim canonical truth"
+      ],
+      "produces": [
+        "revision_marker"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "revision discipline practice"
+        ],
+        "aoa-skills": [
+          "revision authoring workflow"
+        ],
+        "aoa-memo": [
+          "future durable delta history"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.revision.stand_fast",
+      "name": "stand_fast",
+      "move_class": "revision",
+      "intent": "Hold a position after pressure while naming why revision conditions were not met.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate"
+      ],
+      "allowed_seats": [
+        "contestant"
+      ],
+      "preconditions": [
+        "prior stance exists",
+        "challenge or pressure was received",
+        "non-revision reason can be named"
+      ],
+      "must_not": [
+        "hide confidence loss",
+        "ignore marked contradiction",
+        "pretend silence is resistance"
+      ],
+      "produces": [
+        "stand_fast_marker"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "resistance discipline practice"
+        ],
+        "aoa-skills": [
+          "stand-fast workflow"
+        ],
+        "aoa-evals": [
+          "resistance adequacy check"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.revision.concede",
+      "name": "concede",
+      "move_class": "revision",
+      "intent": "Withdraw or surrender a position under named pressure without erasing the event.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate"
+      ],
+      "allowed_seats": [
+        "contestant"
+      ],
+      "preconditions": [
+        "prior stance exists",
+        "failure or counter-pressure can be named"
+      ],
+      "must_not": [
+        "delete the losing stance",
+        "write scar directly",
+        "convert concession into ToS canon"
+      ],
+      "produces": [
+        "concession_marker"
+      ],
+      "future_owner_handoffs": {
+        "aoa-techniques": [
+          "concession practice"
+        ],
+        "aoa-skills": [
+          "concession workflow"
+        ],
+        "aoa-memo": [
+          "future scar or lesson memory"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.revision.defer_with_cost",
+      "name": "defer_with_cost",
+      "move_class": "revision",
+      "intent": "Defer resolution while naming the cost, blocked closure, and required follow-up.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "agonic_witness_candidate",
+        "assistant_service_actor"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "witness",
+        "service_actor"
+      ],
+      "preconditions": [
+        "resolution is not lawful yet",
+        "cost and follow-up path can be named"
+      ],
+      "must_not": [
+        "pretend deferral is closure",
+        "hide unresolved contradiction",
+        "create open-ended endless debate"
+      ],
+      "produces": [
+        "deferred_with_cost_marker"
+      ],
+      "future_owner_handoffs": {
+        "aoa-playbooks": [
+          "deferred follow-up choreography"
+        ],
+        "aoa-routing": [
+          "follow-up route hint"
+        ],
+        "aoa-stats": [
+          "future derived deferral summaries"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.boundary.flag_scope_breach",
+      "name": "flag_scope_breach",
+      "move_class": "boundary",
+      "intent": "Name a scope, role, assistant, proof, memory, or canon boundary breach risk.",
+      "allowed_actor_forms": [
+        "agonic_contestant_candidate",
+        "agonic_witness_candidate",
+        "assistant_service_actor"
+      ],
+      "allowed_seats": [
+        "contestant",
+        "witness",
+        "service_actor"
+      ],
+      "preconditions": [
+        "boundary risk is observed",
+        "owning repository or layer can be named"
+      ],
+      "must_not": [
+        "use boundary flag to seize owner authority",
+        "claim proof verdict without eval",
+        "write memory objects"
+      ],
+      "produces": [
+        "boundary_flag"
+      ],
+      "future_owner_handoffs": {
+        "Agents-of-Abyss": [
+          "federation boundary law"
+        ],
+        "aoa-routing": [
+          "owner route hint"
+        ],
+        "aoa-evals": [
+          "boundary breach proof"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    },
+    {
+      "move_id": "agon.move.escalation.escalate_to_agon_gate",
+      "name": "escalate_to_agon_gate",
+      "move_class": "escalation",
+      "intent": "Signal that service handling is insufficient and a future arena gate may be needed.",
+      "allowed_actor_forms": [
+        "assistant_service_actor",
+        "agonic_contestant_candidate",
+        "agonic_witness_candidate"
+      ],
+      "allowed_seats": [
+        "service_actor",
+        "contestant",
+        "witness"
+      ],
+      "preconditions": [
+        "service or ordinary agent path cannot lawfully close",
+        "reason for arena consideration is explicit"
+      ],
+      "must_not": [
+        "open arena session",
+        "override routing owner",
+        "turn escalation into verdict"
+      ],
+      "produces": [
+        "agon_gate_hint"
+      ],
+      "future_owner_handoffs": {
+        "aoa-routing": [
+          "agon_needed dispatch gate"
+        ],
+        "Agents-of-Abyss": [
+          "future arena open law"
+        ],
+        "aoa-playbooks": [
+          "future trial selection"
+        ]
+      },
+      "status": "seeded_pre_protocol",
+      "wave": "III",
+      "live_protocol": false,
+      "runtime_effect": "none",
+      "center_owns": [
+        "lawful move vocabulary",
+        "move class boundary",
+        "pre-protocol legality intent",
+        "owner handoff map"
+      ],
+      "not_owned_here": [
+        "execution steps",
+        "runtime packet shape",
+        "verdict logic",
+        "scar storage",
+        "retention check",
+        "Tree-of-Sophia canonization"
+      ]
+    }
+  ]
+}

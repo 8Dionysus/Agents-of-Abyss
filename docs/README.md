@@ -19,7 +19,9 @@ For the shortest outsider overview, read in this order:
 
 Use [LAYERS](LAYERS.md) and [REPO_ROLES](REPO_ROLES.md) after that when you need conceptual or routing detail rather than the first-pass center view.
 Use [DIRECTION_SURFACES](DIRECTION_SURFACES.md) when you need to check which repos currently use `ROADMAP.md` and which rely on another direction surface.
-Use [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) when you need the provisional Agon preparation holding boundary without starting Agon or minting a new repository.
+Use [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) when you need the conservative Agon holding boundary that kept Agon center-owned before the turn.
+Use [AGON_IMPOSITION_POSTURE](AGON_IMPOSITION_POSTURE.md) when you need the first Agon turn that places current surfaces under survival scrutiny without starting a live arena.
+Use [AGON_LAWFUL_MOVE_LANGUAGE](AGON_LAWFUL_MOVE_LANGUAGE.md) when you need the first center-owned lawful move vocabulary that stays pre-protocol and routes execution, proof, memory, routing, and runtime work back to their owning layers.
 
 ## How to verify center claims
 
@@ -49,6 +51,8 @@ Use [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) when you need the pr
 - [WITNESS_COMPOST](WITNESS_COMPOST.md) — the paired public-contract doctrine for witness and compost
 - [TOS_GROWTH_SUPPORT](TOS_GROWTH_SUPPORT.md), [TOS_TEMPLATE_SUPPORT](TOS_TEMPLATE_SUPPORT.md), [TOS_LINEAGE_PILOT_SUPPORT](TOS_LINEAGE_PILOT_SUPPORT.md), [TOS_SOIL_PREP_SUPPORT](TOS_SOIL_PREP_SUPPORT.md) — narrow AoA support doctrine for ToS-owned work
 - [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) — the provisional Agon preparation holding boundary that keeps Agon center-owned for now, not a new sibling repo, not ToS canon, and not runtime substrate
+- [AGON_IMPOSITION_POSTURE](AGON_IMPOSITION_POSTURE.md), [AGON_SURVIVAL_CRITERIA](AGON_SURVIVAL_CRITERIA.md), [AGON_DOUBT_AUDIT](AGON_DOUBT_AUDIT.md), [PRE_AGON_BASELINE](PRE_AGON_BASELINE.md), and [AGON_WAVE0_LANDING](AGON_WAVE0_LANDING.md) — the first Agon turn, its survival lens, the initial audit frame, the named before-image, and the bounded landing order for Wave 0
+- [AGON_LAWFUL_MOVE_LANGUAGE](AGON_LAWFUL_MOVE_LANGUAGE.md), [AGON_MOVE_REGISTRY_MODEL](AGON_MOVE_REGISTRY_MODEL.md), [AGON_MOVE_OWNER_HANDOFFS](AGON_MOVE_OWNER_HANDOFFS.md), and [AGON_WAVE3_LANDING](AGON_WAVE3_LANDING.md) — the first lawful move vocabulary, its compact registry model, owner handoff doctrine, and the bounded Wave III landing order
 
 ## Support and maintenance docs
 
@@ -80,6 +84,8 @@ Use [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) when you need the pr
 4. [COMPONENT_REFRESH_LAW](COMPONENT_REFRESH_LAW.md)
 5. [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md)
 6. [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md)
+7. [AGON_IMPOSITION_POSTURE](AGON_IMPOSITION_POSTURE.md)
+8. [AGON_LAWFUL_MOVE_LANGUAGE](AGON_LAWFUL_MOVE_LANGUAGE.md)
 
 ## Notes
 

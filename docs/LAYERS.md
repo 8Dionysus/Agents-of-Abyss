@@ -146,3 +146,53 @@ Purpose:
 Main question:
 - how can AoA prepare the arena without starting it or absorbing neighboring
   owner truth?
+
+## Agon imposition gate
+
+Repository: `Agents-of-Abyss` for the center-owned Wave 0 turn.
+
+Current surfaces:
+- `docs/AGON_IMPOSITION_POSTURE.md`
+- `docs/AGON_SURVIVAL_CRITERIA.md`
+- `docs/AGON_DOUBT_AUDIT.md`
+- `docs/PRE_AGON_BASELINE.md`
+- `docs/AGON_WAVE0_LANDING.md`
+- `generated/agon_imposition_readiness.min.json`
+
+Purpose:
+- place the current federation under Agon scrutiny without starting the arena
+- define survive/recharter/defer/prune/quarantine as the first center-owned
+  Agon verdict scale
+- capture a named pre-Agon baseline so later cuts are judged against a visible
+  before-image
+- keep actor, proof, memory, routing, runtime, and ToS handoffs explicit while
+  the center remains the owner of the imposition law only
+
+Main question:
+- which current surfaces deserve to survive Agon scrutiny, and what must be
+  rechartered before lawful moves or runtime claims begin?
+
+## Agon lawful move language
+
+Repository: `Agents-of-Abyss` for the center-owned Wave III turn.
+
+Current surfaces:
+- `docs/AGON_LAWFUL_MOVE_LANGUAGE.md`
+- `docs/AGON_MOVE_REGISTRY_MODEL.md`
+- `docs/AGON_MOVE_OWNER_HANDOFFS.md`
+- `docs/AGON_WAVE3_LANDING.md`
+- `generated/agon_lawful_move_registry.min.json`
+
+Purpose:
+- give Agon a first legal vocabulary after the imposition gate and actor-side
+  rechartering work
+- keep lawful move names center-owned while routing reusable practice,
+  bounded execution, proof, memory, routing gates, playbook choreography, and
+  runtime implementation back to their owning layers
+- make every move explicitly pre-protocol so the center does not smuggle live
+  arena behavior into a registry
+
+Main question:
+- which legal move names can the center publish now without falsely claiming
+  live session authority, verdict logic, scars, retention, runtime packets, or
+  ToS canonization?

@@ -74,3 +74,52 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
     for surface in current_release_surfaces:
         assert (REPO_ROOT / surface).exists(), surface
         assert surface in roadmap
+
+
+def test_roadmap_names_unreleased_agon_imposition_gate_surfaces() -> None:
+    roadmap = read_text("ROADMAP.md")
+
+    assert "### Unreleased next turn: Agon imposition gate" in roadmap
+    assert "explicit Wave 0 validation commands" in roadmap
+
+    unreleased_surfaces = [
+        "docs/AGON_IMPOSITION_POSTURE.md",
+        "docs/AGON_SURVIVAL_CRITERIA.md",
+        "docs/AGON_DOUBT_AUDIT.md",
+        "docs/PRE_AGON_BASELINE.md",
+        "docs/AGON_WAVE0_LANDING.md",
+        "generated/agon_imposition_readiness.min.json",
+        "schemas/agon-imposition-readiness.schema.json",
+        "examples/agon_doubt_audit.example.json",
+        "scripts/build_agon_imposition_readiness.py",
+        "scripts/validate_agon_imposition_readiness.py",
+        "tests/test_agon_imposition_readiness.py",
+    ]
+    for surface in unreleased_surfaces:
+        assert (REPO_ROOT / surface).exists(), surface
+        assert surface in roadmap
+
+
+def test_roadmap_names_unreleased_agon_lawful_move_language_surfaces() -> None:
+    roadmap = read_text("ROADMAP.md")
+
+    assert "### Unreleased follow-on turn: Agon lawful move language" in roadmap
+    assert "explicit Wave III validation commands" in roadmap
+
+    unreleased_surfaces = [
+        "docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
+        "docs/AGON_MOVE_REGISTRY_MODEL.md",
+        "docs/AGON_MOVE_OWNER_HANDOFFS.md",
+        "docs/AGON_WAVE3_LANDING.md",
+        "config/agon_lawful_moves.seed.json",
+        "generated/agon_lawful_move_registry.min.json",
+        "schemas/agon-lawful-move.schema.json",
+        "schemas/agon-lawful-move-registry.schema.json",
+        "examples/agon_lawful_move.example.json",
+        "scripts/build_agon_lawful_move_registry.py",
+        "scripts/validate_agon_lawful_moves.py",
+        "tests/test_agon_lawful_moves.py",
+    ]
+    for surface in unreleased_surfaces:
+        assert (REPO_ROOT / surface).exists(), surface
+        assert surface in roadmap

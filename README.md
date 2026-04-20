@@ -46,7 +46,9 @@ Then branch by need:
 - **counterpart bridge and KAG restraint**: [docs/COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md)
 - **witness and compost pilot**: [docs/WITNESS_COMPOST](docs/WITNESS_COMPOST.md)
 - **ToS support waves**: [docs/TOS_GROWTH_SUPPORT](docs/TOS_GROWTH_SUPPORT.md), [docs/TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md), [docs/TOS_LINEAGE_PILOT_SUPPORT](docs/TOS_LINEAGE_PILOT_SUPPORT.md), [docs/TOS_SOIL_PREP_SUPPORT](docs/TOS_SOIL_PREP_SUPPORT.md)
-- **Agon preparation posture**: [docs/AGON_PREPARATION_POSTURE](docs/AGON_PREPARATION_POSTURE.md)
+- **Agon preparation holding boundary**: [docs/AGON_PREPARATION_POSTURE](docs/AGON_PREPARATION_POSTURE.md)
+- **Agon imposition gate**: [docs/AGON_IMPOSITION_POSTURE](docs/AGON_IMPOSITION_POSTURE.md), [docs/AGON_SURVIVAL_CRITERIA](docs/AGON_SURVIVAL_CRITERIA.md), [docs/AGON_DOUBT_AUDIT](docs/AGON_DOUBT_AUDIT.md), [docs/PRE_AGON_BASELINE](docs/PRE_AGON_BASELINE.md), [generated/agon_imposition_readiness.min.json](generated/agon_imposition_readiness.min.json), `python scripts/build_agon_imposition_readiness.py --check`, `python scripts/validate_agon_imposition_readiness.py`, and `python -m pytest -q tests/test_agon_imposition_readiness.py`
+- **Agon lawful move language**: [docs/AGON_LAWFUL_MOVE_LANGUAGE](docs/AGON_LAWFUL_MOVE_LANGUAGE.md), [docs/AGON_MOVE_REGISTRY_MODEL](docs/AGON_MOVE_REGISTRY_MODEL.md), [docs/AGON_MOVE_OWNER_HANDOFFS](docs/AGON_MOVE_OWNER_HANDOFFS.md), [docs/AGON_WAVE3_LANDING](docs/AGON_WAVE3_LANDING.md), [generated/agon_lawful_move_registry.min.json](generated/agon_lawful_move_registry.min.json), `python scripts/build_agon_lawful_move_registry.py --check`, `python scripts/validate_agon_lawful_moves.py`, and `python -m pytest -q tests/test_agon_lawful_moves.py`
 - **adjunct RPG reflection contour**: [docs/RPG_LAYER_MODEL](docs/RPG_LAYER_MODEL.md), [docs/RPG_FIRST_WAVE](docs/RPG_FIRST_WAVE.md), [docs/RPG_SECOND_WAVE](docs/RPG_SECOND_WAVE.md), [docs/RPG_SKILLS_AND_FEATS](docs/RPG_SKILLS_AND_FEATS.md), [docs/RPG_ARCHITECTURE_RFC](docs/RPG_ARCHITECTURE_RFC.md), [docs/RPG_CANONICAL_TERMINOLOGY](docs/RPG_CANONICAL_TERMINOLOGY.md), [docs/RPG_BOUNDARY_MAP](docs/RPG_BOUNDARY_MAP.md)
 - **public onboarding, support, release, and CI posture**: [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md)
 
@@ -80,7 +82,9 @@ The current center-level framing and declared near-term direction are:
 - **bounded counterpart bridges** with `aoa-kag` remaining derived and conceptual origin remaining in `Tree-of-Sophia`
 - **contract-first witness and compost** before any deeper runtime instrumentation wave
 - **explicit, reviewable ToS support** for growth law, corpus scaffold, lineage pilot, and soil prep without AoA authoring ToS meaning
-- **Agon preparation** that keeps Agon inside the center as a provisional future protocol contour, not a new sibling repo, not ToS canon, and not runtime substrate
+- **Agon preparation holding boundary** that keeps Agon inside the center as a provisional future protocol contour, not a new sibling repo, not ToS canon, and not runtime substrate
+- **Agon imposition gate** that places the current system under Agon survival scrutiny without starting a live arena protocol, a sibling repo, ToS canon, or runtime substrate
+- **Agon lawful move language** that gives the center a first pre-protocol legal vocabulary without turning lawful moves into runtime packets, verdict law, scars, retention, or ToS authority
 
 The linked wave notes above hold the compact doctrine for each declared move.
 

@@ -7,6 +7,29 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+### Added
+
+- Agon Wave 0 imposition doctrine, readiness capsule, and explicit builder /
+  validator / test surfaces for the center repository
+- Agon Wave III lawful move doctrine, move registry seed, and explicit builder
+  / validator / test surfaces for the center repository
+
+### Changed
+
+- center route docs and roadmap now distinguish the historical Agon
+  preparation holding boundary from the new Agon imposition gate
+- center route docs, layer map, and local guide surfaces now distinguish the
+  Agon imposition gate from the first pre-protocol lawful move vocabulary
+
+### Validation
+
+- `python scripts/build_agon_imposition_readiness.py --check`
+- `python scripts/validate_agon_imposition_readiness.py`
+- `python -m pytest -q tests/test_agon_imposition_readiness.py`
+- `python scripts/build_agon_lawful_move_registry.py --check`
+- `python scripts/validate_agon_lawful_moves.py`
+- `python -m pytest -q tests/test_agon_lawful_moves.py`
+
 ## [0.2.2] - 2026-04-19
 
 ### Summary
