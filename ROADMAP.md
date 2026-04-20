@@ -52,7 +52,7 @@ The current center framing also includes its first bounded cross-repo entry and 
 
 ### Current release contour
 
-The live center contour for `v0.2.1` is roadmap continuity and owner-boundary
+The live center contour for `v0.2.2` is roadmap continuity and owner-boundary
 hardening, not a new implementation layer. Its current checked surface is:
 
 - center public route and support posture:

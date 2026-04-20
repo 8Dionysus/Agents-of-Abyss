@@ -23,9 +23,9 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
     registry = load_json("generated/ecosystem_registry.min.json")
     supporting = load_json("generated/federation_supporting_inventory.min.json")
 
-    assert "> Current release: `v0.2.1`" in readme
-    assert "## [0.2.1] - 2026-04-12" in changelog
-    assert "`v0.2.1`" in roadmap
+    assert "> Current release: `v0.2.2`" in readme
+    assert "## [0.2.2] - 2026-04-19" in changelog
+    assert "`v0.2.2`" in roadmap
     assert "Current release contour" in roadmap
     assert "roadmap continuity and owner-boundary" in roadmap
     assert "leaving checkpoint carry, candidate identity, seed staging" in roadmap
