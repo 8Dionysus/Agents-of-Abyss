@@ -7,6 +7,37 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-04-19
+
+### Summary
+
+- this patch tightens center release posture, pre-Agon preparation guidance,
+  and roadmap/current-direction routing around the active center wave
+- CI and protection surfaces are aligned through Node24 workflow refs, pull
+  request template coverage, and the required-check contract
+- `Agents-of-Abyss` remains the center doctrine and route map without
+  absorbing sdk, runtime, memory, or proof ownership
+
+### Added
+
+- component refresh center law and pre-Agon preparation posture surfaces for
+  the center repository
+- a GitHub pull request template for bounded contribution intake
+
+### Changed
+
+- roadmap/current-direction docs, aoa-sdk guard wording, and required-check
+  plus Actions wiring are aligned with the current center release path
+
+### Validation
+
+- `python scripts/release_check.py`
+
+### Notes
+
+- this patch stays on center-owned doctrine, release posture, and routing
+  surfaces; implementation ownership remains in sibling repositories
+
 ## [0.2.1] - 2026-04-12
 
 ### Summary
