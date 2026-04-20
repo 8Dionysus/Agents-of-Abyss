@@ -197,6 +197,26 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("\"status\":\"pre_protocol_owner_binding\"", registry)
         self.assertIn("\"readiness\":\"owner_binding_seeded\"", registry)
 
+    def test_agon_gate_routing_handoff_routes_stay_center_bounded(self) -> None:
+        readme = read_text("README.md")
+        docs_readme = read_text("docs/README.md")
+        roadmap = read_text("ROADMAP.md")
+        layers = read_text("docs/LAYERS.md")
+        repo_roles = read_text("docs/REPO_ROLES.md")
+        handoff = read_text("docs/AGON_GATE_ROUTING_HANDOFF.md")
+        landing = read_text("docs/AGON_WAVE5_CENTER_HANDOFF.md")
+        request = read_text("generated/agon_gate_routing_handoff_request.min.json")
+
+        self.assertIn("docs/AGON_GATE_ROUTING_HANDOFF", readme)
+        self.assertIn("AGON_GATE_ROUTING_HANDOFF.md", docs_readme)
+        self.assertIn("Agon gate routing handoff", roadmap)
+        self.assertIn("Agon gate routing handoff", layers)
+        self.assertIn("docs/AGON_GATE_ROUTING_HANDOFF.md", repo_roles)
+        self.assertIn("may grow a thin pre-protocol gate surface", handoff)
+        self.assertIn("gate hint is not arena activation", landing)
+        self.assertIn("\"status\":\"seeded_center_handoff_request\"", request)
+        self.assertIn("\"required_stop_line\":\"routing hint is not arena activation\"", request)
+
     def test_generated_agents_keeps_registry_as_publication_surface(self) -> None:
         generated_agents = read_text("generated/AGENTS.md")
         self.assertIn("published summary surface", generated_agents)

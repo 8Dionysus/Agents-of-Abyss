@@ -13,9 +13,11 @@ define the contracts for the Wave III lawful move vocabulary and registry.
 `agon-move-owner-binding.schema.json` and
 `agon-move-owner-binding-registry.schema.json` define the contracts for the
 Wave IV owner-binding seed and registry.
+`agon-gate-routing-handoff-request.schema.json` defines the contract for the
+Wave V center handoff request.
 These files are the boundary surfaces for tracked machine-readable center
-publication, Wave 0 Agon readiness, Wave III lawful move language, and Wave IV
-owner binding law.
+publication, Wave 0 Agon readiness, Wave III lawful move language, Wave IV
+owner binding law, and the Wave V gate-routing handoff.
 
 ## Editing posture
 
@@ -64,6 +66,14 @@ After changing the Wave IV owner-binding schemas, also run:
 python scripts/build_agon_move_owner_binding_registry.py --check
 python scripts/validate_agon_move_owner_bindings.py
 python -m pytest -q tests/test_agon_move_owner_bindings.py
+```
+
+After changing the Wave V gate-routing handoff schema, also run:
+
+```bash
+python scripts/build_agon_gate_routing_handoff_request.py --check
+python scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
 ```
 
 If a schema change is intentional, mention the contract shift clearly in the

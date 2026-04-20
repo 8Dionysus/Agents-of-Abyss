@@ -15,6 +15,8 @@ Tracking starts with the community-docs baseline for this repository.
   / validator / test surfaces for the center repository
 - Agon Wave IV move owner binding doctrine, binding registry seed, and
   explicit builder / validator / test surfaces for the center repository
+- Agon Wave V gate routing handoff doctrine, center handoff request seed, and
+  explicit builder / validator / test surfaces for the center repository
 
 ### Changed
 
@@ -24,6 +26,8 @@ Tracking starts with the community-docs baseline for this repository.
   Agon imposition gate from the first pre-protocol lawful move vocabulary
 - center route docs, layer map, and local guide surfaces now distinguish the
   first pre-protocol lawful move vocabulary from the next owner-binding turn
+- center route docs, layer map, and local guide surfaces now distinguish the
+  owner-binding turn from the next gate-routing handoff into `aoa-routing`
 
 ### Validation
 
@@ -36,6 +40,9 @@ Tracking starts with the community-docs baseline for this repository.
 - `python scripts/build_agon_move_owner_binding_registry.py --check`
 - `python scripts/validate_agon_move_owner_bindings.py`
 - `python -m pytest -q tests/test_agon_move_owner_bindings.py`
+- `python scripts/build_agon_gate_routing_handoff_request.py --check`
+- `python scripts/validate_agon_gate_routing_handoff_request.py`
+- `python -m pytest -q tests/test_agon_gate_routing_handoff_request.py`
 
 ## [0.2.2] - 2026-04-19
 
