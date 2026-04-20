@@ -217,6 +217,28 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("\"status\":\"seeded_center_handoff_request\"", request)
         self.assertIn("\"required_stop_line\":\"routing hint is not arena activation\"", request)
 
+    def test_agon_trial_playbook_handoff_routes_stay_center_bounded(self) -> None:
+        readme = read_text("README.md")
+        docs_readme = read_text("docs/README.md")
+        roadmap = read_text("ROADMAP.md")
+        layers = read_text("docs/LAYERS.md")
+        repo_roles = read_text("docs/REPO_ROLES.md")
+        handoff = read_text("docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md")
+        owner_request = read_text("docs/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md")
+        stop_lines = read_text("docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md")
+        request = read_text("generated/agon_trial_playbook_request.min.json")
+
+        self.assertIn("docs/AGON_TRIAL_PLAYBOOK_HANDOFF", readme)
+        self.assertIn("AGON_TRIAL_PLAYBOOK_HANDOFF.md", docs_readme)
+        self.assertIn("Agon trial playbook handoff", roadmap)
+        self.assertIn("Agon trial playbook handoff", layers)
+        self.assertIn("docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md", repo_roles)
+        self.assertIn("Trial playbooks rehearse the arena. They do not open it.", handoff)
+        self.assertIn("requests that `aoa-playbooks` land", owner_request)
+        self.assertIn("pre-protocol choreography wave", stop_lines)
+        self.assertIn("\"status\":\"seeded_pre_protocol_owner_request\"", request)
+        self.assertIn("\"target_repo\":\"aoa-playbooks\"", request)
+
     def test_generated_agents_keeps_registry_as_publication_surface(self) -> None:
         generated_agents = read_text("generated/AGENTS.md")
         self.assertIn("published summary surface", generated_agents)
