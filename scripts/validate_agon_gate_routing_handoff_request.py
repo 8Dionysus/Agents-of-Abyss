@@ -9,6 +9,18 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUEST_PATH = ROOT / "generated" / "agon_gate_routing_handoff_request.min.json"
+REQUIRED_ROUTING_STOP_LINES = {
+    "create_arena_session",
+    "perform_sealed_commit",
+    "issue_verdict",
+    "write_scar",
+    "schedule_retention",
+    "mutate_rank",
+    "grant_closure",
+    "grant_summon_authority",
+    "promote_to_tree_of_sophia",
+    "author_agon_law",
+}
 
 
 def load_json(path: Path) -> Any:
@@ -31,10 +43,8 @@ def main() -> int:
     require(request["owner_repo"] == "Agents-of-Abyss", "request must be center-owned")
     require(request["routing_repo"] == "aoa-routing", "routing repo mismatch")
     require("agon_gate_candidate" in request["routing_may_emit"], "gate candidate output missing")
-    require("create_arena_session" in request["routing_must_not"], "missing arena stop-line")
-    require("issue_verdict" in request["routing_must_not"], "missing verdict stop-line")
-    require("write_scar" in request["routing_must_not"], "missing scar stop-line")
-    require("promote_to_tree_of_sophia" in request["routing_must_not"], "missing ToS stop-line")
+    missing = sorted(REQUIRED_ROUTING_STOP_LINES - set(request["routing_must_not"]))
+    require(not missing, f"missing routing stop-lines: {missing}")
     require(request["required_stop_line"] == "routing hint is not arena activation", "missing required stop-line")
 
     expected = ROOT.parent / "aoa-routing" / "generated" / "agon_gate_routing_registry.min.json"

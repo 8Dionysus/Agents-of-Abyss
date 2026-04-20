@@ -29,5 +29,7 @@ def test_agon_gate_handoff_preserves_center_law():
     assert "create_arena_session" in request["routing_must_not"]
     assert "issue_verdict" in request["routing_must_not"]
     assert "write_scar" in request["routing_must_not"]
+    assert "grant_closure" in request["routing_must_not"]
+    assert "grant_summon_authority" in request["routing_must_not"]
     assert "future_arena_session_model" in request["center_must_keep"]
     assert request["required_stop_line"] == "routing hint is not arena activation"

@@ -26,6 +26,19 @@ ALLOWED_OWNER_REPOS = {
     "aoa-agents",
 }
 
+ALLOWED_MOVE_CLASSES = {
+    "stance",
+    "evidence",
+    "trace",
+    "contradiction",
+    "closure",
+    "summon",
+    "witness",
+    "revision",
+    "boundary",
+    "escalation",
+}
+
 STOP_WORDS = (
     "live arena session",
     "runtime packet",
@@ -55,6 +68,14 @@ def write_json_min(path: Path, data: Any) -> None:
         json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n",
         encoding="utf-8",
     )
+
+
+def require_non_empty_string_list(value: Any, *, move_id: str, field: str) -> list[str]:
+    if not isinstance(value, list) or not value:
+        raise ValidationError(f"{move_id}: {field} must be a non-empty list of strings")
+    if any(not isinstance(item, str) or not item.strip() for item in value):
+        raise ValidationError(f"{move_id}: {field} must be a non-empty list of strings")
+    return value
 
 
 def collect_move_ids_from_wave3(root: Path = ROOT) -> set[str]:
@@ -106,6 +127,11 @@ def validate_config(config: dict[str, Any], *, require_wave3: bool = False, root
         move_id = binding.get("move_id", "")
         if not move_id.startswith("agon.move."):
             raise ValidationError(f"{move_id}: invalid move_id")
+        move_class = binding.get("move_class")
+        if not isinstance(move_class, str) or move_class not in ALLOWED_MOVE_CLASSES:
+            raise ValidationError(f"{move_id}: invalid move_class {move_class!r}")
+        if not move_id.startswith(f"agon.move.{move_class}."):
+            raise ValidationError(f"{move_id}: move_id class segment must match move_class {move_class!r}")
         if binding.get("wave") != "IV":
             raise ValidationError(f"{move_id}: wave must be IV")
         if binding.get("binding_status") != "seeded_pre_protocol_owner_binding":
@@ -141,10 +167,21 @@ def validate_config(config: dict[str, Any], *, require_wave3: bool = False, root
                 raise ValidationError(f"{move_id}: center binding must be center_law_binding_seeded")
             if repo != "Agents-of-Abyss" and status != "requested_not_landed":
                 raise ValidationError(f"{move_id}: non-center owner binding must be requested_not_landed")
-            if not ob.get("candidate_refs"):
-                raise ValidationError(f"{move_id}: {repo} missing candidate_refs")
-            if not ob.get("owns_later") or not ob.get("does_not_own"):
-                raise ValidationError(f"{move_id}: {repo} must declare owns_later and does_not_own")
+            require_non_empty_string_list(
+                ob.get("candidate_refs"),
+                move_id=move_id,
+                field=f"{repo} candidate_refs",
+            )
+            require_non_empty_string_list(
+                ob.get("owns_later"),
+                move_id=move_id,
+                field=f"{repo} owns_later",
+            )
+            require_non_empty_string_list(
+                ob.get("does_not_own"),
+                move_id=move_id,
+                field=f"{repo} does_not_own",
+            )
 
         boundary = binding.get("assistant_boundary", "")
         for forbidden in ("contestant", "judge", "closer", "summon initiator", "scar writer", "ToS promotion"):
