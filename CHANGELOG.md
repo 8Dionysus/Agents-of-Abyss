@@ -35,6 +35,10 @@ Tracking starts with the community-docs baseline for this repository.
 
 - `python scripts/release_check.py`
 
+### Notes
+
+- detailed lineage-validator, owner-landing doctrine, and self-agency continuity changes for this patch remain enumerated below under `Added` and `Changed`
+
 ## [0.2.0] - 2026-04-10
 
 ### Summary
