@@ -42,6 +42,12 @@ The current center-declared growth move after the trunk-first structural wave is
 - prepare the Agon holding boundary explicitly without starting Agon, minting a
   new sibling repository, turning ToS into an arena, or pushing protocol law into
   runtime and control-plane layers
+- impose Agon as a center-owned audit gate that judges existing surfaces by
+  survival criteria without starting a live arena, runtime service, or new
+  sibling repository
+- plant the first lawful move vocabulary as center-owned pre-protocol legal
+  language without turning move names into live sessions, runtime packets,
+  verdict law, scars, retention, or ToS authority
 
 The current center framing also includes its first bounded cross-repo entry and readiness-alignment surfaces:
 - keep `aoa-stats` public as a derived observability layer that summarizes movement without becoming proof, route, or score authority
@@ -80,6 +86,60 @@ hardening, not a new implementation layer. Its current checked surface is:
 This contour lets the center name the route, validators, and stop-lines while
 leaving checkpoint carry, candidate identity, seed staging, owner landing,
 derived summaries, recurring method, and future Agon-related handoffs in their
+owning repositories.
+
+### Unreleased next turn: Agon imposition gate
+
+The next unreleased center turn after `v0.2.2` is the Agon imposition gate. Its
+checked surface is:
+
+- center-owned Agon turn docs:
+  `docs/AGON_IMPOSITION_POSTURE.md`,
+  `docs/AGON_SURVIVAL_CRITERIA.md`,
+  `docs/AGON_DOUBT_AUDIT.md`,
+  `docs/PRE_AGON_BASELINE.md`, and
+  `docs/AGON_WAVE0_LANDING.md`
+- Wave 0 publication and contract surfaces:
+  `generated/agon_imposition_readiness.min.json`,
+  `schemas/agon-imposition-readiness.schema.json`, and
+  `examples/agon_doubt_audit.example.json`
+- explicit Wave 0 validation commands:
+  `scripts/build_agon_imposition_readiness.py`,
+  `scripts/validate_agon_imposition_readiness.py`, and
+  `tests/test_agon_imposition_readiness.py`
+
+This turn keeps Agon center-owned as an imposition audit, not a live arena,
+not a sibling repository, and not a runtime contour. It names the current
+system as a pre-Agon baseline and subjects current surfaces to
+survive/recharter/defer/prune/quarantine review while later actor, proof,
+memory, routing, runtime, and ToS waves remain routed to their owning
+repositories.
+
+### Unreleased follow-on turn: Agon lawful move language
+
+The next unreleased center turn after Wave 0 is the Agon lawful move language.
+Its checked surface is:
+
+- center-owned Wave III lawful move docs:
+  `docs/AGON_LAWFUL_MOVE_LANGUAGE.md`,
+  `docs/AGON_MOVE_REGISTRY_MODEL.md`,
+  `docs/AGON_MOVE_OWNER_HANDOFFS.md`, and
+  `docs/AGON_WAVE3_LANDING.md`
+- Wave III publication and contract surfaces:
+  `config/agon_lawful_moves.seed.json`,
+  `generated/agon_lawful_move_registry.min.json`,
+  `schemas/agon-lawful-move.schema.json`,
+  `schemas/agon-lawful-move-registry.schema.json`, and
+  `examples/agon_lawful_move.example.json`
+- explicit Wave III validation commands:
+  `scripts/build_agon_lawful_move_registry.py`,
+  `scripts/validate_agon_lawful_moves.py`, and
+  `tests/test_agon_lawful_moves.py`
+
+This turn keeps lawful moves center-owned as pre-protocol legal vocabulary, not
+live arena execution. Every move stays explicitly pre-protocol with
+`live_protocol: false` and `runtime_effect: none`, while execution, proof,
+memory, routing, scenario, and runtime follow-through remain routed to their
 owning repositories.
 
 ## Phase 1: center realignment

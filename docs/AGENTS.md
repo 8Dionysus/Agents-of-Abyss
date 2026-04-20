@@ -18,6 +18,14 @@ Important documents here include:
 - `METHOD_SPINE.md` for the second-wave method doctrine
 - `COUNTERPART_BRIDGE.md` for bounded counterpart and KAG restraint
 - `WITNESS_COMPOST.md` for the witness and compost pilot
+- `AGON_PREPARATION_POSTURE.md`, `AGON_IMPOSITION_POSTURE.md`,
+  `AGON_SURVIVAL_CRITERIA.md`, `AGON_DOUBT_AUDIT.md`,
+  `PRE_AGON_BASELINE.md`, and `AGON_WAVE0_LANDING.md` for the center-owned
+  Agon holding boundary, first imposition turn, survival lens, audit frame,
+  before-image, and landing order
+- `AGON_LAWFUL_MOVE_LANGUAGE.md`, `AGON_MOVE_REGISTRY_MODEL.md`,
+  `AGON_MOVE_OWNER_HANDOFFS.md`, and `AGON_WAVE3_LANDING.md` for the first
+  pre-protocol lawful move vocabulary and its owner-handoff stop-lines
 - `TOS_GROWTH_SUPPORT.md`, `TOS_TEMPLATE_SUPPORT.md`, `TOS_LINEAGE_PILOT_SUPPORT.md`, and `TOS_SOIL_PREP_SUPPORT.md` for current AoA support doctrine around `Tree-of-Sophia`
 
 ## Editing posture
@@ -50,6 +58,22 @@ Then run:
 python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
+```
+
+If you changed the Agon imposition surfaces, also run:
+
+```bash
+python scripts/build_agon_imposition_readiness.py --check
+python scripts/validate_agon_imposition_readiness.py
+python -m pytest -q tests/test_agon_imposition_readiness.py
+```
+
+If you changed the Agon lawful move language surfaces, also run:
+
+```bash
+python scripts/build_agon_lawful_move_registry.py --check
+python scripts/validate_agon_lawful_moves.py
+python -m pytest -q tests/test_agon_lawful_moves.py
 ```
 
 If you changed ownership, routing, or maturity language, confirm the machine-readable registry still matches the prose.
