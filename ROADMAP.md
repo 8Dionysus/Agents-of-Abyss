@@ -173,6 +173,32 @@ practice, workflow, proof, routing, scenario, memory, stats, and actor slices
 remain only `requested_not_landed` companion requests until their owner
 repositories review them under their own boundaries.
 
+### Unreleased follow-on turn: Agon gate routing handoff
+
+The next unreleased center turn after Wave IV is the Agon gate routing handoff.
+Its checked surface is:
+
+- center-owned Wave V handoff docs:
+  `docs/AGON_GATE_ROUTING_HANDOFF.md`,
+  `docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
+  `docs/AGON_GATE_ROUTING_STOP_LINES.md`, and
+  `docs/AGON_WAVE5_CENTER_HANDOFF.md`
+- Wave V publication and contract surfaces:
+  `config/agon_gate_routing_handoff_request.seed.json`,
+  `generated/agon_gate_routing_handoff_request.min.json`,
+  `schemas/agon-gate-routing-handoff-request.schema.json`, and
+  `examples/agon_gate_routing_handoff_request.example.json`
+- explicit Wave V validation commands:
+  `scripts/build_agon_gate_routing_handoff_request.py`,
+  `scripts/validate_agon_gate_routing_handoff_request.py`, and
+  `tests/test_agon_gate_routing_handoff_request.py`
+
+This turn keeps gate routing center-owned as a pre-protocol handoff request,
+not live arena activation. `aoa-routing` may emit gate candidates, missing-
+context hints, owner-review hints, and quarantine hints, while verdicts,
+scars, retention, rank mutation, runtime dispatch, and ToS promotion remain
+outside routing and outside a live arena.
+
 ## Phase 1: center realignment
 
 Goals:

@@ -224,3 +224,27 @@ Main question:
 - which future owner obligations can the center publish now without falsely
   claiming that practice, workflows, proof, routing, scenario, memory,
   stats, or actor slices have already landed in their owning repositories?
+
+## Agon gate routing handoff
+
+Repository: `Agents-of-Abyss` for the center-owned Wave V turn.
+
+Current surfaces:
+- `docs/AGON_GATE_ROUTING_HANDOFF.md`
+- `docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`
+- `docs/AGON_GATE_ROUTING_STOP_LINES.md`
+- `docs/AGON_WAVE5_CENTER_HANDOFF.md`
+- `generated/agon_gate_routing_handoff_request.min.json`
+
+Purpose:
+- accept one thin pre-protocol handoff from `aoa-routing` when ordinary
+  service, routing, or routine cognitive handling is no longer enough
+- keep `Agents-of-Abyss` as the owner of Agon law while routing remains only
+  a gate-candidate and next-hop surface
+- keep every routing gate hint explicitly below arena activation so the center
+  does not smuggle live session, verdict, scar, retention, rank, runtime, or
+  ToS authority into navigation
+
+Main question:
+- which routing conditions can honestly emit a center-facing Agon gate
+  candidate without falsely claiming arena activation or routing-owned law?

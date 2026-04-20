@@ -27,6 +27,11 @@ Then branch by task:
   `docs/AGON_MOVE_OWNER_BINDING.md`,
   `docs/AGON_OWNER_REPO_REQUESTS.md`, and
   `docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
+- gate-routing handoff, owner request, or stop-line questions:
+  `docs/AGON_GATE_ROUTING_HANDOFF.md`,
+  `docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
+  `docs/AGON_GATE_ROUTING_STOP_LINES.md`, and
+  `docs/AGON_WAVE5_CENTER_HANDOFF.md`
 - witness / compost, counterpart bridge, or ToS support waves: the relevant compact doctrine note under `docs/`
 
 Nearest-file precedence applies inside:
@@ -121,6 +126,14 @@ If the task touches the Agon move owner binding turn, also review:
 - `docs/AGON_WAVE4_LANDING.md`
 - `generated/agon_move_owner_binding_registry.min.json`
 
+If the task touches the Agon gate routing handoff turn, also review:
+
+- `docs/AGON_GATE_ROUTING_HANDOFF.md`
+- `docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`
+- `docs/AGON_GATE_ROUTING_STOP_LINES.md`
+- `docs/AGON_WAVE5_CENTER_HANDOFF.md`
+- `generated/agon_gate_routing_handoff_request.min.json`
+
 If you edit `docs/`, `generated/`, `schemas/`, or `scripts/`, read the local
 `AGENTS.md` first.
 
@@ -138,6 +151,14 @@ If you changed the Agon move owner binding surfaces, also run:
 python scripts/build_agon_move_owner_binding_registry.py --check
 python scripts/validate_agon_move_owner_bindings.py
 python -m pytest -q tests/test_agon_move_owner_bindings.py
+```
+
+If you changed the Agon gate routing handoff surfaces, also run:
+
+```bash
+python scripts/build_agon_gate_routing_handoff_request.py --check
+python scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
 ```
 
 ## Audit protocol
@@ -165,6 +186,9 @@ For GitHub review in this repository, treat the following as P1:
 - move owner binding registry changes without corresponding doctrine or without
   running `python scripts/build_agon_move_owner_binding_registry.py --check`
   plus `python scripts/validate_agon_move_owner_bindings.py`
+- gate routing handoff request changes without corresponding doctrine or without
+  running `python scripts/build_agon_gate_routing_handoff_request.py --check`
+  plus `python scripts/validate_agon_gate_routing_handoff_request.py`
 - semantic changes hidden under "docs-only" or "metadata-only" wording
 
 Ignore trivial wording nits unless the task explicitly asks for copyediting.

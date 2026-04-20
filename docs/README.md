@@ -23,6 +23,7 @@ Use [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) when you need the co
 Use [AGON_IMPOSITION_POSTURE](AGON_IMPOSITION_POSTURE.md) when you need the first Agon turn that places current surfaces under survival scrutiny without starting a live arena.
 Use [AGON_LAWFUL_MOVE_LANGUAGE](AGON_LAWFUL_MOVE_LANGUAGE.md) when you need the first center-owned lawful move vocabulary that stays pre-protocol and routes execution, proof, memory, routing, and runtime work back to their owning layers.
 Use [AGON_MOVE_OWNER_BINDING](AGON_MOVE_OWNER_BINDING.md) when you need the next center-owned owner-binding turn that keeps lawful move vocabulary in the center while making later owner requests explicit and still non-landed.
+Use [AGON_GATE_ROUTING_HANDOFF](AGON_GATE_ROUTING_HANDOFF.md) when you need the next center-owned handoff that allows thin pre-protocol gate candidates from `aoa-routing` without treating a routing hint as arena activation.
 
 ## How to verify center claims
 
@@ -55,6 +56,7 @@ Use [AGON_MOVE_OWNER_BINDING](AGON_MOVE_OWNER_BINDING.md) when you need the next
 - [AGON_IMPOSITION_POSTURE](AGON_IMPOSITION_POSTURE.md), [AGON_SURVIVAL_CRITERIA](AGON_SURVIVAL_CRITERIA.md), [AGON_DOUBT_AUDIT](AGON_DOUBT_AUDIT.md), [PRE_AGON_BASELINE](PRE_AGON_BASELINE.md), and [AGON_WAVE0_LANDING](AGON_WAVE0_LANDING.md) — the first Agon turn, its survival lens, the initial audit frame, the named before-image, and the bounded landing order for Wave 0
 - [AGON_LAWFUL_MOVE_LANGUAGE](AGON_LAWFUL_MOVE_LANGUAGE.md), [AGON_MOVE_REGISTRY_MODEL](AGON_MOVE_REGISTRY_MODEL.md), [AGON_MOVE_OWNER_HANDOFFS](AGON_MOVE_OWNER_HANDOFFS.md), and [AGON_WAVE3_LANDING](AGON_WAVE3_LANDING.md) — the first lawful move vocabulary, its compact registry model, owner handoff doctrine, and the bounded Wave III landing order
 - [AGON_MOVE_OWNER_BINDING](AGON_MOVE_OWNER_BINDING.md), [AGON_MOVE_BINDING_MATRIX_MODEL](AGON_MOVE_BINDING_MATRIX_MODEL.md), [AGON_OWNER_REPO_REQUESTS](AGON_OWNER_REPO_REQUESTS.md), [AGON_PRE_PROTOCOL_STOP_LINES](AGON_PRE_PROTOCOL_STOP_LINES.md), and [AGON_WAVE4_LANDING](AGON_WAVE4_LANDING.md) — the owner-binding doctrine, compact binding matrix, cross-repo request law, stop-lines, and the bounded Wave IV landing order
+- [AGON_GATE_ROUTING_HANDOFF](AGON_GATE_ROUTING_HANDOFF.md), [AGON_GATE_ROUTING_OWNER_REQUEST](AGON_GATE_ROUTING_OWNER_REQUEST.md), [AGON_GATE_ROUTING_STOP_LINES](AGON_GATE_ROUTING_STOP_LINES.md), and [AGON_WAVE5_CENTER_HANDOFF](AGON_WAVE5_CENTER_HANDOFF.md) — the center-side routing handoff, cross-repo owner request, gate stop-lines, and the bounded Wave V center landing order
 
 ## Support and maintenance docs
 
@@ -89,6 +91,7 @@ Use [AGON_MOVE_OWNER_BINDING](AGON_MOVE_OWNER_BINDING.md) when you need the next
 7. [AGON_IMPOSITION_POSTURE](AGON_IMPOSITION_POSTURE.md)
 8. [AGON_LAWFUL_MOVE_LANGUAGE](AGON_LAWFUL_MOVE_LANGUAGE.md)
 9. [AGON_MOVE_OWNER_BINDING](AGON_MOVE_OWNER_BINDING.md)
+10. [AGON_GATE_ROUTING_HANDOFF](AGON_GATE_ROUTING_HANDOFF.md)
 
 ## Notes
 

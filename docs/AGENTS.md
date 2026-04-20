@@ -30,6 +30,10 @@ Important documents here include:
   `AGON_OWNER_REPO_REQUESTS.md`, `AGON_PRE_PROTOCOL_STOP_LINES.md`, and
   `AGON_WAVE4_LANDING.md` for the first owner-binding turn, its compact
   binding matrix, cross-repo request law, stop-lines, and landing order
+- `AGON_GATE_ROUTING_HANDOFF.md`, `AGON_GATE_ROUTING_OWNER_REQUEST.md`,
+  `AGON_GATE_ROUTING_STOP_LINES.md`, and `AGON_WAVE5_CENTER_HANDOFF.md` for
+  the first center-owned gate-routing handoff, its owner request, stop-lines,
+  and landing order
 - `TOS_GROWTH_SUPPORT.md`, `TOS_TEMPLATE_SUPPORT.md`, `TOS_LINEAGE_PILOT_SUPPORT.md`, and `TOS_SOIL_PREP_SUPPORT.md` for current AoA support doctrine around `Tree-of-Sophia`
 
 ## Editing posture
@@ -86,6 +90,14 @@ If you changed the Agon move owner binding surfaces, also run:
 python scripts/build_agon_move_owner_binding_registry.py --check
 python scripts/validate_agon_move_owner_bindings.py
 python -m pytest -q tests/test_agon_move_owner_bindings.py
+```
+
+If you changed the Agon gate routing handoff surfaces, also run:
+
+```bash
+python scripts/build_agon_gate_routing_handoff_request.py --check
+python scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
 ```
 
 If you changed ownership, routing, or maturity language, confirm the machine-readable registry still matches the prose.

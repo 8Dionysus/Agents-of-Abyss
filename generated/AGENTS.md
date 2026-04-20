@@ -12,6 +12,8 @@ It summarizes repository names, roles, statuses, shared maturity, and kind for t
 move registry for the center-owned pre-protocol legal vocabulary.
 `generated/agon_move_owner_binding_registry.min.json` is the tracked Wave IV
 owner-binding registry for the center-owned pre-protocol owner-binding law.
+`generated/agon_gate_routing_handoff_request.min.json` is the tracked Wave V
+center handoff request for thin pre-protocol Agon gate routing.
 
 This directory is derived in purpose, but the registry is currently maintained as a tracked JSON artifact inside this repository.
 Treat it as a published summary surface, not a hidden second charter.
@@ -67,6 +69,20 @@ When editing `agon_move_owner_binding_registry.min.json`:
   shadow owner-landing ledger, live arena runtime, verdict government, scar
   ledger, retention engine, or ToS promotion path
 
+When editing `agon_gate_routing_handoff_request.min.json`:
+
+- keep it aligned with `docs/AGON_GATE_ROUTING_HANDOFF.md`,
+  `docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
+  `docs/AGON_GATE_ROUTING_STOP_LINES.md`,
+  `docs/AGON_WAVE5_CENTER_HANDOFF.md`, and
+  `config/agon_gate_routing_handoff_request.seed.json`
+- treat `scripts/build_agon_gate_routing_handoff_request.py` as the canonical
+  builder and `scripts/validate_agon_gate_routing_handoff_request.py` as the
+  explicit Wave V validator
+- keep the handoff explicitly pre-protocol; it must not become a shadow arena
+  activation record, routing-owned Agon law, verdict government, scar ledger,
+  retention engine, runtime dispatch authority, or ToS promotion path
+
 There is no builder script for the compact registry or supporting inventory
 surfaces today. If that changes later, update this guide and
 `scripts/validate_ecosystem.py` together.
@@ -103,6 +119,14 @@ After changing the Agon move owner binding registry, also run:
 python scripts/build_agon_move_owner_binding_registry.py --check
 python scripts/validate_agon_move_owner_bindings.py
 python -m pytest -q tests/test_agon_move_owner_bindings.py
+```
+
+After changing the Agon gate routing handoff request, also run:
+
+```bash
+python scripts/build_agon_gate_routing_handoff_request.py --check
+python scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
 ```
 
 A registry edit is only done when the JSON, the schema, and the center-layer prose still agree.

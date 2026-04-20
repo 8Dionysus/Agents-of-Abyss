@@ -26,6 +26,10 @@ Current scripts include:
   stale-check of `generated/agon_move_owner_binding_registry.min.json`
 - `validate_agon_move_owner_bindings.py` for the explicit Wave IV move owner
   binding contract check
+- `build_agon_gate_routing_handoff_request.py` for deterministic rebuild or
+  stale-check of `generated/agon_gate_routing_handoff_request.min.json`
+- `validate_agon_gate_routing_handoff_request.py` for the explicit Wave V
+  gate-routing handoff contract check
 
 ## Editing posture
 
@@ -73,6 +77,14 @@ After changing the Agon Wave IV builder or validator, also run:
 python scripts/build_agon_move_owner_binding_registry.py --check
 python scripts/validate_agon_move_owner_bindings.py
 python -m pytest -q tests/test_agon_move_owner_bindings.py
+```
+
+After changing the Agon Wave V builder or validator, also run:
+
+```bash
+python scripts/build_agon_gate_routing_handoff_request.py --check
+python scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
 ```
 
 A script change is done when the failure mode is clearer, not more mysterious.
