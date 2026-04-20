@@ -1,12 +1,24 @@
 from __future__ import annotations
 
+import importlib.util
 import json
 import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_builder():
+    path = ROOT / "scripts" / "build_agon_lawful_move_registry.py"
+    spec = importlib.util.spec_from_file_location("agon_lawful_move_builder_test", path)
+    assert spec and spec.loader
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def test_lawful_move_registry_is_current() -> None:
@@ -58,3 +70,38 @@ def test_lawful_move_registry_pre_protocol_invariants() -> None:
         if "assistant_service_actor" in move["allowed_actor_forms"]:
             assert "judge_candidate" not in move["allowed_seats"]
             assert move["move_class"] != "summon"
+        if move["move_class"] == "summon":
+            assert move["allowed_actor_forms"] == ["agonic_contestant_candidate"]
+            assert move["allowed_seats"] == ["contestant"]
+
+
+def test_builder_rejects_unknown_move_keys() -> None:
+    builder = load_builder()
+    move = next(
+        item
+        for item in json.loads((ROOT / "config" / "agon_lawful_moves.seed.json").read_text(encoding="utf-8"))["moves"]
+        if item["move_class"] == "summon"
+    )
+    bad_move = dict(move)
+    bad_move["unexpected"] = "drift"
+
+    with pytest.raises(SystemExit, match="unexpected keys present"):
+        builder.validate_move(bad_move)
+
+
+def test_builder_rejects_non_contestant_summon_semantics() -> None:
+    builder = load_builder()
+    move = next(
+        item
+        for item in json.loads((ROOT / "config" / "agon_lawful_moves.seed.json").read_text(encoding="utf-8"))["moves"]
+        if item["move_class"] == "summon"
+    )
+    bad_seats = dict(move)
+    bad_seats["allowed_seats"] = ["contestant", "witness"]
+    with pytest.raises(SystemExit, match="summon vocabulary is contestant-only"):
+        builder.validate_move(bad_seats)
+
+    bad_actor_forms = dict(move)
+    bad_actor_forms["allowed_actor_forms"] = ["agonic_contestant_candidate", "agonic_witness_candidate"]
+    with pytest.raises(SystemExit, match="summon vocabulary is contestant-only"):
+        builder.validate_move(bad_actor_forms)
