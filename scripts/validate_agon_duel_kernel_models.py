@@ -67,14 +67,21 @@ def main():
             return fail(f"{kernel_id} must forbid assistant contestant seat")
 
         events = kernel.get("event_sequence", [])
-        last_position = -1
-        for event in REQUIRED_EVENTS:
-            if event not in events:
-                return fail(f"{kernel_id} missing event {event}")
-            current_position = events.index(event)
-            if current_position <= last_position:
+        event_order = {event: index for index, event in enumerate(REQUIRED_EVENTS)}
+        seen_required_events = set()
+        last_rank = -1
+        for event in events:
+            rank = event_order.get(event)
+            if rank is None:
+                continue
+            if rank <= last_rank:
                 return fail(f"{kernel_id} event order is invalid at {event}")
-            last_position = current_position
+            seen_required_events.add(event)
+            last_rank = rank
+
+        for event in REQUIRED_EVENTS:
+            if event not in seen_required_events:
+                return fail(f"{kernel_id} missing event {event}")
 
         stop_lines = set(kernel.get("stop_lines", []))
         for item in FORBIDDEN_STOP_LINE_GAPS:
