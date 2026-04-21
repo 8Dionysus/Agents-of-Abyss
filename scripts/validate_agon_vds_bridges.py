@@ -9,7 +9,7 @@ def validate():
     assert d['registry_id']=='agon.vds_bridge.registry.v1'
     assert d['wave']=='XI' and d['live_protocol'] is False and d['runtime_effect']=='none'
     assert set(d['terminal_outcomes'])==REQUIRED_OUTCOMES
-    assert d['bridge_count']>=5
+    assert d['bridge_count']==len(d['bridge_components'])
     ids=[c['component_id'] for c in d['bridge_components']]; assert len(ids)==len(set(ids))
     classes={c['component_class'] for c in d['bridge_components']}
     assert {'verdict_draft','delta_receipt_candidate','scar_request','retention_request','inscription_bundle_candidate'} <= classes
