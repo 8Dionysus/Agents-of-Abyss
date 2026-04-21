@@ -1,0 +1,11 @@
+{
+  "authority": "observation_only",
+  "component_id": "component.agon.mechanical-trial-suite-surfaces",
+  "observation_intent": "Detect drift in center trial-suite law, candidate outputs, assistant boundaries, and stop-lines.",
+  "repo": "Agents-of-Abyss",
+  "surfaces": [
+    "generated/agon_mechanical_trial_suite_registry.min.json",
+    "docs/AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md"
+  ],
+  "wave": "XIII"
+}
