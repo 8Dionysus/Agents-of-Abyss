@@ -1,0 +1,16 @@
+{
+  "candidate_id": "example.concept_delta.001",
+  "concept_map_after": [
+    "claim",
+    "evidence",
+    "interpretation",
+    "closure"
+  ],
+  "concept_map_before": [
+    "claim",
+    "evidence",
+    "closure"
+  ],
+  "future_effect_claim": "raise review threshold for interpretation claims",
+  "pressure_event": "model prediction failed"
+}
