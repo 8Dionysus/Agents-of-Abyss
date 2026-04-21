@@ -1,0 +1,11 @@
+{
+  "law_family": "summon",
+  "runtime_effect": "none",
+  "summon_intent": {
+    "cost_acknowledgement": true,
+    "expected_delta": "produce challenge to hidden contradiction",
+    "need_statement": "current actor cannot break its own closure assumption",
+    "summon_type": "adversarial",
+    "visibility": "declared_before_use"
+  }
+}
