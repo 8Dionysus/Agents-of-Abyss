@@ -1,0 +1,31 @@
+{
+  "bindings": [
+    {
+      "does_not_emit": [
+        "verdict",
+        "scar",
+        "rank_mutation",
+        "tos_promotion"
+      ],
+      "emits": [
+        "recurrence_observation",
+        "owner_review_candidate"
+      ],
+      "hook_id": "component.agon.wave16.Agents_of_Abyss.drift_watch",
+      "surface_globs": [
+        "generated/agon_slc_registry.min.json",
+        "config/agon_slc.seed.json",
+        "docs/AGON_SCHOOLS_LINEAGES_CAMPAIGNS.md",
+        "docs/AGON_SCHOOL_MODEL.md",
+        "docs/AGON_LINEAGE_MODEL.md",
+        "docs/AGON_CAMPAIGN_MODEL.md",
+        "docs/AGON_CAMPAIGN_OWNER_HANDOFFS.md",
+        "docs/AGON_WAVE16_STOP_LINES.md",
+        "docs/AGON_WAVE16_LANDING.md"
+      ]
+    }
+  ],
+  "component_id": "component.agon.wave16.Agents_of_Abyss",
+  "hook_binding_set_id": "component.agon.wave16.Agents_of_Abyss.hooks",
+  "wave": "XVI"
+}
