@@ -22,12 +22,12 @@
         "minLength": 1,
         "type": "string"
       },
-      "maxItems": 10,
-      "minItems": 10,
+      "maxItems": 11,
+      "minItems": 11,
       "type": "array"
     },
     "move_extension_count": {
-      "const": 10
+      "const": 11
     },
     "registry_id": {
       "const": "agon.epistemic_agon.registry.v1"
