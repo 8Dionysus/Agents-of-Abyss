@@ -1,0 +1,24 @@
+{
+  "component_id": "component:agon:vds-bridge-surfaces",
+  "may_emit": [
+    "review_queue_candidate",
+    "owner_summary_candidate",
+    "dossier_candidate"
+  ],
+  "must_not_emit": [
+    "live_verdict",
+    "scar_write",
+    "retention_execution",
+    "rank_mutation",
+    "tos_promotion"
+  ],
+  "observation_intent": "Detect drift in verdict, delta, scar, retention and inscription bridge surfaces before runtime activation.",
+  "observed_surfaces": [
+    "generated/agon_vds_bridge_registry.min.json",
+    "config/agon_vds_bridges.seed.json",
+    "docs/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
+    "docs/AGON_WAVE11_STOP_LINES.md"
+  ],
+  "owner_repo": "Agents-of-Abyss",
+  "status": "seeded_recurrence_observation_component"
+}

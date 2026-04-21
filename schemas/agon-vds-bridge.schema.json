@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "component_class": {
+      "type": "string"
+    },
+    "component_id": {
+      "pattern": "^agon\\.bridge\\.",
+      "type": "string"
+    },
+    "not_granted": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "owner_handoffs": {
+      "type": "object"
+    },
+    "required_fields": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "statement": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "component_id",
+    "component_class",
+    "statement",
+    "required_fields",
+    "owner_handoffs",
+    "not_granted"
+  ],
+  "title": "Agon VDS Bridge Component",
+  "type": "object"
+}
