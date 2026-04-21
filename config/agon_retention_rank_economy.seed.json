@@ -197,11 +197,11 @@
       "id": "agon.retention.rank_interlock.v1",
       "interlocks": [
         {
-          "may_emit": "jurisdiction_grant_candidate",
+          "may_emit": "grant_jurisdiction_candidate",
           "when": "retention_passed_repeatedly"
         },
         {
-          "may_emit": "jurisdiction_suspension_candidate",
+          "may_emit": "suspend_jurisdiction_candidate",
           "when": "retention_failed_repeat_error"
         },
         {
