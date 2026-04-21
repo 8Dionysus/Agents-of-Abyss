@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "home_repo": {
+      "const": "Agents-of-Abyss"
+    },
+    "interlocks": {
+      "minItems": 1,
+      "type": "array"
+    },
+    "law_families": {
+      "minItems": 3,
+      "type": "array"
+    },
+    "live_protocol": {
+      "const": false
+    },
+    "registry_id": {
+      "const": "agon.ccs_law.registry.v1"
+    },
+    "runtime_effect": {
+      "const": "none"
+    },
+    "stop_lines": {
+      "minItems": 1,
+      "type": "array"
+    },
+    "wave": {
+      "const": "X"
+    }
+  },
+  "required": [
+    "registry_id",
+    "version",
+    "wave",
+    "home_repo",
+    "status",
+    "live_protocol",
+    "runtime_effect",
+    "law_families",
+    "interlocks",
+    "stop_lines"
+  ],
+  "title": "Agon CCS Law Registry",
+  "type": "object"
+}

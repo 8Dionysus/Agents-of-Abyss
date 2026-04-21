@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "allowed_lawful_moves": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "law_family": {
+      "enum": [
+        "contradiction",
+        "closure",
+        "summon"
+      ],
+      "type": "string"
+    },
+    "law_id": {
+      "pattern": "^agon\\.law\\.",
+      "type": "string"
+    },
+    "not_granted": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "owner_handoffs": {
+      "type": "object"
+    },
+    "statement": {
+      "minLength": 10,
+      "type": "string"
+    }
+  },
+  "required": [
+    "law_family",
+    "law_id",
+    "statement",
+    "allowed_lawful_moves",
+    "owner_handoffs",
+    "not_granted"
+  ],
+  "title": "Agon Contradiction Closure Summon Law",
+  "type": "object"
+}
