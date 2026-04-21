@@ -8,6 +8,9 @@
       "type": "string"
     },
     "kernels": {
+      "items": {
+        "$ref": "./agon-duel-kernel-model.schema.json"
+      },
       "type": "array"
     },
     "registry_id": {

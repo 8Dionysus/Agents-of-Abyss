@@ -3,6 +3,9 @@
   "additionalProperties": true,
   "properties": {
     "bridge_components": {
+      "items": {
+        "$ref": "./agon-vds-bridge.schema.json"
+      },
       "minItems": 5,
       "type": "array"
     },

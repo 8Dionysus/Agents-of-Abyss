@@ -5,7 +5,10 @@
     "home_repo": {
       "const": "Agents-of-Abyss"
     },
-    "interlocks": {
+    "interlock_count": {
+      "type": "integer"
+    },
+    "interlock_ids": {
       "minItems": 1,
       "type": "array"
     },
@@ -39,7 +42,8 @@
     "live_protocol",
     "runtime_effect",
     "law_families",
-    "interlocks",
+    "interlock_ids",
+    "interlock_count",
     "stop_lines"
   ],
   "title": "Agon CCS Law Registry",
