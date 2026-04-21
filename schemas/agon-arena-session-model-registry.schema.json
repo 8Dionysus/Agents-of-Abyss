@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "live_protocol": {
+      "const": false,
+      "type": "boolean"
+    },
+    "owner_repo": {
+      "type": "string"
+    },
+    "registry_ref": {
+      "type": "string"
+    },
+    "required_stop_lines": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "runtime_effect": {
+      "const": "none",
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "session_models": {
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": true,
+        "properties": {
+          "charter": {
+            "type": "object"
+          },
+          "lifecycle": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "live_protocol": {
+            "const": false,
+            "type": "boolean"
+          },
+          "owner_handoffs": {
+            "type": "object"
+          },
+          "pressure_profiles": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "profile": {
+            "type": "string"
+          },
+          "runtime_effect": {
+            "const": "none",
+            "type": "string"
+          },
+          "seats": {
+            "type": "object"
+          },
+          "session_model_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "terminal_outcomes": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "session_model_id",
+          "status",
+          "profile",
+          "live_protocol",
+          "runtime_effect",
+          "charter",
+          "seats",
+          "lifecycle",
+          "pressure_profiles",
+          "terminal_outcomes",
+          "owner_handoffs"
+        ],
+        "title": "Agon Arena Session Model",
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "status": {
+      "type": "string"
+    },
+    "wave": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "wave",
+    "owner_repo",
+    "status",
+    "live_protocol",
+    "runtime_effect",
+    "registry_ref",
+    "session_models",
+    "required_stop_lines"
+  ],
+  "title": "Agon Arena Session Model Registry",
+  "type": "object"
+}

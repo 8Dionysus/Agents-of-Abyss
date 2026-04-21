@@ -1,0 +1,42 @@
+{
+  "bindings": [
+    {
+      "binding_ref": "agon.wave7.center-request.generated.watch",
+      "component_ref": "component:agon:court-memo-stats-center-request",
+      "config": {
+        "json_field_signals": [
+          {
+            "category": "overclaim_risk",
+            "field": "live_protocol",
+            "match": "equals",
+            "signal": "live_protocol_claim_present",
+            "value": true
+          }
+        ],
+        "record_id_field": "request_ref"
+      },
+      "event": "generated_surface_refreshed",
+      "input_ref": "agon-wave7-center-request",
+      "notes": "Observation only; no arena activation.",
+      "owner_repo": "Agents-of-Abyss",
+      "path_globs": [
+        "generated/agon_court_memo_stats_prebinding_request.min.json"
+      ],
+      "producer": "runtime_candidate_watch",
+      "signal_rules": [
+        {
+          "category": "change_pressure",
+          "match": "always",
+          "signal": "wave7_request_changed",
+          "source_inputs": [
+            "agon-wave7-center-request"
+          ]
+        }
+      ]
+    }
+  ],
+  "component_ref": "component:agon:court-memo-stats-center-request",
+  "notes": "Wave VII center hooks produce review observations only.",
+  "owner_repo": "Agents-of-Abyss",
+  "schema_version": "aoa_hook_binding_set_v1"
+}
