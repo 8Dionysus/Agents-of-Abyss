@@ -1,0 +1,15 @@
+{
+  "component_id": "component:agon:duel-kernel-model-surfaces",
+  "forbidden_actions": [
+    "open_arena_session",
+    "issue_verdict",
+    "write_scar",
+    "mutate_rank"
+  ],
+  "hook_binding_set_id": "hooks:component:agon:duel-kernel-model-surfaces",
+  "producers": [
+    "registry_diff",
+    "docs_diff",
+    "stop_line_check"
+  ]
+}

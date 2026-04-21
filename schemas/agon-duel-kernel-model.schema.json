@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "event_sequence": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "id": {
+      "type": "string"
+    },
+    "invariants": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "live_protocol": {
+      "type": "boolean"
+    },
+    "minimum_seats": {
+      "type": "object"
+    },
+    "runtime_effect": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "stop_lines": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "status",
+    "live_protocol",
+    "minimum_seats",
+    "event_sequence",
+    "invariants",
+    "stop_lines"
+  ],
+  "title": "Agon Duel Kernel Model",
+  "type": "object"
+}
