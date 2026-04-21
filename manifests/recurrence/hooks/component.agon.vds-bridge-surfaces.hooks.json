@@ -1,0 +1,23 @@
+{
+  "component_id": "component:agon:vds-bridge-surfaces",
+  "hidden_scheduler_allowed": false,
+  "hook_binding_set_id": "hooks:component:agon:vds-bridge-surfaces",
+  "hooks": [
+    {
+      "emits": "review_queue_candidate",
+      "hook_id": "agon.vds.registry.drift",
+      "watches": [
+        "generated/agon_vds_bridge_registry.min.json"
+      ]
+    },
+    {
+      "emits": "owner_summary_candidate",
+      "hook_id": "agon.vds.stopline.drift",
+      "watches": [
+        "docs/AGON_WAVE11_STOP_LINES.md"
+      ]
+    }
+  ],
+  "owner_repo": "Agents-of-Abyss",
+  "runtime_effect": "none"
+}
