@@ -1,0 +1,16 @@
+{
+  "authority": "observe_only",
+  "component_id": "component:agon:duel-kernel-model-surfaces",
+  "owner_repo": "Agents-of-Abyss",
+  "recurrence_watch": [
+    "duel_kernel_model_drift",
+    "assistant_boundary_drift",
+    "event_sequence_drift",
+    "stop_line_drift"
+  ],
+  "surface_refs": [
+    "generated/agon_duel_kernel_model_registry.min.json",
+    "config/agon_duel_kernel_models.seed.json",
+    "docs/AGON_DUEL_KERNEL_MODEL.md"
+  ]
+}
