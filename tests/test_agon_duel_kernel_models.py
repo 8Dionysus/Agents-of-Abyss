@@ -40,3 +40,20 @@ def test_agon_duel_kernel_model_registry_rejects_repeated_earlier_phase(tmp_path
     validator.REG = registry_path
 
     assert validator.main() == 1
+
+
+def test_agon_duel_kernel_model_registry_rejects_non_string_event_entries(tmp_path: Path, capsys):
+    validator = _load_script(ROOT / "scripts" / "validate_agon_duel_kernel_models.py")
+    registry = json.loads(
+        (
+            ROOT / "generated" / "agon_duel_kernel_model_registry.min.json"
+        ).read_text(encoding="utf-8")
+    )
+    registry["kernels"][0]["event_sequence"][3] = {"bad": "event"}
+
+    registry_path = tmp_path / "agon_duel_kernel_model_registry.min.json"
+    registry_path.write_text(json.dumps(registry), encoding="utf-8")
+    validator.REG = registry_path
+
+    assert validator.main() == 1
+    assert "event_sequence entries must be strings" in capsys.readouterr().err
