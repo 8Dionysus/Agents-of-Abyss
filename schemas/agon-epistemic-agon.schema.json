@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidate_outputs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "component_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "component_type": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "forbidden_effects": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 10,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "live_protocol": {
+      "const": false
+    },
+    "move_extensions": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "owner_repo": {
+      "const": "Agents-of-Abyss"
+    },
+    "required_inputs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "runtime_effect": {
+      "enum": [
+        "none",
+        "candidate_only",
+        "local_dry_run_candidate_only",
+        "local_rehearsal_candidate_only"
+      ]
+    },
+    "summary": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "candidate_outputs",
+    "component_id",
+    "component_type",
+    "forbidden_effects",
+    "live_protocol",
+    "move_extensions",
+    "owner_repo",
+    "required_inputs",
+    "runtime_effect",
+    "summary"
+  ],
+  "title": "Agon Epistemic Agon Component",
+  "type": "object"
+}
