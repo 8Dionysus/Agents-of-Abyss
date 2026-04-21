@@ -1,0 +1,34 @@
+{
+  "assistant_contestant_allowed": false,
+  "assistant_support_allowed": true,
+  "contestant_count": 2,
+  "expected_candidate_outputs": [
+    "verdict_draft_candidate",
+    "scar_request_candidate",
+    "trial_chronicle_candidate"
+  ],
+  "forbidden_authority": [
+    "live_verdict",
+    "durable_scar",
+    "retention_execution",
+    "rank_mutation",
+    "tos_promotion"
+  ],
+  "gate_trigger": "broken_trace_or_trace_gap",
+  "kernel_model_id": "agon.duel_kernel.mechanical_duel.v0",
+  "lawful_moves": [
+    "probe_trace",
+    "deny_trace_closure",
+    "request_witness",
+    "defer_with_cost"
+  ],
+  "live_protocol": false,
+  "playbook_id": "AOA-P-0033",
+  "primary_pressure": "broken_trace",
+  "runtime_effect": "none",
+  "runtime_kernel_id": "abyss.runtime.agon.mechanical_duel_kernel.v0",
+  "session_model_id": "agon.session.broken_trace_trial",
+  "slug": "broken_trace",
+  "terminal_candidate": "failed_honorably",
+  "trial_id": "agon.trial.mechanical.broken_trace.v0"
+}
