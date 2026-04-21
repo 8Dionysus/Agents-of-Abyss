@@ -71,6 +71,8 @@ def main():
         seen_required_events = set()
         last_rank = -1
         for event in events:
+            if not isinstance(event, str):
+                return fail(f"{kernel_id} event_sequence entries must be strings")
             rank = event_order.get(event)
             if rank is None:
                 continue
