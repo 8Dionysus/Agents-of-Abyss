@@ -27,7 +27,7 @@ from build_agon_epistemic_agon_registry import (  # noqa: E402
 )
 
 EXPECTED_COUNT = 8
-EXPECTED_MOVE_EXTENSION_COUNT = 10
+EXPECTED_MOVE_EXTENSION_COUNT = 11
 KEY_FIELD = "component_id"
 REQUIRED_FIELDS = ['candidate_outputs', 'component_id', 'component_type', 'forbidden_effects', 'live_protocol', 'move_extensions', 'owner_repo', 'required_inputs', 'runtime_effect', 'summary']
 FORBIDDEN_EFFECTS = ['live_verdict_authority', 'durable_scar_write', 'retention_execution', 'rank_mutation', 'trust_mutation', 'tree_of_sophia_promotion', 'kag_promotion', 'hidden_scheduler_action', 'assistant_contestant_drift', 'auto_doctrine_rewrite']
@@ -133,6 +133,11 @@ def validate() -> int:
     missing_from_components = set(move_extensions) - component_move_extensions
     if missing_from_components:
         return fail(f"{MOVE_EXTENSIONS_KEY} missing from components: {sorted(missing_from_components)}")
+    undeclared_component_extensions = component_move_extensions - set(move_extensions)
+    if undeclared_component_extensions:
+        return fail(
+            f"component move_extensions missing from {MOVE_EXTENSIONS_KEY}: {sorted(undeclared_component_extensions)}"
+        )
 
     if not OUT.exists():
         return fail(f"missing generated registry {OUT}")

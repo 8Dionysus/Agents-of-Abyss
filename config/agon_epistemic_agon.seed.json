@@ -280,6 +280,7 @@
     "challenge_model",
     "attack_inference_chain",
     "compare_explanatory_power",
+    "stand_fast",
     "propose_bifurcation",
     "defend_concept_boundary",
     "revise_concept_map",

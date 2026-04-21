@@ -8,6 +8,11 @@ def test_generated_registry_shape():
     assert reg['runtime_posture'] in ('candidate_only', 'pre_protocol_candidate_only')
     assert reg['count'] == 8
     assert len(reg['epistemic_components']) == 8
+    assert set(reg['epistemic_move_extensions']) == {
+        move
+        for item in reg['epistemic_components']
+        for move in item['move_extensions']
+    }
     for item in reg['epistemic_components']:
         assert item['live_protocol'] is False
         assert 'auto_doctrine_rewrite' in item.get('forbidden_effects', [])
