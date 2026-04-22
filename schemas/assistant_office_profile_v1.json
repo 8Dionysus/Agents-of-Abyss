@@ -55,7 +55,7 @@
     "owner_repo": {
       "type": "string",
       "minLength": 1,
-      "const": "Agents-of-Abyss"
+      "const": "aoa-agents"
     },
     "service_contract": {
       "type": "object",
