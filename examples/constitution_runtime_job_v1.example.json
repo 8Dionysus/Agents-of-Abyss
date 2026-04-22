@@ -1,0 +1,7 @@
+{
+  "authority_required": "runtime_limited",
+  "job_id": "job_001",
+  "job_kind": "appeal_expiry",
+  "run_at": "2026-05-01T00:00:00Z",
+  "state": "scheduled"
+}

@@ -1,0 +1,8 @@
+{
+  "event_kinds": [
+    "experience.governance.case.enqueued",
+    "experience.governance.vote.committed"
+  ],
+  "registry_id": "experience.constitution_runtime.events",
+  "version": "1.0.0"
+}

@@ -1,0 +1,24 @@
+{
+  "authority": {
+    "actor": "operator.sovereign",
+    "mode": "reviewed"
+  },
+  "created_at": "2026-04-22T12:00:00-06:00",
+  "decision_refs": [],
+  "disputants": [
+    "aoa-agents.owner",
+    "aoa-routing.owner"
+  ],
+  "evidence_refs": [
+    "receipt:example:001"
+  ],
+  "id": "experience.dispute_record.example.001",
+  "issue": "whether routing rule stole meaning authority",
+  "kind": "experience.dispute_record",
+  "notes": [
+    "seed example for v0.8 polis governance"
+  ],
+  "resolution_state": "open",
+  "schema_version": "v1",
+  "status": "proposed"
+}

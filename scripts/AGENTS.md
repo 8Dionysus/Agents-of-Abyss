@@ -36,6 +36,8 @@ Current scripts include:
   certification/watchtower contract check
 - `validate_experience_wave3.py` for the third center-owned experience
   federation/adoption contract check
+- `validate_experience_wave4.py` for the fourth center-owned experience
+  polis governance and constitution runtime contract check
 
 ## Editing posture
 
@@ -112,6 +114,13 @@ After changing the Experience Wave 3 validator, also run:
 ```bash
 python scripts/validate_experience_wave3.py
 python -m pytest -q tests/test_experience_wave3.py
+```
+
+After changing the Experience Wave 4 validator, also run:
+
+```bash
+python scripts/validate_experience_wave4.py
+python -m pytest -q tests/test_experience_wave4.py tests/test_experience_wave4_seed_contracts.py
 ```
 
 A script change is done when the failure mode is clearer, not more mysterious.

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/council_schedule_v1.json",
+  "title": "council_schedule_v1",
+  "description": "Seed schema for council_schedule_v1 in Experience Constitution Runtime v0.9.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "members",
+    "quorum_required",
+    "schedule_id",
+    "scheduled_for",
+    "status"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "quorum_required": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "schedule_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scheduled_for": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "scheduled"
+      ]
+    }
+  }
+}

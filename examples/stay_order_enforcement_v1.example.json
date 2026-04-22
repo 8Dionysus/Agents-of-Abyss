@@ -1,0 +1,8 @@
+{
+  "action": "promote_release",
+  "checked_at": "2026-04-22T00:00:00Z",
+  "decision": "blocked",
+  "enforcement_id": "enforce_001",
+  "stay_id": "stay_001",
+  "target": "assistant.notary@1.2.0"
+}

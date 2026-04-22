@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/governance_runtime_case_v1.json",
+  "title": "governance_runtime_case_v1",
+  "description": "Seed schema for governance_runtime_case_v1 in Experience Constitution Runtime v0.9.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_class",
+    "case_id",
+    "created_at",
+    "evidence_refs",
+    "opened_by",
+    "owner_surface",
+    "risk_level",
+    "state"
+  ],
+  "properties": {
+    "case_class": {
+      "type": "string",
+      "minLength": 1
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "opened_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner_surface": {
+      "type": "string",
+      "minLength": 1
+    },
+    "risk_level": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "material"
+      ]
+    },
+    "state": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "queued"
+      ]
+    }
+  }
+}

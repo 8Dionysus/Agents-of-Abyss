@@ -1,0 +1,24 @@
+{
+  "applies_to": [
+    "aoa-agents",
+    "aoa-evals"
+  ],
+  "authority": {
+    "actor": "operator.sovereign",
+    "mode": "reviewed"
+  },
+  "created_at": "2026-04-22T12:00:00-06:00",
+  "decision_refs": [],
+  "evidence_refs": [
+    "receipt:example:001"
+  ],
+  "holding": "assistant may request review but cannot self-recharter",
+  "id": "experience.policy_precedent.example.001",
+  "kind": "experience.policy_precedent",
+  "notes": [
+    "seed example for v0.8 polis governance"
+  ],
+  "precedent_class": "assistant_self_recharter_block",
+  "schema_version": "v1",
+  "status": "proposed"
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience_charter_amendment_v1.json",
+  "title": "Experience Charter Amendment V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "authority",
+    "change_class",
+    "created_at",
+    "decision_refs",
+    "diff_summary",
+    "evidence_refs",
+    "id",
+    "kind",
+    "notes",
+    "requires_eval",
+    "schema_version",
+    "status",
+    "target_charter"
+  ],
+  "properties": {
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "actor",
+        "mode"
+      ],
+      "properties": {
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "reviewed"
+          ]
+        }
+      }
+    },
+    "change_class": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "diff_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1,
+      "const": "experience.charter_amendment"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "requires_eval": {
+      "type": "boolean",
+      "const": true
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1,
+      "const": "v1"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "proposed"
+      ]
+    },
+    "target_charter": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

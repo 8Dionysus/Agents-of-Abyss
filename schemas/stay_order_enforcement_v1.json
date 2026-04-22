@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/stay_order_enforcement_v1.json",
+  "title": "stay_order_enforcement_v1",
+  "description": "Seed schema for stay_order_enforcement_v1 in Experience Constitution Runtime v0.9.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "action",
+    "checked_at",
+    "decision",
+    "enforcement_id",
+    "stay_id",
+    "target"
+  ],
+  "properties": {
+    "action": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "promote_release"
+      ]
+    },
+    "checked_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "blocked"
+      ]
+    },
+    "enforcement_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stay_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "assistant.notary@1.2.0"
+      ]
+    }
+  }
+}

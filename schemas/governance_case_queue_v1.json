@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/governance_case_queue_v1.json",
+  "title": "governance_case_queue_v1",
+  "description": "Seed schema for governance_case_queue_v1 in Experience Constitution Runtime v0.9.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "items",
+    "queue_id",
+    "state",
+    "updated_at"
+  ],
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "queue_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "active"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
