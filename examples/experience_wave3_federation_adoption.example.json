@@ -90,6 +90,11 @@
       "authority_note": "patches are reviewable and local to the owning layer"
     },
     {
+      "kind": "runtime_activation_gate_checked",
+      "owner_repo": "owner repositories",
+      "authority_note": "assistant, agonic, routing, skill, technique, and runtime activation stays owner-approved and may still be blocked"
+    },
+    {
       "kind": "rollback_or_quarantine_declared",
       "owner_repo": "owner repositories",
       "authority_note": "every durable adoption needs rollback or explicit quarantine fallback"

@@ -8,6 +8,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from jsonschema import Draft202012Validator
+
 ROOT = Path(__file__).resolve().parents[1]
 
 DOC_PATH = ROOT / "docs" / "EXPERIENCE_WAVE1_KERNEL.md"
@@ -106,6 +108,13 @@ def validate_schema(schema: dict[str, Any]) -> None:
     ):
         if key not in required:
             fail(f"schema.required must include {key!r}")
+
+
+def validate_example_matches_schema(schema: dict[str, Any], example: dict[str, Any]) -> None:
+    Draft202012Validator.check_schema(schema)
+    errors = sorted(Draft202012Validator(schema).iter_errors(example), key=lambda error: list(error.path))
+    if errors:
+        fail(f"Experience Wave 1 example does not match schema: {errors[0].message}")
 
 
 def validate_flow(flow: dict[str, Any]) -> None:
@@ -214,8 +223,11 @@ def run_validation() -> list[str]:
     try:
         require_files()
         validate_doc(DOC_PATH.read_text(encoding="utf-8"))
-        validate_schema(require_dict(read_json(SCHEMA_PATH), "schema"))
-        validate_flow(require_dict(read_json(EXAMPLE_PATH), "example"))
+        schema = require_dict(read_json(SCHEMA_PATH), "schema")
+        example = require_dict(read_json(EXAMPLE_PATH), "example")
+        validate_schema(schema)
+        validate_example_matches_schema(schema, example)
+        validate_flow(example)
     except ValidationError as exc:
         return [str(exc)]
     return []
