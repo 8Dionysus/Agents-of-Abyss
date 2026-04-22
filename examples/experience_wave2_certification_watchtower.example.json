@@ -128,6 +128,41 @@
       "must_not": "certify releases"
     },
     {
+      "repo": "aoa-agents",
+      "owns": "assistant release posture and role contracts",
+      "must_not": "self-deploy assistants or certify releases"
+    },
+    {
+      "repo": "aoa-playbooks",
+      "owns": "rollback drills and release choreography",
+      "must_not": "turn playbook evidence into certification authority"
+    },
+    {
+      "repo": "aoa-memo",
+      "owns": "post-release retention memory gates",
+      "must_not": "become proof or release authority"
+    },
+    {
+      "repo": "aoa-routing",
+      "owns": "incident re-entry and owner dispatch hints",
+      "must_not": "approve release or choose durable rollback"
+    },
+    {
+      "repo": "aoa-sdk",
+      "owns": "typed helper call contracts",
+      "must_not": "turn helper calls into deployment authority"
+    },
+    {
+      "repo": "aoa-kag",
+      "owns": "post-release pattern candidate handoff",
+      "must_not": "promote patterns without reviewed evidence"
+    },
+    {
+      "repo": "Tree-of-Sophia",
+      "owns": "no-direct-write boundary for knowledge intake",
+      "must_not": "receive direct writes from release or watchtower paths"
+    },
+    {
       "repo": "aoa-stats",
       "owns": "derived summaries",
       "must_not": "turn summaries into proof or approval"

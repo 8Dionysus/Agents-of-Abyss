@@ -41,6 +41,7 @@ ADOPTION_ORDER = [
     "shadow_adoption_run_completed",
     "adoption_decision_recorded",
     "owner_local_patch_prepared",
+    "runtime_activation_gate_checked",
     "rollback_or_quarantine_declared",
     "retention_check_scheduled",
 ]

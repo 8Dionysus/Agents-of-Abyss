@@ -64,6 +64,19 @@ REQUIRED_HUMAN_AUTHORITIES = {
     "ring promotion",
     "durable rollback",
 }
+REQUIRED_OWNER_REPOS = {
+    "Agents-of-Abyss",
+    "Tree-of-Sophia",
+    "abyss-stack",
+    "aoa-agents",
+    "aoa-evals",
+    "aoa-kag",
+    "aoa-memo",
+    "aoa-playbooks",
+    "aoa-routing",
+    "aoa-sdk",
+    "aoa-stats",
+}
 
 
 class ValidationError(RuntimeError):
@@ -170,9 +183,9 @@ def validate_example(flow: dict[str, Any]) -> None:
 
     owner_split = require_list(flow.get("owner_split"), "owner_split")
     repos = {require_dict(item, f"owner_split[{index}]").get("repo") for index, item in enumerate(owner_split)}
-    for repo in ("Agents-of-Abyss", "aoa-evals", "aoa-stats", "abyss-stack"):
-        if repo not in repos:
-            fail(f"owner_split must include {repo}")
+    missing_repos = REQUIRED_OWNER_REPOS.difference(repos)
+    if missing_repos:
+        fail("owner_split is missing: " + ", ".join(sorted(missing_repos)))
 
 
 def validate_doc(text: str) -> None:
