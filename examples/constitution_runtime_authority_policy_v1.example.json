@@ -1,0 +1,13 @@
+{
+  "denied_actions": [
+    "codex:seal_final_decision",
+    "assistant:self_recharter"
+  ],
+  "policy_id": "experience.constitution_runtime.authority",
+  "sovereign_actions": [
+    "seal_final_decision",
+    "suppress_material_stay",
+    "direct_tos_write"
+  ],
+  "version": "1.0.0"
+}

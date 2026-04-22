@@ -1,0 +1,9 @@
+{
+  "case_id": "case_runtime_001",
+  "choice": "approve_hold",
+  "nonce": "n-001",
+  "reason": "material release risk",
+  "revealed_at": "2026-04-22T00:00:00Z",
+  "vote_id": "vote_001",
+  "voter_id": "evals.delegate"
+}

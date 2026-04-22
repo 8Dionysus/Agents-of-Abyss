@@ -51,6 +51,7 @@ Use [AGON_TRIAL_PLAYBOOK_HANDOFF](AGON_TRIAL_PLAYBOOK_HANDOFF.md) when you need 
 - [EXPERIENCE_WAVE1_KERNEL](EXPERIENCE_WAVE1_KERNEL.md) — the first experience-capture kernel for friction, recurrence, candidate, verdict, memory gate, owner route, and inert projection
 - [EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER](EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md) — the second experience wave for certification discipline plus gated watchtower contracts
 - [EXPERIENCE_WAVE3_FEDERATION_ADOPTION](EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md) — the third experience wave for cross-repo federation harvest and owner-local adoption gates
+- [EXPERIENCE_WAVE4_POLIS_CONSTITUTION](EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md) — the fourth experience wave for polis governance, constitution runtime, sealed decisions, stays, appeals, and replayable precedent
 - [SELF_AGENCY_CONTINUITY](SELF_AGENCY_CONTINUITY.md) — the center-level law for bounded long-arc continuity with explicit anchors and governed reanchor
 - [COMPONENT_REFRESH_LAW](COMPONENT_REFRESH_LAW.md) — the center-level law for owner-owned refresh of drifting internal technical surfaces
 - [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md) — the boundary doctrine for AoA x ToS counterpart work and KAG restraint

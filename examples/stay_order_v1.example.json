@@ -1,0 +1,10 @@
+{
+  "case_id": "case_runtime_001",
+  "expires_at": "2026-04-29T00:00:00Z",
+  "issued_at": "2026-04-22T00:00:00Z",
+  "issued_by": "operator",
+  "reason": "material unresolved appeal",
+  "scope": "assistant_release",
+  "state": "active",
+  "stay_id": "stay_001"
+}

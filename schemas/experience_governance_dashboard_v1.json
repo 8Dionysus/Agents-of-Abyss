@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience_governance_dashboard_v1.json",
+  "title": "Experience Governance Dashboard V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "authority",
+    "blocked_actions",
+    "created_at",
+    "decision_refs",
+    "evidence_refs",
+    "id",
+    "kind",
+    "metrics",
+    "notes",
+    "open_cases",
+    "schema_version",
+    "status"
+  ],
+  "properties": {
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "actor",
+        "mode"
+      ],
+      "properties": {
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "reviewed"
+          ]
+        }
+      }
+    },
+    "blocked_actions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1,
+      "const": "experience.governance_dashboard"
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "appeals",
+        "cases_opened",
+        "overturns",
+        "vetoes"
+      ],
+      "properties": {
+        "appeals": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cases_opened": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "overturns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "vetoes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "open_cases": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1,
+      "const": "v1"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "proposed"
+      ]
+    }
+  }
+}

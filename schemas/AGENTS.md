@@ -22,11 +22,14 @@ for the second experience wave's certification and contract-only watchtower
 example.
 `experience-wave3-federation-adoption.schema.json` defines the contract for the
 third experience wave's federation harvest and owner-local adoption example.
+`experience-wave4-polis-constitution.schema.json` defines the contract for the
+fourth experience wave's polis governance and constitution runtime example.
 These files are the boundary surfaces for tracked machine-readable center
 publication, Wave 0 Agon readiness, Wave III lawful move language, Wave IV
 owner binding law, the Wave V gate-routing handoff, and the Experience Wave 1
 center kernel plus the Experience Wave 2 certification/watchtower center and
-Experience Wave 3 federation/adoption center.
+Experience Wave 3 federation/adoption center plus the Experience Wave 4
+polis/constitution center.
 
 ## Editing posture
 
@@ -104,6 +107,13 @@ After changing the Experience Wave 3 schema, also run:
 ```bash
 python scripts/validate_experience_wave3.py
 python -m pytest -q tests/test_experience_wave3.py
+```
+
+After changing the Experience Wave 4 schema, also run:
+
+```bash
+python scripts/validate_experience_wave4.py
+python -m pytest -q tests/test_experience_wave4.py tests/test_experience_wave4_seed_contracts.py
 ```
 
 If a schema change is intentional, mention the contract shift clearly in the

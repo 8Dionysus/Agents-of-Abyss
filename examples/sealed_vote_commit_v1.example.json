@@ -1,0 +1,7 @@
+{
+  "case_id": "case_runtime_001",
+  "committed_at": "2026-04-22T00:00:00Z",
+  "sealed_hash": "sha256:placeholder",
+  "vote_id": "vote_001",
+  "voter_id": "evals.delegate"
+}
