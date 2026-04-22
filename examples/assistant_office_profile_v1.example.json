@@ -8,7 +8,7 @@
   "mandate": "intent normalization, missing-input surfacing, ambiguity routing",
   "notes": "Example artifact for assistant_office_profile_v1.",
   "office_id": "concierge.assistant",
-  "owner_repo": "Agents-of-Abyss",
+  "owner_repo": "aoa-agents",
   "service_contract": {
     "prohibited": [
       "invent_priorities",
