@@ -30,6 +30,8 @@ Current scripts include:
   stale-check of `generated/agon_gate_routing_handoff_request.min.json`
 - `validate_agon_gate_routing_handoff_request.py` for the explicit Wave V
   gate-routing handoff contract check
+- `validate_experience_wave1.py` for the first center-owned experience-capture
+  kernel contract check
 
 ## Editing posture
 
@@ -85,6 +87,13 @@ After changing the Agon Wave V builder or validator, also run:
 python scripts/build_agon_gate_routing_handoff_request.py --check
 python scripts/validate_agon_gate_routing_handoff_request.py
 python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
+```
+
+After changing the Experience Wave 1 validator, also run:
+
+```bash
+python scripts/validate_experience_wave1.py
+python -m pytest -q tests/test_experience_wave1.py
 ```
 
 A script change is done when the failure mode is clearer, not more mysterious.

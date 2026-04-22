@@ -34,6 +34,9 @@ Important documents here include:
   `AGON_GATE_ROUTING_STOP_LINES.md`, and `AGON_WAVE5_CENTER_HANDOFF.md` for
   the first center-owned gate-routing handoff, its owner request, stop-lines,
   and landing order
+- `EXPERIENCE_WAVE1_KERNEL.md` for the first experience-capture kernel and
+  its friction -> recurrence -> candidate -> verdict -> memory gate -> owner
+  route -> inert projection order
 - `TOS_GROWTH_SUPPORT.md`, `TOS_TEMPLATE_SUPPORT.md`, `TOS_LINEAGE_PILOT_SUPPORT.md`, and `TOS_SOIL_PREP_SUPPORT.md` for current AoA support doctrine around `Tree-of-Sophia`
 
 ## Editing posture
@@ -98,6 +101,13 @@ If you changed the Agon gate routing handoff surfaces, also run:
 python scripts/build_agon_gate_routing_handoff_request.py --check
 python scripts/validate_agon_gate_routing_handoff_request.py
 python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
+```
+
+If you changed the Experience Wave 1 surfaces, also run:
+
+```bash
+python scripts/validate_experience_wave1.py
+python -m pytest -q tests/test_experience_wave1.py
 ```
 
 If you changed ownership, routing, or maturity language, confirm the machine-readable registry still matches the prose.
