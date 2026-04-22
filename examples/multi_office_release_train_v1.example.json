@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-04-22T00:00:00Z",
+  "evidence_refs": [
+    "generated/multi_office_train_clean_flow/release_train.json"
+  ],
+  "gates": [
+    "registry",
+    "handoff_graph",
+    "compatibility_matrix",
+    "smoke_gates",
+    "rollback_plan",
+    "operator_seal"
+  ],
+  "id": "multi_office_release_train_v1_example",
+  "kind": "multi_office_release_train_v1",
+  "notes": "Example artifact for multi_office_release_train_v1.",
+  "offices": [
+    "notary.assistant",
+    "concierge.assistant",
+    "courier.assistant",
+    "monitor.assistant"
+  ],
+  "owner_repo": "Agents-of-Abyss",
+  "rollback_plan_ref": "rollback-clean-v1-1",
+  "status": "draft",
+  "train_id": "train-service-001",
+  "version": "1.1.0"
+}

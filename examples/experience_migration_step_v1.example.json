@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-04-22T00:00:00Z",
+  "evidence_refs": [
+    "generated/sovereign_release_clean_flow/release_candidate.json"
+  ],
+  "id": "experience_migration_step_example",
+  "kind": "experience_migration_step_v1",
+  "notes": "Example artifact for experience_migration_step_v1.",
+  "owner_repo": "Agents-of-Abyss",
+  "rollback_ref": "migration_backup_001",
+  "status": "draft",
+  "step": "copy_schema_surfaces",
+  "version": "1.0.0"
+}
