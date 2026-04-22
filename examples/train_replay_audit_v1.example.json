@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-04-22T00:00:00Z",
+  "event_hash_chain": "sha256:clean",
+  "evidence_refs": [
+    "generated/multi_office_train_clean_flow/release_train.json"
+  ],
+  "id": "train_replay_audit_v1_example",
+  "kind": "train_replay_audit_v1",
+  "notes": "Example artifact for train_replay_audit_v1.",
+  "owner_repo": "Agents-of-Abyss",
+  "replay_valid": true,
+  "status": "draft",
+  "train_id": "train-service-001",
+  "version": "1.1.0"
+}

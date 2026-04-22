@@ -70,10 +70,16 @@ def wave3_stems() -> set[str]:
     stems: set[str] = set()
     for example_path in sorted((ROOT / "examples").glob("*.example.json")):
         stem = example_path.name.removesuffix(".example.json")
+        if stem.endswith("_v1"):
+            continue
         if stem.startswith(WAVE3_PREFIXES):
             stems.add(stem)
     for schema_path in sorted((ROOT / "schemas").glob("*_v1.json")):
         stem = schema_path.name.removesuffix("_v1.json")
+        if not (ROOT / "examples" / f"{stem}.example.json").exists() and (
+            ROOT / "examples" / f"{stem}_v1.example.json"
+        ).exists():
+            continue
         if stem.startswith(WAVE3_PREFIXES):
             stems.add(stem)
     stems.add("experience_wave3_federation_adoption")
