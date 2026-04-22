@@ -34,6 +34,8 @@ Current scripts include:
   kernel contract check
 - `validate_experience_wave2.py` for the second center-owned experience
   certification/watchtower contract check
+- `validate_experience_wave3.py` for the third center-owned experience
+  federation/adoption contract check
 
 ## Editing posture
 
@@ -103,6 +105,13 @@ After changing the Experience Wave 2 validator, also run:
 ```bash
 python scripts/validate_experience_wave2.py
 python -m pytest -q tests/test_experience_wave2.py
+```
+
+After changing the Experience Wave 3 validator, also run:
+
+```bash
+python scripts/validate_experience_wave3.py
+python -m pytest -q tests/test_experience_wave3.py
 ```
 
 A script change is done when the failure mode is clearer, not more mysterious.

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "kind": "federation_recurrence_lattice",
+  "id": "federation_recurrence_lattice.example",
+  "status": "candidate",
+  "summary": "Example federation_recurrence_lattice object for v0.6 federation harvest seed.",
+  "owner_repo": "Agents-of-Abyss",
+  "evidence_refs": [
+    "receipt://v0.6/federation_recurrence_lattice/example"
+  ],
+  "payload": {
+    "family": "wrong_surface",
+    "repo_count": 4,
+    "signal_count": 9,
+    "window": "14d",
+    "threshold_met": true
+  }
+}

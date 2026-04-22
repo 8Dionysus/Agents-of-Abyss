@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "kind": "shared_experience_pattern",
+  "id": "shared_experience_pattern.example",
+  "status": "candidate",
+  "summary": "Example shared_experience_pattern object for v0.6 federation harvest seed.",
+  "owner_repo": "Agents-of-Abyss",
+  "evidence_refs": [
+    "receipt://v0.6/shared_experience_pattern/example"
+  ],
+  "payload": {
+    "pattern_id": "pattern.wrong_surface.cross_repo.001",
+    "lineage_state": "active",
+    "adoption_mode": "owner_local_quest",
+    "derived_only": true
+  }
+}

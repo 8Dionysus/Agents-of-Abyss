@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "kind": "federation_landing_patchset",
+  "id": "federation_landing_patchset.example",
+  "status": "candidate",
+  "summary": "Example federation_landing_patchset object for v0.6 federation harvest seed.",
+  "owner_repo": "Agents-of-Abyss",
+  "evidence_refs": [
+    "receipt://v0.6/federation_landing_patchset/example"
+  ],
+  "payload": {
+    "patchset_id": "experience.v0.6.landing",
+    "repos_touched": 10,
+    "overwrites_source_truth": false
+  }
+}
