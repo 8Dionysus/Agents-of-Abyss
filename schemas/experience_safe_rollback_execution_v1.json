@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "experience_safe_rollback_execution",
+  "type": "object",
+  "description": "experience_safe_rollback_execution schema for AoA experience deployment watchtower v0.5.",
+  "required": [
+    "execution_id",
+    "release_id",
+    "restored_version",
+    "authorized_by",
+    "status",
+    "evidence_refs"
+  ],
+  "properties": {
+    "execution_id": {
+      "type": "string"
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "restored_version": {
+      "type": "string"
+    },
+    "authorized_by": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

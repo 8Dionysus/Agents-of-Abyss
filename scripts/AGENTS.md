@@ -32,6 +32,8 @@ Current scripts include:
   gate-routing handoff contract check
 - `validate_experience_wave1.py` for the first center-owned experience-capture
   kernel contract check
+- `validate_experience_wave2.py` for the second center-owned experience
+  certification/watchtower contract check
 
 ## Editing posture
 
@@ -94,6 +96,13 @@ After changing the Experience Wave 1 validator, also run:
 ```bash
 python scripts/validate_experience_wave1.py
 python -m pytest -q tests/test_experience_wave1.py
+```
+
+After changing the Experience Wave 2 validator, also run:
+
+```bash
+python scripts/validate_experience_wave2.py
+python -m pytest -q tests/test_experience_wave2.py
 ```
 
 A script change is done when the failure mode is clearer, not more mysterious.

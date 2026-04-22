@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "pack_id": {
+      "type": "string"
+    },
+    "candidate_version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "cases_total": {
+      "type": "integer"
+    },
+    "cases_passed": {
+      "type": "integer"
+    },
+    "cases_failed": {
+      "type": "integer"
+    },
+    "failures": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "pack_id",
+    "candidate_version",
+    "status",
+    "cases_total",
+    "cases_passed",
+    "cases_failed",
+    "failures"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experience Regression Run V1"
+}

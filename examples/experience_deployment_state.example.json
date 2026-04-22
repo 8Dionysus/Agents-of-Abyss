@@ -1,0 +1,8 @@
+{
+  "state_id": "deployment.state.001",
+  "release_id": "assistant.notary.1.1.0",
+  "ring_id": "ring_0_internal",
+  "state": "watching",
+  "transitioned_by": "operator",
+  "decision_ref": "decision.activate.001"
+}

@@ -1,0 +1,8 @@
+{
+  "trigger_id": "rollback.trigger.001",
+  "release_id": "assistant.notary.1.1.0",
+  "alarm_id": "alarm.drift.001",
+  "trigger_type": "critical_drift",
+  "authority_required": true,
+  "recommended_action": "pause_and_rollback"
+}

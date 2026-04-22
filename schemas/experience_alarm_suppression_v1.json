@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "experience_alarm_suppression",
+  "type": "object",
+  "description": "experience_alarm_suppression schema for AoA experience deployment watchtower v0.5.",
+  "required": [
+    "suppression_id",
+    "alarm_id",
+    "reason",
+    "expires_at",
+    "authorized_by"
+  ],
+  "properties": {
+    "suppression_id": {
+      "type": "string"
+    },
+    "alarm_id": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": "string"
+    },
+    "authorized_by": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

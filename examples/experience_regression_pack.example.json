@@ -1,0 +1,18 @@
+{
+  "id": "reg.pack.notary.001",
+  "kind": "experience_regression_pack",
+  "target_office": "notary",
+  "candidate_version": "1.1.0-rc.1",
+  "case_refs": [
+    "gold.notary.scope.001",
+    "gold.notary.receipt.001",
+    "neg.notary.self_rewrite.001"
+  ],
+  "coverage": {
+    "golden_cases": 2,
+    "boundary_cases": 1,
+    "degradation_cases": 1,
+    "negative_cases": 1
+  },
+  "minimum_pass_rate": 1.0
+}

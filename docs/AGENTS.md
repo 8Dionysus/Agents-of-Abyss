@@ -37,6 +37,9 @@ Important documents here include:
 - `EXPERIENCE_WAVE1_KERNEL.md` for the first experience-capture kernel and
   its friction -> recurrence -> candidate -> verdict -> memory gate -> owner
   route -> inert projection order
+- `EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md` for the second experience
+  wave, its v0.4 certification spine, v0.5 contract-only watchtower spine,
+  and release/deployment authority stop-lines
 - `TOS_GROWTH_SUPPORT.md`, `TOS_TEMPLATE_SUPPORT.md`, `TOS_LINEAGE_PILOT_SUPPORT.md`, and `TOS_SOIL_PREP_SUPPORT.md` for current AoA support doctrine around `Tree-of-Sophia`
 
 ## Editing posture
@@ -108,6 +111,13 @@ If you changed the Experience Wave 1 surfaces, also run:
 ```bash
 python scripts/validate_experience_wave1.py
 python -m pytest -q tests/test_experience_wave1.py
+```
+
+If you changed the Experience Wave 2 surfaces, also run:
+
+```bash
+python scripts/validate_experience_wave2.py
+python -m pytest -q tests/test_experience_wave2.py
 ```
 
 If you changed ownership, routing, or maturity language, confirm the machine-readable registry still matches the prose.
