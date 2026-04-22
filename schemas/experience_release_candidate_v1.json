@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "target_agent": {
+      "type": "string"
+    },
+    "base_version": {
+      "type": "string"
+    },
+    "candidate_version": {
+      "type": "string"
+    },
+    "change_type": {
+      "type": "string"
+    },
+    "patch_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "behavior_contract_delta": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "target_agent",
+    "base_version",
+    "candidate_version",
+    "change_type",
+    "patch_refs",
+    "behavior_contract_delta",
+    "status"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experience Release Candidate V1"
+}

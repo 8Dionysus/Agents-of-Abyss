@@ -1,0 +1,20 @@
+{
+  "id": "cert.plan.notary.001",
+  "kind": "experience_certification_plan",
+  "version": "1.0",
+  "target_agent": "abyss.assistant.notary.001",
+  "target_office": "notary",
+  "source_patch_proposal": "patch.exp.notary.receipt_strengthen.001",
+  "required_inputs": [
+    "bounded_verdict",
+    "regression_pack",
+    "rollback_drill",
+    "compatibility_delta"
+  ],
+  "required_reviewers": [
+    "operator",
+    "evaluator"
+  ],
+  "authority_floor": "operator_review_required",
+  "status": "planned"
+}

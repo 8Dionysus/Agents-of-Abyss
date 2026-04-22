@@ -1,0 +1,141 @@
+{
+  "schema_version": "experience_wave2_certification_watchtower_v1",
+  "wave": "experience_wave2",
+  "status": "certification_active_watchtower_contract_only",
+  "source_seeds": [
+    "aoa-experience-certification-forge-seed-v0_4.zip",
+    "aoa-experience-deployment-watchtower-seed-v0_5.zip"
+  ],
+  "certification_flow": [
+    {
+      "kind": "experience_patch_proposal",
+      "owner_repo": "aoa-agents",
+      "authority_note": "proposal only; no release authority"
+    },
+    {
+      "kind": "release_candidate_built",
+      "owner_repo": "aoa-agents",
+      "authority_note": "candidate remains unreleased until gate and review pass"
+    },
+    {
+      "kind": "regression_pack_bound",
+      "owner_repo": "aoa-evals",
+      "authority_note": "proof surface checks coverage without certifying"
+    },
+    {
+      "kind": "certification_gate_evaluated",
+      "owner_repo": "aoa-evals",
+      "authority_note": "gate emits verdicts, not certification"
+    },
+    {
+      "kind": "rollback_drill_proved",
+      "owner_repo": "aoa-playbooks",
+      "authority_note": "rollback drill evidence is required before release approval"
+    },
+    {
+      "kind": "operator_review_recorded",
+      "owner_repo": "Agents-of-Abyss",
+      "authority_note": "authorized reviewer is required; Codex may not certify"
+    },
+    {
+      "kind": "versioned_assistant_release_declared",
+      "owner_repo": "aoa-agents",
+      "authority_note": "release is versioned and review-grounded"
+    },
+    {
+      "kind": "post_release_retention_watch_started",
+      "owner_repo": "aoa-memo",
+      "authority_note": "memory retention remains gated and reviewable"
+    }
+  ],
+  "deployment_flow": [
+    {
+      "kind": "certified_release_received",
+      "owner_repo": "aoa-agents",
+      "authority_note": "deployment may only start from certified release evidence"
+    },
+    {
+      "kind": "deployment_plan_declared",
+      "owner_repo": "abyss-stack",
+      "authority_note": "contract-only in this wave; no live service activation"
+    },
+    {
+      "kind": "rollout_ring_activated",
+      "owner_repo": "abyss-stack",
+      "authority_note": "no Codex ring promotion"
+    },
+    {
+      "kind": "canary_watch_recorded",
+      "owner_repo": "aoa-evals",
+      "authority_note": "canaries produce verdict evidence, not promotion authority"
+    },
+    {
+      "kind": "drift_or_health_verdict_recorded",
+      "owner_repo": "aoa-evals",
+      "authority_note": "material alarms require verdicts before durable rollback"
+    },
+    {
+      "kind": "ring_promotion_or_rollback_decided",
+      "owner_repo": "Agents-of-Abyss",
+      "authority_note": "operator authority is required for promotion or durable rollback"
+    },
+    {
+      "kind": "incident_reentry_routed",
+      "owner_repo": "aoa-routing",
+      "authority_note": "routing remains advisory and returns incidents to the experience loop"
+    },
+    {
+      "kind": "post_release_retention_result_recorded",
+      "owner_repo": "aoa-stats",
+      "authority_note": "stats summarize retention and drift only; they do not prove release success"
+    }
+  ],
+  "authority": {
+    "codex_may": [
+      "capture evidence",
+      "propose release candidates",
+      "run regression checks",
+      "draft rollback drills",
+      "summarize watch records"
+    ],
+    "codex_must_not": [
+      "certify",
+      "approve release",
+      "promote rollout rings",
+      "execute durable rollback",
+      "self-deploy assistants",
+      "suppress material alarms",
+      "write direct Tree-of-Sophia or KAG promotion"
+    ],
+    "human_authority_required": [
+      "certification",
+      "release approval",
+      "ring promotion",
+      "durable rollback",
+      "post-release retention acceptance"
+    ],
+    "runtime_effect": "none"
+  },
+  "owner_split": [
+    {
+      "repo": "Agents-of-Abyss",
+      "owns": "center law, ordered flow, and authority stop-lines",
+      "must_not": "absorb owner-local execution"
+    },
+    {
+      "repo": "aoa-evals",
+      "owns": "bounded verdicts and proof bundles",
+      "must_not": "certify releases"
+    },
+    {
+      "repo": "aoa-stats",
+      "owns": "derived summaries",
+      "must_not": "turn summaries into proof or approval"
+    },
+    {
+      "repo": "abyss-stack",
+      "owns": "runtime records and dry-run storage posture",
+      "must_not": "activate live deployment from this contract"
+    }
+  ]
+}

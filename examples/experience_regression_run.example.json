@@ -1,0 +1,11 @@
+{
+  "id": "reg.run.notary.001",
+  "kind": "experience_regression_run",
+  "pack_id": "reg.pack.notary.001",
+  "candidate_version": "1.1.0-rc.1",
+  "status": "passed",
+  "cases_total": 5,
+  "cases_passed": 5,
+  "cases_failed": 0,
+  "failures": []
+}

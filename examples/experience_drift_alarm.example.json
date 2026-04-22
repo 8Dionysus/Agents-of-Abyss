@@ -1,0 +1,11 @@
+{
+  "alarm_id": "alarm.drift.001",
+  "release_id": "assistant.notary.1.1.0",
+  "ring_id": "ring_1_pilot",
+  "family": "scope_drift",
+  "level": "material",
+  "status": "open",
+  "evidence_refs": [
+    "watch.record.017"
+  ]
+}

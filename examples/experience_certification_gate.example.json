@@ -1,0 +1,13 @@
+{
+  "id": "gate.notary.001",
+  "kind": "experience_certification_gate",
+  "candidate": "rc.notary.1.1.0.001",
+  "gate_results": {
+    "authority": "passed",
+    "regression": "passed",
+    "rollback": "passed",
+    "compatibility": "passed",
+    "operator_review": "pending"
+  },
+  "terminal_decision": "blocked_until_operator_review"
+}

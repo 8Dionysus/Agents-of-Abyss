@@ -1,0 +1,7 @@
+{
+  "suppression_id": "alarm.suppress.001",
+  "alarm_id": "alarm.noise.001",
+  "reason": "duplicate low severity warning under duplicate window",
+  "expires_at": "2026-05-06T00:00:00Z",
+  "authorized_by": "evaluator"
+}

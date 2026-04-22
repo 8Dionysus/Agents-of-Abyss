@@ -49,6 +49,7 @@ Use [AGON_TRIAL_PLAYBOOK_HANDOFF](AGON_TRIAL_PLAYBOOK_HANDOFF.md) when you need 
 - [METHOD_SPINE](METHOD_SPINE.md) — the center-level doctrine for method placement and maturity language
 - [REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md), [CANDIDATE_LINEAGE_CROSSWALK](CANDIDATE_LINEAGE_CROSSWALK.md), and [OWNER_LANDING_AND_PRUNING](OWNER_LANDING_AND_PRUNING.md) — the center-level route, stage-ownership crosswalk, and post-candidate landing/pruning doctrine
 - [EXPERIENCE_WAVE1_KERNEL](EXPERIENCE_WAVE1_KERNEL.md) — the first experience-capture kernel for friction, recurrence, candidate, verdict, memory gate, owner route, and inert projection
+- [EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER](EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md) — the second experience wave for certification discipline plus gated watchtower contracts
 - [SELF_AGENCY_CONTINUITY](SELF_AGENCY_CONTINUITY.md) — the center-level law for bounded long-arc continuity with explicit anchors and governed reanchor
 - [COMPONENT_REFRESH_LAW](COMPONENT_REFRESH_LAW.md) — the center-level law for owner-owned refresh of drifting internal technical surfaces
 - [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md) — the boundary doctrine for AoA x ToS counterpart work and KAG restraint

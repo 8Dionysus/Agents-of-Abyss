@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "base_version": {
+      "type": "string"
+    },
+    "candidate_version": {
+      "type": "string"
+    },
+    "change_type": {
+      "type": "string"
+    },
+    "preserved_promises": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "new_promises": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "breaking_changes": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "base_version",
+    "candidate_version",
+    "change_type",
+    "preserved_promises",
+    "new_promises",
+    "breaking_changes"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experience Compatibility Delta V1"
+}
