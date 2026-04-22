@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "kind": "federation_quest_bundle",
+  "id": "federation_quest_bundle.example",
+  "status": "candidate",
+  "summary": "Example federation_quest_bundle object for v0.6 federation harvest seed.",
+  "owner_repo": "Agents-of-Abyss",
+  "evidence_refs": [
+    "receipt://v0.6/federation_quest_bundle/example"
+  ],
+  "payload": {
+    "quests": [
+      "AOA-Q-EXP-0060",
+      "AOA-Q-EXP-0061"
+    ],
+    "fanout_repos": [
+      "aoa-routing",
+      "aoa-evals",
+      "aoa-memo"
+    ]
+  }
+}

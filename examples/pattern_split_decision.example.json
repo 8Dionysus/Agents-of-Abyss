@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "kind": "pattern_split_decision",
+  "id": "pattern_split_decision.example",
+  "status": "approved",
+  "summary": "Example pattern_split_decision object for v0.6 federation harvest seed.",
+  "owner_repo": "Agents-of-Abyss",
+  "evidence_refs": [
+    "receipt://v0.6/pattern_split_decision/example"
+  ],
+  "payload": {
+    "decision": "split",
+    "source_pattern": "pattern.ab",
+    "target_patterns": [
+      "pattern.a",
+      "pattern.b"
+    ],
+    "reason": "different owner surfaces"
+  }
+}

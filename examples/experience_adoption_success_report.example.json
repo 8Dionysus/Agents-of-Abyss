@@ -1,0 +1,24 @@
+{
+  "schema_id": "experience_adoption_success_report_v1",
+  "kind": "experience_adoption_success_report",
+  "version": "1.0",
+  "status": "proposed",
+  "summary": "Example experience_adoption_success_report object for Experience Adoption Forge v0.7.",
+  "refs": {
+    "source": "experience.shared_pattern_registry",
+    "owner": "Agents-of-Abyss",
+    "related": [
+      "experience.v0.6.federation_harvest",
+      "experience.v0.7.adoption_forge"
+    ]
+  },
+  "payload": {
+    "wave": "v0.7",
+    "repo": "Agents-of-Abyss",
+    "pattern_ref": "pattern.shared.wrong_surface_to_owner_landing.v1",
+    "owner_surface": "Agents-of-Abyss",
+    "requires_owner_consent": true,
+    "rollback_required": true,
+    "retention_cycles": 3
+  }
+}
