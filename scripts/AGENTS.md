@@ -42,6 +42,8 @@ Current scripts include:
   mesh operations center contract check
 - `validate_experience_v1_3_office_foundry_role_pairs.py` for the v1.3 office
   foundry role-pairs center contract check
+- `validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py` for
+  the v1.4 agonic pair trial and mechanical arena kernel center contract check
 
 ## Editing posture
 
@@ -134,6 +136,13 @@ python scripts/validate_experience_v1_2_service_mesh_operations.py
 python -m pytest -q tests/test_experience_v1_2_service_mesh_operations.py
 python scripts/validate_experience_v1_3_office_foundry_role_pairs.py
 python -m pytest -q tests/test_experience_v1_3_office_foundry_role_pairs.py
+```
+
+After changing the Experience v1.4 campaign validator, also run:
+
+```bash
+python scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+python -m pytest -q tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
 ```
 
 A script change is done when the failure mode is clearer, not more mysterious.

@@ -28,12 +28,15 @@ fourth experience wave's polis governance and constitution runtime example.
 the v1.2 service mesh operations center example.
 `experience-v1-3-office-foundry-role-pairs.schema.json` defines the contract
 for the v1.3 office foundry role-pairs center example.
+`experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json`
+defines the contract for the v1.4 agonic pair trial and mechanical arena
+kernel center example.
 These files are the boundary surfaces for tracked machine-readable center
 publication, Wave 0 Agon readiness, Wave III lawful move language, Wave IV
 owner binding law, the Wave V gate-routing handoff, and the Experience Wave 1
 center kernel plus the Experience Wave 2 certification/watchtower center and
 Experience Wave 3 federation/adoption center plus the Experience Wave 4
-polis/constitution center plus the v1.2-v1.3 planting campaign contracts.
+polis/constitution center plus the v1.2-v1.4 planting campaign contracts.
 
 ## Editing posture
 
@@ -127,6 +130,13 @@ python scripts/validate_experience_v1_2_service_mesh_operations.py
 python -m pytest -q tests/test_experience_v1_2_service_mesh_operations.py
 python scripts/validate_experience_v1_3_office_foundry_role_pairs.py
 python -m pytest -q tests/test_experience_v1_3_office_foundry_role_pairs.py
+```
+
+After changing the Experience v1.4 campaign schema, also run:
+
+```bash
+python scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+python -m pytest -q tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
 ```
 
 If a schema change is intentional, mention the contract shift clearly in the
