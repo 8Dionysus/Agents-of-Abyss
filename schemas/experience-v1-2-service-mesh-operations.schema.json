@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agents-of-abyss.local/schemas/experience-v1-2-service-mesh-operations.schema.json",
+  "title": "experience_v1_2_service_mesh_operations_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "planting_id",
+    "campaign_wave",
+    "status",
+    "runtime_effect",
+    "live_service_activation",
+    "source_seed",
+    "predecessor_surfaces",
+    "primary_offices",
+    "prepared_offices",
+    "operations_flow",
+    "failure_laws",
+    "authority",
+    "owner_split"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "experience_v1_2_service_mesh_operations_v1"
+    },
+    "planting_id": {
+      "const": "experience_v1_2_service_mesh_operations_center_contract"
+    },
+    "campaign_wave": {
+      "const": "wave2_service_mesh_operations"
+    },
+    "status": {
+      "const": "center_service_mesh_operations_contract_landed"
+    },
+    "runtime_effect": {
+      "const": "none"
+    },
+    "live_service_activation": {
+      "const": false
+    },
+    "source_seed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "archive_name",
+        "seed_id",
+        "version",
+        "sha256",
+        "claim_limit"
+      ],
+      "properties": {
+        "archive_name": {
+          "const": "aoa-experience-service-mesh-operations-seed-v1_2.zip"
+        },
+        "seed_id": {
+          "const": "aoa-experience-service-mesh-operations-v1.2"
+        },
+        "version": {
+          "const": "1.2.0"
+        },
+        "sha256": {
+          "const": "df829241ac629770635290e5da2742b81e4d5575270c94a92c34a95f4bbacb85"
+        },
+        "claim_limit": {
+          "const": "archive_readable_not_runtime_ready"
+        }
+      }
+    },
+    "predecessor_surfaces": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "string"
+      }
+    },
+    "primary_offices": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "string"
+      }
+    },
+    "prepared_offices": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "string"
+      }
+    },
+    "operations_flow": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/flow_step"
+      }
+    },
+    "failure_laws": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "string"
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contract_effect",
+        "codex_may",
+        "codex_must_not",
+        "assistant_must_not",
+        "derived_layers_must_not",
+        "human_gates_required"
+      ],
+      "properties": {
+        "contract_effect": {
+          "const": "center_service_mesh_operations_law_only"
+        },
+        "codex_may": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "codex_must_not": {
+          "type": "array",
+          "minItems": 10,
+          "items": {
+            "type": "string"
+          }
+        },
+        "assistant_must_not": {
+          "type": "array",
+          "minItems": 8,
+          "items": {
+            "type": "string"
+          }
+        },
+        "derived_layers_must_not": {
+          "type": "array",
+          "minItems": 6,
+          "items": {
+            "type": "string"
+          }
+        },
+        "human_gates_required": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "owner_split": {
+      "type": "array",
+      "minItems": 15,
+      "maxItems": 15,
+      "items": {
+        "$ref": "#/$defs/owner_entry"
+      }
+    }
+  },
+  "$defs": {
+    "owner_repo": {
+      "enum": [
+        "8Dionysus",
+        "Agents-of-Abyss",
+        "Dionysus",
+        "Tree-of-Sophia",
+        "abyss-stack",
+        "aoa-agents",
+        "aoa-evals",
+        "aoa-kag",
+        "aoa-memo",
+        "aoa-playbooks",
+        "aoa-routing",
+        "aoa-sdk",
+        "aoa-skills",
+        "aoa-stats",
+        "aoa-techniques"
+      ]
+    },
+    "flow_step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "order",
+        "kind",
+        "owner",
+        "authority_note"
+      ],
+      "properties": {
+        "order": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "kind": {
+          "type": "string"
+        },
+        "owner": {
+          "$ref": "#/$defs/owner_repo"
+        },
+        "authority_note": {
+          "type": "string"
+        },
+        "stop_lines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "owner_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repo",
+        "owns",
+        "must_not"
+      ],
+      "properties": {
+        "repo": {
+          "$ref": "#/$defs/owner_repo"
+        },
+        "owns": {
+          "type": "string"
+        },
+        "must_not": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

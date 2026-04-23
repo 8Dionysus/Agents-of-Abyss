@@ -52,6 +52,9 @@ Important documents here include:
 - `EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md` for the center bridge from the
   `Dionysus` v1.2-v2.0 intake line into future owner-local waves without
   treating archive transport as owner truth
+- `EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md` for the v1.2 service mesh
+  operations contract, office-failure rehearsal laws, owner routing, and
+  no-runtime stop-lines
 - `TOS_GROWTH_SUPPORT.md`, `TOS_TEMPLATE_SUPPORT.md`, `TOS_LINEAGE_PILOT_SUPPORT.md`, and `TOS_SOIL_PREP_SUPPORT.md` for current AoA support doctrine around `Tree-of-Sophia`
 
 ## Editing posture
@@ -158,6 +161,13 @@ If you changed the Experience v1.2-v2.0 bridge surfaces, also run:
 ```bash
 python scripts/validate_experience_v1_2_to_v2_0_bridge.py
 python -m pytest -q tests/test_experience_v1_2_to_v2_0_bridge.py
+```
+
+If you changed the Experience v1.2 service mesh operations surfaces, also run:
+
+```bash
+python scripts/validate_experience_v1_2_service_mesh_operations.py
+python -m pytest -q tests/test_experience_v1_2_service_mesh_operations.py
 ```
 
 If you changed ownership, routing, or maturity language, confirm the machine-readable registry still matches the prose.
