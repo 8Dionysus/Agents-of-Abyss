@@ -46,6 +46,12 @@ Important documents here include:
 - `EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md` for the fourth experience wave,
   its v0.8 polis governance spine, v0.9 constitution runtime spine, and
   council/vote/stay/replay/precedent authority stop-lines
+- `EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md` for the fifth experience wave, its
+  v1.0 installation spine, v1.1 live-office spine, and release/office
+  authority stop-lines
+- `EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md` for the center bridge from the
+  `Dionysus` v1.2-v2.0 intake line into future owner-local waves without
+  treating archive transport as owner truth
 - `TOS_GROWTH_SUPPORT.md`, `TOS_TEMPLATE_SUPPORT.md`, `TOS_LINEAGE_PILOT_SUPPORT.md`, and `TOS_SOIL_PREP_SUPPORT.md` for current AoA support doctrine around `Tree-of-Sophia`
 
 ## Editing posture
@@ -138,6 +144,20 @@ If you changed the Experience Wave 4 surfaces, also run:
 ```bash
 python scripts/validate_experience_wave4.py
 python -m pytest -q tests/test_experience_wave4.py tests/test_experience_wave4_seed_contracts.py
+```
+
+If you changed the Experience Wave 5 surfaces, also run:
+
+```bash
+python scripts/validate_experience_wave5.py
+python -m pytest -q tests/test_experience_wave5.py
+```
+
+If you changed the Experience v1.2-v2.0 bridge surfaces, also run:
+
+```bash
+python scripts/validate_experience_v1_2_to_v2_0_bridge.py
+python -m pytest -q tests/test_experience_v1_2_to_v2_0_bridge.py
 ```
 
 If you changed ownership, routing, or maturity language, confirm the machine-readable registry still matches the prose.

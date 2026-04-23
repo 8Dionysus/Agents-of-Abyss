@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agents-of-abyss.local/schemas/experience-v1-2-v2-0-bridge.schema.json",
+  "title": "experience_v1_2_to_v2_0_bridge_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "bridge_id",
+    "status",
+    "runtime_effect",
+    "dionysus_intake",
+    "source_seeds",
+    "predecessor_surfaces",
+    "campaign_route",
+    "authority",
+    "owner_split"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "experience_v1_2_to_v2_0_bridge_v1"
+    },
+    "bridge_id": {
+      "const": "experience_v1_2_to_v2_0_center_bridge"
+    },
+    "status": {
+      "const": "center_bridge_only"
+    },
+    "runtime_effect": {
+      "const": "none"
+    },
+    "dionysus_intake": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "note_ref",
+        "map_ref",
+        "status",
+        "source_count",
+        "claim_limit"
+      ],
+      "properties": {
+        "note_ref": {
+          "type": "string",
+          "pattern": "^seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack\\.md$"
+        },
+        "map_ref": {
+          "type": "string",
+          "pattern": "^seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack\\.map\\.yaml$"
+        },
+        "status": {
+          "const": "staged_only_not_landed"
+        },
+        "source_count": {
+          "const": 9
+        },
+        "claim_limit": {
+          "const": "archive_readable_not_owner_ready"
+        }
+      }
+    },
+    "source_seeds": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "string"
+      }
+    },
+    "predecessor_surfaces": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "string"
+      }
+    },
+    "campaign_route": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "items": {
+        "$ref": "#/$defs/route_step"
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bridge_effect",
+        "codex_may",
+        "codex_must_not",
+        "assistant_must_not",
+        "derived_layers_must_not",
+        "human_gates_required"
+      ],
+      "properties": {
+        "bridge_effect": {
+          "const": "center_route_only"
+        },
+        "codex_may": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "codex_must_not": {
+          "type": "array",
+          "minItems": 10,
+          "items": {
+            "type": "string"
+          }
+        },
+        "assistant_must_not": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "string"
+          }
+        },
+        "derived_layers_must_not": {
+          "type": "array",
+          "minItems": 6,
+          "items": {
+            "type": "string"
+          }
+        },
+        "human_gates_required": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "owner_split": {
+      "type": "array",
+      "minItems": 15,
+      "maxItems": 15,
+      "items": {
+        "$ref": "#/$defs/owner_entry"
+      }
+    }
+  },
+  "$defs": {
+    "owner_repo": {
+      "enum": [
+        "8Dionysus",
+        "Agents-of-Abyss",
+        "Dionysus",
+        "Tree-of-Sophia",
+        "abyss-stack",
+        "aoa-agents",
+        "aoa-evals",
+        "aoa-kag",
+        "aoa-memo",
+        "aoa-playbooks",
+        "aoa-routing",
+        "aoa-sdk",
+        "aoa-skills",
+        "aoa-stats",
+        "aoa-techniques"
+      ]
+    },
+    "route_step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "order",
+        "kind",
+        "owner",
+        "effect"
+      ],
+      "properties": {
+        "order": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 13
+        },
+        "kind": {
+          "type": "string"
+        },
+        "source_version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+$"
+        },
+        "owner": {
+          "$ref": "#/$defs/owner_repo"
+        },
+        "effect": {
+          "type": "string"
+        },
+        "stop_lines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "owner_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repo",
+        "owns",
+        "must_not"
+      ],
+      "properties": {
+        "repo": {
+          "$ref": "#/$defs/owner_repo"
+        },
+        "owns": {
+          "type": "string"
+        },
+        "must_not": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
