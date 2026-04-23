@@ -43,6 +43,22 @@ EXPECTED_ROUTE_KINDS = [
     "dionysus_harvest_closure",
 ]
 
+EXPECTED_ROUTE_SOURCE_VERSIONS = [
+    None,
+    None,
+    "v1.2",
+    "v1.3",
+    "v1.4",
+    "v1.5",
+    "v1.6",
+    "v1.7",
+    "v1.8",
+    "v1.9",
+    "v2.0",
+    None,
+    None,
+]
+
 EXPECTED_OWNER_REPOS = {
     "8Dionysus",
     "Agents-of-Abyss",
@@ -187,6 +203,8 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         fail("campaign_route orders must be contiguous from 1 to 13")
     if [step["kind"] for step in route] != EXPECTED_ROUTE_KINDS:
         fail("campaign_route kinds must preserve the bridge spine")
+    if [step.get("source_version") for step in route] != EXPECTED_ROUTE_SOURCE_VERSIONS:
+        fail("campaign_route source_version mapping must preserve v1.2-v2.0 provenance")
 
     if payload["status"] != "center_bridge_only":
         fail("bridge status must remain center_bridge_only")

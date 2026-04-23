@@ -170,7 +170,8 @@
         "order",
         "kind",
         "owner",
-        "effect"
+        "effect",
+        "stop_lines"
       ],
       "properties": {
         "order": {
