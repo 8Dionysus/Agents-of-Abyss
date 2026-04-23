@@ -1,0 +1,255 @@
+{
+  "schema_version": "experience_v1_2_service_mesh_operations_v1",
+  "planting_id": "experience_v1_2_service_mesh_operations_center_contract",
+  "campaign_wave": "wave2_service_mesh_operations",
+  "status": "center_service_mesh_operations_contract_landed",
+  "runtime_effect": "none",
+  "live_service_activation": false,
+  "source_seed": {
+    "archive_name": "aoa-experience-service-mesh-operations-seed-v1_2.zip",
+    "seed_id": "aoa-experience-service-mesh-operations-v1.2",
+    "version": "1.2.0",
+    "sha256": "df829241ac629770635290e5da2742b81e4d5575270c94a92c34a95f4bbacb85",
+    "claim_limit": "archive_readable_not_runtime_ready"
+  },
+  "predecessor_surfaces": [
+    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
+    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
+    "docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
+    "docs/EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md",
+    "docs/EXPERIENCE_SERVICE_MESH_LAW.md",
+    "docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+    "docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "docs/AGON_PRE_PROTOCOL_STOP_LINES.md"
+  ],
+  "primary_offices": [
+    "notary.assistant",
+    "concierge.assistant",
+    "courier.assistant",
+    "monitor.assistant"
+  ],
+  "prepared_offices": [
+    "librarian.assistant",
+    "steward.assistant",
+    "scheduler.assistant"
+  ],
+  "operations_flow": [
+    {
+      "order": 1,
+      "kind": "service_mesh_release_received",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "v1.1 office mesh law is the predecessor; this step does not expand the mesh",
+      "stop_lines": [
+        "no new office promotion",
+        "no release approval"
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "drill_plan_declared",
+      "owner": "aoa-playbooks",
+      "authority_note": "future owner-local playbooks may choreograph drills; center only names the contract",
+      "stop_lines": [
+        "no runtime execution",
+        "no scheduler loop"
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "scenario_injected",
+      "owner": "aoa-playbooks",
+      "authority_note": "scenario injection remains rehearsal input, not production incident creation",
+      "stop_lines": [
+        "no hidden failure injection",
+        "no live service activation"
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "office_integrity_checked",
+      "owner": "aoa-agents",
+      "authority_note": "office mandate, handoff, receipt, scope, alarm, rollback, and escalation checks remain assistant-boundary evidence",
+      "stop_lines": [
+        "no assistant self-heal",
+        "no assistant contestant drift"
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "bounded_verdict_recorded",
+      "owner": "aoa-evals",
+      "authority_note": "evals may record bounded verdict evidence; they do not certify drill pass",
+      "stop_lines": [
+        "no drill pass by Codex",
+        "no live verdict authority"
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "memory_gate_evaluated",
+      "owner": "aoa-memo",
+      "authority_note": "memory gate can admit reviewed lesson candidates only after owner review",
+      "stop_lines": [
+        "memo is not truth",
+        "no retention execution"
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "incident_reentry_routed",
+      "owner": "aoa-routing",
+      "authority_note": "routing may suggest reentry and escalation paths; it does not own meaning",
+      "stop_lines": [
+        "routing is not owner",
+        "no live summon authority"
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "retention_or_patch_proposal_declared",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "material failures return to the experience loop as candidates, not automatic landings",
+      "stop_lines": [
+        "no automatic patch landing",
+        "no rank trust or honor mutation"
+      ]
+    }
+  ],
+  "failure_laws": [
+    "no_hidden_assistant_self_heal",
+    "no_courier_meaning_edit",
+    "no_concierge_scope_expansion",
+    "no_notary_closure_without_receipt",
+    "no_monitor_material_alarm_without_verdict_path",
+    "no_service_to_agon_escalation_without_trigger",
+    "no_drill_pass_by_codex",
+    "no_direct_tree_of_sophia_runtime_write"
+  ],
+  "authority": {
+    "contract_effect": "center_service_mesh_operations_law_only",
+    "codex_may": [
+      "simulate service drills",
+      "collect evidence",
+      "propose drill results",
+      "prepare owner-local requests",
+      "run validators"
+    ],
+    "codex_must_not": [
+      "certify drill passed",
+      "seal drill",
+      "rewrite assistant policy",
+      "activate live services ports schedulers workers or daemons",
+      "approve release or train",
+      "grant service-to-Agon live summon authority",
+      "grant live verdict authority",
+      "write scars",
+      "mutate rank trust honor or retention",
+      "write directly to Tree-of-Sophia",
+      "promote KAG patterns to canon",
+      "copy raw archive proposals into owner truth"
+    ],
+    "assistant_must_not": [
+      "self-heal persistent mandate",
+      "self-release",
+      "self-enroll",
+      "self-certify",
+      "become agonic contestant",
+      "edit courier packet meaning",
+      "expand concierge scope",
+      "close notary work without receipt",
+      "treat monitor alarm as material without verdict path"
+    ],
+    "derived_layers_must_not": [
+      "stats_as_proof",
+      "memo_as_truth",
+      "routing_as_owner",
+      "kag_as_canon",
+      "sdk_as_authority",
+      "runtime_as_doctrine",
+      "dionysus_as_runtime"
+    ],
+    "human_gates_required": [
+      "operator drill pass acceptance",
+      "owner-local assistant posture approval",
+      "runtime-owner gate before any service or worker",
+      "Tree-of-Sophia review before canon or interpretive intake"
+    ]
+  },
+  "owner_split": [
+    {
+      "repo": "Agents-of-Abyss",
+      "owns": "center service mesh operations law source bridge operations flow and authority stop-lines",
+      "must_not": "replace owner-local repository truth"
+    },
+    {
+      "repo": "aoa-agents",
+      "owns": "assistant office posture failure posture and recovery contracts after owner-local landing",
+      "must_not": "grant assistant self-heal self-release self-enroll self-certify or contestant authority"
+    },
+    {
+      "repo": "aoa-evals",
+      "owns": "bounded drill verdict bundles and proof checks",
+      "must_not": "certify drill pass or become release authority"
+    },
+    {
+      "repo": "aoa-playbooks",
+      "owns": "drill choreography scenario injection and rollback rehearsal playbooks",
+      "must_not": "execute runtime drills or scheduler loops"
+    },
+    {
+      "repo": "aoa-memo",
+      "owns": "memory gates lesson candidates rollback revisions and retention readiness",
+      "must_not": "make memory truth or execute retention"
+    },
+    {
+      "repo": "aoa-stats",
+      "owns": "derived service dashboards and summaries",
+      "must_not": "become proof or drill judgment authority"
+    },
+    {
+      "repo": "aoa-routing",
+      "owns": "advisory escalation incident reentry and service handoff routes",
+      "must_not": "become owner meaning or live summon authority"
+    },
+    {
+      "repo": "aoa-sdk",
+      "owns": "typed helper contracts and service mesh API seams",
+      "must_not": "become service runtime or semantic authority"
+    },
+    {
+      "repo": "aoa-kag",
+      "owns": "derived service pattern candidates",
+      "must_not": "become canon or Tree-of-Sophia promotion authority"
+    },
+    {
+      "repo": "abyss-stack",
+      "owns": "runtime jobs workers storage and drill substrate only after a separate runtime-owner gate",
+      "must_not": "activate runtime from this center landing"
+    },
+    {
+      "repo": "Tree-of-Sophia",
+      "owns": "canon and interpretive review through its own path",
+      "must_not": "receive direct runtime writes"
+    },
+    {
+      "repo": "Dionysus",
+      "owns": "source lineage staged intake and later harvest trace",
+      "must_not": "become runtime or owner doctrine"
+    },
+    {
+      "repo": "8Dionysus",
+      "owns": "shared-root projection law where workspace projection surfaces are affected",
+      "must_not": "absorb service runtime truth"
+    },
+    {
+      "repo": "aoa-skills",
+      "owns": "bounded execution workflows extracted from owner-accepted patterns",
+      "must_not": "grant service operations authority"
+    },
+    {
+      "repo": "aoa-techniques",
+      "owns": "reusable engineering practice extracted from owner-accepted patterns",
+      "must_not": "grant runtime or canon authority"
+    }
+  ]
+}
