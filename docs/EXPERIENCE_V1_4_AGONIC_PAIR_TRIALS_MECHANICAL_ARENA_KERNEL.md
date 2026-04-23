@@ -44,6 +44,11 @@ This surface depends on and remains subordinate to:
 - `AGON_PRE_PROTOCOL_STOP_LINES.md`
 - `AGON_WAVE12_STOP_LINES.md`
 - `AGON_WAVE13_STOP_LINES.md`
+- `AGON_WAVE14_STOP_LINES.md`
+- `AGON_WAVE15_STOP_LINES.md`
+- `AGON_WAVE16_STOP_LINES.md`
+- `AGON_WAVE17_STOP_LINES.md`
+- `AGON_WAVE18_STOP_LINES.md`
 
 The v1.3 contract separated office from kind and named first role pairs. This
 v1.4 surface may name the first center-level arena kernel contract for the

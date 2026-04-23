@@ -76,8 +76,8 @@
     },
     "predecessor_surfaces": {
       "type": "array",
-      "minItems": 17,
-      "maxItems": 17,
+      "minItems": 22,
+      "maxItems": 22,
       "items": {
         "type": "string"
       }

@@ -100,6 +100,19 @@ def test_experience_v14_mechanical_arena_requires_current_agon_predecessors() ->
         validator.validate_payload(bad_payload, schema)
 
 
+def test_experience_v14_mechanical_arena_requires_latest_agon_stop_lines() -> None:
+    validator = load_validator()
+    payload = load_example()
+    schema = load_schema()
+    bad_payload = copy.deepcopy(payload)
+    predecessors = bad_payload["predecessor_surfaces"]
+    assert isinstance(predecessors, list)
+    predecessors.remove("docs/AGON_WAVE18_STOP_LINES.md")
+
+    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+        validator.validate_payload(bad_payload, schema)
+
+
 def test_experience_v14_mechanical_arena_rejects_assistant_contestant_pair_trial() -> None:
     validator = load_validator()
     payload = load_example()

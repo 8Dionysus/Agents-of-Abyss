@@ -213,6 +213,19 @@ def test_experience_v12_service_mesh_requires_flow_stop_lines() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
+def test_experience_v12_service_mesh_requires_flow_stop_lines_in_schema() -> None:
+    validator = load_validator()
+    payload = load_example()
+    schema = load_schema()
+    bad_payload = copy.deepcopy(payload)
+    flow = bad_payload["operations_flow"]
+    assert isinstance(flow, list)
+    del flow[1]["stop_lines"]
+
+    with pytest.raises(validator.ValidationError, match="schema|stop_lines"):
+        validator.validate_payload(bad_payload, schema)
+
+
 @pytest.mark.parametrize(
     "authority_note",
     [

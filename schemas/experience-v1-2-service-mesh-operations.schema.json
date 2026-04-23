@@ -194,7 +194,8 @@
         "order",
         "kind",
         "owner",
-        "authority_note"
+        "authority_note",
+        "stop_lines"
       ],
       "properties": {
         "order": {

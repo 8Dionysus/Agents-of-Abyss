@@ -143,3 +143,29 @@ def test_experience_bridge_requires_campaign_route_order() -> None:
 
     with pytest.raises(validator.ValidationError, match="contiguous|spine"):
         validator.validate_payload(bad_bridge, schema)
+
+
+def test_experience_bridge_requires_campaign_route_source_version_mapping() -> None:
+    validator = load_validator()
+    bridge = load_example()
+    schema = load_schema()
+    bad_bridge = copy.deepcopy(bridge)
+    route = bad_bridge["campaign_route"]
+    assert isinstance(route, list)
+    route[5]["source_version"] = "v1.8"
+
+    with pytest.raises(validator.ValidationError, match="source_version mapping"):
+        validator.validate_payload(bad_bridge, schema)
+
+
+def test_experience_bridge_requires_campaign_route_stop_lines_in_schema() -> None:
+    validator = load_validator()
+    bridge = load_example()
+    schema = load_schema()
+    bad_bridge = copy.deepcopy(bridge)
+    route = bad_bridge["campaign_route"]
+    assert isinstance(route, list)
+    del route[2]["stop_lines"]
+
+    with pytest.raises(validator.ValidationError, match="schema|stop_lines"):
+        validator.validate_payload(bad_bridge, schema)
