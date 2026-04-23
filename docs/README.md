@@ -26,6 +26,7 @@ Use [AGON_MOVE_OWNER_BINDING](AGON_MOVE_OWNER_BINDING.md) when you need the next
 Use [AGON_GATE_ROUTING_HANDOFF](AGON_GATE_ROUTING_HANDOFF.md) when you need the next center-owned handoff that allows thin pre-protocol gate candidates from `aoa-routing` without treating a routing hint as arena activation.
 Use [AGON_TRIAL_PLAYBOOK_HANDOFF](AGON_TRIAL_PLAYBOOK_HANDOFF.md) when you need the next center-owned handoff that asks `aoa-playbooks` to land mechanical trial choreography without treating a playbook route as a live arena.
 Use [EXPERIENCE_WAVE5_SOVEREIGN_OFFICE](EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md) when you need the final experience wave that joins first sovereign release with live office expansion while keeping release authority and owner-local execution bounded.
+Use [EXPERIENCE_V1_2_TO_V2_0_BRIDGE](EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md) when you need the center bridge from the `Dionysus` v1.2-v2.0 intake pack into later owner-local planting waves without treating archive transport as owner truth.
 
 ## How to verify center claims
 
@@ -54,6 +55,7 @@ Use [EXPERIENCE_WAVE5_SOVEREIGN_OFFICE](EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md) wh
 - [EXPERIENCE_WAVE3_FEDERATION_ADOPTION](EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md) — the third experience wave for cross-repo federation harvest and owner-local adoption gates
 - [EXPERIENCE_WAVE4_POLIS_CONSTITUTION](EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md) — the fourth experience wave for polis governance, constitution runtime, sealed decisions, stays, appeals, and replayable precedent
 - [EXPERIENCE_WAVE5_SOVEREIGN_OFFICE](EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md) — the fifth experience wave for installable sovereign release, first live assistant office, and governed multi-office train expansion
+- [EXPERIENCE_V1_2_TO_V2_0_BRIDGE](EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md) — the center bridge from staged `Dionysus` v1.2-v2.0 intake into later owner-local planting waves
 - [SELF_AGENCY_CONTINUITY](SELF_AGENCY_CONTINUITY.md) — the center-level law for bounded long-arc continuity with explicit anchors and governed reanchor
 - [COMPONENT_REFRESH_LAW](COMPONENT_REFRESH_LAW.md) — the center-level law for owner-owned refresh of drifting internal technical surfaces
 - [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md) — the boundary doctrine for AoA x ToS counterpart work and KAG restraint
