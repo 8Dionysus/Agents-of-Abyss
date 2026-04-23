@@ -55,6 +55,10 @@ The current center-declared growth move after the trunk-first structural wave is
   mechanical Agon trials become repeatable without turning scenario
   composition into live arena law, verdict authority, scars, retention,
   runtime substrate, or ToS promotion
+- plant the v1.5 epistemic duel model-of-other forge center contract so sealed
+  prediction, reveal scoring, countermodel pressure, revision, and bifurcation
+  quality can be named without activating live duel/runtime authority, truth
+  verdicts, standing or memory mutation, scars, retention, or ToS/KAG canon
 
 The current center framing also includes its first bounded cross-repo entry and readiness-alignment surfaces:
 - keep `aoa-stats` public as a derived observability layer that summarizes movement without becoming proof, route, or score authority

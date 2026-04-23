@@ -44,6 +44,8 @@ Current scripts include:
   foundry role-pairs center contract check
 - `validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py` for
   the v1.4 agonic pair trial and mechanical arena kernel center contract check
+- `validate_experience_v1_5_epistemic_duel_model_of_other_forge.py` for the
+  v1.5 epistemic duel and model-of-other forge center contract check
 
 ## Editing posture
 
@@ -143,6 +145,13 @@ After changing the Experience v1.4 campaign validator, also run:
 ```bash
 python scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
 python -m pytest -q tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+```
+
+After changing the Experience v1.5 campaign validator, also run:
+
+```bash
+python scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python -m pytest -q tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
 ```
 
 A script change is done when the failure mode is clearer, not more mysterious.
