@@ -38,6 +38,10 @@ Current scripts include:
   federation/adoption contract check
 - `validate_experience_wave4.py` for the fourth center-owned experience
   polis governance and constitution runtime contract check
+- `validate_experience_v1_2_service_mesh_operations.py` for the v1.2 service
+  mesh operations center contract check
+- `validate_experience_v1_3_office_foundry_role_pairs.py` for the v1.3 office
+  foundry role-pairs center contract check
 
 ## Editing posture
 
@@ -121,6 +125,15 @@ After changing the Experience Wave 4 validator, also run:
 ```bash
 python scripts/validate_experience_wave4.py
 python -m pytest -q tests/test_experience_wave4.py tests/test_experience_wave4_seed_contracts.py
+```
+
+After changing the Experience v1.2 or v1.3 campaign validators, also run:
+
+```bash
+python scripts/validate_experience_v1_2_service_mesh_operations.py
+python -m pytest -q tests/test_experience_v1_2_service_mesh_operations.py
+python scripts/validate_experience_v1_3_office_foundry_role_pairs.py
+python -m pytest -q tests/test_experience_v1_3_office_foundry_role_pairs.py
 ```
 
 A script change is done when the failure mode is clearer, not more mysterious.

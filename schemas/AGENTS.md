@@ -24,12 +24,16 @@ example.
 third experience wave's federation harvest and owner-local adoption example.
 `experience-wave4-polis-constitution.schema.json` defines the contract for the
 fourth experience wave's polis governance and constitution runtime example.
+`experience-v1-2-service-mesh-operations.schema.json` defines the contract for
+the v1.2 service mesh operations center example.
+`experience-v1-3-office-foundry-role-pairs.schema.json` defines the contract
+for the v1.3 office foundry role-pairs center example.
 These files are the boundary surfaces for tracked machine-readable center
 publication, Wave 0 Agon readiness, Wave III lawful move language, Wave IV
 owner binding law, the Wave V gate-routing handoff, and the Experience Wave 1
 center kernel plus the Experience Wave 2 certification/watchtower center and
 Experience Wave 3 federation/adoption center plus the Experience Wave 4
-polis/constitution center.
+polis/constitution center plus the v1.2-v1.3 planting campaign contracts.
 
 ## Editing posture
 
@@ -114,6 +118,15 @@ After changing the Experience Wave 4 schema, also run:
 ```bash
 python scripts/validate_experience_wave4.py
 python -m pytest -q tests/test_experience_wave4.py tests/test_experience_wave4_seed_contracts.py
+```
+
+After changing the Experience v1.2 or v1.3 campaign schemas, also run the matching contract validator and tests:
+
+```bash
+python scripts/validate_experience_v1_2_service_mesh_operations.py
+python -m pytest -q tests/test_experience_v1_2_service_mesh_operations.py
+python scripts/validate_experience_v1_3_office_foundry_role_pairs.py
+python -m pytest -q tests/test_experience_v1_3_office_foundry_role_pairs.py
 ```
 
 If a schema change is intentional, mention the contract shift clearly in the
