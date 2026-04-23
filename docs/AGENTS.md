@@ -61,6 +61,9 @@ Important documents here include:
 - `EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md` for the v1.4
   agonic pair trial and mechanical arena kernel contract, assistant witness
   boundary, current Agon law alignment, and no-live-arena stop-lines
+- `EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md` for the v1.5
+  epistemic duel and model-of-other forge contract, sealed prediction pressure,
+  owner routing, and no-live-duel/no-runtime stop-lines
 - `TOS_GROWTH_SUPPORT.md`, `TOS_TEMPLATE_SUPPORT.md`, `TOS_LINEAGE_PILOT_SUPPORT.md`, and `TOS_SOIL_PREP_SUPPORT.md` for current AoA support doctrine around `Tree-of-Sophia`
 
 ## Editing posture
@@ -188,6 +191,13 @@ If you changed the Experience v1.4 mechanical arena kernel surfaces, also run:
 ```bash
 python scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
 python -m pytest -q tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+```
+
+If you changed the Experience v1.5 epistemic duel model-of-other forge surfaces, also run:
+
+```bash
+python scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python -m pytest -q tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
 ```
 
 If you changed ownership, routing, or maturity language, confirm the machine-readable registry still matches the prose.

@@ -273,3 +273,27 @@ Purpose:
 Main question:
 - which recurring mechanical Agon trials can honestly become playbook-owned
   choreography now without falsely claiming live arena authority?
+
+## Experience v1.5 epistemic duel model-of-other forge
+
+Repository: `Agents-of-Abyss` for the center-owned Wave 5 turn of the current
+v1.2-v2.0 planting campaign. It is not `Experience Wave 5`.
+
+Current surfaces:
+- `docs/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md`
+- `examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
+- `schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
+
+Purpose:
+- extend the v1.4 mechanical arena kernel into epistemic duel pressure without
+  starting a live duel or runtime
+- require sealed model-of-other prediction before reveal and scoring
+- route countermodel pressure, revision quality, memory, KAG, routing, runtime,
+  and ToS handoffs to their owning layers
+- forbid assistant contestants, assistant deep modeling, truth verdicts,
+  standing mutation, durable memory or scar writes, retention execution, and
+  direct ToS/KAG canon promotion
+
+Main question:
+- which epistemic duel constraints can the center name now without claiming
+  live arena authority or downstream owner truth?
