@@ -2,34 +2,33 @@
 
 This is the single branch point for center-level processes and engineering philosophy in `Agents-of-Abyss`.
 
-Use it after the root `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, and `docs/FEDERATION_RULES.md`. The purpose is simple: when a human or agent asks "what kind of move is this?", this atlas points to the right mechanic, owner split, stop-lines, and verification surface.
+Use it after the root `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, and `docs/REPO_ROLES.md`. The purpose is simple: when a human or agent asks **what kind of move is this?**, this atlas points to the right mechanic, owner split, stop-line, machine companion, and verification path.
 
 This file does not create new authority. It keeps the root README human-sized while giving agents a precise map of the deeper machinery.
 
 ## How to use this atlas
 
 1. Name the mechanic you are touching.
-2. Read the center entry and its stop-lines.
+2. Read the mechanic's center entry and stop-lines.
 3. Identify the owner repository that owns the operational truth.
 4. Run the validator named by that mechanic when a validator exists.
-5. If ownership is unclear, return to `docs/FEDERATION_RULES.md` before changing anything.
+5. If ownership is unclear, return to [FEDERATION_RULES](FEDERATION_RULES.md) before changing anything.
 
 ## Compass
 
-| Mechanic | Center question | Start here |
-|---|---|---|
-| Constitutional polis | What does the center own, and what must stay outside it? | [CHARTER](../CHARTER.md), [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md), [docs/FEDERATION_RULES](FEDERATION_RULES.md) |
-| Layer ownership | Which repository owns this object class? | [docs/LAYERS](LAYERS.md), [docs/REPO_ROLES](REPO_ROLES.md) |
-| Direction and maturity | What phase or direction is current? | [ROADMAP](../ROADMAP.md), [docs/DIRECTION_SURFACES](DIRECTION_SURFACES.md), [docs/METHOD_SPINE](METHOD_SPINE.md) |
-| Growth refinery | How does a growth object move across checkpoint, candidate, seed, owner landing, proof, method, and memory? | [docs/REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md), [docs/CANDIDATE_LINEAGE_CROSSWALK](CANDIDATE_LINEAGE_CROSSWALK.md), [docs/OWNER_LANDING_AND_PRUNING](OWNER_LANDING_AND_PRUNING.md) |
-| Recurrence and return | How does AoA recover when a route loses its axis? | [docs/RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) |
-| Self-agency continuity | How can a long-arc route persist without autonomy mythology? | [docs/SELF_AGENCY_CONTINUITY](SELF_AGENCY_CONTINUITY.md), [docs/COMPONENT_REFRESH_LAW](COMPONENT_REFRESH_LAW.md) |
-| Experience | Which staged experience contract or planting wave is relevant? | [Experience](#experience) |
-| Agon | Which pressure, duel, arena, lawful move, verdict, retention, rank, or canon boundary is relevant? | [Agon](#agon) |
-| Antifragility and subtraction | What stress, degraded mode, evidence, pruning, or anti-authority posture applies? | [docs/ANTIFRAGILITY](ANTIFRAGILITY.md), [docs/VIA_NEGATIVA](VIA_NEGATIVA.md) |
-| Quest and RPG reflection | How are deferred obligations, campaigns, progression, or adjunct RPG vocabulary handled? | [docs/QUESTBOOK_MODEL](QUESTBOOK_MODEL.md), [docs/RPG_LAYER_MODEL](RPG_LAYER_MODEL.md) |
-| ToS bridge | How can AoA support ToS without authoring ToS meaning? | [docs/COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md), [docs/WITNESS_COMPOST](WITNESS_COMPOST.md) |
-| Release and public support | Which claims can the center publicly support? | [docs/PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md), [docs/FEDERATION_RELEASE_PROTOCOL](FEDERATION_RELEASE_PROTOCOL.md), [docs/RELEASING](RELEASING.md) |
+| Mechanic | Center question | Current status | Start here | Must not claim |
+|---|---|---|---|---|
+| Constitutional polis | What does the center own, and what must stay outside it? | landed center law | [CHARTER](../CHARTER.md), [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md), [FEDERATION_RULES](FEDERATION_RULES.md) | layer-owned truth |
+| Layer ownership | Which repository owns this object class? | landed route map | [LAYERS](LAYERS.md), [REPO_ROLES](REPO_ROLES.md) | convenience ownership transfer |
+| Method and growth refinery | How does repeated work move from donor or checkpoint to candidate, seed, owner landing, proof, method, memory, or derived summary? | center doctrine and cross-owner route | [METHOD_SPINE](METHOD_SPINE.md), [REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md) | center-owned scenario canon |
+| Recursion, recurrence, return, continuity | How does AoA recover when a route loses its axis and must re-enter through a valid anchor? | bounded return law | [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md), [SELF_AGENCY_CONTINUITY](SELF_AGENCY_CONTINUITY.md) | ambient continuity or hidden memory sovereignty |
+| Experience | Which staged experience contract, office/service posture, seed intake, duel pressure, continuity loom, or runtime boundary is relevant? | planted center contracts through v2.0 | [Experience](#experience) | live workspace runtime or owner-local activation |
+| Agon | Which pressure, lawful move, duel, arena, packet, verdict, retention, rank, school, canon, or threshold boundary is relevant? | center-owned pre-protocol law and candidate grammar | [Agon](#agon) | live arena execution or assistant contestant authority |
+| Antifragility and subtraction | What stress, degraded mode, evidence, pruning, or anti-authority posture applies? | center doctrine | [ANTIFRAGILITY](ANTIFRAGILITY.md), [VIA_NEGATIVA](VIA_NEGATIVA.md) | one-score health or deletion theater |
+| Questbook | What obligation must survive the current diff as a public tracked follow-up? | public obligation model | [QUESTBOOK](../QUESTBOOK.md), [QUESTBOOK_MODEL](QUESTBOOK_MODEL.md) | second roadmap or private scratchpad |
+| RPG reflection | How can progression, questlines, campaigns, roles, and feats be read without rewriting ownership? | adjunct reflection layer | [RPG_LAYER_MODEL](RPG_LAYER_MODEL.md), [RPG_ARCHITECTURE_RFC](RPG_ARCHITECTURE_RFC.md) | hidden ontology or runtime ledger |
+| ToS bridge, witness, compost | How can AoA support ToS without authoring ToS meaning? | support doctrine and seams | [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md), [WITNESS_COMPOST](WITNESS_COMPOST.md) | AoA-authored ToS canon |
+| Release, audit, public support | Which claims can the center publicly support? | release and CI posture | [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md), [FEDERATION_RELEASE_PROTOCOL](FEDERATION_RELEASE_PROTOCOL.md), [RELEASING](RELEASING.md) | unverified public claim |
 
 ## Constitutional polis
 
@@ -39,10 +38,10 @@ Read:
 
 1. [CHARTER](../CHARTER.md) for mission and ownership boundary.
 2. [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md) for the public contour.
-3. [docs/LAYERS](LAYERS.md) for conceptual layer definitions.
-4. [docs/REPO_ROLES](REPO_ROLES.md) for compact ownership routing.
-5. [docs/FEDERATION_RULES](FEDERATION_RULES.md) for source-of-truth law.
-6. [docs/PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md) for public claim and CI posture.
+3. [LAYERS](LAYERS.md) for conceptual layer definitions.
+4. [REPO_ROLES](REPO_ROLES.md) for compact ownership routing.
+5. [FEDERATION_RULES](FEDERATION_RULES.md) for source-of-truth law.
+6. [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md) for public claim and CI posture.
 
 Machine companions:
 
@@ -65,12 +64,14 @@ Use this branch when the object is not just a task, but a repeated route that ma
 
 Core law:
 
-- [docs/ROOTLINE](ROOTLINE.md) keeps the trunk-first coordination spine.
-- [docs/METHOD_SPINE](METHOD_SPINE.md) says recurring scenario-level method belongs in `aoa-playbooks`.
-- [docs/REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md) names the non-sovereign chain `cluster_ref -> candidate_ref -> seed_ref -> object_ref`.
-- [docs/CANDIDATE_LINEAGE_CROSSWALK](CANDIDATE_LINEAGE_CROSSWALK.md) maps stages to owners.
-- [docs/OWNER_LANDING_AND_PRUNING](OWNER_LANDING_AND_PRUNING.md) handles post-candidate landing and pruning.
-- [docs/COMPONENT_REFRESH_LAW](COMPONENT_REFRESH_LAW.md) handles owner-owned maintenance of one drifting technical component.
+- [ROOTLINE](ROOTLINE.md) keeps the trunk-first coordination spine.
+- [METHOD_SPINE](METHOD_SPINE.md) says recurring scenario-level method belongs in `aoa-playbooks`.
+- [REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md) names the non-sovereign chain `cluster_ref -> candidate_ref -> seed_ref -> object_ref`.
+- [CANDIDATE_LINEAGE_CROSSWALK](CANDIDATE_LINEAGE_CROSSWALK.md) maps stages to owners.
+- [OWNER_LANDING_AND_PRUNING](OWNER_LANDING_AND_PRUNING.md) handles post-candidate landing and pruning.
+- [COMPONENT_REFRESH_LAW](COMPONENT_REFRESH_LAW.md) handles owner-owned maintenance of one drifting technical component.
+
+Route anchors: `docs/METHOD_SPINE.md`, `docs/REVIEWABLE_GROWTH_REFINERY.md`, `docs/CANDIDATE_LINEAGE_CROSSWALK.md`, and `docs/OWNER_LANDING_AND_PRUNING.md`.
 
 Owner split:
 
@@ -92,16 +93,16 @@ python scripts/validate_candidate_lineage_contract.py --workspace-root /srv
 python scripts/validate_wave4_kernel_automation.py --workspace-root /srv
 ```
 
-## Recurrence, return, and continuity
+## Recursion, recurrence, return, and continuity
 
-Use this branch when the route lost its axis, needs bounded re-entry, or must preserve duration without pretending that continuity is a magic ambient memory.
+Use this branch when a route lost its axis, must recurse back into a valid anchor, needs bounded re-entry, or must preserve duration without pretending that continuity is magic ambient memory.
 
 Core law:
 
-- [docs/RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md): when a route loses its axis, return to the last valid anchor before continuing.
-- [docs/SELF_AGENCY_CONTINUITY](SELF_AGENCY_CONTINUITY.md): continuity means bounded duration with explicit anchors and reviewable return, not permissionless autonomy.
-- [docs/COMPONENT_REFRESH_LAW](COMPONENT_REFRESH_LAW.md): drifting components refresh through owner-owned receipts, not mystical self-healing.
-- [docs/METHOD_SPINE](METHOD_SPINE.md): recurring return routes should become playbook-owned method.
+- [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md): when a route loses its axis, return to the last valid anchor before continuing.
+- [SELF_AGENCY_CONTINUITY](SELF_AGENCY_CONTINUITY.md): continuity means bounded duration with explicit anchors and reviewable return, not permissionless autonomy.
+- [COMPONENT_REFRESH_LAW](COMPONENT_REFRESH_LAW.md): drifting components refresh through owner-owned receipts, not mystical self-healing.
+- [METHOD_SPINE](METHOD_SPINE.md): recurring return routes should become playbook-owned method.
 
 Vocabulary:
 
@@ -140,7 +141,7 @@ Read this as planted center law, not live authority. These surfaces repeatedly f
 | [EXPERIENCE_WAVE4_POLIS_CONSTITUTION](EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md) | polis governance, constitution runtime, sealed decisions, stays, appeals, and replayable precedent |
 | [EXPERIENCE_WAVE5_SOVEREIGN_OFFICE](EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md) | installable sovereign release and first live-office contour, still bounded by owner-local authority |
 
-### Experience v1.2 -> v2.0 planting line
+### Experience v1.2 to v2.0 planting line
 
 | Surface | Role |
 |---|---|
@@ -159,52 +160,34 @@ Validation is version-specific. Use the matching `scripts/validate_experience_*.
 
 ## Agon
 
-Use this branch when pressure, contest, survival, lawful moves, arena sessions, sealed commitments, verdicts, scars, retention, rank, schools, canon promotion, or ToS thresholds are involved.
+Use this branch when pressure, contest, survival, lawful moves, arena sessions, sealed commitments, state packets, verdicts, scars, retention, rank, schools, canon promotion, or ToS thresholds are involved.
 
 Agon is center-owned as law, vocabulary, stop-line, and owner-binding doctrine. It is not live arena execution in this repository. Owner repos must land their own slices before practice, workflows, proof, memory, stats, routing, actors, runtime, or ToS canon become operational truth.
 
-### Entry sequence
+### Agon phase map
 
-| Surface | Role |
-|---|---|
-| [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md) | conservative holding boundary before Agon activation |
-| [AGON_IMPOSITION_POSTURE](AGON_IMPOSITION_POSTURE.md) | first imposition gate over current surfaces |
-| [AGON_SURVIVAL_CRITERIA](AGON_SURVIVAL_CRITERIA.md), [AGON_DOUBT_AUDIT](AGON_DOUBT_AUDIT.md), [PRE_AGON_BASELINE](PRE_AGON_BASELINE.md) | survival lens, doubt audit, and before-image |
-| [AGON_LAWFUL_MOVE_LANGUAGE](AGON_LAWFUL_MOVE_LANGUAGE.md), [AGON_MOVE_REGISTRY_MODEL](AGON_MOVE_REGISTRY_MODEL.md), [AGON_MOVE_OWNER_HANDOFFS](AGON_MOVE_OWNER_HANDOFFS.md) | first lawful move vocabulary and registry contour |
-| [AGON_MOVE_OWNER_BINDING](AGON_MOVE_OWNER_BINDING.md), [AGON_MOVE_BINDING_MATRIX_MODEL](AGON_MOVE_BINDING_MATRIX_MODEL.md), [AGON_OWNER_REPO_REQUESTS](AGON_OWNER_REPO_REQUESTS.md), [AGON_PRE_PROTOCOL_STOP_LINES](AGON_PRE_PROTOCOL_STOP_LINES.md) | move owner binding, requested owner slices, and pre-protocol stop-lines |
+| Phase | Surfaces | Role |
+|---|---|---|
+| Baseline and imposition | [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md), [AGON_IMPOSITION_POSTURE](AGON_IMPOSITION_POSTURE.md), [AGON_SURVIVAL_CRITERIA](AGON_SURVIVAL_CRITERIA.md), [AGON_DOUBT_AUDIT](AGON_DOUBT_AUDIT.md), [PRE_AGON_BASELINE](PRE_AGON_BASELINE.md) | conservative boundary, survival lens, and first pressure gate before live protocol |
+| Lawful move language | [AGON_LAWFUL_MOVE_LANGUAGE](AGON_LAWFUL_MOVE_LANGUAGE.md), [AGON_MOVE_REGISTRY_MODEL](AGON_MOVE_REGISTRY_MODEL.md), [AGON_MOVE_OWNER_HANDOFFS](AGON_MOVE_OWNER_HANDOFFS.md) | center vocabulary and registry contour without execution authority |
+| Owner binding | [AGON_MOVE_OWNER_BINDING](AGON_MOVE_OWNER_BINDING.md), [AGON_MOVE_BINDING_MATRIX_MODEL](AGON_MOVE_BINDING_MATRIX_MODEL.md), [AGON_OWNER_REPO_REQUESTS](AGON_OWNER_REPO_REQUESTS.md), [AGON_PRE_PROTOCOL_STOP_LINES](AGON_PRE_PROTOCOL_STOP_LINES.md) | owner gravity for moves and explicit non-landed requests |
+| Gate, playbook, recurrence, prebinding | [AGON_GATE_ROUTING_HANDOFF](AGON_GATE_ROUTING_HANDOFF.md), [AGON_GATE_ROUTING_OWNER_REQUEST](AGON_GATE_ROUTING_OWNER_REQUEST.md), [AGON_GATE_ROUTING_STOP_LINES](AGON_GATE_ROUTING_STOP_LINES.md), [AGON_TRIAL_PLAYBOOK_HANDOFF](AGON_TRIAL_PLAYBOOK_HANDOFF.md), [AGON_TRIAL_PLAYBOOK_OWNER_REQUEST](AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md), [AGON_TRIAL_PLAYBOOK_STOP_LINES](AGON_TRIAL_PLAYBOOK_STOP_LINES.md), [AGON_RECURRENCE_ADAPTER](AGON_RECURRENCE_ADAPTER.md), [AGON_RECURRENCE_ADAPTER_HANDOFF](AGON_RECURRENCE_ADAPTER_HANDOFF.md), [AGON_RECURRENCE_OWNER_REQUEST](AGON_RECURRENCE_OWNER_REQUEST.md), [AGON_RECURRENCE_STOP_LINES](AGON_RECURRENCE_STOP_LINES.md), [AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF](AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF.md), [AGON_COURT_MEMO_STATS_PREBINDING_OWNER_REQUEST](AGON_COURT_MEMO_STATS_PREBINDING_OWNER_REQUEST.md), [AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES](AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md) | pre-protocol handoffs to routing, playbooks, recurrence, proof, memory, and stats without granting authority |
+| Arena, seats, pressure, sessions | [AGON_ARENA_SESSION_MODEL](AGON_ARENA_SESSION_MODEL.md), [AGON_ARENA_SESSION_STOP_LINES](AGON_ARENA_SESSION_STOP_LINES.md), [AGON_SESSION_LIFECYCLE_MODEL](AGON_SESSION_LIFECYCLE_MODEL.md), [AGON_CHARTER_AND_SEAT_MODEL](AGON_CHARTER_AND_SEAT_MODEL.md), [AGON_PRESSURE_PROFILE_MODEL](AGON_PRESSURE_PROFILE_MODEL.md) | future session frame, seating, lifecycle, and pressure profile without live arena |
+| Packets and commitments | [AGON_STATE_PACKET_MODEL](AGON_STATE_PACKET_MODEL.md), [AGON_STATE_PACKET_STOP_LINES](AGON_STATE_PACKET_STOP_LINES.md), [AGON_PACKET_SEQUENCE_MODEL](AGON_PACKET_SEQUENCE_MODEL.md), [AGON_PACKET_OWNER_HANDOFFS](AGON_PACKET_OWNER_HANDOFFS.md), [AGON_SEALED_COMMIT_MODEL](AGON_SEALED_COMMIT_MODEL.md) | declaration, reveal, revision, packet sequence, and owner handoff grammar |
+| Contradiction, closure, summon | [AGON_CONTRADICTION_LAW_MODEL](AGON_CONTRADICTION_LAW_MODEL.md), [AGON_CONTRADICTION_CLOSURE_SUMMON_LAW](AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md), [AGON_CLOSURE_LAW_MODEL](AGON_CLOSURE_LAW_MODEL.md), [AGON_SUMMON_LAW_MODEL](AGON_SUMMON_LAW_MODEL.md), [AGON_LAW_INTERLOCKS](AGON_LAW_INTERLOCKS.md) | contradiction handling and closure/summon law without unbounded escalation |
+| Verdict, delta, scars, inscription | [AGON_VERDICT_DRAFT_MODEL](AGON_VERDICT_DRAFT_MODEL.md), [AGON_VERDICT_DELTA_SCAR_BRIDGE](AGON_VERDICT_DELTA_SCAR_BRIDGE.md), [AGON_SCAR_REQUEST_BRIDGE_MODEL](AGON_SCAR_REQUEST_BRIDGE_MODEL.md), [AGON_DELTA_RECEIPT_MODEL](AGON_DELTA_RECEIPT_MODEL.md), [AGON_CONCEPT_MAP_DELTA_MODEL](AGON_CONCEPT_MAP_DELTA_MODEL.md), [AGON_INSCRIPTION_BUNDLE_MODEL](AGON_INSCRIPTION_BUNDLE_MODEL.md) | draft verdicts, deltas, scars, receipts, concept-map candidates, and inscription bundles without runtime mutation |
+| Duel kernel and model-of-other | [AGON_DUEL_KERNEL_MODEL](AGON_DUEL_KERNEL_MODEL.md), [AGON_DUEL_KERNEL_EVENT_MODEL](AGON_DUEL_KERNEL_EVENT_MODEL.md), [AGON_DUEL_KERNEL_OWNER_HANDOFFS](AGON_DUEL_KERNEL_OWNER_HANDOFFS.md), [AGON_DUEL_KERNEL_SEAT_MODEL](AGON_DUEL_KERNEL_SEAT_MODEL.md), [AGON_MODEL_OF_OTHER_LAW](AGON_MODEL_OF_OTHER_LAW.md), [AGON_BIFURCATION_RUPTURE_MODEL](AGON_BIFURCATION_RUPTURE_MODEL.md) | duel kernel grammar, event model, seats, model-of-other law, and bifurcation pressure without live duel authority |
+| Mechanical trials | [AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL](AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md), [AGON_MECHANICAL_TRIAL_RUN_MODEL](AGON_MECHANICAL_TRIAL_RUN_MODEL.md), [AGON_MECHANICAL_TRIAL_OUTCOME_CANDIDATE_MODEL](AGON_MECHANICAL_TRIAL_OUTCOME_CANDIDATE_MODEL.md), [AGON_MECHANICAL_TRIAL_OWNER_HANDOFFS](AGON_MECHANICAL_TRIAL_OWNER_HANDOFFS.md) | trial-suite grammar and outcome candidates without proof sovereignty |
+| Epistemic Agon | [AGON_EPISTEMIC_AGON](AGON_EPISTEMIC_AGON.md), [AGON_EPISTEMIC_MOVE_EXTENSION_MODEL](AGON_EPISTEMIC_MOVE_EXTENSION_MODEL.md), [AGON_EPISTEMIC_OWNER_HANDOFFS](AGON_EPISTEMIC_OWNER_HANDOFFS.md) | epistemic contest grammar and handoffs without truth ownership |
+| Retention, rank, standing | [AGON_RETENTION_RANK_ECONOMY](AGON_RETENTION_RANK_ECONOMY.md), [AGON_RETENTION_CHECK_MODEL](AGON_RETENTION_CHECK_MODEL.md), [AGON_RETENTION_REQUEST_MODEL](AGON_RETENTION_REQUEST_MODEL.md), [AGON_RETENTION_OWNER_HANDOFFS](AGON_RETENTION_OWNER_HANDOFFS.md), [AGON_RANK_JURISDICTION_MODEL](AGON_RANK_JURISDICTION_MODEL.md), [AGON_RANK_MUTATION_CANDIDATE_MODEL](AGON_RANK_MUTATION_CANDIDATE_MODEL.md) | retention, standing, rank, jurisdiction, and mutation candidates without live rank authority |
+| Schools, lineages, campaigns | [AGON_SCHOOL_MODEL](AGON_SCHOOL_MODEL.md), [AGON_LINEAGE_MODEL](AGON_LINEAGE_MODEL.md), [AGON_CAMPAIGN_MODEL](AGON_CAMPAIGN_MODEL.md), [AGON_CAMPAIGN_OWNER_HANDOFFS](AGON_CAMPAIGN_OWNER_HANDOFFS.md), [AGON_SCHOOLS_LINEAGES_CAMPAIGNS](AGON_SCHOOLS_LINEAGES_CAMPAIGNS.md) | school, lineage, and campaign grammar without hidden hierarchy |
+| KAG, canon, Sophian threshold | [AGON_KAG_PROMOTION_PATH](AGON_KAG_PROMOTION_PATH.md), [AGON_KAG_PROMOTION_CANDIDATE_MODEL](AGON_KAG_PROMOTION_CANDIDATE_MODEL.md), [AGON_KAG_SURVIVAL_CRITERIA](AGON_KAG_SURVIVAL_CRITERIA.md), [AGON_KAG_OWNER_HANDOFFS](AGON_KAG_OWNER_HANDOFFS.md), [AGON_CANON_RESTRAINT_MODEL](AGON_CANON_RESTRAINT_MODEL.md), [AGON_TOS_THRESHOLD_PACKET_MODEL](AGON_TOS_THRESHOLD_PACKET_MODEL.md), [AGON_SOPHIAN_THRESHOLD](AGON_SOPHIAN_THRESHOLD.md), [AGON_SOPHIAN_OWNER_HANDOFFS](AGON_SOPHIAN_OWNER_HANDOFFS.md), [AGON_TERMINAL_OUTCOME_MODEL](AGON_TERMINAL_OUTCOME_MODEL.md) | promotion candidates, canon restraint, ToS/Sophian thresholds, and terminal outcome boundaries without direct canon write |
 
-### Handoffs and early choreography
+### Agon wave landings
 
-| Surface | Role |
-|---|---|
-| [AGON_GATE_ROUTING_HANDOFF](AGON_GATE_ROUTING_HANDOFF.md), [AGON_GATE_ROUTING_OWNER_REQUEST](AGON_GATE_ROUTING_OWNER_REQUEST.md), [AGON_GATE_ROUTING_STOP_LINES](AGON_GATE_ROUTING_STOP_LINES.md) | routing may emit pre-protocol gate candidates, not arena activation |
-| [AGON_TRIAL_PLAYBOOK_HANDOFF](AGON_TRIAL_PLAYBOOK_HANDOFF.md), [AGON_TRIAL_PLAYBOOK_OWNER_REQUEST](AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md), [AGON_TRIAL_PLAYBOOK_STOP_LINES](AGON_TRIAL_PLAYBOOK_STOP_LINES.md) | playbooks may land recurring mechanical trial choreography, not verdict law |
-| [AGON_RECURRENCE_ADAPTER](AGON_RECURRENCE_ADAPTER.md), [AGON_RECURRENCE_ADAPTER_HANDOFF](AGON_RECURRENCE_ADAPTER_HANDOFF.md), [AGON_RECURRENCE_OWNER_REQUEST](AGON_RECURRENCE_OWNER_REQUEST.md), [AGON_RECURRENCE_STOP_LINES](AGON_RECURRENCE_STOP_LINES.md) | recurrence routes into Agon without turning return into arena authority |
-| [AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF](AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF.md), [AGON_COURT_MEMO_STATS_PREBINDING_OWNER_REQUEST](AGON_COURT_MEMO_STATS_PREBINDING_OWNER_REQUEST.md), [AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES](AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md) | proof, memory, and observability receiving surfaces are prebound without authority drift |
+Use the landing and stop-line document for the wave you touch.
 
-### Arena, packets, and evidence grammar
-
-| Surface | Role |
-|---|---|
-| [AGON_ARENA_SESSION_MODEL](AGON_ARENA_SESSION_MODEL.md), [AGON_ARENA_SESSION_STOP_LINES](AGON_ARENA_SESSION_STOP_LINES.md) | future session model and stop-lines |
-| [AGON_DUEL_KERNEL_MODEL](AGON_DUEL_KERNEL_MODEL.md), [AGON_DUEL_KERNEL_EVENT_MODEL](AGON_DUEL_KERNEL_EVENT_MODEL.md), [AGON_DUEL_KERNEL_OWNER_HANDOFFS](AGON_DUEL_KERNEL_OWNER_HANDOFFS.md), [AGON_DUEL_KERNEL_SEAT_MODEL](AGON_DUEL_KERNEL_SEAT_MODEL.md) | duel kernel grammar and owner handoffs |
-| [AGON_SEALED_COMMIT_MODEL](AGON_SEALED_COMMIT_MODEL.md), [AGON_STATE_PACKET_MODEL](AGON_STATE_PACKET_MODEL.md), [AGON_STATE_PACKET_STOP_LINES](AGON_STATE_PACKET_STOP_LINES.md) | commitment, reveal, declaration, revision, and packet stop-lines |
-| [AGON_VERDICT_DRAFT_MODEL](AGON_VERDICT_DRAFT_MODEL.md), [AGON_VERDICT_DELTA_SCAR_BRIDGE](AGON_VERDICT_DELTA_SCAR_BRIDGE.md), [AGON_SCAR_REQUEST_BRIDGE_MODEL](AGON_SCAR_REQUEST_BRIDGE_MODEL.md) | draft verdicts, deltas, scars, and bridges without runtime mutation |
-
-### Consequence, rank, school, and canon boundaries
-
-| Surface | Role |
-|---|---|
-| [AGON_RETENTION_RANK_ECONOMY](AGON_RETENTION_RANK_ECONOMY.md), [AGON_RETENTION_CHECK_MODEL](AGON_RETENTION_CHECK_MODEL.md), [AGON_RETENTION_OWNER_HANDOFFS](AGON_RETENTION_OWNER_HANDOFFS.md), [AGON_RETENTION_REQUEST_MODEL](AGON_RETENTION_REQUEST_MODEL.md) | retention, rank, and owner handoff candidates |
-| [AGON_RANK_JURISDICTION_MODEL](AGON_RANK_JURISDICTION_MODEL.md), [AGON_RANK_MUTATION_CANDIDATE_MODEL](AGON_RANK_MUTATION_CANDIDATE_MODEL.md) | standing and jurisdiction candidates, not live mutation |
-| [AGON_SCHOOL_MODEL](AGON_SCHOOL_MODEL.md), [AGON_SCHOOLS_LINEAGES_CAMPAIGNS](AGON_SCHOOLS_LINEAGES_CAMPAIGNS.md), [AGON_LINEAGE_MODEL](AGON_LINEAGE_MODEL.md) | schools, lineages, campaigns, and lineage grammar |
-| [AGON_KAG_PROMOTION_PATH](AGON_KAG_PROMOTION_PATH.md), [AGON_KAG_PROMOTION_CANDIDATE_MODEL](AGON_KAG_PROMOTION_CANDIDATE_MODEL.md), [AGON_KAG_SURVIVAL_CRITERIA](AGON_KAG_SURVIVAL_CRITERIA.md), [AGON_KAG_OWNER_HANDOFFS](AGON_KAG_OWNER_HANDOFFS.md) | KAG promotion candidates and survival checks without canon sovereignty |
-| [AGON_CANON_RESTRAINT_MODEL](AGON_CANON_RESTRAINT_MODEL.md), [AGON_TOS_THRESHOLD_PACKET_MODEL](AGON_TOS_THRESHOLD_PACKET_MODEL.md), [AGON_SOPHIAN_THRESHOLD](AGON_SOPHIAN_THRESHOLD.md), [AGON_SOPHIAN_OWNER_HANDOFFS](AGON_SOPHIAN_OWNER_HANDOFFS.md) | ToS and Sophian threshold boundaries without direct canon write |
-| [AGON_CONTRADICTION_LAW_MODEL](AGON_CONTRADICTION_LAW_MODEL.md), [AGON_CONTRADICTION_CLOSURE_SUMMON_LAW](AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md), [AGON_CLOSURE_LAW_MODEL](AGON_CLOSURE_LAW_MODEL.md), [AGON_SUMMON_LAW_MODEL](AGON_SUMMON_LAW_MODEL.md), [AGON_LAW_INTERLOCKS](AGON_LAW_INTERLOCKS.md) | contradiction, closure, summon, and law-interlock grammar |
-
-### Wave landings
-
-Use the landing and stop-line document for the wave you touch. Known center waves include:
+Known center waves include:
 
 - [AGON_WAVE0_LANDING](AGON_WAVE0_LANDING.md)
 - [AGON_WAVE3_LANDING](AGON_WAVE3_LANDING.md)
@@ -223,6 +206,7 @@ Use the landing and stop-line document for the wave you touch. Known center wave
 - [AGON_WAVE16_LANDING](AGON_WAVE16_LANDING.md) and [AGON_WAVE16_STOP_LINES](AGON_WAVE16_STOP_LINES.md)
 - [AGON_WAVE17_LANDING](AGON_WAVE17_LANDING.md) and [AGON_WAVE17_STOP_LINES](AGON_WAVE17_STOP_LINES.md)
 - [AGON_WAVE18_LANDING](AGON_WAVE18_LANDING.md)
+- [AGON_INTERLUDE_R4_LANDING](AGON_INTERLUDE_R4_LANDING.md)
 
 Generated companions live under `generated/agon_*.min.json`. Use the matching builder, validator, and test for the generated surface you changed.
 
@@ -230,13 +214,15 @@ Generated companions live under `generated/agon_*.min.json`. Use the matching bu
 
 Use this branch when the system is under stress, sprawl, authority inflation, or cleanup pressure.
 
-- [docs/ANTIFRAGILITY](ANTIFRAGILITY.md): stress should make the system more legible, bounded, and teachable.
-- [docs/ANTIFRAGILITY_FIRST_WAVE](ANTIFRAGILITY_FIRST_WAVE.md): first-wave antifragility scope.
-- [docs/VIA_NEGATIVA](VIA_NEGATIVA.md): subtraction as doctrine.
-- [docs/ANTI_AUTHORITY_RULES](ANTI_AUTHORITY_RULES.md): stop authority inflation.
-- [docs/ONE_IN_ONE_OUT](ONE_IN_ONE_OUT.md): sprawl pressure rule.
-- [FRAGILITY_BLACKLIST](../FRAGILITY_BLACKLIST.md): known fragile patterns.
-- [DELETION_CANDIDATES](../DELETION_CANDIDATES.json): deletion candidates.
+| Surface | Role |
+|---|---|
+| [ANTIFRAGILITY](ANTIFRAGILITY.md) | stress should make the system more legible, bounded, and teachable |
+| [ANTIFRAGILITY_FIRST_WAVE](ANTIFRAGILITY_FIRST_WAVE.md) | first-wave antifragility scope |
+| [VIA_NEGATIVA](VIA_NEGATIVA.md) | subtraction as doctrine |
+| [ANTI_AUTHORITY_RULES](ANTI_AUTHORITY_RULES.md) | stop authority inflation |
+| [ONE_IN_ONE_OUT](ONE_IN_ONE_OUT.md) | sprawl pressure rule |
+| [FRAGILITY_BLACKLIST](../FRAGILITY_BLACKLIST.md) | known fragile patterns |
+| [DELETION_CANDIDATES](../DELETION_CANDIDATES.json) | deletion candidates |
 
 Review questions:
 
@@ -250,11 +236,20 @@ Review questions:
 
 Use this branch when work becomes a tracked obligation, questline, campaign, progression path, or readable adjunct reflection.
 
+Quest surfaces:
+
 - [QUESTBOOK](../QUESTBOOK.md): public tracked surface for deferred obligations.
-- [docs/QUESTBOOK_MODEL](QUESTBOOK_MODEL.md): quest lifecycle, placement bands, risk, difficulty, and harvest rules.
-- [docs/QUESTBOOK_FIRST_WAVE](QUESTBOOK_FIRST_WAVE.md): first-wave guardrails.
-- [docs/RPG_LAYER_MODEL](RPG_LAYER_MODEL.md): adjunct RPG reflection layer.
-- [docs/RPG_FIRST_WAVE](RPG_FIRST_WAVE.md), [docs/RPG_SECOND_WAVE](RPG_SECOND_WAVE.md), [docs/RPG_SKILLS_AND_FEATS](RPG_SKILLS_AND_FEATS.md), [docs/RPG_ARCHITECTURE_RFC](RPG_ARCHITECTURE_RFC.md), [docs/RPG_CANONICAL_TERMINOLOGY](RPG_CANONICAL_TERMINOLOGY.md), [docs/RPG_BOUNDARY_MAP](RPG_BOUNDARY_MAP.md): supporting RPG reflection docs.
+- [`quests/`](../quests/): public quest files, including center, Agon, and Experience follow-through work.
+- [QUESTBOOK_MODEL](QUESTBOOK_MODEL.md): quest lifecycle, placement bands, risk, difficulty, and harvest rules.
+- [QUESTBOOK_FIRST_WAVE](QUESTBOOK_FIRST_WAVE.md): first-wave guardrails.
+
+RPG reflection surfaces:
+
+- [RPG_LAYER_MODEL](RPG_LAYER_MODEL.md): adjunct RPG reflection layer.
+- [RPG_FIRST_WAVE](RPG_FIRST_WAVE.md) and [RPG_SECOND_WAVE](RPG_SECOND_WAVE.md): staged reflection contours.
+- [RPG_SKILLS_AND_FEATS](RPG_SKILLS_AND_FEATS.md): skill/feat reading, not skill ownership.
+- [RPG_ARCHITECTURE_RFC](RPG_ARCHITECTURE_RFC.md): four-plane split of source meaning, proof/witness, runtime/session, and presentation/theme.
+- [RPG_CANONICAL_TERMINOLOGY](RPG_CANONICAL_TERMINOLOGY.md) and [RPG_BOUNDARY_MAP](RPG_BOUNDARY_MAP.md): terms and boundaries.
 
 Boundary:
 
@@ -267,25 +262,31 @@ Boundary:
 
 Use this branch when AoA supports `Tree-of-Sophia` or derived knowledge work without authoring ToS meaning.
 
-- [docs/COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md): counterpart mappings stay derived, optional, and non-identity.
-- [docs/WITNESS_COMPOST](WITNESS_COMPOST.md): witness and compost pilot doctrine.
-- [docs/TOS_GROWTH_SUPPORT](TOS_GROWTH_SUPPORT.md), [docs/TOS_TEMPLATE_SUPPORT](TOS_TEMPLATE_SUPPORT.md), [docs/TOS_LINEAGE_PILOT_SUPPORT](TOS_LINEAGE_PILOT_SUPPORT.md), [docs/TOS_SOIL_PREP_SUPPORT](TOS_SOIL_PREP_SUPPORT.md): narrow AoA support doctrine for ToS-owned work.
+| Surface | Role |
+|---|---|
+| [ROOTLINE](ROOTLINE.md) | trunk-first AoA x ToS coordination spine |
+| [COUNTERPART_BRIDGE](COUNTERPART_BRIDGE.md) | counterpart mappings stay derived, optional, and non-identity |
+| [WITNESS_COMPOST](WITNESS_COMPOST.md) | witness and compost pilot doctrine |
+| [TOS_GROWTH_SUPPORT](TOS_GROWTH_SUPPORT.md) | narrow support for ToS-owned growth law |
+| [TOS_TEMPLATE_SUPPORT](TOS_TEMPLATE_SUPPORT.md) | support around ToS templates without owning ToS scaffold truth |
+| [TOS_LINEAGE_PILOT_SUPPORT](TOS_LINEAGE_PILOT_SUPPORT.md) | support around ToS lineage pilot work |
+| [TOS_SOIL_PREP_SUPPORT](TOS_SOIL_PREP_SUPPORT.md) | soil-preparation support without ToS authorship |
 
-Rule:
-
-`Tree-of-Sophia` owns authored knowledge meaning. AoA may route, support, derive, witness, or prepare. It does not become ToS canon.
+Rule: `Tree-of-Sophia` owns authored knowledge meaning. AoA may route, support, derive, witness, or prepare. It does not become ToS canon.
 
 ## Release, audit, and support posture
 
 Use this branch when a public claim, release surface, or audit route must be checked.
 
-- [docs/PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md): what the center may honestly claim.
-- [docs/DIRECTION_SURFACES](DIRECTION_SURFACES.md): current direction surface per repo.
-- [docs/FEDERATION_RELEASE_PROTOCOL](FEDERATION_RELEASE_PROTOCOL.md): shared release completeness contract.
-- [docs/RELEASING](RELEASING.md): center release runbook.
-- [ECOSYSTEM_AUDIT_INDEX](../ECOSYSTEM_AUDIT_INDEX.md): audit index.
-- [docs/CODEX_AUDIT_PROTOCOL](CODEX_AUDIT_PROTOCOL.md): Codex audit protocol.
-- [docs/CODEX_SKILL_PROOF_AUDIT_BRIDGE](CODEX_SKILL_PROOF_AUDIT_BRIDGE.md): skill/proof audit bridge.
+| Surface | Role |
+|---|---|
+| [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md) | what the center may honestly claim |
+| [DIRECTION_SURFACES](DIRECTION_SURFACES.md) | current direction surface per repo |
+| [FEDERATION_RELEASE_PROTOCOL](FEDERATION_RELEASE_PROTOCOL.md) | shared release completeness contract |
+| [RELEASING](RELEASING.md) | center release runbook |
+| [ECOSYSTEM_AUDIT_INDEX](../ECOSYSTEM_AUDIT_INDEX.md) | audit index |
+| [CODEX_AUDIT_PROTOCOL](CODEX_AUDIT_PROTOCOL.md) | Codex audit protocol |
+| [CODEX_SKILL_PROOF_AUDIT_BRIDGE](CODEX_SKILL_PROOF_AUDIT_BRIDGE.md) | skill/proof audit bridge |
 
 Compact validation:
 
