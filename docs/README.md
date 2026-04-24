@@ -14,8 +14,9 @@ For the shortest center overview, read:
 2. [`CHARTER`](../CHARTER.md)
 3. [`ECOSYSTEM_MAP`](../ECOSYSTEM_MAP.md)
 4. [`FEDERATION_RULES`](FEDERATION_RULES.md)
-5. [`ROADMAP`](../ROADMAP.md)
-6. [`PUBLIC_SUPPORT_POSTURE`](PUBLIC_SUPPORT_POSTURE.md)
+5. [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md)
+6. [`ROADMAP`](../ROADMAP.md)
+7. [`PUBLIC_SUPPORT_POSTURE`](PUBLIC_SUPPORT_POSTURE.md)
 
 Then use [`MECHANICS`](MECHANICS.md) as the single branch point for center-level processes: method/growth, recurrence/return/continuity, Agon, Experience, antifragility/subtraction, quest/RPG reflection, ToS bridge, release posture, machine companions, and related stop-lines.
 
@@ -26,10 +27,12 @@ Then use [`MECHANICS`](MECHANICS.md) as the single branch point for center-level
 | Authority | Check whether the center may make the claim. | [`CHARTER`](../CHARTER.md) |
 | Contour | Check whether the repo, layer, or anchor is currently named. | [`ECOSYSTEM_MAP`](../ECOSYSTEM_MAP.md) |
 | Ownership law | Check whether source, derived, routing, runtime, and ToS meaning remain separate. | [`FEDERATION_RULES`](FEDERATION_RULES.md) |
+| Root placement | Check whether a file belongs at repository root. | [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md) |
 | Direction | Check whether the claim reflects current program direction. | [`ROADMAP`](../ROADMAP.md), [`DIRECTION_SURFACES`](DIRECTION_SURFACES.md) |
 | Public support | Check whether the claim can be stated publicly and validated. | [`PUBLIC_SUPPORT_POSTURE`](PUBLIC_SUPPORT_POSTURE.md) |
 | Machine contract | Check compact machine-facing capsules. | [`generated/center_entry_map.min.json`](../generated/center_entry_map.min.json), [`generated/ecosystem_registry.min.json`](../generated/ecosystem_registry.min.json), [`generated/federation_supporting_inventory.min.json`](../generated/federation_supporting_inventory.min.json) |
 | Mechanic route | Check process-specific owner splits and stop-lines. | [`MECHANICS`](MECHANICS.md) |
+| Audit route | Check cleanup and drift review surfaces. | [`audits/`](audits/), [`ECOSYSTEM_AUDIT_INDEX`](../ECOSYSTEM_AUDIT_INDEX.md) |
 
 Core validation:
 
@@ -47,7 +50,18 @@ python -m pytest -q tests
 | [`LAYERS`](LAYERS.md) | what each AoA layer is for |
 | [`REPO_ROLES`](REPO_ROLES.md) | what each current or emerging repository owns and should not absorb |
 | [`FEDERATION_RULES`](FEDERATION_RULES.md) | stable source-of-truth boundaries |
+| [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md) | what may live in repository root and where root leaks should move |
 | [`MECHANICS`](MECHANICS.md) | the branch atlas for processes and engineering philosophy |
+
+
+## Documentation districts
+
+| District | Use |
+|---|---|
+| `docs/` root | stable center doctrine and maps that are too deep for repository root but still center-level |
+| [`docs/audits/`](audits/) | audit evidence, cleanup candidates, and root-surface review artifacts |
+| [`docs/registry/`](registry/) | registry evolution notes and future schema/migration planning |
+| [`docs/landings/`](landings/) | historical seed manifests and wave receipts that should not stand in repository root |
 
 ## Doctrine clusters
 
@@ -70,8 +84,9 @@ Use these clusters for orientation only. Deep branch routing belongs in [`MECHAN
 
 1. [`REPO_ROLES`](REPO_ROLES.md)
 2. [`FEDERATION_RULES`](FEDERATION_RULES.md)
-3. [`MECHANICS`](MECHANICS.md)
-4. [`CONTRIBUTING`](../CONTRIBUTING.md)
+3. [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md) if the change touches root
+4. [`MECHANICS`](MECHANICS.md) if the change touches a process or mechanic
+5. [`CONTRIBUTING`](../CONTRIBUTING.md)
 
 ### I need to understand doctrine after the overview
 
@@ -87,6 +102,14 @@ Use these clusters for orientation only. Deep branch routing belongs in [`MECHAN
 2. Read the specific surface and its stop-lines.
 3. Run the matching validator and test named by that surface.
 4. Confirm the change does not grant live authority, runtime activation, memory sovereignty, ToS canon, or owner truth outside the proper owner repository.
+
+
+### I am cleaning root or duplicate surfaces
+
+1. Read [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md).
+2. Check [`FRAGILITY_BLACKLIST`](../FRAGILITY_BLACKLIST.md).
+3. Check [`audits/ROOT_SURFACE_AUDIT_2026_04_24`](audits/ROOT_SURFACE_AUDIT_2026_04_24.md).
+4. Move, merge, or delete only with a surviving canonical home.
 
 ## Notes
 

@@ -4,7 +4,9 @@
 
 Agents of Abyss (AoA) is a modular operational federation for building, evolving, and governing long-horizon agentic systems.
 
-This repository is the canonical high-level statement of that federation. It exists to keep the overall shape of AoA clear even as implementation and authored meaning spread across specialized repositories.
+`Agents-of-Abyss` is the constitutional polis of that federation. It keeps the overall shape of AoA clear while implementation, proof, memory, runtime, authored knowledge, and recurring practice live in their owning repositories.
+
+The center is allowed to name the city. It is not allowed to swallow every district.
 
 ## Mission
 
@@ -13,7 +15,7 @@ AoA exists to support sustained intellectual and technical work through:
 - reusable techniques
 - bounded agent workflows
 - portable evaluation surfaces
-- derived observability and machine-first summary surfaces
+- derived observability and machine-first summaries
 - routing and navigation layers
 - memory and recall layers
 - explicit role contracts
@@ -24,66 +26,46 @@ AoA exists to support sustained intellectual and technical work through:
 
 ## What this repository owns
 
-This repository owns ecosystem-level truth about:
-
-- what AoA is
-- which current public layers belong to AoA
-- what role each layer plays
-- how the layers relate to one another
-- what principles govern growth across the federation
-- how AoA relates to `Tree-of-Sophia` and `abyss-stack`
+| Center-owned object | Meaning |
+|---|---|
+| Ecosystem identity | the public name, center posture, and high-level contour of AoA |
+| Layer map | the current public roles of source-owned, derived, routing, support, and adjacent surfaces |
+| Federation rules | the discipline that keeps source truth, derived truth, routing truth, runtime truth, and authored knowledge truth separate |
+| Program-level direction | roadmap-level direction and maturity crosswalks, without repo-local implementation promises |
+| Center mechanics | constitutional stop-lines, owner-split law, and pre-protocol grammar for mechanics such as Agon and Experience |
+| Root surface governance | the law that decides what belongs in root and what must move into docs, audits, generated surfaces, quests, or owner repos |
+| Center-entry capsules | compact machine-facing surfaces that help low-context agents orient without replacing human docs |
 
 ## What this repository does not own
 
-This repository does not own the primary content of specialized layers.
+| Not owned here | Stronger owner |
+|---|---|
+| reusable technique truth | `aoa-techniques` |
+| executable workflow truth | `aoa-skills` |
+| proof, verdict, scoring, and regression truth | `aoa-evals` |
+| derived observability as authority | `aoa-stats` owns derived views, not authority |
+| route hints as authored truth | `aoa-routing` routes, source owners author |
+| memory, retention, recall, or witness objects as primary truth | `aoa-memo` |
+| role, persona, standing, and handoff truth | `aoa-agents` |
+| scenario choreography and recurring method once operational | `aoa-playbooks` |
+| source canon for graph or retrieval projections | `aoa-kag` stays derived, `Tree-of-Sophia` owns ToS meaning |
+| runtime implementation, services, storage, workers, and daemons | `abyss-stack` |
+| ToS-authored knowledge meaning | `Tree-of-Sophia` |
 
-It does not own:
+## Center discipline
 
-- technique truth
-- skill truth
-- eval truth
-- stats-layer derived-view truth
-- playbook truth
-- memory truth
-- agent-role truth
-- KAG-derived truth as authored source
-- ToS-authored knowledge truth
-- infrastructure implementation detail
+A center claim is healthy only when it makes the owner split easier to inspect. When a center document begins to define repo-local behavior, it should shrink back to routing, stop-lines, or an explicit owner request.
 
-## Public federation, current baseline
+A root file is healthy only when it serves the public civic surface. Historical receipts, audit artifacts, generated objects, and future design notes should live in their proper districts rather than standing beside the constitution.
 
-The current public AoA federation includes:
+- `aoa-stats` stays a derived observability layer, never authority.
 
-- `Agents-of-Abyss`
-- `aoa-techniques`
-- `aoa-skills`
-- `aoa-evals`
-- `aoa-stats`
-- `aoa-routing`
-- `aoa-memo`
-- `aoa-agents`
-- `aoa-playbooks`
-- `aoa-kag`
+## Review rule
 
-Adjacent system anchors include:
+Before changing the center, check:
 
-- `Tree-of-Sophia`
-- `abyss-stack`
-
-## Core principles
-
-- modularity over monolith
-- reviewability over opacity
-- explicit ownership over blurred convenience
-- routing over duplication
-- bounded claims over vague scope inflation
-- durable terminology over naming drift
-- human meaning, agent acceleration
-
-## Direction
-
-AoA should grow by adding clear, reviewable layers rather than collapsing everything into the center.
-
-The center should remain the place where the federation is named, mapped, and governed.
-
-Specialized repositories should remain the places where specialized meaning is owned.
+1. [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current contour.
+2. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth law.
+3. [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) for root placement.
+4. [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md) for honest public claims.
+5. Generated capsules and validators before claiming the change is complete.
