@@ -16,6 +16,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         for relative_path in (
             "README.md",
             "docs/README.md",
+            "docs/MECHANICS.md",
             "AGENTS.md",
             "docs/AGENTS.md",
             "CONTRIBUTING.md",
@@ -29,8 +30,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
     def test_readme_keeps_aoa_sdk_outside_compact_registry_v1_but_routes_to_supporting_inventory(self) -> None:
         readme = read_text("README.md")
         self.assertIn("aoa-sdk", readme)
-        self.assertIn("outside the compact registry v1 by design", readme)
-        self.assertIn("supporting machine-readable inventory", readme)
+        self.assertIn("compact registry membership", readme)
+        self.assertIn("generated/federation_supporting_inventory.min.json", readme)
 
     def test_center_surfaces_name_aoa_stats_as_public_layer(self) -> None:
         readme = read_text("README.md")
@@ -38,15 +39,20 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         ecosystem_map = read_text("ECOSYSTEM_MAP.md")
         roadmap = read_text("ROADMAP.md")
 
-        self.assertIn("`aoa-stats` | derived observability and machine-first summary layer", readme)
+        self.assertIn("`aoa-stats` | derived observability and machine-first summaries", readme)
         self.assertIn("- `aoa-stats`", charter)
         self.assertIn("`aoa-stats` | derived observability layer", ecosystem_map)
         self.assertIn("- `aoa-stats`", roadmap)
 
-    def test_docs_readme_routes_to_aoa_stats_public_layer_decision(self) -> None:
+    def test_docs_readme_routes_to_mechanics_and_decision_notes_remain_available(self) -> None:
         docs_readme = read_text("docs/README.md")
-        self.assertIn("decisions/2026-04-09-aoa-stats-public-layer.md", docs_readme)
-        self.assertIn("public federation contour", docs_readme)
+        mechanics = read_text("docs/MECHANICS.md")
+
+        self.assertIn("MECHANICS.md", docs_readme)
+        self.assertIn("aoa-stats", mechanics)
+        self.assertTrue(
+            (REPO_ROOT / "docs/decisions/2026-04-09-aoa-stats-public-layer.md").exists()
+        )
 
     def test_direction_surfaces_map_routes_sdk_stats_and_seed_garden_through_root_roadmaps(self) -> None:
         direction_surfaces = read_text("docs/DIRECTION_SURFACES.md")
@@ -59,13 +65,15 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
     def test_growth_refinery_routes_include_owner_landing_and_pruning_doctrine(self) -> None:
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
+        mechanics = read_text("docs/MECHANICS.md")
         refinery_doc = read_text("docs/REVIEWABLE_GROWTH_REFINERY.md")
         crosswalk = read_text("docs/CANDIDATE_LINEAGE_CROSSWALK.md")
         owner_landing = read_text("docs/OWNER_LANDING_AND_PRUNING.md")
 
-        self.assertIn("docs/OWNER_LANDING_AND_PRUNING", readme)
-        self.assertIn("python scripts/validate_candidate_lineage_contract.py --workspace-root /srv", readme)
-        self.assertIn("python scripts/validate_wave4_kernel_automation.py --workspace-root /srv", readme)
+        self.assertIn("docs/MECHANICS.md", readme)
+        self.assertIn("docs/OWNER_LANDING_AND_PRUNING", mechanics)
+        self.assertIn("python scripts/validate_candidate_lineage_contract.py --workspace-root /srv", mechanics)
+        self.assertIn("python scripts/validate_wave4_kernel_automation.py --workspace-root /srv", mechanics)
         self.assertIn("OWNER_LANDING_AND_PRUNING.md", docs_readme)
         self.assertIn("docs/OWNER_LANDING_AND_PRUNING.md", refinery_doc)
         self.assertIn("python scripts/validate_candidate_lineage_contract.py --workspace-root /srv", refinery_doc)
@@ -113,12 +121,14 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
     def test_agon_preparation_routes_stay_center_bounded(self) -> None:
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
+        mechanics = read_text("docs/MECHANICS.md")
         roadmap = read_text("ROADMAP.md")
         layers = read_text("docs/LAYERS.md")
         repo_roles = read_text("docs/REPO_ROLES.md")
         posture = read_text("docs/AGON_PREPARATION_POSTURE.md")
 
-        self.assertIn("docs/AGON_PREPARATION_POSTURE", readme)
+        self.assertIn("docs/MECHANICS.md#agon", readme)
+        self.assertIn("AGON_PREPARATION_POSTURE.md", mechanics)
         self.assertIn("AGON_PREPARATION_POSTURE.md", docs_readme)
         self.assertIn("Agon preparation holding boundary", roadmap)
         self.assertIn("Agon preparation protocol posture", layers)
@@ -134,6 +144,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
     def test_agon_imposition_routes_stay_center_bounded(self) -> None:
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
+        mechanics = read_text("docs/MECHANICS.md")
         roadmap = read_text("ROADMAP.md")
         layers = read_text("docs/LAYERS.md")
         repo_roles = read_text("docs/REPO_ROLES.md")
@@ -143,7 +154,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         baseline = read_text("docs/PRE_AGON_BASELINE.md")
         readiness = read_text("generated/agon_imposition_readiness.min.json")
 
-        self.assertIn("docs/AGON_IMPOSITION_POSTURE", readme)
+        self.assertIn("docs/MECHANICS.md#agon", readme)
+        self.assertIn("AGON_IMPOSITION_POSTURE.md", mechanics)
         self.assertIn("AGON_IMPOSITION_POSTURE.md", docs_readme)
         self.assertIn("Agon imposition gate", roadmap)
         self.assertIn("Agon imposition gate", layers)
@@ -160,6 +172,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
     def test_agon_lawful_move_routes_stay_center_bounded(self) -> None:
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
+        mechanics = read_text("docs/MECHANICS.md")
         roadmap = read_text("ROADMAP.md")
         layers = read_text("docs/LAYERS.md")
         repo_roles = read_text("docs/REPO_ROLES.md")
@@ -167,7 +180,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         landing = read_text("docs/AGON_WAVE3_LANDING.md")
         registry = read_text("generated/agon_lawful_move_registry.min.json")
 
-        self.assertIn("docs/AGON_LAWFUL_MOVE_LANGUAGE", readme)
+        self.assertIn("docs/MECHANICS.md#agon", readme)
+        self.assertIn("AGON_LAWFUL_MOVE_LANGUAGE.md", mechanics)
         self.assertIn("AGON_LAWFUL_MOVE_LANGUAGE.md", docs_readme)
         self.assertIn("Agon lawful move language", roadmap)
         self.assertIn("Agon lawful move language", layers)
@@ -180,6 +194,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
     def test_agon_move_owner_binding_routes_stay_center_bounded(self) -> None:
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
+        mechanics = read_text("docs/MECHANICS.md")
         roadmap = read_text("ROADMAP.md")
         layers = read_text("docs/LAYERS.md")
         repo_roles = read_text("docs/REPO_ROLES.md")
@@ -187,7 +202,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         landing = read_text("docs/AGON_WAVE4_LANDING.md")
         registry = read_text("generated/agon_move_owner_binding_registry.min.json")
 
-        self.assertIn("docs/AGON_MOVE_OWNER_BINDING", readme)
+        self.assertIn("docs/MECHANICS.md#agon", readme)
+        self.assertIn("AGON_MOVE_OWNER_BINDING.md", mechanics)
         self.assertIn("AGON_MOVE_OWNER_BINDING.md", docs_readme)
         self.assertIn("Agon move owner binding", roadmap)
         self.assertIn("Agon move owner binding", layers)
@@ -200,6 +216,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
     def test_agon_gate_routing_handoff_routes_stay_center_bounded(self) -> None:
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
+        mechanics = read_text("docs/MECHANICS.md")
         roadmap = read_text("ROADMAP.md")
         layers = read_text("docs/LAYERS.md")
         repo_roles = read_text("docs/REPO_ROLES.md")
@@ -207,8 +224,9 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         landing = read_text("docs/AGON_WAVE5_CENTER_HANDOFF.md")
         request = read_text("generated/agon_gate_routing_handoff_request.min.json")
 
-        self.assertIn("docs/AGON_GATE_ROUTING_HANDOFF", readme)
-        self.assertIn("AGON_GATE_ROUTING_HANDOFF.md", docs_readme)
+        self.assertIn("docs/MECHANICS.md#agon", readme)
+        self.assertIn("MECHANICS.md", docs_readme)
+        self.assertIn("AGON_GATE_ROUTING_HANDOFF.md", mechanics)
         self.assertIn("Agon gate routing handoff", roadmap)
         self.assertIn("Agon gate routing handoff", layers)
         self.assertIn("docs/AGON_GATE_ROUTING_HANDOFF.md", repo_roles)
@@ -220,6 +238,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
     def test_agon_trial_playbook_handoff_routes_stay_center_bounded(self) -> None:
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
+        mechanics = read_text("docs/MECHANICS.md")
         roadmap = read_text("ROADMAP.md")
         layers = read_text("docs/LAYERS.md")
         repo_roles = read_text("docs/REPO_ROLES.md")
@@ -228,8 +247,9 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         stop_lines = read_text("docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md")
         request = read_text("generated/agon_trial_playbook_request.min.json")
 
-        self.assertIn("docs/AGON_TRIAL_PLAYBOOK_HANDOFF", readme)
-        self.assertIn("AGON_TRIAL_PLAYBOOK_HANDOFF.md", docs_readme)
+        self.assertIn("docs/MECHANICS.md#agon", readme)
+        self.assertIn("MECHANICS.md", docs_readme)
+        self.assertIn("AGON_TRIAL_PLAYBOOK_HANDOFF.md", mechanics)
         self.assertIn("Agon trial playbook handoff", roadmap)
         self.assertIn("Agon trial playbook handoff", layers)
         self.assertIn("docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md", repo_roles)

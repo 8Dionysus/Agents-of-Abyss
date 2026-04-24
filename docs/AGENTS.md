@@ -13,6 +13,8 @@ Important documents here include:
 - `LAYERS.md` for the conceptual layer model
 - `REPO_ROLES.md` for compact ownership routing
 - `FEDERATION_RULES.md` for source-of-truth boundaries
+- `MECHANICS.md` as the single branch atlas for center-level processes,
+  engineering philosophy, owner splits, stop-lines, and validation routes
 - `ROOTLINE.md` for the trunk-first planting spine
 - `RECURRENCE_PRINCIPLE.md` for the standing recovery law when a route loses axis and must regain a valid anchor
 - `METHOD_SPINE.md` for the second-wave method doctrine
