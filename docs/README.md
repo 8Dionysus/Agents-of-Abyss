@@ -40,6 +40,7 @@ Core validation:
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
 python scripts/validate_ecosystem.py
+python scripts/validate_markdown_shape.py
 python -m pytest -q tests
 ```
 
@@ -62,6 +63,19 @@ python -m pytest -q tests
 | [`docs/audits/`](audits/) | audit evidence, cleanup candidates, and root-surface review artifacts |
 | [`docs/registry/`](registry/) | registry evolution notes and future schema/migration planning |
 | [`docs/landings/`](landings/) | historical seed manifests and wave receipts that should not stand in repository root |
+
+## Root-adjacent technical districts
+
+| District | Local gate | Use |
+|---|---|---|
+| `generated/` | [`generated/README`](../generated/README.md) | compact machine-facing capsules built from source docs |
+| `scripts/` | [`scripts/README`](../scripts/README.md) | builders, validators, release checks, and local guardrails |
+| `schemas/` | [`schemas/README`](../schemas/README.md) | JSON schema contracts for center-planted surfaces |
+| `tests/` | [`tests/README`](../tests/README.md) | regression tests for generated and center-contract surfaces |
+| `quests/` | [`quests/README`](../quests/README.md) | tracked obligations, not a second roadmap |
+| `manifests/` | [`manifests/README`](../manifests/README.md) | owner-bound manifests and recurrence receipts |
+| `config/` | [`config/README`](../config/README.md) | development and validator configuration, not secrets |
+| `examples/` | [`examples/README`](../examples/README.md) | public-safe examples, not proof canon |
 
 ## Doctrine clusters
 

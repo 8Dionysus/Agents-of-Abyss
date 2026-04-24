@@ -46,6 +46,9 @@ Read:
 
 Machine companions:
 
+- [`generated/README.md`](../generated/README.md)
+- [`scripts/README.md`](../scripts/README.md)
+- [`schemas/README.md`](../schemas/README.md)
 - [`generated/center_entry_map.min.json`](../generated/center_entry_map.min.json)
 - [`generated/ecosystem_registry.min.json`](../generated/ecosystem_registry.min.json)
 - [`generated/federation_supporting_inventory.min.json`](../generated/federation_supporting_inventory.min.json)
@@ -56,6 +59,7 @@ Validation:
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
 python scripts/validate_ecosystem.py
+python scripts/validate_markdown_shape.py
 python -m pytest -q tests
 ```
 
@@ -69,10 +73,8 @@ Core law:
 - [METHOD_SPINE](METHOD_SPINE.md) says recurring scenario-level method belongs in `aoa-playbooks`.
 - [REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md) names the non-sovereign chain `cluster_ref -> candidate_ref -> seed_ref -> object_ref`.
 - [CANDIDATE_LINEAGE_CROSSWALK](CANDIDATE_LINEAGE_CROSSWALK.md) maps stages to owners.
-- [OWNER_LANDING_AND_PRUNING](OWNER_LANDING_AND_PRUNING.md) handles post-candidate landing and pruning.
+- [OWNER_LANDING_AND_PRUNING](OWNER_LANDING_AND_PRUNING.md) handles post-candidate landing and pruning. Canonical route path: `docs/OWNER_LANDING_AND_PRUNING.md`.
 - [COMPONENT_REFRESH_LAW](COMPONENT_REFRESH_LAW.md) handles owner-owned maintenance of one drifting technical component.
-
-Route anchors: `docs/METHOD_SPINE.md`, `docs/REVIEWABLE_GROWTH_REFINERY.md`, `docs/CANDIDATE_LINEAGE_CROSSWALK.md`, and `docs/OWNER_LANDING_AND_PRUNING.md`.
 
 Owner split:
 
@@ -167,22 +169,24 @@ Agon is center-owned as law, vocabulary, stop-line, and owner-binding doctrine. 
 
 ### Agon phase map
 
-| Phase | Surfaces | Role |
+This table names the branch, points to its first anchors, and keeps the full surface chain out of the root-facing atlas rows.
+
+| Phase | Start here | Role |
 |---|---|---|
-| Baseline and imposition | [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md), [AGON_IMPOSITION_POSTURE](AGON_IMPOSITION_POSTURE.md), [AGON_SURVIVAL_CRITERIA](AGON_SURVIVAL_CRITERIA.md), [AGON_DOUBT_AUDIT](AGON_DOUBT_AUDIT.md), [PRE_AGON_BASELINE](PRE_AGON_BASELINE.md) | conservative boundary, survival lens, and first pressure gate before live protocol |
-| Lawful move language | [AGON_LAWFUL_MOVE_LANGUAGE](AGON_LAWFUL_MOVE_LANGUAGE.md), [AGON_MOVE_REGISTRY_MODEL](AGON_MOVE_REGISTRY_MODEL.md), [AGON_MOVE_OWNER_HANDOFFS](AGON_MOVE_OWNER_HANDOFFS.md) | center vocabulary and registry contour without execution authority |
-| Owner binding | [AGON_MOVE_OWNER_BINDING](AGON_MOVE_OWNER_BINDING.md), [AGON_MOVE_BINDING_MATRIX_MODEL](AGON_MOVE_BINDING_MATRIX_MODEL.md), [AGON_OWNER_REPO_REQUESTS](AGON_OWNER_REPO_REQUESTS.md), [AGON_PRE_PROTOCOL_STOP_LINES](AGON_PRE_PROTOCOL_STOP_LINES.md) | owner gravity for moves and explicit non-landed requests |
-| Gate, playbook, recurrence, prebinding | [AGON_GATE_ROUTING_HANDOFF](AGON_GATE_ROUTING_HANDOFF.md), [AGON_GATE_ROUTING_OWNER_REQUEST](AGON_GATE_ROUTING_OWNER_REQUEST.md), [AGON_GATE_ROUTING_STOP_LINES](AGON_GATE_ROUTING_STOP_LINES.md), [AGON_TRIAL_PLAYBOOK_HANDOFF](AGON_TRIAL_PLAYBOOK_HANDOFF.md), [AGON_TRIAL_PLAYBOOK_OWNER_REQUEST](AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md), [AGON_TRIAL_PLAYBOOK_STOP_LINES](AGON_TRIAL_PLAYBOOK_STOP_LINES.md), [AGON_RECURRENCE_ADAPTER](AGON_RECURRENCE_ADAPTER.md), [AGON_RECURRENCE_ADAPTER_HANDOFF](AGON_RECURRENCE_ADAPTER_HANDOFF.md), [AGON_RECURRENCE_OWNER_REQUEST](AGON_RECURRENCE_OWNER_REQUEST.md), [AGON_RECURRENCE_STOP_LINES](AGON_RECURRENCE_STOP_LINES.md), [AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF](AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF.md), [AGON_COURT_MEMO_STATS_PREBINDING_OWNER_REQUEST](AGON_COURT_MEMO_STATS_PREBINDING_OWNER_REQUEST.md), [AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES](AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md) | pre-protocol handoffs to routing, playbooks, recurrence, proof, memory, and stats without granting authority |
-| Arena, seats, pressure, sessions | [AGON_ARENA_SESSION_MODEL](AGON_ARENA_SESSION_MODEL.md), [AGON_ARENA_SESSION_STOP_LINES](AGON_ARENA_SESSION_STOP_LINES.md), [AGON_SESSION_LIFECYCLE_MODEL](AGON_SESSION_LIFECYCLE_MODEL.md), [AGON_CHARTER_AND_SEAT_MODEL](AGON_CHARTER_AND_SEAT_MODEL.md), [AGON_PRESSURE_PROFILE_MODEL](AGON_PRESSURE_PROFILE_MODEL.md) | future session frame, seating, lifecycle, and pressure profile without live arena |
-| Packets and commitments | [AGON_STATE_PACKET_MODEL](AGON_STATE_PACKET_MODEL.md), [AGON_STATE_PACKET_STOP_LINES](AGON_STATE_PACKET_STOP_LINES.md), [AGON_PACKET_SEQUENCE_MODEL](AGON_PACKET_SEQUENCE_MODEL.md), [AGON_PACKET_OWNER_HANDOFFS](AGON_PACKET_OWNER_HANDOFFS.md), [AGON_SEALED_COMMIT_MODEL](AGON_SEALED_COMMIT_MODEL.md) | declaration, reveal, revision, packet sequence, and owner handoff grammar |
-| Contradiction, closure, summon | [AGON_CONTRADICTION_LAW_MODEL](AGON_CONTRADICTION_LAW_MODEL.md), [AGON_CONTRADICTION_CLOSURE_SUMMON_LAW](AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md), [AGON_CLOSURE_LAW_MODEL](AGON_CLOSURE_LAW_MODEL.md), [AGON_SUMMON_LAW_MODEL](AGON_SUMMON_LAW_MODEL.md), [AGON_LAW_INTERLOCKS](AGON_LAW_INTERLOCKS.md) | contradiction handling and closure/summon law without unbounded escalation |
-| Verdict, delta, scars, inscription | [AGON_VERDICT_DRAFT_MODEL](AGON_VERDICT_DRAFT_MODEL.md), [AGON_VERDICT_DELTA_SCAR_BRIDGE](AGON_VERDICT_DELTA_SCAR_BRIDGE.md), [AGON_SCAR_REQUEST_BRIDGE_MODEL](AGON_SCAR_REQUEST_BRIDGE_MODEL.md), [AGON_DELTA_RECEIPT_MODEL](AGON_DELTA_RECEIPT_MODEL.md), [AGON_CONCEPT_MAP_DELTA_MODEL](AGON_CONCEPT_MAP_DELTA_MODEL.md), [AGON_INSCRIPTION_BUNDLE_MODEL](AGON_INSCRIPTION_BUNDLE_MODEL.md) | draft verdicts, deltas, scars, receipts, concept-map candidates, and inscription bundles without runtime mutation |
-| Duel kernel and model-of-other | [AGON_DUEL_KERNEL_MODEL](AGON_DUEL_KERNEL_MODEL.md), [AGON_DUEL_KERNEL_EVENT_MODEL](AGON_DUEL_KERNEL_EVENT_MODEL.md), [AGON_DUEL_KERNEL_OWNER_HANDOFFS](AGON_DUEL_KERNEL_OWNER_HANDOFFS.md), [AGON_DUEL_KERNEL_SEAT_MODEL](AGON_DUEL_KERNEL_SEAT_MODEL.md), [AGON_MODEL_OF_OTHER_LAW](AGON_MODEL_OF_OTHER_LAW.md), [AGON_BIFURCATION_RUPTURE_MODEL](AGON_BIFURCATION_RUPTURE_MODEL.md) | duel kernel grammar, event model, seats, model-of-other law, and bifurcation pressure without live duel authority |
-| Mechanical trials | [AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL](AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md), [AGON_MECHANICAL_TRIAL_RUN_MODEL](AGON_MECHANICAL_TRIAL_RUN_MODEL.md), [AGON_MECHANICAL_TRIAL_OUTCOME_CANDIDATE_MODEL](AGON_MECHANICAL_TRIAL_OUTCOME_CANDIDATE_MODEL.md), [AGON_MECHANICAL_TRIAL_OWNER_HANDOFFS](AGON_MECHANICAL_TRIAL_OWNER_HANDOFFS.md) | trial-suite grammar and outcome candidates without proof sovereignty |
-| Epistemic Agon | [AGON_EPISTEMIC_AGON](AGON_EPISTEMIC_AGON.md), [AGON_EPISTEMIC_MOVE_EXTENSION_MODEL](AGON_EPISTEMIC_MOVE_EXTENSION_MODEL.md), [AGON_EPISTEMIC_OWNER_HANDOFFS](AGON_EPISTEMIC_OWNER_HANDOFFS.md) | epistemic contest grammar and handoffs without truth ownership |
-| Retention, rank, standing | [AGON_RETENTION_RANK_ECONOMY](AGON_RETENTION_RANK_ECONOMY.md), [AGON_RETENTION_CHECK_MODEL](AGON_RETENTION_CHECK_MODEL.md), [AGON_RETENTION_REQUEST_MODEL](AGON_RETENTION_REQUEST_MODEL.md), [AGON_RETENTION_OWNER_HANDOFFS](AGON_RETENTION_OWNER_HANDOFFS.md), [AGON_RANK_JURISDICTION_MODEL](AGON_RANK_JURISDICTION_MODEL.md), [AGON_RANK_MUTATION_CANDIDATE_MODEL](AGON_RANK_MUTATION_CANDIDATE_MODEL.md) | retention, standing, rank, jurisdiction, and mutation candidates without live rank authority |
-| Schools, lineages, campaigns | [AGON_SCHOOL_MODEL](AGON_SCHOOL_MODEL.md), [AGON_LINEAGE_MODEL](AGON_LINEAGE_MODEL.md), [AGON_CAMPAIGN_MODEL](AGON_CAMPAIGN_MODEL.md), [AGON_CAMPAIGN_OWNER_HANDOFFS](AGON_CAMPAIGN_OWNER_HANDOFFS.md), [AGON_SCHOOLS_LINEAGES_CAMPAIGNS](AGON_SCHOOLS_LINEAGES_CAMPAIGNS.md) | school, lineage, and campaign grammar without hidden hierarchy |
-| KAG, canon, Sophian threshold | [AGON_KAG_PROMOTION_PATH](AGON_KAG_PROMOTION_PATH.md), [AGON_KAG_PROMOTION_CANDIDATE_MODEL](AGON_KAG_PROMOTION_CANDIDATE_MODEL.md), [AGON_KAG_SURVIVAL_CRITERIA](AGON_KAG_SURVIVAL_CRITERIA.md), [AGON_KAG_OWNER_HANDOFFS](AGON_KAG_OWNER_HANDOFFS.md), [AGON_CANON_RESTRAINT_MODEL](AGON_CANON_RESTRAINT_MODEL.md), [AGON_TOS_THRESHOLD_PACKET_MODEL](AGON_TOS_THRESHOLD_PACKET_MODEL.md), [AGON_SOPHIAN_THRESHOLD](AGON_SOPHIAN_THRESHOLD.md), [AGON_SOPHIAN_OWNER_HANDOFFS](AGON_SOPHIAN_OWNER_HANDOFFS.md), [AGON_TERMINAL_OUTCOME_MODEL](AGON_TERMINAL_OUTCOME_MODEL.md) | promotion candidates, canon restraint, ToS/Sophian thresholds, and terminal outcome boundaries without direct canon write |
+| Baseline and imposition | [AGON_PREPARATION_POSTURE](AGON_PREPARATION_POSTURE.md), [AGON_IMPOSITION_POSTURE](AGON_IMPOSITION_POSTURE.md), [AGON_SURVIVAL_CRITERIA](AGON_SURVIVAL_CRITERIA.md) | conservative boundary, survival lens, and first pressure gate before live protocol |
+| Lawful move language | [AGON_LAWFUL_MOVE_LANGUAGE](AGON_LAWFUL_MOVE_LANGUAGE.md), [AGON_MOVE_REGISTRY_MODEL](AGON_MOVE_REGISTRY_MODEL.md) | center vocabulary and registry contour without execution authority |
+| Owner binding | [AGON_MOVE_OWNER_BINDING](AGON_MOVE_OWNER_BINDING.md), [AGON_MOVE_BINDING_MATRIX_MODEL](AGON_MOVE_BINDING_MATRIX_MODEL.md), [AGON_PRE_PROTOCOL_STOP_LINES](AGON_PRE_PROTOCOL_STOP_LINES.md) | owner gravity for moves and explicit non-landed requests |
+| Gate, playbook, recurrence, prebinding | [AGON_GATE_ROUTING_HANDOFF](AGON_GATE_ROUTING_HANDOFF.md), [AGON_TRIAL_PLAYBOOK_HANDOFF](AGON_TRIAL_PLAYBOOK_HANDOFF.md), [AGON_RECURRENCE_ADAPTER](AGON_RECURRENCE_ADAPTER.md), [AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF](AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF.md) | handoffs to routing, playbooks, recurrence, proof, memory, and stats without granting authority |
+| Arena, seats, pressure, sessions | [AGON_ARENA_SESSION_MODEL](AGON_ARENA_SESSION_MODEL.md), [AGON_SESSION_LIFECYCLE_MODEL](AGON_SESSION_LIFECYCLE_MODEL.md), [AGON_CHARTER_AND_SEAT_MODEL](AGON_CHARTER_AND_SEAT_MODEL.md) | future session frame, seating, lifecycle, and pressure profile without live arena |
+| Packets and commitments | [AGON_STATE_PACKET_MODEL](AGON_STATE_PACKET_MODEL.md), [AGON_PACKET_SEQUENCE_MODEL](AGON_PACKET_SEQUENCE_MODEL.md), [AGON_SEALED_COMMIT_MODEL](AGON_SEALED_COMMIT_MODEL.md) | declaration, reveal, revision, packet sequence, and owner handoff grammar |
+| Contradiction, closure, summon | [AGON_CONTRADICTION_LAW_MODEL](AGON_CONTRADICTION_LAW_MODEL.md), [AGON_CONTRADICTION_CLOSURE_SUMMON_LAW](AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md), [AGON_LAW_INTERLOCKS](AGON_LAW_INTERLOCKS.md) | contradiction handling and closure/summon law without unbounded escalation |
+| Verdict, delta, scars, inscription | [AGON_VERDICT_DRAFT_MODEL](AGON_VERDICT_DRAFT_MODEL.md), [AGON_VERDICT_DELTA_SCAR_BRIDGE](AGON_VERDICT_DELTA_SCAR_BRIDGE.md), [AGON_INSCRIPTION_BUNDLE_MODEL](AGON_INSCRIPTION_BUNDLE_MODEL.md) | draft verdicts, deltas, scars, receipts, concept-map candidates, and inscription bundles without runtime mutation |
+| Duel kernel and model-of-other | [AGON_DUEL_KERNEL_MODEL](AGON_DUEL_KERNEL_MODEL.md), [AGON_DUEL_KERNEL_EVENT_MODEL](AGON_DUEL_KERNEL_EVENT_MODEL.md), [AGON_MODEL_OF_OTHER_LAW](AGON_MODEL_OF_OTHER_LAW.md) | duel kernel grammar, event model, seats, model-of-other law, and bifurcation pressure without live duel authority |
+| Mechanical trials | [AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL](AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md), [AGON_MECHANICAL_TRIAL_RUN_MODEL](AGON_MECHANICAL_TRIAL_RUN_MODEL.md) | trial-suite grammar and outcome candidates without proof sovereignty |
+| Epistemic Agon | [AGON_EPISTEMIC_AGON](AGON_EPISTEMIC_AGON.md), [AGON_EPISTEMIC_MOVE_EXTENSION_MODEL](AGON_EPISTEMIC_MOVE_EXTENSION_MODEL.md) | epistemic contest grammar and handoffs without truth ownership |
+| Retention, rank, standing | [AGON_RETENTION_RANK_ECONOMY](AGON_RETENTION_RANK_ECONOMY.md), [AGON_RETENTION_CHECK_MODEL](AGON_RETENTION_CHECK_MODEL.md), [AGON_RANK_JURISDICTION_MODEL](AGON_RANK_JURISDICTION_MODEL.md) | retention, standing, rank, jurisdiction, and mutation candidates without live rank authority |
+| Schools, lineages, campaigns | [AGON_SCHOOL_MODEL](AGON_SCHOOL_MODEL.md), [AGON_LINEAGE_MODEL](AGON_LINEAGE_MODEL.md), [AGON_CAMPAIGN_MODEL](AGON_CAMPAIGN_MODEL.md) | school, lineage, and campaign grammar without hidden hierarchy |
+| KAG, canon, Sophian threshold | [AGON_KAG_PROMOTION_PATH](AGON_KAG_PROMOTION_PATH.md), [AGON_CANON_RESTRAINT_MODEL](AGON_CANON_RESTRAINT_MODEL.md), [AGON_SOPHIAN_THRESHOLD](AGON_SOPHIAN_THRESHOLD.md) | promotion candidates, canon restraint, ToS/Sophian thresholds, and terminal outcome boundaries without direct canon write |
 
 ### Agon wave landings
 
@@ -293,6 +297,7 @@ Compact validation:
 
 ```bash
 python scripts/validate_ecosystem.py
+python scripts/validate_markdown_shape.py
 python -m pytest -q tests
 ```
 

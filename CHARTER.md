@@ -15,7 +15,7 @@ AoA exists to support sustained intellectual and technical work through:
 - reusable techniques
 - bounded agent workflows
 - portable evaluation surfaces
-- derived observability and machine-first summaries
+- `aoa-stats` derived observability and machine-first summaries
 - routing and navigation layers
 - memory and recall layers
 - explicit role contracts
@@ -57,8 +57,6 @@ AoA exists to support sustained intellectual and technical work through:
 A center claim is healthy only when it makes the owner split easier to inspect. When a center document begins to define repo-local behavior, it should shrink back to routing, stop-lines, or an explicit owner request.
 
 A root file is healthy only when it serves the public civic surface. Historical receipts, audit artifacts, generated objects, and future design notes should live in their proper districts rather than standing beside the constitution.
-
-- `aoa-stats` stays a derived observability layer, never authority.
 
 ## Review rule
 
