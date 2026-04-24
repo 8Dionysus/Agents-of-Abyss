@@ -21,6 +21,7 @@ surfaces where that direction becomes operational.
 
 Then branch by task:
 
+- process, mechanic, or engineering-philosophy route questions: `docs/MECHANICS.md`
 - method-centered growth or scenario-home questions: `docs/METHOD_SPINE.md`
 - adjunct RPG reflection or canonical vocabulary questions: `docs/RPG_LAYER_MODEL.md` and `docs/RPG_CANONICAL_TERMINOLOGY.md`
 - move-owner binding, owner-request, or pre-protocol stop-line questions:
