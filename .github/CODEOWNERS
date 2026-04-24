@@ -4,7 +4,20 @@
 /docs/ @8Dionysus
 /generated/ @8Dionysus
 /schemas/ @8Dionysus
+/config/ @8Dionysus
+/examples/ @8Dionysus
+/manifests/ @8Dionysus
+/quests/ @8Dionysus
+
 /README.md @8Dionysus
 /CHARTER.md @8Dionysus
 /ECOSYSTEM_MAP.md @8Dionysus
 /ROADMAP.md @8Dionysus
+/GLOSSARY.md @8Dionysus
+/QUESTBOOK.md @8Dionysus
+/ECOSYSTEM_AUDIT_INDEX.md @8Dionysus
+/FRAGILITY_BLACKLIST.md @8Dionysus
+/docs/ROOT_SURFACE_LAW.md @8Dionysus
+/docs/audits/ @8Dionysus
+/docs/registry/ @8Dionysus
+/docs/landings/ @8Dionysus

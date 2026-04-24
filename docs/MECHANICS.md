@@ -18,7 +18,7 @@ This file does not create new authority. It keeps the root README human-sized wh
 
 | Mechanic | Center question | Current status | Start here | Must not claim |
 |---|---|---|---|---|
-| Constitutional polis | What does the center own, and what must stay outside it? | landed center law | [CHARTER](../CHARTER.md), [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md), [FEDERATION_RULES](FEDERATION_RULES.md) | layer-owned truth |
+| Constitutional polis | What does the center own, and what must stay outside it? | landed center law | [CHARTER](../CHARTER.md), [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md), [FEDERATION_RULES](FEDERATION_RULES.md), [ROOT_SURFACE_LAW](ROOT_SURFACE_LAW.md) | layer-owned truth or root-surface inflation |
 | Layer ownership | Which repository owns this object class? | landed route map | [LAYERS](LAYERS.md), [REPO_ROLES](REPO_ROLES.md) | convenience ownership transfer |
 | Method and growth refinery | How does repeated work move from donor or checkpoint to candidate, seed, owner landing, proof, method, memory, or derived summary? | center doctrine and cross-owner route | [METHOD_SPINE](METHOD_SPINE.md), [REVIEWABLE_GROWTH_REFINERY](REVIEWABLE_GROWTH_REFINERY.md) | center-owned scenario canon |
 | Recursion, recurrence, return, continuity | How does AoA recover when a route loses its axis and must re-enter through a valid anchor? | bounded return law | [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md), [SELF_AGENCY_CONTINUITY](SELF_AGENCY_CONTINUITY.md) | ambient continuity or hidden memory sovereignty |
@@ -41,7 +41,8 @@ Read:
 3. [LAYERS](LAYERS.md) for conceptual layer definitions.
 4. [REPO_ROLES](REPO_ROLES.md) for compact ownership routing.
 5. [FEDERATION_RULES](FEDERATION_RULES.md) for source-of-truth law.
-6. [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md) for public claim and CI posture.
+6. [ROOT_SURFACE_LAW](ROOT_SURFACE_LAW.md) for repository-root placement and cleanup law.
+7. [PUBLIC_SUPPORT_POSTURE](PUBLIC_SUPPORT_POSTURE.md) for public claim and CI posture.
 
 Machine companions:
 
@@ -222,7 +223,7 @@ Use this branch when the system is under stress, sprawl, authority inflation, or
 | [ANTI_AUTHORITY_RULES](ANTI_AUTHORITY_RULES.md) | stop authority inflation |
 | [ONE_IN_ONE_OUT](ONE_IN_ONE_OUT.md) | sprawl pressure rule |
 | [FRAGILITY_BLACKLIST](../FRAGILITY_BLACKLIST.md) | known fragile patterns |
-| [DELETION_CANDIDATES](../DELETION_CANDIDATES.json) | deletion candidates |
+| [DELETION_CANDIDATES](audits/DELETION_CANDIDATES.json) | deletion candidates |
 
 Review questions:
 
@@ -284,7 +285,7 @@ Use this branch when a public claim, release surface, or audit route must be che
 | [DIRECTION_SURFACES](DIRECTION_SURFACES.md) | current direction surface per repo |
 | [FEDERATION_RELEASE_PROTOCOL](FEDERATION_RELEASE_PROTOCOL.md) | shared release completeness contract |
 | [RELEASING](RELEASING.md) | center release runbook |
-| [ECOSYSTEM_AUDIT_INDEX](../ECOSYSTEM_AUDIT_INDEX.md) | audit index |
+| [ECOSYSTEM_AUDIT_INDEX](../ECOSYSTEM_AUDIT_INDEX.md), [ROOT_SURFACE_AUDIT_2026_04_24](audits/ROOT_SURFACE_AUDIT_2026_04_24.md) | audit index |
 | [CODEX_AUDIT_PROTOCOL](CODEX_AUDIT_PROTOCOL.md) | Codex audit protocol |
 | [CODEX_SKILL_PROOF_AUDIT_BRIDGE](CODEX_SKILL_PROOF_AUDIT_BRIDGE.md) | skill/proof audit bridge |
 

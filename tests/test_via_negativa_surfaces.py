@@ -8,7 +8,13 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_deletion_candidates_surface_stays_owner_aware() -> None:
-    candidates = json.loads((REPO_ROOT / "DELETION_CANDIDATES.json").read_text())
+    root_candidate_path = REPO_ROOT / "DELETION_CANDIDATES.json"
+    candidate_path = REPO_ROOT / "docs" / "audits" / "DELETION_CANDIDATES.json"
+
+    assert not root_candidate_path.exists()
+    assert candidate_path.exists()
+
+    candidates = json.loads(candidate_path.read_text())
     schema = json.loads(
         (REPO_ROOT / "schemas" / "deletion_candidate_list_v1.json").read_text()
     )
