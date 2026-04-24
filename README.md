@@ -6,7 +6,7 @@ It is not one bot, one workflow, or one narrow automation project. It is a modul
 
 This repository is the constitutional and ecosystem-center repository of AoA. It names the federation, maps its layers, states the growth rules, and routes readers toward the repositories that own specialized meaning. It should keep the ecosystem intelligible without absorbing it.
 
-> Current release: `v0.2.2`. See [CHANGELOG](CHANGELOG.md) for release notes.
+> Current release: `v0.2.3`. See [CHANGELOG](CHANGELOG.md) for release notes.
 
 ## Start here
 

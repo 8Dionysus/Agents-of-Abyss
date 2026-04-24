@@ -7,6 +7,24 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+## [0.2.3] - 2026-04-23
+
+### Summary
+
+- this patch lands the Agon pre-protocol center line from imposition,
+  lawful-move vocabulary, owner binding, and gate routing through trial
+  handoffs, recurrence, contradiction closure, duel kernels, mechanical
+  trials, epistemic agon, rank economy, schools, lineages, campaigns, and
+  ToS/KAG threshold posture
+- the Experience program advances from wave1-wave5 (external v0.1-v1.1)
+  into the v1.2-v2.0 planting line: service mesh operations, office foundry,
+  mechanical arena, epistemic duel, reputation, affect, context routing,
+  continuity loom, and living workspace runtime doctrine are now visible from
+  the center
+- `Agents-of-Abyss` remains the constitutional center: it records law,
+  stop-lines, handoffs, and review contracts without taking over runtime,
+  proof, skill, memory, KAG, or ToS authored truth
+
 ### Added
 
 - Agon Wave 0 imposition doctrine, readiness capsule, and explicit builder /
@@ -17,6 +35,15 @@ Tracking starts with the community-docs baseline for this repository.
   explicit builder / validator / test surfaces for the center repository
 - Agon Wave V gate routing handoff doctrine, center handoff request seed, and
   explicit builder / validator / test surfaces for the center repository
+- center-owned Agon doctrine, registries, and owner-request surfaces for trial
+  playbooks, recurrence adapters, contradiction closure, verdict delta scars,
+  duel kernels, mechanical trials, epistemic agon, retention rank, schools,
+  lineages, campaigns, KAG promotion, and Sophian thresholds
+- Experience center doctrine for the external v0.1-v1.1 seed line
+  (kernel, certification/watchtower, federation/adoption, polis/constitution,
+  and sovereign office) plus the v1.2-v2.0 bridge and versioned center
+  contracts for service mesh, office foundry, arena, duel, rank, affect,
+  routing, continuity, and living workspace runtime
 
 ### Changed
 
@@ -28,9 +55,16 @@ Tracking starts with the community-docs baseline for this repository.
   first pre-protocol lawful move vocabulary from the next owner-binding turn
 - center route docs, layer map, and local guide surfaces now distinguish the
   owner-binding turn from the next gate-routing handoff into `aoa-routing`
+- review follow-up validators, ordering checks, generated registry checks,
+  and contract guards were tightened across the Agon and Experience center
+  surfaces
+- center route docs, layer maps, seed manifests, and generated registry
+  surfaces now keep Agon, Experience, and sibling-owner handoffs legible
+  without moving specialized implementation authority into the center
 
 ### Validation
 
+- `python scripts/release_check.py`
 - `python scripts/build_agon_imposition_readiness.py --check`
 - `python scripts/validate_agon_imposition_readiness.py`
 - `python -m pytest -q tests/test_agon_imposition_readiness.py`
@@ -43,6 +77,12 @@ Tracking starts with the community-docs baseline for this repository.
 - `python scripts/build_agon_gate_routing_handoff_request.py --check`
 - `python scripts/validate_agon_gate_routing_handoff_request.py`
 - `python -m pytest -q tests/test_agon_gate_routing_handoff_request.py`
+
+### Notes
+
+- this release is a center-owned doctrine and routing release; sibling repos
+  still own execution workflows, proof bundles, runtime records, memory
+  objects, derived KAG structures, and source-authored ToS meaning
 
 ## [0.2.2] - 2026-04-19
 

@@ -69,7 +69,7 @@ The current center framing also includes its first bounded cross-repo entry and 
 
 ### Current release contour
 
-The live center contour for `v0.2.2` is roadmap continuity and owner-boundary
+The live center contour for `v0.2.3` is roadmap continuity and owner-boundary
 hardening, not a new implementation layer. Its current checked surface is:
 
 - center public route and support posture:
@@ -101,7 +101,7 @@ owning repositories.
 
 ### Unreleased next turn: Agon imposition gate
 
-The next unreleased center turn after `v0.2.2` is the Agon imposition gate. Its
+The next unreleased center turn after `v0.2.3` is the Agon imposition gate. Its
 checked surface is:
 
 - center-owned Agon turn docs:
