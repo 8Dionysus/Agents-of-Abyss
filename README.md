@@ -18,7 +18,7 @@ This README is human-first and agent-useful. A person should see the city before
 |---|---|---|
 | Constitutional center | Proven center surface for identity, layer map, federation rules, and program-level direction. | A stable civic root for the AoA federation: clear enough for humans, strict enough for agents. |
 | Federation contour | Compact registry v1 names the public AoA contour and adjacent anchors. Supporting consumers are tracked separately. | Every layer can grow without stealing another layer's truth. |
-| Root surface governance | The root contains civic docs, public governance docs, indexes, machine folders, and a few legacy leak artifacts that should be moved or narrowed. | The root should stay a city gate: lawful, readable, sparse, and strict about what belongs nearby. |
+| Root surface governance | Root surface law is planted, first root-leak cleanup is defined, and technical districts now get local gates. | The root should stay a city gate: lawful, readable, sparse, and strict about what belongs nearby. |
 | Mechanics | Agon, Experience, recurrence/return, growth, quest/RPG reflection, antifragility, and ToS support are mostly center contracts, doctrine, or pre-protocol routes. | A readable engineering philosophy where every mechanic has a home, owner split, stop-line, and verification path. |
 | Runtime | The center does not run the body. Runtime belongs to `abyss-stack` or later owner-local gates. | Runtime can enact validated mechanics without becoming the source of law or meaning. |
 | Self-agency | Continuity is anchor-bound and reviewable. No permissionless autonomy, hidden memory sovereignty, or live arena authority is claimed here. | Long-horizon agency can preserve continuity, revise method, and return to anchors without losing provenance or human judgment. |
@@ -56,6 +56,7 @@ Use this tree before trusting a claim made by the center:
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
 python scripts/validate_ecosystem.py
+python scripts/validate_markdown_shape.py
 python -m pytest -q tests
 ```
 
@@ -69,7 +70,7 @@ Do not add a root file because a thought feels important. The root is allowed to
 | Civic law and map | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md` | keep in root, make human-readable, and cross-check with generated capsules |
 | Public governance and legal | `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `LICENSE` | keep in root because platforms and contributors expect them there |
 | Thin civic indexes | `GLOSSARY.md`, `QUESTBOOK.md`, `ECOSYSTEM_AUDIT_INDEX.md`, `FRAGILITY_BLACKLIST.md` | keep only if they stay compact and route deeper rather than duplicate deeper doctrine |
-| Machine and developer districts | `scripts/`, `schemas/`, `generated/`, `tests/`, `config/`, `examples/`, `.github/` | keep by function, not as narrative surfaces |
+| Machine and developer districts | `scripts/`, `schemas/`, `generated/`, `tests/`, `config/`, `examples/`, `manifests/`, `quests/`, `.github/` | keep by function, give each district a local README gate, and do not let generated or executable surfaces become source truth |
 | Agent lanes | `AGENTS.md`, `.agents/`, `Spark/` | keep under their own lane law; do not use them as general root docs |
 
 Everything else must justify its place through [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md).
@@ -120,7 +121,7 @@ Treat this contour as a map of planted law, contracts, candidates, and proof sur
 | Contour | Current status | Do not read as | Primary surfaces |
 |---|---|---|---|
 | Public center map | landed public route and registry v1 | a claim that the center owns every object it names | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, generated registry capsules |
-| Root surface governance | civic root law plus first cleanup route for leaked historical, audit, and design-note artifacts | permission to hide history or delete without review | `docs/ROOT_SURFACE_LAW.md`, `docs/audits/ROOT_SURFACE_AUDIT_2026_04_24.md` |
+| Root surface governance | civic root law, completed root-leak cleanup route, district gates, and Markdown shape guardrail | permission to hide history, delete without review, or turn district READMEs into doctrine catalogs | `docs/ROOT_SURFACE_LAW.md`, `docs/audits/ROOT_SURFACE_AUDIT_2026_04_24.md`, `scripts/validate_markdown_shape.py`, local district READMEs |
 | Method and growth | center doctrine and cross-owner route | a new lineage layer or center-owned method corpus | `docs/METHOD_SPINE.md`, `docs/REVIEWABLE_GROWTH_REFINERY.md`, `docs/CANDIDATE_LINEAGE_CROSSWALK.md`, `docs/OWNER_LANDING_AND_PRUNING.md` |
 | Recurrence and continuity | bounded return to valid anchors | ambient continuity, hidden memory, or runtime autonomy | `docs/RECURRENCE_PRINCIPLE.md`, `docs/SELF_AGENCY_CONTINUITY.md`, `docs/COMPONENT_REFRESH_LAW.md` |
 | Agon | center-owned pre-protocol law, move language, owner binding, handoffs, arena grammar, consequence candidates, and threshold restraint | live arena execution, assistant contestant authority, live rank mutation, or canon write authority | `docs/MECHANICS.md#agon` and linked `AGON_*` surfaces |
@@ -129,6 +130,12 @@ Treat this contour as a map of planted law, contracts, candidates, and proof sur
 | Quest/RPG reflection | public quest model and adjunct progression reading layer | runtime ledger, global score, or hidden ontology | `QUESTBOOK.md`, `quests/`, `docs/QUESTBOOK_MODEL.md`, `docs/RPG_LAYER_MODEL.md` |
 | ToS support and counterpart work | AoA may route, support, witness, derive, and prepare ToS-adjacent seams | AoA-authored ToS meaning or direct ToS canon write | `docs/COUNTERPART_BRIDGE.md`, `docs/WITNESS_COMPOST.md`, `docs/TOS_GROWTH_SUPPORT.md`, `docs/TOS_TEMPLATE_SUPPORT.md`, `docs/TOS_LINEAGE_PILOT_SUPPORT.md`, `docs/TOS_SOIL_PREP_SUPPORT.md` |
 | Release and support | public claims must align across human docs, generated capsules, and validators | release glamour without claim verification | `docs/PUBLIC_SUPPORT_POSTURE.md`, `docs/FEDERATION_RELEASE_PROTOCOL.md`, `docs/RELEASING.md`, `scripts/`, `tests/` |
+
+## Technical district gates
+
+Root-adjacent technical districts now have their own local gates: `generated/README.md`, `scripts/README.md`, `schemas/README.md`, `tests/README.md`, `config/README.md`, `examples/README.md`, `manifests/README.md`, `manifests/recurrence/README.md`, and `quests/README.md`.
+
+Use them when the question is no longer constitutional, but district-local: how builders, validators, generated capsules, schemas, manifests, tests, examples, or quest obligations should be handled.
 
 ## Working rule
 

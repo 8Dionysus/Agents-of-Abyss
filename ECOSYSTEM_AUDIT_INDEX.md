@@ -26,7 +26,7 @@ It exists to answer five questions fast:
 
 | Repository | Audit class | Owns | Primary source-of-truth docs | Mandatory verification before "done" | Default audit focus | Route away when |
 |---|---|---|---|---|---|---|
-| `Agents-of-Abyss` | constitutional | ecosystem identity, layer map, federation rules, program-level direction, center mechanics, root surface law | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, `docs/ROOT_SURFACE_LAW.md`, `ROADMAP.md`, generated registry capsules | `python scripts/validate_ecosystem.py` plus nearest center validator for touched generated surfaces | ownership drift, routing drift, root-surface inflation, silent absorption of layer-owned meaning | the task mainly changes a layer-owned object rather than the center |
+| `Agents-of-Abyss` | constitutional | ecosystem identity, layer map, federation rules, program-level direction, center mechanics, root surface law | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, `docs/ROOT_SURFACE_LAW.md`, `ROADMAP.md`, generated registry capsules | `python scripts/validate_ecosystem.py`, `python scripts/validate_markdown_shape.py`, plus nearest center validator for touched generated surfaces | ownership drift, routing drift, root-surface inflation, silent absorption of layer-owned meaning | the task mainly changes a layer-owned object rather than the center |
 | `Tree-of-Sophia` | meaning | source-first knowledge architecture, node layering, lineage logic, authored meaning discipline | ToS README, ToS review checklist, and ToS architecture notes | manual review route in ToS-owned docs | provenance loss, authored-vs-derived drift, flattened interpretation | the task mainly concerns runtime, routing, or derived substrate mechanics |
 | `abyss-stack` | runtime | runtime body, deployment, storage, profiles, presets, secrets bootstrap, lifecycle, and security posture | stack README, charter, boundaries, architecture, service catalog, deployment, runbook, and security docs | repo-local stack validator and touched runtime checks | port exposure, secret-bearing drift, profile/preset/module drift, path mapping drift | the task mainly changes authored meaning or AoA layer truth |
 | `aoa-techniques` | workflow | reusable engineering practice canon | repo `AGENTS.md`, `README.md`, and technique docs | repo-local validation documented there | technique duplication, shallow donor copying, missing evidence or checks | the task mainly packages execution rather than reusable practice |
@@ -57,6 +57,13 @@ Use this route when the question is not only "is the claim true?" but "should th
 Current root-surface cleanup evidence lives in [docs/audits/ROOT_SURFACE_AUDIT_2026_04_24](docs/audits/ROOT_SURFACE_AUDIT_2026_04_24.md).
 
 ## Drift signatures worth flagging immediately
+
+### Documentation shape drift
+
+- a key README or civic surface collapses into a few long lines
+- tables, code fences, or numbered paths become hard for humans or agents to parse
+- a technical district gains many files without a local README gate
+- a root file remains after its better home is planted in `docs/audits/`, `docs/registry/`, or `docs/landings/`
 
 ### Constitutional drift
 

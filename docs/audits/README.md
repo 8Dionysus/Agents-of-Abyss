@@ -7,6 +7,7 @@ This directory holds audit evidence, cleanup candidates, and review artifacts th
 | Surface | Role |
 |---|---|
 | [`ROOT_SURFACE_AUDIT_2026_04_24`](ROOT_SURFACE_AUDIT_2026_04_24.md) | first root-surface classification and cleanup decision pass |
+| [`DOCUMENTATION_SURFACE_AUDIT_2026_04_24`](DOCUMENTATION_SURFACE_AUDIT_2026_04_24.md) | top-down and bottom-up documentation order audit that led to the v4 documentation package |
 | [`DELETION_CANDIDATES.json`](DELETION_CANDIDATES.json) | inspect-first via negativa candidate list for Codex and maintainers |
 
 ## Rule
