@@ -1,5 +1,7 @@
 # Agents of Abyss (AoA)
 
+![Agents of Abyss expedition crossing the abyss toward a lit citadel](assets/agents-of-abyss-readme-banner.png)
+
 `Agents-of-Abyss` is the constitutional polis of AoA.
 
 AoA as a whole is the federation: source-owned repositories, derived layers, routing surfaces, supporting consumers, public profile surfaces, and adjacent system anchors. This repository is not that whole federation. It is the polis where the federation is named, mapped, governed, audited, and kept legible.
