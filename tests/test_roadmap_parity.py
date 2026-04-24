@@ -76,10 +76,10 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
         assert surface in roadmap
 
 
-def test_roadmap_names_unreleased_agon_imposition_gate_surfaces() -> None:
+def test_roadmap_names_released_agon_imposition_gate_surfaces() -> None:
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Unreleased next turn: Agon imposition gate" in roadmap
+    assert "### Released in `v0.2.3`: Agon imposition gate" in roadmap
     assert "explicit Wave 0 validation commands" in roadmap
 
     unreleased_surfaces = [
@@ -100,10 +100,10 @@ def test_roadmap_names_unreleased_agon_imposition_gate_surfaces() -> None:
         assert surface in roadmap
 
 
-def test_roadmap_names_unreleased_agon_lawful_move_language_surfaces() -> None:
+def test_roadmap_names_released_agon_lawful_move_language_surfaces() -> None:
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Unreleased follow-on turn: Agon lawful move language" in roadmap
+    assert "### Released in `v0.2.3`: Agon lawful move language" in roadmap
     assert "explicit Wave III validation commands" in roadmap
 
     unreleased_surfaces = [
@@ -125,10 +125,10 @@ def test_roadmap_names_unreleased_agon_lawful_move_language_surfaces() -> None:
         assert surface in roadmap
 
 
-def test_roadmap_names_unreleased_agon_move_owner_binding_surfaces() -> None:
+def test_roadmap_names_released_agon_move_owner_binding_surfaces() -> None:
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Unreleased follow-on turn: Agon move owner binding" in roadmap
+    assert "### Released in `v0.2.3`: Agon move owner binding" in roadmap
     assert "explicit Wave IV validation commands" in roadmap
 
     unreleased_surfaces = [
@@ -151,10 +151,10 @@ def test_roadmap_names_unreleased_agon_move_owner_binding_surfaces() -> None:
         assert surface in roadmap
 
 
-def test_roadmap_names_unreleased_agon_gate_routing_handoff_surfaces() -> None:
+def test_roadmap_names_released_agon_gate_routing_handoff_surfaces() -> None:
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Unreleased follow-on turn: Agon gate routing handoff" in roadmap
+    assert "### Released in `v0.2.3`: Agon gate routing handoff" in roadmap
     assert "explicit Wave V validation commands" in roadmap
 
     unreleased_surfaces = [
@@ -175,10 +175,10 @@ def test_roadmap_names_unreleased_agon_gate_routing_handoff_surfaces() -> None:
         assert surface in roadmap
 
 
-def test_roadmap_names_unreleased_agon_trial_playbook_handoff_surfaces() -> None:
+def test_roadmap_names_released_agon_trial_playbook_handoff_surfaces() -> None:
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Unreleased follow-on turn: Agon trial playbook handoff" in roadmap
+    assert "### Released in `v0.2.3`: Agon trial playbook handoff" in roadmap
     assert "explicit Wave VI validation commands" in roadmap
 
     unreleased_surfaces = [

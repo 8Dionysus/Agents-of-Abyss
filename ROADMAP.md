@@ -99,9 +99,9 @@ leaving checkpoint carry, candidate identity, seed staging, owner landing,
 derived summaries, recurring method, and future Agon-related handoffs in their
 owning repositories.
 
-### Unreleased next turn: Agon imposition gate
+### Released in `v0.2.3`: Agon imposition gate
 
-The next unreleased center turn after `v0.2.3` is the Agon imposition gate. Its
+The Agon imposition gate is now part of the `v0.2.3` center contour. Its
 checked surface is:
 
 - center-owned Agon turn docs:
@@ -126,10 +126,10 @@ survive/recharter/defer/prune/quarantine review while later actor, proof,
 memory, routing, runtime, and ToS waves remain routed to their owning
 repositories.
 
-### Unreleased follow-on turn: Agon lawful move language
+### Released in `v0.2.3`: Agon lawful move language
 
-The next unreleased center turn after Wave 0 is the Agon lawful move language.
-Its checked surface is:
+The Agon lawful move language is now part of the `v0.2.3` center contour. Its
+checked surface is:
 
 - center-owned Wave III lawful move docs:
   `docs/AGON_LAWFUL_MOVE_LANGUAGE.md`,
@@ -153,9 +153,9 @@ live arena execution. Every move stays explicitly pre-protocol with
 memory, routing, scenario, and runtime follow-through remain routed to their
 owning repositories.
 
-### Unreleased follow-on turn: Agon move owner binding
+### Released in `v0.2.3`: Agon move owner binding
 
-The next unreleased center turn after Wave III is the Agon move owner binding.
+The Agon move owner binding turn is now part of the `v0.2.3` center contour.
 Its checked surface is:
 
 - center-owned Wave IV owner-binding docs:
@@ -181,10 +181,10 @@ practice, workflow, proof, routing, scenario, memory, stats, and actor slices
 remain only `requested_not_landed` companion requests until their owner
 repositories review them under their own boundaries.
 
-### Unreleased follow-on turn: Agon gate routing handoff
+### Released in `v0.2.3`: Agon gate routing handoff
 
-The next unreleased center turn after Wave IV is the Agon gate routing handoff.
-Its checked surface is:
+The Agon gate routing handoff is now part of the `v0.2.3` center contour. Its
+checked surface is:
 
 - center-owned Wave V handoff docs:
   `docs/AGON_GATE_ROUTING_HANDOFF.md`,
@@ -207,10 +207,10 @@ context hints, owner-review hints, and quarantine hints, while verdicts,
 scars, retention, rank mutation, runtime dispatch, and ToS promotion remain
 outside routing and outside a live arena.
 
-### Unreleased follow-on turn: Agon trial playbook handoff
+### Released in `v0.2.3`: Agon trial playbook handoff
 
-The next unreleased center turn after Wave V is the Agon trial playbook handoff.
-Its checked surface is:
+The Agon trial playbook handoff is now part of the `v0.2.3` center contour. Its
+checked surface is:
 
 - center-owned Wave VI handoff docs:
   `docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md`,
