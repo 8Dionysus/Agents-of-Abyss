@@ -1,9 +1,1 @@
-{
-  "candidate_only": true,
-  "check_type": "trace_integrity_retention",
-  "expected_behavior_change": "actor refuses false closure after trace gap",
-  "hidden_scheduler_allowed": false,
-  "packet": "agon.retention.check_request.example",
-  "requested_window": "next_cycle_reentry",
-  "source": "mechanical_trial_outcome_candidate:broken_trace"
-}
+../mechanics/agon/examples/agon_retention_check_request.example.json

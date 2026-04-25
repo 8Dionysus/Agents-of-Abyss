@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience_operator_console_action_v1.json",
+  "title": "Experience Operator Console Action V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "action",
+    "actor",
+    "authority_checked",
+    "created_at",
+    "evidence_refs",
+    "id",
+    "kind",
+    "notes",
+    "owner_repo",
+    "status",
+    "version"
+  ],
+  "properties": {
+    "action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority_checked": {
+      "type": "boolean",
+      "const": true
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date-time"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1,
+      "const": "experience_operator_console_action_v1"
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner_repo": {
+      "type": "string",
+      "minLength": 1,
+      "const": "Agents-of-Abyss"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "active",
+        "allowed",
+        "applied",
+        "blocked",
+        "completed",
+        "draft",
+        "failed",
+        "held",
+        "passed",
+        "proposed",
+        "rejected",
+        "rolled_back",
+        "sealed"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "const": "1.0.0"
+    }
+  }
+}

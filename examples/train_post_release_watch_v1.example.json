@@ -1,15 +1,1 @@
-{
-  "alarms": [],
-  "created_at": "2026-04-22T00:00:00Z",
-  "evidence_refs": [
-    "generated/multi_office_train_clean_flow/release_train.json"
-  ],
-  "id": "train_post_release_watch_v1_example",
-  "kind": "train_post_release_watch_v1",
-  "notes": "Example artifact for train_post_release_watch_v1.",
-  "owner_repo": "Agents-of-Abyss",
-  "status": "draft",
-  "train_id": "train-service-001",
-  "version": "1.1.0",
-  "watch_window": "3 cycles"
-}
+../mechanics/experience/examples/train_post_release_watch_v1.example.json

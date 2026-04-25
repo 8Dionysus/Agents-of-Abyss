@@ -1,8 +1,1 @@
-{
-  "schema_version": "aoa_candidate_lineage_chain_example_v1",
-  "cluster_ref": "cluster:growth:aoa-sdk-checkpoint-auto-capture-verify-green",
-  "candidate_ref": "candidate:session-growth:reviewed-donor-harvest",
-  "seed_ref": "seed:aoa:session-growth:reviewed-donor-harvest:v1",
-  "object_ref": null,
-  "note": "Center-level witness only. Live ownership remains in aoa-sdk, aoa-skills, Dionysus, and the final owner repo."
-}
+../mechanics/method-growth/examples/lineage_contract_chain.example.json

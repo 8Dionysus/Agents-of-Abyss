@@ -1,0 +1,20 @@
+{
+  "schema_version": "agon_doubt_audit_example_v0",
+  "surface_id": "aoa-agents",
+  "current_claim": "role and persona layer for explicit role-bearing actors",
+  "agon_suspicion": "current role-bearing actors are not yet full subject-bearing actors and do not yet carry the agonic/assistant split",
+  "survival_axes": [
+    "actor_formation_readiness",
+    "source_ownership_discipline",
+    "assistant_anti_drift"
+  ],
+  "initial_verdict": "recharter",
+  "owner_next_action": "Wave I: Agonic Actor Rechartering and Wave II: Assistant Civil Rechartering",
+  "must_not_absorb": [
+    "arena protocol law",
+    "scar ledger",
+    "verdict logic",
+    "runtime packet canon",
+    "ToS canonization"
+  ]
+}

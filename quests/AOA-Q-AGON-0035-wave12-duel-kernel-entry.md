@@ -1,3 +1,1 @@
-# AOA-Q-AGON-0035: Wave XII Duel Kernel Entry
-
-Prepare the next wave only after Wave XI remains bridge-only.
+triaged/AOA-Q-AGON-0035-wave12-duel-kernel-entry.md

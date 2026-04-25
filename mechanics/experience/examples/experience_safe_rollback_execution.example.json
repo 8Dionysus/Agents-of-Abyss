@@ -1,0 +1,10 @@
+{
+  "execution_id": "rollback.exec.001",
+  "release_id": "assistant.notary.1.1.0",
+  "restored_version": "assistant.notary.1.0.3",
+  "authorized_by": "operator",
+  "status": "completed",
+  "evidence_refs": [
+    "rollback.job.001"
+  ]
+}

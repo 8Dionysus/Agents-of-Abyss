@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience_veto_v1.json",
+  "title": "Experience Veto V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "authority",
+    "case_ref",
+    "created_at",
+    "decision_refs",
+    "evidence_refs",
+    "expires_at",
+    "id",
+    "kind",
+    "material_risk",
+    "notes",
+    "schema_version",
+    "scope",
+    "status",
+    "veto_by"
+  ],
+  "properties": {
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "actor",
+        "mode"
+      ],
+      "properties": {
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "reviewed"
+          ]
+        }
+      }
+    },
+    "case_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "expires_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1,
+      "const": "experience.veto"
+    },
+    "material_risk": {
+      "type": "string",
+      "minLength": 1
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1,
+      "const": "v1"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "block_release_promotion"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "proposed"
+      ]
+    },
+    "veto_by": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/constitution_runtime_authority_policy_v1.json",
+  "title": "constitution_runtime_authority_policy_v1",
+  "description": "Seed schema for constitution_runtime_authority_policy_v1 in Experience Constitution Runtime v0.9.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "denied_actions",
+    "policy_id",
+    "sovereign_actions",
+    "version"
+  ],
+  "properties": {
+    "denied_actions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "policy_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sovereign_actions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "const": "1.0.0"
+    }
+  }
+}

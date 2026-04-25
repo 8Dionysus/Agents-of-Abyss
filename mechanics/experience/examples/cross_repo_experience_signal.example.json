@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "kind": "cross_repo_experience_signal",
+  "id": "cross_repo_experience_signal.example",
+  "status": "candidate",
+  "summary": "Example cross_repo_experience_signal object for v0.6 federation harvest seed.",
+  "owner_repo": "Agents-of-Abyss",
+  "evidence_refs": [
+    "receipt://v0.6/cross_repo_experience_signal/example"
+  ],
+  "payload": {
+    "repo": "aoa-routing",
+    "family": "wrong_surface",
+    "surface": "owner_landing",
+    "severity": "material",
+    "release_id": "assistant.router@1.2.0"
+  }
+}

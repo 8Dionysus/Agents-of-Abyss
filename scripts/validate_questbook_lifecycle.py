@@ -1,0 +1,1 @@
+../mechanics/questbook/scripts/validate_questbook_lifecycle.py

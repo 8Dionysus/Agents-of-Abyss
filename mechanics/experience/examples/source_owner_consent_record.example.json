@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "kind": "source_owner_consent_record",
+  "id": "source_owner_consent_record.example",
+  "status": "candidate",
+  "summary": "Example source_owner_consent_record object for v0.6 federation harvest seed.",
+  "owner_repo": "Agents-of-Abyss",
+  "evidence_refs": [
+    "receipt://v0.6/source_owner_consent_record/example"
+  ],
+  "payload": {
+    "owner_repo": "aoa-routing",
+    "consent": "approve",
+    "dissent_reason": null
+  }
+}

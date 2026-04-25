@@ -24,6 +24,10 @@ This file applies to JSON schema contracts under `schemas/`.
 
 ## Role of this directory
 
+Root `schemas/` owns repository-wide shape contracts and compatibility aliases.
+Mechanic-owned schema sources live under `mechanics/<slug>/schemas/`; root
+aliases must not be edited as source files.
+
 `ecosystem-registry.schema.json` defines the contract for
 `generated/ecosystem_registry.min.json`.
 `agon-imposition-readiness.schema.json` defines the contract for
@@ -66,6 +70,7 @@ Treat any schema change here as a contract change.
 
 When editing the schema:
 
+- follow mechanic-owned aliases into `mechanics/<slug>/schemas/` before editing
 - keep `$schema`, `$id`, required keys, and enums explicit
 - preserve alignment with the corresponding generated surface
 - update the matching validator or builder when the allowed shape or allowed

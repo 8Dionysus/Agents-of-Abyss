@@ -14,7 +14,12 @@ Do not use this lane to override owner-local truth, generated-source boundaries,
 
 ## Closeout
 
-Closeout must name changed active parts, archival sources consulted through `PROVENANCE.md`, owner requests affected, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
+Closeout must name changed active parts, whether `PROVENANCE.md` was consulted, owner requests affected, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
+
+If `PROVENANCE.md` was not consulted, say so explicitly. If it was consulted,
+name only the relevant provenance bridge or archive map/log section. Do not
+enumerate individual archived files unless the task specifically audited archive
+evidence in depth.
 
 ## Role
 

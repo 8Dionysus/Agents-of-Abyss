@@ -406,7 +406,7 @@
         ],
         "stronger_owner_split": [
           "Owner repositories own repo-local obligations and local task truth.",
-          "`quests/` holds public center quest items, not private scratch work.",
+          "`quests/` holds public center quest items in lifecycle directories, not private scratch work.",
           "`aoa-playbooks` owns recurring quest choreography when a quest becomes repeatable method.",
           "`aoa-evals` owns proof obligations attached to quest closure.",
           "`aoa-memo` owns lessons retained after quest completion."
@@ -421,7 +421,7 @@
         "private scratchpad",
         "repo-local task sink"
       ],
-      "owner_boundary": "Quest lifecycle and public obligation mechanics; root QUESTBOOK remains index and quests/ remains item store.",
+      "owner_boundary": "Quest lifecycle and public obligation mechanics; root QUESTBOOK remains index and quests/ remains lifecycle item store.",
       "owner_request_doc_ref": "mechanics/questbook/docs/QUESTBOOK_OWNER_REPO_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-QUESTBOOK-PLAYBOOKS-001",
@@ -436,6 +436,7 @@
       "title": "Questbook",
       "validation_refs": [
         "scripts/validate_mechanics_topology.py",
+        "scripts/validate_questbook_lifecycle.py",
         "scripts/validate_mechanic_readme_cards.py",
         "scripts/build_mechanic_card_index.py",
         "scripts/validate_mechanic_card_index.py",

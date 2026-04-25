@@ -1,3 +1,1 @@
-# AOA-Q-AGON-0048 Schools / Lineages / Campaigns
-
-Land center grammar for non-canonical historical forms of Agon.
+triaged/AOA-Q-AGON-0048-schools-lineages-campaigns.md

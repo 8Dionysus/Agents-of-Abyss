@@ -1,13 +1,1 @@
-{
-  "id": "cert.evidence.notary.001",
-  "kind": "experience_certification_evidence_bundle",
-  "candidate": "rc.notary.1.1.0.001",
-  "contains": {
-    "source_patch": "patch.exp.notary.receipt_strengthen.001",
-    "bounded_verdict": "verdict.exp.notary.001",
-    "regression_run": "reg.run.notary.001",
-    "rollback_drill": "rollback.drill.notary.001",
-    "compatibility_delta": "compat.delta.notary.001"
-  },
-  "complete": true
-}
+../mechanics/experience/examples/experience_certification_evidence_bundle.example.json

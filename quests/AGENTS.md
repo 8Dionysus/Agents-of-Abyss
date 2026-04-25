@@ -6,7 +6,9 @@ This card applies to `quests/` and all descendants unless a nearer `AGENTS.md` n
 
 ## Role
 
-`quests/` holds quest item store for public obligations, visible work items, and bounded follow-through records.
+`quests/` holds the quest item store for public obligations, visible work items, and bounded follow-through records.
+
+Lifecycle directories are the source placement. Top-level `AOA-Q-*` files are compatibility aliases and should not be edited as source files.
 
 ## Read before editing
 
@@ -26,6 +28,7 @@ Run the narrowest relevant checks first. Usual checks for this district:
 
 ```bash
 python scripts/validate_mechanics_topology.py
+python scripts/validate_questbook_lifecycle.py
 python scripts/validate_links.py
 python -m pytest -q tests
 ```

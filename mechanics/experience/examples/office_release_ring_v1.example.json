@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-04-22T00:00:00Z",
+  "evidence_refs": [
+    "generated/multi_office_train_clean_flow/release_train.json"
+  ],
+  "id": "office_release_ring_v1_example",
+  "kind": "office_release_ring_v1",
+  "notes": "Example artifact for office_release_ring_v1.",
+  "offices": [
+    "notary.assistant",
+    "concierge.assistant",
+    "courier.assistant",
+    "monitor.assistant"
+  ],
+  "owner_repo": "Agents-of-Abyss",
+  "promotion_blockers": [],
+  "ring": "ring_1_pilot",
+  "status": "draft",
+  "version": "1.1.0"
+}

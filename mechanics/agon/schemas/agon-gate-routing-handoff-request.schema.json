@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "center_must_keep": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "expected_routing_surface": {
+      "type": "string"
+    },
+    "future_wave_dependency": {
+      "type": "object"
+    },
+    "owner_repo": {
+      "const": "Agents-of-Abyss",
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "required_stop_line": {
+      "type": "string"
+    },
+    "routing_may_emit": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "routing_must_not": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "routing_repo": {
+      "const": "aoa-routing",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "agon_gate_routing_handoff_request.v1",
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "wave": {
+      "const": "V",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "wave",
+    "status",
+    "owner_repo",
+    "routing_repo",
+    "purpose",
+    "routing_may_emit",
+    "routing_must_not",
+    "center_must_keep",
+    "expected_routing_surface",
+    "required_stop_line",
+    "future_wave_dependency"
+  ],
+  "title": "Agon Gate Routing Handoff Request",
+  "type": "object"
+}

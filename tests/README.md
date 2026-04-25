@@ -4,6 +4,9 @@ This directory holds regression tests for center contracts, generated surfaces, 
 
 Tests protect bounded claims. They do not replace proof canon in `aoa-evals` and do not grant authority beyond the claims they check.
 
+Mechanic-owned tests live in `mechanics/<slug>/tests/`. Root test paths may
+remain as compatibility aliases so established pytest commands keep working.
+
 ## Use this directory when
 
 - a generated surface changes
@@ -11,8 +14,9 @@ Tests protect bounded claims. They do not replace proof canon in `aoa-evals` and
 - a validator changes
 - a link, Markdown shape, status vocabulary, or generated freshness guardrail changes
 - an AGENTS-card mesh, local card, or mesh index changes
-- an Agon or Experience center contract changes
+- an Agon, Experience, RPG, antifragility, method-growth, or Questbook contract changes
 - an Experience active part or provenance bridge changes
+- a Questbook item changes lifecycle placement
 - a release or root-surface guardrail needs regression protection
 
 ## Rules
@@ -51,4 +55,10 @@ python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
 python scripts/build_agents_mesh_index.py --check
 python scripts/validate_agents_mesh_index.py
+```
+
+For Questbook lifecycle changes, run:
+
+```bash
+python scripts/validate_questbook_lifecycle.py
 ```

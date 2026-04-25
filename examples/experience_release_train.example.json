@@ -1,16 +1,1 @@
-{
-  "id": "release.train.assistants.2026-04-22",
-  "kind": "experience_release_train",
-  "scope": "assistant_service_releases",
-  "release_candidates": [
-    "rc.notary.1.1.0.001",
-    "rc.router.1.0.1.001"
-  ],
-  "gates": [
-    "regression",
-    "rollback",
-    "authority",
-    "operator_review"
-  ],
-  "train_status": "assembling"
-}
+../mechanics/experience/examples/experience_release_train.example.json

@@ -693,6 +693,8 @@
     "python scripts/build_link_shape_hygiene_index.py --check",
     "python scripts/validate_link_shape_hygiene_index.py",
     "python scripts/validate_experience_distillation.py",
+    "python scripts/validate_mechanic_artifact_topology.py",
+    "python scripts/validate_questbook_lifecycle.py",
     "python scripts/validate_agents_md_shape.py",
     "python scripts/validate_agents_mesh.py",
     "python scripts/build_agents_mesh_index.py --check",

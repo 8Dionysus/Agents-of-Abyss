@@ -1,0 +1,58 @@
+{
+  "actor": {
+    "actor_id": "architect",
+    "kind": "agonic",
+    "office": "tracer",
+    "seat_role": "contestant_candidate"
+  },
+  "constraints": {
+    "forbidden_effects": [
+      "create_live_arena_session",
+      "execute_move",
+      "issue_verdict",
+      "grant_closure",
+      "write_durable_scar",
+      "schedule_retention_as_authority",
+      "mutate_rank",
+      "promote_to_tree_of_sophia",
+      "auto_modify_owner_repo"
+    ],
+    "stop_lines": [
+      "no_live_session_instance_creation",
+      "no_runtime_state_transition",
+      "no_live_move_execution",
+      "no_verdict_authority",
+      "no_durable_scar_write",
+      "no_retention_execution",
+      "no_rank_mutation",
+      "no_tree_of_sophia_promotion",
+      "no_hidden_scheduler_action",
+      "no_assistant_contestant_drift",
+      "no_center_takeover_of_owner_truth"
+    ]
+  },
+  "lifecycle_slot": "engagement_window",
+  "live_protocol": false,
+  "packet_id": "pkt.move.example.001",
+  "packet_type": "agon.move_declaration",
+  "payload": {
+    "lawful_move_id": "probe_trace",
+    "move_intent": "inspect continuity before closure review",
+    "requested_owner_review": [
+      "aoa-evals.trace_integrity_precheck"
+    ],
+    "supporting_refs": [
+      "pkt.evidence.example.001"
+    ],
+    "target_ref": "trace.segment.example"
+  },
+  "protocol": "agon/state-packet/0.1",
+  "runtime_effect": "none",
+  "sequence": {
+    "logical_step": 8,
+    "prev_packet_ref": "pkt.reveal.example.001"
+  },
+  "session_draft_ref": "draft.broken_trace.example",
+  "session_model_id": "agon.session.broken_trace_trial",
+  "wave": "IX"
+}

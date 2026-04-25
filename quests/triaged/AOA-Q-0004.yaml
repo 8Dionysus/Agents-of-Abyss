@@ -1,0 +1,50 @@
+schema_version: work_quest_v1
+id: AOA-Q-0004
+title: Define the first adjunct RPG reflection layer without mutating quest or role canon
+summary: Stage a bounded RPG reflection contour on top of live AoA questbooks, roles, proof surfaces, memory boundaries, and routing seams.
+repo: Agents-of-Abyss
+owner_surface: center/rpg-reflection
+theme_ref: ''
+milestone_ref: ''
+kind: doctrine
+state: triaged
+band: frontier
+difficulty: d4_architecture
+risk: r2_contract
+control_mode: human_codex_copilot
+delegate_tier: conductor
+fallback_tier: deep
+wrapper_class: codex_primary
+write_scope: cross_repo_request
+split_required: true
+complexity_basis:
+  scope: 3
+  ambiguity: 2
+  boundary: 3
+  verification: 2
+parent: null
+depends_on: []
+activation:
+  mode: manual
+  note: open when the first bounded RPG reflection slice is ready to be staged
+anchor_ref:
+  artifact: rpg_layer_model
+  ref: mechanics/rpg/docs/RPG_LAYER_MODEL.md
+  note: the common model must stay adjunct and multi-repo
+handoff_role: federation-maintainer
+evidence:
+  - common reflection map is explicit
+  - repo ownership boundaries are explicit
+  - first-wave exclusions are explicit
+harvest:
+  target: none
+opened_at: '2026-04-01'
+touched_at: '2026-04-01'
+tags:
+  - rpg
+  - quests
+  - progression
+  - campaigns
+notes: >
+  This contour must not widen `work_quest_v1`, mutate `profiles/*.profile.json`, or introduce runtime mechanics in repos that do not own runtime.
+public_safe: true

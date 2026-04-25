@@ -4,6 +4,9 @@ This directory holds public-safe examples for the AoA center.
 
 Examples demonstrate shape, posture, or usage. They are not proof canon, not owner-local truth, and not hidden runtime configuration.
 
+Mechanic-owned examples live in `mechanics/<slug>/examples/`. Root examples may
+remain as compatibility aliases for established commands and links.
+
 ## Rules
 
 - Keep examples public-safe.
@@ -16,4 +19,5 @@ Examples demonstrate shape, posture, or usage. They are not proof canon, not own
 
 1. Identify the source surface that the example illustrates.
 2. Check whether the example belongs in a sibling repository instead.
-3. Run any validator or test that consumes the example.
+3. If the example belongs to a center mechanic, edit the mechanic-owned source path.
+4. Run any validator or test that consumes the example.

@@ -1,9 +1,1 @@
-{
-  "case_id": "case_runtime_001",
-  "event_hash": "sha256:event",
-  "event_id": "evt_001",
-  "event_kind": "experience.governance.case.enqueued",
-  "observed_at": "2026-04-22T00:00:00Z",
-  "payload_hash": "sha256:payload",
-  "prev_hash": "genesis"
-}
+../mechanics/experience/examples/decision_replay_event_v1.example.json

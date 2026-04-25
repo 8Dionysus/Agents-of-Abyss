@@ -1,0 +1,10 @@
+{
+  "record_id": "watch.record.001",
+  "release_id": "assistant.notary.1.1.0",
+  "ring_id": "ring_0_internal",
+  "signal_family": "receipt_fidelity",
+  "status": "healthy",
+  "evidence_refs": [
+    "receipt.watch.001"
+  ]
+}

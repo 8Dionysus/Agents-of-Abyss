@@ -1,0 +1,202 @@
+{
+  "schema_version": "experience_wave4_polis_constitution_v1",
+  "wave": "experience_wave4",
+  "status": "polis_governance_constitution_runtime_contract_gated",
+  "source_seeds": [
+    "aoa-experience-polis-governance-seed-v0_8.zip",
+    "aoa-experience-constitution-runtime-seed-v0_9.zip"
+  ],
+  "polis_flow": [
+    {
+      "kind": "governance_case_opened",
+      "owner_repo": "Agents-of-Abyss",
+      "authority_note": "center law names the case without deciding owner-local execution"
+    },
+    {
+      "kind": "authority_checked",
+      "owner_repo": "Agents-of-Abyss",
+      "authority_note": "authority is explicit before council, veto, appeal, or amendment"
+    },
+    {
+      "kind": "council_or_sovereign_review_selected",
+      "owner_repo": "Agents-of-Abyss",
+      "authority_note": "review path is visible and conflict of interest is bounded"
+    },
+    {
+      "kind": "vote_veto_stay_appeal_or_amendment_resolved",
+      "owner_repo": "Agents-of-Abyss",
+      "authority_note": "Codex and assistants cannot become voting or recharter authority"
+    },
+    {
+      "kind": "decision_logged",
+      "owner_repo": "aoa-memo",
+      "authority_note": "memory stores bounded decision history without becoming proof"
+    },
+    {
+      "kind": "owner_local_route_declared",
+      "owner_repo": "aoa-routing",
+      "authority_note": "routing dispatches to owners without authoring meaning"
+    },
+    {
+      "kind": "precedent_or_release_hold_recorded",
+      "owner_repo": "aoa-kag",
+      "authority_note": "precedent candidate remains derived and cannot force adoption"
+    },
+    {
+      "kind": "retention_and_audit_scheduled",
+      "owner_repo": "aoa-evals",
+      "authority_note": "proof remains bounded and does not replace human judgment"
+    }
+  ],
+  "runtime_flow": [
+    {
+      "kind": "runtime_case_queued",
+      "owner_repo": "abyss-stack",
+      "authority_note": "runtime queues the case without resolving constitutional authority"
+    },
+    {
+      "kind": "authority_resolved",
+      "owner_repo": "Agents-of-Abyss",
+      "authority_note": "resolver denies sovereign actions to Codex and self-actions to assistants"
+    },
+    {
+      "kind": "council_scheduled_with_quorum",
+      "owner_repo": "abyss-stack",
+      "authority_note": "scheduler checks quorum and recusals before session work"
+    },
+    {
+      "kind": "vote_sealed_before_reveal",
+      "owner_repo": "aoa-sdk",
+      "authority_note": "typed helpers commit sealed votes before reveal payloads"
+    },
+    {
+      "kind": "reveal_checked_against_hash",
+      "owner_repo": "aoa-evals",
+      "authority_note": "vote integrity is checked against the sealed hash"
+    },
+    {
+      "kind": "stay_hold_or_appeal_enforced",
+      "owner_repo": "abyss-stack",
+      "authority_note": "stays are scoped, expiring, replayable, and material"
+    },
+    {
+      "kind": "decision_history_replayed",
+      "owner_repo": "aoa-memo",
+      "authority_note": "decision replay can expose hash break or lineage drift"
+    },
+    {
+      "kind": "precedent_indexed_from_sealed_decision",
+      "owner_repo": "aoa-kag",
+      "authority_note": "KAG indexes only sealed reviewed precedent candidates"
+    },
+    {
+      "kind": "dashboard_and_owner_dispatch_recorded",
+      "owner_repo": "aoa-stats",
+      "authority_note": "stats summarizes movement and does not judge meaning"
+    }
+  ],
+  "authority": {
+    "runtime_effect": "contract_only",
+    "codex_may": [
+      "enqueue governance cases",
+      "summarize evidence",
+      "simulate candidate outcomes",
+      "prepare owner-local review material"
+    ],
+    "codex_must_not": [
+      "vote",
+      "resolve sovereign authority",
+      "seal final decisions",
+      "suppress material stays",
+      "certify appeals",
+      "amend charters",
+      "write directly to Tree-of-Sophia",
+      "force owner adoption",
+      "author routing meaning",
+      "promote policy precedent"
+    ],
+    "assistant_must_not": [
+      "self-recharter",
+      "self-certify",
+      "vote on own release",
+      "bypass release holds",
+      "hide durable behavior adoption"
+    ],
+    "human_authority_required": [
+      "council vote",
+      "sovereign operator stop",
+      "charter amendment",
+      "veto or stay order",
+      "appeal certification",
+      "final policy precedent",
+      "Tree-of-Sophia intake review"
+    ]
+  },
+  "owner_split": [
+    {
+      "repo": "Agents-of-Abyss",
+      "owns": "center law, ordered spine, stop-lines, and owner split",
+      "must_not": "absorb owner-local execution"
+    },
+    {
+      "repo": "Tree-of-Sophia",
+      "owns": "source-first dossier intake boundaries and no direct governance write",
+      "must_not": "be written by runtime or Codex"
+    },
+    {
+      "repo": "aoa-evals",
+      "owns": "bounded authority, stay, vote seal, and replay verdicts",
+      "must_not": "turn verdicts into sovereign judgment"
+    },
+    {
+      "repo": "aoa-playbooks",
+      "owns": "runbooks for sealed sessions, stay enforcement, appeals, and replay",
+      "must_not": "turn scenarios into hidden runtime ledgers"
+    },
+    {
+      "repo": "aoa-stats",
+      "owns": "derived queue, stay, seal, and replay summaries",
+      "must_not": "judge meaning or certify precedent"
+    },
+    {
+      "repo": "aoa-memo",
+      "owns": "bounded decision, stay, and precedent memories",
+      "must_not": "become proof or governance authority"
+    },
+    {
+      "repo": "aoa-routing",
+      "owns": "case, appeal, stay, and precedent dispatch hints",
+      "must_not": "author decisions or owner truth"
+    },
+    {
+      "repo": "aoa-agents",
+      "owns": "role posture, authority claims, release holds, and self-recharter blocks",
+      "must_not": "let assistants vote on themselves"
+    },
+    {
+      "repo": "aoa-sdk",
+      "owns": "typed helper calls for queues, sealing, replay, and runtime API",
+      "must_not": "bypass owner consent or authority checks"
+    },
+    {
+      "repo": "aoa-kag",
+      "owns": "derived precedent candidates and supersession links",
+      "must_not": "force adoption or replace source truth"
+    },
+    {
+      "repo": "aoa-skills",
+      "owns": "bounded governance-runtime skill invocation posture",
+      "must_not": "turn skills into constitutional authority"
+    },
+    {
+      "repo": "aoa-techniques",
+      "owns": "authority-resolution and sealed-decision practice",
+      "must_not": "claim proof or execution authority"
+    },
+    {
+      "repo": "abyss-stack",
+      "owns": "queues, scheduler, storage, stay enforcement, and replay jobs",
+      "must_not": "author center law or ToS meaning"
+    }
+  ]
+}

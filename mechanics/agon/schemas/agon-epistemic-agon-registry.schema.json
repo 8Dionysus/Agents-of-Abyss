@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "count": {
+      "const": 8
+    },
+    "digest": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "epistemic_components": {
+      "items": {
+        "$ref": "agon-epistemic-agon.schema.json"
+      },
+      "maxItems": 8,
+      "minItems": 8,
+      "type": "array"
+    },
+    "epistemic_move_extensions": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 11,
+      "minItems": 11,
+      "type": "array"
+    },
+    "move_extension_count": {
+      "const": 11
+    },
+    "registry_id": {
+      "const": "agon.epistemic_agon.registry.v1"
+    },
+    "runtime_posture": {
+      "const": "candidate_only"
+    },
+    "wave": {
+      "const": "XV"
+    }
+  },
+  "required": [
+    "registry_id",
+    "wave",
+    "runtime_posture",
+    "count",
+    "move_extension_count",
+    "epistemic_move_extensions",
+    "epistemic_components",
+    "digest"
+  ],
+  "title": "Agon Epistemic Agon Registry",
+  "type": "object"
+}

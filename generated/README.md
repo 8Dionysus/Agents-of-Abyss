@@ -4,6 +4,10 @@ This directory holds compact machine-facing surfaces built from stronger source 
 
 Generated files help low-context agents, validators, and local tooling orient quickly. They are not the primary source of meaning.
 
+Mechanic-owned generated companions live in `mechanics/<slug>/generated/`.
+Root generated paths may remain as compatibility aliases for established
+commands and public references.
+
 ## Current role
 
 | Surface family | Role |
@@ -16,8 +20,7 @@ Generated files help low-context agents, validators, and local tooling orient qu
 | `docs_thematic_index.min.json` | compact map of docs thematic districts |
 | `link_shape_hygiene.min.json` | compact mirror of Wave E hygiene guardrails |
 | `agents_mesh.min.json` | compact mirror of Wave F AGENTS-card coverage |
-| `agon_*.min.json` | generated Agon pre-protocol or candidate registry surfaces |
-| `dual_vocabulary_overlay.json` | derived vocabulary overlay surface |
+| mechanic aliases | generated companions such as `agon_*.min.json` or `dual_vocabulary_overlay.json` routed to mechanic homes |
 
 ## Rules
 

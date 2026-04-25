@@ -1,13 +1,1 @@
-{
-  "id": "rc.notary.1.1.0.001",
-  "kind": "experience_release_candidate",
-  "target_agent": "abyss.assistant.notary.001",
-  "base_version": "1.0.0",
-  "candidate_version": "1.1.0-rc.1",
-  "change_type": "minor",
-  "patch_refs": [
-    "patch.exp.notary.receipt_strengthen.001"
-  ],
-  "behavior_contract_delta": "compat.delta.notary.001",
-  "status": "awaiting_certification"
-}
+../mechanics/experience/examples/experience_release_candidate.example.json

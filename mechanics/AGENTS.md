@@ -54,6 +54,19 @@ The package `ROADMAP.md` is the forward contour. The package `LANDING_LOG.md`
 is the checked landing ledger. The package `docs/` directory holds detailed
 mechanic-owned doctrine, models, waves, handoffs, or support notes.
 
+Mechanic packages may also own artifact homes:
+
+- `schemas/`
+- `examples/`
+- `config/`
+- `generated/`
+- `scripts/`
+- `tests/`
+
+Use these homes when an artifact only makes sense inside the mechanic's owner
+boundary. Keep root technical districts for repository-wide contracts and
+compatibility aliases, as defined by `mechanics/ARTIFACT_TOPOLOGY.md`.
+
 
 ## Owner-request law
 
@@ -73,7 +86,7 @@ When a mechanic output would become runtime, proof, memory, role, playbook, KAG,
 
 - `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, `docs/LAYERS.md`, and `docs/REPO_ROLES.md` remain governance surfaces.
 - `QUESTBOOK.md` remains a root public obligation index; `mechanics/questbook/` owns questbook mechanics.
-- `quests/` remains the quest item store.
+- `quests/` remains the quest item store; lifecycle directories own source placement, and top-level `AOA-Q-*` entries are compatibility aliases.
 - `docs/landings/` remains an archive and receipt district, not a canonical mechanic log.
 - Generated card indexes reflect package entries; they do not author mechanic truth.
 
@@ -90,6 +103,9 @@ When editing a mechanic:
 7. Update `mechanics/registry.json` when a package, owner boundary, card field, required surface, or validation route changes.
 8. Rebuild the generated card index when card-facing registry fields change.
 9. Rebuild the owner-request queue when request-facing registry or queue fields change.
+10. Run `scripts/validate_mechanic_artifact_topology.py` when schemas,
+    examples, config, generated artifacts, scripts, tests, or quest routing move
+    between root districts and mechanic homes.
 
 Do not touch these surfaces mechanically. The post-change review is a route check:
 change only the files whose future-facing meaning actually moved.
@@ -103,6 +119,7 @@ python scripts/validate_mechanic_readme_cards.py
 python scripts/build_mechanic_card_index.py --check
 python scripts/validate_mechanic_card_index.py
 python scripts/validate_mechanics_topology.py
+python scripts/validate_mechanic_artifact_topology.py
 python scripts/validate_owner_request_queue.py
 python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py

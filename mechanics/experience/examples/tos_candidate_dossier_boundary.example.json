@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "kind": "tos_candidate_dossier_boundary",
+  "id": "tos_candidate_dossier_boundary.example",
+  "status": "candidate",
+  "summary": "Example tos_candidate_dossier_boundary object for v0.6 federation harvest seed.",
+  "owner_repo": "Agents-of-Abyss",
+  "evidence_refs": [
+    "receipt://v0.6/tos_candidate_dossier_boundary/example"
+  ],
+  "payload": {
+    "dossier_id": "tos.dossier.pattern.001",
+    "direct_write_allowed": false,
+    "requires_kag_promotion": true
+  }
+}

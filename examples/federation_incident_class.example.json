@@ -1,16 +1,1 @@
-{
-  "schema_version": "1.0",
-  "kind": "federation_incident_class",
-  "id": "federation_incident_class.example",
-  "status": "candidate",
-  "summary": "Example federation_incident_class object for v0.6 federation harvest seed.",
-  "owner_repo": "Agents-of-Abyss",
-  "evidence_refs": [
-    "receipt://v0.6/federation_incident_class/example"
-  ],
-  "payload": {
-    "class_id": "incident.cross_repo.false_closure",
-    "scope": "federation-derived",
-    "not_source_truth": true
-  }
-}
+../mechanics/experience/examples/federation_incident_class.example.json

@@ -1,0 +1,12 @@
+{
+  "summary_id": "deploy.health.001",
+  "release_id": "assistant.notary.1.1.0",
+  "window": "ring_0_cycle_1",
+  "health": "healthy",
+  "alarm_counts": {
+    "warning": 0,
+    "material": 0,
+    "critical": 0
+  },
+  "recommendation": "promote_when_window_complete"
+}

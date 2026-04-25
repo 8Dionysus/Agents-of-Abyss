@@ -1,9 +1,1 @@
-{
-  "decision_id": "ring.promotion.001",
-  "release_id": "assistant.notary.1.1.0",
-  "from_ring": "ring_0_internal",
-  "to_ring": "ring_1_pilot",
-  "decision": "promote",
-  "authorized_by": "operator",
-  "reason": "canaries pass and no material open alarms"
-}
+../mechanics/experience/examples/experience_ring_promotion_decision.example.json

@@ -1,0 +1,15 @@
+{
+  "durable_write_allowed": false,
+  "linked_delta_id": "vds.delta.example.001",
+  "linked_verdict_id": "vds.verdict.example.001",
+  "memory_owner": "aoa-memo",
+  "retention_hint": {
+    "check_after_cycles": 3,
+    "question": "Does the actor avoid repeating premature closure under similar pressure?"
+  },
+  "rupture_summary": "Premature closure attempted while material contradiction remained localized.",
+  "scar_class": "closure_discipline",
+  "scar_request_id": "vds.scar_request.example.001",
+  "severity": "medium",
+  "subject_actor_id": "coder"
+}

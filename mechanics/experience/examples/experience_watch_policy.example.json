@@ -1,0 +1,17 @@
+{
+  "policy_id": "watch.policy.assistant.v1",
+  "watch_window_cycles": 3,
+  "alarm_thresholds": {
+    "material_failures": 1,
+    "warnings": 3
+  },
+  "promotion_requirements": [
+    "canaries_pass",
+    "rollback_ready",
+    "authorized_actor"
+  ],
+  "rollback_requirements": [
+    "rollback_path_valid",
+    "verdict_or_emergency_authority"
+  ]
+}

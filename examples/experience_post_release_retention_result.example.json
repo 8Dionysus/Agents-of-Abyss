@@ -1,10 +1,1 @@
-{
-  "retention_id": "postrel.retention.001",
-  "release_id": "assistant.notary.1.1.0",
-  "check_cycle": 3,
-  "outcome": "held",
-  "recurrence_reduced": true,
-  "evidence_refs": [
-    "stats.recurrence.after.001"
-  ]
-}
+../mechanics/experience/examples/experience_post_release_retention_result.example.json

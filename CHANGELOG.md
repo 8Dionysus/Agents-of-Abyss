@@ -51,6 +51,12 @@ Tracking starts with the community-docs baseline for this repository.
   `mechanics/experience/PARTS.md`, `mechanics/experience/parts/`,
   `mechanics/experience/PROVENANCE.md`, archived source packets, and
   `scripts/validate_experience_distillation.py`
+- `mechanics/ARTIFACT_TOPOLOGY.md` and
+  `scripts/validate_mechanic_artifact_topology.py` for mechanic-owned schemas,
+  examples, config, generated companions, scripts, and tests
+- Questbook lifecycle board validation through
+  `scripts/validate_questbook_lifecycle.py`, lifecycle directories under
+  `quests/`, and root `AOA-Q-*` compatibility aliases
 
 ### Changed
 
@@ -82,6 +88,12 @@ Tracking starts with the community-docs baseline for this repository.
   package surfaces, while long Wave 1-5 and v1.2-v2.0 source packets are
   preserved behind a single provenance bridge instead of being listed in
   active part docs
+- Agon, Experience, RPG, antifragility, and method-growth mechanic artifacts now
+  live in mechanic-owned homes, while root technical districts keep stable
+  command and link aliases
+- Questbook now uses lifecycle source placement instead of a flat quest pile:
+  `captured`, `triaged`, `ready`, `active`, `blocked`, `reanchor`, `done`, and
+  `dropped`
 - detailed agent-lane and Codex audit references now live under
   `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
   narrow compatibility route into `mechanics/README.md`

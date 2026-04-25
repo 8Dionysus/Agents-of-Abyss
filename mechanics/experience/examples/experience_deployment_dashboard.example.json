@@ -1,0 +1,13 @@
+{
+  "dashboard_id": "dashboard.deploy.001",
+  "release_id": "assistant.notary.1.1.0",
+  "rings": [
+    {
+      "ring_id": "ring_0_internal",
+      "state": "watching"
+    }
+  ],
+  "open_alarms": [],
+  "promotion_blockers": [],
+  "rollback_ready": true
+}

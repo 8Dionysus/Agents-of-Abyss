@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-04-22T00:00:00Z",
+  "evidence_refs": [
+    "generated/multi_office_train_clean_flow/release_train.json"
+  ],
+  "id": "assistant_office_profile_v1_example",
+  "kind": "assistant_office_profile_v1",
+  "mandate": "intent normalization, missing-input surfacing, ambiguity routing",
+  "notes": "Example artifact for assistant_office_profile_v1.",
+  "office_id": "concierge.assistant",
+  "owner_repo": "aoa-agents",
+  "service_contract": {
+    "prohibited": [
+      "invent_priorities",
+      "self_release"
+    ],
+    "scope": [
+      "normalize_intent",
+      "request_missing_inputs"
+    ]
+  },
+  "status": "draft",
+  "version": "1.1.0"
+}

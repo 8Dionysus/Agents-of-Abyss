@@ -1,0 +1,22 @@
+{
+  "authority": {
+    "actor": "operator.sovereign",
+    "mode": "reviewed"
+  },
+  "created_at": "2026-04-22T12:00:00-06:00",
+  "decision": "emergency_stay",
+  "decision_refs": [],
+  "emergency": true,
+  "evidence_refs": [
+    "receipt:example:001"
+  ],
+  "id": "experience.operator_decision.example.001",
+  "kind": "experience.operator_decision",
+  "notes": [
+    "seed example for v0.8 polis governance"
+  ],
+  "operator_ref": "operator.sovereign",
+  "reason": "material governance breach detected",
+  "schema_version": "v1",
+  "status": "proposed"
+}

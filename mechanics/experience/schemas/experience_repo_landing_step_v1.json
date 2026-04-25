@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience_repo_landing_step_v1.json",
+  "title": "Experience Repo Landing Step V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "created_at",
+    "evidence_refs",
+    "id",
+    "kind",
+    "notes",
+    "owner_repo",
+    "phase",
+    "preconditions",
+    "repo",
+    "status",
+    "version"
+  ],
+  "properties": {
+    "created_at": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date-time"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1,
+      "const": "experience_repo_landing_step_v1"
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner_repo": {
+      "type": "string",
+      "minLength": 1,
+      "const": "Agents-of-Abyss"
+    },
+    "phase": {
+      "type": "string",
+      "minLength": 1
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "repo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "active",
+        "allowed",
+        "applied",
+        "blocked",
+        "completed",
+        "draft",
+        "failed",
+        "held",
+        "passed",
+        "proposed",
+        "rejected",
+        "rolled_back",
+        "sealed"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "const": "1.0.0"
+    }
+  }
+}

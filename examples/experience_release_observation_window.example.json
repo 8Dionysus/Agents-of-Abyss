@@ -1,12 +1,1 @@
-{
-  "window_id": "obs.window.001",
-  "release_id": "assistant.notary.1.1.0",
-  "ring_id": "ring_0_internal",
-  "starts_at": "2026-04-22T00:00:00Z",
-  "ends_at": "2026-04-25T00:00:00Z",
-  "required_probes": [
-    "scope_fidelity",
-    "receipt_fidelity",
-    "rollback_reachability"
-  ]
-}
+../mechanics/experience/examples/experience_release_observation_window.example.json

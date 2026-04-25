@@ -1,18 +1,1 @@
-{
-  "forbidden_effects": [
-    "live_verdict_authority",
-    "durable_scar_write",
-    "retention_execution",
-    "rank_mutation",
-    "trust_mutation",
-    "tree_of_sophia_promotion",
-    "kag_promotion",
-    "hidden_scheduler_action",
-    "assistant_contestant_drift",
-    "auto_doctrine_rewrite"
-  ],
-  "live_protocol": false,
-  "move_extension": "challenge_model",
-  "posture": "candidate_only",
-  "runtime_effect": "candidate_only"
-}
+../mechanics/agon/examples/agon_epistemic_move_extension.example.json

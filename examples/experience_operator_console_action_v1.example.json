@@ -1,15 +1,1 @@
-{
-  "action": "approve_release",
-  "actor": "operator",
-  "authority_checked": true,
-  "created_at": "2026-04-22T00:00:00Z",
-  "evidence_refs": [
-    "generated/sovereign_release_clean_flow/release_candidate.json"
-  ],
-  "id": "experience_operator_console_action_example",
-  "kind": "experience_operator_console_action_v1",
-  "notes": "Example artifact for experience_operator_console_action_v1.",
-  "owner_repo": "Agents-of-Abyss",
-  "status": "draft",
-  "version": "1.0.0"
-}
+../mechanics/experience/examples/experience_operator_console_action_v1.example.json

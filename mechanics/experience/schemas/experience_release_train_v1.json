@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "release_candidates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "train_status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "scope",
+    "release_candidates",
+    "gates",
+    "train_status"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experience Release Train V1"
+}

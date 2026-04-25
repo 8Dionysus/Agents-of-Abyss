@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agon retention rank economy registry",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "registry_id": {
+      "const": "agon.retention_rank_economy.registry.v1"
+    },
+    "wave": {
+      "const": "XIV"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "live_protocol": {
+      "const": false
+    },
+    "runtime_effect": {
+      "enum": [
+        "candidate_only",
+        "none",
+        "review_surface_only",
+        "local_dry_run_candidate_only"
+      ]
+    },
+    "entry_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    },
+    "stop_lines": {
+      "$ref": "#/$defs/nonEmptyStringArray"
+    },
+    "source_config": {
+      "const": "config/agon_retention_rank_economy.seed.json"
+    },
+    "generated_note": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "registry_id",
+    "wave",
+    "status",
+    "live_protocol",
+    "runtime_effect",
+    "entry_count",
+    "entries",
+    "stop_lines",
+    "source_config",
+    "generated_note"
+  ],
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate_only": {
+          "const": true
+        },
+        "live_authority": {
+          "const": false
+        },
+        "allowed_effect": {
+          "type": "string",
+          "minLength": 1
+        },
+        "forbidden_effects": {
+          "$ref": "#/$defs/nonEmptyStringArray"
+        },
+        "handoffs": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "inputs": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "outputs": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "depends_on": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "notes": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "review_required": {
+          "type": "boolean"
+        },
+        "retention_check_types": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "windows": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "statuses": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "mutation_candidate_types": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "triggers": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "rank_ladder": {
+          "$ref": "#/$defs/namedItemArray"
+        },
+        "earned_jurisdictions": {
+          "$ref": "#/$defs/namedItemArray"
+        },
+        "interlocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/interlock"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "owner",
+        "status",
+        "description",
+        "candidate_only",
+        "live_authority",
+        "allowed_effect",
+        "forbidden_effects"
+      ]
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "namedItemArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/namedItem"
+      }
+    },
+    "namedItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "description"
+      ]
+    },
+    "interlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "when": {
+          "type": "string",
+          "minLength": 1
+        },
+        "may_emit": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "when",
+        "may_emit"
+      ]
+    }
+  }
+}

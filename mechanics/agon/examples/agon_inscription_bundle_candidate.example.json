@@ -1,0 +1,22 @@
+{
+  "bundle_id": "vds.bundle.example.001",
+  "canon_promotion_allowed": false,
+  "delta_candidate_refs": [
+    "vds.delta.example.001"
+  ],
+  "owner_routes": [
+    "aoa-evals",
+    "aoa-memo",
+    "aoa-stats"
+  ],
+  "retention_request_refs": [
+    "vds.retention.example.001"
+  ],
+  "scar_request_refs": [
+    "vds.scar_request.example.001"
+  ],
+  "stats_hint_refs": [
+    "agon.stats.vds.verdict_outcome_draft_summary"
+  ],
+  "verdict_draft_ref": "vds.verdict.example.001"
+}

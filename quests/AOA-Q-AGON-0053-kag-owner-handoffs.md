@@ -1,3 +1,1 @@
-# AOA-Q-AGON-0053 KAG Owner Handoffs
-
-Ensure memo, evals, stats, and KAG retain their boundaries under promotion pressure.
+triaged/AOA-Q-AGON-0053-kag-owner-handoffs.md

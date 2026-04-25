@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "kind": "federation_harvest_decision",
+  "id": "federation_harvest_decision.example",
+  "status": "approved",
+  "summary": "Example federation_harvest_decision object for v0.6 federation harvest seed.",
+  "owner_repo": "Agents-of-Abyss",
+  "evidence_refs": [
+    "receipt://v0.6/federation_harvest_decision/example"
+  ],
+  "payload": {
+    "decision": "approve",
+    "actor": "operator",
+    "blockers": [],
+    "owner_consensus": "sufficient"
+  }
+}

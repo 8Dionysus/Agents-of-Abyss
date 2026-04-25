@@ -1,16 +1,1 @@
-{
-  "schema_version": "1.0",
-  "kind": "pattern_suppression_record",
-  "id": "pattern_suppression_record.example",
-  "status": "candidate",
-  "summary": "Example pattern_suppression_record object for v0.6 federation harvest seed.",
-  "owner_repo": "Agents-of-Abyss",
-  "evidence_refs": [
-    "receipt://v0.6/pattern_suppression_record/example"
-  ],
-  "payload": {
-    "suppression_reason": "duplicate_low_signal",
-    "ttl": "14d",
-    "review_required": true
-  }
-}
+../mechanics/experience/examples/pattern_suppression_record.example.json
