@@ -16,10 +16,27 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
-DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md"
-SCHEMA_PATH = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "schemas" / "experience-v1-8-context-routing-nervous-system.schema.json"
-EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "examples" / "experience_v1_8_context_routing_nervous_system.example.json"
+
+SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "continuity-context"
+    / "schemas"
+    / "experience-v1-8-context-routing-nervous-system.schema.json"
+)
+EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "continuity-context"
+    / "examples"
+    / "experience_v1_8_context_routing_nervous_system.example.json"
+)
 
 SOURCE_SEED = {
     "archive_name": "aoa-experience-context-routing-nervous-system-seed-v1_8.zip",
@@ -228,7 +245,10 @@ EXPECTED_FLOW = [
         "kind": "wave7_affect_predecessor_checked",
         "owner": "Agents-of-Abyss",
         "authority_note": "v1.7 remains predecessor law; routing may activate layers only after affect rank and rights boundaries are already candidate-bound",
-        "stop_lines": ["no predecessor erasure", "no wave8 collision with arena-session law"],
+        "stop_lines": [
+            "no predecessor erasure",
+            "no wave8 collision with arena-session law",
+        ],
     },
     {
         "order": 3,
@@ -256,7 +276,10 @@ EXPECTED_FLOW = [
         "kind": "assistant_and_personal_context_boundary_checked",
         "owner": "aoa-agents",
         "authority_note": "assistant scope and personal context minimization stay actor-bound and reversible never self-authorizing",
-        "stop_lines": ["no assistant context expansion", "no personal context overreach"],
+        "stop_lines": [
+            "no assistant context expansion",
+            "no personal context overreach",
+        ],
     },
     {
         "order": 7,
@@ -270,7 +293,10 @@ EXPECTED_FLOW = [
         "kind": "service_vs_agon_route_gate_checked",
         "owner": "aoa-evals",
         "authority_note": "service stays service until lawful trigger review; routing may point toward Agon but cannot grant rights verdict or protocol open",
-        "stop_lines": ["no service-to-agon without trigger", "no affect or rank direct rights route"],
+        "stop_lines": [
+            "no service-to-agon without trigger",
+            "no affect or rank direct rights route",
+        ],
     },
     {
         "order": 9,
@@ -298,7 +324,10 @@ EXPECTED_FLOW = [
         "kind": "owner_landing_or_recharter_request_declared",
         "owner": "Agents-of-Abyss",
         "authority_note": "future routing work returns to owner-local landings or human recharter requests not runtime activation from the center",
-        "stop_lines": ["no runtime cache or worker activation", "no hidden scheduler action"],
+        "stop_lines": [
+            "no runtime cache or worker activation",
+            "no hidden scheduler action",
+        ],
     },
 ]
 
@@ -423,12 +452,6 @@ EXPECTED_SEED_DRY_RUN_EVIDENCE = {
     "seed_tests_passed": 28,
 }
 
-DOC_REQUIRED_SNIPPETS = [
-    "It is Wave 8 of the current v1.2-v2.0 planting campaign.",
-    "It is not `Experience Wave VIII`;",
-    "routing may activate layers; it may not steal meaning from their owners",
-]
-
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -439,28 +462,36 @@ def expect_equal(actual: Any, expected: Any, label: str) -> None:
         raise ValidationError(f"{label} must preserve the Wave 8 center contract")
 
 
-def validate_doc() -> None:
-    text = DOC_PATH.read_text(encoding="utf-8")
-    for snippet in DOC_REQUIRED_SNIPPETS:
-        if snippet not in text:
-            raise ValidationError(f"doc boundary missing required snippet: {snippet}")
-
-
 def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     Draft202012Validator(schema).validate(payload)
-    validate_doc()
 
     expect_equal(payload["source_seed"], SOURCE_SEED, "source_seed")
-    expect_equal(payload["predecessor_surfaces"], EXPECTED_PREDECESSORS, "predecessor_surfaces")
-    expect_equal(payload["context_routing_law"], EXPECTED_CONTEXT_ROUTING_LAW, "context_routing_law")
+    expect_equal(
+        payload["predecessor_surfaces"], EXPECTED_PREDECESSORS, "predecessor_surfaces"
+    )
+    expect_equal(
+        payload["context_routing_law"],
+        EXPECTED_CONTEXT_ROUTING_LAW,
+        "context_routing_law",
+    )
     expect_equal(payload["context_requests"], EXPECTED_REQUESTS, "context_requests")
     expect_equal(payload["routing_flow"], EXPECTED_FLOW, "routing_flow")
     expect_equal(payload["hard_guards"], EXPECTED_HARD_GUARDS, "hard_guards")
-    expect_equal(payload["blocking_contracts"], EXPECTED_BLOCKING_CONTRACTS, "blocking_contracts")
+    expect_equal(
+        payload["blocking_contracts"], EXPECTED_BLOCKING_CONTRACTS, "blocking_contracts"
+    )
     expect_equal(payload["authority"], EXPECTED_AUTHORITY, "authority")
     expect_equal(payload["owner_split"], EXPECTED_OWNER_SPLIT, "owner_split")
-    expect_equal(payload["quarantined_surfaces"], EXPECTED_QUARANTINED_SURFACES, "quarantined_surfaces")
-    expect_equal(payload["seed_dry_run_evidence"], EXPECTED_SEED_DRY_RUN_EVIDENCE, "seed_dry_run_evidence")
+    expect_equal(
+        payload["quarantined_surfaces"],
+        EXPECTED_QUARANTINED_SURFACES,
+        "quarantined_surfaces",
+    )
+    expect_equal(
+        payload["seed_dry_run_evidence"],
+        EXPECTED_SEED_DRY_RUN_EVIDENCE,
+        "seed_dry_run_evidence",
+    )
 
 
 def main() -> int:

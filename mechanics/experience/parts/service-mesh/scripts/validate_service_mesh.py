@@ -16,10 +16,27 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
-DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md"
-SCHEMA_PATH = ROOT / "mechanics" / "experience" / "parts" / "service-mesh" / "schemas" / "experience-v1-2-service-mesh-operations.schema.json"
-EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "parts" / "service-mesh" / "examples" / "experience_v1_2_service_mesh_operations.example.json"
+
+SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "service-mesh"
+    / "schemas"
+    / "experience-v1-2-service-mesh-operations.schema.json"
+)
+EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "service-mesh"
+    / "examples"
+    / "experience_v1_2_service_mesh_operations.example.json"
+)
 
 SOURCE_ARCHIVE = "aoa-experience-service-mesh-operations-seed-v1_2.zip"
 SOURCE_SHA256 = "df829241ac629770635290e5da2742b81e4d5575270c94a92c34a95f4bbacb85"
@@ -121,27 +138,6 @@ EXPECTED_OWNER_REPOS = {
     "aoa-techniques",
 }
 
-REQUIRED_DOC_TOKENS = [
-    "It is Wave 2 of the current v1.2-v2.0 planting campaign",
-    "It is not `Experience Wave 2`",
-    "`aoa-experience-service-mesh-operations-seed-v1_2.zip`",
-    SOURCE_SHA256,
-    "`EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md`",
-    "`EXPERIENCE_SERVICE_MESH_LAW.md`",
-    "`EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md`",
-    "`EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md`",
-    "`AGON_PRE_PROTOCOL_STOP_LINES.md`",
-    "`no_hidden_assistant_self_heal`",
-    "`no_drill_pass_by_codex`",
-    "activate live services",
-    "service-to-Agon escalation into live summon authority",
-    "stats become proof",
-    "memo become truth",
-    "routing become owner",
-    "KAG become canon",
-    "SDK become authority",
-]
-
 REQUIRED_CODEX_DENIALS = [
     "certify drill passed",
     "seal drill",
@@ -237,7 +233,9 @@ def validate_schema(schema: dict[str, Any], payload: dict[str, Any]) -> None:
     )
     if errors:
         path = ".".join(str(part) for part in errors[0].path) or "<root>"
-        fail(f"service mesh example does not match schema at {path}: {errors[0].message}")
+        fail(
+            f"service mesh example does not match schema at {path}: {errors[0].message}"
+        )
 
 
 def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
@@ -257,7 +255,9 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         fail("source_seed.claim_limit must deny runtime readiness")
 
     if payload["predecessor_surfaces"] != EXPECTED_PREDECESSORS:
-        fail("predecessor_surfaces must preserve Dionysus, v1.1, bridge, runtime, and Agon order")
+        fail(
+            "predecessor_surfaces must preserve Dionysus, v1.1, bridge, runtime, and Agon order"
+        )
     if payload["primary_offices"] != EXPECTED_PRIMARY_OFFICES:
         fail("primary_offices must preserve the v1.2 primary office contour")
     if payload["prepared_offices"] != EXPECTED_PREPARED_OFFICES:
@@ -271,10 +271,14 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     if [step["owner"] for step in flow] != EXPECTED_FLOW_OWNERS:
         fail("operations_flow owners must preserve center and downstream owner routing")
     if [step["authority_note"] for step in flow] != EXPECTED_FLOW_AUTHORITY_NOTES:
-        fail("operations_flow authority_note values must preserve the exact no-runtime contract")
+        fail(
+            "operations_flow authority_note values must preserve the exact no-runtime contract"
+        )
     for index, step in enumerate(flow):
         if step.get("stop_lines") != EXPECTED_FLOW_STOP_LINES[index]:
-            fail(f"operations_flow[{index}].stop_lines must preserve required stop-lines")
+            fail(
+                f"operations_flow[{index}].stop_lines must preserve required stop-lines"
+            )
         authority_note = str(step["authority_note"]).lower()
         forbidden_note_tokens = [
             "runtime executes",
@@ -291,16 +295,22 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
             "mutate honor",
             "execute retention",
         ]
-        leaked_note = [token for token in forbidden_note_tokens if token in authority_note]
+        leaked_note = [
+            token for token in forbidden_note_tokens if token in authority_note
+        ]
         if leaked_note:
-            fail(f"operations_flow[{index}].authority_note grants forbidden authority: {leaked_note}")
+            fail(
+                f"operations_flow[{index}].authority_note grants forbidden authority: {leaked_note}"
+            )
 
     if payload["failure_laws"] != EXPECTED_FAILURE_LAWS:
         fail("failure_laws must preserve the v1.2 non-negotiable laws exactly")
 
     authority = payload["authority"]
     if authority["contract_effect"] != "center_service_mesh_operations_law_only":
-        fail("authority.contract_effect must remain center_service_mesh_operations_law_only")
+        fail(
+            "authority.contract_effect must remain center_service_mesh_operations_law_only"
+        )
     if authority["codex_may"] != EXPECTED_CODEX_MAY:
         fail("codex_may must remain the exact bounded allow-list")
 
@@ -335,35 +345,48 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     for phrase in REQUIRED_CODEX_DENIALS:
         assert_phrase_present(authority["codex_must_not"], phrase, "codex_must_not")
     for phrase in REQUIRED_ASSISTANT_DENIALS:
-        assert_phrase_present(authority["assistant_must_not"], phrase, "assistant_must_not")
+        assert_phrase_present(
+            authority["assistant_must_not"], phrase, "assistant_must_not"
+        )
 
     derived = set(authority["derived_layers_must_not"])
     if derived != EXPECTED_DERIVED_DENIALS:
-        fail("derived_layers_must_not must exactly deny stats, memo, routing, KAG, SDK, runtime, and Dionysus drift")
+        fail(
+            "derived_layers_must_not must exactly deny stats, memo, routing, KAG, SDK, runtime, and Dionysus drift"
+        )
 
     for phrase in REQUIRED_HUMAN_GATES:
-        assert_phrase_present(authority["human_gates_required"], phrase, "human_gates_required")
+        assert_phrase_present(
+            authority["human_gates_required"], phrase, "human_gates_required"
+        )
 
     owners = {entry["repo"] for entry in payload["owner_split"]}
     if owners != EXPECTED_OWNER_REPOS:
         fail(f"owner_split repo set mismatch: {sorted(owners)}")
 
     for entry in payload["owner_split"]:
-        if entry["repo"] == "abyss-stack" and "separate runtime-owner gate" not in entry["owns"]:
-            fail("abyss-stack owner_split entry must require a separate runtime-owner gate")
-        if entry["repo"] == "Tree-of-Sophia" and "direct runtime writes" not in entry["must_not"]:
+        if (
+            entry["repo"] == "abyss-stack"
+            and "separate runtime-owner gate" not in entry["owns"]
+        ):
+            fail(
+                "abyss-stack owner_split entry must require a separate runtime-owner gate"
+            )
+        if (
+            entry["repo"] == "Tree-of-Sophia"
+            and "direct runtime writes" not in entry["must_not"]
+        ):
             fail("Tree-of-Sophia owner_split entry must deny direct runtime writes")
         if entry["repo"] == "aoa-agents" and "self-heal" not in entry["must_not"]:
             fail("aoa-agents owner_split entry must deny assistant self-heal authority")
 
 
 def validate_files() -> None:
-    for path in (DOC_PATH, SCHEMA_PATH, EXAMPLE_PATH):
+    for path in (SCHEMA_PATH, EXAMPLE_PATH):
         if not path.exists():
-            fail(f"missing service mesh operations surface: {path.relative_to(ROOT).as_posix()}")
-
-    doc_text = DOC_PATH.read_text(encoding="utf-8")
-    assert_contains_all(doc_text, REQUIRED_DOC_TOKENS, "service mesh operations doc")
+            fail(
+                f"missing service mesh operations surface: {path.relative_to(ROOT).as_posix()}"
+            )
 
     schema = read_json(SCHEMA_PATH)
     payload = read_json(EXAMPLE_PATH)

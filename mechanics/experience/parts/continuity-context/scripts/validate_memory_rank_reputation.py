@@ -16,10 +16,27 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
-DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md"
-SCHEMA_PATH = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "schemas" / "experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json"
-EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "examples" / "experience_v1_6_epistemic_memory_rank_reputation_engine.example.json"
+
+SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "continuity-context"
+    / "schemas"
+    / "experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json"
+)
+EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "continuity-context"
+    / "examples"
+    / "experience_v1_6_epistemic_memory_rank_reputation_engine.example.json"
+)
 
 SOURCE_ARCHIVE = "aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6.zip"
 SOURCE_SHA256 = "51e403eb0ca9ac384b1edba959b67bdf457efc5813ba3aa7577e94ee87591475"
@@ -505,26 +522,6 @@ EXPECTED_SEED_EVIDENCE = {
     "claim_limit": "dry_run_only_not_owner_readiness",
 }
 
-REQUIRED_DOC_TOKENS = [
-    "It is Wave 6 of the current v1.2-v2.0 planting campaign",
-    "It is not `Experience Wave 6`",
-    f"`{SOURCE_ARCHIVE}`",
-    SOURCE_SHA256,
-    "`EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md`",
-    "`AGON_RETENTION_RANK_ECONOMY.md`",
-    "`AGON_RANK_JURISDICTION_MODEL.md`",
-    "`AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md`",
-    "no standing is earned by a single blaze",
-    "Closure is earned jurisdiction, not default completion",
-    "Summon is costly visible intent, not a panic button",
-    "`no_live_rank_mutation`",
-    "`no_assistant_agonic_rank`",
-    "`no_direct_tree_of_sophia_or_kag_canon`",
-    "`active` is not a landing state",
-    "turn memo candidates into durable memory",
-    "treat generated clean-flow results as landed owner truth",
-]
-
 FORBIDDEN_AUTHORITY_NOTE_SNIPPETS = [
     "live rank may run after this gate",
     "Codex rank assignment allowed",
@@ -545,17 +542,16 @@ def require(condition: bool, message: str) -> None:
         raise ValidationError(message)
 
 
-def validate_doc_tokens(doc_text: str) -> None:
-    for token in REQUIRED_DOC_TOKENS:
-        require(token in doc_text, f"doc missing required token: {token}")
-
-
 def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     validator = Draft202012Validator(schema)
-    errors = sorted(validator.iter_errors(payload), key=lambda err: list(err.absolute_path))
+    errors = sorted(
+        validator.iter_errors(payload), key=lambda err: list(err.absolute_path)
+    )
     if errors:
         first = errors[0]
-        raise ValidationError(f"schema validation failed at {list(first.absolute_path)}: {first.message}")
+        raise ValidationError(
+            f"schema validation failed at {list(first.absolute_path)}: {first.message}"
+        )
 
     require(
         payload["source_seed"]
@@ -568,47 +564,102 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         },
         "source_seed must preserve the v1.6 archive identity",
     )
-    require(payload["predecessor_surfaces"] == EXPECTED_PREDECESSORS, "predecessor_surfaces must preserve the v1.6 bridge spine")
-    require(payload["rank_reputation_law"] == EXPECTED_RANK_REPUTATION_LAW, "rank_reputation_law drifted")
-    require(payload["consequence_requests"] == EXPECTED_REQUESTS, "consequence_requests drifted")
+    require(
+        payload["predecessor_surfaces"] == EXPECTED_PREDECESSORS,
+        "predecessor_surfaces must preserve the v1.6 bridge spine",
+    )
+    require(
+        payload["rank_reputation_law"] == EXPECTED_RANK_REPUTATION_LAW,
+        "rank_reputation_law drifted",
+    )
+    require(
+        payload["consequence_requests"] == EXPECTED_REQUESTS,
+        "consequence_requests drifted",
+    )
 
     flow = payload["consequence_flow"]
-    require([step["order"] for step in flow] == list(range(1, len(EXPECTED_FLOW_KINDS) + 1)), "consequence_flow order must remain contiguous")
-    require([step["kind"] for step in flow] == EXPECTED_FLOW_KINDS, "consequence_flow kinds drifted")
-    require([step["owner"] for step in flow] == EXPECTED_FLOW_OWNERS, "consequence_flow owners drifted")
-    require([step["stop_lines"] for step in flow] == EXPECTED_FLOW_STOP_LINES, "consequence_flow stop_lines drifted")
-    require([step["authority_note"] for step in flow] == EXPECTED_FLOW_AUTHORITY_NOTES, "consequence_flow authority_note drifted")
+    require(
+        [step["order"] for step in flow]
+        == list(range(1, len(EXPECTED_FLOW_KINDS) + 1)),
+        "consequence_flow order must remain contiguous",
+    )
+    require(
+        [step["kind"] for step in flow] == EXPECTED_FLOW_KINDS,
+        "consequence_flow kinds drifted",
+    )
+    require(
+        [step["owner"] for step in flow] == EXPECTED_FLOW_OWNERS,
+        "consequence_flow owners drifted",
+    )
+    require(
+        [step["stop_lines"] for step in flow] == EXPECTED_FLOW_STOP_LINES,
+        "consequence_flow stop_lines drifted",
+    )
+    require(
+        [step["authority_note"] for step in flow] == EXPECTED_FLOW_AUTHORITY_NOTES,
+        "consequence_flow authority_note drifted",
+    )
     for step in flow:
         note = step["authority_note"]
         for snippet in FORBIDDEN_AUTHORITY_NOTE_SNIPPETS:
-            require(snippet not in note, f"authority_note leaked forbidden authority: {snippet}")
+            require(
+                snippet not in note,
+                f"authority_note leaked forbidden authority: {snippet}",
+            )
 
     require(payload["hard_guards"] == EXPECTED_HARD_GUARDS, "hard_guards drifted")
-    require(payload["blocking_contracts"] == EXPECTED_BLOCKING_CONTRACTS, "blocking_contracts drifted")
+    require(
+        payload["blocking_contracts"] == EXPECTED_BLOCKING_CONTRACTS,
+        "blocking_contracts drifted",
+    )
 
     authority = payload["authority"]
-    require(authority["contract_effect"] == "center_rank_reputation_and_jurisdiction_law_only", "contract_effect drifted")
+    require(
+        authority["contract_effect"]
+        == "center_rank_reputation_and_jurisdiction_law_only",
+        "contract_effect drifted",
+    )
     require(authority["codex_may"] == EXPECTED_CODEX_MAY, "codex_may drifted")
-    require(authority["codex_must_not"] == EXPECTED_CODEX_DENIALS, "codex_must_not drifted")
-    require(authority["assistant_must_not"] == REQUIRED_ASSISTANT_DENIALS, "assistant_must_not drifted")
-    require(authority["derived_layers_must_not"] == EXPECTED_DERIVED_DENIALS, "derived_layers_must_not drifted")
-    require(authority["human_gates_required"] == REQUIRED_HUMAN_GATES, "human_gates_required drifted")
+    require(
+        authority["codex_must_not"] == EXPECTED_CODEX_DENIALS, "codex_must_not drifted"
+    )
+    require(
+        authority["assistant_must_not"] == REQUIRED_ASSISTANT_DENIALS,
+        "assistant_must_not drifted",
+    )
+    require(
+        authority["derived_layers_must_not"] == EXPECTED_DERIVED_DENIALS,
+        "derived_layers_must_not drifted",
+    )
+    require(
+        authority["human_gates_required"] == REQUIRED_HUMAN_GATES,
+        "human_gates_required drifted",
+    )
 
     owner_split = payload["owner_split"]
     require(owner_split == EXPECTED_OWNER_SPLIT, "owner_split drifted")
-    require({entry["repo"] for entry in owner_split} == EXPECTED_OWNER_REPOS, "owner_split repo set drifted")
+    require(
+        {entry["repo"] for entry in owner_split} == EXPECTED_OWNER_REPOS,
+        "owner_split repo set drifted",
+    )
 
-    require(payload["quarantined_surfaces"] == EXPECTED_QUARANTINED_SURFACES, "quarantined_surfaces drifted")
-    require(payload["seed_dry_run_evidence"] == EXPECTED_SEED_EVIDENCE, "seed_dry_run_evidence drifted")
-
-    validate_doc_tokens(DOC_PATH.read_text(encoding="utf-8"))
+    require(
+        payload["quarantined_surfaces"] == EXPECTED_QUARANTINED_SURFACES,
+        "quarantined_surfaces drifted",
+    )
+    require(
+        payload["seed_dry_run_evidence"] == EXPECTED_SEED_EVIDENCE,
+        "seed_dry_run_evidence drifted",
+    )
 
 
 def main() -> int:
     schema = load_json(SCHEMA_PATH)
     payload = load_json(EXAMPLE_PATH)
     validate_payload(payload, schema)
-    print("ok: Experience v1.6 epistemic memory rank reputation engine center contract is valid")
+    print(
+        "ok: Experience v1.6 epistemic memory rank reputation engine center contract is valid"
+    )
     return 0
 
 

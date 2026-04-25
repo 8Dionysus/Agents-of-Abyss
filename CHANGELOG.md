@@ -92,6 +92,9 @@ Tracking starts with the community-docs baseline for this repository.
   their owning `mechanics/experience/parts/<part>/` homes, with
   `mechanics/experience/artifact-map.json` preserving old flat-path receipts
   and artifact topology validation enforcing the route
+- Experience provenance checks now live in the package-level distillation
+  validator, active part validators no longer direct-read `legacy/raw`, and
+  `release-deployment` now has a local validator and test route
 - Agon, Experience, RPG, antifragility, and method-growth mechanic artifacts now
   live in mechanic-owned homes; root technical districts keep repo-wide
   contracts only and no longer carry mechanic artifact aliases

@@ -10,17 +10,34 @@ from typing import Any
 
 from jsonschema import Draft202012Validator
 
+
 def _repo_root() -> Path:
     for candidate in Path(__file__).resolve().parents:
         if (candidate / "mechanics" / "registry.json").is_file():
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
-DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_WAVE1_KERNEL.md"
-SCHEMA_PATH = ROOT / "mechanics" / "experience" / "parts" / "capture-kernel" / "schemas" / "experience-wave1-flow.schema.json"
-EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "parts" / "capture-kernel" / "examples" / "experience_wave1_flow.example.json"
+SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "capture-kernel"
+    / "schemas"
+    / "experience-wave1-flow.schema.json"
+)
+EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "capture-kernel"
+    / "examples"
+    / "experience_wave1_flow.example.json"
+)
 
 EXPECTED_SOURCE_SEEDS = [
     "aoa-experience-mechanic-seed-v0_1.zip",
@@ -75,7 +92,7 @@ def read_json(path: Path) -> Any:
 def require_files() -> None:
     missing = [
         path.relative_to(ROOT).as_posix()
-        for path in (DOC_PATH, SCHEMA_PATH, EXAMPLE_PATH)
+        for path in (SCHEMA_PATH, EXAMPLE_PATH)
         if not path.exists()
     ]
     if missing:
@@ -96,7 +113,9 @@ def require_list(value: Any, label: str) -> list[Any]:
 
 def validate_schema(schema: dict[str, Any]) -> None:
     if schema.get("title") != "experience_wave1_flow_v1":
-        fail("mechanics/experience/parts/capture-kernel/schemas/experience-wave1-flow.schema.json title must be experience_wave1_flow_v1")
+        fail(
+            "mechanics/experience/parts/capture-kernel/schemas/experience-wave1-flow.schema.json title must be experience_wave1_flow_v1"
+        )
     if schema.get("additionalProperties") is not False:
         fail("experience Wave 1 schema must reject additional top-level properties")
     required = require_list(schema.get("required"), "schema.required")
@@ -116,9 +135,14 @@ def validate_schema(schema: dict[str, Any]) -> None:
             fail(f"schema.required must include {key!r}")
 
 
-def validate_example_matches_schema(schema: dict[str, Any], example: dict[str, Any]) -> None:
+def validate_example_matches_schema(
+    schema: dict[str, Any], example: dict[str, Any]
+) -> None:
     Draft202012Validator.check_schema(schema)
-    errors = sorted(Draft202012Validator(schema).iter_errors(example), key=lambda error: list(error.path))
+    errors = sorted(
+        Draft202012Validator(schema).iter_errors(example),
+        key=lambda error: list(error.path),
+    )
     if errors:
         fail(f"Experience Wave 1 example does not match schema: {errors[0].message}")
 
@@ -135,11 +159,16 @@ def validate_flow(flow: dict[str, Any]) -> None:
 
     candidate = require_dict(flow.get("candidate"), "candidate")
     candidate_ref = candidate.get("candidate_ref")
-    if not isinstance(candidate_ref, str) or not candidate_ref.startswith("experience.candidate."):
+    if not isinstance(candidate_ref, str) or not candidate_ref.startswith(
+        "experience.candidate."
+    ):
         fail("candidate.candidate_ref must be an experience candidate ref")
 
     events = require_list(flow.get("events"), "events")
-    kinds = [require_dict(event, f"events[{index}]").get("kind") for index, event in enumerate(events)]
+    kinds = [
+        require_dict(event, f"events[{index}]").get("kind")
+        for index, event in enumerate(events)
+    ]
     if kinds[: len(EXPECTED_EVENT_ORDER)] != EXPECTED_EVENT_ORDER:
         fail("events must preserve the Wave 1 ordered spine")
     if len(set(kinds)) != len(kinds):
@@ -154,7 +183,9 @@ def validate_flow(flow: dict[str, Any]) -> None:
         event_ids.append(event_id)
         if event.get("candidate_ref") != candidate_ref:
             fail(f"events[{index}].candidate_ref must match candidate.candidate_ref")
-        evidence_refs = require_list(event.get("evidence_refs"), f"events[{index}].evidence_refs")
+        evidence_refs = require_list(
+            event.get("evidence_refs"), f"events[{index}].evidence_refs"
+        )
         if not evidence_refs:
             fail(f"events[{index}].evidence_refs must not be empty")
     if len(event_ids) != len(set(event_ids)):
@@ -181,7 +212,9 @@ def validate_flow(flow: dict[str, Any]) -> None:
         fail("owner_route.candidate_ref must match candidate.candidate_ref")
     if owner_route.get("primary_repo") != candidate.get("intended_owner_repo"):
         fail("owner_route.primary_repo must match candidate.intended_owner_repo")
-    non_authority_repos = require_list(owner_route.get("non_authority_repos"), "owner_route.non_authority_repos")
+    non_authority_repos = require_list(
+        owner_route.get("non_authority_repos"), "owner_route.non_authority_repos"
+    )
     for repo in ("Agents-of-Abyss", "aoa-stats", "aoa-routing", "aoa-sdk"):
         if repo not in non_authority_repos:
             fail(f"owner_route.non_authority_repos must include {repo}")
@@ -189,12 +222,23 @@ def validate_flow(flow: dict[str, Any]) -> None:
     projection = require_dict(flow.get("projection"), "projection")
     if projection.get("candidate_ref") != candidate_ref:
         fail("projection.candidate_ref must match candidate.candidate_ref")
-    if projection.get("status") not in {"not_requested", "proposed_dry_run", "owner_local_only", "blocked"}:
+    if projection.get("status") not in {
+        "not_requested",
+        "proposed_dry_run",
+        "owner_local_only",
+        "blocked",
+    }:
         fail("projection.status is not a valid inert Wave 1 projection status")
     forbidden_present = sorted(FORBIDDEN_PROJECTION_FIELDS.intersection(projection))
     if forbidden_present:
-        fail("projection must not contain runtime fields: " + ", ".join(forbidden_present))
-    must_not = " ".join(str(item) for item in require_list(projection.get("must_not"), "projection.must_not"))
+        fail(
+            "projection must not contain runtime fields: "
+            + ", ".join(forbidden_present)
+        )
+    must_not = " ".join(
+        str(item)
+        for item in require_list(projection.get("must_not"), "projection.must_not")
+    )
     for phrase in ("hidden runtime", "durable memory", "owner review"):
         if phrase not in must_not:
             fail(f"projection.must_not must mention {phrase!r}")
@@ -202,33 +246,18 @@ def validate_flow(flow: dict[str, Any]) -> None:
     authority = require_dict(flow.get("authority"), "authority")
     if authority.get("runtime_effect") != "none":
         fail("authority.runtime_effect must remain none")
-    not_owned = require_list(authority.get("not_owned_here"), "authority.not_owned_here")
+    not_owned = require_list(
+        authority.get("not_owned_here"), "authority.not_owned_here"
+    )
     not_owned_text = "\n".join(str(item) for item in not_owned)
     for token in REQUIRED_NOT_OWNED_TOKENS:
         if token not in not_owned_text:
             fail(f"authority.not_owned_here must include {token!r}")
 
 
-def validate_doc(text: str) -> None:
-    for token in (
-        "friction_observed",
-        "recurrence_detected",
-        "candidate_declared",
-        "review_verdict_recorded",
-        "memory_gate_decided",
-        "owner_route_selected",
-        "projection_proposed",
-        "hidden runtime execution",
-        "automatic projection",
-    ):
-        if token not in text:
-            fail(f"mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md must mention {token!r}")
-
-
 def run_validation() -> list[str]:
     try:
         require_files()
-        validate_doc(DOC_PATH.read_text(encoding="utf-8"))
         schema = require_dict(read_json(SCHEMA_PATH), "schema")
         example = require_dict(read_json(EXAMPLE_PATH), "example")
         validate_schema(schema)

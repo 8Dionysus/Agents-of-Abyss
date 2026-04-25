@@ -60,6 +60,8 @@ Surfaces:
 - `mechanics/experience/parts/governance-polis/tests/`
 - `mechanics/experience/parts/release-deployment/schemas/`
 - `mechanics/experience/parts/release-deployment/examples/`
+- `mechanics/experience/parts/release-deployment/scripts/`
+- `mechanics/experience/parts/release-deployment/tests/`
 - `mechanics/experience/parts/office-operations/schemas/`
 - `mechanics/experience/parts/office-operations/examples/`
 - `mechanics/experience/parts/office-operations/scripts/`
@@ -581,3 +583,40 @@ stop-lines must stay visible in the Experience card and part contracts.
 Next route: future Experience changes perform a post-change route review across
 direction, parts, roadmap, landing log, owner requests, registry, validators,
 and generated surfaces, updating only the surfaces whose meaning truly moved.
+
+### Experience provenance-gate hardening
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` keeps archival Experience source accounting in
+the package-level provenance gate. Active part validators check their living
+contracts, schemas, examples, and tests without reading the archive district
+directly.
+
+Surfaces:
+
+- `mechanics/experience/scripts/validate_experience_distillation.py`
+- `mechanics/experience/tests/test_experience_distillation.py`
+- `mechanics/experience/parts/*/scripts/*.py`
+- `mechanics/experience/parts/release-deployment/VALIDATION.md`
+- `mechanics/experience/parts/release-deployment/scripts/validate_release_deployment.py`
+- `mechanics/experience/parts/release-deployment/tests/test_release_deployment.py`
+- `mechanics/experience/artifact-map.json`
+
+Validation:
+
+- `python mechanics/experience/scripts/validate_experience_distillation.py`
+- `python mechanics/experience/parts/release-deployment/scripts/validate_release_deployment.py`
+- `python scripts/validate_mechanic_artifact_topology.py --mechanic experience`
+- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
+- `python -m pytest -q mechanics/experience/tests mechanics/experience/parts`
+
+Stop-lines: active part validators must not read the archival packet district
+directly, archival token drift must fail at the package gate, and
+release-deployment must not sit as schema/example-only without a local active
+validation route.
+
+Next route: future archival-packet audits update the package provenance gate and
+`mechanics/experience/PROVENANCE.md` bridge; future part behavior changes update
+the owning part validator, tests, artifact map, and this ledger when the landing
+surface moves.

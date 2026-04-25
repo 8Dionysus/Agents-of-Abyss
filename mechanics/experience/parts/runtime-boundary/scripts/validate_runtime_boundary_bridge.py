@@ -16,10 +16,27 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
-DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md"
-SCHEMA_PATH = ROOT / "mechanics" / "experience" / "parts" / "runtime-boundary" / "schemas" / "experience-v1-2-v2-0-bridge.schema.json"
-EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "parts" / "runtime-boundary" / "examples" / "experience_v1_2_to_v2_0_bridge.example.json"
+
+SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "runtime-boundary"
+    / "schemas"
+    / "experience-v1-2-v2-0-bridge.schema.json"
+)
+EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "runtime-boundary"
+    / "examples"
+    / "experience_v1_2_to_v2_0_bridge.example.json"
+)
 
 EXPECTED_SEEDS = [
     "aoa-experience-service-mesh-operations-seed-v1_2.zip",
@@ -82,27 +99,6 @@ EXPECTED_OWNER_REPOS = {
     "aoa-stats",
     "aoa-techniques",
 }
-
-REQUIRED_DOC_TOKENS = [
-    "It is not `Experience Wave 1`",
-    "`Dionysus` staged intake",
-    "owner-local planting waves",
-    "`EXPERIENCE_WAVE1_KERNEL.md`",
-    "`EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md`",
-    "`EXPERIENCE_AGON_SERVICE_SEAM_V1_1.md`",
-    "`EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md`",
-    "`AGON_PRE_PROTOCOL_STOP_LINES.md`",
-    "create a new `aoa-experience` repository",
-    "open a live arena",
-    "install `.codex/continuity`",
-    "write directly to `Tree-of-Sophia`",
-    "stats become proof",
-    "memo become truth",
-    "routing become owner",
-    "KAG become canon",
-    "SDK become authority",
-    "`Dionysus` become runtime",
-]
 
 REQUIRED_PREDECESSOR_TOKENS = [
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
@@ -273,19 +269,22 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         fail(f"owner_split repo set mismatch: {sorted(owners)}")
 
     for entry in payload["owner_split"]:
-        if entry["repo"] == "abyss-stack" and "separate runtime-owner gate" not in entry["owns"]:
+        if (
+            entry["repo"] == "abyss-stack"
+            and "separate runtime-owner gate" not in entry["owns"]
+        ):
             fail("abyss-stack entry must require a separate runtime-owner gate")
-        if entry["repo"] == "Tree-of-Sophia" and "direct writes" not in entry["must_not"]:
+        if (
+            entry["repo"] == "Tree-of-Sophia"
+            and "direct writes" not in entry["must_not"]
+        ):
             fail("Tree-of-Sophia entry must deny direct writes")
 
 
 def validate_files() -> None:
-    for path in (DOC_PATH, SCHEMA_PATH, EXAMPLE_PATH):
+    for path in (SCHEMA_PATH, EXAMPLE_PATH):
         if not path.exists():
             fail(f"missing bridge surface: {path.relative_to(ROOT)}")
-
-    doc_text = DOC_PATH.read_text(encoding="utf-8")
-    _assert_contains_all(doc_text, REQUIRED_DOC_TOKENS, "bridge doc")
 
     schema = _load_json(SCHEMA_PATH)
     if schema.get("title") != "experience_v1_2_to_v2_0_bridge_v1":

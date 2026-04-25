@@ -12,6 +12,6 @@ This directory preserves raw `EXPERIENCE_*` source files after active direction 
 ## Validation
 
 ```bash
-python scripts/validate_experience_distillation.py
+python mechanics/experience/scripts/validate_experience_distillation.py
 python scripts/validate_links.py
 ```

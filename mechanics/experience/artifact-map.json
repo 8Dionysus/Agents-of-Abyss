@@ -3264,6 +3264,22 @@
       "path": "mechanics/experience/parts/service-mesh/tests/test_service_mesh.py",
       "legacy_named": true,
       "renamed_from": "test_experience_v1_2_service_mesh_operations.py"
+    },
+    {
+      "kind": "script",
+      "part": "release-deployment",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_release_deployment.py",
+      "path": "mechanics/experience/parts/release-deployment/scripts/validate_release_deployment.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "release-deployment",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_release_deployment.py",
+      "path": "mechanics/experience/parts/release-deployment/tests/test_release_deployment.py",
+      "legacy_named": false
     }
   ]
 }

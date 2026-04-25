@@ -16,10 +16,27 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
-DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
-SCHEMA_PATH = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "schemas" / "experience-v2-0-living-workspace-continuity-runtime.schema.json"
-EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "examples" / "experience_v2_0_living_workspace_continuity_runtime.example.json"
+
+SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "continuity-context"
+    / "schemas"
+    / "experience-v2-0-living-workspace-continuity-runtime.schema.json"
+)
+EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "continuity-context"
+    / "examples"
+    / "experience_v2_0_living_workspace_continuity_runtime.example.json"
+)
 
 SOURCE_SEED = {
     "archive_name": "aoa-experience-living-workspace-continuity-runtime-seed-v2_0.zip",
@@ -261,21 +278,30 @@ EXPECTED_FLOW = [
         "kind": "wave9_continuity_predecessor_checked",
         "owner": "Agents-of-Abyss",
         "authority_note": "v1.9 continuity loom remains predecessor law; v2.0 may not outrun continuity boundaries already fixed in the center",
-        "stop_lines": ["no predecessor erasure", "no living-workspace runtime before wave9 boundary"],
+        "stop_lines": [
+            "no predecessor erasure",
+            "no living-workspace runtime before wave9 boundary",
+        ],
     },
     {
         "order": 3,
         "kind": "living_workspace_runtime_charter_requested",
         "owner": "Agents-of-Abyss",
         "authority_note": "charter is required before any install projection runtime or live-run surface can land elsewhere",
-        "stop_lines": ["no experience wave x naming", "no center-created runtime activation"],
+        "stop_lines": [
+            "no experience wave x naming",
+            "no center-created runtime activation",
+        ],
     },
     {
         "order": 4,
         "kind": "shared_root_projection_boundary_requested",
         "owner": "8Dionysus",
         "authority_note": "shared-root projection law may govern selected workspace-root surfaces without transferring runtime truth",
-        "stop_lines": ["no workspace sovereignty transfer", "no live .codex continuity projection"],
+        "stop_lines": [
+            "no workspace sovereignty transfer",
+            "no live .codex continuity projection",
+        ],
     },
     {
         "order": 5,
@@ -303,7 +329,10 @@ EXPECTED_FLOW = [
         "kind": "continuity_run_posture_checked",
         "owner": "aoa-agents",
         "authority_note": "assistant continuity-backed runs remain notary-limited and operator-reviewed",
-        "stop_lines": ["no assistant self-authorized continuity", "no personal context overreach"],
+        "stop_lines": [
+            "no assistant self-authorized continuity",
+            "no personal context overreach",
+        ],
     },
     {
         "order": 9,
@@ -317,7 +346,10 @@ EXPECTED_FLOW = [
         "kind": "runtime_integrity_and_replay_checked",
         "owner": "aoa-evals",
         "authority_note": "checkpoint export replay and runtime integrity require bounded proof before any owner-local adoption",
-        "stop_lines": ["no replay hash bypass", "no checkpoint export without budget and evidence"],
+        "stop_lines": [
+            "no replay hash bypass",
+            "no checkpoint export without budget and evidence",
+        ],
     },
     {
         "order": 11,
@@ -364,7 +396,14 @@ EXPECTED_HARD_GUARDS = [
 
 EXPECTED_BLOCKING_CONTRACTS = {
     "activation_state": {
-        "allowed_landing_states": ["draft", "proposed", "reviewed", "blocked", "quarantined", "candidate_only"],
+        "allowed_landing_states": [
+            "draft",
+            "proposed",
+            "reviewed",
+            "blocked",
+            "quarantined",
+            "candidate_only",
+        ],
         "active_runtime_allowed": False,
         "codex_continuity_installation_allowed": False,
     },
@@ -461,22 +500,6 @@ EXPECTED_SEED_EVIDENCE = {
     "seed_tests_passed": 18,
 }
 
-REQUIRED_DOC_SNIPPETS = [
-    "aoa-experience-living-workspace-continuity-runtime-seed-v2_0.zip",
-    "It is Wave 10 of the current `v1.2 -> v2.0` planting campaign.",
-    "It is not a live workspace runtime",
-    "No hidden `.codex/continuity` installation.",
-    "No Codex durable continuity approval.",
-    "No direct `Tree-of-Sophia` runtime write.",
-    "`aoa-kag` owns derived pattern lift only after later owner-local landing.",
-    "not install `.codex/continuity`",
-]
-
-BANNED_DOC_SNIPPETS = [
-    "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9.zip",
-    "It is Wave 9 of the current `v1.2 -> v2.0` planting campaign.",
-]
-
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -491,43 +514,63 @@ def expect_equal(name: str, actual: Any, expected: Any, detail: str) -> None:
         raise ValidationError(f"{name} {detail}")
 
 
-def validate_document() -> None:
-    doc_text = load_text(DOC_PATH)
-    for snippet in REQUIRED_DOC_SNIPPETS:
-        if snippet not in doc_text:
-            raise ValidationError(f"documentation missing required living-workspace phrase: {snippet}")
-    for snippet in BANNED_DOC_SNIPPETS:
-        if snippet in doc_text:
-            raise ValidationError(f"documentation still carries stale phrase: {snippet}")
-
-
 def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     Draft202012Validator(schema).validate(payload)
 
-    expect_equal("source_seed", payload["source_seed"], SOURCE_SEED, "must preserve v2.0 seed provenance")
+    expect_equal(
+        "source_seed",
+        payload["source_seed"],
+        SOURCE_SEED,
+        "must preserve v2.0 seed provenance",
+    )
     expect_equal(
         "predecessor_surfaces",
         payload["predecessor_surfaces"],
         EXPECTED_PREDECESSORS,
         "must preserve the v2.0 predecessor chain",
     )
-    expect_equal("runtime_law", payload["runtime_law"], EXPECTED_RUNTIME_LAW, "must preserve runtime law")
+    expect_equal(
+        "runtime_law",
+        payload["runtime_law"],
+        EXPECTED_RUNTIME_LAW,
+        "must preserve runtime law",
+    )
     expect_equal(
         "runtime_requests",
         payload["runtime_requests"],
         EXPECTED_REQUESTS,
         "must preserve runtime request ownership and boundaries",
     )
-    expect_equal("runtime_flow", payload["runtime_flow"], EXPECTED_FLOW, "must preserve the runtime flow spine")
-    expect_equal("hard_guards", payload["hard_guards"], EXPECTED_HARD_GUARDS, "must preserve hard guards")
+    expect_equal(
+        "runtime_flow",
+        payload["runtime_flow"],
+        EXPECTED_FLOW,
+        "must preserve the runtime flow spine",
+    )
+    expect_equal(
+        "hard_guards",
+        payload["hard_guards"],
+        EXPECTED_HARD_GUARDS,
+        "must preserve hard guards",
+    )
     expect_equal(
         "blocking_contracts",
         payload["blocking_contracts"],
         EXPECTED_BLOCKING_CONTRACTS,
         "must preserve non-runtime blocking contracts",
     )
-    expect_equal("authority", payload["authority"], EXPECTED_AUTHORITY, "must preserve center authority posture")
-    expect_equal("owner_split", payload["owner_split"], EXPECTED_OWNER_SPLIT, "must preserve owner split")
+    expect_equal(
+        "authority",
+        payload["authority"],
+        EXPECTED_AUTHORITY,
+        "must preserve center authority posture",
+    )
+    expect_equal(
+        "owner_split",
+        payload["owner_split"],
+        EXPECTED_OWNER_SPLIT,
+        "must preserve owner split",
+    )
     expect_equal(
         "quarantined_surfaces",
         payload["quarantined_surfaces"],
@@ -543,11 +586,12 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
 
 
 def main() -> int:
-    validate_document()
     schema = load_json(SCHEMA_PATH)
     payload = load_json(EXAMPLE_PATH)
     validate_payload(payload, schema)
-    print("ok: Experience v2.0 living workspace continuity runtime center contract is valid")
+    print(
+        "ok: Experience v2.0 living workspace continuity runtime center contract is valid"
+    )
     return 0
 
 
