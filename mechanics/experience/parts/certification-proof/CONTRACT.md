@@ -24,4 +24,4 @@ This part owns certification discipline, watchtower posture, canary gates, regre
 
 ## Next route
 
-When this part needs operational landing, update `OWNER_REQUESTS.md` and `mechanics/owner-request-queue.json`, then route to the stronger owner named above. Keep raw source detail in `legacy/raw/` and keep active docs short.
+When this part needs operational landing, update `OWNER_REQUESTS.md` and `mechanics/owner-request-queue.json`, then route to the stronger owner named above. Keep historical-source detail out of active part docs and keep only the distilled contract here.

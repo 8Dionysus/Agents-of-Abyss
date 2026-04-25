@@ -280,7 +280,7 @@ Repository: `Agents-of-Abyss` for the center-owned Wave 5 turn of the current
 v1.2-v2.0 planting campaign. It is not `Experience Wave 5`.
 
 Current surfaces:
-- `mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md`
+- `mechanics/experience/parts/compatibility-bridges/README.md`
 - `examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
 - `schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
 

@@ -35,7 +35,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 - [office-operations contract](parts/office-operations/CONTRACT.md)
 - [runtime-boundary contract](parts/runtime-boundary/CONTRACT.md)
 - [compatibility-bridges contract](parts/compatibility-bridges/CONTRACT.md)
-- [legacy raw index](legacy/INDEX.md)
+- [provenance bridge](PROVENANCE.md)
 
 ## Stop-lines
 

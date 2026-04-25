@@ -161,6 +161,7 @@
       "canonical_docs": [
         "mechanics/experience/DIRECTION.md",
         "mechanics/experience/PARTS.md",
+        "mechanics/experience/PROVENANCE.md",
         "mechanics/experience/parts/capture-kernel/README.md",
         "mechanics/experience/parts/certification-proof/README.md",
         "mechanics/experience/parts/adoption-federation/README.md",
@@ -171,8 +172,7 @@
         "mechanics/experience/parts/continuity-context/README.md",
         "mechanics/experience/parts/runtime-boundary/README.md",
         "mechanics/experience/parts/compatibility-bridges/README.md",
-        "mechanics/experience/OWNER_REQUESTS.md",
-        "mechanics/experience/legacy/INDEX.md"
+        "mechanics/experience/OWNER_REQUESTS.md"
       ],
       "card": {
         "center_owns": "Experience center contracts, release posture, stop-lines, adoption route language, and owner-routing grammar.",

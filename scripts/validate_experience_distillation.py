@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Experience active parts and legacy raw provenance."""
+"""Validate Experience active parts and the single provenance bridge."""
 
 from __future__ import annotations
 
@@ -16,6 +16,7 @@ LEGACY_ROOT = EXPERIENCE_ROOT / "legacy"
 RAW_ROOT = LEGACY_ROOT / "raw"
 PARTS_ROOT = EXPERIENCE_ROOT / "parts"
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
+PROVENANCE_PATH = EXPERIENCE_ROOT / "PROVENANCE.md"
 
 PART_SLUGS = (
     "capture-kernel",
@@ -34,6 +35,7 @@ ROOT_SURFACES = (
     "README.md",
     "DIRECTION.md",
     "PARTS.md",
+    "PROVENANCE.md",
     "LANDING_LOG.md",
     "ROADMAP.md",
     "OWNER_REQUESTS.md",
@@ -62,6 +64,15 @@ STALE_ACTIVE_REFS = (
 )
 
 ACTIVE_TEXT_SUFFIXES = (".md", ".py", ".json", ".yaml", ".yml", ".toml", ".txt")
+ACTIVE_ARCHIVE_LOAD_PATTERNS = (
+    "legacy/",
+    "Legacy raw",
+    "Primary raw provenance",
+    "raw provenance",
+    "raw source",
+    "raw-source",
+)
+ACTIVE_ARCHIVE_FILENAME_RE = re.compile(r"EXPERIENCE_[A-Z0-9_]+\.md")
 
 
 def rel(path: Path) -> str:
@@ -97,6 +108,18 @@ def active_text_files() -> list[Path]:
     return files
 
 
+def active_markdown_files_without_bridge() -> list[Path]:
+    files: list[Path] = []
+    for path in EXPERIENCE_ROOT.rglob("*.md"):
+        if not path.is_file():
+            continue
+        relative = path.relative_to(EXPERIENCE_ROOT).as_posix()
+        if relative.startswith("legacy/") or path == PROVENANCE_PATH:
+            continue
+        files.append(path)
+    return files
+
+
 def validate_root_surfaces(problems: list[str]) -> None:
     for name in ROOT_SURFACES:
         require_file(EXPERIENCE_ROOT / name, problems)
@@ -117,13 +140,14 @@ def validate_root_surfaces(problems: list[str]) -> None:
             problems.append(f"mechanics/experience/PARTS.md: missing part slug {slug}")
         if slug not in readme:
             problems.append(f"mechanics/experience/README.md: missing part slug {slug}")
-    for text_name, text in (
-        ("mechanics/experience/DIRECTION.md", direction),
-        ("mechanics/experience/PARTS.md", parts),
-        ("mechanics/experience/README.md", readme),
-    ):
-        if "legacy/raw" not in text:
-            problems.append(f"{text_name}: must route to legacy/raw provenance")
+    provenance = read(PROVENANCE_PATH) if PROVENANCE_PATH.exists() else ""
+    for needle in ("legacy/INDEX.md", "legacy/DISTILLATION_LOG.md", "legacy/raw/README.md"):
+        if needle not in provenance:
+            problems.append(f"mechanics/experience/PROVENANCE.md: missing archive route {needle}")
+    if "only active Experience surface" not in provenance:
+        problems.append("mechanics/experience/PROVENANCE.md: must declare itself the only active archive bridge")
+    if "PROVENANCE.md" not in readme and "PROVENANCE" not in readme:
+        problems.append("mechanics/experience/README.md: missing provenance bridge route")
 
 
 def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
@@ -141,8 +165,8 @@ def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
         readme = read(readme_path) if readme_path.exists() else ""
         contract = read(contract_path) if contract_path.exists() else ""
         validation = read(validation_path) if validation_path.exists() else ""
-        if "## Legacy raw sources" not in readme:
-            problems.append(f"{rel(readme_path)}: missing legacy raw source section")
+        if "## Legacy raw sources" in readme or "## Primary raw provenance" in readme:
+            problems.append(f"{rel(readme_path)}: active part README carries archival source inventory")
         if "## Must not claim" not in contract:
             problems.append(f"{rel(contract_path)}: missing explicit stop-line section")
         if f"validate_experience_distillation.py --part {slug}" not in validation:
@@ -183,6 +207,17 @@ def validate_no_stale_active_refs(problems: list[str]) -> None:
                 break
 
 
+def validate_active_docs_are_lean(problems: list[str]) -> None:
+    for path in active_markdown_files_without_bridge():
+        text = read(path)
+        for pattern in ACTIVE_ARCHIVE_LOAD_PATTERNS:
+            if pattern in text:
+                problems.append(f"{rel(path)}: active doc carries archive-load marker {pattern!r}")
+                break
+        if ACTIVE_ARCHIVE_FILENAME_RE.search(text):
+            problems.append(f"{rel(path)}: active doc names archived Experience source files")
+
+
 def validate_registry(problems: list[str]) -> None:
     registry = load_registry()
     experience = next(
@@ -200,10 +235,12 @@ def validate_registry(problems: list[str]) -> None:
         canonical = []
     for ref in canonical:
         ref_text = str(ref)
-        if ref_text.startswith("mechanics/experience/legacy/raw/"):
-            problems.append(f"mechanics/registry.json: raw file listed as canonical active doc: {ref_text}")
+        if ref_text.startswith("mechanics/experience/legacy/"):
+            problems.append(f"mechanics/registry.json: archive file listed as canonical active doc: {ref_text}")
         if not (REPO_ROOT / ref_text).exists():
             problems.append(f"mechanics/registry.json: canonical doc missing: {ref_text}")
+    if "mechanics/experience/PROVENANCE.md" not in canonical:
+        problems.append("mechanics/registry.json: experience canonical_docs must include PROVENANCE.md bridge")
     if "scripts/validate_experience_distillation.py" not in experience.get("validation_refs", []):
         problems.append("mechanics/registry.json: missing validate_experience_distillation.py validation ref")
 
@@ -220,6 +257,7 @@ def validate(selected: set[str] | None = None) -> list[str]:
     validate_parts(selected, problems)
     validate_raw_sources(problems)
     validate_no_stale_active_refs(problems)
+    validate_active_docs_are_lean(problems)
     validate_registry(problems)
     return problems
 

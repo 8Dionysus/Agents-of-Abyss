@@ -8,6 +8,10 @@ Legacy is not a trash archive. It is the provenance district for Experience wave
 - `INDEX.md`: every raw source mapped to an active part route.
 - `DISTILLATION_LOG.md`: dated accounting for raw-to-active distillation decisions.
 
+The active package reaches this district only through
+[`../PROVENANCE.md`](../PROVENANCE.md). Do not duplicate this archive inventory
+inside active part docs.
+
 ## Use this when
 
 - you need the exact historic surface behind an active part
