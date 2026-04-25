@@ -11,7 +11,7 @@ from jsonschema import Draft202012Validator
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md"
+DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md"
 SCHEMA_PATH = ROOT / "schemas" / "experience-v1-5-epistemic-duel-model-of-other-forge.schema.json"
 EXAMPLE_PATH = ROOT / "examples" / "experience_v1_5_epistemic_duel_model_of_other_forge.example.json"
 
@@ -21,10 +21,10 @@ SOURCE_SHA256 = "51349824b23af2da3434e0ba6ce95fe6c5faf32bdb449b98e793d2912c73ff0
 EXPECTED_PREDECESSORS = [
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
     "mechanics/agon/docs/AGON_MODEL_OF_OTHER_LAW.md",
     "mechanics/agon/docs/AGON_EPISTEMIC_AGON.md",
     "mechanics/agon/docs/AGON_EPISTEMIC_MOVE_EXTENSION_MODEL.md",
@@ -41,7 +41,7 @@ EXPECTED_PREDECESSORS = [
     "mechanics/agon/docs/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
     "mechanics/agon/docs/AGON_DELTA_RECEIPT_MODEL.md",
     "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
-    "mechanics/experience/docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
     "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
 ]
 
@@ -744,7 +744,7 @@ def validate_doc() -> None:
     except FileNotFoundError as exc:
         fail("missing v1.5 epistemic duel documentation")
         raise AssertionError from exc
-    assert_contains_all(text, REQUIRED_DOC_TOKENS, "mechanics/experience/docs/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md")
+    assert_contains_all(text, REQUIRED_DOC_TOKENS, "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md")
 
 
 def main() -> int:

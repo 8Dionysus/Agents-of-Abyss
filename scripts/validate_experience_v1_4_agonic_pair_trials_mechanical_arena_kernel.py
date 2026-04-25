@@ -11,7 +11,7 @@ from jsonschema import Draft202012Validator
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md"
+DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md"
 SCHEMA_PATH = (
     ROOT
     / "schemas"
@@ -29,9 +29,9 @@ SOURCE_SHA256 = "c62a9c38b662ad7c62405c7ca2ac75fe5ea7cc05f13e001a141ad60cf2f5f40
 EXPECTED_PREDECESSORS = [
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
     "mechanics/agon/docs/AGON_ARENA_SESSION_MODEL.md",
     "mechanics/agon/docs/AGON_CHARTER_AND_SEAT_MODEL.md",
     "mechanics/agon/docs/AGON_SEALED_COMMIT_MODEL.md",
@@ -40,7 +40,7 @@ EXPECTED_PREDECESSORS = [
     "mechanics/agon/docs/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
     "mechanics/agon/docs/AGON_DUEL_KERNEL_MODEL.md",
     "mechanics/agon/docs/AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md",
-    "mechanics/experience/docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
     "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
     "mechanics/agon/docs/AGON_WAVE12_STOP_LINES.md",
     "mechanics/agon/docs/AGON_WAVE13_STOP_LINES.md",

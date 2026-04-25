@@ -46,7 +46,7 @@
       "summary": "A bounded pilot candidate is declared for owner-native review choreography.",
       "actor_role": "codex",
       "evidence_refs": [
-        "mechanics/experience/docs/EXPERIENCE_WAVE1_KERNEL.md"
+        "mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md"
       ]
     },
     {
@@ -66,7 +66,7 @@
       "summary": "Durable memory is allowed only as a requested memo candidate after owner review.",
       "actor_role": "memory-keeper",
       "evidence_refs": [
-        "mechanics/experience/docs/EXPERIENCE_WAVE1_KERNEL.md#stop-lines"
+        "mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md#stop-lines"
       ]
     },
     {
@@ -76,7 +76,7 @@
       "summary": "The pilot choreography belongs first in aoa-playbooks, with proof, memory, routing, and stats as subordinate follow-through.",
       "actor_role": "router",
       "evidence_refs": [
-        "mechanics/experience/docs/EXPERIENCE_WAVE1_KERNEL.md#owner-split"
+        "mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md#owner-split"
       ]
     },
     {
@@ -96,7 +96,7 @@
     "reviewer_role": "operator_review",
     "rationale": "The candidate preserves the v0.1-v0.3 mechanics while keeping owner landing review-gated.",
     "evidence_refs": [
-      "mechanics/experience/docs/EXPERIENCE_WAVE1_KERNEL.md",
+      "mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md",
       "examples/experience_wave1_flow.example.json"
     ]
   },

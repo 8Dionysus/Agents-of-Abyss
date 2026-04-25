@@ -11,7 +11,7 @@ from jsonschema import Draft202012Validator, ValidationError
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md"
+DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md"
 SCHEMA_PATH = ROOT / "schemas" / "experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json"
 EXAMPLE_PATH = ROOT / "examples" / "experience_v1_6_epistemic_memory_rank_reputation_engine.example.json"
 
@@ -21,11 +21,11 @@ SOURCE_SHA256 = "51e403eb0ca9ac384b1edba959b67bdf457efc5813ba3aa7577e94ee8759147
 EXPECTED_PREDECESSORS = [
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
     "mechanics/agon/docs/AGON_WAVE14_LANDING.md",
     "mechanics/agon/docs/AGON_WAVE14_STOP_LINES.md",
     "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
@@ -34,7 +34,7 @@ EXPECTED_PREDECESSORS = [
     "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md",
     "mechanics/agon/docs/AGON_WAVE15_LANDING.md",
     "mechanics/agon/docs/AGON_WAVE15_STOP_LINES.md",
-    "mechanics/experience/docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
 ]
 
 EXPECTED_RANK_REPUTATION_LAW = [

@@ -12,6 +12,7 @@ Tests protect bounded claims. They do not replace proof canon in `aoa-evals` and
 - a link, Markdown shape, status vocabulary, or generated freshness guardrail changes
 - an AGENTS-card mesh, local card, or mesh index changes
 - an Agon or Experience center contract changes
+- an Experience active-part or legacy raw provenance route changes
 - a release or root-surface guardrail needs regression protection
 
 ## Rules
@@ -29,7 +30,15 @@ python -m pytest -q tests
 ```
 
 Run targeted validators before or alongside pytest when a generated surface,
-schema, or hygiene guardrail changes. For Wave E hygiene, run:
+schema, or hygiene guardrail changes.
+
+For Experience active-part or legacy raw provenance changes, run:
+
+```bash
+python scripts/validate_experience_distillation.py
+```
+
+For Wave E hygiene, run:
 
 ```bash
 python scripts/validate_hygiene_suite.py

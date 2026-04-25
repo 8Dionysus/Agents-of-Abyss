@@ -95,7 +95,7 @@ def test_experience_v16_rank_reputation_requires_v15_predecessor() -> None:
     bad_payload = copy.deepcopy(payload)
     predecessors = bad_payload["predecessor_surfaces"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/experience/docs/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md")
+    predecessors.remove("mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md")
 
     with pytest.raises(validator.ValidationError, match="predecessor_surfaces|bridge spine|schema"):
         validator.validate_payload(bad_payload, schema)

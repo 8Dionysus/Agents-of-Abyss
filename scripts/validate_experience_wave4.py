@@ -12,9 +12,9 @@ from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).resolve().parents[1]
 
-DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md"
-V08_DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_V0_8_POLIS_GOVERNANCE.md"
-V09_DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_V0_9_CONSTITUTION_RUNTIME.md"
+DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md"
+V08_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V0_8_POLIS_GOVERNANCE.md"
+V09_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V0_9_CONSTITUTION_RUNTIME.md"
 SCHEMA_PATH = ROOT / "schemas" / "experience-wave4-polis-constitution.schema.json"
 EXAMPLE_PATH = ROOT / "examples" / "experience_wave4_polis_constitution.example.json"
 
@@ -219,7 +219,7 @@ def validate_example(flow: dict[str, Any]) -> None:
 def validate_doc(text: str) -> None:
     for token in REQUIRED_DOC_TOKENS:
         if token not in text:
-            fail(f"mechanics/experience/docs/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md must mention {token!r}")
+            fail(f"mechanics/experience/legacy/raw/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md must mention {token!r}")
 
 
 def run_validation() -> list[str]:

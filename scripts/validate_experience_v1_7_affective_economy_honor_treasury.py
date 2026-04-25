@@ -11,7 +11,7 @@ from jsonschema import Draft202012Validator, ValidationError
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md"
+DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md"
 SCHEMA_PATH = ROOT / "schemas" / "experience-v1-7-affective-economy-honor-treasury.schema.json"
 EXAMPLE_PATH = ROOT / "examples" / "experience_v1_7_affective_economy_honor_treasury.example.json"
 
@@ -21,12 +21,12 @@ SOURCE_SHA256 = "328872f61d4ffa16fdfd1315bf90c48ff4cfa7960b9b500275f6c8872bfe338
 EXPECTED_PREDECESSORS = [
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md",
     "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
     "mechanics/agon/docs/AGON_DELTA_RECEIPT_MODEL.md",
     "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md",
@@ -36,7 +36,7 @@ EXPECTED_PREDECESSORS = [
     "mechanics/agon/docs/AGON_WAVE16_STOP_LINES.md",
     "mechanics/agon/docs/AGON_WAVE17_LANDING.md",
     "mechanics/agon/docs/AGON_WAVE17_STOP_LINES.md",
-    "mechanics/experience/docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
     "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md",
 ]
 

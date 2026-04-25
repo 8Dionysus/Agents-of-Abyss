@@ -159,14 +159,20 @@
     {
       "agents_ref": "mechanics/experience/AGENTS.md",
       "canonical_docs": [
-        "mechanics/experience/docs/EXPERIENCE_WAVE1_KERNEL.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
-        "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md",
-        "mechanics/experience/docs/EXPERIENCE_OWNER_REPO_REQUESTS.md"
+        "mechanics/experience/DIRECTION.md",
+        "mechanics/experience/PARTS.md",
+        "mechanics/experience/parts/capture-kernel/README.md",
+        "mechanics/experience/parts/certification-proof/README.md",
+        "mechanics/experience/parts/adoption-federation/README.md",
+        "mechanics/experience/parts/governance-polis/README.md",
+        "mechanics/experience/parts/release-deployment/README.md",
+        "mechanics/experience/parts/office-operations/README.md",
+        "mechanics/experience/parts/service-mesh/README.md",
+        "mechanics/experience/parts/continuity-context/README.md",
+        "mechanics/experience/parts/runtime-boundary/README.md",
+        "mechanics/experience/parts/compatibility-bridges/README.md",
+        "mechanics/experience/OWNER_REQUESTS.md",
+        "mechanics/experience/legacy/INDEX.md"
       ],
       "card": {
         "center_owns": "Experience center contracts, release posture, stop-lines, adoption route language, and owner-routing grammar.",
@@ -202,7 +208,7 @@
         "owner-local activation"
       ],
       "owner_boundary": "Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, offices, runtime, KAG, memory, and ToS authority remain owner-local.",
-      "owner_request_doc_ref": "mechanics/experience/docs/EXPERIENCE_OWNER_REPO_REQUESTS.md",
+      "owner_request_doc_ref": "mechanics/experience/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-EXPERIENCE-STACK-001",
         "ORQ-EXPERIENCE-MEMO-001",
@@ -218,6 +224,7 @@
       "status": "planted",
       "title": "Experience",
       "validation_refs": [
+        "scripts/validate_experience_distillation.py",
         "scripts/validate_mechanic_landing_logs.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/validate_mechanic_readme_cards.py",

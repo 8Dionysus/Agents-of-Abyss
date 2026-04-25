@@ -107,7 +107,7 @@ def test_experience_v15_epistemic_duel_requires_v14_mechanical_predecessor() -> 
     bad_payload = copy.deepcopy(payload)
     predecessors = bad_payload["predecessor_surfaces"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/experience/docs/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md")
+    predecessors.remove("mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md")
 
     with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
         validator.validate_payload(bad_payload, schema)
