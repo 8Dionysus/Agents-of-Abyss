@@ -5,7 +5,7 @@
   "repo": "Agents-of-Abyss",
   "surfaces": [
     "generated/agon_mechanical_trial_suite_registry.min.json",
-    "docs/AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md"
+    "mechanics/agon/docs/AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md"
   ],
   "wave": "XIII"
 }

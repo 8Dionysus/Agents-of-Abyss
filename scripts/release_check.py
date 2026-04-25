@@ -12,6 +12,7 @@ COMMANDS = [
     ("validate markdown shape", [sys.executable, "scripts/validate_markdown_shape.py"]),
     ("check center entry map", [sys.executable, "scripts/build_center_entry_map.py", "--check"]),
     ("validate center entry map", [sys.executable, "scripts/validate_center_entry_map.py"]),
+    ("validate mechanics topology", [sys.executable, "scripts/validate_mechanics_topology.py"]),
     ("validate mechanic landing logs", [sys.executable, "scripts/validate_mechanic_landing_logs.py"]),
     ("validate ecosystem", [sys.executable, "scripts/validate_ecosystem.py"]),
     ("run tests", [sys.executable, "-m", "pytest", "-q"]),

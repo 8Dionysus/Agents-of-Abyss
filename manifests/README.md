@@ -20,6 +20,6 @@ A manifest is not a memory store, not a roadmap, and not a root civic surface.
 
 ## Before editing
 
-1. Check [`docs/RECURRENCE_PRINCIPLE.md`](../docs/RECURRENCE_PRINCIPLE.md) if the manifest is recurrence-related.
+1. Check [`mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md`](../mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md) if the manifest is recurrence-related.
 2. Check [`docs/ROOT_SURFACE_LAW.md`](../docs/ROOT_SURFACE_LAW.md) if the manifest was considered for root.
 3. Keep the owner-local landing path visible.

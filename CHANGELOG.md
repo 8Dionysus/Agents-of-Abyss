@@ -12,9 +12,16 @@ Tracking starts with the community-docs baseline for this repository.
 - `docs/START_HERE_ROUTE_CONTRACT.md` as the canonical route-mode contract for
   public entry, root editing, direction changes, ownership routing, mechanic
   changes, public claim validation, low-context agents, and district work
-- `docs/AGON_LANDING_LOG.md` and `docs/EXPERIENCE_LANDING_LOG.md` as
-  mechanic-level landing ledgers for checked surfaces, validators, owner
-  boundaries, stop-lines, and next routes
+- `mechanics/` as the canonical root topology for center mechanics, with a
+  shared mechanics `AGENTS.md`, per-mechanic packages, `README.md`,
+  `ROADMAP.md`, `LANDING_LOG.md`, and `docs/` surfaces for each canonical
+  mechanic
+- `mechanics/registry.json` and `scripts/validate_mechanics_topology.py` to
+  machine-check mechanic slugs, required package files, owner boundaries,
+  compatibility routes, and moved-path cleanup
+- `mechanics/agon/LANDING_LOG.md` and
+  `mechanics/experience/LANDING_LOG.md` as mechanic-level landing ledgers for
+  checked surfaces, validators, owner boundaries, stop-lines, and next routes
 - `scripts/validate_mechanic_landing_logs.py` and regression coverage for the
   Agon and Experience LANDING_LOG surfaces
 
@@ -23,11 +30,19 @@ Tracking starts with the community-docs baseline for this repository.
 - `generated/center_entry_map.min.json` and its schema now publish the
   `aoa_center_entry_map_v2` route contract with route modes, human paths,
   machine companions, and explicit `must_not_claim` stop-lines
+- `docs/MECHANICS.md` is now a compatibility route to
+  `mechanics/README.md`; the full mechanics atlas lives under the root
+  mechanics topology
 - `ROADMAP.md` now keeps strategic direction and current contour while
   detailed Agon and Experience landing history lives in mechanic LANDING_LOG
   surfaces
-- release validation now runs Markdown shape checks and mechanic landing-log
-  validation through `scripts/release_check.py`
+- route surfaces, schemas, generated maps, examples, manifests, validators,
+  and tests now resolve Agon, Experience, RPG, recurrence, questbook,
+  antifragility, ToS-bridge, method-growth, and release-support references
+  through `mechanics/`
+- release validation now runs Markdown shape checks, mechanics topology
+  validation, and mechanic landing-log validation through
+  `scripts/release_check.py`
 
 ## [0.2.3] - 2026-04-23
 

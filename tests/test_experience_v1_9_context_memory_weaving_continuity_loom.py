@@ -107,7 +107,7 @@ def test_experience_v19_continuity_loom_requires_v18_predecessor() -> None:
     bad_payload = copy.deepcopy(payload)
     predecessors = bad_payload["predecessor_surfaces"]
     assert isinstance(predecessors, list)
-    predecessors.remove("docs/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md")
+    predecessors.remove("mechanics/experience/docs/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md")
 
     with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
         validator.validate_payload(bad_payload, schema)
@@ -120,7 +120,7 @@ def test_experience_v19_continuity_loom_requires_agon_state_packet_predecessor()
     bad_payload = copy.deepcopy(payload)
     predecessors = bad_payload["predecessor_surfaces"]
     assert isinstance(predecessors, list)
-    predecessors.remove("docs/AGON_STATE_PACKET_MODEL.md")
+    predecessors.remove("mechanics/agon/docs/AGON_STATE_PACKET_MODEL.md")
 
     with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
         validator.validate_payload(bad_payload, schema)

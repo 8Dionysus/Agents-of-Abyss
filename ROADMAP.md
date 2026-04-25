@@ -74,35 +74,35 @@ hardening, not a new implementation layer. Its current checked surface is:
 
 - center public route and support posture:
   `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`,
-  `docs/FEDERATION_RULES.md`, `docs/PUBLIC_SUPPORT_POSTURE.md`, and
-  `docs/DIRECTION_SURFACES.md`
+  `docs/FEDERATION_RULES.md`, `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, and
+  `mechanics/release-support/docs/DIRECTION_SURFACES.md`
 - compact center and support capsules:
   `generated/center_entry_map.min.json`,
   `generated/ecosystem_registry.min.json`, and
   `generated/federation_supporting_inventory.min.json`
 - reviewable growth-refinery and post-candidate owner followthrough doctrine:
-  `docs/REVIEWABLE_GROWTH_REFINERY.md`,
-  `docs/CANDIDATE_LINEAGE_CROSSWALK.md`,
-  `docs/OWNER_LANDING_AND_PRUNING.md`,
+  `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`,
+  `mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`,
+  `mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md`,
   `examples/lineage_contract_chain.example.json`, and
   `scripts/validate_candidate_lineage_contract.py`
 - self-agency continuity and component refresh stop-lines:
-  `docs/SELF_AGENCY_CONTINUITY.md` and
-  `docs/COMPONENT_REFRESH_LAW.md`
+  `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md` and
+  `mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md`
 - Agon preparation holding boundary:
-  `docs/AGON_PREPARATION_POSTURE.md`
+  `mechanics/agon/docs/AGON_PREPARATION_POSTURE.md`
 - current kernel-wave automation boundary checks:
   `scripts/validate_wave4_kernel_automation.py`
 - mechanic landing ledgers:
-  `docs/AGON_LANDING_LOG.md` and `docs/EXPERIENCE_LANDING_LOG.md`
+  `mechanics/agon/LANDING_LOG.md` and `mechanics/experience/LANDING_LOG.md`
 
 This contour lets the center name the route, validators, and stop-lines while
 leaving checkpoint carry, candidate identity, seed staging, owner landing,
 derived summaries, recurring method, and future Agon-related handoffs in their
 owning repositories.
 
-Detailed Agon wave landings now live in `docs/AGON_LANDING_LOG.md`; detailed
-Experience planting history now lives in `docs/EXPERIENCE_LANDING_LOG.md`.
+Detailed Agon wave landings now live in `mechanics/agon/LANDING_LOG.md`; detailed
+Experience planting history now lives in `mechanics/experience/LANDING_LOG.md`.
 `ROADMAP.md` keeps the direction and current contour, while LANDING_LOG
 surfaces keep the wave ledger, validators, surfaces, owner boundaries, and
 stop-lines.

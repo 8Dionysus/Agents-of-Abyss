@@ -27,5 +27,5 @@ A schema checks shape. It does not prove truth, grant authority, or replace the 
 
 1. Identify the source document that owns the semantics.
 2. Identify the generated artifact or validator that consumes the schema.
-3. Check [`docs/MECHANICS.md`](../docs/MECHANICS.md) if the schema belongs to Agon, Experience, recurrence, quest/RPG, or another mechanic.
+3. Check [`mechanics/README.md`](../mechanics/README.md) if the schema belongs to Agon, Experience, recurrence, quest/RPG, or another mechanic.
 4. Run the nearest validator and `python -m pytest -q tests`.

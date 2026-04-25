@@ -14,7 +14,7 @@
       "emits": "owner_summary_candidate",
       "hook_id": "agon.vds.stopline.drift",
       "watches": [
-        "docs/AGON_WAVE11_STOP_LINES.md"
+        "mechanics/agon/docs/AGON_WAVE11_STOP_LINES.md"
       ]
     }
   ],

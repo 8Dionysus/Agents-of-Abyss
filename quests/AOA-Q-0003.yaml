@@ -30,7 +30,7 @@ activation:
   note: wait for first contour seam proof
 anchor_ref:
   artifact: first_wave_doc
-  ref: docs/QUESTBOOK_FIRST_WAVE.md
+  ref: mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md
 handoff_role: federation-maintainer
 evidence:
   - later contour repo classes are named

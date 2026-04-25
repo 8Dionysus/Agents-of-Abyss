@@ -12,11 +12,11 @@ READINESS_PATH = REPO_ROOT / "generated" / "agon_imposition_readiness.min.json"
 SCHEMA_REF = "schemas/agon-imposition-readiness.schema.json"
 
 AUTHORITY_REFS = (
-    "docs/AGON_IMPOSITION_POSTURE.md",
-    "docs/AGON_SURVIVAL_CRITERIA.md",
-    "docs/AGON_DOUBT_AUDIT.md",
-    "docs/PRE_AGON_BASELINE.md",
-    "docs/AGON_WAVE0_LANDING.md",
+    "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
+    "mechanics/agon/docs/AGON_SURVIVAL_CRITERIA.md",
+    "mechanics/agon/docs/AGON_DOUBT_AUDIT.md",
+    "mechanics/agon/docs/PRE_AGON_BASELINE.md",
+    "mechanics/agon/docs/AGON_WAVE0_LANDING.md",
 )
 
 BASELINE_REFS = (
@@ -25,8 +25,8 @@ BASELINE_REFS = (
     "ECOSYSTEM_MAP.md",
     "docs/LAYERS.md",
     "docs/FEDERATION_RULES.md",
-    "docs/ANTI_AUTHORITY_RULES.md",
-    "docs/AGON_PREPARATION_POSTURE.md",
+    "mechanics/antifragility/docs/ANTI_AUTHORITY_RULES.md",
+    "mechanics/agon/docs/AGON_PREPARATION_POSTURE.md",
     "ROADMAP.md",
 )
 

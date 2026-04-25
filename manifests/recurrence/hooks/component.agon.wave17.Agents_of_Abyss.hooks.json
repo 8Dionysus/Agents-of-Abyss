@@ -17,12 +17,12 @@
       "surface_globs": [
         "generated/agon_kag_promotion_path_registry.min.json",
         "config/agon_kag_promotion_path.seed.json",
-        "docs/AGON_KAG_PROMOTION_PATH.md",
-        "docs/AGON_KAG_PROMOTION_CANDIDATE_MODEL.md",
-        "docs/AGON_KAG_SURVIVAL_CRITERIA.md",
-        "docs/AGON_KAG_OWNER_HANDOFFS.md",
-        "docs/AGON_WAVE17_STOP_LINES.md",
-        "docs/AGON_WAVE17_LANDING.md"
+        "mechanics/agon/docs/AGON_KAG_PROMOTION_PATH.md",
+        "mechanics/agon/docs/AGON_KAG_PROMOTION_CANDIDATE_MODEL.md",
+        "mechanics/agon/docs/AGON_KAG_SURVIVAL_CRITERIA.md",
+        "mechanics/agon/docs/AGON_KAG_OWNER_HANDOFFS.md",
+        "mechanics/agon/docs/AGON_WAVE17_STOP_LINES.md",
+        "mechanics/agon/docs/AGON_WAVE17_LANDING.md"
       ]
     }
   ],

@@ -1,0 +1,259 @@
+{
+  "schema_version": "aoa_mechanics_registry_v1",
+  "authority_ref": "mechanics/README.md",
+  "agents_ref": "mechanics/AGENTS.md",
+  "compatibility_routes": [
+    "docs/MECHANICS.md",
+    "FRAGILITY_BLACKLIST.md",
+    "QUESTBOOK.md"
+  ],
+  "mechanics": [
+    {
+      "slug": "method-growth",
+      "title": "Method-growth",
+      "status": "landed",
+      "package_path": "mechanics/method-growth",
+      "entry_ref": "mechanics/method-growth/README.md",
+      "roadmap_ref": "mechanics/method-growth/ROADMAP.md",
+      "landing_log_ref": "mechanics/method-growth/LANDING_LOG.md",
+      "agents_ref": "mechanics/method-growth/AGENTS.md",
+      "docs_path": "mechanics/method-growth/docs",
+      "owner_boundary": "Center route from repeated work to candidate, seed, owner landing, proof, method, memory, and derived summary; final object truth remains owner-local.",
+      "canonical_docs": [
+        "mechanics/method-growth/docs/ROOTLINE.md",
+        "mechanics/method-growth/docs/METHOD_SPINE.md",
+        "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
+        "mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md",
+        "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
+      ],
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py"
+      ],
+      "must_not_claim": [
+        "center-owned final object truth",
+        "owner-local activation"
+      ]
+    },
+    {
+      "slug": "recurrence",
+      "title": "Recurrence",
+      "status": "landed",
+      "package_path": "mechanics/recurrence",
+      "entry_ref": "mechanics/recurrence/README.md",
+      "roadmap_ref": "mechanics/recurrence/ROADMAP.md",
+      "landing_log_ref": "mechanics/recurrence/LANDING_LOG.md",
+      "agents_ref": "mechanics/recurrence/AGENTS.md",
+      "docs_path": "mechanics/recurrence/docs",
+      "owner_boundary": "Center return and continuity law; memory, routing, choreography, proof, and runtime behavior remain owner-local.",
+      "canonical_docs": [
+        "mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md",
+        "mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md",
+        "mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md"
+      ],
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py"
+      ],
+      "must_not_claim": [
+        "ambient continuity",
+        "hidden memory sovereignty",
+        "runtime self-healing"
+      ]
+    },
+    {
+      "slug": "experience",
+      "title": "Experience",
+      "status": "planted",
+      "package_path": "mechanics/experience",
+      "entry_ref": "mechanics/experience/README.md",
+      "roadmap_ref": "mechanics/experience/ROADMAP.md",
+      "landing_log_ref": "mechanics/experience/LANDING_LOG.md",
+      "agents_ref": "mechanics/experience/AGENTS.md",
+      "docs_path": "mechanics/experience/docs",
+      "owner_boundary": "Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, offices, runtime, KAG, memory, and ToS authority remain owner-local.",
+      "canonical_docs": [
+        "mechanics/experience/docs/EXPERIENCE_WAVE1_KERNEL.md",
+        "mechanics/experience/docs/EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md",
+        "mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
+        "mechanics/experience/docs/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md",
+        "mechanics/experience/docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
+        "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+      ],
+      "validation_refs": [
+        "scripts/validate_mechanic_landing_logs.py",
+        "scripts/validate_mechanics_topology.py"
+      ],
+      "must_not_claim": [
+        "live workspace runtime",
+        "hidden memory sovereignty",
+        "owner-local activation"
+      ]
+    },
+    {
+      "slug": "agon",
+      "title": "Agon",
+      "status": "landed",
+      "package_path": "mechanics/agon",
+      "entry_ref": "mechanics/agon/README.md",
+      "roadmap_ref": "mechanics/agon/ROADMAP.md",
+      "landing_log_ref": "mechanics/agon/LANDING_LOG.md",
+      "agents_ref": "mechanics/agon/AGENTS.md",
+      "docs_path": "mechanics/agon/docs",
+      "owner_boundary": "Center pressure, lawful move, arena grammar, packets, verdict, rank, school, and canon-restraint doctrine; live arena execution and owner-local truth remain outside.",
+      "canonical_docs": [
+        "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
+        "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
+        "mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md",
+        "mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md",
+        "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
+        "mechanics/agon/docs/AGON_TOS_THRESHOLD_PACKET_MODEL.md",
+        "mechanics/agon/docs/PRE_AGON_BASELINE.md"
+      ],
+      "validation_refs": [
+        "scripts/validate_mechanic_landing_logs.py",
+        "scripts/validate_mechanics_topology.py"
+      ],
+      "must_not_claim": [
+        "live arena execution",
+        "assistant contestant authority",
+        "rank mutation",
+        "ToS canon write authority"
+      ]
+    },
+    {
+      "slug": "antifragility",
+      "title": "Antifragility",
+      "status": "landed",
+      "package_path": "mechanics/antifragility",
+      "entry_ref": "mechanics/antifragility/README.md",
+      "roadmap_ref": "mechanics/antifragility/ROADMAP.md",
+      "landing_log_ref": "mechanics/antifragility/LANDING_LOG.md",
+      "agents_ref": "mechanics/antifragility/AGENTS.md",
+      "docs_path": "mechanics/antifragility/docs",
+      "owner_boundary": "Center stress, subtraction, anti-authority, and fragility-pattern doctrine; owner repositories own local repair evidence.",
+      "canonical_docs": [
+        "mechanics/antifragility/docs/ANTIFRAGILITY.md",
+        "mechanics/antifragility/docs/VIA_NEGATIVA.md",
+        "mechanics/antifragility/docs/ANTI_AUTHORITY_RULES.md",
+        "mechanics/antifragility/docs/ONE_IN_ONE_OUT.md",
+        "mechanics/antifragility/FRAGILITY_BLACKLIST.md"
+      ],
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py"
+      ],
+      "must_not_claim": [
+        "one-score health",
+        "deletion theater",
+        "owner-local cleanup authority"
+      ]
+    },
+    {
+      "slug": "questbook",
+      "title": "Questbook",
+      "status": "landed",
+      "package_path": "mechanics/questbook",
+      "entry_ref": "mechanics/questbook/README.md",
+      "roadmap_ref": "mechanics/questbook/ROADMAP.md",
+      "landing_log_ref": "mechanics/questbook/LANDING_LOG.md",
+      "agents_ref": "mechanics/questbook/AGENTS.md",
+      "docs_path": "mechanics/questbook/docs",
+      "owner_boundary": "Quest lifecycle and public obligation mechanics; root QUESTBOOK remains index and quests/ remains item store.",
+      "canonical_docs": [
+        "mechanics/questbook/docs/QUESTBOOK_MODEL.md",
+        "mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md",
+        "QUESTBOOK.md",
+        "quests/README.md"
+      ],
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py"
+      ],
+      "must_not_claim": [
+        "second roadmap",
+        "private scratchpad",
+        "repo-local task sink"
+      ]
+    },
+    {
+      "slug": "rpg",
+      "title": "RPG",
+      "status": "landed",
+      "package_path": "mechanics/rpg",
+      "entry_ref": "mechanics/rpg/README.md",
+      "roadmap_ref": "mechanics/rpg/ROADMAP.md",
+      "landing_log_ref": "mechanics/rpg/LANDING_LOG.md",
+      "agents_ref": "mechanics/rpg/AGENTS.md",
+      "docs_path": "mechanics/rpg/docs",
+      "owner_boundary": "Adjunct RPG reflection for progression and navigation; role, skill, technique, playbook, quest item, and runtime truth remain owner-local.",
+      "canonical_docs": [
+        "mechanics/rpg/docs/RPG_LAYER_MODEL.md",
+        "mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md",
+        "mechanics/rpg/docs/RPG_BOUNDARY_MAP.md",
+        "mechanics/rpg/docs/RPG_FIRST_WAVE.md",
+        "mechanics/rpg/docs/RPG_SECOND_WAVE.md"
+      ],
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py"
+      ],
+      "must_not_claim": [
+        "hidden ontology",
+        "runtime ledger",
+        "role-canon mutation"
+      ]
+    },
+    {
+      "slug": "tos-bridge",
+      "title": "ToS bridge",
+      "status": "landed",
+      "package_path": "mechanics/tos-bridge",
+      "entry_ref": "mechanics/tos-bridge/README.md",
+      "roadmap_ref": "mechanics/tos-bridge/ROADMAP.md",
+      "landing_log_ref": "mechanics/tos-bridge/LANDING_LOG.md",
+      "agents_ref": "mechanics/tos-bridge/AGENTS.md",
+      "docs_path": "mechanics/tos-bridge/docs",
+      "owner_boundary": "AoA support posture for Tree-of-Sophia; ToS authored meaning and canon stay in Tree-of-Sophia.",
+      "canonical_docs": [
+        "mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md",
+        "mechanics/tos-bridge/docs/WITNESS_COMPOST.md",
+        "mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md",
+        "mechanics/tos-bridge/docs/TOS_TEMPLATE_SUPPORT.md",
+        "mechanics/tos-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md",
+        "mechanics/tos-bridge/docs/TOS_SOIL_PREP_SUPPORT.md"
+      ],
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py"
+      ],
+      "must_not_claim": [
+        "AoA-authored ToS canon",
+        "source interpretation authority",
+        "owner-local implementation truth"
+      ]
+    },
+    {
+      "slug": "release-support",
+      "title": "Release support",
+      "status": "landed",
+      "package_path": "mechanics/release-support",
+      "entry_ref": "mechanics/release-support/README.md",
+      "roadmap_ref": "mechanics/release-support/ROADMAP.md",
+      "landing_log_ref": "mechanics/release-support/LANDING_LOG.md",
+      "agents_ref": "mechanics/release-support/AGENTS.md",
+      "docs_path": "mechanics/release-support/docs",
+      "owner_boundary": "Center release posture and public claim boundaries; sibling repositories own local release truth.",
+      "canonical_docs": [
+        "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
+        "mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md",
+        "mechanics/release-support/docs/RELEASING.md",
+        "mechanics/release-support/docs/DIRECTION_SURFACES.md"
+      ],
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py",
+        "scripts/release_check.py"
+      ],
+      "must_not_claim": [
+        "unverified public claim",
+        "sibling release truth",
+        "roadmap history as changelog"
+      ]
+    }
+  ]
+}

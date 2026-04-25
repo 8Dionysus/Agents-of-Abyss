@@ -33,8 +33,8 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.temp_dir = Path(tempfile.mkdtemp(prefix="aoa_center_questbook_"))
         self.repo_root = self.temp_dir / "Agents-of-Abyss"
         self.questbook_path = self.repo_root / "QUESTBOOK.md"
-        self.questbook_model_path = self.repo_root / "docs" / "QUESTBOOK_MODEL.md"
-        self.first_wave_path = self.repo_root / "docs" / "QUESTBOOK_FIRST_WAVE.md"
+        self.questbook_model_path = self.repo_root / "mechanics" / "questbook" / "docs" / "QUESTBOOK_MODEL.md"
+        self.first_wave_path = self.repo_root / "mechanics" / "questbook" / "docs" / "QUESTBOOK_FIRST_WAVE.md"
         self.quests_dir = self.repo_root / "quests"
         self.patches = (
             patch.object(validate_ecosystem, "REPO_ROOT", self.repo_root),
@@ -45,17 +45,17 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             patch.object(
                 validate_ecosystem,
                 "RPG_ARCHITECTURE_RFC_PATH",
-                self.repo_root / "docs" / "RPG_ARCHITECTURE_RFC.md",
+                self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_ARCHITECTURE_RFC.md",
             ),
             patch.object(
                 validate_ecosystem,
                 "RPG_CANONICAL_TERMINOLOGY_PATH",
-                self.repo_root / "docs" / "RPG_CANONICAL_TERMINOLOGY.md",
+                self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_CANONICAL_TERMINOLOGY.md",
             ),
             patch.object(
                 validate_ecosystem,
                 "RPG_BOUNDARY_MAP_PATH",
-                self.repo_root / "docs" / "RPG_BOUNDARY_MAP.md",
+                self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_BOUNDARY_MAP.md",
             ),
             patch.object(
                 validate_ecosystem,
@@ -75,12 +75,12 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             patch.object(
                 validate_ecosystem,
                 "RPG_BRIDGE_WAVE_PATH",
-                self.repo_root / "docs" / "RPG_BRIDGE_WAVE.md",
+                self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_BRIDGE_WAVE.md",
             ),
             patch.object(
                 validate_ecosystem,
                 "RPG_RUNTIME_PROJECTION_WAVE_PATH",
-                self.repo_root / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md",
+                self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md",
             ),
         )
         for patcher in self.patches:
@@ -124,17 +124,17 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
     def write_rpg_architecture_surface(self) -> None:
         write_text(
-            self.repo_root / "docs" / "RPG_ARCHITECTURE_RFC.md",
+            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_ARCHITECTURE_RFC.md",
             "The RPG layer MUST remain a reflection and orchestration layer.\n"
             "One universal power score MUST NOT become authoritative.\n",
         )
         write_text(
-            self.repo_root / "docs" / "RPG_CANONICAL_TERMINOLOGY.md",
+            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_CANONICAL_TERMINOLOGY.md",
             "the machine vocabulary stays stable\n"
             "dual_vocabulary_overlay_v1\n",
         )
         write_text(
-            self.repo_root / "docs" / "RPG_BOUNDARY_MAP.md",
+            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_BOUNDARY_MAP.md",
             "The repo that already owns meaning keeps owning meaning.\n"
             "1. source meaning wins\n",
         )
@@ -143,7 +143,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
     def write_rpg_bridge_wave_surface(self) -> None:
         write_text(
-            self.repo_root / "docs" / "RPG_BRIDGE_WAVE.md",
+            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_BRIDGE_WAVE.md",
             "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership.\n"
             "`aoa-routing` may orient. It does not own proof, party doctrine, or quest meaning.\n"
             "do not create a universal rank or power score here\n"
@@ -152,7 +152,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
     def write_rpg_runtime_projection_surface(self) -> None:
         write_text(
-            self.repo_root / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md",
+            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md",
             "This document defines the first body-facing rollout for the AoA RPG reflection contour.\n"
             "It is the pass where the contour stops being only a federation of ideas and gains runtime-owned read models, generated transport collections, and a bounded projection seam.\n"
             "Let the body carry the contour.\n"
@@ -426,7 +426,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0007`\n",
         )
         write_text(
-            self.repo_root / "docs" / "RPG_BRIDGE_WAVE.md",
+            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_BRIDGE_WAVE.md",
             "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership.\n",
         )
 
@@ -620,7 +620,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
-            "missing required file: docs/RPG_ARCHITECTURE_RFC.md",
+            "missing required file: mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md",
         ):
             validate_ecosystem.validate_questbook_surface()
 

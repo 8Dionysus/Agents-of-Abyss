@@ -2,7 +2,7 @@
 
 This glossary defines the compact working vocabulary used at the AoA ecosystem center.
 
-It should stay aligned with `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, `docs/LAYERS.md`, `docs/REPO_ROLES.md`, `docs/ROOT_SURFACE_LAW.md`, and `docs/MECHANICS.md`.
+It should stay aligned with `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, `docs/LAYERS.md`, `docs/REPO_ROLES.md`, `docs/ROOT_SURFACE_LAW.md`, and `mechanics/README.md`.
 
 It is not a replacement for those documents. It is the smallest stable vocabulary that keeps the federation legible.
 
@@ -304,7 +304,7 @@ AoA prefers bounded claims over vague global assertions.
 
 ### Mechanics Atlas
 
-The branch map at `docs/MECHANICS.md`.
+The branch map at `mechanics/README.md`.
 
 It routes center-level processes such as method/growth, recurrence, Agon, Experience, antifragility, quest/RPG reflection, ToS support, and release posture.
 

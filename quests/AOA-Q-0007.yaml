@@ -32,7 +32,7 @@ activation:
   note: open when the bridge between proof, composition, and navigation is ready to be staged
 anchor_ref:
   artifact: rpg_bridge_wave
-  ref: docs/RPG_BRIDGE_WAVE.md
+  ref: mechanics/rpg/docs/RPG_BRIDGE_WAVE.md
   note: the bridge must stay narrow, cited, and non-authoritative
 handoff_role: federation-maintainer
 evidence:

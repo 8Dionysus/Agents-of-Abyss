@@ -60,10 +60,10 @@ When deciding where something belongs:
    civil/service assistant variants, requested owner landings, routing gates,
    trial scenarios, verdicts, scars, derived summaries, SDK helpers, runtime
    services, or ToS canonization, route that slice to the owning layer named in
-   `docs/AGON_PREPARATION_POSTURE.md`, `docs/AGON_IMPOSITION_POSTURE.md`,
-   `docs/AGON_LAWFUL_MOVE_LANGUAGE.md`, `docs/AGON_MOVE_OWNER_BINDING.md`,
-   `docs/AGON_GATE_ROUTING_HANDOFF.md`, `docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md`,
-   and `docs/AGON_OWNER_REPO_REQUESTS.md`.
+   `mechanics/agon/docs/AGON_PREPARATION_POSTURE.md`, `mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md`,
+   `mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md`, `mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md`,
+   `mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md`, `mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md`,
+   and `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`.
 
 ## Compact rule
 

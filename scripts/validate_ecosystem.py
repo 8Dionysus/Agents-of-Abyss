@@ -19,19 +19,19 @@ SCHEMA_PATH = REPO_ROOT / "schemas" / "ecosystem-registry.schema.json"
 SUPPORTING_INVENTORY_PATH = REPO_ROOT / "generated" / "federation_supporting_inventory.min.json"
 SUPPORTING_SCHEMA_PATH = REPO_ROOT / "schemas" / "federation-supporting-inventory.schema.json"
 QUESTBOOK_PATH = REPO_ROOT / "QUESTBOOK.md"
-QUESTBOOK_MODEL_PATH = REPO_ROOT / "docs" / "QUESTBOOK_MODEL.md"
-QUESTBOOK_FIRST_WAVE_PATH = REPO_ROOT / "docs" / "QUESTBOOK_FIRST_WAVE.md"
+QUESTBOOK_MODEL_PATH = REPO_ROOT / "mechanics" / "questbook" / "docs" / "QUESTBOOK_MODEL.md"
+QUESTBOOK_FIRST_WAVE_PATH = REPO_ROOT / "mechanics" / "questbook" / "docs" / "QUESTBOOK_FIRST_WAVE.md"
 QUESTS_PATH = REPO_ROOT / "quests"
 REQUIRED_QUEST_IDS = ("AOA-Q-0001", "AOA-Q-0002", "AOA-Q-0003")
 CLOSED_QUEST_STATES = {"done", "dropped"}
-RPG_ARCHITECTURE_RFC_PATH = REPO_ROOT / "docs" / "RPG_ARCHITECTURE_RFC.md"
-RPG_CANONICAL_TERMINOLOGY_PATH = REPO_ROOT / "docs" / "RPG_CANONICAL_TERMINOLOGY.md"
-RPG_BOUNDARY_MAP_PATH = REPO_ROOT / "docs" / "RPG_BOUNDARY_MAP.md"
+RPG_ARCHITECTURE_RFC_PATH = REPO_ROOT / "mechanics" / "rpg" / "docs" / "RPG_ARCHITECTURE_RFC.md"
+RPG_CANONICAL_TERMINOLOGY_PATH = REPO_ROOT / "mechanics" / "rpg" / "docs" / "RPG_CANONICAL_TERMINOLOGY.md"
+RPG_BOUNDARY_MAP_PATH = REPO_ROOT / "mechanics" / "rpg" / "docs" / "RPG_BOUNDARY_MAP.md"
 DUAL_VOCABULARY_SCHEMA_PATH = REPO_ROOT / "schemas" / "dual_vocabulary_overlay.schema.json"
 DUAL_VOCABULARY_EXAMPLE_PATH = REPO_ROOT / "examples" / "dual_vocabulary_overlay.example.json"
 DUAL_VOCABULARY_GENERATED_PATH = REPO_ROOT / "generated" / "dual_vocabulary_overlay.json"
-RPG_BRIDGE_WAVE_PATH = REPO_ROOT / "docs" / "RPG_BRIDGE_WAVE.md"
-RPG_RUNTIME_PROJECTION_WAVE_PATH = REPO_ROOT / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md"
+RPG_BRIDGE_WAVE_PATH = REPO_ROOT / "mechanics" / "rpg" / "docs" / "RPG_BRIDGE_WAVE.md"
+RPG_RUNTIME_PROJECTION_WAVE_PATH = REPO_ROOT / "mechanics" / "rpg" / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md"
 QUESTBOOK_SECTION_TO_BAND = {
     "Frontier": "frontier",
     "Near": "near",
@@ -518,21 +518,21 @@ def validate_questbook_surface() -> None:
     if "AOA-Q-0006" in actual_ids:
         architecture_rfc_text = read_text(RPG_ARCHITECTURE_RFC_PATH)
         if "The RPG layer MUST remain a reflection and orchestration layer." not in architecture_rfc_text:
-            fail("docs/RPG_ARCHITECTURE_RFC.md must keep the reflection-layer core rule explicit")
+            fail("mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md must keep the reflection-layer core rule explicit")
         if "One universal power score MUST NOT become authoritative." not in architecture_rfc_text:
-            fail("docs/RPG_ARCHITECTURE_RFC.md must keep the anti-power-score law explicit")
+            fail("mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md must keep the anti-power-score law explicit")
 
         canonical_terms_text = read_text(RPG_CANONICAL_TERMINOLOGY_PATH)
         if "the machine vocabulary stays stable" not in canonical_terms_text:
-            fail("docs/RPG_CANONICAL_TERMINOLOGY.md must keep machine vocabulary stability explicit")
+            fail("mechanics/rpg/docs/RPG_CANONICAL_TERMINOLOGY.md must keep machine vocabulary stability explicit")
         if "dual_vocabulary_overlay_v1" not in canonical_terms_text:
-            fail("docs/RPG_CANONICAL_TERMINOLOGY.md must reference dual_vocabulary_overlay_v1")
+            fail("mechanics/rpg/docs/RPG_CANONICAL_TERMINOLOGY.md must reference dual_vocabulary_overlay_v1")
 
         boundary_map_text = read_text(RPG_BOUNDARY_MAP_PATH)
         if "The repo that already owns meaning keeps owning meaning." not in boundary_map_text:
-            fail("docs/RPG_BOUNDARY_MAP.md must keep the ownership law explicit")
+            fail("mechanics/rpg/docs/RPG_BOUNDARY_MAP.md must keep the ownership law explicit")
         if "1. source meaning wins" not in boundary_map_text:
-            fail("docs/RPG_BOUNDARY_MAP.md must keep the precedence rule explicit")
+            fail("mechanics/rpg/docs/RPG_BOUNDARY_MAP.md must keep the precedence rule explicit")
 
         schema_payload = read_json(DUAL_VOCABULARY_SCHEMA_PATH)
         if not isinstance(schema_payload, dict):
@@ -551,24 +551,24 @@ def validate_questbook_surface() -> None:
     if "AOA-Q-0007" in actual_ids:
         bridge_wave_text = read_text(RPG_BRIDGE_WAVE_PATH)
         if "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership." not in bridge_wave_text:
-            fail("docs/RPG_BRIDGE_WAVE.md must keep the bridge-purpose law explicit")
+            fail("mechanics/rpg/docs/RPG_BRIDGE_WAVE.md must keep the bridge-purpose law explicit")
         if "`aoa-routing` may orient. It does not own proof, party doctrine, or quest meaning." not in bridge_wave_text:
-            fail("docs/RPG_BRIDGE_WAVE.md must keep routing non-authority explicit")
+            fail("mechanics/rpg/docs/RPG_BRIDGE_WAVE.md must keep routing non-authority explicit")
         if "do not create a universal rank or power score here" not in bridge_wave_text:
-            fail("docs/RPG_BRIDGE_WAVE.md must keep the anti-power-score bridge rule explicit")
+            fail("mechanics/rpg/docs/RPG_BRIDGE_WAVE.md must keep the anti-power-score bridge rule explicit")
         if "This wave is a bridge, not a throne." not in bridge_wave_text:
-            fail("docs/RPG_BRIDGE_WAVE.md must keep the anti-throne rule explicit")
+            fail("mechanics/rpg/docs/RPG_BRIDGE_WAVE.md must keep the anti-throne rule explicit")
 
     if "AOA-Q-0008" in actual_ids:
         runtime_projection_text = read_text(RPG_RUNTIME_PROJECTION_WAVE_PATH)
         if "This document defines the first body-facing rollout for the AoA RPG reflection contour." not in runtime_projection_text:
-            fail("docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the body-facing role explicit")
+            fail("mechanics/rpg/docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the body-facing role explicit")
         if "It is the pass where the contour stops being only a federation of ideas and gains runtime-owned read models, generated transport collections, and a bounded projection seam." not in runtime_projection_text:
-            fail("docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the body-facing transition explicit")
+            fail("mechanics/rpg/docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the body-facing transition explicit")
         if "Let the body carry the contour." not in runtime_projection_text:
-            fail("docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the body-carries-the-contour rule explicit")
+            fail("mechanics/rpg/docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the body-carries-the-contour rule explicit")
         if "Do not let it rewrite the soul." not in runtime_projection_text:
-            fail("docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the anti-rewrite rule explicit")
+            fail("mechanics/rpg/docs/RPG_RUNTIME_PROJECTION_WAVE.md must keep the anti-rewrite rule explicit")
 
         generated_payload = read_json(DUAL_VOCABULARY_GENERATED_PATH)
         schema_payload = read_json(DUAL_VOCABULARY_SCHEMA_PATH)
@@ -577,12 +577,12 @@ def validate_questbook_surface() -> None:
         validate_dual_vocabulary_generated_payload(generated_payload, schema_payload)
 
     if "ATM10-Agent" in first_wave_text:
-        fail("docs/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")
+        fail("mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")
 
     required_phrase = "It is a foundation pass, not a new numbered AoA wave."
     if required_phrase not in first_wave_text:
         fail(
-            "docs/QUESTBOOK_FIRST_WAVE.md must state that the contour is not "
+            "mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md must state that the contour is not "
             "a new numbered AoA wave"
         )
 

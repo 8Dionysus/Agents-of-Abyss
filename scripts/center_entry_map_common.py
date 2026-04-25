@@ -17,6 +17,7 @@ VALIDATION_REFS = (
     "scripts/validate_markdown_shape.py",
     "scripts/build_center_entry_map.py",
     "scripts/validate_center_entry_map.py",
+    "scripts/validate_mechanics_topology.py",
     "scripts/validate_mechanic_landing_logs.py",
     "scripts/validate_ecosystem.py",
     "tests/test_center_entry_map.py",
@@ -67,7 +68,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         ],
         "verification_refs": [
             "CHARTER.md",
-            "docs/PUBLIC_SUPPORT_POSTURE.md",
+            "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         ],
         "must_not_claim": [
             "the first-reading route replaces owner-local docs",
@@ -112,13 +113,13 @@ ROUTES: tuple[dict[str, object], ...] = (
             "ECOSYSTEM_MAP.md",
             "docs/FEDERATION_RULES.md",
             "ROADMAP.md",
-            "docs/DIRECTION_SURFACES.md",
+            "mechanics/release-support/docs/DIRECTION_SURFACES.md",
             "CHANGELOG.md",
         ],
         "machine_surface_refs": ["generated/center_entry_map.min.json"],
         "verification_refs": [
-            "docs/PUBLIC_SUPPORT_POSTURE.md",
-            "docs/FEDERATION_RELEASE_PROTOCOL.md",
+            "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
+            "mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md",
         ],
         "must_not_claim": [
             "future direction is already landed implementation",
@@ -159,18 +160,22 @@ ROUTES: tuple[dict[str, object], ...] = (
         "priority": 5,
         "audience": ["mechanic-author", "coding-agent", "reviewer"],
         "need": "edit Agon, Experience, recurrence, method/growth, antifragility, quest/RPG, or ToS support without stealing owner truth",
-        "surface_ref": "docs/MECHANICS.md",
+        "surface_ref": "mechanics/README.md",
         "human_path": [
             "README.md",
             "CHARTER.md",
             "ECOSYSTEM_MAP.md",
             "docs/FEDERATION_RULES.md",
-            "docs/MECHANICS.md",
+            "mechanics/README.md",
         ],
-        "machine_surface_refs": ["generated/center_entry_map.min.json"],
+        "machine_surface_refs": [
+            "generated/center_entry_map.min.json",
+            "mechanics/registry.json",
+        ],
         "verification_refs": [
             "docs/START_HERE_ROUTE_CONTRACT.md",
             "docs/REPO_ROLES.md",
+            "mechanics/registry.json",
         ],
         "must_not_claim": [
             "center mechanics activate live runtime",
@@ -183,9 +188,9 @@ ROUTES: tuple[dict[str, object], ...] = (
         "priority": 6,
         "audience": ["release-agent", "public-docs-editor", "reviewer"],
         "need": "decide whether the center may honestly claim something publicly",
-        "surface_ref": "docs/PUBLIC_SUPPORT_POSTURE.md",
+        "surface_ref": "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         "human_path": [
-            "docs/PUBLIC_SUPPORT_POSTURE.md",
+            "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
             "CHARTER.md",
             "ECOSYSTEM_MAP.md",
             "docs/FEDERATION_RULES.md",
@@ -196,8 +201,8 @@ ROUTES: tuple[dict[str, object], ...] = (
             "generated/federation_supporting_inventory.min.json",
         ],
         "verification_refs": [
-            "docs/FEDERATION_RELEASE_PROTOCOL.md",
-            "docs/RELEASING.md",
+            "mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md",
+            "mechanics/release-support/docs/RELEASING.md",
         ],
         "must_not_claim": [
             "passing center checks proves downstream implementation",
@@ -221,7 +226,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         ],
         "verification_refs": [
             "CHARTER.md",
-            "docs/PUBLIC_SUPPORT_POSTURE.md",
+            "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         ],
         "must_not_claim": [
             "the machine capsule replaces human docs",
