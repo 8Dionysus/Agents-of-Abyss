@@ -29,7 +29,7 @@ activation:
   note: open when the first bounded RPG reflection slice is ready to be staged
 anchor_ref:
   artifact: rpg_layer_model
-  ref: docs/RPG_LAYER_MODEL.md
+  ref: mechanics/rpg/docs/RPG_LAYER_MODEL.md
   note: the common model must stay adjunct and multi-repo
 handoff_role: federation-maintainer
 evidence:

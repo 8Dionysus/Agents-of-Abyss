@@ -59,7 +59,7 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 | `registry-v2-notes.md` | move | `docs/registry/REGISTRY_V2_NOTES.md` | it is a future registry design note and belongs near registry evolution |
 | `DELETION_CANDIDATES.json` | move | `docs/audits/DELETION_CANDIDATES.json` | it is an inspect-first audit artifact, not a civic root surface |
 | `.github/pull_request_template.md` | remove | keep `.github/PULL_REQUEST_TEMPLATE.md` | duplicate PR templates with different casing create template ambiguity |
-| `FRAGILITY_BLACKLIST.md` | keep, narrow | root index to `docs/VIA_NEGATIVA.md` and `docs/audits/DELETION_CANDIDATES.json` | useful root pattern index if compact |
+| `FRAGILITY_BLACKLIST.md` | keep, narrow | root index to `mechanics/antifragility/docs/VIA_NEGATIVA.md` and `docs/audits/DELETION_CANDIDATES.json` | useful root pattern index if compact |
 | `QUESTBOOK.md` | keep, narrow | root quest index | useful only while it stays federation-level and does not become a second roadmap |
 | `ECOSYSTEM_AUDIT_INDEX.md` | keep, clean | root audit router | useful root index if it routes rather than storing every audit detail |
 | `GLOSSARY.md` | keep | root vocabulary companion | useful compact vocabulary if aligned with center docs |

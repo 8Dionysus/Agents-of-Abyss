@@ -9,7 +9,7 @@
   "observed_surfaces": [
     "config/agon_ccs_laws.seed.json",
     "generated/agon_ccs_law_registry.min.json",
-    "docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md"
+    "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md"
   ],
   "owner_repo": "Agents-of-Abyss",
   "status": "seeded_pre_protocol_recurrence_component",

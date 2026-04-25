@@ -31,7 +31,7 @@ activation:
   note: open when the RPG contour needs a runtime body and frontend-readable bundles
 anchor_ref:
   artifact: rpg_runtime_projection_wave
-  ref: docs/RPG_RUNTIME_PROJECTION_WAVE.md
+  ref: mechanics/rpg/docs/RPG_RUNTIME_PROJECTION_WAVE.md
   note: the runtime body must stay downstream of upstream meaning
 handoff_role: federation-maintainer
 evidence:

@@ -10,10 +10,10 @@ Move from conservative Agon preparation to system-wide Agon scrutiny without cla
 
 ## Acceptance checks
 
-- `docs/AGON_IMPOSITION_POSTURE.md` exists and names the new review sovereignty.
-- `docs/AGON_SURVIVAL_CRITERIA.md` defines survive/recharter/defer/prune/quarantine.
-- `docs/AGON_DOUBT_AUDIT.md` gives the first audit frame for current repositories.
-- `docs/PRE_AGON_BASELINE.md` separates release-clean from Agon-ready.
+- `mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md` exists and names the new review sovereignty.
+- `mechanics/agon/docs/AGON_SURVIVAL_CRITERIA.md` defines survive/recharter/defer/prune/quarantine.
+- `mechanics/agon/docs/AGON_DOUBT_AUDIT.md` gives the first audit frame for current repositories.
+- `mechanics/agon/docs/PRE_AGON_BASELINE.md` separates release-clean from Agon-ready.
 - `generated/agon_imposition_readiness.min.json` is deterministic and validates.
 - No new sibling repository is created.
 - No arena runtime, session protocol, verdict, scar, or ToS write path is introduced.

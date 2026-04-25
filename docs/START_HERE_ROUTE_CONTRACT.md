@@ -14,7 +14,9 @@ The route modes are reflected in:
 
 - `README.md`
 - `docs/README.md`
-- `docs/PUBLIC_SUPPORT_POSTURE.md`
+- `mechanics/README.md`
+- `mechanics/registry.json`
+- `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`
 - `CONTRIBUTING.md`
 - `generated/center_entry_map.min.json`
 - `schemas/center-entry-map.schema.json`
@@ -30,10 +32,10 @@ If one of those surfaces changes the route order or adds a new route mode, the o
 |---|---|---|---|
 | `first-reading` | humans, new agents, outside readers | understand the center without entering every district | `README.md` -> `CHARTER.md` -> `ECOSYSTEM_MAP.md` -> `docs/FEDERATION_RULES.md` |
 | `root-editing` | contributors, coding agents, maintainers | change root surfaces without making the root a warehouse | first reading -> `CONTRIBUTING.md` -> `docs/ROOT_SURFACE_LAW.md` |
-| `direction-change` | maintainers, release agents | update roadmap, phase, maturity, or release contour | first reading -> `ROADMAP.md` -> `docs/DIRECTION_SURFACES.md` -> `CHANGELOG.md` |
+| `direction-change` | maintainers, release agents | update roadmap, phase, maturity, or release contour | first reading -> `ROADMAP.md` -> `mechanics/release-support/docs/DIRECTION_SURFACES.md` -> `CHANGELOG.md` |
 | `ownership-routing` | humans and agents deciding where work belongs | choose the owner repository for a change | first reading -> `docs/LAYERS.md` -> `docs/REPO_ROLES.md` |
-| `mechanic-change` | authors of Agon, Experience, recurrence, growth, quest/RPG, or ToS support surfaces | edit a process without stealing owner truth | first reading -> `docs/MECHANICS.md` -> the relevant stop-line surface |
-| `public-claim-validation` | release agents, public docs editors, reviewers | decide whether the center may honestly claim something | `docs/PUBLIC_SUPPORT_POSTURE.md` -> generated capsules -> validators |
+| `mechanic-change` | authors of Agon, Experience, recurrence, growth, quest/RPG, or ToS support surfaces | edit a process without stealing owner truth | first reading -> `mechanics/README.md` -> `mechanics/<slug>/README.md` -> the relevant stop-line surface |
+| `public-claim-validation` | release agents, public docs editors, reviewers | decide whether the center may honestly claim something | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` -> generated capsules -> validators |
 | `low-context-agent` | small models, retrieval systems, capsule-first agents | get a compact route before reading full docs | `generated/center_entry_map.min.json` |
 | `district-work` | contributors already inside a technical district | respect local file purpose and validation boundaries | root route -> local district `README.md` |
 
@@ -88,9 +90,9 @@ Read:
 
 1. first-reading route
 2. `ROADMAP.md`
-3. `docs/DIRECTION_SURFACES.md`
+3. `mechanics/release-support/docs/DIRECTION_SURFACES.md`
 4. `CHANGELOG.md`
-5. `docs/PUBLIC_SUPPORT_POSTURE.md` when the change affects public claims
+5. `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` when the change affects public claims
 
 Direction changes must distinguish:
 
@@ -114,7 +116,7 @@ Read:
 1. first-reading route
 2. `docs/LAYERS.md`
 3. `docs/REPO_ROLES.md`
-4. `docs/MECHANICS.md` only if the change is also a process or mechanic
+4. `mechanics/README.md` only if the change is also a process or mechanic
 
 Ownership-routing changes must not move owner truth into the center because the center is nearby. The center may name and route. The owner repository owns the primary object.
 
@@ -136,10 +138,11 @@ Examples:
 Read:
 
 1. first-reading route
-2. `docs/MECHANICS.md`
-3. the relevant mechanic entry
-4. the stop-line surface for the specific branch
-5. the builder, validator, and test named by the affected generated surface when one exists
+2. `mechanics/README.md`
+3. `mechanics/<slug>/README.md`
+4. `mechanics/<slug>/LANDING_LOG.md` when a landing changed
+5. the stop-line surface for the specific branch
+6. the builder, validator, and test named by the affected generated surface when one exists
 
 Mechanic changes must name their owner split. A mechanic is healthy only when it makes ownership easier to inspect.
 
@@ -149,7 +152,7 @@ Use this route when a sentence sounds like a public promise.
 
 Read:
 
-1. `docs/PUBLIC_SUPPORT_POSTURE.md`
+1. `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`
 2. `CHARTER.md`
 3. `ECOSYSTEM_MAP.md`
 4. `docs/FEDERATION_RULES.md`

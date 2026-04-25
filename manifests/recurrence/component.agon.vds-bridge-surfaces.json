@@ -16,8 +16,8 @@
   "observed_surfaces": [
     "generated/agon_vds_bridge_registry.min.json",
     "config/agon_vds_bridges.seed.json",
-    "docs/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
-    "docs/AGON_WAVE11_STOP_LINES.md"
+    "mechanics/agon/docs/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
+    "mechanics/agon/docs/AGON_WAVE11_STOP_LINES.md"
   ],
   "owner_repo": "Agents-of-Abyss",
   "status": "seeded_recurrence_observation_component"

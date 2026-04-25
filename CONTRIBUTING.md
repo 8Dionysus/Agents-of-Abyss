@@ -73,8 +73,8 @@ Use this check path before you widen a center claim or move material into this r
 2. Read [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current documented public federation contour.
 3. Read [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline.
 4. Read [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) before adding, moving, deleting, or renaming any root-level file.
-5. Read [docs/MECHANICS](docs/MECHANICS.md) before editing center-level process, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS-support surfaces.
-6. Read the relevant LANDING_LOG before editing Agon or Experience landing surfaces: [docs/AGON_LANDING_LOG](docs/AGON_LANDING_LOG.md) or [docs/EXPERIENCE_LANDING_LOG](docs/EXPERIENCE_LANDING_LOG.md).
+5. Read [mechanics/README](mechanics/README.md) before editing center-level process, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS-support surfaces.
+6. Read the relevant LANDING_LOG before editing Agon or Experience landing surfaces: [Agon LANDING_LOG](mechanics/agon/LANDING_LOG.md) or [Experience LANDING_LOG](mechanics/experience/LANDING_LOG.md).
 7. Read the local district README before changing `generated/`, `scripts/`, `schemas/`, `tests/`, `config/`, `examples/`, `manifests/`, or `quests/`.
 8. Read [ROADMAP](ROADMAP.md) for declared direction and current phase.
 9. Check generated capsules before claiming the change is complete.

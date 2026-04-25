@@ -11,7 +11,7 @@ from jsonschema import Draft202012Validator
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOC_PATH = ROOT / "docs" / "EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md"
+DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md"
 SCHEMA_PATH = ROOT / "schemas" / "experience-v1-2-service-mesh-operations.schema.json"
 EXAMPLE_PATH = ROOT / "examples" / "experience_v1_2_service_mesh_operations.example.json"
 
@@ -21,12 +21,12 @@ SOURCE_SHA256 = "df829241ac629770635290e5da2742b81e4d5575270c94a92c34a95f4bbacb8
 EXPECTED_PREDECESSORS = [
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
-    "docs/EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md",
-    "docs/EXPERIENCE_SERVICE_MESH_LAW.md",
-    "docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
+    "mechanics/experience/docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
+    "mechanics/experience/docs/EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md",
+    "mechanics/experience/docs/EXPERIENCE_SERVICE_MESH_LAW.md",
+    "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+    "mechanics/experience/docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
 ]
 
 EXPECTED_PRIMARY_OFFICES = [

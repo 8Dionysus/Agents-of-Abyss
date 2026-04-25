@@ -2,7 +2,7 @@
 
 This questbook holds federation-level cross-repo obligations only. It does not absorb repo-local quest detail from sibling repositories.
 
-It is a root index, not a second roadmap. Program direction belongs in [ROADMAP](ROADMAP.md). Quest lifecycle law belongs in [docs/QUESTBOOK_MODEL](docs/QUESTBOOK_MODEL.md). Backing quest files live under [`quests/`](quests/).
+It is a root index, not a second roadmap. Program direction belongs in [ROADMAP](ROADMAP.md). Quest lifecycle law belongs in [mechanics/questbook/QUESTBOOK_MODEL](mechanics/questbook/docs/QUESTBOOK_MODEL.md). Backing quest files live under [`quests/`](quests/).
 
 ## Frontier
 

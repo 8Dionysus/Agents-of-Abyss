@@ -65,5 +65,5 @@ Before changing the center, check:
 1. [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current contour.
 2. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth law.
 3. [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) for root placement.
-4. [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md) for honest public claims.
+4. [docs/PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) for honest public claims.
 5. Generated capsules and validators before claiming the change is complete.

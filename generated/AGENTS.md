@@ -31,9 +31,9 @@ When editing `ecosystem_registry.min.json` or `federation_supporting_inventory.m
 
 When editing `agon_imposition_readiness.min.json`:
 
-- keep it aligned with `docs/AGON_IMPOSITION_POSTURE.md`,
-  `docs/AGON_SURVIVAL_CRITERIA.md`, `docs/AGON_DOUBT_AUDIT.md`,
-  `docs/PRE_AGON_BASELINE.md`, and
+- keep it aligned with `mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md`,
+  `mechanics/agon/docs/AGON_SURVIVAL_CRITERIA.md`, `mechanics/agon/docs/AGON_DOUBT_AUDIT.md`,
+  `mechanics/agon/docs/PRE_AGON_BASELINE.md`, and
   `schemas/agon-imposition-readiness.schema.json`
 - treat `scripts/build_agon_imposition_readiness.py` as the canonical builder
   and `scripts/validate_agon_imposition_readiness.py` as the explicit Wave 0
@@ -43,9 +43,9 @@ When editing `agon_imposition_readiness.min.json`:
 
 When editing `agon_lawful_move_registry.min.json`:
 
-- keep it aligned with `docs/AGON_LAWFUL_MOVE_LANGUAGE.md`,
-  `docs/AGON_MOVE_REGISTRY_MODEL.md`,
-  `docs/AGON_MOVE_OWNER_HANDOFFS.md`, and
+- keep it aligned with `mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md`,
+  `mechanics/agon/docs/AGON_MOVE_REGISTRY_MODEL.md`,
+  `mechanics/agon/docs/AGON_MOVE_OWNER_HANDOFFS.md`, and
   `config/agon_lawful_moves.seed.json`
 - treat `scripts/build_agon_lawful_move_registry.py` as the canonical builder
   and `scripts/validate_agon_lawful_moves.py` as the explicit Wave III
@@ -55,10 +55,10 @@ When editing `agon_lawful_move_registry.min.json`:
 
 When editing `agon_move_owner_binding_registry.min.json`:
 
-- keep it aligned with `docs/AGON_MOVE_OWNER_BINDING.md`,
-  `docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`,
-  `docs/AGON_OWNER_REPO_REQUESTS.md`,
-  `docs/AGON_PRE_PROTOCOL_STOP_LINES.md`, and
+- keep it aligned with `mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md`,
+  `mechanics/agon/docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`,
+  `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`,
+  `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`, and
   `config/agon_move_owner_bindings.seed.json`
 - treat `scripts/build_agon_move_owner_binding_registry.py` as the canonical
   builder and `scripts/validate_agon_move_owner_bindings.py` as the explicit
@@ -71,10 +71,10 @@ When editing `agon_move_owner_binding_registry.min.json`:
 
 When editing `agon_gate_routing_handoff_request.min.json`:
 
-- keep it aligned with `docs/AGON_GATE_ROUTING_HANDOFF.md`,
-  `docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
-  `docs/AGON_GATE_ROUTING_STOP_LINES.md`,
-  `docs/AGON_WAVE5_CENTER_HANDOFF.md`, and
+- keep it aligned with `mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md`,
+  `mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
+  `mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md`,
+  `mechanics/agon/docs/AGON_WAVE5_CENTER_HANDOFF.md`, and
   `config/agon_gate_routing_handoff_request.seed.json`
 - treat `scripts/build_agon_gate_routing_handoff_request.py` as the canonical
   builder and `scripts/validate_agon_gate_routing_handoff_request.py` as the

@@ -15,7 +15,7 @@ The federation already had strong repo-local validation in several places, but i
 The public owner repos now follow one shared release contract:
 
 - release cadence is `48h or 15 commits or public-surface drift`
-- every owner repo must ship `docs/RELEASING.md`
+- every owner repo must ship `mechanics/release-support/docs/RELEASING.md`
 - every owner repo must ship `scripts/release_check.py`
 - the latest tagged changelog section must include `Summary`, `Validation`, and `Notes`
 - README must show the exact current-release banner

@@ -11,7 +11,7 @@ from jsonschema import Draft202012Validator
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOC_PATH = ROOT / "docs" / "EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md"
+DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md"
 SCHEMA_PATH = ROOT / "schemas" / "experience-v1-2-v2-0-bridge.schema.json"
 EXAMPLE_PATH = ROOT / "examples" / "experience_v1_2_to_v2_0_bridge.example.json"
 
@@ -101,15 +101,15 @@ REQUIRED_DOC_TOKENS = [
 REQUIRED_PREDECESSOR_TOKENS = [
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "docs/EXPERIENCE_WAVE1_KERNEL.md",
-    "docs/EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md",
-    "docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
-    "docs/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md",
-    "docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
-    "docs/EXPERIENCE_AGON_SERVICE_SEAM_V1_1.md",
-    "docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
-    "docs/AGON_RETENTION_RANK_ECONOMY.md",
+    "mechanics/experience/docs/EXPERIENCE_WAVE1_KERNEL.md",
+    "mechanics/experience/docs/EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md",
+    "mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
+    "mechanics/experience/docs/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md",
+    "mechanics/experience/docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
+    "mechanics/experience/docs/EXPERIENCE_AGON_SERVICE_SEAM_V1_1.md",
+    "mechanics/experience/docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
+    "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
 ]
 
 REQUIRED_CODEX_DENIALS = [

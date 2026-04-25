@@ -33,7 +33,7 @@ Read in this order:
 4. [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) before adding, moving, deleting, or renaming any root-level file.
 5. [ROADMAP](ROADMAP.md) for current program-level direction.
 6. [docs/LAYERS](docs/LAYERS.md) and [docs/REPO_ROLES](docs/REPO_ROLES.md) for layer roles and ownership routing.
-7. [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md) for what the center may honestly claim and how CI reinforces it.
+7. [release-support/PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) for what the center may honestly claim and how CI reinforces it.
 
 If you only need the shortest outside overview, stop after step 3. If you are
 a low-context agent or small model, also inspect
@@ -49,11 +49,11 @@ Use this tree before trusting a claim made by the center:
 |---|---|---|---|
 | Authority | Is this actually a center-owned claim? | [CHARTER](CHARTER.md) | The claim must fit the center's ownership boundary. |
 | Contour | Does the current map name the repo, layer, or adjacent anchor being discussed? | [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) | Cross-check [`generated/ecosystem_registry.min.json`](generated/ecosystem_registry.min.json) and [`generated/federation_supporting_inventory.min.json`](generated/federation_supporting_inventory.min.json). |
-| Ownership law | Does the claim preserve source truth, derived truth, routing truth, runtime truth, and ToS-authored meaning as separate things? | [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) | Cross-check [docs/REPO_ROLES](docs/REPO_ROLES.md) and [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md). |
+| Ownership law | Does the claim preserve source truth, derived truth, routing truth, runtime truth, and ToS-authored meaning as separate things? | [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) | Cross-check [docs/REPO_ROLES](docs/REPO_ROLES.md) and [release-support/PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md). |
 | Surface placement | Does this object deserve to live in the repository root? | [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) | If it is a wave receipt, audit artifact, future registry note, or generated object, route it away from root. |
-| Direction | Is this current program direction rather than an old contour, wave note, or copied promise? | [ROADMAP](ROADMAP.md) | Cross-check [docs/DIRECTION_SURFACES](docs/DIRECTION_SURFACES.md). |
+| Direction | Is this current program direction rather than an old contour, wave note, or copied promise? | [ROADMAP](ROADMAP.md) | Cross-check [release-support/DIRECTION_SURFACES](mechanics/release-support/docs/DIRECTION_SURFACES.md). |
 | Machine contract | Can the compact surfaces still rebuild and validate? | generated capsules and validators | Run the commands below. |
-| Mechanic route | Is the claim about a process, engineering philosophy, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS support? | [docs/MECHANICS](docs/MECHANICS.md) | Use the atlas entry for that mechanic before editing the deeper surface. |
+| Mechanic route | Is the claim about a process, engineering philosophy, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS support? | [mechanics/README](mechanics/README.md) | Use the package entry for that mechanic before editing the deeper surface. |
 | Audit route | Is this cleanup, pruning, or duplicate-meaning review? | [ECOSYSTEM_AUDIT_INDEX](ECOSYSTEM_AUDIT_INDEX.md) and [docs/audits](docs/audits/) | Keep audit evidence reviewable without promoting it into constitutional law. |
 
 ```bash
@@ -82,7 +82,7 @@ Everything else must justify its place through [docs/ROOT_SURFACE_LAW](docs/ROOT
 
 ## Branch by mechanism
 
-Use [docs/MECHANICS](docs/MECHANICS.md) as the single process gate when the question is **what kind of move is this?** rather than **which repository is this?** The atlas routes method/growth, recurrence/return/continuity, Agon, Experience, antifragility/subtraction, quest/RPG reflection, ToS bridge/witness/compost, release posture, machine companions, validators, owner splits, and stop-lines. Detailed mechanic landing history lives in [docs/AGON_LANDING_LOG](docs/AGON_LANDING_LOG.md) and [docs/EXPERIENCE_LANDING_LOG](docs/EXPERIENCE_LANDING_LOG.md), not in the root roadmap. The root deliberately keeps those branches behind one door so the polis remains a city gate, not a warehouse.
+Use [mechanics/README](mechanics/README.md) as the single process gate when the question is **what kind of move is this?** rather than **which repository is this?** The atlas routes method/growth, recurrence/return/continuity, Agon, Experience, antifragility/subtraction, quest/RPG reflection, ToS bridge/witness/compost, release posture, machine companions, validators, owner splits, and stop-lines. Detailed mechanic landing history lives in [Agon LANDING_LOG](mechanics/agon/LANDING_LOG.md) and [Experience LANDING_LOG](mechanics/experience/LANDING_LOG.md), not in the root roadmap. The root deliberately keeps those branches behind one door so the polis remains a city gate, not a warehouse.
 
 ## Quick route table
 
@@ -127,14 +127,14 @@ Treat this contour as a map of planted law, contracts, candidates, and proof sur
 |---|---|---|---|
 | Public center map | landed public route and registry v1 | a claim that the center owns every object it names | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, generated registry capsules |
 | Root surface governance | civic root law, completed root-leak cleanup route, district gates, and Markdown shape guardrail | permission to hide history, delete without review, or turn district READMEs into doctrine catalogs | `docs/ROOT_SURFACE_LAW.md`, `docs/audits/ROOT_SURFACE_AUDIT_2026_04_24.md`, `scripts/validate_markdown_shape.py`, local district READMEs |
-| Method and growth | center doctrine and cross-owner route | a new lineage layer or center-owned method corpus | `docs/METHOD_SPINE.md`, `docs/REVIEWABLE_GROWTH_REFINERY.md`, `docs/CANDIDATE_LINEAGE_CROSSWALK.md`, `docs/OWNER_LANDING_AND_PRUNING.md` |
-| Recurrence and continuity | bounded return to valid anchors | ambient continuity, hidden memory, or runtime autonomy | `docs/RECURRENCE_PRINCIPLE.md`, `docs/SELF_AGENCY_CONTINUITY.md`, `docs/COMPONENT_REFRESH_LAW.md` |
-| Agon | center-owned pre-protocol law, move language, owner binding, handoffs, arena grammar, consequence candidates, and threshold restraint | live arena execution, assistant contestant authority, live rank mutation, or canon write authority | `docs/MECHANICS.md#agon` and linked `AGON_*` surfaces |
-| Experience | staged center contracts through Wave 1-5 and v1.2 to v2.0 | live workspace runtime, hidden memory sovereignty, or owner-local activation | `docs/MECHANICS.md#experience` and linked `EXPERIENCE_*` surfaces |
-| Antifragility and subtraction | stress discipline, degraded-mode evidence, pruning, and anti-authority cleanup | one-score health, deletion theater, or authority transfer | `docs/ANTIFRAGILITY.md`, `docs/VIA_NEGATIVA.md`, `FRAGILITY_BLACKLIST.md`, `docs/audits/DELETION_CANDIDATES.json` |
-| Quest/RPG reflection | public quest model and adjunct progression reading layer | runtime ledger, global score, or hidden ontology | `QUESTBOOK.md`, `quests/`, `docs/QUESTBOOK_MODEL.md`, `docs/RPG_LAYER_MODEL.md` |
-| ToS support and counterpart work | AoA may route, support, witness, derive, and prepare ToS-adjacent seams | AoA-authored ToS meaning or direct ToS canon write | `docs/COUNTERPART_BRIDGE.md`, `docs/WITNESS_COMPOST.md`, `docs/TOS_GROWTH_SUPPORT.md`, `docs/TOS_TEMPLATE_SUPPORT.md`, `docs/TOS_LINEAGE_PILOT_SUPPORT.md`, `docs/TOS_SOIL_PREP_SUPPORT.md` |
-| Release and support | public claims must align across human docs, generated capsules, and validators | release glamour without claim verification | `docs/PUBLIC_SUPPORT_POSTURE.md`, `docs/FEDERATION_RELEASE_PROTOCOL.md`, `docs/RELEASING.md`, `scripts/`, `tests/` |
+| Method and growth | center doctrine and cross-owner route | a new lineage layer or center-owned method corpus | `mechanics/method-growth/docs/METHOD_SPINE.md`, `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`, `mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`, `mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md` |
+| Recurrence and continuity | bounded return to valid anchors | ambient continuity, hidden memory, or runtime autonomy | `mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md`, `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md`, `mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md` |
+| Agon | center-owned pre-protocol law, move language, owner binding, handoffs, arena grammar, consequence candidates, and threshold restraint | live arena execution, assistant contestant authority, live rank mutation, or canon write authority | `mechanics/agon/README.md` and linked `mechanics/agon/docs/AGON_*` surfaces |
+| Experience | staged center contracts through Wave 1-5 and v1.2 to v2.0 | live workspace runtime, hidden memory sovereignty, or owner-local activation | `mechanics/experience/README.md` and linked `mechanics/experience/docs/EXPERIENCE_*` surfaces |
+| Antifragility and subtraction | stress discipline, degraded-mode evidence, pruning, and anti-authority cleanup | one-score health, deletion theater, or authority transfer | `mechanics/antifragility/docs/ANTIFRAGILITY.md`, `mechanics/antifragility/docs/VIA_NEGATIVA.md`, `FRAGILITY_BLACKLIST.md`, `docs/audits/DELETION_CANDIDATES.json` |
+| Quest/RPG reflection | public quest model and adjunct progression reading layer | runtime ledger, global score, or hidden ontology | `QUESTBOOK.md`, `quests/`, `mechanics/questbook/docs/QUESTBOOK_MODEL.md`, `mechanics/rpg/docs/RPG_LAYER_MODEL.md` |
+| ToS support and counterpart work | AoA may route, support, witness, derive, and prepare ToS-adjacent seams | AoA-authored ToS meaning or direct ToS canon write | `mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md`, `mechanics/tos-bridge/docs/WITNESS_COMPOST.md`, `mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md`, `mechanics/tos-bridge/docs/TOS_TEMPLATE_SUPPORT.md`, `mechanics/tos-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md`, `mechanics/tos-bridge/docs/TOS_SOIL_PREP_SUPPORT.md` |
+| Release and support | public claims must align across human docs, generated capsules, and validators | release glamour without claim verification | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, `mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md`, `mechanics/release-support/docs/RELEASING.md`, `scripts/`, `tests/` |
 
 ## Technical district gates
 

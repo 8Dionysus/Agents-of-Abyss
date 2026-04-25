@@ -10,8 +10,8 @@ Ensure Wave I starts from Agon scrutiny rather than from compatibility comfort.
 
 ## Required inputs
 
-- `Agents-of-Abyss/docs/AGON_IMPOSITION_POSTURE.md`
-- `Agents-of-Abyss/docs/AGON_SURVIVAL_CRITERIA.md`
+- `Agents-of-Abyss/mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md`
+- `Agents-of-Abyss/mechanics/agon/docs/AGON_SURVIVAL_CRITERIA.md`
 - `Agents-of-Abyss/generated/agon_imposition_readiness.min.json`
 - `aoa-agents/docs/AGENT_SUBJECT_PREP.md`
 

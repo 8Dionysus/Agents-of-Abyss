@@ -2,7 +2,7 @@
 
 This directory holds tracked AoA obligations that should survive the current diff.
 
-It is not a private scratchpad and not a second roadmap. Program direction belongs in [`ROADMAP.md`](../ROADMAP.md). The root quest index is [`QUESTBOOK.md`](../QUESTBOOK.md). Quest lifecycle law lives in [`docs/QUESTBOOK_MODEL.md`](../docs/QUESTBOOK_MODEL.md).
+It is not a private scratchpad and not a second roadmap. Program direction belongs in [`ROADMAP.md`](../ROADMAP.md). The root quest index is [`QUESTBOOK.md`](../QUESTBOOK.md). Quest lifecycle law lives in [`mechanics/questbook/docs/QUESTBOOK_MODEL.md`](../mechanics/questbook/docs/QUESTBOOK_MODEL.md).
 
 ## File families
 
@@ -34,7 +34,7 @@ It is not a private scratchpad and not a second roadmap. Program direction belon
 ## Before editing
 
 1. Check [`QUESTBOOK.md`](../QUESTBOOK.md).
-2. Check [`docs/QUESTBOOK_MODEL.md`](../docs/QUESTBOOK_MODEL.md).
-3. If the quest touches a mechanic, check [`docs/MECHANICS.md`](../docs/MECHANICS.md).
+2. Check [`mechanics/questbook/docs/QUESTBOOK_MODEL.md`](../mechanics/questbook/docs/QUESTBOOK_MODEL.md).
+3. If the quest touches a mechanic, check [`mechanics/README.md`](../mechanics/README.md).
 4. Keep the owner split explicit.
 5. Leave a clear follow-up path rather than a placeholder.

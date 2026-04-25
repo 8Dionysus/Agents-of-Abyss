@@ -30,9 +30,9 @@ AoA now names one narrow reviewable growth-refinery route:
 
 The center records the route in:
 
-- `docs/REVIEWABLE_GROWTH_REFINERY.md`
-- `docs/CANDIDATE_LINEAGE_CROSSWALK.md`
-- `docs/METHOD_SPINE.md`
+- `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`
+- `mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`
+- `mechanics/method-growth/docs/METHOD_SPINE.md`
 
 This route does **not** create a new sovereign layer.
 

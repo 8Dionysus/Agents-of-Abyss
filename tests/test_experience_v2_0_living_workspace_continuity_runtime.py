@@ -118,7 +118,7 @@ def test_experience_v20_living_workspace_runtime_requires_wave9_predecessor() ->
     bad_payload = copy.deepcopy(payload)
     predecessors = bad_payload["predecessor_surfaces"]
     assert isinstance(predecessors, list)
-    predecessors.remove("docs/EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md")
+    predecessors.remove("mechanics/experience/docs/EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md")
 
     with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
         validator.validate_payload(bad_payload, schema)

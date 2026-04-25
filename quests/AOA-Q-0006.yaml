@@ -31,7 +31,7 @@ activation:
   note: open when the runtime/frontend contour is ready to be fixed without widening source ownership
 anchor_ref:
   artifact: rpg_architecture_rfc
-  ref: docs/RPG_ARCHITECTURE_RFC.md
+  ref: mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md
   note: this RFC must hold the line between source meaning, proof, runtime, and presentation
 handoff_role: federation-maintainer
 evidence:

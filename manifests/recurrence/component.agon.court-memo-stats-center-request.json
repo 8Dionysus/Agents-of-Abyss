@@ -45,8 +45,8 @@
   ],
   "component_ref": "component:agon:court-memo-stats-center-request",
   "contract_surfaces": [
-    "docs/AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF.md",
-    "docs/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md"
+    "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF.md",
+    "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md"
   ],
   "description": "Center-owned Wave VII request for court, memory, and stats prebinding.",
   "freshness": {
@@ -81,7 +81,7 @@
     "python scripts/validate_agon_court_memo_stats_prebinding_request.py"
   ],
   "rollback_anchors": [
-    "docs/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md"
+    "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md"
   ],
   "schema_version": "aoa_recurrence_component_v2",
   "signal_edges": [

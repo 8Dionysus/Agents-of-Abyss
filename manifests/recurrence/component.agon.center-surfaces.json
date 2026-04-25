@@ -2,7 +2,7 @@
   "beacon_rules": [
     {
       "beacon_ref": "agon.center.law_surface_drift",
-      "decision_surface": "docs/AGON_IMPOSITION_POSTURE.md",
+      "decision_surface": "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
       "kind": "canonical_pressure",
       "match_categories": [
         "change_pressure",
@@ -43,7 +43,7 @@
     },
     {
       "beacon_ref": "agon.center.pre_protocol_handoff_pressure",
-      "decision_surface": "docs/AGON_RECURRENCE_ADAPTER_HANDOFF.md",
+      "decision_surface": "mechanics/agon/docs/AGON_RECURRENCE_ADAPTER_HANDOFF.md",
       "kind": "automation_seed_candidate",
       "match_categories": [
         "repeat_pattern",
@@ -99,30 +99,30 @@
       "required": true,
       "suggested_action": "observe",
       "suggested_commands": [],
-      "target": "docs/AGON_RECURRENCE_ADAPTER.md",
+      "target": "mechanics/agon/docs/AGON_RECURRENCE_ADAPTER.md",
       "target_repo": "Agents-of-Abyss"
     }
   ],
   "contract_surfaces": [
-    "docs/AGON_IMPOSITION_POSTURE.md",
-    "docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
-    "docs/AGON_MOVE_OWNER_BINDING.md",
-    "docs/AGON_GATE_ROUTING_HANDOFF.md",
-    "docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
-    "docs/AGON_RECURRENCE_ADAPTER_HANDOFF.md"
+    "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
+    "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
+    "mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md",
+    "mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md",
+    "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
+    "mechanics/agon/docs/AGON_RECURRENCE_ADAPTER_HANDOFF.md"
   ],
   "decision_surfaces": [
-    "docs/AGON_IMPOSITION_POSTURE.md",
-    "docs/AGON_LAWFUL_MOVE_LANGUAGE.md"
+    "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
+    "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md"
   ],
   "description": "Center-owned Agon law and stop-line surfaces from Waves 0, III, IV, V handoff, and VI handoff.",
   "documentation_surfaces": [
-    "docs/AGON_IMPOSITION_POSTURE.md",
-    "docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
-    "docs/AGON_MOVE_OWNER_BINDING.md",
-    "docs/AGON_GATE_ROUTING_HANDOFF.md",
-    "docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
-    "docs/AGON_RECURRENCE_ADAPTER_HANDOFF.md"
+    "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
+    "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
+    "mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md",
+    "mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md",
+    "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
+    "mechanics/agon/docs/AGON_RECURRENCE_ADAPTER_HANDOFF.md"
   ],
   "drift_signals": [
     {
@@ -191,8 +191,8 @@
     }
   ],
   "rollback_anchors": [
-    "docs/AGON_IMPOSITION_POSTURE.md",
-    "docs/AGON_LAWFUL_MOVE_LANGUAGE.md"
+    "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
+    "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md"
   ],
   "schema_version": "aoa_recurrence_component_v2",
   "signal_edges": [

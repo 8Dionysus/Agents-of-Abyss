@@ -15,13 +15,13 @@
       "surface_globs": [
         "generated/agon_slc_registry.min.json",
         "config/agon_slc.seed.json",
-        "docs/AGON_SCHOOLS_LINEAGES_CAMPAIGNS.md",
-        "docs/AGON_SCHOOL_MODEL.md",
-        "docs/AGON_LINEAGE_MODEL.md",
-        "docs/AGON_CAMPAIGN_MODEL.md",
-        "docs/AGON_CAMPAIGN_OWNER_HANDOFFS.md",
-        "docs/AGON_WAVE16_STOP_LINES.md",
-        "docs/AGON_WAVE16_LANDING.md"
+        "mechanics/agon/docs/AGON_SCHOOLS_LINEAGES_CAMPAIGNS.md",
+        "mechanics/agon/docs/AGON_SCHOOL_MODEL.md",
+        "mechanics/agon/docs/AGON_LINEAGE_MODEL.md",
+        "mechanics/agon/docs/AGON_CAMPAIGN_MODEL.md",
+        "mechanics/agon/docs/AGON_CAMPAIGN_OWNER_HANDOFFS.md",
+        "mechanics/agon/docs/AGON_WAVE16_STOP_LINES.md",
+        "mechanics/agon/docs/AGON_WAVE16_LANDING.md"
       ]
     }
   ],

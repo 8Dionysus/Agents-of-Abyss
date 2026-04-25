@@ -9,64 +9,21 @@ It explains how the federation is shaped and how it should grow without collapsi
 
 Important documents here include:
 
-- `README.md` as the human-first map of the docs surface
-- `LAYERS.md` for the conceptual layer model
-- `REPO_ROLES.md` for compact ownership routing
-- `FEDERATION_RULES.md` for source-of-truth boundaries
-- `MECHANICS.md` as the single branch atlas for center-level processes,
-  engineering philosophy, owner splits, stop-lines, and validation routes
-- `ROOTLINE.md` for the trunk-first planting spine
-- `RECURRENCE_PRINCIPLE.md` for the standing recovery law when a route loses axis and must regain a valid anchor
-- `METHOD_SPINE.md` for the second-wave method doctrine
-- `COUNTERPART_BRIDGE.md` for bounded counterpart and KAG restraint
-- `WITNESS_COMPOST.md` for the witness and compost pilot
-- `AGON_PREPARATION_POSTURE.md`, `AGON_IMPOSITION_POSTURE.md`,
-  `AGON_SURVIVAL_CRITERIA.md`, `AGON_DOUBT_AUDIT.md`,
-  `PRE_AGON_BASELINE.md`, and `AGON_WAVE0_LANDING.md` for the center-owned
-  Agon holding boundary, first imposition turn, survival lens, audit frame,
-  before-image, and landing order
-- `AGON_LAWFUL_MOVE_LANGUAGE.md`, `AGON_MOVE_REGISTRY_MODEL.md`,
-  `AGON_MOVE_OWNER_HANDOFFS.md`, and `AGON_WAVE3_LANDING.md` for the first
-  pre-protocol lawful move vocabulary and its owner-handoff stop-lines
-- `AGON_MOVE_OWNER_BINDING.md`, `AGON_MOVE_BINDING_MATRIX_MODEL.md`,
-  `AGON_OWNER_REPO_REQUESTS.md`, `AGON_PRE_PROTOCOL_STOP_LINES.md`, and
-  `AGON_WAVE4_LANDING.md` for the first owner-binding turn, its compact
-  binding matrix, cross-repo request law, stop-lines, and landing order
-- `AGON_GATE_ROUTING_HANDOFF.md`, `AGON_GATE_ROUTING_OWNER_REQUEST.md`,
-  `AGON_GATE_ROUTING_STOP_LINES.md`, and `AGON_WAVE5_CENTER_HANDOFF.md` for
-  the first center-owned gate-routing handoff, its owner request, stop-lines,
-  and landing order
-- `EXPERIENCE_WAVE1_KERNEL.md` for the first experience-capture kernel and
-  its friction -> recurrence -> candidate -> verdict -> memory gate -> owner
-  route -> inert projection order
-- `EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md` for the second experience
-  wave, its v0.4 certification spine, v0.5 contract-only watchtower spine,
-  and release/deployment authority stop-lines
-- `EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md` for the third experience wave,
-  its v0.6 federation harvest spine, v0.7 owner-local adoption spine, and
-  KAG/ToS/runtime/assistant stop-lines
-- `EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md` for the fourth experience wave,
-  its v0.8 polis governance spine, v0.9 constitution runtime spine, and
-  council/vote/stay/replay/precedent authority stop-lines
-- `EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md` for the fifth experience wave, its
-  v1.0 installation spine, v1.1 live-office spine, and release/office
-  authority stop-lines
-- `EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md` for the center bridge from the
-  `Dionysus` v1.2-v2.0 intake line into future owner-local waves without
-  treating archive transport as owner truth
-- `EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md` for the v1.2 service mesh
-  operations contract, office-failure rehearsal laws, owner routing, and
-  no-runtime stop-lines
-- `EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md` for the v1.3 office foundry
-  and role-pair contract, office/kind split, no-hybrid law, owner routing, and
-  no-runtime stop-lines
-- `EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md` for the v1.4
-  agonic pair trial and mechanical arena kernel contract, assistant witness
-  boundary, current Agon law alignment, and no-live-arena stop-lines
-- `EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md` for the v1.5
-  epistemic duel and model-of-other forge contract, sealed prediction pressure,
-  owner routing, and no-live-duel/no-runtime stop-lines
-- `TOS_GROWTH_SUPPORT.md`, `TOS_TEMPLATE_SUPPORT.md`, `TOS_LINEAGE_PILOT_SUPPORT.md`, and `TOS_SOIL_PREP_SUPPORT.md` for current AoA support doctrine around `Tree-of-Sophia`
+- `README.md` as the human-first map of the docs surface.
+- `LAYERS.md` for the conceptual layer model.
+- `REPO_ROLES.md` for compact ownership routing.
+- `FEDERATION_RULES.md` for source-of-truth boundaries.
+- `ROOT_SURFACE_LAW.md` for root placement and cleanup law.
+- `START_HERE_ROUTE_CONTRACT.md` for public entry route modes.
+- `MECHANICS.md` as a compatibility route to `../mechanics/README.md`.
+
+Mechanic-owned doctrine now lives under `../mechanics/`.
+Use `../mechanics/AGENTS.md` and the nearest `../mechanics/<slug>/AGENTS.md`
+before editing Agon, Experience, recurrence, method-growth, antifragility,
+questbook, RPG, ToS-bridge, or release-support surfaces.
+The former docs-root mechanic anchors now route through packages, including
+`ROOTLINE.md`, `METHOD_SPINE.md`, `COUNTERPART_BRIDGE.md`, and
+`WITNESS_COMPOST.md`.
 
 ## Editing posture
 

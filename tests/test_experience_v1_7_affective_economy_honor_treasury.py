@@ -95,7 +95,7 @@ def test_experience_v17_affective_honor_requires_v16_predecessor() -> None:
     bad_payload = copy.deepcopy(payload)
     predecessors = bad_payload["predecessor_surfaces"]
     assert isinstance(predecessors, list)
-    predecessors.remove("docs/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md")
+    predecessors.remove("mechanics/experience/docs/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md")
 
     with pytest.raises(validator.ValidationError, match="predecessor_surfaces|bridge spine|schema"):
         validator.validate_payload(bad_payload, schema)
@@ -108,7 +108,7 @@ def test_experience_v17_affective_honor_requires_wave7_handoff_predecessor() -> 
     bad_payload = copy.deepcopy(payload)
     predecessors = bad_payload["predecessor_surfaces"]
     assert isinstance(predecessors, list)
-    predecessors.remove("docs/AGON_WAVE7_CENTER_HANDOFF.md")
+    predecessors.remove("mechanics/agon/docs/AGON_WAVE7_CENTER_HANDOFF.md")
 
     with pytest.raises(validator.ValidationError, match="predecessor_surfaces|bridge spine|schema"):
         validator.validate_payload(bad_payload, schema)

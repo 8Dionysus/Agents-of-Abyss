@@ -19,6 +19,6 @@ Recurrence means bounded return to a valid anchor. It does not mean ambient memo
 
 ## Start here
 
-- [`docs/RECURRENCE_PRINCIPLE.md`](../../docs/RECURRENCE_PRINCIPLE.md)
-- [`docs/SELF_AGENCY_CONTINUITY.md`](../../docs/SELF_AGENCY_CONTINUITY.md)
-- [`docs/MECHANICS.md`](../../docs/MECHANICS.md)
+- [`mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md`](../../mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md)
+- [`mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md`](../../mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md)
+- [`mechanics/README.md`](../../mechanics/README.md)

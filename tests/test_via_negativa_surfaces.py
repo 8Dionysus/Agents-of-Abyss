@@ -47,9 +47,9 @@ def test_deletion_candidates_surface_stays_owner_aware() -> None:
 def test_center_docs_route_to_via_negativa_surfaces() -> None:
     readme = (REPO_ROOT / "README.md").read_text()
     docs_readme = (REPO_ROOT / "docs" / "README.md").read_text()
-    mechanics = (REPO_ROOT / "docs" / "MECHANICS.md").read_text()
+    mechanics = (REPO_ROOT / "mechanics" / "README.md").read_text()
 
-    assert "docs/MECHANICS.md" in readme
+    assert "mechanics/README.md" in readme
     assert "VIA_NEGATIVA.md" in mechanics
     assert "ANTI_AUTHORITY_RULES.md" in mechanics
     assert "ONE_IN_ONE_OUT.md" in mechanics

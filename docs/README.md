@@ -16,14 +16,14 @@ For the shortest center overview, read:
 4. [`FEDERATION_RULES`](FEDERATION_RULES.md)
 5. [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md)
 6. [`ROADMAP`](../ROADMAP.md)
-7. [`PUBLIC_SUPPORT_POSTURE`](PUBLIC_SUPPORT_POSTURE.md)
+7. [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md)
 
-Then use [`MECHANICS`](MECHANICS.md) as the single branch point for center-level processes: method/growth, recurrence/return/continuity, Agon, Experience, antifragility/subtraction, quest/RPG reflection, ToS bridge, release posture, machine companions, and related stop-lines.
+Then use [`MECHANICS`](../mechanics/README.md) as the single branch point for center-level processes: method/growth, recurrence/return/continuity, Agon, Experience, antifragility/subtraction, quest/RPG reflection, ToS bridge, release posture, machine companions, and related stop-lines.
 
 The route modes behind this entry surface are governed by
 [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md). Mechanic landing
-history lives in [`AGON_LANDING_LOG`](AGON_LANDING_LOG.md) and
-[`EXPERIENCE_LANDING_LOG`](EXPERIENCE_LANDING_LOG.md).
+history lives in [`AGON_LANDING_LOG`](../mechanics/agon/LANDING_LOG.md) and
+[`EXPERIENCE_LANDING_LOG`](../mechanics/experience/LANDING_LOG.md).
 
 ## How to verify center claims
 
@@ -33,10 +33,10 @@ history lives in [`AGON_LANDING_LOG`](AGON_LANDING_LOG.md) and
 | Contour | Check whether the repo, layer, or anchor is currently named. | [`ECOSYSTEM_MAP`](../ECOSYSTEM_MAP.md) |
 | Ownership law | Check whether source, derived, routing, runtime, and ToS meaning remain separate. | [`FEDERATION_RULES`](FEDERATION_RULES.md) |
 | Root placement | Check whether a file belongs at repository root. | [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md) |
-| Direction | Check whether the claim reflects current program direction. | [`ROADMAP`](../ROADMAP.md), [`DIRECTION_SURFACES`](DIRECTION_SURFACES.md) |
-| Public support | Check whether the claim can be stated publicly and validated. | [`PUBLIC_SUPPORT_POSTURE`](PUBLIC_SUPPORT_POSTURE.md) |
+| Direction | Check whether the claim reflects current program direction. | [`ROADMAP`](../ROADMAP.md), [`DIRECTION_SURFACES`](../mechanics/release-support/docs/DIRECTION_SURFACES.md) |
+| Public support | Check whether the claim can be stated publicly and validated. | [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) |
 | Machine contract | Check compact machine-facing capsules. | [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md), [`generated/center_entry_map.min.json`](../generated/center_entry_map.min.json), [`generated/ecosystem_registry.min.json`](../generated/ecosystem_registry.min.json), [`generated/federation_supporting_inventory.min.json`](../generated/federation_supporting_inventory.min.json) |
-| Mechanic route | Check process-specific owner splits and stop-lines. | [`MECHANICS`](MECHANICS.md), [`AGON_LANDING_LOG`](AGON_LANDING_LOG.md), [`EXPERIENCE_LANDING_LOG`](EXPERIENCE_LANDING_LOG.md) |
+| Mechanic route | Check process-specific owner splits and stop-lines. | [`MECHANICS`](../mechanics/README.md), [`AGON_LANDING_LOG`](../mechanics/agon/LANDING_LOG.md), [`EXPERIENCE_LANDING_LOG`](../mechanics/experience/LANDING_LOG.md) |
 | Audit route | Check cleanup and drift review surfaces. | [`audits/`](audits/), [`ECOSYSTEM_AUDIT_INDEX`](../ECOSYSTEM_AUDIT_INDEX.md) |
 
 Core validation:
@@ -58,7 +58,7 @@ python -m pytest -q tests
 | [`REPO_ROLES`](REPO_ROLES.md) | what each current or emerging repository owns and should not absorb |
 | [`FEDERATION_RULES`](FEDERATION_RULES.md) | stable source-of-truth boundaries |
 | [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md) | what may live in repository root and where root leaks should move |
-| [`MECHANICS`](MECHANICS.md) | the branch atlas for processes and engineering philosophy |
+| [`MECHANICS`](../mechanics/README.md) | the branch atlas for processes and engineering philosophy |
 
 
 ## Documentation districts
@@ -85,18 +85,18 @@ python -m pytest -q tests
 
 ## Doctrine clusters
 
-Use these clusters for orientation only. Deep branch routing belongs in [`MECHANICS`](MECHANICS.md), not in this map.
+Use these clusters for orientation only. Deep branch routing belongs in [`MECHANICS`](../mechanics/README.md), not in this map.
 
 | Cluster | Start here | Use when |
 |---|---|---|
-| Method and growth | [`METHOD_SPINE`](METHOD_SPINE.md), [`REVIEWABLE_GROWTH_REFINERY`](REVIEWABLE_GROWTH_REFINERY.md), [`CANDIDATE_LINEAGE_CROSSWALK`](CANDIDATE_LINEAGE_CROSSWALK.md), [`OWNER_LANDING_AND_PRUNING`](OWNER_LANDING_AND_PRUNING.md) | a repeated pattern needs owner-local landing, proof, memory, method, or pruning |
-| Recurrence and continuity | [`RECURRENCE_PRINCIPLE`](RECURRENCE_PRINCIPLE.md), [`SELF_AGENCY_CONTINUITY`](SELF_AGENCY_CONTINUITY.md), [`COMPONENT_REFRESH_LAW`](COMPONENT_REFRESH_LAW.md) | a route lost its axis, needs return, or must preserve bounded duration |
-| Agon | [`MECHANICS`](MECHANICS.md#agon), [`AGON_LANDING_LOG`](AGON_LANDING_LOG.md), [`AGON_PREPARATION_POSTURE`](AGON_PREPARATION_POSTURE.md), [`AGON_IMPOSITION_POSTURE`](AGON_IMPOSITION_POSTURE.md), [`AGON_LAWFUL_MOVE_LANGUAGE`](AGON_LAWFUL_MOVE_LANGUAGE.md), [`AGON_MOVE_OWNER_BINDING`](AGON_MOVE_OWNER_BINDING.md) | pressure, lawful move, arena, packet, verdict, retention, rank, school, canon, or owner-binding law is involved |
-| Experience | [`MECHANICS`](MECHANICS.md#experience), [`EXPERIENCE_LANDING_LOG`](EXPERIENCE_LANDING_LOG.md) | a staged experience contract, office/service posture, continuity loom, or runtime boundary is involved |
-| Antifragility and subtraction | [`ANTIFRAGILITY`](ANTIFRAGILITY.md), [`VIA_NEGATIVA`](VIA_NEGATIVA.md), [`ANTI_AUTHORITY_RULES`](ANTI_AUTHORITY_RULES.md), [`ONE_IN_ONE_OUT`](ONE_IN_ONE_OUT.md) | stress, degraded mode, pruning, or authority inflation must be handled |
-| Questbook and RPG | [`QUESTBOOK_MODEL`](QUESTBOOK_MODEL.md), [`RPG_LAYER_MODEL`](RPG_LAYER_MODEL.md), [`RPG_ARCHITECTURE_RFC`](RPG_ARCHITECTURE_RFC.md) | obligations, questlines, progression, or adjunct campaign vocabulary is needed |
-| ToS bridge | [`COUNTERPART_BRIDGE`](COUNTERPART_BRIDGE.md), [`WITNESS_COMPOST`](WITNESS_COMPOST.md), [`TOS_GROWTH_SUPPORT`](TOS_GROWTH_SUPPORT.md), [`TOS_TEMPLATE_SUPPORT`](TOS_TEMPLATE_SUPPORT.md), [`TOS_LINEAGE_PILOT_SUPPORT`](TOS_LINEAGE_PILOT_SUPPORT.md), [`TOS_SOIL_PREP_SUPPORT`](TOS_SOIL_PREP_SUPPORT.md) | AoA supports ToS while preserving ToS-authored meaning |
-| Release and audit | [`PUBLIC_SUPPORT_POSTURE`](PUBLIC_SUPPORT_POSTURE.md), [`DIRECTION_SURFACES`](DIRECTION_SURFACES.md), [`FEDERATION_RELEASE_PROTOCOL`](FEDERATION_RELEASE_PROTOCOL.md), [`RELEASING`](RELEASING.md), [`CODEX_AUDIT_PROTOCOL`](CODEX_AUDIT_PROTOCOL.md) | a public claim, release, or audit route needs verification |
+| Method and growth | [`METHOD_SPINE`](../mechanics/method-growth/docs/METHOD_SPINE.md), [`REVIEWABLE_GROWTH_REFINERY`](../mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md), [`CANDIDATE_LINEAGE_CROSSWALK`](../mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md), [`OWNER_LANDING_AND_PRUNING`](../mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md) | a repeated pattern needs owner-local landing, proof, memory, method, or pruning |
+| Recurrence and continuity | [`RECURRENCE_PRINCIPLE`](../mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md), [`SELF_AGENCY_CONTINUITY`](../mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md), [`COMPONENT_REFRESH_LAW`](../mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md) | a route lost its axis, needs return, or must preserve bounded duration |
+| Agon | [`MECHANICS`](../mechanics/agon/README.md), [`AGON_LANDING_LOG`](../mechanics/agon/LANDING_LOG.md), [`AGON_PREPARATION_POSTURE`](../mechanics/agon/docs/AGON_PREPARATION_POSTURE.md), [`AGON_IMPOSITION_POSTURE`](../mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md), [`AGON_LAWFUL_MOVE_LANGUAGE`](../mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md), [`AGON_MOVE_OWNER_BINDING`](../mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md) | pressure, lawful move, arena, packet, verdict, retention, rank, school, canon, or owner-binding law is involved |
+| Experience | [`MECHANICS`](../mechanics/experience/README.md), [`EXPERIENCE_LANDING_LOG`](../mechanics/experience/LANDING_LOG.md) | a staged experience contract, office/service posture, continuity loom, or runtime boundary is involved |
+| Antifragility and subtraction | [`ANTIFRAGILITY`](../mechanics/antifragility/docs/ANTIFRAGILITY.md), [`VIA_NEGATIVA`](../mechanics/antifragility/docs/VIA_NEGATIVA.md), [`ANTI_AUTHORITY_RULES`](../mechanics/antifragility/docs/ANTI_AUTHORITY_RULES.md), [`ONE_IN_ONE_OUT`](../mechanics/antifragility/docs/ONE_IN_ONE_OUT.md) | stress, degraded mode, pruning, or authority inflation must be handled |
+| Questbook and RPG | [`QUESTBOOK_MODEL`](../mechanics/questbook/docs/QUESTBOOK_MODEL.md), [`RPG_LAYER_MODEL`](../mechanics/rpg/docs/RPG_LAYER_MODEL.md), [`RPG_ARCHITECTURE_RFC`](../mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md) | obligations, questlines, progression, or adjunct campaign vocabulary is needed |
+| ToS bridge | [`COUNTERPART_BRIDGE`](../mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md), [`WITNESS_COMPOST`](../mechanics/tos-bridge/docs/WITNESS_COMPOST.md), [`TOS_GROWTH_SUPPORT`](../mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md), [`TOS_TEMPLATE_SUPPORT`](../mechanics/tos-bridge/docs/TOS_TEMPLATE_SUPPORT.md), [`TOS_LINEAGE_PILOT_SUPPORT`](../mechanics/tos-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md), [`TOS_SOIL_PREP_SUPPORT`](../mechanics/tos-bridge/docs/TOS_SOIL_PREP_SUPPORT.md) | AoA supports ToS while preserving ToS-authored meaning |
+| Release and audit | [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md), [`DIRECTION_SURFACES`](../mechanics/release-support/docs/DIRECTION_SURFACES.md), [`FEDERATION_RELEASE_PROTOCOL`](../mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md), [`RELEASING`](../mechanics/release-support/docs/RELEASING.md), [`CODEX_AUDIT_PROTOCOL`](CODEX_AUDIT_PROTOCOL.md) | a public claim, release, or audit route needs verification |
 
 ## Recommended reading paths
 
@@ -105,20 +105,20 @@ Use these clusters for orientation only. Deep branch routing belongs in [`MECHAN
 1. [`REPO_ROLES`](REPO_ROLES.md)
 2. [`FEDERATION_RULES`](FEDERATION_RULES.md)
 3. [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md) if the change touches root
-4. [`MECHANICS`](MECHANICS.md) if the change touches a process or mechanic
+4. [`MECHANICS`](../mechanics/README.md) if the change touches a process or mechanic
 5. [`CONTRIBUTING`](../CONTRIBUTING.md)
 
 ### I need to understand doctrine after the overview
 
 1. [`ROADMAP`](../ROADMAP.md)
-2. [`METHOD_SPINE`](METHOD_SPINE.md)
-3. [`RECURRENCE_PRINCIPLE`](RECURRENCE_PRINCIPLE.md)
-4. [`SELF_AGENCY_CONTINUITY`](SELF_AGENCY_CONTINUITY.md)
-5. [`MECHANICS`](MECHANICS.md)
+2. [`METHOD_SPINE`](../mechanics/method-growth/docs/METHOD_SPINE.md)
+3. [`RECURRENCE_PRINCIPLE`](../mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md)
+4. [`SELF_AGENCY_CONTINUITY`](../mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md)
+5. [`MECHANICS`](../mechanics/README.md)
 
 ### I am touching Agon or Experience
 
-1. Read the relevant branch in [`MECHANICS`](MECHANICS.md).
+1. Read the relevant branch in [`MECHANICS`](../mechanics/README.md).
 2. Read the specific surface and its stop-lines.
 3. Run the matching validator and test named by that surface.
 4. Confirm the change does not grant live authority, runtime activation, memory sovereignty, ToS canon, or owner truth outside the proper owner repository.

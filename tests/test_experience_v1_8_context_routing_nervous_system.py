@@ -90,7 +90,7 @@ def test_experience_v18_context_routing_requires_v17_predecessor() -> None:
     bad_payload = copy.deepcopy(payload)
     predecessors = bad_payload["predecessor_surfaces"]
     assert isinstance(predecessors, list)
-    predecessors.remove("docs/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md")
+    predecessors.remove("mechanics/experience/docs/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md")
 
     with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
         validator.validate_payload(bad_payload, schema)
@@ -103,7 +103,7 @@ def test_experience_v18_context_routing_requires_gate_routing_handoff_predecesso
     bad_payload = copy.deepcopy(payload)
     predecessors = bad_payload["predecessor_surfaces"]
     assert isinstance(predecessors, list)
-    predecessors.remove("docs/AGON_GATE_ROUTING_HANDOFF.md")
+    predecessors.remove("mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md")
 
     with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
         validator.validate_payload(bad_payload, schema)
