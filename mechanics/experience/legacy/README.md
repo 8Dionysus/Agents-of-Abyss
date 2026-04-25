@@ -1,0 +1,28 @@
+# Experience Legacy
+
+Legacy is not a trash archive. It is the provenance district for Experience waves, bridges, laws, tables, compatibility records, and version packets that are too heavy for the active route.
+
+## Layout
+
+- `raw/`: preserved `EXPERIENCE_*` source files.
+- `INDEX.md`: every raw source mapped to an active part route.
+- `DISTILLATION_LOG.md`: dated accounting for raw-to-active distillation decisions.
+
+## Use this when
+
+- you need the exact historic surface behind an active part
+- you are checking whether a new wave should become active direction
+- you are auditing stop-lines, owner boundaries, or version provenance
+
+## Stop-lines
+
+- Do not use raw files as the normal first route for low-context agents.
+- Do not delete raw provenance after distillation.
+- Do not make legacy/raw the only place a current active rule lives.
+
+## Validation
+
+```bash
+python scripts/validate_experience_distillation.py
+python scripts/validate_mechanic_landing_logs.py --mechanic experience
+```

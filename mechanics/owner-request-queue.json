@@ -322,9 +322,10 @@
     {
       "center_sources": [
         "mechanics/experience/README.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
-        "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+        "mechanics/experience/DIRECTION.md",
+        "mechanics/experience/parts/runtime-boundary/CONTRACT.md",
+        "mechanics/experience/parts/office-operations/CONTRACT.md",
+        "mechanics/experience/OWNER_REQUESTS.md"
       ],
       "center_status": "planted",
       "handoff_surface_hint": "abyss-stack/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-EXPERIENCE-STACK-001",
@@ -345,9 +346,9 @@
     {
       "center_sources": [
         "mechanics/experience/README.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
-        "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+        "mechanics/experience/parts/capture-kernel/CONTRACT.md",
+        "mechanics/experience/parts/continuity-context/CONTRACT.md",
+        "mechanics/experience/OWNER_REQUESTS.md"
       ],
       "center_status": "planted",
       "handoff_surface_hint": "aoa-memo/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-EXPERIENCE-MEMO-001",
@@ -368,9 +369,9 @@
     {
       "center_sources": [
         "mechanics/experience/README.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
-        "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+        "mechanics/experience/parts/continuity-context/CONTRACT.md",
+        "mechanics/experience/parts/runtime-boundary/CONTRACT.md",
+        "mechanics/experience/OWNER_REQUESTS.md"
       ],
       "center_status": "planted",
       "handoff_surface_hint": "aoa-routing/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-EXPERIENCE-ROUTING-001",
@@ -391,9 +392,9 @@
     {
       "center_sources": [
         "mechanics/experience/README.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
-        "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+        "mechanics/experience/parts/certification-proof/CONTRACT.md",
+        "mechanics/experience/parts/adoption-federation/CONTRACT.md",
+        "mechanics/experience/OWNER_REQUESTS.md"
       ],
       "center_status": "planted",
       "handoff_surface_hint": "aoa-evals/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-EXPERIENCE-EVALS-001",
@@ -414,9 +415,9 @@
     {
       "center_sources": [
         "mechanics/experience/README.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
-        "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+        "mechanics/experience/parts/office-operations/CONTRACT.md",
+        "mechanics/experience/parts/service-mesh/CONTRACT.md",
+        "mechanics/experience/OWNER_REQUESTS.md"
       ],
       "center_status": "planted",
       "handoff_surface_hint": "aoa-agents/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-EXPERIENCE-AGENTS-001",
@@ -437,9 +438,9 @@
     {
       "center_sources": [
         "mechanics/experience/README.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
-        "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+        "mechanics/experience/parts/continuity-context/CONTRACT.md",
+        "mechanics/experience/parts/compatibility-bridges/CONTRACT.md",
+        "mechanics/experience/OWNER_REQUESTS.md"
       ],
       "center_status": "planted",
       "handoff_surface_hint": "aoa-kag/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-EXPERIENCE-KAG-001",
@@ -460,9 +461,8 @@
     {
       "center_sources": [
         "mechanics/experience/README.md",
-        "mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
-        "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+        "mechanics/experience/parts/compatibility-bridges/CONTRACT.md",
+        "mechanics/experience/OWNER_REQUESTS.md"
       ],
       "center_status": "planted",
       "handoff_surface_hint": "Tree-of-Sophia/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-EXPERIENCE-TOS-001",

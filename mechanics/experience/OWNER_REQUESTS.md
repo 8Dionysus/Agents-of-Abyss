@@ -8,9 +8,9 @@ It names the stronger owner slices that must land outside `Agents-of-Abyss` befo
 
 Each request is a handoff candidate. A request packet is not owner acceptance. It may be copied into an owner-local issue, document, branch, or receipt, but it remains center-side until the owner repository accepts it.
 
-Source queue: [`mechanics/owner-request-queue.json`](../../../mechanics/owner-request-queue.json)
+Source queue: [`mechanics/owner-request-queue.json`](../owner-request-queue.json)
 
-Generated companion: [`generated/owner_request_queue.min.json`](../../../generated/owner_request_queue.min.json)
+Generated companion: [`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json)
 
 ## Requests
 
@@ -26,10 +26,16 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../../generat
 
 ## Center sources
 
-- [README.md](../../../mechanics/experience/README.md)
-- [EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md](../../../mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md)
-- [EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md](../../../mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md)
-- [EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md](../../../mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md)
+- [README.md](README.md)
+- [DIRECTION.md](DIRECTION.md)
+- [PARTS.md](PARTS.md)
+- [adoption-federation contract](parts/adoption-federation/CONTRACT.md)
+- [certification-proof contract](parts/certification-proof/CONTRACT.md)
+- [continuity-context contract](parts/continuity-context/CONTRACT.md)
+- [office-operations contract](parts/office-operations/CONTRACT.md)
+- [runtime-boundary contract](parts/runtime-boundary/CONTRACT.md)
+- [compatibility-bridges contract](parts/compatibility-bridges/CONTRACT.md)
+- [legacy raw index](legacy/INDEX.md)
 
 ## Stop-lines
 

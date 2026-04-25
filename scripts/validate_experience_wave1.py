@@ -12,7 +12,7 @@ from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).resolve().parents[1]
 
-DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_WAVE1_KERNEL.md"
+DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_WAVE1_KERNEL.md"
 SCHEMA_PATH = ROOT / "schemas" / "experience-wave1-flow.schema.json"
 EXAMPLE_PATH = ROOT / "examples" / "experience_wave1_flow.example.json"
 
@@ -216,7 +216,7 @@ def validate_doc(text: str) -> None:
         "automatic projection",
     ):
         if token not in text:
-            fail(f"mechanics/experience/docs/EXPERIENCE_WAVE1_KERNEL.md must mention {token!r}")
+            fail(f"mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md must mention {token!r}")
 
 
 def run_validation() -> list[str]:

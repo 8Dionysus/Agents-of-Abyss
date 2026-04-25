@@ -11,7 +11,7 @@ from jsonschema import Draft202012Validator, ValidationError
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
 SCHEMA_PATH = ROOT / "schemas" / "experience-v2-0-living-workspace-continuity-runtime.schema.json"
 EXAMPLE_PATH = ROOT / "examples" / "experience_v2_0_living_workspace_continuity_runtime.example.json"
 
@@ -26,14 +26,14 @@ SOURCE_SEED = {
 }
 
 EXPECTED_PREDECESSORS = [
-    "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md",
     "mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md",
     "docs/FEDERATION_RULES.md",
-    "mechanics/experience/docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/experience/docs/EXPERIENCE_REPO_LANDING_ORDER.md",
-    "mechanics/experience/docs/EXPERIENCE_TOS_CANDIDATE_BOUNDARY.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_REPO_LANDING_ORDER.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_TOS_CANDIDATE_BOUNDARY.md",
     "8Dionysus:docs/WORKSPACE_INSTALL.md",
     "8Dionysus:docs/CODEX_PLANE_REGENERATION.md",
     "mechanics/agon/docs/AGON_WAVE10_LANDING.md",

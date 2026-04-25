@@ -37,7 +37,7 @@ owner-local runtime and memory activation remain outside the center.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_WAVE1_KERNEL.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md`
 - `schemas/experience-wave1-flow.schema.json`
 - `examples/experience_wave1_flow.example.json`
 - `scripts/validate_experience_wave1.py`
@@ -63,7 +63,7 @@ owner-local review.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md`
 - `schemas/experience-wave2-certification-watchtower.schema.json`
 - `examples/experience_wave2_certification_watchtower.example.json`
 - `scripts/validate_experience_wave2.py`
@@ -88,7 +88,7 @@ owner repositories decide whether adoption lands locally.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md`
 - `schemas/experience-wave3-federation-adoption.schema.json`
 - `examples/experience_wave3_federation_adoption.example.json`
 - `scripts/validate_experience_wave3.py`
@@ -113,7 +113,7 @@ implementation stays outside the center.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md`
 - `schemas/experience-wave4-polis-constitution.schema.json`
 - `examples/experience_wave4_polis_constitution.example.json`
 - `scripts/validate_experience_wave4.py`
@@ -140,7 +140,7 @@ live-office contour; owner-local repositories own any live-office activation.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md`
 - `schemas/experience-wave5-sovereign-office.schema.json`
 - `examples/experience_wave5_sovereign_office.example.json`
 - `scripts/validate_experience_wave5.py`
@@ -167,7 +167,7 @@ owner-local planting waves; it does not own future runtime activation.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md`
 - `schemas/experience-v1-2-v2-0-bridge.schema.json`
 - `examples/experience_v1_2_to_v2_0_bridge.example.json`
 - `scripts/validate_experience_v1_2_to_v2_0_bridge.py`
@@ -192,7 +192,7 @@ no-runtime stop-lines; runtime service ownership remains outside the center.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md`
 - `schemas/experience-v1-2-service-mesh-operations.schema.json`
 - `examples/experience_v1_2_service_mesh_operations.example.json`
 - `scripts/validate_experience_v1_2_service_mesh_operations.py`
@@ -216,7 +216,7 @@ does not create hybrid-agent authority.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md`
 - `schemas/experience-v1-3-office-foundry-role-pairs.schema.json`
 - `examples/experience_v1_3_office_foundry_role_pairs.example.json`
 - `scripts/validate_experience_v1_3_office_foundry_role_pairs.py`
@@ -240,7 +240,7 @@ Agon law, arena operation, verdicts, scars, and retention remain unactivated.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md`
 - `schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json`
 - `examples/experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json`
 - `scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py`
@@ -265,7 +265,7 @@ standing mutation remain outside the center.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md`
 - `schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
 - `examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
 - `scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py`
@@ -290,7 +290,7 @@ jurisdiction candidates; memory truth and live rank mutation remain outside.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md`
 - `schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json`
 - `examples/experience_v1_6_epistemic_memory_rank_reputation_engine.example.json`
 - `scripts/validate_experience_v1_6_epistemic_memory_rank_reputation_engine.py`
@@ -315,7 +315,7 @@ rights, and honor treasury activation remain outside the center.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md`
 - `schemas/experience-v1-7-affective-economy-honor-treasury.schema.json`
 - `examples/experience_v1_7_affective_economy_honor_treasury.example.json`
 - `scripts/validate_experience_v1_7_affective_economy_honor_treasury.py`
@@ -339,7 +339,7 @@ route receipt grammar; live router engine and owner override remain outside.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md`
 - `schemas/experience-v1-8-context-routing-nervous-system.schema.json`
 - `examples/experience_v1_8_context_routing_nervous_system.example.json`
 - `scripts/validate_experience_v1_8_context_routing_nervous_system.py`
@@ -364,7 +364,7 @@ grammar; private memory sovereignty and runtime installation remain outside.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md`
 - `schemas/experience-v1-9-context-memory-weaving-continuity-loom.schema.json`
 - `examples/experience_v1_9_context_memory_weaving_continuity_loom.example.json`
 - `scripts/validate_experience_v1_9_context_memory_weaving_continuity_loom.py`
@@ -390,7 +390,7 @@ outside the center.
 
 Surfaces:
 
-- `mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md`
+- `mechanics/experience/legacy/raw/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md`
 - `schemas/experience-v2-0-living-workspace-continuity-runtime.schema.json`
 - `examples/experience_v2_0_living_workspace_continuity_runtime.example.json`
 - `scripts/validate_experience_v2_0_living_workspace_continuity_runtime.py`
@@ -406,3 +406,39 @@ activation, no hidden memory sovereignty.
 
 Next route: owner-local hardening must land in the owning repository before
 any runtime claim becomes public truth.
+
+### Experience active parts plus legacy raw provenance
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` keeps Experience direction, functioning
+part contracts, owner requests, landing history, and provenance accounting;
+runtime, memory, proof, routing, KAG, ToS meaning, and live office authority
+remain with stronger owner repositories.
+
+Surfaces:
+
+- `mechanics/experience/DIRECTION.md`
+- `mechanics/experience/PARTS.md`
+- `mechanics/experience/parts/README.md`
+- `mechanics/experience/legacy/README.md`
+- `mechanics/experience/legacy/INDEX.md`
+- `mechanics/experience/legacy/DISTILLATION_LOG.md`
+- `mechanics/experience/legacy/raw/README.md`
+- `mechanics/experience/OWNER_REQUESTS.md`
+- `scripts/validate_experience_distillation.py`
+- `tests/test_experience_distillation.py`
+
+Validation:
+
+- `python scripts/validate_experience_distillation.py`
+- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
+- `python -m pytest -q tests/test_experience_distillation.py`
+
+Stop-lines: no raw file becomes the primary active route by accumulation, no
+raw provenance is deleted to make the active surface look clean, and no owner
+activation is claimed from center distillation alone.
+
+Next route: future Experience waves land by preserving raw provenance,
+updating the active part they pressure, and routing owner-local activation
+through `mechanics/experience/OWNER_REQUESTS.md`.

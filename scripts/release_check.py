@@ -28,6 +28,7 @@ COMMANDS = [
     ("check center entry map", [sys.executable, "scripts/build_center_entry_map.py", "--check"]),
     ("validate center entry map", [sys.executable, "scripts/validate_center_entry_map.py"]),
     ("validate mechanics topology", [sys.executable, "scripts/validate_mechanics_topology.py"]),
+    ("validate Experience distillation", [sys.executable, "scripts/validate_experience_distillation.py"]),
     ("check mechanic card index", [sys.executable, "scripts/build_mechanic_card_index.py", "--check"]),
     ("validate mechanic card index", [sys.executable, "scripts/validate_mechanic_card_index.py"]),
     ("check owner request queue", [sys.executable, "scripts/build_owner_request_queue.py", "--check"]),

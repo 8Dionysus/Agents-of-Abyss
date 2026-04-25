@@ -11,7 +11,7 @@ from jsonschema import Draft202012Validator, ValidationError
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOC_PATH = ROOT / "mechanics" / "experience" / "docs" / "EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md"
+DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md"
 SCHEMA_PATH = ROOT / "schemas" / "experience-v1-8-context-routing-nervous-system.schema.json"
 EXAMPLE_PATH = ROOT / "examples" / "experience_v1_8_context_routing_nervous_system.example.json"
 
@@ -27,18 +27,18 @@ SOURCE_SEED = {
 EXPECTED_PREDECESSORS = [
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md",
-    "mechanics/experience/docs/EXPERIENCE_AGON_SERVICE_SEAM_V1_1.md",
-    "mechanics/experience/docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/experience/docs/EXPERIENCE_AUTHORITY_RESOLVER.md",
-    "mechanics/experience/docs/EXPERIENCE_TOS_CANDIDATE_BOUNDARY.md",
-    "mechanics/experience/docs/EXPERIENCE_REPO_LANDING_ORDER.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_AGON_SERVICE_SEAM_V1_1.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_AUTHORITY_RESOLVER.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_TOS_CANDIDATE_BOUNDARY.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_REPO_LANDING_ORDER.md",
     "mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md",
     "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md",
     "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",

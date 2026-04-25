@@ -267,40 +267,35 @@ These surfaces repeatedly forbid live runtime activation, hidden memory
 sovereignty, assistant contestant authority, direct ToS writes, and owner-truth
 theft unless a later owner-local gate lands the slice.
 
-Landing history, checked surfaces, validators, and stop-lines live in
-[EXPERIENCE_LANDING_LOG](experience/LANDING_LOG.md).
+Active direction, functioning parts, landing history, raw provenance, and
+owner requests live in [Experience](experience/README.md),
+[DIRECTION](experience/DIRECTION.md), [PARTS](experience/PARTS.md),
+[LANDING_LOG](experience/LANDING_LOG.md), [legacy](experience/legacy/README.md),
+and [OWNER_REQUESTS](experience/OWNER_REQUESTS.md).
 
 This atlas stays a route surface rather than the canonical Experience ledger.
+The heavy Wave 1-5 and v1.2-v2.0 raw files remain under
+`mechanics/experience/legacy/raw/`; use them as provenance, not as the first
+active route.
 
-### Experience Wave 1-5
+### Experience active parts
 
-| Surface | Role |
+| Part | Role |
 |---|---|
-| [EXPERIENCE_WAVE1_KERNEL](experience/docs/EXPERIENCE_WAVE1_KERNEL.md) | first experience-capture kernel for friction, recurrence, candidate, verdict, memory gate, owner route, and inert projection |
-| [EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER](experience/docs/EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md) | certification discipline and gated watchtower contracts |
-| [EXPERIENCE_WAVE3_FEDERATION_ADOPTION](experience/docs/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md) | federation harvest and owner-local adoption gates |
-| [EXPERIENCE_WAVE4_POLIS_CONSTITUTION](experience/docs/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md) | polis governance, constitution runtime, sealed decisions, stays, appeals, and replayable precedent |
-| [EXPERIENCE_WAVE5_SOVEREIGN_OFFICE](experience/docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md) | installable sovereign release and first live-office contour, still bounded by owner-local authority |
+| [Capture Kernel](experience/parts/capture-kernel/README.md) | friction, incident, candidate, verdict route, memory gate, and inert projection intake |
+| [Certification Proof](experience/parts/certification-proof/README.md) | certification, watchtower, canary, smoke, regression, and proof handoff discipline |
+| [Adoption Federation](experience/parts/adoption-federation/README.md) | federation harvest, adoption gates, owner consent, rollback, and retention routes |
+| [Governance Polis](experience/parts/governance-polis/README.md) | polis governance, constitution boundary, appeals, stays, policy, and precedent |
+| [Release Deployment](experience/parts/release-deployment/README.md) | installation, deployment, release train, rollout, rollback, semver, and landing order |
+| [Office Operations](experience/parts/office-operations/README.md) | sovereign office posture, operator routes, assistant invariants, roles, and handoffs |
+| [Service Mesh](experience/parts/service-mesh/README.md) | service mesh operations and no-runtime service boundaries |
+| [Continuity Context](experience/parts/continuity-context/README.md) | context routing grammar, continuity loom, replay, memory routes, and re-entry |
+| [Runtime Boundary](experience/parts/runtime-boundary/README.md) | living-workspace runtime stop-lines, authority resolver boundaries, and case queues |
+| [Compatibility Bridges](experience/parts/compatibility-bridges/README.md) | cross-mechanic, ToS, KAG, and Agon bridge language without authority transfer |
 
-### Experience v1.2 to v2.0 planting line
-
-| Surface | Role |
-|---|---|
-| [EXPERIENCE_V1_2_TO_V2_0_BRIDGE](experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md) | center bridge from `Dionysus` intake into future owner-local planting waves |
-| [EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS](experience/docs/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md) | service mesh operations drills and no-runtime stop-lines |
-| [EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS](experience/docs/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md) | office foundry and role-pair split without hybrid-agent authority |
-| [EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL](experience/docs/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md) | mechanical arena kernel contour without live arena, verdicts, scars, retention, or assistant contestants |
-| [EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE](experience/docs/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md) | sealed model-of-other prediction, reveal scoring, countermodel pressure, revision, and bifurcation quality without live duel authority |
-| [EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE](experience/docs/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md) | rank, reputation, standing, and jurisdiction candidates without live rank mutation or memory truth |
-| [EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY](experience/docs/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md) | affect and honor grammar without consciousness claims, honor treasury activation, or rights authority |
-| [EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM](experience/docs/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md) | context routing, salience, budget, and route receipt grammar without live router engine or owner override |
-| [EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM](experience/docs/EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md) | bounded continuity weave and re-entry grammar without private memory sovereignty or runtime installation |
-| [EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME](experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md) | final center boundary before future owner-local living-workspace continuity hardening, still not live runtime |
-
-Validation is version-specific.
-
-Use the matching `scripts/validate_experience_*.py` and
-`tests/test_experience_*.py` named by the surface you changed.
+Validation starts with `python scripts/validate_experience_distillation.py`,
+then the matching `scripts/validate_experience_*.py` and
+`tests/test_experience_*.py` named by any raw surface you changed.
 
 ## Agon
 

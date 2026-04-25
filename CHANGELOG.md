@@ -47,6 +47,10 @@ Tracking starts with the community-docs baseline for this repository.
   `docs/AGENTS_MESH_INDEX.md`, `config/agents_mesh.json`,
   `generated/agents_mesh.min.json`, local `AGENTS.md` district cards, mesh
   validators, and regression tests
+- Experience active-part distillation through `mechanics/experience/DIRECTION.md`,
+  `mechanics/experience/PARTS.md`, `mechanics/experience/parts/`,
+  `mechanics/experience/legacy/raw/`, and
+  `scripts/validate_experience_distillation.py`
 
 ### Changed
 
@@ -74,6 +78,9 @@ Tracking starts with the community-docs baseline for this repository.
 - `scripts/release_check.py`, center-entry sync, generated freshness, and
   contributor guidance now include AGENTS mesh shape, coverage, and generated
   index validation before release acceptance
+- Experience now keeps functioning direction and part contracts in active
+  package surfaces, while long Wave 1-5 and v1.2-v2.0 source packets are
+  preserved and indexed as legacy raw provenance
 - detailed agent-lane and Codex audit references now live under
   `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
   narrow compatibility route into `mechanics/README.md`

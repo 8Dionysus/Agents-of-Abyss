@@ -543,6 +543,40 @@
       ]
     },
     {
+      "path": "mechanics/experience/parts/AGENTS.md",
+      "scope": "mechanics/experience/parts/",
+      "kind": "mechanic-parts-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Active parts card for Experience.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/experience/legacy/AGENTS.md",
+      "scope": "mechanics/experience/legacy/",
+      "kind": "mechanic-legacy-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Legacy provenance card for Experience.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
       "path": "mechanics/agon/AGENTS.md",
       "scope": "mechanics/agon/",
       "kind": "mechanic-package-card",

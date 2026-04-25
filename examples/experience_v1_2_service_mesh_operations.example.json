@@ -15,11 +15,11 @@
   "predecessor_surfaces": [
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
     "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md",
-    "mechanics/experience/docs/EXPERIENCE_SERVICE_MESH_LAW.md",
-    "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/docs/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_SERVICE_MESH_LAW.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
     "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md"
   ],
   "primary_offices": [

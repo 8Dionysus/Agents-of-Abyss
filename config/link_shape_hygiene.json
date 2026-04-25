@@ -241,6 +241,62 @@
         "require_h2": true
       },
       {
+        "path": "mechanics/experience/DIRECTION.md",
+        "required": true,
+        "min_lines": 35,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/experience/PARTS.md",
+        "required": true,
+        "min_lines": 30,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/experience/OWNER_REQUESTS.md",
+        "required": true,
+        "min_lines": 35,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/experience/legacy/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/experience/legacy/INDEX.md",
+        "required": true,
+        "min_lines": 120,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/experience/legacy/DISTILLATION_LOG.md",
+        "required": true,
+        "min_lines": 25,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/experience/parts/README.md",
+        "required": true,
+        "min_lines": 15,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
         "path": "mechanics/AGENTS.md",
         "required": true,
         "min_lines": 40,
@@ -636,6 +692,7 @@
     "python scripts/validate_status_vocabulary.py",
     "python scripts/build_link_shape_hygiene_index.py --check",
     "python scripts/validate_link_shape_hygiene_index.py",
+    "python scripts/validate_experience_distillation.py",
     "python scripts/validate_agents_md_shape.py",
     "python scripts/validate_agents_mesh.py",
     "python scripts/build_agents_mesh_index.py --check",

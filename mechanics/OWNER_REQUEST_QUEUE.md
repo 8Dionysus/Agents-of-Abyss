@@ -97,7 +97,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 
 - `method-growth` -> [METHOD_GROWTH_OWNER_REPO_REQUESTS.md](method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `Dionysus`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`
 - `recurrence` -> [RECURRENCE_OWNER_REPO_REQUESTS.md](recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md); owners: `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`
-- `experience` -> [EXPERIENCE_OWNER_REPO_REQUESTS.md](experience/docs/EXPERIENCE_OWNER_REPO_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`
+- `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`
 - `agon` -> [AGON_OWNER_REPO_REQUESTS.md](agon/docs/AGON_OWNER_REPO_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-routing`, `aoa-agents`, `abyss-stack`, `Tree-of-Sophia`
 - `antifragility` -> [ANTIFRAGILITY_OWNER_REPO_REQUESTS.md](antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-playbooks`
 - `questbook` -> [QUESTBOOK_OWNER_REPO_REQUESTS.md](questbook/docs/QUESTBOOK_OWNER_REPO_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-routing`
