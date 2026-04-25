@@ -1,0 +1,1052 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agents-of-abyss.local/mechanics/experience/parts/continuity-context/schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json",
+  "title": "experience_v1_6_epistemic_memory_rank_reputation_engine_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "planting_id",
+    "campaign_wave",
+    "status",
+    "runtime_effect",
+    "live_rank_mutation",
+    "live_rights_activation",
+    "live_runtime_activation",
+    "source_seed",
+    "predecessor_surfaces",
+    "rank_reputation_law",
+    "consequence_requests",
+    "consequence_flow",
+    "hard_guards",
+    "blocking_contracts",
+    "authority",
+    "owner_split",
+    "quarantined_surfaces",
+    "seed_dry_run_evidence"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "experience_v1_6_epistemic_memory_rank_reputation_engine_v1"
+    },
+    "planting_id": {
+      "const": "experience_v1_6_epistemic_memory_rank_reputation_engine_center_contract"
+    },
+    "campaign_wave": {
+      "const": "wave6_epistemic_memory_rank_reputation_engine"
+    },
+    "status": {
+      "const": "center_rank_reputation_and_jurisdiction_contract_landed"
+    },
+    "runtime_effect": {
+      "const": "none"
+    },
+    "live_rank_mutation": {
+      "const": false
+    },
+    "live_rights_activation": {
+      "const": false
+    },
+    "live_runtime_activation": {
+      "const": false
+    },
+    "source_seed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "archive_name",
+        "seed_id",
+        "version",
+        "sha256",
+        "claim_limit"
+      ],
+      "properties": {
+        "archive_name": {
+          "const": "aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6.zip"
+        },
+        "seed_id": {
+          "const": "aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6"
+        },
+        "version": {
+          "const": "v1.6"
+        },
+        "sha256": {
+          "const": "51e403eb0ca9ac384b1edba959b67bdf457efc5813ba3aa7577e94ee87591475"
+        },
+        "claim_limit": {
+          "const": "archive_readable_not_owner_ready"
+        }
+      }
+    },
+    "predecessor_surfaces": {
+      "const": [
+        "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
+        "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
+        "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+        "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
+        "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
+        "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
+        "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
+        "mechanics/agon/docs/AGON_WAVE14_LANDING.md",
+        "mechanics/agon/docs/AGON_WAVE14_STOP_LINES.md",
+        "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
+        "mechanics/agon/docs/AGON_RETENTION_OWNER_HANDOFFS.md",
+        "mechanics/agon/docs/AGON_RANK_JURISDICTION_MODEL.md",
+        "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md",
+        "mechanics/agon/docs/AGON_WAVE15_LANDING.md",
+        "mechanics/agon/docs/AGON_WAVE15_STOP_LINES.md",
+        "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md"
+      ]
+    },
+    "rank_reputation_law": {
+      "const": [
+        "no_standing_from_single_blaze",
+        "no_reputation_event_without_evidence",
+        "no_rank_delta_without_retention_and_review",
+        "no_jurisdiction_grant_without_reviewed_basis",
+        "no_closure_right_without_contradiction_trace",
+        "no_summon_right_without_visible_cost",
+        "no_codex_rank_or_rights_authority",
+        "no_assistant_agonic_rank_or_jurisdiction",
+        "no_memory_or_model_history_as_truth",
+        "no_runtime_ledger_or_scheduler_authority",
+        "no_direct_tree_of_sophia_or_kag_canon"
+      ]
+    },
+    "consequence_requests": {
+      "const": [
+        {
+          "request": "reputation_event_review",
+          "owner": "aoa-evals",
+          "input_boundary": "verdict trace recurrence evidence retention context and actor posture",
+          "output_candidate": "reputation_event_candidate",
+          "must_include": [
+            "evidence_refs",
+            "verdict_trace",
+            "recurrence_trace",
+            "retention_context"
+          ],
+          "must_not_include": [
+            "codex_rank_assignment",
+            "direct_rights_grant",
+            "durable_memory_write",
+            "direct_tos_write"
+          ],
+          "live_execution": false,
+          "authority": "bounded_eval_request_only"
+        },
+        {
+          "request": "retention_window_review",
+          "owner": "aoa-memo",
+          "input_boundary": "scar delta recurrence record reentry evidence and owner review posture",
+          "output_candidate": "retention_result_candidate",
+          "must_include": [
+            "reentry_window",
+            "recurrence_trace",
+            "owner_review_needed",
+            "candidate_only"
+          ],
+          "must_not_include": [
+            "durable_memory_write",
+            "scheduler_loop",
+            "automatic_decay",
+            "rank_mutation"
+          ],
+          "live_execution": false,
+          "authority": "candidate_intake_only"
+        },
+        {
+          "request": "standing_transition_review",
+          "owner": "aoa-agents",
+          "input_boundary": "reviewed basis retention result jurisdiction kind and actor standing posture",
+          "output_candidate": "standing_or_jurisdiction_candidate",
+          "must_include": [
+            "reviewed_basis",
+            "retention_result",
+            "jurisdiction_kind",
+            "contradiction_status"
+          ],
+          "must_not_include": [
+            "assistant_rank_assignment",
+            "codex_authority",
+            "one_event_promotion",
+            "hidden_right_grant"
+          ],
+          "live_execution": false,
+          "authority": "owner_local_candidate_only"
+        },
+        {
+          "request": "model_history_update_review",
+          "owner": "aoa-memo",
+          "input_boundary": "bounded model-of-other history candidate with trace and non-canon limits",
+          "output_candidate": "model_history_candidate",
+          "must_include": [
+            "source_refs",
+            "history_delta",
+            "non_canon_label",
+            "review_trace"
+          ],
+          "must_not_include": [
+            "durable_identity_claim",
+            "canon_anchor_write",
+            "hidden_memory_thread",
+            "pairing_lock_in"
+          ],
+          "live_execution": false,
+          "authority": "candidate_history_only"
+        },
+        {
+          "request": "derived_observability_review",
+          "owner": "aoa-stats",
+          "input_boundary": "reviewed consequence packets and bounded summary candidates",
+          "output_candidate": "dashboard_or_watch_candidate",
+          "must_include": [
+            "derived_only",
+            "source_refs",
+            "non_authoritative_label",
+            "review_trace"
+          ],
+          "must_not_include": [
+            "proof_score",
+            "canon_write",
+            "routing_authority",
+            "runtime_scheduler"
+          ],
+          "live_execution": false,
+          "authority": "derived_surface_only"
+        }
+      ]
+    },
+    "consequence_flow": {
+      "const": [
+        {
+          "order": 1,
+          "kind": "source_seed_received",
+          "owner": "Agents-of-Abyss",
+          "authority_note": "Dionysus archive is transport evidence; center may name v1.6 standing and rights law only",
+          "stop_lines": [
+            "no raw archive replay",
+            "no generated clean-flow promotion"
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "wave5_epistemic_predecessor_checked",
+          "owner": "Agents-of-Abyss",
+          "authority_note": "v1.5 remains predecessor law; v1.6 may only add consequence grammar after the epistemic layer",
+          "stop_lines": [
+            "no wave16 collapse",
+            "no predecessor erasure"
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "consequence_charter_requested",
+          "owner": "Agents-of-Abyss",
+          "authority_note": "charter is required before any later owner-local standing or rights landing can be considered",
+          "stop_lines": [
+            "no center-created live standing",
+            "no rights by declaration"
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "reputation_event_review_requested",
+          "owner": "aoa-evals",
+          "authority_note": "reputation review may produce a candidate packet but cannot issue final standing or rights",
+          "stop_lines": [
+            "no reputation without evidence",
+            "no direct rights grant"
+          ]
+        },
+        {
+          "order": 5,
+          "kind": "memo_intake_candidate_requested",
+          "owner": "aoa-memo",
+          "authority_note": "memo may receive bounded consequence candidates but cannot convert them into durable truth here",
+          "stop_lines": [
+            "no durable memory write",
+            "no memo as truth"
+          ]
+        },
+        {
+          "order": 6,
+          "kind": "retention_check_candidate_requested",
+          "owner": "aoa-memo",
+          "authority_note": "retention windows remain candidate-only and may not become scheduler execution or automatic decay",
+          "stop_lines": [
+            "no scheduler loop",
+            "no automatic decay execution"
+          ]
+        },
+        {
+          "order": 7,
+          "kind": "repeated_retention_result_candidate_checked",
+          "owner": "aoa-evals",
+          "authority_note": "retention legitimacy may be checked as bounded evidence without mutating standing on its own",
+          "stop_lines": [
+            "no one-event retention win",
+            "no retention without recurrence"
+          ]
+        },
+        {
+          "order": 8,
+          "kind": "standing_and_jurisdiction_candidate_requested",
+          "owner": "aoa-agents",
+          "authority_note": "standing and jurisdiction remain owner-local candidates and may not be assigned by assistants or Codex",
+          "stop_lines": [
+            "no assistant agonic rank",
+            "no codex standing authority"
+          ]
+        },
+        {
+          "order": 9,
+          "kind": "summon_and_closure_rights_gate_checked",
+          "owner": "aoa-agents",
+          "authority_note": "summon and closure stay reviewed jurisdictions behind contradiction law and visible cost",
+          "stop_lines": [
+            "no closure over open contradiction",
+            "no summon without visible cost"
+          ]
+        },
+        {
+          "order": 10,
+          "kind": "derived_observability_candidate_requested",
+          "owner": "aoa-stats",
+          "authority_note": "derived dashboards may summarize bounded packets but cannot become proof, score, or verdict authority",
+          "stop_lines": [
+            "no stats as proof",
+            "no dashboard as verdict"
+          ]
+        },
+        {
+          "order": 11,
+          "kind": "owner_landing_or_recharter_request_declared",
+          "owner": "Agents-of-Abyss",
+          "authority_note": "future consequence work returns to owner-local landing or human recharter as requests",
+          "stop_lines": [
+            "no runtime ledger activation",
+            "no direct Tree-of-Sophia or KAG canon"
+          ]
+        }
+      ]
+    },
+    "hard_guards": {
+      "const": [
+        "no_live_rank_mutation",
+        "no_live_rights_activation",
+        "no_live_runtime_activation",
+        "no_codex_rank_assignment",
+        "no_assistant_agonic_rank",
+        "no_reputation_without_evidence",
+        "no_rank_delta_without_retention_and_review",
+        "no_single_event_standing",
+        "no_closure_right_without_contradiction_trace",
+        "no_summon_right_without_visible_cost",
+        "no_memory_or_model_history_as_truth",
+        "no_durable_memory_write",
+        "no_runtime_decay_or_scheduler",
+        "no_stats_as_proof",
+        "no_routing_as_owner",
+        "no_direct_tree_of_sophia_or_kag_canon"
+      ]
+    },
+    "blocking_contracts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "activation_state",
+        "reputation_evidence",
+        "retention_boundary",
+        "standing_and_jurisdiction",
+        "actor_boundary",
+        "memory_history_boundary",
+        "derived_layer_boundary",
+        "tos_kag_boundary",
+        "runtime_storage",
+        "archive_consistency"
+      ],
+      "properties": {
+        "activation_state": {
+          "$ref": "#/$defs/activation_state"
+        },
+        "reputation_evidence": {
+          "$ref": "#/$defs/reputation_evidence"
+        },
+        "retention_boundary": {
+          "$ref": "#/$defs/retention_boundary"
+        },
+        "standing_and_jurisdiction": {
+          "$ref": "#/$defs/standing_and_jurisdiction"
+        },
+        "actor_boundary": {
+          "$ref": "#/$defs/actor_boundary"
+        },
+        "memory_history_boundary": {
+          "$ref": "#/$defs/memory_history_boundary"
+        },
+        "derived_layer_boundary": {
+          "$ref": "#/$defs/derived_layer_boundary"
+        },
+        "tos_kag_boundary": {
+          "$ref": "#/$defs/tos_kag_boundary"
+        },
+        "runtime_storage": {
+          "$ref": "#/$defs/runtime_storage"
+        },
+        "archive_consistency": {
+          "$ref": "#/$defs/archive_consistency"
+        }
+      }
+    },
+    "authority": {
+      "$ref": "#/$defs/authority"
+    },
+    "owner_split": {
+      "const": [
+        {
+          "repo": "Agents-of-Abyss",
+          "owns": "center rank reputation and jurisdiction law predecessor mapping flow hard guards and authority stop-lines",
+          "must_not": "replace owner-local actor truth memory retention routing runtime KAG ToS or eval legitimacy"
+        },
+        {
+          "repo": "aoa-agents",
+          "owns": "standing and jurisdiction truth surfaces after owner-local landing",
+          "must_not": "grant one-event rank assistant authority hidden rights or direct closure by default"
+        },
+        {
+          "repo": "aoa-evals",
+          "owns": "legitimacy checks over evidence recurrence retention and standing-transition requests",
+          "must_not": "issue live verdicts assign rank grant rights or convert evidence into runtime law"
+        },
+        {
+          "repo": "aoa-playbooks",
+          "owns": "recurring consequence choreography fallback posture and operator review routes",
+          "must_not": "become runtime or standing authority"
+        },
+        {
+          "repo": "aoa-memo",
+          "owns": "retention and model-history intake candidates only after owner review",
+          "must_not": "become memory truth durable storage or self-justifying history"
+        },
+        {
+          "repo": "aoa-stats",
+          "owns": "derived dashboards watch orders and consequence summaries only",
+          "must_not": "become proof score or reputation truth"
+        },
+        {
+          "repo": "aoa-routing",
+          "owns": "advisory route candidates only",
+          "must_not": "dispatch as owner truth or right-grant authority"
+        },
+        {
+          "repo": "aoa-sdk",
+          "owns": "typed packet helpers validation helpers and control-plane seams only",
+          "must_not": "become semantic standing or runtime authority"
+        },
+        {
+          "repo": "aoa-kag",
+          "owns": "derived consequence pattern candidates only",
+          "must_not": "become canon or source truth"
+        },
+        {
+          "repo": "aoa-skills",
+          "owns": "bounded standing and review workflows extracted after owner acceptance",
+          "must_not": "grant rank reputation rights or runtime authority"
+        },
+        {
+          "repo": "aoa-techniques",
+          "owns": "reusable retention and review practices after owner acceptance",
+          "must_not": "grant live authority"
+        },
+        {
+          "repo": "abyss-stack",
+          "owns": "runtime ledger storage workers schedulers deployment ports and services only after a separate runtime-owner gate",
+          "must_not": "activate runtime from this center landing"
+        },
+        {
+          "repo": "Tree-of-Sophia",
+          "owns": "canon and interpretive review through its own path",
+          "must_not": "receive direct runtime writes node paths canon writes or unreviewed consequence dossiers"
+        },
+        {
+          "repo": "Dionysus",
+          "owns": "source lineage staged intake and later harvest trace",
+          "must_not": "become runtime or standing truth"
+        },
+        {
+          "repo": "8Dionysus",
+          "owns": "shared-root projection law where workspace projection surfaces are affected",
+          "must_not": "absorb rank or rights truth"
+        }
+      ]
+    },
+    "quarantined_surfaces": {
+      "const": [
+        "archive-local generated rank reputation clean-flow runtime-like artifacts",
+        "archive-local generated dashboards watch orders and right resolutions",
+        "archive-local repo/* owner proposals outside this center contract",
+        "archive-local face ledgers trust vectors model histories and policy artifacts as transport evidence only",
+        "archive-local scripts and tests as transport evidence only",
+        "archive-local runtime storage records workers schedulers and catalogs"
+      ]
+    },
+    "seed_dry_run_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "archive_integrity",
+        "schema_example_pairs",
+        "json_files",
+        "seed_tests_passed",
+        "claim_limit"
+      ],
+      "properties": {
+        "archive_integrity": {
+          "const": "unzip_t_passed"
+        },
+        "schema_example_pairs": {
+          "const": 53
+        },
+        "json_files": {
+          "const": 146
+        },
+        "seed_tests_passed": {
+          "const": 12
+        },
+        "claim_limit": {
+          "const": "dry_run_only_not_owner_readiness"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "string_list": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "request",
+        "owner",
+        "input_boundary",
+        "output_candidate",
+        "must_include",
+        "must_not_include",
+        "live_execution",
+        "authority"
+      ],
+      "properties": {
+        "request": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "input_boundary": {
+          "type": "string"
+        },
+        "output_candidate": {
+          "type": "string"
+        },
+        "must_include": {
+          "$ref": "#/$defs/string_list"
+        },
+        "must_not_include": {
+          "$ref": "#/$defs/string_list"
+        },
+        "live_execution": {
+          "const": false
+        },
+        "authority": {
+          "type": "string"
+        }
+      }
+    },
+    "flow_step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "order",
+        "kind",
+        "owner",
+        "authority_note",
+        "stop_lines"
+      ],
+      "properties": {
+        "order": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 11
+        },
+        "kind": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "authority_note": {
+          "type": "string"
+        },
+        "stop_lines": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "activation_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowed_landing_states",
+        "active_allowed_during_landing",
+        "live_rank_mutation_allowed",
+        "live_rights_activation_allowed",
+        "live_runtime_allowed"
+      ],
+      "properties": {
+        "allowed_landing_states": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "draft"
+            },
+            {
+              "const": "proposed"
+            },
+            {
+              "const": "reviewed"
+            },
+            {
+              "const": "blocked"
+            },
+            {
+              "const": "quarantined"
+            },
+            {
+              "const": "candidate_only"
+            }
+          ],
+          "items": false,
+          "minItems": 6,
+          "maxItems": 6
+        },
+        "active_allowed_during_landing": {
+          "const": false
+        },
+        "live_rank_mutation_allowed": {
+          "const": false
+        },
+        "live_rights_activation_allowed": {
+          "const": false
+        },
+        "live_runtime_allowed": {
+          "const": false
+        }
+      }
+    },
+    "reputation_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_refs_required",
+        "verdict_trace_required",
+        "recurrence_trace_required",
+        "retention_context_required",
+        "missing_evidence_allowed",
+        "direct_rights_grant_allowed",
+        "one_event_promotion_allowed"
+      ],
+      "properties": {
+        "evidence_refs_required": {
+          "const": true
+        },
+        "verdict_trace_required": {
+          "const": true
+        },
+        "recurrence_trace_required": {
+          "const": true
+        },
+        "retention_context_required": {
+          "const": true
+        },
+        "missing_evidence_allowed": {
+          "const": false
+        },
+        "direct_rights_grant_allowed": {
+          "const": false
+        },
+        "one_event_promotion_allowed": {
+          "const": false
+        }
+      }
+    },
+    "retention_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "memo_candidate_only_required",
+        "recurrence_required",
+        "reentry_window_required",
+        "automatic_decay_execution_allowed",
+        "scheduler_loop_allowed",
+        "retention_result_may_mutate_standing"
+      ],
+      "properties": {
+        "memo_candidate_only_required": {
+          "const": true
+        },
+        "recurrence_required": {
+          "const": true
+        },
+        "reentry_window_required": {
+          "const": true
+        },
+        "automatic_decay_execution_allowed": {
+          "const": false
+        },
+        "scheduler_loop_allowed": {
+          "const": false
+        },
+        "retention_result_may_mutate_standing": {
+          "const": false
+        }
+      }
+    },
+    "standing_and_jurisdiction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "standing_candidate_only_required",
+        "reviewed_basis_required",
+        "retention_result_required",
+        "jurisdiction_review_required",
+        "rank_jump_without_review_allowed",
+        "closure_without_trace_allowed",
+        "summon_without_visible_cost_allowed"
+      ],
+      "properties": {
+        "standing_candidate_only_required": {
+          "const": true
+        },
+        "reviewed_basis_required": {
+          "const": true
+        },
+        "retention_result_required": {
+          "const": true
+        },
+        "jurisdiction_review_required": {
+          "const": true
+        },
+        "rank_jump_without_review_allowed": {
+          "const": false
+        },
+        "closure_without_trace_allowed": {
+          "const": false
+        },
+        "summon_without_visible_cost_allowed": {
+          "const": false
+        }
+      }
+    },
+    "actor_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assistant_rank_assignment_allowed",
+        "assistant_jurisdiction_grant_allowed",
+        "assistant_judge_allowed",
+        "codex_rank_assignment_allowed",
+        "codex_rights_grant_allowed",
+        "codex_memory_write_allowed"
+      ],
+      "properties": {
+        "assistant_rank_assignment_allowed": {
+          "const": false
+        },
+        "assistant_jurisdiction_grant_allowed": {
+          "const": false
+        },
+        "assistant_judge_allowed": {
+          "const": false
+        },
+        "codex_rank_assignment_allowed": {
+          "const": false
+        },
+        "codex_rights_grant_allowed": {
+          "const": false
+        },
+        "codex_memory_write_allowed": {
+          "const": false
+        }
+      }
+    },
+    "memory_history_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "durable_memory_write_allowed",
+        "model_history_candidate_only_required",
+        "durable_identity_claim_allowed",
+        "hidden_memory_thread_allowed",
+        "pairing_lock_in_allowed"
+      ],
+      "properties": {
+        "durable_memory_write_allowed": {
+          "const": false
+        },
+        "model_history_candidate_only_required": {
+          "const": true
+        },
+        "durable_identity_claim_allowed": {
+          "const": false
+        },
+        "hidden_memory_thread_allowed": {
+          "const": false
+        },
+        "pairing_lock_in_allowed": {
+          "const": false
+        }
+      }
+    },
+    "derived_layer_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stats_as_proof_allowed",
+        "routing_as_owner_allowed",
+        "memo_as_truth_allowed",
+        "eval_live_verdict_authority_allowed",
+        "dashboard_as_verdict_allowed"
+      ],
+      "properties": {
+        "stats_as_proof_allowed": {
+          "const": false
+        },
+        "routing_as_owner_allowed": {
+          "const": false
+        },
+        "memo_as_truth_allowed": {
+          "const": false
+        },
+        "eval_live_verdict_authority_allowed": {
+          "const": false
+        },
+        "dashboard_as_verdict_allowed": {
+          "const": false
+        }
+      }
+    },
+    "tos_kag_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_write_allowed",
+        "direct_node_path_allowed",
+        "tos_canon_write_allowed",
+        "kag_promotion_allowed",
+        "kag_canonization_allowed",
+        "dossier_candidate_only"
+      ],
+      "properties": {
+        "runtime_write_allowed": {
+          "const": false
+        },
+        "direct_node_path_allowed": {
+          "const": false
+        },
+        "tos_canon_write_allowed": {
+          "const": false
+        },
+        "kag_promotion_allowed": {
+          "const": false
+        },
+        "kag_canonization_allowed": {
+          "const": false
+        },
+        "dossier_candidate_only": {
+          "const": true
+        }
+      }
+    },
+    "runtime_storage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_worker_activation_allowed",
+        "storage_record_authoritative",
+        "host_port_open_allowed",
+        "scheduler_loop_allowed",
+        "scoring_job_allowed",
+        "deployment_daemon_allowed"
+      ],
+      "properties": {
+        "runtime_worker_activation_allowed": {
+          "const": false
+        },
+        "storage_record_authoritative": {
+          "const": false
+        },
+        "host_port_open_allowed": {
+          "const": false
+        },
+        "scheduler_loop_allowed": {
+          "const": false
+        },
+        "scoring_job_allowed": {
+          "const": false
+        },
+        "deployment_daemon_allowed": {
+          "const": false
+        }
+      }
+    },
+    "archive_consistency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "clean_flow_may_inform_contract",
+        "raw_generated_output_copied_as_truth",
+        "fixture_generated_result_disagreement_allowed",
+        "archive_scripts_tests_copied_as_owner_truth",
+        "archive_runtime_outputs_copied_as_owner_truth"
+      ],
+      "properties": {
+        "clean_flow_may_inform_contract": {
+          "const": true
+        },
+        "raw_generated_output_copied_as_truth": {
+          "const": false
+        },
+        "fixture_generated_result_disagreement_allowed": {
+          "const": false
+        },
+        "archive_scripts_tests_copied_as_owner_truth": {
+          "const": false
+        },
+        "archive_runtime_outputs_copied_as_owner_truth": {
+          "const": false
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contract_effect",
+        "codex_may",
+        "codex_must_not",
+        "assistant_must_not",
+        "derived_layers_must_not",
+        "human_gates_required"
+      ],
+      "properties": {
+        "contract_effect": {
+          "const": "center_rank_reputation_and_jurisdiction_law_only"
+        },
+        "codex_may": {
+          "const": [
+            "simulate rank and rights contract checks",
+            "collect seed dry-run evidence",
+            "propose owner-local standing review packets",
+            "run validators",
+            "prepare bounded handoff maps"
+          ]
+        },
+        "codex_must_not": {
+          "const": [
+            "activate live rank mutation",
+            "activate live rights grant",
+            "activate live runtime",
+            "assign rank",
+            "grant summon right",
+            "grant closure right",
+            "issue reputation verdict",
+            "seal standing truth",
+            "write durable memory",
+            "write model history as truth",
+            "execute retention",
+            "start decay scheduler",
+            "promote dashboard to proof",
+            "route as owner",
+            "promote KAG canon",
+            "write directly to Tree-of-Sophia",
+            "promote generated clean-flow output to owner truth",
+            "copy raw archive proposals into owner truth"
+          ]
+        },
+        "assistant_must_not": {
+          "const": [
+            "become primary rank authority",
+            "grant summon right",
+            "grant closure right",
+            "issue reputation verdict",
+            "become judge",
+            "write memory",
+            "write model history as truth",
+            "execute retention",
+            "start decay scheduler",
+            "mutate standing or jurisdiction",
+            "promote KAG canon",
+            "write directly to Tree-of-Sophia"
+          ]
+        },
+        "derived_layers_must_not": {
+          "const": [
+            "stats_as_proof",
+            "memo_as_truth",
+            "routing_as_owner",
+            "kag_as_canon",
+            "sdk_as_authority",
+            "evals_as_live_verdict_authority",
+            "playbooks_as_runtime",
+            "runtime_as_doctrine",
+            "dionysus_as_runtime",
+            "reputation_as_live_score"
+          ]
+        },
+        "human_gates_required": {
+          "const": [
+            "operator review before reputation event adoption",
+            "owner-local memo approval before retention intake",
+            "owner-local eval approval before legitimacy verdict use",
+            "owner-local agents approval before standing or jurisdiction mutation",
+            "human review before summon right grant",
+            "human review before closure right grant",
+            "runtime-owner gate before ledger scheduler workers ports services or daemons",
+            "Tree-of-Sophia review before canon or interpretive intake",
+            "KAG owner review before pattern promotion"
+          ]
+        }
+      }
+    },
+    "owner_split_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repo",
+        "owns",
+        "must_not"
+      ],
+      "properties": {
+        "repo": {
+          "type": "string"
+        },
+        "owns": {
+          "type": "string"
+        },
+        "must_not": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

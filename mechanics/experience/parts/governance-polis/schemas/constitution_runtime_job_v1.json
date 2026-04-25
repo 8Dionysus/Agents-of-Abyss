@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/parts/governance-polis/schemas/constitution_runtime_job_v1.json",
+  "title": "constitution_runtime_job_v1",
+  "description": "Seed schema for constitution_runtime_job_v1 in Experience Constitution Runtime v0.9.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "authority_required",
+    "job_id",
+    "job_kind",
+    "run_at",
+    "state"
+  ],
+  "properties": {
+    "authority_required": {
+      "type": "string",
+      "minLength": 1
+    },
+    "job_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "job_kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "scheduled"
+      ]
+    }
+  }
+}

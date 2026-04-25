@@ -1,0 +1,3269 @@
+{
+  "schema_version": "aoa_experience_artifact_map_v1",
+  "mechanic": "experience",
+  "created": "2026-04-25",
+  "purpose": "Machine-readable map from legacy-flat Experience artifact paths into active functioning part homes.",
+  "route_rule": "Use parts/<part>/ for current working artifacts; use PROVENANCE.md and legacy/ only for archive evidence.",
+  "parts": [
+    "capture-kernel",
+    "certification-proof",
+    "adoption-federation",
+    "governance-polis",
+    "release-deployment",
+    "office-operations",
+    "service-mesh",
+    "continuity-context",
+    "runtime-boundary",
+    "compatibility-bridges"
+  ],
+  "artifacts": [
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_authority_policy.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_authority_policy.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_decision.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_decision.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_diff_bundle.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_diff_bundle.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_event_kind_registry.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_event_kind_registry.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_exit_report.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_exit_report.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_failure_report.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_failure_report.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_landing_patchset.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_landing_patchset.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_manifest.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_manifest.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_plan.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_plan.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_quarantine_order.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_quarantine_order.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_readiness_report.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_readiness_report.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_request.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_request.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_retention_probe.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_retention_probe.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_review_queue.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_review_queue.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_risk_register.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_risk_register.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_rollback_plan.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_rollback_plan.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_state.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_state.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_success_report.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_adoption_success_report.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_owner_consent.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_owner_consent.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_post_release_retention_result.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_post_release_retention_result.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_retirement_decision.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_retirement_decision.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_revocation_decision.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_revocation_decision.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_ring_promotion_decision.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_ring_promotion_decision.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_shadow_adoption_result.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_shadow_adoption_result.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_shadow_adoption_run.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_shadow_adoption_run.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_wave3_federation_adoption.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_wave3_federation_adoption.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_authority_policy.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_authority_policy.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_dashboard.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_dashboard.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_decision_log.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_decision_log.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_event_kind_registry.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_event_kind_registry.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_harvest_decision.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_harvest_decision.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_harvest_run_result.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_harvest_run_result.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_incident_class.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_incident_class.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_landing_patchset.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_landing_patchset.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_pattern_candidate.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_pattern_candidate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_quest_bundle.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_quest_bundle.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_recurrence_lattice.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_recurrence_lattice.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/federation_state.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/federation_state.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/source_owner_consent_record.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/source_owner_consent_record.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/train_adoption_report_v1.example.json",
+      "path": "mechanics/experience/parts/adoption-federation/examples/train_adoption_report_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-wave3-federation-adoption.schema.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience-wave3-federation-adoption.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_authority_policy_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_authority_policy_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_decision_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_decision_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_diff_bundle_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_diff_bundle_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_event_kind_registry_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_event_kind_registry_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_exit_report_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_exit_report_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_failure_report_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_failure_report_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_landing_patchset_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_landing_patchset_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_manifest_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_manifest_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_plan_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_plan_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_quarantine_order_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_quarantine_order_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_readiness_report_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_readiness_report_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_request_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_request_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_retention_probe_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_retention_probe_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_review_queue_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_review_queue_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_risk_register_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_risk_register_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_rollback_plan_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_rollback_plan_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_state_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_state_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_success_report_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_adoption_success_report_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_owner_consent_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_owner_consent_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_post_release_retention_result_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_post_release_retention_result_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_retirement_decision_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_retirement_decision_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_revocation_decision_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_revocation_decision_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_ring_promotion_decision_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_ring_promotion_decision_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_shadow_adoption_result_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_shadow_adoption_result_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_shadow_adoption_run_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience_shadow_adoption_run_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_authority_policy_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_authority_policy_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_dashboard_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_dashboard_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_decision_log_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_decision_log_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_event_kind_registry_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_event_kind_registry_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_harvest_decision_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_harvest_decision_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_harvest_run_result_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_harvest_run_result_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_incident_class_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_incident_class_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_landing_patchset_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_landing_patchset_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_pattern_candidate_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_pattern_candidate_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_quest_bundle_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_quest_bundle_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_recurrence_lattice_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_recurrence_lattice_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/federation_state_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/federation_state_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/source_owner_consent_record_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/source_owner_consent_record_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "adoption-federation",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/train_adoption_report_v1.json",
+      "path": "mechanics/experience/parts/adoption-federation/schemas/train_adoption_report_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "script",
+      "part": "adoption-federation",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_wave3.py",
+      "path": "mechanics/experience/parts/adoption-federation/scripts/validate_adoption_federation.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_wave3.py"
+    },
+    {
+      "kind": "test",
+      "part": "adoption-federation",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_wave3.py",
+      "path": "mechanics/experience/parts/adoption-federation/tests/test_adoption_federation.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_wave3.py"
+    },
+    {
+      "kind": "example",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/cross_repo_experience_signal.example.json",
+      "path": "mechanics/experience/parts/capture-kernel/examples/cross_repo_experience_signal.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_golden_case.example.json",
+      "path": "mechanics/experience/parts/capture-kernel/examples/experience_golden_case.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_landing_order_v1.example.json",
+      "path": "mechanics/experience/parts/capture-kernel/examples/experience_landing_order_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_landing_patchset_v1.example.json",
+      "path": "mechanics/experience/parts/capture-kernel/examples/experience_landing_patchset_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_pattern_downlink.example.json",
+      "path": "mechanics/experience/parts/capture-kernel/examples/experience_pattern_downlink.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_repo_landing_step_v1.example.json",
+      "path": "mechanics/experience/parts/capture-kernel/examples/experience_repo_landing_step_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_wave1_flow.example.json",
+      "path": "mechanics/experience/parts/capture-kernel/examples/experience_wave1_flow.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/cross_repo_experience_signal_v1.json",
+      "path": "mechanics/experience/parts/capture-kernel/schemas/cross_repo_experience_signal_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-wave1-flow.schema.json",
+      "path": "mechanics/experience/parts/capture-kernel/schemas/experience-wave1-flow.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_golden_case_v1.json",
+      "path": "mechanics/experience/parts/capture-kernel/schemas/experience_golden_case_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_landing_order_v1.json",
+      "path": "mechanics/experience/parts/capture-kernel/schemas/experience_landing_order_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_landing_patchset_v1.json",
+      "path": "mechanics/experience/parts/capture-kernel/schemas/experience_landing_patchset_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_pattern_downlink_v1.json",
+      "path": "mechanics/experience/parts/capture-kernel/schemas/experience_pattern_downlink_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "capture-kernel",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_repo_landing_step_v1.json",
+      "path": "mechanics/experience/parts/capture-kernel/schemas/experience_repo_landing_step_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "script",
+      "part": "capture-kernel",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_wave1.py",
+      "path": "mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_wave1.py"
+    },
+    {
+      "kind": "test",
+      "part": "capture-kernel",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_wave1.py",
+      "path": "mechanics/experience/parts/capture-kernel/tests/test_capture_kernel.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_wave1.py"
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_alarm_suppression.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_alarm_suppression.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_canary_probe.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_canary_probe.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_canary_result.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_canary_result.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_certification_decision_log.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_certification_decision_log.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_certification_evidence_bundle.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_certification_evidence_bundle.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_certification_gate.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_certification_gate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_certification_plan.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_certification_plan.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_certification_result.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_certification_result.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_drift_alarm.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_drift_alarm.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_go_no_go_decision_v1.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_go_no_go_decision_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_regression_case.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_regression_case.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_regression_pack.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_regression_pack.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_regression_run.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_regression_run.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_smoke_test_plan_v1.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_smoke_test_plan_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_smoke_test_result_v1.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_smoke_test_result_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_watch_policy.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_watch_policy.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_watch_record.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_watch_record.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_watchtower_authority_policy.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_watchtower_authority_policy.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_watchtower_decision_log.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_watchtower_decision_log.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_wave2_certification_watchtower.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_wave2_certification_watchtower.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/train_post_release_watch_v1.example.json",
+      "path": "mechanics/experience/parts/certification-proof/examples/train_post_release_watch_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-wave2-certification-watchtower.schema.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience-wave2-certification-watchtower.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_alarm_suppression_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_alarm_suppression_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_canary_probe_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_canary_probe_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_canary_result_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_canary_result_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_certification_decision_log_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_certification_decision_log_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_certification_evidence_bundle_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_certification_evidence_bundle_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_certification_gate_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_certification_gate_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_certification_plan_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_certification_plan_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_certification_result_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_certification_result_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_drift_alarm_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_drift_alarm_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_go_no_go_decision_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_go_no_go_decision_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_regression_case_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_regression_case_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_regression_pack_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_regression_pack_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_regression_run_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_regression_run_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_smoke_test_plan_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_smoke_test_plan_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_smoke_test_result_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_smoke_test_result_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_watch_policy_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_watch_policy_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_watch_record_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_watch_record_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_watchtower_authority_policy_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_watchtower_authority_policy_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_watchtower_decision_log_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience_watchtower_decision_log_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "certification-proof",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/train_post_release_watch_v1.json",
+      "path": "mechanics/experience/parts/certification-proof/schemas/train_post_release_watch_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "script",
+      "part": "certification-proof",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_wave2.py",
+      "path": "mechanics/experience/parts/certification-proof/scripts/validate_certification_proof.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_wave2.py"
+    },
+    {
+      "kind": "test",
+      "part": "certification-proof",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_wave2.py",
+      "path": "mechanics/experience/parts/certification-proof/tests/test_certification_proof.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_wave2.py"
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_adoption_compatibility_matrix.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/experience_adoption_compatibility_matrix.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_compatibility_delta.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/experience_compatibility_delta.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_cross_kind_conflict.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/experience_cross_kind_conflict.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_tos_dossier_governance_review.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/experience_tos_dossier_governance_review.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/kag_promotion_gate.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/kag_promotion_gate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_compatibility_matrix_v1.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/office_compatibility_matrix_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/shared_experience_pattern.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/shared_experience_pattern.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/shared_watch_pattern.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/shared_watch_pattern.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/tos_candidate_dossier_boundary.example.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/tos_candidate_dossier_boundary.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_adoption_compatibility_matrix_v1.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/experience_adoption_compatibility_matrix_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_compatibility_delta_v1.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/experience_compatibility_delta_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_cross_kind_conflict_v1.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/experience_cross_kind_conflict_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_tos_dossier_governance_review_v1.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/experience_tos_dossier_governance_review_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/kag_promotion_gate_v1.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/kag_promotion_gate_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_compatibility_matrix_v1.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/office_compatibility_matrix_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/shared_experience_pattern_v1.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/shared_experience_pattern_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/shared_watch_pattern_v1.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/shared_watch_pattern_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/tos_candidate_dossier_boundary_v1.json",
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/tos_candidate_dossier_boundary_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "script",
+      "part": "compatibility-bridges",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py",
+      "path": "mechanics/experience/parts/compatibility-bridges/scripts/validate_agonic_pair_trials_bridge.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py"
+    },
+    {
+      "kind": "script",
+      "part": "compatibility-bridges",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py",
+      "path": "mechanics/experience/parts/compatibility-bridges/scripts/validate_epistemic_duel_bridge.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_v1_5_epistemic_duel_model_of_other_forge.py"
+    },
+    {
+      "kind": "test",
+      "part": "compatibility-bridges",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py",
+      "path": "mechanics/experience/parts/compatibility-bridges/tests/test_agonic_pair_trials_bridge.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py"
+    },
+    {
+      "kind": "test",
+      "part": "compatibility-bridges",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py",
+      "path": "mechanics/experience/parts/compatibility-bridges/tests/test_epistemic_duel_bridge.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_v1_5_epistemic_duel_model_of_other_forge.py"
+    },
+    {
+      "kind": "example",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v1_6_epistemic_memory_rank_reputation_engine.example.json",
+      "path": "mechanics/experience/parts/continuity-context/examples/experience_v1_6_epistemic_memory_rank_reputation_engine.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v1_7_affective_economy_honor_treasury.example.json",
+      "path": "mechanics/experience/parts/continuity-context/examples/experience_v1_7_affective_economy_honor_treasury.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v1_8_context_routing_nervous_system.example.json",
+      "path": "mechanics/experience/parts/continuity-context/examples/experience_v1_8_context_routing_nervous_system.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v1_9_context_memory_weaving_continuity_loom.example.json",
+      "path": "mechanics/experience/parts/continuity-context/examples/experience_v1_9_context_memory_weaving_continuity_loom.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v2_0_living_workspace_continuity_runtime.example.json",
+      "path": "mechanics/experience/parts/continuity-context/examples/experience_v2_0_living_workspace_continuity_runtime.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/pattern_lineage_record.example.json",
+      "path": "mechanics/experience/parts/continuity-context/examples/pattern_lineage_record.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/pattern_merge_decision.example.json",
+      "path": "mechanics/experience/parts/continuity-context/examples/pattern_merge_decision.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/pattern_split_decision.example.json",
+      "path": "mechanics/experience/parts/continuity-context/examples/pattern_split_decision.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/pattern_suppression_record.example.json",
+      "path": "mechanics/experience/parts/continuity-context/examples/pattern_suppression_record.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json",
+      "path": "mechanics/experience/parts/continuity-context/schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-v1-7-affective-economy-honor-treasury.schema.json",
+      "path": "mechanics/experience/parts/continuity-context/schemas/experience-v1-7-affective-economy-honor-treasury.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-v1-8-context-routing-nervous-system.schema.json",
+      "path": "mechanics/experience/parts/continuity-context/schemas/experience-v1-8-context-routing-nervous-system.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-v1-9-context-memory-weaving-continuity-loom.schema.json",
+      "path": "mechanics/experience/parts/continuity-context/schemas/experience-v1-9-context-memory-weaving-continuity-loom.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-v2-0-living-workspace-continuity-runtime.schema.json",
+      "path": "mechanics/experience/parts/continuity-context/schemas/experience-v2-0-living-workspace-continuity-runtime.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/pattern_lineage_record_v1.json",
+      "path": "mechanics/experience/parts/continuity-context/schemas/pattern_lineage_record_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/pattern_merge_decision_v1.json",
+      "path": "mechanics/experience/parts/continuity-context/schemas/pattern_merge_decision_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/pattern_split_decision_v1.json",
+      "path": "mechanics/experience/parts/continuity-context/schemas/pattern_split_decision_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "continuity-context",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/pattern_suppression_record_v1.json",
+      "path": "mechanics/experience/parts/continuity-context/schemas/pattern_suppression_record_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "script",
+      "part": "continuity-context",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_v1_7_affective_economy_honor_treasury.py",
+      "path": "mechanics/experience/parts/continuity-context/scripts/validate_affective_economy.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_v1_7_affective_economy_honor_treasury.py"
+    },
+    {
+      "kind": "script",
+      "part": "continuity-context",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_v1_9_context_memory_weaving_continuity_loom.py",
+      "path": "mechanics/experience/parts/continuity-context/scripts/validate_context_memory_weaving.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_v1_9_context_memory_weaving_continuity_loom.py"
+    },
+    {
+      "kind": "script",
+      "part": "continuity-context",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_v1_8_context_routing_nervous_system.py",
+      "path": "mechanics/experience/parts/continuity-context/scripts/validate_context_routing.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_v1_8_context_routing_nervous_system.py"
+    },
+    {
+      "kind": "script",
+      "part": "continuity-context",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_v2_0_living_workspace_continuity_runtime.py",
+      "path": "mechanics/experience/parts/continuity-context/scripts/validate_living_workspace_continuity.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_v2_0_living_workspace_continuity_runtime.py"
+    },
+    {
+      "kind": "script",
+      "part": "continuity-context",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_v1_6_epistemic_memory_rank_reputation_engine.py",
+      "path": "mechanics/experience/parts/continuity-context/scripts/validate_memory_rank_reputation.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_v1_6_epistemic_memory_rank_reputation_engine.py"
+    },
+    {
+      "kind": "test",
+      "part": "continuity-context",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_v1_7_affective_economy_honor_treasury.py",
+      "path": "mechanics/experience/parts/continuity-context/tests/test_affective_economy.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_v1_7_affective_economy_honor_treasury.py"
+    },
+    {
+      "kind": "test",
+      "part": "continuity-context",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_v1_9_context_memory_weaving_continuity_loom.py",
+      "path": "mechanics/experience/parts/continuity-context/tests/test_context_memory_weaving.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_v1_9_context_memory_weaving_continuity_loom.py"
+    },
+    {
+      "kind": "test",
+      "part": "continuity-context",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_v1_8_context_routing_nervous_system.py",
+      "path": "mechanics/experience/parts/continuity-context/tests/test_context_routing.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_v1_8_context_routing_nervous_system.py"
+    },
+    {
+      "kind": "test",
+      "part": "continuity-context",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_v2_0_living_workspace_continuity_runtime.py",
+      "path": "mechanics/experience/parts/continuity-context/tests/test_living_workspace_continuity.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_v2_0_living_workspace_continuity_runtime.py"
+    },
+    {
+      "kind": "test",
+      "part": "continuity-context",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_v1_6_epistemic_memory_rank_reputation_engine.py",
+      "path": "mechanics/experience/parts/continuity-context/tests/test_memory_rank_reputation.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_v1_6_epistemic_memory_rank_reputation_engine.py"
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/appeal_expiry_job_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/appeal_expiry_job_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/appeal_record_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/appeal_record_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/constitution_runtime_authority_policy_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/constitution_runtime_authority_policy_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/constitution_runtime_event_kind_registry_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/constitution_runtime_event_kind_registry_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/constitution_runtime_job_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/constitution_runtime_job_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/constitution_runtime_snapshot_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/constitution_runtime_snapshot_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/council_schedule_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/council_schedule_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/decision_replay_event_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/decision_replay_event_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/decision_replay_report_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/decision_replay_report_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_appeal.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_appeal.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_authority_conflict.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_authority_conflict.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_charter_amendment.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_charter_amendment.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_conflict_of_interest_record.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_conflict_of_interest_record.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_council_member.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_council_member.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_council_session.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_council_session.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_council_vote.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_council_vote.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_dispute_record.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_dispute_record.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_governance_audit_record.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_governance_audit_record.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_governance_case.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_governance_case.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_governance_dashboard.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_governance_dashboard.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_governance_decision.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_governance_decision.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_governance_event_kind_registry.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_governance_event_kind_registry.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_governance_packet.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_governance_packet.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_governance_state.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_governance_state.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_installation_authority_policy_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_installation_authority_policy_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_policy_change.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_policy_change.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_policy_precedent.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_policy_precedent.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_quarantine_order.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_quarantine_order.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_stay_order.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_stay_order.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_veto.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_veto.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_wave4_polis_constitution.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_wave4_polis_constitution.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/governance_case_queue_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/governance_case_queue_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/governance_runtime_case_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/governance_runtime_case_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/governance_runtime_dashboard_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/governance_runtime_dashboard_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/precedent_index_entry_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/precedent_index_entry_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/runtime_policy_lock_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/runtime_policy_lock_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/sealed_decision_record_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/sealed_decision_record_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/sealed_vote_commit_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/sealed_vote_commit_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/stay_order_enforcement_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/stay_order_enforcement_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/stay_order_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/stay_order_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/vote_reveal_v1.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/vote_reveal_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/appeal_expiry_job_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/appeal_expiry_job_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/appeal_record_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/appeal_record_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/constitution_runtime_authority_policy_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/constitution_runtime_authority_policy_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/constitution_runtime_event_kind_registry_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/constitution_runtime_event_kind_registry_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/constitution_runtime_job_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/constitution_runtime_job_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/constitution_runtime_snapshot_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/constitution_runtime_snapshot_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/council_schedule_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/council_schedule_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/decision_replay_event_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/decision_replay_event_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/decision_replay_report_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/decision_replay_report_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-wave4-polis-constitution.schema.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience-wave4-polis-constitution.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_appeal_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_appeal_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_authority_conflict_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_authority_conflict_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_charter_amendment_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_charter_amendment_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_conflict_of_interest_record_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_conflict_of_interest_record_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_council_member_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_council_member_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_council_session_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_council_session_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_council_vote_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_council_vote_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_dispute_record_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_dispute_record_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_governance_audit_record_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_governance_audit_record_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_governance_case_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_governance_case_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_governance_dashboard_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_governance_dashboard_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_governance_decision_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_governance_decision_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_governance_event_kind_registry_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_governance_event_kind_registry_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_governance_packet_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_governance_packet_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_governance_state_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_governance_state_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_installation_authority_policy_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_installation_authority_policy_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_policy_change_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_policy_change_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_policy_precedent_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_policy_precedent_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_quarantine_order_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_quarantine_order_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_stay_order_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_stay_order_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_veto_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience_veto_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/governance_case_queue_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/governance_case_queue_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/governance_runtime_case_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/governance_runtime_case_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/governance_runtime_dashboard_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/governance_runtime_dashboard_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/precedent_index_entry_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/precedent_index_entry_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/runtime_policy_lock_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/runtime_policy_lock_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/sealed_decision_record_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/sealed_decision_record_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/sealed_vote_commit_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/sealed_vote_commit_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/stay_order_enforcement_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/stay_order_enforcement_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/stay_order_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/stay_order_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/vote_reveal_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/vote_reveal_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "script",
+      "part": "governance-polis",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_wave4.py",
+      "path": "mechanics/experience/parts/governance-polis/scripts/validate_governance_polis.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_wave4.py"
+    },
+    {
+      "kind": "test",
+      "part": "governance-polis",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_wave4.py",
+      "path": "mechanics/experience/parts/governance-polis/tests/test_governance_polis.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_wave4.py"
+    },
+    {
+      "kind": "test",
+      "part": "governance-polis",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_wave4_seed_contracts.py",
+      "path": "mechanics/experience/parts/governance-polis/tests/test_governance_polis_seed_contracts.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_wave4_seed_contracts.py"
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/assistant_office_profile_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/assistant_office_profile_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/assistant_office_registry_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/assistant_office_registry_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_first_office_bootstrap_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/experience_first_office_bootstrap_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_live_assistant_office_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/experience_live_assistant_office_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_operator_console_action_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/experience_operator_console_action_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_operator_console_state_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/experience_operator_console_state_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_operator_decision.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/experience_operator_decision.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_operator_handoff_packet_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/experience_operator_handoff_packet_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v1_3_office_foundry_role_pairs.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/experience_v1_3_office_foundry_role_pairs.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_wave5_sovereign_office.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/experience_wave5_sovereign_office.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/multi_office_release_train_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/multi_office_release_train_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_bootstrap_order_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_bootstrap_order_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_handoff_contract_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_handoff_contract_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_incident_reentry_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_incident_reentry_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_mesh_dashboard_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_mesh_dashboard_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_release_candidate_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_release_candidate_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_release_ring_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_release_ring_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_train_authority_policy_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_train_authority_policy_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_train_deployment_result_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_train_deployment_result_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_train_event_kind_registry_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_train_event_kind_registry_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_train_gate_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_train_gate_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_train_go_no_go_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_train_go_no_go_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/office_train_rollback_plan_v1.example.json",
+      "path": "mechanics/experience/parts/office-operations/examples/office_train_rollback_plan_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/assistant_office_profile_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/assistant_office_profile_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/assistant_office_registry_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/assistant_office_registry_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-v1-3-office-foundry-role-pairs.schema.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/experience-v1-3-office-foundry-role-pairs.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-wave5-sovereign-office.schema.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/experience-wave5-sovereign-office.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_first_office_bootstrap_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/experience_first_office_bootstrap_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_live_assistant_office_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/experience_live_assistant_office_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_operator_console_action_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/experience_operator_console_action_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_operator_console_state_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/experience_operator_console_state_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_operator_decision_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/experience_operator_decision_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_operator_handoff_packet_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/experience_operator_handoff_packet_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/multi_office_release_train_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/multi_office_release_train_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_bootstrap_order_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_bootstrap_order_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_handoff_contract_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_handoff_contract_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_incident_reentry_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_incident_reentry_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_mesh_dashboard_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_mesh_dashboard_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_release_candidate_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_release_candidate_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_release_ring_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_release_ring_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_train_authority_policy_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_train_authority_policy_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_train_deployment_result_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_train_deployment_result_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_train_event_kind_registry_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_train_event_kind_registry_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_train_gate_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_train_gate_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_train_go_no_go_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_train_go_no_go_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "office-operations",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/office_train_rollback_plan_v1.json",
+      "path": "mechanics/experience/parts/office-operations/schemas/office_train_rollback_plan_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "script",
+      "part": "office-operations",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_wave5.py",
+      "path": "mechanics/experience/parts/office-operations/scripts/validate_office_operations.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_wave5.py"
+    },
+    {
+      "kind": "script",
+      "part": "office-operations",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_v1_3_office_foundry_role_pairs.py",
+      "path": "mechanics/experience/parts/office-operations/scripts/validate_office_role_pairs.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_v1_3_office_foundry_role_pairs.py"
+    },
+    {
+      "kind": "test",
+      "part": "office-operations",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_wave5.py",
+      "path": "mechanics/experience/parts/office-operations/tests/test_office_operations.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_wave5.py"
+    },
+    {
+      "kind": "test",
+      "part": "office-operations",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_wave5_seed_contracts.py",
+      "path": "mechanics/experience/parts/office-operations/tests/test_office_operations_seed_contracts.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_wave5_seed_contracts.py"
+    },
+    {
+      "kind": "test",
+      "part": "office-operations",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_v1_3_office_foundry_role_pairs.py",
+      "path": "mechanics/experience/parts/office-operations/tests/test_office_role_pairs.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_v1_3_office_foundry_role_pairs.py"
+    },
+    {
+      "kind": "script",
+      "part": "package",
+      "status": "package-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_distillation.py",
+      "path": "mechanics/experience/scripts/validate_experience_distillation.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "package",
+      "status": "package-test",
+      "old_path": "mechanics/experience/tests/test_experience_distillation.py",
+      "path": "mechanics/experience/tests/test_experience_distillation.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_deployment_dashboard.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_deployment_dashboard.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_deployment_health_summary.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_deployment_health_summary.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_deployment_incident.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_deployment_incident.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_deployment_plan.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_deployment_plan.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_deployment_state.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_deployment_state.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_first_rollback_drill_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_first_rollback_drill_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_installation_plan_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_installation_plan_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_installation_state_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_installation_state_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_migration_backup_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_migration_backup_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_migration_plan_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_migration_plan_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_migration_step_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_migration_step_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_release_candidate.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_release_candidate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_release_hold.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_release_hold.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_release_observation_window.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_release_observation_window.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_release_replay_audit_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_release_replay_audit_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_release_seal_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_release_seal_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_release_train.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_release_train.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_rollback_drill.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_rollback_drill.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_rollback_trigger.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_rollback_trigger.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_rollout_ring.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_rollout_ring.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_safe_rollback_execution.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_safe_rollback_execution.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_sovereign_release_candidate_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_sovereign_release_candidate_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_sovereign_release_log_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_sovereign_release_log_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_sovereign_release_result_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_sovereign_release_result_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v1_0_event_kind_registry_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_v1_0_event_kind_registry_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/train_replay_audit_v1.example.json",
+      "path": "mechanics/experience/parts/release-deployment/examples/train_replay_audit_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_deployment_dashboard_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_deployment_dashboard_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_deployment_health_summary_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_deployment_health_summary_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_deployment_incident_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_deployment_incident_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_deployment_plan_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_deployment_plan_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_deployment_state_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_deployment_state_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_first_rollback_drill_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_first_rollback_drill_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_installation_plan_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_installation_plan_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_installation_state_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_installation_state_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_migration_backup_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_migration_backup_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_migration_plan_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_migration_plan_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_migration_step_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_migration_step_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_release_candidate_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_release_candidate_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_release_hold_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_release_hold_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_release_observation_window_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_release_observation_window_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_release_replay_audit_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_release_replay_audit_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_release_seal_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_release_seal_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_release_train_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_release_train_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_rollback_drill_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_rollback_drill_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_rollback_trigger_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_rollback_trigger_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_rollout_ring_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_rollout_ring_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_safe_rollback_execution_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_safe_rollback_execution_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_sovereign_release_candidate_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_sovereign_release_candidate_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_sovereign_release_log_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_sovereign_release_log_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_sovereign_release_result_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_sovereign_release_result_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_v1_0_event_kind_registry_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_v1_0_event_kind_registry_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "release-deployment",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/train_replay_audit_v1.json",
+      "path": "mechanics/experience/parts/release-deployment/schemas/train_replay_audit_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "runtime-boundary",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/authority_resolution_v1.example.json",
+      "path": "mechanics/experience/parts/runtime-boundary/examples/authority_resolution_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "runtime-boundary",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_downstream_projection.example.json",
+      "path": "mechanics/experience/parts/runtime-boundary/examples/experience_downstream_projection.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "runtime-boundary",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_runtime_bootstrap_packet_v1.example.json",
+      "path": "mechanics/experience/parts/runtime-boundary/examples/experience_runtime_bootstrap_packet_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "runtime-boundary",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v1_2_to_v2_0_bridge.example.json",
+      "path": "mechanics/experience/parts/runtime-boundary/examples/experience_v1_2_to_v2_0_bridge.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "runtime-boundary",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/authority_resolution_v1.json",
+      "path": "mechanics/experience/parts/runtime-boundary/schemas/authority_resolution_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "runtime-boundary",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-v1-2-v2-0-bridge.schema.json",
+      "path": "mechanics/experience/parts/runtime-boundary/schemas/experience-v1-2-v2-0-bridge.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "runtime-boundary",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_downstream_projection_v1.json",
+      "path": "mechanics/experience/parts/runtime-boundary/schemas/experience_downstream_projection_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "runtime-boundary",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience_runtime_bootstrap_packet_v1.json",
+      "path": "mechanics/experience/parts/runtime-boundary/schemas/experience_runtime_bootstrap_packet_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "script",
+      "part": "runtime-boundary",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_v1_2_to_v2_0_bridge.py",
+      "path": "mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_v1_2_to_v2_0_bridge.py"
+    },
+    {
+      "kind": "test",
+      "part": "runtime-boundary",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_v1_2_to_v2_0_bridge.py",
+      "path": "mechanics/experience/parts/runtime-boundary/tests/test_runtime_boundary_bridge.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_v1_2_to_v2_0_bridge.py"
+    },
+    {
+      "kind": "example",
+      "part": "service-mesh",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/experience_v1_2_service_mesh_operations.example.json",
+      "path": "mechanics/experience/parts/service-mesh/examples/experience_v1_2_service_mesh_operations.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "example",
+      "part": "service-mesh",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/service_mesh_state_v1.example.json",
+      "path": "mechanics/experience/parts/service-mesh/examples/service_mesh_state_v1.example.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "service-mesh",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/experience-v1-2-service-mesh-operations.schema.json",
+      "path": "mechanics/experience/parts/service-mesh/schemas/experience-v1-2-service-mesh-operations.schema.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "schema",
+      "part": "service-mesh",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/service_mesh_state_v1.json",
+      "path": "mechanics/experience/parts/service-mesh/schemas/service_mesh_state_v1.json",
+      "legacy_named": true
+    },
+    {
+      "kind": "script",
+      "part": "service-mesh",
+      "status": "active-part-validator",
+      "old_path": "mechanics/experience/scripts/validate_experience_v1_2_service_mesh_operations.py",
+      "path": "mechanics/experience/parts/service-mesh/scripts/validate_service_mesh.py",
+      "legacy_named": true,
+      "renamed_from": "validate_experience_v1_2_service_mesh_operations.py"
+    },
+    {
+      "kind": "test",
+      "part": "service-mesh",
+      "status": "active-part-test",
+      "old_path": "mechanics/experience/tests/test_experience_v1_2_service_mesh_operations.py",
+      "path": "mechanics/experience/parts/service-mesh/tests/test_service_mesh.py",
+      "legacy_named": true,
+      "renamed_from": "test_experience_v1_2_service_mesh_operations.py"
+    }
+  ]
+}

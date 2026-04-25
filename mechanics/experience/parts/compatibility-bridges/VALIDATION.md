@@ -17,8 +17,8 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 ## Targeted checks
 
 ```bash
-python mechanics/experience/scripts/validate_experience_v1_2_to_v2_0_bridge.py
-python mechanics/experience/scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
-python mechanics/experience/scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_2_to_v2_0_bridge.py mechanics/experience/tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py mechanics/experience/tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py
+python mechanics/experience/parts/compatibility-bridges/scripts/validate_agonic_pair_trials_bridge.py
+python mechanics/experience/parts/compatibility-bridges/scripts/validate_epistemic_duel_bridge.py
+python -m pytest -q mechanics/experience/parts/runtime-boundary/tests/test_runtime_boundary_bridge.py mechanics/experience/parts/compatibility-bridges/tests/test_agonic_pair_trials_bridge.py mechanics/experience/parts/compatibility-bridges/tests/test_epistemic_duel_bridge.py
 ```

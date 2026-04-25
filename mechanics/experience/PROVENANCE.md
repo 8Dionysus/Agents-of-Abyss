@@ -25,6 +25,8 @@ The detailed archive account lives here:
   Experience parts.
 - [distillation log](legacy/DISTILLATION_LOG.md): what was distilled, where it
   landed, and which boundaries survived.
+- [artifact receipt](legacy/artifacts/README.md): how old flat schemas,
+  examples, validators, and tests were moved into active part homes.
 - [legacy overview](legacy/README.md): archive role, stop-lines, and validation.
 - [raw packet district](legacy/raw/README.md): preserved source packet storage.
 
@@ -33,4 +35,3 @@ The detailed archive account lives here:
 When an archival source changes current behavior, update the relevant active
 part first, then update the archive map and distillation log. Active part docs
 must not grow per-source lists or archival inventories.
-

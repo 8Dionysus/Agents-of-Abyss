@@ -17,8 +17,8 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 ## Targeted checks
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave3.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave3.py
+python mechanics/experience/parts/adoption-federation/scripts/validate_adoption_federation.py
+python -m pytest -q mechanics/experience/parts/adoption-federation/tests/test_adoption_federation.py
 python scripts/validate_owner_request_queue.py --mechanic experience
 python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py

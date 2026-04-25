@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/parts/governance-polis/schemas/experience_policy_precedent_v1.json",
+  "title": "Experience Policy Precedent V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "applies_to",
+    "authority",
+    "created_at",
+    "decision_refs",
+    "evidence_refs",
+    "holding",
+    "id",
+    "kind",
+    "notes",
+    "precedent_class",
+    "schema_version",
+    "status"
+  ],
+  "properties": {
+    "applies_to": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "actor",
+        "mode"
+      ],
+      "properties": {
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "reviewed"
+          ]
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "holding": {
+      "type": "string",
+      "minLength": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1,
+      "const": "experience.policy_precedent"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "precedent_class": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1,
+      "const": "v1"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "proposed"
+      ]
+    }
+  }
+}

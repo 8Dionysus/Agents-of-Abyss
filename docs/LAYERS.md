@@ -281,8 +281,8 @@ v1.2-v2.0 planting campaign. It is not `Experience Wave 5`.
 
 Current surfaces:
 - `mechanics/experience/parts/compatibility-bridges/README.md`
-- `mechanics/experience/examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
-- `mechanics/experience/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
+- `mechanics/experience/parts/compatibility-bridges/examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
+- `mechanics/experience/parts/compatibility-bridges/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
 
 Purpose:
 - extend the v1.4 mechanical arena kernel into epistemic duel pressure without

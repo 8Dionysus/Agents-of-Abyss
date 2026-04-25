@@ -21,6 +21,7 @@ EXPERIENCE_ROOT = REPO_ROOT / "mechanics" / "experience"
 LEGACY_ROOT = EXPERIENCE_ROOT / "legacy"
 RAW_ROOT = LEGACY_ROOT / "raw"
 PARTS_ROOT = EXPERIENCE_ROOT / "parts"
+ARTIFACT_MAP_PATH = EXPERIENCE_ROOT / "artifact-map.json"
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 PROVENANCE_PATH = EXPERIENCE_ROOT / "PROVENANCE.md"
 MECHANICS_ATLAS_PATH = REPO_ROOT / "mechanics" / "README.md"
@@ -55,6 +56,7 @@ LEGACY_SURFACES = (
     "README.md",
     "INDEX.md",
     "DISTILLATION_LOG.md",
+    "artifacts/README.md",
     "raw/README.md",
 )
 
@@ -72,6 +74,14 @@ STALE_ACTIVE_REFS = (
 )
 
 ACTIVE_TEXT_SUFFIXES = (".md", ".py", ".json", ".yaml", ".yml", ".toml", ".txt")
+PART_ARTIFACT_DIRS = (
+    "schemas",
+    "examples",
+    "config",
+    "generated",
+    "scripts",
+    "tests",
+)
 ARTIFACT_PREFIXES = (
     "config/",
     "examples/",
@@ -80,6 +90,16 @@ ARTIFACT_PREFIXES = (
     "scripts/",
     "tests/",
 )
+ROOT_ARTIFACT_ALLOWLIST = {
+    "scripts": {"validate_experience_distillation.py"},
+    "tests": {"test_experience_distillation.py"},
+}
+PART_ARTIFACT_STATUSES = {
+    "active-part-artifact",
+    "active-part-validator",
+    "active-part-test",
+}
+PACKAGE_ARTIFACT_STATUSES = {"package-validator", "package-test"}
 ACTIVE_ARCHIVE_LOAD_PATTERNS = (
     "legacy/",
     "Legacy raw",
@@ -153,6 +173,10 @@ def load_registry() -> dict[str, object]:
     return json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
 
 
+def load_artifact_map() -> dict[str, object]:
+    return json.loads(ARTIFACT_MAP_PATH.read_text(encoding="utf-8"))
+
+
 def read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
@@ -175,6 +199,11 @@ def require_file(path: Path, problems: list[str]) -> None:
         problems.append(f"{rel(path)}: missing final newline")
 
 
+def is_part_artifact_path(relative: str) -> bool:
+    parts = Path(relative).parts
+    return len(parts) >= 3 and parts[0] == "parts" and parts[2] in PART_ARTIFACT_DIRS
+
+
 def active_text_files() -> list[Path]:
     files: list[Path] = []
     for path in EXPERIENCE_ROOT.rglob("*"):
@@ -184,6 +213,8 @@ def active_text_files() -> list[Path]:
         if relative.startswith("legacy/raw/"):
             continue
         if relative.startswith(ARTIFACT_PREFIXES):
+            continue
+        if is_part_artifact_path(relative):
             continue
         files.append(path)
     return files
@@ -197,6 +228,8 @@ def active_markdown_files_without_bridge() -> list[Path]:
         relative = path.relative_to(EXPERIENCE_ROOT).as_posix()
         if relative.startswith("legacy/") or path == PROVENANCE_PATH:
             continue
+        if is_part_artifact_path(relative):
+            continue
         files.append(path)
     return files
 
@@ -204,6 +237,7 @@ def active_markdown_files_without_bridge() -> list[Path]:
 def validate_root_surfaces(problems: list[str]) -> None:
     for name in ROOT_SURFACES:
         require_file(EXPERIENCE_ROOT / name, problems)
+    require_file(ARTIFACT_MAP_PATH, problems)
     for name in LEGACY_SURFACES:
         require_file(LEGACY_ROOT / name, problems)
     require_file(EXPERIENCE_ROOT / "docs" / "AGENTS.md", problems)
@@ -222,7 +256,12 @@ def validate_root_surfaces(problems: list[str]) -> None:
         if slug not in readme:
             problems.append(f"mechanics/experience/README.md: missing part slug {slug}")
     provenance = read(PROVENANCE_PATH) if PROVENANCE_PATH.exists() else ""
-    for needle in ("legacy/INDEX.md", "legacy/DISTILLATION_LOG.md", "legacy/raw/README.md"):
+    for needle in (
+        "legacy/INDEX.md",
+        "legacy/DISTILLATION_LOG.md",
+        "legacy/artifacts/README.md",
+        "legacy/raw/README.md",
+    ):
         if needle not in provenance:
             problems.append(f"mechanics/experience/PROVENANCE.md: missing archive route {needle}")
     if "only active Experience surface" not in provenance:
@@ -283,6 +322,108 @@ def validate_raw_sources(problems: list[str]) -> None:
         problems.append(f"{rel(index_path)}: indexed raw source missing on disk: {name}")
     if len(stale) > 10:
         problems.append(f"{rel(index_path)}: {len(stale) - 10} more stale raw index entries")
+
+
+def validate_artifact_map(problems: list[str]) -> None:
+    if not ARTIFACT_MAP_PATH.is_file():
+        problems.append(f"missing file: {rel(ARTIFACT_MAP_PATH)}")
+        return
+
+    data = load_artifact_map()
+    if data.get("schema_version") != "aoa_experience_artifact_map_v1":
+        problems.append(f"{rel(ARTIFACT_MAP_PATH)}: schema_version must be aoa_experience_artifact_map_v1")
+    if data.get("mechanic") != "experience":
+        problems.append(f"{rel(ARTIFACT_MAP_PATH)}: mechanic must be experience")
+    if tuple(data.get("parts", ())) != PART_SLUGS:
+        problems.append(f"{rel(ARTIFACT_MAP_PATH)}: parts must match active Experience part order")
+
+    artifacts = data.get("artifacts")
+    if not isinstance(artifacts, list) or not artifacts:
+        problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifacts must be a non-empty list")
+        artifacts = []
+
+    seen_old: set[str] = set()
+    seen_new: set[str] = set()
+    listed_paths: set[str] = set()
+    for index, item in enumerate(artifacts):
+        if not isinstance(item, dict):
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} must be an object")
+            continue
+        kind = str(item.get("kind", ""))
+        part = str(item.get("part", ""))
+        old_path = str(item.get("old_path", ""))
+        new_path = str(item.get("path", ""))
+        if kind not in {"schema", "example", "script", "test"}:
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid kind {kind!r}")
+        if part != "package" and part not in PART_SLUGS:
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid part {part!r}")
+        status = str(item.get("status", ""))
+        if part == "package":
+            if status not in PACKAGE_ARTIFACT_STATUSES:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: package artifact {index} has invalid status {status!r}")
+        elif status not in PART_ARTIFACT_STATUSES:
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid status {status!r}")
+        if old_path in seen_old:
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: duplicate old_path {old_path}")
+        seen_old.add(old_path)
+        if new_path in seen_new:
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: duplicate path {new_path}")
+        seen_new.add(new_path)
+
+        if part == "package":
+            if new_path != old_path:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: package artifact path must remain stable: {new_path}")
+            if kind == "script" and not new_path.startswith("mechanics/experience/scripts/"):
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: package script outside package scripts/: {new_path}")
+            if kind == "test" and not new_path.startswith("mechanics/experience/tests/"):
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: package test outside package tests/: {new_path}")
+        else:
+            expected_prefix = f"mechanics/experience/parts/{part}/"
+            if not new_path.startswith(expected_prefix):
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: {new_path} must live under {expected_prefix}")
+            new_parts = Path(new_path).parts
+            if len(new_parts) < 5 or new_parts[4] not in PART_ARTIFACT_DIRS:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: {new_path} must live in a part artifact directory")
+            if kind == "schema" and "/schemas/" not in new_path:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: schema artifact outside schemas/: {new_path}")
+            if kind == "example" and "/examples/" not in new_path:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: example artifact outside examples/: {new_path}")
+            if kind == "script" and "/scripts/" not in new_path:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: script artifact outside scripts/: {new_path}")
+            if kind == "test" and "/tests/" not in new_path:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: test artifact outside tests/: {new_path}")
+
+        new_file = REPO_ROOT / new_path
+        old_file = REPO_ROOT / old_path
+        if not new_file.is_file():
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: mapped artifact missing: {new_path}")
+        else:
+            listed_paths.add(new_path)
+        if part != "package" and old_file.exists():
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: old flat artifact still exists: {old_path}")
+
+    for dirname in PART_ARTIFACT_DIRS:
+        root_artifact_dir = EXPERIENCE_ROOT / dirname
+        if not root_artifact_dir.exists():
+            continue
+        allowed = ROOT_ARTIFACT_ALLOWLIST.get(dirname, set())
+        for path in root_artifact_dir.iterdir():
+            if not path.is_file():
+                continue
+            if path.name not in allowed and path.name != "README.md":
+                problems.append(f"{rel(path)}: flat Experience artifact must move to a part-local home")
+
+    for part in PART_SLUGS:
+        for dirname in PART_ARTIFACT_DIRS:
+            part_dir = PARTS_ROOT / part / dirname
+            if not part_dir.exists():
+                continue
+            for path in part_dir.iterdir():
+                if not path.is_file() or path.name == "README.md":
+                    continue
+                path_ref = rel(path)
+                if path_ref not in listed_paths:
+                    problems.append(f"{path_ref}: part artifact is not listed in artifact-map.json")
 
 
 def validate_no_stale_active_refs(problems: list[str]) -> None:
@@ -394,6 +535,7 @@ def validate(selected: set[str] | None = None) -> list[str]:
     validate_root_surfaces(problems)
     validate_parts(selected, problems)
     validate_raw_sources(problems)
+    validate_artifact_map(problems)
     validate_no_stale_active_refs(problems)
     validate_active_docs_are_lean(problems)
     validate_route_surfaces(problems)

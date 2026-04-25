@@ -17,6 +17,6 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 ## Targeted checks
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave4.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave4.py mechanics/experience/tests/test_experience_wave4_seed_contracts.py
+python mechanics/experience/parts/governance-polis/scripts/validate_governance_polis.py
+python -m pytest -q mechanics/experience/parts/governance-polis/tests/test_governance_polis.py mechanics/experience/parts/governance-polis/tests/test_governance_polis_seed_contracts.py
 ```

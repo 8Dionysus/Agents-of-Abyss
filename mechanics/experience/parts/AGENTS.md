@@ -29,6 +29,7 @@ Run:
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic experience
 python scripts/validate_mechanic_readme_cards.py --mechanic experience
 python scripts/validate_mechanic_landing_logs.py --mechanic experience
 ```

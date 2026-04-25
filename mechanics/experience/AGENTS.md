@@ -36,6 +36,8 @@ It does not activate live workspace runtime, owner-local offices, hidden memory 
 - `OWNER_REQUESTS.md`: center-side owner request packet.
 - `ROADMAP.md`: current and next Experience contour.
 - `LANDING_LOG.md`: canonical Experience landing ledger.
+- `artifact-map.json`: machine-readable receipt from old flat artifact paths to
+  active part-local homes.
 - `PROVENANCE.md`: controlled bridge to archival accounting.
 - `docs/`: compatibility route only.
 
@@ -56,5 +58,7 @@ does not affect its job.
 ## Validation
 
 Use `python mechanics/experience/scripts/validate_experience_distillation.py` after active-part or provenance-route changes.
+Use `python scripts/validate_mechanic_artifact_topology.py --mechanic experience` after schema, example, script, or test placement changes.
 Use `python scripts/validate_mechanic_landing_logs.py --mechanic experience` after landing-log or surface-chain changes.
-Use the nearest `scripts/validate_experience_*.py` and `tests/test_experience_*.py` for version-specific surfaces.
+Use the nearest `parts/<part>/scripts/*.py` and `parts/<part>/tests/test_*.py`
+for part-specific artifact surfaces.

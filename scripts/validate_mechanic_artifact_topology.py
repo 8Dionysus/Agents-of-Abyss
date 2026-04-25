@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -21,6 +22,7 @@ MECHANIC_SLUGS = (
     "release-support",
 )
 ARTIFACT_DIRS = ("schemas", "examples", "config", "generated", "scripts", "tests")
+EXPERIENCE_ARTIFACT_MAP = REPO_ROOT / "mechanics" / "experience" / "artifact-map.json"
 
 AGON_PREFIXES = ("agon", "test_agon", "build_agon", "validate_agon")
 ANTIFRAGILITY_PREFIXES = (
@@ -171,6 +173,40 @@ def validate_mechanic_sources(selected: set[str] | None, problems: list[str]) ->
                     problems.append(f"{rel(path)} does not match owning mechanic {slug}")
 
 
+def validate_experience_part_artifacts(selected: set[str] | None, problems: list[str]) -> None:
+    if selected and "experience" not in selected:
+        return
+    if not EXPERIENCE_ARTIFACT_MAP.is_file():
+        problems.append(f"missing Experience artifact map: {rel(EXPERIENCE_ARTIFACT_MAP)}")
+        return
+    data = json.loads(EXPERIENCE_ARTIFACT_MAP.read_text(encoding="utf-8"))
+    if data.get("schema_version") != "aoa_experience_artifact_map_v1":
+        problems.append(f"{rel(EXPERIENCE_ARTIFACT_MAP)} has invalid schema_version")
+    mapped_paths = {
+        str(item.get("path"))
+        for item in data.get("artifacts", [])
+        if isinstance(item, dict) and str(item.get("part")) != "package"
+    }
+    for path_ref in mapped_paths:
+        path = REPO_ROOT / path_ref
+        if not path.is_file():
+            problems.append(f"{rel(EXPERIENCE_ARTIFACT_MAP)} maps missing artifact: {path_ref}")
+    parts_root = REPO_ROOT / "mechanics" / "experience" / "parts"
+    for part in parts_root.iterdir() if parts_root.is_dir() else []:
+        if not part.is_dir():
+            continue
+        for dirname in ARTIFACT_DIRS:
+            artifact_dir = part / dirname
+            if not artifact_dir.exists():
+                continue
+            for artifact in artifact_dir.iterdir():
+                if not artifact.is_file() or artifact.name == "README.md":
+                    continue
+                path_ref = rel(artifact)
+                if path_ref not in mapped_paths:
+                    problems.append(f"{path_ref} is not registered in mechanics/experience/artifact-map.json")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mechanic", choices=MECHANIC_SLUGS, action="append")
@@ -184,6 +220,7 @@ def main() -> int:
     validate_package_dirs(selected, problems)
     validate_root_artifacts(selected, problems)
     validate_mechanic_sources(selected, problems)
+    validate_experience_part_artifacts(selected, problems)
     if problems:
         print("Mechanic artifact topology validation failed:")
         for problem in problems:

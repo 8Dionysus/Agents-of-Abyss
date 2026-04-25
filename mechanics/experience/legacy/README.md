@@ -5,6 +5,8 @@ Legacy is not a trash archive. It is the provenance district for Experience wave
 ## Layout
 
 - `raw/`: preserved `EXPERIENCE_*` source files.
+- `artifacts/`: receipt notes for old flat schemas, examples, validators, and
+  tests that now live under active part homes.
 - `INDEX.md`: every raw source mapped to an active part route.
 - `DISTILLATION_LOG.md`: dated accounting for raw-to-active distillation decisions.
 
@@ -20,7 +22,7 @@ inside active part docs.
 
 ## Stop-lines
 
-- Do not use raw files as the normal first route for low-context agents.
+- Do not use raw files as the normal first route for routine edits.
 - Do not delete raw provenance after distillation.
 - Do not make legacy/raw the only place a current active rule lives.
 
@@ -28,5 +30,6 @@ inside active part docs.
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic experience
 python scripts/validate_mechanic_landing_logs.py --mechanic experience
 ```
