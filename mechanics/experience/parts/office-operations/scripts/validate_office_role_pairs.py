@@ -16,10 +16,27 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
-DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md"
-SCHEMA_PATH = ROOT / "mechanics" / "experience" / "parts" / "office-operations" / "schemas" / "experience-v1-3-office-foundry-role-pairs.schema.json"
-EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "parts" / "office-operations" / "examples" / "experience_v1_3_office_foundry_role_pairs.example.json"
+
+SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "office-operations"
+    / "schemas"
+    / "experience-v1-3-office-foundry-role-pairs.schema.json"
+)
+EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "office-operations"
+    / "examples"
+    / "experience_v1_3_office_foundry_role_pairs.example.json"
+)
 
 SOURCE_ARCHIVE = "aoa-experience-office-foundry-role-pairs-seed-v1_3.zip"
 SOURCE_SHA256 = "d7ccb771f742540fcee0becdbfc79de69c2f97b5704ac067029fec23fef90648"
@@ -295,31 +312,6 @@ EXPECTED_OWNER_SPLIT = [
     },
 ]
 
-REQUIRED_DOC_TOKENS = [
-    "It is Wave 3 of the current v1.2-v2.0 planting campaign",
-    "It is not `Experience Wave 3`",
-    "`aoa-experience-office-foundry-role-pairs-seed-v1_3.zip`",
-    SOURCE_SHA256,
-    "`EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md`",
-    "`EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md`",
-    "`AGON_PRE_PROTOCOL_STOP_LINES.md`",
-    "office names the work",
-    "kind names the mode of becoming",
-    "`no_hybrid_agent`",
-    "`no_assistant_self_recharter`",
-    "`no_codex_pair_approval`",
-    "hybrid runtime mask",
-    "`active` is not a landing state",
-    "durable writes are forbidden",
-    "fixture/generated-result disagreement is a validation failure",
-    "stats become proof",
-    "memo become truth",
-    "routing become owner",
-    "KAG become canon",
-    "SDK become authority",
-    "evals become certification authority",
-]
-
 REQUIRED_CODEX_DENIALS = [
     "approve office pair",
     "activate office pair",
@@ -416,7 +408,9 @@ def validate_schema(schema: dict[str, Any], payload: dict[str, Any]) -> None:
     )
     if errors:
         path = ".".join(str(part) for part in errors[0].path) or "<root>"
-        fail(f"office foundry example does not match schema at {path}: {errors[0].message}")
+        fail(
+            f"office foundry example does not match schema at {path}: {errors[0].message}"
+        )
 
 
 def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
@@ -436,11 +430,15 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         fail("source_seed.claim_limit must deny owner readiness")
 
     if payload["predecessor_surfaces"] != EXPECTED_PREDECESSORS:
-        fail("predecessor_surfaces must preserve Dionysus, v1.2, runtime, and Agon order")
+        fail(
+            "predecessor_surfaces must preserve Dionysus, v1.2, runtime, and Agon order"
+        )
     if payload["existing_service_offices"] != EXPECTED_EXISTING_SERVICE_OFFICES:
         fail("existing_service_offices must preserve the pre-v1.3 service offices")
     if payload["expanded_service_offices"] != EXPECTED_EXPANDED_SERVICE_OFFICES:
-        fail("expanded_service_offices must preserve the first expanded service offices")
+        fail(
+            "expanded_service_offices must preserve the first expanded service offices"
+        )
     if payload["role_pairs"] != EXPECTED_ROLE_PAIRS:
         fail("role_pairs must preserve exact no-hybrid role-pair contour")
     if payload["kind_split_law"] != EXPECTED_KIND_SPLIT_LAW:
@@ -454,7 +452,9 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     if [step["owner"] for step in flow] != EXPECTED_FLOW_OWNERS:
         fail("foundry_flow owners must preserve center and downstream owner routing")
     if [step["authority_note"] for step in flow] != EXPECTED_FLOW_AUTHORITY_NOTES:
-        fail("foundry_flow authority_note values must preserve the exact no-hybrid contract")
+        fail(
+            "foundry_flow authority_note values must preserve the exact no-hybrid contract"
+        )
     for index, step in enumerate(flow):
         if step.get("stop_lines") != EXPECTED_FLOW_STOP_LINES[index]:
             fail(f"foundry_flow[{index}].stop_lines must preserve required stop-lines")
@@ -477,18 +477,26 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
             "routing owns meaning",
             "kag canon",
         ]
-        leaked_note = [token for token in forbidden_note_tokens if token in authority_note]
+        leaked_note = [
+            token for token in forbidden_note_tokens if token in authority_note
+        ]
         if leaked_note:
-            fail(f"foundry_flow[{index}].authority_note grants forbidden authority: {leaked_note}")
+            fail(
+                f"foundry_flow[{index}].authority_note grants forbidden authority: {leaked_note}"
+            )
 
     if payload["hard_guards"] != EXPECTED_HARD_GUARDS:
         fail("hard_guards must preserve the v1.3 non-negotiable guard order exactly")
     if payload["blocking_contracts"] != EXPECTED_BLOCKING_CONTRACTS:
-        fail("blocking_contracts must preserve exact no-runtime, no-scar, no-hybrid guard contracts")
+        fail(
+            "blocking_contracts must preserve exact no-runtime, no-scar, no-hybrid guard contracts"
+        )
 
     authority = payload["authority"]
     if authority["contract_effect"] != "center_office_foundry_role_pairs_law_only":
-        fail("authority.contract_effect must remain center_office_foundry_role_pairs_law_only")
+        fail(
+            "authority.contract_effect must remain center_office_foundry_role_pairs_law_only"
+        )
     if authority["codex_may"] != EXPECTED_CODEX_MAY:
         fail("codex_may must remain the exact bounded allow-list")
 
@@ -523,41 +531,62 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     for phrase in REQUIRED_CODEX_DENIALS:
         assert_phrase_present(authority["codex_must_not"], phrase, "codex_must_not")
     for phrase in REQUIRED_ASSISTANT_DENIALS:
-        assert_phrase_present(authority["assistant_must_not"], phrase, "assistant_must_not")
+        assert_phrase_present(
+            authority["assistant_must_not"], phrase, "assistant_must_not"
+        )
 
     derived = set(authority["derived_layers_must_not"])
     if derived != EXPECTED_DERIVED_DENIALS:
-        fail("derived_layers_must_not must exactly deny stats, memo, routing, KAG, SDK, evals, runtime, and Dionysus drift")
+        fail(
+            "derived_layers_must_not must exactly deny stats, memo, routing, KAG, SDK, evals, runtime, and Dionysus drift"
+        )
 
     for phrase in REQUIRED_HUMAN_GATES:
-        assert_phrase_present(authority["human_gates_required"], phrase, "human_gates_required")
+        assert_phrase_present(
+            authority["human_gates_required"], phrase, "human_gates_required"
+        )
 
     owners = {entry["repo"] for entry in payload["owner_split"]}
     if owners != EXPECTED_OWNER_REPOS:
         fail(f"owner_split repo set mismatch: {sorted(owners)}")
     if payload["owner_split"] != EXPECTED_OWNER_SPLIT:
-        fail("owner_split must preserve exact owner responsibilities and authority denials")
+        fail(
+            "owner_split must preserve exact owner responsibilities and authority denials"
+        )
 
     for entry in payload["owner_split"]:
-        if entry["repo"] == "aoa-agents" and "hybrid actor masks" not in entry["must_not"]:
+        if (
+            entry["repo"] == "aoa-agents"
+            and "hybrid actor masks" not in entry["must_not"]
+        ):
             fail("aoa-agents owner_split entry must deny hybrid actor masks")
         if entry["repo"] == "aoa-evals" and "certify release" not in entry["must_not"]:
             fail("aoa-evals owner_split entry must deny certification authority")
-        if entry["repo"] == "aoa-routing" and "define office meaning" not in entry["must_not"]:
+        if (
+            entry["repo"] == "aoa-routing"
+            and "define office meaning" not in entry["must_not"]
+        ):
             fail("aoa-routing owner_split entry must deny meaning ownership")
-        if entry["repo"] == "abyss-stack" and "separate runtime-owner gate" not in entry["owns"]:
-            fail("abyss-stack owner_split entry must require a separate runtime-owner gate")
-        if entry["repo"] == "Tree-of-Sophia" and "direct runtime writes" not in entry["must_not"]:
+        if (
+            entry["repo"] == "abyss-stack"
+            and "separate runtime-owner gate" not in entry["owns"]
+        ):
+            fail(
+                "abyss-stack owner_split entry must require a separate runtime-owner gate"
+            )
+        if (
+            entry["repo"] == "Tree-of-Sophia"
+            and "direct runtime writes" not in entry["must_not"]
+        ):
             fail("Tree-of-Sophia owner_split entry must deny direct runtime writes")
 
 
 def validate_files() -> None:
-    for path in (DOC_PATH, SCHEMA_PATH, EXAMPLE_PATH):
+    for path in (SCHEMA_PATH, EXAMPLE_PATH):
         if not path.exists():
-            fail(f"missing office foundry role-pairs surface: {path.relative_to(ROOT).as_posix()}")
-
-    doc_text = DOC_PATH.read_text(encoding="utf-8")
-    assert_contains_all(doc_text, REQUIRED_DOC_TOKENS, "office foundry role-pairs doc")
+            fail(
+                f"missing office foundry role-pairs surface: {path.relative_to(ROOT).as_posix()}"
+            )
 
     schema = read_json(SCHEMA_PATH)
     payload = read_json(EXAMPLE_PATH)

@@ -16,6 +16,7 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 REPO_ROOT = _repo_root()
 EXPERIENCE_ROOT = REPO_ROOT / "mechanics" / "experience"
 LEGACY_ROOT = EXPERIENCE_ROOT / "legacy"
@@ -152,16 +153,255 @@ OWNER_STOP_LINE_PHRASES = (
 )
 
 PART_STOP_LINE_PHRASES = {
-    "capture-kernel": ("hidden memory sovereignty or recall authority", "Live route behavior"),
+    "capture-kernel": (
+        "hidden memory sovereignty or recall authority",
+        "Live route behavior",
+    ),
     "certification-proof": ("certification truth", "Operational Experience adoption"),
-    "adoption-federation": ("Owner-local activation, adoption, or acceptance", "Operational Experience adoption"),
+    "adoption-federation": (
+        "Owner-local activation, adoption, or acceptance",
+        "Operational Experience adoption",
+    ),
     "governance-polis": ("runtime enforcement", "Hidden precedent ledger"),
-    "release-deployment": ("runtime deployment", "Owner-local activation, installation, or acceptance"),
+    "release-deployment": (
+        "runtime deployment",
+        "Owner-local activation, installation, or acceptance",
+    ),
     "office-operations": ("Owner-local office activation", "Hybrid-agent authority"),
     "service-mesh": ("Live service runtime", "Live dispatch behavior"),
     "continuity-context": ("ambient continuity", "Live router engine authority"),
-    "runtime-boundary": ("runtime owner gates", "services, storage, or lifecycle authority"),
+    "runtime-boundary": (
+        "runtime owner gates",
+        "services, storage, or lifecycle authority",
+    ),
     "compatibility-bridges": ("source-authored meaning", "ToS canon"),
+}
+
+RAW_REF_RE = re.compile(r"mechanics/experience/legacy/raw/(EXPERIENCE_[A-Z0-9_]+\.md)")
+PART_VALIDATOR_RAW_READ_PATTERN = 'ROOT / "mechanics" / "experience" / "legacy" / "raw"'
+
+RAW_DOC_TOKEN_REQUIREMENTS = {
+    "EXPERIENCE_WAVE1_KERNEL.md": (
+        "friction_observed",
+        "recurrence_detected",
+        "candidate_declared",
+        "review_verdict_recorded",
+        "memory_gate_decided",
+        "owner_route_selected",
+        "projection_proposed",
+        "hidden runtime execution",
+        "automatic projection",
+    ),
+    "EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md": (
+        "Codex may not certify",
+        "No Codex ring promotion",
+        "No assistant self-deployment",
+        "release is not done at activation",
+        "contract-only",
+        "no live service activation",
+    ),
+    "EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md": (
+        "Harvest approval is not adoption authority",
+        "no direct `Tree-of-Sophia` write",
+        "no Codex approval of federation harvest",
+        "no assistant hidden self-rewrite",
+        "no runtime activation without owner-local approval",
+    ),
+    "EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md": (
+        "Codex must not vote",
+        "Assistant agents must not self-recharter",
+        "Runtime jobs must not become the source of constitutional meaning",
+        "no direct governance or runtime write",
+    ),
+    "EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md": (
+        "Codex may not certify",
+        "`notary.assistant` remains the first receipt-bearing office anchor",
+        "allow direct runtime writes into `Tree-of-Sophia`",
+        "Stats summarizes. Memo remembers. Evals judges. Routing points.",
+    ),
+    "EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md": (
+        "It is not `Experience Wave 1`",
+        "`Dionysus` staged intake",
+        "owner-local planting waves",
+        "`EXPERIENCE_WAVE1_KERNEL.md`",
+        "`EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md`",
+        "`EXPERIENCE_AGON_SERVICE_SEAM_V1_1.md`",
+        "`EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md`",
+        "`AGON_PRE_PROTOCOL_STOP_LINES.md`",
+        "create a new `aoa-experience` repository",
+        "open a live arena",
+        "install `.codex/continuity`",
+        "write directly to `Tree-of-Sophia`",
+        "stats become proof",
+        "memo become truth",
+        "routing become owner",
+        "KAG become canon",
+        "SDK become authority",
+        "`Dionysus` become runtime",
+    ),
+    "EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md": (
+        "It is Wave 2 of the current v1.2-v2.0 planting campaign",
+        "It is not `Experience Wave 2`",
+        "`aoa-experience-service-mesh-operations-seed-v1_2.zip`",
+        "df829241ac629770635290e5da2742b81e4d5575270c94a92c34a95f4bbacb85",
+        "`EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md`",
+        "`EXPERIENCE_SERVICE_MESH_LAW.md`",
+        "`EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md`",
+        "`EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md`",
+        "`AGON_PRE_PROTOCOL_STOP_LINES.md`",
+        "`no_hidden_assistant_self_heal`",
+        "`no_drill_pass_by_codex`",
+        "activate live services",
+        "service-to-Agon escalation into live summon authority",
+        "stats become proof",
+        "memo become truth",
+        "routing become owner",
+        "KAG become canon",
+        "SDK become authority",
+    ),
+    "EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md": (
+        "It is Wave 3 of the current v1.2-v2.0 planting campaign",
+        "It is not `Experience Wave 3`",
+        "`aoa-experience-office-foundry-role-pairs-seed-v1_3.zip`",
+        "d7ccb771f742540fcee0becdbfc79de69c2f97b5704ac067029fec23fef90648",
+        "`EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md`",
+        "`EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md`",
+        "`AGON_PRE_PROTOCOL_STOP_LINES.md`",
+        "office names the work",
+        "kind names the mode of becoming",
+        "`no_hybrid_agent`",
+        "`no_assistant_self_recharter`",
+        "`no_codex_pair_approval`",
+        "hybrid runtime mask",
+        "`active` is not a landing state",
+        "durable writes are forbidden",
+        "fixture/generated-result disagreement is a validation failure",
+        "stats become proof",
+        "memo become truth",
+        "routing become owner",
+        "KAG become canon",
+        "SDK become authority",
+        "evals become certification authority",
+    ),
+    "EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md": (
+        "It is Wave 4 of the current v1.2-v2.0 planting campaign",
+        "It is not `Experience Wave 4`",
+        "`aoa-experience-agonic-pair-trials-mechanical-arena-kernel-seed-v1_4.zip`",
+        "c62a9c38b662ad7c62405c7ca2ac75fe5ea7cc05f13e001a141ad60cf2f5f404",
+        "`EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md`",
+        "`AGON_ARENA_SESSION_MODEL.md`",
+        "`AGON_DUEL_KERNEL_MODEL.md`",
+        "`AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md`",
+        "Current Agon arena, packet, verdict, duel-kernel, and mechanical-trial surfaces",
+        "No arena without charter",
+        "No contestant without agonic kind",
+        "No stance without sealed commit",
+        "No summon without visible request and cost",
+        "`no_live_arena_activation`",
+        "`no_assistant_contestant`",
+        "`no_codex_arena_verdict`",
+        "`active` is not a landing state",
+        "generated clean-flow examples may inform checks",
+        "stats become proof",
+        "memo become truth",
+        "routing become owner",
+        "KAG become canon",
+        "SDK become authority",
+        "evals become live verdict authority",
+    ),
+    "EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md": (
+        "It is Wave 5 of the current v1.2-v2.0 planting campaign",
+        "It is not `Experience Wave 5`",
+        "`aoa-experience-epistemic-duel-model-of-other-forge-seed-v1_5.zip`",
+        "51349824b23af2da3434e0ba6ce95fe6c5faf32bdb449b98e793d2912c73ff05",
+        "`EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md`",
+        "`AGON_MODEL_OF_OTHER_LAW.md`",
+        "`AGON_EPISTEMIC_AGON.md`",
+        "`AGON_RETENTION_RANK_ECONOMY.md`",
+        "No model-of-other without sealed prediction",
+        "No caricature model and no mind-reading claim",
+        "`no_live_duel_activation`",
+        "`no_assistant_deep_modeling`",
+        "`no_codex_truth_verdict`",
+        "`active` is not a landing state",
+        "generated clean-flow examples may inform checks",
+        "stats become proof",
+        "memo become truth",
+        "routing become owner",
+        "KAG become canon",
+        "model-of-other become truth",
+    ),
+    "EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md": (
+        "It is Wave 6 of the current v1.2-v2.0 planting campaign",
+        "It is not `Experience Wave 6`",
+        "`aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6.zip`",
+        "51e403eb0ca9ac384b1edba959b67bdf457efc5813ba3aa7577e94ee87591475",
+        "`EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md`",
+        "`AGON_RETENTION_RANK_ECONOMY.md`",
+        "`AGON_RANK_JURISDICTION_MODEL.md`",
+        "`AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md`",
+        "no standing is earned by a single blaze",
+        "Closure is earned jurisdiction, not default completion",
+        "Summon is costly visible intent, not a panic button",
+        "`no_live_rank_mutation`",
+        "`no_assistant_agonic_rank`",
+        "`no_direct_tree_of_sophia_or_kag_canon`",
+        "`active` is not a landing state",
+        "turn memo candidates into durable memory",
+        "treat generated clean-flow results as landed owner truth",
+    ),
+    "EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md": (
+        "It is Wave 7 of the current v1.2-v2.0 planting campaign",
+        "It is not `Experience Wave 7`",
+        "`aoa-experience-affective-economy-honor-treasury-seed-v1_7.zip`",
+        "328872f61d4ffa16fdfd1315bf90c48ff4cfa7960b9b500275f6c8872bfe338e",
+        "`EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md`",
+        "`AGON_WAVE7_CENTER_HANDOFF.md`",
+        "`AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md`",
+        "`AGON_WAVE17_STOP_LINES.md`",
+        "affect is a bounded control signal, not proof of consciousness",
+        "claiming an affective delta is not applying a delta",
+        "`no_live_affect_governance`",
+        "`no_assistant_persistent_affect_rewrite`",
+        "`no_direct_tree_of_sophia_or_kag_canon`",
+        "`active` is not a landing state",
+        "turn honor into a sovereign score or treasury court",
+        "treat generated clean-flow results as landed owner truth",
+    ),
+    "EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md": (
+        "It is Wave 8 of the current v1.2-v2.0 planting campaign.",
+        "It is not `Experience Wave VIII`;",
+        "routing may activate layers; it may not steal meaning from their owners",
+    ),
+    "EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md": (
+        "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9.zip",
+        "It is Wave 9 of the current `v1.2 -> v2.0` planting campaign.",
+        "`Experience Wave IX`",
+        "No private memory sovereignty.",
+        "No runtime continuity installation.",
+        "not a live continuity runtime",
+    ),
+    "EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md": (
+        "aoa-experience-living-workspace-continuity-runtime-seed-v2_0.zip",
+        "It is Wave 10 of the current `v1.2 -> v2.0` planting campaign.",
+        "It is not a live workspace runtime",
+        "No hidden `.codex/continuity` installation.",
+        "No Codex durable continuity approval.",
+        "No direct `Tree-of-Sophia` runtime write.",
+        "`aoa-kag` owns derived pattern lift only after later owner-local landing.",
+        "not install `.codex/continuity`",
+    ),
+}
+
+RAW_DOC_BANNED_SNIPPETS = {
+    "EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md": (
+        "aoa-experience-context-routing-nervous-system-seed-v1_8.zip",
+        "It is Wave 8 of the current v1.2-v2.0 planting campaign.",
+    ),
+    "EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md": (
+        "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9.zip",
+        "It is Wave 9 of the current `v1.2 -> v2.0` planting campaign.",
+    ),
 }
 
 
@@ -245,12 +485,26 @@ def validate_root_surfaces(problems: list[str]) -> None:
     require_file(PARTS_ROOT / "AGENTS.md", problems)
     require_file(PARTS_ROOT / "README.md", problems)
 
-    direction = read(EXPERIENCE_ROOT / "DIRECTION.md") if (EXPERIENCE_ROOT / "DIRECTION.md").exists() else ""
-    parts = read(EXPERIENCE_ROOT / "PARTS.md") if (EXPERIENCE_ROOT / "PARTS.md").exists() else ""
-    readme = read(EXPERIENCE_ROOT / "README.md") if (EXPERIENCE_ROOT / "README.md").exists() else ""
+    direction = (
+        read(EXPERIENCE_ROOT / "DIRECTION.md")
+        if (EXPERIENCE_ROOT / "DIRECTION.md").exists()
+        else ""
+    )
+    parts = (
+        read(EXPERIENCE_ROOT / "PARTS.md")
+        if (EXPERIENCE_ROOT / "PARTS.md").exists()
+        else ""
+    )
+    readme = (
+        read(EXPERIENCE_ROOT / "README.md")
+        if (EXPERIENCE_ROOT / "README.md").exists()
+        else ""
+    )
     for slug in PART_SLUGS:
         if slug not in direction:
-            problems.append(f"mechanics/experience/DIRECTION.md: missing part slug {slug}")
+            problems.append(
+                f"mechanics/experience/DIRECTION.md: missing part slug {slug}"
+            )
         if slug not in parts:
             problems.append(f"mechanics/experience/PARTS.md: missing part slug {slug}")
         if slug not in readme:
@@ -263,11 +517,17 @@ def validate_root_surfaces(problems: list[str]) -> None:
         "legacy/raw/README.md",
     ):
         if needle not in provenance:
-            problems.append(f"mechanics/experience/PROVENANCE.md: missing archive route {needle}")
+            problems.append(
+                f"mechanics/experience/PROVENANCE.md: missing archive route {needle}"
+            )
     if "only active Experience surface" not in provenance:
-        problems.append("mechanics/experience/PROVENANCE.md: must declare itself the only active archive bridge")
+        problems.append(
+            "mechanics/experience/PROVENANCE.md: must declare itself the only active archive bridge"
+        )
     if "PROVENANCE.md" not in readme and "PROVENANCE" not in readme:
-        problems.append("mechanics/experience/README.md: missing provenance bridge route")
+        problems.append(
+            "mechanics/experience/README.md: missing provenance bridge route"
+        )
 
 
 def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
@@ -286,29 +546,43 @@ def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
         contract = read(contract_path) if contract_path.exists() else ""
         validation = read(validation_path) if validation_path.exists() else ""
         if "## Legacy raw sources" in readme or "## Primary raw provenance" in readme:
-            problems.append(f"{rel(readme_path)}: active part README carries archival source inventory")
+            problems.append(
+                f"{rel(readme_path)}: active part README carries archival source inventory"
+            )
         if "## Must not claim" not in contract:
             problems.append(f"{rel(contract_path)}: missing explicit stop-line section")
         for phrase in PART_STOP_LINE_PHRASES[slug]:
             if not contains_phrase(contract, phrase):
-                problems.append(f"{rel(contract_path)}: missing part-specific stop-line phrase {phrase!r}")
+                problems.append(
+                    f"{rel(contract_path)}: missing part-specific stop-line phrase {phrase!r}"
+                )
         if f"validate_experience_distillation.py --part {slug}" not in validation:
-            problems.append(f"{rel(validation_path)}: missing targeted distillation command")
+            problems.append(
+                f"{rel(validation_path)}: missing targeted distillation command"
+            )
         for phrase in VAGUE_VALIDATION_PHRASES:
             if contains_phrase(validation, phrase):
-                problems.append(f"{rel(validation_path)}: vague validation phrase {phrase!r}")
+                problems.append(
+                    f"{rel(validation_path)}: vague validation phrase {phrase!r}"
+                )
 
 
 def validate_raw_sources(problems: list[str]) -> None:
     raw_docs = sorted(RAW_ROOT.glob("EXPERIENCE_*.md"))
     if len(raw_docs) < 140:
-        problems.append(f"{rel(RAW_ROOT)}: expected at least 140 raw Experience sources, found {len(raw_docs)}")
+        problems.append(
+            f"{rel(RAW_ROOT)}: expected at least 140 raw Experience sources, found {len(raw_docs)}"
+        )
     old_docs = sorted((EXPERIENCE_ROOT / "docs").glob("EXPERIENCE_*.md"))
     if old_docs:
         for path in old_docs[:10]:
-            problems.append(f"active docs directory still contains raw Experience source: {rel(path)}")
+            problems.append(
+                f"active docs directory still contains raw Experience source: {rel(path)}"
+            )
         if len(old_docs) > 10:
-            problems.append(f"active docs directory has {len(old_docs) - 10} more raw Experience sources")
+            problems.append(
+                f"active docs directory has {len(old_docs) - 10} more raw Experience sources"
+            )
 
     index_path = LEGACY_ROOT / "INDEX.md"
     index = read(index_path) if index_path.exists() else ""
@@ -319,9 +593,52 @@ def validate_raw_sources(problems: list[str]) -> None:
     existing = {path.name for path in raw_docs}
     stale = sorted(indexed - existing)
     for name in stale[:10]:
-        problems.append(f"{rel(index_path)}: indexed raw source missing on disk: {name}")
+        problems.append(
+            f"{rel(index_path)}: indexed raw source missing on disk: {name}"
+        )
     if len(stale) > 10:
-        problems.append(f"{rel(index_path)}: {len(stale) - 10} more stale raw index entries")
+        problems.append(
+            f"{rel(index_path)}: {len(stale) - 10} more stale raw index entries"
+        )
+
+
+def validate_raw_source_requirements(problems: list[str]) -> None:
+    index_path = LEGACY_ROOT / "INDEX.md"
+    index = read(index_path) if index_path.exists() else ""
+
+    for name, tokens in RAW_DOC_TOKEN_REQUIREMENTS.items():
+        path = RAW_ROOT / name
+        require_file(path, problems)
+        if not path.exists():
+            continue
+        text = read(path)
+        for token in tokens:
+            if token not in text:
+                problems.append(f"{rel(path)}: missing raw provenance token {token!r}")
+        for snippet in RAW_DOC_BANNED_SNIPPETS.get(name, ()):
+            if snippet in text:
+                problems.append(
+                    f"{rel(path)}: stale raw provenance snippet still present {snippet!r}"
+                )
+
+    for path in PARTS_ROOT.rglob("*"):
+        if not path.is_file() or path.suffix not in ACTIVE_TEXT_SUFFIXES:
+            continue
+        text = read(path)
+        if path.suffix == ".py" and PART_VALIDATOR_RAW_READ_PATTERN in text:
+            problems.append(
+                f"{rel(path)}: part validator must not direct-read legacy/raw; use package provenance gate"
+            )
+        for name in RAW_REF_RE.findall(text):
+            raw_path = RAW_ROOT / name
+            if not raw_path.is_file():
+                problems.append(
+                    f"{rel(path)}: references missing raw provenance source {name}"
+                )
+            if name not in index:
+                problems.append(
+                    f"{rel(path)}: references raw source not listed in legacy/INDEX.md: {name}"
+                )
 
 
 def validate_artifact_map(problems: list[str]) -> None:
@@ -331,11 +648,15 @@ def validate_artifact_map(problems: list[str]) -> None:
 
     data = load_artifact_map()
     if data.get("schema_version") != "aoa_experience_artifact_map_v1":
-        problems.append(f"{rel(ARTIFACT_MAP_PATH)}: schema_version must be aoa_experience_artifact_map_v1")
+        problems.append(
+            f"{rel(ARTIFACT_MAP_PATH)}: schema_version must be aoa_experience_artifact_map_v1"
+        )
     if data.get("mechanic") != "experience":
         problems.append(f"{rel(ARTIFACT_MAP_PATH)}: mechanic must be experience")
     if tuple(data.get("parts", ())) != PART_SLUGS:
-        problems.append(f"{rel(ARTIFACT_MAP_PATH)}: parts must match active Experience part order")
+        problems.append(
+            f"{rel(ARTIFACT_MAP_PATH)}: parts must match active Experience part order"
+        )
 
     artifacts = data.get("artifacts")
     if not isinstance(artifacts, list) or not artifacts:
@@ -347,22 +668,32 @@ def validate_artifact_map(problems: list[str]) -> None:
     listed_paths: set[str] = set()
     for index, item in enumerate(artifacts):
         if not isinstance(item, dict):
-            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} must be an object")
+            problems.append(
+                f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} must be an object"
+            )
             continue
         kind = str(item.get("kind", ""))
         part = str(item.get("part", ""))
         old_path = str(item.get("old_path", ""))
         new_path = str(item.get("path", ""))
         if kind not in {"schema", "example", "script", "test"}:
-            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid kind {kind!r}")
+            problems.append(
+                f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid kind {kind!r}"
+            )
         if part != "package" and part not in PART_SLUGS:
-            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid part {part!r}")
+            problems.append(
+                f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid part {part!r}"
+            )
         status = str(item.get("status", ""))
         if part == "package":
             if status not in PACKAGE_ARTIFACT_STATUSES:
-                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: package artifact {index} has invalid status {status!r}")
+                problems.append(
+                    f"{rel(ARTIFACT_MAP_PATH)}: package artifact {index} has invalid status {status!r}"
+                )
         elif status not in PART_ARTIFACT_STATUSES:
-            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid status {status!r}")
+            problems.append(
+                f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid status {status!r}"
+            )
         if old_path in seen_old:
             problems.append(f"{rel(ARTIFACT_MAP_PATH)}: duplicate old_path {old_path}")
         seen_old.add(old_path)
@@ -372,35 +703,61 @@ def validate_artifact_map(problems: list[str]) -> None:
 
         if part == "package":
             if new_path != old_path:
-                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: package artifact path must remain stable: {new_path}")
-            if kind == "script" and not new_path.startswith("mechanics/experience/scripts/"):
-                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: package script outside package scripts/: {new_path}")
-            if kind == "test" and not new_path.startswith("mechanics/experience/tests/"):
-                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: package test outside package tests/: {new_path}")
+                problems.append(
+                    f"{rel(ARTIFACT_MAP_PATH)}: package artifact path must remain stable: {new_path}"
+                )
+            if kind == "script" and not new_path.startswith(
+                "mechanics/experience/scripts/"
+            ):
+                problems.append(
+                    f"{rel(ARTIFACT_MAP_PATH)}: package script outside package scripts/: {new_path}"
+                )
+            if kind == "test" and not new_path.startswith(
+                "mechanics/experience/tests/"
+            ):
+                problems.append(
+                    f"{rel(ARTIFACT_MAP_PATH)}: package test outside package tests/: {new_path}"
+                )
         else:
             expected_prefix = f"mechanics/experience/parts/{part}/"
             if not new_path.startswith(expected_prefix):
-                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: {new_path} must live under {expected_prefix}")
+                problems.append(
+                    f"{rel(ARTIFACT_MAP_PATH)}: {new_path} must live under {expected_prefix}"
+                )
             new_parts = Path(new_path).parts
             if len(new_parts) < 5 or new_parts[4] not in PART_ARTIFACT_DIRS:
-                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: {new_path} must live in a part artifact directory")
+                problems.append(
+                    f"{rel(ARTIFACT_MAP_PATH)}: {new_path} must live in a part artifact directory"
+                )
             if kind == "schema" and "/schemas/" not in new_path:
-                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: schema artifact outside schemas/: {new_path}")
+                problems.append(
+                    f"{rel(ARTIFACT_MAP_PATH)}: schema artifact outside schemas/: {new_path}"
+                )
             if kind == "example" and "/examples/" not in new_path:
-                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: example artifact outside examples/: {new_path}")
+                problems.append(
+                    f"{rel(ARTIFACT_MAP_PATH)}: example artifact outside examples/: {new_path}"
+                )
             if kind == "script" and "/scripts/" not in new_path:
-                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: script artifact outside scripts/: {new_path}")
+                problems.append(
+                    f"{rel(ARTIFACT_MAP_PATH)}: script artifact outside scripts/: {new_path}"
+                )
             if kind == "test" and "/tests/" not in new_path:
-                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: test artifact outside tests/: {new_path}")
+                problems.append(
+                    f"{rel(ARTIFACT_MAP_PATH)}: test artifact outside tests/: {new_path}"
+                )
 
         new_file = REPO_ROOT / new_path
         old_file = REPO_ROOT / old_path
         if not new_file.is_file():
-            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: mapped artifact missing: {new_path}")
+            problems.append(
+                f"{rel(ARTIFACT_MAP_PATH)}: mapped artifact missing: {new_path}"
+            )
         else:
             listed_paths.add(new_path)
         if part != "package" and old_file.exists():
-            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: old flat artifact still exists: {old_path}")
+            problems.append(
+                f"{rel(ARTIFACT_MAP_PATH)}: old flat artifact still exists: {old_path}"
+            )
 
     for dirname in PART_ARTIFACT_DIRS:
         root_artifact_dir = EXPERIENCE_ROOT / dirname
@@ -411,7 +768,9 @@ def validate_artifact_map(problems: list[str]) -> None:
             if not path.is_file():
                 continue
             if path.name not in allowed and path.name != "README.md":
-                problems.append(f"{rel(path)}: flat Experience artifact must move to a part-local home")
+                problems.append(
+                    f"{rel(path)}: flat Experience artifact must move to a part-local home"
+                )
 
     for part in PART_SLUGS:
         for dirname in PART_ARTIFACT_DIRS:
@@ -423,7 +782,9 @@ def validate_artifact_map(problems: list[str]) -> None:
                     continue
                 path_ref = rel(path)
                 if path_ref not in listed_paths:
-                    problems.append(f"{path_ref}: part artifact is not listed in artifact-map.json")
+                    problems.append(
+                        f"{path_ref}: part artifact is not listed in artifact-map.json"
+                    )
 
 
 def validate_no_stale_active_refs(problems: list[str]) -> None:
@@ -440,13 +801,19 @@ def validate_active_docs_are_lean(problems: list[str]) -> None:
         text = read(path)
         for pattern in ACTIVE_ARCHIVE_LOAD_PATTERNS:
             if pattern in text:
-                problems.append(f"{rel(path)}: active doc carries archive-load marker {pattern!r}")
+                problems.append(
+                    f"{rel(path)}: active doc carries archive-load marker {pattern!r}"
+                )
                 break
         if ACTIVE_ARCHIVE_FILENAME_RE.search(text):
-            problems.append(f"{rel(path)}: active doc names archived Experience source files")
+            problems.append(
+                f"{rel(path)}: active doc names archived Experience source files"
+            )
         for pattern in ACTIVE_ROUTE_POLLUTION_PATTERNS:
             if contains_phrase(text, pattern):
-                problems.append(f"{rel(path)}: active route carries route-pollution marker {pattern!r}")
+                problems.append(
+                    f"{rel(path)}: active route carries route-pollution marker {pattern!r}"
+                )
 
 
 def validate_route_surfaces(problems: list[str]) -> None:
@@ -457,12 +824,16 @@ def validate_route_surfaces(problems: list[str]) -> None:
             problems.append(f"{rel(roadmap_path)}: stale roadmap route {pattern!r}")
     for phrase in ("parts/", "PROVENANCE.md", "owner-local adoption links"):
         if phrase not in roadmap:
-            problems.append(f"{rel(roadmap_path)}: missing current route phrase {phrase!r}")
+            problems.append(
+                f"{rel(roadmap_path)}: missing current route phrase {phrase!r}"
+            )
 
     atlas = read(MECHANICS_ATLAS_PATH) if MECHANICS_ATLAS_PATH.exists() else ""
     for pattern in ACTIVE_ROUTE_POLLUTION_PATTERNS:
         if contains_phrase(atlas, pattern):
-            problems.append(f"{rel(MECHANICS_ATLAS_PATH)}: Experience atlas carries route-pollution marker {pattern!r}")
+            problems.append(
+                f"{rel(MECHANICS_ATLAS_PATH)}: Experience atlas carries route-pollution marker {pattern!r}"
+            )
 
 
 def validate_thematic_experience_route(problems: list[str]) -> None:
@@ -476,57 +847,103 @@ def validate_thematic_experience_route(problems: list[str]) -> None:
         if isinstance(item, dict) and item.get("source_glob") == "docs/EXPERIENCE_*.md"
     ]
     if len(matches) != 1:
-        problems.append("docs/thematic_districts.json: expected one docs/EXPERIENCE_*.md migration route")
+        problems.append(
+            "docs/thematic_districts.json: expected one docs/EXPERIENCE_*.md migration route"
+        )
         return
     target = matches[0].get("target_dir")
     if target != "mechanics/experience/legacy/raw":
-        problems.append("docs/thematic_districts.json: docs/EXPERIENCE_*.md must route to mechanics/experience/legacy/raw")
+        problems.append(
+            "docs/thematic_districts.json: docs/EXPERIENCE_*.md must route to mechanics/experience/legacy/raw"
+        )
 
 
 def validate_registry(problems: list[str]) -> None:
     registry = load_registry()
     experience = next(
-        (item for item in registry.get("mechanics", []) if isinstance(item, dict) and item.get("slug") == "experience"),
+        (
+            item
+            for item in registry.get("mechanics", [])
+            if isinstance(item, dict) and item.get("slug") == "experience"
+        ),
         None,
     )
     if not isinstance(experience, dict):
         problems.append("mechanics/registry.json: missing experience entry")
         return
-    if experience.get("owner_request_doc_ref") != "mechanics/experience/OWNER_REQUESTS.md":
-        problems.append("mechanics/registry.json: experience owner_request_doc_ref must point to OWNER_REQUESTS.md")
+    if (
+        experience.get("owner_request_doc_ref")
+        != "mechanics/experience/OWNER_REQUESTS.md"
+    ):
+        problems.append(
+            "mechanics/registry.json: experience owner_request_doc_ref must point to OWNER_REQUESTS.md"
+        )
     canonical = experience.get("canonical_docs")
     if not isinstance(canonical, list) or not canonical:
-        problems.append("mechanics/registry.json: experience canonical_docs must be non-empty")
+        problems.append(
+            "mechanics/registry.json: experience canonical_docs must be non-empty"
+        )
         canonical = []
     for ref in canonical:
         ref_text = str(ref)
         if ref_text.startswith("mechanics/experience/legacy/"):
-            problems.append(f"mechanics/registry.json: archive file listed as canonical active doc: {ref_text}")
+            problems.append(
+                f"mechanics/registry.json: archive file listed as canonical active doc: {ref_text}"
+            )
         if not (REPO_ROOT / ref_text).exists():
-            problems.append(f"mechanics/registry.json: canonical doc missing: {ref_text}")
+            problems.append(
+                f"mechanics/registry.json: canonical doc missing: {ref_text}"
+            )
     if "mechanics/experience/PROVENANCE.md" not in canonical:
-        problems.append("mechanics/registry.json: experience canonical_docs must include PROVENANCE.md bridge")
-    for required_doc in ("mechanics/experience/ROADMAP.md", "mechanics/experience/LANDING_LOG.md"):
+        problems.append(
+            "mechanics/registry.json: experience canonical_docs must include PROVENANCE.md bridge"
+        )
+    for required_doc in (
+        "mechanics/experience/ROADMAP.md",
+        "mechanics/experience/LANDING_LOG.md",
+    ):
         if required_doc not in canonical:
-            problems.append(f"mechanics/registry.json: experience canonical_docs must include {required_doc}")
-    if "mechanics/experience/scripts/validate_experience_distillation.py" not in experience.get("validation_refs", []):
-        problems.append("mechanics/registry.json: missing validate_experience_distillation.py validation ref")
+            problems.append(
+                f"mechanics/registry.json: experience canonical_docs must include {required_doc}"
+            )
+    if (
+        "mechanics/experience/scripts/validate_experience_distillation.py"
+        not in experience.get("validation_refs", [])
+    ):
+        problems.append(
+            "mechanics/registry.json: missing validate_experience_distillation.py validation ref"
+        )
     must_not_claim = experience.get("must_not_claim", [])
     if not isinstance(must_not_claim, list):
-        problems.append("mechanics/registry.json: experience must_not_claim must be a list")
+        problems.append(
+            "mechanics/registry.json: experience must_not_claim must be a list"
+        )
         must_not_claim = []
     joined_claims = "\n".join(str(item) for item in must_not_claim)
-    readme = read(EXPERIENCE_ROOT / "README.md") if (EXPERIENCE_ROOT / "README.md").exists() else ""
+    readme = (
+        read(EXPERIENCE_ROOT / "README.md")
+        if (EXPERIENCE_ROOT / "README.md").exists()
+        else ""
+    )
     for phrase in OWNER_STOP_LINE_PHRASES:
         if not contains_phrase(joined_claims, phrase):
-            problems.append(f"mechanics/registry.json: experience must_not_claim missing {phrase!r}")
+            problems.append(
+                f"mechanics/registry.json: experience must_not_claim missing {phrase!r}"
+            )
         if not contains_phrase(readme, phrase):
-            problems.append(f"mechanics/experience/README.md: missing owner stop-line phrase {phrase!r}")
+            problems.append(
+                f"mechanics/experience/README.md: missing owner stop-line phrase {phrase!r}"
+            )
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--part", choices=PART_SLUGS, action="append", help="Validate a specific Experience part.")
+    parser.add_argument(
+        "--part",
+        choices=PART_SLUGS,
+        action="append",
+        help="Validate a specific Experience part.",
+    )
     return parser.parse_args()
 
 
@@ -535,6 +952,7 @@ def validate(selected: set[str] | None = None) -> list[str]:
     validate_root_surfaces(problems)
     validate_parts(selected, problems)
     validate_raw_sources(problems)
+    validate_raw_source_requirements(problems)
     validate_artifact_map(problems)
     validate_no_stale_active_refs(problems)
     validate_active_docs_are_lean(problems)

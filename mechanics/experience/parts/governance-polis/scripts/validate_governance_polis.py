@@ -10,19 +10,34 @@ from typing import Any
 
 from jsonschema import Draft202012Validator
 
+
 def _repo_root() -> Path:
     for candidate in Path(__file__).resolve().parents:
         if (candidate / "mechanics" / "registry.json").is_file():
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
-DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md"
-V08_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V0_8_POLIS_GOVERNANCE.md"
-V09_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V0_9_CONSTITUTION_RUNTIME.md"
-SCHEMA_PATH = ROOT / "mechanics" / "experience" / "parts" / "governance-polis" / "schemas" / "experience-wave4-polis-constitution.schema.json"
-EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "parts" / "governance-polis" / "examples" / "experience_wave4_polis_constitution.example.json"
+SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "governance-polis"
+    / "schemas"
+    / "experience-wave4-polis-constitution.schema.json"
+)
+EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "governance-polis"
+    / "examples"
+    / "experience_wave4_polis_constitution.example.json"
+)
 
 EXPECTED_SOURCE_SEEDS = [
     "aoa-experience-polis-governance-seed-v0_8.zip",
@@ -48,12 +63,6 @@ RUNTIME_ORDER = [
     "decision_history_replayed",
     "precedent_indexed_from_sealed_decision",
     "dashboard_and_owner_dispatch_recorded",
-]
-REQUIRED_DOC_TOKENS = [
-    "Codex must not vote",
-    "Assistant agents must not self-recharter",
-    "Runtime jobs must not become the source of constitutional meaning",
-    "no direct governance or runtime write",
 ]
 REQUIRED_CODEX_DENIALS = {
     "vote",
@@ -134,7 +143,7 @@ def require_list(value: Any, label: str) -> list[Any]:
 def require_files() -> None:
     missing = [
         path.relative_to(ROOT).as_posix()
-        for path in (DOC_PATH, V08_DOC_PATH, V09_DOC_PATH, SCHEMA_PATH, EXAMPLE_PATH)
+        for path in (SCHEMA_PATH, EXAMPLE_PATH)
         if not path.exists()
     ]
     if missing:
@@ -147,14 +156,20 @@ def validate_schema(schema: dict[str, Any], example: dict[str, Any]) -> None:
     if schema.get("additionalProperties") is not False:
         fail("Wave 4 schema must reject additional top-level properties")
     Draft202012Validator.check_schema(schema)
-    errors = sorted(Draft202012Validator(schema).iter_errors(example), key=lambda error: list(error.path))
+    errors = sorted(
+        Draft202012Validator(schema).iter_errors(example),
+        key=lambda error: list(error.path),
+    )
     if errors:
         fail(f"Wave 4 example does not match schema: {errors[0].message}")
 
 
 def validate_flow_order(flow: dict[str, Any], key: str, expected: list[str]) -> None:
     raw_steps = require_list(flow.get(key), key)
-    kinds = [require_dict(step, f"{key}[{index}]").get("kind") for index, step in enumerate(raw_steps)]
+    kinds = [
+        require_dict(step, f"{key}[{index}]").get("kind")
+        for index, step in enumerate(raw_steps)
+    ]
     if kinds != expected:
         fail(f"{key} must preserve the expected ordered spine")
     if len(set(kinds)) != len(kinds):
@@ -186,22 +201,36 @@ def validate_example(flow: dict[str, Any]) -> None:
     if authority.get("runtime_effect") != "contract_only":
         fail("authority.runtime_effect must remain contract_only")
 
-    may = set(str(item) for item in require_list(authority.get("codex_may"), "authority.codex_may"))
+    may = set(
+        str(item)
+        for item in require_list(authority.get("codex_may"), "authority.codex_may")
+    )
     codex_denied = set(
-        str(item) for item in require_list(authority.get("codex_must_not"), "authority.codex_must_not")
+        str(item)
+        for item in require_list(
+            authority.get("codex_must_not"), "authority.codex_must_not"
+        )
     )
     assistant_denied = set(
         str(item)
-        for item in require_list(authority.get("assistant_must_not"), "authority.assistant_must_not")
+        for item in require_list(
+            authority.get("assistant_must_not"), "authority.assistant_must_not"
+        )
     )
     human_required = set(
         str(item)
-        for item in require_list(authority.get("human_authority_required"), "authority.human_authority_required")
+        for item in require_list(
+            authority.get("human_authority_required"),
+            "authority.human_authority_required",
+        )
     )
 
     leaked = may.intersection(REQUIRED_CODEX_DENIALS)
     if leaked:
-        fail("authority.codex_may must not include denied authority: " + ", ".join(sorted(leaked)))
+        fail(
+            "authority.codex_may must not include denied authority: "
+            + ", ".join(sorted(leaked))
+        )
 
     missing_codex = REQUIRED_CODEX_DENIALS.difference(codex_denied)
     if missing_codex:
@@ -209,29 +238,31 @@ def validate_example(flow: dict[str, Any]) -> None:
 
     missing_assistant = REQUIRED_ASSISTANT_DENIALS.difference(assistant_denied)
     if missing_assistant:
-        fail("authority.assistant_must_not is missing: " + ", ".join(sorted(missing_assistant)))
+        fail(
+            "authority.assistant_must_not is missing: "
+            + ", ".join(sorted(missing_assistant))
+        )
 
     missing_human = REQUIRED_HUMAN_AUTHORITIES.difference(human_required)
     if missing_human:
-        fail("authority.human_authority_required is missing: " + ", ".join(sorted(missing_human)))
+        fail(
+            "authority.human_authority_required is missing: "
+            + ", ".join(sorted(missing_human))
+        )
 
     owner_split = require_list(flow.get("owner_split"), "owner_split")
-    repos = {require_dict(item, f"owner_split[{index}]").get("repo") for index, item in enumerate(owner_split)}
+    repos = {
+        require_dict(item, f"owner_split[{index}]").get("repo")
+        for index, item in enumerate(owner_split)
+    }
     missing_repos = REQUIRED_OWNER_REPOS.difference(repos)
     if missing_repos:
         fail("owner_split is missing: " + ", ".join(sorted(missing_repos)))
 
 
-def validate_doc(text: str) -> None:
-    for token in REQUIRED_DOC_TOKENS:
-        if token not in text:
-            fail(f"mechanics/experience/legacy/raw/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md must mention {token!r}")
-
-
 def run_validation() -> list[str]:
     try:
         require_files()
-        validate_doc(DOC_PATH.read_text(encoding="utf-8"))
         schema = require_dict(read_json(SCHEMA_PATH), "schema")
         example = require_dict(read_json(EXAMPLE_PATH), "example")
         validate_schema(schema, example)

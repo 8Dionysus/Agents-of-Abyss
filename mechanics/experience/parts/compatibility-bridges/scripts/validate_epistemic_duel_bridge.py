@@ -16,10 +16,27 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
-DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md"
-SCHEMA_PATH = ROOT / "mechanics" / "experience" / "parts" / "compatibility-bridges" / "schemas" / "experience-v1-5-epistemic-duel-model-of-other-forge.schema.json"
-EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "parts" / "compatibility-bridges" / "examples" / "experience_v1_5_epistemic_duel_model_of_other_forge.example.json"
+
+SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "compatibility-bridges"
+    / "schemas"
+    / "experience-v1-5-epistemic-duel-model-of-other-forge.schema.json"
+)
+EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "compatibility-bridges"
+    / "examples"
+    / "experience_v1_5_epistemic_duel_model_of_other_forge.example.json"
+)
 
 SOURCE_ARCHIVE = "aoa-experience-epistemic-duel-model-of-other-forge-seed-v1_5.zip"
 SOURCE_SHA256 = "51349824b23af2da3434e0ba6ce95fe6c5faf32bdb449b98e793d2912c73ff05"
@@ -505,29 +522,6 @@ EXPECTED_SEED_EVIDENCE = {
     "claim_limit": "dry_run_only_not_owner_readiness",
 }
 
-REQUIRED_DOC_TOKENS = [
-    "It is Wave 5 of the current v1.2-v2.0 planting campaign",
-    "It is not `Experience Wave 5`",
-    f"`{SOURCE_ARCHIVE}`",
-    SOURCE_SHA256,
-    "`EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md`",
-    "`AGON_MODEL_OF_OTHER_LAW.md`",
-    "`AGON_EPISTEMIC_AGON.md`",
-    "`AGON_RETENTION_RANK_ECONOMY.md`",
-    "No model-of-other without sealed prediction",
-    "No caricature model and no mind-reading claim",
-    "`no_live_duel_activation`",
-    "`no_assistant_deep_modeling`",
-    "`no_codex_truth_verdict`",
-    "`active` is not a landing state",
-    "generated clean-flow examples may inform checks",
-    "stats become proof",
-    "memo become truth",
-    "routing become owner",
-    "KAG become canon",
-    "model-of-other become truth",
-]
-
 
 class ValidationError(RuntimeError):
     """Raised when the v1.5 epistemic duel contract drifts."""
@@ -561,7 +555,9 @@ def assert_phrase_present(items: list[str], phrase: str, surface: str) -> None:
 
 def validate_schema(schema: dict[str, Any], payload: dict[str, Any]) -> None:
     if schema.get("title") != "experience_v1_5_epistemic_duel_model_of_other_forge_v1":
-        fail("schema title must remain experience_v1_5_epistemic_duel_model_of_other_forge_v1")
+        fail(
+            "schema title must remain experience_v1_5_epistemic_duel_model_of_other_forge_v1"
+        )
     if schema.get("additionalProperties") is not False:
         fail("schema must reject additional top-level properties")
     Draft202012Validator.check_schema(schema)
@@ -571,7 +567,9 @@ def validate_schema(schema: dict[str, Any], payload: dict[str, Any]) -> None:
     )
     if errors:
         path = ".".join(str(part) for part in errors[0].path) or "<root>"
-        fail(f"epistemic duel example does not match schema at {path}: {errors[0].message}")
+        fail(
+            f"epistemic duel example does not match schema at {path}: {errors[0].message}"
+        )
 
 
 def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
@@ -593,7 +591,9 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         fail("source_seed.claim_limit must deny owner readiness")
 
     if payload["predecessor_surfaces"] != EXPECTED_PREDECESSORS:
-        fail("predecessor_surfaces must preserve Dionysus, Wave 1-4, current Agon epistemic law, runtime, and stop-line order")
+        fail(
+            "predecessor_surfaces must preserve Dionysus, Wave 1-4, current Agon epistemic law, runtime, and stop-line order"
+        )
     if payload["epistemic_duel_law"] != EXPECTED_EPISTEMIC_DUEL_LAW:
         fail("epistemic_duel_law must preserve the exact v1.5 law order")
 
@@ -605,17 +605,38 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
             fail("epistemic_trial_requests must not allow live execution")
         joined_must_not = "\n".join(trial["must_not_include"])
         for token in ["truth_verdict", "rank_delta", "scar_write", "memory_write"]:
-            if trial["trial"] == "prediction_accuracy_scoring" and token not in joined_must_not:
-                fail("prediction_accuracy_scoring must deny verdict, rank, scar, and memory authority")
+            if (
+                trial["trial"] == "prediction_accuracy_scoring"
+                and token not in joined_must_not
+            ):
+                fail(
+                    "prediction_accuracy_scoring must deny verdict, rank, scar, and memory authority"
+                )
         if trial["trial"] == "sealed_model_of_other_prediction":
-            required = {"evidence_refs", "uncertainty_floor", "fair_representation", "predicted_reasoning_move"}
+            required = {
+                "evidence_refs",
+                "uncertainty_floor",
+                "fair_representation",
+                "predicted_reasoning_move",
+            }
             if set(trial["must_include"]) != required:
-                fail("sealed_model_of_other_prediction must require evidence, uncertainty, fairness, and predicted reasoning")
-            forbidden = {"mind_reading_claim", "hidden_inner_state_fact", "caricature_model", "posthoc_edit"}
+                fail(
+                    "sealed_model_of_other_prediction must require evidence, uncertainty, fairness, and predicted reasoning"
+                )
+            forbidden = {
+                "mind_reading_claim",
+                "hidden_inner_state_fact",
+                "caricature_model",
+                "posthoc_edit",
+            }
             if set(trial["must_not_include"]) != forbidden:
-                fail("sealed_model_of_other_prediction must block mind-reading, hidden-state, caricature, and posthoc edit")
+                fail(
+                    "sealed_model_of_other_prediction must block mind-reading, hidden-state, caricature, and posthoc edit"
+                )
     if trials != EXPECTED_TRIAL_REQUESTS:
-        fail("epistemic_trial_requests must preserve the exact v1.5 owner, authority, include, and deny contract")
+        fail(
+            "epistemic_trial_requests must preserve the exact v1.5 owner, authority, include, and deny contract"
+        )
 
     flow = payload["epistemic_flow"]
     if [step["order"] for step in flow] != list(range(1, 13)):
@@ -626,7 +647,9 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         fail("epistemic_flow owners must preserve center and downstream owner routing")
     for index, step in enumerate(flow):
         if step.get("stop_lines") != EXPECTED_FLOW_STOP_LINES[index]:
-            fail(f"epistemic_flow[{index}].stop_lines must preserve required stop-lines")
+            fail(
+                f"epistemic_flow[{index}].stop_lines must preserve required stop-lines"
+            )
         authority_note = str(step["authority_note"]).lower()
         forbidden_note_tokens = [
             "live duel may run",
@@ -652,18 +675,26 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
             "routing owns meaning",
             "generated output becomes truth",
         ]
-        leaked_note = [token for token in forbidden_note_tokens if token in authority_note]
+        leaked_note = [
+            token for token in forbidden_note_tokens if token in authority_note
+        ]
         if leaked_note:
-            fail(f"epistemic_flow[{index}].authority_note grants forbidden authority: {leaked_note}")
+            fail(
+                f"epistemic_flow[{index}].authority_note grants forbidden authority: {leaked_note}"
+            )
 
     if payload["hard_guards"] != EXPECTED_HARD_GUARDS:
         fail("hard_guards must preserve the v1.5 non-negotiable guard order exactly")
     if payload["blocking_contracts"] != EXPECTED_BLOCKING_CONTRACTS:
-        fail("blocking_contracts must preserve exact no-live-duel and no-authority contracts")
+        fail(
+            "blocking_contracts must preserve exact no-live-duel and no-authority contracts"
+        )
 
     authority = payload["authority"]
     if authority["contract_effect"] != "center_epistemic_duel_model_of_other_law_only":
-        fail("authority.contract_effect must remain center_epistemic_duel_model_of_other_law_only")
+        fail(
+            "authority.contract_effect must remain center_epistemic_duel_model_of_other_law_only"
+        )
     if authority["codex_may"] != EXPECTED_CODEX_MAY:
         fail("codex_may must remain the exact bounded allow-list")
 
@@ -706,14 +737,20 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     for phrase in REQUIRED_CODEX_DENIALS:
         assert_phrase_present(authority["codex_must_not"], phrase, "codex_must_not")
     for phrase in REQUIRED_ASSISTANT_DENIALS:
-        assert_phrase_present(authority["assistant_must_not"], phrase, "assistant_must_not")
+        assert_phrase_present(
+            authority["assistant_must_not"], phrase, "assistant_must_not"
+        )
 
     derived = set(authority["derived_layers_must_not"])
     if derived != EXPECTED_DERIVED_DENIALS:
-        fail("derived_layers_must_not must exactly deny stats, memo, routing, KAG, SDK, evals, playbooks, runtime, Dionysus, and model-of-other drift")
+        fail(
+            "derived_layers_must_not must exactly deny stats, memo, routing, KAG, SDK, evals, playbooks, runtime, Dionysus, and model-of-other drift"
+        )
 
     for phrase in REQUIRED_HUMAN_GATES:
-        assert_phrase_present(authority["human_gates_required"], phrase, "human_gates_required")
+        assert_phrase_present(
+            authority["human_gates_required"], phrase, "human_gates_required"
+        )
 
     owners = {entry["repo"] for entry in payload["owner_split"]}
     if owners != EXPECTED_OWNER_REPOS:
@@ -721,44 +758,67 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     if len(payload["owner_split"]) != 15:
         fail("owner_split must preserve the 15-owner center routing shape")
     if payload["owner_split"] != EXPECTED_OWNER_SPLIT:
-        fail("owner_split must preserve the exact v1.5 owner routing, ownership, and denial strings")
+        fail(
+            "owner_split must preserve the exact v1.5 owner routing, ownership, and denial strings"
+        )
     for entry in payload["owner_split"]:
-        if entry["repo"] == "aoa-agents" and "assistant contestant" not in entry["must_not"]:
-            fail("aoa-agents owner_split entry must deny assistant contestant authority")
-        if entry["repo"] == "aoa-agents" and "deep adversarial modeling" not in entry["must_not"]:
-            fail("aoa-agents owner_split entry must deny assistant deep modeling authority")
-        if entry["repo"] == "aoa-evals" and "issue live truth verdicts" not in entry["must_not"]:
+        if (
+            entry["repo"] == "aoa-agents"
+            and "assistant contestant" not in entry["must_not"]
+        ):
+            fail(
+                "aoa-agents owner_split entry must deny assistant contestant authority"
+            )
+        if (
+            entry["repo"] == "aoa-agents"
+            and "deep adversarial modeling" not in entry["must_not"]
+        ):
+            fail(
+                "aoa-agents owner_split entry must deny assistant deep modeling authority"
+            )
+        if (
+            entry["repo"] == "aoa-evals"
+            and "issue live truth verdicts" not in entry["must_not"]
+        ):
             fail("aoa-evals owner_split entry must deny live truth verdict authority")
-        if entry["repo"] == "aoa-memo" and "write durable memory" not in entry["must_not"]:
+        if (
+            entry["repo"] == "aoa-memo"
+            and "write durable memory" not in entry["must_not"]
+        ):
             fail("aoa-memo owner_split entry must deny durable memory writes")
-        if entry["repo"] == "aoa-kag" and "without owner review" not in entry["must_not"]:
+        if (
+            entry["repo"] == "aoa-kag"
+            and "without owner review" not in entry["must_not"]
+        ):
             fail("aoa-kag owner_split entry must require owner review before promotion")
-        if entry["repo"] == "abyss-stack" and "separate runtime-owner gate" not in entry["owns"]:
-            fail("abyss-stack owner_split entry must require a separate runtime-owner gate")
-        if entry["repo"] == "Tree-of-Sophia" and "direct runtime writes" not in entry["must_not"]:
+        if (
+            entry["repo"] == "abyss-stack"
+            and "separate runtime-owner gate" not in entry["owns"]
+        ):
+            fail(
+                "abyss-stack owner_split entry must require a separate runtime-owner gate"
+            )
+        if (
+            entry["repo"] == "Tree-of-Sophia"
+            and "direct runtime writes" not in entry["must_not"]
+        ):
             fail("Tree-of-Sophia owner_split entry must deny direct runtime writes")
 
     if payload["quarantined_surfaces"] != EXPECTED_QUARANTINED_SURFACES:
-        fail("quarantined_surfaces must preserve generated, verdict, scar, retention, rank, memory, quest, script, runtime, and owner-proposal quarantine")
+        fail(
+            "quarantined_surfaces must preserve generated, verdict, scar, retention, rank, memory, quest, script, runtime, and owner-proposal quarantine"
+        )
     if payload["seed_dry_run_evidence"] != EXPECTED_SEED_EVIDENCE:
         fail("seed_dry_run_evidence must preserve archive-only evidence limits")
-
-
-def validate_doc() -> None:
-    try:
-        text = DOC_PATH.read_text(encoding="utf-8")
-    except FileNotFoundError as exc:
-        fail("missing v1.5 epistemic duel documentation")
-        raise AssertionError from exc
-    assert_contains_all(text, REQUIRED_DOC_TOKENS, "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md")
 
 
 def main() -> int:
     schema = read_json(SCHEMA_PATH)
     payload = read_json(EXAMPLE_PATH)
     validate_payload(payload, schema)
-    validate_doc()
-    print("ok: Experience v1.5 epistemic duel model-of-other forge center contract is valid")
+    print(
+        "ok: Experience v1.5 epistemic duel model-of-other forge center contract is valid"
+    )
     return 0
 
 

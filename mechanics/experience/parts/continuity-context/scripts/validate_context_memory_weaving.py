@@ -16,10 +16,27 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
-DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md"
-SCHEMA_PATH = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "schemas" / "experience-v1-9-context-memory-weaving-continuity-loom.schema.json"
-EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "examples" / "experience_v1_9_context_memory_weaving_continuity_loom.example.json"
+
+SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "continuity-context"
+    / "schemas"
+    / "experience-v1-9-context-memory-weaving-continuity-loom.schema.json"
+)
+EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "continuity-context"
+    / "examples"
+    / "experience_v1_9_context_memory_weaving_continuity_loom.example.json"
+)
 
 SOURCE_SEED = {
     "archive_name": "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9.zip",
@@ -216,14 +233,20 @@ EXPECTED_FLOW = [
         "kind": "wave8_routing_predecessor_checked",
         "owner": "Agents-of-Abyss",
         "authority_note": "v1.8 routing remains predecessor law; continuity may request receipt-backed reentry only after routing boundaries are already candidate-bound",
-        "stop_lines": ["no predecessor erasure", "no packet collision with agon wave ix surfaces"],
+        "stop_lines": [
+            "no predecessor erasure",
+            "no packet collision with agon wave ix surfaces",
+        ],
     },
     {
         "order": 3,
         "kind": "continuity_loom_charter_requested",
         "owner": "Agents-of-Abyss",
         "authority_note": "charter is required before any owner-local continuity thread packet dashboard or runtime surface can land",
-        "stop_lines": ["no center-created continuity engine", "no .codex/continuity installation"],
+        "stop_lines": [
+            "no center-created continuity engine",
+            "no .codex/continuity installation",
+        ],
     },
     {
         "order": 4,
@@ -237,14 +260,20 @@ EXPECTED_FLOW = [
         "kind": "freshness_and_privacy_gate_checked",
         "owner": "aoa-agents",
         "authority_note": "assistant carryover and personal context require minimization freshness and reversible boundaries before any reentry candidate advances",
-        "stop_lines": ["no assistant private memory expansion", "no personal context overreach"],
+        "stop_lines": [
+            "no assistant private memory expansion",
+            "no personal context overreach",
+        ],
     },
     {
         "order": 6,
         "kind": "continuity_legitimacy_review_requested",
         "owner": "aoa-evals",
         "authority_note": "continuity requires evidence trace false-continuity screening and human review before legitimacy can advance",
-        "stop_lines": ["no continuity without evidence", "no codex continuity approval"],
+        "stop_lines": [
+            "no continuity without evidence",
+            "no codex continuity approval",
+        ],
     },
     {
         "order": 7,
@@ -310,7 +339,14 @@ EXPECTED_HARD_GUARDS = [
 
 EXPECTED_BLOCKING_CONTRACTS = {
     "activation_state": {
-        "allowed_landing_states": ["draft", "proposed", "reviewed", "blocked", "quarantined", "candidate_only"],
+        "allowed_landing_states": [
+            "draft",
+            "proposed",
+            "reviewed",
+            "blocked",
+            "quarantined",
+            "candidate_only",
+        ],
         "active_runtime_allowed": False,
         "continuity_installation_allowed": False,
     },
@@ -400,20 +436,6 @@ EXPECTED_SEED_EVIDENCE = {
     "seed_tests_passed": 18,
 }
 
-REQUIRED_DOC_SNIPPETS = [
-    "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9.zip",
-    "It is Wave 9 of the current `v1.2 -> v2.0` planting campaign.",
-    "`Experience Wave IX`",
-    "No private memory sovereignty.",
-    "No runtime continuity installation.",
-    "not a live continuity runtime",
-]
-
-BANNED_DOC_SNIPPETS = [
-    "aoa-experience-context-routing-nervous-system-seed-v1_8.zip",
-    "It is Wave 8 of the current v1.2-v2.0 planting campaign.",
-]
-
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -428,43 +450,63 @@ def expect_equal(name: str, actual: Any, expected: Any, detail: str) -> None:
         raise ValidationError(f"{name} {detail}")
 
 
-def validate_document() -> None:
-    doc_text = load_text(DOC_PATH)
-    for snippet in REQUIRED_DOC_SNIPPETS:
-        if snippet not in doc_text:
-            raise ValidationError(f"documentation missing required continuity loom phrase: {snippet}")
-    for snippet in BANNED_DOC_SNIPPETS:
-        if snippet in doc_text:
-            raise ValidationError(f"documentation still carries stale phrase: {snippet}")
-
-
 def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     Draft202012Validator(schema).validate(payload)
 
-    expect_equal("source_seed", payload["source_seed"], SOURCE_SEED, "must preserve continuity loom seed provenance")
+    expect_equal(
+        "source_seed",
+        payload["source_seed"],
+        SOURCE_SEED,
+        "must preserve continuity loom seed provenance",
+    )
     expect_equal(
         "predecessor_surfaces",
         payload["predecessor_surfaces"],
         EXPECTED_PREDECESSORS,
         "must preserve the v1.9 predecessor chain",
     )
-    expect_equal("continuity_law", payload["continuity_law"], EXPECTED_CONTINUITY_LAW, "must preserve continuity law")
+    expect_equal(
+        "continuity_law",
+        payload["continuity_law"],
+        EXPECTED_CONTINUITY_LAW,
+        "must preserve continuity law",
+    )
     expect_equal(
         "continuity_requests",
         payload["continuity_requests"],
         EXPECTED_REQUESTS,
         "must preserve continuity request ownership and boundaries",
     )
-    expect_equal("continuity_flow", payload["continuity_flow"], EXPECTED_FLOW, "must preserve the continuity flow spine")
-    expect_equal("hard_guards", payload["hard_guards"], EXPECTED_HARD_GUARDS, "must preserve hard guards")
+    expect_equal(
+        "continuity_flow",
+        payload["continuity_flow"],
+        EXPECTED_FLOW,
+        "must preserve the continuity flow spine",
+    )
+    expect_equal(
+        "hard_guards",
+        payload["hard_guards"],
+        EXPECTED_HARD_GUARDS,
+        "must preserve hard guards",
+    )
     expect_equal(
         "blocking_contracts",
         payload["blocking_contracts"],
         EXPECTED_BLOCKING_CONTRACTS,
         "must preserve non-runtime blocking contracts",
     )
-    expect_equal("authority", payload["authority"], EXPECTED_AUTHORITY, "must preserve center authority posture")
-    expect_equal("owner_split", payload["owner_split"], EXPECTED_OWNER_SPLIT, "must preserve owner split")
+    expect_equal(
+        "authority",
+        payload["authority"],
+        EXPECTED_AUTHORITY,
+        "must preserve center authority posture",
+    )
+    expect_equal(
+        "owner_split",
+        payload["owner_split"],
+        EXPECTED_OWNER_SPLIT,
+        "must preserve owner split",
+    )
     expect_equal(
         "quarantined_surfaces",
         payload["quarantined_surfaces"],
@@ -480,11 +522,12 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
 
 
 def main() -> int:
-    validate_document()
     schema = load_json(SCHEMA_PATH)
     payload = load_json(EXAMPLE_PATH)
     validate_payload(payload, schema)
-    print("ok: Experience v1.9 context memory weaving continuity loom center contract is valid")
+    print(
+        "ok: Experience v1.9 context memory weaving continuity loom center contract is valid"
+    )
     return 0
 
 
