@@ -1,1 +1,0 @@
-../mechanics/method-growth/scripts/validate_wave4_kernel_automation.py

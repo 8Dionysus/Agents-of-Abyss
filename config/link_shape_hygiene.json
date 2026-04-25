@@ -692,15 +692,15 @@
     "python scripts/validate_status_vocabulary.py",
     "python scripts/build_link_shape_hygiene_index.py --check",
     "python scripts/validate_link_shape_hygiene_index.py",
-    "python scripts/validate_experience_distillation.py",
+    "python mechanics/experience/scripts/validate_experience_distillation.py",
     "python scripts/validate_mechanic_artifact_topology.py",
-    "python scripts/validate_questbook_lifecycle.py",
+    "python mechanics/questbook/scripts/validate_questbook_lifecycle.py",
     "python scripts/validate_agents_md_shape.py",
     "python scripts/validate_agents_mesh.py",
     "python scripts/build_agents_mesh_index.py --check",
     "python scripts/validate_agents_mesh_index.py",
     "python scripts/validate_generated_freshness.py",
     "python scripts/validate_hygiene_suite.py",
-    "python -m pytest -q tests"
+    "python -m pytest -q"
   ]
 }

@@ -27,7 +27,7 @@ python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
 python scripts/validate_links.py
 python scripts/validate_mechanics_topology.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 ## Closeout

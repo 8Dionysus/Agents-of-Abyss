@@ -1,5 +1,5 @@
 {
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/agon-school-lineage-campaign.schema.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/agon/schemas/agon-school-lineage-campaign.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {

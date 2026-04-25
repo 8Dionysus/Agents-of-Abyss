@@ -111,11 +111,11 @@
     "no_memo_as_truth"
   ],
   "requires_prior_surfaces": [
-    "generated/agon_lawful_move_registry.min.json",
-    "generated/agon_move_owner_binding_registry.min.json",
-    "generated/agon_gate_routing_handoff_request.min.json",
-    "generated/agon_trial_playbook_request.min.json",
-    "generated/agon_recurrence_adapter_request.min.json",
+    "mechanics/agon/generated/agon_lawful_move_registry.min.json",
+    "mechanics/agon/generated/agon_move_owner_binding_registry.min.json",
+    "mechanics/agon/generated/agon_gate_routing_handoff_request.min.json",
+    "mechanics/agon/generated/agon_trial_playbook_request.min.json",
+    "mechanics/agon/generated/agon_recurrence_adapter_request.min.json",
     "aoa-agents/generated/agent_formation_trial.min.json",
     "aoa-playbooks/generated/agon_trial_playbook_registry.min.json"
   ],

@@ -34,7 +34,7 @@ python scripts/validate_links.py
 python scripts/validate_mechanic_readme_cards.py
 python scripts/validate_mechanics_topology.py
 python scripts/validate_mechanic_landing_logs.py --mechanic antifragility
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 Run any targeted builder, validator, and test named by the generated or version-specific surface you touched.

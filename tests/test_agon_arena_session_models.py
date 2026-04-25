@@ -1,1 +1,0 @@
-../mechanics/agon/tests/test_agon_arena_session_models.py

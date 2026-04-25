@@ -3,7 +3,7 @@
 ## Required local check
 
 ```bash
-python scripts/validate_experience_distillation.py --part runtime-boundary
+python mechanics/experience/scripts/validate_experience_distillation.py --part runtime-boundary
 ```
 
 ## Mechanic checks
@@ -17,6 +17,6 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 ## Targeted checks
 
 ```bash
-python scripts/validate_experience_v2_0_living_workspace_continuity_runtime.py
-python -m pytest -q tests/test_experience_v2_0_living_workspace_continuity_runtime.py
+python mechanics/experience/scripts/validate_experience_v2_0_living_workspace_continuity_runtime.py
+python -m pytest -q mechanics/experience/tests/test_experience_v2_0_living_workspace_continuity_runtime.py
 ```

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/stay_order_enforcement_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/stay_order_enforcement_v1.json",
   "title": "stay_order_enforcement_v1",
   "description": "Seed schema for stay_order_enforcement_v1 in Experience Constitution Runtime v0.9.",
   "type": "object",

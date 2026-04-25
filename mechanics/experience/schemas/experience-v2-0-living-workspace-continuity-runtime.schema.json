@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://agents-of-abyss.local/schemas/experience-v2-0-living-workspace-continuity-runtime.schema.json",
+  "$id": "https://agents-of-abyss.local/mechanics/experience/schemas/experience-v2-0-living-workspace-continuity-runtime.schema.json",
   "title": "experience_v2_0_living_workspace_continuity_runtime_v1",
   "type": "object",
   "additionalProperties": false,

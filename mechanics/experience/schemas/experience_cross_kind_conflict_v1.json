@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience_cross_kind_conflict_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/experience_cross_kind_conflict_v1.json",
   "title": "Experience Cross Kind Conflict V1",
   "type": "object",
   "additionalProperties": false,

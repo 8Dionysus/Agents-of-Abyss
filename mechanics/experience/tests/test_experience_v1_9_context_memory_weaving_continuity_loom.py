@@ -21,7 +21,7 @@ ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "scripts" / "validate_experience_v1_9_context_memory_weaving_continuity_loom.py"
+    path = ROOT / "mechanics" / "experience" / "scripts" / "validate_experience_v1_9_context_memory_weaving_continuity_loom.py"
     spec = importlib.util.spec_from_file_location("experience_v19_continuity_loom_validator_test", path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
@@ -31,7 +31,7 @@ def load_validator():
 
 def load_example() -> dict[str, object]:
     return json.loads(
-        (ROOT / "examples" / "experience_v1_9_context_memory_weaving_continuity_loom.example.json").read_text(
+        (ROOT / "mechanics" / "experience" / "examples" / "experience_v1_9_context_memory_weaving_continuity_loom.example.json").read_text(
             encoding="utf-8"
         )
     )
@@ -39,7 +39,7 @@ def load_example() -> dict[str, object]:
 
 def load_schema() -> dict[str, object]:
     return json.loads(
-        (ROOT / "schemas" / "experience-v1-9-context-memory-weaving-continuity-loom.schema.json").read_text(
+        (ROOT / "mechanics" / "experience" / "schemas" / "experience-v1-9-context-memory-weaving-continuity-loom.schema.json").read_text(
             encoding="utf-8"
         )
     )
@@ -51,7 +51,7 @@ def validate_schema_only(payload: dict[str, object], schema: dict[str, object]) 
 
 def test_experience_v19_continuity_loom_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "scripts/validate_experience_v1_9_context_memory_weaving_continuity_loom.py"],
+        [sys.executable, "mechanics/experience/scripts/validate_experience_v1_9_context_memory_weaving_continuity_loom.py"],
         cwd=ROOT,
         text=True,
         capture_output=True,

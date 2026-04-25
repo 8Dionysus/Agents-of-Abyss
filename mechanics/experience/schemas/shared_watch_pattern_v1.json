@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/schemas/shared_watch_pattern_v1.json",
+  "$id": "https://aoa.local/mechanics/experience/schemas/shared_watch_pattern_v1.json",
   "title": "shared_watch_pattern_v1",
   "type": "object",
   "required": [

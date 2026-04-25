@@ -60,7 +60,7 @@ This cleanup creates durable next steps rather than placeholders:
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
 python scripts/validate_ecosystem.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 If any generated capsule references moved paths, update its builder source rather than editing generated output by hand.

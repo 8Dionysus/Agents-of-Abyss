@@ -21,7 +21,7 @@ Moved or clarified:
 
 Validation:
 
-- `python scripts/validate_experience_distillation.py`
+- `python mechanics/experience/scripts/validate_experience_distillation.py`
 - `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
 
 Stop-lines: do not delete raw provenance, do not duplicate archive inventories
@@ -45,11 +45,11 @@ Surfaces:
 - `mechanics/experience/legacy/README.md`
 - `mechanics/experience/legacy/INDEX.md`
 - `mechanics/experience/legacy/raw/`
-- `scripts/validate_experience_distillation.py`
+- `mechanics/experience/scripts/validate_experience_distillation.py`
 
 Validation:
 
-- `python scripts/validate_experience_distillation.py`
+- `python mechanics/experience/scripts/validate_experience_distillation.py`
 - `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
 
 Stop-lines: do not turn `legacy/raw/` into the active route, do not delete provenance, and do not claim owner-local activation from center distillation.

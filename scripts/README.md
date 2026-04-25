@@ -5,8 +5,8 @@ This directory holds builders, validators, release checks, and local guardrails 
 Scripts may build or validate compact surfaces. They do not create constitutional authority by themselves.
 
 Mechanic-owned builders, validators, and helper modules live in
-`mechanics/<slug>/scripts/`. Root script paths may remain as compatibility
-aliases for established commands and release checks.
+`mechanics/<slug>/scripts/`. Root `scripts/` contains root-owned release,
+topology, hygiene, and shared validators.
 
 ## Main families
 
@@ -14,7 +14,7 @@ aliases for established commands and release checks.
 |---|---|---|
 | Center builders | `build_center_entry_map.py` | build compact center-entry surfaces |
 | Center validators | `validate_center_entry_map.py`, `validate_ecosystem.py` | check center and registry contracts |
-| Mechanic aliases | `build_agon_*.py`, `validate_agon_*.py`, `validate_experience_*.py`, `validate_questbook_lifecycle.py` | stable command routes to mechanic-owned scripts |
+| Mechanic scripts | `mechanics/<slug>/scripts/*.py` | mechanic-owned validators and builders called directly |
 | Mechanics validators | `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, `validate_mechanic_readme_cards.py`, `validate_mechanic_artifact_topology.py`, `validate_questbook_lifecycle.py` | check mechanic cards, artifact homes, quest lifecycle board, and generated card index |
 | Owner-request validators | `build_owner_request_queue.py`, `validate_owner_request_queue.py`, `validate_generated_owner_request_queue.py`, `validate_owner_request_docs.py` | check center-side owner request packets |
 | Docs thematic validators | `plan_docs_thematic_cleanup.py`, `build_docs_thematic_index.py`, `validate_docs_thematic_*.py` | check docs district cleanup grammar |
@@ -43,9 +43,9 @@ python scripts/repair_known_link_drifts.py --check
 python scripts/validate_links.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
-python scripts/validate_experience_distillation.py
+python mechanics/experience/scripts/validate_experience_distillation.py
 python scripts/validate_mechanic_artifact_topology.py
-python scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python scripts/build_mechanic_card_index.py --check
 python scripts/validate_mechanic_card_index.py
 python scripts/build_owner_request_queue.py --check
@@ -61,7 +61,7 @@ python scripts/build_agents_mesh_index.py --check
 python scripts/validate_agents_mesh_index.py
 python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 Run narrower or wider checks based on the touched surfaces.

@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/build_agon_arena_session_model_registry.py

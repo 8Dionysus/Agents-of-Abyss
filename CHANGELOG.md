@@ -50,13 +50,13 @@ Tracking starts with the community-docs baseline for this repository.
 - Experience active-part distillation through `mechanics/experience/DIRECTION.md`,
   `mechanics/experience/PARTS.md`, `mechanics/experience/parts/`,
   `mechanics/experience/PROVENANCE.md`, archived source packets, and
-  `scripts/validate_experience_distillation.py`
+  `mechanics/experience/scripts/validate_experience_distillation.py`
 - `mechanics/ARTIFACT_TOPOLOGY.md` and
   `scripts/validate_mechanic_artifact_topology.py` for mechanic-owned schemas,
   examples, config, generated companions, scripts, and tests
 - Questbook lifecycle board validation through
-  `scripts/validate_questbook_lifecycle.py`, lifecycle directories under
-  `quests/`, and root `AOA-Q-*` compatibility aliases
+  `mechanics/questbook/scripts/validate_questbook_lifecycle.py`, lifecycle directories under
+  `quests/`, and checks that reject top-level `AOA-Q-*` aliases
 
 ### Changed
 
@@ -89,8 +89,8 @@ Tracking starts with the community-docs baseline for this repository.
   preserved behind a single provenance bridge instead of being listed in
   active part docs
 - Agon, Experience, RPG, antifragility, and method-growth mechanic artifacts now
-  live in mechanic-owned homes, while root technical districts keep stable
-  command and link aliases
+  live in mechanic-owned homes; root technical districts keep repo-wide
+  contracts only and no longer carry mechanic artifact aliases
 - Questbook now uses lifecycle source placement instead of a flat quest pile:
   `captured`, `triaged`, `ready`, `active`, `blocked`, `reanchor`, `done`, and
   `dropped`
@@ -158,18 +158,18 @@ Tracking starts with the community-docs baseline for this repository.
 ### Validation
 
 - `python scripts/release_check.py`
-- `python scripts/build_agon_imposition_readiness.py --check`
-- `python scripts/validate_agon_imposition_readiness.py`
-- `python -m pytest -q tests/test_agon_imposition_readiness.py`
-- `python scripts/build_agon_lawful_move_registry.py --check`
-- `python scripts/validate_agon_lawful_moves.py`
-- `python -m pytest -q tests/test_agon_lawful_moves.py`
-- `python scripts/build_agon_move_owner_binding_registry.py --check`
-- `python scripts/validate_agon_move_owner_bindings.py`
-- `python -m pytest -q tests/test_agon_move_owner_bindings.py`
-- `python scripts/build_agon_gate_routing_handoff_request.py --check`
-- `python scripts/validate_agon_gate_routing_handoff_request.py`
-- `python -m pytest -q tests/test_agon_gate_routing_handoff_request.py`
+- `python mechanics/agon/scripts/build_agon_imposition_readiness.py --check`
+- `python mechanics/agon/scripts/validate_agon_imposition_readiness.py`
+- `python -m pytest -q mechanics/agon/tests/test_agon_imposition_readiness.py`
+- `python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check`
+- `python mechanics/agon/scripts/validate_agon_lawful_moves.py`
+- `python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py`
+- `python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check`
+- `python mechanics/agon/scripts/validate_agon_move_owner_bindings.py`
+- `python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py`
+- `python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check`
+- `python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py`
+- `python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.py`
 
 ### Notes
 

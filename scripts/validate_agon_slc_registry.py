@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/validate_agon_slc_registry.py

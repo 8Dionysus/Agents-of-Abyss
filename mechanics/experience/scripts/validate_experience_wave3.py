@@ -21,8 +21,8 @@ ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md"
 V06_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V0_6_FEDERATION_HARVEST.md"
 V07_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V0_7_ADOPTION_FORGE.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-wave3-federation-adoption.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_wave3_federation_adoption.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-wave3-federation-adoption.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_wave3_federation_adoption.example.json"
 
 EXPECTED_SOURCE_SEEDS = [
     "aoa-experience-federation-harvest-seed-v0_6.zip",

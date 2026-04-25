@@ -13,8 +13,8 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-CONFIG_PATH = ROOT / "config" / "agon_gate_routing_handoff_request.seed.json"
-OUTPUT_PATH = ROOT / "generated" / "agon_gate_routing_handoff_request.min.json"
+CONFIG_PATH = ROOT / "mechanics" / "agon" / "config" / "agon_gate_routing_handoff_request.seed.json"
+OUTPUT_PATH = ROOT / "mechanics" / "agon" / "generated" / "agon_gate_routing_handoff_request.min.json"
 
 
 def load_json(path: Path) -> Any:
@@ -37,7 +37,7 @@ def main() -> int:
         if not OUTPUT_PATH.exists():
             raise SystemExit(f"Missing generated output: {OUTPUT_PATH}")
         if OUTPUT_PATH.read_text(encoding="utf-8") != rendered:
-            raise SystemExit("generated/agon_gate_routing_handoff_request.min.json is stale")
+            raise SystemExit("mechanics/agon/generated/agon_gate_routing_handoff_request.min.json is stale")
         print("Agon gate routing handoff request is up to date.")
         return 0
 

@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Validate Questbook lifecycle board placement and compatibility aliases."""
+"""Validate Questbook lifecycle board placement."""
 
 from __future__ import annotations
 
-import os
 import sys
 from pathlib import Path
 
@@ -43,12 +42,6 @@ def fail(problems: list[str], message: str) -> None:
     problems.append(message)
 
 
-def alias_target(path: Path) -> Path | None:
-    if not path.is_symlink():
-        return None
-    return (path.parent / os.readlink(path)).resolve()
-
-
 def state_from_yaml(path: Path, problems: list[str]) -> str | None:
     if yaml is None:
         fail(problems, "PyYAML is required to validate YAML quest lifecycle state")
@@ -84,39 +77,12 @@ def validate_lifecycle_dirs(problems: list[str]) -> None:
             fail(problems, f"{rel(readme)}: lifecycle directory needs a README gate")
 
 
-def validate_root_aliases(problems: list[str]) -> dict[str, str]:
-    aliases: dict[str, str] = {}
+def validate_root_entries_absent(problems: list[str]) -> None:
     for path in sorted(QUESTS_DIR.glob("AOA-Q-*")):
-        if path.is_dir():
-            fail(problems, f"{rel(path)}: quest root entries must not be directories")
-            continue
-        target = alias_target(path)
-        if target is None:
-            fail(
-                problems,
-                f"{rel(path)}: root quest entry must be a compatibility symlink into a lifecycle directory",
-            )
-            continue
-        try:
-            target_rel = target.relative_to(REPO_ROOT)
-        except ValueError:
-            fail(problems, f"{rel(path)}: symlink target must stay inside this repository")
-            continue
-        parts = target_rel.parts
-        if len(parts) < 3 or parts[0] != "quests" or parts[1] not in LIFECYCLE_STATES:
-            fail(problems, f"{rel(path)}: symlink target must be quests/<lifecycle-state>/{path.name}")
-            continue
-        if parts[-1] != path.name:
-            fail(problems, f"{rel(path)}: symlink target filename must match the alias")
-            continue
-        if not target.is_file():
-            fail(problems, f"{rel(path)}: symlink target is missing")
-            continue
-        aliases[path.name] = parts[1]
-    return aliases
+        fail(problems, f"{rel(path)}: root quest aliases are not allowed; use quests/<lifecycle-state>/{path.name}")
 
 
-def validate_source_items(aliases: dict[str, str], problems: list[str]) -> None:
+def validate_source_items(problems: list[str]) -> None:
     source_names: set[str] = set()
     for state in LIFECYCLE_STATES:
         state_dir = QUESTS_DIR / state
@@ -129,12 +95,6 @@ def validate_source_items(aliases: dict[str, str], problems: list[str]) -> None:
             if path.name in source_names:
                 fail(problems, f"{rel(path)}: duplicate quest source filename")
             source_names.add(path.name)
-            alias_state = aliases.get(path.name)
-            if alias_state != state:
-                fail(
-                    problems,
-                    f"{rel(path)}: root compatibility alias must point to this lifecycle directory",
-                )
             if path.suffix == ".yaml":
                 payload_state = state_from_yaml(path, problems)
                 if payload_state is not None and payload_state != state:
@@ -143,19 +103,12 @@ def validate_source_items(aliases: dict[str, str], problems: list[str]) -> None:
                         f"{rel(path)}: YAML state {payload_state!r} must match lifecycle directory {state!r}",
                     )
 
-    missing_aliases = sorted(source_names - set(aliases))
-    if missing_aliases:
-        fail(problems, "missing root compatibility aliases: " + ", ".join(missing_aliases))
-    dangling_aliases = sorted(set(aliases) - source_names)
-    if dangling_aliases:
-        fail(problems, "root aliases without lifecycle source: " + ", ".join(dangling_aliases))
-
 
 def validate_public_index(problems: list[str]) -> None:
     questbook = (REPO_ROOT / "QUESTBOOK.md").read_text(encoding="utf-8")
     required_phrases = (
         "lifecycle directories under [`quests/`](quests/)",
-        "Top-level `quests/AOA-Q-*` paths are compatibility aliases",
+        "Top-level `quests/AOA-Q-*` aliases are intentionally absent",
     )
     for phrase in required_phrases:
         if phrase not in questbook:
@@ -165,8 +118,8 @@ def validate_public_index(problems: list[str]) -> None:
 def main() -> int:
     problems: list[str] = []
     validate_lifecycle_dirs(problems)
-    aliases = validate_root_aliases(problems)
-    validate_source_items(aliases, problems)
+    validate_root_entries_absent(problems)
+    validate_source_items(problems)
     validate_public_index(problems)
     if problems:
         print("Questbook lifecycle validation failed:")

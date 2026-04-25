@@ -157,7 +157,7 @@ Current surfaces:
 - `mechanics/agon/docs/AGON_DOUBT_AUDIT.md`
 - `mechanics/agon/docs/PRE_AGON_BASELINE.md`
 - `mechanics/agon/docs/AGON_WAVE0_LANDING.md`
-- `generated/agon_imposition_readiness.min.json`
+- `mechanics/agon/generated/agon_imposition_readiness.min.json`
 
 Purpose:
 - place the current federation under Agon scrutiny without starting the arena
@@ -181,7 +181,7 @@ Current surfaces:
 - `mechanics/agon/docs/AGON_MOVE_REGISTRY_MODEL.md`
 - `mechanics/agon/docs/AGON_MOVE_OWNER_HANDOFFS.md`
 - `mechanics/agon/docs/AGON_WAVE3_LANDING.md`
-- `generated/agon_lawful_move_registry.min.json`
+- `mechanics/agon/generated/agon_lawful_move_registry.min.json`
 
 Purpose:
 - give Agon a first legal vocabulary after the imposition gate and actor-side
@@ -207,7 +207,7 @@ Current surfaces:
 - `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`
 - `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
 - `mechanics/agon/docs/AGON_WAVE4_LANDING.md`
-- `generated/agon_move_owner_binding_registry.min.json`
+- `mechanics/agon/generated/agon_move_owner_binding_registry.min.json`
 
 Purpose:
 - bind each lawful move to the owner repositories that must later carry
@@ -234,7 +234,7 @@ Current surfaces:
 - `mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`
 - `mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md`
 - `mechanics/agon/docs/AGON_WAVE5_CENTER_HANDOFF.md`
-- `generated/agon_gate_routing_handoff_request.min.json`
+- `mechanics/agon/generated/agon_gate_routing_handoff_request.min.json`
 
 Purpose:
 - accept one thin pre-protocol handoff from `aoa-routing` when ordinary
@@ -258,7 +258,7 @@ Current surfaces:
 - `mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md`
 - `mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md`
 - `mechanics/agon/docs/AGON_WAVE6_CENTER_HANDOFF.md`
-- `generated/agon_trial_playbook_request.min.json`
+- `mechanics/agon/generated/agon_trial_playbook_request.min.json`
 
 Purpose:
 - hand one bounded Agon slice to `aoa-playbooks`: recurring mechanical trial
@@ -281,8 +281,8 @@ v1.2-v2.0 planting campaign. It is not `Experience Wave 5`.
 
 Current surfaces:
 - `mechanics/experience/parts/compatibility-bridges/README.md`
-- `examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
-- `schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
+- `mechanics/experience/examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
+- `mechanics/experience/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
 
 Purpose:
 - extend the v1.4 mechanical arena kernel into epistemic duel pressure without

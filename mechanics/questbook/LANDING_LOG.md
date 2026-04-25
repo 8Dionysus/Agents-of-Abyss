@@ -43,7 +43,7 @@ Surfaces:
 - `quests/README.md`
 - `quests/<lifecycle-state>/`
 
-Validation: `python scripts/validate_questbook_lifecycle.py`
+Validation: `python mechanics/questbook/scripts/validate_questbook_lifecycle.py`
 
 Stop-lines: lifecycle placement is not a roadmap, scheduler, private memory, or
 owner-local task claim.

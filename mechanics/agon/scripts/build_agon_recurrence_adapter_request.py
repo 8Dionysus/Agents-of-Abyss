@@ -10,15 +10,15 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-SRC = ROOT / "config" / "agon_recurrence_adapter_request.seed.json"
-OUT = ROOT / "generated" / "agon_recurrence_adapter_request.min.json"
+SRC = ROOT / "mechanics" / "agon" / "config" / "agon_recurrence_adapter_request.seed.json"
+OUT = ROOT / "mechanics" / "agon" / "generated" / "agon_recurrence_adapter_request.min.json"
 
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 def build():
     data = dict(load_json(SRC))
-    data["generated_by"] = "scripts/build_agon_recurrence_adapter_request.py"
+    data["generated_by"] = "mechanics/agon/scripts/build_agon_recurrence_adapter_request.py"
     data["component_count"] = len(data.get("requested_components", []))
     data["observed_surface_count"] = sum(len(c.get("observed_surfaces", [])) for c in data.get("requested_components", []))
     data["generated_at"] = "2026-04-20T00:00:00Z"

@@ -29,7 +29,7 @@ Federation-level quest mechanics, root public quest index posture, quest item pl
 ### Validation
 ```bash
 python scripts/validate_mechanics_topology.py --mechanic questbook
-python scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python scripts/validate_mechanic_readme_cards.py --mechanic questbook
 python scripts/build_mechanic_card_index.py --check
 python scripts/validate_mechanic_card_index.py

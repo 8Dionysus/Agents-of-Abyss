@@ -21,8 +21,8 @@ ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md"
 V04_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V0_4_CERTIFICATION_FORGE.md"
 V05_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V0_5_DEPLOYMENT_WATCHTOWER.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-wave2-certification-watchtower.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_wave2_certification_watchtower.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-wave2-certification-watchtower.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_wave2_certification_watchtower.example.json"
 
 EXPECTED_SOURCE_SEEDS = [
     "aoa-experience-certification-forge-seed-v0_4.zip",

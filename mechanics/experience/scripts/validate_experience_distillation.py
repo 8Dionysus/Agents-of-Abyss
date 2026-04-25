@@ -368,7 +368,7 @@ def validate_registry(problems: list[str]) -> None:
     for required_doc in ("mechanics/experience/ROADMAP.md", "mechanics/experience/LANDING_LOG.md"):
         if required_doc not in canonical:
             problems.append(f"mechanics/registry.json: experience canonical_docs must include {required_doc}")
-    if "scripts/validate_experience_distillation.py" not in experience.get("validation_refs", []):
+    if "mechanics/experience/scripts/validate_experience_distillation.py" not in experience.get("validation_refs", []):
         problems.append("mechanics/registry.json: missing validate_experience_distillation.py validation ref")
     must_not_claim = experience.get("must_not_claim", [])
     if not isinstance(must_not_claim, list):

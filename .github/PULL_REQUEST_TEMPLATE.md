@@ -75,7 +75,7 @@ Describe how you checked the change. Examples:
 - ran `python scripts/validate_mechanic_landing_logs.py`
 - ran `python scripts/validate_ecosystem.py`
 - ran the nearest Agon, Experience, schema, generated, or release validator
-- ran `python -m pytest -q tests`
+- ran `python -m pytest -q`
 
 ## Risk / follow-ups
 

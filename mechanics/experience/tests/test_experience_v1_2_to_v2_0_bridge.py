@@ -20,7 +20,7 @@ ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "scripts" / "validate_experience_v1_2_to_v2_0_bridge.py"
+    path = ROOT / "mechanics" / "experience" / "scripts" / "validate_experience_v1_2_to_v2_0_bridge.py"
     spec = importlib.util.spec_from_file_location("experience_bridge_validator_test", path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
@@ -30,7 +30,7 @@ def load_validator():
 
 def load_example() -> dict[str, object]:
     return json.loads(
-        (ROOT / "examples" / "experience_v1_2_to_v2_0_bridge.example.json").read_text(
+        (ROOT / "mechanics" / "experience" / "examples" / "experience_v1_2_to_v2_0_bridge.example.json").read_text(
             encoding="utf-8"
         )
     )
@@ -38,7 +38,7 @@ def load_example() -> dict[str, object]:
 
 def load_schema() -> dict[str, object]:
     return json.loads(
-        (ROOT / "schemas" / "experience-v1-2-v2-0-bridge.schema.json").read_text(
+        (ROOT / "mechanics" / "experience" / "schemas" / "experience-v1-2-v2-0-bridge.schema.json").read_text(
             encoding="utf-8"
         )
     )
@@ -46,7 +46,7 @@ def load_schema() -> dict[str, object]:
 
 def test_experience_bridge_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "scripts/validate_experience_v1_2_to_v2_0_bridge.py"],
+        [sys.executable, "mechanics/experience/scripts/validate_experience_v1_2_to_v2_0_bridge.py"],
         cwd=ROOT,
         text=True,
         capture_output=True,

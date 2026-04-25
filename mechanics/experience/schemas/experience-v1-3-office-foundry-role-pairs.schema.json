@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://agents-of-abyss.local/schemas/experience-v1-3-office-foundry-role-pairs.schema.json",
+  "$id": "https://agents-of-abyss.local/mechanics/experience/schemas/experience-v1-3-office-foundry-role-pairs.schema.json",
   "title": "experience_v1_3_office_foundry_role_pairs_v1",
   "type": "object",
   "additionalProperties": false,

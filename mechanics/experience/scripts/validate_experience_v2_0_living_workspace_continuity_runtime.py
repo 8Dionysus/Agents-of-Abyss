@@ -18,8 +18,8 @@ def _repo_root() -> Path:
 
 ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-v2-0-living-workspace-continuity-runtime.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_v2_0_living_workspace_continuity_runtime.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-v2-0-living-workspace-continuity-runtime.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_v2_0_living_workspace_continuity_runtime.example.json"
 
 SOURCE_SEED = {
     "archive_name": "aoa-experience-living-workspace-continuity-runtime-seed-v2_0.zip",

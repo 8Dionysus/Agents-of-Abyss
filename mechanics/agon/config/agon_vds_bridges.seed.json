@@ -290,12 +290,12 @@
   "registry_id": "agon.vds_bridge.registry.v1",
   "runtime_effect": "none",
   "source_dependencies": {
-    "arena_session_models": "generated/agon_arena_session_model_registry.min.json",
-    "ccs_laws": "generated/agon_ccs_law_registry.min.json",
+    "arena_session_models": "mechanics/agon/generated/agon_arena_session_model_registry.min.json",
+    "ccs_laws": "mechanics/agon/generated/agon_ccs_law_registry.min.json",
     "eval_prebindings": "aoa-evals/generated/agon_eval_prebinding_registry.min.json",
     "memo_prebindings": "aoa-memo/generated/agon_memo_prebinding_registry.min.json",
     "recurrence_adapter": "aoa-sdk/generated/agon_recurrence_adapter_registry.min.json",
-    "state_packets": "generated/agon_state_packet_registry.min.json",
+    "state_packets": "mechanics/agon/generated/agon_state_packet_registry.min.json",
     "stats_prebindings": "aoa-stats/generated/agon_stats_prebinding_registry.min.json"
   },
   "status": "seeded_pre_runtime_bridge",

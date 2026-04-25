@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://agents-of-abyss.local/schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json",
+  "$id": "https://agents-of-abyss.local/mechanics/experience/schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json",
   "title": "experience_v1_4_agonic_pair_trials_mechanical_arena_kernel_v1",
   "type": "object",
   "additionalProperties": false,

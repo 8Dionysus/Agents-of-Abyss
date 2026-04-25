@@ -13,7 +13,7 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-REQ = ROOT / "generated" / "agon_trial_playbook_request.min.json"
+REQ = ROOT / "mechanics" / "agon" / "generated" / "agon_trial_playbook_request.min.json"
 REQUIRED_STOP_LINES = {
     "no_arena_session_creation",
     "no_sealed_commit_runtime",
@@ -32,7 +32,7 @@ def fail(msg: str) -> int:
     return 1
 
 def main() -> int:
-    builder = ROOT / "scripts" / "build_agon_trial_playbook_request.py"
+    builder = ROOT / "mechanics" / "agon" / "scripts" / "build_agon_trial_playbook_request.py"
     result = subprocess.run([sys.executable, str(builder), "--check"], cwd=ROOT)
     if result.returncode != 0:
         return result.returncode

@@ -10,7 +10,7 @@ Land the first center-owned pre-protocol vocabulary of Agon lawful moves.
 
 ## Scope
 
-- Add `config/agon_lawful_moves.seed.json`.
+- Add `mechanics/agon/config/agon_lawful_moves.seed.json`.
 - Add schema docs and generated compact registry.
 - Validate that every move remains pre-protocol.
 
@@ -26,7 +26,7 @@ Land the first center-owned pre-protocol vocabulary of Agon lawful moves.
 ## Acceptance
 
 ```bash
-python scripts/build_agon_lawful_move_registry.py --check
-python scripts/validate_agon_lawful_moves.py
-python -m pytest -q tests/test_agon_lawful_moves.py
+python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check
+python mechanics/agon/scripts/validate_agon_lawful_moves.py
+python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py
 ```

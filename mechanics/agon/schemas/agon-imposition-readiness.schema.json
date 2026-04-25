@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://8dionysus.github.io/Agents-of-Abyss/schemas/agon-imposition-readiness.schema.json",
+  "$id": "https://8dionysus.github.io/Agents-of-Abyss/mechanics/agon/schemas/agon-imposition-readiness.schema.json",
   "title": "Agon Imposition Readiness",
   "type": "object",
   "additionalProperties": false,

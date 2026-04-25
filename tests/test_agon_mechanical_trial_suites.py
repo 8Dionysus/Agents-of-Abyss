@@ -1,1 +1,0 @@
-../mechanics/agon/tests/test_agon_mechanical_trial_suites.py

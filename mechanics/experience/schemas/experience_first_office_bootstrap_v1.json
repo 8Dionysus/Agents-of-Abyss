@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience_first_office_bootstrap_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/experience_first_office_bootstrap_v1.json",
   "title": "Experience First Office Bootstrap V1",
   "type": "object",
   "additionalProperties": false,

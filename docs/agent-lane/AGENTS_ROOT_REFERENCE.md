@@ -140,7 +140,7 @@ If the task touches the Agon move owner binding turn, also review:
 - `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`
 - `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
 - `mechanics/agon/docs/AGON_WAVE4_LANDING.md`
-- `generated/agon_move_owner_binding_registry.min.json`
+- `mechanics/agon/generated/agon_move_owner_binding_registry.min.json`
 
 If the task touches the Agon gate routing handoff turn, also review:
 
@@ -148,7 +148,7 @@ If the task touches the Agon gate routing handoff turn, also review:
 - `mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`
 - `mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md`
 - `mechanics/agon/docs/AGON_WAVE5_CENTER_HANDOFF.md`
-- `generated/agon_gate_routing_handoff_request.min.json`
+- `mechanics/agon/generated/agon_gate_routing_handoff_request.min.json`
 
 If you edit `docs/`, `generated/`, `schemas/`, or `scripts/`, read the local
 `AGENTS.md` first.
@@ -158,23 +158,23 @@ Run local validation when relevant:
 ```bash
 python -m pip install -r requirements-dev.txt
 python scripts/validate_ecosystem.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 If you changed the Agon move owner binding surfaces, also run:
 
 ```bash
-python scripts/build_agon_move_owner_binding_registry.py --check
-python scripts/validate_agon_move_owner_bindings.py
-python -m pytest -q tests/test_agon_move_owner_bindings.py
+python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check
+python mechanics/agon/scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py
 ```
 
 If you changed the Agon gate routing handoff surfaces, also run:
 
 ```bash
-python scripts/build_agon_gate_routing_handoff_request.py --check
-python scripts/validate_agon_gate_routing_handoff_request.py
-python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
+python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check
+python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.py
 ```
 
 ## Audit protocol
@@ -200,11 +200,11 @@ For GitHub review in this repository, treat the following as P1:
 - center-level claims about quest, progression, checkpoint, or runtime state that should live in owner repos instead
 - generated registry changes without corresponding source updates or without running `python scripts/validate_ecosystem.py`
 - move owner binding registry changes without corresponding doctrine or without
-  running `python scripts/build_agon_move_owner_binding_registry.py --check`
-  plus `python scripts/validate_agon_move_owner_bindings.py`
+  running `python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check`
+  plus `python mechanics/agon/scripts/validate_agon_move_owner_bindings.py`
 - gate routing handoff request changes without corresponding doctrine or without
-  running `python scripts/build_agon_gate_routing_handoff_request.py --check`
-  plus `python scripts/validate_agon_gate_routing_handoff_request.py`
+  running `python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check`
+  plus `python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py`
 - semantic changes hidden under "docs-only" or "metadata-only" wording
 
 Ignore trivial wording nits unless the task explicitly asks for copyediting.

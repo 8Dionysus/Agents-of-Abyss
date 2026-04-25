@@ -1,1 +1,0 @@
-../mechanics/experience/scripts/validate_experience_v1_7_affective_economy_honor_treasury.py

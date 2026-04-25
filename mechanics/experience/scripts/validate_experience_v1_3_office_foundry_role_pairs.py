@@ -18,8 +18,8 @@ def _repo_root() -> Path:
 
 ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-v1-3-office-foundry-role-pairs.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_v1_3_office_foundry_role_pairs.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-v1-3-office-foundry-role-pairs.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_v1_3_office_foundry_role_pairs.example.json"
 
 SOURCE_ARCHIVE = "aoa-experience-office-foundry-role-pairs-seed-v1_3.zip"
 SOURCE_SHA256 = "d7ccb771f742540fcee0becdbfc79de69c2f97b5704ac067029fec23fef90648"

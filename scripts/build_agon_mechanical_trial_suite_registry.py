@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/build_agon_mechanical_trial_suite_registry.py

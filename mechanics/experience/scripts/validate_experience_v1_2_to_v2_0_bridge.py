@@ -18,8 +18,8 @@ def _repo_root() -> Path:
 
 ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-v1-2-v2-0-bridge.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_v1_2_to_v2_0_bridge.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-v1-2-v2-0-bridge.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_v1_2_to_v2_0_bridge.example.json"
 
 EXPECTED_SEEDS = [
     "aoa-experience-service-mesh-operations-seed-v1_2.zip",

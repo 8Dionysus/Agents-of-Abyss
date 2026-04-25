@@ -21,8 +21,8 @@ ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md"
 V08_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V0_8_POLIS_GOVERNANCE.md"
 V09_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V0_9_CONSTITUTION_RUNTIME.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-wave4-polis-constitution.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_wave4_polis_constitution.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-wave4-polis-constitution.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_wave4_polis_constitution.example.json"
 
 EXPECTED_SOURCE_SEEDS = [
     "aoa-experience-polis-governance-seed-v0_8.zip",

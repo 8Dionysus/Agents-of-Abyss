@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://agents-of-abyss.local/schemas/experience-v1-7-affective-economy-honor-treasury.schema.json",
+  "$id": "https://agents-of-abyss.local/mechanics/experience/schemas/experience-v1-7-affective-economy-honor-treasury.schema.json",
   "title": "experience_v1_7_affective_economy_honor_treasury_v1",
   "type": "object",
   "additionalProperties": false,

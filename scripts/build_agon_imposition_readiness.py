@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/build_agon_imposition_readiness.py

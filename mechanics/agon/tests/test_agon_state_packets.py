@@ -19,7 +19,7 @@ def load_module(path: Path, name: str):
 
 
 def test_state_packet_registry_is_current():
-    build = load_module(ROOT / 'scripts' / 'build_agon_state_packet_registry.py', 'build_agon_state_packet_registry')
+    build = load_module(ROOT / "mechanics" / "agon" / "scripts" / 'build_agon_state_packet_registry.py', 'build_agon_state_packet_registry')
     seed = build.load_json(build.CONFIG)
     expected = build.build(seed)
     current = build.load_json(build.OUT)
@@ -27,5 +27,5 @@ def test_state_packet_registry_is_current():
 
 
 def test_state_packet_validation():
-    validate = load_module(ROOT / 'scripts' / 'validate_agon_state_packets.py', 'validate_agon_state_packets')
+    validate = load_module(ROOT / "mechanics" / "agon" / "scripts" / 'validate_agon_state_packets.py', 'validate_agon_state_packets')
     validate.validate()

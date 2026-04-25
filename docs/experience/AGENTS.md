@@ -31,7 +31,7 @@ python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
 python scripts/validate_links.py
 python scripts/validate_markdown_shape.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 If thematic district indexes or migration maps changed, run their matching builders and validators too.

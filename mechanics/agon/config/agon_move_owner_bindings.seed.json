@@ -2163,8 +2163,8 @@
   ],
   "schema_version": "agon-move-owner-bindings.seed/0.1",
   "scope": "bind Wave III lawful moves to owner repos and future candidate surfaces without creating live protocol behavior",
-  "source_move_registry": "generated/agon_lawful_move_registry.min.json",
-  "source_move_seed": "config/agon_lawful_moves.seed.json",
+  "source_move_registry": "mechanics/agon/generated/agon_lawful_move_registry.min.json",
+  "source_move_seed": "mechanics/agon/config/agon_lawful_moves.seed.json",
   "status": "pre_protocol_owner_binding_seed",
   "title": "Agon move owner binding",
   "wave": "IV"

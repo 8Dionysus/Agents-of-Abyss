@@ -10,8 +10,8 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-SRC = ROOT / "config" / "agon_trial_playbook_request.seed.json"
-OUT = ROOT / "generated" / "agon_trial_playbook_request.min.json"
+SRC = ROOT / "mechanics" / "agon" / "config" / "agon_trial_playbook_request.seed.json"
+OUT = ROOT / "mechanics" / "agon" / "generated" / "agon_trial_playbook_request.min.json"
 
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -19,7 +19,7 @@ def load_json(path: Path):
 def build():
     data = load_json(SRC)
     data = dict(data)
-    data["generated_by"] = "scripts/build_agon_trial_playbook_request.py"
+    data["generated_by"] = "mechanics/agon/scripts/build_agon_trial_playbook_request.py"
     data["trial_count"] = len(data.get("requested_trial_playbooks", []))
     return data
 

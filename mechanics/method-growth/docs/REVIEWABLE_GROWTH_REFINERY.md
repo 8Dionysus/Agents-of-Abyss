@@ -49,7 +49,7 @@ It does not mint the identities inside that chain.
 The center keeps one witness-shaped validator for the live example chain:
 
 ```bash
-python scripts/validate_candidate_lineage_contract.py --workspace-root /srv
+python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv
 ```
 
 That check reads owner-repo examples in `aoa-sdk`, `aoa-skills`, and
@@ -58,14 +58,14 @@ It may detect drift in the chain, but it does not make this repository the
 owner of checkpoint carry, reviewed candidate identity, seed identity, or final
 object identity.
 
-The center-level example at `examples/lineage_contract_chain.example.json` is
+The center-level example at `mechanics/method-growth/examples/lineage_contract_chain.example.json` is
 a crosswalk witness only.
 
 For the wave-four next-kernel and reviewed automation seam, the center keeps a
 second witness-shaped validator:
 
 ```bash
-python scripts/validate_wave4_kernel_automation.py --workspace-root /srv
+python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv
 ```
 
 That check confirms the reviewed closeout hint in `aoa-sdk`, the kernel

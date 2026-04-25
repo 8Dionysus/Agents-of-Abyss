@@ -54,7 +54,6 @@ The center must not:
 - canonical object: `work_quest_v1`
 - thin delegation projection: `quest_dispatch_v1`
 - source item store: `quests/<lifecycle-state>/AOA-Q-*`
-- compatibility aliases: `quests/AOA-Q-*`
 
 This naming avoids conflating the human-facing questbook concept with repo-specific operator intents such as `open_quest_book`.
 
@@ -74,8 +73,8 @@ QUESTBOOK uses two axes.
 - `dropped`
 
 The lifecycle state is not only prose. Quest source files live in the matching
-directory under `quests/`. Top-level `quests/AOA-Q-*` paths are aliases kept for
-stable public links, commands, and old references.
+directory under `quests/`. Top-level `quests/AOA-Q-*` aliases are intentionally
+absent so every route lands on the source lifecycle lane.
 
 Promotion is explicit:
 
@@ -160,5 +159,5 @@ If richer local notes are needed, keep them in ignored local overlays and refere
 ## Validation
 
 ```bash
-python scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 ```

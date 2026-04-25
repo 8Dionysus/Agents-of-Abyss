@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/office_compatibility_matrix_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/office_compatibility_matrix_v1.json",
   "title": "Office Compatibility Matrix V1",
   "type": "object",
   "additionalProperties": false,

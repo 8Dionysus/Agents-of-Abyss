@@ -64,18 +64,18 @@ Surfaces:
 - `mechanics/agon/docs/AGON_DOUBT_AUDIT.md`
 - `mechanics/agon/docs/PRE_AGON_BASELINE.md`
 - `mechanics/agon/docs/AGON_WAVE0_LANDING.md`
-- `generated/agon_imposition_readiness.min.json`
-- `schemas/agon-imposition-readiness.schema.json`
-- `examples/agon_doubt_audit.example.json`
-- `scripts/build_agon_imposition_readiness.py`
-- `scripts/validate_agon_imposition_readiness.py`
-- `tests/test_agon_imposition_readiness.py`
+- `mechanics/agon/generated/agon_imposition_readiness.min.json`
+- `mechanics/agon/schemas/agon-imposition-readiness.schema.json`
+- `mechanics/agon/examples/agon_doubt_audit.example.json`
+- `mechanics/agon/scripts/build_agon_imposition_readiness.py`
+- `mechanics/agon/scripts/validate_agon_imposition_readiness.py`
+- `mechanics/agon/tests/test_agon_imposition_readiness.py`
 
 Validation:
 
-- `python scripts/build_agon_imposition_readiness.py --check`
-- `python scripts/validate_agon_imposition_readiness.py`
-- `python -m pytest -q tests/test_agon_imposition_readiness.py`
+- `python mechanics/agon/scripts/build_agon_imposition_readiness.py --check`
+- `python mechanics/agon/scripts/validate_agon_imposition_readiness.py`
+- `python -m pytest -q mechanics/agon/tests/test_agon_imposition_readiness.py`
 
 Stop-lines: survive, recharter, defer, prune, or quarantine review does not
 grant actor, proof, memory, routing, runtime, or ToS authority.
@@ -97,20 +97,20 @@ Surfaces:
 - `mechanics/agon/docs/AGON_MOVE_REGISTRY_MODEL.md`
 - `mechanics/agon/docs/AGON_MOVE_OWNER_HANDOFFS.md`
 - `mechanics/agon/docs/AGON_WAVE3_LANDING.md`
-- `config/agon_lawful_moves.seed.json`
-- `generated/agon_lawful_move_registry.min.json`
-- `schemas/agon-lawful-move.schema.json`
-- `schemas/agon-lawful-move-registry.schema.json`
-- `examples/agon_lawful_move.example.json`
-- `scripts/build_agon_lawful_move_registry.py`
-- `scripts/validate_agon_lawful_moves.py`
-- `tests/test_agon_lawful_moves.py`
+- `mechanics/agon/config/agon_lawful_moves.seed.json`
+- `mechanics/agon/generated/agon_lawful_move_registry.min.json`
+- `mechanics/agon/schemas/agon-lawful-move.schema.json`
+- `mechanics/agon/schemas/agon-lawful-move-registry.schema.json`
+- `mechanics/agon/examples/agon_lawful_move.example.json`
+- `mechanics/agon/scripts/build_agon_lawful_move_registry.py`
+- `mechanics/agon/scripts/validate_agon_lawful_moves.py`
+- `mechanics/agon/tests/test_agon_lawful_moves.py`
 
 Validation:
 
-- `python scripts/build_agon_lawful_move_registry.py --check`
-- `python scripts/validate_agon_lawful_moves.py`
-- `python -m pytest -q tests/test_agon_lawful_moves.py`
+- `python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check`
+- `python mechanics/agon/scripts/validate_agon_lawful_moves.py`
+- `python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py`
 
 Stop-lines: every move remains pre-protocol with `live_protocol: false` and
 `runtime_effect: none`.
@@ -133,20 +133,20 @@ Surfaces:
 - `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`
 - `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
 - `mechanics/agon/docs/AGON_WAVE4_LANDING.md`
-- `config/agon_move_owner_bindings.seed.json`
-- `generated/agon_move_owner_binding_registry.min.json`
-- `schemas/agon-move-owner-binding.schema.json`
-- `schemas/agon-move-owner-binding-registry.schema.json`
-- `examples/agon_move_owner_binding.example.json`
-- `scripts/build_agon_move_owner_binding_registry.py`
-- `scripts/validate_agon_move_owner_bindings.py`
-- `tests/test_agon_move_owner_bindings.py`
+- `mechanics/agon/config/agon_move_owner_bindings.seed.json`
+- `mechanics/agon/generated/agon_move_owner_binding_registry.min.json`
+- `mechanics/agon/schemas/agon-move-owner-binding.schema.json`
+- `mechanics/agon/schemas/agon-move-owner-binding-registry.schema.json`
+- `mechanics/agon/examples/agon_move_owner_binding.example.json`
+- `mechanics/agon/scripts/build_agon_move_owner_binding_registry.py`
+- `mechanics/agon/scripts/validate_agon_move_owner_bindings.py`
+- `mechanics/agon/tests/test_agon_move_owner_bindings.py`
 
 Validation:
 
-- `python scripts/build_agon_move_owner_binding_registry.py --check`
-- `python scripts/validate_agon_move_owner_bindings.py`
-- `python -m pytest -q tests/test_agon_move_owner_bindings.py`
+- `python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check`
+- `python mechanics/agon/scripts/validate_agon_move_owner_bindings.py`
+- `python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py`
 
 Stop-lines: owner requests are not landed practice, workflow, proof, route,
 scenario, memory, stats, actor, runtime, or ToS authority.
@@ -167,19 +167,19 @@ Surfaces:
 - `mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`
 - `mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md`
 - `mechanics/agon/docs/AGON_WAVE5_CENTER_HANDOFF.md`
-- `config/agon_gate_routing_handoff_request.seed.json`
-- `generated/agon_gate_routing_handoff_request.min.json`
-- `schemas/agon-gate-routing-handoff-request.schema.json`
-- `examples/agon_gate_routing_handoff_request.example.json`
-- `scripts/build_agon_gate_routing_handoff_request.py`
-- `scripts/validate_agon_gate_routing_handoff_request.py`
-- `tests/test_agon_gate_routing_handoff_request.py`
+- `mechanics/agon/config/agon_gate_routing_handoff_request.seed.json`
+- `mechanics/agon/generated/agon_gate_routing_handoff_request.min.json`
+- `mechanics/agon/schemas/agon-gate-routing-handoff-request.schema.json`
+- `mechanics/agon/examples/agon_gate_routing_handoff_request.example.json`
+- `mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py`
+- `mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py`
+- `mechanics/agon/tests/test_agon_gate_routing_handoff_request.py`
 
 Validation:
 
-- `python scripts/build_agon_gate_routing_handoff_request.py --check`
-- `python scripts/validate_agon_gate_routing_handoff_request.py`
-- `python -m pytest -q tests/test_agon_gate_routing_handoff_request.py`
+- `python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check`
+- `python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py`
+- `python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.py`
 
 Stop-lines: routing hints are not arena activation, verdicts, scars, retention,
 rank mutation, runtime dispatch, or ToS promotion.
@@ -200,19 +200,19 @@ Surfaces:
 - `mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md`
 - `mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md`
 - `mechanics/agon/docs/AGON_WAVE6_CENTER_HANDOFF.md`
-- `config/agon_trial_playbook_request.seed.json`
-- `generated/agon_trial_playbook_request.min.json`
-- `schemas/agon-trial-playbook-request.schema.json`
-- `examples/agon_trial_playbook_request.example.json`
-- `scripts/build_agon_trial_playbook_request.py`
-- `scripts/validate_agon_trial_playbook_request.py`
-- `tests/test_agon_trial_playbook_request.py`
+- `mechanics/agon/config/agon_trial_playbook_request.seed.json`
+- `mechanics/agon/generated/agon_trial_playbook_request.min.json`
+- `mechanics/agon/schemas/agon-trial-playbook-request.schema.json`
+- `mechanics/agon/examples/agon_trial_playbook_request.example.json`
+- `mechanics/agon/scripts/build_agon_trial_playbook_request.py`
+- `mechanics/agon/scripts/validate_agon_trial_playbook_request.py`
+- `mechanics/agon/tests/test_agon_trial_playbook_request.py`
 
 Validation:
 
-- `python scripts/build_agon_trial_playbook_request.py --check`
-- `python scripts/validate_agon_trial_playbook_request.py`
-- `python -m pytest -q tests/test_agon_trial_playbook_request.py`
+- `python mechanics/agon/scripts/build_agon_trial_playbook_request.py --check`
+- `python mechanics/agon/scripts/validate_agon_trial_playbook_request.py`
+- `python -m pytest -q mechanics/agon/tests/test_agon_trial_playbook_request.py`
 
 Stop-lines: trial playbooks rehearse the arena; they do not open it or grant
 verdict, scar, retention, rank, runtime, or ToS authority.
@@ -257,7 +257,7 @@ Validation:
 
 - `python scripts/release_check.py`
 - nearest `scripts/validate_agon_*.py` named by the changed generated surface
-- nearest `python -m pytest -q tests/test_agon_*.py`
+- nearest `python -m pytest -q/test_agon_*.py`
 
 Stop-lines: later center waves still do not create live arena authority,
 assistant contestants, live rank mutation, runtime dispatch, hidden memory

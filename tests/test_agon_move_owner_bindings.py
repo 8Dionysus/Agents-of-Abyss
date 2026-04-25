@@ -1,1 +1,0 @@
-../mechanics/agon/tests/test_agon_move_owner_bindings.py

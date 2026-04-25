@@ -1,1 +1,0 @@
-triaged/AOA-Q-AGON-0033-verdict-delta-scar-bridge.md

@@ -80,7 +80,7 @@ class CenterEntryMapTests(unittest.TestCase):
     def test_baseline_validation_commands_are_named(self) -> None:
         self.assertIn("python scripts/validate_entry_surface_sync.py", BASELINE_VALIDATION_COMMANDS)
         self.assertIn("python scripts/build_center_entry_map.py --check", BASELINE_VALIDATION_COMMANDS)
-        self.assertIn("python -m pytest -q tests", BASELINE_VALIDATION_COMMANDS)
+        self.assertIn("python -m pytest -q", BASELINE_VALIDATION_COMMANDS)
 
 
 if __name__ == "__main__":

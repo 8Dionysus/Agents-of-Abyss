@@ -12,7 +12,7 @@ def _repo_root() -> pathlib.Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-REG = ROOT / "generated" / "agon_duel_kernel_model_registry.min.json"
+REG = ROOT / "mechanics" / "agon" / "generated" / "agon_duel_kernel_model_registry.min.json"
 REQUIRED_EVENTS = [
     "kernel.draft_created",
     "kernel.charter_bound",

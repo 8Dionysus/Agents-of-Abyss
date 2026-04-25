@@ -47,7 +47,7 @@ Experience center contracts, release posture, stop-lines, adoption route languag
 ### Validation
 
 ```bash
-python scripts/validate_experience_distillation.py
+python mechanics/experience/scripts/validate_experience_distillation.py
 python scripts/validate_mechanic_landing_logs.py --mechanic experience
 python scripts/validate_mechanics_topology.py --mechanic experience
 python scripts/validate_mechanic_readme_cards.py --mechanic experience

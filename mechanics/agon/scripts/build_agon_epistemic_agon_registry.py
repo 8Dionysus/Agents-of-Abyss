@@ -15,8 +15,8 @@ def _repo_root() -> pathlib.Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-SRC = ROOT / "config" / "agon_epistemic_agon.seed.json"
-OUT = ROOT / "generated" / "agon_epistemic_agon_registry.min.json"
+SRC = ROOT / "mechanics" / "agon" / "config" / "agon_epistemic_agon.seed.json"
+OUT = ROOT / "mechanics" / "agon" / "generated" / "agon_epistemic_agon_registry.min.json"
 ITEM_KEY = "epistemic_components"
 MOVE_EXTENSIONS_KEY = "epistemic_move_extensions"
 REGISTRY_ID = "agon.epistemic_agon.registry.v1"

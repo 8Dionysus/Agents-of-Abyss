@@ -227,7 +227,7 @@
       "type": "object"
     }
   },
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/agon-school-lineage-campaign-registry.schema.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/agon/schemas/agon-school-lineage-campaign-registry.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {

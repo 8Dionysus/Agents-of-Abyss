@@ -16,11 +16,11 @@ def _repo_root() -> pathlib.Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-SRC = ROOT / 'config/agon_slc.seed.json'
-OUT = ROOT / 'generated/agon_slc_registry.min.json'
-ENTRY_SCHEMA = ROOT / 'schemas' / 'agon-school-lineage-campaign.schema.json'
-REGISTRY_SCHEMA = ROOT / 'schemas' / 'agon-school-lineage-campaign-registry.schema.json'
-BUILDER = ROOT / 'scripts' / 'build_agon_slc_registry.py'
+SRC = ROOT / 'mechanics/agon/config/agon_slc.seed.json'
+OUT = ROOT / 'mechanics/agon/generated/agon_slc_registry.min.json'
+ENTRY_SCHEMA = ROOT / "mechanics" / "agon" / "schemas" / 'agon-school-lineage-campaign.schema.json'
+REGISTRY_SCHEMA = ROOT / "mechanics" / "agon" / "schemas" / 'agon-school-lineage-campaign-registry.schema.json'
+BUILDER = ROOT / "mechanics" / "agon" / "scripts" / 'build_agon_slc_registry.py'
 ITEM_KEY = 'slc_components'
 EXPECTED_COUNT = 10
 UNIQUE_KEY_FIELD = 'component_id'

@@ -11,7 +11,7 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 REPO_ROOT = _repo_root()
-SCRIPTS = REPO_ROOT / "scripts"
+SCRIPTS = REPO_ROOT / "mechanics" / "agon" / "scripts"
 if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
 

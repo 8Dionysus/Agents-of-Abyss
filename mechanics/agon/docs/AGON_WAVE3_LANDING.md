@@ -14,8 +14,8 @@ Wave III plants the first center-owned move vocabulary for future Agon sessions.
 
 The wave is landed when:
 
-- `config/agon_lawful_moves.seed.json` exists;
-- `generated/agon_lawful_move_registry.min.json` is generated from it;
+- `mechanics/agon/config/agon_lawful_moves.seed.json` exists;
+- `mechanics/agon/generated/agon_lawful_move_registry.min.json` is generated from it;
 - every move is explicitly pre-protocol;
 - every move has owner handoffs;
 - no move claims runtime, verdict, scar, retention, or ToS authority;
@@ -24,9 +24,9 @@ The wave is landed when:
 ## Commands
 
 ```bash
-python scripts/build_agon_lawful_move_registry.py --check
-python scripts/validate_agon_lawful_moves.py
-python -m pytest -q tests/test_agon_lawful_moves.py
+python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check
+python mechanics/agon/scripts/validate_agon_lawful_moves.py
+python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py
 ```
 
 ## Required previous surfaces
@@ -44,7 +44,7 @@ If Wave 0 was already planted, it should also have:
 
 ```text
 mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md
-generated/agon_imposition_readiness.min.json
+mechanics/agon/generated/agon_imposition_readiness.min.json
 ```
 
 The validator treats Wave 0 surfaces as strengthening context, not as a blocker for this seed's internal shape. Owner policy may make them required in a later release gate.

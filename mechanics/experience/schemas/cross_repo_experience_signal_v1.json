@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/schemas/cross_repo_experience_signal_v1.json",
+  "$id": "https://aoa.local/mechanics/experience/schemas/cross_repo_experience_signal_v1.json",
   "title": "cross_repo_experience_signal_v1",
   "type": "object",
   "required": [

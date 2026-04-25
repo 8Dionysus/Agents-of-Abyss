@@ -3,7 +3,7 @@
 ## Required local check
 
 ```bash
-python scripts/validate_experience_distillation.py --part governance-polis
+python mechanics/experience/scripts/validate_experience_distillation.py --part governance-polis
 ```
 
 ## Mechanic checks
@@ -17,6 +17,6 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 ## Targeted checks
 
 ```bash
-python scripts/validate_experience_wave4.py
-python -m pytest -q tests/test_experience_wave4.py tests/test_experience_wave4_seed_contracts.py
+python mechanics/experience/scripts/validate_experience_wave4.py
+python -m pytest -q mechanics/experience/tests/test_experience_wave4.py mechanics/experience/tests/test_experience_wave4_seed_contracts.py
 ```

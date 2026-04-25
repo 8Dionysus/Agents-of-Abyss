@@ -18,8 +18,8 @@ def _repo_root() -> Path:
 
 ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-v1-5-epistemic-duel-model-of-other-forge.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_v1_5_epistemic_duel_model_of_other_forge.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-v1-5-epistemic-duel-model-of-other-forge.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_v1_5_epistemic_duel_model_of_other_forge.example.json"
 
 SOURCE_ARCHIVE = "aoa-experience-epistemic-duel-model-of-other-forge-seed-v1_5.zip"
 SOURCE_SHA256 = "51349824b23af2da3434e0ba6ce95fe6c5faf32bdb449b98e793d2912c73ff05"

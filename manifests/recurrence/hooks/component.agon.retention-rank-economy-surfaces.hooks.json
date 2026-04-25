@@ -3,12 +3,12 @@
     {
       "decision_authority": false,
       "emits": "recurrence.observation.retention_rank_pressure",
-      "source": "generated/agon_retention_rank_economy_registry.min.json"
+      "source": "mechanics/agon/generated/agon_retention_rank_economy_registry.min.json"
     },
     {
       "decision_authority": false,
       "emits": "recurrence.observation.owner_review_needed",
-      "source": "config/agon_retention_rank_economy.seed.json"
+      "source": "mechanics/agon/config/agon_retention_rank_economy.seed.json"
     }
   ],
   "hidden_scheduler_allowed": false,

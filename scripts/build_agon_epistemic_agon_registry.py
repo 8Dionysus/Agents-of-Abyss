@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/build_agon_epistemic_agon_registry.py

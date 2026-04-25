@@ -6,8 +6,8 @@ Mechanic packages are not document archives only. A mechanic may own the
 schemas, examples, seed config, generated companions, validators, tests, and
 quest rules that make its contracts usable.
 
-This topology keeps root technical districts as stable entry lanes while moving
-mechanic-owned substance into mechanic homes.
+This topology keeps root technical districts as repository-wide lanes while
+moving mechanic-owned substance into mechanic homes.
 
 ## Root lane
 
@@ -17,14 +17,13 @@ Root technical districts own repository-wide contracts:
 - `examples/`: center examples that are not owned by a specific mechanic.
 - `config/`: repo-wide validator and hygiene configuration.
 - `generated/`: repo-wide compact mirrors and root indexes.
-- `scripts/`: release gate, topology, hygiene, root wrappers, and shared
-  validators.
-- `tests/`: root contract tests and compatibility checks.
+- `scripts/`: release gate, topology, hygiene, and shared root validators.
+- `tests/`: root contract tests for root-owned surfaces.
 - `quests/`: public quest item store, organized by Questbook lifecycle state.
 
-Root may keep compatibility aliases for mechanic-owned artifacts when older
-commands, tests, or public links still rely on the path. The alias is not the
-source of meaning.
+Root technical districts must not keep mechanic-owned aliases. Established
+commands, tests, and public links should be routed to the mechanic-owned path
+instead of preserving duplicate root entries.
 
 ## Mechanic lane
 
@@ -57,25 +56,18 @@ boundary. Examples:
 - Quest lifecycle schemas, quest projections, quest validators, and quest
   closure checks belong under `mechanics/questbook/`.
 
-## Compatibility aliases
-
-A compatibility alias may remain in a root district only when:
-
-- the target is inside the owning mechanic package;
-- the owning mechanic package is the stronger source path;
-- the alias exists to keep an established command or public route working;
-- validators can distinguish the alias from a root-authored artifact.
+## No Root Aliases
 
 Do not add new root-authored mechanic artifacts. Add them to the owning
-mechanic package and expose a root alias only when a compatibility surface needs
-it.
+mechanic package and update callers, validators, generated indexes, and docs to
+use that path directly.
 
 ## Questbook
 
 Questbook is a mechanic, not a TODO pile. The root `QUESTBOOK.md` stays a compact
 frontier index, and `quests/` stays the public item store. Quest source objects
 live in lifecycle directories such as `quests/triaged/` and `quests/done/`;
-top-level `quests/AOA-Q-*` paths are compatibility aliases. The questbook
+top-level `quests/AOA-Q-*` aliases are intentionally absent. The questbook
 package owns lifecycle, placement, closure, harvest, and owner-routing rules.
 
 Use quests when an obligation should survive the current diff as a public,
@@ -88,7 +80,7 @@ Run:
 
 ```bash
 python scripts/validate_mechanic_artifact_topology.py
-python scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 ```
 
 For release-bound work, also run:

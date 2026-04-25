@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/validate_agon_arena_session_models.py

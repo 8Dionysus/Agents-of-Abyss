@@ -12,8 +12,8 @@
   "observation_only": true,
   "repo": "Agents-of-Abyss",
   "surfaces": [
-    "generated/agon_slc_registry.min.json",
-    "config/agon_slc.seed.json",
+    "mechanics/agon/generated/agon_slc_registry.min.json",
+    "mechanics/agon/config/agon_slc.seed.json",
     "mechanics/agon/docs/AGON_SCHOOLS_LINEAGES_CAMPAIGNS.md",
     "mechanics/agon/docs/AGON_SCHOOL_MODEL.md",
     "mechanics/agon/docs/AGON_LINEAGE_MODEL.md",

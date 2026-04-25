@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/council_schedule_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/council_schedule_v1.json",
   "title": "council_schedule_v1",
   "description": "Seed schema for council_schedule_v1 in Experience Constitution Runtime v0.9.",
   "type": "object",

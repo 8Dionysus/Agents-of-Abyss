@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/build_agon_move_owner_binding_registry.py

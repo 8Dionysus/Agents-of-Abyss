@@ -12,8 +12,8 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-CONFIG = ROOT / 'config' / 'agon_ccs_laws.seed.json'
-OUT = ROOT / 'generated' / 'agon_ccs_law_registry.min.json'
+CONFIG = ROOT / "mechanics" / "agon" / "config" / 'agon_ccs_laws.seed.json'
+OUT = ROOT / "mechanics" / "agon" / "generated" / 'agon_ccs_law_registry.min.json'
 
 
 def load_json(path: Path):
@@ -65,7 +65,7 @@ def main() -> int:
         if not OUT.exists():
             raise SystemExit(f'missing generated registry: {OUT}')
         if OUT.read_text(encoding='utf-8') != text:
-            raise SystemExit('generated/agon_ccs_law_registry.min.json is out of date')
+            raise SystemExit('mechanics/agon/generated/agon_ccs_law_registry.min.json is out of date')
         return 0
 
     OUT.parent.mkdir(parents=True, exist_ok=True)

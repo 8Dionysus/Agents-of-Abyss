@@ -23,20 +23,20 @@ def _load_script(path: Path):
 
 
 def test_agon_duel_kernel_model_registry_build_check():
-    result = subprocess.run([sys.executable, 'scripts/build_agon_duel_kernel_model_registry.py', '--check'], text=True, capture_output=True)
+    result = subprocess.run([sys.executable, 'mechanics/agon/scripts/build_agon_duel_kernel_model_registry.py', '--check'], text=True, capture_output=True)
     assert result.returncode == 0, result.stderr
 
 
 def test_agon_duel_kernel_model_registry_validates():
-    result = subprocess.run([sys.executable, 'scripts/validate_agon_duel_kernel_models.py'], text=True, capture_output=True)
+    result = subprocess.run([sys.executable, 'mechanics/agon/scripts/validate_agon_duel_kernel_models.py'], text=True, capture_output=True)
     assert result.returncode == 0, result.stderr
 
 
 def test_agon_duel_kernel_model_registry_rejects_repeated_earlier_phase(tmp_path: Path):
-    validator = _load_script(ROOT / "scripts" / "validate_agon_duel_kernel_models.py")
+    validator = _load_script(ROOT / "mechanics" / "agon" / "scripts" / "validate_agon_duel_kernel_models.py")
     registry = json.loads(
         (
-            ROOT / "generated" / "agon_duel_kernel_model_registry.min.json"
+            ROOT / "mechanics" / "agon" / "generated" / "agon_duel_kernel_model_registry.min.json"
         ).read_text(encoding="utf-8")
     )
     registry["kernels"][0]["event_sequence"].append("kernel.commit_phase_opened")
@@ -49,10 +49,10 @@ def test_agon_duel_kernel_model_registry_rejects_repeated_earlier_phase(tmp_path
 
 
 def test_agon_duel_kernel_model_registry_rejects_non_string_event_entries(tmp_path: Path, capsys):
-    validator = _load_script(ROOT / "scripts" / "validate_agon_duel_kernel_models.py")
+    validator = _load_script(ROOT / "mechanics" / "agon" / "scripts" / "validate_agon_duel_kernel_models.py")
     registry = json.loads(
         (
-            ROOT / "generated" / "agon_duel_kernel_model_registry.min.json"
+            ROOT / "mechanics" / "agon" / "generated" / "agon_duel_kernel_model_registry.min.json"
         ).read_text(encoding="utf-8")
     )
     registry["kernels"][0]["event_sequence"][3] = {"bad": "event"}

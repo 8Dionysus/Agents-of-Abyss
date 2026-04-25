@@ -18,17 +18,17 @@ def run_script(rel: str, *args: str):
 
 
 def test_arena_session_registry_is_up_to_date():
-    result = run_script('scripts/build_agon_arena_session_model_registry.py', '--check')
+    result = run_script('mechanics/agon/scripts/build_agon_arena_session_model_registry.py', '--check')
     assert result.returncode == 0, result.stderr + result.stdout
 
 
 def test_arena_session_models_validate():
-    result = run_script('scripts/validate_agon_arena_session_models.py')
+    result = run_script('mechanics/agon/scripts/validate_agon_arena_session_models.py')
     assert result.returncode == 0, result.stderr + result.stdout
 
 
 def test_registry_remains_pre_protocol():
-    registry = json.loads((ROOT / 'generated' / 'agon_arena_session_model_registry.min.json').read_text(encoding='utf-8'))
+    registry = json.loads((ROOT / "mechanics" / "agon" / "generated" / 'agon_arena_session_model_registry.min.json').read_text(encoding='utf-8'))
     assert registry['live_protocol'] is False
     assert registry['runtime_effect'] == 'none'
     assert registry['session_model_count'] >= 8

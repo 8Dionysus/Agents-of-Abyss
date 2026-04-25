@@ -16,4 +16,4 @@ Functioning Experience parts live here. Each part should carry a distinct job, a
 
 ## Validation
 
-`python scripts/validate_experience_distillation.py`
+`python mechanics/experience/scripts/validate_experience_distillation.py`

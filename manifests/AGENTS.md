@@ -27,7 +27,7 @@ Run the narrowest relevant checks first. Usual checks for this district:
 ```bash
 python scripts/validate_links.py
 python scripts/validate_generated_freshness.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 If a listed validator is not present in the checkout yet, report that explicitly and run the closest available guardrail.

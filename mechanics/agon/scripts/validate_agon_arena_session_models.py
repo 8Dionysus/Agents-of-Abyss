@@ -5,12 +5,21 @@ import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-ROOT = SCRIPT_DIR.parents[0]
+
+
+def _repo_root() -> Path:
+    for candidate in Path(__file__).resolve().parents:
+        if (candidate / "mechanics" / "registry.json").is_file():
+            return candidate
+    raise RuntimeError("repo root not found")
+
+
+ROOT = _repo_root()
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_agon_arena_session_model_registry import build, dump_min  # noqa: E402
 
-CONFIG = ROOT / 'config' / 'agon_arena_session_models.seed.json'
-GENERATED = ROOT / 'generated' / 'agon_arena_session_model_registry.min.json'
+CONFIG = ROOT / "mechanics" / "agon" / "config" / 'agon_arena_session_models.seed.json'
+GENERATED = ROOT / "mechanics" / "agon" / "generated" / 'agon_arena_session_model_registry.min.json'
 
 ALLOWED_MOVES = {
     'assert_position', 'challenge_claim', 'request_evidence', 'offer_evidence_reference',

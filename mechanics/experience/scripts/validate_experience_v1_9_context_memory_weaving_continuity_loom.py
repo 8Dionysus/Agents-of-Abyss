@@ -18,8 +18,8 @@ def _repo_root() -> Path:
 
 ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-v1-9-context-memory-weaving-continuity-loom.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_v1_9_context_memory_weaving_continuity_loom.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-v1-9-context-memory-weaving-continuity-loom.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_v1_9_context_memory_weaving_continuity_loom.example.json"
 
 SOURCE_SEED = {
     "archive_name": "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9.zip",

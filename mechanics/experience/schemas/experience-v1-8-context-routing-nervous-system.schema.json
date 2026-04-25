@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://agents-of-abyss.local/schemas/experience-v1-8-context-routing-nervous-system.schema.json",
+  "$id": "https://agents-of-abyss.local/mechanics/experience/schemas/experience-v1-8-context-routing-nervous-system.schema.json",
   "title": "experience_v1_8_context_routing_nervous_system_v1",
   "type": "object",
   "additionalProperties": false,

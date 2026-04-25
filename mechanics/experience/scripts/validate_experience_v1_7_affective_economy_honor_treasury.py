@@ -18,8 +18,8 @@ def _repo_root() -> Path:
 
 ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-v1-7-affective-economy-honor-treasury.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_v1_7_affective_economy_honor_treasury.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-v1-7-affective-economy-honor-treasury.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_v1_7_affective_economy_honor_treasury.example.json"
 
 SOURCE_ARCHIVE = "aoa-experience-affective-economy-honor-treasury-seed-v1_7.zip"
 SOURCE_SHA256 = "328872f61d4ffa16fdfd1315bf90c48ff4cfa7960b9b500275f6c8872bfe338e"

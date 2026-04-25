@@ -20,9 +20,9 @@ The companion seeds are optional first landings. They only hold candidate reques
 From `Agents-of-Abyss`:
 
 ```bash
-python scripts/build_agon_move_owner_binding_registry.py --check
-python scripts/validate_agon_move_owner_bindings.py
-python -m pytest -q tests/test_agon_move_owner_bindings.py
+python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check
+python mechanics/agon/scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py
 ```
 
 From `aoa-techniques` after companion landing:
@@ -30,7 +30,7 @@ From `aoa-techniques` after companion landing:
 ```bash
 python scripts/build_agon_technique_binding_candidates.py --check
 python scripts/validate_agon_technique_binding_candidates.py
-python -m pytest -q tests/test_agon_technique_binding_candidates.py
+python -m pytest -q/test_agon_technique_binding_candidates.py
 ```
 
 From `aoa-skills` after companion landing:
@@ -38,7 +38,7 @@ From `aoa-skills` after companion landing:
 ```bash
 python scripts/build_agon_skill_binding_candidates.py --check
 python scripts/validate_agon_skill_binding_candidates.py
-python -m pytest -q tests/test_agon_skill_binding_candidates.py
+python -m pytest -q/test_agon_skill_binding_candidates.py
 ```
 
 ## Exit criteria

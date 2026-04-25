@@ -9,7 +9,7 @@
       ],
       "emits": "review_queue_candidate",
       "hook_ref": "agon.wave8.hook.session_model_registry_drift",
-      "observes": "generated/agon_arena_session_model_registry.min.json"
+      "observes": "mechanics/agon/generated/agon_arena_session_model_registry.min.json"
     },
     {
       "does_not": [
@@ -19,7 +19,7 @@
       ],
       "emits": "owner_review_summary",
       "hook_ref": "agon.wave8.hook.session_model_stop_line_drift",
-      "observes": "config/agon_arena_session_models.seed.json"
+      "observes": "mechanics/agon/config/agon_arena_session_models.seed.json"
     }
   ],
   "live_protocol": false,

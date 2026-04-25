@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience_policy_precedent_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/experience_policy_precedent_v1.json",
   "title": "Experience Policy Precedent V1",
   "type": "object",
   "additionalProperties": false,

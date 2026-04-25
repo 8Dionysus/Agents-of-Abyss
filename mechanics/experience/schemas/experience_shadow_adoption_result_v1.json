@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience_shadow_adoption_result_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/experience_shadow_adoption_result_v1.json",
   "title": "experience_shadow_adoption_result v1",
   "type": "object",
   "required": [

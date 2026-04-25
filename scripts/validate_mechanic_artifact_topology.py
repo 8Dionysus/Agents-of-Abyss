@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Validate mechanic-owned artifact homes and root compatibility aliases."""
+"""Validate mechanic-owned artifact homes and root artifact districts."""
 
 from __future__ import annotations
 
 import argparse
-import os
 import sys
 from pathlib import Path
 
@@ -113,17 +112,6 @@ def rel(path: Path) -> str:
     return path.relative_to(REPO_ROOT).as_posix()
 
 
-def is_alias_to(path: Path, slug: str) -> bool:
-    if not path.is_symlink():
-        return False
-    target = (path.parent / os.readlink(path)).resolve()
-    try:
-        target_rel = target.relative_to(REPO_ROOT).as_posix()
-    except ValueError:
-        return False
-    return target_rel.startswith(f"mechanics/{slug}/")
-
-
 def validate_package_dirs(selected: set[str] | None, problems: list[str]) -> None:
     for slug in MECHANIC_SLUGS:
         if selected and slug not in selected:
@@ -138,7 +126,7 @@ def validate_package_dirs(selected: set[str] | None, problems: list[str]) -> Non
                 problems.append(f"{rel(path)} must be a directory")
 
 
-def validate_root_aliases(selected: set[str] | None, problems: list[str]) -> None:
+def validate_root_artifacts(selected: set[str] | None, problems: list[str]) -> None:
     for root_dir in ("schemas", "examples", "config", "generated", "scripts", "tests"):
         district = REPO_ROOT / root_dir
         if not district.is_dir():
@@ -153,13 +141,16 @@ def validate_root_aliases(selected: set[str] | None, problems: list[str]) -> Non
             slug = mechanic_for_name(name)
             if selected and slug not in selected:
                 continue
+            if path.is_symlink():
+                problems.append(
+                    f"{rel(path)} is a root alias; remove it and route callers to the owning mechanic path"
+                )
+                continue
             if slug is None:
                 continue
-            if not is_alias_to(path, slug):
-                problems.append(
-                    f"{rel(path)} is mechanic-owned; move source to mechanics/{slug}/ "
-                    "and leave only a compatibility alias if the root path must remain"
-                )
+            problems.append(
+                f"{rel(path)} is mechanic-owned; keep source under mechanics/{slug}/ and update callers"
+            )
 
 
 def validate_mechanic_sources(selected: set[str] | None, problems: list[str]) -> None:
@@ -191,7 +182,7 @@ def main() -> int:
     selected = set(args.mechanic) if args.mechanic else None
     problems: list[str] = []
     validate_package_dirs(selected, problems)
-    validate_root_aliases(selected, problems)
+    validate_root_artifacts(selected, problems)
     validate_mechanic_sources(selected, problems)
     if problems:
         print("Mechanic artifact topology validation failed:")

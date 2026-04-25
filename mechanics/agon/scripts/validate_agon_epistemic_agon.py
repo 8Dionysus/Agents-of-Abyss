@@ -38,8 +38,8 @@ KEY_FIELD = "component_id"
 REQUIRED_FIELDS = ['candidate_outputs', 'component_id', 'component_type', 'forbidden_effects', 'live_protocol', 'move_extensions', 'owner_repo', 'required_inputs', 'runtime_effect', 'summary']
 FORBIDDEN_EFFECTS = ['live_verdict_authority', 'durable_scar_write', 'retention_execution', 'rank_mutation', 'trust_mutation', 'tree_of_sophia_promotion', 'kag_promotion', 'hidden_scheduler_action', 'assistant_contestant_drift', 'auto_doctrine_rewrite']
 ALLOWED_RUNTIME = ['none', 'candidate_only', 'local_dry_run_candidate_only', 'local_rehearsal_candidate_only']
-ITEM_SCHEMA = ROOT / "schemas" / "agon-epistemic-agon.schema.json"
-REGISTRY_SCHEMA = ROOT / "schemas" / "agon-epistemic-agon-registry.schema.json"
+ITEM_SCHEMA = ROOT / "mechanics" / "agon" / "schemas" / "agon-epistemic-agon.schema.json"
+REGISTRY_SCHEMA = ROOT / "mechanics" / "agon" / "schemas" / "agon-epistemic-agon-registry.schema.json"
 
 
 def fail(message: str) -> int:

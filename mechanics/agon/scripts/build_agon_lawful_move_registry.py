@@ -22,8 +22,8 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-SOURCE = ROOT / "config" / "agon_lawful_moves.seed.json"
-OUTPUT = ROOT / "generated" / "agon_lawful_move_registry.min.json"
+SOURCE = ROOT / "mechanics" / "agon" / "config" / "agon_lawful_moves.seed.json"
+OUTPUT = ROOT / "mechanics" / "agon" / "generated" / "agon_lawful_move_registry.min.json"
 
 MOVE_CLASSES = {
     "stance",
@@ -238,8 +238,8 @@ def build_registry() -> dict[str, Any]:
 
     return {
         "schema_version": "agon-lawful-move-registry/0.1",
-        "generated_by": "scripts/build_agon_lawful_move_registry.py",
-        "source": "config/agon_lawful_moves.seed.json",
+        "generated_by": "mechanics/agon/scripts/build_agon_lawful_move_registry.py",
+        "source": "mechanics/agon/config/agon_lawful_moves.seed.json",
         "wave": "III",
         "status": "pre_protocol_lawful_move_language",
         "counts": {

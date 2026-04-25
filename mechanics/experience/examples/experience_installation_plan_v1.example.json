@@ -17,10 +17,10 @@
     "abyss-stack",
     "Tree-of-Sophia"
   ],
-  "migration_plan_ref": "repo/Agents-of-Abyss/examples/experience_migration_plan_v1.example.json",
+  "migration_plan_ref": "repo/Agents-of-Abyss/mechanics/experience/examples/experience_migration_plan_v1.example.json",
   "notes": "Example artifact for experience_installation_plan_v1.",
   "owner_repo": "Agents-of-Abyss",
-  "smoke_plan_ref": "repo/Agents-of-Abyss/examples/experience_smoke_test_plan_v1.example.json",
+  "smoke_plan_ref": "repo/Agents-of-Abyss/mechanics/experience/examples/experience_smoke_test_plan_v1.example.json",
   "status": "draft",
   "version": "1.0.0"
 }

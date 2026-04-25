@@ -27,9 +27,9 @@ CLOSED_QUEST_STATES = {"done", "dropped"}
 RPG_ARCHITECTURE_RFC_PATH = REPO_ROOT / "mechanics" / "rpg" / "docs" / "RPG_ARCHITECTURE_RFC.md"
 RPG_CANONICAL_TERMINOLOGY_PATH = REPO_ROOT / "mechanics" / "rpg" / "docs" / "RPG_CANONICAL_TERMINOLOGY.md"
 RPG_BOUNDARY_MAP_PATH = REPO_ROOT / "mechanics" / "rpg" / "docs" / "RPG_BOUNDARY_MAP.md"
-DUAL_VOCABULARY_SCHEMA_PATH = REPO_ROOT / "schemas" / "dual_vocabulary_overlay.schema.json"
-DUAL_VOCABULARY_EXAMPLE_PATH = REPO_ROOT / "examples" / "dual_vocabulary_overlay.example.json"
-DUAL_VOCABULARY_GENERATED_PATH = REPO_ROOT / "generated" / "dual_vocabulary_overlay.json"
+DUAL_VOCABULARY_SCHEMA_PATH = REPO_ROOT / "mechanics" / "rpg" / "schemas" / "dual_vocabulary_overlay.schema.json"
+DUAL_VOCABULARY_EXAMPLE_PATH = REPO_ROOT / "mechanics" / "rpg" / "examples" / "dual_vocabulary_overlay.example.json"
+DUAL_VOCABULARY_GENERATED_PATH = REPO_ROOT / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json"
 RPG_BRIDGE_WAVE_PATH = REPO_ROOT / "mechanics" / "rpg" / "docs" / "RPG_BRIDGE_WAVE.md"
 RPG_RUNTIME_PROJECTION_WAVE_PATH = REPO_ROOT / "mechanics" / "rpg" / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md"
 QUESTBOOK_SECTION_TO_BAND = {
@@ -185,85 +185,85 @@ def dual_vocabulary_required_canonical_keys(schema: dict[str, object]) -> set[st
 
 def validate_dual_vocabulary_generated_payload(payload: object, schema: dict[str, object]) -> None:
     if not isinstance(payload, dict):
-        fail("generated/dual_vocabulary_overlay.json must be a JSON object")
+        fail("mechanics/rpg/generated/dual_vocabulary_overlay.json must be a JSON object")
 
     required_top_level = schema.get("required")
     if not isinstance(required_top_level, list):
-        fail("schemas/dual_vocabulary_overlay.schema.json must declare top-level required fields")
+        fail("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json must declare top-level required fields")
     missing_top_level = [key for key in required_top_level if key not in payload]
     if missing_top_level:
         fail(
-            "generated/dual_vocabulary_overlay.json is missing required keys: "
+            "mechanics/rpg/generated/dual_vocabulary_overlay.json is missing required keys: "
             + ", ".join(missing_top_level)
         )
 
     properties = schema.get("properties")
     if not isinstance(properties, dict):
-        fail("schemas/dual_vocabulary_overlay.schema.json must declare properties")
+        fail("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json must declare properties")
     entries_schema = properties.get("entries")
     if not isinstance(entries_schema, dict):
-        fail("schemas/dual_vocabulary_overlay.schema.json must define entries")
+        fail("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json must define entries")
 
     for field_name in ("overlay_id", "theme_id", "language"):
         value = payload.get(field_name)
         if not isinstance(value, str) or not value:
-            fail(f"generated/dual_vocabulary_overlay.json {field_name} must be a non-empty string")
+            fail(f"mechanics/rpg/generated/dual_vocabulary_overlay.json {field_name} must be a non-empty string")
 
     if payload.get("schema_version") != "dual_vocabulary_overlay_v1":
-        fail("generated/dual_vocabulary_overlay.json schema_version must equal 'dual_vocabulary_overlay_v1'")
+        fail("mechanics/rpg/generated/dual_vocabulary_overlay.json schema_version must equal 'dual_vocabulary_overlay_v1'")
     if payload.get("public_safe") is not True:
-        fail("generated/dual_vocabulary_overlay.json public_safe must be true")
+        fail("mechanics/rpg/generated/dual_vocabulary_overlay.json public_safe must be true")
 
     entries = payload.get("entries")
     if not isinstance(entries, list):
-        fail("generated/dual_vocabulary_overlay.json entries must be a list")
+        fail("mechanics/rpg/generated/dual_vocabulary_overlay.json entries must be a list")
 
     min_items = entries_schema.get("minItems")
     if isinstance(min_items, int) and len(entries) < min_items:
-        fail(f"generated/dual_vocabulary_overlay.json entries must contain at least {min_items} items")
+        fail(f"mechanics/rpg/generated/dual_vocabulary_overlay.json entries must contain at least {min_items} items")
     max_items = entries_schema.get("maxItems")
     if isinstance(max_items, int) and len(entries) > max_items:
-        fail(f"generated/dual_vocabulary_overlay.json entries must contain at most {max_items} items")
+        fail(f"mechanics/rpg/generated/dual_vocabulary_overlay.json entries must contain at most {max_items} items")
 
     item_schema = entries_schema.get("items")
     if not isinstance(item_schema, dict):
-        fail("schemas/dual_vocabulary_overlay.schema.json entries.items must be an object")
+        fail("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json entries.items must be an object")
     required_entry_fields = item_schema.get("required")
     if not isinstance(required_entry_fields, list):
-        fail("schemas/dual_vocabulary_overlay.schema.json entries.items must declare required fields")
+        fail("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json entries.items must declare required fields")
     item_properties = item_schema.get("properties")
     if not isinstance(item_properties, dict):
-        fail("schemas/dual_vocabulary_overlay.schema.json entries.items must declare properties")
+        fail("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json entries.items must declare properties")
     presentation_group_schema = item_properties.get("presentation_group")
     if not isinstance(presentation_group_schema, dict) or not isinstance(
         presentation_group_schema.get("enum"),
         list,
     ):
-        fail("schemas/dual_vocabulary_overlay.schema.json must constrain presentation_group")
+        fail("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json must constrain presentation_group")
     allowed_groups = {value for value in presentation_group_schema["enum"] if isinstance(value, str)}
 
     seen_canonical_keys: set[str] = set()
     duplicate_canonical_keys: list[str] = []
     for index, entry in enumerate(entries):
         if not isinstance(entry, dict):
-            fail(f"generated/dual_vocabulary_overlay.json entries[{index}] must be an object")
+            fail(f"mechanics/rpg/generated/dual_vocabulary_overlay.json entries[{index}] must be an object")
         missing_entry_fields = [key for key in required_entry_fields if key not in entry]
         if missing_entry_fields:
             fail(
-                "generated/dual_vocabulary_overlay.json "
+                "mechanics/rpg/generated/dual_vocabulary_overlay.json "
                 f"entries[{index}] is missing required keys: {', '.join(missing_entry_fields)}"
             )
         for field_name in ("canonical_key", "canonical_label", "presentation_label"):
             value = entry.get(field_name)
             if not isinstance(value, str) or not value:
                 fail(
-                    "generated/dual_vocabulary_overlay.json "
+                    "mechanics/rpg/generated/dual_vocabulary_overlay.json "
                     f"entries[{index}].{field_name} must be a non-empty string"
                 )
         presentation_group = entry.get("presentation_group")
         if presentation_group not in allowed_groups:
             fail(
-                "generated/dual_vocabulary_overlay.json "
+                "mechanics/rpg/generated/dual_vocabulary_overlay.json "
                 f"entries[{index}].presentation_group must stay within the schema enum"
             )
         canonical_key = entry["canonical_key"]
@@ -273,14 +273,14 @@ def validate_dual_vocabulary_generated_payload(payload: object, schema: dict[str
 
     if duplicate_canonical_keys:
         fail(
-            "generated/dual_vocabulary_overlay.json must not duplicate canonical_key values "
+            "mechanics/rpg/generated/dual_vocabulary_overlay.json must not duplicate canonical_key values "
             f"(first duplicate: {duplicate_canonical_keys[0]})"
         )
 
     missing_canonical_keys = sorted(dual_vocabulary_required_canonical_keys(schema) - seen_canonical_keys)
     if missing_canonical_keys:
         fail(
-            "generated/dual_vocabulary_overlay.json is missing required canonical_key values: "
+            "mechanics/rpg/generated/dual_vocabulary_overlay.json is missing required canonical_key values: "
             + ", ".join(missing_canonical_keys)
         )
 
@@ -447,15 +447,34 @@ def validate_nested_agents_surface() -> None:
         fail(f"nested AGENTS docs check failed: {formatted}")
 
 
+def collect_quest_paths() -> dict[str, Path]:
+    root_quest_files = sorted(path for path in QUESTS_PATH.glob("AOA-Q-*.yaml") if path.is_file())
+    if root_quest_files:
+        listed = ", ".join(path.relative_to(REPO_ROOT).as_posix() for path in root_quest_files)
+        fail(f"quest yaml files must live in lifecycle directories, not top-level quests: {listed}")
+
+    quest_paths: dict[str, Path] = {}
+    for path in sorted(QUESTS_PATH.glob("*/AOA-Q-*.yaml")):
+        if not path.is_file():
+            continue
+        quest_id = path.stem
+        previous = quest_paths.get(quest_id)
+        if previous is not None:
+            fail(
+                f"duplicate quest id '{quest_id}' in "
+                f"{previous.relative_to(REPO_ROOT).as_posix()} and {path.relative_to(REPO_ROOT).as_posix()}"
+            )
+        quest_paths[quest_id] = path
+    return quest_paths
+
+
 def validate_questbook_surface() -> None:
     questbook_text = read_text(QUESTBOOK_PATH)
     read_text(QUESTBOOK_MODEL_PATH)
     first_wave_text = read_text(QUESTBOOK_FIRST_WAVE_PATH)
     questbook_bands, ids_in_unmapped_sections = parse_questbook_bands(questbook_text)
 
-    quest_paths = {
-        path.stem: path for path in QUESTS_PATH.glob("AOA-Q-*.yaml") if path.is_file()
-    }
+    quest_paths = collect_quest_paths()
     actual_ids = set(quest_paths)
     expected_ids = set(REQUIRED_QUEST_IDS)
     missing = sorted(expected_ids - actual_ids)
@@ -536,17 +555,17 @@ def validate_questbook_surface() -> None:
 
         schema_payload = read_json(DUAL_VOCABULARY_SCHEMA_PATH)
         if not isinstance(schema_payload, dict):
-            fail("schemas/dual_vocabulary_overlay.schema.json must be a JSON object")
+            fail("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json must be a JSON object")
         if schema_payload.get("title") != "dual_vocabulary_overlay_v1":
-            fail("schemas/dual_vocabulary_overlay.schema.json title must equal 'dual_vocabulary_overlay_v1'")
+            fail("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json title must equal 'dual_vocabulary_overlay_v1'")
 
         example_payload = read_json(DUAL_VOCABULARY_EXAMPLE_PATH)
         if not isinstance(example_payload, dict):
-            fail("examples/dual_vocabulary_overlay.example.json must be a JSON object")
+            fail("mechanics/rpg/examples/dual_vocabulary_overlay.example.json must be a JSON object")
         if example_payload.get("schema_version") != "dual_vocabulary_overlay_v1":
-            fail("examples/dual_vocabulary_overlay.example.json schema_version must equal 'dual_vocabulary_overlay_v1'")
+            fail("mechanics/rpg/examples/dual_vocabulary_overlay.example.json schema_version must equal 'dual_vocabulary_overlay_v1'")
         if example_payload.get("public_safe") is not True:
-            fail("examples/dual_vocabulary_overlay.example.json public_safe must be true")
+            fail("mechanics/rpg/examples/dual_vocabulary_overlay.example.json public_safe must be true")
 
     if "AOA-Q-0007" in actual_ids:
         bridge_wave_text = read_text(RPG_BRIDGE_WAVE_PATH)
@@ -573,7 +592,7 @@ def validate_questbook_surface() -> None:
         generated_payload = read_json(DUAL_VOCABULARY_GENERATED_PATH)
         schema_payload = read_json(DUAL_VOCABULARY_SCHEMA_PATH)
         if not isinstance(schema_payload, dict):
-            fail("schemas/dual_vocabulary_overlay.schema.json must be a JSON object")
+            fail("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json must be a JSON object")
         validate_dual_vocabulary_generated_payload(generated_payload, schema_payload)
 
     if "ATM10-Agent" in first_wave_text:

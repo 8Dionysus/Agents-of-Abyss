@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://agents-of-abyss.local/schemas/experience-v1-2-v2-0-bridge.schema.json",
+  "$id": "https://agents-of-abyss.local/mechanics/experience/schemas/experience-v1-2-v2-0-bridge.schema.json",
   "title": "experience_v1_2_to_v2_0_bridge_v1",
   "type": "object",
   "additionalProperties": false,

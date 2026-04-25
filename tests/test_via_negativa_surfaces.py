@@ -1,1 +1,0 @@
-../mechanics/antifragility/tests/test_via_negativa_surfaces.py

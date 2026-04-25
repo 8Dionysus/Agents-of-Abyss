@@ -16,8 +16,8 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-BUILDER_PATH = ROOT / "scripts" / "build_agon_lawful_move_registry.py"
-GENERATED = ROOT / "generated" / "agon_lawful_move_registry.min.json"
+BUILDER_PATH = ROOT / "mechanics" / "agon" / "scripts" / "build_agon_lawful_move_registry.py"
+GENERATED = ROOT / "mechanics" / "agon" / "generated" / "agon_lawful_move_registry.min.json"
 
 REQUIRED_FILES = [
     "README.md",
@@ -28,15 +28,15 @@ REQUIRED_FILES = [
     "mechanics/agon/docs/AGON_MOVE_REGISTRY_MODEL.md",
     "mechanics/agon/docs/AGON_MOVE_OWNER_HANDOFFS.md",
     "mechanics/agon/docs/AGON_WAVE3_LANDING.md",
-    "schemas/agon-lawful-move.schema.json",
-    "schemas/agon-lawful-move-registry.schema.json",
-    "config/agon_lawful_moves.seed.json",
-    "generated/agon_lawful_move_registry.min.json",
+    "mechanics/agon/schemas/agon-lawful-move.schema.json",
+    "mechanics/agon/schemas/agon-lawful-move-registry.schema.json",
+    "mechanics/agon/config/agon_lawful_moves.seed.json",
+    "mechanics/agon/generated/agon_lawful_move_registry.min.json",
 ]
 
 OPTIONAL_WAVE0_FILES = [
     "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
-    "generated/agon_imposition_readiness.min.json",
+    "mechanics/agon/generated/agon_imposition_readiness.min.json",
 ]
 
 REQUIRED_MOVE_KEYS = {
@@ -163,7 +163,7 @@ def main() -> int:
     expected = builder.dumps_min(builder.build_registry())
     existing = GENERATED.read_text(encoding="utf-8")
     if existing != expected:
-        fail("generated/agon_lawful_move_registry.min.json is stale; run scripts/build_agon_lawful_move_registry.py")
+        fail("mechanics/agon/generated/agon_lawful_move_registry.min.json is stale; run mechanics/agon/scripts/build_agon_lawful_move_registry.py")
 
     registry = read_json(GENERATED)
     validate_registry_shape(registry)

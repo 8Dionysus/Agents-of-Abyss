@@ -4,15 +4,15 @@ This directory holds machine-readable shape contracts for center-planted surface
 
 A schema checks shape. It does not prove truth, grant authority, or replace the source document that gives meaning to the object.
 
-Mechanic-owned schemas live in `mechanics/<slug>/schemas/`. Root paths such as
-`schemas/agon-*` may exist as compatibility aliases only.
+Mechanic-owned schemas live in `mechanics/<slug>/schemas/`. Root `schemas/`
+contains only root-owned shape contracts.
 
 ## Main families
 
 | Family | Examples | Meaning |
 |---|---|---|
 | Center and federation | `center-entry-map.schema.json`, `ecosystem-registry.schema.json` | compact center and registry contracts |
-| Mechanic aliases | `agon-*`, `experience-*`, `dual_vocabulary_overlay.schema.json`, `deletion_candidate_list_v1.json` | stable root routes to mechanic-owned schemas |
+| Mechanic schemas | `mechanics/<slug>/schemas/*` | mechanic-owned shape contracts |
 
 ## Rules
 
@@ -27,4 +27,4 @@ Mechanic-owned schemas live in `mechanics/<slug>/schemas/`. Root paths such as
 1. Identify the source document that owns the semantics.
 2. Identify the generated artifact or validator that consumes the schema.
 3. Check [`mechanics/README.md`](../mechanics/README.md) if the schema belongs to Agon, Experience, RPG, antifragility, questbook, or another mechanic.
-4. Run the nearest validator and `python -m pytest -q tests`.
+4. Run the nearest validator and `python -m pytest -q`.

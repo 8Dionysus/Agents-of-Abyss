@@ -23,8 +23,8 @@
     "no_center_takeover_of_owner_truth"
   ],
   "observed_surfaces": [
-    "config/agon_arena_session_models.seed.json",
-    "generated/agon_arena_session_model_registry.min.json",
+    "mechanics/agon/config/agon_arena_session_models.seed.json",
+    "mechanics/agon/generated/agon_arena_session_model_registry.min.json",
     "mechanics/agon/docs/AGON_ARENA_SESSION_MODEL.md",
     "mechanics/agon/docs/AGON_SESSION_LIFECYCLE_MODEL.md",
     "mechanics/agon/docs/AGON_CHARTER_AND_SEAT_MODEL.md"

@@ -3,7 +3,7 @@
 ## Required local check
 
 ```bash
-python scripts/validate_experience_distillation.py --part service-mesh
+python mechanics/experience/scripts/validate_experience_distillation.py --part service-mesh
 ```
 
 ## Mechanic checks
@@ -17,6 +17,6 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 ## Targeted checks
 
 ```bash
-python scripts/validate_experience_v1_2_service_mesh_operations.py
-python -m pytest -q tests/test_experience_v1_2_service_mesh_operations.py
+python mechanics/experience/scripts/validate_experience_v1_2_service_mesh_operations.py
+python -m pytest -q mechanics/experience/tests/test_experience_v1_2_service_mesh_operations.py
 ```

@@ -3,7 +3,7 @@
 ## Required local check
 
 ```bash
-python scripts/validate_experience_distillation.py --part compatibility-bridges
+python mechanics/experience/scripts/validate_experience_distillation.py --part compatibility-bridges
 ```
 
 ## Mechanic checks
@@ -17,8 +17,8 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 ## Targeted checks
 
 ```bash
-python scripts/validate_experience_v1_2_to_v2_0_bridge.py
-python scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
-python scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
-python -m pytest -q tests/test_experience_v1_2_to_v2_0_bridge.py tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python mechanics/experience/scripts/validate_experience_v1_2_to_v2_0_bridge.py
+python mechanics/experience/scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+python mechanics/experience/scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python -m pytest -q mechanics/experience/tests/test_experience_v1_2_to_v2_0_bridge.py mechanics/experience/tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py mechanics/experience/tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
 ```

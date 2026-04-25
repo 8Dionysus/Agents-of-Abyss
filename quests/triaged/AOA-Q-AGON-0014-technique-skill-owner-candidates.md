@@ -18,7 +18,7 @@ In `aoa-techniques`:
 ```bash
 python scripts/build_agon_technique_binding_candidates.py --check
 python scripts/validate_agon_technique_binding_candidates.py
-python -m pytest -q tests/test_agon_technique_binding_candidates.py
+python -m pytest -q/test_agon_technique_binding_candidates.py
 ```
 
 In `aoa-skills`:
@@ -26,5 +26,5 @@ In `aoa-skills`:
 ```bash
 python scripts/build_agon_skill_binding_candidates.py --check
 python scripts/validate_agon_skill_binding_candidates.py
-python -m pytest -q tests/test_agon_skill_binding_candidates.py
+python -m pytest -q/test_agon_skill_binding_candidates.py
 ```
