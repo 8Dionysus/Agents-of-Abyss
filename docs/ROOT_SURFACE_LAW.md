@@ -16,6 +16,23 @@ A root surface is allowed only when it serves at least one of these durable role
 
 A surface that is merely interesting, historical, local to one wave, generated, experimental, or future-looking must not sit in root by default.
 
+## Docs-root principle
+
+`docs/` root has its own smaller version of the same law.
+
+A file may remain flat under `docs/` only when it is current center doctrine,
+current route law, owner map support, or a compatibility route that protects a
+known public entrypoint. Historical receipts, audit evidence, registry notes,
+decisions, postmortems, traces, mechanic-specific legacy records, and
+superseded aliases belong in thematic districts.
+
+The docs district law is defined by:
+
+- [`THEMATIC_DISTRICT_PROTOCOL`](THEMATIC_DISTRICT_PROTOCOL.md)
+- [`CURRENT_SURFACE_INDEX`](CURRENT_SURFACE_INDEX.md)
+- [`thematic_districts.json`](thematic_districts.json)
+- [`generated/docs_thematic_index.min.json`](../generated/docs_thematic_index.min.json)
+
 ## Allowed root surfaces
 
 | Class | Allowed examples | Why root is justified | Guardrail |
@@ -68,8 +85,41 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 
 This law intentionally opens deeper cleanup instead of hiding the problem.
 
-After the first root cleanup lands, run a second pass over `docs/` to decide whether wave landing receipts should remain flat under `docs/` or migrate into thematic districts such as `docs/landings/`, `docs/agon/`, `docs/experience/`, and `docs/registry/`. Do not perform that migration casually. It touches many links, generated surfaces, tests, and agent expectations.
+Wave D starts that second pass by adding thematic district law, a classifier, a
+generated district index, and cleanup validators. It does not remove the
+`docs/MECHANICS.md` compatibility route because current mechanic entry now
+belongs under `mechanics/README.md` while old callers still need a safe route.
+
+## Wave D docs cleanup decisions
+
+| Existing docs surface kind | Decision | New home or status | Why |
+|---|---|---|---|
+| current center doctrine | keep flat under `docs/` | `FEDERATION_RULES`, `LAYERS`, `REPO_ROLES`, `ROOT_SURFACE_LAW`, `START_HERE_ROUTE_CONTRACT` | these are current orientation surfaces |
+| mechanic compatibility route | keep flat and narrow | `docs/MECHANICS.md` | existing entrypoint that routes to `mechanics/README.md` |
+| agent reference detail | move | `docs/agent-lane/` | supports agent lane without crowding current doctrine |
+| audit protocol/evidence | move | `docs/audits/` | review surfaces belong together |
+| seed, wave, or landing receipt | move or keep under | `docs/landings/` | receipts preserve provenance without masquerading as current law |
+| registry design note | move or keep under | `docs/registry/` | registry evolution belongs beside registry planning |
+| decision record | keep or move into | `docs/decisions/` | decisions explain why; current surfaces define what |
+| postmortem/retrospective | keep or move into | `docs/postmortems/` | repair learning is not route law |
+| move manifest/provenance log | move into | `docs/traces/` | traces explain movement, not meaning |
+| flat Agon legacy docs | move into | `docs/agon/` | current Agon doctrine routes through `mechanics/agon/` |
+| flat Experience legacy docs | move into | `docs/experience/` | current Experience doctrine routes through `mechanics/experience/` |
+| superseded aliases | move into | `docs/legacy/` | legacy surfaces are compatibility/provenance, not current law |
+
+## Docs cleanup validation
+
+```bash
+python scripts/plan_docs_thematic_cleanup.py --check
+python scripts/validate_docs_thematic_districts.py
+python scripts/validate_docs_migration_map.py
+python scripts/build_docs_thematic_index.py --check
+python scripts/validate_docs_thematic_index.py
+```
 
 ## Final rule
 
 The root is healthy when every file there can explain why it is visible before the reader enters the districts. If the explanation sounds like "it was created during a wave," move it.
+
+The docs root is healthy when every flat docs file can explain why it is
+current rather than historical, evidential, transitional, or legacy.

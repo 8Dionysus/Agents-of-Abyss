@@ -11,6 +11,9 @@ Generated files help low-context agents, validators, and local tooling orient qu
 | `center_entry_map.min.json` | compact center-entry map for low-context orientation |
 | `ecosystem_registry.min.json` | compact public AoA contour registry |
 | `federation_supporting_inventory.min.json` | supporting consumers and adjacent support surfaces outside compact registry v1 |
+| `mechanic_card_index.min.json` | compact reflection of mechanic package entry cards |
+| `owner_request_queue.min.json` | compact center-side owner request queue |
+| `docs_thematic_index.min.json` | compact map of docs thematic districts |
 | `agon_*.min.json` | generated Agon pre-protocol or candidate registry surfaces |
 | `dual_vocabulary_overlay.json` | derived vocabulary overlay surface |
 
@@ -27,6 +30,12 @@ Generated files help low-context agents, validators, and local tooling orient qu
 ```bash
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
+python scripts/build_mechanic_card_index.py --check
+python scripts/validate_mechanic_card_index.py
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
+python scripts/build_docs_thematic_index.py --check
+python scripts/validate_docs_thematic_index.py
 python scripts/validate_ecosystem.py
 ```
 

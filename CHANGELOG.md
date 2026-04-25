@@ -24,6 +24,20 @@ Tracking starts with the community-docs baseline for this repository.
   checked surfaces, validators, owner boundaries, stop-lines, and next routes
 - `scripts/validate_mechanic_landing_logs.py` and regression coverage for the
   Agon and Experience LANDING_LOG surfaces
+- mechanic card contracts for every root mechanic package, plus
+  `generated/mechanic_card_index.min.json`,
+  `scripts/build_mechanic_card_index.py`,
+  `scripts/validate_mechanic_card_index.py`, and
+  `scripts/validate_mechanic_readme_cards.py`
+- `mechanics/OWNER_REQUEST_PROTOCOL.md`,
+  `mechanics/OWNER_REQUEST_QUEUE.md`,
+  `mechanics/owner-request-queue.json`, per-mechanic
+  `*OWNER_REPO_REQUESTS.md` packets, `generated/owner_request_queue.min.json`,
+  and owner-request validators for center-side handoff tracking
+- docs thematic district cleanup law through
+  `docs/THEMATIC_DISTRICT_PROTOCOL.md`, `docs/CURRENT_SURFACE_INDEX.md`,
+  `docs/thematic_districts.json`, `generated/docs_thematic_index.min.json`,
+  district README gates, and docs-thematic validators
 
 ### Changed
 
@@ -43,6 +57,11 @@ Tracking starts with the community-docs baseline for this repository.
 - release validation now runs Markdown shape checks, mechanics topology
   validation, and mechanic landing-log validation through
   `scripts/release_check.py`
+- `scripts/release_check.py` now also checks docs thematic cleanup, mechanic
+  card indexes, and generated owner-request queues before running tests
+- detailed agent-lane and Codex audit references now live under
+  `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
+  narrow compatibility route into `mechanics/README.md`
 
 ## [0.2.3] - 2026-04-23
 

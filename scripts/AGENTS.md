@@ -11,7 +11,14 @@ Current scripts include:
 - `validate_ecosystem.py` for schema, registry, and center-level `QUESTBOOK` surface checks
 - `validate_nested_agents.py` for required local directory guidance under `docs/`, `generated/`, `schemas/`, and `scripts/`
 - `validate_entry_surface_sync.py` for route-mode parity across public entry surfaces
-- `release_check.py` for the release-gate bundle that runs markdown shape, entry sync, center-entry, mechanics, ecosystem, and tests
+- `release_check.py` for the release-gate bundle that runs docs thematic, markdown shape, entry sync, center-entry, mechanics, ecosystem, and tests
+- `plan_docs_thematic_cleanup.py`, `build_docs_thematic_index.py`, and
+  `validate_docs_thematic_*.py` for Wave D docs district cleanup checks
+- `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, and
+  `validate_mechanic_readme_cards.py` for the mechanic card contract
+- `build_owner_request_queue.py`, `validate_owner_request_queue.py`,
+  `validate_generated_owner_request_queue.py`, and
+  `validate_owner_request_docs.py` for center-side owner request packets
 - `validate_candidate_lineage_contract.py` for the narrow cross-repo Growth Refinery example-chain witness
 - `validate_wave4_kernel_automation.py` for the reviewed wave 4 next-kernel and automation follow-through seam across sibling repos
 - `agon_imposition_common.py` for the canonical Agon Wave 0 capsule payload,
@@ -70,6 +77,11 @@ After changing validator logic, run:
 
 ```bash
 python -m pip install -r requirements-dev.txt
+python scripts/plan_docs_thematic_cleanup.py --check
+python scripts/validate_docs_thematic_districts.py
+python scripts/validate_docs_migration_map.py
+python scripts/build_docs_thematic_index.py --check
+python scripts/validate_docs_thematic_index.py
 python scripts/validate_entry_surface_sync.py
 python scripts/validate_ecosystem.py
 python scripts/release_check.py
