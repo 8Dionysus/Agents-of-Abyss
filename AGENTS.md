@@ -1,5 +1,29 @@
 # AGENTS.md
 
+## Applies to
+
+This root card applies to the whole repository unless a nearer nested `AGENTS.md` narrows the lane.
+
+## Role
+
+This AGENTS card keeps local work inside the Agents-of-Abyss center lane, names the nearest owner boundary, and routes wider claims back to the root card.
+
+## Read before editing
+
+Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or protocol surface before changing files in this lane.
+
+## Boundaries
+
+Do not use this lane to override owner-local truth, generated-source boundaries, sibling-repo authority, or release validation contracts.
+
+## Validation
+
+Run the nearest validator named by this card. For release-facing changes, also run `python scripts/release_check.py`.
+
+## Closeout
+
+Closeout must name changed surfaces, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
+
 Root route card for `Agents-of-Abyss`.
 
 ## Purpose
@@ -83,6 +107,10 @@ python scripts/validate_markdown_shape.py
 python scripts/validate_status_vocabulary.py
 python scripts/build_link_shape_hygiene_index.py --check
 python scripts/validate_link_shape_hygiene_index.py
+python scripts/validate_agents_md_shape.py
+python scripts/validate_agents_mesh.py
+python scripts/build_agents_mesh_index.py --check
+python scripts/validate_agents_mesh_index.py
 python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py

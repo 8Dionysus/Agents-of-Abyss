@@ -43,6 +43,10 @@ Tracking starts with the community-docs baseline for this repository.
   `docs/HYGIENE_GUARDRAIL_INDEX.md`,
   `config/link_shape_hygiene.json`, `generated/link_shape_hygiene.min.json`,
   local-link/status/freshness validators, and exact known-repair traces
+- Wave F AGENTS mesh guardrails through `docs/AGENTS_MESH_PROTOCOL.md`,
+  `docs/AGENTS_MESH_INDEX.md`, `config/agents_mesh.json`,
+  `generated/agents_mesh.min.json`, local `AGENTS.md` district cards, mesh
+  validators, and regression tests
 
 ### Changed
 
@@ -67,6 +71,9 @@ Tracking starts with the community-docs baseline for this repository.
 - `scripts/release_check.py` now also checks known link repairs, local
   Markdown links, status vocabulary, generated freshness, and the Wave E
   hygiene suite before release acceptance
+- `scripts/release_check.py`, center-entry sync, generated freshness, and
+  contributor guidance now include AGENTS mesh shape, coverage, and generated
+  index validation before release acceptance
 - detailed agent-lane and Codex audit references now live under
   `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
   narrow compatibility route into `mechanics/README.md`

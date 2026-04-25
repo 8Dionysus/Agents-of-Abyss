@@ -17,6 +17,7 @@ It is not a runtime secret store and not the configuration home for `abyss-stack
 | Surface | Consumed by | Role |
 |---|---|---|
 | `link_shape_hygiene.json` | Wave E hygiene validators and `generated/link_shape_hygiene.min.json` | local link repair rules, Markdown shape targets, status vocabularies, and generated freshness checks |
+| `agents_mesh.json` | Wave F AGENTS mesh validators and `generated/agents_mesh.min.json` | required local AGENTS-card coverage, shape headings, and compact mesh metadata |
 
 ## Before editing
 
@@ -29,4 +30,13 @@ For `link_shape_hygiene.json`, the nearest validator is:
 
 ```bash
 python scripts/validate_hygiene_suite.py
+```
+
+For `agents_mesh.json`, the nearest validators are:
+
+```bash
+python scripts/validate_agents_md_shape.py
+python scripts/validate_agents_mesh.py
+python scripts/build_agents_mesh_index.py --check
+python scripts/validate_agents_mesh_index.py
 ```

@@ -1,0 +1,789 @@
+{
+  "schema_version": "aoa_agents_mesh_v1",
+  "authority_ref": "docs/AGENTS_MESH_PROTOCOL.md",
+  "root_agents_ref": "AGENTS.md",
+  "route_contract_ref": "docs/START_HERE_ROUTE_CONTRACT.md",
+  "generated_ref": "generated/agents_mesh.min.json",
+  "required_headings": [
+    "## Applies to",
+    "## Role",
+    "## Read before editing",
+    "## Boundaries",
+    "## Validation",
+    "## Closeout"
+  ],
+  "max_line_length": 240,
+  "min_heading_count": 7,
+  "entries": [
+    {
+      "path": "AGENTS.md",
+      "scope": "repository root",
+      "kind": "root-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Upgrades the current compact root card into a readable mesh root.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": ".agents/AGENTS.md",
+      "scope": ".agents/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": ".github/AGENTS.md",
+      "scope": ".github/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "Spark/AGENTS.md",
+      "scope": "Spark/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "assets/AGENTS.md",
+      "scope": "assets/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "config/AGENTS.md",
+      "scope": "config/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "examples/AGENTS.md",
+      "scope": "examples/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "generated/AGENTS.md",
+      "scope": "generated/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "manifests/AGENTS.md",
+      "scope": "manifests/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "quests/AGENTS.md",
+      "scope": "quests/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "schemas/AGENTS.md",
+      "scope": "schemas/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "scripts/AGENTS.md",
+      "scope": "scripts/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "tests/AGENTS.md",
+      "scope": "tests/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "New or upgraded local district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/AGENTS.md",
+      "scope": "docs/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Upgrades docs card for thematic districts and route-contract discipline.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/agent-lane/AGENTS.md",
+      "scope": "docs/agent-lane/",
+      "kind": "docs-thematic-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Thematic docs district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/audits/AGENTS.md",
+      "scope": "docs/audits/",
+      "kind": "docs-thematic-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Thematic docs district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/landings/AGENTS.md",
+      "scope": "docs/landings/",
+      "kind": "docs-thematic-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Thematic docs district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/registry/AGENTS.md",
+      "scope": "docs/registry/",
+      "kind": "docs-thematic-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Thematic docs district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/decisions/AGENTS.md",
+      "scope": "docs/decisions/",
+      "kind": "docs-thematic-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Thematic docs district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/postmortems/AGENTS.md",
+      "scope": "docs/postmortems/",
+      "kind": "docs-thematic-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Thematic docs district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/traces/AGENTS.md",
+      "scope": "docs/traces/",
+      "kind": "docs-thematic-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Thematic docs district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/agon/AGENTS.md",
+      "scope": "docs/agon/",
+      "kind": "docs-thematic-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Thematic docs district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/experience/AGENTS.md",
+      "scope": "docs/experience/",
+      "kind": "docs-thematic-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Thematic docs district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "docs/legacy/AGENTS.md",
+      "scope": "docs/legacy/",
+      "kind": "docs-thematic-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Thematic docs district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/AGENTS.md",
+      "scope": "mechanics/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Upgrades mechanics root package law and mesh rules.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/method-growth/AGENTS.md",
+      "scope": "mechanics/method-growth/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for Method-growth.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/method-growth/docs/AGENTS.md",
+      "scope": "mechanics/method-growth/docs/",
+      "kind": "mechanic-docs-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Deep docs card for Method-growth.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/recurrence/AGENTS.md",
+      "scope": "mechanics/recurrence/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for Recurrence.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/recurrence/docs/AGENTS.md",
+      "scope": "mechanics/recurrence/docs/",
+      "kind": "mechanic-docs-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Deep docs card for Recurrence.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/experience/AGENTS.md",
+      "scope": "mechanics/experience/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for Experience.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/experience/docs/AGENTS.md",
+      "scope": "mechanics/experience/docs/",
+      "kind": "mechanic-docs-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Deep docs card for Experience.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/agon/AGENTS.md",
+      "scope": "mechanics/agon/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for Agon.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/agon/docs/AGENTS.md",
+      "scope": "mechanics/agon/docs/",
+      "kind": "mechanic-docs-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Deep docs card for Agon.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/antifragility/AGENTS.md",
+      "scope": "mechanics/antifragility/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for Antifragility.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/antifragility/docs/AGENTS.md",
+      "scope": "mechanics/antifragility/docs/",
+      "kind": "mechanic-docs-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Deep docs card for Antifragility.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/questbook/AGENTS.md",
+      "scope": "mechanics/questbook/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for Questbook.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/questbook/docs/AGENTS.md",
+      "scope": "mechanics/questbook/docs/",
+      "kind": "mechanic-docs-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Deep docs card for Questbook.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/rpg/AGENTS.md",
+      "scope": "mechanics/rpg/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for RPG.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/rpg/docs/AGENTS.md",
+      "scope": "mechanics/rpg/docs/",
+      "kind": "mechanic-docs-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Deep docs card for RPG.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/tos-bridge/AGENTS.md",
+      "scope": "mechanics/tos-bridge/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for ToS bridge.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/tos-bridge/docs/AGENTS.md",
+      "scope": "mechanics/tos-bridge/docs/",
+      "kind": "mechanic-docs-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Deep docs card for ToS bridge.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/release-support/AGENTS.md",
+      "scope": "mechanics/release-support/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for Release support.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/release-support/docs/AGENTS.md",
+      "scope": "mechanics/release-support/docs/",
+      "kind": "mechanic-docs-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Deep docs card for Release support.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "manifests/recurrence/AGENTS.md",
+      "scope": "manifests/recurrence/",
+      "kind": "nested-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Nested recurrence manifest district card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    }
+  ],
+  "exemptions": [
+    {
+      "path": ".git/",
+      "reason": "VCS internals, not repository-authored surface."
+    },
+    {
+      "path": ".venv/",
+      "reason": "local environment, not committed project surface."
+    },
+    {
+      "path": "__pycache__/",
+      "reason": "Python cache, not committed project surface."
+    }
+  ],
+  "validation_commands": [
+    "python scripts/validate_agents_md_shape.py",
+    "python scripts/validate_agents_mesh.py",
+    "python scripts/build_agents_mesh_index.py --check",
+    "python scripts/validate_agents_mesh_index.py",
+    "python scripts/validate_generated_freshness.py",
+    "python scripts/release_check.py"
+  ]
+}

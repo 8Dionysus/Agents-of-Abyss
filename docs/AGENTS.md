@@ -1,5 +1,25 @@
 # AGENTS.md
 
+## Applies to
+
+This card applies to `docs/` and every nested path under that scope until a nearer `AGENTS.md` narrows the lane.
+
+## Role
+
+This AGENTS card keeps local work inside the Agents-of-Abyss center lane, names the nearest owner boundary, and routes wider claims back to the root card.
+
+## Read before editing
+
+Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or protocol surface before changing files in this lane.
+
+## Boundaries
+
+Do not use this lane to override owner-local truth, generated-source boundaries, sibling-repo authority, or release validation contracts.
+
+## Closeout
+
+Closeout must name changed surfaces, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
+
 This file applies to center-layer doctrine under `docs/`.
 
 ## Role of this directory
@@ -21,6 +41,9 @@ Important documents here include:
 - `LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`, `HYGIENE_GUARDRAIL_INDEX.md`, and
   `../config/link_shape_hygiene.json` for local link, Markdown shape, status
   vocabulary, and generated freshness guardrails.
+- `AGENTS_MESH_PROTOCOL.md`, `AGENTS_MESH_INDEX.md`, and
+  `../config/agents_mesh.json` for local AGENTS-card coverage, shape, and
+  generated mesh guardrails.
 
 Mechanic-owned doctrine now lives under `../mechanics/`.
 Use `../mechanics/AGENTS.md` and the nearest `../mechanics/<slug>/AGENTS.md`
@@ -73,6 +96,10 @@ python scripts/validate_markdown_shape.py
 python scripts/validate_status_vocabulary.py
 python scripts/build_link_shape_hygiene_index.py --check
 python scripts/validate_link_shape_hygiene_index.py
+python scripts/validate_agents_md_shape.py
+python scripts/validate_agents_mesh.py
+python scripts/build_agents_mesh_index.py --check
+python scripts/validate_agents_mesh_index.py
 python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py

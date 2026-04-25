@@ -1,5 +1,25 @@
 # AGENTS.md
 
+## Applies to
+
+This card applies to `generated/` and every nested path under that scope until a nearer `AGENTS.md` narrows the lane.
+
+## Role
+
+This AGENTS card keeps local work inside the Agents-of-Abyss center lane, names the nearest owner boundary, and routes wider claims back to the root card.
+
+## Read before editing
+
+Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or protocol surface before changing files in this lane.
+
+## Boundaries
+
+Do not use this lane to override owner-local truth, generated-source boundaries, sibling-repo authority, or release validation contracts.
+
+## Closeout
+
+Closeout must name changed surfaces, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
+
 This file applies to compact machine-readable publication surfaces under `generated/`.
 
 ## Role of this directory
@@ -18,6 +38,8 @@ docs thematic districts.
 `generated/link_shape_hygiene.min.json` is the compact machine-facing mirror
 for Wave E link, Markdown shape, status vocabulary, and generated freshness
 guardrails.
+`generated/agents_mesh.min.json` is the compact machine-facing mirror for the
+Wave F AGENTS-card mesh.
 `generated/agon_imposition_readiness.min.json` is the tracked Wave 0 readiness capsule for the center-owned Agon imposition gate.
 `generated/agon_lawful_move_registry.min.json` is the tracked Wave III lawful
 move registry for the center-owned pre-protocol legal vocabulary.
@@ -83,6 +105,15 @@ When editing `link_shape_hygiene.min.json`:
 - run `scripts/validate_link_shape_hygiene_index.py` and
   `scripts/validate_generated_freshness.py`
 - do not cite it as stronger than the authored hygiene protocol or config
+
+When editing `agents_mesh.min.json`:
+
+- rebuild it with `scripts/build_agents_mesh_index.py`
+- keep it aligned with `config/agents_mesh.json`, `docs/AGENTS_MESH_PROTOCOL.md`,
+  `docs/AGENTS_MESH_INDEX.md`, and the registered `AGENTS.md` cards
+- run `scripts/validate_agents_md_shape.py`, `scripts/validate_agents_mesh.py`,
+  and `scripts/validate_agents_mesh_index.py`
+- do not cite it as stronger than the local cards it summarizes
 
 When editing `agon_imposition_readiness.min.json`:
 
@@ -171,6 +202,10 @@ python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
 python scripts/build_link_shape_hygiene_index.py --check
 python scripts/validate_link_shape_hygiene_index.py
+python scripts/build_agents_mesh_index.py --check
+python scripts/validate_agents_mesh_index.py
+python scripts/validate_agents_mesh.py
+python scripts/validate_agents_md_shape.py
 python scripts/validate_generated_freshness.py
 ```
 

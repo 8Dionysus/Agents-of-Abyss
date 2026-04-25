@@ -217,6 +217,22 @@
         "require_h2": true
       },
       {
+        "path": "docs/AGENTS_MESH_PROTOCOL.md",
+        "required": true,
+        "min_lines": 35,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/AGENTS_MESH_INDEX.md",
+        "required": true,
+        "min_lines": 15,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
         "path": "mechanics/README.md",
         "required": true,
         "min_lines": 200,
@@ -597,6 +613,14 @@
       "required": false
     },
     {
+      "output": "generated/agents_mesh.min.json",
+      "builder": "scripts/build_agents_mesh_index.py",
+      "check_args": [
+        "--check"
+      ],
+      "required": true
+    },
+    {
       "output": "generated/link_shape_hygiene.min.json",
       "builder": "scripts/build_link_shape_hygiene_index.py",
       "check_args": [
@@ -612,6 +636,10 @@
     "python scripts/validate_status_vocabulary.py",
     "python scripts/build_link_shape_hygiene_index.py --check",
     "python scripts/validate_link_shape_hygiene_index.py",
+    "python scripts/validate_agents_md_shape.py",
+    "python scripts/validate_agents_mesh.py",
+    "python scripts/build_agents_mesh_index.py --check",
+    "python scripts/validate_agents_mesh_index.py",
     "python scripts/validate_generated_freshness.py",
     "python scripts/validate_hygiene_suite.py",
     "python -m pytest -q tests"
