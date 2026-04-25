@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/mechanics/experience/parts/adoption-federation/schemas/federation_event_kind_registry_v1.json",
+  "title": "federation_event_kind_registry_v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "kind",
+    "id",
+    "status",
+    "summary",
+    "evidence_refs",
+    "payload",
+    "owner_repo"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "kind": {
+      "type": "string",
+      "const": "federation_event_kind_registry"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "captured",
+        "candidate",
+        "review",
+        "approved",
+        "blocked",
+        "rejected",
+        "promoted",
+        "active",
+        "retired",
+        "scheduled",
+        "passed",
+        "failed"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner_repo": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "payload": {
+      "type": "object",
+      "required": [
+        "event_kinds"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "event_kinds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

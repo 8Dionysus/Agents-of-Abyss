@@ -48,6 +48,7 @@ Experience center contracts, release posture, stop-lines, adoption route languag
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic experience
 python scripts/validate_mechanic_landing_logs.py --mechanic experience
 python scripts/validate_mechanics_topology.py --mechanic experience
 python scripts/validate_mechanic_readme_cards.py --mechanic experience
@@ -71,6 +72,7 @@ python scripts/validate_owner_request_docs.py --mechanic experience
 - [LANDING_LOG](LANDING_LOG.md)
 - [ROADMAP](ROADMAP.md)
 - [OWNER_REQUESTS](OWNER_REQUESTS.md)
+- [artifact-map](artifact-map.json)
 - [PROVENANCE](PROVENANCE.md)
 
 ## Functioning parts

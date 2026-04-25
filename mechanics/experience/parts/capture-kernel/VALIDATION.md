@@ -17,6 +17,6 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 ## Targeted checks
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave1.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave1.py
+python mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py
+python -m pytest -q mechanics/experience/parts/capture-kernel/tests/test_capture_kernel.py
 ```

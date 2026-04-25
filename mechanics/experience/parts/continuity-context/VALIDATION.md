@@ -17,9 +17,9 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 ## Targeted checks
 
 ```bash
-python mechanics/experience/scripts/validate_experience_v1_6_epistemic_memory_rank_reputation_engine.py
-python mechanics/experience/scripts/validate_experience_v1_7_affective_economy_honor_treasury.py
-python mechanics/experience/scripts/validate_experience_v1_8_context_routing_nervous_system.py
-python mechanics/experience/scripts/validate_experience_v1_9_context_memory_weaving_continuity_loom.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_6_epistemic_memory_rank_reputation_engine.py mechanics/experience/tests/test_experience_v1_7_affective_economy_honor_treasury.py mechanics/experience/tests/test_experience_v1_8_context_routing_nervous_system.py mechanics/experience/tests/test_experience_v1_9_context_memory_weaving_continuity_loom.py
+python mechanics/experience/parts/continuity-context/scripts/validate_memory_rank_reputation.py
+python mechanics/experience/parts/continuity-context/scripts/validate_affective_economy.py
+python mechanics/experience/parts/continuity-context/scripts/validate_context_routing.py
+python mechanics/experience/parts/continuity-context/scripts/validate_context_memory_weaving.py
+python -m pytest -q mechanics/experience/parts/continuity-context/tests/test_memory_rank_reputation.py mechanics/experience/parts/continuity-context/tests/test_affective_economy.py mechanics/experience/parts/continuity-context/tests/test_context_routing.py mechanics/experience/parts/continuity-context/tests/test_context_memory_weaving.py
 ```

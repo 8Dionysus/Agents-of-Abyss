@@ -9,8 +9,11 @@ future owner-local repositories decide what they can honestly activate.
 - Keep Wave 1-5 and v1.2-v2.0 contracts routed through active `parts/`.
 - Keep `LANDING_LOG.md` as the canonical Experience landing ledger.
 - Keep `PROVENANCE.md` as the only active bridge back to historical accounting.
+- Keep `artifact-map.json` as the machine-readable receipt from old flat
+  artifacts into active part homes.
 - Keep preserved source evidence behind `PROVENANCE.md`, not in the working route.
-- Keep validators and generated artifacts aligned with the active route.
+- Keep validators, tests, schemas, and examples aligned with the active part
+  that uses them.
 
 ## Next Work
 

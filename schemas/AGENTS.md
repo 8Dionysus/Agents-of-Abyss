@@ -124,52 +124,52 @@ python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.
 After changing the Experience Wave 1 schema, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave1.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave1.py
+python mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py
+python -m pytest -q mechanics/experience/parts/capture-kernel/tests/test_capture_kernel.py
 ```
 
 After changing the Experience Wave 2 schema, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave2.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave2.py
+python mechanics/experience/parts/certification-proof/scripts/validate_certification_proof.py
+python -m pytest -q mechanics/experience/parts/certification-proof/tests/test_certification_proof.py
 ```
 
 After changing the Experience Wave 3 schema, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave3.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave3.py
+python mechanics/experience/parts/adoption-federation/scripts/validate_adoption_federation.py
+python -m pytest -q mechanics/experience/parts/adoption-federation/tests/test_adoption_federation.py
 ```
 
 After changing the Experience Wave 4 schema, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave4.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave4.py mechanics/experience/tests/test_experience_wave4_seed_contracts.py
+python mechanics/experience/parts/governance-polis/scripts/validate_governance_polis.py
+python -m pytest -q mechanics/experience/parts/governance-polis/tests/test_governance_polis.py mechanics/experience/parts/governance-polis/tests/test_governance_polis_seed_contracts.py
 ```
 
 After changing the Experience v1.2 or v1.3 campaign schemas, also run the matching contract validator and tests:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_v1_2_service_mesh_operations.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_2_service_mesh_operations.py
-python mechanics/experience/scripts/validate_experience_v1_3_office_foundry_role_pairs.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_3_office_foundry_role_pairs.py
+python mechanics/experience/parts/service-mesh/scripts/validate_service_mesh.py
+python -m pytest -q mechanics/experience/parts/service-mesh/tests/test_service_mesh.py
+python mechanics/experience/parts/office-operations/scripts/validate_office_role_pairs.py
+python -m pytest -q mechanics/experience/parts/office-operations/tests/test_office_role_pairs.py
 ```
 
 After changing the Experience v1.4 campaign schema, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+python mechanics/experience/parts/compatibility-bridges/scripts/validate_agonic_pair_trials_bridge.py
+python -m pytest -q mechanics/experience/parts/compatibility-bridges/tests/test_agonic_pair_trials_bridge.py
 ```
 
 After changing the Experience v1.5 campaign schema, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python mechanics/experience/parts/compatibility-bridges/scripts/validate_epistemic_duel_bridge.py
+python -m pytest -q mechanics/experience/parts/compatibility-bridges/tests/test_epistemic_duel_bridge.py
 ```
 
 If a schema change is intentional, mention the contract shift clearly in the

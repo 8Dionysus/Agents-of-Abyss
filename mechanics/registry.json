@@ -164,6 +164,7 @@
         "mechanics/experience/PROVENANCE.md",
         "mechanics/experience/ROADMAP.md",
         "mechanics/experience/LANDING_LOG.md",
+        "mechanics/experience/artifact-map.json",
         "mechanics/experience/parts/capture-kernel/README.md",
         "mechanics/experience/parts/certification-proof/README.md",
         "mechanics/experience/parts/adoption-federation/README.md",
@@ -231,6 +232,7 @@
       "title": "Experience",
       "validation_refs": [
         "mechanics/experience/scripts/validate_experience_distillation.py",
+        "scripts/validate_mechanic_artifact_topology.py",
         "scripts/validate_mechanic_landing_logs.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/validate_mechanic_readme_cards.py",

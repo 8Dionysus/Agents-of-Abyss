@@ -141,71 +141,71 @@ python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.
 If you changed the Experience Wave 1 surfaces, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave1.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave1.py
+python mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py
+python -m pytest -q mechanics/experience/parts/capture-kernel/tests/test_capture_kernel.py
 ```
 
 If you changed the Experience Wave 2 surfaces, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave2.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave2.py
+python mechanics/experience/parts/certification-proof/scripts/validate_certification_proof.py
+python -m pytest -q mechanics/experience/parts/certification-proof/tests/test_certification_proof.py
 ```
 
 If you changed the Experience Wave 3 surfaces, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave3.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave3.py
+python mechanics/experience/parts/adoption-federation/scripts/validate_adoption_federation.py
+python -m pytest -q mechanics/experience/parts/adoption-federation/tests/test_adoption_federation.py
 ```
 
 If you changed the Experience Wave 4 surfaces, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave4.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave4.py mechanics/experience/tests/test_experience_wave4_seed_contracts.py
+python mechanics/experience/parts/governance-polis/scripts/validate_governance_polis.py
+python -m pytest -q mechanics/experience/parts/governance-polis/tests/test_governance_polis.py mechanics/experience/parts/governance-polis/tests/test_governance_polis_seed_contracts.py
 ```
 
 If you changed the Experience Wave 5 surfaces, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_wave5.py
-python -m pytest -q mechanics/experience/tests/test_experience_wave5.py
+python mechanics/experience/parts/office-operations/scripts/validate_office_operations.py
+python -m pytest -q mechanics/experience/parts/office-operations/tests/test_office_operations.py
 ```
 
 If you changed the Experience v1.2-v2.0 bridge surfaces, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_v1_2_to_v2_0_bridge.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_2_to_v2_0_bridge.py
+python mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py
+python -m pytest -q mechanics/experience/parts/runtime-boundary/tests/test_runtime_boundary_bridge.py
 ```
 
 If you changed the Experience v1.2 service mesh operations surfaces, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_v1_2_service_mesh_operations.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_2_service_mesh_operations.py
+python mechanics/experience/parts/service-mesh/scripts/validate_service_mesh.py
+python -m pytest -q mechanics/experience/parts/service-mesh/tests/test_service_mesh.py
 ```
 
 If you changed the Experience v1.3 office foundry role-pair surfaces, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_v1_3_office_foundry_role_pairs.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_3_office_foundry_role_pairs.py
+python mechanics/experience/parts/office-operations/scripts/validate_office_role_pairs.py
+python -m pytest -q mechanics/experience/parts/office-operations/tests/test_office_role_pairs.py
 ```
 
 If you changed the Experience v1.4 mechanical arena kernel surfaces, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+python mechanics/experience/parts/compatibility-bridges/scripts/validate_agonic_pair_trials_bridge.py
+python -m pytest -q mechanics/experience/parts/compatibility-bridges/tests/test_agonic_pair_trials_bridge.py
 ```
 
 If you changed the Experience v1.5 epistemic duel model-of-other forge surfaces, also run:
 
 ```bash
-python mechanics/experience/scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
-python -m pytest -q mechanics/experience/tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python mechanics/experience/parts/compatibility-bridges/scripts/validate_epistemic_duel_bridge.py
+python -m pytest -q mechanics/experience/parts/compatibility-bridges/tests/test_epistemic_duel_bridge.py
 ```
 
 If you changed ownership, routing, or maturity language, confirm the machine-readable registry still matches the prose.

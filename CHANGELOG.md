@@ -88,6 +88,10 @@ Tracking starts with the community-docs baseline for this repository.
   package surfaces, while long Wave 1-5 and v1.2-v2.0 source packets are
   preserved behind a single provenance bridge instead of being listed in
   active part docs
+- Experience schemas, examples, part validators, and part tests now live under
+  their owning `mechanics/experience/parts/<part>/` homes, with
+  `mechanics/experience/artifact-map.json` preserving old flat-path receipts
+  and artifact topology validation enforcing the route
 - Agon, Experience, RPG, antifragility, and method-growth mechanic artifacts now
   live in mechanic-owned homes; root technical districts keep repo-wide
   contracts only and no longer carry mechanic artifact aliases

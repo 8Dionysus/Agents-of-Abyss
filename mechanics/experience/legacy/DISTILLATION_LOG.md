@@ -26,10 +26,44 @@ Validation:
 
 Stop-lines: do not delete raw provenance, do not duplicate archive inventories
 inside active part docs, and do not let legacy become the normal first route for
-low-context agents.
+routine mechanic edits.
 
 Next route: future packet landings update the active part and this legacy map;
 active parts stay short.
+
+## 2026-04-25 - Part-local artifact homes
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` keeps Experience schemas, examples,
+validators, and tests close to their functioning parts while preserving old flat
+paths as receipts.
+
+Moved or clarified:
+
+- Flat `mechanics/experience/schemas/` files moved into
+  `mechanics/experience/parts/<part>/schemas/`.
+- Flat `mechanics/experience/examples/` files moved into
+  `mechanics/experience/parts/<part>/examples/`.
+- Part-specific validators moved into
+  `mechanics/experience/parts/<part>/scripts/` with clearer names.
+- Part-specific tests moved into `mechanics/experience/parts/<part>/tests/`.
+- `mechanics/experience/artifact-map.json` records every old path and active
+  destination.
+- `mechanics/experience/legacy/artifacts/README.md` explains the receipt route.
+
+Validation:
+
+- `python mechanics/experience/scripts/validate_experience_distillation.py`
+- `python scripts/validate_mechanic_artifact_topology.py --mechanic experience`
+- `python -m pytest -q mechanics/experience/tests mechanics/experience/parts`
+
+Stop-lines: do not recreate flat aliases, do not let old wave names dictate
+active part names, and do not treat examples or generated receipts as owner
+truth.
+
+Next route: future Experience artifacts land directly in the active part that
+uses them, then update the artifact map and landing ledger.
 
 ## 2026-04-25 - Active parts plus legacy raw provenance
 
