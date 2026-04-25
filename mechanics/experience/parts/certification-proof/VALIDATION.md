@@ -16,4 +16,7 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 
 ## Targeted checks
 
-run `python scripts/validate_experience_wave2.py`, targeted certification validators, and matching tests for the touched surface.
+```bash
+python scripts/validate_experience_wave2.py
+python -m pytest -q tests/test_experience_wave2.py
+```

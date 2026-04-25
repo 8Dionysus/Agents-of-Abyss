@@ -16,4 +16,7 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 
 ## Targeted checks
 
-run `python scripts/validate_experience_v1_2_service_mesh_operations.py` and matching tests for v1.2 service mesh surfaces.
+```bash
+python scripts/validate_experience_v1_2_service_mesh_operations.py
+python -m pytest -q tests/test_experience_v1_2_service_mesh_operations.py
+```

@@ -16,8 +16,9 @@ This part owns service mesh law, service operations, Agon and service release co
 
 ## Must not claim
 
-- Live workspace runtime.
+- Live service runtime or service dispatch.
 - Hidden memory sovereignty.
+- Live dispatch behavior before `aoa-routing` accepts it.
 - Owner-local activation or acceptance.
 - Proof verdicts before the proof owner lands evidence.
 - ToS-authored meaning from an AoA center bridge.

@@ -1,6 +1,6 @@
 # Experience Direction
 
-Experience is the center mechanic for making lived work reviewable. The active package is intentionally lean: it names current direction, functioning parts, owner requests, landing history, and stop-lines. Historical source accounting stays behind the provenance bridge.
+Experience is the center mechanic for making lived work reviewable. The active package keeps a clean route: current direction, functioning parts, owner requests, landing history, and stop-lines each have a distinct job. Historical source accounting stays behind the provenance bridge.
 
 ## Active surfaces
 
@@ -28,9 +28,9 @@ Experience is the center mechanic for making lived work reviewable. The active p
 
 ## Distillation law
 
-New waves, bridge packets, and long exploratory surfaces must not become the active user route by accumulation. After a packet lands, update the relevant part `README.md`, `CONTRACT.md`, or `VALIDATION.md`, then update archival accounting through `PROVENANCE.md`.
+New waves, bridge packets, and long exploratory surfaces must not become the active route by accumulation. After a packet lands, distill the surviving function into the relevant part `README.md`, `CONTRACT.md`, or `VALIDATION.md`, then update archival accounting through `PROVENANCE.md`.
 
-A functioning part should answer three questions quickly:
+A functioning part should make three things clear:
 
 - what does this part own at the center
 - what stronger owner keeps operational authority
@@ -40,8 +40,10 @@ A functioning part should answer three questions quickly:
 
 - Do not claim live workspace runtime from Experience center docs.
 - Do not claim hidden memory sovereignty.
+- Do not claim live router engine authority.
 - Do not claim owner-local activation before the owner repository accepts and proves the slice.
-- Do not let archival packets become the primary route for low-context agents.
+- Do not claim operational Experience adoption, KAG/source meaning transfer, or ToS canon from center docs.
+- Do not let historical packets become the primary route.
 
 ## Validation
 

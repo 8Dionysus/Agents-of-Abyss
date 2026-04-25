@@ -84,10 +84,15 @@ When editing a mechanic:
 1. Read this file, then the nearest `mechanics/<slug>/AGENTS.md`.
 2. Keep the package `README.md` card synchronized with `mechanics/registry.json`.
 3. Keep owner-local implementation claims out of center mechanics.
-4. Update the mechanic `LANDING_LOG.md` when a checked landing changes.
-5. Update `mechanics/registry.json` when a package, owner boundary, card field, required surface, or validation route changes.
-6. Rebuild the generated card index when card-facing registry fields change.
-7. Rebuild the owner-request queue when request-facing registry or queue fields change.
+4. After the content change, review whether `DIRECTION.md`, `PARTS.md`, `ROADMAP.md`, `LANDING_LOG.md`, owner-request docs, validators, or generated indexes also changed in meaning.
+5. Update `ROADMAP.md` when the change alters future work, route shape, unresolved owner pressure, or a mechanic's current contour.
+6. Update the mechanic `LANDING_LOG.md` when a checked landing changes.
+7. Update `mechanics/registry.json` when a package, owner boundary, card field, required surface, or validation route changes.
+8. Rebuild the generated card index when card-facing registry fields change.
+9. Rebuild the owner-request queue when request-facing registry or queue fields change.
+
+Do not touch these surfaces mechanically. The post-change review is a route check:
+change only the files whose future-facing meaning actually moved.
 
 ## Validation
 

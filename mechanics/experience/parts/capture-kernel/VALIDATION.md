@@ -16,4 +16,7 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 
 ## Targeted checks
 
-run `python scripts/validate_experience_wave1.py` and `python -m pytest -q tests/test_experience_wave1.py` for the Wave 1 kernel; run the distillation validator after part-surface moves.
+```bash
+python scripts/validate_experience_wave1.py
+python -m pytest -q tests/test_experience_wave1.py
+```

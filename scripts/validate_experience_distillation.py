@@ -17,6 +17,8 @@ RAW_ROOT = LEGACY_ROOT / "raw"
 PARTS_ROOT = EXPERIENCE_ROOT / "parts"
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 PROVENANCE_PATH = EXPERIENCE_ROOT / "PROVENANCE.md"
+MECHANICS_ATLAS_PATH = REPO_ROOT / "mechanics" / "README.md"
+THEMATIC_DISTRICTS_PATH = REPO_ROOT / "docs" / "thematic_districts.json"
 
 PART_SLUGS = (
     "capture-kernel",
@@ -74,6 +76,57 @@ ACTIVE_ARCHIVE_LOAD_PATTERNS = (
 )
 ACTIVE_ARCHIVE_FILENAME_RE = re.compile(r"EXPERIENCE_[A-Z0-9_]+\.md")
 
+ACTIVE_ROUTE_POLLUTION_PATTERNS = (
+    "low-context",
+    "small enough",
+    "legacy provenance",
+    "raw surface",
+    "raw surfaces",
+    "raw file",
+    "raw files",
+    "named by any raw",
+    "touching legacy provenance",
+)
+
+STALE_ROADMAP_PATTERNS = (
+    "Keep Wave 1-5 and v1.2-v2.0 surfaces in `docs/`",
+    "surfaces in `docs/`",
+    "package-local migration next",
+)
+
+VAGUE_VALIDATION_PHRASES = (
+    "targeted validators",
+    "matching tests for the touched surface",
+    "validator named by the bridge surface",
+    "targeted deployment",
+    "targeted office validators",
+    "tests named by any raw",
+    "named by any raw surface",
+)
+
+OWNER_STOP_LINE_PHRASES = (
+    "live workspace runtime or service dispatch",
+    "hidden memory sovereignty or recall authority",
+    "live router engine authority",
+    "owner-local activation, office installation, or adoption",
+    "proof verdicts, certification truth, or regression evidence before `aoa-evals` lands them",
+    "`aoa-kag` projections as source-authored meaning",
+    "ToS-authored meaning or canon",
+)
+
+PART_STOP_LINE_PHRASES = {
+    "capture-kernel": ("hidden memory sovereignty or recall authority", "Live route behavior"),
+    "certification-proof": ("certification truth", "Operational Experience adoption"),
+    "adoption-federation": ("Owner-local activation, adoption, or acceptance", "Operational Experience adoption"),
+    "governance-polis": ("runtime enforcement", "Hidden precedent ledger"),
+    "release-deployment": ("runtime deployment", "Owner-local activation, installation, or acceptance"),
+    "office-operations": ("Owner-local office activation", "Hybrid-agent authority"),
+    "service-mesh": ("Live service runtime", "Live dispatch behavior"),
+    "continuity-context": ("ambient continuity", "Live router engine authority"),
+    "runtime-boundary": ("runtime owner gates", "services, storage, or lifecycle authority"),
+    "compatibility-bridges": ("source-authored meaning", "ToS canon"),
+}
+
 
 def rel(path: Path) -> str:
     return path.relative_to(REPO_ROOT).as_posix()
@@ -85,6 +138,15 @@ def load_registry() -> dict[str, object]:
 
 def read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
+
+
+def normalize(value: str) -> str:
+    value = value.replace("`", "")
+    return re.sub(r"\s+", " ", value.casefold()).strip()
+
+
+def contains_phrase(text: str, phrase: str) -> bool:
+    return normalize(phrase) in normalize(text)
 
 
 def require_file(path: Path, problems: list[str]) -> None:
@@ -169,8 +231,14 @@ def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
             problems.append(f"{rel(readme_path)}: active part README carries archival source inventory")
         if "## Must not claim" not in contract:
             problems.append(f"{rel(contract_path)}: missing explicit stop-line section")
+        for phrase in PART_STOP_LINE_PHRASES[slug]:
+            if not contains_phrase(contract, phrase):
+                problems.append(f"{rel(contract_path)}: missing part-specific stop-line phrase {phrase!r}")
         if f"validate_experience_distillation.py --part {slug}" not in validation:
             problems.append(f"{rel(validation_path)}: missing targeted distillation command")
+        for phrase in VAGUE_VALIDATION_PHRASES:
+            if contains_phrase(validation, phrase):
+                problems.append(f"{rel(validation_path)}: vague validation phrase {phrase!r}")
 
 
 def validate_raw_sources(problems: list[str]) -> None:
@@ -216,6 +284,43 @@ def validate_active_docs_are_lean(problems: list[str]) -> None:
                 break
         if ACTIVE_ARCHIVE_FILENAME_RE.search(text):
             problems.append(f"{rel(path)}: active doc names archived Experience source files")
+        for pattern in ACTIVE_ROUTE_POLLUTION_PATTERNS:
+            if contains_phrase(text, pattern):
+                problems.append(f"{rel(path)}: active route carries route-pollution marker {pattern!r}")
+
+
+def validate_route_surfaces(problems: list[str]) -> None:
+    roadmap_path = EXPERIENCE_ROOT / "ROADMAP.md"
+    roadmap = read(roadmap_path) if roadmap_path.exists() else ""
+    for pattern in STALE_ROADMAP_PATTERNS:
+        if pattern in roadmap:
+            problems.append(f"{rel(roadmap_path)}: stale roadmap route {pattern!r}")
+    for phrase in ("parts/", "PROVENANCE.md", "owner-local adoption links"):
+        if phrase not in roadmap:
+            problems.append(f"{rel(roadmap_path)}: missing current route phrase {phrase!r}")
+
+    atlas = read(MECHANICS_ATLAS_PATH) if MECHANICS_ATLAS_PATH.exists() else ""
+    for pattern in ACTIVE_ROUTE_POLLUTION_PATTERNS:
+        if contains_phrase(atlas, pattern):
+            problems.append(f"{rel(MECHANICS_ATLAS_PATH)}: Experience atlas carries route-pollution marker {pattern!r}")
+
+
+def validate_thematic_experience_route(problems: list[str]) -> None:
+    if not THEMATIC_DISTRICTS_PATH.exists():
+        problems.append(f"missing file: {rel(THEMATIC_DISTRICTS_PATH)}")
+        return
+    data = json.loads(read(THEMATIC_DISTRICTS_PATH))
+    matches = [
+        item
+        for item in data.get("pattern_migrations", [])
+        if isinstance(item, dict) and item.get("source_glob") == "docs/EXPERIENCE_*.md"
+    ]
+    if len(matches) != 1:
+        problems.append("docs/thematic_districts.json: expected one docs/EXPERIENCE_*.md migration route")
+        return
+    target = matches[0].get("target_dir")
+    if target != "mechanics/experience/legacy/raw":
+        problems.append("docs/thematic_districts.json: docs/EXPERIENCE_*.md must route to mechanics/experience/legacy/raw")
 
 
 def validate_registry(problems: list[str]) -> None:
@@ -241,8 +346,22 @@ def validate_registry(problems: list[str]) -> None:
             problems.append(f"mechanics/registry.json: canonical doc missing: {ref_text}")
     if "mechanics/experience/PROVENANCE.md" not in canonical:
         problems.append("mechanics/registry.json: experience canonical_docs must include PROVENANCE.md bridge")
+    for required_doc in ("mechanics/experience/ROADMAP.md", "mechanics/experience/LANDING_LOG.md"):
+        if required_doc not in canonical:
+            problems.append(f"mechanics/registry.json: experience canonical_docs must include {required_doc}")
     if "scripts/validate_experience_distillation.py" not in experience.get("validation_refs", []):
         problems.append("mechanics/registry.json: missing validate_experience_distillation.py validation ref")
+    must_not_claim = experience.get("must_not_claim", [])
+    if not isinstance(must_not_claim, list):
+        problems.append("mechanics/registry.json: experience must_not_claim must be a list")
+        must_not_claim = []
+    joined_claims = "\n".join(str(item) for item in must_not_claim)
+    readme = read(EXPERIENCE_ROOT / "README.md") if (EXPERIENCE_ROOT / "README.md").exists() else ""
+    for phrase in OWNER_STOP_LINE_PHRASES:
+        if not contains_phrase(joined_claims, phrase):
+            problems.append(f"mechanics/registry.json: experience must_not_claim missing {phrase!r}")
+        if not contains_phrase(readme, phrase):
+            problems.append(f"mechanics/experience/README.md: missing owner stop-line phrase {phrase!r}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -258,6 +377,8 @@ def validate(selected: set[str] | None = None) -> list[str]:
     validate_raw_sources(problems)
     validate_no_stale_active_refs(problems)
     validate_active_docs_are_lean(problems)
+    validate_route_surfaces(problems)
+    validate_thematic_experience_route(problems)
     validate_registry(problems)
     return problems
 

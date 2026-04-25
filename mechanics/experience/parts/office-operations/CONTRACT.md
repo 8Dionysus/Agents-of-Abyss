@@ -18,7 +18,8 @@ This part owns sovereign office posture, operator console route, assistant relea
 
 - Live workspace runtime.
 - Hidden memory sovereignty.
-- Owner-local activation or acceptance.
+- Owner-local office activation, installation, or acceptance.
+- Hybrid-agent authority.
 - Proof verdicts before the proof owner lands evidence.
 - ToS-authored meaning from an AoA center bridge.
 

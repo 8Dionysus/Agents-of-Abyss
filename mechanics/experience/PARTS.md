@@ -1,6 +1,6 @@
 # Experience Parts
 
-This file is the active map of functioning Experience parts. It replaces the old pattern where long source packets acted as the default route.
+This file is the active map of functioning Experience parts. Each part owns a real slice of the mechanic: purpose, boundary, validation, and next route. Long historical packets stay outside the working path.
 
 ## Part map
 
@@ -19,11 +19,13 @@ This file is the active map of functioning Experience parts. It replaces the old
 
 ## Active part contract
 
-Every part keeps three small surfaces:
+Every part keeps three working surfaces:
 
 - `README.md`: what the part is for and where to start.
 - `CONTRACT.md`: owner boundary, stop-lines, and allowed outputs.
 - `VALIDATION.md`: commands and tests.
+
+A part may grow, split, merge, shrink, or retire when that improves its function and keeps the route cleaner. The move should leave the active path easier to follow, not merely smaller.
 
 ## Provenance bridge
 

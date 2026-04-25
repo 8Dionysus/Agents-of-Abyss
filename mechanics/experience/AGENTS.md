@@ -34,6 +34,20 @@ It does not activate live workspace runtime, owner-local offices, hidden memory 
 - `PROVENANCE.md`: controlled bridge to archival accounting.
 - `docs/`: compatibility route only.
 
+## Post-change route review
+
+After any Experience change, check whether the move changed:
+
+- `DIRECTION.md`: the mechanic's current operating direction.
+- `PARTS.md`: the active part map or part boundaries.
+- `ROADMAP.md`: future work, route shape, unresolved owner pressure, or current contour.
+- `LANDING_LOG.md`: a checked landing, supersession, or planted contract.
+- `OWNER_REQUESTS.md` and `mechanics/owner-request-queue.json`: stronger-owner asks or stop-lines.
+- `mechanics/registry.json` and generated indexes: card-facing route, owner boundary, validation refs, or public summaries.
+
+Only update a surface when its meaning moved. Leave it untouched when the change
+does not affect its job.
+
 ## Validation
 
 Use `python scripts/validate_experience_distillation.py` after active-part or provenance-route changes.

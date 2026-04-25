@@ -16,4 +16,8 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 
 ## Targeted checks
 
-run `python scripts/validate_experience_wave5.py` and targeted office validators or seed-contract tests.
+```bash
+python scripts/validate_experience_wave5.py
+python scripts/validate_experience_v1_3_office_foundry_role_pairs.py
+python -m pytest -q tests/test_experience_wave5.py tests/test_experience_wave5_seed_contracts.py tests/test_experience_v1_3_office_foundry_role_pairs.py
+```

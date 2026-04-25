@@ -16,10 +16,11 @@ This part owns polis governance, constitution runtime boundary, council model, v
 
 ## Must not claim
 
-- Live workspace runtime.
+- Live workspace runtime or runtime enforcement.
 - Hidden memory sovereignty.
 - Owner-local activation or acceptance.
 - Proof verdicts before the proof owner lands evidence.
+- Hidden precedent ledger or unreviewed authority resolver.
 - ToS-authored meaning from an AoA center bridge.
 
 ## Next route
