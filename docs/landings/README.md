@@ -6,8 +6,8 @@ A landing receipt may explain what a wave planted, why it belonged in the center
 
 Canonical mechanic landing ledgers now live one level up:
 
-- [`AGON_LANDING_LOG`](../AGON_LANDING_LOG.md)
-- [`EXPERIENCE_LANDING_LOG`](../EXPERIENCE_LANDING_LOG.md)
+- [`AGON_LANDING_LOG`](../../mechanics/agon/LANDING_LOG.md)
+- [`EXPERIENCE_LANDING_LOG`](../../mechanics/experience/LANDING_LOG.md)
 
 Use this directory for archived receipts and seed manifests. Use the
 LANDING_LOG surfaces for active mechanic landing history, required validators,

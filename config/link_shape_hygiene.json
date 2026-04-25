@@ -1,0 +1,619 @@
+{
+  "schema": "aoa.link_shape_hygiene.v1",
+  "wave": "E",
+  "purpose": "Guard local links, Markdown shape, status vocabularies, generated freshness, and known link-drift repairs without becoming a source-of-truth layer.",
+  "protocol_ref": "docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
+  "index_ref": "docs/HYGIENE_GUARDRAIL_INDEX.md",
+  "generated_ref": "generated/link_shape_hygiene.min.json",
+  "link_validation": {
+    "scan_globs": [
+      "**/*.md"
+    ],
+    "exclude_globs": [
+      ".git/**",
+      ".github/**/*.md.bak",
+      ".mypy_cache/**",
+      ".pytest_cache/**",
+      ".ruff_cache/**",
+      ".venv/**",
+      "venv/**",
+      "node_modules/**",
+      "__pycache__/**",
+      ".wave_*_backups/**",
+      "docs/traces/conflicts/**"
+    ],
+    "ignore_schemes": [
+      "http",
+      "https",
+      "mailto",
+      "tel",
+      "data"
+    ],
+    "check_anchors_by_default": false,
+    "known_rewrites": [
+      {
+        "id": "federation-rules-recurrence-principle-route",
+        "file": "docs/FEDERATION_RULES.md",
+        "old": "(RECURRENCE_PRINCIPLE.md)",
+        "new": "(../mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md)",
+        "reason": "Recurrence principle is mechanic-local, not a flat docs neighbor."
+      },
+      {
+        "id": "landings-agon-log-mechanic-route",
+        "file": "docs/landings/README.md",
+        "old": "](../AGON_LANDING_LOG.md)",
+        "new": "](../../mechanics/agon/LANDING_LOG.md)",
+        "reason": "Agon landing log moved from flat docs into the mechanics/agon package."
+      },
+      {
+        "id": "landings-experience-log-mechanic-route",
+        "file": "docs/landings/README.md",
+        "old": "](../EXPERIENCE_LANDING_LOG.md)",
+        "new": "](../../mechanics/experience/LANDING_LOG.md)",
+        "reason": "Experience landing log moved from flat docs into the mechanics/experience package."
+      },
+      {
+        "id": "antifragility-via-negativa-local-route",
+        "file": "mechanics/antifragility/FRAGILITY_BLACKLIST.md",
+        "old": "[docs/VIA_NEGATIVA](mechanics/antifragility/docs/VIA_NEGATIVA.md)",
+        "new": "[VIA_NEGATIVA](docs/VIA_NEGATIVA.md)",
+        "reason": "Mechanic-local doctrine should route relative to the antifragility package root."
+      },
+      {
+        "id": "antifragility-deletion-candidates-audit-route",
+        "file": "mechanics/antifragility/FRAGILITY_BLACKLIST.md",
+        "old": "[docs/audits/DELETION_CANDIDATES.json](docs/audits/DELETION_CANDIDATES.json)",
+        "new": "[docs/audits/DELETION_CANDIDATES.json](../../docs/audits/DELETION_CANDIDATES.json)",
+        "reason": "Deletion candidates are root docs audit evidence, not antifragility-local files."
+      },
+      {
+        "id": "antifragility-root-surface-law-route",
+        "file": "mechanics/antifragility/FRAGILITY_BLACKLIST.md",
+        "old": "[docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md)",
+        "new": "[docs/ROOT_SURFACE_LAW](../../docs/ROOT_SURFACE_LAW.md)",
+        "reason": "Root surface law remains under root docs governance."
+      },
+      {
+        "id": "method-growth-rootline-recurrence-route",
+        "file": "mechanics/method-growth/docs/ROOTLINE.md",
+        "old": "[RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md)",
+        "new": "[RECURRENCE_PRINCIPLE](../../recurrence/docs/RECURRENCE_PRINCIPLE.md)",
+        "reason": "Rootline recurrence reference crosses from method-growth docs to recurrence doctrine."
+      },
+      {
+        "id": "release-support-releasing-changelog-route",
+        "file": "mechanics/release-support/docs/RELEASING.md",
+        "old": "[CHANGELOG](../CHANGELOG.md)",
+        "new": "[CHANGELOG](../../../CHANGELOG.md)",
+        "reason": "Repo changelog stays at repository root, three levels above release-support docs."
+      }
+    ]
+  },
+  "markdown_shape": {
+    "default_max_line_length": 700,
+    "default_min_lines": 1,
+    "default_require_final_newline": true,
+    "default_require_h1": false,
+    "default_require_h2": false,
+    "targets": [
+      {
+        "path": "README.md",
+        "required": true,
+        "min_lines": 90,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "AGENTS.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "CHARTER.md",
+        "required": true,
+        "min_lines": 45,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "ECOSYSTEM_MAP.md",
+        "required": true,
+        "min_lines": 50,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "required": true,
+        "min_lines": 80,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "GLOSSARY.md",
+        "required": true,
+        "min_lines": 180,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "QUESTBOOK.md",
+        "required": true,
+        "min_lines": 30,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "FRAGILITY_BLACKLIST.md",
+        "required": true,
+        "min_lines": 10,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "ECOSYSTEM_AUDIT_INDEX.md",
+        "required": true,
+        "min_lines": 90,
+        "max_line_length": 750,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "required": true,
+        "min_lines": 60,
+        "max_line_length": 700,
+        "require_h1": false,
+        "require_h2": false
+      },
+      {
+        "path": "docs/README.md",
+        "required": true,
+        "min_lines": 100,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/MECHANICS.md",
+        "required": true,
+        "min_lines": 15,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/START_HERE_ROUTE_CONTRACT.md",
+        "required": true,
+        "min_lines": 120,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
+        "required": true,
+        "min_lines": 45,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/HYGIENE_GUARDRAIL_INDEX.md",
+        "required": true,
+        "min_lines": 35,
+        "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/README.md",
+        "required": true,
+        "min_lines": 200,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/AGENTS.md",
+        "required": true,
+        "min_lines": 40,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/agon/LANDING_LOG.md",
+        "required": true,
+        "min_lines": 180,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/experience/LANDING_LOG.md",
+        "required": true,
+        "min_lines": 250,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/agon/README.md",
+        "required": true,
+        "min_lines": 25,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/experience/README.md",
+        "required": true,
+        "min_lines": 25,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/method-growth/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/recurrence/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/antifragility/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/questbook/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/rpg/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/tos-bridge/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/release-support/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/ROOT_SURFACE_LAW.md",
+        "required": true,
+        "min_lines": 70,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/THEMATIC_DISTRICT_PROTOCOL.md",
+        "required": true,
+        "min_lines": 30,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/CURRENT_SURFACE_INDEX.md",
+        "required": true,
+        "min_lines": 25,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/agent-lane/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/audits/README.md",
+        "required": true,
+        "min_lines": 18,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/decisions/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/postmortems/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/traces/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/agon/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/experience/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/legacy/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/registry/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/landings/README.md",
+        "required": true,
+        "min_lines": 14,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "generated/README.md",
+        "required": true,
+        "min_lines": 25,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "scripts/README.md",
+        "required": true,
+        "min_lines": 30,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "schemas/README.md",
+        "required": true,
+        "min_lines": 30,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "tests/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "config/README.md",
+        "required": true,
+        "min_lines": 15,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "examples/README.md",
+        "required": true,
+        "min_lines": 15,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "manifests/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "manifests/recurrence/README.md",
+        "required": true,
+        "min_lines": 20,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "quests/README.md",
+        "required": true,
+        "min_lines": 30,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      }
+    ],
+    "directory_readme_gates": []
+  },
+  "status_vocabulary": {
+    "mechanic_status": [
+      "planted",
+      "landed",
+      "requested",
+      "operational",
+      "deprecated"
+    ],
+    "owner_request_status": [
+      "queued",
+      "requested",
+      "accepted",
+      "landed",
+      "blocked",
+      "superseded",
+      "retired"
+    ],
+    "maturity_status": [
+      "seed",
+      "proven",
+      "promoted",
+      "canonical",
+      "deprecated"
+    ],
+    "hygiene_status": [
+      "planned",
+      "active",
+      "warning",
+      "blocked",
+      "retired"
+    ]
+  },
+  "status_checks": [
+    {
+      "file": "mechanics/registry.json",
+      "json_path": "mechanics.*.status",
+      "vocabulary": "mechanic_status",
+      "required": false
+    },
+    {
+      "file": "generated/mechanic_card_index.min.json",
+      "json_path": "mechanics.*.status",
+      "vocabulary": "mechanic_status",
+      "required": false
+    },
+    {
+      "file": "mechanics/owner-request-queue.json",
+      "json_path": "requests.*.queue_status",
+      "vocabulary": "owner_request_status",
+      "required": false
+    },
+    {
+      "file": "generated/owner_request_queue.min.json",
+      "json_path": "requests.*.queue_status",
+      "vocabulary": "owner_request_status",
+      "required": false
+    },
+    {
+      "file": "generated/link_shape_hygiene.min.json",
+      "json_path": "guardrails.*.status",
+      "vocabulary": "hygiene_status",
+      "required": true
+    }
+  ],
+  "generated_freshness": [
+    {
+      "output": "generated/center_entry_map.min.json",
+      "builder": "scripts/build_center_entry_map.py",
+      "check_args": [
+        "--check"
+      ],
+      "required": false
+    },
+    {
+      "output": "generated/mechanic_card_index.min.json",
+      "builder": "scripts/build_mechanic_card_index.py",
+      "check_args": [
+        "--check"
+      ],
+      "required": false
+    },
+    {
+      "output": "generated/owner_request_queue.min.json",
+      "builder": "scripts/build_owner_request_queue.py",
+      "check_args": [
+        "--check"
+      ],
+      "required": false
+    },
+    {
+      "output": "generated/docs_thematic_index.min.json",
+      "builder": "scripts/build_docs_thematic_index.py",
+      "check_args": [
+        "--check"
+      ],
+      "required": false
+    },
+    {
+      "output": "generated/link_shape_hygiene.min.json",
+      "builder": "scripts/build_link_shape_hygiene_index.py",
+      "check_args": [
+        "--check"
+      ],
+      "required": true
+    }
+  ],
+  "validation_commands": [
+    "python scripts/repair_known_link_drifts.py --check",
+    "python scripts/validate_links.py",
+    "python scripts/validate_markdown_shape.py",
+    "python scripts/validate_status_vocabulary.py",
+    "python scripts/build_link_shape_hygiene_index.py --check",
+    "python scripts/validate_link_shape_hygiene_index.py",
+    "python scripts/validate_generated_freshness.py",
+    "python scripts/validate_hygiene_suite.py",
+    "python -m pytest -q tests"
+  ]
+}

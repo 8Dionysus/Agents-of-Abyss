@@ -29,6 +29,12 @@ Docs cleanup grammar is governed by
 [`CURRENT_SURFACE_INDEX`](CURRENT_SURFACE_INDEX.md),
 [`thematic_districts.json`](thematic_districts.json), and the generated
 [`docs_thematic_index`](../generated/docs_thematic_index.min.json).
+Link shape, Markdown shape, status vocabulary, and generated freshness hygiene
+are governed by
+[`LINK_AND_SHAPE_HYGIENE_PROTOCOL`](LINK_AND_SHAPE_HYGIENE_PROTOCOL.md),
+[`HYGIENE_GUARDRAIL_INDEX`](HYGIENE_GUARDRAIL_INDEX.md),
+[`config/link_shape_hygiene.json`](../config/link_shape_hygiene.json), and
+[`generated/link_shape_hygiene.min.json`](../generated/link_shape_hygiene.min.json).
 
 ## Route modes
 
@@ -67,7 +73,12 @@ python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
+python scripts/repair_known_link_drifts.py --check
+python scripts/validate_links.py
 python scripts/validate_markdown_shape.py
+python scripts/validate_status_vocabulary.py
+python scripts/build_link_shape_hygiene_index.py --check
+python scripts/validate_link_shape_hygiene_index.py
 python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
@@ -77,6 +88,8 @@ python scripts/validate_mechanic_card_index.py
 python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py
 python scripts/validate_mechanic_landing_logs.py
+python scripts/validate_generated_freshness.py
+python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
 ```
@@ -91,6 +104,8 @@ python -m pytest -q tests
 | [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md) | what may live in repository root and where root leaks should move |
 | [`THEMATIC_DISTRICT_PROTOCOL`](THEMATIC_DISTRICT_PROTOCOL.md) | how old, historical, evidential, and transitional docs move into districts |
 | [`CURRENT_SURFACE_INDEX`](CURRENT_SURFACE_INDEX.md) | thin index of current docs root surfaces and districts |
+| [`LINK_AND_SHAPE_HYGIENE_PROTOCOL`](LINK_AND_SHAPE_HYGIENE_PROTOCOL.md) | how local links, Markdown shape, status vocabularies, and generated freshness stay checkable |
+| [`HYGIENE_GUARDRAIL_INDEX`](HYGIENE_GUARDRAIL_INDEX.md) | thin index of Wave E hygiene scripts, config, generated mirror, and traces |
 | [`MECHANICS`](../mechanics/README.md) | the branch atlas for processes and engineering philosophy |
 
 

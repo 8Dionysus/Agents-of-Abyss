@@ -14,6 +14,7 @@ Generated files help low-context agents, validators, and local tooling orient qu
 | `mechanic_card_index.min.json` | compact reflection of mechanic package entry cards |
 | `owner_request_queue.min.json` | compact center-side owner request queue |
 | `docs_thematic_index.min.json` | compact map of docs thematic districts |
+| `link_shape_hygiene.min.json` | compact mirror of Wave E hygiene guardrails |
 | `agon_*.min.json` | generated Agon pre-protocol or candidate registry surfaces |
 | `dual_vocabulary_overlay.json` | derived vocabulary overlay surface |
 
@@ -36,6 +37,9 @@ python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
+python scripts/build_link_shape_hygiene_index.py --check
+python scripts/validate_link_shape_hygiene_index.py
+python scripts/validate_generated_freshness.py
 python scripts/validate_ecosystem.py
 ```
 

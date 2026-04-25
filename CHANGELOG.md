@@ -38,6 +38,11 @@ Tracking starts with the community-docs baseline for this repository.
   `docs/THEMATIC_DISTRICT_PROTOCOL.md`, `docs/CURRENT_SURFACE_INDEX.md`,
   `docs/thematic_districts.json`, `generated/docs_thematic_index.min.json`,
   district README gates, and docs-thematic validators
+- Wave E link and shape hygiene guardrails through
+  `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`,
+  `docs/HYGIENE_GUARDRAIL_INDEX.md`,
+  `config/link_shape_hygiene.json`, `generated/link_shape_hygiene.min.json`,
+  local-link/status/freshness validators, and exact known-repair traces
 
 ### Changed
 
@@ -59,9 +64,14 @@ Tracking starts with the community-docs baseline for this repository.
   `scripts/release_check.py`
 - `scripts/release_check.py` now also checks docs thematic cleanup, mechanic
   card indexes, and generated owner-request queues before running tests
+- `scripts/release_check.py` now also checks known link repairs, local
+  Markdown links, status vocabulary, generated freshness, and the Wave E
+  hygiene suite before release acceptance
 - detailed agent-lane and Codex audit references now live under
   `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
   narrow compatibility route into `mechanics/README.md`
+- stale links from old flat docs paths into mechanic packages and root docs
+  audit surfaces now route through exact, manifest-backed repair rules
 
 ## [0.2.3] - 2026-04-23
 

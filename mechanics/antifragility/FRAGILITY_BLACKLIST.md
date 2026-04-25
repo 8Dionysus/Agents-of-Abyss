@@ -2,7 +2,7 @@
 
 This blacklist names patterns that should be removed, merged, narrowed, suppressed, quarantined, or refused before the ecosystem grows new surface area.
 
-It is a compact root index. Canonical subtraction doctrine lives in [docs/VIA_NEGATIVA](mechanics/antifragility/docs/VIA_NEGATIVA.md). Audit candidates live in [docs/audits/DELETION_CANDIDATES.json](docs/audits/DELETION_CANDIDATES.json).
+It is a compact root index. Canonical subtraction doctrine lives in [VIA_NEGATIVA](docs/VIA_NEGATIVA.md). Audit candidates live in [docs/audits/DELETION_CANDIDATES.json](../../docs/audits/DELETION_CANDIDATES.json).
 
 | Pattern | Fragility | Default response |
 |---|---|---|
@@ -24,4 +24,4 @@ It is a compact root index. Canonical subtraction doctrine lives in [docs/VIA_NE
 
 ## Use with root cleanup
 
-If the fragile object is in the repository root, apply [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) first. The first question is not "is this interesting?" It is "does this object still deserve civic root visibility?"
+If the fragile object is in the repository root, apply [docs/ROOT_SURFACE_LAW](../../docs/ROOT_SURFACE_LAW.md) first. The first question is not "is this interesting?" It is "does this object still deserve civic root visibility?"

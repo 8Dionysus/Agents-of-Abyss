@@ -77,7 +77,12 @@ python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
+python scripts/repair_known_link_drifts.py --check
+python scripts/validate_links.py
 python scripts/validate_markdown_shape.py
+python scripts/validate_status_vocabulary.py
+python scripts/build_link_shape_hygiene_index.py --check
+python scripts/validate_link_shape_hygiene_index.py
 python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
@@ -87,6 +92,8 @@ python scripts/validate_mechanic_card_index.py
 python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py
 python scripts/validate_mechanic_landing_logs.py
+python scripts/validate_generated_freshness.py
+python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
 ```
@@ -152,7 +159,7 @@ Treat this contour as a map of planted law, contracts, candidates, and proof sur
 | Contour | Current status | Do not read as | Primary surfaces |
 |---|---|---|---|
 | Public center map | landed public route and registry v1 | a claim that the center owns every object it names | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, generated registry capsules |
-| Root surface governance | civic root law, completed root-leak cleanup route, district gates, and Markdown shape guardrail | permission to hide history, delete without review, or turn district READMEs into doctrine catalogs | `docs/ROOT_SURFACE_LAW.md`, `docs/audits/ROOT_SURFACE_AUDIT_2026_04_24.md`, `scripts/validate_markdown_shape.py`, local district READMEs |
+| Root surface governance | civic root law, completed root-leak cleanup route, district gates, and link/shape hygiene guardrails | permission to hide history, delete without review, or turn district READMEs into doctrine catalogs | `docs/ROOT_SURFACE_LAW.md`, `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`, `docs/audits/ROOT_SURFACE_AUDIT_2026_04_24.md`, `scripts/validate_hygiene_suite.py`, local district READMEs |
 | Method and growth | center doctrine and cross-owner route | a new lineage layer or center-owned method corpus | `mechanics/method-growth/docs/METHOD_SPINE.md`, `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`, `mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`, `mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md` |
 | Recurrence and continuity | bounded return to valid anchors | ambient continuity, hidden memory, or runtime autonomy | `mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md`, `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md`, `mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md` |
 | Agon | center-owned pre-protocol law, move language, owner binding, handoffs, arena grammar, consequence candidates, and threshold restraint | live arena execution, assistant contestant authority, live rank mutation, or canon write authority | `mechanics/agon/README.md` and linked `mechanics/agon/docs/AGON_*` surfaces |

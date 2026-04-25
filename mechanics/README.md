@@ -161,7 +161,12 @@ Machine companions:
 Validation:
 
 ```bash
+python scripts/repair_known_link_drifts.py --check
+python scripts/validate_links.py
 python scripts/validate_markdown_shape.py
+python scripts/validate_status_vocabulary.py
+python scripts/build_link_shape_hygiene_index.py --check
+python scripts/validate_link_shape_hygiene_index.py
 python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
@@ -171,6 +176,8 @@ python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py
 python scripts/validate_owner_request_docs.py
 python scripts/validate_mechanic_landing_logs.py
+python scripts/validate_generated_freshness.py
+python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
 ```
@@ -430,7 +437,12 @@ checked.
 Compact validation:
 
 ```bash
+python scripts/repair_known_link_drifts.py --check
+python scripts/validate_links.py
 python scripts/validate_markdown_shape.py
+python scripts/validate_status_vocabulary.py
+python scripts/build_link_shape_hygiene_index.py --check
+python scripts/validate_link_shape_hygiene_index.py
 python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
@@ -440,6 +452,8 @@ python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py
 python scripts/validate_owner_request_docs.py
 python scripts/validate_mechanic_landing_logs.py
+python scripts/validate_generated_freshness.py
+python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
 ```
