@@ -24,6 +24,7 @@ The protocol lives in `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`. The machine-fac
 | `docs/HYGIENE_GUARDRAIL_INDEX.md` | human index for guardrails |
 | `config/link_shape_hygiene.json` | source config for validators and generated mirror |
 | `generated/link_shape_hygiene.min.json` | compact machine-facing mirror |
+| `generated/agents_mesh.min.json` | required generated freshness target for Wave F AGENTS mesh |
 | `docs/traces/WAVE_E_HYGIENE_REPAIR_MANIFEST.json` | optional repair trace written by the apply script |
 
 ## What counts as success
@@ -56,6 +57,7 @@ python scripts/validate_markdown_shape.py
 python scripts/validate_status_vocabulary.py
 python scripts/build_link_shape_hygiene_index.py --check
 python scripts/validate_link_shape_hygiene_index.py
+python scripts/build_agents_mesh_index.py --check
 python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
 python -m pytest -q tests

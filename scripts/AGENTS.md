@@ -1,5 +1,25 @@
 # AGENTS.md
 
+## Applies to
+
+This card applies to `scripts/` and every nested path under that scope until a nearer `AGENTS.md` narrows the lane.
+
+## Role
+
+This AGENTS card keeps local work inside the Agents-of-Abyss center lane, names the nearest owner boundary, and routes wider claims back to the root card.
+
+## Read before editing
+
+Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or protocol surface before changing files in this lane.
+
+## Boundaries
+
+Do not use this lane to override owner-local truth, generated-source boundaries, sibling-repo authority, or release validation contracts.
+
+## Closeout
+
+Closeout must name changed surfaces, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
+
 This file applies to validation and builder tooling under `scripts/`.
 
 ## Role of this directory
@@ -21,6 +41,10 @@ Current scripts include:
   `validate_link_shape_hygiene_index.py`, `validate_generated_freshness.py`,
   and `validate_hygiene_suite.py` for Wave E link, Markdown shape, status
   vocabulary, generated freshness, and known-repair guardrails
+- `agents_mesh_common.py`, `validate_agents_md_shape.py`,
+  `validate_agents_mesh.py`, `build_agents_mesh_index.py`, and
+  `validate_agents_mesh_index.py` for Wave F AGENTS-card coverage, shape, and
+  compact mesh checks
 - `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, and
   `validate_mechanic_readme_cards.py` for the mechanic card contract
 - `build_owner_request_queue.py`, `validate_owner_request_queue.py`,
@@ -95,6 +119,10 @@ python scripts/validate_markdown_shape.py
 python scripts/validate_status_vocabulary.py
 python scripts/build_link_shape_hygiene_index.py --check
 python scripts/validate_link_shape_hygiene_index.py
+python scripts/validate_agents_md_shape.py
+python scripts/validate_agents_mesh.py
+python scripts/build_agents_mesh_index.py --check
+python scripts/validate_agents_mesh_index.py
 python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
 python scripts/validate_entry_surface_sync.py

@@ -67,7 +67,7 @@ Use this tree before trusting a claim made by the center:
 | Ownership law | Does the claim preserve source truth, derived truth, routing truth, runtime truth, and ToS-authored meaning as separate things? | [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) | Cross-check [docs/REPO_ROLES](docs/REPO_ROLES.md) and [release-support/PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md). |
 | Surface placement | Does this object deserve to live in the repository root? | [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) | If it is a wave receipt, audit artifact, future registry note, or generated object, route it away from root. |
 | Direction | Is this current program direction rather than an old contour, wave note, or copied promise? | [ROADMAP](ROADMAP.md) | Cross-check [release-support/DIRECTION_SURFACES](mechanics/release-support/docs/DIRECTION_SURFACES.md). |
-| Machine contract | Can the compact surfaces still rebuild and validate? | generated capsules and validators | Run the commands below. |
+| Machine contract | Can the compact surfaces and AGENTS mesh still rebuild and validate? | generated capsules, AGENTS cards, and validators | Run the commands below. |
 | Mechanic route | Is the claim about a process, engineering philosophy, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS support? | [mechanics/README](mechanics/README.md) | Use the package entry for that mechanic before editing the deeper surface. |
 | Audit route | Is this cleanup, pruning, or duplicate-meaning review? | [ECOSYSTEM_AUDIT_INDEX](ECOSYSTEM_AUDIT_INDEX.md) and [docs/audits](docs/audits/) | Keep audit evidence reviewable without promoting it into constitutional law. |
 
@@ -83,6 +83,10 @@ python scripts/validate_markdown_shape.py
 python scripts/validate_status_vocabulary.py
 python scripts/build_link_shape_hygiene_index.py --check
 python scripts/validate_link_shape_hygiene_index.py
+python scripts/validate_agents_md_shape.py
+python scripts/validate_agents_mesh.py
+python scripts/build_agents_mesh_index.py --check
+python scripts/validate_agents_mesh_index.py
 python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
@@ -159,7 +163,7 @@ Treat this contour as a map of planted law, contracts, candidates, and proof sur
 | Contour | Current status | Do not read as | Primary surfaces |
 |---|---|---|---|
 | Public center map | landed public route and registry v1 | a claim that the center owns every object it names | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, generated registry capsules |
-| Root surface governance | civic root law, completed root-leak cleanup route, district gates, and link/shape hygiene guardrails | permission to hide history, delete without review, or turn district READMEs into doctrine catalogs | `docs/ROOT_SURFACE_LAW.md`, `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`, `docs/audits/ROOT_SURFACE_AUDIT_2026_04_24.md`, `scripts/validate_hygiene_suite.py`, local district READMEs |
+| Root surface governance | civic root law, completed root-leak cleanup route, district gates, link/shape hygiene, and AGENTS mesh guardrails | permission to hide history, delete without review, or turn district READMEs or AGENTS cards into doctrine catalogs | `docs/ROOT_SURFACE_LAW.md`, `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`, `docs/AGENTS_MESH_PROTOCOL.md`, `docs/audits/ROOT_SURFACE_AUDIT_2026_04_24.md`, `scripts/validate_hygiene_suite.py`, local district READMEs and AGENTS cards |
 | Method and growth | center doctrine and cross-owner route | a new lineage layer or center-owned method corpus | `mechanics/method-growth/docs/METHOD_SPINE.md`, `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`, `mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`, `mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md` |
 | Recurrence and continuity | bounded return to valid anchors | ambient continuity, hidden memory, or runtime autonomy | `mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md`, `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md`, `mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md` |
 | Agon | center-owned pre-protocol law, move language, owner binding, handoffs, arena grammar, consequence candidates, and threshold restraint | live arena execution, assistant contestant authority, live rank mutation, or canon write authority | `mechanics/agon/README.md` and linked `mechanics/agon/docs/AGON_*` surfaces |

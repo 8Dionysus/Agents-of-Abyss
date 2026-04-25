@@ -17,6 +17,8 @@ This index explains which `docs/` surfaces are current and which districts hold 
 | `docs/CURRENT_SURFACE_INDEX.md` | thin current index | routes old material without duplicating it |
 | `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md` | hygiene law | current link, shape, status, and freshness guardrail |
 | `docs/HYGIENE_GUARDRAIL_INDEX.md` | thin hygiene index | routes hygiene scripts, config, generated mirror, and traces |
+| `docs/AGENTS_MESH_PROTOCOL.md` | AGENTS mesh law | current local agent-card coverage and shape guardrail |
+| `docs/AGENTS_MESH_INDEX.md` | thin AGENTS mesh index | routes mesh config, generated mirror, validators, and cards |
 | `docs/thematic_districts.json` | machine-readable classifier | source for Wave D validators and generated index |
 
 ## Thematic districts
@@ -38,5 +40,6 @@ This index explains which `docs/` surfaces are current and which districts hold 
 
 ```bash
 python scripts/plan_docs_thematic_cleanup.py --check
+python scripts/validate_agents_mesh.py
 python scripts/validate_hygiene_suite.py
 ```

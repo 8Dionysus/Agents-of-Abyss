@@ -10,6 +10,7 @@ Tests protect bounded claims. They do not replace proof canon in `aoa-evals` and
 - a schema contract changes
 - a validator changes
 - a link, Markdown shape, status vocabulary, or generated freshness guardrail changes
+- an AGENTS-card mesh, local card, or mesh index changes
 - an Agon or Experience center contract changes
 - a release or root-surface guardrail needs regression protection
 
@@ -32,4 +33,13 @@ schema, or hygiene guardrail changes. For Wave E hygiene, run:
 
 ```bash
 python scripts/validate_hygiene_suite.py
+```
+
+For Wave F AGENTS mesh changes, run:
+
+```bash
+python scripts/validate_agents_md_shape.py
+python scripts/validate_agents_mesh.py
+python scripts/build_agents_mesh_index.py --check
+python scripts/validate_agents_mesh_index.py
 ```

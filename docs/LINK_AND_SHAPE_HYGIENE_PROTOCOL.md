@@ -100,6 +100,9 @@ generated/link_shape_hygiene.min.json
 ```
 
 It reflects the protocol and config. It does not replace them.
+Other generated surfaces, including `generated/agents_mesh.min.json`, may be
+registered as freshness targets when their builders are part of the release
+gate.
 
 ## Agent route
 
@@ -123,6 +126,7 @@ python scripts/validate_markdown_shape.py
 python scripts/validate_status_vocabulary.py
 python scripts/build_link_shape_hygiene_index.py --check
 python scripts/validate_link_shape_hygiene_index.py
+python scripts/build_agents_mesh_index.py --check
 python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
 python -m pytest -q tests
