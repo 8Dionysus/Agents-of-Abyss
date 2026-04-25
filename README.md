@@ -41,6 +41,21 @@ a low-context agent or small model, also inspect
 The route modes behind this entry surface are governed by
 [`docs/START_HERE_ROUTE_CONTRACT.md`](docs/START_HERE_ROUTE_CONTRACT.md).
 
+## Route modes
+
+Every public entry surface must expose the same route-mode vocabulary:
+
+| Route mode | Use when | Start surface |
+|---|---|---|
+| `first-reading` | you need the shortest honest center overview | `README.md` |
+| `root-editing` | you will add, move, delete, rename, or rewrite a root surface | `docs/ROOT_SURFACE_LAW.md` |
+| `direction-change` | you will change roadmap, phase, maturity, release contour, or declared direction | `ROADMAP.md` |
+| `ownership-routing` | you need to decide which repository owns a change | `docs/REPO_ROLES.md` |
+| `mechanic-change` | you will touch Agon, Experience, recurrence, method/growth, antifragility, quest/RPG, or ToS support | `mechanics/README.md` |
+| `public-claim-validation` | a sentence sounds like a public promise | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` |
+| `low-context-agent` | you need a compact machine-facing route before full reading | `generated/center_entry_map.min.json` |
+| `district-work` | you are already inside a technical district | nearest local `README.md` |
+
 ## How to verify center claims
 
 Use this tree before trusting a claim made by the center:
@@ -57,11 +72,13 @@ Use this tree before trusting a claim made by the center:
 | Audit route | Is this cleanup, pruning, or duplicate-meaning review? | [ECOSYSTEM_AUDIT_INDEX](ECOSYSTEM_AUDIT_INDEX.md) and [docs/audits](docs/audits/) | Keep audit evidence reviewable without promoting it into constitutional law. |
 
 ```bash
+python scripts/validate_markdown_shape.py
+python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
+python scripts/validate_mechanics_topology.py
 python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
-python scripts/validate_markdown_shape.py
 python -m pytest -q tests
 ```
 

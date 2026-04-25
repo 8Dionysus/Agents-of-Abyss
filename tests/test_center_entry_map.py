@@ -7,7 +7,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from center_entry_map_common import REQUIRED_ROUTE_MODES, SURFACE_PAYLOAD, build_payload
+from center_entry_map_common import (
+    BASELINE_VALIDATION_COMMANDS,
+    ENTRY_SURFACE_REFS,
+    REQUIRED_ROUTE_MODES,
+    SURFACE_PAYLOAD,
+    VALIDATION_REFS,
+    build_payload,
+)
 
 
 class CenterEntryMapTests(unittest.TestCase):
@@ -26,19 +33,7 @@ class CenterEntryMapTests(unittest.TestCase):
         routes = payload["routes"]
         self.assertEqual([route["priority"] for route in routes], list(range(1, len(routes) + 1)))
         self.assertEqual({route["route_mode"] for route in routes}, set(REQUIRED_ROUTE_MODES))
-        self.assertEqual(
-            [route["route_id"] for route in routes],
-            [
-                "first-reading",
-                "root-editing",
-                "direction-change",
-                "ownership-routing",
-                "mechanic-change",
-                "public-claim-validation",
-                "low-context-agent",
-                "district-work",
-            ],
-        )
+        self.assertEqual([route["route_id"] for route in routes], list(REQUIRED_ROUTE_MODES))
 
     def test_first_reading_route_keeps_human_path_short(self) -> None:
         payload = build_payload()
@@ -69,6 +64,23 @@ class CenterEntryMapTests(unittest.TestCase):
         self.assertEqual(route["surface_ref"], "generated/center_entry_map.min.json")
         self.assertIn("README.md", route["human_path"])
         self.assertTrue(any("replaces human docs" in item for item in route["must_not_claim"]))
+
+    def test_entry_surface_refs_are_declared(self) -> None:
+        self.assertIn("AGENTS.md", ENTRY_SURFACE_REFS)
+        self.assertIn("mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md", ENTRY_SURFACE_REFS)
+        self.assertIn("generated/center_entry_map.min.json", ENTRY_SURFACE_REFS)
+
+    def test_validation_refs_include_entry_sync(self) -> None:
+        payload = build_payload()
+        for ref in VALIDATION_REFS:
+            self.assertIn(ref, payload["validation_refs"])
+        self.assertIn("scripts/validate_entry_surface_sync.py", payload["validation_refs"])
+        self.assertIn("tests/test_entry_surface_sync.py", payload["validation_refs"])
+
+    def test_baseline_validation_commands_are_named(self) -> None:
+        self.assertIn("python scripts/validate_entry_surface_sync.py", BASELINE_VALIDATION_COMMANDS)
+        self.assertIn("python scripts/build_center_entry_map.py --check", BASELINE_VALIDATION_COMMANDS)
+        self.assertIn("python -m pytest -q tests", BASELINE_VALIDATION_COMMANDS)
 
 
 if __name__ == "__main__":

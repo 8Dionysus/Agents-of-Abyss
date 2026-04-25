@@ -13,18 +13,7 @@ CENTER_ENTRY_MAP_PATH = REPO_ROOT / "generated" / "center_entry_map.min.json"
 SCHEMA_REF = "schemas/center-entry-map.schema.json"
 ROUTE_CONTRACT_REF = "docs/START_HERE_ROUTE_CONTRACT.md"
 
-VALIDATION_REFS = (
-    "scripts/validate_markdown_shape.py",
-    "scripts/build_center_entry_map.py",
-    "scripts/validate_center_entry_map.py",
-    "scripts/validate_mechanics_topology.py",
-    "scripts/validate_mechanic_landing_logs.py",
-    "scripts/validate_ecosystem.py",
-    "tests/test_center_entry_map.py",
-)
-
-FORBIDDEN_LOW_CONTEXT_PREFIXES = ("src/", "scripts/")
-REQUIRED_ROUTE_MODES = (
+ROUTE_MODE_ORDER = (
     "first-reading",
     "root-editing",
     "direction-change",
@@ -34,6 +23,53 @@ REQUIRED_ROUTE_MODES = (
     "low-context-agent",
     "district-work",
 )
+REQUIRED_ROUTE_MODES = ROUTE_MODE_ORDER
+
+ENTRY_SURFACE_REFS = (
+    "README.md",
+    "AGENTS.md",
+    "docs/README.md",
+    "docs/START_HERE_ROUTE_CONTRACT.md",
+    "CONTRIBUTING.md",
+    "mechanics/README.md",
+    "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
+    "generated/center_entry_map.min.json",
+)
+
+MACHINE_CONTRACT_REFS = (
+    "generated/center_entry_map.min.json",
+    "schemas/center-entry-map.schema.json",
+    "scripts/center_entry_map_common.py",
+    "scripts/validate_center_entry_map.py",
+    "scripts/validate_entry_surface_sync.py",
+    "tests/test_center_entry_map.py",
+    "tests/test_entry_surface_sync.py",
+)
+
+BASELINE_VALIDATION_COMMANDS = (
+    "python scripts/validate_markdown_shape.py",
+    "python scripts/validate_entry_surface_sync.py",
+    "python scripts/build_center_entry_map.py --check",
+    "python scripts/validate_center_entry_map.py",
+    "python scripts/validate_mechanics_topology.py",
+    "python scripts/validate_mechanic_landing_logs.py",
+    "python scripts/validate_ecosystem.py",
+    "python -m pytest -q tests",
+)
+
+VALIDATION_REFS = (
+    "scripts/validate_markdown_shape.py",
+    "scripts/validate_entry_surface_sync.py",
+    "scripts/build_center_entry_map.py",
+    "scripts/validate_center_entry_map.py",
+    "scripts/validate_mechanics_topology.py",
+    "scripts/validate_mechanic_landing_logs.py",
+    "scripts/validate_ecosystem.py",
+    "tests/test_center_entry_map.py",
+    "tests/test_entry_surface_sync.py",
+)
+
+FORBIDDEN_LOW_CONTEXT_PREFIXES = ("src/", "scripts/")
 
 SURFACE_PAYLOAD: dict[str, object] = {
     "schema_version": "aoa_center_entry_map_v2",
