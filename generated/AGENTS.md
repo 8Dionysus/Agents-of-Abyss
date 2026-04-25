@@ -7,6 +7,8 @@ This file applies to compact machine-readable publication surfaces under `genera
 `generated/ecosystem_registry.min.json` is the current compact machine-readable registry for AoA center-layer routing.
 It summarizes repository names, roles, statuses, shared maturity, and kind for the public ecosystem map.
 `generated/federation_supporting_inventory.min.json` is the companion machine-readable inventory for supporting consumer/control-plane surfaces that stay outside compact registry v1.
+`generated/center_entry_map.min.json` is the compact machine-facing route
+capsule for the shared `Start here` contract.
 `generated/agon_imposition_readiness.min.json` is the tracked Wave 0 readiness capsule for the center-owned Agon imposition gate.
 `generated/agon_lawful_move_registry.min.json` is the tracked Wave III lawful
 move registry for the center-owned pre-protocol legal vocabulary.
@@ -28,6 +30,16 @@ When editing `ecosystem_registry.min.json` or `federation_supporting_inventory.m
 - do not smuggle layer-owned implementation detail, speculative repos, or private assumptions into the registry
 - keep compact registry v1 and supporting inventory boundaries explicit instead of blurring them together
 - prefer the smallest coherent change that keeps the center more legible
+
+When editing `center_entry_map.min.json`:
+
+- rebuild it with `scripts/build_center_entry_map.py`
+- keep it aligned with `docs/START_HERE_ROUTE_CONTRACT.md`, `README.md`,
+  `AGENTS.md`, `docs/README.md`, `CONTRIBUTING.md`, `mechanics/README.md`, and
+  `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`
+- run `scripts/validate_entry_surface_sync.py` so route modes remain visible
+  across human and generated entry surfaces
+- do not let the compact route capsule replace authored human docs
 
 When editing `agon_imposition_readiness.min.json`:
 
@@ -93,8 +105,16 @@ After changing a generated center inventory surface, run:
 
 ```bash
 python -m pip install -r requirements-dev.txt
+python scripts/validate_entry_surface_sync.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
+```
+
+After changing the center entry map, also run:
+
+```bash
+python scripts/build_center_entry_map.py --check
+python scripts/validate_center_entry_map.py
 ```
 
 After changing the Agon readiness capsule, also run:

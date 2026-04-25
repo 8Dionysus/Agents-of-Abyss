@@ -24,6 +24,8 @@ It does not own:
 
 ## Start here
 
+Entry routing is governed by `docs/START_HERE_ROUTE_CONTRACT.md`.
+
 1. `CHARTER.md`
 2. `ECOSYSTEM_MAP.md`
 3. `docs/LAYERS.md`
@@ -32,6 +34,20 @@ It does not own:
 6. `README.md`
 7. For detailed preserved root branches, read `docs/AGENTS_ROOT_REFERENCE.md`.
 
+## Route modes
+
+Use the named route before widening a center claim:
+
+| Route mode | Use when | First surface |
+|---|---|---|
+| `first-reading` | you need the shortest honest center overview | `README.md` |
+| `root-editing` | a root surface changes | `docs/ROOT_SURFACE_LAW.md` |
+| `direction-change` | roadmap, phase, maturity, or release contour changes | `ROADMAP.md` |
+| `ownership-routing` | ownership is unclear | `docs/REPO_ROLES.md` |
+| `mechanic-change` | Agon, Experience, recurrence, growth, antifragility, quest/RPG, or ToS support changes | `mechanics/README.md` |
+| `public-claim-validation` | a sentence sounds like a public promise | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` |
+| `low-context-agent` | a compact machine route is needed first | `generated/center_entry_map.min.json` |
+| `district-work` | work is already inside a technical district | nearest local `README.md` |
 
 ## AGENTS stack law
 
@@ -56,7 +72,12 @@ It does not own:
 Run the narrowest relevant center check. Default center integrity:
 
 ```bash
-python -m pip install -r requirements-dev.txt
+python scripts/validate_markdown_shape.py
+python scripts/validate_entry_surface_sync.py
+python scripts/build_center_entry_map.py --check
+python scripts/validate_center_entry_map.py
+python scripts/validate_mechanics_topology.py
+python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
 ```

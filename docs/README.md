@@ -25,6 +25,21 @@ The route modes behind this entry surface are governed by
 history lives in [`AGON_LANDING_LOG`](../mechanics/agon/LANDING_LOG.md) and
 [`EXPERIENCE_LANDING_LOG`](../mechanics/experience/LANDING_LOG.md).
 
+## Route modes
+
+This docs map mirrors, but does not replace, the canonical route contract.
+
+| Route mode | Use when | Continue through |
+|---|---|---|
+| `first-reading` | you need the shortest honest center overview | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md` |
+| `root-editing` | a root surface changes | `CONTRIBUTING.md`, `docs/ROOT_SURFACE_LAW.md` |
+| `direction-change` | roadmap, phase, maturity, or release contour changes | `ROADMAP.md`, `mechanics/release-support/docs/DIRECTION_SURFACES.md`, `CHANGELOG.md` |
+| `ownership-routing` | you need to decide where work belongs | `docs/LAYERS.md`, `docs/REPO_ROLES.md` |
+| `mechanic-change` | a process or mechanic changes | `mechanics/README.md`, relevant package README and `LANDING_LOG.md` |
+| `public-claim-validation` | public support language or release claims change | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, generated capsules, validators |
+| `low-context-agent` | a compact machine route is needed first | `generated/center_entry_map.min.json` |
+| `district-work` | you are already in a technical district | nearest local `README.md` gate |
+
 ## How to verify center claims
 
 | Branch | Use | Primary surface |
@@ -42,11 +57,13 @@ history lives in [`AGON_LANDING_LOG`](../mechanics/agon/LANDING_LOG.md) and
 Core validation:
 
 ```bash
+python scripts/validate_markdown_shape.py
+python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
+python scripts/validate_mechanics_topology.py
 python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
-python scripts/validate_markdown_shape.py
 python -m pytest -q tests
 ```
 

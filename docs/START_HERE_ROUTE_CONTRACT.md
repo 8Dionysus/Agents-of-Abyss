@@ -1,6 +1,7 @@
 # Start Here Route Contract
 
 This document is the canonical route contract for the `Start here` surface of `Agents-of-Abyss`.
+The canonical file path is `docs/START_HERE_ROUTE_CONTRACT.md`.
 
 It answers one question: when a human, agent, contributor, validator, or downstream owner enters the center, what path should they follow before changing or trusting anything?
 
@@ -228,8 +229,10 @@ Run:
 
 ```bash
 python scripts/validate_markdown_shape.py
+python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
+python scripts/validate_mechanics_topology.py
 python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests

@@ -14,6 +14,22 @@ This file does not create new authority. It keeps the root README human-sized wh
 4. Run the validator named by that mechanic when a validator exists.
 5. If ownership is unclear, return to [FEDERATION_RULES](../docs/FEDERATION_RULES.md) before changing anything.
 
+## Entry route contract
+
+Mechanic navigation participates in the shared entry contract at
+[`docs/START_HERE_ROUTE_CONTRACT.md`](../docs/START_HERE_ROUTE_CONTRACT.md).
+
+| Route mode | Mechanic-facing meaning |
+|---|---|
+| `first-reading` | understand the center before entering a mechanic |
+| `root-editing` | change root placement only through root surface law |
+| `direction-change` | route program direction through roadmap and release-support surfaces |
+| `ownership-routing` | decide whether center mechanics or a sibling repository owns the object |
+| `mechanic-change` | edit this atlas, a mechanic package, or its `LANDING_LOG.md` |
+| `public-claim-validation` | check whether a mechanic claim can be public |
+| `low-context-agent` | use the compact center entry map before opening deeper packages |
+| `district-work` | follow the nearest local README once inside a technical district |
+
 ## Compass
 
 | Mechanic | Center question | Current status | Start here | Must not claim |
@@ -56,12 +72,13 @@ Machine companions:
 Validation:
 
 ```bash
+python scripts/validate_markdown_shape.py
+python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
 python scripts/validate_mechanics_topology.py
 python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
-python scripts/validate_markdown_shape.py
 python -m pytest -q tests
 ```
 

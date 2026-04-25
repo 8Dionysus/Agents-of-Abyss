@@ -10,6 +10,8 @@ Current scripts include:
 
 - `validate_ecosystem.py` for schema, registry, and center-level `QUESTBOOK` surface checks
 - `validate_nested_agents.py` for required local directory guidance under `docs/`, `generated/`, `schemas/`, and `scripts/`
+- `validate_entry_surface_sync.py` for route-mode parity across public entry surfaces
+- `release_check.py` for the release-gate bundle that runs markdown shape, entry sync, center-entry, mechanics, ecosystem, and tests
 - `validate_candidate_lineage_contract.py` for the narrow cross-repo Growth Refinery example-chain witness
 - `validate_wave4_kernel_automation.py` for the reviewed wave 4 next-kernel and automation follow-through seam across sibling repos
 - `agon_imposition_common.py` for the canonical Agon Wave 0 capsule payload,
@@ -68,7 +70,9 @@ After changing validator logic, run:
 
 ```bash
 python -m pip install -r requirements-dev.txt
+python scripts/validate_entry_surface_sync.py
 python scripts/validate_ecosystem.py
+python scripts/release_check.py
 ```
 
 After changing the Agon Wave 0 builder or validator, also run:

@@ -67,7 +67,22 @@ Examples:
 
 ## Before you edit
 
-Use this check path before you widen a center claim or move material into this repository:
+Use the canonical route contract before you widen a center claim or move
+material into this repository:
+[`docs/START_HERE_ROUTE_CONTRACT.md`](docs/START_HERE_ROUTE_CONTRACT.md).
+
+| Route mode | Contributor use |
+|---|---|
+| `first-reading` | understand the center before expanding a claim |
+| `root-editing` | add, move, delete, rename, or rewrite root surfaces |
+| `direction-change` | change roadmap, phase, maturity, release contour, or declared direction |
+| `ownership-routing` | decide which repository owns a change |
+| `mechanic-change` | edit center-level process, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS support |
+| `public-claim-validation` | check whether public language is honest and supportable |
+| `low-context-agent` | use a compact machine route before full reading |
+| `district-work` | follow local README gates inside technical districts |
+
+Use this check path:
 
 1. Read [CHARTER](CHARTER.md) for ownership boundaries.
 2. Read [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current documented public federation contour.
@@ -117,11 +132,13 @@ Use the smallest relevant validation set, then widen when generated surfaces or 
 Baseline center checks:
 
 ```bash
+python scripts/validate_markdown_shape.py
+python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
+python scripts/validate_mechanics_topology.py
 python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
-python scripts/validate_markdown_shape.py
 python -m pytest -q tests
 ```
 

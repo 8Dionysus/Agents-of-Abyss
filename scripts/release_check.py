@@ -10,6 +10,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 COMMANDS = [
     ("validate markdown shape", [sys.executable, "scripts/validate_markdown_shape.py"]),
+    ("validate entry surface sync", [sys.executable, "scripts/validate_entry_surface_sync.py"]),
     ("check center entry map", [sys.executable, "scripts/build_center_entry_map.py", "--check"]),
     ("validate center entry map", [sys.executable, "scripts/validate_center_entry_map.py"]),
     ("validate mechanics topology", [sys.executable, "scripts/validate_mechanics_topology.py"]),
