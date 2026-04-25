@@ -1,0 +1,27 @@
+from __future__ import annotations
+
+import sys
+import unittest
+from pathlib import Path
+
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+from validate_mechanic_landing_logs import validate_log
+
+
+class MechanicLandingLogTests(unittest.TestCase):
+    def test_agon_landing_log_carries_release_anchors(self) -> None:
+        problems = validate_log("agon")
+
+        self.assertEqual(problems, [])
+
+    def test_experience_landing_log_carries_versioned_center_line(self) -> None:
+        problems = validate_log("experience")
+
+        self.assertEqual(problems, [])
+
+
+if __name__ == "__main__":
+    unittest.main()

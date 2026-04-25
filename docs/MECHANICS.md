@@ -58,6 +58,7 @@ Validation:
 ```bash
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
+python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
 python scripts/validate_markdown_shape.py
 python -m pytest -q tests
@@ -134,6 +135,10 @@ Use this branch when working with staged experience contracts, office/service po
 
 Read this as planted center law, not live authority. These surfaces repeatedly forbid live runtime activation, hidden memory sovereignty, assistant contestant authority, direct ToS writes, and owner-truth theft unless a later owner-local gate lands the slice.
 
+Landing history, checked surfaces, validators, and stop-lines live in
+[EXPERIENCE_LANDING_LOG](EXPERIENCE_LANDING_LOG.md). This atlas stays a route
+surface rather than the canonical Experience ledger.
+
 ### Experience Wave 1-5
 
 | Surface | Role |
@@ -166,6 +171,10 @@ Validation is version-specific. Use the matching `scripts/validate_experience_*.
 Use this branch when pressure, contest, survival, lawful moves, arena sessions, sealed commitments, state packets, verdicts, scars, retention, rank, schools, canon promotion, or ToS thresholds are involved.
 
 Agon is center-owned as law, vocabulary, stop-line, and owner-binding doctrine. It is not live arena execution in this repository. Owner repos must land their own slices before practice, workflows, proof, memory, stats, routing, actors, runtime, or ToS canon become operational truth.
+
+Landing history, checked surfaces, validators, and stop-lines live in
+[AGON_LANDING_LOG](AGON_LANDING_LOG.md). This atlas stays a route surface rather
+than the canonical Agon ledger.
 
 ### Agon phase map
 
