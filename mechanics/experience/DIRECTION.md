@@ -1,6 +1,6 @@
 # Experience Direction
 
-Experience is the center mechanic for making lived work reviewable. The active package is intentionally lean: it names current direction, functioning parts, owner requests, landing history, and stop-lines. The long wave and version records remain preserved under `legacy/raw/`.
+Experience is the center mechanic for making lived work reviewable. The active package is intentionally lean: it names current direction, functioning parts, owner requests, landing history, and stop-lines. Historical source accounting stays behind the provenance bridge.
 
 ## Active surfaces
 
@@ -11,7 +11,7 @@ Experience is the center mechanic for making lived work reviewable. The active p
 - `OWNER_REQUESTS.md`: center-side owner request packet.
 - `LANDING_LOG.md`: canonical landing ledger.
 - `ROADMAP.md`: future contour, not a historical ledger.
-- `legacy/`: provenance, raw sources, and distillation accounting.
+- `PROVENANCE.md`: the only active bridge back to archival accounting.
 
 ## Functioning parts
 
@@ -28,7 +28,7 @@ Experience is the center mechanic for making lived work reviewable. The active p
 
 ## Distillation law
 
-New waves, bridge packets, and long exploratory surfaces may land as raw provenance first, but they must not become the active user route by accumulation. After a packet lands, update the relevant part `README.md`, `CONTRACT.md`, or `VALIDATION.md`, then index the raw source in `legacy/INDEX.md`.
+New waves, bridge packets, and long exploratory surfaces must not become the active user route by accumulation. After a packet lands, update the relevant part `README.md`, `CONTRACT.md`, or `VALIDATION.md`, then update archival accounting through `PROVENANCE.md`.
 
 A functioning part should answer three questions quickly:
 
@@ -41,7 +41,7 @@ A functioning part should answer three questions quickly:
 - Do not claim live workspace runtime from Experience center docs.
 - Do not claim hidden memory sovereignty.
 - Do not claim owner-local activation before the owner repository accepts and proves the slice.
-- Do not let `legacy/raw/` become the primary route for low-context agents.
+- Do not let archival packets become the primary route for low-context agents.
 
 ## Validation
 

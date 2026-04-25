@@ -267,16 +267,15 @@ These surfaces repeatedly forbid live runtime activation, hidden memory
 sovereignty, assistant contestant authority, direct ToS writes, and owner-truth
 theft unless a later owner-local gate lands the slice.
 
-Active direction, functioning parts, landing history, raw provenance, and
+Active direction, functioning parts, landing history, archival bridge, and
 owner requests live in [Experience](experience/README.md),
 [DIRECTION](experience/DIRECTION.md), [PARTS](experience/PARTS.md),
-[LANDING_LOG](experience/LANDING_LOG.md), [legacy](experience/legacy/README.md),
+[LANDING_LOG](experience/LANDING_LOG.md), [PROVENANCE](experience/PROVENANCE.md),
 and [OWNER_REQUESTS](experience/OWNER_REQUESTS.md).
 
 This atlas stays a route surface rather than the canonical Experience ledger.
-The heavy Wave 1-5 and v1.2-v2.0 raw files remain under
-`mechanics/experience/legacy/raw/`; use them as provenance, not as the first
-active route.
+Historical source packets stay behind the provenance bridge; use them for
+audits, not as the first active route.
 
 ### Experience active parts
 

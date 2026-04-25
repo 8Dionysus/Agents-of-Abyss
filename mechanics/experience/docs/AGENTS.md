@@ -6,7 +6,7 @@ This card applies to `mechanics/experience/docs/` compatibility surfaces.
 
 ## Role
 
-This directory is now a compatibility route only. Active Experience direction lives in `../DIRECTION.md`, `../PARTS.md`, and `../parts/`; preserved raw provenance lives in `../legacy/raw/`.
+This directory is now a compatibility route only. Active Experience direction lives in `../DIRECTION.md`, `../PARTS.md`, and `../parts/`; archival accounting is routed through `../PROVENANCE.md`.
 
 ## Read before editing
 
@@ -14,7 +14,7 @@ Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/experience/AGENTS.md`, 
 
 ## Boundaries
 
-Do not add new heavy `EXPERIENCE_*` doctrine here. Do not use this route to bypass active part contracts, owner requests, landing logs, or legacy indexing.
+Do not add new heavy doctrine here. Do not use this route to bypass active part contracts, owner requests, landing logs, or provenance accounting.
 
 ## Validation
 
@@ -28,4 +28,4 @@ python scripts/validate_agents_mesh.py
 
 ## Closeout
 
-Report compatibility-route changes, whether active parts or legacy raw surfaces changed, and checks run or skipped.
+Report compatibility-route changes, whether active parts or provenance accounting changed, and checks run or skipped.

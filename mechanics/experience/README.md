@@ -67,8 +67,7 @@ python scripts/validate_owner_request_docs.py --mechanic experience
 - [LANDING_LOG](LANDING_LOG.md)
 - [ROADMAP](ROADMAP.md)
 - [OWNER_REQUESTS](OWNER_REQUESTS.md)
-- [Legacy provenance](legacy/README.md)
-- [Legacy raw index](legacy/INDEX.md)
+- [PROVENANCE](PROVENANCE.md)
 
 ## Functioning parts
 
@@ -89,9 +88,10 @@ Use [OWNER_REQUESTS](OWNER_REQUESTS.md) when this mechanic produces an owner-loc
 
 A request packet is not owner acceptance. Keep `experience` claims center-bounded until the stronger owner lands the slice and proof routes are satisfied.
 
-## Legacy and raw source posture
+## Historical provenance
 
-Long wave, law, table, bridge, and compatibility documents now live under [legacy/raw](legacy/raw/). They are preserved and indexed, but the active user route is the part map above.
+Use [PROVENANCE](PROVENANCE.md) only when auditing how archived source packets
+were distilled. The active user route is the part map above.
 
 ## Owner boundary
 
@@ -99,4 +99,4 @@ Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, 
 
 ## Growth posture
 
-When this mechanic changes, keep the active route small enough for a low-context agent to act safely. Land raw packets under `legacy/raw/`, update the relevant active part, preserve landing history in `LANDING_LOG.md`, and route proof, memory, runtime, actor, KAG, and ToS claims to their stronger owners.
+When this mechanic changes, keep the active route small enough for a low-context agent to act safely. Update the relevant active part, preserve landing history in `LANDING_LOG.md`, keep archival accounting behind `PROVENANCE.md`, and route proof, memory, runtime, actor, KAG, and ToS claims to their stronger owners.

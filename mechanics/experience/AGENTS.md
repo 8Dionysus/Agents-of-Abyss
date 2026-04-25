@@ -14,7 +14,7 @@ Do not use this lane to override owner-local truth, generated-source boundaries,
 
 ## Closeout
 
-Closeout must name changed active parts, raw legacy sources consulted or moved, owner requests affected, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
+Closeout must name changed active parts, archival sources consulted through `PROVENANCE.md`, owner requests affected, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
 
 ## Role
 
@@ -31,11 +31,11 @@ It does not activate live workspace runtime, owner-local offices, hidden memory 
 - `OWNER_REQUESTS.md`: center-side owner request packet.
 - `ROADMAP.md`: current and next Experience contour.
 - `LANDING_LOG.md`: canonical Experience landing ledger.
-- `legacy/`: preserved raw provenance and distillation accounting.
+- `PROVENANCE.md`: controlled bridge to archival accounting.
 - `docs/`: compatibility route only.
 
 ## Validation
 
-Use `python scripts/validate_experience_distillation.py` after active-part, legacy, or raw-source changes.
+Use `python scripts/validate_experience_distillation.py` after active-part or provenance-route changes.
 Use `python scripts/validate_mechanic_landing_logs.py --mechanic experience` after landing-log or surface-chain changes.
-Use the nearest `scripts/validate_experience_*.py` and `tests/test_experience_*.py` for version-specific raw surfaces.
+Use the nearest `scripts/validate_experience_*.py` and `tests/test_experience_*.py` for version-specific surfaces.

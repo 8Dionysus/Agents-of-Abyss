@@ -16,8 +16,4 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 
 ## Targeted checks
 
-run targeted deployment, installation, release, and rollback validators or tests named by the raw source.
-
-## Raw source accounting
-
-Legacy raw sources for this part are listed in `mechanics/experience/legacy/INDEX.md`. If a raw source becomes active guidance, update this part's `README.md` or `CONTRACT.md` and add a note to `mechanics/experience/legacy/DISTILLATION_LOG.md`.
+run targeted deployment, installation, release, and rollback validators or tests named by the touched surface.

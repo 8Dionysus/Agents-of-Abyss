@@ -2,6 +2,35 @@
 
 This log records decisions that move Experience from long raw packets into light active parts.
 
+## 2026-04-25 - Active docs provenance-load cleanup
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` keeps active Experience parts concise while
+legacy preserves the detailed source inventory, raw packet map, and distillation
+accounting.
+
+Moved or clarified:
+
+- Active part `README.md` files no longer carry per-source legacy lists.
+- Active part `VALIDATION.md` files no longer carry archive accounting sections.
+- `mechanics/experience/PROVENANCE.md` is the single active bridge back to this
+  legacy district.
+- `mechanics/experience/legacy/INDEX.md` remains the detailed map from every
+  preserved raw source to the active part that absorbed it.
+
+Validation:
+
+- `python scripts/validate_experience_distillation.py`
+- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
+
+Stop-lines: do not delete raw provenance, do not duplicate archive inventories
+inside active part docs, and do not let legacy become the normal first route for
+low-context agents.
+
+Next route: future packet landings update the active part and this legacy map;
+active parts stay short.
+
 ## 2026-04-25 - Active parts plus legacy raw provenance
 
 Status: landed.

@@ -2,6 +2,10 @@
 
 Every preserved raw `EXPERIENCE_*` source must appear here with its active part route. Status `legacy-indexed` means the raw source is preserved and routed; it does not mean every line has been re-authored into active guidance.
 
+Active Experience docs do not repeat this inventory. The active bridge is
+[`../PROVENANCE.md`](../PROVENANCE.md); this index is the detailed archive map
+behind that bridge.
+
 ## Raw source map
 
 ### Capture Kernel
