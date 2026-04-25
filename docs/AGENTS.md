@@ -18,6 +18,9 @@ Important documents here include:
 - `MECHANICS.md` as a compatibility route to `../mechanics/README.md`.
 - `THEMATIC_DISTRICT_PROTOCOL.md`, `CURRENT_SURFACE_INDEX.md`, and
   `thematic_districts.json` for old-to-current docs cleanup.
+- `LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`, `HYGIENE_GUARDRAIL_INDEX.md`, and
+  `../config/link_shape_hygiene.json` for local link, Markdown shape, status
+  vocabulary, and generated freshness guardrails.
 
 Mechanic-owned doctrine now lives under `../mechanics/`.
 Use `../mechanics/AGENTS.md` and the nearest `../mechanics/<slug>/AGENTS.md`
@@ -64,6 +67,14 @@ python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
+python scripts/repair_known_link_drifts.py --check
+python scripts/validate_links.py
+python scripts/validate_markdown_shape.py
+python scripts/validate_status_vocabulary.py
+python scripts/build_link_shape_hygiene_index.py --check
+python scripts/validate_link_shape_hygiene_index.py
+python scripts/validate_generated_freshness.py
+python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
 ```

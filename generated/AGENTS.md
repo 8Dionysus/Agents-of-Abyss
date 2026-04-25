@@ -15,6 +15,9 @@ reflection of mechanic package entry cards.
 center-side owner request packets.
 `generated/docs_thematic_index.min.json` is the compact machine-facing map of
 docs thematic districts.
+`generated/link_shape_hygiene.min.json` is the compact machine-facing mirror
+for Wave E link, Markdown shape, status vocabulary, and generated freshness
+guardrails.
 `generated/agon_imposition_readiness.min.json` is the tracked Wave 0 readiness capsule for the center-owned Agon imposition gate.
 `generated/agon_lawful_move_registry.min.json` is the tracked Wave III lawful
 move registry for the center-owned pre-protocol legal vocabulary.
@@ -71,6 +74,15 @@ When editing `docs_thematic_index.min.json`:
   `docs/THEMATIC_DISTRICT_PROTOCOL.md`, and `docs/CURRENT_SURFACE_INDEX.md`
 - run `scripts/validate_docs_thematic_index.py`
 - do not cite it as stronger than the authored docs cleanup law
+
+When editing `link_shape_hygiene.min.json`:
+
+- rebuild it with `scripts/build_link_shape_hygiene_index.py`
+- keep it aligned with `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`,
+  `docs/HYGIENE_GUARDRAIL_INDEX.md`, and `config/link_shape_hygiene.json`
+- run `scripts/validate_link_shape_hygiene_index.py` and
+  `scripts/validate_generated_freshness.py`
+- do not cite it as stronger than the authored hygiene protocol or config
 
 When editing `agon_imposition_readiness.min.json`:
 
@@ -157,6 +169,9 @@ python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
+python scripts/build_link_shape_hygiene_index.py --check
+python scripts/validate_link_shape_hygiene_index.py
+python scripts/validate_generated_freshness.py
 ```
 
 After changing the Agon readiness capsule, also run:

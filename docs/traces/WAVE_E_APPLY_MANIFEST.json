@@ -1,0 +1,104 @@
+{
+  "applied_at": "2026-04-25T05:01:53.208266+00:00",
+  "payload_files": [
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "config/link_shape_hygiene.json"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "docs/HYGIENE_GUARDRAIL_INDEX.md"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "generated/link_shape_hygiene.min.json"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "scripts/build_link_shape_hygiene_index.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "scripts/hygiene_common.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "scripts/repair_known_link_drifts.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "scripts/validate_generated_freshness.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "scripts/validate_hygiene_suite.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "scripts/validate_link_shape_hygiene_index.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "scripts/validate_links.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "scripts/validate_markdown_shape.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "scripts/validate_status_vocabulary.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "tests/test_generated_freshness.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "tests/test_link_shape_hygiene_index.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "tests/test_markdown_shape.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "tests/test_repair_known_link_drifts.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "tests/test_status_vocabulary.py"
+    },
+    {
+      "action": "copy",
+      "backup": null,
+      "path": "tests/test_validate_links.py"
+    }
+  ],
+  "payload_only": true,
+  "repairs_stdout": "",
+  "schema": "aoa.wave_e_apply_manifest.v1",
+  "skip_repairs": false
+}

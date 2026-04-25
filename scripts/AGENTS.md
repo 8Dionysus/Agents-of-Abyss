@@ -11,9 +11,16 @@ Current scripts include:
 - `validate_ecosystem.py` for schema, registry, and center-level `QUESTBOOK` surface checks
 - `validate_nested_agents.py` for required local directory guidance under `docs/`, `generated/`, `schemas/`, and `scripts/`
 - `validate_entry_surface_sync.py` for route-mode parity across public entry surfaces
-- `release_check.py` for the release-gate bundle that runs docs thematic, markdown shape, entry sync, center-entry, mechanics, ecosystem, and tests
+- `release_check.py` for the release-gate bundle that runs docs thematic, link
+  and shape hygiene, entry sync, center-entry, mechanics, generated freshness,
+  ecosystem, and tests
 - `plan_docs_thematic_cleanup.py`, `build_docs_thematic_index.py`, and
   `validate_docs_thematic_*.py` for Wave D docs district cleanup checks
+- `hygiene_common.py`, `repair_known_link_drifts.py`, `validate_links.py`,
+  `validate_status_vocabulary.py`, `build_link_shape_hygiene_index.py`,
+  `validate_link_shape_hygiene_index.py`, `validate_generated_freshness.py`,
+  and `validate_hygiene_suite.py` for Wave E link, Markdown shape, status
+  vocabulary, generated freshness, and known-repair guardrails
 - `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, and
   `validate_mechanic_readme_cards.py` for the mechanic card contract
 - `build_owner_request_queue.py`, `validate_owner_request_queue.py`,
@@ -82,6 +89,14 @@ python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
+python scripts/repair_known_link_drifts.py --check
+python scripts/validate_links.py
+python scripts/validate_markdown_shape.py
+python scripts/validate_status_vocabulary.py
+python scripts/build_link_shape_hygiene_index.py --check
+python scripts/validate_link_shape_hygiene_index.py
+python scripts/validate_generated_freshness.py
+python scripts/validate_hygiene_suite.py
 python scripts/validate_entry_surface_sync.py
 python scripts/validate_ecosystem.py
 python scripts/release_check.py

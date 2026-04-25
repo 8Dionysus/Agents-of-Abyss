@@ -8,7 +8,7 @@ See also:
 
 - [Federation Release Protocol](FEDERATION_RELEASE_PROTOCOL.md)
 - [Public Support Posture](PUBLIC_SUPPORT_POSTURE.md)
-- [CHANGELOG](../CHANGELOG.md)
+- [CHANGELOG](../../../CHANGELOG.md)
 
 ## Release goals
 

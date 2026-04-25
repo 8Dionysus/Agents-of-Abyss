@@ -29,7 +29,7 @@ The current first planting wave is:
 
 Witness traces and context compost are intentionally later.
 They become stronger once the structural law above is already explicit.
-The rootline establishes checkpoint posture structurally; [RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md) names the recovery law for returning from those checkpoints when continuity fails.
+The rootline establishes checkpoint posture structurally; [RECURRENCE_PRINCIPLE](../../recurrence/docs/RECURRENCE_PRINCIPLE.md) names the recovery law for returning from those checkpoints when continuity fails.
 
 ## Next wave after the rootline
 

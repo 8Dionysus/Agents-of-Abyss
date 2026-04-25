@@ -15,6 +15,8 @@ This index explains which `docs/` surfaces are current and which districts hold 
 | `docs/START_HERE_ROUTE_CONTRACT.md` | route-mode contract | current entry contract |
 | `docs/THEMATIC_DISTRICT_PROTOCOL.md` | docs district law | current docs cleanup law |
 | `docs/CURRENT_SURFACE_INDEX.md` | thin current index | routes old material without duplicating it |
+| `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md` | hygiene law | current link, shape, status, and freshness guardrail |
+| `docs/HYGIENE_GUARDRAIL_INDEX.md` | thin hygiene index | routes hygiene scripts, config, generated mirror, and traces |
 | `docs/thematic_districts.json` | machine-readable classifier | source for Wave D validators and generated index |
 
 ## Thematic districts
@@ -36,4 +38,5 @@ This index explains which `docs/` surfaces are current and which districts hold 
 
 ```bash
 python scripts/plan_docs_thematic_cleanup.py --check
+python scripts/validate_hygiene_suite.py
 ```

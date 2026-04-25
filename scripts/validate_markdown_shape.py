@@ -1,133 +1,95 @@
 #!/usr/bin/env python3
-"""Validate shape of human-facing Markdown entrypoints.
-
-This guardrail catches the failure mode where civic docs keep their semantic
-content but collapse into a few extremely long lines. It is intentionally narrow:
-it protects key entry surfaces and district README gates without pretending to
-lint the whole repository.
-"""
+"""Validate protected Markdown files for readable shape."""
 from __future__ import annotations
 
 import argparse
-from pathlib import Path
 import sys
+from pathlib import Path
 
-DEFAULT_TARGETS = {
-    "README.md": {"min_lines": 90, "max_line_length": 700},
-    "CHARTER.md": {"min_lines": 45, "max_line_length": 700},
-    "ECOSYSTEM_MAP.md": {"min_lines": 50, "max_line_length": 700},
-    "CONTRIBUTING.md": {"min_lines": 80, "max_line_length": 700},
-    "GLOSSARY.md": {"min_lines": 180, "max_line_length": 700},
-    "QUESTBOOK.md": {"min_lines": 30, "max_line_length": 700},
-    "FRAGILITY_BLACKLIST.md": {"min_lines": 10, "max_line_length": 700},
-    "ECOSYSTEM_AUDIT_INDEX.md": {"min_lines": 90, "max_line_length": 750},
-    ".github/PULL_REQUEST_TEMPLATE.md": {"min_lines": 60, "max_line_length": 700},
-    "docs/README.md": {"min_lines": 100, "max_line_length": 700},
-    "docs/MECHANICS.md": {"min_lines": 15, "max_line_length": 700},
-    "docs/START_HERE_ROUTE_CONTRACT.md": {"min_lines": 120, "max_line_length": 700},
-    "mechanics/README.md": {"min_lines": 200, "max_line_length": 700},
-    "mechanics/AGENTS.md": {"min_lines": 40, "max_line_length": 700},
-    "mechanics/agon/LANDING_LOG.md": {"min_lines": 180, "max_line_length": 700},
-    "mechanics/experience/LANDING_LOG.md": {"min_lines": 250, "max_line_length": 700},
-    "mechanics/agon/README.md": {"min_lines": 25, "max_line_length": 700},
-    "mechanics/experience/README.md": {"min_lines": 25, "max_line_length": 700},
-    "mechanics/method-growth/README.md": {"min_lines": 20, "max_line_length": 700},
-    "mechanics/recurrence/README.md": {"min_lines": 20, "max_line_length": 700},
-    "mechanics/antifragility/README.md": {"min_lines": 20, "max_line_length": 700},
-    "mechanics/questbook/README.md": {"min_lines": 20, "max_line_length": 700},
-    "mechanics/rpg/README.md": {"min_lines": 20, "max_line_length": 700},
-    "mechanics/tos-bridge/README.md": {"min_lines": 20, "max_line_length": 700},
-    "mechanics/release-support/README.md": {"min_lines": 20, "max_line_length": 700},
-    "docs/ROOT_SURFACE_LAW.md": {"min_lines": 70, "max_line_length": 700},
-    "docs/THEMATIC_DISTRICT_PROTOCOL.md": {"min_lines": 30, "max_line_length": 700},
-    "docs/CURRENT_SURFACE_INDEX.md": {"min_lines": 25, "max_line_length": 700},
-    "docs/agent-lane/README.md": {"min_lines": 20, "max_line_length": 700},
-    "docs/audits/README.md": {"min_lines": 18, "max_line_length": 700},
-    "docs/decisions/README.md": {"min_lines": 20, "max_line_length": 700},
-    "docs/postmortems/README.md": {"min_lines": 20, "max_line_length": 700},
-    "docs/traces/README.md": {"min_lines": 20, "max_line_length": 700},
-    "docs/agon/README.md": {"min_lines": 20, "max_line_length": 700},
-    "docs/experience/README.md": {"min_lines": 20, "max_line_length": 700},
-    "docs/legacy/README.md": {"min_lines": 20, "max_line_length": 700},
-    "docs/registry/README.md": {"min_lines": 20, "max_line_length": 700},
-    "docs/landings/README.md": {"min_lines": 14, "max_line_length": 700},
-    "generated/README.md": {"min_lines": 25, "max_line_length": 700},
-    "scripts/README.md": {"min_lines": 30, "max_line_length": 700},
-    "schemas/README.md": {"min_lines": 30, "max_line_length": 700},
-    "tests/README.md": {"min_lines": 20, "max_line_length": 700},
-    "config/README.md": {"min_lines": 15, "max_line_length": 700},
-    "examples/README.md": {"min_lines": 15, "max_line_length": 700},
-    "manifests/README.md": {"min_lines": 20, "max_line_length": 700},
-    "manifests/recurrence/README.md": {"min_lines": 20, "max_line_length": 700},
-    "quests/README.md": {"min_lines": 30, "max_line_length": 700},
-}
+SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
+from hygiene_common import load_config  # noqa: E402
 
 
-def has_heading(lines: list[str], level: str) -> bool:
-    return any(line.startswith(level) for line in lines)
+def has_heading(lines: list[str], prefix: str) -> bool:
+    return any(line.startswith(prefix) for line in lines)
 
 
-def check_file(root: Path, rel: str, min_lines: int, max_line_length: int) -> list[str]:
+def code_fences_balanced(lines: list[str]) -> bool:
+    count = 0
+    for line in lines:
+        if line.strip().startswith("```"):
+            count += 1
+    return count % 2 == 0
+
+
+def check_file(root: Path, target: dict[str, object], defaults: dict[str, object]) -> list[str]:
+    rel = str(target["path"])
     path = root / rel
+    required = bool(target.get("required", False))
     problems: list[str] = []
-
     if not path.exists():
-        problems.append(f"{rel}: missing")
+        if required:
+            problems.append(f"{rel}: missing required Markdown surface")
         return problems
-
+    if not path.is_file():
+        problems.append(f"{rel}: expected a file")
+        return problems
     text = path.read_text(encoding="utf-8")
     lines = text.splitlines()
-
+    min_lines = int(target.get("min_lines", defaults.get("default_min_lines", 1)))
+    max_line_length = int(target.get("max_line_length", defaults.get("default_max_line_length", 900)))
     if len(lines) < min_lines:
         problems.append(f"{rel}: only {len(lines)} lines, expected at least {min_lines}")
-
-    if not text.endswith("\n"):
+    if bool(target.get("require_final_newline", defaults.get("default_require_final_newline", True))) and not text.endswith("\n"):
         problems.append(f"{rel}: missing final newline")
-
-    if rel != ".github/PULL_REQUEST_TEMPLATE.md" and not has_heading(lines, "# "):
+    if bool(target.get("require_h1", defaults.get("default_require_h1", False))) and not has_heading(lines, "# "):
         problems.append(f"{rel}: missing top-level heading")
-
-    if rel.endswith(".md") and rel != ".github/PULL_REQUEST_TEMPLATE.md" and not has_heading(lines, "## "):
-        problems.append(f"{rel}: missing second-level headings")
-
+    if bool(target.get("require_h2", defaults.get("default_require_h2", False))) and not has_heading(lines, "## "):
+        problems.append(f"{rel}: missing second-level heading")
+    if not code_fences_balanced(lines):
+        problems.append(f"{rel}: unbalanced fenced code blocks")
     for number, line in enumerate(lines, start=1):
         if len(line) > max_line_length:
-            problems.append(
-                f"{rel}:{number}: line length {len(line)} exceeds {max_line_length}"
-            )
+            problems.append(f"{rel}:{number}: line length {len(line)} exceeds {max_line_length}")
+    return problems
 
+
+def configured_targets(config: dict[str, object]) -> list[dict[str, object]]:
+    shape = config.get("markdown_shape", {})
+    targets = list(shape.get("targets", [])) + list(shape.get("directory_readme_gates", []))
+    deduped: dict[str, dict[str, object]] = {}
+    for target in targets:
+        if isinstance(target, dict) and "path" in target:
+            deduped[str(target["path"])] = target
+    return [deduped[key] for key in sorted(deduped)]
+
+
+def validate(root: Path, explicit_targets: list[str] | None = None) -> list[str]:
+    config = load_config(root)
+    shape = config.get("markdown_shape", {})
+    targets = configured_targets(config)
+    if explicit_targets:
+        targets = [{"path": item, "required": True, "min_lines": 1} for item in explicit_targets]
+    problems: list[str] = []
+    for target in targets:
+        problems.extend(check_file(root, target, shape))
     return problems
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--repo-root",
-        default=".",
-        help="repository root to inspect",
-    )
-    parser.add_argument(
-        "--target",
-        action="append",
-        help="specific Markdown file to check; may be passed multiple times",
-    )
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--repo-root", default=".")
+    parser.add_argument("--target", action="append", help="specific Markdown file to check; may be repeated")
     args = parser.parse_args()
-
     root = Path(args.repo_root).resolve()
-    targets = args.target or list(DEFAULT_TARGETS)
-
-    problems: list[str] = []
-    for rel in targets:
-        spec = DEFAULT_TARGETS.get(rel, {"min_lines": 1, "max_line_length": 700})
-        problems.extend(check_file(root, rel, spec["min_lines"], spec["max_line_length"]))
-
+    problems = validate(root, args.target)
     if problems:
         print("Markdown shape validation failed:")
         for problem in problems:
-            print(f"  - {problem}")
+            print(f" - {problem}")
         return 1
-
-    print(f"Markdown shape validation passed for {len(targets)} files.")
+    print("Markdown shape validation passed.")
     return 0
 
 

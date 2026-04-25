@@ -41,6 +41,7 @@ If this PR touches a center mechanic or technical district:
 - [ ] I checked `mechanics/README.md` and the relevant `mechanics/<slug>/README.md`.
 - [ ] If this touches a mechanic landing, I updated the relevant `mechanics/<slug>/LANDING_LOG.md` or explained why no landing changed.
 - [ ] I checked the local district README for `generated/`, `scripts/`, `schemas/`, `tests/`, `config/`, `examples/`, `manifests/`, or `quests/` when applicable.
+- [ ] If this touches links, generated capsules, validator config, or status vocabulary, I checked `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`.
 - [ ] I confirmed the change does not grant live runtime authority, hidden memory sovereignty, proof authority, rank mutation, ToS canon write authority, or owner-local truth outside the proper owner repository.
 
 ## Neighboring repositories affected
@@ -63,6 +64,7 @@ Describe how you checked the change. Examples:
 - checked `mechanics/README.md` for mechanic routing
 - checked `mechanics/agon/LANDING_LOG.md` or `mechanics/experience/LANDING_LOG.md` when a mechanic landing changed
 - checked the relevant technical district README
+- ran `python scripts/validate_hygiene_suite.py`
 - ran `python scripts/validate_markdown_shape.py`
 - ran `python scripts/validate_mechanics_topology.py`
 - ran `python scripts/validate_mechanic_landing_logs.py`

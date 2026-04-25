@@ -31,9 +31,11 @@ HISTORICAL_REFERENCE_PREFIXES = (
     "docs/landings/",
     "docs/audits/",
     "docs/postmortems/",
+    "docs/traces/",
 )
 HISTORICAL_REFERENCE_PATHS = {
     "CHANGELOG.md",
+    "config/link_shape_hygiene.json",
     "docs/agent-lane/AGENTS_ROOT_REFERENCE.md",
 }
 OLD_ACTIVE_PATTERNS = (
