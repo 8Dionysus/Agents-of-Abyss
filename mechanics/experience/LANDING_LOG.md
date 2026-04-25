@@ -469,6 +469,48 @@ Stop-lines: active part docs must not carry archival inventories, per-source
 lists, or old packet filenames; archive detail remains accessible only through
 the provenance bridge and archive district.
 
-Next route: keep future part docs small; when historical accounting matters,
-use `mechanics/experience/PROVENANCE.md` instead of adding source lists to
-active contracts.
+Next route: keep future part docs clean, functional, and free of source-list
+load; when historical accounting matters, use
+`mechanics/experience/PROVENANCE.md` instead of adding source lists to active
+contracts.
+
+### Experience route discipline hardening
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` owns the Experience working route, part
+contracts, and center stop-lines; stronger owners keep runtime, memory, proof,
+routing, actor, KAG, and ToS authority.
+
+Surfaces:
+
+- `mechanics/AGENTS.md`
+- `mechanics/experience/AGENTS.md`
+- `mechanics/experience/README.md`
+- `mechanics/experience/DIRECTION.md`
+- `mechanics/experience/PARTS.md`
+- `mechanics/experience/ROADMAP.md`
+- `mechanics/experience/parts/AGENTS.md`
+- `mechanics/experience/parts/README.md`
+- `mechanics/experience/parts/*/CONTRACT.md`
+- `mechanics/experience/parts/*/VALIDATION.md`
+- `mechanics/registry.json`
+- `docs/thematic_districts.json`
+- `scripts/validate_experience_distillation.py`
+- `tests/test_experience_distillation.py`
+
+Validation:
+
+- `python scripts/validate_experience_distillation.py`
+- `python scripts/validate_mechanic_readme_cards.py --mechanic experience`
+- `python scripts/validate_mechanics_topology.py --mechanic experience`
+- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
+- `python scripts/release_check.py`
+
+Stop-lines: active route surfaces must not carry stale flat-doc routes,
+service-model notes, source-list load, or duplicated paths; owner-request
+stop-lines must stay visible in the Experience card and part contracts.
+
+Next route: future Experience changes perform a post-change route review across
+direction, parts, roadmap, landing log, owner requests, registry, validators,
+and generated surfaces, updating only the surfaces whose meaning truly moved.

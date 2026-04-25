@@ -18,7 +18,8 @@ target owner repositories accept or reject landing; `aoa-evals` owns adoption pr
 
 - Live workspace runtime.
 - Hidden memory sovereignty.
-- Owner-local activation or acceptance.
+- Owner-local activation, adoption, or acceptance.
+- Operational Experience adoption before owner-local evidence lands.
 - Proof verdicts before the proof owner lands evidence.
 - ToS-authored meaning from an AoA center bridge.
 

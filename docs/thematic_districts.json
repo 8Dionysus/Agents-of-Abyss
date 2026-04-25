@@ -244,9 +244,9 @@
     },
     {
       "source_glob": "docs/EXPERIENCE_*.md",
-      "target_dir": "docs/experience",
+      "target_dir": "mechanics/experience/legacy/raw",
       "district": "experience",
-      "reason": "flat Experience historical records move to docs/experience"
+      "reason": "flat Experience packets route to preserved raw provenance before distillation into mechanics/experience parts"
     },
     {
       "source_glob": "docs/*AUDIT*.md",

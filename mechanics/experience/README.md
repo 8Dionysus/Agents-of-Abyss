@@ -36,9 +36,13 @@ Experience center contracts, release posture, stop-lines, adoption route languag
 
 ### Must not claim
 
-- live workspace runtime
-- hidden memory sovereignty
-- owner-local activation
+- live workspace runtime or service dispatch
+- hidden memory sovereignty or recall authority
+- live router engine authority
+- owner-local activation, office installation, or adoption
+- proof verdicts, certification truth, or regression evidence before `aoa-evals` lands them
+- `aoa-kag` projections as source-authored meaning
+- ToS-authored meaning or canon
 
 ### Validation
 
@@ -95,8 +99,8 @@ were distilled. The active user route is the part map above.
 
 ## Owner boundary
 
-Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, offices, runtime, KAG, memory, and ToS authority remain owner-local.
+Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, offices, runtime, routing, proof, KAG, memory, and ToS authority remain owner-local.
 
 ## Growth posture
 
-When this mechanic changes, keep the active route small enough for a low-context agent to act safely. Update the relevant active part, preserve landing history in `LANDING_LOG.md`, keep archival accounting behind `PROVENANCE.md`, and route proof, memory, runtime, actor, KAG, and ToS claims to their stronger owners.
+When this mechanic changes, preserve a clean active route: update the relevant functioning part, remove duplicate or stale paths, preserve landing history in `LANDING_LOG.md`, keep historical accounting behind `PROVENANCE.md`, and route proof, memory, runtime, actor, KAG, and ToS claims to their stronger owners.

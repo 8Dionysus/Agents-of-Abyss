@@ -16,4 +16,8 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 
 ## Targeted checks
 
-run targeted deployment, installation, release, and rollback validators or tests named by the touched surface.
+```bash
+python scripts/validate_experience_wave5.py
+python scripts/validate_experience_v1_2_to_v2_0_bridge.py
+python -m pytest -q tests/test_experience_wave5.py tests/test_experience_wave5_seed_contracts.py tests/test_experience_v1_2_to_v2_0_bridge.py
+```

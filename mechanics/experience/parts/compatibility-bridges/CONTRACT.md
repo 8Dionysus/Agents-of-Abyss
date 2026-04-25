@@ -20,7 +20,8 @@ the crossed mechanic or owner repository keeps authority; Experience only record
 - Hidden memory sovereignty.
 - Owner-local activation or acceptance.
 - Proof verdicts before the proof owner lands evidence.
-- ToS-authored meaning from an AoA center bridge.
+- `aoa-kag` projections as source-authored meaning.
+- ToS-authored meaning or ToS canon from an AoA center bridge.
 
 ## Next route
 

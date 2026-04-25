@@ -16,9 +16,9 @@ This part owns installation, deployment, release train, rollout rings, rollback 
 
 ## Must not claim
 
-- Live workspace runtime.
+- Live workspace runtime or runtime deployment.
 - Hidden memory sovereignty.
-- Owner-local activation or acceptance.
+- Owner-local activation, installation, or acceptance.
 - Proof verdicts before the proof owner lands evidence.
 - ToS-authored meaning from an AoA center bridge.
 

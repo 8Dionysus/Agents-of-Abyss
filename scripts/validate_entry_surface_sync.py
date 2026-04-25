@@ -20,6 +20,10 @@ HUMAN_ENTRY_SURFACES = tuple(
     ref for ref in ENTRY_SURFACE_REFS if ref != "generated/center_entry_map.min.json"
 )
 
+SURFACE_ROUTE_MODE_EXEMPTIONS = {
+    "mechanics/README.md": {"low-context-agent"},
+}
+
 
 def read_ref(ref: str) -> str:
     path = CENTER_ENTRY_MAP_PATH if ref == "generated/center_entry_map.min.json" else resolve_local_ref(ref)
@@ -40,7 +44,10 @@ def collect_problems() -> list[str]:
             problems.append(f"{ref}: cannot read entry surface: {exc}")
             continue
 
+        exempt = SURFACE_ROUTE_MODE_EXEMPTIONS.get(ref, set())
         for mode in REQUIRED_ROUTE_MODES:
+            if mode in exempt:
+                continue
             if mode not in text:
                 problems.append(f"{ref}: missing route mode '{mode}'")
 

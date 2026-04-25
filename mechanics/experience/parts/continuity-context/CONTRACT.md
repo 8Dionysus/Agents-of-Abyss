@@ -17,7 +17,8 @@ This part owns context routing grammar, continuity loom, memory weaving, pattern
 ## Must not claim
 
 - Live workspace runtime.
-- Hidden memory sovereignty.
+- Hidden memory sovereignty or ambient continuity.
+- Live router engine authority.
 - Owner-local activation or acceptance.
 - Proof verdicts before the proof owner lands evidence.
 - ToS-authored meaning from an AoA center bridge.

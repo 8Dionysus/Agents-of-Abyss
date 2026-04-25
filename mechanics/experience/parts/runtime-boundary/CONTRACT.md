@@ -16,7 +16,8 @@ This part owns living-workspace runtime boundary language, runtime authority res
 
 ## Must not claim
 
-- Live workspace runtime.
+- Live workspace runtime before runtime owner gates land.
+- Runtime owner gates, services, storage, or lifecycle authority.
 - Hidden memory sovereignty.
 - Owner-local activation or acceptance.
 - Proof verdicts before the proof owner lands evidence.

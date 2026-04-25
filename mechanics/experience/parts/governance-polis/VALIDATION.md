@@ -16,4 +16,7 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 
 ## Targeted checks
 
-run `python scripts/validate_experience_wave4.py` and Wave 4 seed-contract tests for governance surfaces.
+```bash
+python scripts/validate_experience_wave4.py
+python -m pytest -q tests/test_experience_wave4.py tests/test_experience_wave4_seed_contracts.py
+```

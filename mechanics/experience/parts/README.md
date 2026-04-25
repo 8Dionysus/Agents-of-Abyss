@@ -1,6 +1,6 @@
 # Experience Parts Index
 
-Functioning Experience parts live here. Each part stays small enough for a low-context agent to read before touching legacy provenance.
+Functioning Experience parts live here. Each part should carry a distinct job, a clear boundary, exact validation, and a next route without duplicate or stale paths.
 
 ## Parts
 - [Capture Kernel](capture-kernel/README.md): friction record, candidate packet, owner route, memory gate, and inert projection boundary.

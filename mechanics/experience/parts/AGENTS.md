@@ -6,7 +6,7 @@ This card applies to `mechanics/experience/parts/` and all active Experience par
 
 ## Role
 
-Experience parts hold concise functioning contracts. They distill archival packet pressure into readable center-owned direction, owner boundaries, and validation routes.
+Experience parts hold functioning contracts. They distill source pressure into readable center-owned direction, owner boundaries, and validation routes.
 
 ## Read before editing
 
@@ -15,6 +15,13 @@ Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/experience/AGENTS.md`, 
 ## Boundaries
 
 Do not move archival inventories into active part docs wholesale. Do not claim runtime activation, hidden memory authority, owner acceptance, proof verdicts, or ToS-authored meaning from this lane.
+
+## Part evolution
+
+A part may grow, split, merge, shrink, or retire when that improves its function.
+Make the route cleaner and more useful; do not optimize for size alone. When a
+part boundary changes, review `PARTS.md`, the package `ROADMAP.md`, owner
+requests, validators, and the landing log before closing.
 
 ## Validation
 

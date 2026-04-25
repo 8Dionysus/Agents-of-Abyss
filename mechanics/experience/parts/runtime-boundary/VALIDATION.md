@@ -16,4 +16,7 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 
 ## Targeted checks
 
-run `python scripts/validate_experience_v2_0_living_workspace_continuity_runtime.py` and matching tests.
+```bash
+python scripts/validate_experience_v2_0_living_workspace_continuity_runtime.py
+python -m pytest -q tests/test_experience_v2_0_living_workspace_continuity_runtime.py
+```

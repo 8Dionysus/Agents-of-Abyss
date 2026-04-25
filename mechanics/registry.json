@@ -162,6 +162,8 @@
         "mechanics/experience/DIRECTION.md",
         "mechanics/experience/PARTS.md",
         "mechanics/experience/PROVENANCE.md",
+        "mechanics/experience/ROADMAP.md",
+        "mechanics/experience/LANDING_LOG.md",
         "mechanics/experience/parts/capture-kernel/README.md",
         "mechanics/experience/parts/certification-proof/README.md",
         "mechanics/experience/parts/adoption-federation/README.md",
@@ -203,11 +205,15 @@
       "entry_ref": "mechanics/experience/README.md",
       "landing_log_ref": "mechanics/experience/LANDING_LOG.md",
       "must_not_claim": [
-        "live workspace runtime",
-        "hidden memory sovereignty",
-        "owner-local activation"
+        "live workspace runtime or service dispatch",
+        "hidden memory sovereignty or recall authority",
+        "live router engine authority",
+        "owner-local activation, office installation, or adoption",
+        "proof verdicts, certification truth, or regression evidence before `aoa-evals` lands them",
+        "`aoa-kag` projections as source-authored meaning",
+        "ToS-authored meaning or canon"
       ],
-      "owner_boundary": "Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, offices, runtime, KAG, memory, and ToS authority remain owner-local.",
+      "owner_boundary": "Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, offices, runtime, routing, proof, KAG, memory, and ToS authority remain owner-local.",
       "owner_request_doc_ref": "mechanics/experience/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-EXPERIENCE-STACK-001",

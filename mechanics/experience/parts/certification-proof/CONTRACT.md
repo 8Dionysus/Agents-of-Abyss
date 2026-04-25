@@ -19,7 +19,8 @@ This part owns certification discipline, watchtower posture, canary gates, regre
 - Live workspace runtime.
 - Hidden memory sovereignty.
 - Owner-local activation or acceptance.
-- Proof verdicts before the proof owner lands evidence.
+- Proof verdicts, certification truth, or regression evidence before `aoa-evals` lands evidence.
+- Operational Experience adoption before evidence is owner-local.
 - ToS-authored meaning from an AoA center bridge.
 
 ## Next route

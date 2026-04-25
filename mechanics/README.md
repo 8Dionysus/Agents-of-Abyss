@@ -26,7 +26,7 @@ deeper machinery.
 Mechanic work uses the `mechanic-change` route in
 [`docs/START_HERE_ROUTE_CONTRACT.md`](../docs/START_HERE_ROUTE_CONTRACT.md).
 
-The full route-mode vocabulary is shared across entry surfaces:
+Mechanic-facing route modes:
 
 | Route mode | Mechanics relevance |
 |---|---|
@@ -36,13 +36,12 @@ The full route-mode vocabulary is shared across entry surfaces:
 | `ownership-routing` | decide which owner repository owns operational truth |
 | `mechanic-change` | change a process, stop-line, owner split, or mechanic package |
 | `public-claim-validation` | check whether a mechanic claim can be publicly supported |
-| `low-context-agent` | use compact entry data before reading full surfaces |
 | `district-work` | respect local gates for scripts, schemas, generated capsules, tests, and quests |
 
 ## Mechanic card contract
 
 Every `mechanics/<slug>/README.md` is an agent-operable card, not merely a
-human overview. The card lets a low-context agent answer: **when do I use this,
+human overview. The card lets a reader answer: **when do I use this,
 what does the center own, who owns the stronger truth, what can enter, what can
 leave, what must not be claimed, how do I validate it, and where do I route
 next?**
@@ -294,7 +293,7 @@ audits, not as the first active route.
 
 Validation starts with `python scripts/validate_experience_distillation.py`,
 then the matching `scripts/validate_experience_*.py` and
-`tests/test_experience_*.py` named by any raw surface you changed.
+`tests/test_experience_*.py` for the active part or versioned contract you changed.
 
 ## Agon
 

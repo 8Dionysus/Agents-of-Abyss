@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from center_entry_map_common import ENTRY_SURFACE_REFS, REQUIRED_ROUTE_MODES  # noqa: E402
-from validate_entry_surface_sync import collect_problems  # noqa: E402
+from validate_entry_surface_sync import SURFACE_ROUTE_MODE_EXEMPTIONS, collect_problems  # noqa: E402
 
 
 class EntrySurfaceSyncTests(unittest.TestCase):
@@ -38,6 +38,9 @@ class EntrySurfaceSyncTests(unittest.TestCase):
                 "district-work",
             ],
         )
+
+    def test_mechanics_atlas_does_not_need_low_context_route_label(self) -> None:
+        self.assertIn("low-context-agent", SURFACE_ROUTE_MODE_EXEMPTIONS["mechanics/README.md"])
 
 
 if __name__ == "__main__":

@@ -27,3 +27,40 @@ def test_experience_distillation_part_validation_is_valid() -> None:
     module = load_validator()
 
     assert module.validate({"runtime-boundary"}) == []
+
+
+def test_active_route_rejects_route_pollution_markers(monkeypatch) -> None:
+    module = load_validator()
+    original_read = module.read
+    target = ROOT / "mechanics" / "experience" / "parts" / "README.md"
+
+    def fake_read(path: Path) -> str:
+        if path == target:
+            return "Functioning parts stay small enough for a low-context agent before touching legacy provenance.\n"
+        return original_read(path)
+
+    monkeypatch.setattr(module, "read", fake_read)
+    problems: list[str] = []
+
+    module.validate_active_docs_are_lean(problems)
+
+    assert any("route-pollution marker" in problem for problem in problems)
+
+
+def test_experience_thematic_route_points_to_preserved_raw_provenance() -> None:
+    module = load_validator()
+    problems: list[str] = []
+
+    module.validate_thematic_experience_route(problems)
+
+    assert problems == []
+
+
+def test_experience_owner_stop_lines_are_reflected() -> None:
+    module = load_validator()
+    problems: list[str] = []
+
+    module.validate_registry(problems)
+
+    assert not [problem for problem in problems if "must_not_claim missing" in problem]
+    assert not [problem for problem in problems if "missing owner stop-line phrase" in problem]
