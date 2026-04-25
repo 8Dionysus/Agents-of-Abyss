@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/appeal_expiry_job_v1.json",
+  "title": "appeal_expiry_job_v1",
+  "description": "Seed schema for appeal_expiry_job_v1 in Experience Constitution Runtime v0.9.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "appeal_id",
+    "decision",
+    "job_id",
+    "run_at"
+  ],
+  "properties": {
+    "appeal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "expire_if_no_active_stay"
+      ]
+    },
+    "job_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_at": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

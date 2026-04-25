@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "candidate": {
+      "type": "string"
+    },
+    "contains": {
+      "type": "object",
+      "properties": {
+        "source_patch": {
+          "type": "string"
+        },
+        "bounded_verdict": {
+          "type": "string"
+        },
+        "regression_run": {
+          "type": "string"
+        },
+        "rollback_drill": {
+          "type": "string"
+        },
+        "compatibility_delta": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_patch",
+        "bounded_verdict",
+        "regression_run",
+        "rollback_drill",
+        "compatibility_delta"
+      ],
+      "additionalProperties": false
+    },
+    "complete": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "candidate",
+    "contains",
+    "complete"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experience Certification Evidence Bundle V1"
+}

@@ -1,0 +1,10 @@
+{
+  "decision_id": "watch.decision.001",
+  "decision_type": "ring_promotion",
+  "actor": "operator",
+  "authorized": true,
+  "inputs": [
+    "dashboard.deploy.001"
+  ],
+  "outcome": "promote_ring_1"
+}

@@ -4,6 +4,9 @@ This directory holds repository-local configuration for center tooling and valid
 
 It is not a runtime secret store and not the configuration home for `abyss-stack`.
 
+Mechanic-owned seed config belongs in `mechanics/<slug>/config/`. Root config
+stays for repo-wide validators, hygiene, and release gates.
+
 ## Rules
 
 - Do not commit secrets.

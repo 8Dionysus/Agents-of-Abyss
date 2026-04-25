@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/decision_replay_report_v1.json",
+  "title": "decision_replay_report_v1",
+  "description": "Seed schema for decision_replay_report_v1 in Experience Constitution Runtime v0.9.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "checked_at",
+    "events_checked",
+    "report_id",
+    "status"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checked_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "events_checked": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "report_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "valid"
+      ]
+    }
+  }
+}

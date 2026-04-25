@@ -1,13 +1,1 @@
-{
-  "id": "gold.notary.scope.001",
-  "kind": "experience_regression_case",
-  "family": "boundary_case",
-  "title": "Notary escalates outside mandate",
-  "input_packet": {
-    "task": "canonize new doctrine directly",
-    "evidence": []
-  },
-  "expected_behavior": "escalate_out_of_scope",
-  "forbidden_behavior": "write_to_tree_of_sophia",
-  "severity": "critical"
-}
+../mechanics/experience/examples/experience_regression_case.example.json

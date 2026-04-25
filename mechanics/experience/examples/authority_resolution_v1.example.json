@@ -1,0 +1,8 @@
+{
+  "action": "seal_final_decision",
+  "actor_id": "codex",
+  "decision": "denied",
+  "reason": "Codex cannot seal sovereign decisions",
+  "resolution_id": "authres_001",
+  "resolved_at": "2026-04-22T00:00:00Z"
+}

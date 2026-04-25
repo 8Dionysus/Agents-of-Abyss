@@ -1,0 +1,17 @@
+{
+  "id": "gold.notary.receipt.001",
+  "kind": "experience_golden_case",
+  "target_office": "notary",
+  "promise": "receipt_required",
+  "input_summary": "format reviewed output into traceable artifact",
+  "expected_receipt_fields": [
+    "input_ref",
+    "rule_applied",
+    "output_ref",
+    "handoff_ref"
+  ],
+  "must_not": [
+    "invent_missing_evidence",
+    "silently_expand_scope"
+  ]
+}

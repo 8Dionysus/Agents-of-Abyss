@@ -1,18 +1,1 @@
-{
-  "law_family": "contradiction",
-  "lawful_next_moves": [
-    "localize_contradiction",
-    "deny_closure"
-  ],
-  "material_contradiction": {
-    "closure_blocking": true,
-    "contradiction_id": "C-EXAMPLE-001",
-    "locus": "closure evidence conflicts with trace gap",
-    "materiality": [
-      "closure_relevant",
-      "trace_relevant"
-    ],
-    "status": "open"
-  },
-  "runtime_effect": "none"
-}
+../mechanics/agon/examples/agon_contradiction_law.example.json

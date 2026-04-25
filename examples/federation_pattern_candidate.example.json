@@ -1,18 +1,1 @@
-{
-  "schema_version": "1.0",
-  "kind": "federation_pattern_candidate",
-  "id": "federation_pattern_candidate.example",
-  "status": "candidate",
-  "summary": "Example federation_pattern_candidate object for v0.6 federation harvest seed.",
-  "owner_repo": "Agents-of-Abyss",
-  "evidence_refs": [
-    "receipt://v0.6/federation_pattern_candidate/example"
-  ],
-  "payload": {
-    "family": "wrong_surface",
-    "candidate_id": "pattern.wrong_surface.cross_repo.001",
-    "repo_count": 4,
-    "proposed_owner": "Agents-of-Abyss",
-    "pattern_summary": "wrong surface repeats after deployment watch"
-  }
-}
+../mechanics/experience/examples/federation_pattern_candidate.example.json

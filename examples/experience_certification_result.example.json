@@ -1,18 +1,1 @@
-{
-  "id": "cert.result.notary.001",
-  "kind": "experience_certification_result",
-  "plan_id": "cert.plan.notary.001",
-  "target_agent": "abyss.assistant.notary.001",
-  "candidate_version": "1.1.0-rc.1",
-  "decision": "approved_with_watch",
-  "decided_by": "operator",
-  "evidence_refs": [
-    "reg.run.notary.001",
-    "rollback.drill.notary.001",
-    "compat.delta.notary.001"
-  ],
-  "conditions": [
-    "post_release_retention_watch_3_cycles"
-  ],
-  "issued_at": "2026-04-22T00:00:00Z"
-}
+../mechanics/experience/examples/experience_certification_result.example.json

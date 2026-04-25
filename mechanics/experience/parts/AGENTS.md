@@ -35,4 +35,9 @@ python scripts/validate_mechanic_landing_logs.py --mechanic experience
 
 ## Closeout
 
-Report the active part changed, archival sources consulted through the provenance bridge, owner requests affected, checks run, and any sources that still need deeper distillation.
+Report the active part changed, whether `PROVENANCE.md` was consulted, owner requests affected, checks run, and any unresolved distillation risk.
+
+If `PROVENANCE.md` was not consulted, say so explicitly. If it was consulted,
+name only the relevant provenance bridge or archive map/log section. Do not
+enumerate individual archived files unless the task specifically audited archive
+evidence in depth.

@@ -21,6 +21,12 @@ This file does not create new authority.
 It keeps the root README human-sized while giving agents a precise map of the
 deeper machinery.
 
+Mechanics are not documentation-only packages. When a schema, example, seed
+config, generated companion, validator, test, or quest rule belongs to one
+mechanic, its source home is the mechanic package. Root technical districts keep
+repo-wide contracts and compatibility aliases. See
+[ARTIFACT_TOPOLOGY](ARTIFACT_TOPOLOGY.md).
+
 ## Canonical route contract
 
 Mechanic work uses the `mechanic-change` route in
@@ -374,7 +380,7 @@ progression path, or readable adjunct reflection.
 Quest surfaces:
 
 - [QUESTBOOK](../QUESTBOOK.md): public tracked surface for deferred obligations.
-- [`quests/`](../quests/): public quest files, including center, Agon, and Experience follow-through work.
+- [`quests/`](../quests/): lifecycle item store for center, Agon, and Experience follow-through work.
 - [QUESTBOOK_MODEL](questbook/docs/QUESTBOOK_MODEL.md): quest lifecycle, placement bands, risk, difficulty, and harvest rules.
 - [QUESTBOOK_FIRST_WAVE](questbook/docs/QUESTBOOK_FIRST_WAVE.md): first-wave guardrails.
 

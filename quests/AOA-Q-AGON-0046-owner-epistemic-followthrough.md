@@ -1,3 +1,1 @@
-# AOA-Q-AGON-0046: Owner Epistemic Followthrough
-
-Coordinate owner surfaces.
+triaged/AOA-Q-AGON-0046-owner-epistemic-followthrough.md

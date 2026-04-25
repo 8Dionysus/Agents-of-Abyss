@@ -1,7 +1,1 @@
-{
-  "appeal_id": "appeal_001",
-  "case_id": "case_runtime_001",
-  "expires_at": "2026-04-30T00:00:00Z",
-  "opened_by": "agents.owner",
-  "state": "open"
-}
+../mechanics/experience/examples/appeal_record_v1.example.json

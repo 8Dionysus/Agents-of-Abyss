@@ -1,12 +1,1 @@
-{
-  "case_id": "case_runtime_001",
-  "members": [
-    "operator",
-    "evals.delegate",
-    "agents.owner"
-  ],
-  "quorum_required": 2,
-  "schedule_id": "schedule_001",
-  "scheduled_for": "2026-04-23T17:00:00Z",
-  "status": "scheduled"
-}
+../mechanics/experience/examples/council_schedule_v1.example.json

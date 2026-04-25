@@ -1,0 +1,9 @@
+{
+  "applies_mutation": false,
+  "candidate_type": "suspend_jurisdiction_candidate",
+  "packet": "agon.rank.mutation_candidate.example",
+  "reason": "repeat failed closure discipline retention",
+  "requires_owner_review": true,
+  "target_actor": "reviewer",
+  "target_jurisdiction": "jurisdiction.closure_candidate"
+}

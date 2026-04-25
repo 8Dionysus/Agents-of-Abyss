@@ -24,6 +24,11 @@ This file applies to compact machine-readable publication surfaces under `genera
 
 ## Role of this directory
 
+Root `generated/` owns repository-wide compact mirrors and compatibility
+aliases. Mechanic-owned generated sources live under
+`mechanics/<slug>/generated/`; root aliases must not be treated as stronger
+than the mechanic package source.
+
 `generated/ecosystem_registry.min.json` is the current compact machine-readable registry for AoA center-layer routing.
 It summarizes repository names, roles, statuses, shared maturity, and kind for the public ecosystem map.
 `generated/federation_supporting_inventory.min.json` is the companion machine-readable inventory for supporting consumer/control-plane surfaces that stay outside compact registry v1.
@@ -55,6 +60,7 @@ Treat it as a published summary surface, not a hidden second charter.
 
 When editing `ecosystem_registry.min.json` or `federation_supporting_inventory.min.json`:
 
+- follow mechanic-owned aliases into `mechanics/<slug>/generated/` before editing
 - keep it aligned with `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, and `docs/FEDERATION_RULES.md`
 - preserve the current field contract around `name`, `role`, `status`, `shared_maturity`, and `kind`
 - keep entries compact, explicit, and reviewable

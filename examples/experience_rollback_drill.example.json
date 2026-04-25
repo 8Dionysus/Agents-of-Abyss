@@ -1,14 +1,1 @@
-{
-  "id": "rollback.drill.notary.001",
-  "kind": "experience_rollback_drill",
-  "target_agent": "abyss.assistant.notary.001",
-  "candidate_version": "1.1.0-rc.1",
-  "rollback_to": "1.0.0",
-  "trigger": "regression_failure_or_operator_revoke",
-  "steps": [
-    "disable_candidate",
-    "restore_previous_contract",
-    "replay_golden_cases"
-  ],
-  "status": "passed"
-}
+../mechanics/experience/examples/experience_rollback_drill.example.json

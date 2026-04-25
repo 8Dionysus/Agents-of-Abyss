@@ -1,0 +1,131 @@
+{
+  "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
+  "binding_intent": "Bind probe_trace to owner-respecting future practice, workflow, proof, route, memory, and observability surfaces without starting live arena execution.",
+  "binding_status": "seeded_pre_protocol_owner_binding",
+  "live_protocol": false,
+  "move_class": "trace",
+  "move_id": "agon.move.trace.probe_trace",
+  "name": "probe_trace",
+  "owner_bindings": [
+    {
+      "candidate_refs": [
+        "center:Agents-of-Abyss:agon/probe-trace-law"
+      ],
+      "does_not_own": [
+        "technique truth",
+        "skill workflow truth",
+        "proof/memory/stat truth"
+      ],
+      "owner_repo": "Agents-of-Abyss",
+      "owner_role": "center_law_owner",
+      "owns_later": [
+        "legal move vocabulary",
+        "owner binding law",
+        "pre-protocol stop-line"
+      ],
+      "status": "center_law_binding_seeded"
+    },
+    {
+      "candidate_refs": [
+        "candidate:aoa-techniques:agon/probe-trace-practice"
+      ],
+      "does_not_own": [
+        "lawful move vocabulary",
+        "arena verdicts",
+        "runtime execution"
+      ],
+      "owner_repo": "aoa-techniques",
+      "owner_role": "practice_owner",
+      "owns_later": [
+        "portable practice guidance",
+        "adaptation notes",
+        "practice validation method"
+      ],
+      "status": "requested_not_landed"
+    },
+    {
+      "candidate_refs": [
+        "candidate:aoa-skills:agon/probe-trace-workflow"
+      ],
+      "does_not_own": [
+        "lawful move vocabulary",
+        "proof truth",
+        "durable scars"
+      ],
+      "owner_repo": "aoa-skills",
+      "owner_role": "bounded_workflow_owner",
+      "owns_later": [
+        "bounded workflow contract",
+        "agent-facing trigger boundary",
+        "verification guidance"
+      ],
+      "status": "requested_not_landed"
+    },
+    {
+      "candidate_refs": [
+        "candidate:aoa-evals:agon/probe-trace-check"
+      ],
+      "does_not_own": [
+        "center law",
+        "routing authority",
+        "memory truth"
+      ],
+      "owner_repo": "aoa-evals",
+      "owner_role": "proof_owner",
+      "owns_later": [
+        "proof predicate",
+        "breach check",
+        "adequacy assessment"
+      ],
+      "status": "requested_not_landed"
+    },
+    {
+      "candidate_refs": [
+        "candidate:aoa-memo:agon/probe-trace-memory-intake"
+      ],
+      "does_not_own": [
+        "verdict truth",
+        "canon truth",
+        "legal move definition"
+      ],
+      "owner_repo": "aoa-memo",
+      "owner_role": "durable_memory_owner",
+      "owns_later": [
+        "scar candidate intake",
+        "delta candidate intake",
+        "chronicle/retention handoff"
+      ],
+      "status": "requested_not_landed"
+    },
+    {
+      "candidate_refs": [
+        "candidate:aoa-stats:agon/probe-trace-summary"
+      ],
+      "does_not_own": [
+        "value sovereignty",
+        "verdict authority",
+        "routing authority"
+      ],
+      "owner_repo": "aoa-stats",
+      "owner_role": "derived_observability_owner",
+      "owns_later": [
+        "derived non-sovereign summary",
+        "movement signal",
+        "health readout"
+      ],
+      "status": "requested_not_landed"
+    }
+  ],
+  "readiness": "owner_binding_seeded",
+  "runtime_effect": "none",
+  "stop_lines": [
+    "must not create live arena session",
+    "must not define runtime packet transport",
+    "must not issue final verdict",
+    "must not write durable scars",
+    "must not schedule retention",
+    "must not promote to Tree-of-Sophia",
+    "must not let assistants become hidden contestants"
+  ],
+  "wave": "IV"
+}

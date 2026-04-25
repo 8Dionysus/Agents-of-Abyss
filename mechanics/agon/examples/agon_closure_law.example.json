@@ -1,0 +1,13 @@
+{
+  "closure_candidate": {
+    "lawful_outcome_preview": "deny_closure_candidate",
+    "predicates": {
+      "closure_right_present": false,
+      "no_open_material_contradiction": false,
+      "trace_integrity_satisfied": false
+    },
+    "requested_by": "future.contestant"
+  },
+  "law_family": "closure",
+  "runtime_effect": "none"
+}

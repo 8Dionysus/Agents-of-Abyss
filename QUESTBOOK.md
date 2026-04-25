@@ -2,7 +2,9 @@
 
 This questbook holds federation-level cross-repo obligations only. It does not absorb repo-local quest detail from sibling repositories.
 
-It is a root index, not a second roadmap. Program direction belongs in [ROADMAP](ROADMAP.md). Quest lifecycle law belongs in [mechanics/questbook/QUESTBOOK_MODEL](mechanics/questbook/docs/QUESTBOOK_MODEL.md). Backing quest files live under [`quests/`](quests/).
+It is a root index, not a second roadmap. Program direction belongs in [ROADMAP](ROADMAP.md). Quest lifecycle law belongs in [mechanics/questbook/QUESTBOOK_MODEL](mechanics/questbook/docs/QUESTBOOK_MODEL.md). Backing quest files live in lifecycle directories under [`quests/`](quests/).
+
+Top-level `quests/AOA-Q-*` paths are compatibility aliases. The lifecycle directory is the source placement for each quest object.
 
 ## Frontier
 
@@ -29,8 +31,9 @@ It is a root index, not a second roadmap. Program direction belongs in [ROADMAP]
 
 ## Backing files
 
-- `quests/*.yaml`
-- `quests/*.md`
+- `quests/<lifecycle-state>/AOA-Q-*.yaml`
+- `quests/<lifecycle-state>/AOA-Q-*.md`
+- `quests/AOA-Q-*` compatibility aliases for established links and commands
 - future center-level generated summaries only after a real builder and validator exist
 
 ## Rule

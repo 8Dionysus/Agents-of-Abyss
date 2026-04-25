@@ -1,11 +1,1 @@
-{
-  "incident_id": "deployment.incident.001",
-  "release_id": "assistant.notary.1.1.0",
-  "family": "false_completion",
-  "severity": "material",
-  "status": "reentered",
-  "owner_route": "aoa-agents",
-  "evidence_refs": [
-    "alarm.drift.001"
-  ]
-}
+../mechanics/experience/examples/experience_deployment_incident.example.json

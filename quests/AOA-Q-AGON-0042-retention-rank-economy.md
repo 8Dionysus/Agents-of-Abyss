@@ -1,3 +1,1 @@
-# AOA-Q-AGON-0042: Retention and Rank Economy
-
-Land Wave XIV center law for retention requests, rank standing, jurisdiction candidates, and stop-lines.
+triaged/AOA-Q-AGON-0042-retention-rank-economy.md

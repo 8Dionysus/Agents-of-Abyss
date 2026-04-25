@@ -1,17 +1,1 @@
-{
-  "schema_version": "1.0",
-  "kind": "kag_promotion_gate",
-  "id": "kag_promotion_gate.example",
-  "status": "approved",
-  "summary": "Example kag_promotion_gate object for v0.6 federation harvest seed.",
-  "owner_repo": "Agents-of-Abyss",
-  "evidence_refs": [
-    "receipt://v0.6/kag_promotion_gate/example"
-  ],
-  "payload": {
-    "candidate_id": "pattern.wrong_surface.cross_repo.001",
-    "gate": "kag",
-    "allowed": true,
-    "blockers": []
-  }
-}
+../mechanics/experience/examples/kag_promotion_gate.example.json

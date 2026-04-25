@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/schemas/decision_replay_event_v1.json",
+  "title": "decision_replay_event_v1",
+  "description": "Seed schema for decision_replay_event_v1 in Experience Constitution Runtime v0.9.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "event_hash",
+    "event_id",
+    "event_kind",
+    "observed_at",
+    "payload_hash",
+    "prev_hash"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prev_hash": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

@@ -1,8 +1,1 @@
-{
-  "ring_id": "ring_1_pilot",
-  "order": 1,
-  "population": "pilot_users",
-  "duration_cycles": 3,
-  "promotion_gate": "no_material_open_alarm",
-  "rollback_behavior": "restore_previous_certified"
-}
+../mechanics/experience/examples/experience_rollout_ring.example.json

@@ -1,3 +1,1 @@
-# AOA-Q-AGON-0032 Wave XI Entry
-
-Prepare verdict / delta / scar bridge over Wave X law without creating durable scar writes or live verdict authority.
+triaged/AOA-Q-AGON-0032-wave11-verdict-delta-scar-entry.md

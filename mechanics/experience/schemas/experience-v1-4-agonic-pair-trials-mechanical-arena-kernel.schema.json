@@ -1,0 +1,687 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agents-of-abyss.local/schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json",
+  "title": "experience_v1_4_agonic_pair_trials_mechanical_arena_kernel_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "planting_id",
+    "campaign_wave",
+    "status",
+    "runtime_effect",
+    "live_arena_activation",
+    "live_runtime_activation",
+    "source_seed",
+    "predecessor_surfaces",
+    "arena_kernel_law",
+    "first_pair_trials",
+    "kernel_flow",
+    "hard_guards",
+    "blocking_contracts",
+    "authority",
+    "owner_split",
+    "quarantined_surfaces",
+    "seed_dry_run_evidence"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "experience_v1_4_agonic_pair_trials_mechanical_arena_kernel_v1"
+    },
+    "planting_id": {
+      "const": "experience_v1_4_agonic_pair_trials_mechanical_arena_kernel_center_contract"
+    },
+    "campaign_wave": {
+      "const": "wave4_agonic_pair_trials_mechanical_arena_kernel"
+    },
+    "status": {
+      "const": "center_mechanical_arena_kernel_contract_landed"
+    },
+    "runtime_effect": {
+      "const": "none"
+    },
+    "live_arena_activation": {
+      "const": false
+    },
+    "live_runtime_activation": {
+      "const": false
+    },
+    "source_seed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "archive_name",
+        "seed_id",
+        "version",
+        "sha256",
+        "claim_limit"
+      ],
+      "properties": {
+        "archive_name": {
+          "const": "aoa-experience-agonic-pair-trials-mechanical-arena-kernel-seed-v1_4.zip"
+        },
+        "seed_id": {
+          "const": "aoa-experience-agonic-pair-trials-mechanical-arena-kernel-seed-v1_4"
+        },
+        "version": {
+          "const": "v1.4"
+        },
+        "sha256": {
+          "const": "c62a9c38b662ad7c62405c7ca2ac75fe5ea7cc05f13e001a141ad60cf2f5f404"
+        },
+        "claim_limit": {
+          "const": "archive_readable_not_owner_ready"
+        }
+      }
+    },
+    "predecessor_surfaces": {
+      "type": "array",
+      "minItems": 22,
+      "maxItems": 22,
+      "items": {
+        "type": "string"
+      }
+    },
+    "arena_kernel_law": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "string"
+      }
+    },
+    "first_pair_trials": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/pair_trial"
+      }
+    },
+    "kernel_flow": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/flow_step"
+      }
+    },
+    "hard_guards": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocking_contracts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "activation_state",
+        "contestant_eligibility",
+        "witness_contract",
+        "stance_integrity",
+        "closure_contract",
+        "summon_economy",
+        "verdict_boundary",
+        "scar_retention",
+        "tos_boundary",
+        "runtime_storage",
+        "archive_consistency"
+      ],
+      "properties": {
+        "activation_state": {
+          "$ref": "#/$defs/activation_state"
+        },
+        "contestant_eligibility": {
+          "$ref": "#/$defs/contestant_eligibility"
+        },
+        "witness_contract": {
+          "$ref": "#/$defs/witness_contract"
+        },
+        "stance_integrity": {
+          "$ref": "#/$defs/stance_integrity"
+        },
+        "closure_contract": {
+          "$ref": "#/$defs/closure_contract"
+        },
+        "summon_economy": {
+          "$ref": "#/$defs/summon_economy"
+        },
+        "verdict_boundary": {
+          "$ref": "#/$defs/verdict_boundary"
+        },
+        "scar_retention": {
+          "$ref": "#/$defs/scar_retention"
+        },
+        "tos_boundary": {
+          "$ref": "#/$defs/tos_boundary"
+        },
+        "runtime_storage": {
+          "$ref": "#/$defs/runtime_storage"
+        },
+        "archive_consistency": {
+          "$ref": "#/$defs/archive_consistency"
+        }
+      }
+    },
+    "authority": {
+      "$ref": "#/$defs/authority"
+    },
+    "owner_split": {
+      "type": "array",
+      "minItems": 15,
+      "maxItems": 15,
+      "items": {
+        "$ref": "#/$defs/owner_split"
+      }
+    },
+    "quarantined_surfaces": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "string"
+      }
+    },
+    "seed_dry_run_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "archive_integrity",
+        "schema_example_pairs",
+        "json_files",
+        "seed_tests_passed",
+        "claim_limit"
+      ],
+      "properties": {
+        "archive_integrity": {
+          "const": "unzip_t_passed"
+        },
+        "schema_example_pairs": {
+          "const": 33
+        },
+        "json_files": {
+          "const": 108
+        },
+        "seed_tests_passed": {
+          "const": 16
+        },
+        "claim_limit": {
+          "const": "dry_run_only_not_owner_readiness"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "pair_trial": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "office",
+        "assistant_form",
+        "agonic_form",
+        "trial_kind",
+        "assistant_authority",
+        "agonic_authority",
+        "witness_requirements",
+        "live_enrollment",
+        "scar_authority"
+      ],
+      "properties": {
+        "office": {
+          "enum": [
+            "verifier",
+            "chronicler",
+            "librarian"
+          ]
+        },
+        "assistant_form": {
+          "type": "string",
+          "pattern": "^[a-z]+\\.assistant$"
+        },
+        "agonic_form": {
+          "type": "string",
+          "pattern": "^[a-z]+\\.agonic$"
+        },
+        "trial_kind": {
+          "const": "mechanical_duel"
+        },
+        "assistant_authority": {
+          "type": "string"
+        },
+        "agonic_authority": {
+          "type": "string"
+        },
+        "witness_requirements": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z]+\\.assistant$"
+          }
+        },
+        "live_enrollment": {
+          "const": false
+        },
+        "scar_authority": {
+          "const": "none_from_center"
+        }
+      }
+    },
+    "flow_step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "order",
+        "kind",
+        "owner",
+        "authority_note",
+        "stop_lines"
+      ],
+      "properties": {
+        "order": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "kind": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "authority_note": {
+          "type": "string"
+        },
+        "stop_lines": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "activation_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowed_landing_states",
+        "active_allowed_during_landing",
+        "live_arena_allowed",
+        "live_runtime_allowed"
+      ],
+      "properties": {
+        "allowed_landing_states": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "active_allowed_during_landing": {
+          "const": false
+        },
+        "live_arena_allowed": {
+          "const": false
+        },
+        "live_runtime_allowed": {
+          "const": false
+        }
+      }
+    },
+    "contestant_eligibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_contestant_kinds",
+        "assistant_primary_contestant_allowed",
+        "same_actor_service_and_contestant_allowed",
+        "two_contestant_duel_only",
+        "third_permanent_contestant_allowed"
+      ],
+      "properties": {
+        "primary_contestant_kinds": {
+          "type": "array",
+          "items": {
+            "const": "agonic"
+          }
+        },
+        "assistant_primary_contestant_allowed": {
+          "const": false
+        },
+        "same_actor_service_and_contestant_allowed": {
+          "const": false
+        },
+        "two_contestant_duel_only": {
+          "const": true
+        },
+        "third_permanent_contestant_allowed": {
+          "const": false
+        }
+      }
+    },
+    "witness_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "service_witness_required",
+        "assistant_service_witness_allowed",
+        "assistant_judge_allowed",
+        "assistant_scar_writer_allowed",
+        "assistant_retention_executor_allowed"
+      ],
+      "properties": {
+        "service_witness_required": {
+          "const": true
+        },
+        "assistant_service_witness_allowed": {
+          "const": true
+        },
+        "assistant_judge_allowed": {
+          "const": false
+        },
+        "assistant_scar_writer_allowed": {
+          "const": false
+        },
+        "assistant_retention_executor_allowed": {
+          "const": false
+        }
+      }
+    },
+    "stance_integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sealed_commit_required",
+        "reveal_must_match_commit_hash",
+        "posthoc_commit_edit_allowed"
+      ],
+      "properties": {
+        "sealed_commit_required": {
+          "const": true
+        },
+        "reveal_must_match_commit_hash": {
+          "const": true
+        },
+        "posthoc_commit_edit_allowed": {
+          "const": false
+        }
+      }
+    },
+    "closure_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "trace_required",
+        "material_open_contradiction_blocks_closure",
+        "closure_without_trace_allowed",
+        "unresolved_protocol_breach_blocks_closure",
+        "false_success_allowed"
+      ],
+      "properties": {
+        "trace_required": {
+          "const": true
+        },
+        "material_open_contradiction_blocks_closure": {
+          "const": true
+        },
+        "closure_without_trace_allowed": {
+          "const": false
+        },
+        "unresolved_protocol_breach_blocks_closure": {
+          "const": true
+        },
+        "false_success_allowed": {
+          "const": false
+        }
+      }
+    },
+    "summon_economy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "visible_summon_request_required",
+        "summon_cost_required",
+        "hidden_summon_allowed",
+        "codex_summon_authority_allowed",
+        "routing_summon_authority_allowed"
+      ],
+      "properties": {
+        "visible_summon_request_required": {
+          "const": true
+        },
+        "summon_cost_required": {
+          "const": true
+        },
+        "hidden_summon_allowed": {
+          "const": false
+        },
+        "codex_summon_authority_allowed": {
+          "const": false
+        },
+        "routing_summon_authority_allowed": {
+          "const": false
+        }
+      }
+    },
+    "verdict_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowed_issuer_kinds",
+        "codex_verdict_allowed",
+        "assistant_verdict_allowed",
+        "runtime_verdict_allowed",
+        "verdict_may_grant_scar_rank_retention"
+      ],
+      "properties": {
+        "allowed_issuer_kinds": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "evaluator",
+              "operator",
+              "council"
+            ]
+          }
+        },
+        "codex_verdict_allowed": {
+          "const": false
+        },
+        "assistant_verdict_allowed": {
+          "const": false
+        },
+        "runtime_verdict_allowed": {
+          "const": false
+        },
+        "verdict_may_grant_scar_rank_retention": {
+          "const": false
+        }
+      }
+    },
+    "scar_retention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scar_candidate_only_required",
+        "retention_schedule_candidate_only_required",
+        "durable_scar_write_allowed",
+        "retention_execution_allowed",
+        "rank_mutation_allowed",
+        "honor_mutation_allowed"
+      ],
+      "properties": {
+        "scar_candidate_only_required": {
+          "const": true
+        },
+        "retention_schedule_candidate_only_required": {
+          "const": true
+        },
+        "durable_scar_write_allowed": {
+          "const": false
+        },
+        "retention_execution_allowed": {
+          "const": false
+        },
+        "rank_mutation_allowed": {
+          "const": false
+        },
+        "honor_mutation_allowed": {
+          "const": false
+        }
+      }
+    },
+    "tos_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_write_allowed",
+        "direct_node_path_allowed",
+        "canon_write_allowed",
+        "dossier_candidate_only"
+      ],
+      "properties": {
+        "runtime_write_allowed": {
+          "const": false
+        },
+        "direct_node_path_allowed": {
+          "const": false
+        },
+        "canon_write_allowed": {
+          "const": false
+        },
+        "dossier_candidate_only": {
+          "const": true
+        }
+      }
+    },
+    "runtime_storage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_worker_activation_allowed",
+        "storage_record_authoritative",
+        "host_port_open_allowed",
+        "scheduler_loop_allowed",
+        "deployment_daemon_allowed"
+      ],
+      "properties": {
+        "runtime_worker_activation_allowed": {
+          "const": false
+        },
+        "storage_record_authoritative": {
+          "const": false
+        },
+        "host_port_open_allowed": {
+          "const": false
+        },
+        "scheduler_loop_allowed": {
+          "const": false
+        },
+        "deployment_daemon_allowed": {
+          "const": false
+        }
+      }
+    },
+    "archive_consistency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "clean_flow_may_inform_contract",
+        "raw_generated_output_copied_as_truth",
+        "fixture_generated_result_disagreement_allowed",
+        "archive_pycache_allowed_in_owner_repo"
+      ],
+      "properties": {
+        "clean_flow_may_inform_contract": {
+          "const": true
+        },
+        "raw_generated_output_copied_as_truth": {
+          "const": false
+        },
+        "fixture_generated_result_disagreement_allowed": {
+          "const": false
+        },
+        "archive_pycache_allowed_in_owner_repo": {
+          "const": false
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contract_effect",
+        "codex_may",
+        "codex_must_not",
+        "assistant_must_not",
+        "derived_layers_must_not",
+        "human_gates_required"
+      ],
+      "properties": {
+        "contract_effect": {
+          "const": "center_mechanical_arena_kernel_law_only"
+        },
+        "codex_may": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "codex_must_not": {
+          "type": "array",
+          "minItems": 12,
+          "items": {
+            "type": "string"
+          }
+        },
+        "assistant_must_not": {
+          "type": "array",
+          "minItems": 9,
+          "items": {
+            "type": "string"
+          }
+        },
+        "derived_layers_must_not": {
+          "type": "array",
+          "minItems": 9,
+          "maxItems": 9,
+          "items": {
+            "type": "string"
+          }
+        },
+        "human_gates_required": {
+          "type": "array",
+          "minItems": 6,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "owner_split": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repo",
+        "owns",
+        "must_not"
+      ],
+      "properties": {
+        "repo": {
+          "type": "string"
+        },
+        "owns": {
+          "type": "string"
+        },
+        "must_not": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

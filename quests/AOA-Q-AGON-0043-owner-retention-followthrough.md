@@ -1,3 +1,1 @@
-# AOA-Q-AGON-0043: Owner Retention Followthrough
-
-Coordinate memo, agents, evals, stats, and SDK followthrough without granting live mutation authority.
+triaged/AOA-Q-AGON-0043-owner-retention-followthrough.md

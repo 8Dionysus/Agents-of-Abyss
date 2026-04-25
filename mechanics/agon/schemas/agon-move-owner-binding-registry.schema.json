@@ -1,0 +1,66 @@
+{
+  "$id": "https://github.com/8Dionysus/Agents-of-Abyss/schemas/agon-move-owner-binding-registry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bindings": {
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "move_class_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "type": "object"
+    },
+    "owner_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "agon-move-owner-binding-registry/0.1"
+    },
+    "source_move_registry": {
+      "type": "string"
+    },
+    "source_move_seed": {
+      "type": "string"
+    },
+    "status": {
+      "const": "pre_protocol_owner_binding"
+    },
+    "stop_line": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "total_bindings": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "wave": {
+      "const": "IV"
+    }
+  },
+  "required": [
+    "schema_version",
+    "wave",
+    "title",
+    "status",
+    "source_move_registry",
+    "source_move_seed",
+    "total_bindings",
+    "owner_counts",
+    "move_class_counts",
+    "stop_line",
+    "bindings"
+  ],
+  "title": "Agon move owner binding registry",
+  "type": "object"
+}

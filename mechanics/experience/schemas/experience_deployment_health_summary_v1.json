@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "experience_deployment_health_summary",
+  "type": "object",
+  "description": "experience_deployment_health_summary schema for AoA experience deployment watchtower v0.5.",
+  "required": [
+    "summary_id",
+    "release_id",
+    "window",
+    "health",
+    "alarm_counts",
+    "recommendation"
+  ],
+  "properties": {
+    "summary_id": {
+      "type": "string"
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "window": {
+      "type": "string"
+    },
+    "health": {
+      "type": "string"
+    },
+    "alarm_counts": {
+      "type": "object"
+    },
+    "recommendation": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

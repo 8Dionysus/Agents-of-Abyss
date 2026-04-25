@@ -1,17 +1,1 @@
-{
-  "schema_version": "1.0",
-  "kind": "federation_harvest_run_result",
-  "id": "federation_harvest_run_result.example",
-  "status": "candidate",
-  "summary": "Example federation_harvest_run_result object for v0.6 federation harvest seed.",
-  "owner_repo": "Agents-of-Abyss",
-  "evidence_refs": [
-    "receipt://v0.6/federation_harvest_run_result/example"
-  ],
-  "payload": {
-    "run_id": "fed.harvest.001",
-    "status": "passed",
-    "patterns_promoted": 1,
-    "patterns_blocked": 3
-  }
-}
+../mechanics/experience/examples/federation_harvest_run_result.example.json

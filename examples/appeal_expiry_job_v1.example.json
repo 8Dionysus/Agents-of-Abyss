@@ -1,6 +1,1 @@
-{
-  "appeal_id": "appeal_001",
-  "decision": "expire_if_no_active_stay",
-  "job_id": "job_expire_001",
-  "run_at": "2026-05-01T00:00:00Z"
-}
+../mechanics/experience/examples/appeal_expiry_job_v1.example.json

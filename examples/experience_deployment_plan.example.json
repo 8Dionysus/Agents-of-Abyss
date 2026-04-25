@@ -1,15 +1,1 @@
-{
-  "plan_id": "dep.plan.001",
-  "release_id": "assistant.notary.1.1.0",
-  "target_kind": "assistant",
-  "rings": [
-    {
-      "ring_id": "ring_0_internal",
-      "population": "internal",
-      "duration_cycles": 1
-    }
-  ],
-  "rollback_plan_id": "rollback.notary.1.0.3",
-  "authority_policy_ref": "watchtower.authority.v1",
-  "created_by": "operator"
-}
+../mechanics/experience/examples/experience_deployment_plan.example.json

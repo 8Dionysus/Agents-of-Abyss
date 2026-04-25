@@ -25,6 +25,8 @@ This file applies to validation and builder tooling under `scripts/`.
 ## Role of this directory
 
 `scripts/` is the lightweight validation seam for the AoA center.
+Mechanic-owned scripts live under `mechanics/<slug>/scripts/`; root script
+entries for those lanes are compatibility aliases for stable commands.
 
 Current scripts include:
 
@@ -47,6 +49,9 @@ Current scripts include:
   compact mesh checks
 - `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, and
   `validate_mechanic_readme_cards.py` for the mechanic card contract
+- `validate_mechanic_artifact_topology.py` and
+  `validate_questbook_lifecycle.py` for mechanic artifact homes and the quest
+  lifecycle board
 - `build_owner_request_queue.py`, `validate_owner_request_queue.py`,
   `validate_generated_owner_request_queue.py`, and
   `validate_owner_request_docs.py` for center-side owner request packets
@@ -93,6 +98,7 @@ Keep this script surface small, repo-relative, deterministic, and limited to the
 
 When changing script logic:
 
+- follow mechanic-owned aliases into `mechanics/<slug>/scripts/` before editing
 - prefer crisp failure messages over hidden magic
 - keep checks anchored to public repository surfaces
 - avoid network access, speculative repo discovery, or layer-owned validation that belongs elsewhere

@@ -1,15 +1,1 @@
-{
-  "candidate_ref": "exp-release-1.0.0-rc1",
-  "created_at": "2026-04-22T00:00:00Z",
-  "evidence_refs": [
-    "generated/sovereign_release_clean_flow/release_candidate.json"
-  ],
-  "id": "experience_sovereign_release_candidate_example",
-  "kind": "experience_sovereign_release_candidate_v1",
-  "notes": "Example artifact for experience_sovereign_release_candidate_v1.",
-  "owner_repo": "Agents-of-Abyss",
-  "requires_operator_seal": true,
-  "rollback_ref": "rollback-drill-clean-001",
-  "status": "draft",
-  "version": "1.0.0"
-}
+../mechanics/experience/examples/experience_sovereign_release_candidate_v1.example.json

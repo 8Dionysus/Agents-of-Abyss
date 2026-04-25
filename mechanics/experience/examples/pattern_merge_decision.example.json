@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "kind": "pattern_merge_decision",
+  "id": "pattern_merge_decision.example",
+  "status": "approved",
+  "summary": "Example pattern_merge_decision object for v0.6 federation harvest seed.",
+  "owner_repo": "Agents-of-Abyss",
+  "evidence_refs": [
+    "receipt://v0.6/pattern_merge_decision/example"
+  ],
+  "payload": {
+    "decision": "merge",
+    "source_patterns": [
+      "pattern.a",
+      "pattern.b"
+    ],
+    "target_pattern": "pattern.ab",
+    "compatibility": "compatible"
+  }
+}

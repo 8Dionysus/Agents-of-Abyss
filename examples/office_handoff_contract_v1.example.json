@@ -1,17 +1,1 @@
-{
-  "created_at": "2026-04-22T00:00:00Z",
-  "evidence_refs": [
-    "generated/multi_office_train_clean_flow/release_train.json"
-  ],
-  "hidden_meaning_edit_allowed": false,
-  "id": "office_handoff_contract_v1_example",
-  "kind": "office_handoff_contract_v1",
-  "notes": "Example artifact for office_handoff_contract_v1.",
-  "owner_repo": "Agents-of-Abyss",
-  "receipt_required": true,
-  "source_office": "concierge.assistant",
-  "state_packet_schema": "office_handoff_packet_v1",
-  "status": "draft",
-  "target_office": "courier.assistant",
-  "version": "1.1.0"
-}
+../mechanics/experience/examples/office_handoff_contract_v1.example.json

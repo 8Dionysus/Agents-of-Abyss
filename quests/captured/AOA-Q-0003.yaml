@@ -1,0 +1,49 @@
+schema_version: work_quest_v1
+id: AOA-Q-0003
+title: Plan the next QUESTBOOK contour after the foundation seams are proven
+summary: ''
+repo: Agents-of-Abyss
+owner_surface: center/contour-planning
+theme_ref: ''
+milestone_ref: ''
+kind: rollout
+state: captured
+band: near
+difficulty: d3_seam
+risk: r1_repo_local
+control_mode: human_codex_copilot
+delegate_tier: planner
+fallback_tier: conductor
+wrapper_class: codex_primary
+write_scope: docs_only
+split_required: false
+complexity_basis:
+  scope: 2
+  ambiguity: 2
+  boundary: 1
+  verification: 1
+parent: null
+depends_on: []
+activation:
+  mode: on_review_of
+  ref: AOA-Q-0002
+  note: wait for first contour seam proof
+anchor_ref:
+  artifact: first_wave_doc
+  ref: mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md
+handoff_role: federation-maintainer
+evidence:
+  - later contour repo classes are named
+  - repo-specific caveats are named
+  - foundation seam proof gates the expansion
+harvest:
+  target: none
+opened_at: '2026-03-31'
+touched_at: '2026-03-31'
+tags:
+  - contour
+  - adoption
+notes: >-
+  The next contour opens only after the foundation seams are proven and does
+  not include ATM10-Agent in this planting line.
+public_safe: true

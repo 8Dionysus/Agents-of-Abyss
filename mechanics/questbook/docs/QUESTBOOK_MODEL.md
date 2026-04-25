@@ -53,6 +53,8 @@ The center must not:
 - human surface: `QUESTBOOK.md`
 - canonical object: `work_quest_v1`
 - thin delegation projection: `quest_dispatch_v1`
+- source item store: `quests/<lifecycle-state>/AOA-Q-*`
+- compatibility aliases: `quests/AOA-Q-*`
 
 This naming avoids conflating the human-facing questbook concept with repo-specific operator intents such as `open_quest_book`.
 
@@ -70,6 +72,19 @@ QUESTBOOK uses two axes.
 - `reanchor`
 - `done`
 - `dropped`
+
+The lifecycle state is not only prose. Quest source files live in the matching
+directory under `quests/`. Top-level `quests/AOA-Q-*` paths are aliases kept for
+stable public links, commands, and old references.
+
+Promotion is explicit:
+
+- `captured` -> `triaged` when the owner lane, band, and rough acceptance are known
+- `triaged` -> `ready` when the next action can be taken without raw history
+- `ready` -> `active` only while an owner lane is actually advancing it
+- `active` -> `done`, `blocked`, `reanchor`, or `dropped` when the current move ends
+- `blocked` -> `ready` only after the named dependency changes
+- `reanchor` -> `captured` or `triaged` after the route is honestly reset
 
 ### Placement band
 
@@ -141,3 +156,9 @@ Do not store:
 - raw local planning noise
 
 If richer local notes are needed, keep them in ignored local overlays and reference the public quest ID.
+
+## Validation
+
+```bash
+python scripts/validate_questbook_lifecycle.py
+```

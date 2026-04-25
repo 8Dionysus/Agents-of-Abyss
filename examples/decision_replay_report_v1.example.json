@@ -1,7 +1,1 @@
-{
-  "case_id": "case_runtime_001",
-  "checked_at": "2026-04-22T00:00:00Z",
-  "events_checked": 3,
-  "report_id": "replay_001",
-  "status": "valid"
-}
+../mechanics/experience/examples/decision_replay_report_v1.example.json

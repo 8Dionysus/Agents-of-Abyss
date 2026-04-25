@@ -1,10 +1,1 @@
-{
-  "id": "decision.cert.notary.001",
-  "kind": "experience_certification_decision_log",
-  "candidate": "rc.notary.1.1.0.001",
-  "decision": "approved_with_watch",
-  "reason": "regression and rollback passed; minor behavior tightening",
-  "decider": "operator",
-  "forbidden_authority_checked": true,
-  "post_release_watch": "retention.watch.notary.001"
-}
+../mechanics/experience/examples/experience_certification_decision_log.example.json

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "experience_rollout_ring",
+  "type": "object",
+  "description": "experience_rollout_ring schema for AoA experience deployment watchtower v0.5.",
+  "required": [
+    "ring_id",
+    "order",
+    "population",
+    "duration_cycles",
+    "promotion_gate",
+    "rollback_behavior"
+  ],
+  "properties": {
+    "ring_id": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "population": {
+      "type": "string"
+    },
+    "duration_cycles": {
+      "type": "integer"
+    },
+    "promotion_gate": {
+      "type": "string"
+    },
+    "rollback_behavior": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

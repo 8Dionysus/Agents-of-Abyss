@@ -1,10 +1,1 @@
-{
-  "result_id": "canary.result.001",
-  "probe_id": "canary.scope.001",
-  "status": "pass",
-  "severity": "none",
-  "observed_at": "2026-04-22T00:00:00Z",
-  "evidence_refs": [
-    "trace.canary.001"
-  ]
-}
+../mechanics/experience/examples/experience_canary_result.example.json

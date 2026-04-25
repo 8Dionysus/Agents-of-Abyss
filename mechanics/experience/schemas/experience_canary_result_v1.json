@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "experience_canary_result",
+  "type": "object",
+  "description": "experience_canary_result schema for AoA experience deployment watchtower v0.5.",
+  "required": [
+    "result_id",
+    "probe_id",
+    "status",
+    "severity",
+    "observed_at",
+    "evidence_refs"
+  ],
+  "properties": {
+    "result_id": {
+      "type": "string"
+    },
+    "probe_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string"
+    },
+    "observed_at": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

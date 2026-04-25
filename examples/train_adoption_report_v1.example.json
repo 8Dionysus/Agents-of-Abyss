@@ -1,15 +1,1 @@
-{
-  "adoption_result": "activated_under_watch",
-  "created_at": "2026-04-22T00:00:00Z",
-  "evidence_refs": [
-    "generated/multi_office_train_clean_flow/release_train.json"
-  ],
-  "id": "train_adoption_report_v1_example",
-  "kind": "train_adoption_report_v1",
-  "notes": "Example artifact for train_adoption_report_v1.",
-  "owner_repo": "Agents-of-Abyss",
-  "retention_required": true,
-  "status": "draft",
-  "train_id": "train-service-001",
-  "version": "1.1.0"
-}
+../mechanics/experience/examples/train_adoption_report_v1.example.json

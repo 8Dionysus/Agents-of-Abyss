@@ -24,9 +24,13 @@ Questbook owns the mechanics of public obligations, quest lifecycle, placement,
 risk, difficulty, and harvest rules.
 
 Root `QUESTBOOK.md` remains the public index.
-`quests/` remains the quest item store.
+`quests/` remains the quest item store. Source quest objects live under lifecycle directories; root-level `AOA-Q-*` entries are compatibility aliases.
 
 ## Validation
 
-Run `python scripts/validate_mechanics_topology.py --mechanic questbook` after
-package changes.
+Run after package or quest-store changes:
+
+```bash
+python scripts/validate_mechanics_topology.py --mechanic questbook
+python scripts/validate_questbook_lifecycle.py
+```

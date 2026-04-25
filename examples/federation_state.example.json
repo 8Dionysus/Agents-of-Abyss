@@ -1,18 +1,1 @@
-{
-  "schema_version": "1.0",
-  "kind": "federation_state",
-  "id": "federation_state.example",
-  "status": "candidate",
-  "summary": "Example federation_state object for v0.6 federation harvest seed.",
-  "owner_repo": "Agents-of-Abyss",
-  "evidence_refs": [
-    "receipt://v0.6/federation_state/example"
-  ],
-  "payload": {
-    "state": "kag_promoted",
-    "allowed_next": [
-      "tos_dossier_prepared",
-      "owner_adoption_quest"
-    ]
-  }
-}
+../mechanics/experience/examples/federation_state.example.json

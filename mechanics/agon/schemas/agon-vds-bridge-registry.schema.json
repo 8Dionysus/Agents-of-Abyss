@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "bridge_components": {
+      "items": {
+        "$ref": "./agon-vds-bridge.schema.json"
+      },
+      "minItems": 5,
+      "type": "array"
+    },
+    "live_protocol": {
+      "const": false
+    },
+    "outcome_bridge_matrix": {
+      "minItems": 7,
+      "type": "array"
+    },
+    "registry_id": {
+      "const": "agon.vds_bridge.registry.v1"
+    },
+    "runtime_effect": {
+      "const": "none"
+    },
+    "status": {
+      "type": "string"
+    },
+    "stop_lines": {
+      "minItems": 10,
+      "type": "array"
+    },
+    "version": {
+      "type": "string"
+    },
+    "wave": {
+      "const": "XI"
+    }
+  },
+  "required": [
+    "registry_id",
+    "version",
+    "wave",
+    "status",
+    "live_protocol",
+    "runtime_effect",
+    "bridge_components",
+    "outcome_bridge_matrix",
+    "stop_lines"
+  ],
+  "title": "Agon VDS Bridge Registry",
+  "type": "object"
+}
