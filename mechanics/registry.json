@@ -1,75 +1,163 @@
 {
-  "schema_version": "aoa_mechanics_registry_v1",
-  "authority_ref": "mechanics/README.md",
   "agents_ref": "mechanics/AGENTS.md",
+  "authority_ref": "mechanics/README.md",
+  "card_contract_ref": "mechanics/README.md#mechanic-card-contract",
   "compatibility_routes": [
     "docs/MECHANICS.md",
     "FRAGILITY_BLACKLIST.md",
     "QUESTBOOK.md"
   ],
+  "generated_card_index_ref": "generated/mechanic_card_index.min.json",
+  "generated_owner_request_queue_ref": "generated/owner_request_queue.min.json",
+  "mechanic_card_required_headings": [
+    "## Mechanic card",
+    "### Trigger",
+    "### Center owns",
+    "### Stronger owner split",
+    "### Inputs",
+    "### Outputs",
+    "### Must not claim",
+    "### Validation",
+    "### Next route"
+  ],
   "mechanics": [
     {
-      "slug": "method-growth",
-      "title": "Method-growth",
-      "status": "landed",
-      "package_path": "mechanics/method-growth",
-      "entry_ref": "mechanics/method-growth/README.md",
-      "roadmap_ref": "mechanics/method-growth/ROADMAP.md",
-      "landing_log_ref": "mechanics/method-growth/LANDING_LOG.md",
       "agents_ref": "mechanics/method-growth/AGENTS.md",
-      "docs_path": "mechanics/method-growth/docs",
-      "owner_boundary": "Center route from repeated work to candidate, seed, owner landing, proof, method, memory, and derived summary; final object truth remains owner-local.",
       "canonical_docs": [
         "mechanics/method-growth/docs/ROOTLINE.md",
         "mechanics/method-growth/docs/METHOD_SPINE.md",
         "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
         "mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md",
-        "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
+        "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md",
+        "mechanics/method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md"
       ],
-      "validation_refs": [
-        "scripts/validate_mechanics_topology.py"
-      ],
+      "card": {
+        "center_owns": "Center growth route, lineage vocabulary, reviewable-growth discipline, and owner landing/pruning rules.",
+        "inputs": [
+          "Repeated work, donor-route residue, checkpoint pressure, or candidate lineage needing owner landing.",
+          "A reviewable friction, seed, or object candidate with enough context to name a stronger owner."
+        ],
+        "next_route": [
+          "For final object truth, route to the final owner repo before claiming activation.",
+          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Owner route, candidate reference, seed reference, proof request, method request, memory request, or pruning decision.",
+          "No final object truth until the final owner repository lands it."
+        ],
+        "stronger_owner_split": [
+          "`aoa-sdk` owns provisional carry and typed helper hints.",
+          "`aoa-skills` owns reviewed candidate identity and skill-shaped object truth.",
+          "`Dionysus` owns seed staging.",
+          "`aoa-evals` owns proof.",
+          "`aoa-playbooks` owns recurring method.",
+          "`aoa-stats` owns derived summary.",
+          "`aoa-memo` owns bounded memory and lessons.",
+          "The final owner repository owns final object truth."
+        ],
+        "trigger": "Use when repeated work may become a reusable method, candidate object, seed, proof, memory lesson, derived summary, or owner-local doctrine."
+      },
+      "docs_path": "mechanics/method-growth/docs",
+      "entry_ref": "mechanics/method-growth/README.md",
+      "landing_log_ref": "mechanics/method-growth/LANDING_LOG.md",
       "must_not_claim": [
         "center-owned final object truth",
         "owner-local activation"
+      ],
+      "owner_boundary": "Center route from repeated work to candidate, seed, owner landing, proof, method, memory, and derived summary; final object truth remains owner-local.",
+      "owner_request_doc_ref": "mechanics/method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-METHOD-SKILLS-001",
+        "ORQ-METHOD-SDK-001",
+        "ORQ-METHOD-DIONYSUS-001",
+        "ORQ-METHOD-EVALS-001",
+        "ORQ-METHOD-PLAYBOOKS-001",
+        "ORQ-METHOD-MEMO-001"
+      ],
+      "package_path": "mechanics/method-growth",
+      "roadmap_ref": "mechanics/method-growth/ROADMAP.md",
+      "slug": "method-growth",
+      "status": "landed",
+      "title": "Method-growth",
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py"
       ]
     },
     {
-      "slug": "recurrence",
-      "title": "Recurrence",
-      "status": "landed",
-      "package_path": "mechanics/recurrence",
-      "entry_ref": "mechanics/recurrence/README.md",
-      "roadmap_ref": "mechanics/recurrence/ROADMAP.md",
-      "landing_log_ref": "mechanics/recurrence/LANDING_LOG.md",
       "agents_ref": "mechanics/recurrence/AGENTS.md",
-      "docs_path": "mechanics/recurrence/docs",
-      "owner_boundary": "Center return and continuity law; memory, routing, choreography, proof, and runtime behavior remain owner-local.",
       "canonical_docs": [
         "mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md",
         "mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md",
-        "mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md"
+        "mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md",
+        "mechanics/recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md"
       ],
-      "validation_refs": [
-        "scripts/validate_mechanics_topology.py"
-      ],
+      "card": {
+        "center_owns": "Center return law, drift/anchor/re-entry vocabulary, component refresh boundary, and safe-stop posture.",
+        "inputs": [
+          "A drifting route, lost axis, stale component, broken handoff, or continuity claim that needs an anchor.",
+          "The last reviewable anchor and the expected next route from that anchor."
+        ],
+        "next_route": [
+          "For memory, route to `aoa-memo`; for routing behavior, route to `aoa-routing`; for runtime wrappers, route to `abyss-stack` after runtime gates.",
+          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Return point, re-entry step, safe stop, component refresh request, or owner-local handoff.",
+          "No ambient continuity claim and no hidden memory sovereignty."
+        ],
+        "stronger_owner_split": [
+          "`aoa-routing` owns local routing implementation and route graph behavior.",
+          "`aoa-memo` owns checkpoint, recall, and provenance.",
+          "`aoa-agents` owns role and handoff posture.",
+          "`aoa-playbooks` owns recurring return choreography.",
+          "`aoa-evals` owns drift and recovery-quality proof.",
+          "`abyss-stack` owns runtime wrappers after runtime-owner gates."
+        ],
+        "trigger": "Use when a route loses its axis, must return to a valid anchor, or needs bounded continuity across a handoff."
+      },
+      "docs_path": "mechanics/recurrence/docs",
+      "entry_ref": "mechanics/recurrence/README.md",
+      "landing_log_ref": "mechanics/recurrence/LANDING_LOG.md",
       "must_not_claim": [
         "ambient continuity",
         "hidden memory sovereignty",
         "runtime self-healing"
+      ],
+      "owner_boundary": "Center return and continuity law; memory, routing, choreography, proof, and runtime behavior remain owner-local.",
+      "owner_request_doc_ref": "mechanics/recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-RECURRENCE-ROUTING-001",
+        "ORQ-RECURRENCE-MEMO-001",
+        "ORQ-RECURRENCE-AGENTS-001",
+        "ORQ-RECURRENCE-PLAYBOOKS-001",
+        "ORQ-RECURRENCE-EVALS-001",
+        "ORQ-RECURRENCE-STACK-001"
+      ],
+      "package_path": "mechanics/recurrence",
+      "roadmap_ref": "mechanics/recurrence/ROADMAP.md",
+      "slug": "recurrence",
+      "status": "landed",
+      "title": "Recurrence",
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py"
       ]
     },
     {
-      "slug": "experience",
-      "title": "Experience",
-      "status": "planted",
-      "package_path": "mechanics/experience",
-      "entry_ref": "mechanics/experience/README.md",
-      "roadmap_ref": "mechanics/experience/ROADMAP.md",
-      "landing_log_ref": "mechanics/experience/LANDING_LOG.md",
       "agents_ref": "mechanics/experience/AGENTS.md",
-      "docs_path": "mechanics/experience/docs",
-      "owner_boundary": "Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, offices, runtime, KAG, memory, and ToS authority remain owner-local.",
       "canonical_docs": [
         "mechanics/experience/docs/EXPERIENCE_WAVE1_KERNEL.md",
         "mechanics/experience/docs/EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md",
@@ -77,29 +165,72 @@
         "mechanics/experience/docs/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md",
         "mechanics/experience/docs/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
         "mechanics/experience/docs/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+        "mechanics/experience/docs/EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md",
+        "mechanics/experience/docs/EXPERIENCE_OWNER_REPO_REQUESTS.md"
       ],
-      "validation_refs": [
-        "scripts/validate_mechanic_landing_logs.py",
-        "scripts/validate_mechanics_topology.py"
-      ],
+      "card": {
+        "center_owns": "Experience center contracts, release posture, stop-lines, adoption route language, and owner-routing grammar.",
+        "inputs": [
+          "Friction record, release experience, incident, adoption request, office/service contour, duel pressure, or continuity claim.",
+          "A source surface that can be turned into a bounded contract without declaring live runtime authority."
+        ],
+        "next_route": [
+          "For runtime or live workspace activation, route to `abyss-stack` and the relevant owner-local gate.",
+          "For memory, route to `aoa-memo`; for adoption proof, route to `aoa-evals`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Reviewable contract, owner adoption request, stop-line, proof route, memory route, or inert projection.",
+          "No live workspace runtime until the stronger owner lands and validates it."
+        ],
+        "stronger_owner_split": [
+          "`abyss-stack` owns runtime activation and workspace infrastructure.",
+          "`aoa-memo` owns memory objects, recall, and provenance.",
+          "`aoa-routing` owns live routing behavior and context router implementation.",
+          "`aoa-evals` owns adoption proof, certification checks, and regression evidence.",
+          "`aoa-agents` owns actor, office, role, and handoff posture.",
+          "`Tree-of-Sophia` owns ToS-authored meaning and canon.",
+          "Future owner-local repositories own live office and workspace behavior."
+        ],
+        "trigger": "Use when lived work, friction, releases, offices, incidents, service posture, seed intake, duel pressure, continuity loom, or living-workspace boundaries must become reviewable contracts."
+      },
+      "docs_path": "mechanics/experience/docs",
+      "entry_ref": "mechanics/experience/README.md",
+      "landing_log_ref": "mechanics/experience/LANDING_LOG.md",
       "must_not_claim": [
         "live workspace runtime",
         "hidden memory sovereignty",
         "owner-local activation"
+      ],
+      "owner_boundary": "Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, offices, runtime, KAG, memory, and ToS authority remain owner-local.",
+      "owner_request_doc_ref": "mechanics/experience/docs/EXPERIENCE_OWNER_REPO_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STACK-001",
+        "ORQ-EXPERIENCE-MEMO-001",
+        "ORQ-EXPERIENCE-ROUTING-001",
+        "ORQ-EXPERIENCE-EVALS-001",
+        "ORQ-EXPERIENCE-AGENTS-001",
+        "ORQ-EXPERIENCE-KAG-001",
+        "ORQ-EXPERIENCE-TOS-001"
+      ],
+      "package_path": "mechanics/experience",
+      "roadmap_ref": "mechanics/experience/ROADMAP.md",
+      "slug": "experience",
+      "status": "planted",
+      "title": "Experience",
+      "validation_refs": [
+        "scripts/validate_mechanic_landing_logs.py",
+        "scripts/validate_mechanics_topology.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py"
       ]
     },
     {
-      "slug": "agon",
-      "title": "Agon",
-      "status": "landed",
-      "package_path": "mechanics/agon",
-      "entry_ref": "mechanics/agon/README.md",
-      "roadmap_ref": "mechanics/agon/ROADMAP.md",
-      "landing_log_ref": "mechanics/agon/LANDING_LOG.md",
       "agents_ref": "mechanics/agon/AGENTS.md",
-      "docs_path": "mechanics/agon/docs",
-      "owner_boundary": "Center pressure, lawful move, arena grammar, packets, verdict, rank, school, and canon-restraint doctrine; live arena execution and owner-local truth remain outside.",
       "canonical_docs": [
         "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
         "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
@@ -107,153 +238,444 @@
         "mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md",
         "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
         "mechanics/agon/docs/AGON_TOS_THRESHOLD_PACKET_MODEL.md",
-        "mechanics/agon/docs/PRE_AGON_BASELINE.md"
+        "mechanics/agon/docs/PRE_AGON_BASELINE.md",
+        "mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md"
       ],
-      "validation_refs": [
-        "scripts/validate_mechanic_landing_logs.py",
-        "scripts/validate_mechanics_topology.py"
-      ],
+      "card": {
+        "center_owns": "Agon vocabulary, stop-lines, pressure doctrine, lawful-move grammar, and owner handoff expectations.",
+        "inputs": [
+          "Conflict, contradiction, pressure request, lawful move candidate, trial contour, packet model, or threshold question.",
+          "A bounded source that can be routed without granting live arena or assistant contestant authority."
+        ],
+        "next_route": [
+          "For trial practice, route to `aoa-playbooks`; for proof, route to `aoa-evals`; for scars or retention, route to `aoa-memo`; for runtime, route to `abyss-stack` after runtime gates.",
+          "For ToS canon or threshold authority, route to `Tree-of-Sophia`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Stop-line, owner handoff, trial/playbook request, proof request, memory request, route gate, or ToS threshold packet.",
+          "No rank, verdict, scar, memory, runtime, or canon mutation inside the center."
+        ],
+        "stronger_owner_split": [
+          "`aoa-playbooks` owns trial choreography and repeatable practice flows.",
+          "`aoa-evals` owns verdict proof, evaluation discipline, and regression evidence.",
+          "`aoa-memo` owns scars, retention memory, and bounded lessons.",
+          "`aoa-stats` owns aggregate rank and reputation projections after proof gates.",
+          "`aoa-routing` owns gates, handoffs, and route behavior.",
+          "`aoa-agents` owns actor seats, role contracts, and contestant posture.",
+          "`abyss-stack` owns runtime session bodies after runtime-owner gates.",
+          "`Tree-of-Sophia` owns ToS canon and Sophian threshold decisions."
+        ],
+        "trigger": "Use when conflict, contradiction, bounded pressure, survival tests, lawful moves, arena or duel grammar, packets, verdicts, retention, rank, schools, canon promotion, or ToS thresholds are involved."
+      },
+      "docs_path": "mechanics/agon/docs",
+      "entry_ref": "mechanics/agon/README.md",
+      "landing_log_ref": "mechanics/agon/LANDING_LOG.md",
       "must_not_claim": [
         "live arena execution",
         "assistant contestant authority",
         "rank mutation",
         "ToS canon write authority"
+      ],
+      "owner_boundary": "Center pressure, lawful move, arena grammar, packets, verdict, rank, school, and canon-restraint doctrine; live arena execution and owner-local truth remain outside.",
+      "owner_request_doc_ref": "mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-AGON-PLAYBOOKS-001",
+        "ORQ-AGON-EVALS-001",
+        "ORQ-AGON-MEMO-001",
+        "ORQ-AGON-STATS-001",
+        "ORQ-AGON-ROUTING-001",
+        "ORQ-AGON-AGENTS-001",
+        "ORQ-AGON-STACK-001",
+        "ORQ-AGON-TOS-001"
+      ],
+      "package_path": "mechanics/agon",
+      "roadmap_ref": "mechanics/agon/ROADMAP.md",
+      "slug": "agon",
+      "status": "landed",
+      "title": "Agon",
+      "validation_refs": [
+        "scripts/validate_mechanic_landing_logs.py",
+        "scripts/validate_mechanics_topology.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py"
       ]
     },
     {
-      "slug": "antifragility",
-      "title": "Antifragility",
-      "status": "landed",
-      "package_path": "mechanics/antifragility",
-      "entry_ref": "mechanics/antifragility/README.md",
-      "roadmap_ref": "mechanics/antifragility/ROADMAP.md",
-      "landing_log_ref": "mechanics/antifragility/LANDING_LOG.md",
       "agents_ref": "mechanics/antifragility/AGENTS.md",
-      "docs_path": "mechanics/antifragility/docs",
-      "owner_boundary": "Center stress, subtraction, anti-authority, and fragility-pattern doctrine; owner repositories own local repair evidence.",
       "canonical_docs": [
         "mechanics/antifragility/docs/ANTIFRAGILITY.md",
         "mechanics/antifragility/docs/VIA_NEGATIVA.md",
         "mechanics/antifragility/docs/ANTI_AUTHORITY_RULES.md",
         "mechanics/antifragility/docs/ONE_IN_ONE_OUT.md",
-        "mechanics/antifragility/FRAGILITY_BLACKLIST.md"
+        "mechanics/antifragility/FRAGILITY_BLACKLIST.md",
+        "mechanics/antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md"
       ],
-      "validation_refs": [
-        "scripts/validate_mechanics_topology.py"
-      ],
+      "card": {
+        "center_owns": "Center stress doctrine, via negativa, anti-authority posture, one-in-one-out pressure, and fragility blacklist posture.",
+        "inputs": [
+          "Stress event, fragility pattern, deletion candidate, authority drift, or cleanup proposal.",
+          "Evidence that the change makes ownership, proof, or stop-lines clearer rather than merely smaller."
+        ],
+        "next_route": [
+          "For owner-local cleanup, route to the owning repository; for repair proof, route to `aoa-evals`; for retained lessons, route to `aoa-memo`.",
+          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Subtraction route, anti-authority stop-line, repair request, evidence request, or owner-local cleanup handoff.",
+          "No one-score health metric and no deletion theater."
+        ],
+        "stronger_owner_split": [
+          "Owner repositories own their local deletion, repair, resilience, and incident evidence.",
+          "`aoa-evals` owns repair proof and regression evidence.",
+          "`aoa-memo` owns incident lessons and retained memory."
+        ],
+        "trigger": "Use when stress, sprawl, authority inflation, cleanup pressure, degraded mode, or a fragile pattern needs bounded review."
+      },
+      "docs_path": "mechanics/antifragility/docs",
+      "entry_ref": "mechanics/antifragility/README.md",
+      "landing_log_ref": "mechanics/antifragility/LANDING_LOG.md",
       "must_not_claim": [
         "one-score health",
         "deletion theater",
         "owner-local cleanup authority"
+      ],
+      "owner_boundary": "Center stress, subtraction, anti-authority, and fragility-pattern doctrine; owner repositories own local repair evidence.",
+      "owner_request_doc_ref": "mechanics/antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-ANTIFRAGILITY-EVALS-001",
+        "ORQ-ANTIFRAGILITY-MEMO-001",
+        "ORQ-ANTIFRAGILITY-STATS-001",
+        "ORQ-ANTIFRAGILITY-PLAYBOOKS-001"
+      ],
+      "package_path": "mechanics/antifragility",
+      "roadmap_ref": "mechanics/antifragility/ROADMAP.md",
+      "slug": "antifragility",
+      "status": "landed",
+      "title": "Antifragility",
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py"
       ]
     },
     {
-      "slug": "questbook",
-      "title": "Questbook",
-      "status": "landed",
-      "package_path": "mechanics/questbook",
-      "entry_ref": "mechanics/questbook/README.md",
-      "roadmap_ref": "mechanics/questbook/ROADMAP.md",
-      "landing_log_ref": "mechanics/questbook/LANDING_LOG.md",
       "agents_ref": "mechanics/questbook/AGENTS.md",
-      "docs_path": "mechanics/questbook/docs",
-      "owner_boundary": "Quest lifecycle and public obligation mechanics; root QUESTBOOK remains index and quests/ remains item store.",
       "canonical_docs": [
         "mechanics/questbook/docs/QUESTBOOK_MODEL.md",
         "mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md",
         "QUESTBOOK.md",
-        "quests/README.md"
+        "quests/README.md",
+        "mechanics/questbook/docs/QUESTBOOK_OWNER_REPO_REQUESTS.md"
       ],
-      "validation_refs": [
-        "scripts/validate_mechanics_topology.py"
-      ],
+      "card": {
+        "center_owns": "Federation-level quest mechanics, root public quest index posture, quest item placement, and obligation lifecycle language.",
+        "inputs": [
+          "Deferred obligation, follow-up, risk, dependency, or public work item that must not be lost.",
+          "Enough context to choose center quest placement or route the obligation to the owner repository."
+        ],
+        "next_route": [
+          "For repo-local obligations, route to the owner repository instead of keeping them in the center.",
+          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Quest item, root questbook index update, owner-local task route, proof request, or closure note.",
+          "No private scratchpad and no parallel roadmap."
+        ],
+        "stronger_owner_split": [
+          "Owner repositories own repo-local obligations and local task truth.",
+          "`quests/` holds public center quest items, not private scratch work.",
+          "`aoa-playbooks` owns recurring quest choreography when a quest becomes repeatable method.",
+          "`aoa-evals` owns proof obligations attached to quest closure.",
+          "`aoa-memo` owns lessons retained after quest completion."
+        ],
+        "trigger": "Use when an obligation must survive the current session as a public, reviewable follow-up without becoming a second roadmap or private scratchpad."
+      },
+      "docs_path": "mechanics/questbook/docs",
+      "entry_ref": "mechanics/questbook/README.md",
+      "landing_log_ref": "mechanics/questbook/LANDING_LOG.md",
       "must_not_claim": [
         "second roadmap",
         "private scratchpad",
         "repo-local task sink"
+      ],
+      "owner_boundary": "Quest lifecycle and public obligation mechanics; root QUESTBOOK remains index and quests/ remains item store.",
+      "owner_request_doc_ref": "mechanics/questbook/docs/QUESTBOOK_OWNER_REPO_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-QUESTBOOK-PLAYBOOKS-001",
+        "ORQ-QUESTBOOK-EVALS-001",
+        "ORQ-QUESTBOOK-MEMO-001",
+        "ORQ-QUESTBOOK-ROUTING-001"
+      ],
+      "package_path": "mechanics/questbook",
+      "roadmap_ref": "mechanics/questbook/ROADMAP.md",
+      "slug": "questbook",
+      "status": "landed",
+      "title": "Questbook",
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py"
       ]
     },
     {
-      "slug": "rpg",
-      "title": "RPG",
-      "status": "landed",
-      "package_path": "mechanics/rpg",
-      "entry_ref": "mechanics/rpg/README.md",
-      "roadmap_ref": "mechanics/rpg/ROADMAP.md",
-      "landing_log_ref": "mechanics/rpg/LANDING_LOG.md",
       "agents_ref": "mechanics/rpg/AGENTS.md",
-      "docs_path": "mechanics/rpg/docs",
-      "owner_boundary": "Adjunct RPG reflection for progression and navigation; role, skill, technique, playbook, quest item, and runtime truth remain owner-local.",
       "canonical_docs": [
         "mechanics/rpg/docs/RPG_LAYER_MODEL.md",
         "mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md",
         "mechanics/rpg/docs/RPG_BOUNDARY_MAP.md",
         "mechanics/rpg/docs/RPG_FIRST_WAVE.md",
-        "mechanics/rpg/docs/RPG_SECOND_WAVE.md"
+        "mechanics/rpg/docs/RPG_SECOND_WAVE.md",
+        "mechanics/rpg/docs/RPG_OWNER_REPO_REQUESTS.md"
       ],
-      "validation_refs": [
-        "scripts/validate_mechanics_topology.py"
-      ],
+      "card": {
+        "center_owns": "Adjunct RPG reflection posture, progression-reading vocabulary, boundary map, and presentation grammar.",
+        "inputs": [
+          "Progression signal, questline, campaign contour, role/skill/feat reading, or presentation need.",
+          "A source object whose owner can be named before RPG reflection is attached."
+        ],
+        "next_route": [
+          "For role truth, route to `aoa-agents`; for skills, route to `aoa-skills`; for campaign method, route to `aoa-playbooks`; for runtime state, route to `abyss-stack` after runtime gates.",
+          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Readable reflection, progression label, campaign map, presentation route, or owner handoff.",
+          "No hidden ontology, runtime ledger, or role-canon mutation."
+        ],
+        "stronger_owner_split": [
+          "`aoa-agents` owns role, persona, and actor contract truth.",
+          "`aoa-skills` owns skill-shaped object truth.",
+          "`aoa-playbooks` owns scenario, campaign, and repeatable choreography truth.",
+          "`aoa-evals` owns progression proof and evidence.",
+          "`quests/` and owner repositories own quest item truth according to placement.",
+          "`abyss-stack` owns runtime and session-state behavior after runtime gates."
+        ],
+        "trigger": "Use when progression, questlines, campaigns, roles, skills, feats, or readable adjunct reflection need to be interpreted without rewriting ownership."
+      },
+      "docs_path": "mechanics/rpg/docs",
+      "entry_ref": "mechanics/rpg/README.md",
+      "landing_log_ref": "mechanics/rpg/LANDING_LOG.md",
       "must_not_claim": [
         "hidden ontology",
         "runtime ledger",
         "role-canon mutation"
+      ],
+      "owner_boundary": "Adjunct RPG reflection for progression and navigation; role, skill, technique, playbook, quest item, and runtime truth remain owner-local.",
+      "owner_request_doc_ref": "mechanics/rpg/docs/RPG_OWNER_REPO_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-RPG-AGENTS-001",
+        "ORQ-RPG-SKILLS-001",
+        "ORQ-RPG-PLAYBOOKS-001",
+        "ORQ-RPG-EVALS-001",
+        "ORQ-RPG-STACK-001",
+        "ORQ-RPG-STATS-001"
+      ],
+      "package_path": "mechanics/rpg",
+      "roadmap_ref": "mechanics/rpg/ROADMAP.md",
+      "slug": "rpg",
+      "status": "landed",
+      "title": "RPG",
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py"
       ]
     },
     {
-      "slug": "tos-bridge",
-      "title": "ToS bridge",
-      "status": "landed",
-      "package_path": "mechanics/tos-bridge",
-      "entry_ref": "mechanics/tos-bridge/README.md",
-      "roadmap_ref": "mechanics/tos-bridge/ROADMAP.md",
-      "landing_log_ref": "mechanics/tos-bridge/LANDING_LOG.md",
       "agents_ref": "mechanics/tos-bridge/AGENTS.md",
-      "docs_path": "mechanics/tos-bridge/docs",
-      "owner_boundary": "AoA support posture for Tree-of-Sophia; ToS authored meaning and canon stay in Tree-of-Sophia.",
       "canonical_docs": [
         "mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md",
         "mechanics/tos-bridge/docs/WITNESS_COMPOST.md",
         "mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md",
         "mechanics/tos-bridge/docs/TOS_TEMPLATE_SUPPORT.md",
         "mechanics/tos-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md",
-        "mechanics/tos-bridge/docs/TOS_SOIL_PREP_SUPPORT.md"
+        "mechanics/tos-bridge/docs/TOS_SOIL_PREP_SUPPORT.md",
+        "mechanics/tos-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md"
       ],
-      "validation_refs": [
-        "scripts/validate_mechanics_topology.py"
-      ],
+      "card": {
+        "center_owns": "AoA support posture, route language, counterpart/witness/compost support boundaries, and non-authoring stop-lines.",
+        "inputs": [
+          "ToS support request, counterpart mapping, witness note, compost proposal, template support, lineage pilot support, or soil-prep support.",
+          "A source distinction between AoA support and ToS-authored meaning."
+        ],
+        "next_route": [
+          "For ToS meaning, canon, or source interpretation, route to `Tree-of-Sophia` before making any claim.",
+          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Support route, witness/compost note, derived handoff, template support note, growth-support route, or soil-prep route.",
+          "No AoA-authored ToS canon and no source interpretation authority."
+        ],
+        "stronger_owner_split": [
+          "`Tree-of-Sophia` owns ToS-authored meaning, canon, and source interpretation.",
+          "AoA owner repositories own only their local support, proof, memory, routing, or derived implementation surfaces."
+        ],
+        "trigger": "Use when AoA supports Tree-of-Sophia counterpart, witness, compost, template, growth, lineage, or soil-prep work without authoring ToS meaning."
+      },
+      "docs_path": "mechanics/tos-bridge/docs",
+      "entry_ref": "mechanics/tos-bridge/README.md",
+      "landing_log_ref": "mechanics/tos-bridge/LANDING_LOG.md",
       "must_not_claim": [
         "AoA-authored ToS canon",
         "source interpretation authority",
         "owner-local implementation truth"
+      ],
+      "owner_boundary": "AoA support posture for Tree-of-Sophia; ToS authored meaning and canon stay in Tree-of-Sophia.",
+      "owner_request_doc_ref": "mechanics/tos-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-TOSBRIDGE-TOS-001",
+        "ORQ-TOSBRIDGE-KAG-001",
+        "ORQ-TOSBRIDGE-ROUTING-001",
+        "ORQ-TOSBRIDGE-MEMO-001",
+        "ORQ-TOSBRIDGE-EVALS-001",
+        "ORQ-TOSBRIDGE-PLAYBOOKS-001"
+      ],
+      "package_path": "mechanics/tos-bridge",
+      "roadmap_ref": "mechanics/tos-bridge/ROADMAP.md",
+      "slug": "tos-bridge",
+      "status": "landed",
+      "title": "ToS bridge",
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py"
       ]
     },
     {
-      "slug": "release-support",
-      "title": "Release support",
-      "status": "landed",
-      "package_path": "mechanics/release-support",
-      "entry_ref": "mechanics/release-support/README.md",
-      "roadmap_ref": "mechanics/release-support/ROADMAP.md",
-      "landing_log_ref": "mechanics/release-support/LANDING_LOG.md",
       "agents_ref": "mechanics/release-support/AGENTS.md",
-      "docs_path": "mechanics/release-support/docs",
-      "owner_boundary": "Center release posture and public claim boundaries; sibling repositories own local release truth.",
       "canonical_docs": [
         "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         "mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md",
         "mechanics/release-support/docs/RELEASING.md",
-        "mechanics/release-support/docs/DIRECTION_SURFACES.md"
+        "mechanics/release-support/docs/DIRECTION_SURFACES.md",
+        "mechanics/release-support/docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md"
       ],
-      "validation_refs": [
-        "scripts/validate_mechanics_topology.py",
-        "scripts/release_check.py"
-      ],
+      "card": {
+        "center_owns": "Center release posture, public claim boundaries, federation release protocol, release runbook, and roadmap/changelog/direction separation.",
+        "inputs": [
+          "Public claim, release note, roadmap change, direction update, audit finding, or support statement.",
+          "Source evidence sufficient to decide whether the center may support the claim."
+        ],
+        "next_route": [
+          "For sibling release truth, route to the sibling repository before claiming support.",
+          "For proof-dependent claims, route to `aoa-evals`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Supportable claim, stop-line, release checklist route, direction-surface update, audit route, or sibling handoff.",
+          "No unverified public claim and no substitution of roadmap history for changelog truth."
+        ],
+        "stronger_owner_split": [
+          "Sibling repositories own their local release truth and implementation evidence.",
+          "`aoa-evals` owns proof evidence for quality or regression claims.",
+          "Generated surfaces reflect source truth but do not author release truth."
+        ],
+        "trigger": "Use when a public claim, release surface, changelog, roadmap, direction surface, support posture, or audit route must be checked."
+      },
+      "docs_path": "mechanics/release-support/docs",
+      "entry_ref": "mechanics/release-support/README.md",
+      "landing_log_ref": "mechanics/release-support/LANDING_LOG.md",
       "must_not_claim": [
         "unverified public claim",
         "sibling release truth",
         "roadmap history as changelog"
+      ],
+      "owner_boundary": "Center release posture and public claim boundaries; sibling repositories own local release truth.",
+      "owner_request_doc_ref": "mechanics/release-support/docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-RELEASE-EVALS-001",
+        "ORQ-RELEASE-STATS-001",
+        "ORQ-RELEASE-ROUTING-001",
+        "ORQ-RELEASE-SDK-001",
+        "ORQ-RELEASE-PROFILE-001"
+      ],
+      "package_path": "mechanics/release-support",
+      "roadmap_ref": "mechanics/release-support/ROADMAP.md",
+      "slug": "release-support",
+      "status": "landed",
+      "title": "Release support",
+      "validation_refs": [
+        "scripts/validate_mechanics_topology.py",
+        "scripts/release_check.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py"
       ]
     }
-  ]
+  ],
+  "owner_request_priority_vocabulary": {
+    "P0": "Unlocks a claimed stop-line or prevents the center from overclaiming operational truth.",
+    "P1": "Strong owner-local landing needed for the mechanic to become useful beyond center doctrine.",
+    "P2": "Important cross-owner support or evidence route, but not currently blocking the mechanic card.",
+    "P3": "Deferred improvement or optional compatibility refinement."
+  },
+  "owner_request_protocol_ref": "mechanics/OWNER_REQUEST_PROTOCOL.md",
+  "owner_request_queue_ref": "mechanics/OWNER_REQUEST_QUEUE.md",
+  "owner_request_required_fields": [
+    "id",
+    "mechanic",
+    "owner_repo",
+    "owner_role",
+    "queue_status",
+    "priority",
+    "slice",
+    "center_status",
+    "center_sources",
+    "required_owner_landing",
+    "proof_route",
+    "handoff_surface_hint",
+    "stop_line",
+    "next_action"
+  ],
+  "owner_request_source_ref": "mechanics/owner-request-queue.json",
+  "owner_request_status_vocabulary": {
+    "accepted": "The owner repository has accepted scope in an owner-local issue, document, branch, or equivalent receipt.",
+    "blocked": "The request cannot advance until an explicit blocker is resolved.",
+    "landed": "The owner repository has landed the requested surface and the required proof or receipt is linked.",
+    "queued": "The center has identified an owner-local slice, but no full request packet is ready yet.",
+    "requested": "A center-side request packet exists and may be handed to the owner repository; this is not owner acceptance.",
+    "retired": "The request is intentionally kept as historical context and must not be treated as active.",
+    "superseded": "The request has been replaced by another request ID and must point to that successor."
+  },
+  "owner_request_validation_refs": [
+    "scripts/validate_owner_request_queue.py",
+    "scripts/build_owner_request_queue.py",
+    "scripts/validate_generated_owner_request_queue.py",
+    "scripts/validate_owner_request_docs.py"
+  ],
+  "schema_version": "aoa_mechanics_registry_v1",
+  "status_vocabulary": {
+    "deprecated": "The route is retained only for compatibility, history, or migration support.",
+    "landed": "Center route, stop-lines, registry entry, card, and validation expectations exist.",
+    "operational": "The stronger owner repository has accepted and validated the relevant implementation, proof, memory, runtime, or canon surface.",
+    "planted": "Center doctrine and route language exist, but the mechanic must not be claimed as operational truth.",
+    "requested": "A named owner-local landing request exists, but the owner has not yet accepted operational truth."
+  }
 }

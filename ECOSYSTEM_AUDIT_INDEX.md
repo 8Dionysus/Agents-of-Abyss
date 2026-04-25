@@ -2,7 +2,7 @@
 
 This file is the compact audit routing surface for Codex and human reviewers.
 
-Use it with `AGENTS.md`, [docs/CODEX_AUDIT_PROTOCOL](docs/CODEX_AUDIT_PROTOCOL.md), [docs/CODEX_SKILL_PROOF_AUDIT_BRIDGE](docs/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md), and [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md).
+Use it with `AGENTS.md`, [docs/audits/CODEX_AUDIT_PROTOCOL](docs/audits/CODEX_AUDIT_PROTOCOL.md), [docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE](docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md), and [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md).
 
 It exists to answer five questions fast:
 

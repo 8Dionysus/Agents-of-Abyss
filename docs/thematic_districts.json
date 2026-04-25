@@ -1,0 +1,275 @@
+{
+  "schema_version": 2,
+  "purpose": "Keep docs/ current and route historical/evidence/legacy material into thematic districts.",
+  "current_root_allowlist": [
+    "AGENTS.md",
+    "README.md",
+    "FEDERATION_RULES.md",
+    "LAYERS.md",
+    "REPO_ROLES.md",
+    "ROOT_SURFACE_LAW.md",
+    "START_HERE_ROUTE_CONTRACT.md",
+    "MECHANICS.md",
+    "CURRENT_SURFACE_INDEX.md",
+    "THEMATIC_DISTRICT_PROTOCOL.md",
+    "thematic_districts.json"
+  ],
+  "districts": {
+    "agent-lane": {
+      "path": "docs/agent-lane",
+      "readme": "docs/agent-lane/README.md",
+      "role": "Agent-lane references that support AGENTS.md without becoming root doctrine.",
+      "authority": "supporting_reference",
+      "patterns": [
+        "AGENTS_ROOT_REFERENCE",
+        "AGENT_LANE"
+      ],
+      "must_not_claim": [
+        "Does not replace root or nearest AGENTS.md."
+      ]
+    },
+    "audits": {
+      "path": "docs/audits",
+      "readme": "docs/audits/README.md",
+      "role": "Audit evidence, cleanup candidates, review protocols, and drift checks.",
+      "authority": "evidence_and_protocol",
+      "patterns": [
+        "AUDIT",
+        "CLEANUP",
+        "DRIFT",
+        "DELETION_CANDIDATES",
+        "BLACKLIST",
+        "REVIEW",
+        "PROOF_AUDIT"
+      ],
+      "must_not_claim": [
+        "Audit evidence is not law until adopted by a canonical surface."
+      ]
+    },
+    "landings": {
+      "path": "docs/landings",
+      "readme": "docs/landings/README.md",
+      "role": "Historical seed manifests, wave receipts, and landing notes.",
+      "authority": "historical_receipt",
+      "patterns": [
+        "LANDING",
+        "SEED",
+        "SEED_MANIFEST",
+        "WAVE",
+        "PACK",
+        "RECEIPT"
+      ],
+      "must_not_claim": [
+        "Receipts do not prove owner-local implementation."
+      ]
+    },
+    "registry": {
+      "path": "docs/registry",
+      "readme": "docs/registry/README.md",
+      "role": "Registry evolution, schema/capsule notes, and generated-index planning.",
+      "authority": "design_note",
+      "patterns": [
+        "REGISTRY",
+        "INVENTORY",
+        "SCHEMA",
+        "CAPSULE",
+        "INDEX",
+        "MAP"
+      ],
+      "must_not_claim": [
+        "Registry notes are not runtime truth or source meaning."
+      ]
+    },
+    "decisions": {
+      "path": "docs/decisions",
+      "readme": "docs/decisions/README.md",
+      "role": "Decision records explaining why a route, owner split, or placement was chosen.",
+      "authority": "decision_record",
+      "patterns": [
+        "DECISION",
+        "ADR",
+        "RFC",
+        "RATIONALE"
+      ],
+      "must_not_claim": [
+        "Decisions explain why; current surfaces define what."
+      ]
+    },
+    "postmortems": {
+      "path": "docs/postmortems",
+      "readme": "docs/postmortems/README.md",
+      "role": "Failure-learning, incident review, repair notes, and retrospectives.",
+      "authority": "retrospective_learning",
+      "patterns": [
+        "POSTMORTEM",
+        "RETRO",
+        "RETROSPECTIVE",
+        "INCIDENT",
+        "FAILURE",
+        "REPAIR"
+      ],
+      "must_not_claim": [
+        "Postmortems are not evergreen route law unless promoted."
+      ]
+    },
+    "traces": {
+      "path": "docs/traces",
+      "readme": "docs/traces/README.md",
+      "role": "Migration evidence, provenance logs, link rewrite traces, and move manifests.",
+      "authority": "provenance_trace",
+      "patterns": [
+        "TRACE",
+        "PROVENANCE",
+        "MIGRATION",
+        "BEFORE_AFTER",
+        "MOVE_LOG",
+        "LINK_REWRITE",
+        "MANIFEST"
+      ],
+      "must_not_claim": [
+        "Traces explain movement, not meaning."
+      ]
+    },
+    "agon": {
+      "path": "docs/agon",
+      "readme": "docs/agon/README.md",
+      "role": "Historical or transitional Agon center records not owned by current mechanics/agon surfaces.",
+      "authority": "mechanic_legacy_receipt",
+      "current_route": "mechanics/agon/README.md",
+      "patterns": [
+        "AGON"
+      ],
+      "must_not_claim": [
+        "Does not grant live arena authority."
+      ]
+    },
+    "experience": {
+      "path": "docs/experience",
+      "readme": "docs/experience/README.md",
+      "role": "Historical or transitional Experience center records not owned by current mechanics/experience surfaces.",
+      "authority": "mechanic_legacy_receipt",
+      "current_route": "mechanics/experience/README.md",
+      "patterns": [
+        "EXPERIENCE",
+        "OFFICE",
+        "LOOM",
+        "SERVICE_POSTURE"
+      ],
+      "must_not_claim": [
+        "Does not grant live workspace runtime."
+      ]
+    },
+    "legacy": {
+      "path": "docs/legacy",
+      "readme": "docs/legacy/README.md",
+      "role": "Compatibility aliases and superseded flat docs preserved for provenance.",
+      "authority": "superseded_reference",
+      "patterns": [
+        "LEGACY",
+        "OLD",
+        "SUPERSEDED",
+        "MECHANICS"
+      ],
+      "must_not_claim": [
+        "Legacy surfaces are not current law when canonical routes exist."
+      ]
+    }
+  },
+  "tie_break_order": [
+    "agent-lane",
+    "audits",
+    "landings",
+    "registry",
+    "decisions",
+    "postmortems",
+    "traces",
+    "agon",
+    "experience",
+    "legacy"
+  ],
+  "exact_migrations": [
+    {
+      "source": "docs/AGENTS_ROOT_REFERENCE.md",
+      "target": "docs/agent-lane/AGENTS_ROOT_REFERENCE.md",
+      "district": "agent-lane",
+      "link_target": "docs/agent-lane/AGENTS_ROOT_REFERENCE.md",
+      "reason": "agent-lane reference belongs in the agent-lane district"
+    },
+    {
+      "source": "docs/CODEX_AUDIT_PROTOCOL.md",
+      "target": "docs/audits/CODEX_AUDIT_PROTOCOL.md",
+      "district": "audits",
+      "link_target": "docs/audits/CODEX_AUDIT_PROTOCOL.md",
+      "reason": "audit protocol belongs with audit surfaces"
+    },
+    {
+      "source": "docs/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md",
+      "target": "docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md",
+      "district": "audits",
+      "link_target": "docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md",
+      "reason": "skill/proof audit bridge belongs with audit surfaces"
+    },
+    {
+      "source": "SEED_MANIFEST.md",
+      "target": "docs/landings/AGON_WAVE3_SEED_MANIFEST.md",
+      "district": "landings",
+      "link_target": "docs/landings/AGON_WAVE3_SEED_MANIFEST.md",
+      "reason": "root seed manifests are wave receipts"
+    },
+    {
+      "source": "registry-v2-notes.md",
+      "target": "docs/registry/REGISTRY_V2_NOTES.md",
+      "district": "registry",
+      "link_target": "docs/registry/REGISTRY_V2_NOTES.md",
+      "reason": "future registry notes belong in registry district"
+    },
+    {
+      "source": "DELETION_CANDIDATES.json",
+      "target": "docs/audits/DELETION_CANDIDATES.json",
+      "district": "audits",
+      "link_target": "docs/audits/DELETION_CANDIDATES.json",
+      "reason": "deletion candidates are audit evidence"
+    }
+  ],
+  "pattern_migrations": [
+    {
+      "source_glob": "docs/AGON_*.md",
+      "target_dir": "docs/agon",
+      "district": "agon",
+      "reason": "flat Agon historical records move to docs/agon"
+    },
+    {
+      "source_glob": "docs/EXPERIENCE_*.md",
+      "target_dir": "docs/experience",
+      "district": "experience",
+      "reason": "flat Experience historical records move to docs/experience"
+    },
+    {
+      "source_glob": "docs/*AUDIT*.md",
+      "target_dir": "docs/audits",
+      "district": "audits",
+      "reason": "flat audit records move to docs/audits"
+    },
+    {
+      "source_glob": "docs/*LANDING*.md",
+      "target_dir": "docs/landings",
+      "district": "landings",
+      "reason": "flat landing records move to docs/landings"
+    },
+    {
+      "source_glob": "docs/*SEED*.md",
+      "target_dir": "docs/landings",
+      "district": "landings",
+      "reason": "flat seed records move to docs/landings"
+    }
+  ],
+  "validation_refs": [
+    "python scripts/plan_docs_thematic_cleanup.py --check",
+    "python scripts/validate_docs_thematic_districts.py",
+    "python scripts/validate_docs_migration_map.py",
+    "python scripts/build_docs_thematic_index.py --check",
+    "python scripts/validate_docs_thematic_index.py"
+  ],
+  "generated_index_ref": "generated/docs_thematic_index.min.json",
+  "migration_manifest_ref": "docs/traces/WAVE_D_MOVE_MANIFEST.json"
+}

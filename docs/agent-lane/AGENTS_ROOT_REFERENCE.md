@@ -37,17 +37,17 @@ surfaces where that direction becomes operational.
 Then branch by task:
 
 - process, mechanic, or engineering-philosophy route questions: `docs/MECHANICS.md`
-- method-centered growth or scenario-home questions: `docs/METHOD_SPINE.md`
-- adjunct RPG reflection or canonical vocabulary questions: `docs/RPG_LAYER_MODEL.md` and `docs/RPG_CANONICAL_TERMINOLOGY.md`
+- method-centered growth or scenario-home questions: `mechanics/method-growth/docs/METHOD_SPINE.md`
+- adjunct RPG reflection or canonical vocabulary questions: `mechanics/rpg/docs/RPG_LAYER_MODEL.md` and `mechanics/rpg/docs/RPG_CANONICAL_TERMINOLOGY.md`
 - move-owner binding, owner-request, or pre-protocol stop-line questions:
-  `docs/AGON_MOVE_OWNER_BINDING.md`,
-  `docs/AGON_OWNER_REPO_REQUESTS.md`, and
-  `docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
+  `mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md`,
+  `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`, and
+  `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
 - gate-routing handoff, owner request, or stop-line questions:
-  `docs/AGON_GATE_ROUTING_HANDOFF.md`,
-  `docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
-  `docs/AGON_GATE_ROUTING_STOP_LINES.md`, and
-  `docs/AGON_WAVE5_CENTER_HANDOFF.md`
+  `mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md`,
+  `mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
+  `mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md`, and
+  `mechanics/agon/docs/AGON_WAVE5_CENTER_HANDOFF.md`
 - witness / compost, counterpart bridge, or ToS support waves: the relevant compact doctrine note under `docs/`
 
 Nearest-file precedence applies inside:
@@ -135,19 +135,19 @@ If the task touches method, quest reflection, or canonical vocabulary, also revi
 
 If the task touches the Agon move owner binding turn, also review:
 
-- `docs/AGON_MOVE_OWNER_BINDING.md`
-- `docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`
-- `docs/AGON_OWNER_REPO_REQUESTS.md`
-- `docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
-- `docs/AGON_WAVE4_LANDING.md`
+- `mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md`
+- `mechanics/agon/docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`
+- `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`
+- `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
+- `mechanics/agon/docs/AGON_WAVE4_LANDING.md`
 - `generated/agon_move_owner_binding_registry.min.json`
 
 If the task touches the Agon gate routing handoff turn, also review:
 
-- `docs/AGON_GATE_ROUTING_HANDOFF.md`
-- `docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`
-- `docs/AGON_GATE_ROUTING_STOP_LINES.md`
-- `docs/AGON_WAVE5_CENTER_HANDOFF.md`
+- `mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md`
+- `mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`
+- `mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md`
+- `mechanics/agon/docs/AGON_WAVE5_CENTER_HANDOFF.md`
 - `generated/agon_gate_routing_handoff_request.min.json`
 
 If you edit `docs/`, `generated/`, `schemas/`, or `scripts/`, read the local
@@ -182,13 +182,13 @@ python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
 For repository audits and GitHub review, also read:
 
 - `ECOSYSTEM_AUDIT_INDEX.md`
-- `docs/CODEX_AUDIT_PROTOCOL.md`
+- `docs/audits/CODEX_AUDIT_PROTOCOL.md`
 
 ## Skill / proof audit bridge
 
 When a task touches `aoa-skills` or `aoa-evals`, also read:
 
-- `docs/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md`
+- `docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md`
 
 ## Review guidelines
 

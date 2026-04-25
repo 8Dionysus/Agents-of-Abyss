@@ -9,6 +9,12 @@ It summarizes repository names, roles, statuses, shared maturity, and kind for t
 `generated/federation_supporting_inventory.min.json` is the companion machine-readable inventory for supporting consumer/control-plane surfaces that stay outside compact registry v1.
 `generated/center_entry_map.min.json` is the compact machine-facing route
 capsule for the shared `Start here` contract.
+`generated/mechanic_card_index.min.json` is the compact machine-facing
+reflection of mechanic package entry cards.
+`generated/owner_request_queue.min.json` is the compact machine-facing index of
+center-side owner request packets.
+`generated/docs_thematic_index.min.json` is the compact machine-facing map of
+docs thematic districts.
 `generated/agon_imposition_readiness.min.json` is the tracked Wave 0 readiness capsule for the center-owned Agon imposition gate.
 `generated/agon_lawful_move_registry.min.json` is the tracked Wave III lawful
 move registry for the center-owned pre-protocol legal vocabulary.
@@ -40,6 +46,31 @@ When editing `center_entry_map.min.json`:
 - run `scripts/validate_entry_surface_sync.py` so route modes remain visible
   across human and generated entry surfaces
 - do not let the compact route capsule replace authored human docs
+
+When editing `mechanic_card_index.min.json`:
+
+- rebuild it with `scripts/build_mechanic_card_index.py`
+- keep it aligned with `mechanics/registry.json` and the package
+  `mechanics/<slug>/README.md` card sections
+- run `scripts/validate_mechanic_card_index.py`
+- do not let the compact card index replace mechanic package README surfaces
+
+When editing `owner_request_queue.min.json`:
+
+- rebuild it with `scripts/build_owner_request_queue.py`
+- keep it aligned with `mechanics/owner-request-queue.json`,
+  `mechanics/OWNER_REQUEST_PROTOCOL.md`, `mechanics/OWNER_REQUEST_QUEUE.md`, and
+  `mechanics/<slug>/docs/*OWNER_REPO_REQUESTS.md`
+- run `scripts/validate_generated_owner_request_queue.py`
+- do not treat requests as owner-local acceptance or implementation receipts
+
+When editing `docs_thematic_index.min.json`:
+
+- rebuild it with `scripts/build_docs_thematic_index.py`
+- keep it aligned with `docs/thematic_districts.json`,
+  `docs/THEMATIC_DISTRICT_PROTOCOL.md`, and `docs/CURRENT_SURFACE_INDEX.md`
+- run `scripts/validate_docs_thematic_index.py`
+- do not cite it as stronger than the authored docs cleanup law
 
 When editing `agon_imposition_readiness.min.json`:
 
@@ -115,6 +146,17 @@ After changing the center entry map, also run:
 ```bash
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
+```
+
+After changing generated mechanic, owner-request, or docs-thematic surfaces, also run:
+
+```bash
+python scripts/build_mechanic_card_index.py --check
+python scripts/validate_mechanic_card_index.py
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
+python scripts/build_docs_thematic_index.py --check
+python scripts/validate_docs_thematic_index.py
 ```
 
 After changing the Agon readiness capsule, also run:

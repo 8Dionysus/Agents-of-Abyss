@@ -24,6 +24,11 @@ The route modes behind this entry surface are governed by
 [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md). Mechanic landing
 history lives in [`AGON_LANDING_LOG`](../mechanics/agon/LANDING_LOG.md) and
 [`EXPERIENCE_LANDING_LOG`](../mechanics/experience/LANDING_LOG.md).
+Docs cleanup grammar is governed by
+[`THEMATIC_DISTRICT_PROTOCOL`](THEMATIC_DISTRICT_PROTOCOL.md),
+[`CURRENT_SURFACE_INDEX`](CURRENT_SURFACE_INDEX.md),
+[`thematic_districts.json`](thematic_districts.json), and the generated
+[`docs_thematic_index`](../generated/docs_thematic_index.min.json).
 
 ## Route modes
 
@@ -57,11 +62,20 @@ This docs map mirrors, but does not replace, the canonical route contract.
 Core validation:
 
 ```bash
+python scripts/plan_docs_thematic_cleanup.py --check
+python scripts/validate_docs_thematic_districts.py
+python scripts/validate_docs_migration_map.py
+python scripts/build_docs_thematic_index.py --check
+python scripts/validate_docs_thematic_index.py
 python scripts/validate_markdown_shape.py
 python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
 python scripts/validate_mechanics_topology.py
+python scripts/build_mechanic_card_index.py --check
+python scripts/validate_mechanic_card_index.py
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
 python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
@@ -75,6 +89,8 @@ python -m pytest -q tests
 | [`REPO_ROLES`](REPO_ROLES.md) | what each current or emerging repository owns and should not absorb |
 | [`FEDERATION_RULES`](FEDERATION_RULES.md) | stable source-of-truth boundaries |
 | [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md) | what may live in repository root and where root leaks should move |
+| [`THEMATIC_DISTRICT_PROTOCOL`](THEMATIC_DISTRICT_PROTOCOL.md) | how old, historical, evidential, and transitional docs move into districts |
+| [`CURRENT_SURFACE_INDEX`](CURRENT_SURFACE_INDEX.md) | thin index of current docs root surfaces and districts |
 | [`MECHANICS`](../mechanics/README.md) | the branch atlas for processes and engineering philosophy |
 
 
@@ -83,9 +99,16 @@ python -m pytest -q tests
 | District | Use |
 |---|---|
 | `docs/` root | stable center doctrine and maps that are too deep for repository root but still center-level |
+| [`docs/agent-lane/`](agent-lane/) | agent-lane references that support, but do not replace, `AGENTS.md` |
 | [`docs/audits/`](audits/) | audit evidence, cleanup candidates, and root-surface review artifacts |
-| [`docs/registry/`](registry/) | registry evolution notes and future schema/migration planning |
 | [`docs/landings/`](landings/) | historical seed manifests and wave receipts that should not stand in repository root |
+| [`docs/registry/`](registry/) | registry evolution notes and future schema/migration planning |
+| [`docs/decisions/`](decisions/) | decision records explaining why a route or placement was chosen |
+| [`docs/postmortems/`](postmortems/) | retrospective repair learning and rollout review |
+| [`docs/traces/`](traces/) | migration evidence, move manifests, and provenance logs |
+| [`docs/agon/`](agon/) | historical or transitional Agon center records; current route is `mechanics/agon/` |
+| [`docs/experience/`](experience/) | historical or transitional Experience center records; current route is `mechanics/experience/` |
+| [`docs/legacy/`](legacy/) | compatibility aliases and superseded flat docs |
 
 ## Root-adjacent technical districts
 
@@ -113,7 +136,7 @@ Use these clusters for orientation only. Deep branch routing belongs in [`MECHAN
 | Antifragility and subtraction | [`ANTIFRAGILITY`](../mechanics/antifragility/docs/ANTIFRAGILITY.md), [`VIA_NEGATIVA`](../mechanics/antifragility/docs/VIA_NEGATIVA.md), [`ANTI_AUTHORITY_RULES`](../mechanics/antifragility/docs/ANTI_AUTHORITY_RULES.md), [`ONE_IN_ONE_OUT`](../mechanics/antifragility/docs/ONE_IN_ONE_OUT.md) | stress, degraded mode, pruning, or authority inflation must be handled |
 | Questbook and RPG | [`QUESTBOOK_MODEL`](../mechanics/questbook/docs/QUESTBOOK_MODEL.md), [`RPG_LAYER_MODEL`](../mechanics/rpg/docs/RPG_LAYER_MODEL.md), [`RPG_ARCHITECTURE_RFC`](../mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md) | obligations, questlines, progression, or adjunct campaign vocabulary is needed |
 | ToS bridge | [`COUNTERPART_BRIDGE`](../mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md), [`WITNESS_COMPOST`](../mechanics/tos-bridge/docs/WITNESS_COMPOST.md), [`TOS_GROWTH_SUPPORT`](../mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md), [`TOS_TEMPLATE_SUPPORT`](../mechanics/tos-bridge/docs/TOS_TEMPLATE_SUPPORT.md), [`TOS_LINEAGE_PILOT_SUPPORT`](../mechanics/tos-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md), [`TOS_SOIL_PREP_SUPPORT`](../mechanics/tos-bridge/docs/TOS_SOIL_PREP_SUPPORT.md) | AoA supports ToS while preserving ToS-authored meaning |
-| Release and audit | [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md), [`DIRECTION_SURFACES`](../mechanics/release-support/docs/DIRECTION_SURFACES.md), [`FEDERATION_RELEASE_PROTOCOL`](../mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md), [`RELEASING`](../mechanics/release-support/docs/RELEASING.md), [`CODEX_AUDIT_PROTOCOL`](CODEX_AUDIT_PROTOCOL.md) | a public claim, release, or audit route needs verification |
+| Release and audit | [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md), [`DIRECTION_SURFACES`](../mechanics/release-support/docs/DIRECTION_SURFACES.md), [`FEDERATION_RELEASE_PROTOCOL`](../mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md), [`RELEASING`](../mechanics/release-support/docs/RELEASING.md), [`CODEX_AUDIT_PROTOCOL`](audits/CODEX_AUDIT_PROTOCOL.md) | a public claim, release, or audit route needs verification |
 
 ## Recommended reading paths
 
@@ -144,9 +167,11 @@ Use these clusters for orientation only. Deep branch routing belongs in [`MECHAN
 ### I am cleaning root or duplicate surfaces
 
 1. Read [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md).
-2. Check [`FRAGILITY_BLACKLIST`](../FRAGILITY_BLACKLIST.md).
-3. Check [`audits/ROOT_SURFACE_AUDIT_2026_04_24`](audits/ROOT_SURFACE_AUDIT_2026_04_24.md).
-4. Move, merge, or delete only with a surviving canonical home.
+2. Read [`THEMATIC_DISTRICT_PROTOCOL`](THEMATIC_DISTRICT_PROTOCOL.md).
+3. Check [`CURRENT_SURFACE_INDEX`](CURRENT_SURFACE_INDEX.md).
+4. Check [`FRAGILITY_BLACKLIST`](../FRAGILITY_BLACKLIST.md).
+5. Check [`audits/ROOT_SURFACE_AUDIT_2026_04_24`](audits/ROOT_SURFACE_AUDIT_2026_04_24.md).
+6. Move, merge, or delete only with a surviving canonical home.
 
 ## Notes
 

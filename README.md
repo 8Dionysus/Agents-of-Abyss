@@ -72,11 +72,20 @@ Use this tree before trusting a claim made by the center:
 | Audit route | Is this cleanup, pruning, or duplicate-meaning review? | [ECOSYSTEM_AUDIT_INDEX](ECOSYSTEM_AUDIT_INDEX.md) and [docs/audits](docs/audits/) | Keep audit evidence reviewable without promoting it into constitutional law. |
 
 ```bash
+python scripts/plan_docs_thematic_cleanup.py --check
+python scripts/validate_docs_thematic_districts.py
+python scripts/validate_docs_migration_map.py
+python scripts/build_docs_thematic_index.py --check
+python scripts/validate_docs_thematic_index.py
 python scripts/validate_markdown_shape.py
 python scripts/validate_entry_surface_sync.py
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
 python scripts/validate_mechanics_topology.py
+python scripts/build_mechanic_card_index.py --check
+python scripts/validate_mechanic_card_index.py
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
 python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests

@@ -16,6 +16,8 @@ Important documents here include:
 - `ROOT_SURFACE_LAW.md` for root placement and cleanup law.
 - `START_HERE_ROUTE_CONTRACT.md` for public entry route modes.
 - `MECHANICS.md` as a compatibility route to `../mechanics/README.md`.
+- `THEMATIC_DISTRICT_PROTOCOL.md`, `CURRENT_SURFACE_INDEX.md`, and
+  `thematic_districts.json` for old-to-current docs cleanup.
 
 Mechanic-owned doctrine now lives under `../mechanics/`.
 Use `../mechanics/AGENTS.md` and the nearest `../mechanics/<slug>/AGENTS.md`
@@ -39,6 +41,10 @@ When editing:
 
 Do not let this directory become a shadow corpus for techniques, skills, evals, memory objects, runtime configs, or ToS-authored meaning.
 
+Historical, evidential, and support material should live in the nearest
+thematic district such as `agent-lane/`, `audits/`, `landings/`, `registry/`,
+`decisions/`, `postmortems/`, `traces/`, `agon/`, `experience/`, or `legacy/`.
+
 ## Validation
 
 After changing docs here, review the connected center-layer surfaces:
@@ -53,6 +59,11 @@ Then run:
 
 ```bash
 python -m pip install -r requirements-dev.txt
+python scripts/plan_docs_thematic_cleanup.py --check
+python scripts/validate_docs_thematic_districts.py
+python scripts/validate_docs_migration_map.py
+python scripts/build_docs_thematic_index.py --check
+python scripts/validate_docs_thematic_index.py
 python scripts/validate_ecosystem.py
 python -m pytest -q tests
 ```

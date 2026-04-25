@@ -11,7 +11,7 @@ Use it when:
 
 Read this file together with:
 
-- `docs/CODEX_AUDIT_PROTOCOL.md`
+- `docs/audits/CODEX_AUDIT_PROTOCOL.md`
 - `ECOSYSTEM_AUDIT_INDEX.md`
 - `aoa-skills/AUDIT.md`
 - `aoa-evals/AUDIT.md`
