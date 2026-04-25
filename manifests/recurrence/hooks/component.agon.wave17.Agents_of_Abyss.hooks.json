@@ -15,8 +15,8 @@
       ],
       "hook_id": "component.agon.wave17.Agents_of_Abyss.drift_watch",
       "surface_globs": [
-        "generated/agon_kag_promotion_path_registry.min.json",
-        "config/agon_kag_promotion_path.seed.json",
+        "mechanics/agon/generated/agon_kag_promotion_path_registry.min.json",
+        "mechanics/agon/config/agon_kag_promotion_path.seed.json",
         "mechanics/agon/docs/AGON_KAG_PROMOTION_PATH.md",
         "mechanics/agon/docs/AGON_KAG_PROMOTION_CANDIDATE_MODEL.md",
         "mechanics/agon/docs/AGON_KAG_SURVIVAL_CRITERIA.md",

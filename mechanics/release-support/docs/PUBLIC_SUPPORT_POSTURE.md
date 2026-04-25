@@ -79,7 +79,7 @@ Use the tiers below when you need to verify center claims:
 | tier | purpose | surface |
 |---|---|---|
 | Tier 1 | compact center contract validation | `python scripts/validate_ecosystem.py` |
-| Tier 2 | bounded repository regression battery | `python -m pytest -q tests` |
+| Tier 2 | bounded repository regression battery | `python -m pytest -q` |
 | Tier 3 | source-side scheduled truth check | `.github/workflows/source-side-smoke.yml` |
 
 The machine-facing center capsule has its own bounded rebuild loop:
@@ -102,6 +102,6 @@ The machine-facing center capsule has its own bounded rebuild loop:
 - `python scripts/validate_generated_freshness.py`
 - `python scripts/validate_hygiene_suite.py`
 - `python scripts/validate_ecosystem.py`
-- `python -m pytest -q tests`
+- `python -m pytest -q`
 
 PR and push validation live in `.github/workflows/repo-validation.yml`.

@@ -21,9 +21,9 @@ Do not modify owner repositories from this patch.
 ## Validation commands
 
 ```bash
-python scripts/build_agon_imposition_readiness.py --check
-python scripts/validate_agon_imposition_readiness.py
-python -m pytest -q tests/test_agon_imposition_readiness.py
+python mechanics/agon/scripts/build_agon_imposition_readiness.py --check
+python mechanics/agon/scripts/validate_agon_imposition_readiness.py
+python -m pytest -q mechanics/agon/tests/test_agon_imposition_readiness.py
 ```
 
 ## Recommended follow-through

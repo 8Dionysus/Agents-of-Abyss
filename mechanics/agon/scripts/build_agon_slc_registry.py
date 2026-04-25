@@ -8,8 +8,8 @@ def _repo_root() -> pathlib.Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-SRC = ROOT / 'config/agon_slc.seed.json'
-OUT = ROOT / 'generated/agon_slc_registry.min.json'
+SRC = ROOT / 'mechanics/agon/config/agon_slc.seed.json'
+OUT = ROOT / 'mechanics/agon/generated/agon_slc_registry.min.json'
 ITEM_KEY = 'slc_components'
 REGISTRY_ID = 'agon.slc.registry.v1'
 WAVE = 'XVI'

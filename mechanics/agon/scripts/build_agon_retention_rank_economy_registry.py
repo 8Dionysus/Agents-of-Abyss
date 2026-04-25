@@ -11,8 +11,8 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-CONFIG = ROOT / "config/agon_retention_rank_economy.seed.json"
-OUTPUT = ROOT / "generated/agon_retention_rank_economy_registry.min.json"
+CONFIG = ROOT / "mechanics/agon/config/agon_retention_rank_economy.seed.json"
+OUTPUT = ROOT / "mechanics/agon/generated/agon_retention_rank_economy_registry.min.json"
 
 
 def load_json(path: Path):
@@ -30,7 +30,7 @@ def build_registry():
         "entry_count": len(seed["entries"]),
         "entries": sorted(seed["entries"], key=lambda item: item["id"]),
         "stop_lines": seed.get("stop_lines", []),
-        "source_config": "config/agon_retention_rank_economy.seed.json",
+        "source_config": "mechanics/agon/config/agon_retention_rank_economy.seed.json",
         "generated_note": "Generated from seed config. Review before integration into release checks."
     }
 

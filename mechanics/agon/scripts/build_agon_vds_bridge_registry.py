@@ -8,8 +8,8 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-CONFIG=ROOT/'config'/'agon_vds_bridges.seed.json'
-OUTPUT=ROOT/'generated'/'agon_vds_bridge_registry.min.json'
+CONFIG=ROOT / "mechanics" / "agon" / "config"/'agon_vds_bridges.seed.json'
+OUTPUT=ROOT / "mechanics" / "agon" / "generated"/'agon_vds_bridge_registry.min.json'
 def compact(o): return json.dumps(o,ensure_ascii=False,sort_keys=True,separators=(',',':'))+'\n'
 def build_registry():
     s=json.loads(CONFIG.read_text(encoding='utf-8'))

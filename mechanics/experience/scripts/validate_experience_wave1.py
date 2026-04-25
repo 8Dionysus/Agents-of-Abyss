@@ -19,8 +19,8 @@ def _repo_root() -> Path:
 ROOT = _repo_root()
 
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_WAVE1_KERNEL.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-wave1-flow.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_wave1_flow.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-wave1-flow.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_wave1_flow.example.json"
 
 EXPECTED_SOURCE_SEEDS = [
     "aoa-experience-mechanic-seed-v0_1.zip",
@@ -96,7 +96,7 @@ def require_list(value: Any, label: str) -> list[Any]:
 
 def validate_schema(schema: dict[str, Any]) -> None:
     if schema.get("title") != "experience_wave1_flow_v1":
-        fail("schemas/experience-wave1-flow.schema.json title must be experience_wave1_flow_v1")
+        fail("mechanics/experience/schemas/experience-wave1-flow.schema.json title must be experience_wave1_flow_v1")
     if schema.get("additionalProperties") is not False:
         fail("experience Wave 1 schema must reject additional top-level properties")
     required = require_list(schema.get("required"), "schema.required")

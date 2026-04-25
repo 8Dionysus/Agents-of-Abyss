@@ -1,1 +1,0 @@
-../mechanics/experience/scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py

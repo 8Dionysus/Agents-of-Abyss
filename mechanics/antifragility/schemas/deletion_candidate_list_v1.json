@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/seed/schemas/deletion_candidate_list_v1.json",
+  "$id": "https://aoa.local/seed/mechanics/antifragility/schemas/deletion_candidate_list_v1.json",
   "title": "deletion_candidate_list_v1",
   "type": "object",
   "additionalProperties": false,

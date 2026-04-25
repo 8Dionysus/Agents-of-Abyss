@@ -18,8 +18,8 @@ def _repo_root() -> Path:
 
 ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-v1-8-context-routing-nervous-system.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_v1_8_context_routing_nervous_system.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-v1-8-context-routing-nervous-system.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_v1_8_context_routing_nervous_system.example.json"
 
 SOURCE_SEED = {
     "archive_name": "aoa-experience-context-routing-nervous-system-seed-v1_8.zip",

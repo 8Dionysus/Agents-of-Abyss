@@ -3,7 +3,7 @@
 ## Required local check
 
 ```bash
-python scripts/validate_experience_distillation.py --part office-operations
+python mechanics/experience/scripts/validate_experience_distillation.py --part office-operations
 ```
 
 ## Mechanic checks
@@ -17,7 +17,7 @@ python scripts/validate_mechanic_readme_cards.py --mechanic experience
 ## Targeted checks
 
 ```bash
-python scripts/validate_experience_wave5.py
-python scripts/validate_experience_v1_3_office_foundry_role_pairs.py
-python -m pytest -q tests/test_experience_wave5.py tests/test_experience_wave5_seed_contracts.py tests/test_experience_v1_3_office_foundry_role_pairs.py
+python mechanics/experience/scripts/validate_experience_wave5.py
+python mechanics/experience/scripts/validate_experience_v1_3_office_foundry_role_pairs.py
+python -m pytest -q mechanics/experience/tests/test_experience_wave5.py mechanics/experience/tests/test_experience_wave5_seed_contracts.py mechanics/experience/tests/test_experience_v1_3_office_foundry_role_pairs.py
 ```

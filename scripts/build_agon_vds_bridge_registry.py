@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/build_agon_vds_bridge_registry.py

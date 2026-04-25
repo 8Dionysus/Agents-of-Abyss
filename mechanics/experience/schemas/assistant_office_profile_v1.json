@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/assistant_office_profile_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/assistant_office_profile_v1.json",
   "title": "Assistant Office Profile V1",
   "type": "object",
   "additionalProperties": false,

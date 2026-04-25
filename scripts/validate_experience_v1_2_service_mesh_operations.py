@@ -1,1 +1,0 @@
-../mechanics/experience/scripts/validate_experience_v1_2_service_mesh_operations.py

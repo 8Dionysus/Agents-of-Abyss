@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/8Dionysus/Agents-of-Abyss/schemas/experience-wave1-flow.schema.json",
+  "$id": "https://github.com/8Dionysus/Agents-of-Abyss/mechanics/experience/schemas/experience-wave1-flow.schema.json",
   "title": "experience_wave1_flow_v1",
   "type": "object",
   "additionalProperties": false,

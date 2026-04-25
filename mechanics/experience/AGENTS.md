@@ -55,6 +55,6 @@ does not affect its job.
 
 ## Validation
 
-Use `python scripts/validate_experience_distillation.py` after active-part or provenance-route changes.
+Use `python mechanics/experience/scripts/validate_experience_distillation.py` after active-part or provenance-route changes.
 Use `python scripts/validate_mechanic_landing_logs.py --mechanic experience` after landing-log or surface-chain changes.
 Use the nearest `scripts/validate_experience_*.py` and `tests/test_experience_*.py` for version-specific surfaces.

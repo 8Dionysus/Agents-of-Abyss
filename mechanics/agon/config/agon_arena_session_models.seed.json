@@ -26,12 +26,12 @@
     "no_center_takeover_of_owner_truth"
   ],
   "requires_prior_surfaces": [
-    "generated/agon_imposition_readiness.min.json",
-    "generated/agon_lawful_move_registry.min.json",
-    "generated/agon_move_owner_binding_registry.min.json",
-    "generated/agon_gate_routing_handoff_request.min.json",
-    "generated/agon_trial_playbook_request.min.json",
-    "generated/agon_court_memo_stats_prebinding_request.min.json",
+    "mechanics/agon/generated/agon_imposition_readiness.min.json",
+    "mechanics/agon/generated/agon_lawful_move_registry.min.json",
+    "mechanics/agon/generated/agon_move_owner_binding_registry.min.json",
+    "mechanics/agon/generated/agon_gate_routing_handoff_request.min.json",
+    "mechanics/agon/generated/agon_trial_playbook_request.min.json",
+    "mechanics/agon/generated/agon_court_memo_stats_prebinding_request.min.json",
     "aoa-agents/generated/agent_formation_trial.min.json",
     "aoa-routing/generated/agon_gate_routing_registry.min.json",
     "aoa-playbooks/generated/agon_trial_playbook_registry.min.json"

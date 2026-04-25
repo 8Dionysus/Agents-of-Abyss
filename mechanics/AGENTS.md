@@ -64,8 +64,8 @@ Mechanic packages may also own artifact homes:
 - `tests/`
 
 Use these homes when an artifact only makes sense inside the mechanic's owner
-boundary. Keep root technical districts for repository-wide contracts and
-compatibility aliases, as defined by `mechanics/ARTIFACT_TOPOLOGY.md`.
+boundary. Keep root technical districts for repository-wide contracts only, as
+defined by `mechanics/ARTIFACT_TOPOLOGY.md`.
 
 
 ## Owner-request law
@@ -86,7 +86,7 @@ When a mechanic output would become runtime, proof, memory, role, playbook, KAG,
 
 - `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, `docs/LAYERS.md`, and `docs/REPO_ROLES.md` remain governance surfaces.
 - `QUESTBOOK.md` remains a root public obligation index; `mechanics/questbook/` owns questbook mechanics.
-- `quests/` remains the quest item store; lifecycle directories own source placement, and top-level `AOA-Q-*` entries are compatibility aliases.
+- `quests/` remains the quest item store; lifecycle directories own source placement, and top-level `AOA-Q-*` aliases are intentionally absent.
 - `docs/landings/` remains an archive and receipt district, not a canonical mechanic log.
 - Generated card indexes reflect package entries; they do not author mechanic truth.
 
@@ -132,5 +132,5 @@ For release-bound mechanics changes, also run:
 python scripts/validate_markdown_shape.py
 python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
-python -m pytest -q tests
+python -m pytest -q
 ```

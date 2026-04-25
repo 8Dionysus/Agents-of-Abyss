@@ -4,7 +4,7 @@ This directory holds tracked AoA obligations that should survive the current dif
 
 It is not a private scratchpad and not a second roadmap. Program direction belongs in [`ROADMAP.md`](../ROADMAP.md). The root quest index is [`QUESTBOOK.md`](../QUESTBOOK.md). Quest lifecycle law lives in [`mechanics/questbook/docs/QUESTBOOK_MODEL.md`](../mechanics/questbook/docs/QUESTBOOK_MODEL.md).
 
-Quest sources live in lifecycle directories. Top-level `AOA-Q-*` paths are compatibility aliases for established links and commands.
+Quest sources live in lifecycle directories. Top-level `AOA-Q-*` aliases are intentionally absent; route directly to the lifecycle path.
 
 ## Lifecycle board
 
@@ -26,7 +26,6 @@ Quest sources live in lifecycle directories. Top-level `AOA-Q-*` paths are compa
 | `<state>/AOA-Q-*.yaml` | foundation or federation-level quest records | directory must match YAML `state` |
 | `<state>/AOA-Q-AGON-*.md` | Agon-related obligations and owner follow-through | do not grant live arena authority |
 | `<state>/AOA-Q-EXP-*.md` | Experience-related obligations and staged contract follow-through | do not grant live workspace runtime or hidden memory sovereignty |
-| `AOA-Q-*` aliases | compatibility routes to lifecycle sources | do not edit aliases as source files |
 | future generated summaries | allowed only after a real builder and validator exist | do not create manual pseudo-generated indexes |
 
 ## Use this directory when
@@ -58,5 +57,5 @@ Quest sources live in lifecycle directories. Top-level `AOA-Q-*` paths are compa
 ## Validation
 
 ```bash
-python scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 ```

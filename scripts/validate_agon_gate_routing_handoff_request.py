@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py

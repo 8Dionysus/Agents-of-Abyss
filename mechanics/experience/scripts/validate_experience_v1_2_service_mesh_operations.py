@@ -18,8 +18,8 @@ def _repo_root() -> Path:
 
 ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-v1-2-service-mesh-operations.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_v1_2_service_mesh_operations.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-v1-2-service-mesh-operations.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_v1_2_service_mesh_operations.example.json"
 
 SOURCE_ARCHIVE = "aoa-experience-service-mesh-operations-seed-v1_2.zip"
 SOURCE_SHA256 = "df829241ac629770635290e5da2742b81e4d5575270c94a92c34a95f4bbacb85"

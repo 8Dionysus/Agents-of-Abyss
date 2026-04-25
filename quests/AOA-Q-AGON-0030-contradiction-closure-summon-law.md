@@ -1,1 +1,0 @@
-triaged/AOA-Q-AGON-0030-contradiction-closure-summon-law.md

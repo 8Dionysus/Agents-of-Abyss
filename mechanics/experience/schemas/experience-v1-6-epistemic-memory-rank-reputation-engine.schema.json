@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://agents-of-abyss.local/schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json",
+  "$id": "https://agents-of-abyss.local/mechanics/experience/schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json",
   "title": "experience_v1_6_epistemic_memory_rank_reputation_engine_v1",
   "type": "object",
   "additionalProperties": false,

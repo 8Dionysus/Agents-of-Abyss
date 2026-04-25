@@ -60,7 +60,7 @@ python scripts/validate_link_shape_hygiene_index.py
 python scripts/build_agents_mesh_index.py --check
 python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 A future agent should be able to add a district or generated capsule by changing the config and tests, not by memorizing a private checklist.

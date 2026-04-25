@@ -19,13 +19,13 @@ def _load_script(path: Path):
 
 
 def test_ccs_registry_is_current():
-    builder = _load_script(ROOT / 'scripts' / 'build_agon_ccs_law_registry.py')
-    seed = builder.load_json(ROOT / 'config' / 'agon_ccs_laws.seed.json')
+    builder = _load_script(ROOT / "mechanics" / "agon" / "scripts" / 'build_agon_ccs_law_registry.py')
+    seed = builder.load_json(ROOT / "mechanics" / "agon" / "config" / 'agon_ccs_laws.seed.json')
     expected = builder.build(seed)
-    current = builder.load_json(ROOT / 'generated' / 'agon_ccs_law_registry.min.json')
+    current = builder.load_json(ROOT / "mechanics" / "agon" / "generated" / 'agon_ccs_law_registry.min.json')
     assert current == expected
 
 
 def test_ccs_laws_validate():
-    validator = _load_script(ROOT / 'scripts' / 'validate_agon_ccs_laws.py')
+    validator = _load_script(ROOT / "mechanics" / "agon" / "scripts" / 'validate_agon_ccs_laws.py')
     validator.validate()

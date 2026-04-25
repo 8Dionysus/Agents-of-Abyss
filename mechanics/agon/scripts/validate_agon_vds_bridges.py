@@ -8,7 +8,7 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-REGISTRY=ROOT/'generated'/'agon_vds_bridge_registry.min.json'
+REGISTRY=ROOT / "mechanics" / "agon" / "generated"/'agon_vds_bridge_registry.min.json'
 REQUIRED_OUTCOMES={'resolved','revised_and_resolved','bifurcated','deferred_with_cost','failed_honorably','invalidated','quarantined'}
 def validate():
     d=json.loads(REGISTRY.read_text(encoding='utf-8'))

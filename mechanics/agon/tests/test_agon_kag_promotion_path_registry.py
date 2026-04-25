@@ -9,7 +9,7 @@ def _repo_root() -> pathlib.Path:
 ROOT = _repo_root()
 
 def test_wave17_registry_shape():
-    reg = json.loads((ROOT / 'generated/agon_kag_promotion_path_registry.min.json').read_text(encoding='utf-8'))
+    reg = json.loads((ROOT / 'mechanics/agon/generated/agon_kag_promotion_path_registry.min.json').read_text(encoding='utf-8'))
     assert reg['wave'] == 'XVII'
     assert reg['count'] == 10
     assert len(reg['kag_promotion_components']) == 10
@@ -20,5 +20,5 @@ def test_wave17_registry_shape():
         assert item.get('canonical_status') not in ('canon', 'canonical', 'tree_of_sophia_canon')
 
 def test_builder_check_and_validator():
-    assert subprocess.run([sys.executable, str(ROOT / 'scripts/build_agon_kag_promotion_path_registry.py'), '--check'], cwd=ROOT).returncode == 0
-    assert subprocess.run([sys.executable, str(ROOT / 'scripts/validate_agon_kag_promotion_path_registry.py')], cwd=ROOT).returncode == 0
+    assert subprocess.run([sys.executable, str(ROOT / 'mechanics/agon/scripts/build_agon_kag_promotion_path_registry.py'), '--check'], cwd=ROOT).returncode == 0
+    assert subprocess.run([sys.executable, str(ROOT / 'mechanics/agon/scripts/validate_agon_kag_promotion_path_registry.py')], cwd=ROOT).returncode == 0

@@ -12,9 +12,9 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-REGISTRY = ROOT / "generated/agon_retention_rank_economy_registry.min.json"
-SCHEMA = ROOT / "schemas/agon-retention-rank-economy-registry.schema.json"
-BUILDER = ROOT / "scripts/build_agon_retention_rank_economy_registry.py"
+REGISTRY = ROOT / "mechanics/agon/generated/agon_retention_rank_economy_registry.min.json"
+SCHEMA = ROOT / "mechanics/agon/schemas/agon-retention-rank-economy-registry.schema.json"
+BUILDER = ROOT / "mechanics/agon/scripts/build_agon_retention_rank_economy_registry.py"
 REQUIRED_ENTRY_FIELDS = ['id', 'kind', 'owner', 'status', 'description', 'candidate_only', 'live_authority']
 EXPECTED_LIVE_PROTOCOL = False
 REQUIRED_STOP_LINES = {

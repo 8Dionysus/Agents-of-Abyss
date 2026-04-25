@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience-wave4-polis-constitution.schema.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/experience-wave4-polis-constitution.schema.json",
   "title": "experience_wave4_polis_constitution_v1",
   "type": "object",
   "additionalProperties": false,

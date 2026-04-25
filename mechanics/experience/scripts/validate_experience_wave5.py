@@ -21,8 +21,8 @@ ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md"
 V10_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_0_INSTALLATION_SOVEREIGN_RELEASE.md"
 V11_DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-wave5-sovereign-office.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_wave5_sovereign_office.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-wave5-sovereign-office.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_wave5_sovereign_office.example.json"
 
 EXPECTED_SOURCE_SEEDS = [
     "aoa-experience-installation-sovereign-release-seed-v1_0.zip",

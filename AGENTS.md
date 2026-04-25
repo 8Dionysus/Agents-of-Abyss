@@ -123,7 +123,7 @@ python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 If an Agon owner-binding or gate-routing surface changes, also run the matching builder, validator, and targeted tests named in `docs/agent-lane/AGENTS_ROOT_REFERENCE.md`.

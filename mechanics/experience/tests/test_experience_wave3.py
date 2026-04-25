@@ -50,7 +50,7 @@ WAVE3_PREFIXES = (
 
 
 def load_validator():
-    path = ROOT / "scripts" / "validate_experience_wave3.py"
+    path = ROOT / "mechanics" / "experience" / "scripts" / "validate_experience_wave3.py"
     spec = importlib.util.spec_from_file_location("experience_wave3_validator_test", path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
@@ -59,14 +59,14 @@ def load_validator():
 
 
 def load_example() -> dict[str, object]:
-    return json.loads((ROOT / "examples" / "experience_wave3_federation_adoption.example.json").read_text())
+    return json.loads((ROOT / "mechanics" / "experience" / "examples" / "experience_wave3_federation_adoption.example.json").read_text())
 
 
 def load_contract(stem: str) -> tuple[dict[str, object], dict[str, object]]:
-    schema_path = ROOT / "schemas" / f"{stem}_v1.json"
+    schema_path = ROOT / "mechanics" / "experience" / "schemas" / f"{stem}_v1.json"
     if stem == "experience_wave3_federation_adoption":
-        schema_path = ROOT / "schemas" / "experience-wave3-federation-adoption.schema.json"
-    example_path = ROOT / "examples" / f"{stem}.example.json"
+        schema_path = ROOT / "mechanics" / "experience" / "schemas" / "experience-wave3-federation-adoption.schema.json"
+    example_path = ROOT / "mechanics" / "experience" / "examples" / f"{stem}.example.json"
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
     example = json.loads(example_path.read_text(encoding="utf-8"))
     return schema, example
@@ -74,16 +74,16 @@ def load_contract(stem: str) -> tuple[dict[str, object], dict[str, object]]:
 
 def wave3_stems() -> set[str]:
     stems: set[str] = set()
-    for example_path in sorted((ROOT / "examples").glob("*.example.json")):
+    for example_path in sorted((ROOT / "mechanics" / "experience" / "examples").glob("*.example.json")):
         stem = example_path.name.removesuffix(".example.json")
         if stem.endswith("_v1"):
             continue
         if stem.startswith(WAVE3_PREFIXES):
             stems.add(stem)
-    for schema_path in sorted((ROOT / "schemas").glob("*_v1.json")):
+    for schema_path in sorted((ROOT / "mechanics" / "experience" / "schemas").glob("*_v1.json")):
         stem = schema_path.name.removesuffix("_v1.json")
-        if not (ROOT / "examples" / f"{stem}.example.json").exists() and (
-            ROOT / "examples" / f"{stem}_v1.example.json"
+        if not (ROOT / "mechanics" / "experience" / "examples" / f"{stem}.example.json").exists() and (
+            ROOT / "mechanics" / "experience" / "examples" / f"{stem}_v1.example.json"
         ).exists():
             continue
         if stem.startswith(WAVE3_PREFIXES):
@@ -119,7 +119,7 @@ def wrong_type_value(value: object) -> object:
 
 def test_experience_wave3_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "scripts/validate_experience_wave3.py"],
+        [sys.executable, "mechanics/experience/scripts/validate_experience_wave3.py"],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -210,10 +210,10 @@ def test_seeded_wave3_examples_validate_against_schemas() -> None:
     assert stems
     missing_pairs: list[str] = []
     for stem in sorted(stems):
-        schema_path = ROOT / "schemas" / f"{stem}_v1.json"
+        schema_path = ROOT / "mechanics" / "experience" / "schemas" / f"{stem}_v1.json"
         if stem == "experience_wave3_federation_adoption":
-            schema_path = ROOT / "schemas" / "experience-wave3-federation-adoption.schema.json"
-        example_path = ROOT / "examples" / f"{stem}.example.json"
+            schema_path = ROOT / "mechanics" / "experience" / "schemas" / "experience-wave3-federation-adoption.schema.json"
+        example_path = ROOT / "mechanics" / "experience" / "examples" / f"{stem}.example.json"
         if not schema_path.exists():
             missing_pairs.append(f"{example_path.relative_to(ROOT)} -> {schema_path.relative_to(ROOT)}")
         if not example_path.exists():

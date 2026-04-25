@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/office_train_deployment_result_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/office_train_deployment_result_v1.json",
   "title": "Office Train Deployment Result V1",
   "type": "object",
   "additionalProperties": false,

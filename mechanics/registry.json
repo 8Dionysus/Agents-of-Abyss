@@ -230,7 +230,7 @@
       "status": "planted",
       "title": "Experience",
       "validation_refs": [
-        "scripts/validate_experience_distillation.py",
+        "mechanics/experience/scripts/validate_experience_distillation.py",
         "scripts/validate_mechanic_landing_logs.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/validate_mechanic_readme_cards.py",
@@ -436,7 +436,7 @@
       "title": "Questbook",
       "validation_refs": [
         "scripts/validate_mechanics_topology.py",
-        "scripts/validate_questbook_lifecycle.py",
+        "mechanics/questbook/scripts/validate_questbook_lifecycle.py",
         "scripts/validate_mechanic_readme_cards.py",
         "scripts/build_mechanic_card_index.py",
         "scripts/validate_mechanic_card_index.py",

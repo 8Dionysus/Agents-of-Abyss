@@ -21,15 +21,15 @@ class MechanicArtifactTopologyTests(unittest.TestCase):
         )
         self.assertEqual(result.returncode, 0, result.stdout)
 
-    def test_root_agon_artifacts_are_aliases(self) -> None:
+    def test_root_agon_artifacts_are_absent(self) -> None:
         for district in ("schemas", "examples", "config", "generated"):
             for path in (REPO_ROOT / district).glob("agon*"):
-                self.assertTrue(path.is_symlink(), f"{path} should be a compatibility alias")
+                self.fail(f"{path} should live only under mechanics/agon/")
 
-    def test_root_experience_artifacts_are_aliases(self) -> None:
+    def test_root_experience_artifacts_are_absent(self) -> None:
         for district in ("schemas", "examples"):
             for path in (REPO_ROOT / district).glob("experience*"):
-                self.assertTrue(path.is_symlink(), f"{path} should be a compatibility alias")
+                self.fail(f"{path} should live only under mechanics/experience/")
 
 
 if __name__ == "__main__":

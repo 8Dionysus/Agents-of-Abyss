@@ -7,8 +7,8 @@ This card applies to `tests/` and all descendants unless a nearer `AGENTS.md` na
 ## Role
 
 `tests/` holds regression tests, contract tests, and fixtures that guard route, shape, generated freshness, mechanics topology, and ecosystem claims.
-Mechanic-owned tests live under `mechanics/<slug>/tests/`; root entries for
-those lanes are compatibility aliases for stable pytest commands.
+Mechanic-owned tests live under `mechanics/<slug>/tests/`; root `tests/` keeps
+only root-owned contract tests.
 
 ## Read before editing
 
@@ -21,14 +21,14 @@ Use the nearest README for local file purpose. Use source docs, schemas, generat
 - Tests guard contracts; they do not author meaning by themselves.
 - Do not delete failing assertions without updating the source contract they protect.
 - Keep fixtures compact and clearly non-authoritative.
-- Follow mechanic-owned aliases into `mechanics/<slug>/tests/` before editing.
+- Edit mechanic-owned tests directly under `mechanics/<slug>/tests/`.
 
 ## Validation
 
 Run the narrowest relevant checks first. Usual checks for this district:
 
 ```bash
-python -m pytest -q tests
+python -m pytest -q
 python scripts/validate_agents_mesh.py
 ```
 

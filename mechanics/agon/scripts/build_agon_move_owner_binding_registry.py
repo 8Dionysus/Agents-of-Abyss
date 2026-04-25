@@ -15,10 +15,10 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-CONFIG_PATH = ROOT / "config" / "agon_move_owner_bindings.seed.json"
-GENERATED_PATH = ROOT / "generated" / "agon_move_owner_binding_registry.min.json"
-MOVE_SEED_PATH = ROOT / "config" / "agon_lawful_moves.seed.json"
-MOVE_REGISTRY_PATH = ROOT / "generated" / "agon_lawful_move_registry.min.json"
+CONFIG_PATH = ROOT / "mechanics" / "agon" / "config" / "agon_move_owner_bindings.seed.json"
+GENERATED_PATH = ROOT / "mechanics" / "agon" / "generated" / "agon_move_owner_binding_registry.min.json"
+MOVE_SEED_PATH = ROOT / "mechanics" / "agon" / "config" / "agon_lawful_moves.seed.json"
+MOVE_REGISTRY_PATH = ROOT / "mechanics" / "agon" / "generated" / "agon_lawful_move_registry.min.json"
 
 ALLOWED_OWNER_REPOS = {
     "Agents-of-Abyss",
@@ -100,7 +100,7 @@ def collect_move_ids_from_wave3(root: Path = ROOT) -> set[str]:
 
     raise ValidationError(
         "Wave IV strict check requires Wave III lawful move language. "
-        "Expected config/agon_lawful_moves.seed.json or generated/agon_lawful_move_registry.min.json."
+        "Expected mechanics/agon/config/agon_lawful_moves.seed.json or mechanics/agon/generated/agon_lawful_move_registry.min.json."
     )
 
 

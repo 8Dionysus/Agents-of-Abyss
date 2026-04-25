@@ -11,8 +11,8 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-CONFIG = ROOT / 'config' / 'agon_ccs_laws.seed.json'
-REGISTRY = ROOT / 'generated' / 'agon_ccs_law_registry.min.json'
+CONFIG = ROOT / "mechanics" / "agon" / "config" / 'agon_ccs_laws.seed.json'
+REGISTRY = ROOT / "mechanics" / "agon" / "generated" / 'agon_ccs_law_registry.min.json'
 REQUIRED_FAMILIES = {'contradiction', 'closure', 'summon'}
 FORBIDDEN_GRANTS = {'live_closure', 'live_summon', 'verdict_authority', 'durable_scar_write', 'rank_mutation', 'tree_of_sophia_promotion'}
 

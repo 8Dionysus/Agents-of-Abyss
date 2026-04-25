@@ -40,7 +40,7 @@
       "$ref": "#/$defs/nonEmptyStringArray"
     },
     "source_config": {
-      "const": "config/agon_retention_rank_economy.seed.json"
+      "const": "mechanics/agon/config/agon_retention_rank_economy.seed.json"
     },
     "generated_note": {
       "type": "string",

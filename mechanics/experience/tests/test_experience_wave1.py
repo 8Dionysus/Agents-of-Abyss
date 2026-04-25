@@ -20,7 +20,7 @@ ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "scripts" / "validate_experience_wave1.py"
+    path = ROOT / "mechanics" / "experience" / "scripts" / "validate_experience_wave1.py"
     spec = importlib.util.spec_from_file_location("experience_wave1_validator_test", path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
@@ -29,12 +29,12 @@ def load_validator():
 
 
 def load_example() -> dict[str, object]:
-    return json.loads((ROOT / "examples" / "experience_wave1_flow.example.json").read_text(encoding="utf-8"))
+    return json.loads((ROOT / "mechanics" / "experience" / "examples" / "experience_wave1_flow.example.json").read_text(encoding="utf-8"))
 
 
 def test_experience_wave1_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "scripts/validate_experience_wave1.py"],
+        [sys.executable, "mechanics/experience/scripts/validate_experience_wave1.py"],
         cwd=ROOT,
         text=True,
         capture_output=True,

@@ -12,8 +12,8 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-CONFIG = ROOT / 'config' / 'agon_arena_session_models.seed.json'
-GENERATED = ROOT / 'generated' / 'agon_arena_session_model_registry.min.json'
+CONFIG = ROOT / "mechanics" / "agon" / "config" / 'agon_arena_session_models.seed.json'
+GENERATED = ROOT / "mechanics" / "agon" / "generated" / 'agon_arena_session_model_registry.min.json'
 
 
 def load(path: Path):
@@ -31,7 +31,7 @@ def build(config: dict) -> dict:
     outcomes = sorted({o.get('outcome_id') for r in records for o in r.get('terminal_outcomes', []) if o.get('outcome_id')})
     return {
         'schema_version': 'agon_arena_session_model_registry_v1',
-        'source': 'config/agon_arena_session_models.seed.json',
+        'source': 'mechanics/agon/config/agon_arena_session_models.seed.json',
         'wave': config.get('wave'),
         'owner_repo': config.get('owner_repo'),
         'status': config.get('status'),
@@ -63,7 +63,7 @@ def main() -> int:
             print(f'missing generated registry: {GENERATED}', file=sys.stderr)
             return 1
         if GENERATED.read_text(encoding='utf-8') != rendered:
-            print('generated/agon_arena_session_model_registry.min.json is stale', file=sys.stderr)
+            print('mechanics/agon/generated/agon_arena_session_model_registry.min.json is stale', file=sys.stderr)
             return 1
         print('agon arena session model registry is up to date')
         return 0

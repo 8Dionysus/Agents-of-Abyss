@@ -16,19 +16,19 @@ def load(name, rel):
     return mod
 
 def test_build_count_and_digest():
-    mod = load('builder', 'scripts/build_agon_mechanical_trial_suite_registry.py')
+    mod = load('builder', 'mechanics/agon/scripts/build_agon_mechanical_trial_suite_registry.py')
     reg = mod.build()
     assert reg['count'] == 7
     assert reg['digest']
     assert reg['runtime_posture'] in ('candidate_only', 'pre_protocol_candidate_only', 'local_dry_run_candidate_only')
 
 def test_validator_green():
-    mod = load('validator', 'scripts/validate_agon_mechanical_trial_suites.py')
+    mod = load('validator', 'mechanics/agon/scripts/validate_agon_mechanical_trial_suites.py')
     assert mod.main() == 0
 
 def test_validator_rejects_stale_generated_registry(tmp_path):
-    validator = load('validator', 'scripts/validate_agon_mechanical_trial_suites.py')
-    builder = load('builder', 'scripts/build_agon_mechanical_trial_suite_registry.py')
+    validator = load('validator', 'mechanics/agon/scripts/validate_agon_mechanical_trial_suites.py')
+    builder = load('builder', 'mechanics/agon/scripts/build_agon_mechanical_trial_suite_registry.py')
     stale = builder.build()
     stale['digest'] = '0' * 64
     out = tmp_path / 'agon_mechanical_trial_suite_registry.min.json'

@@ -9,8 +9,8 @@ def _repo_root() -> pathlib.Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-CONFIG = ROOT / 'config/agon_court_memo_stats_prebinding_request.seed.json'
-GENERATED = ROOT / 'generated/agon_court_memo_stats_prebinding_request.min.json'
+CONFIG = ROOT / 'mechanics/agon/config/agon_court_memo_stats_prebinding_request.seed.json'
+GENERATED = ROOT / 'mechanics/agon/generated/agon_court_memo_stats_prebinding_request.min.json'
 RECORD_KEY = 'owner_requests'
 REGISTRY_SCHEMA = 'agon_court_memo_stats_prebinding_request_registry_v1'
 

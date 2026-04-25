@@ -91,10 +91,10 @@
         "sdk_helpers": "aoa-sdk/generated/agon_duel_kernel_sdk_bindings.min.json"
       },
       "required_registry_inputs": [
-        "generated/agon_arena_session_model_registry.min.json",
-        "generated/agon_state_packet_registry.min.json",
-        "generated/agon_ccs_law_registry.min.json",
-        "generated/agon_vds_bridge_registry.min.json"
+        "mechanics/agon/generated/agon_arena_session_model_registry.min.json",
+        "mechanics/agon/generated/agon_state_packet_registry.min.json",
+        "mechanics/agon/generated/agon_ccs_law_registry.min.json",
+        "mechanics/agon/generated/agon_vds_bridge_registry.min.json"
       ],
       "runtime_effect": "delegated_to_abyss_stack_bounded_local_event_log_candidate",
       "session_model_refs": [

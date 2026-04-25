@@ -60,17 +60,17 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             patch.object(
                 validate_ecosystem,
                 "DUAL_VOCABULARY_SCHEMA_PATH",
-                self.repo_root / "schemas" / "dual_vocabulary_overlay.schema.json",
+                self.repo_root / "mechanics" / "rpg" / "schemas" / "dual_vocabulary_overlay.schema.json",
             ),
             patch.object(
                 validate_ecosystem,
                 "DUAL_VOCABULARY_EXAMPLE_PATH",
-                self.repo_root / "examples" / "dual_vocabulary_overlay.example.json",
+                self.repo_root / "mechanics" / "rpg" / "examples" / "dual_vocabulary_overlay.example.json",
             ),
             patch.object(
                 validate_ecosystem,
                 "DUAL_VOCABULARY_GENERATED_PATH",
-                self.repo_root / "generated" / "dual_vocabulary_overlay.json",
+                self.repo_root / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json",
             ),
             patch.object(
                 validate_ecosystem,
@@ -108,14 +108,20 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             "It is a foundation pass, not a new numbered AoA wave.\n",
         )
         self.quests_dir.mkdir(parents=True, exist_ok=True)
-        for quest_id in validate_ecosystem.REQUIRED_QUEST_IDS:
+        required_states = {
+            "AOA-Q-0001": "triaged",
+            "AOA-Q-0002": "triaged",
+            "AOA-Q-0003": "captured",
+        }
+        for quest_id, state in required_states.items():
             write_text(
-                self.quests_dir / f"{quest_id}.yaml",
+                self.quests_dir / state / f"{quest_id}.yaml",
                 "\n".join(
                     (
                         "schema_version: work_quest_v1",
                         f"id: {quest_id}",
                         "repo: Agents-of-Abyss",
+                        f"state: {state}",
                         "public_safe: true",
                     )
                 )
@@ -138,8 +144,8 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             "The repo that already owns meaning keeps owning meaning.\n"
             "1. source meaning wins\n",
         )
-        copy_repo_text(self.repo_root, "schemas/dual_vocabulary_overlay.schema.json")
-        copy_repo_text(self.repo_root, "examples/dual_vocabulary_overlay.example.json")
+        copy_repo_text(self.repo_root, "mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json")
+        copy_repo_text(self.repo_root, "mechanics/rpg/examples/dual_vocabulary_overlay.example.json")
 
     def write_rpg_bridge_wave_surface(self) -> None:
         write_text(
@@ -158,17 +164,18 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             "Let the body carry the contour.\n"
             "Do not let it rewrite the soul.\n",
         )
-        copy_repo_text(self.repo_root, "generated/dual_vocabulary_overlay.json")
+        copy_repo_text(self.repo_root, "mechanics/rpg/generated/dual_vocabulary_overlay.json")
 
     def test_valid_extra_quest_file_is_allowed(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0004.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0004.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0004",
                     "repo: Agents-of-Abyss",
+                    "state: triaged",
                     "band: frontier",
                     "public_safe: true",
                 )
@@ -185,12 +192,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_questbook_rejects_band_section_mismatch(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0004.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0004.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0004",
                     "repo: Agents-of-Abyss",
+                    "state: triaged",
                     "band: frontier",
                     "public_safe: true",
                 )
@@ -226,12 +234,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_questbook_rejects_band_listing_only_under_unmapped_section(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0004.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0004.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0004",
                     "repo: Agents-of-Abyss",
+                    "state: triaged",
                     "band: frontier",
                     "public_safe: true",
                 )
@@ -272,12 +281,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             with self.subTest(bullet=bullet):
                 self.write_valid_surface()
                 write_text(
-                    self.quests_dir / "AOA-Q-0004.yaml",
+                    self.quests_dir / "triaged" / "AOA-Q-0004.yaml",
                     "\n".join(
                         (
                             "schema_version: work_quest_v1",
                             "id: AOA-Q-0004",
                             "repo: Agents-of-Abyss",
+                            "state: triaged",
                             "band: frontier",
                             "public_safe: true",
                         )
@@ -316,7 +326,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_valid_second_wave_extra_quest_file_is_allowed(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0005.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0005.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
@@ -339,7 +349,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_valid_surface()
         self.write_rpg_architecture_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0006.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0006.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
@@ -362,7 +372,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_valid_surface()
         self.write_rpg_bridge_wave_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0007.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0007.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
@@ -386,7 +396,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_rpg_architecture_surface()
         self.write_rpg_runtime_projection_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0008.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0008.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
@@ -409,7 +419,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_valid_surface()
         self.write_rpg_bridge_wave_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0007.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0007.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
@@ -440,7 +450,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_valid_surface()
         self.write_rpg_runtime_projection_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0008.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0008.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
@@ -456,11 +466,11 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             self.questbook_path,
             self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
         )
-        (self.repo_root / "generated" / "dual_vocabulary_overlay.json").unlink()
+        (self.repo_root / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json").unlink()
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
-            "missing required file: generated/dual_vocabulary_overlay.json",
+            "missing required file: mechanics/rpg/generated/dual_vocabulary_overlay.json",
         ):
             validate_ecosystem.validate_questbook_surface()
 
@@ -469,7 +479,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_rpg_architecture_surface()
         self.write_rpg_runtime_projection_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0008.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0008.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
@@ -486,12 +496,12 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
         )
         write_text(
-            self.repo_root / "generated" / "dual_vocabulary_overlay.json",
+            self.repo_root / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json",
             json.dumps(
                 {
                     key: value
                     for key, value in json.loads(
-                        (self.repo_root / "generated" / "dual_vocabulary_overlay.json").read_text(
+                        (self.repo_root / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json").read_text(
                             encoding="utf-8"
                         )
                     ).items()
@@ -513,7 +523,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_rpg_architecture_surface()
         self.write_rpg_runtime_projection_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0008.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0008.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
@@ -530,7 +540,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
         )
 
-        generated_path = self.repo_root / "generated" / "dual_vocabulary_overlay.json"
+        generated_path = self.repo_root / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json"
         payload = json.loads(generated_path.read_text(encoding="utf-8"))
         payload["entries"][0]["canonical_key"] = payload["entries"][1]["canonical_key"]
         generated_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
@@ -543,7 +553,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
     def test_missing_required_foundation_quest_fails(self) -> None:
         self.write_valid_surface()
-        (self.quests_dir / "AOA-Q-0003.yaml").unlink()
+        (self.quests_dir / "captured" / "AOA-Q-0003.yaml").unlink()
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
@@ -554,12 +564,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_invalid_extra_quest_file_fails(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0004.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0004.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0004",
                     "repo: aoa-routing",
+                    "state: triaged",
                     "public_safe: true",
                 )
             )
@@ -575,7 +586,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_closed_extra_quest_must_not_stay_listed(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0004.yaml",
+            self.quests_dir / "done" / "AOA-Q-0004.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
@@ -601,7 +612,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_rpg_architecture_quest_requires_rfc_docs(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "AOA-Q-0006.yaml",
+            self.quests_dir / "triaged" / "AOA-Q-0006.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",

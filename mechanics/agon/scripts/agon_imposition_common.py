@@ -14,8 +14,8 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 REPO_ROOT = _repo_root()
-READINESS_PATH = REPO_ROOT / "generated" / "agon_imposition_readiness.min.json"
-SCHEMA_REF = "schemas/agon-imposition-readiness.schema.json"
+READINESS_PATH = REPO_ROOT / "mechanics" / "agon" / "generated" / "agon_imposition_readiness.min.json"
+SCHEMA_REF = "mechanics/agon/schemas/agon-imposition-readiness.schema.json"
 
 AUTHORITY_REFS = (
     "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
@@ -37,9 +37,9 @@ BASELINE_REFS = (
 )
 
 VALIDATION_REFS = (
-    "scripts/build_agon_imposition_readiness.py",
-    "scripts/validate_agon_imposition_readiness.py",
-    "tests/test_agon_imposition_readiness.py",
+    "mechanics/agon/scripts/build_agon_imposition_readiness.py",
+    "mechanics/agon/scripts/validate_agon_imposition_readiness.py",
+    "mechanics/agon/tests/test_agon_imposition_readiness.py",
 )
 
 SURVIVAL_AXES: tuple[dict[str, str], ...] = (
@@ -258,8 +258,8 @@ def main_build(argv: list[str] | None = None) -> int:
     if args.check:
         current = READINESS_PATH.read_text(encoding="utf-8")
         if current != expected:
-            raise SystemExit("generated/agon_imposition_readiness.min.json is stale; rebuild it")
-        print("[ok] generated/agon_imposition_readiness.min.json is current")
+            raise SystemExit("mechanics/agon/generated/agon_imposition_readiness.min.json is stale; rebuild it")
+        print("[ok] mechanics/agon/generated/agon_imposition_readiness.min.json is current")
         return 0
     READINESS_PATH.write_text(expected, encoding="utf-8")
     print(f"[ok] wrote {READINESS_PATH.relative_to(REPO_ROOT)}")
@@ -271,6 +271,6 @@ def main_validate() -> int:
     validate_payload(payload, check_refs=True)
     expected = build_payload()
     if payload != expected:
-        raise SystemExit("generated/agon_imposition_readiness.min.json does not match canonical rebuild")
-    print("[ok] validated generated/agon_imposition_readiness.min.json")
+        raise SystemExit("mechanics/agon/generated/agon_imposition_readiness.min.json does not match canonical rebuild")
+    print("[ok] validated mechanics/agon/generated/agon_imposition_readiness.min.json")
     return 0

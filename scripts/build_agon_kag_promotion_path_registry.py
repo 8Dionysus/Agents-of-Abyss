@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/build_agon_kag_promotion_path_registry.py

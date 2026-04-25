@@ -84,15 +84,15 @@ hardening, not a new implementation layer. Its current checked surface is:
   `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`,
   `mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`,
   `mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md`,
-  `examples/lineage_contract_chain.example.json`, and
-  `scripts/validate_candidate_lineage_contract.py`
+  `mechanics/method-growth/examples/lineage_contract_chain.example.json`, and
+  `mechanics/method-growth/scripts/validate_candidate_lineage_contract.py`
 - self-agency continuity and component refresh stop-lines:
   `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md` and
   `mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md`
 - Agon preparation holding boundary:
   `mechanics/agon/docs/AGON_PREPARATION_POSTURE.md`
 - current kernel-wave automation boundary checks:
-  `scripts/validate_wave4_kernel_automation.py`
+  `mechanics/method-growth/scripts/validate_wave4_kernel_automation.py`
 - mechanic landing ledgers:
   `mechanics/agon/LANDING_LOG.md` and `mechanics/experience/LANDING_LOG.md`
 

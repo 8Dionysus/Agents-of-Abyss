@@ -14,14 +14,14 @@ def _repo_root() -> pathlib.Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-OUT = ROOT / 'generated/agon_slc_registry.min.json'
+OUT = ROOT / 'mechanics/agon/generated/agon_slc_registry.min.json'
 ITEM_KEY = 'slc_components'
 EXPECTED_COUNT = 10
 UNIQUE_KEY_FIELD = 'component_id'
 REQUIRED_STOP_LINES = ['no_live_verdict_authority', 'no_durable_scar_write', 'no_retention_execution', 'no_rank_or_trust_mutation', 'no_tree_of_sophia_promotion', 'no_kag_promotion', 'no_hidden_scheduler_action', 'no_assistant_contestant_drift', 'no_auto_doctrine_rewrite', 'no_school_as_authority', 'no_lineage_as_canon', 'no_campaign_as_live_arena', 'no_center_takeover_of_owner_truth']
 REQUIRED_FORBIDDEN = ['live_verdict_authority', 'durable_scar_write', 'retention_execution', 'rank_mutation', 'trust_mutation', 'tree_of_sophia_promotion', 'kag_promotion', 'hidden_scheduler_action', 'assistant_contestant_drift', 'auto_doctrine_rewrite', 'school_authority', 'lineage_canonization', 'live_campaign_arena']
-ENTRY_SCHEMA = ROOT / 'schemas' / 'agon-school-lineage-campaign.schema.json'
-REGISTRY_SCHEMA = ROOT / 'schemas' / 'agon-school-lineage-campaign-registry.schema.json'
+ENTRY_SCHEMA = ROOT / "mechanics" / "agon" / "schemas" / 'agon-school-lineage-campaign.schema.json'
+REGISTRY_SCHEMA = ROOT / "mechanics" / "agon" / "schemas" / 'agon-school-lineage-campaign-registry.schema.json'
 
 
 def load(path: pathlib.Path):
@@ -50,8 +50,8 @@ def test_wave16_registry_shape():
 
 
 def test_builder_check_and_validator():
-    assert subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_agon_slc_registry.py'), '--check'], cwd=ROOT).returncode == 0
-    assert subprocess.run([sys.executable, str(ROOT / 'scripts' / 'validate_agon_slc_registry.py')], cwd=ROOT).returncode == 0
+    assert subprocess.run([sys.executable, str(ROOT / "mechanics" / "agon" / "scripts" / 'build_agon_slc_registry.py'), '--check'], cwd=ROOT).returncode == 0
+    assert subprocess.run([sys.executable, str(ROOT / "mechanics" / "agon" / "scripts" / 'validate_agon_slc_registry.py')], cwd=ROOT).returncode == 0
 
 
 def test_schemas_constrain_registry_and_entries():

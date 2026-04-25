@@ -14,7 +14,7 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-REQUEST_PATH = ROOT / "generated" / "agon_gate_routing_handoff_request.min.json"
+REQUEST_PATH = ROOT / "mechanics" / "agon" / "generated" / "agon_gate_routing_handoff_request.min.json"
 REQUIRED_ROUTING_STOP_LINES = {
     "create_arena_session",
     "perform_sealed_commit",
@@ -40,7 +40,7 @@ def require(condition: bool, message: str) -> None:
 
 def main() -> int:
     subprocess.run(
-        [sys.executable, str(ROOT / "scripts" / "build_agon_gate_routing_handoff_request.py"), "--check"],
+        [sys.executable, str(ROOT / "mechanics" / "agon" / "scripts" / "build_agon_gate_routing_handoff_request.py"), "--check"],
         check=True,
     )
     request = load_json(REQUEST_PATH)

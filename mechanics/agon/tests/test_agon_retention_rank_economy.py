@@ -22,20 +22,20 @@ def _load(path: Path):
 
 
 def test_generated_registry_matches_seed():
-    builder = _load(ROOT / "scripts/build_agon_retention_rank_economy_registry.py")
-    generated = json.loads((ROOT / "generated/agon_retention_rank_economy_registry.min.json").read_text(encoding="utf-8"))
+    builder = _load(ROOT / "mechanics/agon/scripts/build_agon_retention_rank_economy_registry.py")
+    generated = json.loads((ROOT / "mechanics/agon/generated/agon_retention_rank_economy_registry.min.json").read_text(encoding="utf-8"))
     assert builder.build_registry() == generated
 
 
 def test_validator_accepts_registry():
-    validator = _load(ROOT / "scripts/validate_agon_retention_rank_economy.py")
+    validator = _load(ROOT / "mechanics/agon/scripts/validate_agon_retention_rank_economy.py")
     assert validator.main() == 0
 
 
 def test_schemas_constrain_entry_and_registry():
-    generated = json.loads((ROOT / "generated/agon_retention_rank_economy_registry.min.json").read_text(encoding="utf-8"))
-    entry_schema = json.loads((ROOT / "schemas/agon-retention-rank-economy.schema.json").read_text(encoding="utf-8"))
-    registry_schema = json.loads((ROOT / "schemas/agon-retention-rank-economy-registry.schema.json").read_text(encoding="utf-8"))
+    generated = json.loads((ROOT / "mechanics/agon/generated/agon_retention_rank_economy_registry.min.json").read_text(encoding="utf-8"))
+    entry_schema = json.loads((ROOT / "mechanics/agon/schemas/agon-retention-rank-economy.schema.json").read_text(encoding="utf-8"))
+    registry_schema = json.loads((ROOT / "mechanics/agon/schemas/agon-retention-rank-economy-registry.schema.json").read_text(encoding="utf-8"))
 
     Draft202012Validator.check_schema(entry_schema)
     Draft202012Validator.check_schema(registry_schema)

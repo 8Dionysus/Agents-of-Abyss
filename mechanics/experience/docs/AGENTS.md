@@ -21,7 +21,7 @@ Do not add new heavy doctrine here. Do not use this route to bypass active part 
 Run:
 
 ```bash
-python scripts/validate_experience_distillation.py
+python mechanics/experience/scripts/validate_experience_distillation.py
 python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
 ```

@@ -10,7 +10,7 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-REQ = ROOT / "generated" / "agon_recurrence_adapter_request.min.json"
+REQ = ROOT / "mechanics" / "agon" / "generated" / "agon_recurrence_adapter_request.min.json"
 
 REQUIRED_STOP_LINES = {
     "no_arena_session_creation",
@@ -32,7 +32,7 @@ def fail(msg: str) -> int:
     return 1
 
 def main() -> int:
-    builder = ROOT / "scripts" / "build_agon_recurrence_adapter_request.py"
+    builder = ROOT / "mechanics" / "agon" / "scripts" / "build_agon_recurrence_adapter_request.py"
     result = subprocess.run([sys.executable, str(builder), "--check"], cwd=ROOT)
     if result.returncode != 0:
         return result.returncode

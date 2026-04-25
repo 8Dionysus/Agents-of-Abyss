@@ -21,7 +21,7 @@ ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "scripts" / "validate_experience_wave2.py"
+    path = ROOT / "mechanics" / "experience" / "scripts" / "validate_experience_wave2.py"
     spec = importlib.util.spec_from_file_location("experience_wave2_validator_test", path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
@@ -30,12 +30,12 @@ def load_validator():
 
 
 def load_example() -> dict[str, object]:
-    return json.loads((ROOT / "examples" / "experience_wave2_certification_watchtower.example.json").read_text())
+    return json.loads((ROOT / "mechanics" / "experience" / "examples" / "experience_wave2_certification_watchtower.example.json").read_text())
 
 
 def test_experience_wave2_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "scripts/validate_experience_wave2.py"],
+        [sys.executable, "mechanics/experience/scripts/validate_experience_wave2.py"],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -86,12 +86,12 @@ def test_experience_wave2_rejects_out_of_order_watchtower() -> None:
 def test_seeded_center_examples_validate_against_schemas() -> None:
     stems = [
         example.name.removesuffix(".example.json")
-        for example in sorted((ROOT / "examples").glob("experience_*.example.json"))
+        for example in sorted((ROOT / "mechanics" / "experience" / "examples").glob("experience_*.example.json"))
     ]
     paired = []
     for stem in stems:
-        schema_path = ROOT / "schemas" / f"{stem}_v1.json"
-        example_path = ROOT / "examples" / f"{stem}.example.json"
+        schema_path = ROOT / "mechanics" / "experience" / "schemas" / f"{stem}_v1.json"
+        example_path = ROOT / "mechanics" / "experience" / "examples" / f"{stem}.example.json"
         if schema_path.exists():
             paired.append((schema_path, example_path))
     assert paired

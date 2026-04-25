@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/8Dionysus/Agents-of-Abyss/schemas/agon-lawful-move.schema.json",
+  "$id": "https://github.com/8Dionysus/Agents-of-Abyss/mechanics/agon/schemas/agon-lawful-move.schema.json",
   "title": "Agon lawful move",
   "type": "object",
   "additionalProperties": false,

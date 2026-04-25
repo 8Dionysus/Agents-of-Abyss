@@ -1,1 +1,0 @@
-../mechanics/experience/scripts/validate_experience_v1_2_to_v2_0_bridge.py

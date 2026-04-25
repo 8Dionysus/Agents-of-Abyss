@@ -1,1 +1,0 @@
-../mechanics/experience/scripts/validate_experience_distillation.py

@@ -28,7 +28,7 @@
       "purpose": "Carry a pre-protocol request from an Agon gate candidate into a draft arena session model.",
       "recommended_previous_surfaces": [
         "generated/agon_gate_routing_registry.min.json",
-        "generated/agon_arena_session_model_registry.min.json"
+        "mechanics/agon/generated/agon_arena_session_model_registry.min.json"
       ],
       "required_payload_fields": [
         "source_gate_hint",
@@ -62,7 +62,7 @@
       "purpose": "Record that an actor or service role accepts the draft charter boundaries for a future arena session.",
       "recommended_previous_surfaces": [
         "generated/agent_formation_trial.min.json",
-        "generated/agon_arena_session_model_registry.min.json"
+        "mechanics/agon/generated/agon_arena_session_model_registry.min.json"
       ],
       "required_payload_fields": [
         "accepted_charter_refs",
@@ -166,7 +166,7 @@
       "packet_type": "agon.reveal_request",
       "purpose": "Request that sealed commits be opened only after all required commits and receipts are present.",
       "recommended_previous_surfaces": [
-        "generated/agon_arena_session_model_registry.min.json"
+        "mechanics/agon/generated/agon_arena_session_model_registry.min.json"
       ],
       "required_payload_fields": [
         "required_commit_refs",
@@ -230,8 +230,8 @@
       "packet_type": "agon.move_declaration",
       "purpose": "Declare an intended lawful move using the Wave III move vocabulary without executing it as a live move.",
       "recommended_previous_surfaces": [
-        "generated/agon_lawful_move_registry.min.json",
-        "generated/agon_move_owner_binding_registry.min.json"
+        "mechanics/agon/generated/agon_lawful_move_registry.min.json",
+        "mechanics/agon/generated/agon_move_owner_binding_registry.min.json"
       ],
       "required_payload_fields": [
         "lawful_move_id",
@@ -302,7 +302,7 @@
       "packet_type": "agon.contradiction_notice",
       "purpose": "Mark or localize a contradiction candidate before the full contradiction ledger exists.",
       "recommended_previous_surfaces": [
-        "generated/agon_lawful_move_registry.min.json",
+        "mechanics/agon/generated/agon_lawful_move_registry.min.json",
         "generated/agon_trial_playbook_registry.min.json"
       ],
       "required_payload_fields": [
@@ -334,8 +334,8 @@
       "packet_type": "agon.summon_intent",
       "purpose": "Declare a costly summon intent for later review without initiating a live summon.",
       "recommended_previous_surfaces": [
-        "generated/agon_lawful_move_registry.min.json",
-        "generated/agon_court_memo_stats_prebinding_request.min.json"
+        "mechanics/agon/generated/agon_lawful_move_registry.min.json",
+        "mechanics/agon/generated/agon_court_memo_stats_prebinding_request.min.json"
       ],
       "required_payload_fields": [
         "summon_type",
@@ -441,7 +441,7 @@
       "purpose": "Bundle packets for future court prebinding review without issuing verdict authority.",
       "recommended_previous_surfaces": [
         "generated/agon_eval_prebinding_registry.min.json",
-        "generated/agon_arena_session_model_registry.min.json"
+        "mechanics/agon/generated/agon_arena_session_model_registry.min.json"
       ],
       "required_payload_fields": [
         "packet_refs",
@@ -502,7 +502,7 @@
       "packet_type": "agon.closeout_candidate",
       "purpose": "Summarize pre-protocol packet state without declaring live closure, verdict, scar, or rank effect.",
       "recommended_previous_surfaces": [
-        "generated/agon_arena_session_model_registry.min.json"
+        "mechanics/agon/generated/agon_arena_session_model_registry.min.json"
       ],
       "required_payload_fields": [
         "packet_refs",
@@ -533,7 +533,7 @@
       "packet_type": "agon.quarantine_notice",
       "purpose": "Mark that the packet sequence must stop for owner review because a stop-line or required condition failed.",
       "recommended_previous_surfaces": [
-        "generated/agon_imposition_readiness.min.json"
+        "mechanics/agon/generated/agon_imposition_readiness.min.json"
       ],
       "required_payload_fields": [
         "blocked_packet_ref",

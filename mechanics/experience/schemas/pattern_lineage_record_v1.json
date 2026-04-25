@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/schemas/pattern_lineage_record_v1.json",
+  "$id": "https://aoa.local/mechanics/experience/schemas/pattern_lineage_record_v1.json",
   "title": "pattern_lineage_record_v1",
   "type": "object",
   "required": [

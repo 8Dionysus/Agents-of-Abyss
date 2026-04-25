@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/train_post_release_watch_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/train_post_release_watch_v1.json",
   "title": "Train Post Release Watch V1",
   "type": "object",
   "additionalProperties": false,

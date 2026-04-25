@@ -14,8 +14,8 @@
   ],
   "observation_intent": "Detect drift in verdict, delta, scar, retention and inscription bridge surfaces before runtime activation.",
   "observed_surfaces": [
-    "generated/agon_vds_bridge_registry.min.json",
-    "config/agon_vds_bridges.seed.json",
+    "mechanics/agon/generated/agon_vds_bridge_registry.min.json",
+    "mechanics/agon/config/agon_vds_bridges.seed.json",
     "mechanics/agon/docs/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
     "mechanics/agon/docs/AGON_WAVE11_STOP_LINES.md"
   ],

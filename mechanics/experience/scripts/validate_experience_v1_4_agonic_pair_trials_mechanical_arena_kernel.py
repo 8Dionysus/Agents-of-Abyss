@@ -19,13 +19,11 @@ def _repo_root() -> Path:
 ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md"
 SCHEMA_PATH = (
-    ROOT
-    / "schemas"
+    ROOT / "mechanics" / "experience" / "schemas"
     / "experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json"
 )
 EXAMPLE_PATH = (
-    ROOT
-    / "examples"
+    ROOT / "mechanics" / "experience" / "examples"
     / "experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json"
 )
 

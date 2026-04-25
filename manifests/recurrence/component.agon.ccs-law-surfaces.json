@@ -7,8 +7,8 @@
   ],
   "component_id": "component:agon:ccs-law-surfaces",
   "observed_surfaces": [
-    "config/agon_ccs_laws.seed.json",
-    "generated/agon_ccs_law_registry.min.json",
+    "mechanics/agon/config/agon_ccs_laws.seed.json",
+    "mechanics/agon/generated/agon_ccs_law_registry.min.json",
     "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md"
   ],
   "owner_repo": "Agents-of-Abyss",

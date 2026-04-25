@@ -16,11 +16,11 @@ def _repo_root() -> pathlib.Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-SRC = ROOT / 'config/agon_kag_promotion_path.seed.json'
-OUT = ROOT / 'generated/agon_kag_promotion_path_registry.min.json'
-ENTRY_SCHEMA = ROOT / 'schemas/agon-kag-promotion-path.schema.json'
-REGISTRY_SCHEMA = ROOT / 'schemas/agon-kag-promotion-path-registry.schema.json'
-BUILDER = ROOT / 'scripts/build_agon_kag_promotion_path_registry.py'
+SRC = ROOT / 'mechanics/agon/config/agon_kag_promotion_path.seed.json'
+OUT = ROOT / 'mechanics/agon/generated/agon_kag_promotion_path_registry.min.json'
+ENTRY_SCHEMA = ROOT / 'mechanics/agon/schemas/agon-kag-promotion-path.schema.json'
+REGISTRY_SCHEMA = ROOT / 'mechanics/agon/schemas/agon-kag-promotion-path-registry.schema.json'
+BUILDER = ROOT / 'mechanics/agon/scripts/build_agon_kag_promotion_path_registry.py'
 ITEM_KEY = 'kag_promotion_components'
 REGISTRY_ID = 'agon.kag_promotion_path.registry.v1'
 WAVE = 'XVII'

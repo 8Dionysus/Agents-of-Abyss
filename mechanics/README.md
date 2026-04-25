@@ -24,7 +24,7 @@ deeper machinery.
 Mechanics are not documentation-only packages. When a schema, example, seed
 config, generated companion, validator, test, or quest rule belongs to one
 mechanic, its source home is the mechanic package. Root technical districts keep
-repo-wide contracts and compatibility aliases. See
+repo-wide contracts only. See
 [ARTIFACT_TOPOLOGY](ARTIFACT_TOPOLOGY.md).
 
 ## Canonical route contract
@@ -188,7 +188,7 @@ python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 ## Method, growth, and owner landing
@@ -222,8 +222,8 @@ Owner split:
 Validation anchors:
 
 ```bash
-python scripts/validate_candidate_lineage_contract.py --workspace-root /srv
-python scripts/validate_wave4_kernel_automation.py --workspace-root /srv
+python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv
+python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv
 ```
 
 ## Recurrence, return, and continuity
@@ -297,7 +297,7 @@ audits, not as the first active route.
 | [Runtime Boundary](experience/parts/runtime-boundary/README.md) | living-workspace runtime stop-lines, authority resolver boundaries, and case queues |
 | [Compatibility Bridges](experience/parts/compatibility-bridges/README.md) | cross-mechanic, ToS, KAG, and Agon bridge language without authority transfer |
 
-Validation starts with `python scripts/validate_experience_distillation.py`,
+Validation starts with `python mechanics/experience/scripts/validate_experience_distillation.py`,
 then the matching `scripts/validate_experience_*.py` and
 `tests/test_experience_*.py` for the active part or versioned contract you changed.
 
@@ -462,7 +462,7 @@ python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 If you touched a generated Agon or Experience capsule, run that surface's

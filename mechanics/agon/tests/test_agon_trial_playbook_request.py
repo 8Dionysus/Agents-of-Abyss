@@ -13,7 +13,7 @@ ROOT = _repo_root()
 
 def test_agon_trial_playbook_request_build_check():
     result = subprocess.run(
-        [sys.executable, str(ROOT / "scripts" / "build_agon_trial_playbook_request.py"), "--check"],
+        [sys.executable, str(ROOT / "mechanics" / "agon" / "scripts" / "build_agon_trial_playbook_request.py"), "--check"],
         cwd=ROOT,
         capture_output=True,
         text=True,
@@ -21,7 +21,7 @@ def test_agon_trial_playbook_request_build_check():
     assert result.returncode == 0, result.stderr + result.stdout
 
 def test_agon_trial_playbook_request_shape():
-    data = json.loads((ROOT / "generated" / "agon_trial_playbook_request.min.json").read_text(encoding="utf-8"))
+    data = json.loads((ROOT / "mechanics" / "agon" / "generated" / "agon_trial_playbook_request.min.json").read_text(encoding="utf-8"))
     assert data["schema_version"] == "agon-trial-playbook-request-v1"
     assert data["wave"] == "VI"
     assert data["live_protocol"] is False

@@ -13,7 +13,7 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(ROOT / "mechanics" / "agon" / "scripts"))
 
 from build_agon_move_owner_binding_registry import (  # noqa: E402
     CONFIG_PATH,

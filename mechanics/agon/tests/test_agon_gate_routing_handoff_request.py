@@ -21,13 +21,13 @@ def dump_min(obj) -> str:
 
 
 def test_agon_gate_handoff_request_is_current():
-    config = load_json(ROOT / "config" / "agon_gate_routing_handoff_request.seed.json")
-    current = (ROOT / "generated" / "agon_gate_routing_handoff_request.min.json").read_text(encoding="utf-8")
+    config = load_json(ROOT / "mechanics" / "agon" / "config" / "agon_gate_routing_handoff_request.seed.json")
+    current = (ROOT / "mechanics" / "agon" / "generated" / "agon_gate_routing_handoff_request.min.json").read_text(encoding="utf-8")
     assert current == dump_min(config)
 
 
 def test_agon_gate_handoff_preserves_center_law():
-    request = load_json(ROOT / "generated" / "agon_gate_routing_handoff_request.min.json")
+    request = load_json(ROOT / "mechanics" / "agon" / "generated" / "agon_gate_routing_handoff_request.min.json")
 
     assert request["owner_repo"] == "Agents-of-Abyss"
     assert request["routing_repo"] == "aoa-routing"

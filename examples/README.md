@@ -4,8 +4,8 @@ This directory holds public-safe examples for the AoA center.
 
 Examples demonstrate shape, posture, or usage. They are not proof canon, not owner-local truth, and not hidden runtime configuration.
 
-Mechanic-owned examples live in `mechanics/<slug>/examples/`. Root examples may
-remain as compatibility aliases for established commands and links.
+Mechanic-owned examples live in `mechanics/<slug>/examples/`. Root `examples/`
+contains only root-owned examples.
 
 ## Rules
 

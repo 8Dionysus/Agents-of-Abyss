@@ -14,8 +14,8 @@
   ],
   "posture": "observation_only",
   "surfaces": [
-    "generated/agon_epistemic_agon_registry.min.json",
-    "config/agon_epistemic_agon.seed.json"
+    "mechanics/agon/generated/agon_epistemic_agon_registry.min.json",
+    "mechanics/agon/config/agon_epistemic_agon.seed.json"
   ],
   "wave": "XV"
 }

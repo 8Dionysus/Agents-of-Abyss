@@ -25,12 +25,12 @@
     {
       "hook_id": "detect_threshold_surface_drift",
       "mode": "observe_only",
-      "target": "generated/agon_sophian_threshold_registry.min.json"
+      "target": "mechanics/agon/generated/agon_sophian_threshold_registry.min.json"
     },
     {
       "hook_id": "detect_canon_authority_leak",
       "mode": "observe_only",
-      "target": "config/agon_sophian_threshold.seed.json"
+      "target": "mechanics/agon/config/agon_sophian_threshold.seed.json"
     }
   ],
   "wave": "XVIII"

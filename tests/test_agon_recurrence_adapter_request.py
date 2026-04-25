@@ -1,1 +1,0 @@
-../mechanics/agon/tests/test_agon_recurrence_adapter_request.py

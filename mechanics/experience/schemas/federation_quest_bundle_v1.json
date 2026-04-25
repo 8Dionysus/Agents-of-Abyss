@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/schemas/federation_quest_bundle_v1.json",
+  "$id": "https://aoa.local/mechanics/experience/schemas/federation_quest_bundle_v1.json",
   "title": "federation_quest_bundle_v1",
   "type": "object",
   "required": [

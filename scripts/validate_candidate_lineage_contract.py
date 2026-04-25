@@ -1,1 +1,0 @@
-../mechanics/method-growth/scripts/validate_candidate_lineage_contract.py

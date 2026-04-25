@@ -23,7 +23,7 @@ def test_deletion_candidates_surface_stays_owner_aware() -> None:
 
     candidates = json.loads(candidate_path.read_text())
     schema = json.loads(
-        (REPO_ROOT / "schemas" / "deletion_candidate_list_v1.json").read_text()
+        (REPO_ROOT / "mechanics" / "antifragility" / "schemas" / "deletion_candidate_list_v1.json").read_text()
     )
 
     assert candidates["schema_version"] == schema["properties"]["schema_version"]["const"]

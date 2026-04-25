@@ -24,7 +24,7 @@
     {
       "relation": "Agon Wave 0 Agon Imposition Gate",
       "repo": "Agents-of-Abyss",
-      "surface": "generated/agon_imposition_readiness.min.json"
+      "surface": "mechanics/agon/generated/agon_imposition_readiness.min.json"
     },
     {
       "relation": "Agon Wave I Agonic Actor Rechartering",
@@ -44,12 +44,12 @@
     {
       "relation": "Agon Wave III Lawful Move Language",
       "repo": "Agents-of-Abyss",
-      "surface": "generated/agon_lawful_move_registry.min.json"
+      "surface": "mechanics/agon/generated/agon_lawful_move_registry.min.json"
     },
     {
       "relation": "Agon Wave IV Move Owner Binding",
       "repo": "Agents-of-Abyss",
-      "surface": "generated/agon_move_owner_binding_registry.min.json"
+      "surface": "mechanics/agon/generated/agon_move_owner_binding_registry.min.json"
     },
     {
       "relation": "Agon Wave V Agon Gate Routing",
@@ -76,12 +76,12 @@
       "hook_manifest_path": "manifests/recurrence/hooks/component.agon.center-surfaces.hooks.json",
       "manifest_path": "manifests/recurrence/component.agon.center-surfaces.json",
       "observed_surfaces": [
-        "generated/agon_imposition_readiness.min.json",
-        "generated/agon_lawful_move_registry.min.json",
-        "generated/agon_move_owner_binding_registry.min.json",
-        "generated/agon_gate_routing_handoff_request.min.json",
-        "generated/agon_trial_playbook_request.min.json",
-        "generated/agon_recurrence_adapter_request.min.json"
+        "mechanics/agon/generated/agon_imposition_readiness.min.json",
+        "mechanics/agon/generated/agon_lawful_move_registry.min.json",
+        "mechanics/agon/generated/agon_move_owner_binding_registry.min.json",
+        "mechanics/agon/generated/agon_gate_routing_handoff_request.min.json",
+        "mechanics/agon/generated/agon_trial_playbook_request.min.json",
+        "mechanics/agon/generated/agon_recurrence_adapter_request.min.json"
       ],
       "review_lane": "general",
       "target_repo": "Agents-of-Abyss",

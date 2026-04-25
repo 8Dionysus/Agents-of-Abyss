@@ -25,8 +25,8 @@ This file applies to validation and builder tooling under `scripts/`.
 ## Role of this directory
 
 `scripts/` is the lightweight validation seam for the AoA center.
-Mechanic-owned scripts live under `mechanics/<slug>/scripts/`; root script
-entries for those lanes are compatibility aliases for stable commands.
+Mechanic-owned scripts live under `mechanics/<slug>/scripts/`; root `scripts/`
+keeps only root-owned validators, builders, and release checks.
 
 Current scripts include:
 
@@ -50,7 +50,7 @@ Current scripts include:
 - `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, and
   `validate_mechanic_readme_cards.py` for the mechanic card contract
 - `validate_mechanic_artifact_topology.py` and
-  `validate_questbook_lifecycle.py` for mechanic artifact homes and the quest
+  `mechanics/questbook/scripts/validate_questbook_lifecycle.py` for mechanic artifact homes and the quest
   lifecycle board
 - `build_owner_request_queue.py`, `validate_owner_request_queue.py`,
   `validate_generated_owner_request_queue.py`, and
@@ -60,19 +60,19 @@ Current scripts include:
 - `agon_imposition_common.py` for the canonical Agon Wave 0 capsule payload,
   local-reference checks, and shared build/validate entrypoints
 - `build_agon_imposition_readiness.py` for deterministic rebuild or stale-check
-  of `generated/agon_imposition_readiness.min.json`
+  of `mechanics/agon/generated/agon_imposition_readiness.min.json`
 - `validate_agon_imposition_readiness.py` for the explicit Wave 0 readiness
   contract check
 - `build_agon_lawful_move_registry.py` for deterministic rebuild or stale-check
-  of `generated/agon_lawful_move_registry.min.json`
+  of `mechanics/agon/generated/agon_lawful_move_registry.min.json`
 - `validate_agon_lawful_moves.py` for the explicit Wave III lawful move
   vocabulary contract check
 - `build_agon_move_owner_binding_registry.py` for deterministic rebuild or
-  stale-check of `generated/agon_move_owner_binding_registry.min.json`
+  stale-check of `mechanics/agon/generated/agon_move_owner_binding_registry.min.json`
 - `validate_agon_move_owner_bindings.py` for the explicit Wave IV move owner
   binding contract check
 - `build_agon_gate_routing_handoff_request.py` for deterministic rebuild or
-  stale-check of `generated/agon_gate_routing_handoff_request.min.json`
+  stale-check of `mechanics/agon/generated/agon_gate_routing_handoff_request.min.json`
 - `validate_agon_gate_routing_handoff_request.py` for the explicit Wave V
   gate-routing handoff contract check
 - `validate_experience_wave1.py` for the first center-owned experience-capture
@@ -98,7 +98,7 @@ Keep this script surface small, repo-relative, deterministic, and limited to the
 
 When changing script logic:
 
-- follow mechanic-owned aliases into `mechanics/<slug>/scripts/` before editing
+- edit mechanic-owned scripts directly under `mechanics/<slug>/scripts/`
 - prefer crisp failure messages over hidden magic
 - keep checks anchored to public repository surfaces
 - avoid network access, speculative repo discovery, or layer-owned validation that belongs elsewhere
@@ -139,84 +139,84 @@ python scripts/release_check.py
 After changing the Agon Wave 0 builder or validator, also run:
 
 ```bash
-python scripts/build_agon_imposition_readiness.py --check
-python scripts/validate_agon_imposition_readiness.py
-python -m pytest -q tests/test_agon_imposition_readiness.py
+python mechanics/agon/scripts/build_agon_imposition_readiness.py --check
+python mechanics/agon/scripts/validate_agon_imposition_readiness.py
+python -m pytest -q mechanics/agon/tests/test_agon_imposition_readiness.py
 ```
 
 After changing the Agon Wave III builder or validator, also run:
 
 ```bash
-python scripts/build_agon_lawful_move_registry.py --check
-python scripts/validate_agon_lawful_moves.py
-python -m pytest -q tests/test_agon_lawful_moves.py
+python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check
+python mechanics/agon/scripts/validate_agon_lawful_moves.py
+python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py
 ```
 
 After changing the Agon Wave IV builder or validator, also run:
 
 ```bash
-python scripts/build_agon_move_owner_binding_registry.py --check
-python scripts/validate_agon_move_owner_bindings.py
-python -m pytest -q tests/test_agon_move_owner_bindings.py
+python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check
+python mechanics/agon/scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py
 ```
 
 After changing the Agon Wave V builder or validator, also run:
 
 ```bash
-python scripts/build_agon_gate_routing_handoff_request.py --check
-python scripts/validate_agon_gate_routing_handoff_request.py
-python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
+python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check
+python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.py
 ```
 
 After changing the Experience Wave 1 validator, also run:
 
 ```bash
-python scripts/validate_experience_wave1.py
-python -m pytest -q tests/test_experience_wave1.py
+python mechanics/experience/scripts/validate_experience_wave1.py
+python -m pytest -q mechanics/experience/tests/test_experience_wave1.py
 ```
 
 After changing the Experience Wave 2 validator, also run:
 
 ```bash
-python scripts/validate_experience_wave2.py
-python -m pytest -q tests/test_experience_wave2.py
+python mechanics/experience/scripts/validate_experience_wave2.py
+python -m pytest -q mechanics/experience/tests/test_experience_wave2.py
 ```
 
 After changing the Experience Wave 3 validator, also run:
 
 ```bash
-python scripts/validate_experience_wave3.py
-python -m pytest -q tests/test_experience_wave3.py
+python mechanics/experience/scripts/validate_experience_wave3.py
+python -m pytest -q mechanics/experience/tests/test_experience_wave3.py
 ```
 
 After changing the Experience Wave 4 validator, also run:
 
 ```bash
-python scripts/validate_experience_wave4.py
-python -m pytest -q tests/test_experience_wave4.py tests/test_experience_wave4_seed_contracts.py
+python mechanics/experience/scripts/validate_experience_wave4.py
+python -m pytest -q mechanics/experience/tests/test_experience_wave4.py mechanics/experience/tests/test_experience_wave4_seed_contracts.py
 ```
 
 After changing the Experience v1.2 or v1.3 campaign validators, also run:
 
 ```bash
-python scripts/validate_experience_v1_2_service_mesh_operations.py
-python -m pytest -q tests/test_experience_v1_2_service_mesh_operations.py
-python scripts/validate_experience_v1_3_office_foundry_role_pairs.py
-python -m pytest -q tests/test_experience_v1_3_office_foundry_role_pairs.py
+python mechanics/experience/scripts/validate_experience_v1_2_service_mesh_operations.py
+python -m pytest -q mechanics/experience/tests/test_experience_v1_2_service_mesh_operations.py
+python mechanics/experience/scripts/validate_experience_v1_3_office_foundry_role_pairs.py
+python -m pytest -q mechanics/experience/tests/test_experience_v1_3_office_foundry_role_pairs.py
 ```
 
 After changing the Experience v1.4 campaign validator, also run:
 
 ```bash
-python scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
-python -m pytest -q tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+python mechanics/experience/scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+python -m pytest -q mechanics/experience/tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
 ```
 
 After changing the Experience v1.5 campaign validator, also run:
 
 ```bash
-python scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
-python -m pytest -q tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python mechanics/experience/scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python -m pytest -q mechanics/experience/tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
 ```
 
 A script change is done when the failure mode is clearer, not more mysterious.

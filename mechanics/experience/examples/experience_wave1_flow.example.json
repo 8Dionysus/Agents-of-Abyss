@@ -56,7 +56,7 @@
       "summary": "The candidate is accepted only for owner review and does not bypass repository gates.",
       "actor_role": "reviewer",
       "evidence_refs": [
-        "scripts/validate_experience_wave1.py"
+        "mechanics/experience/scripts/validate_experience_wave1.py"
       ]
     },
     {
@@ -86,7 +86,7 @@
       "summary": "Projection remains a dry-run owner-local proposal until the target repository accepts it.",
       "actor_role": "coder",
       "evidence_refs": [
-        "schemas/experience-wave1-flow.schema.json"
+        "mechanics/experience/schemas/experience-wave1-flow.schema.json"
       ]
     }
   ],
@@ -97,7 +97,7 @@
     "rationale": "The candidate preserves the v0.1-v0.3 mechanics while keeping owner landing review-gated.",
     "evidence_refs": [
       "mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md",
-      "examples/experience_wave1_flow.example.json"
+      "mechanics/experience/examples/experience_wave1_flow.example.json"
     ]
   },
   "memory_gate": {

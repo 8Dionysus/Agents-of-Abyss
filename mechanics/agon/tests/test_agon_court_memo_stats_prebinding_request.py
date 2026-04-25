@@ -17,10 +17,10 @@ def run(cmd):
 
 
 def test_wave7_generated_surface_is_current():
-    result = run(['scripts/build_agon_court_memo_stats_prebinding_request.py', '--check'])
+    result = run(['mechanics/agon/scripts/build_agon_court_memo_stats_prebinding_request.py', '--check'])
     assert result.returncode == 0, result.stderr
 
 
 def test_wave7_validator_passes():
-    result = run(['scripts/validate_agon_court_memo_stats_prebinding_request.py'])
+    result = run(['mechanics/agon/scripts/validate_agon_court_memo_stats_prebinding_request.py'])
     assert result.returncode == 0, result.stderr

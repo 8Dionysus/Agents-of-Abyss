@@ -19,7 +19,7 @@ ROOT = _repo_root()
 
 
 def load_builder():
-    path = ROOT / "scripts" / "build_agon_move_owner_binding_registry.py"
+    path = ROOT / "mechanics" / "agon" / "scripts" / "build_agon_move_owner_binding_registry.py"
     spec = importlib.util.spec_from_file_location("agon_move_owner_binding_builder_test", path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
@@ -29,7 +29,7 @@ def load_builder():
 
 def test_agon_move_owner_binding_registry_is_current() -> None:
     result = subprocess.run(
-        [sys.executable, "scripts/build_agon_move_owner_binding_registry.py", "--check"],
+        [sys.executable, "mechanics/agon/scripts/build_agon_move_owner_binding_registry.py", "--check"],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -39,7 +39,7 @@ def test_agon_move_owner_binding_registry_is_current() -> None:
 
 
 def test_agon_move_owner_binding_registry_shape() -> None:
-    data = json.loads((ROOT / "generated" / "agon_move_owner_binding_registry.min.json").read_text())
+    data = json.loads((ROOT / "mechanics" / "agon" / "generated" / "agon_move_owner_binding_registry.min.json").read_text())
     assert data["wave"] == "IV"
     assert data["status"] == "pre_protocol_owner_binding"
     assert data["total_bindings"] == 18
@@ -52,7 +52,7 @@ def test_agon_move_owner_binding_registry_shape() -> None:
 
 def test_owner_binding_validator_rejects_non_list_fields() -> None:
     builder = load_builder()
-    config = json.loads((ROOT / "config" / "agon_move_owner_bindings.seed.json").read_text(encoding="utf-8"))
+    config = json.loads((ROOT / "mechanics" / "agon" / "config" / "agon_move_owner_bindings.seed.json").read_text(encoding="utf-8"))
     config["bindings"][0]["owner_bindings"][0]["candidate_refs"] = "center:broken"
     with pytest.raises(builder.ValidationError, match="candidate_refs must be a non-empty list of strings"):
         builder.validate_config(config)
@@ -60,7 +60,7 @@ def test_owner_binding_validator_rejects_non_list_fields() -> None:
 
 def test_owner_binding_validator_rejects_move_class_drift() -> None:
     builder = load_builder()
-    config = json.loads((ROOT / "config" / "agon_move_owner_bindings.seed.json").read_text(encoding="utf-8"))
+    config = json.loads((ROOT / "mechanics" / "agon" / "config" / "agon_move_owner_bindings.seed.json").read_text(encoding="utf-8"))
     config["bindings"][0]["move_class"] = "typo"
     with pytest.raises(builder.ValidationError, match="invalid move_class"):
         builder.validate_config(config)

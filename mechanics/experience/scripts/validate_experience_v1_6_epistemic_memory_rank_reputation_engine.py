@@ -18,8 +18,8 @@ def _repo_root() -> Path:
 
 ROOT = _repo_root()
 DOC_PATH = ROOT / "mechanics" / "experience" / "legacy" / "raw" / "EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md"
-SCHEMA_PATH = ROOT / "schemas" / "experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json"
-EXAMPLE_PATH = ROOT / "examples" / "experience_v1_6_epistemic_memory_rank_reputation_engine.example.json"
+SCHEMA_PATH = ROOT / "mechanics" / "experience" / "schemas" / "experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json"
+EXAMPLE_PATH = ROOT / "mechanics" / "experience" / "examples" / "experience_v1_6_epistemic_memory_rank_reputation_engine.example.json"
 
 SOURCE_ARCHIVE = "aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6.zip"
 SOURCE_SHA256 = "51e403eb0ca9ac384b1edba959b67bdf457efc5813ba3aa7577e94ee87591475"

@@ -11,7 +11,7 @@ def _repo_root() -> Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-VALIDATOR = ROOT / "scripts" / "validate_experience_distillation.py"
+VALIDATOR = ROOT / "mechanics" / "experience" / "scripts" / "validate_experience_distillation.py"
 
 
 def load_validator():

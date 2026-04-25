@@ -19,7 +19,7 @@ ROOT = _repo_root()
 
 
 def load_builder():
-    path = ROOT / "scripts" / "build_agon_lawful_move_registry.py"
+    path = ROOT / "mechanics" / "agon" / "scripts" / "build_agon_lawful_move_registry.py"
     spec = importlib.util.spec_from_file_location("agon_lawful_move_builder_test", path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
@@ -29,7 +29,7 @@ def load_builder():
 
 def test_lawful_move_registry_is_current() -> None:
     result = subprocess.run(
-        [sys.executable, "scripts/build_agon_lawful_move_registry.py", "--check"],
+        [sys.executable, "mechanics/agon/scripts/build_agon_lawful_move_registry.py", "--check"],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -38,7 +38,7 @@ def test_lawful_move_registry_is_current() -> None:
 
 
 def test_lawful_move_registry_pre_protocol_invariants() -> None:
-    registry_path = ROOT / "generated" / "agon_lawful_move_registry.min.json"
+    registry_path = ROOT / "mechanics" / "agon" / "generated" / "agon_lawful_move_registry.min.json"
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
 
     assert registry["wave"] == "III"
@@ -85,7 +85,7 @@ def test_builder_rejects_unknown_move_keys() -> None:
     builder = load_builder()
     move = next(
         item
-        for item in json.loads((ROOT / "config" / "agon_lawful_moves.seed.json").read_text(encoding="utf-8"))["moves"]
+        for item in json.loads((ROOT / "mechanics" / "agon" / "config" / "agon_lawful_moves.seed.json").read_text(encoding="utf-8"))["moves"]
         if item["move_class"] == "summon"
     )
     bad_move = dict(move)
@@ -99,7 +99,7 @@ def test_builder_rejects_non_contestant_summon_semantics() -> None:
     builder = load_builder()
     move = next(
         item
-        for item in json.loads((ROOT / "config" / "agon_lawful_moves.seed.json").read_text(encoding="utf-8"))["moves"]
+        for item in json.loads((ROOT / "mechanics" / "agon" / "config" / "agon_lawful_moves.seed.json").read_text(encoding="utf-8"))["moves"]
         if item["move_class"] == "summon"
     )
     bad_seats = dict(move)

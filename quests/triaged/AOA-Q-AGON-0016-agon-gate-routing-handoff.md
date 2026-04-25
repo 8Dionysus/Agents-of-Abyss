@@ -10,6 +10,6 @@ Accept a center-side handoff request for `aoa-routing` to emit pre-protocol Agon
 
 ## Acceptance
 
-- `generated/agon_gate_routing_handoff_request.min.json` is current.
+- `mechanics/agon/generated/agon_gate_routing_handoff_request.min.json` is current.
 - Validation passes.
 - Docs state that a gate hint is not arena activation.

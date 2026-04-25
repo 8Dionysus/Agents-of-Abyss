@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/governance_runtime_case_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/governance_runtime_case_v1.json",
   "title": "governance_runtime_case_v1",
   "description": "Seed schema for governance_runtime_case_v1 in Experience Constitution Runtime v0.9.",
   "type": "object",

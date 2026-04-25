@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/validate_agon_sophian_threshold_registry.py

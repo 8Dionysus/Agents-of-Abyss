@@ -65,7 +65,7 @@ BASELINE_VALIDATION_COMMANDS = (
     "python scripts/validate_generated_freshness.py",
     "python scripts/validate_hygiene_suite.py",
     "python scripts/validate_ecosystem.py",
-    "python -m pytest -q tests",
+    "python -m pytest -q",
 )
 
 VALIDATION_REFS = (

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://agents-of-abyss.local/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json",
+  "$id": "https://agents-of-abyss.local/mechanics/experience/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json",
   "title": "experience_v1_5_epistemic_duel_model_of_other_forge_v1",
   "type": "object",
   "additionalProperties": false,

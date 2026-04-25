@@ -21,7 +21,7 @@ Do not treat raw legacy files as the primary active route. Do not delete provena
 Run:
 
 ```bash
-python scripts/validate_experience_distillation.py
+python mechanics/experience/scripts/validate_experience_distillation.py
 python scripts/validate_mechanic_landing_logs.py --mechanic experience
 python scripts/validate_links.py
 ```

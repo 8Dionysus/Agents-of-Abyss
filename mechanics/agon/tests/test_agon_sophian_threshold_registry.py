@@ -12,9 +12,9 @@ def _repo_root() -> pathlib.Path:
     raise RuntimeError("repo root not found")
 
 ROOT = _repo_root()
-GENERATED = ROOT / 'generated/agon_sophian_threshold_registry.min.json'
-SCRIPT = ROOT / 'scripts/build_agon_sophian_threshold_registry.py'
-VALIDATOR = ROOT / 'scripts/validate_agon_sophian_threshold_registry.py'
+GENERATED = ROOT / 'mechanics/agon/generated/agon_sophian_threshold_registry.min.json'
+SCRIPT = ROOT / 'mechanics/agon/scripts/build_agon_sophian_threshold_registry.py'
+VALIDATOR = ROOT / 'mechanics/agon/scripts/validate_agon_sophian_threshold_registry.py'
 EXPECTED_COUNT = 10
 ITEM_KEY = 'threshold_components'
 

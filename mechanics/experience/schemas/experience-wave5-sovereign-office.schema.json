@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience-wave5-sovereign-office.schema.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/experience-wave5-sovereign-office.schema.json",
   "title": "experience_wave5_sovereign_office_v1",
   "type": "object",
   "additionalProperties": false,

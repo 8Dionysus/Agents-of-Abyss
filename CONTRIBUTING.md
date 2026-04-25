@@ -91,7 +91,7 @@ Use this check path:
 5. Read [mechanics/README](mechanics/README.md) before editing center-level process, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS-support surfaces.
 6. Read the relevant LANDING_LOG before editing Agon or Experience landing surfaces: [Agon LANDING_LOG](mechanics/agon/LANDING_LOG.md) or [Experience LANDING_LOG](mechanics/experience/LANDING_LOG.md).
 7. Read the local district README before changing `generated/`, `scripts/`, `schemas/`, `tests/`, `config/`, `examples/`, `manifests/`, or `quests/`.
-   For mechanic-owned artifacts, follow the root alias into `mechanics/<slug>/`.
+   For mechanic-owned artifacts, route directly to `mechanics/<slug>/`.
 8. Read [ROADMAP](ROADMAP.md) for declared direction and current phase.
 9. Check generated capsules before claiming the change is complete.
 
@@ -160,7 +160,7 @@ python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 If the change touches Agon, Experience, generated capsules, schemas, quests, or release posture, run the nearest matching validator and test named by the affected surface.

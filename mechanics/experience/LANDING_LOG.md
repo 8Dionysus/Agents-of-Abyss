@@ -38,15 +38,15 @@ owner-local runtime and memory activation remain outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/capture-kernel/README.md`
-- `schemas/experience-wave1-flow.schema.json`
-- `examples/experience_wave1_flow.example.json`
-- `scripts/validate_experience_wave1.py`
-- `tests/test_experience_wave1.py`
+- `mechanics/experience/schemas/experience-wave1-flow.schema.json`
+- `mechanics/experience/examples/experience_wave1_flow.example.json`
+- `mechanics/experience/scripts/validate_experience_wave1.py`
+- `mechanics/experience/tests/test_experience_wave1.py`
 
 Validation:
 
-- `python scripts/validate_experience_wave1.py`
-- `python -m pytest -q tests/test_experience_wave1.py`
+- `python mechanics/experience/scripts/validate_experience_wave1.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_wave1.py`
 
 Stop-lines: no live runtime, no hidden memory sovereignty, no inert projection
 pretending to be activation.
@@ -64,15 +64,15 @@ owner-local review.
 Surfaces:
 
 - `mechanics/experience/parts/certification-proof/README.md`
-- `schemas/experience-wave2-certification-watchtower.schema.json`
-- `examples/experience_wave2_certification_watchtower.example.json`
-- `scripts/validate_experience_wave2.py`
-- `tests/test_experience_wave2.py`
+- `mechanics/experience/schemas/experience-wave2-certification-watchtower.schema.json`
+- `mechanics/experience/examples/experience_wave2_certification_watchtower.example.json`
+- `mechanics/experience/scripts/validate_experience_wave2.py`
+- `mechanics/experience/tests/test_experience_wave2.py`
 
 Validation:
 
-- `python scripts/validate_experience_wave2.py`
-- `python -m pytest -q tests/test_experience_wave2.py`
+- `python mechanics/experience/scripts/validate_experience_wave2.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_wave2.py`
 
 Stop-lines: no autonomous certification, no proof authority transfer, no
 runtime watchtower activation.
@@ -89,15 +89,15 @@ owner repositories decide whether adoption lands locally.
 Surfaces:
 
 - `mechanics/experience/parts/adoption-federation/README.md`
-- `schemas/experience-wave3-federation-adoption.schema.json`
-- `examples/experience_wave3_federation_adoption.example.json`
-- `scripts/validate_experience_wave3.py`
-- `tests/test_experience_wave3.py`
+- `mechanics/experience/schemas/experience-wave3-federation-adoption.schema.json`
+- `mechanics/experience/examples/experience_wave3_federation_adoption.example.json`
+- `mechanics/experience/scripts/validate_experience_wave3.py`
+- `mechanics/experience/tests/test_experience_wave3.py`
 
 Validation:
 
-- `python scripts/validate_experience_wave3.py`
-- `python -m pytest -q tests/test_experience_wave3.py`
+- `python mechanics/experience/scripts/validate_experience_wave3.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_wave3.py`
 
 Stop-lines: no owner-truth theft, no federation adoption without owner review.
 
@@ -114,17 +114,17 @@ implementation stays outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/governance-polis/README.md`
-- `schemas/experience-wave4-polis-constitution.schema.json`
-- `examples/experience_wave4_polis_constitution.example.json`
-- `scripts/validate_experience_wave4.py`
-- `tests/test_experience_wave4.py`
-- `tests/test_experience_wave4_seed_contracts.py`
+- `mechanics/experience/schemas/experience-wave4-polis-constitution.schema.json`
+- `mechanics/experience/examples/experience_wave4_polis_constitution.example.json`
+- `mechanics/experience/scripts/validate_experience_wave4.py`
+- `mechanics/experience/tests/test_experience_wave4.py`
+- `mechanics/experience/tests/test_experience_wave4_seed_contracts.py`
 
 Validation:
 
-- `python scripts/validate_experience_wave4.py`
-- `python -m pytest -q tests/test_experience_wave4.py`
-- `python -m pytest -q tests/test_experience_wave4_seed_contracts.py`
+- `python mechanics/experience/scripts/validate_experience_wave4.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_wave4.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_wave4_seed_contracts.py`
 
 Stop-lines: no constitution runtime activation, no hidden precedent ledger, no
 unreviewed authority resolver.
@@ -141,17 +141,17 @@ live-office contour; owner-local repositories own any live-office activation.
 Surfaces:
 
 - `mechanics/experience/parts/office-operations/README.md`
-- `schemas/experience-wave5-sovereign-office.schema.json`
-- `examples/experience_wave5_sovereign_office.example.json`
-- `scripts/validate_experience_wave5.py`
-- `tests/test_experience_wave5.py`
-- `tests/test_experience_wave5_seed_contracts.py`
+- `mechanics/experience/schemas/experience-wave5-sovereign-office.schema.json`
+- `mechanics/experience/examples/experience_wave5_sovereign_office.example.json`
+- `mechanics/experience/scripts/validate_experience_wave5.py`
+- `mechanics/experience/tests/test_experience_wave5.py`
+- `mechanics/experience/tests/test_experience_wave5_seed_contracts.py`
 
 Validation:
 
-- `python scripts/validate_experience_wave5.py`
-- `python -m pytest -q tests/test_experience_wave5.py`
-- `python -m pytest -q tests/test_experience_wave5_seed_contracts.py`
+- `python mechanics/experience/scripts/validate_experience_wave5.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_wave5.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_wave5_seed_contracts.py`
 
 Stop-lines: no live office without owner-local authority, no sovereign runtime
 claim from center docs.
@@ -168,15 +168,15 @@ owner-local planting waves; it does not own future runtime activation.
 Surfaces:
 
 - `mechanics/experience/parts/runtime-boundary/README.md`
-- `schemas/experience-v1-2-v2-0-bridge.schema.json`
-- `examples/experience_v1_2_to_v2_0_bridge.example.json`
-- `scripts/validate_experience_v1_2_to_v2_0_bridge.py`
-- `tests/test_experience_v1_2_to_v2_0_bridge.py`
+- `mechanics/experience/schemas/experience-v1-2-v2-0-bridge.schema.json`
+- `mechanics/experience/examples/experience_v1_2_to_v2_0_bridge.example.json`
+- `mechanics/experience/scripts/validate_experience_v1_2_to_v2_0_bridge.py`
+- `mechanics/experience/tests/test_experience_v1_2_to_v2_0_bridge.py`
 
 Validation:
 
-- `python scripts/validate_experience_v1_2_to_v2_0_bridge.py`
-- `python -m pytest -q tests/test_experience_v1_2_to_v2_0_bridge.py`
+- `python mechanics/experience/scripts/validate_experience_v1_2_to_v2_0_bridge.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_v1_2_to_v2_0_bridge.py`
 
 Stop-lines: no future owner-local wave is considered landed by center bridge
 language alone.
@@ -193,15 +193,15 @@ no-runtime stop-lines; runtime service ownership remains outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/service-mesh/README.md`
-- `schemas/experience-v1-2-service-mesh-operations.schema.json`
-- `examples/experience_v1_2_service_mesh_operations.example.json`
-- `scripts/validate_experience_v1_2_service_mesh_operations.py`
-- `tests/test_experience_v1_2_service_mesh_operations.py`
+- `mechanics/experience/schemas/experience-v1-2-service-mesh-operations.schema.json`
+- `mechanics/experience/examples/experience_v1_2_service_mesh_operations.example.json`
+- `mechanics/experience/scripts/validate_experience_v1_2_service_mesh_operations.py`
+- `mechanics/experience/tests/test_experience_v1_2_service_mesh_operations.py`
 
 Validation:
 
-- `python scripts/validate_experience_v1_2_service_mesh_operations.py`
-- `python -m pytest -q tests/test_experience_v1_2_service_mesh_operations.py`
+- `python mechanics/experience/scripts/validate_experience_v1_2_service_mesh_operations.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_v1_2_service_mesh_operations.py`
 
 Stop-lines: no live service mesh, no runtime dispatch, no owner-local activation.
 
@@ -217,15 +217,15 @@ does not create hybrid-agent authority.
 Surfaces:
 
 - `mechanics/experience/parts/office-operations/README.md`
-- `schemas/experience-v1-3-office-foundry-role-pairs.schema.json`
-- `examples/experience_v1_3_office_foundry_role_pairs.example.json`
-- `scripts/validate_experience_v1_3_office_foundry_role_pairs.py`
-- `tests/test_experience_v1_3_office_foundry_role_pairs.py`
+- `mechanics/experience/schemas/experience-v1-3-office-foundry-role-pairs.schema.json`
+- `mechanics/experience/examples/experience_v1_3_office_foundry_role_pairs.example.json`
+- `mechanics/experience/scripts/validate_experience_v1_3_office_foundry_role_pairs.py`
+- `mechanics/experience/tests/test_experience_v1_3_office_foundry_role_pairs.py`
 
 Validation:
 
-- `python scripts/validate_experience_v1_3_office_foundry_role_pairs.py`
-- `python -m pytest -q tests/test_experience_v1_3_office_foundry_role_pairs.py`
+- `python mechanics/experience/scripts/validate_experience_v1_3_office_foundry_role_pairs.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_v1_3_office_foundry_role_pairs.py`
 
 Stop-lines: no hidden hybrid agent, no office activation by center docs.
 
@@ -241,15 +241,15 @@ Agon law, arena operation, verdicts, scars, and retention remain unactivated.
 Surfaces:
 
 - `mechanics/experience/parts/compatibility-bridges/README.md`
-- `schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json`
-- `examples/experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json`
-- `scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py`
-- `tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py`
+- `mechanics/experience/schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json`
+- `mechanics/experience/examples/experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json`
+- `mechanics/experience/scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py`
+- `mechanics/experience/tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py`
 
 Validation:
 
-- `python scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py`
-- `python -m pytest -q tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py`
+- `python mechanics/experience/scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py`
 
 Stop-lines: no live arena, no verdicts, no scars, no assistant contestants.
 
@@ -266,15 +266,15 @@ standing mutation remain outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/compatibility-bridges/README.md`
-- `schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
-- `examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
-- `scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py`
-- `tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py`
+- `mechanics/experience/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
+- `mechanics/experience/examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
+- `mechanics/experience/scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py`
+- `mechanics/experience/tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py`
 
 Validation:
 
-- `python scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py`
-- `python -m pytest -q tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py`
+- `python mechanics/experience/scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py`
 
 Stop-lines: no live duel authority, no truth verdict, no standing or memory
 mutation.
@@ -291,15 +291,15 @@ jurisdiction candidates; memory truth and live rank mutation remain outside.
 Surfaces:
 
 - `mechanics/experience/parts/continuity-context/README.md`
-- `schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json`
-- `examples/experience_v1_6_epistemic_memory_rank_reputation_engine.example.json`
-- `scripts/validate_experience_v1_6_epistemic_memory_rank_reputation_engine.py`
-- `tests/test_experience_v1_6_epistemic_memory_rank_reputation_engine.py`
+- `mechanics/experience/schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json`
+- `mechanics/experience/examples/experience_v1_6_epistemic_memory_rank_reputation_engine.example.json`
+- `mechanics/experience/scripts/validate_experience_v1_6_epistemic_memory_rank_reputation_engine.py`
+- `mechanics/experience/tests/test_experience_v1_6_epistemic_memory_rank_reputation_engine.py`
 
 Validation:
 
-- `python scripts/validate_experience_v1_6_epistemic_memory_rank_reputation_engine.py`
-- `python -m pytest -q tests/test_experience_v1_6_epistemic_memory_rank_reputation_engine.py`
+- `python mechanics/experience/scripts/validate_experience_v1_6_epistemic_memory_rank_reputation_engine.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_v1_6_epistemic_memory_rank_reputation_engine.py`
 
 Stop-lines: no live rank mutation, no hidden memory truth, no reputation
 authority.
@@ -316,15 +316,15 @@ rights, and honor treasury activation remain outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/continuity-context/README.md`
-- `schemas/experience-v1-7-affective-economy-honor-treasury.schema.json`
-- `examples/experience_v1_7_affective_economy_honor_treasury.example.json`
-- `scripts/validate_experience_v1_7_affective_economy_honor_treasury.py`
-- `tests/test_experience_v1_7_affective_economy_honor_treasury.py`
+- `mechanics/experience/schemas/experience-v1-7-affective-economy-honor-treasury.schema.json`
+- `mechanics/experience/examples/experience_v1_7_affective_economy_honor_treasury.example.json`
+- `mechanics/experience/scripts/validate_experience_v1_7_affective_economy_honor_treasury.py`
+- `mechanics/experience/tests/test_experience_v1_7_affective_economy_honor_treasury.py`
 
 Validation:
 
-- `python scripts/validate_experience_v1_7_affective_economy_honor_treasury.py`
-- `python -m pytest -q tests/test_experience_v1_7_affective_economy_honor_treasury.py`
+- `python mechanics/experience/scripts/validate_experience_v1_7_affective_economy_honor_treasury.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_v1_7_affective_economy_honor_treasury.py`
 
 Stop-lines: no consciousness claim, no rights authority, no live treasury.
 
@@ -340,15 +340,15 @@ route receipt grammar; live router engine and owner override remain outside.
 Surfaces:
 
 - `mechanics/experience/parts/continuity-context/README.md`
-- `schemas/experience-v1-8-context-routing-nervous-system.schema.json`
-- `examples/experience_v1_8_context_routing_nervous_system.example.json`
-- `scripts/validate_experience_v1_8_context_routing_nervous_system.py`
-- `tests/test_experience_v1_8_context_routing_nervous_system.py`
+- `mechanics/experience/schemas/experience-v1-8-context-routing-nervous-system.schema.json`
+- `mechanics/experience/examples/experience_v1_8_context_routing_nervous_system.example.json`
+- `mechanics/experience/scripts/validate_experience_v1_8_context_routing_nervous_system.py`
+- `mechanics/experience/tests/test_experience_v1_8_context_routing_nervous_system.py`
 
 Validation:
 
-- `python scripts/validate_experience_v1_8_context_routing_nervous_system.py`
-- `python -m pytest -q tests/test_experience_v1_8_context_routing_nervous_system.py`
+- `python mechanics/experience/scripts/validate_experience_v1_8_context_routing_nervous_system.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_v1_8_context_routing_nervous_system.py`
 
 Stop-lines: no live router engine, no owner override, no route receipt as
 authority.
@@ -365,15 +365,15 @@ grammar; private memory sovereignty and runtime installation remain outside.
 Surfaces:
 
 - `mechanics/experience/parts/continuity-context/README.md`
-- `schemas/experience-v1-9-context-memory-weaving-continuity-loom.schema.json`
-- `examples/experience_v1_9_context_memory_weaving_continuity_loom.example.json`
-- `scripts/validate_experience_v1_9_context_memory_weaving_continuity_loom.py`
-- `tests/test_experience_v1_9_context_memory_weaving_continuity_loom.py`
+- `mechanics/experience/schemas/experience-v1-9-context-memory-weaving-continuity-loom.schema.json`
+- `mechanics/experience/examples/experience_v1_9_context_memory_weaving_continuity_loom.example.json`
+- `mechanics/experience/scripts/validate_experience_v1_9_context_memory_weaving_continuity_loom.py`
+- `mechanics/experience/tests/test_experience_v1_9_context_memory_weaving_continuity_loom.py`
 
 Validation:
 
-- `python scripts/validate_experience_v1_9_context_memory_weaving_continuity_loom.py`
-- `python -m pytest -q tests/test_experience_v1_9_context_memory_weaving_continuity_loom.py`
+- `python mechanics/experience/scripts/validate_experience_v1_9_context_memory_weaving_continuity_loom.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_v1_9_context_memory_weaving_continuity_loom.py`
 
 Stop-lines: no private memory sovereignty, no runtime installation, no ambient
 continuity.
@@ -391,15 +391,15 @@ outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/runtime-boundary/README.md`
-- `schemas/experience-v2-0-living-workspace-continuity-runtime.schema.json`
-- `examples/experience_v2_0_living_workspace_continuity_runtime.example.json`
-- `scripts/validate_experience_v2_0_living_workspace_continuity_runtime.py`
-- `tests/test_experience_v2_0_living_workspace_continuity_runtime.py`
+- `mechanics/experience/schemas/experience-v2-0-living-workspace-continuity-runtime.schema.json`
+- `mechanics/experience/examples/experience_v2_0_living_workspace_continuity_runtime.example.json`
+- `mechanics/experience/scripts/validate_experience_v2_0_living_workspace_continuity_runtime.py`
+- `mechanics/experience/tests/test_experience_v2_0_living_workspace_continuity_runtime.py`
 
 Validation:
 
-- `python scripts/validate_experience_v2_0_living_workspace_continuity_runtime.py`
-- `python -m pytest -q tests/test_experience_v2_0_living_workspace_continuity_runtime.py`
+- `python mechanics/experience/scripts/validate_experience_v2_0_living_workspace_continuity_runtime.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_v2_0_living_workspace_continuity_runtime.py`
 
 Stop-lines: no live workspace runtime from center docs, no owner-local
 activation, no hidden memory sovereignty.
@@ -423,14 +423,14 @@ Surfaces:
 - `mechanics/experience/parts/README.md`
 - `mechanics/experience/PROVENANCE.md`
 - `mechanics/experience/OWNER_REQUESTS.md`
-- `scripts/validate_experience_distillation.py`
-- `tests/test_experience_distillation.py`
+- `mechanics/experience/scripts/validate_experience_distillation.py`
+- `mechanics/experience/tests/test_experience_distillation.py`
 
 Validation:
 
-- `python scripts/validate_experience_distillation.py`
+- `python mechanics/experience/scripts/validate_experience_distillation.py`
 - `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
-- `python -m pytest -q tests/test_experience_distillation.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_distillation.py`
 
 Stop-lines: no archived packet becomes the primary active route by
 accumulation, no provenance is deleted to make the active surface look clean,
@@ -456,14 +456,14 @@ Surfaces:
 - `mechanics/experience/PARTS.md`
 - `mechanics/experience/parts/README.md`
 - `mechanics/experience/OWNER_REQUESTS.md`
-- `scripts/validate_experience_distillation.py`
-- `tests/test_experience_distillation.py`
+- `mechanics/experience/scripts/validate_experience_distillation.py`
+- `mechanics/experience/tests/test_experience_distillation.py`
 
 Validation:
 
-- `python scripts/validate_experience_distillation.py`
+- `python mechanics/experience/scripts/validate_experience_distillation.py`
 - `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
-- `python -m pytest -q tests/test_experience_distillation.py`
+- `python -m pytest -q mechanics/experience/tests/test_experience_distillation.py`
 
 Stop-lines: active part docs must not carry archival inventories, per-source
 lists, or old packet filenames; archive detail remains accessible only through
@@ -496,12 +496,12 @@ Surfaces:
 - `mechanics/experience/parts/*/VALIDATION.md`
 - `mechanics/registry.json`
 - `docs/thematic_districts.json`
-- `scripts/validate_experience_distillation.py`
-- `tests/test_experience_distillation.py`
+- `mechanics/experience/scripts/validate_experience_distillation.py`
+- `mechanics/experience/tests/test_experience_distillation.py`
 
 Validation:
 
-- `python scripts/validate_experience_distillation.py`
+- `python mechanics/experience/scripts/validate_experience_distillation.py`
 - `python scripts/validate_mechanic_readme_cards.py --mechanic experience`
 - `python scripts/validate_mechanics_topology.py --mechanic experience`
 - `python scripts/validate_mechanic_landing_logs.py --mechanic experience`

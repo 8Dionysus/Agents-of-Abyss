@@ -5,8 +5,8 @@
 Wave III uses one source file and one generated capsule:
 
 ```text
-config/agon_lawful_moves.seed.json
-generated/agon_lawful_move_registry.min.json
+mechanics/agon/config/agon_lawful_moves.seed.json
+mechanics/agon/generated/agon_lawful_move_registry.min.json
 ```
 
 The source file is the reviewable owner-authored list.

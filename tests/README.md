@@ -4,8 +4,8 @@ This directory holds regression tests for center contracts, generated surfaces, 
 
 Tests protect bounded claims. They do not replace proof canon in `aoa-evals` and do not grant authority beyond the claims they check.
 
-Mechanic-owned tests live in `mechanics/<slug>/tests/`. Root test paths may
-remain as compatibility aliases so established pytest commands keep working.
+Mechanic-owned tests live in `mechanics/<slug>/tests/`. Root `tests/` keeps
+only root-owned contract tests.
 
 ## Use this directory when
 
@@ -30,7 +30,7 @@ remain as compatibility aliases so established pytest commands keep working.
 ## Baseline command
 
 ```bash
-python -m pytest -q tests
+python -m pytest -q
 ```
 
 Run targeted validators before or alongside pytest when a generated surface,
@@ -39,7 +39,7 @@ schema, or hygiene guardrail changes.
 For Experience active-part or provenance-bridge changes, run:
 
 ```bash
-python scripts/validate_experience_distillation.py
+python mechanics/experience/scripts/validate_experience_distillation.py
 ```
 
 For Wave E hygiene, run:
@@ -60,5 +60,5 @@ python scripts/validate_agents_mesh_index.py
 For Questbook lifecycle changes, run:
 
 ```bash
-python scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 ```

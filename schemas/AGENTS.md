@@ -24,14 +24,13 @@ This file applies to JSON schema contracts under `schemas/`.
 
 ## Role of this directory
 
-Root `schemas/` owns repository-wide shape contracts and compatibility aliases.
-Mechanic-owned schema sources live under `mechanics/<slug>/schemas/`; root
-aliases must not be edited as source files.
+Root `schemas/` owns repository-wide shape contracts. Mechanic-owned schema
+sources live under `mechanics/<slug>/schemas/`.
 
 `ecosystem-registry.schema.json` defines the contract for
 `generated/ecosystem_registry.min.json`.
 `agon-imposition-readiness.schema.json` defines the contract for
-`generated/agon_imposition_readiness.min.json`.
+`mechanics/agon/generated/agon_imposition_readiness.min.json`.
 `agon-lawful-move.schema.json` and `agon-lawful-move-registry.schema.json`
 define the contracts for the Wave III lawful move vocabulary and registry.
 `agon-move-owner-binding.schema.json` and
@@ -70,7 +69,7 @@ Treat any schema change here as a contract change.
 
 When editing the schema:
 
-- follow mechanic-owned aliases into `mechanics/<slug>/schemas/` before editing
+- edit mechanic-owned schemas directly under `mechanics/<slug>/schemas/`
 - keep `$schema`, `$id`, required keys, and enums explicit
 - preserve alignment with the corresponding generated surface
 - update the matching validator or builder when the allowed shape or allowed
@@ -93,84 +92,84 @@ python scripts/validate_ecosystem.py
 After changing `agon-imposition-readiness.schema.json`, also run:
 
 ```bash
-python scripts/build_agon_imposition_readiness.py --check
-python scripts/validate_agon_imposition_readiness.py
-python -m pytest -q tests/test_agon_imposition_readiness.py
+python mechanics/agon/scripts/build_agon_imposition_readiness.py --check
+python mechanics/agon/scripts/validate_agon_imposition_readiness.py
+python -m pytest -q mechanics/agon/tests/test_agon_imposition_readiness.py
 ```
 
 After changing the Wave III lawful move schemas, also run:
 
 ```bash
-python scripts/build_agon_lawful_move_registry.py --check
-python scripts/validate_agon_lawful_moves.py
-python -m pytest -q tests/test_agon_lawful_moves.py
+python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check
+python mechanics/agon/scripts/validate_agon_lawful_moves.py
+python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py
 ```
 
 After changing the Wave IV owner-binding schemas, also run:
 
 ```bash
-python scripts/build_agon_move_owner_binding_registry.py --check
-python scripts/validate_agon_move_owner_bindings.py
-python -m pytest -q tests/test_agon_move_owner_bindings.py
+python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check
+python mechanics/agon/scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py
 ```
 
 After changing the Wave V gate-routing handoff schema, also run:
 
 ```bash
-python scripts/build_agon_gate_routing_handoff_request.py --check
-python scripts/validate_agon_gate_routing_handoff_request.py
-python -m pytest -q tests/test_agon_gate_routing_handoff_request.py
+python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check
+python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.py
 ```
 
 After changing the Experience Wave 1 schema, also run:
 
 ```bash
-python scripts/validate_experience_wave1.py
-python -m pytest -q tests/test_experience_wave1.py
+python mechanics/experience/scripts/validate_experience_wave1.py
+python -m pytest -q mechanics/experience/tests/test_experience_wave1.py
 ```
 
 After changing the Experience Wave 2 schema, also run:
 
 ```bash
-python scripts/validate_experience_wave2.py
-python -m pytest -q tests/test_experience_wave2.py
+python mechanics/experience/scripts/validate_experience_wave2.py
+python -m pytest -q mechanics/experience/tests/test_experience_wave2.py
 ```
 
 After changing the Experience Wave 3 schema, also run:
 
 ```bash
-python scripts/validate_experience_wave3.py
-python -m pytest -q tests/test_experience_wave3.py
+python mechanics/experience/scripts/validate_experience_wave3.py
+python -m pytest -q mechanics/experience/tests/test_experience_wave3.py
 ```
 
 After changing the Experience Wave 4 schema, also run:
 
 ```bash
-python scripts/validate_experience_wave4.py
-python -m pytest -q tests/test_experience_wave4.py tests/test_experience_wave4_seed_contracts.py
+python mechanics/experience/scripts/validate_experience_wave4.py
+python -m pytest -q mechanics/experience/tests/test_experience_wave4.py mechanics/experience/tests/test_experience_wave4_seed_contracts.py
 ```
 
 After changing the Experience v1.2 or v1.3 campaign schemas, also run the matching contract validator and tests:
 
 ```bash
-python scripts/validate_experience_v1_2_service_mesh_operations.py
-python -m pytest -q tests/test_experience_v1_2_service_mesh_operations.py
-python scripts/validate_experience_v1_3_office_foundry_role_pairs.py
-python -m pytest -q tests/test_experience_v1_3_office_foundry_role_pairs.py
+python mechanics/experience/scripts/validate_experience_v1_2_service_mesh_operations.py
+python -m pytest -q mechanics/experience/tests/test_experience_v1_2_service_mesh_operations.py
+python mechanics/experience/scripts/validate_experience_v1_3_office_foundry_role_pairs.py
+python -m pytest -q mechanics/experience/tests/test_experience_v1_3_office_foundry_role_pairs.py
 ```
 
 After changing the Experience v1.4 campaign schema, also run:
 
 ```bash
-python scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
-python -m pytest -q tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+python mechanics/experience/scripts/validate_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
+python -m pytest -q mechanics/experience/tests/test_experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.py
 ```
 
 After changing the Experience v1.5 campaign schema, also run:
 
 ```bash
-python scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
-python -m pytest -q tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python mechanics/experience/scripts/validate_experience_v1_5_epistemic_duel_model_of_other_forge.py
+python -m pytest -q mechanics/experience/tests/test_experience_v1_5_epistemic_duel_model_of_other_forge.py
 ```
 
 If a schema change is intentional, mention the contract shift clearly in the

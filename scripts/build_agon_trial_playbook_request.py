@@ -1,1 +1,0 @@
-../mechanics/agon/scripts/build_agon_trial_playbook_request.py

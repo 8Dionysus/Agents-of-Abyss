@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 import subprocess
 import sys
 import unittest
@@ -20,7 +19,7 @@ REPO_ROOT = _repo_root()
 class QuestbookLifecycleTests(unittest.TestCase):
     def test_validator_accepts_current_board(self) -> None:
         result = subprocess.run(
-            [sys.executable, "scripts/validate_questbook_lifecycle.py"],
+            [sys.executable, "mechanics/questbook/scripts/validate_questbook_lifecycle.py"],
             cwd=REPO_ROOT,
             check=False,
             text=True,
@@ -29,19 +28,9 @@ class QuestbookLifecycleTests(unittest.TestCase):
         )
         self.assertEqual(result.returncode, 0, result.stdout)
 
-    def test_root_quest_entries_are_compatibility_aliases(self) -> None:
+    def test_root_quest_entries_are_absent(self) -> None:
         root_entries = sorted((REPO_ROOT / "quests").glob("AOA-Q-*"))
-        self.assertGreater(len(root_entries), 0)
-        for path in root_entries:
-            self.assertTrue(path.is_symlink(), path)
-            target = (path.parent / os.readlink(path)).resolve()
-            target_rel = target.relative_to(REPO_ROOT).parts
-            self.assertEqual(target_rel[0], "quests")
-            self.assertIn(
-                target_rel[1],
-                {"captured", "triaged", "ready", "active", "blocked", "reanchor", "done", "dropped"},
-            )
-            self.assertEqual(target.name, path.name)
+        self.assertEqual(root_entries, [])
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aoa.local/Agents-of-Abyss/schemas/experience_downstream_projection_v1.json",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/schemas/experience_downstream_projection_v1.json",
   "title": "experience_downstream_projection v1",
   "type": "object",
   "required": [
