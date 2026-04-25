@@ -7,6 +7,28 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+### Added
+
+- `docs/START_HERE_ROUTE_CONTRACT.md` as the canonical route-mode contract for
+  public entry, root editing, direction changes, ownership routing, mechanic
+  changes, public claim validation, low-context agents, and district work
+- `docs/AGON_LANDING_LOG.md` and `docs/EXPERIENCE_LANDING_LOG.md` as
+  mechanic-level landing ledgers for checked surfaces, validators, owner
+  boundaries, stop-lines, and next routes
+- `scripts/validate_mechanic_landing_logs.py` and regression coverage for the
+  Agon and Experience LANDING_LOG surfaces
+
+### Changed
+
+- `generated/center_entry_map.min.json` and its schema now publish the
+  `aoa_center_entry_map_v2` route contract with route modes, human paths,
+  machine companions, and explicit `must_not_claim` stop-lines
+- `ROADMAP.md` now keeps strategic direction and current contour while
+  detailed Agon and Experience landing history lives in mechanic LANDING_LOG
+  surfaces
+- release validation now runs Markdown shape checks and mechanic landing-log
+  validation through `scripts/release_check.py`
+
 ## [0.2.3] - 2026-04-23
 
 ### Summary

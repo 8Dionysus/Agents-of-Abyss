@@ -35,7 +35,11 @@ Read in this order:
 6. [docs/LAYERS](docs/LAYERS.md) and [docs/REPO_ROLES](docs/REPO_ROLES.md) for layer roles and ownership routing.
 7. [docs/PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md) for what the center may honestly claim and how CI reinforces it.
 
-If you only need the shortest outside overview, stop after step 3. If you are a low-context agent or small model, also inspect [`generated/center_entry_map.min.json`](generated/center_entry_map.min.json).
+If you only need the shortest outside overview, stop after step 3. If you are
+a low-context agent or small model, also inspect
+[`generated/center_entry_map.min.json`](generated/center_entry_map.min.json).
+The route modes behind this entry surface are governed by
+[`docs/START_HERE_ROUTE_CONTRACT.md`](docs/START_HERE_ROUTE_CONTRACT.md).
 
 ## How to verify center claims
 
@@ -55,6 +59,7 @@ Use this tree before trusting a claim made by the center:
 ```bash
 python scripts/build_center_entry_map.py --check
 python scripts/validate_center_entry_map.py
+python scripts/validate_mechanic_landing_logs.py
 python scripts/validate_ecosystem.py
 python scripts/validate_markdown_shape.py
 python -m pytest -q tests
@@ -77,7 +82,7 @@ Everything else must justify its place through [docs/ROOT_SURFACE_LAW](docs/ROOT
 
 ## Branch by mechanism
 
-Use [docs/MECHANICS](docs/MECHANICS.md) as the single process gate when the question is **what kind of move is this?** rather than **which repository is this?** The atlas routes method/growth, recurrence/return/continuity, Agon, Experience, antifragility/subtraction, quest/RPG reflection, ToS bridge/witness/compost, release posture, machine companions, validators, owner splits, and stop-lines. The root deliberately keeps those branches behind one door so the polis remains a city gate, not a warehouse.
+Use [docs/MECHANICS](docs/MECHANICS.md) as the single process gate when the question is **what kind of move is this?** rather than **which repository is this?** The atlas routes method/growth, recurrence/return/continuity, Agon, Experience, antifragility/subtraction, quest/RPG reflection, ToS bridge/witness/compost, release posture, machine companions, validators, owner splits, and stop-lines. Detailed mechanic landing history lives in [docs/AGON_LANDING_LOG](docs/AGON_LANDING_LOG.md) and [docs/EXPERIENCE_LANDING_LOG](docs/EXPERIENCE_LANDING_LOG.md), not in the root roadmap. The root deliberately keeps those branches behind one door so the polis remains a city gate, not a warehouse.
 
 ## Quick route table
 

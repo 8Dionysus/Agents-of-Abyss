@@ -93,146 +93,19 @@ hardening, not a new implementation layer. Its current checked surface is:
   `docs/AGON_PREPARATION_POSTURE.md`
 - current kernel-wave automation boundary checks:
   `scripts/validate_wave4_kernel_automation.py`
+- mechanic landing ledgers:
+  `docs/AGON_LANDING_LOG.md` and `docs/EXPERIENCE_LANDING_LOG.md`
 
 This contour lets the center name the route, validators, and stop-lines while
 leaving checkpoint carry, candidate identity, seed staging, owner landing,
 derived summaries, recurring method, and future Agon-related handoffs in their
 owning repositories.
 
-### Released in `v0.2.3`: Agon imposition gate
-
-The Agon imposition gate is now part of the `v0.2.3` center contour. Its
-checked surface is:
-
-- center-owned Agon turn docs:
-  `docs/AGON_IMPOSITION_POSTURE.md`,
-  `docs/AGON_SURVIVAL_CRITERIA.md`,
-  `docs/AGON_DOUBT_AUDIT.md`,
-  `docs/PRE_AGON_BASELINE.md`, and
-  `docs/AGON_WAVE0_LANDING.md`
-- Wave 0 publication and contract surfaces:
-  `generated/agon_imposition_readiness.min.json`,
-  `schemas/agon-imposition-readiness.schema.json`, and
-  `examples/agon_doubt_audit.example.json`
-- explicit Wave 0 validation commands:
-  `scripts/build_agon_imposition_readiness.py`,
-  `scripts/validate_agon_imposition_readiness.py`, and
-  `tests/test_agon_imposition_readiness.py`
-
-This turn keeps Agon center-owned as an imposition audit, not a live arena,
-not a sibling repository, and not a runtime contour. It names the current
-system as a pre-Agon baseline and subjects current surfaces to
-survive/recharter/defer/prune/quarantine review while later actor, proof,
-memory, routing, runtime, and ToS waves remain routed to their owning
-repositories.
-
-### Released in `v0.2.3`: Agon lawful move language
-
-The Agon lawful move language is now part of the `v0.2.3` center contour. Its
-checked surface is:
-
-- center-owned Wave III lawful move docs:
-  `docs/AGON_LAWFUL_MOVE_LANGUAGE.md`,
-  `docs/AGON_MOVE_REGISTRY_MODEL.md`,
-  `docs/AGON_MOVE_OWNER_HANDOFFS.md`, and
-  `docs/AGON_WAVE3_LANDING.md`
-- Wave III publication and contract surfaces:
-  `config/agon_lawful_moves.seed.json`,
-  `generated/agon_lawful_move_registry.min.json`,
-  `schemas/agon-lawful-move.schema.json`,
-  `schemas/agon-lawful-move-registry.schema.json`, and
-  `examples/agon_lawful_move.example.json`
-- explicit Wave III validation commands:
-  `scripts/build_agon_lawful_move_registry.py`,
-  `scripts/validate_agon_lawful_moves.py`, and
-  `tests/test_agon_lawful_moves.py`
-
-This turn keeps lawful moves center-owned as pre-protocol legal vocabulary, not
-live arena execution. Every move stays explicitly pre-protocol with
-`live_protocol: false` and `runtime_effect: none`, while execution, proof,
-memory, routing, scenario, and runtime follow-through remain routed to their
-owning repositories.
-
-### Released in `v0.2.3`: Agon move owner binding
-
-The Agon move owner binding turn is now part of the `v0.2.3` center contour.
-Its checked surface is:
-
-- center-owned Wave IV owner-binding docs:
-  `docs/AGON_MOVE_OWNER_BINDING.md`,
-  `docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`,
-  `docs/AGON_OWNER_REPO_REQUESTS.md`,
-  `docs/AGON_PRE_PROTOCOL_STOP_LINES.md`, and
-  `docs/AGON_WAVE4_LANDING.md`
-- Wave IV publication and contract surfaces:
-  `config/agon_move_owner_bindings.seed.json`,
-  `generated/agon_move_owner_binding_registry.min.json`,
-  `schemas/agon-move-owner-binding.schema.json`,
-  `schemas/agon-move-owner-binding-registry.schema.json`, and
-  `examples/agon_move_owner_binding.example.json`
-- explicit Wave IV validation commands:
-  `scripts/build_agon_move_owner_binding_registry.py`,
-  `scripts/validate_agon_move_owner_bindings.py`, and
-  `tests/test_agon_move_owner_bindings.py`
-
-This turn keeps owner binding center-owned as pre-protocol binding law, not
-live owner landing. Every move keeps `Agents-of-Abyss` as the legal owner while
-practice, workflow, proof, routing, scenario, memory, stats, and actor slices
-remain only `requested_not_landed` companion requests until their owner
-repositories review them under their own boundaries.
-
-### Released in `v0.2.3`: Agon gate routing handoff
-
-The Agon gate routing handoff is now part of the `v0.2.3` center contour. Its
-checked surface is:
-
-- center-owned Wave V handoff docs:
-  `docs/AGON_GATE_ROUTING_HANDOFF.md`,
-  `docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
-  `docs/AGON_GATE_ROUTING_STOP_LINES.md`, and
-  `docs/AGON_WAVE5_CENTER_HANDOFF.md`
-- Wave V publication and contract surfaces:
-  `config/agon_gate_routing_handoff_request.seed.json`,
-  `generated/agon_gate_routing_handoff_request.min.json`,
-  `schemas/agon-gate-routing-handoff-request.schema.json`, and
-  `examples/agon_gate_routing_handoff_request.example.json`
-- explicit Wave V validation commands:
-  `scripts/build_agon_gate_routing_handoff_request.py`,
-  `scripts/validate_agon_gate_routing_handoff_request.py`, and
-  `tests/test_agon_gate_routing_handoff_request.py`
-
-This turn keeps gate routing center-owned as a pre-protocol handoff request,
-not live arena activation. `aoa-routing` may emit gate candidates, missing-
-context hints, owner-review hints, and quarantine hints, while verdicts,
-scars, retention, rank mutation, runtime dispatch, and ToS promotion remain
-outside routing and outside a live arena.
-
-### Released in `v0.2.3`: Agon trial playbook handoff
-
-The Agon trial playbook handoff is now part of the `v0.2.3` center contour. Its
-checked surface is:
-
-- center-owned Wave VI handoff docs:
-  `docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md`,
-  `docs/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md`,
-  `docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md`, and
-  `docs/AGON_WAVE6_CENTER_HANDOFF.md`
-- Wave VI publication and contract surfaces:
-  `config/agon_trial_playbook_request.seed.json`,
-  `generated/agon_trial_playbook_request.min.json`,
-  `schemas/agon-trial-playbook-request.schema.json`, and
-  `examples/agon_trial_playbook_request.example.json`
-- explicit Wave VI validation commands:
-  `scripts/build_agon_trial_playbook_request.py`,
-  `scripts/validate_agon_trial_playbook_request.py`, and
-  `tests/test_agon_trial_playbook_request.py`
-
-This turn keeps trial-playbook handoff center-owned as a pre-protocol owner
-request, not live arena activation. `aoa-playbooks` may land recurring
-mechanical trial choreography, expected evidence posture, owner-review
-artifacts, and fallback posture, while Agon law, verdicts, scars, retention,
-rank mutation, runtime substrate, and ToS promotion remain outside the
-playbook layer and outside a live arena.
+Detailed Agon wave landings now live in `docs/AGON_LANDING_LOG.md`; detailed
+Experience planting history now lives in `docs/EXPERIENCE_LANDING_LOG.md`.
+`ROADMAP.md` keeps the direction and current contour, while LANDING_LOG
+surfaces keep the wave ledger, validators, surfaces, owner boundaries, and
+stop-lines.
 
 ## Phase 1: center realignment
 

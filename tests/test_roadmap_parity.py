@@ -29,6 +29,8 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
     assert "Current release contour" in roadmap
     assert "roadmap continuity and owner-boundary" in roadmap
     assert "leaving checkpoint carry, candidate identity, seed staging" in roadmap
+    assert "docs/AGON_LANDING_LOG.md" in roadmap
+    assert "docs/EXPERIENCE_LANDING_LOG.md" in roadmap
 
     registry_names = {entry["name"] for entry in registry["repos"]}
     supporting_names = {entry["name"] for entry in supporting["repos"]}
@@ -70,6 +72,8 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
         "docs/COMPONENT_REFRESH_LAW.md",
         "docs/AGON_PREPARATION_POSTURE.md",
         "scripts/validate_wave4_kernel_automation.py",
+        "docs/AGON_LANDING_LOG.md",
+        "docs/EXPERIENCE_LANDING_LOG.md",
     ]
     for surface in current_release_surfaces:
         assert (REPO_ROOT / surface).exists(), surface
@@ -77,10 +81,11 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
 
 
 def test_roadmap_names_released_agon_imposition_gate_surfaces() -> None:
+    landing_log = read_text("docs/AGON_LANDING_LOG.md")
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Released in `v0.2.3`: Agon imposition gate" in roadmap
-    assert "explicit Wave 0 validation commands" in roadmap
+    assert "### Agon imposition gate" in landing_log
+    assert "docs/AGON_LANDING_LOG.md" in roadmap
 
     unreleased_surfaces = [
         "docs/AGON_IMPOSITION_POSTURE.md",
@@ -97,14 +102,15 @@ def test_roadmap_names_released_agon_imposition_gate_surfaces() -> None:
     ]
     for surface in unreleased_surfaces:
         assert (REPO_ROOT / surface).exists(), surface
-        assert surface in roadmap
+        assert surface in landing_log
 
 
 def test_roadmap_names_released_agon_lawful_move_language_surfaces() -> None:
+    landing_log = read_text("docs/AGON_LANDING_LOG.md")
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Released in `v0.2.3`: Agon lawful move language" in roadmap
-    assert "explicit Wave III validation commands" in roadmap
+    assert "### Agon lawful move language" in landing_log
+    assert "docs/AGON_LANDING_LOG.md" in roadmap
 
     unreleased_surfaces = [
         "docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
@@ -122,14 +128,15 @@ def test_roadmap_names_released_agon_lawful_move_language_surfaces() -> None:
     ]
     for surface in unreleased_surfaces:
         assert (REPO_ROOT / surface).exists(), surface
-        assert surface in roadmap
+        assert surface in landing_log
 
 
 def test_roadmap_names_released_agon_move_owner_binding_surfaces() -> None:
+    landing_log = read_text("docs/AGON_LANDING_LOG.md")
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Released in `v0.2.3`: Agon move owner binding" in roadmap
-    assert "explicit Wave IV validation commands" in roadmap
+    assert "### Agon move owner binding" in landing_log
+    assert "docs/AGON_LANDING_LOG.md" in roadmap
 
     unreleased_surfaces = [
         "docs/AGON_MOVE_OWNER_BINDING.md",
@@ -148,14 +155,15 @@ def test_roadmap_names_released_agon_move_owner_binding_surfaces() -> None:
     ]
     for surface in unreleased_surfaces:
         assert (REPO_ROOT / surface).exists(), surface
-        assert surface in roadmap
+        assert surface in landing_log
 
 
 def test_roadmap_names_released_agon_gate_routing_handoff_surfaces() -> None:
+    landing_log = read_text("docs/AGON_LANDING_LOG.md")
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Released in `v0.2.3`: Agon gate routing handoff" in roadmap
-    assert "explicit Wave V validation commands" in roadmap
+    assert "### Agon gate routing handoff" in landing_log
+    assert "docs/AGON_LANDING_LOG.md" in roadmap
 
     unreleased_surfaces = [
         "docs/AGON_GATE_ROUTING_HANDOFF.md",
@@ -172,14 +180,15 @@ def test_roadmap_names_released_agon_gate_routing_handoff_surfaces() -> None:
     ]
     for surface in unreleased_surfaces:
         assert (REPO_ROOT / surface).exists(), surface
-        assert surface in roadmap
+        assert surface in landing_log
 
 
 def test_roadmap_names_released_agon_trial_playbook_handoff_surfaces() -> None:
+    landing_log = read_text("docs/AGON_LANDING_LOG.md")
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Released in `v0.2.3`: Agon trial playbook handoff" in roadmap
-    assert "explicit Wave VI validation commands" in roadmap
+    assert "### Agon trial playbook handoff" in landing_log
+    assert "docs/AGON_LANDING_LOG.md" in roadmap
 
     unreleased_surfaces = [
         "docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
@@ -196,4 +205,4 @@ def test_roadmap_names_released_agon_trial_playbook_handoff_surfaces() -> None:
     ]
     for surface in unreleased_surfaces:
         assert (REPO_ROOT / surface).exists(), surface
-        assert surface in roadmap
+        assert surface in landing_log

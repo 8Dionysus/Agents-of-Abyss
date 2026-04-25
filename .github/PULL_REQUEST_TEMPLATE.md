@@ -39,6 +39,7 @@ If this PR adds, moves, removes, or renames a root file:
 If this PR touches a center mechanic or technical district:
 
 - [ ] I checked `docs/MECHANICS.md` for the relevant mechanic.
+- [ ] If this touches Agon or Experience landing surfaces, I updated the relevant `docs/*_LANDING_LOG.md` or explained why no landing changed.
 - [ ] I checked the local district README for `generated/`, `scripts/`, `schemas/`, `tests/`, `config/`, `examples/`, `manifests/`, or `quests/` when applicable.
 - [ ] I confirmed the change does not grant live runtime authority, hidden memory sovereignty, proof authority, rank mutation, ToS canon write authority, or owner-local truth outside the proper owner repository.
 
@@ -60,8 +61,10 @@ Describe how you checked the change. Examples:
 - checked `ECOSYSTEM_MAP.md` and `docs/LAYERS.md` for alignment
 - checked `docs/ROOT_SURFACE_LAW.md` for root placement
 - checked `docs/MECHANICS.md` for mechanic routing
+- checked `docs/AGON_LANDING_LOG.md` or `docs/EXPERIENCE_LANDING_LOG.md` when a mechanic landing changed
 - checked the relevant technical district README
 - ran `python scripts/validate_markdown_shape.py`
+- ran `python scripts/validate_mechanic_landing_logs.py`
 - ran `python scripts/validate_ecosystem.py`
 - ran the nearest Agon, Experience, schema, generated, or release validator
 - ran `python -m pytest -q tests`

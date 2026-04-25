@@ -15,7 +15,7 @@ For ecosystem understanding, read in this order:
 Stop there for a first-pass center view.
 Use `docs/LAYERS.md` and `ROADMAP.md` only when you need conceptual detail or declared direction after the overview.
 
-For small-model and low-context entry, use `generated/center_entry_map.min.json` as the compact machine-facing companion to the same route.
+For small-model and low-context entry, use `generated/center_entry_map.min.json` as the compact machine-facing companion to the same route. The route modes are governed by `docs/START_HERE_ROUTE_CONTRACT.md`.
 `README.md` remains the public human root, and `CHARTER.md` remains the authority surface.
 
 ## Public support posture
@@ -42,6 +42,9 @@ An `Agents-of-Abyss` public claim is only honest when these stay aligned in the 
 - `CHARTER.md`
 - `ECOSYSTEM_MAP.md`
 - `docs/FEDERATION_RULES.md`
+- `docs/START_HERE_ROUTE_CONTRACT.md`
+- `docs/AGON_LANDING_LOG.md`
+- `docs/EXPERIENCE_LANDING_LOG.md`
 - `generated/center_entry_map.min.json`
 - `generated/ecosystem_registry.min.json`
 - `generated/federation_supporting_inventory.min.json`
@@ -63,5 +66,6 @@ The machine-facing center capsule has its own bounded rebuild loop:
 
 - `python scripts/build_center_entry_map.py --check`
 - `python scripts/validate_center_entry_map.py`
+- `python scripts/validate_mechanic_landing_logs.py`
 
 PR and push validation live in `.github/workflows/repo-validation.yml`.

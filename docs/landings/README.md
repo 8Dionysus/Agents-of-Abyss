@@ -4,6 +4,15 @@ This directory holds historical seed manifests and wave receipts that should rem
 
 A landing receipt may explain what a wave planted, why it belonged in the center, and how it was validated. It should not become the canonical doctrine for the mechanic after the deeper surfaces have landed.
 
+Canonical mechanic landing ledgers now live one level up:
+
+- [`AGON_LANDING_LOG`](../AGON_LANDING_LOG.md)
+- [`EXPERIENCE_LANDING_LOG`](../EXPERIENCE_LANDING_LOG.md)
+
+Use this directory for archived receipts and seed manifests. Use the
+LANDING_LOG surfaces for active mechanic landing history, required validators,
+owner boundaries, and stop-lines.
+
 ## Current surfaces
 
 | Surface | Role |
@@ -12,4 +21,6 @@ A landing receipt may explain what a wave planted, why it belonged in the center
 
 ## Future docs pass
 
-A later docs-architecture pass may decide whether more `AGON_WAVE*_LANDING.md` and `EXPERIENCE_*` landing surfaces should remain flat under `docs/` or move into thematic districts. That migration should update links, validators, generated capsules, and tests together.
+A later docs-architecture pass may decide whether more historical receipt files
+should move here. That migration should update links, LANDING_LOG entries,
+validators, generated capsules, and tests together.
