@@ -12,7 +12,7 @@ SRC = ROOT / 'mechanics/agon/parts/duel-kernel/config/agon_mechanical_trial_suit
 OUT = ROOT / 'mechanics/agon/parts/duel-kernel/generated/agon_mechanical_trial_suite_registry.min.json'
 ITEM_KEY = 'trials'
 REGISTRY_ID = 'agon.mechanical_trial_suite.registry.v0'
-WAVE = 'XIII'
+LINEAGE_REF = 'mechanical-trial-suite'
 RUNTIME_POSTURE = 'pre_protocol_candidate_only'
 REQUIRED_FIELDS = ['trial_id', 'playbook_id', 'session_model_id', 'kernel_model_id', 'runtime_kernel_id', 'terminal_candidate', 'lawful_moves', 'contestant_count', 'live_protocol', 'runtime_effect', 'assistant_contestant_allowed']
 FORBIDDEN_TRUE_FIELDS = ['assistant_contestant_allowed']
@@ -28,7 +28,7 @@ def digest_obj(obj):
 def expected_registry(data, items):
     return {
         'registry_id': REGISTRY_ID,
-        'wave': WAVE,
+        'lineage_ref': LINEAGE_REF,
         'runtime_posture': RUNTIME_POSTURE,
         'count': len(items),
         ITEM_KEY: items,
@@ -56,8 +56,8 @@ def main():
     data = json.loads(SRC.read_text(encoding='utf-8'))
     if data.get('registry_id') != REGISTRY_ID:
         return fail(f'source registry_id must be {REGISTRY_ID}')
-    if data.get('wave') != WAVE:
-        return fail(f'source wave must be {WAVE}')
+    if data.get('lineage_ref') != LINEAGE_REF:
+        return fail(f'source lineage_ref must be {LINEAGE_REF}')
     if data.get('runtime_posture') != RUNTIME_POSTURE:
         return fail(f'source runtime_posture must be {RUNTIME_POSTURE}')
     items = data.get(ITEM_KEY, [])

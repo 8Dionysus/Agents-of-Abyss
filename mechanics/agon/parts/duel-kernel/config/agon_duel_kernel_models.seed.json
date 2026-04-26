@@ -120,11 +120,11 @@
   ],
   "registry_id": "agon.duel_kernel_model_registry.v1",
   "runtime_posture": "bounded_model_and_owner_handoff_only",
-  "source_waves": [
-    "VIII_arena_session_model",
-    "IX_state_packets",
-    "X_ccs_law",
-    "XI_vds_bridge"
+  "source_refs": [
+    "packet_arena_session_model",
+    "state_packets",
+    "ccs_law",
+    "vds_bridge"
   ],
-  "wave": "XII"
+  "lineage_ref": "duel-kernel"
 }

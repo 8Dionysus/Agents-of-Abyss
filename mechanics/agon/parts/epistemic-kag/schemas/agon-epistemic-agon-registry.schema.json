@@ -35,13 +35,13 @@
     "runtime_posture": {
       "const": "candidate_only"
     },
-    "wave": {
-      "const": "XV"
+    "lineage_ref": {
+      "const": "epistemic-agon"
     }
   },
   "required": [
     "registry_id",
-    "wave",
+    "lineage_ref",
     "runtime_posture",
     "count",
     "move_extension_count",

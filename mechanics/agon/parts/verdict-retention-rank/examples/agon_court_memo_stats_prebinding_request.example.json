@@ -1,13 +1,13 @@
 {
   "live_protocol": false,
-  "next_wave_unlocked_when": [
+  "next_enablement": [
     "eval prebinding registry validates",
     "memo prebinding registry validates",
     "stats prebinding registry validates",
     "recurrence manifests for court/memory/stats surfaces exist",
     "no owner claims live protocol authority"
   ],
-  "notes": "Wave VII binds court, memory, and observability surfaces to recurring Agon pressure. It does not open the arena.",
+  "notes": "court/memo/stats prebinding route binds court, memory, and observability surfaces to recurring Agon pressure. It does not open the arena.",
   "owner_repo": "Agents-of-Abyss",
   "owner_requests": [
     {
@@ -23,7 +23,7 @@
       "opens_arena_session": false,
       "promotes_to_tos": false,
       "request": "land court prebinding surfaces for closure, trace, evidence, contradiction, assistant boundary, summon intent, and delta legitimacy checks",
-      "request_ref": "agon.wave7.request.evals_court_prebinding",
+      "request_ref": "agon.court_memo_stats.request.evals_court_prebinding",
       "runs_hidden_scheduler": false,
       "runtime_effect": "none",
       "status": "seeded_owner_request",
@@ -42,7 +42,7 @@
       "opens_arena_session": false,
       "promotes_to_tos": false,
       "request": "land scar, delta, rupture, trial chronicle, and retention candidate intake surfaces",
-      "request_ref": "agon.wave7.request.memo_memory_prebinding",
+      "request_ref": "agon.court_memo_stats.request.memo_memory_prebinding",
       "runs_hidden_scheduler": false,
       "runtime_effect": "none",
       "status": "seeded_owner_request",
@@ -61,7 +61,7 @@
       "opens_arena_session": false,
       "promotes_to_tos": false,
       "request": "land derived observability prebindings for closure discipline, contradiction integrity, summon pressure, assistant escalation, delta candidates, and recurrence review pressure",
-      "request_ref": "agon.wave7.request.stats_observability_prebinding",
+      "request_ref": "agon.court_memo_stats.request.stats_observability_prebinding",
       "runs_hidden_scheduler": false,
       "runtime_effect": "none",
       "status": "seeded_owner_request",
@@ -79,8 +79,8 @@
       "mutates_rank": false,
       "opens_arena_session": false,
       "promotes_to_tos": false,
-      "request": "land optional recurrence review lanes for Wave VII surfaces",
-      "request_ref": "agon.wave7.request.sdk_recurrence_lanes",
+      "request": "land optional recurrence review lanes for court/memo/stats prebinding route surfaces",
+      "request_ref": "agon.court_memo_stats.request.sdk_recurrence_lanes",
       "runs_hidden_scheduler": false,
       "runtime_effect": "none",
       "status": "seeded_owner_request",
@@ -96,7 +96,7 @@
     "beacon_observation",
     "trial_playbook_recurrence_signal"
   ],
-  "request_ref": "agon.wave7.court_memo_stats_prebinding",
+  "request_ref": "agon.court_memo_stats.prebinding",
   "required_stop_lines": [
     "no_arena_session_creation",
     "no_sealed_commit_runtime",
@@ -123,5 +123,5 @@
   "schema_version": "agon_court_memo_stats_prebinding_request_v1",
   "status": "seeded_pre_protocol_handoff_request",
   "title": "Court / Memo / Stats Prebinding over Recurrence Review Surfaces",
-  "wave": "VII"
+  "lineage_ref": "court-memo-stats-prebinding"
 }

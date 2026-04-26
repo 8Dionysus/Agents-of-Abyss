@@ -41,7 +41,7 @@ def test_lawful_move_registry_pre_protocol_invariants() -> None:
     registry_path = ROOT / "mechanics" / "agon" / "parts" / "lawful-move-grammar" / "generated" / "agon_lawful_move_registry.min.json"
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
 
-    assert registry["wave"] == "III"
+    assert registry["lineage_ref"] == "lawful-move-grammar"
     assert registry["status"] == "pre_protocol_lawful_move_language"
     assert registry["counts"]["total"] == len(registry["moves"])
     assert registry["counts"]["total"] >= 10

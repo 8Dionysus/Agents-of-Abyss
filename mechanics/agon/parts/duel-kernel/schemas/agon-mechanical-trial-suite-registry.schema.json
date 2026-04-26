@@ -22,13 +22,13 @@
       },
       "type": "array"
     },
-    "wave": {
-      "const": "XIII"
+    "lineage_ref": {
+      "const": "mechanical-trial-suite"
     }
   },
   "required": [
     "registry_id",
-    "wave",
+    "lineage_ref",
     "runtime_posture",
     "count",
     "trials",

@@ -23,13 +23,13 @@
     "status": {
       "type": "string"
     },
-    "wave": {
+    "lineage_ref": {
       "type": "string"
     }
   },
   "required": [
     "schema_version",
-    "wave",
+    "lineage_ref",
     "owner_repo",
     "status",
     "live_protocol",

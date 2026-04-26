@@ -2,7 +2,7 @@
 """Build the compact Agon lawful move registry.
 
 This script intentionally uses only the Python standard library.
-It validates the Wave III pre-protocol vocabulary without claiming live arena runtime.
+It validates the lawful-move-grammar route pre-protocol vocabulary without claiming live arena runtime.
 """
 
 from __future__ import annotations
@@ -75,7 +75,7 @@ EXPECTED_MOVE_KEYS = {
     "produces",
     "future_owner_handoffs",
     "status",
-    "wave",
+    "lineage_ref",
     "live_protocol",
     "runtime_effect",
     "center_owns",
@@ -148,8 +148,8 @@ def validate_move(move: dict[str, Any]) -> None:
 
     if move.get("status") != "seeded_pre_protocol":
         fail(f"{move_id}: status must be seeded_pre_protocol")
-    if move.get("wave") != "III":
-        fail(f"{move_id}: wave must be III")
+    if move.get("lineage_ref") != "lawful-move-grammar":
+        fail(f"{move_id}: lineage_ref must be lawful-move-grammar")
     if move.get("live_protocol") is not False:
         fail(f"{move_id}: live_protocol must be false")
     if move.get("runtime_effect") != "none":
@@ -190,7 +190,7 @@ def validate_move(move: dict[str, Any]) -> None:
 
     if move_class == "summon":
         if actor_forms != ["agonic_contestant_candidate"] or seats != ["contestant"]:
-            fail(f"{move_id}: summon vocabulary is contestant-only in Wave III")
+            fail(f"{move_id}: summon vocabulary is contestant-only in lawful-move-grammar route")
         if "hidden summon" not in " ".join(must_not).lower():
             fail(f"{move_id}: summon moves must explicitly forbid hidden summon")
 
@@ -204,8 +204,8 @@ def validate_move(move: dict[str, Any]) -> None:
 
 
 def validate_source(source: dict[str, Any]) -> list[dict[str, Any]]:
-    if source.get("wave") != "III":
-        fail("source wave must be III")
+    if source.get("lineage_ref") != "lawful-move-grammar":
+        fail("source lineage_ref must be lawful-move-grammar")
     if source.get("status") != "pre_protocol_language_seed":
         fail("source status must be pre_protocol_language_seed")
     moves = source.get("moves")
@@ -240,7 +240,7 @@ def build_registry() -> dict[str, Any]:
         "schema_version": "agon-lawful-move-registry/0.1",
         "generated_by": "mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py",
         "source": "mechanics/agon/parts/lawful-move-grammar/config/agon_lawful_moves.seed.json",
-        "wave": "III",
+        "lineage_ref": "lawful-move-grammar",
         "status": "pre_protocol_lawful_move_language",
         "counts": {
             "total": len(moves),

@@ -117,8 +117,8 @@
       "minItems": 5,
       "type": "array"
     },
-    "wave": {
-      "const": "IV"
+    "lineage_ref": {
+      "const": "owner-binding"
     }
   },
   "required": [
@@ -126,7 +126,7 @@
     "name",
     "move_class",
     "binding_status",
-    "wave",
+    "lineage_ref",
     "live_protocol",
     "runtime_effect",
     "binding_intent",

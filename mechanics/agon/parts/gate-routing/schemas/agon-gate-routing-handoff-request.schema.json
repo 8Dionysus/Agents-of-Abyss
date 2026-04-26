@@ -11,7 +11,7 @@
     "expected_routing_surface": {
       "type": "string"
     },
-    "future_wave_dependency": {
+    "future_dependency": {
       "type": "object"
     },
     "owner_repo": {
@@ -47,14 +47,14 @@
     "status": {
       "type": "string"
     },
-    "wave": {
-      "const": "V",
+    "lineage_ref": {
+      "const": "gate-routing",
       "type": "string"
     }
   },
   "required": [
     "schema_version",
-    "wave",
+    "lineage_ref",
     "status",
     "owner_repo",
     "routing_repo",
@@ -64,7 +64,7 @@
     "center_must_keep",
     "expected_routing_surface",
     "required_stop_line",
-    "future_wave_dependency"
+    "future_dependency"
   ],
   "title": "Agon Gate Routing Handoff Request",
   "type": "object"

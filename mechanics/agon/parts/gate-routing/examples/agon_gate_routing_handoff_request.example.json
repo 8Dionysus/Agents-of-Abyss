@@ -7,7 +7,7 @@
     "future_terminal_outcomes"
   ],
   "expected_routing_surface": "aoa-routing/generated/agon_gate_routing_registry.min.json",
-  "future_wave_dependency": {
+  "future_dependency": {
     "before_arena_session_model": [
       "aoa-routing gate hints must stay pre-protocol",
       "actor formation surfaces remain owned by aoa-agents",
@@ -36,5 +36,5 @@
   "routing_repo": "aoa-routing",
   "schema_version": "agon_gate_routing_handoff_request.v1",
   "status": "seeded_center_handoff_request",
-  "wave": "V"
+  "lineage_ref": "gate-routing"
 }

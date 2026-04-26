@@ -27,7 +27,7 @@ from build_agon_epistemic_agon_registry import (  # noqa: E402
     REGISTRY_ID,
     RUNTIME_POSTURE,
     SRC,
-    WAVE,
+    LINEAGE_REF,
     build,
     load_source,
 )
@@ -106,8 +106,8 @@ def validate() -> int:
 
     if data.get("registry_id") != REGISTRY_ID:
         return fail(f"source registry_id must be {REGISTRY_ID}")
-    if data.get("wave") != WAVE:
-        return fail(f"source wave must be {WAVE}")
+    if data.get("lineage_ref") != LINEAGE_REF:
+        return fail(f"source lineage_ref must be {LINEAGE_REF}")
     if data.get("runtime_posture") != RUNTIME_POSTURE:
         return fail(f"source runtime_posture must be {RUNTIME_POSTURE}")
 

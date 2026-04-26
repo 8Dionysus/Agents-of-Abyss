@@ -204,8 +204,8 @@
       "type": "array",
       "uniqueItems": true
     },
-    "wave": {
-      "const": "XVI"
+    "lineage_ref": {
+      "const": "school-lineage-campaign"
     }
   },
   "required": [
@@ -221,7 +221,7 @@
     "review_status",
     "runtime_effect",
     "stop_lines",
-    "wave"
+    "lineage_ref"
   ],
   "title": "agon-school-lineage-campaign.schema.json",
   "type": "object"

@@ -23,7 +23,7 @@ def build_registry():
     seed = load_json(CONFIG)
     return {
         "registry_id": seed["registry_id"],
-        "wave": seed["wave"],
+        "lineage_ref": seed["lineage_ref"],
         "status": seed.get("status", "seeded"),
         "live_protocol": seed["live_protocol"],
         "runtime_effect": seed["runtime_effect"],

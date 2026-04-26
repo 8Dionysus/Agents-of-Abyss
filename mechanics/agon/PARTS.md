@@ -36,9 +36,9 @@ easier to follow, not merely smaller.
 ## Provenance bridge
 
 Detailed source-doc accounting is deliberately outside part docs. Use
-[PROVENANCE](PROVENANCE.md) when a task must audit which wave, model, handoff,
-or generated capsule fed a part. Active part docs should not grow source-file
-inventories.
+[PROVENANCE](PROVENANCE.md) when a task must audit which source contour, model,
+handoff, or generated capsule fed a part. Active part docs should not grow
+source-file inventories.
 
 ## Validation
 

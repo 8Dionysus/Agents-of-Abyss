@@ -19,8 +19,8 @@ SRC = ROOT / 'mechanics/agon/parts/sophian-threshold/config/agon_sophian_thresho
 OUT = ROOT / 'mechanics/agon/parts/sophian-threshold/generated/agon_sophian_threshold_registry.min.json'
 ITEM_KEY = 'threshold_components'
 REGISTRY_ID = 'agon.sophian_threshold.registry.v1'
-WAVE = 'XVIII'
-WAVE_NAME = 'Sophian Threshold'
+LINEAGE_REF = 'sophian-threshold'
+LINEAGE_TITLE = 'Sophian Threshold'
 RUNTIME_POSTURE = 'candidate_only'
 
 
@@ -34,8 +34,8 @@ def load_source() -> dict[str, Any]:
     data = json.loads(SRC.read_text(encoding='utf-8'))
     expected_metadata = {
         'registry_id': REGISTRY_ID,
-        'wave': WAVE,
-        'wave_name': WAVE_NAME,
+        'lineage_ref': LINEAGE_REF,
+        'lineage_title': LINEAGE_TITLE,
         'runtime_posture': RUNTIME_POSTURE,
     }
     for field, expected in expected_metadata.items():
@@ -52,8 +52,8 @@ def build() -> dict[str, Any]:
     items = data[ITEM_KEY]
     return {
         'registry_id': REGISTRY_ID,
-        'wave': WAVE,
-        'wave_name': WAVE_NAME,
+        'lineage_ref': LINEAGE_REF,
+        'lineage_title': LINEAGE_TITLE,
         'runtime_posture': RUNTIME_POSTURE,
         'count': len(items),
         ITEM_KEY: items,

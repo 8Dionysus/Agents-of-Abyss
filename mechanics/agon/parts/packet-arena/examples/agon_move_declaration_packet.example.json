@@ -54,5 +54,5 @@
   },
   "session_draft_ref": "draft.broken_trace.example",
   "session_model_id": "agon.session.broken_trace_trial",
-  "wave": "IX"
+  "lineage_ref": "state-packets"
 }

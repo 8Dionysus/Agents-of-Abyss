@@ -171,7 +171,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("Wave I and Wave II", audit)
         self.assertIn("Release-clean is not Agon-ready.", baseline)
         self.assertIn("\"surface_kind\":\"agon_imposition_gate\"", readiness)
-        self.assertIn("Wave I: Agonic Actor Rechartering", readiness)
+        self.assertIn("agonic-actor-recharter route: Agonic Actor Rechartering", readiness)
+        self.assertNotIn("Wave I: Agonic Actor Rechartering", readiness)
 
     def test_agon_lawful_move_routes_stay_center_bounded(self) -> None:
         readme = read_text("README.md")

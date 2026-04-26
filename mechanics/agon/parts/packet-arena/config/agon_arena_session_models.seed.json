@@ -1,16 +1,16 @@
 {
   "live_protocol": false,
-  "next_wave_unlocked_when": [
+  "next_enablement": [
     "arena session models validate",
     "each model has charter, seats, lifecycle, pressure profiles, and terminal outcome slots",
-    "sealed_commit_slot and reveal_slot remain reserved for Wave IX",
+    "sealed_commit_slot and reveal_slot remain reserved for state-packet route",
     "no model claims live protocol or runtime effect",
     "assistant seats remain service support and cannot become contestants"
   ],
-  "notes": "Wave VIII gives Agon a session-shaped skeleton. It does not open the arena.",
+  "notes": "packet-arena route gives Agon a session-shaped skeleton. It does not open the arena.",
   "owner_repo": "Agents-of-Abyss",
   "purpose": "Define pre-protocol arena session shapes, charters, seats, lifecycle slots, pressure profile slots, and terminal outcome slots without creating live sessions.",
-  "registry_ref": "agon.wave8.arena_session_models",
+  "registry_ref": "agon.packet_arena.session_models",
   "required_stop_lines": [
     "no_live_session_instance_creation",
     "no_runtime_state_transition",
@@ -112,17 +112,17 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "sealed_commit_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future sealed stance commitments. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future sealed stance commitments. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "reveal_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future reveal mechanics. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future reveal mechanics. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
@@ -147,24 +147,24 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-evals",
+          "owner_hint": "future verdict/delta/scar route + aoa-evals",
           "phase_id": "adjudication_slot",
           "phase_status": "reserved_for_future_verdict_bridge",
-          "purpose": "Reserved for future verdict flow. Wave VIII issues no verdicts."
+          "purpose": "Reserved for future verdict flow. packet-arena route issues no verdicts."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-memo",
+          "owner_hint": "future verdict/delta/scar route + aoa-memo",
           "phase_id": "inscription_slot",
           "phase_status": "reserved_for_future_delta_scar_bridge",
-          "purpose": "Reserved for future delta and scar bridge. Wave VIII writes no memory."
+          "purpose": "Reserved for future delta and scar bridge. packet-arena route writes no memory."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XIV + aoa-memo + aoa-stats",
+          "owner_hint": "future retention-rank route + aoa-memo + aoa-stats",
           "phase_id": "retention_slot",
           "phase_status": "reserved_for_future_retention_economy",
-          "purpose": "Reserved for future retention scheduling. Wave VIII schedules nothing."
+          "purpose": "Reserved for future retention scheduling. packet-arena route schedules nothing."
         },
         {
           "live_effect": "none",
@@ -219,7 +219,7 @@
           "pressure_class": "model_of_other",
           "pressure_id": "prediction_required",
           "purpose": "Models required prediction before future reveal.",
-          "requires_future_owner": "aoa-agents + future Wave IX"
+          "requires_future_owner": "aoa-agents + future state-packet route"
         }
       ],
       "profile": "mechanical",
@@ -401,17 +401,17 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "sealed_commit_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future sealed stance commitments. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future sealed stance commitments. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "reveal_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future reveal mechanics. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future reveal mechanics. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
@@ -436,24 +436,24 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-evals",
+          "owner_hint": "future verdict/delta/scar route + aoa-evals",
           "phase_id": "adjudication_slot",
           "phase_status": "reserved_for_future_verdict_bridge",
-          "purpose": "Reserved for future verdict flow. Wave VIII issues no verdicts."
+          "purpose": "Reserved for future verdict flow. packet-arena route issues no verdicts."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-memo",
+          "owner_hint": "future verdict/delta/scar route + aoa-memo",
           "phase_id": "inscription_slot",
           "phase_status": "reserved_for_future_delta_scar_bridge",
-          "purpose": "Reserved for future delta and scar bridge. Wave VIII writes no memory."
+          "purpose": "Reserved for future delta and scar bridge. packet-arena route writes no memory."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XIV + aoa-memo + aoa-stats",
+          "owner_hint": "future retention-rank route + aoa-memo + aoa-stats",
           "phase_id": "retention_slot",
           "phase_status": "reserved_for_future_retention_economy",
-          "purpose": "Reserved for future retention scheduling. Wave VIII schedules nothing."
+          "purpose": "Reserved for future retention scheduling. packet-arena route schedules nothing."
         },
         {
           "live_effect": "none",
@@ -682,17 +682,17 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "sealed_commit_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future sealed stance commitments. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future sealed stance commitments. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "reveal_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future reveal mechanics. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future reveal mechanics. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
@@ -717,24 +717,24 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-evals",
+          "owner_hint": "future verdict/delta/scar route + aoa-evals",
           "phase_id": "adjudication_slot",
           "phase_status": "reserved_for_future_verdict_bridge",
-          "purpose": "Reserved for future verdict flow. Wave VIII issues no verdicts."
+          "purpose": "Reserved for future verdict flow. packet-arena route issues no verdicts."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-memo",
+          "owner_hint": "future verdict/delta/scar route + aoa-memo",
           "phase_id": "inscription_slot",
           "phase_status": "reserved_for_future_delta_scar_bridge",
-          "purpose": "Reserved for future delta and scar bridge. Wave VIII writes no memory."
+          "purpose": "Reserved for future delta and scar bridge. packet-arena route writes no memory."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XIV + aoa-memo + aoa-stats",
+          "owner_hint": "future retention-rank route + aoa-memo + aoa-stats",
           "phase_id": "retention_slot",
           "phase_status": "reserved_for_future_retention_economy",
-          "purpose": "Reserved for future retention scheduling. Wave VIII schedules nothing."
+          "purpose": "Reserved for future retention scheduling. packet-arena route schedules nothing."
         },
         {
           "live_effect": "none",
@@ -971,17 +971,17 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "sealed_commit_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future sealed stance commitments. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future sealed stance commitments. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "reveal_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future reveal mechanics. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future reveal mechanics. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
@@ -1006,24 +1006,24 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-evals",
+          "owner_hint": "future verdict/delta/scar route + aoa-evals",
           "phase_id": "adjudication_slot",
           "phase_status": "reserved_for_future_verdict_bridge",
-          "purpose": "Reserved for future verdict flow. Wave VIII issues no verdicts."
+          "purpose": "Reserved for future verdict flow. packet-arena route issues no verdicts."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-memo",
+          "owner_hint": "future verdict/delta/scar route + aoa-memo",
           "phase_id": "inscription_slot",
           "phase_status": "reserved_for_future_delta_scar_bridge",
-          "purpose": "Reserved for future delta and scar bridge. Wave VIII writes no memory."
+          "purpose": "Reserved for future delta and scar bridge. packet-arena route writes no memory."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XIV + aoa-memo + aoa-stats",
+          "owner_hint": "future retention-rank route + aoa-memo + aoa-stats",
           "phase_id": "retention_slot",
           "phase_status": "reserved_for_future_retention_economy",
-          "purpose": "Reserved for future retention scheduling. Wave VIII schedules nothing."
+          "purpose": "Reserved for future retention scheduling. packet-arena route schedules nothing."
         },
         {
           "live_effect": "none",
@@ -1071,7 +1071,7 @@
           "pressure_class": "model_of_other",
           "pressure_id": "prediction_required",
           "purpose": "Models required prediction before future reveal.",
-          "requires_future_owner": "aoa-agents + future Wave IX"
+          "requires_future_owner": "aoa-agents + future state-packet route"
         }
       ],
       "profile": "mechanical",
@@ -1254,17 +1254,17 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "sealed_commit_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future sealed stance commitments. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future sealed stance commitments. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "reveal_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future reveal mechanics. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future reveal mechanics. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
@@ -1289,24 +1289,24 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-evals",
+          "owner_hint": "future verdict/delta/scar route + aoa-evals",
           "phase_id": "adjudication_slot",
           "phase_status": "reserved_for_future_verdict_bridge",
-          "purpose": "Reserved for future verdict flow. Wave VIII issues no verdicts."
+          "purpose": "Reserved for future verdict flow. packet-arena route issues no verdicts."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-memo",
+          "owner_hint": "future verdict/delta/scar route + aoa-memo",
           "phase_id": "inscription_slot",
           "phase_status": "reserved_for_future_delta_scar_bridge",
-          "purpose": "Reserved for future delta and scar bridge. Wave VIII writes no memory."
+          "purpose": "Reserved for future delta and scar bridge. packet-arena route writes no memory."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XIV + aoa-memo + aoa-stats",
+          "owner_hint": "future retention-rank route + aoa-memo + aoa-stats",
           "phase_id": "retention_slot",
           "phase_status": "reserved_for_future_retention_economy",
-          "purpose": "Reserved for future retention scheduling. Wave VIII schedules nothing."
+          "purpose": "Reserved for future retention scheduling. packet-arena route schedules nothing."
         },
         {
           "live_effect": "none",
@@ -1543,17 +1543,17 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "sealed_commit_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future sealed stance commitments. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future sealed stance commitments. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "reveal_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future reveal mechanics. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future reveal mechanics. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
@@ -1578,24 +1578,24 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-evals",
+          "owner_hint": "future verdict/delta/scar route + aoa-evals",
           "phase_id": "adjudication_slot",
           "phase_status": "reserved_for_future_verdict_bridge",
-          "purpose": "Reserved for future verdict flow. Wave VIII issues no verdicts."
+          "purpose": "Reserved for future verdict flow. packet-arena route issues no verdicts."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-memo",
+          "owner_hint": "future verdict/delta/scar route + aoa-memo",
           "phase_id": "inscription_slot",
           "phase_status": "reserved_for_future_delta_scar_bridge",
-          "purpose": "Reserved for future delta and scar bridge. Wave VIII writes no memory."
+          "purpose": "Reserved for future delta and scar bridge. packet-arena route writes no memory."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XIV + aoa-memo + aoa-stats",
+          "owner_hint": "future retention-rank route + aoa-memo + aoa-stats",
           "phase_id": "retention_slot",
           "phase_status": "reserved_for_future_retention_economy",
-          "purpose": "Reserved for future retention scheduling. Wave VIII schedules nothing."
+          "purpose": "Reserved for future retention scheduling. packet-arena route schedules nothing."
         },
         {
           "live_effect": "none",
@@ -1827,17 +1827,17 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "sealed_commit_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future sealed stance commitments. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future sealed stance commitments. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "reveal_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future reveal mechanics. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future reveal mechanics. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
@@ -1862,24 +1862,24 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-evals",
+          "owner_hint": "future verdict/delta/scar route + aoa-evals",
           "phase_id": "adjudication_slot",
           "phase_status": "reserved_for_future_verdict_bridge",
-          "purpose": "Reserved for future verdict flow. Wave VIII issues no verdicts."
+          "purpose": "Reserved for future verdict flow. packet-arena route issues no verdicts."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-memo",
+          "owner_hint": "future verdict/delta/scar route + aoa-memo",
           "phase_id": "inscription_slot",
           "phase_status": "reserved_for_future_delta_scar_bridge",
-          "purpose": "Reserved for future delta and scar bridge. Wave VIII writes no memory."
+          "purpose": "Reserved for future delta and scar bridge. packet-arena route writes no memory."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XIV + aoa-memo + aoa-stats",
+          "owner_hint": "future retention-rank route + aoa-memo + aoa-stats",
           "phase_id": "retention_slot",
           "phase_status": "reserved_for_future_retention_economy",
-          "purpose": "Reserved for future retention scheduling. Wave VIII schedules nothing."
+          "purpose": "Reserved for future retention scheduling. packet-arena route schedules nothing."
         },
         {
           "live_effect": "none",
@@ -1890,7 +1890,7 @@
         }
       ],
       "live_protocol": false,
-      "notes": "Models prediction discipline. It reserves actual commit/reveal packets for Wave IX.",
+      "notes": "Models prediction discipline. It reserves actual commit/reveal packets for state-packet route.",
       "owner_handoffs": {
         "evals": [
           "future_precheck_refs_only"
@@ -1920,7 +1920,7 @@
           "pressure_class": "model_of_other",
           "pressure_id": "prediction_required",
           "purpose": "Models required prediction before future reveal.",
-          "requires_future_owner": "aoa-agents + future Wave IX"
+          "requires_future_owner": "aoa-agents + future state-packet route"
         },
         {
           "live_effect": "none",
@@ -2108,17 +2108,17 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "sealed_commit_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future sealed stance commitments. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future sealed stance commitments. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave IX",
+          "owner_hint": "future state-packet route",
           "phase_id": "reveal_slot",
-          "phase_status": "reserved_for_wave9_state_packets",
-          "purpose": "Reserved for future reveal mechanics. Wave VIII defines no packets."
+          "phase_status": "reserved_for_state_packet_commit_reveal",
+          "purpose": "Reserved for future reveal mechanics. packet-arena route defines no packets."
         },
         {
           "live_effect": "none",
@@ -2143,24 +2143,24 @@
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-evals",
+          "owner_hint": "future verdict/delta/scar route + aoa-evals",
           "phase_id": "adjudication_slot",
           "phase_status": "reserved_for_future_verdict_bridge",
-          "purpose": "Reserved for future verdict flow. Wave VIII issues no verdicts."
+          "purpose": "Reserved for future verdict flow. packet-arena route issues no verdicts."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XI + aoa-memo",
+          "owner_hint": "future verdict/delta/scar route + aoa-memo",
           "phase_id": "inscription_slot",
           "phase_status": "reserved_for_future_delta_scar_bridge",
-          "purpose": "Reserved for future delta and scar bridge. Wave VIII writes no memory."
+          "purpose": "Reserved for future delta and scar bridge. packet-arena route writes no memory."
         },
         {
           "live_effect": "none",
-          "owner_hint": "future Wave XIV + aoa-memo + aoa-stats",
+          "owner_hint": "future retention-rank route + aoa-memo + aoa-stats",
           "phase_id": "retention_slot",
           "phase_status": "reserved_for_future_retention_economy",
-          "purpose": "Reserved for future retention scheduling. Wave VIII schedules nothing."
+          "purpose": "Reserved for future retention scheduling. packet-arena route schedules nothing."
         },
         {
           "live_effect": "none",
@@ -2327,5 +2327,5 @@
   ],
   "status": "seeded_pre_protocol_arena_session_models",
   "title": "Agon Arena Session Model",
-  "wave": "VIII"
+  "lineage_ref": "packet-arena"
 }

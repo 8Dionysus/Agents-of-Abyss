@@ -13,7 +13,7 @@ OUTPUT=ROOT / "mechanics" / "agon" / "parts" / "verdict-retention-rank" / "gener
 def compact(o): return json.dumps(o,ensure_ascii=False,sort_keys=True,separators=(',',':'))+'\n'
 def build_registry():
     s=json.loads(CONFIG.read_text(encoding='utf-8'))
-    return {'registry_id':s['registry_id'],'version':s['version'],'wave':s['wave'],'status':s['status'],'live_protocol':False,'runtime_effect':'none','bridge_count':len(s['bridge_components']),'terminal_outcomes':s['terminal_outcomes'],'bridge_components':s['bridge_components'],'outcome_bridge_matrix':s['outcome_bridge_matrix'],'stop_lines':s['stop_lines']}
+    return {'registry_id':s['registry_id'],'version':s['version'],'lineage_ref':s['lineage_ref'],'status':s['status'],'live_protocol':False,'runtime_effect':'none','bridge_count':len(s['bridge_components']),'terminal_outcomes':s['terminal_outcomes'],'bridge_components':s['bridge_components'],'outcome_bridge_matrix':s['outcome_bridge_matrix'],'stop_lines':s['stop_lines']}
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--check',action='store_true'); args=ap.parse_args()
     txt=compact(build_registry())

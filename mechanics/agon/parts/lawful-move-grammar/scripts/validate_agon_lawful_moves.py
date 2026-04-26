@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Agon Wave III lawful move language landing."""
+"""Validate Agon lawful-move-grammar route lawful move language landing."""
 
 from __future__ import annotations
 
@@ -23,19 +23,15 @@ REQUIRED_FILES = [
     "README.md",
     "CHARTER.md",
     "docs/LAYERS.md",
-    "mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md",
-    "mechanics/agon/legacy/raw/AGON_LAWFUL_MOVE_LANGUAGE.md",
-    "mechanics/agon/legacy/raw/AGON_MOVE_REGISTRY_MODEL.md",
-    "mechanics/agon/legacy/raw/AGON_MOVE_OWNER_HANDOFFS.md",
-    "mechanics/agon/legacy/raw/AGON_WAVE3_LANDING.md",
+    "mechanics/agon/PROVENANCE.md",
+    "mechanics/agon/PARTS.md",
     "mechanics/agon/parts/lawful-move-grammar/schemas/agon-lawful-move.schema.json",
     "mechanics/agon/parts/lawful-move-grammar/schemas/agon-lawful-move-registry.schema.json",
     "mechanics/agon/parts/lawful-move-grammar/config/agon_lawful_moves.seed.json",
     "mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json",
 ]
 
-OPTIONAL_WAVE0_FILES = [
-    "mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md",
+OPTIONAL_IMPOSITION_FILES = [
     "mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json",
 ]
 
@@ -51,7 +47,7 @@ REQUIRED_MOVE_KEYS = {
     "produces",
     "future_owner_handoffs",
     "status",
-    "wave",
+    "lineage_ref",
     "live_protocol",
     "runtime_effect",
     "center_owns",
@@ -84,13 +80,13 @@ def fail(message: str) -> None:
 def validate_required_files() -> list[str]:
     missing = [rel for rel in REQUIRED_FILES if not (ROOT / rel).exists()]
     if missing:
-        fail("missing required Wave III files: " + ", ".join(missing))
-    return [rel for rel in OPTIONAL_WAVE0_FILES if (ROOT / rel).exists()]
+        fail("missing required lawful-move-grammar route files: " + ", ".join(missing))
+    return [rel for rel in OPTIONAL_IMPOSITION_FILES if (ROOT / rel).exists()]
 
 
 def validate_registry_shape(registry: dict[str, Any]) -> None:
-    if registry.get("wave") != "III":
-        fail("registry wave must be III")
+    if registry.get("lineage_ref") != "lawful-move-grammar":
+        fail("registry lineage_ref must be lawful-move-grammar")
     if registry.get("status") != "pre_protocol_lawful_move_language":
         fail("registry status must be pre_protocol_lawful_move_language")
 
@@ -157,7 +153,7 @@ def validate_registry_shape(registry: dict[str, Any]) -> None:
 
 
 def main() -> int:
-    wave0_present = validate_required_files()
+    imposition_readiness_present = validate_required_files()
 
     builder = load_builder()
     expected = builder.dumps_min(builder.build_registry())
@@ -168,11 +164,11 @@ def main() -> int:
     registry = read_json(GENERATED)
     validate_registry_shape(registry)
 
-    print("ok: Wave III lawful move language is valid")
-    if wave0_present:
-        print("ok: optional Wave 0 imposition surfaces detected: " + ", ".join(wave0_present))
+    print("ok: lawful-move-grammar route lawful move language is valid")
+    if imposition_readiness_present:
+        print("ok: optional imposition-readiness route imposition surfaces detected: " + ", ".join(imposition_readiness_present))
     else:
-        print("note: Wave 0 imposition surfaces not detected by this validator; Wave III shape is still internally valid")
+        print("note: imposition-readiness route imposition surfaces not detected by this validator; lawful-move-grammar route shape is still internally valid")
     return 0
 
 

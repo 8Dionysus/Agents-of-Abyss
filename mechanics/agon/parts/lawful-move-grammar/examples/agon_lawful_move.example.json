@@ -37,7 +37,7 @@
     ]
   },
   "status": "seeded_pre_protocol",
-  "wave": "III",
+  "lineage_ref": "lawful-move-grammar",
   "live_protocol": false,
   "runtime_effect": "none",
   "center_owns": [

@@ -12,8 +12,8 @@ SRC = ROOT / 'mechanics/agon/parts/compatibility-bridges/config/agon_slc.seed.js
 OUT = ROOT / 'mechanics/agon/parts/compatibility-bridges/generated/agon_slc_registry.min.json'
 ITEM_KEY = 'slc_components'
 REGISTRY_ID = 'agon.slc.registry.v1'
-WAVE = 'XVI'
-WAVE_NAME = 'Schools / Lineages / Campaigns'
+LINEAGE_REF = 'school-lineage-campaign'
+LINEAGE_TITLE = 'Schools / Lineages / Campaigns'
 
 def digest_obj(obj):
     return hashlib.sha256(json.dumps(obj, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
@@ -23,8 +23,8 @@ def build():
     items = data.get(ITEM_KEY, [])
     return {
         'registry_id': data.get('registry_id', REGISTRY_ID),
-        'wave': data.get('wave', WAVE),
-        'wave_name': data.get('wave_name', WAVE_NAME),
+        'lineage_ref': data.get('lineage_ref', LINEAGE_REF),
+        'lineage_title': data.get('lineage_title', LINEAGE_TITLE),
         'runtime_posture': data.get('runtime_posture', 'candidate_only'),
         'count': len(items),
         ITEM_KEY: items,

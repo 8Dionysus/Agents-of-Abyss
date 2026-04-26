@@ -46,8 +46,8 @@
       "review_status": "candidate_only",
       "runtime_effect": "candidate_only",
       "tos_canonization_allowed": false,
-      "wave": "XVIII",
-      "wave_name": "Sophian Threshold"
+      "lineage_ref": "sophian-threshold",
+      "lineage_title": "Sophian Threshold"
     },
     {
       "assistant_contestant_allowed": false,
@@ -87,8 +87,8 @@
       "review_status": "candidate_only",
       "runtime_effect": "candidate_only",
       "tos_canonization_allowed": false,
-      "wave": "XVIII",
-      "wave_name": "Sophian Threshold"
+      "lineage_ref": "sophian-threshold",
+      "lineage_title": "Sophian Threshold"
     },
     {
       "assistant_contestant_allowed": false,
@@ -128,8 +128,8 @@
       "review_status": "candidate_only",
       "runtime_effect": "candidate_only",
       "tos_canonization_allowed": false,
-      "wave": "XVIII",
-      "wave_name": "Sophian Threshold"
+      "lineage_ref": "sophian-threshold",
+      "lineage_title": "Sophian Threshold"
     },
     {
       "assistant_contestant_allowed": false,
@@ -171,8 +171,8 @@
       "review_status": "candidate_only",
       "runtime_effect": "candidate_only",
       "tos_canonization_allowed": false,
-      "wave": "XVIII",
-      "wave_name": "Sophian Threshold"
+      "lineage_ref": "sophian-threshold",
+      "lineage_title": "Sophian Threshold"
     },
     {
       "assistant_contestant_allowed": false,
@@ -214,8 +214,8 @@
       "review_status": "candidate_only",
       "runtime_effect": "candidate_only",
       "tos_canonization_allowed": false,
-      "wave": "XVIII",
-      "wave_name": "Sophian Threshold"
+      "lineage_ref": "sophian-threshold",
+      "lineage_title": "Sophian Threshold"
     },
     {
       "assistant_contestant_allowed": false,
@@ -257,8 +257,8 @@
       "review_status": "candidate_only",
       "runtime_effect": "candidate_only",
       "tos_canonization_allowed": false,
-      "wave": "XVIII",
-      "wave_name": "Sophian Threshold"
+      "lineage_ref": "sophian-threshold",
+      "lineage_title": "Sophian Threshold"
     },
     {
       "assistant_contestant_allowed": false,
@@ -299,8 +299,8 @@
       "review_status": "candidate_only",
       "runtime_effect": "candidate_only",
       "tos_canonization_allowed": false,
-      "wave": "XVIII",
-      "wave_name": "Sophian Threshold"
+      "lineage_ref": "sophian-threshold",
+      "lineage_title": "Sophian Threshold"
     },
     {
       "assistant_contestant_allowed": false,
@@ -341,8 +341,8 @@
       "review_status": "candidate_only",
       "runtime_effect": "candidate_only",
       "tos_canonization_allowed": false,
-      "wave": "XVIII",
-      "wave_name": "Sophian Threshold"
+      "lineage_ref": "sophian-threshold",
+      "lineage_title": "Sophian Threshold"
     },
     {
       "assistant_contestant_allowed": false,
@@ -385,8 +385,8 @@
       "review_status": "candidate_only",
       "runtime_effect": "candidate_only",
       "tos_canonization_allowed": false,
-      "wave": "XVIII",
-      "wave_name": "Sophian Threshold"
+      "lineage_ref": "sophian-threshold",
+      "lineage_title": "Sophian Threshold"
     },
     {
       "assistant_contestant_allowed": false,
@@ -429,10 +429,10 @@
       "review_status": "candidate_only",
       "runtime_effect": "candidate_only",
       "tos_canonization_allowed": false,
-      "wave": "XVIII",
-      "wave_name": "Sophian Threshold"
+      "lineage_ref": "sophian-threshold",
+      "lineage_title": "Sophian Threshold"
     }
   ],
-  "wave": "XVIII",
-  "wave_name": "Sophian Threshold"
+  "lineage_ref": "sophian-threshold",
+  "lineage_title": "Sophian Threshold"
 }

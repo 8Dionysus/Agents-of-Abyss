@@ -224,7 +224,7 @@
   "registry_id": "agon.retention_rank_economy.registry.v1",
   "runtime_effect": "candidate_only",
   "source_config": "mechanics/agon/parts/verdict-retention-rank/config/agon_retention_rank_economy.seed.json",
-  "status": "seeded_wave14_center_law",
+  "status": "seeded_retention_rank_center_law",
   "stop_lines": [
     "no_live_verdict_authority",
     "no_durable_scar_write",
@@ -238,5 +238,5 @@
     "no_assistant_contestant_drift",
     "no_center_takeover_of_agent_eval_memo_stats_truth"
   ],
-  "wave": "XIV"
+  "lineage_ref": "retention-rank"
 }

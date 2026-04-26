@@ -119,6 +119,12 @@ Tracking starts with the community-docs baseline for this repository.
   `mechanics/agon/parts/<part>/` homes, with
   `mechanics/agon/artifact-map.json` and `mechanics/agon/legacy/artifacts/`
   preserving the flat-path receipt
+- Agon active part artifacts now use functional part lineage names instead of
+  historical wave labels, while the distillation validator rejects legacy/raw
+  route leakage and wave-era vocabulary inside active part files
+- Agon root markdown surfaces now have a route index and cleaner active-source
+  split, with source-contour history routed through `PROVENANCE.md` and
+  `LANDING_LOG.md` instead of active entry docs
 - Agon, Experience, RPG, antifragility, and method-growth mechanic artifacts now
   live in mechanic-owned homes; root technical districts keep repo-wide
   contracts only and no longer carry mechanic artifact aliases

@@ -56,5 +56,5 @@
   },
   "session_draft_ref": "draft.mechanical_duel.example",
   "session_model_id": "agon.session.mechanical_duel_kernel",
-  "wave": "IX"
+  "lineage_ref": "state-packets"
 }

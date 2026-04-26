@@ -13,8 +13,8 @@ active part.
 ## Boundaries
 
 Active parts are concise working contracts. Do not turn them into source-doc
-inventories, wave ledgers, proof verdicts, memory objects, runtime activation,
-or ToS canon.
+inventories, landing ledgers, proof verdicts, memory objects, runtime
+activation, or ToS canon.
 
 If a task needs detailed source accounting, route through
 `mechanics/agon/PROVENANCE.md`.

@@ -32,7 +32,7 @@ def build(config: dict) -> dict:
     return {
         'schema_version': 'agon_arena_session_model_registry_v1',
         'source': 'mechanics/agon/parts/packet-arena/config/agon_arena_session_models.seed.json',
-        'wave': config.get('wave'),
+        'lineage_ref': config.get('lineage_ref'),
         'owner_repo': config.get('owner_repo'),
         'status': config.get('status'),
         'live_protocol': config.get('live_protocol'),

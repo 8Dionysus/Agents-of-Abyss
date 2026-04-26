@@ -13,7 +13,7 @@ REQUIRED_OUTCOMES={'resolved','revised_and_resolved','bifurcated','deferred_with
 def validate():
     d=json.loads(REGISTRY.read_text(encoding='utf-8'))
     assert d['registry_id']=='agon.vds_bridge.registry.v1'
-    assert d['wave']=='XI' and d['live_protocol'] is False and d['runtime_effect']=='none'
+    assert d['lineage_ref']=='verdict-delta-scar' and d['live_protocol'] is False and d['runtime_effect']=='none'
     assert set(d['terminal_outcomes'])==REQUIRED_OUTCOMES
     assert d['bridge_count']==len(d['bridge_components'])
     ids=[c['component_id'] for c in d['bridge_components']]; assert len(ids)==len(set(ids))

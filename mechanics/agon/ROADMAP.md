@@ -12,13 +12,16 @@ while downstream repositories prepare any real execution slices.
 - Keep active Agon technical artifacts in part-local homes so schemas, config,
   generated capsules, examples, validators, and tests travel with the part that
   owns their behavior.
+- Keep active technical artifacts named by functional part lineage rather than
+  historical landing contour; detailed source history stays behind
+  `PROVENANCE.md`, `LANDING_LOG.md`, and `legacy/`.
 - Keep `LANDING_LOG.md` as the canonical Agon landing ledger.
 
 ## Next Work
 
 - Add owner-local landing receipts when sibling repositories adopt Agon slices.
 - Tighten package-local navigation only when a part becomes hard to operate,
-  not merely because its historical wave family was large.
+  not merely because its historical source family was large.
 - Time has come when: an owner repository accepts an Agon slice. Future move:
   record the owner-local receipt and update the relevant part route. Guardrail:
   center docs must not claim live execution, proof, memory, runtime, rank, KAG,

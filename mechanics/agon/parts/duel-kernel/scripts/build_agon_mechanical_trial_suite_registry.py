@@ -12,7 +12,7 @@ SRC = ROOT / 'mechanics/agon/parts/duel-kernel/config/agon_mechanical_trial_suit
 OUT = ROOT / 'mechanics/agon/parts/duel-kernel/generated/agon_mechanical_trial_suite_registry.min.json'
 ITEM_KEY = 'trials'
 REGISTRY_ID = 'agon.mechanical_trial_suite.registry.v0'
-WAVE = 'XIII'
+LINEAGE_REF = 'mechanical-trial-suite'
 
 def digest_obj(obj):
     return hashlib.sha256(json.dumps(obj, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
@@ -22,7 +22,7 @@ def build():
     items = data.get(ITEM_KEY, [])
     return {
         'registry_id': data.get('registry_id', REGISTRY_ID),
-        'wave': data.get('wave', WAVE),
+        'lineage_ref': data.get('lineage_ref', LINEAGE_REF),
         'runtime_posture': data.get('runtime_posture', 'candidate_only'),
         'count': len(items),
         ITEM_KEY: items,

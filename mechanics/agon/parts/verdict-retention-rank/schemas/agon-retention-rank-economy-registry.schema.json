@@ -7,8 +7,8 @@
     "registry_id": {
       "const": "agon.retention_rank_economy.registry.v1"
     },
-    "wave": {
-      "const": "XIV"
+    "lineage_ref": {
+      "const": "retention-rank"
     },
     "status": {
       "type": "string",
@@ -49,7 +49,7 @@
   },
   "required": [
     "registry_id",
-    "wave",
+    "lineage_ref",
     "status",
     "live_protocol",
     "runtime_effect",

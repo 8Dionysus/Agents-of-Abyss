@@ -9,7 +9,7 @@
     "assistant_anti_drift"
   ],
   "initial_verdict": "recharter",
-  "owner_next_action": "Wave I: Agonic Actor Rechartering and Wave II: Assistant Civil Rechartering",
+  "owner_next_action": "agonic-actor-recharter route: Agonic Actor Rechartering and assistant-civil-recharter route: Assistant Civil Rechartering",
   "must_not_absorb": [
     "arena protocol law",
     "scar ledger",
