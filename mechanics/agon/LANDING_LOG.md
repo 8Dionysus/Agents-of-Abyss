@@ -26,6 +26,64 @@ When a change touches Agon docs, generated capsules, schemas, seed config,
 examples, validators, or tests, update the relevant entry here or explain in
 the PR why the change is not a landing change.
 
+### Agon active route distillation
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` owns the active Agon route, part contracts,
+center-side owner requests, and provenance bridge; detailed wave documents stay
+receipts, and proof, memory, KAG, route behavior, runtime, actor posture,
+scenario choreography, rank, and ToS canon authority remain owner-local.
+
+Surfaces:
+
+- `mechanics/agon/README.md`
+- `mechanics/agon/DIRECTION.md`
+- `mechanics/agon/PARTS.md`
+- `mechanics/agon/OWNER_REQUESTS.md`
+- `mechanics/agon/PROVENANCE.md`
+- `mechanics/agon/parts/README.md`
+- `mechanics/agon/parts/AGENTS.md`
+- `mechanics/agon/parts/imposition-readiness/README.md`
+- `mechanics/agon/parts/lawful-move-grammar/README.md`
+- `mechanics/agon/parts/owner-binding/README.md`
+- `mechanics/agon/parts/gate-routing/README.md`
+- `mechanics/agon/parts/trial-handoff/README.md`
+- `mechanics/agon/parts/recurrence-adapter/README.md`
+- `mechanics/agon/parts/packet-arena/README.md`
+- `mechanics/agon/parts/duel-kernel/README.md`
+- `mechanics/agon/parts/verdict-retention-rank/README.md`
+- `mechanics/agon/parts/epistemic-kag/README.md`
+- `mechanics/agon/parts/sophian-threshold/README.md`
+- `mechanics/agon/parts/compatibility-bridges/README.md`
+- `mechanics/agon/scripts/validate_agon_distillation.py`
+- `mechanics/agon/tests/test_agon_distillation.py`
+- `mechanics/registry.json`
+- `mechanics/owner-request-queue.json`
+- `mechanics/OWNER_REQUEST_QUEUE.md`
+- `generated/owner_request_queue.min.json`
+
+Validation:
+
+- `python mechanics/agon/scripts/validate_agon_distillation.py`
+- `python scripts/validate_mechanic_landing_logs.py --mechanic agon`
+- `python scripts/validate_mechanics_topology.py --mechanic agon`
+- `python scripts/validate_mechanic_artifact_topology.py --mechanic agon`
+- `python scripts/validate_owner_request_queue.py --mechanic agon`
+- `python scripts/build_owner_request_queue.py --check`
+- `python scripts/validate_generated_owner_request_queue.py`
+- `python scripts/validate_owner_request_docs.py --mechanic agon`
+- `python -m pytest -q mechanics/agon/tests/test_agon_distillation.py`
+
+Stop-lines: active parts do not supersede owner repositories, activate a live
+arena, grant contestant authority, mutate memory or rank, convert KAG
+projections into source truth, or write ToS canon.
+
+Next route: distill detailed Agon source families into part-owned artifacts
+only when a part behavior changes; keep old wave documents behind
+`mechanics/agon/PROVENANCE.md` and use `mechanics/agon/OWNER_REQUESTS.md`
+for stronger-owner asks.
+
 ## Landed center line
 
 ### Agon preparation holding boundary

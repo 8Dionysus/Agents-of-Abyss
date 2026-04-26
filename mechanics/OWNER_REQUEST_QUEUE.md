@@ -66,6 +66,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 | `ORQ-AGON-ROUTING-001` | `agon` | `aoa-routing` | `requested` | `P1` | Gates, handoffs, and arena route behavior |
 | `ORQ-AGON-AGENTS-001` | `agon` | `aoa-agents` | `requested` | `P0` | Actor seats, role contracts, and contestant posture |
 | `ORQ-AGON-STACK-001` | `agon` | `abyss-stack` | `requested` | `P2` | Runtime session bodies after runtime-owner gates |
+| `ORQ-AGON-KAG-001` | `agon` | `aoa-kag` | `requested` | `P1` | Derived evidence bundles and KAG-ready pressure projections |
 | `ORQ-AGON-TOS-001` | `agon` | `Tree-of-Sophia` | `requested` | `P0` | ToS threshold and canonization questions |
 | `ORQ-ANTIFRAGILITY-EVALS-001` | `antifragility` | `aoa-evals` | `requested` | `P1` | Repair proof and regression evidence after stress or subtraction |
 | `ORQ-ANTIFRAGILITY-MEMO-001` | `antifragility` | `aoa-memo` | `requested` | `P2` | Incident lessons and retained stress memory |
@@ -98,7 +99,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 - `method-growth` -> [METHOD_GROWTH_OWNER_REPO_REQUESTS.md](method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `Dionysus`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`
 - `recurrence` -> [RECURRENCE_OWNER_REPO_REQUESTS.md](recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md); owners: `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`
 - `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`
-- `agon` -> [AGON_OWNER_REPO_REQUESTS.md](agon/docs/AGON_OWNER_REPO_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-routing`, `aoa-agents`, `abyss-stack`, `Tree-of-Sophia`
+- `agon` -> [OWNER_REQUESTS.md](agon/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-routing`, `aoa-agents`, `abyss-stack`, `aoa-kag`, `Tree-of-Sophia`
 - `antifragility` -> [ANTIFRAGILITY_OWNER_REPO_REQUESTS.md](antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-playbooks`
 - `questbook` -> [QUESTBOOK_OWNER_REPO_REQUESTS.md](questbook/docs/QUESTBOOK_OWNER_REPO_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-routing`
 - `rpg` -> [RPG_OWNER_REPO_REQUESTS.md](rpg/docs/RPG_OWNER_REPO_REQUESTS.md); owners: `aoa-agents`, `aoa-skills`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`, `aoa-stats`

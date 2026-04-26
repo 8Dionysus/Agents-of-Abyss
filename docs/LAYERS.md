@@ -129,6 +129,13 @@ Main question:
 
 Repository: `Agents-of-Abyss` for the center-owned preparation note.
 
+Current route:
+- `mechanics/agon/README.md`
+- `mechanics/agon/DIRECTION.md`
+- `mechanics/agon/PARTS.md`
+- `mechanics/agon/OWNER_REQUESTS.md`
+- `mechanics/agon/PROVENANCE.md`
+
 Current surface:
 - `mechanics/agon/docs/AGON_PREPARATION_POSTURE.md`
 
@@ -204,7 +211,7 @@ Repository: `Agents-of-Abyss` for the center-owned Wave IV turn.
 Current surfaces:
 - `mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md`
 - `mechanics/agon/docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`
-- `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`
+- `mechanics/agon/OWNER_REQUESTS.md`
 - `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
 - `mechanics/agon/docs/AGON_WAVE4_LANDING.md`
 - `mechanics/agon/generated/agon_move_owner_binding_registry.min.json`

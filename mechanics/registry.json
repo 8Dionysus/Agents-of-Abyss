@@ -248,14 +248,24 @@
     {
       "agents_ref": "mechanics/agon/AGENTS.md",
       "canonical_docs": [
-        "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
-        "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
-        "mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md",
-        "mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md",
-        "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
-        "mechanics/agon/docs/AGON_TOS_THRESHOLD_PACKET_MODEL.md",
-        "mechanics/agon/docs/PRE_AGON_BASELINE.md",
-        "mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md"
+        "mechanics/agon/DIRECTION.md",
+        "mechanics/agon/PARTS.md",
+        "mechanics/agon/PROVENANCE.md",
+        "mechanics/agon/ROADMAP.md",
+        "mechanics/agon/LANDING_LOG.md",
+        "mechanics/agon/parts/imposition-readiness/README.md",
+        "mechanics/agon/parts/lawful-move-grammar/README.md",
+        "mechanics/agon/parts/owner-binding/README.md",
+        "mechanics/agon/parts/gate-routing/README.md",
+        "mechanics/agon/parts/trial-handoff/README.md",
+        "mechanics/agon/parts/recurrence-adapter/README.md",
+        "mechanics/agon/parts/packet-arena/README.md",
+        "mechanics/agon/parts/duel-kernel/README.md",
+        "mechanics/agon/parts/verdict-retention-rank/README.md",
+        "mechanics/agon/parts/epistemic-kag/README.md",
+        "mechanics/agon/parts/sophian-threshold/README.md",
+        "mechanics/agon/parts/compatibility-bridges/README.md",
+        "mechanics/agon/OWNER_REQUESTS.md"
       ],
       "card": {
         "center_owns": "Agon vocabulary, stop-lines, pressure doctrine, lawful-move grammar, and owner handoff expectations.",
@@ -265,11 +275,11 @@
         ],
         "next_route": [
           "For trial practice, route to `aoa-playbooks`; for proof, route to `aoa-evals`; for scars or retention, route to `aoa-memo`; for runtime, route to `abyss-stack` after runtime gates.",
-          "For ToS canon or threshold authority, route to `Tree-of-Sophia`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+          "For KAG promotion, route to `aoa-kag`; for ToS canon or threshold authority, route to `Tree-of-Sophia`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
         ],
         "outputs": [
-          "Stop-line, owner handoff, trial/playbook request, proof request, memory request, route gate, or ToS threshold packet.",
-          "No rank, verdict, scar, memory, runtime, or canon mutation inside the center."
+          "Stop-line, owner handoff, trial/playbook request, proof request, memory request, route gate, KAG handoff, or ToS threshold packet.",
+          "No rank, verdict, scar, memory, runtime, KAG, or canon mutation inside the center."
         ],
         "stronger_owner_split": [
           "`aoa-playbooks` owns trial choreography and repeatable practice flows.",
@@ -279,6 +289,7 @@
           "`aoa-routing` owns gates, handoffs, and route behavior.",
           "`aoa-agents` owns actor seats, role contracts, and contestant posture.",
           "`abyss-stack` owns runtime session bodies after runtime-owner gates.",
+          "`aoa-kag` owns derived provenance-aware knowledge substrates.",
           "`Tree-of-Sophia` owns ToS canon and Sophian threshold decisions."
         ],
         "trigger": "Use when conflict, contradiction, bounded pressure, survival tests, lawful moves, arena or duel grammar, packets, verdicts, retention, rank, schools, canon promotion, or ToS thresholds are involved."
@@ -292,8 +303,8 @@
         "rank mutation",
         "ToS canon write authority"
       ],
-      "owner_boundary": "Center pressure, lawful move, arena grammar, packets, verdict, rank, school, and canon-restraint doctrine; live arena execution and owner-local truth remain outside.",
-      "owner_request_doc_ref": "mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md",
+      "owner_boundary": "Center pressure, lawful move, arena grammar, packets, verdict, rank, school, KAG, and canon-restraint doctrine; live arena execution and owner-local truth remain outside.",
+      "owner_request_doc_ref": "mechanics/agon/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-AGON-PLAYBOOKS-001",
         "ORQ-AGON-EVALS-001",
@@ -302,6 +313,7 @@
         "ORQ-AGON-ROUTING-001",
         "ORQ-AGON-AGENTS-001",
         "ORQ-AGON-STACK-001",
+        "ORQ-AGON-KAG-001",
         "ORQ-AGON-TOS-001"
       ],
       "package_path": "mechanics/agon",
@@ -310,6 +322,7 @@
       "status": "landed",
       "title": "Agon",
       "validation_refs": [
+        "mechanics/agon/scripts/validate_agon_distillation.py",
         "scripts/validate_mechanic_landing_logs.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/validate_mechanic_readme_cards.py",
