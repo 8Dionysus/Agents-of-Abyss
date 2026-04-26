@@ -11,6 +11,39 @@ Experience remains planted center law here. It does not activate live workspace
 runtime, hidden memory sovereignty, assistant contestant authority, direct ToS
 writes, or owner-local implementation.
 
+## Route index for agents
+
+Read this index before scanning the full ledger. It names the current shape of
+Experience without requiring every older landing entry to be re-read.
+
+- Current active route: `mechanics/experience/README.md`,
+  `mechanics/experience/DIRECTION.md`, `mechanics/experience/PARTS.md`,
+  `mechanics/experience/parts/README.md`, and the relevant part README.
+- Current proof and placement route: `mechanics/experience/artifact-map.json`,
+  `mechanics/experience/provenance-receipts.json`, and the relevant part-local
+  schemas, examples, scripts, or tests.
+- Current owner pressure route: `mechanics/experience/OWNER_REQUESTS.md`.
+- Current future-pressure route: `mechanics/experience/ROADMAP.md`.
+- Current archive bridge: `mechanics/experience/PROVENANCE.md`; use it only
+  when auditing source provenance or receipt history.
+
+Key recent landings:
+
+- [Experience root route surface cleanup](#experience-root-route-surface-cleanup)
+  clarifies the roles of root Experience markdown surfaces.
+- [Experience provenance receipt indirection](#experience-provenance-receipt-indirection)
+  keeps source packets behind receipt IDs instead of active-path clutter.
+- [Experience active artifact naming cleanup](#experience-active-artifact-naming-cleanup)
+  removes wave and version names from active artifact identities.
+- [Experience part artifact homes](#experience-part-artifact-homes) moves
+  schemas, examples, validators, and tests into functioning part homes.
+- [Experience active parts plus provenance bridge](#experience-active-parts-plus-provenance-bridge)
+  is the main distillation line from old flat docs into active parts.
+
+Older wave and version entries remain historical landing receipts. They should
+not be the first route for new work unless a task specifically audits the
+original landing contour.
+
 ## How to update this log
 
 Every landing entry uses the same shape:
@@ -27,6 +60,38 @@ validators, or tests, update the relevant entry here or explain in the PR why
 the change is not a landing change.
 
 ## Landed center line
+
+### Experience root route surface cleanup
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` keeps root Experience markdown surfaces
+role-specific: direction names the current operating line, parts map active
+functions, roadmap tracks future pressure, provenance bridges receipts and
+archive evidence, and owner requests stay center-side handoff packets.
+
+Surfaces:
+
+- `mechanics/experience/AGENTS.md`
+- `mechanics/experience/DIRECTION.md`
+- `mechanics/experience/PARTS.md`
+- `mechanics/experience/LANDING_LOG.md`
+- `mechanics/experience/ROADMAP.md`
+- `mechanics/experience/OWNER_REQUESTS.md`
+- `mechanics/experience/PROVENANCE.md`
+
+Validation:
+
+- `python mechanics/experience/scripts/validate_experience_distillation.py`
+- `python scripts/validate_markdown_shape.py`
+- `python scripts/validate_mechanic_readme_cards.py --mechanic experience`
+- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
+
+Stop-lines: root markdown surfaces must not become competing part maps,
+validation ledgers, archive inventories, or owner-acceptance receipts.
+
+Next route: future root-md changes should update only the surface whose role
+actually moved, then run the narrow Experience distillation and shape checks.
 
 ### Experience provenance receipt indirection
 

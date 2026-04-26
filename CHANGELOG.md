@@ -100,6 +100,9 @@ Tracking starts with the community-docs baseline for this repository.
   packets, staged seed inputs, and sibling-owner surfaces through
   `mechanics/experience/provenance-receipts.json` receipt IDs instead of
   direct archive or source paths
+- Experience root markdown surfaces now separate direction, part map, roadmap,
+  owner-request, provenance, and landing-log roles with less validation and
+  route duplication, plus a bounded roadmap route for deferred trigger notes
 - Experience provenance checks now live in the package-level distillation
   validator, active part validators no longer direct-read `legacy/raw`, and
   `release-deployment` now has a local validator and test route

@@ -52,10 +52,19 @@ After any Experience change, check whether the move changed:
 - `ROADMAP.md`: future work, route shape, unresolved owner pressure, or current contour.
 - `LANDING_LOG.md`: a checked landing, supersession, or planted contract.
 - `OWNER_REQUESTS.md` and `mechanics/owner-request-queue.json`: stronger-owner asks or stop-lines.
+- `artifact-map.json`: old flat artifact paths, active part homes, or artifact
+  placement receipts.
+- `provenance-receipts.json`: receipt IDs, source refs, or active artifact
+  provenance indirection.
 - `mechanics/registry.json` and generated indexes: card-facing route, owner boundary, validation refs, or public summaries.
 
 Only update a surface when its meaning moved. Leave it untouched when the change
 does not affect its job.
+
+If a change reveals work that should happen later but is not ready now, record
+it in `ROADMAP.md` only when the trigger is concrete. Use a short "time has
+come when" note: condition, future move, and guardrail. Do not put speculative
+plans into active part contracts, `LANDING_LOG.md`, or `PROVENANCE.md`.
 
 ## Validation
 

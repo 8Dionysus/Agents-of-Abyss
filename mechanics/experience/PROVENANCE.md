@@ -17,14 +17,14 @@ Start with the active surfaces:
 If those surfaces answer the task, stop there. Do not pull archival detail into
 the active route.
 
-## Archive map
+## Receipt and archive map
 
-The detailed archive account lives here:
+The receipt layer and detailed archive account live here:
 
 - [provenance receipts](provenance-receipts.json): receipt IDs used by active
   schemas, examples, validators, and tests when they must cite older packets,
   staged seed inputs, or sibling-owner surfaces without pulling those names into
-  the active route.
+  the active route. This is an active receipt registry, not an active contract.
 - [legacy index](legacy/INDEX.md): preserved source packets mapped to active
   Experience parts.
 - [distillation log](legacy/DISTILLATION_LOG.md): what was distilled, where it

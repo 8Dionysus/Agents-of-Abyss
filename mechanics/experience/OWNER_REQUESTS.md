@@ -35,7 +35,9 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 - [office-operations contract](parts/office-operations/CONTRACT.md)
 - [runtime-boundary contract](parts/runtime-boundary/CONTRACT.md)
 - [compatibility-bridges contract](parts/compatibility-bridges/CONTRACT.md)
-- [provenance bridge](PROVENANCE.md)
+
+Use [PROVENANCE](PROVENANCE.md) only when auditing how a center source was
+distilled; do not treat archive accounting as owner acceptance.
 
 ## Stop-lines
 

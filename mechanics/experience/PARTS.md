@@ -40,13 +40,7 @@ direct paths.
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py
 python scripts/validate_mechanic_artifact_topology.py --mechanic experience
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic experience
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic experience
 ```
+
+Use the package `README.md` for full mechanic-card validation and
+`OWNER_REQUESTS.md` for owner-request queue validation.
