@@ -16,12 +16,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "runtime-boundary" / "scripts" / "validate_runtime_boundary_bridge.py"
-    spec = importlib.util.spec_from_file_location("experience_bridge_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "runtime-boundary"
+        / "scripts"
+        / "validate_runtime_boundary_bridge.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_bridge_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -30,23 +41,38 @@ def load_validator():
 
 def load_example() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "runtime-boundary" / "examples" / "experience_v1_2_to_v2_0_bridge.example.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "runtime-boundary"
+            / "examples"
+            / "experience_runtime_boundary_bridge.example.json"
+        ).read_text(encoding="utf-8")
     )
 
 
 def load_schema() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "runtime-boundary" / "schemas" / "experience-v1-2-v2-0-bridge.schema.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "runtime-boundary"
+            / "schemas"
+            / "experience-runtime-boundary-bridge.schema.json"
+        ).read_text(encoding="utf-8")
     )
 
 
 def test_experience_bridge_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -59,11 +85,11 @@ def test_experience_bridge_requires_source_order() -> None:
     bridge = load_example()
     schema = load_schema()
     bad_bridge = copy.deepcopy(bridge)
-    seeds = bad_bridge["source_seeds"]
+    seeds = bad_bridge["source_receipt_refs"]
     assert isinstance(seeds, list)
     seeds.reverse()
 
-    with pytest.raises(validator.ValidationError, match="source_seeds"):
+    with pytest.raises(validator.ValidationError, match="source_receipt_refs"):
         validator.validate_payload(bad_bridge, schema)
 
 

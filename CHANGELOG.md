@@ -92,6 +92,14 @@ Tracking starts with the community-docs baseline for this repository.
   their owning `mechanics/experience/parts/<part>/` homes, with
   `mechanics/experience/artifact-map.json` preserving old flat-path receipts
   and artifact topology validation enforcing the route
+- Experience active part artifacts now use functional part names instead of
+  wave or release-contour artifact identities; source contours remain in
+  provenance and receipts, and the distillation validator guards against
+  active naming drift
+- Experience active schemas, examples, validators, and tests now cite older
+  packets, staged seed inputs, and sibling-owner surfaces through
+  `mechanics/experience/provenance-receipts.json` receipt IDs instead of
+  direct archive or source paths
 - Experience provenance checks now live in the package-level distillation
   validator, active part validators no longer direct-read `legacy/raw`, and
   `release-deployment` now has a local validator and test route

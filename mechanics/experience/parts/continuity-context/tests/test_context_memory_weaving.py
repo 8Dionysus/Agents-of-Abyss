@@ -8,7 +8,10 @@ import sys
 from pathlib import Path
 
 import pytest
-from jsonschema import Draft202012Validator, ValidationError as JSONSchemaValidationError
+from jsonschema import (
+    Draft202012Validator,
+    ValidationError as JSONSchemaValidationError,
+)
 
 
 def _repo_root() -> Path:
@@ -17,12 +20,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "scripts" / "validate_context_memory_weaving.py"
-    spec = importlib.util.spec_from_file_location("experience_v19_continuity_loom_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "continuity-context"
+        / "scripts"
+        / "validate_context_memory_weaving.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_continuity_loom_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -31,17 +45,29 @@ def load_validator():
 
 def load_example() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "examples" / "experience_v1_9_context_memory_weaving_continuity_loom.example.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "continuity-context"
+            / "examples"
+            / "experience_continuity_loom.example.json"
+        ).read_text(encoding="utf-8")
     )
 
 
 def load_schema() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "schemas" / "experience-v1-9-context-memory-weaving-continuity-loom.schema.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "continuity-context"
+            / "schemas"
+            / "experience-continuity-loom.schema.json"
+        ).read_text(encoding="utf-8")
     )
 
 
@@ -49,9 +75,12 @@ def validate_schema_only(payload: dict[str, object], schema: dict[str, object]) 
     Draft202012Validator(schema).validate(payload)
 
 
-def test_experience_v19_continuity_loom_validator_passes() -> None:
+def test_experience_continuity_loom_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/continuity-context/scripts/validate_context_memory_weaving.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/continuity-context/scripts/validate_context_memory_weaving.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -59,80 +88,90 @@ def test_experience_v19_continuity_loom_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_v19_continuity_loom_requires_source_archive() -> None:
+def test_experience_continuity_loom_requires_source_archive() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     source = bad_payload["source_seed"]
     assert isinstance(source, dict)
-    source["archive_name"] = "aoa-experience-context-routing-nervous-system-seed-v1_8.zip"
+    source["receipt_ref"] = (
+        "experience.seed.context-routing"
+    )
 
     with pytest.raises(validator.ValidationError, match="source_seed|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_schema_rejects_wrong_source_archive() -> None:
+def test_experience_continuity_loom_schema_rejects_wrong_source_archive() -> None:
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     source = bad_payload["source_seed"]
     assert isinstance(source, dict)
-    source["archive_name"] = "aoa-experience-context-routing-nervous-system-seed-v1_8.zip"
+    source["receipt_ref"] = (
+        "experience.seed.context-routing"
+    )
 
     with pytest.raises(JSONSchemaValidationError):
         validate_schema_only(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_rejects_live_activation() -> None:
+def test_experience_continuity_loom_rejects_live_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_continuity_loom_activation"] = True
 
-    with pytest.raises(validator.ValidationError, match="live_continuity_loom_activation|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="live_continuity_loom_activation|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_rejects_private_memory_sovereignty() -> None:
+def test_experience_continuity_loom_rejects_private_memory_sovereignty() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_private_memory_sovereignty"] = True
 
-    with pytest.raises(validator.ValidationError, match="live_private_memory_sovereignty|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="live_private_memory_sovereignty|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_requires_v18_predecessor() -> None:
+def test_experience_continuity_loom_requires_context_routing_predecessor() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/experience/legacy/raw/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md")
+    predecessors.remove(
+        "experience.raw.context-routing"
+    )
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+    with pytest.raises(validator.ValidationError, match="predecessor_receipt_refs|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_requires_agon_state_packet_predecessor() -> None:
+def test_experience_continuity_loom_requires_agon_state_packet_predecessor() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/agon/docs/AGON_STATE_PACKET_MODEL.md")
+    predecessors.remove("agon.state-packet-model")
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+    with pytest.raises(validator.ValidationError, match="predecessor_receipt_refs|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_requires_memo_owned_thread_candidate() -> None:
+def test_experience_continuity_loom_requires_memo_owned_thread_candidate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -145,7 +184,7 @@ def test_experience_v19_continuity_loom_requires_memo_owned_thread_candidate() -
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_schema_rejects_wrong_request_owner() -> None:
+def test_experience_continuity_loom_schema_rejects_wrong_request_owner() -> None:
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
@@ -157,7 +196,7 @@ def test_experience_v19_continuity_loom_schema_rejects_wrong_request_owner() -> 
         validate_schema_only(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_requires_routing_owned_reentry_review() -> None:
+def test_experience_continuity_loom_requires_routing_owned_reentry_review() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -170,7 +209,7 @@ def test_experience_v19_continuity_loom_requires_routing_owned_reentry_review() 
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_requires_tos_owned_canonical_boundary() -> None:
+def test_experience_continuity_loom_requires_tos_owned_canonical_boundary() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -183,7 +222,7 @@ def test_experience_v19_continuity_loom_requires_tos_owned_canonical_boundary() 
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_schema_rejects_wrong_flow_owner() -> None:
+def test_experience_continuity_loom_schema_rejects_wrong_flow_owner() -> None:
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
@@ -195,7 +234,7 @@ def test_experience_v19_continuity_loom_schema_rejects_wrong_flow_owner() -> Non
         validate_schema_only(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_requires_replay_integrity_human_gate() -> None:
+def test_experience_continuity_loom_requires_replay_integrity_human_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -230,7 +269,7 @@ def test_experience_v19_continuity_loom_requires_replay_integrity_human_gate() -
         "no_dashboard_or_packet_sovereignty",
     ],
 )
-def test_experience_v19_continuity_loom_requires_hard_guards(guard: str) -> None:
+def test_experience_continuity_loom_requires_hard_guards(guard: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -243,7 +282,7 @@ def test_experience_v19_continuity_loom_requires_hard_guards(guard: str) -> None
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_rejects_active_landing_state() -> None:
+def test_experience_continuity_loom_rejects_active_landing_state() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -258,7 +297,7 @@ def test_experience_v19_continuity_loom_rejects_active_landing_state() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v19_continuity_loom_schema_rejects_missing_hard_guard() -> None:
+def test_experience_continuity_loom_schema_rejects_missing_hard_guard() -> None:
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
@@ -280,7 +319,7 @@ def test_experience_v19_continuity_loom_schema_rejects_missing_hard_guard() -> N
         "replay_hash_break_ignored_allowed",
     ],
 )
-def test_experience_v19_continuity_loom_blocks_evidence_leaks(field: str) -> None:
+def test_experience_continuity_loom_blocks_evidence_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -303,7 +342,7 @@ def test_experience_v19_continuity_loom_blocks_evidence_leaks(field: str) -> Non
         "direct_tos_write_allowed",
     ],
 )
-def test_experience_v19_continuity_loom_blocks_privacy_leaks(field: str) -> None:
+def test_experience_continuity_loom_blocks_privacy_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -326,7 +365,7 @@ def test_experience_v19_continuity_loom_blocks_privacy_leaks(field: str) -> None
         "merge_without_boundary_review_allowed",
     ],
 )
-def test_experience_v19_continuity_loom_blocks_continuity_leaks(field: str) -> None:
+def test_experience_continuity_loom_blocks_continuity_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -349,7 +388,7 @@ def test_experience_v19_continuity_loom_blocks_continuity_leaks(field: str) -> N
         "worker_or_daemon_activation_allowed",
     ],
 )
-def test_experience_v19_continuity_loom_blocks_runtime_leaks(field: str) -> None:
+def test_experience_continuity_loom_blocks_runtime_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()

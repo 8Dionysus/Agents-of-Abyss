@@ -16,12 +16,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "compatibility-bridges" / "scripts" / "validate_agonic_pair_trials_bridge.py"
-    spec = importlib.util.spec_from_file_location("experience_v14_mechanical_arena_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "compatibility-bridges"
+        / "scripts"
+        / "validate_agonic_pair_trials_bridge.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_agonic_arena_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -31,8 +42,13 @@ def load_validator():
 def load_example() -> dict[str, object]:
     return json.loads(
         (
-            ROOT / "mechanics" / "experience" / "parts" / "compatibility-bridges" / "examples"
-            / "experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json"
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "compatibility-bridges"
+            / "examples"
+            / "experience_agonic_pair_trials_arena_kernel.example.json"
         ).read_text(encoding="utf-8")
     )
 
@@ -40,15 +56,23 @@ def load_example() -> dict[str, object]:
 def load_schema() -> dict[str, object]:
     return json.loads(
         (
-            ROOT / "mechanics" / "experience" / "parts" / "compatibility-bridges" / "schemas"
-            / "experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json"
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "compatibility-bridges"
+            / "schemas"
+            / "experience-agonic-pair-trials-arena-kernel.schema.json"
         ).read_text(encoding="utf-8")
     )
 
 
-def test_experience_v14_mechanical_arena_validator_passes() -> None:
+def test_experience_agonic_arena_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/compatibility-bridges/scripts/validate_agonic_pair_trials_bridge.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/compatibility-bridges/scripts/validate_agonic_pair_trials_bridge.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -56,20 +80,22 @@ def test_experience_v14_mechanical_arena_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_v14_mechanical_arena_requires_source_archive() -> None:
+def test_experience_agonic_arena_requires_source_archive() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     source = bad_payload["source_seed"]
     assert isinstance(source, dict)
-    source["archive_name"] = "aoa-experience-epistemic-duel-model-of-other-forge-seed-v1_5.zip"
+    source["receipt_ref"] = (
+        "experience.seed.epistemic-duel-model-forge"
+    )
 
-    with pytest.raises(validator.ValidationError, match="archive_name|schema"):
+    with pytest.raises(validator.ValidationError, match="receipt_ref|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_rejects_live_arena_activation() -> None:
+def test_experience_agonic_arena_rejects_live_arena_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -80,44 +106,46 @@ def test_experience_v14_mechanical_arena_rejects_live_arena_activation() -> None
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_rejects_live_runtime_activation() -> None:
+def test_experience_agonic_arena_rejects_live_runtime_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_runtime_activation"] = True
 
-    with pytest.raises(validator.ValidationError, match="schema|live_runtime_activation"):
+    with pytest.raises(
+        validator.ValidationError, match="schema|live_runtime_activation"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_current_agon_predecessors() -> None:
+def test_experience_agonic_arena_requires_current_agon_predecessors() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/agon/docs/AGON_DUEL_KERNEL_MODEL.md")
+    predecessors.remove("agon.duel-kernel-model")
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+    with pytest.raises(validator.ValidationError, match="predecessor_receipt_refs|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_latest_agon_stop_lines() -> None:
+def test_experience_agonic_arena_requires_latest_agon_stop_lines() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/agon/docs/AGON_WAVE18_STOP_LINES.md")
+    predecessors.remove("agon.arena-session-landing-stop-lines")
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+    with pytest.raises(validator.ValidationError, match="predecessor_receipt_refs|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_rejects_assistant_contestant_pair_trial() -> None:
+def test_experience_agonic_arena_rejects_assistant_contestant_pair_trial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -130,7 +158,7 @@ def test_experience_v14_mechanical_arena_rejects_assistant_contestant_pair_trial
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_rejects_live_pair_enrollment() -> None:
+def test_experience_agonic_arena_rejects_live_pair_enrollment() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -153,7 +181,7 @@ def test_experience_v14_mechanical_arena_rejects_live_pair_enrollment() -> None:
         "no_runtime_storage_or_worker_activation",
     ],
 )
-def test_experience_v14_mechanical_arena_requires_hard_guards(guard: str) -> None:
+def test_experience_agonic_arena_requires_hard_guards(guard: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -166,7 +194,7 @@ def test_experience_v14_mechanical_arena_requires_hard_guards(guard: str) -> Non
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_rejects_active_landing_state() -> None:
+def test_experience_agonic_arena_rejects_active_landing_state() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -183,7 +211,7 @@ def test_experience_v14_mechanical_arena_rejects_active_landing_state() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_blocks_assistant_primary_contestant() -> None:
+def test_experience_agonic_arena_blocks_assistant_primary_contestant() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -196,7 +224,7 @@ def test_experience_v14_mechanical_arena_blocks_assistant_primary_contestant() -
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_witness_and_blocks_assistant_judge() -> None:
+def test_experience_agonic_arena_requires_witness_and_blocks_assistant_judge() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -209,7 +237,7 @@ def test_experience_v14_mechanical_arena_requires_witness_and_blocks_assistant_j
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_blocks_posthoc_commit_edit() -> None:
+def test_experience_agonic_arena_blocks_posthoc_commit_edit() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -222,7 +250,7 @@ def test_experience_v14_mechanical_arena_blocks_posthoc_commit_edit() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_blocks_open_material_contradiction_closure() -> None:
+def test_experience_agonic_arena_blocks_open_material_contradiction_closure() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -235,7 +263,7 @@ def test_experience_v14_mechanical_arena_blocks_open_material_contradiction_clos
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_blocks_hidden_summon() -> None:
+def test_experience_agonic_arena_blocks_hidden_summon() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -248,7 +276,7 @@ def test_experience_v14_mechanical_arena_blocks_hidden_summon() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_blocks_codex_verdict() -> None:
+def test_experience_agonic_arena_blocks_codex_verdict() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -261,7 +289,7 @@ def test_experience_v14_mechanical_arena_blocks_codex_verdict() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_blocks_scar_grant_by_verdict() -> None:
+def test_experience_agonic_arena_blocks_scar_grant_by_verdict() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -274,7 +302,7 @@ def test_experience_v14_mechanical_arena_blocks_scar_grant_by_verdict() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_blocks_durable_scar_and_retention_execution() -> None:
+def test_experience_agonic_arena_blocks_durable_scar_and_retention_execution() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -287,7 +315,7 @@ def test_experience_v14_mechanical_arena_blocks_durable_scar_and_retention_execu
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_blocks_direct_tos_write() -> None:
+def test_experience_agonic_arena_blocks_direct_tos_write() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -300,7 +328,7 @@ def test_experience_v14_mechanical_arena_blocks_direct_tos_write() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_blocks_runtime_storage_activation() -> None:
+def test_experience_agonic_arena_blocks_runtime_storage_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -313,7 +341,7 @@ def test_experience_v14_mechanical_arena_blocks_runtime_storage_activation() -> 
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_blocks_archive_pycache_landing() -> None:
+def test_experience_agonic_arena_blocks_archive_pycache_landing() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -338,7 +366,7 @@ def test_experience_v14_mechanical_arena_blocks_archive_pycache_landing() -> Non
         "grant summon authority",
     ],
 )
-def test_experience_v14_mechanical_arena_rejects_codex_authority_leaks(
+def test_experience_agonic_arena_rejects_codex_authority_leaks(
     forbidden_grant: str,
 ) -> None:
     validator = load_validator()
@@ -349,11 +377,14 @@ def test_experience_v14_mechanical_arena_rejects_codex_authority_leaks(
     assert isinstance(may, list)
     may.append(forbidden_grant)
 
-    with pytest.raises(validator.ValidationError, match="codex_may|forbidden mechanical arena authority"):
+    with pytest.raises(
+        validator.ValidationError,
+        match="codex_may|forbidden mechanical arena authority",
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_assistant_contestant_denial() -> None:
+def test_experience_agonic_arena_requires_assistant_contestant_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -376,7 +407,7 @@ def test_experience_v14_mechanical_arena_requires_assistant_contestant_denial() 
         "runtime_as_doctrine",
     ],
 )
-def test_experience_v14_mechanical_arena_requires_derived_layer_denials(
+def test_experience_agonic_arena_requires_derived_layer_denials(
     derived_denial: str,
 ) -> None:
     validator = load_validator()
@@ -391,20 +422,22 @@ def test_experience_v14_mechanical_arena_requires_derived_layer_denials(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_runtime_owner_gate() -> None:
+def test_experience_agonic_arena_requires_runtime_owner_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     gates = bad_payload["authority"]["human_gates_required"]
     assert isinstance(gates, list)
-    gates.remove("runtime-owner gate before storage workers ports schedulers services or daemons")
+    gates.remove(
+        "runtime-owner gate before storage workers ports schedulers services or daemons"
+    )
 
     with pytest.raises(validator.ValidationError, match="human_gates_required"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_flow_owner_routing() -> None:
+def test_experience_agonic_arena_requires_flow_owner_routing() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -428,7 +461,7 @@ def test_experience_v14_mechanical_arena_requires_flow_owner_routing() -> None:
         "generated output becomes truth",
     ],
 )
-def test_experience_v14_mechanical_arena_rejects_flow_authority_note_leaks(
+def test_experience_agonic_arena_rejects_flow_authority_note_leaks(
     authority_note: str,
 ) -> None:
     validator = load_validator()
@@ -443,20 +476,22 @@ def test_experience_v14_mechanical_arena_rejects_flow_authority_note_leaks(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_all_owner_repos() -> None:
+def test_experience_agonic_arena_requires_all_owner_repos() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     owner_split = bad_payload["owner_split"]
     assert isinstance(owner_split, list)
-    owner_split[:] = [entry for entry in owner_split if entry.get("repo") != "aoa-agents"]
+    owner_split[:] = [
+        entry for entry in owner_split if entry.get("repo") != "aoa-agents"
+    ]
 
     with pytest.raises(validator.ValidationError, match="owner_split|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_agents_assistant_contestant_denial() -> None:
+def test_experience_agonic_arena_requires_agents_assistant_contestant_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -465,13 +500,15 @@ def test_experience_v14_mechanical_arena_requires_agents_assistant_contestant_de
     assert isinstance(owner_split, list)
     for entry in owner_split:
         if entry.get("repo") == "aoa-agents":
-            entry["must_not"] = "grant judge scar writer retention executor hidden summon or hybrid mask authority"
+            entry["must_not"] = (
+                "grant judge scar writer retention executor hidden summon or hybrid mask authority"
+            )
 
     with pytest.raises(validator.ValidationError, match="owner_split|aoa-agents"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_evals_no_live_verdict_denial() -> None:
+def test_experience_agonic_arena_requires_evals_no_live_verdict_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -480,13 +517,15 @@ def test_experience_v14_mechanical_arena_requires_evals_no_live_verdict_denial()
     assert isinstance(owner_split, list)
     for entry in owner_split:
         if entry.get("repo") == "aoa-evals":
-            entry["must_not"] = "certify trials grant scars mutate rank or execute retention"
+            entry["must_not"] = (
+                "certify trials grant scars mutate rank or execute retention"
+            )
 
     with pytest.raises(validator.ValidationError, match="owner_split|aoa-evals"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_memo_no_durable_scar_denial() -> None:
+def test_experience_agonic_arena_requires_memo_no_durable_scar_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -495,13 +534,15 @@ def test_experience_v14_mechanical_arena_requires_memo_no_durable_scar_denial() 
     assert isinstance(owner_split, list)
     for entry in owner_split:
         if entry.get("repo") == "aoa-memo":
-            entry["must_not"] = "make memory truth execute retention or grant future behavior rights"
+            entry["must_not"] = (
+                "make memory truth execute retention or grant future behavior rights"
+            )
 
     with pytest.raises(validator.ValidationError, match="owner_split|aoa-memo"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_runtime_owner_split_gate() -> None:
+def test_experience_agonic_arena_requires_runtime_owner_split_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -510,13 +551,17 @@ def test_experience_v14_mechanical_arena_requires_runtime_owner_split_gate() -> 
     assert isinstance(owner_split, list)
     for entry in owner_split:
         if entry.get("repo") == "abyss-stack":
-            entry["owns"] = "runtime storage workers deployment ports services and session persistence"
+            entry["owns"] = (
+                "runtime storage workers deployment ports services and session persistence"
+            )
 
-    with pytest.raises(validator.ValidationError, match="owner_split|runtime-owner gate"):
+    with pytest.raises(
+        validator.ValidationError, match="owner_split|runtime-owner gate"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_tos_direct_write_denial() -> None:
+def test_experience_agonic_arena_requires_tos_direct_write_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -531,20 +576,22 @@ def test_experience_v14_mechanical_arena_requires_tos_direct_write_denial() -> N
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_requires_quarantine_of_generated_outputs() -> None:
+def test_experience_agonic_arena_requires_quarantine_of_generated_outputs() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     quarantine = bad_payload["quarantined_surfaces"]
     assert isinstance(quarantine, list)
-    quarantine.remove("archive-local generated scar_write and retention_schedule artifacts")
+    quarantine.remove(
+        "archive-local generated scar_write and retention_schedule artifacts"
+    )
 
     with pytest.raises(validator.ValidationError, match="quarantined_surfaces|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v14_mechanical_arena_preserves_dry_run_only_evidence() -> None:
+def test_experience_agonic_arena_preserves_dry_run_only_evidence() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()

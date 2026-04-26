@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience Wave 4 polis/constitution center surfaces."""
+"""Validate the Experience polis/constitution center surfaces."""
 
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ SCHEMA_PATH = (
     / "parts"
     / "governance-polis"
     / "schemas"
-    / "experience-wave4-polis-constitution.schema.json"
+    / "experience-polis-constitution.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -36,12 +36,12 @@ EXAMPLE_PATH = (
     / "parts"
     / "governance-polis"
     / "examples"
-    / "experience_wave4_polis_constitution.example.json"
+    / "experience_polis_constitution.example.json"
 )
 
 EXPECTED_SOURCE_SEEDS = [
-    "aoa-experience-polis-governance-seed-v0_8.zip",
-    "aoa-experience-constitution-runtime-seed-v0_9.zip",
+    "experience.seed.polis-governance",
+    "experience.seed.constitution-runtime",
 ]
 POLIS_ORDER = [
     "governance_case_opened",
@@ -110,7 +110,7 @@ REQUIRED_OWNER_REPOS = {
 
 
 class ValidationError(RuntimeError):
-    """Raised when an Experience Wave 4 surface drifts."""
+    """Raised when an Experience polis/constitution surface drifts."""
 
 
 def fail(message: str) -> None:
@@ -147,21 +147,21 @@ def require_files() -> None:
         if not path.exists()
     ]
     if missing:
-        fail("missing Experience Wave 4 files: " + ", ".join(missing))
+        fail("missing Experience polis/constitution files: " + ", ".join(missing))
 
 
 def validate_schema(schema: dict[str, Any], example: dict[str, Any]) -> None:
-    if schema.get("title") != "experience_wave4_polis_constitution_v1":
-        fail("Wave 4 schema title must be experience_wave4_polis_constitution_v1")
+    if schema.get("title") != "experience_polis_constitution_v1":
+        fail("polis/constitution schema title must be experience_polis_constitution_v1")
     if schema.get("additionalProperties") is not False:
-        fail("Wave 4 schema must reject additional top-level properties")
+        fail("polis/constitution schema must reject additional top-level properties")
     Draft202012Validator.check_schema(schema)
     errors = sorted(
         Draft202012Validator(schema).iter_errors(example),
         key=lambda error: list(error.path),
     )
     if errors:
-        fail(f"Wave 4 example does not match schema: {errors[0].message}")
+        fail(f"polis/constitution example does not match schema: {errors[0].message}")
 
 
 def validate_flow_order(flow: dict[str, Any], key: str, expected: list[str]) -> None:
@@ -185,14 +185,14 @@ def validate_flow_order(flow: dict[str, Any], key: str, expected: list[str]) -> 
 
 
 def validate_example(flow: dict[str, Any]) -> None:
-    if flow.get("schema_version") != "experience_wave4_polis_constitution_v1":
-        fail("example schema_version must be experience_wave4_polis_constitution_v1")
-    if flow.get("wave") != "experience_wave4":
-        fail("example wave must be experience_wave4")
+    if flow.get("schema_version") != "experience_polis_constitution_v1":
+        fail("example schema_version must be experience_polis_constitution_v1")
+    if flow.get("contract_ref") != "experience_polis_constitution":
+        fail("example contract_ref must be experience_polis_constitution")
     if flow.get("status") != "polis_governance_constitution_runtime_contract_gated":
-        fail("example status must keep Wave 4 contract-gated")
-    if flow.get("source_seeds") != EXPECTED_SOURCE_SEEDS:
-        fail("example source_seeds must preserve v0.8 before v0.9")
+        fail("example status must keep polis/constitution contract-gated")
+    if flow.get("source_receipt_refs") != EXPECTED_SOURCE_SEEDS:
+        fail("example source_receipt_refs must preserve v0.8 before v0.9")
 
     validate_flow_order(flow, "polis_flow", POLIS_ORDER)
     validate_flow_order(flow, "runtime_flow", RUNTIME_ORDER)
@@ -278,7 +278,7 @@ def main() -> int:
         for error in errors:
             print(f"[error] {error}", file=sys.stderr)
         return 1
-    print("ok: Experience Wave 4 polis/constitution center is valid")
+    print("ok: Experience polis/constitution center is valid")
     return 0
 
 

@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "experience_federation_adoption_v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "contract_ref",
+    "status",
+    "source_receipt_refs",
+    "federation_flow",
+    "adoption_flow",
+    "authority",
+    "owner_split"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "experience_federation_adoption_v1"
+    },
+    "contract_ref": {
+      "type": "string",
+      "const": "experience_federation_adoption"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "federation_harvest_active_adoption_forge_contract_gated"
+      ]
+    },
+    "source_receipt_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2
+    },
+    "federation_flow": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/flow_step"
+      },
+      "minItems": 8
+    },
+    "adoption_flow": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/flow_step"
+      },
+      "minItems": 10
+    },
+    "authority": {
+      "type": "object",
+      "required": [
+        "codex_may",
+        "codex_must_not",
+        "human_authority_required",
+        "runtime_effect"
+      ],
+      "properties": {
+        "codex_may": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "codex_must_not": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "human_authority_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "runtime_effect": {
+          "type": "string",
+          "const": "none"
+        }
+      },
+      "additionalProperties": false
+    },
+    "owner_split": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "repo",
+          "owns",
+          "must_not"
+        ],
+        "properties": {
+          "repo": {
+            "type": "string"
+          },
+          "owns": {
+            "type": "string"
+          },
+          "must_not": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "flow_step": {
+      "type": "object",
+      "required": [
+        "kind",
+        "owner_repo",
+        "authority_note"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "owner_repo": {
+          "type": "string"
+        },
+        "authority_note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

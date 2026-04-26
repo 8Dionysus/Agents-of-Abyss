@@ -38,6 +38,8 @@ It does not activate live workspace runtime, owner-local offices, hidden memory 
 - `LANDING_LOG.md`: canonical Experience landing ledger.
 - `artifact-map.json`: machine-readable receipt from old flat artifact paths to
   active part-local homes.
+- `provenance-receipts.json`: machine-readable receipt IDs for old packets,
+  sibling surfaces, and staged seed inputs referenced by active artifacts.
 - `PROVENANCE.md`: controlled bridge to archival accounting.
 - `docs/`: compatibility route only.
 

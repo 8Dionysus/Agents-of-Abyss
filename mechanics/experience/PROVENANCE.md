@@ -21,6 +21,10 @@ the active route.
 
 The detailed archive account lives here:
 
+- [provenance receipts](provenance-receipts.json): receipt IDs used by active
+  schemas, examples, validators, and tests when they must cite older packets,
+  staged seed inputs, or sibling-owner surfaces without pulling those names into
+  the active route.
 - [legacy index](legacy/INDEX.md): preserved source packets mapped to active
   Experience parts.
 - [distillation log](legacy/DISTILLATION_LOG.md): what was distilled, where it

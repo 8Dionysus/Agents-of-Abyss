@@ -1,0 +1,462 @@
+{
+  "schema_version": "experience_agonic_pair_trials_arena_kernel_v1",
+  "planting_id": "experience_agonic_pair_trials_arena_kernel_center_contract",
+  "campaign_ref": "agonic_pair_trials_arena_kernel",
+  "status": "center_mechanical_arena_kernel_contract_landed",
+  "runtime_effect": "none",
+  "live_arena_activation": false,
+  "live_runtime_activation": false,
+  "source_seed": {
+    "receipt_ref": "experience.seed.agonic-pair-trials-arena-kernel",
+    "sha256": "c62a9c38b662ad7c62405c7ca2ac75fe5ea7cc05f13e001a141ad60cf2f5f404",
+    "claim_limit": "archive_readable_not_owner_ready"
+  },
+  "predecessor_receipt_refs": [
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.service-mesh-operations",
+    "experience.raw.office-role-pairs",
+    "agon.arena-session-model",
+    "agon.charter-and-seat-model",
+    "agon.sealed-commit-model",
+    "agon.state-packet-model",
+    "agon.contradiction-closure-summon-law",
+    "agon.verdict-delta-scar-bridge",
+    "agon.duel-kernel-model",
+    "agon.mechanical-trials-over-duel-kernel",
+    "experience.raw.runtime-authority-boundary",
+    "agon.pre-protocol-stop-lines",
+    "agon.sealed-commit-stop-lines",
+    "agon.model-of-other-stop-lines",
+    "agon.retention-rank-stop-lines",
+    "agon.epistemic-duel-stop-lines",
+    "agon.contradiction-closure-stop-lines",
+    "agon.affective-honor-stop-lines",
+    "agon.arena-session-landing-stop-lines"
+  ],
+  "arena_kernel_law": [
+    "no_arena_without_charter",
+    "no_contestant_without_agonic_kind",
+    "no_stance_without_sealed_commit",
+    "no_closure_without_trace",
+    "no_closure_over_material_open_contradiction",
+    "no_summon_without_visible_request_and_cost",
+    "no_scar_without_verdict_and_retention",
+    "no_direct_tree_of_sophia_write",
+    "assistants_may_serve_not_secretly_become_contestants"
+  ],
+  "first_pair_trials": [
+    {
+      "office": "verifier",
+      "assistant_form": "verifier.assistant",
+      "agonic_form": "verifier.agonic",
+      "trial_kind": "mechanical_duel",
+      "assistant_authority": "proof_floor_witness_only",
+      "agonic_authority": "contest_evidence_or_closure_only_after_owner_local_trial_gate",
+      "witness_requirements": [
+        "notary.assistant",
+        "chronicler.assistant"
+      ],
+      "live_enrollment": false,
+      "scar_authority": "none_from_center"
+    },
+    {
+      "office": "chronicler",
+      "assistant_form": "chronicler.assistant",
+      "agonic_form": "chronicler.agonic",
+      "trial_kind": "mechanical_duel",
+      "assistant_authority": "record_and_format_scar_packet_only",
+      "agonic_authority": "contest_rupture_or_biography_only_after_owner_local_trial_gate",
+      "witness_requirements": [
+        "notary.assistant",
+        "verifier.assistant"
+      ],
+      "live_enrollment": false,
+      "scar_authority": "none_from_center"
+    },
+    {
+      "office": "librarian",
+      "assistant_form": "librarian.assistant",
+      "agonic_form": "librarian.agonic",
+      "trial_kind": "mechanical_duel",
+      "assistant_authority": "source_carrier_and_dossier_packager_only",
+      "agonic_authority": "contest_reading_or_canonical_risk_only_after_owner_local_trial_gate",
+      "witness_requirements": [
+        "notary.assistant",
+        "chronicler.assistant"
+      ],
+      "live_enrollment": false,
+      "scar_authority": "none_from_center"
+    }
+  ],
+  "kernel_flow": [
+    {
+      "order": 1,
+      "kind": "source_seed_received",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "Dionysus archive is transport evidence; center may name the arena kernel contract only",
+      "stop_lines": [
+        "no raw archive replay",
+        "no generated clean-flow promotion"
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "role_pair_predecessor_checked",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "v1.3 role pairs remain requests; v1.4 may only define the next center kernel boundary",
+      "stop_lines": [
+        "no pair certification",
+        "no live enrollment"
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "arena_charter_requested",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "charter is required before any later owner-local arena can be considered",
+      "stop_lines": [
+        "no arena without charter",
+        "no center-created live arena"
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "contestant_eligibility_checked",
+      "owner": "aoa-agents",
+      "authority_note": "only agonic forms may be primary contestant candidates after owner-local approval",
+      "stop_lines": [
+        "no assistant contestant",
+        "no hybrid contestant mask"
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "service_witness_seats_declared",
+      "owner": "aoa-agents",
+      "authority_note": "assistant forms may witness and serve but cannot judge, close, summon secretly, or write scars",
+      "stop_lines": [
+        "no assistant judge",
+        "no assistant scar writer"
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "sealed_stance_commit_required",
+      "owner": "aoa-evals",
+      "authority_note": "stance integrity is a bounded check, not a live duel execution",
+      "stop_lines": [
+        "no unsealed stance",
+        "no posthoc commit edit"
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "contradiction_ledger_required",
+      "owner": "aoa-evals",
+      "authority_note": "material open contradiction must block closure claims",
+      "stop_lines": [
+        "no closure over material open contradiction",
+        "no false success"
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "summon_cost_gate_required",
+      "owner": "aoa-routing",
+      "authority_note": "routing may request visible summon gates and costs only",
+      "stop_lines": [
+        "no hidden summon",
+        "no routing summon authority"
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "lawful_closure_gate_required",
+      "owner": "aoa-evals",
+      "authority_note": "evals may prepare bounded closure checks but cannot issue live verdict authority",
+      "stop_lines": [
+        "no Codex verdict",
+        "no eval certification authority"
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "delta_receipt_requested",
+      "owner": "aoa-memo",
+      "authority_note": "learning claims require owner-reviewed delta evidence before memory intake",
+      "stop_lines": [
+        "no learning claim without delta receipt",
+        "memo is not truth"
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "scar_retention_bridge_requested",
+      "owner": "aoa-memo",
+      "authority_note": "scar and retention stay request-only until owner-local memory gates land",
+      "stop_lines": [
+        "no durable scar write",
+        "no retention execution"
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "owner_landing_or_recharter_request_declared",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "future arena work returns to owner-local landing or human recharter as requests",
+      "stop_lines": [
+        "no runtime storage activation",
+        "no direct Tree-of-Sophia write"
+      ]
+    }
+  ],
+  "hard_guards": [
+    "no_live_arena_activation",
+    "no_assistant_contestant",
+    "no_hidden_summon",
+    "no_posthoc_stance_tamper",
+    "no_closure_without_trace",
+    "no_closure_over_material_open_contradiction",
+    "no_codex_arena_verdict",
+    "no_scar_without_retention",
+    "no_durable_scar_or_retention_write",
+    "no_rank_or_honor_mutation",
+    "no_direct_tree_of_sophia_write",
+    "no_runtime_storage_or_worker_activation"
+  ],
+  "blocking_contracts": {
+    "activation_state": {
+      "allowed_landing_states": [
+        "draft",
+        "proposed",
+        "reviewed",
+        "blocked",
+        "quarantined",
+        "candidate_only"
+      ],
+      "active_allowed_during_landing": false,
+      "live_arena_allowed": false,
+      "live_runtime_allowed": false
+    },
+    "contestant_eligibility": {
+      "primary_contestant_kinds": [
+        "agonic"
+      ],
+      "assistant_primary_contestant_allowed": false,
+      "same_actor_service_and_contestant_allowed": false,
+      "two_contestant_duel_only": true,
+      "third_permanent_contestant_allowed": false
+    },
+    "witness_contract": {
+      "service_witness_required": true,
+      "assistant_service_witness_allowed": true,
+      "assistant_judge_allowed": false,
+      "assistant_scar_writer_allowed": false,
+      "assistant_retention_executor_allowed": false
+    },
+    "stance_integrity": {
+      "sealed_commit_required": true,
+      "reveal_must_match_commit_hash": true,
+      "posthoc_commit_edit_allowed": false
+    },
+    "closure_contract": {
+      "trace_required": true,
+      "material_open_contradiction_blocks_closure": true,
+      "closure_without_trace_allowed": false,
+      "unresolved_protocol_breach_blocks_closure": true,
+      "false_success_allowed": false
+    },
+    "summon_economy": {
+      "visible_summon_request_required": true,
+      "summon_cost_required": true,
+      "hidden_summon_allowed": false,
+      "codex_summon_authority_allowed": false,
+      "routing_summon_authority_allowed": false
+    },
+    "verdict_boundary": {
+      "allowed_issuer_kinds": [
+        "evaluator",
+        "operator",
+        "council"
+      ],
+      "codex_verdict_allowed": false,
+      "assistant_verdict_allowed": false,
+      "runtime_verdict_allowed": false,
+      "verdict_may_grant_scar_rank_retention": false
+    },
+    "scar_retention": {
+      "scar_candidate_only_required": true,
+      "retention_schedule_candidate_only_required": true,
+      "durable_scar_write_allowed": false,
+      "retention_execution_allowed": false,
+      "rank_mutation_allowed": false,
+      "honor_mutation_allowed": false
+    },
+    "tos_boundary": {
+      "runtime_write_allowed": false,
+      "direct_node_path_allowed": false,
+      "canon_write_allowed": false,
+      "dossier_candidate_only": true
+    },
+    "runtime_storage": {
+      "runtime_worker_activation_allowed": false,
+      "storage_record_authoritative": false,
+      "host_port_open_allowed": false,
+      "scheduler_loop_allowed": false,
+      "deployment_daemon_allowed": false
+    },
+    "archive_consistency": {
+      "clean_flow_may_inform_contract": true,
+      "raw_generated_output_copied_as_truth": false,
+      "fixture_generated_result_disagreement_allowed": false,
+      "archive_pycache_allowed_in_owner_repo": false
+    }
+  },
+  "authority": {
+    "contract_effect": "center_mechanical_arena_kernel_law_only",
+    "codex_may": [
+      "simulate mechanical arena contract checks",
+      "collect seed dry-run evidence",
+      "propose owner-local arena requests",
+      "run validators",
+      "prepare contestant eligibility review packets"
+    ],
+    "codex_must_not": [
+      "activate live arena",
+      "activate runtime storage",
+      "issue arena verdict",
+      "certify trial success",
+      "enroll assistant as contestant",
+      "grant summon authority",
+      "write durable scar",
+      "execute retention",
+      "mutate rank or honor",
+      "write directly to Tree-of-Sophia",
+      "promote generated clean-flow output to owner truth",
+      "copy raw archive proposals into owner truth"
+    ],
+    "assistant_must_not": [
+      "become primary contestant",
+      "become judge",
+      "issue verdict",
+      "perform hidden summon",
+      "write scars",
+      "execute retention",
+      "mutate rank or honor",
+      "write directly to Tree-of-Sophia",
+      "self-enroll into agonic trial"
+    ],
+    "derived_layers_must_not": [
+      "stats_as_proof",
+      "memo_as_truth",
+      "routing_as_owner",
+      "kag_as_canon",
+      "sdk_as_authority",
+      "evals_as_live_verdict_authority",
+      "playbooks_as_runtime",
+      "runtime_as_doctrine",
+      "dionysus_as_runtime"
+    ],
+    "human_gates_required": [
+      "operator arena-kernel acceptance",
+      "owner-local contestant eligibility approval",
+      "owner-local eval approval before verdict bundle use",
+      "owner-local memo approval before scar or retention intake",
+      "runtime-owner gate before storage workers ports schedulers services or daemons",
+      "Tree-of-Sophia review before canon or interpretive intake"
+    ]
+  },
+  "owner_split": [
+    {
+      "repo": "Agents-of-Abyss",
+      "owns": "center mechanical arena kernel law source bridge flow hard guards and authority stop-lines",
+      "must_not": "replace owner-local arena role proof memory routing runtime or ToS truth"
+    },
+    {
+      "repo": "aoa-agents",
+      "owns": "contestant eligibility assistant witness boundaries agonic role posture and pair-trial actor profiles after owner-local landing",
+      "must_not": "grant assistant contestant judge scar writer retention executor hidden summon or hybrid mask authority"
+    },
+    {
+      "repo": "aoa-evals",
+      "owns": "bounded verdict bundles stance-integrity checks contradiction-ledger checks summon-economy checks and scar-worthiness evals",
+      "must_not": "issue live arena verdicts certify trials grant scars mutate rank or execute retention"
+    },
+    {
+      "repo": "aoa-playbooks",
+      "owns": "recurring mechanical trial choreography expected evidence fallback posture and owner-review run routes",
+      "must_not": "execute live arena sessions become runtime or grant verdict scar rank or retention authority"
+    },
+    {
+      "repo": "aoa-memo",
+      "owns": "scar memory writeback gates retention review candidates delta receipt intake and biography boundaries",
+      "must_not": "make memory truth write durable scars execute retention or grant future behavior rights"
+    },
+    {
+      "repo": "aoa-stats",
+      "owns": "derived arena dashboards summon economy metrics and mechanical agon rollups",
+      "must_not": "become proof score verdict rank honor or quest authority"
+    },
+    {
+      "repo": "aoa-routing",
+      "owns": "advisory arena-entry contested-closure and service-to-Agon escalation gate candidates",
+      "must_not": "open live gates own meaning grant summon authority or dispatch runtime arena sessions"
+    },
+    {
+      "repo": "aoa-sdk",
+      "owns": "typed packet helpers API contracts validation helpers and control-plane seams only",
+      "must_not": "become semantic runtime verdict scar retention or storage authority"
+    },
+    {
+      "repo": "aoa-kag",
+      "owns": "derived arena pattern candidates only",
+      "must_not": "become canon force Tree-of-Sophia uptake or claim arena truth"
+    },
+    {
+      "repo": "aoa-skills",
+      "owns": "bounded arena-adjacent workflows extracted from owner-accepted patterns",
+      "must_not": "grant live move verdict summon scar rank retention or runtime authority"
+    },
+    {
+      "repo": "aoa-techniques",
+      "owns": "reusable contradiction analysis stance commit and trace reconstruction practice after owner acceptance",
+      "must_not": "grant live arena canon verdict scar rank retention or runtime authority"
+    },
+    {
+      "repo": "abyss-stack",
+      "owns": "runtime storage workers deployment ports services and session persistence only after a separate runtime-owner gate",
+      "must_not": "activate runtime from this center landing"
+    },
+    {
+      "repo": "Tree-of-Sophia",
+      "owns": "canon and interpretive review through its own path",
+      "must_not": "receive direct runtime writes node paths canon writes or unreviewed arena dossiers"
+    },
+    {
+      "repo": "Dionysus",
+      "owns": "source lineage staged intake and later harvest trace",
+      "must_not": "become runtime owner doctrine or live arena source of truth"
+    },
+    {
+      "repo": "8Dionysus",
+      "owns": "shared-root projection law where workspace projection surfaces are affected",
+      "must_not": "absorb mechanical arena truth"
+    }
+  ],
+  "quarantined_surfaces": [
+    "archive-local generated/mechanical_arena_clean_flow runtime-like examples",
+    "archive-local generated scar_write and retention_schedule artifacts",
+    "archive-local repo/* owner proposals outside this center contract",
+    "archive-local __pycache__ files",
+    "archive-local runtime storage records and dashboard outputs"
+  ],
+  "seed_dry_run_evidence": {
+    "archive_integrity": "unzip_t_passed",
+    "schema_example_pairs": 33,
+    "json_files": 108,
+    "seed_tests_passed": 16,
+    "claim_limit": "dry_run_only_not_owner_readiness"
+  }
+}

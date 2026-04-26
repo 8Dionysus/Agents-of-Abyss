@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience Wave 3 federation/adoption center surfaces."""
+"""Validate the Experience federation/adoption center surfaces."""
 
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ SCHEMA_PATH = (
     / "parts"
     / "adoption-federation"
     / "schemas"
-    / "experience-wave3-federation-adoption.schema.json"
+    / "experience-federation-adoption.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -36,12 +36,12 @@ EXAMPLE_PATH = (
     / "parts"
     / "adoption-federation"
     / "examples"
-    / "experience_wave3_federation_adoption.example.json"
+    / "experience_federation_adoption.example.json"
 )
 
 EXPECTED_SOURCE_SEEDS = [
-    "aoa-experience-federation-harvest-seed-v0_6.zip",
-    "aoa-experience-adoption-forge-seed-v0_7.zip",
+    "experience.seed.federation-harvest",
+    "experience.seed.adoption-forge",
 ]
 FEDERATION_ORDER = [
     "owner_local_signals_collected",
@@ -100,7 +100,7 @@ REQUIRED_OWNER_REPOS = {
 
 
 class ValidationError(RuntimeError):
-    """Raised when an Experience Wave 3 surface drifts."""
+    """Raised when an Experience federation/adoption surface drifts."""
 
 
 def fail(message: str) -> None:
@@ -137,21 +137,23 @@ def require_files() -> None:
         if not path.exists()
     ]
     if missing:
-        fail("missing Experience Wave 3 files: " + ", ".join(missing))
+        fail("missing Experience federation/adoption files: " + ", ".join(missing))
 
 
 def validate_schema(schema: dict[str, Any], example: dict[str, Any]) -> None:
-    if schema.get("title") != "experience_wave3_federation_adoption_v1":
-        fail("Wave 3 schema title must be experience_wave3_federation_adoption_v1")
+    if schema.get("title") != "experience_federation_adoption_v1":
+        fail(
+            "federation/adoption schema title must be experience_federation_adoption_v1"
+        )
     if schema.get("additionalProperties") is not False:
-        fail("Wave 3 schema must reject additional top-level properties")
+        fail("federation/adoption schema must reject additional top-level properties")
     Draft202012Validator.check_schema(schema)
     errors = sorted(
         Draft202012Validator(schema).iter_errors(example),
         key=lambda error: list(error.path),
     )
     if errors:
-        fail(f"Wave 3 example does not match schema: {errors[0].message}")
+        fail(f"federation/adoption example does not match schema: {errors[0].message}")
 
 
 def validate_flow_order(flow: dict[str, Any], key: str, expected: list[str]) -> None:
@@ -175,14 +177,14 @@ def validate_flow_order(flow: dict[str, Any], key: str, expected: list[str]) -> 
 
 
 def validate_example(flow: dict[str, Any]) -> None:
-    if flow.get("schema_version") != "experience_wave3_federation_adoption_v1":
-        fail("example schema_version must be experience_wave3_federation_adoption_v1")
-    if flow.get("wave") != "experience_wave3":
-        fail("example wave must be experience_wave3")
+    if flow.get("schema_version") != "experience_federation_adoption_v1":
+        fail("example schema_version must be experience_federation_adoption_v1")
+    if flow.get("contract_ref") != "experience_federation_adoption":
+        fail("example contract_ref must be experience_federation_adoption")
     if flow.get("status") != "federation_harvest_active_adoption_forge_contract_gated":
         fail("example status must keep adoption owner-gated")
-    if flow.get("source_seeds") != EXPECTED_SOURCE_SEEDS:
-        fail("example source_seeds must preserve v0.6 before v0.7")
+    if flow.get("source_receipt_refs") != EXPECTED_SOURCE_SEEDS:
+        fail("example source_receipt_refs must preserve v0.6 before v0.7")
 
     validate_flow_order(flow, "federation_flow", FEDERATION_ORDER)
     validate_flow_order(flow, "adoption_flow", ADOPTION_ORDER)
@@ -254,7 +256,7 @@ def main() -> int:
         for error in errors:
             print(f"[error] {error}", file=sys.stderr)
         return 1
-    print("ok: Experience Wave 3 federation/adoption center is valid")
+    print("ok: Experience federation/adoption center is valid")
     return 0
 
 

@@ -17,12 +17,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "certification-proof" / "scripts" / "validate_certification_proof.py"
-    spec = importlib.util.spec_from_file_location("experience_wave2_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "certification-proof"
+        / "scripts"
+        / "validate_certification_proof.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_certification_watchtower_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -30,12 +41,25 @@ def load_validator():
 
 
 def load_example() -> dict[str, object]:
-    return json.loads((ROOT / "mechanics" / "experience" / "parts" / "certification-proof" / "examples" / "experience_wave2_certification_watchtower.example.json").read_text())
+    return json.loads(
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "certification-proof"
+            / "examples"
+            / "experience_certification_watchtower.example.json"
+        ).read_text()
+    )
 
 
-def test_experience_wave2_validator_passes() -> None:
+def test_experience_certification_watchtower_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/certification-proof/scripts/validate_certification_proof.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/certification-proof/scripts/validate_certification_proof.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -43,7 +67,7 @@ def test_experience_wave2_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_wave2_rejects_codex_certification() -> None:
+def test_experience_certification_watchtower_rejects_codex_certification() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -57,7 +81,7 @@ def test_experience_wave2_rejects_codex_certification() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave2_rejects_codex_ring_promotion() -> None:
+def test_experience_certification_watchtower_rejects_codex_ring_promotion() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -71,7 +95,7 @@ def test_experience_wave2_rejects_codex_ring_promotion() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave2_rejects_out_of_order_watchtower() -> None:
+def test_experience_certification_watchtower_rejects_out_of_order_watchtower() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -86,12 +110,37 @@ def test_experience_wave2_rejects_out_of_order_watchtower() -> None:
 def test_seeded_center_examples_validate_against_schemas() -> None:
     stems = [
         example.name.removesuffix(".example.json")
-        for example in sorted((ROOT / "mechanics" / "experience" / "parts" / "certification-proof" / "examples").glob("experience_*.example.json"))
+        for example in sorted(
+            (
+                ROOT
+                / "mechanics"
+                / "experience"
+                / "parts"
+                / "certification-proof"
+                / "examples"
+            ).glob("experience_*.example.json")
+        )
     ]
     paired = []
     for stem in stems:
-        schema_path = ROOT / "mechanics" / "experience" / "parts" / "certification-proof" / "schemas" / f"{stem}_v1.json"
-        example_path = ROOT / "mechanics" / "experience" / "parts" / "certification-proof" / "examples" / f"{stem}.example.json"
+        schema_path = (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "certification-proof"
+            / "schemas"
+            / f"{stem}_v1.json"
+        )
+        example_path = (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "certification-proof"
+            / "examples"
+            / f"{stem}.example.json"
+        )
         if schema_path.exists():
             paired.append((schema_path, example_path))
     assert paired
@@ -99,5 +148,8 @@ def test_seeded_center_examples_validate_against_schemas() -> None:
         schema = json.loads(schema_path.read_text())
         example = json.loads(example_path.read_text())
         Draft202012Validator.check_schema(schema)
-        errors = sorted(Draft202012Validator(schema).iter_errors(example), key=lambda error: list(error.path))
+        errors = sorted(
+            Draft202012Validator(schema).iter_errors(example),
+            key=lambda error: list(error.path),
+        )
         assert not errors, f"{example_path.name}: {errors[0].message if errors else ''}"

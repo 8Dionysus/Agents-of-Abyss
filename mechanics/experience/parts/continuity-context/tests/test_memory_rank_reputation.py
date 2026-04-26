@@ -17,12 +17,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "scripts" / "validate_memory_rank_reputation.py"
-    spec = importlib.util.spec_from_file_location("experience_v16_rank_reputation_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "continuity-context"
+        / "scripts"
+        / "validate_memory_rank_reputation.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_rank_reputation_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -32,8 +43,13 @@ def load_validator():
 def load_example() -> dict[str, object]:
     return json.loads(
         (
-            ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "examples"
-            / "experience_v1_6_epistemic_memory_rank_reputation_engine.example.json"
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "continuity-context"
+            / "examples"
+            / "experience_memory_rank_reputation.example.json"
         ).read_text(encoding="utf-8")
     )
 
@@ -41,15 +57,23 @@ def load_example() -> dict[str, object]:
 def load_schema() -> dict[str, object]:
     return json.loads(
         (
-            ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "schemas"
-            / "experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json"
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "continuity-context"
+            / "schemas"
+            / "experience-memory-rank-reputation.schema.json"
         ).read_text(encoding="utf-8")
     )
 
 
-def test_experience_v16_rank_reputation_validator_passes() -> None:
+def test_experience_rank_reputation_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/continuity-context/scripts/validate_memory_rank_reputation.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/continuity-context/scripts/validate_memory_rank_reputation.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -57,20 +81,22 @@ def test_experience_v16_rank_reputation_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_v16_rank_reputation_requires_source_archive() -> None:
+def test_experience_rank_reputation_requires_source_archive() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     source = bad_payload["source_seed"]
     assert isinstance(source, dict)
-    source["archive_name"] = "aoa-experience-epistemic-duel-model-of-other-forge-seed-v1_5.zip"
+    source["receipt_ref"] = (
+        "experience.seed.epistemic-duel-model-forge"
+    )
 
     with pytest.raises(validator.ValidationError, match="source_seed|archive|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_rejects_live_rank_mutation() -> None:
+def test_experience_rank_reputation_rejects_live_rank_mutation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -81,40 +107,48 @@ def test_experience_v16_rank_reputation_rejects_live_rank_mutation() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_rejects_live_rights_activation() -> None:
+def test_experience_rank_reputation_rejects_live_rights_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_rights_activation"] = True
 
-    with pytest.raises(validator.ValidationError, match="schema|live_rights_activation"):
+    with pytest.raises(
+        validator.ValidationError, match="schema|live_rights_activation"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_requires_v15_predecessor() -> None:
+def test_experience_rank_reputation_requires_v15_predecessor() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md")
+    predecessors.remove(
+        "experience.raw.epistemic-duel-model-forge"
+    )
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|bridge spine|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="predecessor_receipt_refs|bridge spine|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_requires_rank_jurisdiction_predecessor() -> None:
+def test_experience_rank_reputation_requires_rank_jurisdiction_predecessor() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/agon/docs/AGON_RANK_JURISDICTION_MODEL.md")
+    predecessors.remove("agon.rank-jurisdiction-model")
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|bridge spine|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="predecessor_receipt_refs|bridge spine|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
@@ -132,7 +166,7 @@ def test_experience_v16_rank_reputation_requires_rank_jurisdiction_predecessor()
         "no_direct_tree_of_sophia_or_kag_canon",
     ],
 )
-def test_experience_v16_rank_reputation_requires_hard_guards(guard: str) -> None:
+def test_experience_rank_reputation_requires_hard_guards(guard: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -145,7 +179,7 @@ def test_experience_v16_rank_reputation_requires_hard_guards(guard: str) -> None
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_rejects_active_landing_state() -> None:
+def test_experience_rank_reputation_rejects_active_landing_state() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -168,7 +202,9 @@ def test_experience_v16_rank_reputation_rejects_active_landing_state() -> None:
         "one_event_promotion_allowed",
     ],
 )
-def test_experience_v16_rank_reputation_blocks_reputation_evidence_leaks(field: str) -> None:
+def test_experience_rank_reputation_blocks_reputation_evidence_leaks(
+    field: str,
+) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -189,7 +225,7 @@ def test_experience_v16_rank_reputation_blocks_reputation_evidence_leaks(field: 
         "retention_result_may_mutate_standing",
     ],
 )
-def test_experience_v16_rank_reputation_blocks_retention_runtime_leaks(field: str) -> None:
+def test_experience_rank_reputation_blocks_retention_runtime_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -210,7 +246,7 @@ def test_experience_v16_rank_reputation_blocks_retention_runtime_leaks(field: st
         "summon_without_visible_cost_allowed",
     ],
 )
-def test_experience_v16_rank_reputation_blocks_jurisdiction_leaks(field: str) -> None:
+def test_experience_rank_reputation_blocks_jurisdiction_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -234,7 +270,7 @@ def test_experience_v16_rank_reputation_blocks_jurisdiction_leaks(field: str) ->
         "codex_memory_write_allowed",
     ],
 )
-def test_experience_v16_rank_reputation_blocks_actor_authority(field: str) -> None:
+def test_experience_rank_reputation_blocks_actor_authority(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -256,7 +292,7 @@ def test_experience_v16_rank_reputation_blocks_actor_authority(field: str) -> No
         "pairing_lock_in_allowed",
     ],
 )
-def test_experience_v16_rank_reputation_blocks_memory_history_leaks(field: str) -> None:
+def test_experience_rank_reputation_blocks_memory_history_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -279,7 +315,7 @@ def test_experience_v16_rank_reputation_blocks_memory_history_leaks(field: str) 
         "dashboard_as_verdict_allowed",
     ],
 )
-def test_experience_v16_rank_reputation_blocks_derived_layer_leaks(field: str) -> None:
+def test_experience_rank_reputation_blocks_derived_layer_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -302,7 +338,7 @@ def test_experience_v16_rank_reputation_blocks_derived_layer_leaks(field: str) -
         "kag_canonization_allowed",
     ],
 )
-def test_experience_v16_rank_reputation_blocks_tos_and_kag_authority(field: str) -> None:
+def test_experience_rank_reputation_blocks_tos_and_kag_authority(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -325,7 +361,7 @@ def test_experience_v16_rank_reputation_blocks_tos_and_kag_authority(field: str)
         "deployment_daemon_allowed",
     ],
 )
-def test_experience_v16_rank_reputation_blocks_runtime_storage(field: str) -> None:
+def test_experience_rank_reputation_blocks_runtime_storage(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -338,7 +374,7 @@ def test_experience_v16_rank_reputation_blocks_runtime_storage(field: str) -> No
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_blocks_raw_generated_output_as_truth() -> None:
+def test_experience_rank_reputation_blocks_raw_generated_output_as_truth() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -363,7 +399,7 @@ def test_experience_v16_rank_reputation_blocks_raw_generated_output_as_truth() -
         "promote KAG canon",
     ],
 )
-def test_experience_v16_rank_reputation_rejects_codex_authority_leaks(
+def test_experience_rank_reputation_rejects_codex_authority_leaks(
     forbidden_grant: str,
 ) -> None:
     validator = load_validator()
@@ -378,7 +414,7 @@ def test_experience_v16_rank_reputation_rejects_codex_authority_leaks(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_requires_assistant_rank_denial() -> None:
+def test_experience_rank_reputation_requires_assistant_rank_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -401,7 +437,7 @@ def test_experience_v16_rank_reputation_requires_assistant_rank_denial() -> None
         "reputation_as_live_score",
     ],
 )
-def test_experience_v16_rank_reputation_requires_derived_layer_denials(
+def test_experience_rank_reputation_requires_derived_layer_denials(
     derived_denial: str,
 ) -> None:
     validator = load_validator()
@@ -416,14 +452,16 @@ def test_experience_v16_rank_reputation_requires_derived_layer_denials(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_requires_runtime_owner_gate() -> None:
+def test_experience_rank_reputation_requires_runtime_owner_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     gates = bad_payload["authority"]["human_gates_required"]
     assert isinstance(gates, list)
-    gates.remove("runtime-owner gate before ledger scheduler workers ports services or daemons")
+    gates.remove(
+        "runtime-owner gate before ledger scheduler workers ports services or daemons"
+    )
 
     with pytest.raises(validator.ValidationError, match="human_gates_required"):
         validator.validate_payload(bad_payload, schema)
@@ -441,7 +479,7 @@ def test_experience_v16_rank_reputation_requires_runtime_owner_gate() -> None:
         "generated output becomes truth",
     ],
 )
-def test_experience_v16_rank_reputation_rejects_flow_authority_note_leaks(
+def test_experience_rank_reputation_rejects_flow_authority_note_leaks(
     authority_note: str,
 ) -> None:
     validator = load_validator()
@@ -456,7 +494,7 @@ def test_experience_v16_rank_reputation_rejects_flow_authority_note_leaks(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_requires_all_owner_repos() -> None:
+def test_experience_rank_reputation_requires_all_owner_repos() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -469,7 +507,7 @@ def test_experience_v16_rank_reputation_requires_all_owner_repos() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_requires_seed_evidence_exactness() -> None:
+def test_experience_rank_reputation_requires_seed_evidence_exactness() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -482,7 +520,7 @@ def test_experience_v16_rank_reputation_requires_seed_evidence_exactness() -> No
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v16_rank_reputation_schema_rejects_law_drift() -> None:
+def test_experience_rank_reputation_schema_rejects_law_drift() -> None:
     payload = load_example()
     schema = load_schema()
     payload["rank_reputation_law"][0] = "allow_live_rank_from_single_blaze"
@@ -492,22 +530,24 @@ def test_experience_v16_rank_reputation_schema_rejects_law_drift() -> None:
     assert errors
 
 
-def test_experience_v16_rank_reputation_schema_rejects_flow_authority_note_drift() -> None:
+def test_experience_rank_reputation_schema_rejects_flow_authority_note_drift() -> None:
     payload = load_example()
     schema = load_schema()
     flow = payload["consequence_flow"]
     assert isinstance(flow, list)
-    flow[7]["authority_note"] = "owner review can assign standing directly in this packet"
+    flow[7]["authority_note"] = (
+        "owner review can assign standing directly in this packet"
+    )
 
     errors = list(Draft202012Validator(schema).iter_errors(payload))
 
     assert errors
 
 
-def test_experience_v16_rank_reputation_schema_rejects_predecessor_drift() -> None:
+def test_experience_rank_reputation_schema_rejects_predecessor_drift() -> None:
     payload = load_example()
     schema = load_schema()
-    predecessors = payload["predecessor_surfaces"]
+    predecessors = payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
     predecessors[0] = "docs/WRONG_PREDECESSOR.md"
 
@@ -516,7 +556,7 @@ def test_experience_v16_rank_reputation_schema_rejects_predecessor_drift() -> No
     assert errors
 
 
-def test_experience_v16_rank_reputation_schema_rejects_owner_split_drift() -> None:
+def test_experience_rank_reputation_schema_rejects_owner_split_drift() -> None:
     payload = load_example()
     schema = load_schema()
     owner_split = payload["owner_split"]
@@ -528,7 +568,7 @@ def test_experience_v16_rank_reputation_schema_rejects_owner_split_drift() -> No
     assert errors
 
 
-def test_experience_v16_rank_reputation_schema_rejects_quarantine_drift() -> None:
+def test_experience_rank_reputation_schema_rejects_quarantine_drift() -> None:
     payload = load_example()
     schema = load_schema()
     quarantined = payload["quarantined_surfaces"]

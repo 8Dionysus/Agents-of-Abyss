@@ -1,0 +1,524 @@
+{
+  "schema_version": "experience_memory_rank_reputation_v1",
+  "planting_id": "experience_memory_rank_reputation_center_contract",
+  "campaign_ref": "memory_rank_reputation",
+  "status": "center_rank_reputation_and_jurisdiction_contract_landed",
+  "runtime_effect": "none",
+  "live_rank_mutation": false,
+  "live_rights_activation": false,
+  "live_runtime_activation": false,
+  "source_seed": {
+    "receipt_ref": "experience.seed.memory-rank-reputation",
+    "sha256": "51e403eb0ca9ac384b1edba959b67bdf457efc5813ba3aa7577e94ee87591475",
+    "claim_limit": "archive_readable_not_owner_ready"
+  },
+  "predecessor_receipt_refs": [
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.service-mesh-operations",
+    "experience.raw.office-role-pairs",
+    "experience.raw.agonic-pair-trials-arena-kernel",
+    "experience.raw.epistemic-duel-model-forge",
+    "agon.retention-rank-landing",
+    "agon.retention-rank-stop-lines",
+    "agon.retention-rank-economy",
+    "agon.retention-owner-handoffs",
+    "agon.rank-jurisdiction-model",
+    "agon.contradiction-closure-summon-law",
+    "agon.epistemic-duel-landing",
+    "agon.epistemic-duel-stop-lines",
+    "experience.raw.runtime-authority-boundary"
+  ],
+  "rank_reputation_law": [
+    "no_standing_from_single_blaze",
+    "no_reputation_event_without_evidence",
+    "no_rank_delta_without_retention_and_review",
+    "no_jurisdiction_grant_without_reviewed_basis",
+    "no_closure_right_without_contradiction_trace",
+    "no_summon_right_without_visible_cost",
+    "no_codex_rank_or_rights_authority",
+    "no_assistant_agonic_rank_or_jurisdiction",
+    "no_memory_or_model_history_as_truth",
+    "no_runtime_ledger_or_scheduler_authority",
+    "no_direct_tree_of_sophia_or_kag_canon"
+  ],
+  "consequence_requests": [
+    {
+      "request": "reputation_event_review",
+      "owner": "aoa-evals",
+      "input_boundary": "verdict trace recurrence evidence retention context and actor posture",
+      "output_candidate": "reputation_event_candidate",
+      "must_include": [
+        "evidence_refs",
+        "verdict_trace",
+        "recurrence_trace",
+        "retention_context"
+      ],
+      "must_not_include": [
+        "codex_rank_assignment",
+        "direct_rights_grant",
+        "durable_memory_write",
+        "direct_tos_write"
+      ],
+      "live_execution": false,
+      "authority": "bounded_eval_request_only"
+    },
+    {
+      "request": "retention_window_review",
+      "owner": "aoa-memo",
+      "input_boundary": "scar delta recurrence record reentry evidence and owner review posture",
+      "output_candidate": "retention_result_candidate",
+      "must_include": [
+        "reentry_window",
+        "recurrence_trace",
+        "owner_review_needed",
+        "candidate_only"
+      ],
+      "must_not_include": [
+        "durable_memory_write",
+        "scheduler_loop",
+        "automatic_decay",
+        "rank_mutation"
+      ],
+      "live_execution": false,
+      "authority": "candidate_intake_only"
+    },
+    {
+      "request": "standing_transition_review",
+      "owner": "aoa-agents",
+      "input_boundary": "reviewed basis retention result jurisdiction kind and actor standing posture",
+      "output_candidate": "standing_or_jurisdiction_candidate",
+      "must_include": [
+        "reviewed_basis",
+        "retention_result",
+        "jurisdiction_kind",
+        "contradiction_status"
+      ],
+      "must_not_include": [
+        "assistant_rank_assignment",
+        "codex_authority",
+        "one_event_promotion",
+        "hidden_right_grant"
+      ],
+      "live_execution": false,
+      "authority": "owner_local_candidate_only"
+    },
+    {
+      "request": "model_history_update_review",
+      "owner": "aoa-memo",
+      "input_boundary": "bounded model-of-other history candidate with trace and non-canon limits",
+      "output_candidate": "model_history_candidate",
+      "must_include": [
+        "source_refs",
+        "history_delta",
+        "non_canon_label",
+        "review_trace"
+      ],
+      "must_not_include": [
+        "durable_identity_claim",
+        "canon_anchor_write",
+        "hidden_memory_thread",
+        "pairing_lock_in"
+      ],
+      "live_execution": false,
+      "authority": "candidate_history_only"
+    },
+    {
+      "request": "derived_observability_review",
+      "owner": "aoa-stats",
+      "input_boundary": "reviewed consequence packets and bounded summary candidates",
+      "output_candidate": "dashboard_or_watch_candidate",
+      "must_include": [
+        "derived_only",
+        "source_refs",
+        "non_authoritative_label",
+        "review_trace"
+      ],
+      "must_not_include": [
+        "proof_score",
+        "canon_write",
+        "routing_authority",
+        "runtime_scheduler"
+      ],
+      "live_execution": false,
+      "authority": "derived_surface_only"
+    }
+  ],
+  "consequence_flow": [
+    {
+      "order": 1,
+      "kind": "source_seed_received",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "Dionysus archive is transport evidence; center may name v1.6 standing and rights law only",
+      "stop_lines": [
+        "no raw archive replay",
+        "no generated clean-flow promotion"
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "epistemic_duel_predecessor_checked",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "v1.5 remains predecessor law; v1.6 may only add consequence grammar after the epistemic layer",
+      "stop_lines": [
+        "no rank-law collapse",
+        "no predecessor erasure"
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "consequence_charter_requested",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "charter is required before any later owner-local standing or rights landing can be considered",
+      "stop_lines": [
+        "no center-created live standing",
+        "no rights by declaration"
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "reputation_event_review_requested",
+      "owner": "aoa-evals",
+      "authority_note": "reputation review may produce a candidate packet but cannot issue final standing or rights",
+      "stop_lines": [
+        "no reputation without evidence",
+        "no direct rights grant"
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "memo_intake_candidate_requested",
+      "owner": "aoa-memo",
+      "authority_note": "memo may receive bounded consequence candidates but cannot convert them into durable truth here",
+      "stop_lines": [
+        "no durable memory write",
+        "no memo as truth"
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "retention_check_candidate_requested",
+      "owner": "aoa-memo",
+      "authority_note": "retention windows remain candidate-only and may not become scheduler execution or automatic decay",
+      "stop_lines": [
+        "no scheduler loop",
+        "no automatic decay execution"
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "repeated_retention_result_candidate_checked",
+      "owner": "aoa-evals",
+      "authority_note": "retention legitimacy may be checked as bounded evidence without mutating standing on its own",
+      "stop_lines": [
+        "no one-event retention win",
+        "no retention without recurrence"
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "standing_and_jurisdiction_candidate_requested",
+      "owner": "aoa-agents",
+      "authority_note": "standing and jurisdiction remain owner-local candidates and may not be assigned by assistants or Codex",
+      "stop_lines": [
+        "no assistant agonic rank",
+        "no codex standing authority"
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "summon_and_closure_rights_gate_checked",
+      "owner": "aoa-agents",
+      "authority_note": "summon and closure stay reviewed jurisdictions behind contradiction law and visible cost",
+      "stop_lines": [
+        "no closure over open contradiction",
+        "no summon without visible cost"
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "derived_observability_candidate_requested",
+      "owner": "aoa-stats",
+      "authority_note": "derived dashboards may summarize bounded packets but cannot become proof, score, or verdict authority",
+      "stop_lines": [
+        "no stats as proof",
+        "no dashboard as verdict"
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "owner_landing_or_recharter_request_declared",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "future consequence work returns to owner-local landing or human recharter as requests",
+      "stop_lines": [
+        "no runtime ledger activation",
+        "no direct Tree-of-Sophia or KAG canon"
+      ]
+    }
+  ],
+  "hard_guards": [
+    "no_live_rank_mutation",
+    "no_live_rights_activation",
+    "no_live_runtime_activation",
+    "no_codex_rank_assignment",
+    "no_assistant_agonic_rank",
+    "no_reputation_without_evidence",
+    "no_rank_delta_without_retention_and_review",
+    "no_single_event_standing",
+    "no_closure_right_without_contradiction_trace",
+    "no_summon_right_without_visible_cost",
+    "no_memory_or_model_history_as_truth",
+    "no_durable_memory_write",
+    "no_runtime_decay_or_scheduler",
+    "no_stats_as_proof",
+    "no_routing_as_owner",
+    "no_direct_tree_of_sophia_or_kag_canon"
+  ],
+  "blocking_contracts": {
+    "activation_state": {
+      "allowed_landing_states": [
+        "draft",
+        "proposed",
+        "reviewed",
+        "blocked",
+        "quarantined",
+        "candidate_only"
+      ],
+      "active_allowed_during_landing": false,
+      "live_rank_mutation_allowed": false,
+      "live_rights_activation_allowed": false,
+      "live_runtime_allowed": false
+    },
+    "reputation_evidence": {
+      "evidence_refs_required": true,
+      "verdict_trace_required": true,
+      "recurrence_trace_required": true,
+      "retention_context_required": true,
+      "missing_evidence_allowed": false,
+      "direct_rights_grant_allowed": false,
+      "one_event_promotion_allowed": false
+    },
+    "retention_boundary": {
+      "memo_candidate_only_required": true,
+      "recurrence_required": true,
+      "reentry_window_required": true,
+      "automatic_decay_execution_allowed": false,
+      "scheduler_loop_allowed": false,
+      "retention_result_may_mutate_standing": false
+    },
+    "standing_and_jurisdiction": {
+      "standing_candidate_only_required": true,
+      "reviewed_basis_required": true,
+      "retention_result_required": true,
+      "jurisdiction_review_required": true,
+      "rank_jump_without_review_allowed": false,
+      "closure_without_trace_allowed": false,
+      "summon_without_visible_cost_allowed": false
+    },
+    "actor_boundary": {
+      "assistant_rank_assignment_allowed": false,
+      "assistant_jurisdiction_grant_allowed": false,
+      "assistant_judge_allowed": false,
+      "codex_rank_assignment_allowed": false,
+      "codex_rights_grant_allowed": false,
+      "codex_memory_write_allowed": false
+    },
+    "memory_history_boundary": {
+      "durable_memory_write_allowed": false,
+      "model_history_candidate_only_required": true,
+      "durable_identity_claim_allowed": false,
+      "hidden_memory_thread_allowed": false,
+      "pairing_lock_in_allowed": false
+    },
+    "derived_layer_boundary": {
+      "stats_as_proof_allowed": false,
+      "routing_as_owner_allowed": false,
+      "memo_as_truth_allowed": false,
+      "eval_live_verdict_authority_allowed": false,
+      "dashboard_as_verdict_allowed": false
+    },
+    "tos_kag_boundary": {
+      "runtime_write_allowed": false,
+      "direct_node_path_allowed": false,
+      "tos_canon_write_allowed": false,
+      "kag_promotion_allowed": false,
+      "kag_canonization_allowed": false,
+      "dossier_candidate_only": true
+    },
+    "runtime_storage": {
+      "runtime_worker_activation_allowed": false,
+      "storage_record_authoritative": false,
+      "host_port_open_allowed": false,
+      "scheduler_loop_allowed": false,
+      "scoring_job_allowed": false,
+      "deployment_daemon_allowed": false
+    },
+    "archive_consistency": {
+      "clean_flow_may_inform_contract": true,
+      "raw_generated_output_copied_as_truth": false,
+      "fixture_generated_result_disagreement_allowed": false,
+      "archive_scripts_tests_copied_as_owner_truth": false,
+      "archive_runtime_outputs_copied_as_owner_truth": false
+    }
+  },
+  "authority": {
+    "contract_effect": "center_rank_reputation_and_jurisdiction_law_only",
+    "codex_may": [
+      "simulate rank and rights contract checks",
+      "collect seed dry-run evidence",
+      "propose owner-local standing review packets",
+      "run validators",
+      "prepare bounded handoff maps"
+    ],
+    "codex_must_not": [
+      "activate live rank mutation",
+      "activate live rights grant",
+      "activate live runtime",
+      "assign rank",
+      "grant summon right",
+      "grant closure right",
+      "issue reputation verdict",
+      "seal standing truth",
+      "write durable memory",
+      "write model history as truth",
+      "execute retention",
+      "start decay scheduler",
+      "promote dashboard to proof",
+      "route as owner",
+      "promote KAG canon",
+      "write directly to Tree-of-Sophia",
+      "promote generated clean-flow output to owner truth",
+      "copy raw archive proposals into owner truth"
+    ],
+    "assistant_must_not": [
+      "become primary rank authority",
+      "grant summon right",
+      "grant closure right",
+      "issue reputation verdict",
+      "become judge",
+      "write memory",
+      "write model history as truth",
+      "execute retention",
+      "start decay scheduler",
+      "mutate standing or jurisdiction",
+      "promote KAG canon",
+      "write directly to Tree-of-Sophia"
+    ],
+    "derived_layers_must_not": [
+      "stats_as_proof",
+      "memo_as_truth",
+      "routing_as_owner",
+      "kag_as_canon",
+      "sdk_as_authority",
+      "evals_as_live_verdict_authority",
+      "playbooks_as_runtime",
+      "runtime_as_doctrine",
+      "dionysus_as_runtime",
+      "reputation_as_live_score"
+    ],
+    "human_gates_required": [
+      "operator review before reputation event adoption",
+      "owner-local memo approval before retention intake",
+      "owner-local eval approval before legitimacy verdict use",
+      "owner-local agents approval before standing or jurisdiction mutation",
+      "human review before summon right grant",
+      "human review before closure right grant",
+      "runtime-owner gate before ledger scheduler workers ports services or daemons",
+      "Tree-of-Sophia review before canon or interpretive intake",
+      "KAG owner review before pattern promotion"
+    ]
+  },
+  "owner_split": [
+    {
+      "repo": "Agents-of-Abyss",
+      "owns": "center rank reputation and jurisdiction law predecessor mapping flow hard guards and authority stop-lines",
+      "must_not": "replace owner-local actor truth memory retention routing runtime KAG ToS or eval legitimacy"
+    },
+    {
+      "repo": "aoa-agents",
+      "owns": "standing and jurisdiction truth surfaces after owner-local landing",
+      "must_not": "grant one-event rank assistant authority hidden rights or direct closure by default"
+    },
+    {
+      "repo": "aoa-evals",
+      "owns": "legitimacy checks over evidence recurrence retention and standing-transition requests",
+      "must_not": "issue live verdicts assign rank grant rights or convert evidence into runtime law"
+    },
+    {
+      "repo": "aoa-playbooks",
+      "owns": "recurring consequence choreography fallback posture and operator review routes",
+      "must_not": "become runtime or standing authority"
+    },
+    {
+      "repo": "aoa-memo",
+      "owns": "retention and model-history intake candidates only after owner review",
+      "must_not": "become memory truth durable storage or self-justifying history"
+    },
+    {
+      "repo": "aoa-stats",
+      "owns": "derived dashboards watch orders and consequence summaries only",
+      "must_not": "become proof score or reputation truth"
+    },
+    {
+      "repo": "aoa-routing",
+      "owns": "advisory route candidates only",
+      "must_not": "dispatch as owner truth or right-grant authority"
+    },
+    {
+      "repo": "aoa-sdk",
+      "owns": "typed packet helpers validation helpers and control-plane seams only",
+      "must_not": "become semantic standing or runtime authority"
+    },
+    {
+      "repo": "aoa-kag",
+      "owns": "derived consequence pattern candidates only",
+      "must_not": "become canon or source truth"
+    },
+    {
+      "repo": "aoa-skills",
+      "owns": "bounded standing and review workflows extracted after owner acceptance",
+      "must_not": "grant rank reputation rights or runtime authority"
+    },
+    {
+      "repo": "aoa-techniques",
+      "owns": "reusable retention and review practices after owner acceptance",
+      "must_not": "grant live authority"
+    },
+    {
+      "repo": "abyss-stack",
+      "owns": "runtime ledger storage workers schedulers deployment ports and services only after a separate runtime-owner gate",
+      "must_not": "activate runtime from this center landing"
+    },
+    {
+      "repo": "Tree-of-Sophia",
+      "owns": "canon and interpretive review through its own path",
+      "must_not": "receive direct runtime writes node paths canon writes or unreviewed consequence dossiers"
+    },
+    {
+      "repo": "Dionysus",
+      "owns": "source lineage staged intake and later harvest trace",
+      "must_not": "become runtime or standing truth"
+    },
+    {
+      "repo": "8Dionysus",
+      "owns": "shared-root projection law where workspace projection surfaces are affected",
+      "must_not": "absorb rank or rights truth"
+    }
+  ],
+  "quarantined_surfaces": [
+    "archive-local generated rank reputation clean-flow runtime-like artifacts",
+    "archive-local generated dashboards watch orders and right resolutions",
+    "archive-local repo/* owner proposals outside this center contract",
+    "archive-local face ledgers trust vectors model histories and policy artifacts as transport evidence only",
+    "archive-local scripts and tests as transport evidence only",
+    "archive-local runtime storage records workers schedulers and catalogs"
+  ],
+  "seed_dry_run_evidence": {
+    "archive_integrity": "unzip_t_passed",
+    "schema_example_pairs": 53,
+    "json_files": 146,
+    "seed_tests_passed": 12,
+    "claim_limit": "dry_run_only_not_owner_readiness"
+  }
+}

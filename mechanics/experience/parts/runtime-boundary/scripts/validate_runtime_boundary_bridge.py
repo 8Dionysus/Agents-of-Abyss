@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience v1.2-v2.0 center bridge contract."""
+"""Validate the Experience runtime boundary bridge contract."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ SCHEMA_PATH = (
     / "parts"
     / "runtime-boundary"
     / "schemas"
-    / "experience-v1-2-v2-0-bridge.schema.json"
+    / "experience-runtime-boundary-bridge.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -35,19 +35,19 @@ EXAMPLE_PATH = (
     / "parts"
     / "runtime-boundary"
     / "examples"
-    / "experience_v1_2_to_v2_0_bridge.example.json"
+    / "experience_runtime_boundary_bridge.example.json"
 )
 
 EXPECTED_SEEDS = [
-    "aoa-experience-service-mesh-operations-seed-v1_2.zip",
-    "aoa-experience-office-foundry-role-pairs-seed-v1_3.zip",
-    "aoa-experience-agonic-pair-trials-mechanical-arena-kernel-seed-v1_4.zip",
-    "aoa-experience-epistemic-duel-model-of-other-forge-seed-v1_5.zip",
-    "aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6.zip",
-    "aoa-experience-affective-economy-honor-treasury-seed-v1_7.zip",
-    "aoa-experience-context-routing-nervous-system-seed-v1_8.zip",
-    "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9.zip",
-    "aoa-experience-living-workspace-continuity-runtime-seed-v2_0.zip",
+    "experience.seed.service-mesh-operations",
+    "experience.seed.office-role-pairs",
+    "experience.seed.agonic-pair-trials-arena-kernel",
+    "experience.seed.epistemic-duel-model-forge",
+    "experience.seed.memory-rank-reputation",
+    "experience.seed.affective-economy-honor-treasury",
+    "experience.seed.context-routing",
+    "experience.seed.continuity-loom",
+    "experience.seed.living-workspace-continuity-runtime",
 ]
 
 EXPECTED_ROUTE_KINDS = [
@@ -101,17 +101,17 @@ EXPECTED_OWNER_REPOS = {
 }
 
 REQUIRED_PREDECESSOR_TOKENS = [
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_AGON_SERVICE_SEAM_V1_1.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.capture-kernel",
+    "experience.raw.certification-watchtower",
+    "experience.raw.federation-adoption",
+    "experience.raw.polis-constitution",
+    "experience.raw.sovereign-office",
+    "experience.raw.agon-service-seam",
+    "experience.raw.runtime-authority-boundary",
+    "agon.pre-protocol-stop-lines",
+    "agon.retention-rank-economy",
 ]
 
 REQUIRED_CODEX_DENIALS = [
@@ -158,7 +158,7 @@ REQUIRED_HUMAN_GATES = [
 
 
 class ValidationError(RuntimeError):
-    """Raised when the Experience v1.2-v2.0 bridge drifts."""
+    """Raised when the Experience runtime boundary bridge drifts."""
 
 
 def fail(message: str) -> None:
@@ -197,8 +197,8 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         path = ".".join(str(part) for part in errors[0].path) or "<root>"
         fail(f"bridge example does not match schema at {path}: {errors[0].message}")
 
-    if payload["source_seeds"] != EXPECTED_SEEDS:
-        fail("source_seeds must preserve the v1.2-v2.0 order exactly")
+    if payload["source_receipt_refs"] != EXPECTED_SEEDS:
+        fail("source_receipt_refs must preserve the source-seed order exactly")
 
     route = payload["campaign_route"]
     if [step["order"] for step in route] != list(range(1, 14)):
@@ -206,18 +206,18 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     if [step["kind"] for step in route] != EXPECTED_ROUTE_KINDS:
         fail("campaign_route kinds must preserve the bridge spine")
     if [step.get("source_version") for step in route] != EXPECTED_ROUTE_SOURCE_VERSIONS:
-        fail("campaign_route source_version mapping must preserve v1.2-v2.0 provenance")
+        fail("campaign_route source_version mapping must preserve source provenance")
 
     if payload["status"] != "center_bridge_only":
         fail("bridge status must remain center_bridge_only")
     if payload["runtime_effect"] != "none":
         fail("bridge runtime_effect must remain none")
 
-    predecessor_text = "\n".join(payload["predecessor_surfaces"])
+    predecessor_text = "\n".join(payload["predecessor_receipt_refs"])
     _assert_contains_all(
         predecessor_text,
         REQUIRED_PREDECESSOR_TOKENS,
-        "predecessor_surfaces",
+        "predecessor_receipt_refs",
     )
 
     authority = payload["authority"]
@@ -287,8 +287,8 @@ def validate_files() -> None:
             fail(f"missing bridge surface: {path.relative_to(ROOT)}")
 
     schema = _load_json(SCHEMA_PATH)
-    if schema.get("title") != "experience_v1_2_to_v2_0_bridge_v1":
-        fail("schema title must remain experience_v1_2_to_v2_0_bridge_v1")
+    if schema.get("title") != "experience_runtime_boundary_bridge_v1":
+        fail("schema title must remain experience_runtime_boundary_bridge_v1")
     if schema.get("additionalProperties") is not False:
         fail("schema must reject additional top-level properties")
 
@@ -298,7 +298,7 @@ def validate_files() -> None:
 
 def main() -> int:
     validate_files()
-    print("ok: Experience v1.2-v2.0 center bridge is valid")
+    print("ok: Experience runtime boundary bridge is valid")
     return 0
 
 

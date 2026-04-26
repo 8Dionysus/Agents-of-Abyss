@@ -31,6 +31,9 @@ A part may grow, split, merge, shrink, or retire when that improves its function
 
 Historical source accounting is deliberately outside part docs. Use
 [PROVENANCE](PROVENANCE.md) when a task must audit where older packets landed.
+Active artifact references to older packets, seed inputs, and sibling surfaces
+use [provenance-receipts](provenance-receipts.json) receipt IDs instead of
+direct paths.
 
 ## Validation
 

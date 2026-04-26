@@ -16,12 +16,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "service-mesh" / "scripts" / "validate_service_mesh.py"
-    spec = importlib.util.spec_from_file_location("experience_v12_service_mesh_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "service-mesh"
+        / "scripts"
+        / "validate_service_mesh.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_service_mesh_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -30,23 +41,38 @@ def load_validator():
 
 def load_example() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "service-mesh" / "examples" / "experience_v1_2_service_mesh_operations.example.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "service-mesh"
+            / "examples"
+            / "experience_service_mesh_operations.example.json"
+        ).read_text(encoding="utf-8")
     )
 
 
 def load_schema() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "service-mesh" / "schemas" / "experience-v1-2-service-mesh-operations.schema.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "service-mesh"
+            / "schemas"
+            / "experience-service-mesh-operations.schema.json"
+        ).read_text(encoding="utf-8")
     )
 
 
-def test_experience_v12_service_mesh_validator_passes() -> None:
+def test_experience_service_mesh_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/service-mesh/scripts/validate_service_mesh.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/service-mesh/scripts/validate_service_mesh.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -54,31 +80,33 @@ def test_experience_v12_service_mesh_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_v12_service_mesh_requires_source_archive() -> None:
+def test_experience_service_mesh_requires_source_archive() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     source = bad_payload["source_seed"]
     assert isinstance(source, dict)
-    source["archive_name"] = "aoa-experience-office-foundry-role-pairs-seed-v1_3.zip"
+    source["receipt_ref"] = "experience.seed.office-role-pairs"
 
-    with pytest.raises(validator.ValidationError, match="archive_name|schema"):
+    with pytest.raises(validator.ValidationError, match="receipt_ref|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_rejects_runtime_activation() -> None:
+def test_experience_service_mesh_rejects_runtime_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_service_activation"] = True
 
-    with pytest.raises(validator.ValidationError, match="schema|live_service_activation"):
+    with pytest.raises(
+        validator.ValidationError, match="schema|live_service_activation"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_rejects_codex_drill_pass_authority() -> None:
+def test_experience_service_mesh_rejects_codex_drill_pass_authority() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -93,7 +121,7 @@ def test_experience_v12_service_mesh_rejects_codex_drill_pass_authority() -> Non
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_rejects_codex_worker_activation() -> None:
+def test_experience_service_mesh_rejects_codex_worker_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -108,7 +136,7 @@ def test_experience_v12_service_mesh_rejects_codex_worker_activation() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_rejects_codex_scheduler_loop() -> None:
+def test_experience_service_mesh_rejects_codex_scheduler_loop() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -135,7 +163,7 @@ def test_experience_v12_service_mesh_rejects_codex_scheduler_loop() -> None:
         "start runtime job",
     ],
 )
-def test_experience_v12_service_mesh_rejects_codex_authority_leaks(
+def test_experience_service_mesh_rejects_codex_authority_leaks(
     forbidden_grant: str,
 ) -> None:
     validator = load_validator()
@@ -148,11 +176,13 @@ def test_experience_v12_service_mesh_rejects_codex_authority_leaks(
     assert isinstance(may, list)
     may.append(forbidden_grant)
 
-    with pytest.raises(validator.ValidationError, match="codex_may|forbidden service authority"):
+    with pytest.raises(
+        validator.ValidationError, match="codex_may|forbidden service authority"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_requires_assistant_self_heal_denial() -> None:
+def test_experience_service_mesh_requires_assistant_self_heal_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -167,7 +197,7 @@ def test_experience_v12_service_mesh_requires_assistant_self_heal_denial() -> No
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_requires_failure_law_order() -> None:
+def test_experience_service_mesh_requires_failure_law_order() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -180,7 +210,7 @@ def test_experience_v12_service_mesh_requires_failure_law_order() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_requires_flow_order() -> None:
+def test_experience_service_mesh_requires_flow_order() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -193,7 +223,7 @@ def test_experience_v12_service_mesh_requires_flow_order() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_requires_flow_owner_routing() -> None:
+def test_experience_service_mesh_requires_flow_owner_routing() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -206,7 +236,7 @@ def test_experience_v12_service_mesh_requires_flow_owner_routing() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_requires_flow_stop_lines() -> None:
+def test_experience_service_mesh_requires_flow_stop_lines() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -219,7 +249,7 @@ def test_experience_v12_service_mesh_requires_flow_stop_lines() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_requires_flow_stop_lines_in_schema() -> None:
+def test_experience_service_mesh_requires_flow_stop_lines_in_schema() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -240,7 +270,7 @@ def test_experience_v12_service_mesh_requires_flow_stop_lines_in_schema() -> Non
         "runtime execution is allowed for this step",
     ],
 )
-def test_experience_v12_service_mesh_rejects_flow_runtime_authority_note(
+def test_experience_service_mesh_rejects_flow_runtime_authority_note(
     authority_note: str,
 ) -> None:
     validator = load_validator()
@@ -255,7 +285,7 @@ def test_experience_v12_service_mesh_rejects_flow_runtime_authority_note(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_requires_runtime_owner_gate() -> None:
+def test_experience_service_mesh_requires_runtime_owner_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -270,7 +300,7 @@ def test_experience_v12_service_mesh_requires_runtime_owner_gate() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_requires_runtime_doctrine_denial() -> None:
+def test_experience_service_mesh_requires_runtime_doctrine_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -285,7 +315,7 @@ def test_experience_v12_service_mesh_requires_runtime_doctrine_denial() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_requires_sdk_authority_denial() -> None:
+def test_experience_service_mesh_requires_sdk_authority_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -300,14 +330,16 @@ def test_experience_v12_service_mesh_requires_sdk_authority_denial() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v12_service_mesh_requires_all_owner_repos() -> None:
+def test_experience_service_mesh_requires_all_owner_repos() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     owner_split = bad_payload["owner_split"]
     assert isinstance(owner_split, list)
-    owner_split[:] = [entry for entry in owner_split if entry.get("repo") != "aoa-routing"]
+    owner_split[:] = [
+        entry for entry in owner_split if entry.get("repo") != "aoa-routing"
+    ]
 
     with pytest.raises(validator.ValidationError, match="owner_split|schema"):
         validator.validate_payload(bad_payload, schema)

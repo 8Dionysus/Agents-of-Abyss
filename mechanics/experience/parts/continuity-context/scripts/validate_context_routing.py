@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience v1.8 context routing nervous system center contract."""
+"""Validate the Experience context routing nervous system center contract."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ SCHEMA_PATH = (
     / "parts"
     / "continuity-context"
     / "schemas"
-    / "experience-v1-8-context-routing-nervous-system.schema.json"
+    / "experience-context-routing.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -35,43 +35,41 @@ EXAMPLE_PATH = (
     / "parts"
     / "continuity-context"
     / "examples"
-    / "experience_v1_8_context_routing_nervous_system.example.json"
+    / "experience_context_routing.example.json"
 )
 
 SOURCE_SEED = {
-    "archive_name": "aoa-experience-context-routing-nervous-system-seed-v1_8.zip",
-    "seed_id": "aoa-experience-context-routing-nervous-system-seed-v1_8",
-    "version": "v1.8",
+    "receipt_ref": "experience.seed.context-routing",
     "sha256": "d8ff2d7adfa91fa06c0f1ba17ffe4d45b0c5f343b026a92806b5ec25b3e427c4",
     "claim_limit": "archive_readable_not_owner_ready",
     "no_new_repo": True,
 }
 
 EXPECTED_PREDECESSORS = [
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_AGON_SERVICE_SEAM_V1_1.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_AUTHORITY_RESOLVER.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_TOS_CANDIDATE_BOUNDARY.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_REPO_LANDING_ORDER.md",
-    "mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md",
-    "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md",
-    "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md",
-    "mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
-    "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE7_CENTER_HANDOFF.md",
-    "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF.md",
-    "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md",
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.service-mesh-operations",
+    "experience.raw.office-role-pairs",
+    "experience.raw.agonic-pair-trials-arena-kernel",
+    "experience.raw.epistemic-duel-model-forge",
+    "experience.raw.memory-rank-reputation",
+    "experience.raw.affective-economy-honor-treasury",
+    "experience.raw.agon-service-seam",
+    "experience.raw.runtime-authority-boundary",
+    "experience.raw.authority-resolver",
+    "experience.raw.tos-candidate-boundary",
+    "experience.raw.repo-landing-order",
+    "method-growth.candidate-lineage-crosswalk",
+    "method-growth.owner-landing-and-pruning",
+    "agon.pre-protocol-stop-lines",
+    "agon.gate-routing-handoff",
+    "agon.gate-routing-stop-lines",
+    "agon.trial-playbook-handoff",
+    "agon.trial-playbook-stop-lines",
+    "agon.center-handoff",
+    "agon.court-memo-stats-prebinding-handoff",
+    "agon.court-memo-stats-prebinding-stop-lines",
 ]
 
 EXPECTED_CONTEXT_ROUTING_LAW = [
@@ -242,12 +240,12 @@ EXPECTED_FLOW = [
     },
     {
         "order": 2,
-        "kind": "wave7_affect_predecessor_checked",
+        "kind": "affect_predecessor_checked",
         "owner": "Agents-of-Abyss",
         "authority_note": "v1.7 remains predecessor law; routing may activate layers only after affect rank and rights boundaries are already candidate-bound",
         "stop_lines": [
             "no predecessor erasure",
-            "no wave8 collision with arena-session law",
+            "no context-routing collision with arena-session law",
         ],
     },
     {
@@ -459,7 +457,9 @@ def load_json(path: Path) -> Any:
 
 def expect_equal(actual: Any, expected: Any, label: str) -> None:
     if actual != expected:
-        raise ValidationError(f"{label} must preserve the Wave 8 center contract")
+        raise ValidationError(
+            f"{label} must preserve the context routing center contract"
+        )
 
 
 def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
@@ -467,7 +467,7 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
 
     expect_equal(payload["source_seed"], SOURCE_SEED, "source_seed")
     expect_equal(
-        payload["predecessor_surfaces"], EXPECTED_PREDECESSORS, "predecessor_surfaces"
+        payload["predecessor_receipt_refs"], EXPECTED_PREDECESSORS, "predecessor_receipt_refs"
     )
     expect_equal(
         payload["context_routing_law"],
@@ -498,7 +498,7 @@ def main() -> int:
     schema = load_json(SCHEMA_PATH)
     payload = load_json(EXAMPLE_PATH)
     validate_payload(payload, schema)
-    print("ok: Experience v1.8 context routing nervous system center contract is valid")
+    print("ok: Experience context routing nervous system center contract is valid")
     return 0
 
 

@@ -14,64 +14,94 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
-ROOT = _repo_root()
-ESCAPE_VALUE = "__wave5_not_allowed__"
-ARTIFACT_MAP_PATH = ROOT / "mechanics" / "experience" / "artifact-map.json"
-ARTIFACTS_BY_OLD = {
-    item["old_path"]: ROOT / item["path"]
-    for item in json.loads(ARTIFACT_MAP_PATH.read_text(encoding="utf-8"))["artifacts"]
-}
 
-WAVE5_CONTRACTS = (
-    ('assistant_office_profile_v1', 'assistant_office_profile_v1.json'),
-    ('assistant_office_registry_v1', 'assistant_office_registry_v1.json'),
-    ('experience_first_office_bootstrap_v1', 'experience_first_office_bootstrap_v1.json'),
-    ('experience_first_rollback_drill_v1', 'experience_first_rollback_drill_v1.json'),
-    ('experience_go_no_go_decision_v1', 'experience_go_no_go_decision_v1.json'),
-    ('experience_installation_authority_policy_v1', 'experience_installation_authority_policy_v1.json'),
-    ('experience_installation_plan_v1', 'experience_installation_plan_v1.json'),
-    ('experience_installation_state_v1', 'experience_installation_state_v1.json'),
-    ('experience_landing_order_v1', 'experience_landing_order_v1.json'),
-    ('experience_landing_patchset_v1', 'experience_landing_patchset_v1.json'),
-    ('experience_live_assistant_office_v1', 'experience_live_assistant_office_v1.json'),
-    ('experience_migration_backup_v1', 'experience_migration_backup_v1.json'),
-    ('experience_migration_plan_v1', 'experience_migration_plan_v1.json'),
-    ('experience_migration_step_v1', 'experience_migration_step_v1.json'),
-    ('experience_operator_console_action_v1', 'experience_operator_console_action_v1.json'),
-    ('experience_operator_console_state_v1', 'experience_operator_console_state_v1.json'),
-    ('experience_operator_handoff_packet_v1', 'experience_operator_handoff_packet_v1.json'),
-    ('experience_release_replay_audit_v1', 'experience_release_replay_audit_v1.json'),
-    ('experience_release_seal_v1', 'experience_release_seal_v1.json'),
-    ('experience_repo_landing_step_v1', 'experience_repo_landing_step_v1.json'),
-    ('experience_runtime_bootstrap_packet_v1', 'experience_runtime_bootstrap_packet_v1.json'),
-    ('experience_smoke_test_plan_v1', 'experience_smoke_test_plan_v1.json'),
-    ('experience_smoke_test_result_v1', 'experience_smoke_test_result_v1.json'),
-    ('experience_sovereign_release_candidate_v1', 'experience_sovereign_release_candidate_v1.json'),
-    ('experience_sovereign_release_log_v1', 'experience_sovereign_release_log_v1.json'),
-    ('experience_sovereign_release_result_v1', 'experience_sovereign_release_result_v1.json'),
-    ('experience_v1_0_event_kind_registry_v1', 'experience_v1_0_event_kind_registry_v1.json'),
-    ('multi_office_release_train_v1', 'multi_office_release_train_v1.json'),
-    ('office_bootstrap_order_v1', 'office_bootstrap_order_v1.json'),
-    ('office_compatibility_matrix_v1', 'office_compatibility_matrix_v1.json'),
-    ('office_handoff_contract_v1', 'office_handoff_contract_v1.json'),
-    ('office_incident_reentry_v1', 'office_incident_reentry_v1.json'),
-    ('office_mesh_dashboard_v1', 'office_mesh_dashboard_v1.json'),
-    ('office_release_candidate_v1', 'office_release_candidate_v1.json'),
-    ('office_release_ring_v1', 'office_release_ring_v1.json'),
-    ('office_train_authority_policy_v1', 'office_train_authority_policy_v1.json'),
-    ('office_train_deployment_result_v1', 'office_train_deployment_result_v1.json'),
-    ('office_train_event_kind_registry_v1', 'office_train_event_kind_registry_v1.json'),
-    ('office_train_gate_v1', 'office_train_gate_v1.json'),
-    ('office_train_go_no_go_v1', 'office_train_go_no_go_v1.json'),
-    ('office_train_rollback_plan_v1', 'office_train_rollback_plan_v1.json'),
-    ('service_mesh_state_v1', 'service_mesh_state_v1.json'),
-    ('train_adoption_report_v1', 'train_adoption_report_v1.json'),
-    ('train_post_release_watch_v1', 'train_post_release_watch_v1.json'),
-    ('train_replay_audit_v1', 'train_replay_audit_v1.json'),
+ROOT = _repo_root()
+ESCAPE_VALUE = "__sovereign_office_not_allowed__"
+ARTIFACT_MAP_PATH = ROOT / "mechanics" / "experience" / "artifact-map.json"
+ARTIFACTS = json.loads(ARTIFACT_MAP_PATH.read_text(encoding="utf-8"))["artifacts"]
+ARTIFACTS_BY_OLD = {item["old_path"]: ROOT / item["path"] for item in ARTIFACTS}
+
+SOVEREIGN_OFFICE_CONTRACTS = (
+    ("assistant_office_profile_v1", "assistant_office_profile_v1.json"),
+    ("assistant_office_registry_v1", "assistant_office_registry_v1.json"),
+    (
+        "experience_first_office_bootstrap_v1",
+        "experience_first_office_bootstrap_v1.json",
+    ),
+    ("experience_first_rollback_drill_v1", "experience_first_rollback_drill_v1.json"),
+    ("experience_go_no_go_decision_v1", "experience_go_no_go_decision_v1.json"),
+    (
+        "experience_installation_authority_policy_v1",
+        "experience_installation_authority_policy_v1.json",
+    ),
+    ("experience_installation_plan_v1", "experience_installation_plan_v1.json"),
+    ("experience_installation_state_v1", "experience_installation_state_v1.json"),
+    ("experience_landing_order_v1", "experience_landing_order_v1.json"),
+    ("experience_landing_patchset_v1", "experience_landing_patchset_v1.json"),
+    ("experience_live_assistant_office_v1", "experience_live_assistant_office_v1.json"),
+    ("experience_migration_backup_v1", "experience_migration_backup_v1.json"),
+    ("experience_migration_plan_v1", "experience_migration_plan_v1.json"),
+    ("experience_migration_step_v1", "experience_migration_step_v1.json"),
+    (
+        "experience_operator_console_action_v1",
+        "experience_operator_console_action_v1.json",
+    ),
+    (
+        "experience_operator_console_state_v1",
+        "experience_operator_console_state_v1.json",
+    ),
+    (
+        "experience_operator_handoff_packet_v1",
+        "experience_operator_handoff_packet_v1.json",
+    ),
+    ("experience_release_replay_audit_v1", "experience_release_replay_audit_v1.json"),
+    ("experience_release_seal_v1", "experience_release_seal_v1.json"),
+    ("experience_repo_landing_step_v1", "experience_repo_landing_step_v1.json"),
+    (
+        "experience_runtime_bootstrap_packet_v1",
+        "experience_runtime_bootstrap_packet_v1.json",
+    ),
+    ("experience_smoke_test_plan_v1", "experience_smoke_test_plan_v1.json"),
+    ("experience_smoke_test_result_v1", "experience_smoke_test_result_v1.json"),
+    (
+        "experience_sovereign_release_candidate_v1",
+        "experience_sovereign_release_candidate_v1.json",
+    ),
+    ("experience_sovereign_release_log_v1", "experience_sovereign_release_log_v1.json"),
+    (
+        "experience_sovereign_release_result_v1",
+        "experience_sovereign_release_result_v1.json",
+    ),
+    (
+        "experience_release_event_kind_registry_v1",
+        "experience_release_event_kind_registry_v1.json",
+    ),
+    ("multi_office_release_train_v1", "multi_office_release_train_v1.json"),
+    ("office_bootstrap_order_v1", "office_bootstrap_order_v1.json"),
+    ("office_compatibility_matrix_v1", "office_compatibility_matrix_v1.json"),
+    ("office_handoff_contract_v1", "office_handoff_contract_v1.json"),
+    ("office_incident_reentry_v1", "office_incident_reentry_v1.json"),
+    ("office_mesh_dashboard_v1", "office_mesh_dashboard_v1.json"),
+    ("office_release_candidate_v1", "office_release_candidate_v1.json"),
+    ("office_release_ring_v1", "office_release_ring_v1.json"),
+    ("office_train_authority_policy_v1", "office_train_authority_policy_v1.json"),
+    ("office_train_deployment_result_v1", "office_train_deployment_result_v1.json"),
+    ("office_train_event_kind_registry_v1", "office_train_event_kind_registry_v1.json"),
+    ("office_train_gate_v1", "office_train_gate_v1.json"),
+    ("office_train_go_no_go_v1", "office_train_go_no_go_v1.json"),
+    ("office_train_rollback_plan_v1", "office_train_rollback_plan_v1.json"),
+    ("service_mesh_state_v1", "service_mesh_state_v1.json"),
+    ("train_adoption_report_v1", "train_adoption_report_v1.json"),
+    ("train_post_release_watch_v1", "train_post_release_watch_v1.json"),
+    ("train_replay_audit_v1", "train_replay_audit_v1.json"),
 )
 
 
 def artifact_path(kind: str, name: str) -> Path:
+    for item in ARTIFACTS:
+        path = Path(item["path"])
+        if len(path.parts) >= 2 and path.parts[-2] == kind and path.name == name:
+            return ROOT / item["path"]
     old_path = "/".join(("mechanics", "experience", kind, name))
     try:
         return ARTIFACTS_BY_OLD[old_path]
@@ -79,7 +109,9 @@ def artifact_path(kind: str, name: str) -> Path:
         raise AssertionError(f"artifact map missing {old_path}") from exc
 
 
-def load_contract(stem: str, schema_file: str) -> tuple[dict[str, object], dict[str, object]]:
+def load_contract(
+    stem: str, schema_file: str
+) -> tuple[dict[str, object], dict[str, object]]:
     schema_path = artifact_path("schemas", schema_file)
     example_path = artifact_path("examples", f"{stem}.example.json")
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
@@ -88,7 +120,10 @@ def load_contract(stem: str, schema_file: str) -> tuple[dict[str, object], dict[
 
 
 def validation_errors(schema: dict[str, object], value: object) -> list[object]:
-    return sorted(Draft202012Validator(schema).iter_errors(value), key=lambda error: list(error.path))
+    return sorted(
+        Draft202012Validator(schema).iter_errors(value),
+        key=lambda error: list(error.path),
+    )
 
 
 def effective_schema(schema: object, value: object) -> object:
@@ -196,7 +231,9 @@ def delete_path(value: object, path: tuple[object, ...]) -> None:
         del cursor[last]
 
 
-def walk_values(value: object, path: tuple[object, ...] = ()) -> list[tuple[tuple[object, ...], object]]:
+def walk_values(
+    value: object, path: tuple[object, ...] = ()
+) -> list[tuple[tuple[object, ...], object]]:
     found: list[tuple[tuple[object, ...], object]] = []
     if isinstance(value, dict):
         for key, child in value.items():
@@ -211,7 +248,9 @@ def walk_values(value: object, path: tuple[object, ...] = ()) -> list[tuple[tupl
     return found
 
 
-def object_paths(value: object, path: tuple[object, ...] = ()) -> list[tuple[object, ...]]:
+def object_paths(
+    value: object, path: tuple[object, ...] = ()
+) -> list[tuple[object, ...]]:
     found: list[tuple[object, ...]] = []
     if isinstance(value, dict):
         found.append(path)
@@ -223,7 +262,9 @@ def object_paths(value: object, path: tuple[object, ...] = ()) -> list[tuple[obj
     return found
 
 
-def array_paths(value: object, path: tuple[object, ...] = ()) -> list[tuple[object, ...]]:
+def array_paths(
+    value: object, path: tuple[object, ...] = ()
+) -> list[tuple[object, ...]]:
     found: list[tuple[object, ...]] = []
     if isinstance(value, dict):
         for key, child in value.items():
@@ -235,7 +276,9 @@ def array_paths(value: object, path: tuple[object, ...] = ()) -> list[tuple[obje
     return found
 
 
-def string_paths(value: object, path: tuple[object, ...] = ()) -> list[tuple[object, ...]]:
+def string_paths(
+    value: object, path: tuple[object, ...] = ()
+) -> list[tuple[object, ...]]:
     found: list[tuple[object, ...]] = []
     if isinstance(value, str):
         found.append(path)
@@ -248,7 +291,9 @@ def string_paths(value: object, path: tuple[object, ...] = ()) -> list[tuple[obj
     return found
 
 
-def schema_for_path(schema: object, example: object, path: tuple[object, ...]) -> object:
+def schema_for_path(
+    schema: object, example: object, path: tuple[object, ...]
+) -> object:
     cursor_schema = schema
     cursor_value = example
     for part in path:
@@ -262,10 +307,16 @@ def schema_for_path(schema: object, example: object, path: tuple[object, ...]) -
     return effective_schema(cursor_schema, cursor_value)
 
 
-def required_paths(schema: object, example: object, path: tuple[object, ...] = ()) -> list[tuple[object, ...]]:
+def required_paths(
+    schema: object, example: object, path: tuple[object, ...] = ()
+) -> list[tuple[object, ...]]:
     schema = effective_schema(schema, example)
     found: list[tuple[object, ...]] = []
-    if isinstance(schema, dict) and schema.get("type") == "object" and isinstance(example, dict):
+    if (
+        isinstance(schema, dict)
+        and schema.get("type") == "object"
+        and isinstance(example, dict)
+    ):
         required = schema.get("required")
         if isinstance(required, list):
             for key in required:
@@ -274,12 +325,19 @@ def required_paths(schema: object, example: object, path: tuple[object, ...] = (
         for key, prop in schema_properties(schema, example).items():
             if key in example:
                 found.extend(required_paths(prop, example[key], (*path, key)))
-    if isinstance(schema, dict) and schema.get("type") == "array" and isinstance(example, list) and example:
+    if (
+        isinstance(schema, dict)
+        and schema.get("type") == "array"
+        and isinstance(example, list)
+        and example
+    ):
         found.extend(required_paths(schema.get("items"), example[0], (*path, 0)))
     return found
 
 
-def constrained_paths(schema: object, example: object, keyword: str, path: tuple[object, ...] = ()) -> list[tuple[tuple[object, ...], object]]:
+def constrained_paths(
+    schema: object, example: object, keyword: str, path: tuple[object, ...] = ()
+) -> list[tuple[tuple[object, ...], object]]:
     schema = effective_schema(schema, example)
     found: list[tuple[tuple[object, ...], object]] = []
     if not isinstance(schema, dict):
@@ -289,39 +347,54 @@ def constrained_paths(schema: object, example: object, keyword: str, path: tuple
     if schema.get("type") == "object" and isinstance(example, dict):
         for key, prop in schema_properties(schema, example).items():
             if key in example:
-                found.extend(constrained_paths(prop, example[key], keyword, (*path, key)))
+                found.extend(
+                    constrained_paths(prop, example[key], keyword, (*path, key))
+                )
     if schema.get("type") == "array" and isinstance(example, list) and example:
-        found.extend(constrained_paths(schema.get("items"), example[0], keyword, (*path, 0)))
+        found.extend(
+            constrained_paths(schema.get("items"), example[0], keyword, (*path, 0))
+        )
     return found
 
 
-class ExperienceWave5SeedContractTests(unittest.TestCase):
-    def assert_invalid(self, schema: dict[str, object], value: object, label: str) -> None:
+class ExperienceSovereignOfficeSeedContractTests(unittest.TestCase):
+    def assert_invalid(
+        self, schema: dict[str, object], value: object, label: str
+    ) -> None:
         errors = validation_errors(schema, value)
         self.assertTrue(errors, f"{label} unexpectedly validated")
 
-    def test_experience_wave5_examples_match_schemas(self) -> None:
-        self.assertTrue(WAVE5_CONTRACTS)
+    def test_experience_sovereign_office_examples_match_schemas(self) -> None:
+        self.assertTrue(SOVEREIGN_OFFICE_CONTRACTS)
         missing_pairs: list[str] = []
-        for stem, schema_file in WAVE5_CONTRACTS:
+        for stem, schema_file in SOVEREIGN_OFFICE_CONTRACTS:
             schema_path = artifact_path("schemas", schema_file)
             example_path = artifact_path("examples", f"{stem}.example.json")
             if not schema_path.exists():
-                missing_pairs.append(f"{example_path.relative_to(ROOT)} -> {schema_path.relative_to(ROOT)}")
+                missing_pairs.append(
+                    f"{example_path.relative_to(ROOT)} -> {schema_path.relative_to(ROOT)}"
+                )
             if not example_path.exists():
-                missing_pairs.append(f"{schema_path.relative_to(ROOT)} -> {example_path.relative_to(ROOT)}")
-        self.assertFalse(missing_pairs, "missing wave5 contract pair(s): " + ", ".join(missing_pairs))
+                missing_pairs.append(
+                    f"{schema_path.relative_to(ROOT)} -> {example_path.relative_to(ROOT)}"
+                )
+        self.assertFalse(
+            missing_pairs,
+            "missing sovereign office contract pair(s): " + ", ".join(missing_pairs),
+        )
 
-        for stem, schema_file in WAVE5_CONTRACTS:
+        for stem, schema_file in SOVEREIGN_OFFICE_CONTRACTS:
             with self.subTest(stem=stem):
                 schema, example = load_contract(stem, schema_file)
                 Draft202012Validator.check_schema(schema)
                 errors = validation_errors(schema, example)
-                self.assertFalse(errors, f"{stem}: {errors[0].message}" if errors else stem)
+                self.assertFalse(
+                    errors, f"{stem}: {errors[0].message}" if errors else stem
+                )
 
-    def test_experience_wave5_schemas_reject_unknown_fields(self) -> None:
+    def test_experience_sovereign_office_schemas_reject_unknown_fields(self) -> None:
         exercised = 0
-        for stem, schema_file in WAVE5_CONTRACTS:
+        for stem, schema_file in SOVEREIGN_OFFICE_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path in object_paths(example):
                 with self.subTest(stem=stem, path=path):
@@ -329,13 +402,17 @@ class ExperienceWave5SeedContractTests(unittest.TestCase):
                     target = get_path(mutated, path) if path else mutated
                     self.assertIsInstance(target, dict)
                     target["contract_escape"] = "loose-field"
-                    self.assert_invalid(schema, mutated, f"{stem} unknown field at {path}")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} unknown field at {path}"
+                    )
                     exercised += 1
         self.assertGreater(exercised, 0)
 
-    def test_experience_wave5_schemas_reject_wrong_types_for_every_field(self) -> None:
+    def test_experience_sovereign_office_schemas_reject_wrong_types_for_every_field(
+        self,
+    ) -> None:
         exercised = 0
-        for stem, schema_file in WAVE5_CONTRACTS:
+        for stem, schema_file in SOVEREIGN_OFFICE_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path, value in walk_values(example):
                 with self.subTest(stem=stem, path=path):
@@ -345,21 +422,25 @@ class ExperienceWave5SeedContractTests(unittest.TestCase):
                     exercised += 1
         self.assertGreater(exercised, 0)
 
-    def test_experience_wave5_schemas_reject_missing_required_fields(self) -> None:
+    def test_experience_sovereign_office_schemas_reject_missing_required_fields(
+        self,
+    ) -> None:
         exercised = 0
-        for stem, schema_file in WAVE5_CONTRACTS:
+        for stem, schema_file in SOVEREIGN_OFFICE_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path in required_paths(schema, example):
                 with self.subTest(stem=stem, path=path):
                     mutated = copy.deepcopy(example)
                     delete_path(mutated, path)
-                    self.assert_invalid(schema, mutated, f"{stem} missing required {path}")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} missing required {path}"
+                    )
                     exercised += 1
         self.assertGreater(exercised, 0)
 
-    def test_experience_wave5_schemas_reject_bad_array_items(self) -> None:
+    def test_experience_sovereign_office_schemas_reject_bad_array_items(self) -> None:
         exercised = 0
-        for stem, schema_file in WAVE5_CONTRACTS:
+        for stem, schema_file in SOVEREIGN_OFFICE_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path in array_paths(example):
                 with self.subTest(stem=stem, path=path):
@@ -370,50 +451,60 @@ class ExperienceWave5SeedContractTests(unittest.TestCase):
                         array_value[0] = wrong_type_value(array_value[0])
                     else:
                         array_value.append({"not": "a valid array item"})
-                    self.assert_invalid(schema, mutated, f"{stem} bad array item at {path}")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} bad array item at {path}"
+                    )
                     exercised += 1
         self.assertGreater(exercised, 0)
 
-    def test_experience_wave5_schemas_reject_empty_strings(self) -> None:
+    def test_experience_sovereign_office_schemas_reject_empty_strings(self) -> None:
         exercised = 0
-        for stem, schema_file in WAVE5_CONTRACTS:
+        for stem, schema_file in SOVEREIGN_OFFICE_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path in string_paths(example):
                 with self.subTest(stem=stem, path=path):
                     mutated = copy.deepcopy(example)
                     set_path(mutated, path, "")
-                    self.assert_invalid(schema, mutated, f"{stem} empty string at {path}")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} empty string at {path}"
+                    )
                     exercised += 1
         self.assertGreater(exercised, 0)
 
-    def test_experience_wave5_schemas_reject_const_escapes(self) -> None:
+    def test_experience_sovereign_office_schemas_reject_const_escapes(self) -> None:
         exercised = 0
-        for stem, schema_file in WAVE5_CONTRACTS:
+        for stem, schema_file in SOVEREIGN_OFFICE_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path, _constraint in constrained_paths(schema, example, "const"):
                 with self.subTest(stem=stem, path=path):
                     value = get_path(example, path)
                     mutated = copy.deepcopy(example)
                     set_path(mutated, path, escape_value(value))
-                    self.assert_invalid(schema, mutated, f"{stem} const escape at {path}")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} const escape at {path}"
+                    )
                     exercised += 1
         self.assertGreater(exercised, 0)
 
-    def test_experience_wave5_schemas_reject_enum_escapes(self) -> None:
+    def test_experience_sovereign_office_schemas_reject_enum_escapes(self) -> None:
         exercised = 0
-        for stem, schema_file in WAVE5_CONTRACTS:
+        for stem, schema_file in SOVEREIGN_OFFICE_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path, _constraint in constrained_paths(schema, example, "enum"):
                 with self.subTest(stem=stem, path=path):
                     value = get_path(example, path)
                     mutated = copy.deepcopy(example)
                     set_path(mutated, path, escape_value(value))
-                    self.assert_invalid(schema, mutated, f"{stem} enum escape at {path}")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} enum escape at {path}"
+                    )
                     exercised += 1
         self.assertGreater(exercised, 0)
 
-    def test_experience_wave5_schemas_reject_numeric_bound_escapes(self) -> None:
-        for stem, schema_file in WAVE5_CONTRACTS:
+    def test_experience_sovereign_office_schemas_reject_numeric_bound_escapes(
+        self,
+    ) -> None:
+        for stem, schema_file in SOVEREIGN_OFFICE_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path, value in walk_values(example):
                 if not isinstance(value, (int, float)) or isinstance(value, bool):
@@ -425,9 +516,13 @@ class ExperienceWave5SeedContractTests(unittest.TestCase):
                     with self.subTest(stem=stem, path=path, bound="minimum"):
                         mutated = copy.deepcopy(example)
                         set_path(mutated, path, field_schema["minimum"] - 1)
-                        self.assert_invalid(schema, mutated, f"{stem} below minimum at {path}")
+                        self.assert_invalid(
+                            schema, mutated, f"{stem} below minimum at {path}"
+                        )
                 if "maximum" in field_schema:
                     with self.subTest(stem=stem, path=path, bound="maximum"):
                         mutated = copy.deepcopy(example)
                         set_path(mutated, path, field_schema["maximum"] + 1)
-                        self.assert_invalid(schema, mutated, f"{stem} above maximum at {path}")
+                        self.assert_invalid(
+                            schema, mutated, f"{stem} above maximum at {path}"
+                        )

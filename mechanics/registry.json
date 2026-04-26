@@ -165,6 +165,7 @@
         "mechanics/experience/ROADMAP.md",
         "mechanics/experience/LANDING_LOG.md",
         "mechanics/experience/artifact-map.json",
+        "mechanics/experience/provenance-receipts.json",
         "mechanics/experience/parts/capture-kernel/README.md",
         "mechanics/experience/parts/certification-proof/README.md",
         "mechanics/experience/parts/adoption-federation/README.md",
@@ -214,7 +215,7 @@
         "`aoa-kag` projections as source-authored meaning",
         "ToS-authored meaning or canon"
       ],
-      "owner_boundary": "Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, offices, runtime, routing, proof, KAG, memory, and ToS authority remain owner-local.",
+      "owner_boundary": "Center contracts and stop-lines for capture, certification, adoption, governance, office, service, continuity, compatibility, and runtime-boundary contours; live workspace, offices, runtime, routing, proof, KAG, memory, and ToS authority remain owner-local.",
       "owner_request_doc_ref": "mechanics/experience/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-EXPERIENCE-STACK-001",

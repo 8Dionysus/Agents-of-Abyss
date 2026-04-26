@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience v1.9 context memory weaving continuity loom center contract."""
+"""Validate the Experience context memory weaving continuity loom center contract."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ SCHEMA_PATH = (
     / "parts"
     / "continuity-context"
     / "schemas"
-    / "experience-v1-9-context-memory-weaving-continuity-loom.schema.json"
+    / "experience-continuity-loom.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -35,50 +35,48 @@ EXAMPLE_PATH = (
     / "parts"
     / "continuity-context"
     / "examples"
-    / "experience_v1_9_context_memory_weaving_continuity_loom.example.json"
+    / "experience_continuity_loom.example.json"
 )
 
 SOURCE_SEED = {
-    "archive_name": "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9.zip",
-    "seed_id": "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9",
-    "version": "v1.9",
+    "receipt_ref": "experience.seed.continuity-loom",
     "sha256": "a3b06434cac02149644eb036a3676fe8fdd398be4c1de3eaa908835dd5e31d96",
     "claim_limit": "archive_readable_not_owner_ready",
     "no_new_repo": True,
 }
 
 EXPECTED_PREDECESSORS = [
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md",
-    "mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md",
-    "mechanics/method-growth/docs/METHOD_SPINE.md",
-    "docs/FEDERATION_RULES.md",
-    "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
-    "mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md",
-    "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_AUTHORITY_RESOLVER.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_AGON_SERVICE_SEAM_V1_1.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_REPO_LANDING_ORDER.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_TOS_CANDIDATE_BOUNDARY.md",
-    "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE8_LANDING.md",
-    "mechanics/agon/docs/AGON_ARENA_SESSION_MODEL.md",
-    "mechanics/agon/docs/AGON_ARENA_SESSION_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE9_LANDING.md",
-    "mechanics/agon/docs/AGON_STATE_PACKET_MODEL.md",
-    "mechanics/agon/docs/AGON_WAVE10_STOP_LINES.md",
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.service-mesh-operations",
+    "experience.raw.office-role-pairs",
+    "experience.raw.agonic-pair-trials-arena-kernel",
+    "experience.raw.epistemic-duel-model-forge",
+    "experience.raw.memory-rank-reputation",
+    "experience.raw.affective-economy-honor-treasury",
+    "experience.raw.context-routing",
+    "recurrence.self-agency-continuity",
+    "method-growth.method-spine",
+    "aoa.federation-rules",
+    "method-growth.reviewable-growth-refinery",
+    "method-growth.candidate-lineage-crosswalk",
+    "method-growth.owner-landing-and-pruning",
+    "experience.raw.authority-resolver",
+    "experience.raw.runtime-authority-boundary",
+    "experience.raw.agon-service-seam",
+    "experience.raw.repo-landing-order",
+    "experience.raw.tos-candidate-boundary",
+    "agon.pre-protocol-stop-lines",
+    "agon.gate-routing-stop-lines",
+    "agon.trial-playbook-stop-lines",
+    "agon.court-memo-stats-prebinding-stop-lines",
+    "agon.context-landing",
+    "agon.arena-session-model",
+    "agon.arena-session-stop-lines",
+    "agon.continuity-landing",
+    "agon.state-packet-model",
+    "agon.runtime-boundary-stop-lines",
 ]
 
 EXPECTED_CONTINUITY_LAW = [
@@ -230,12 +228,12 @@ EXPECTED_FLOW = [
     },
     {
         "order": 2,
-        "kind": "wave8_routing_predecessor_checked",
+        "kind": "routing_predecessor_checked",
         "owner": "Agents-of-Abyss",
         "authority_note": "v1.8 routing remains predecessor law; continuity may request receipt-backed reentry only after routing boundaries are already candidate-bound",
         "stop_lines": [
             "no predecessor erasure",
-            "no packet collision with agon wave ix surfaces",
+            "no packet collision with Agon continuity surfaces",
         ],
     },
     {
@@ -460,8 +458,8 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         "must preserve continuity loom seed provenance",
     )
     expect_equal(
-        "predecessor_surfaces",
-        payload["predecessor_surfaces"],
+        "predecessor_receipt_refs",
+        payload["predecessor_receipt_refs"],
         EXPECTED_PREDECESSORS,
         "must preserve the v1.9 predecessor chain",
     )
@@ -526,7 +524,7 @@ def main() -> int:
     payload = load_json(EXAMPLE_PATH)
     validate_payload(payload, schema)
     print(
-        "ok: Experience v1.9 context memory weaving continuity loom center contract is valid"
+        "ok: Experience context memory weaving continuity loom center contract is valid"
     )
     return 0
 

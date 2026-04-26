@@ -1,0 +1,1515 @@
+{
+  "schema_version": "aoa_experience_provenance_receipts_v1",
+  "mechanic": "experience",
+  "source_of_truth": "mechanics/experience/PROVENANCE.md",
+  "description": "Receipt IDs keep active Experience parts legible while preserving exact archive, seed, and sibling-surface provenance behind the provenance bridge.",
+  "receipts": [
+    {
+      "id": "agon.affective-honor-landing",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE17_LANDING.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.affective-honor-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE17_STOP_LINES.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.arena-session-landing-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE18_STOP_LINES.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.arena-session-model",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_ARENA_SESSION_MODEL.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.arena-session-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_ARENA_SESSION_STOP_LINES.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.center-handoff",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE7_CENTER_HANDOFF.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.charter-and-seat-model",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_CHARTER_AND_SEAT_MODEL.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "compatibility-bridges"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.context-landing",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE8_LANDING.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.continuity-landing",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE9_LANDING.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.contradiction-closure-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE16_STOP_LINES.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.contradiction-closure-summon-law",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.court-memo-stats-prebinding-handoff",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.court-memo-stats-prebinding-owner-request",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_OWNER_REQUEST.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.court-memo-stats-prebinding-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.delta-receipt-model",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_DELTA_RECEIPT_MODEL.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.duel-kernel-model",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_DUEL_KERNEL_MODEL.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.epistemic-agon",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_EPISTEMIC_AGON.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.epistemic-duel-landing",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE15_LANDING.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.epistemic-duel-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE15_STOP_LINES.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.epistemic-move-extension-model",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_EPISTEMIC_MOVE_EXTENSION_MODEL.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "compatibility-bridges"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.epistemic-owner-handoffs",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_EPISTEMIC_OWNER_HANDOFFS.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "compatibility-bridges"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.gate-routing-handoff",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.gate-routing-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.lawful-move-language",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.mechanical-trials-over-duel-kernel",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.model-of-other-law",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_MODEL_OF_OTHER_LAW.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.model-of-other-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE13_STOP_LINES.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.move-owner-binding",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.pre-protocol-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context",
+        "office-operations",
+        "runtime-boundary",
+        "service-mesh"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.rank-jurisdiction-model",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_RANK_JURISDICTION_MODEL.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.retention-owner-handoffs",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_RETENTION_OWNER_HANDOFFS.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.retention-rank-economy",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.retention-rank-landing",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE14_LANDING.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.retention-rank-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE14_STOP_LINES.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.runtime-boundary-landing",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE10_LANDING.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.runtime-boundary-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE10_STOP_LINES.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.sealed-commit-model",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_SEALED_COMMIT_MODEL.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.sealed-commit-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_WAVE12_STOP_LINES.md",
+      "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
+      "active_consumers": [
+        "compatibility-bridges"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Agon owner authority",
+        "Experience ownership over Agon doctrine"
+      ]
+    },
+    {
+      "id": "agon.state-packet-model",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_STATE_PACKET_MODEL.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.trial-playbook-handoff",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.trial-playbook-stop-lines",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "agon.verdict-delta-scar-bridge",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/agon",
+      "source_ref": "mechanics/agon/docs/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "compatibility-bridges"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "aoa.federation-rules",
+      "kind": "aoa-governance-surface",
+      "owner": "Agents-of-Abyss",
+      "source_ref": "docs/FEDERATION_RULES.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "dionysus.experience-intake-map",
+      "kind": "dionysus-staged-intake",
+      "owner": "Dionysus",
+      "source_ref": "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
+      "purpose": "Staged intake lineage used by Experience center contracts without importing seed-path noise into active parts.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context",
+        "office-operations",
+        "runtime-boundary",
+        "service-mesh"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Dionysus seed staging as runtime activation"
+      ]
+    },
+    {
+      "id": "dionysus.experience-intake-note",
+      "kind": "dionysus-staged-intake",
+      "owner": "Dionysus",
+      "source_ref": "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
+      "purpose": "Staged intake lineage used by Experience center contracts without importing seed-path noise into active parts.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context",
+        "office-operations",
+        "runtime-boundary",
+        "service-mesh"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "Dionysus seed staging as runtime activation"
+      ]
+    },
+    {
+      "id": "experience.raw.affective-economy-honor-treasury",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.agon-service-seam",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_AGON_SERVICE_SEAM_V1_1.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "continuity-context",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.agonic-pair-trials-arena-kernel",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.authority-resolver",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_AUTHORITY_RESOLVER.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.capture-kernel",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "capture-kernel",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.capture-kernel.owner-split",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md#owner-split",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "capture-kernel"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.capture-kernel.stop-lines",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_WAVE1_KERNEL.md#stop-lines",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "capture-kernel"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.certification-watchtower",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_WAVE2_CERTIFICATION_WATCHTOWER.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.context-routing",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.continuity-loom",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.epistemic-duel-model-forge",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.federation-adoption",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_WAVE3_FEDERATION_ADOPTION.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.live-office-expansion",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "office-operations",
+        "service-mesh"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.memory-rank-reputation",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.office-role-pairs",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.polis-constitution",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_WAVE4_POLIS_CONSTITUTION.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.repo-landing-order",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_REPO_LANDING_ORDER.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.runtime-authority-boundary",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context",
+        "office-operations",
+        "runtime-boundary",
+        "service-mesh"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.runtime-boundary-bridge",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context",
+        "office-operations",
+        "service-mesh"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.service-mesh-law",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_SERVICE_MESH_LAW.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "office-operations",
+        "service-mesh"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.service-mesh-operations",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context",
+        "office-operations"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.sovereign-office",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "office-operations",
+        "runtime-boundary",
+        "service-mesh"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.raw.tos-candidate-boundary",
+      "kind": "legacy-raw-source",
+      "owner": "mechanics/experience",
+      "source_ref": "mechanics/experience/legacy/raw/EXPERIENCE_TOS_CANDIDATE_BOUNDARY.md",
+      "purpose": "Legacy raw Experience source preserved for audit while active contracts route through distilled part surfaces.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "raw proposal as current operating contract"
+      ]
+    },
+    {
+      "id": "experience.seed.adoption-forge",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-adoption-forge-seed-v0_7.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "adoption-federation"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.affective-economy-honor-treasury",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-affective-economy-honor-treasury-seed-v1_7.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "continuity-context",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.agonic-pair-trials-arena-kernel",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-agonic-pair-trials-mechanical-arena-kernel-seed-v1_4.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "office-operations",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.certification-forge",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-certification-forge-seed-v0_4.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "certification-proof"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.constitution-runtime",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-constitution-runtime-seed-v0_9.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "governance-polis"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.context-routing",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-context-routing-nervous-system-seed-v1_8.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "continuity-context",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.continuity-loom",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "continuity-context",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.deployment-watchtower",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-deployment-watchtower-seed-v0_5.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "certification-proof"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.epistemic-duel-model-forge",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-epistemic-duel-model-of-other-forge-seed-v1_5.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.federation-harvest",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-federation-harvest-seed-v0_6.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "adoption-federation"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.live-office-expansion",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-live-office-expansion-seed-v1_1.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "office-operations"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.living-workspace-continuity-runtime",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-living-workspace-continuity-runtime-seed-v2_0.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "continuity-context",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.mechanic",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-mechanic-seed-v0_1.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "capture-kernel"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.memory-rank-reputation",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "compatibility-bridges",
+        "continuity-context",
+        "runtime-boundary"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.office-role-pairs",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-office-foundry-role-pairs-seed-v1_3.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "office-operations",
+        "runtime-boundary",
+        "service-mesh"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.pilot-integration",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-pilot-integration-seed-v0_3.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "capture-kernel"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.polis-governance",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-polis-governance-seed-v0_8.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "governance-polis"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.runtime-capture",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-runtime-capture-seed-v0_2.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "capture-kernel"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.service-mesh-operations",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-service-mesh-operations-seed-v1_2.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "runtime-boundary",
+        "service-mesh"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "experience.seed.sovereign-release",
+      "kind": "source-seed-archive",
+      "owner": "mechanics/experience",
+      "source_ref": "aoa-experience-installation-sovereign-release-seed-v1_0.zip",
+      "purpose": "Release/planting packet lineage retained as a receipt, not as active route vocabulary.",
+      "active_consumers": [
+        "office-operations"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "release readiness or deployment approval"
+      ]
+    },
+    {
+      "id": "method-growth.candidate-lineage-crosswalk",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/method-growth",
+      "source_ref": "mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "method-growth.method-spine",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/method-growth",
+      "source_ref": "mechanics/method-growth/docs/METHOD_SPINE.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "method-growth.owner-landing-and-pruning",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/method-growth",
+      "source_ref": "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "method-growth.reviewable-growth-refinery",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/method-growth",
+      "source_ref": "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "public-entry.codex-plane-regeneration",
+      "kind": "public-entry-surface",
+      "owner": "8Dionysus",
+      "source_ref": "8Dionysus:docs/CODEX_PLANE_REGENERATION.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "public-entry.workspace-install",
+      "kind": "public-entry-surface",
+      "owner": "8Dionysus",
+      "source_ref": "8Dionysus:docs/WORKSPACE_INSTALL.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    },
+    {
+      "id": "recurrence.self-agency-continuity",
+      "kind": "sibling-mechanic-surface",
+      "owner": "mechanics/recurrence",
+      "source_ref": "mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md",
+      "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
+      "active_consumers": [
+        "continuity-context"
+      ],
+      "must_not_claim": [
+        "active contract truth by itself",
+        "owner-local runtime authority",
+        "ownership over the referenced source surface"
+      ]
+    }
+  ]
+}

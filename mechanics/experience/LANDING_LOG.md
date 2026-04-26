@@ -28,6 +28,76 @@ the change is not a landing change.
 
 ## Landed center line
 
+### Experience provenance receipt indirection
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` keeps active Experience schemas, examples,
+validators, and tests on functional receipt IDs. Exact source packets, staged
+seed paths, sibling surfaces, and owner surfaces stay behind the package
+provenance bridge and receipt registry.
+
+Surfaces:
+
+- `mechanics/experience/provenance-receipts.json`
+- `mechanics/experience/PROVENANCE.md`
+- `mechanics/experience/README.md`
+- `mechanics/experience/DIRECTION.md`
+- `mechanics/experience/PARTS.md`
+- `mechanics/experience/AGENTS.md`
+- `mechanics/experience/scripts/validate_experience_distillation.py`
+- `mechanics/experience/parts/*/schemas/`
+- `mechanics/experience/parts/*/examples/`
+- `mechanics/experience/parts/*/scripts/`
+- `mechanics/experience/parts/*/tests/`
+
+Validation:
+
+- `python mechanics/experience/scripts/validate_experience_distillation.py`
+- `for script in $(find mechanics/experience/parts -path '*/scripts/*.py' -type f | sort); do python "$script"; done`
+- `python -m pytest -q mechanics/experience/tests mechanics/experience/parts`
+
+Stop-lines: active part artifacts may not carry direct archival, staged seed,
+or sibling-source paths when a receipt ID can name the evidence. Receipt IDs do
+not make an old packet, seed, or sibling surface active authority.
+
+Next route: future Experience source citations add or reuse a receipt in
+`mechanics/experience/provenance-receipts.json`, then keep active part
+contracts focused on current function and owner route.
+
+### Experience active artifact naming cleanup
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` keeps active Experience artifact names,
+contract IDs, bridge IDs, and validator/test identities functional by part.
+Historical wave and version contours remain available only through
+`mechanics/experience/PROVENANCE.md` and artifact-map receipts; they are not
+active coordinates for future work.
+
+Surfaces:
+
+- `mechanics/experience/artifact-map.json`
+- `mechanics/experience/scripts/validate_experience_distillation.py`
+- `mechanics/experience/tests/test_experience_distillation.py`
+- `mechanics/experience/parts/*/schemas/`
+- `mechanics/experience/parts/*/examples/`
+- `mechanics/experience/parts/*/scripts/`
+- `mechanics/experience/parts/*/tests/`
+
+Validation:
+
+- `python mechanics/experience/scripts/validate_experience_distillation.py`
+- `for script in $(find mechanics/experience/parts -path '*/scripts/*.py' -type f | sort); do python "$script"; done`
+- `python -m pytest -q mechanics/experience/tests mechanics/experience/parts`
+
+Stop-lines: no active artifact filename, contract identity, bridge identity,
+or validator/test identity may use wave or release-contour naming as the
+working route.
+
+Next route: keep source-contour details in provenance and receipts; future
+artifact work should use the owning part name, not the landing campaign name.
+
 ### Experience part artifact homes
 
 Status: landed.
@@ -107,8 +177,8 @@ owner-local runtime and memory activation remain outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/capture-kernel/README.md`
-- `mechanics/experience/parts/capture-kernel/schemas/experience-wave1-flow.schema.json`
-- `mechanics/experience/parts/capture-kernel/examples/experience_wave1_flow.example.json`
+- `mechanics/experience/parts/capture-kernel/schemas/experience-capture-flow.schema.json`
+- `mechanics/experience/parts/capture-kernel/examples/experience_capture_flow.example.json`
 - `mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py`
 - `mechanics/experience/parts/capture-kernel/tests/test_capture_kernel.py`
 
@@ -133,8 +203,8 @@ owner-local review.
 Surfaces:
 
 - `mechanics/experience/parts/certification-proof/README.md`
-- `mechanics/experience/parts/certification-proof/schemas/experience-wave2-certification-watchtower.schema.json`
-- `mechanics/experience/parts/certification-proof/examples/experience_wave2_certification_watchtower.example.json`
+- `mechanics/experience/parts/certification-proof/schemas/experience-certification-watchtower.schema.json`
+- `mechanics/experience/parts/certification-proof/examples/experience_certification_watchtower.example.json`
 - `mechanics/experience/parts/certification-proof/scripts/validate_certification_proof.py`
 - `mechanics/experience/parts/certification-proof/tests/test_certification_proof.py`
 
@@ -158,8 +228,8 @@ owner repositories decide whether adoption lands locally.
 Surfaces:
 
 - `mechanics/experience/parts/adoption-federation/README.md`
-- `mechanics/experience/parts/adoption-federation/schemas/experience-wave3-federation-adoption.schema.json`
-- `mechanics/experience/parts/adoption-federation/examples/experience_wave3_federation_adoption.example.json`
+- `mechanics/experience/parts/adoption-federation/schemas/experience-federation-adoption.schema.json`
+- `mechanics/experience/parts/adoption-federation/examples/experience_federation_adoption.example.json`
 - `mechanics/experience/parts/adoption-federation/scripts/validate_adoption_federation.py`
 - `mechanics/experience/parts/adoption-federation/tests/test_adoption_federation.py`
 
@@ -183,8 +253,8 @@ implementation stays outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/governance-polis/README.md`
-- `mechanics/experience/parts/governance-polis/schemas/experience-wave4-polis-constitution.schema.json`
-- `mechanics/experience/parts/governance-polis/examples/experience_wave4_polis_constitution.example.json`
+- `mechanics/experience/parts/governance-polis/schemas/experience-polis-constitution.schema.json`
+- `mechanics/experience/parts/governance-polis/examples/experience_polis_constitution.example.json`
 - `mechanics/experience/parts/governance-polis/scripts/validate_governance_polis.py`
 - `mechanics/experience/parts/governance-polis/tests/test_governance_polis.py`
 - `mechanics/experience/parts/governance-polis/tests/test_governance_polis_seed_contracts.py`
@@ -210,8 +280,8 @@ live-office contour; owner-local repositories own any live-office activation.
 Surfaces:
 
 - `mechanics/experience/parts/office-operations/README.md`
-- `mechanics/experience/parts/office-operations/schemas/experience-wave5-sovereign-office.schema.json`
-- `mechanics/experience/parts/office-operations/examples/experience_wave5_sovereign_office.example.json`
+- `mechanics/experience/parts/office-operations/schemas/experience-sovereign-office.schema.json`
+- `mechanics/experience/parts/office-operations/examples/experience_sovereign_office.example.json`
 - `mechanics/experience/parts/office-operations/scripts/validate_office_operations.py`
 - `mechanics/experience/parts/office-operations/tests/test_office_operations.py`
 - `mechanics/experience/parts/office-operations/tests/test_office_operations_seed_contracts.py`
@@ -237,8 +307,8 @@ owner-local planting waves; it does not own future runtime activation.
 Surfaces:
 
 - `mechanics/experience/parts/runtime-boundary/README.md`
-- `mechanics/experience/parts/runtime-boundary/schemas/experience-v1-2-v2-0-bridge.schema.json`
-- `mechanics/experience/parts/runtime-boundary/examples/experience_v1_2_to_v2_0_bridge.example.json`
+- `mechanics/experience/parts/runtime-boundary/schemas/experience-runtime-boundary-bridge.schema.json`
+- `mechanics/experience/parts/runtime-boundary/examples/experience_runtime_boundary_bridge.example.json`
 - `mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py`
 - `mechanics/experience/parts/runtime-boundary/tests/test_runtime_boundary_bridge.py`
 
@@ -262,8 +332,8 @@ no-runtime stop-lines; runtime service ownership remains outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/service-mesh/README.md`
-- `mechanics/experience/parts/service-mesh/schemas/experience-v1-2-service-mesh-operations.schema.json`
-- `mechanics/experience/parts/service-mesh/examples/experience_v1_2_service_mesh_operations.example.json`
+- `mechanics/experience/parts/service-mesh/schemas/experience-service-mesh-operations.schema.json`
+- `mechanics/experience/parts/service-mesh/examples/experience_service_mesh_operations.example.json`
 - `mechanics/experience/parts/service-mesh/scripts/validate_service_mesh.py`
 - `mechanics/experience/parts/service-mesh/tests/test_service_mesh.py`
 
@@ -286,8 +356,8 @@ does not create hybrid-agent authority.
 Surfaces:
 
 - `mechanics/experience/parts/office-operations/README.md`
-- `mechanics/experience/parts/office-operations/schemas/experience-v1-3-office-foundry-role-pairs.schema.json`
-- `mechanics/experience/parts/office-operations/examples/experience_v1_3_office_foundry_role_pairs.example.json`
+- `mechanics/experience/parts/office-operations/schemas/experience-office-foundry-role-pairs.schema.json`
+- `mechanics/experience/parts/office-operations/examples/experience_office_foundry_role_pairs.example.json`
 - `mechanics/experience/parts/office-operations/scripts/validate_office_role_pairs.py`
 - `mechanics/experience/parts/office-operations/tests/test_office_role_pairs.py`
 
@@ -310,8 +380,8 @@ Agon law, arena operation, verdicts, scars, and retention remain unactivated.
 Surfaces:
 
 - `mechanics/experience/parts/compatibility-bridges/README.md`
-- `mechanics/experience/parts/compatibility-bridges/schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json`
-- `mechanics/experience/parts/compatibility-bridges/examples/experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json`
+- `mechanics/experience/parts/compatibility-bridges/schemas/experience-agonic-pair-trials-arena-kernel.schema.json`
+- `mechanics/experience/parts/compatibility-bridges/examples/experience_agonic_pair_trials_arena_kernel.example.json`
 - `mechanics/experience/parts/compatibility-bridges/scripts/validate_agonic_pair_trials_bridge.py`
 - `mechanics/experience/parts/compatibility-bridges/tests/test_agonic_pair_trials_bridge.py`
 
@@ -335,8 +405,8 @@ standing mutation remain outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/compatibility-bridges/README.md`
-- `mechanics/experience/parts/compatibility-bridges/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
-- `mechanics/experience/parts/compatibility-bridges/examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
+- `mechanics/experience/parts/compatibility-bridges/schemas/experience-epistemic-duel-model-forge.schema.json`
+- `mechanics/experience/parts/compatibility-bridges/examples/experience_epistemic_duel_model_forge.example.json`
 - `mechanics/experience/parts/compatibility-bridges/scripts/validate_epistemic_duel_bridge.py`
 - `mechanics/experience/parts/compatibility-bridges/tests/test_epistemic_duel_bridge.py`
 
@@ -360,8 +430,8 @@ jurisdiction candidates; memory truth and live rank mutation remain outside.
 Surfaces:
 
 - `mechanics/experience/parts/continuity-context/README.md`
-- `mechanics/experience/parts/continuity-context/schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json`
-- `mechanics/experience/parts/continuity-context/examples/experience_v1_6_epistemic_memory_rank_reputation_engine.example.json`
+- `mechanics/experience/parts/continuity-context/schemas/experience-memory-rank-reputation.schema.json`
+- `mechanics/experience/parts/continuity-context/examples/experience_memory_rank_reputation.example.json`
 - `mechanics/experience/parts/continuity-context/scripts/validate_memory_rank_reputation.py`
 - `mechanics/experience/parts/continuity-context/tests/test_memory_rank_reputation.py`
 
@@ -385,8 +455,8 @@ rights, and honor treasury activation remain outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/continuity-context/README.md`
-- `mechanics/experience/parts/continuity-context/schemas/experience-v1-7-affective-economy-honor-treasury.schema.json`
-- `mechanics/experience/parts/continuity-context/examples/experience_v1_7_affective_economy_honor_treasury.example.json`
+- `mechanics/experience/parts/continuity-context/schemas/experience-affective-economy-honor-treasury.schema.json`
+- `mechanics/experience/parts/continuity-context/examples/experience_affective_economy_honor_treasury.example.json`
 - `mechanics/experience/parts/continuity-context/scripts/validate_affective_economy.py`
 - `mechanics/experience/parts/continuity-context/tests/test_affective_economy.py`
 
@@ -409,8 +479,8 @@ route receipt grammar; live router engine and owner override remain outside.
 Surfaces:
 
 - `mechanics/experience/parts/continuity-context/README.md`
-- `mechanics/experience/parts/continuity-context/schemas/experience-v1-8-context-routing-nervous-system.schema.json`
-- `mechanics/experience/parts/continuity-context/examples/experience_v1_8_context_routing_nervous_system.example.json`
+- `mechanics/experience/parts/continuity-context/schemas/experience-context-routing.schema.json`
+- `mechanics/experience/parts/continuity-context/examples/experience_context_routing.example.json`
 - `mechanics/experience/parts/continuity-context/scripts/validate_context_routing.py`
 - `mechanics/experience/parts/continuity-context/tests/test_context_routing.py`
 
@@ -434,8 +504,8 @@ grammar; private memory sovereignty and runtime installation remain outside.
 Surfaces:
 
 - `mechanics/experience/parts/continuity-context/README.md`
-- `mechanics/experience/parts/continuity-context/schemas/experience-v1-9-context-memory-weaving-continuity-loom.schema.json`
-- `mechanics/experience/parts/continuity-context/examples/experience_v1_9_context_memory_weaving_continuity_loom.example.json`
+- `mechanics/experience/parts/continuity-context/schemas/experience-continuity-loom.schema.json`
+- `mechanics/experience/parts/continuity-context/examples/experience_continuity_loom.example.json`
 - `mechanics/experience/parts/continuity-context/scripts/validate_context_memory_weaving.py`
 - `mechanics/experience/parts/continuity-context/tests/test_context_memory_weaving.py`
 
@@ -460,8 +530,8 @@ outside the center.
 Surfaces:
 
 - `mechanics/experience/parts/runtime-boundary/README.md`
-- `mechanics/experience/parts/continuity-context/schemas/experience-v2-0-living-workspace-continuity-runtime.schema.json`
-- `mechanics/experience/parts/continuity-context/examples/experience_v2_0_living_workspace_continuity_runtime.example.json`
+- `mechanics/experience/parts/continuity-context/schemas/experience-living-workspace-continuity-runtime.schema.json`
+- `mechanics/experience/parts/continuity-context/examples/experience_living_workspace_continuity_runtime.example.json`
 - `mechanics/experience/parts/continuity-context/scripts/validate_living_workspace_continuity.py`
 - `mechanics/experience/parts/continuity-context/tests/test_living_workspace_continuity.py`
 
