@@ -37,7 +37,7 @@ If a ready quest names a stronger owner that is missing from
 repair the request map before moving the quest again.
 
 The AoA-side route index for current ready quests lives in
-[`experience-ready-owner-routes.md`](../../mechanics/questbook/docs/experience-ready-owner-routes.md).
+[`experience-ready-owner-routes.md`](../../mechanics/questbook/parts/lane-owner-routes/experience-ready-owner-routes.md).
 It maps ready quest files to `ORQ-EXPERIENCE-*` packets without claiming owner
 acceptance.
 

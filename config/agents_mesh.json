@@ -667,7 +667,41 @@
       "kind": "mechanic-docs-card",
       "status": "required",
       "owner": "Agents-of-Abyss",
-      "notes": "Deep docs card for Questbook.",
+      "notes": "Compatibility docs route card for Questbook.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/questbook/parts/AGENTS.md",
+      "scope": "mechanics/questbook/parts/",
+      "kind": "mechanic-parts-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Active parts card for Questbook.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/questbook/legacy/AGENTS.md",
+      "scope": "mechanics/questbook/legacy/",
+      "kind": "mechanic-legacy-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Legacy provenance card for Questbook.",
       "required_headings": [
         "# AGENTS.md",
         "## Applies to",

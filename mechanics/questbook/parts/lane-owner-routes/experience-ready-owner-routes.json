@@ -1,0 +1,500 @@
+{
+  "schema_version": "aoa_ready_owner_routes_v1",
+  "title": "Experience Ready Owner Routes",
+  "lane": "experience",
+  "source_registry": "mechanics/questbook/parts/lane-owner-routes/experience-ready-owner-routes.json",
+  "source_ready_dir": "quests/experience/ready",
+  "owner_request_mechanic": "experience",
+  "owner_request_doc": "mechanics/experience/OWNER_REQUESTS.md",
+  "stop_lines": [
+    "This route table is center-side navigation only.",
+    "Do not update owner-request status from a route table.",
+    "Do not close a ready quest until owner-local acceptance, landing, or proof is actually reviewed.",
+    "Do not add legacy/raw links here; route provenance questions through the Experience package provenance surfaces."
+  ],
+  "routes": [
+    {
+      "quest_id": "AOA-Q-EXP-0041",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0041.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-AGENTS-001",
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "assistant regression matrix"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0042",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0042.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "certification eval bundle"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0043",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0043.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-MEMO-001"
+      ],
+      "route_note": "revision ledger writeback"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0044",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0044.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STATS-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "certification dashboard"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0045",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0045.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-AGENTS-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "assistant release dry-run"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0055",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0055.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-MEMO-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "post-release retention"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0057",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0057.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STATS-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "watchtower dashboard"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0058",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0058.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STACK-001",
+        "ORQ-EXPERIENCE-SDK-001"
+      ],
+      "route_note": "runtime jobs"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0063",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0063.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-EVALS-001",
+        "ORQ-EXPERIENCE-PLAYBOOKS-001"
+      ],
+      "route_note": "federation harvest evals"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0064",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0064.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-MEMO-001"
+      ],
+      "route_note": "retention and forgetting gates"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0065",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0065.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-ROUTING-001"
+      ],
+      "route_note": "owner landing fanout"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0066",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0066.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-KAG-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "KAG promotion dossier"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0067",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0067.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-TOS-001"
+      ],
+      "route_note": "ToS boundary guard"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0069",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0069.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STACK-001",
+        "ORQ-EXPERIENCE-SDK-001"
+      ],
+      "route_note": "runtime workers and SDK helpers"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0074",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0074.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-AGENTS-001",
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "assistant release adoption"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0075",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0075.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-AGENTS-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "agonic trial adoption"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0076",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0076.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-ROUTING-001"
+      ],
+      "route_note": "routing-rule adoption"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0077",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0077.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-SKILLS-001",
+        "ORQ-EXPERIENCE-TECHNIQUES-001"
+      ],
+      "route_note": "playbook, skill, and technique adoption"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0078",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0078.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "shadow adoption runner"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0080",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0080.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-MEMO-001",
+        "ORQ-EXPERIENCE-STATS-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "adoption retention watch"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0081",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0081.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-KAG-001"
+      ],
+      "route_note": "KAG downlink guard"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0082",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0082.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-TOS-001",
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "ToS runtime adoption block"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0083",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0083.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STATS-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "adoption dashboard"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0100-runtime-dashboard",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0100-runtime-dashboard.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STACK-001",
+        "ORQ-EXPERIENCE-STATS-001"
+      ],
+      "route_note": "runtime dashboard"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0101-stack-workers",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0101-stack-workers.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "stack workers"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0102-operator-console",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0102-operator-console.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STACK-001",
+        "ORQ-EXPERIENCE-AGENTS-001"
+      ],
+      "route_note": "operator console"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0102-sdk-runtime-api",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0102-sdk-runtime-api.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-SDK-001",
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "SDK runtime API"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0103-eval-runtime-bundles",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0103-eval-runtime-bundles.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-EVALS-001",
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "eval runtime bundles"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0103-first-assistant-office",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0103-first-assistant-office.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-AGENTS-001",
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "first assistant office"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0104-memo-decision-writeback",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0104-memo-decision-writeback.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-MEMO-001"
+      ],
+      "route_note": "memo decision writeback"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0105-tos-boundary-guard",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0105-tos-boundary-guard.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-TOS-001"
+      ],
+      "route_note": "ToS boundary guard"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0108-live-bootstrap",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0108-live-bootstrap.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STACK-001",
+        "ORQ-EXPERIENCE-PLAYBOOKS-001"
+      ],
+      "route_note": "live bootstrap"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0111-sdk-install-api",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0111-sdk-install-api.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-SDK-001"
+      ],
+      "route_note": "SDK install API"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0112-stack-workers",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0112-stack-workers.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "stack workers"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0113-stats-dashboard",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0113-stats-dashboard.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STATS-001"
+      ],
+      "route_note": "stats dashboard"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0114-memo-revision-ledger",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0114-memo-revision-ledger.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-MEMO-001"
+      ],
+      "route_note": "memo revision ledger"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0115-tos-dossier-boundary",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0115-tos-dossier-boundary.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-TOS-001"
+      ],
+      "route_note": "ToS dossier boundary"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-0116-post-release-retention",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-0116-post-release-retention.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-MEMO-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "post-release retention"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1100-office-registry",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1100-office-registry.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-AGENTS-001"
+      ],
+      "route_note": "office registry"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1101-bootstrap-order",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1101-bootstrap-order.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "bootstrap order"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1102-handoff-graph",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1102-handoff-graph.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-ROUTING-001",
+        "ORQ-EXPERIENCE-AGENTS-001"
+      ],
+      "route_note": "handoff graph"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1103-compatibility-matrix",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1103-compatibility-matrix.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-SDK-001",
+        "ORQ-EXPERIENCE-TECHNIQUES-001"
+      ],
+      "route_note": "compatibility matrix"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1104-release-train",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1104-release-train.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "release train"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1105-train-smoke-gates",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1105-train-smoke-gates.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-EVALS-001",
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "train smoke gates"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1106-train-rollback-plan",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1106-train-rollback-plan.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "train rollback plan"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1107-operator-go-no-go",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1107-operator-go-no-go.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-AGENTS-001",
+        "ORQ-EXPERIENCE-EVALS-001"
+      ],
+      "route_note": "operator go/no-go"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1108-mesh-watch",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1108-mesh-watch.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STATS-001",
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "mesh watch"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1109-incident-reentry",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1109-incident-reentry.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-MEMO-001",
+        "ORQ-EXPERIENCE-ROUTING-001"
+      ],
+      "route_note": "incident re-entry"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1110-service-to-agon-boundary",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1110-service-to-agon-boundary.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-PLAYBOOKS-001",
+        "ORQ-EXPERIENCE-AGENTS-001",
+        "ORQ-EXPERIENCE-ROUTING-001"
+      ],
+      "route_note": "service-to-Agon boundary"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1111-stats-dashboard",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1111-stats-dashboard.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STATS-001"
+      ],
+      "route_note": "stats dashboard"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1112-memo-retention-markers",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1112-memo-retention-markers.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-MEMO-001"
+      ],
+      "route_note": "memo retention markers"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1113-sdk-train-api",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1113-sdk-train-api.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-SDK-001"
+      ],
+      "route_note": "SDK train API"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1114-stack-train-workers",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1114-stack-train-workers.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-STACK-001"
+      ],
+      "route_note": "stack train workers"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1115-tos-boundary-guard",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1115-tos-boundary-guard.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-TOS-001"
+      ],
+      "route_note": "ToS boundary guard"
+    },
+    {
+      "quest_id": "AOA-Q-EXP-1116-v1-1-closeout",
+      "quest_path": "quests/experience/ready/AOA-Q-EXP-1116-v1-1-closeout.md",
+      "owner_request_ids": [
+        "ORQ-EXPERIENCE-EVALS-001",
+        "ORQ-EXPERIENCE-MEMO-001",
+        "ORQ-EXPERIENCE-PLAYBOOKS-001"
+      ],
+      "route_note": "v1.1 closeout"
+    }
+  ]
+}

@@ -8,9 +8,9 @@ It names the stronger owner slices that must land outside `Agents-of-Abyss` befo
 
 Each request is a handoff candidate. A request packet is not owner acceptance. It may be copied into an owner-local issue, document, branch, or receipt, but it remains center-side until the owner repository accepts it.
 
-Source queue: [`mechanics/owner-request-queue.json`](../../../mechanics/owner-request-queue.json)
+Source queue: [`mechanics/owner-request-queue.json`](../owner-request-queue.json)
 
-Generated companion: [`generated/owner_request_queue.min.json`](../../../generated/owner_request_queue.min.json)
+Generated companion: [`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json)
 
 ## Requests
 
@@ -23,11 +23,11 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../../generat
 
 ## Center sources
 
-- [README.md](../../../mechanics/questbook/README.md)
-- [QUESTBOOK_MODEL.md](../../../mechanics/questbook/docs/QUESTBOOK_MODEL.md)
-- [QUESTBOOK_FIRST_WAVE.md](../../../mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md)
-- [QUESTBOOK.md](../../../QUESTBOOK.md)
-- [README.md](../../../quests/README.md)
+- [README.md](README.md)
+- [model-spine](parts/model-spine/README.md)
+- [provenance bridge](PROVENANCE.md)
+- [QUESTBOOK.md](../../QUESTBOOK.md)
+- [quests README](../../quests/README.md)
 
 ## Stop-lines
 

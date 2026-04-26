@@ -42,7 +42,7 @@ activation:
   note: unblocked after the first source-owned quest dispatch seam proof
 anchor_ref:
   artifact: first_wave_doc
-  ref: mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md
+  ref: mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md
 handoff_role: federation-maintainer
 evidence:
   - later contour repo classes are named

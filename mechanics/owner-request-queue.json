@@ -954,8 +954,8 @@
     {
       "center_sources": [
         "mechanics/questbook/README.md",
-        "mechanics/questbook/docs/QUESTBOOK_MODEL.md",
-        "mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md",
+        "mechanics/questbook/parts/model-spine/README.md",
+        "mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md",
         "QUESTBOOK.md",
         "quests/README.md"
       ],
@@ -978,8 +978,8 @@
     {
       "center_sources": [
         "mechanics/questbook/README.md",
-        "mechanics/questbook/docs/QUESTBOOK_MODEL.md",
-        "mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md",
+        "mechanics/questbook/parts/model-spine/README.md",
+        "mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md",
         "QUESTBOOK.md",
         "quests/README.md"
       ],
@@ -1002,8 +1002,8 @@
     {
       "center_sources": [
         "mechanics/questbook/README.md",
-        "mechanics/questbook/docs/QUESTBOOK_MODEL.md",
-        "mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md",
+        "mechanics/questbook/parts/model-spine/README.md",
+        "mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md",
         "QUESTBOOK.md",
         "quests/README.md"
       ],
@@ -1026,8 +1026,8 @@
     {
       "center_sources": [
         "mechanics/questbook/README.md",
-        "mechanics/questbook/docs/QUESTBOOK_MODEL.md",
-        "mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md",
+        "mechanics/questbook/parts/model-spine/README.md",
+        "mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md",
         "QUESTBOOK.md",
         "quests/README.md"
       ],
