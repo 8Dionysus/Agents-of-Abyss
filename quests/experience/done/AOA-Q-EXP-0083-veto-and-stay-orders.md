@@ -1,5 +1,11 @@
 # AOA-Q-EXP-0083: Veto And Stay Orders
 
+source_contract: quest_markdown_contract_v1
+
+## Quest
+
+Track the obligation named by this quest and route it through the reviewability sections below.
+
 Status: proposed
 Seed: v0.8 polis governance
 
@@ -15,3 +21,19 @@ Forge the `veto and stay orders` surface for the experience mechanic without cre
 - assistant self-rewrite is blocked;
 - owner-local routing is explicit;
 - audit or retention is scheduled when durable effects exist.
+
+## Owner Route
+
+Lane/state defaults: [experience done defaults](../README.md#done-defaults).
+
+## Next Action
+
+Lane/state defaults: [experience done defaults](../README.md#done-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [experience done defaults](../README.md#done-defaults).
+
+## Stop-lines
+
+Lane/state defaults: [experience done defaults](../README.md#done-defaults).

@@ -1,5 +1,11 @@
 # AOA-Q-AGON-0013: Move Owner Binding
 
+source_contract: quest_markdown_contract_v1
+
+## Quest
+
+Track the obligation named by this quest and route it through the reviewability sections below.
+
 ## Intent
 
 Land Wave IV owner binding in `Agents-of-Abyss`.
@@ -14,8 +20,20 @@ Land Wave IV owner binding in `Agents-of-Abyss`.
 
 ## Verify
 
-```bash
-python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check
-python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py
-python -m pytest -q mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../../../mechanics/questbook/AGENTS.md#validation).
+
+## Owner Route
+
+Lane/state defaults: [agon done defaults](../README.md#done-defaults).
+
+## Next Action
+
+Lane/state defaults: [agon done defaults](../README.md#done-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [agon done defaults](../README.md#done-defaults).
+
+## Stop-lines
+
+Lane/state defaults: [agon done defaults](../README.md#done-defaults).

@@ -111,7 +111,13 @@ def validate_card(entry: dict[str, Any], required_headings: tuple[str, ...]) -> 
 
     for ref in entry.get("validation_refs", []):
         ref = str(ref)
-        if ref not in text and Path(ref).name not in text:
+        agents_ref = str(entry.get("agents_ref", ""))
+        agents_text = ""
+        if agents_ref:
+            agents_path = REPO_ROOT / agents_ref
+            if agents_path.exists():
+                agents_text = agents_path.read_text(encoding="utf-8")
+        if ref not in text and Path(ref).name not in text and ref not in agents_text and Path(ref).name not in agents_text:
             problems.append(f"{rel}: validation ref not named: {ref}")
 
     if "docs/FEDERATION_RULES.md" not in text:

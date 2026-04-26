@@ -1,5 +1,11 @@
 # AOA-Q-EXP-0066: KAG promotion dossier gate
 
+source_contract: quest_markdown_contract_v1
+
+## Quest
+
+Track the obligation named by this quest and route it through the reviewability sections below.
+
 ## Intent
 
 Seed v0.6 federation harvest surface: KAG promotion dossier gate.
@@ -16,3 +22,19 @@ Seed v0.6 federation harvest surface: KAG promotion dossier gate.
 ## Exit
 
 The quest exits when its schema, example, doc surface, and validation fixture pass the v0.6 seed tests.
+
+## Owner Route
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).
+
+## Next Action
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).
+
+## Stop-lines
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).

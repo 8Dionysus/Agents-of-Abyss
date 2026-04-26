@@ -26,6 +26,8 @@ narrow part source it points to. For relation changes, also read
 `parts/relation-shape/README.md`. For ready-owner route changes, read
 `parts/lane-owner-routes/README.md`, edit the JSON registry, and rebuild the
 Markdown projection instead of editing generated route rows by hand.
+For source object shape changes, read `parts/source-contract/README.md` before
+touching quest files.
 
 ## Boundaries
 
@@ -45,6 +47,24 @@ Markdown projection instead of editing generated route rows by hand.
 - If an owner-request route changes, rebuild the ready-owner route projection,
   validate the owner-request queue, and validate owner-request docs.
 - If package entry surfaces change, validate mechanic topology and README cards.
+- Keep executable validation commands in this file. Other Questbook Markdown
+  surfaces should route here instead of duplicating command blocks.
+
+## Post-change Route Review
+
+Before closeout, review the changed route rather than only the changed file:
+
+- Source quest changed: confirm lane, lifecycle state, source contract,
+  relation shape, generated Questbook views, and owner boundary.
+- Part changed: confirm `parts/registry.json`, `PARTS.md`, `parts/README.md`,
+  the part contract, validation route, landing log, and provenance route still
+  agree.
+- Owner-request route changed: confirm the request packet, queue, generated
+  queue, ready-owner route table, and owner acceptance boundary.
+- AGENTS, docs, or decision surface changed: rebuild the matching generated
+  index and make sure the active route did not move into legacy/raw.
+- Repeated defaults appear in quest sources: move the default to the lane
+  README and keep only a short per-quest route to it.
 
 ## Validation
 
@@ -52,6 +72,9 @@ Run the narrow checks for the touched surface:
 
 ```bash
 python scripts/validate_mechanics_topology.py --mechanic questbook
+python scripts/validate_mechanic_readme_cards.py --mechanic questbook
+python scripts/validate_mechanic_landing_logs.py --mechanic questbook
+python mechanics/questbook/scripts/validate_questbook_source_contract.py
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python mechanics/questbook/scripts/build_questbook_index.py --check
 python mechanics/questbook/scripts/validate_questbook_index.py
@@ -59,7 +82,19 @@ python mechanics/questbook/scripts/validate_quest_relations.py
 python mechanics/questbook/scripts/build_ready_owner_routes.py --check
 python mechanics/questbook/scripts/validate_ready_owner_routes.py
 python mechanics/questbook/scripts/validate_questbook_distillation.py
-python scripts/validate_mechanic_readme_cards.py --mechanic questbook
+python scripts/validate_owner_request_queue.py --mechanic questbook
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
+python scripts/validate_owner_request_docs.py --mechanic questbook
+python scripts/validate_owner_request_queue.py --mechanic experience
+python scripts/validate_owner_request_docs.py --mechanic experience
+python scripts/build_mechanic_card_index.py --check
+python scripts/validate_mechanic_card_index.py
+python scripts/validate_ecosystem.py
+python scripts/validate_links.py
+python scripts/validate_markdown_shape.py
+python scripts/validate_generated_freshness.py
+python -m pytest -q mechanics/questbook/tests
 ```
 
 Use `python scripts/release_check.py` when route, generated, validation, or

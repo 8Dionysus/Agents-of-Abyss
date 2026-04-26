@@ -60,6 +60,25 @@
       ]
     },
     {
+      "slug": "source-contract",
+      "title": "Source Contract",
+      "role": "reviewability contract for Questbook source objects",
+      "readme": "mechanics/questbook/parts/source-contract/README.md",
+      "contract": "mechanics/questbook/parts/source-contract/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/source-contract/VALIDATION.md",
+      "source_surfaces": [
+        "quests/README.md",
+        "mechanics/questbook/parts/quest-store/README.md",
+        "mechanics/questbook/parts/execution-passport/README.md"
+      ],
+      "generated_surfaces": [],
+      "validation_commands": [
+        "python mechanics/questbook/scripts/validate_questbook_source_contract.py",
+        "python mechanics/questbook/scripts/validate_questbook_lifecycle.py",
+        "python mechanics/questbook/scripts/build_questbook_index.py --check"
+      ]
+    },
+    {
       "slug": "lifecycle-law",
       "title": "Lifecycle Law",
       "role": "states, lanes, promotion, and placement bands",

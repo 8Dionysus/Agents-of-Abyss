@@ -9,6 +9,7 @@ routes created during distillation.
 | [`raw/QUESTBOOK_FIRST_WAVE.md`](raw/QUESTBOOK_FIRST_WAVE.md) | [`parts/model-spine`](../parts/model-spine/README.md) | Common quest model, first contour scope, and center stop-lines. |
 | [`raw/QUESTBOOK_FIRST_WAVE.md`](raw/QUESTBOOK_FIRST_WAVE.md) | [`parts/public-index`](../parts/public-index/README.md) | Public root index remains a route surface, not the source of quest state. |
 | [`raw/QUESTBOOK_FIRST_WAVE.md`](raw/QUESTBOOK_FIRST_WAVE.md) | [`parts/quest-store`](../parts/quest-store/README.md) | Quest files remain source quest objects under root `quests/`. |
+| Later derived package route | [`parts/source-contract`](../parts/source-contract/README.md) | Source object reviewability gained its own active contract after lane-first topology proved stable. |
 | [`raw/QUESTBOOK_FIRST_WAVE.md`](raw/QUESTBOOK_FIRST_WAVE.md) | [`parts/lifecycle-law`](../parts/lifecycle-law/README.md) | Quest states, closure discipline, and wave-to-durable lifecycle rules. |
 | [`raw/QUESTBOOK_FIRST_WAVE.md`](raw/QUESTBOOK_FIRST_WAVE.md) | [`parts/generated-views`](../parts/generated-views/README.md) | Generated Questbook maps are derived read models. |
 | [`raw/QUESTBOOK_FIRST_WAVE.md`](raw/QUESTBOOK_FIRST_WAVE.md) | [`parts/execution-passport`](../parts/execution-passport/README.md) | Agent execution-passport pressure was routed into active quest execution criteria. |

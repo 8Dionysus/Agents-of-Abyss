@@ -1,5 +1,11 @@
 # AOA-Q-AGON-0014: Technique and Skill Owner Candidates
 
+source_contract: quest_markdown_contract_v1
+
+## Quest
+
+Track the obligation named by this quest and route it through the reviewability sections below.
+
 ## Intent
 
 Land the companion candidate request surfaces in `aoa-techniques` and `aoa-skills`.
@@ -15,16 +21,24 @@ Land the companion candidate request surfaces in `aoa-techniques` and `aoa-skill
 
 In `aoa-techniques`:
 
-```bash
-python scripts/build_agon_technique_binding_candidates.py --check
-python scripts/validate_agon_technique_binding_candidates.py
-python -m pytest -q/test_agon_technique_binding_candidates.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../../../mechanics/questbook/AGENTS.md#validation).
 
 In `aoa-skills`:
 
-```bash
-python scripts/build_agon_skill_binding_candidates.py --check
-python scripts/validate_agon_skill_binding_candidates.py
-python -m pytest -q/test_agon_skill_binding_candidates.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../../../mechanics/questbook/AGENTS.md#validation).
+
+## Owner Route
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+
+## Next Action
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+
+## Stop-lines
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).

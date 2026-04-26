@@ -1,5 +1,7 @@
 # AOA-Q-AGON-0000: Agon Imposition Gate
 
+source_contract: quest_markdown_contract_v1
+
 ## Quest
 
 Land the center-owned Agon Imposition Gate in `Agents-of-Abyss`.
@@ -25,3 +27,19 @@ Move from conservative Agon preparation to system-wide Agon scrutiny without cla
 ## Exit signal
 
 Wave I may begin when this quest lands and the generated readiness capsule passes validation.
+
+## Owner Route
+
+Lane/state defaults: [agon done defaults](../README.md#done-defaults).
+
+## Next Action
+
+Lane/state defaults: [agon done defaults](../README.md#done-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [agon done defaults](../README.md#done-defaults).
+
+## Stop-lines
+
+Lane/state defaults: [agon done defaults](../README.md#done-defaults).

@@ -15,6 +15,8 @@ Every quest carries:
 
 These fields do not answer "when". They answer "who may touch this, under what
 leash, and how expensive a mistake would be".
+Strict source object placement and reviewability are owned by
+[`source-contract`](../source-contract/README.md).
 
 ## Difficulty Ladder
 

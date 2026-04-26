@@ -12,7 +12,10 @@ Lane-first lifecycle directories are the source placement. Top-level `AOA-Q-*` a
 
 ## Read before editing
 
-Read root `AGENTS.md`, `QUESTBOOK.md`, `quests/README.md`, and `mechanics/questbook/README.md` before changing quest semantics.
+Read root `AGENTS.md`, `QUESTBOOK.md`, `quests/README.md`, and
+`mechanics/questbook/README.md` before changing quest semantics. For source
+object shape, also read
+`mechanics/questbook/parts/source-contract/README.md`.
 
 Use the nearest README for local file purpose. Use source docs, schemas, generated builders, validators, and owner repos as stronger authority when they apply.
 
@@ -26,15 +29,7 @@ Use the nearest README for local file purpose. Use source docs, schemas, generat
 
 Run the narrowest relevant checks first. Usual checks for this district:
 
-```bash
-python scripts/validate_mechanics_topology.py
-python mechanics/questbook/scripts/validate_questbook_lifecycle.py
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-python mechanics/questbook/scripts/validate_quest_relations.py
-python scripts/validate_links.py
-python -m pytest -q
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../mechanics/questbook/AGENTS.md#validation).
 
 If a listed validator is not present in the checkout yet, report that explicitly and run the closest available guardrail.
 

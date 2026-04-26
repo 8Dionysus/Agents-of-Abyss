@@ -1,5 +1,11 @@
 # AOA-Q-AGON-0011 — Owner Handoff Followthrough
 
+source_contract: quest_markdown_contract_v1
+
+## Quest
+
+Track the obligation named by this quest and route it through the reviewability sections below.
+
 ## Intent
 
 Review the Wave III move registry and decide which move families deserve follow-up in neighboring owner repositories.
@@ -16,3 +22,19 @@ Review the Wave III move registry and decide which move families deserve follow-
 ## Acceptance
 
 The center keeps only the move vocabulary and records owner-directed follow-up without absorbing execution, proof, memory, routing, or scenario truth.
+
+## Owner Route
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+
+## Next Action
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+
+## Stop-lines
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).

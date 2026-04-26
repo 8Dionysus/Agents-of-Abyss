@@ -39,8 +39,4 @@ relation vocabulary or stop-lines change.
 
 ## Validation
 
-```bash
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-python mechanics/questbook/scripts/validate_quest_relations.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../../AGENTS.md#validation).

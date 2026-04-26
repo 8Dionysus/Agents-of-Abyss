@@ -25,11 +25,7 @@ contracts, owner requests, landing logs, or provenance accounting.
 
 Run:
 
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_links.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../AGENTS.md#validation).
 
 ## Closeout
 

@@ -21,6 +21,9 @@ Use this index before reading the full ledger:
 | Questbook model spine and route registry | Model detail split into narrow source docs and Experience ready routing moved behind JSON. |
 | Questbook parts and legacy split | Active Questbook routes moved into parts; first-contour provenance moved into legacy. |
 | Questbook distillation gate | Active parts, contracts, validation files, and legacy bridge are now release-checked together. |
+| Quest source contract runway | Quest source reviewability gained a strict YAML/Markdown contract path. |
+| Quest source contract full distillation | All Markdown quest sources now carry the strict source contract; no uncontracted Markdown source lane remains. |
+| Questbook route-default and validation centralization | Repeated quest defaults moved to lane READMEs, and executable validation commands are centralized in Questbook AGENTS. |
 
 Read the full entry only when the change touches that route, its surfaces, or
 its stop-lines. Current route starts at `mechanics/questbook/README.md`,
@@ -490,3 +493,113 @@ closure, or replace human review of Questbook meaning.
 Next route: keep adding Questbook parts through the registry gate; if
 Questbook artifact homes grow beyond docs and route JSON, extend this gate
 rather than reintroducing flat active-source drift.
+
+### Quest source contract runway
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns the common Questbook source object
+reviewability contract. Quest lanes and owner repositories still own
+obligation meaning, acceptance evidence, and closure proof.
+
+Surfaces:
+
+- `mechanics/questbook/parts/source-contract/README.md`
+- `mechanics/questbook/parts/source-contract/CONTRACT.md`
+- `mechanics/questbook/parts/source-contract/VALIDATION.md`
+- `mechanics/questbook/scripts/validate_questbook_source_contract.py`
+- `mechanics/questbook/tests/test_questbook_source_contract.py`
+- `mechanics/questbook/parts/registry.json`
+- `mechanics/questbook/PARTS.md`
+- `mechanics/questbook/parts/README.md`
+- `mechanics/questbook/DIRECTION.md`
+- `mechanics/questbook/ROADMAP.md`
+- `quests/README.md`
+- `quests/AGENTS.md`
+- `scripts/release_check.py`
+
+Validation:
+
+- `python mechanics/questbook/scripts/validate_questbook_source_contract.py`
+- `python mechanics/questbook/scripts/validate_questbook_distillation.py`
+- `python -m pytest -q mechanics/questbook/tests/test_questbook_source_contract.py`
+- `python scripts/release_check.py`
+
+Stop-lines: strict source contracts do not prove owner acceptance or closure.
+
+Next route: completed by the full distillation pass below; keep future Markdown
+quest sources on `quest_markdown_contract_v1`.
+
+### Quest source contract full distillation
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns Questbook source object shape and
+validation. Quest lanes and owner repositories still own obligation meaning,
+acceptance evidence, and closure proof.
+
+Surfaces:
+
+- `quests/agon/ready/AOA-Q-*.md`
+- `quests/agon/done/AOA-Q-*.md`
+- `quests/experience/ready/AOA-Q-*.md`
+- `quests/experience/done/AOA-Q-*.md`
+- `mechanics/questbook/parts/source-contract/README.md`
+- `mechanics/questbook/parts/source-contract/CONTRACT.md`
+- `mechanics/questbook/scripts/validate_questbook_source_contract.py`
+- `mechanics/questbook/tests/test_questbook_source_contract.py`
+- `mechanics/questbook/DIRECTION.md`
+- `mechanics/questbook/ROADMAP.md`
+- `scripts/release_check.py`
+
+Validation:
+
+- `python mechanics/questbook/scripts/validate_questbook_source_contract.py`
+- `python -m pytest -q mechanics/questbook/tests/test_questbook_source_contract.py`
+- `python mechanics/questbook/scripts/build_questbook_index.py --check`
+- `python mechanics/questbook/scripts/validate_questbook_index.py`
+- `python scripts/release_check.py`
+
+Stop-lines: strict quest source shape is not owner acceptance, implementation
+truth, or closure proof. Do not reintroduce Markdown quest sources without
+`source_contract: quest_markdown_contract_v1`.
+
+Next route: if repeated owner-route defaults make files noisy, compress them
+through lane-local route notes without weakening per-quest reviewability.
+
+### Questbook route-default and validation centralization
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns the Questbook source-shape and validation
+route contract. Quest lanes own lane/state defaults; individual quest files own
+quest-specific meaning.
+
+Surfaces:
+
+- `mechanics/questbook/AGENTS.md`
+- `mechanics/questbook/scripts/validate_questbook_distillation.py`
+- `mechanics/questbook/scripts/validate_questbook_source_contract.py`
+- `mechanics/questbook/tests/test_questbook_distillation.py`
+- `mechanics/questbook/tests/test_questbook_source_contract.py`
+- `quests/agon/README.md`
+- `quests/experience/README.md`
+- `quests/agon/*/AOA-Q-*.md`
+- `quests/experience/*/AOA-Q-*.md`
+
+Validation:
+
+- `python mechanics/questbook/scripts/validate_questbook_distillation.py`
+- `python mechanics/questbook/scripts/validate_questbook_source_contract.py`
+- `python mechanics/questbook/scripts/build_questbook_index.py --check`
+- `python mechanics/questbook/scripts/validate_questbook_index.py`
+- `python -m pytest -q mechanics/questbook/tests`
+- `python scripts/release_check.py`
+
+Stop-lines: do not reintroduce executable validation command blocks outside
+`mechanics/questbook/AGENTS.md`; do not expand generic lane/state defaults back
+into every quest source.
+
+Next route: if a lane default becomes too broad, split the lane README section
+or create a lane-local route helper rather than duplicating boilerplate in
+quest files.

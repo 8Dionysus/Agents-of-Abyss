@@ -14,6 +14,11 @@ roadmap.
   hand-maintaining global views.
 - Keep `parts/model-spine/` as a spine; keep lifecycle, execution, harvest,
   and route-map detail in narrow active parts.
+- Keep source object reviewability in `parts/source-contract/`, with rich
+  YAML and strict Markdown contracts required for source quest files.
+- Keep repeated quest route defaults in lane READMEs, not in every quest file.
+- Keep executable validation commands in `AGENTS.md`; other Markdown surfaces
+  route there.
 - Keep ready owner-route tables generated from registries instead of
   hand-maintaining route rows.
 - Keep `docs/` as a compatibility route and `legacy/` as provenance, not as
@@ -29,6 +34,8 @@ roadmap.
 - `PROVENANCE.md` is the only active bridge back to legacy.
 - Part registry validation keeps active parts, contracts, validation routes,
   and legacy provenance accounting synchronized.
+- Post-change route review checks source, generated, owner-request, AGENTS,
+  landing-log, and provenance consequences before closeout.
 - Closure requires evidence, not just a cleaner board.
 
 ## Time Has Come When
@@ -38,8 +45,8 @@ roadmap.
 - A repeated quest family appears twice in one lane or three times across lanes
   and should be harvested into a mechanic, playbook, skill, eval, memo, or
   owner request.
-- Markdown quest objects need a stricter source contract because
-  promotion/closure can no longer be reviewed by title and path alone.
+- A lane gains enough strict Markdown quests that shared defaults should move
+  into a lane-local README rather than repeat in each source file.
 - A second lane gains enough ready owner routes to justify its own registry and
   generated projection.
 - Sibling repositories are ready to accept owner-local questbooks without
@@ -56,3 +63,7 @@ roadmap.
 - Do not treat `sidequest` as dependency, owner transfer, acceptance, or
   closure proof.
 - Do not edit generated ready owner-route tables by hand.
+- Do not create or retain Markdown quest sources outside the strict source
+  contract.
+- Do not duplicate validation command blocks outside Questbook `AGENTS.md`.
+- Do not repeat generic lane/state defaults inside every quest source.

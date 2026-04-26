@@ -1,5 +1,11 @@
 # AOA-Q-EXP-0104: Memo Decision Writeback
 
+source_contract: quest_markdown_contract_v1
+
+## Quest
+
+Track the obligation named by this quest and route it through the reviewability sections below.
+
 ## Aim
 
 Land the v0.9 constitution-runtime seam for `memo-decision-writeback`.
@@ -11,3 +17,19 @@ Land the v0.9 constitution-runtime seam for `memo-decision-writeback`.
 - replay/audit surface exists where relevant;
 - no direct ToS runtime write;
 - no Codex sovereign action.
+
+## Owner Route
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).
+
+## Next Action
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).
+
+## Stop-lines
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).

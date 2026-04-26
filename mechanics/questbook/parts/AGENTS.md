@@ -32,18 +32,7 @@ usable. When a boundary changes, review `PARTS.md`, `ROADMAP.md`,
 
 Run:
 
-```bash
-python scripts/validate_mechanics_topology.py --mechanic questbook
-python scripts/validate_mechanic_readme_cards.py --mechanic questbook
-python scripts/validate_mechanic_landing_logs.py --mechanic questbook
-python mechanics/questbook/scripts/validate_questbook_lifecycle.py
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-python mechanics/questbook/scripts/validate_quest_relations.py
-python mechanics/questbook/scripts/build_ready_owner_routes.py --check
-python mechanics/questbook/scripts/validate_ready_owner_routes.py
-python mechanics/questbook/scripts/validate_questbook_distillation.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../AGENTS.md#validation).
 
 ## Closeout
 

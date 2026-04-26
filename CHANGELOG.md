@@ -83,6 +83,13 @@ Tracking starts with the community-docs baseline for this repository.
   `mechanics/questbook/scripts/validate_questbook_distillation.py`, and
   package tests that keep active part contracts, validation files, index
   coverage, and legacy provenance routing synchronized
+- Questbook source object contract runway through
+  `mechanics/questbook/parts/source-contract/`,
+  `mechanics/questbook/scripts/validate_questbook_source_contract.py`, and tests
+  that validate rich YAML quest sources plus strict Markdown quest contracts
+- Questbook post-change route review and validation centralization through
+  `mechanics/questbook/AGENTS.md`, with lane/state default compression for
+  Agon and Experience quest sources
 
 ### Changed
 
@@ -191,6 +198,12 @@ Tracking starts with the community-docs baseline for this repository.
 - Questbook part additions, retirements, validation routes, and direct
   legacy/raw references are now blocked by a package-level distillation gate
   that is also run from `scripts/release_check.py`
+- Questbook release validation now requires source object reviewability checks
+  for rich YAML quests and strict Markdown contracts; all Markdown quest
+  sources have been promoted to `quest_markdown_contract_v1`
+- Questbook Markdown sources now point generic owner-route, next-action,
+  acceptance-evidence, and stop-line defaults to lane README sections instead
+  of repeating the same route text in every quest file
 - detailed agent-lane and Codex audit references now live under
   `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
   narrow compatibility route into `mechanics/README.md`

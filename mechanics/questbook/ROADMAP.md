@@ -3,8 +3,10 @@
 ## Current Contour
 
 Questbook has landed its lane-first source layout, generated read models,
-center relation model, model-spine split, and registry-backed Experience ready
-owner-route index. Active parts are now machine-checked through
+center relation model, model-spine split, full source contract distillation,
+lane-default compression, centralized validation commands, and
+registry-backed Experience ready owner-route index. Active parts are now
+machine-checked through
 `parts/registry.json` and
 `mechanics/questbook/scripts/validate_questbook_distillation.py`.
 
@@ -13,8 +15,11 @@ Questbook views are read models. Relation shape is explicit through `parent`,
 `sidequest`, and dependency-style relations without transferring lane
 ownership. `parts/model-spine/` is now the short source-of-truth spine;
 lifecycle, execution-passport, harvest, and lane-owner route contract details
-live in narrow part packages. `legacy/` preserves first-contour provenance
-behind `PROVENANCE.md`.
+live in narrow part packages. `parts/source-contract/` now owns source object
+reviewability for YAML and Markdown quest sources. `legacy/` preserves
+first-contour provenance behind `PROVENANCE.md`. Executable validation commands
+live in `mechanics/questbook/AGENTS.md`; part docs and route surfaces point
+there instead of duplicating command blocks.
 
 ## Next Work
 
@@ -25,12 +30,15 @@ behind `PROVENANCE.md`.
   route tables directly.
 - Keep part packages as the normal working route; use `PROVENANCE.md` only
   when older source contours must be audited.
+- Keep every Markdown quest source on `quest_markdown_contract_v1`.
+- Keep lane/state defaults in lane README surfaces and point individual quest
+  sections to those defaults when no sharper per-quest text is needed.
 - Keep `parts/registry.json` synchronized with `PARTS.md`, `parts/README.md`,
   per-part contracts, validation routes, and the legacy index.
 - Keep relation visibility useful while preventing `sidequest` from becoming
   ownership, dependency, or automatic closure.
-- Tighten markdown quest object shape after the lane-first source layout proves
-  stable across several real promotions.
+- Keep validation command lists centralized in `AGENTS.md`; update the
+  post-change route review when a new route consequence appears.
 - Harvest repeated quest families into owner-local mechanics, playbooks, evals,
   or memo surfaces instead of letting open quest lists become noisy.
 
@@ -60,8 +68,8 @@ behind `PROVENANCE.md`.
   visibility is no longer enough to explain owner action cleanly.
 - Promote a recurring quest pattern when it appears twice in one lane or three
   times across lanes.
-- Add a stricter markdown quest contract when title/path review no longer gives
-  enough closure confidence.
+- Promote lane-local questbook helpers when lane defaults no longer carry the
+  repeated source-shape pressure cleanly.
 - Prepare sibling-repo questbooks when owner repositories are ready to accept
   local quest truth without copying the AoA root index.
 
