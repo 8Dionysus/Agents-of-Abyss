@@ -119,6 +119,24 @@ def test_active_artifacts_do_not_use_release_contour_identity() -> None:
     assert problems == []
 
 
+def test_part_validation_commands_live_in_parts_agents() -> None:
+    module = load_validator()
+    problems: list[str] = []
+    parts_agents = (
+        ROOT / "mechanics" / "experience" / "parts" / "AGENTS.md"
+    ).read_text(encoding="utf-8")
+
+    module.validate_parts(None, problems)
+
+    assert problems == []
+    for slug in module.PART_SLUGS:
+        validation = (
+            ROOT / "mechanics" / "experience" / "parts" / slug / "VALIDATION.md"
+        ).read_text(encoding="utf-8")
+        assert "Experience parts AGENTS" in validation
+        assert f"validate_experience_distillation.py --part {slug}" in parts_agents
+
+
 def test_raw_legacy_readme_uses_package_validator_route() -> None:
     readme = (
         ROOT / "mechanics" / "experience" / "legacy" / "raw" / "README.md"

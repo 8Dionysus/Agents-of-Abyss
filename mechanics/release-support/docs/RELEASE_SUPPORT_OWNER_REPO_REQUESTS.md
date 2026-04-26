@@ -39,13 +39,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../../generat
 
 ## Validation
 
-```bash
-python scripts/validate_owner_request_queue.py --mechanic release-support
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic release-support
-python scripts/validate_mechanics_topology.py --mechanic release-support
-```
+Use the validation lane in [mechanics/release-support/docs/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 ## Next route
 

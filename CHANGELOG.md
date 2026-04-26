@@ -204,6 +204,9 @@ Tracking starts with the community-docs baseline for this repository.
 - Questbook Markdown sources now point generic owner-route, next-action,
   acceptance-evidence, and stop-line defaults to lane README sections instead
   of repeating the same route text in every quest file
+- active mechanic child docs now route executable validation through the
+  nearest `AGENTS.md`, with Markdown shape validation guarding against command
+  drift back into child docs
 - detailed agent-lane and Codex audit references now live under
   `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
   narrow compatibility route into `mechanics/README.md`

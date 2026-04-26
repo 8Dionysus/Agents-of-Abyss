@@ -24,16 +24,7 @@ AoA support posture, route language, counterpart/witness/compost support boundar
 - owner-local implementation truth
 
 ### Validation
-```bash
-python scripts/validate_mechanics_topology.py --mechanic tos-bridge
-python scripts/validate_mechanic_readme_cards.py --mechanic tos-bridge
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic tos-bridge
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic tos-bridge
-```
+Use the validation lane in [mechanics/tos-bridge/AGENTS.md](AGENTS.md#validation) for executable commands.
 ### Next route
 - For ToS meaning, canon, or source interpretation, route to `Tree-of-Sophia` before making any claim.
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.

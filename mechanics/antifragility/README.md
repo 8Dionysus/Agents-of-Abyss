@@ -25,16 +25,7 @@ Center stress doctrine, via negativa, anti-authority posture, one-in-one-out pre
 - owner-local cleanup authority
 
 ### Validation
-```bash
-python scripts/validate_mechanics_topology.py --mechanic antifragility
-python scripts/validate_mechanic_readme_cards.py --mechanic antifragility
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic antifragility
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic antifragility
-```
+Use the validation lane in [mechanics/antifragility/AGENTS.md](AGENTS.md#validation) for executable commands.
 ### Next route
 - For owner-local cleanup, route to the owning repository; for repair proof, route to `aoa-evals`; for retained lessons, route to `aoa-memo`.
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.

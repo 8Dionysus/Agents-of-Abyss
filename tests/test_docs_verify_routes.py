@@ -13,6 +13,9 @@ def read_text(relative_path: str) -> str:
 
 class DocsVerifyRoutesTestCase(unittest.TestCase):
     def test_public_and_operator_surfaces_include_full_bounded_battery(self) -> None:
+        authority_by_surface = {
+            "mechanics/README.md": "mechanics/AGENTS.md",
+        }
         for relative_path in (
             "README.md",
             "docs/README.md",
@@ -24,6 +27,10 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         ):
             with self.subTest(path=relative_path):
                 text = read_text(relative_path)
+                authority_ref = authority_by_surface.get(relative_path)
+                if authority_ref:
+                    self.assertIn("AGENTS.md#validation", text)
+                    text += "\n" + read_text(authority_ref)
                 self.assertIn("python scripts/validate_ecosystem.py", text)
                 self.assertIn("python -m pytest -q", text)
 
@@ -72,12 +79,16 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
 
         self.assertIn("mechanics/README.md", readme)
         self.assertIn("method-growth/docs/OWNER_LANDING_AND_PRUNING", mechanics)
-        self.assertIn("python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv", mechanics)
-        self.assertIn("python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv", mechanics)
+        self.assertIn("mechanics/AGENTS.md", mechanics)
+        mechanics_agents = read_text("mechanics/AGENTS.md")
+        method_docs_agents = read_text("mechanics/method-growth/docs/AGENTS.md")
+        self.assertIn("python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv", mechanics_agents)
+        self.assertIn("python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv", mechanics_agents)
         self.assertIn("OWNER_LANDING_AND_PRUNING.md", docs_readme)
         self.assertIn("mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md", refinery_doc)
-        self.assertIn("python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv", refinery_doc)
-        self.assertIn("python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv", refinery_doc)
+        self.assertIn("AGENTS.md#validation", refinery_doc)
+        self.assertIn("python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv", method_docs_agents)
+        self.assertIn("python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv", method_docs_agents)
         self.assertIn("mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md", crosswalk)
         self.assertIn("weaker than a landed owner object", owner_landing)
         self.assertIn("let `aoa-stats` infer owner truth", owner_landing)
@@ -280,13 +291,15 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
     def test_readme_and_public_support_posture_expose_center_entry_capsule(self) -> None:
         readme = read_text("README.md")
         posture = read_text("mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md")
+        posture_agents = read_text("mechanics/release-support/docs/AGENTS.md")
 
         self.assertIn("generated/center_entry_map.min.json", readme)
         self.assertIn("python scripts/build_center_entry_map.py --check", readme)
         self.assertIn("python scripts/validate_center_entry_map.py", readme)
         self.assertIn("generated/center_entry_map.min.json", posture)
-        self.assertIn("python scripts/build_center_entry_map.py --check", posture)
-        self.assertIn("python scripts/validate_center_entry_map.py", posture)
+        self.assertIn("AGENTS.md#validation", posture)
+        self.assertIn("python scripts/build_center_entry_map.py --check", posture_agents)
+        self.assertIn("python scripts/validate_center_entry_map.py", posture_agents)
 
 
 if __name__ == "__main__":

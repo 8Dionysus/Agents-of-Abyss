@@ -1,6 +1,8 @@
 # Experience Parts Index
 
-Functioning Experience parts live here. Each part should carry a distinct job, a clear boundary, exact validation, and a next route without duplicate or stale paths.
+Functioning Experience parts live here. Each part should carry a distinct job,
+a clear boundary, a route to central validation, and a next route without
+duplicate or stale paths.
 
 ## Parts
 - [Capture Kernel](capture-kernel/README.md): friction record, candidate packet, owner route, memory gate, and inert projection boundary.
@@ -16,4 +18,4 @@ Functioning Experience parts live here. Each part should carry a distinct job, a
 
 ## Validation
 
-`python mechanics/experience/scripts/validate_experience_distillation.py`
+Use [Experience parts AGENTS](AGENTS.md#validation) for executable commands.

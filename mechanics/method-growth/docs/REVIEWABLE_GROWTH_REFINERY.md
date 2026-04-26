@@ -48,9 +48,7 @@ It does not mint the identities inside that chain.
 
 The center keeps one witness-shaped validator for the live example chain:
 
-```bash
-python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv
-```
+Use the validation lane in [mechanics/method-growth/docs/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 That check reads owner-repo examples in `aoa-sdk`, `aoa-skills`, and
 `Dionysus`.
@@ -64,9 +62,7 @@ a crosswalk witness only.
 For the wave-four next-kernel and reviewed automation seam, the center keeps a
 second witness-shaped validator:
 
-```bash
-python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv
-```
+Use the validation lane in [mechanics/method-growth/docs/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 That check confirms the reviewed closeout hint in `aoa-sdk`, the kernel
 maturity example set in `aoa-skills`, the review-governed playbook home in

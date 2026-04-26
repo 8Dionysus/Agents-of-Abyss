@@ -63,13 +63,7 @@ distilled; do not treat archive accounting as owner acceptance.
 
 ## Validation
 
-```bash
-python scripts/validate_owner_request_queue.py --mechanic experience
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-```
+Use the validation lane in [mechanics/experience/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 ## Next route
 

@@ -46,7 +46,7 @@ Before publication, the owner repo must pass:
 - clean tracked worktree
 - `main` synced with `origin/main`
 - `mechanics/release-support/docs/RELEASING.md` exists
-- `scripts/release_check.py` exists and passes
+- the repo-level release verifier exists and passes through the AGENTS validation lane
 - latest tagged changelog section keeps `Summary`, `Validation`, and `Notes`
 - README shows the exact current-release banner
 - version-bearing files match the latest release version where they exist

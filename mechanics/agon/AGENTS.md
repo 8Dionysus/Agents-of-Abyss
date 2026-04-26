@@ -16,6 +16,7 @@ boundaries, sibling-repo authority, release validation contracts, live arena
 execution, assistant contestant authority, live rank mutation, KAG canon, or ToS
 canon writes.
 
+
 ## Closeout
 
 Closeout must name changed active parts, whether `PROVENANCE.md` was consulted,
@@ -82,3 +83,53 @@ Use `python scripts/validate_mechanic_landing_logs.py --mechanic agon` after
 landing-log or surface-chain changes.
 Use the nearest part-local `scripts/*agon*.py` and `tests/test_agon_*.py` for
 generated or model-specific changes.
+
+<!-- centralized-child-validation:start -->
+
+### Centralized Child Validation
+
+Executable validation commands from child docs live here. Child docs should
+route to this section instead of carrying command blocks.
+
+#### `mechanics/agon/DIRECTION.md`
+
+```bash
+python mechanics/agon/scripts/validate_agon_distillation.py
+python scripts/validate_mechanics_topology.py --mechanic agon
+python scripts/validate_mechanic_readme_cards.py --mechanic agon
+```
+
+#### `mechanics/agon/OWNER_REQUESTS.md`
+
+```bash
+python scripts/validate_owner_request_queue.py --mechanic agon
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
+python scripts/validate_owner_request_docs.py --mechanic agon
+python scripts/validate_mechanics_topology.py --mechanic agon
+```
+
+#### `mechanics/agon/PARTS.md`
+
+```bash
+python mechanics/agon/scripts/validate_agon_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic agon
+```
+
+#### `mechanics/agon/README.md`
+
+```bash
+python mechanics/agon/scripts/validate_agon_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic agon
+python scripts/validate_mechanic_landing_logs.py --mechanic agon
+python scripts/validate_mechanics_topology.py --mechanic agon
+python scripts/validate_mechanic_readme_cards.py --mechanic agon
+python scripts/build_mechanic_card_index.py --check
+python scripts/validate_mechanic_card_index.py
+python scripts/validate_owner_request_queue.py --mechanic agon
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
+python scripts/validate_owner_request_docs.py --mechanic agon
+```
+
+<!-- centralized-child-validation:end -->

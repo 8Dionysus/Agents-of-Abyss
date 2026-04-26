@@ -39,6 +39,32 @@ python -m pytest -q
 
 Run any targeted builder, validator, and test named by the generated or version-specific surface you touched.
 
+<!-- centralized-child-validation:start -->
+
+### Centralized Child Validation
+
+Executable validation commands from child docs live here. Child docs should
+route to this section instead of carrying command blocks.
+
+#### `mechanics/method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md`
+
+```bash
+python scripts/validate_owner_request_queue.py --mechanic method-growth
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
+python scripts/validate_owner_request_docs.py --mechanic method-growth
+python scripts/validate_mechanics_topology.py --mechanic method-growth
+```
+
+#### `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`
+
+```bash
+python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv
+python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv
+```
+
+<!-- centralized-child-validation:end -->
+
 ## Closeout
 
 Report source docs changed, package README or registry updates needed, generated mirrors rebuilt or not rebuilt, owner-request status affected, and checks run or skipped.

@@ -54,19 +54,7 @@ handoff expectations.
 
 ### Validation
 
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic agon
-python scripts/validate_mechanic_landing_logs.py --mechanic agon
-python scripts/validate_mechanics_topology.py --mechanic agon
-python scripts/validate_mechanic_readme_cards.py --mechanic agon
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic agon
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic agon
-```
+Use the validation lane in [mechanics/agon/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 ### Next route
 

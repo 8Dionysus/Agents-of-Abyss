@@ -30,8 +30,4 @@ inside active part docs.
 
 ## Validation
 
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic agon
-python scripts/validate_mechanic_landing_logs.py --mechanic agon
-```
+Use the validation lane in [mechanics/agon/legacy/AGENTS.md](AGENTS.md#validation) for executable commands.

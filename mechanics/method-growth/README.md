@@ -29,16 +29,7 @@ Center growth route, lineage vocabulary, reviewable-growth discipline, and owner
 - owner-local activation
 
 ### Validation
-```bash
-python scripts/validate_mechanics_topology.py --mechanic method-growth
-python scripts/validate_mechanic_readme_cards.py --mechanic method-growth
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic method-growth
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic method-growth
-```
+Use the validation lane in [mechanics/method-growth/AGENTS.md](AGENTS.md#validation) for executable commands.
 ### Next route
 - For final object truth, route to the final owner repo before claiming activation.
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.

@@ -82,12 +82,7 @@ Machine companion:
 
 Validation:
 
-```bash
-python scripts/validate_mechanic_readme_cards.py
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_mechanics_topology.py
-```
+Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 The generated card index reflects `mechanics/registry.json` and the package
 README cards. It never authors mechanic meaning.
@@ -106,12 +101,7 @@ Use these surfaces when the card output would become owner-local work:
 
 Validation:
 
-```bash
-python scripts/validate_owner_request_queue.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py
-```
+Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 A request packet is not owner acceptance. Owner repositories land operational truth; the center keeps the queue honest.
 
@@ -165,31 +155,7 @@ Machine companions:
 
 Validation:
 
-```bash
-python scripts/repair_known_link_drifts.py --check
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_status_vocabulary.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_entry_surface_sync.py
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_owner_request_queue.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py
-python scripts/validate_mechanic_landing_logs.py
-python scripts/validate_generated_freshness.py
-python scripts/validate_hygiene_suite.py
-python scripts/validate_ecosystem.py
-python -m pytest -q
-```
+Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 ## Method, growth, and owner landing
 
@@ -221,10 +187,7 @@ Owner split:
 
 Validation anchors:
 
-```bash
-python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv
-python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv
-```
+Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 ## Recurrence, return, and continuity
 
@@ -297,9 +260,9 @@ audits, not as the first active route.
 | [Runtime Boundary](experience/parts/runtime-boundary/README.md) | living-workspace runtime stop-lines, authority resolver boundaries, and case queues |
 | [Compatibility Bridges](experience/parts/compatibility-bridges/README.md) | cross-mechanic, ToS, KAG, and Agon bridge language without authority transfer |
 
-Validation starts with `python mechanics/experience/scripts/validate_experience_distillation.py`,
-then the matching `scripts/validate_experience_*.py` and
-`tests/test_experience_*.py` for the active part or versioned contract you changed.
+Validation starts in [Experience AGENTS](experience/AGENTS.md#validation);
+follow its part-specific route for the active part or versioned contract you
+changed.
 
 ## Agon
 
@@ -441,31 +404,7 @@ checked.
 
 Compact validation:
 
-```bash
-python scripts/repair_known_link_drifts.py --check
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_status_vocabulary.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_entry_surface_sync.py
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_owner_request_queue.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py
-python scripts/validate_mechanic_landing_logs.py
-python scripts/validate_generated_freshness.py
-python scripts/validate_hygiene_suite.py
-python scripts/validate_ecosystem.py
-python -m pytest -q
-```
+Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 If you touched a generated Agon or Experience capsule, run that surface's
 builder, validator, and test as well.

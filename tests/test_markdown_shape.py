@@ -38,6 +38,30 @@ class MarkdownShapeTest(unittest.TestCase):
         self.assertNotEqual(bad.returncode, 0)
         self.assertIn("missing second-level heading", bad.stdout)
 
+    def test_active_mechanic_child_docs_route_validation_to_agents(self) -> None:
+        (self.tempdir / "README.md").write_text("# Root\n\n## Gate\n", encoding="utf-8")
+        mechanic = self.tempdir / "mechanics/example"
+        mechanic.mkdir(parents=True)
+        (mechanic / "AGENTS.md").write_text(
+            "# AGENTS.md\n\n## Validation\n\n```bash\npython scripts/validate_links.py\n```\n",
+            encoding="utf-8",
+        )
+        child = mechanic / "README.md"
+        child.write_text("# Example\n\n## Validation\n\n`python scripts/validate_links.py`\n", encoding="utf-8")
+
+        bad = subprocess.run(
+            [sys.executable, "scripts/validate_markdown_shape.py"],
+            cwd=self.tempdir,
+            text=True,
+            capture_output=True,
+        )
+
+        self.assertNotEqual(bad.returncode, 0)
+        self.assertIn("executable validation command belongs in nearest AGENTS.md", bad.stdout)
+        child.write_text("# Example\n\n## Validation\n\nUse AGENTS.md#validation.\n", encoding="utf-8")
+        ok = subprocess.run([sys.executable, "scripts/validate_markdown_shape.py"], cwd=self.tempdir)
+        self.assertEqual(ok.returncode, 0)
+
 
 if __name__ == "__main__":
     unittest.main()
