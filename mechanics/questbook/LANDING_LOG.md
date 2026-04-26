@@ -41,7 +41,7 @@ Surfaces:
 - `mechanics/questbook/tests/test_questbook_lifecycle.py`
 - `QUESTBOOK.md`
 - `quests/README.md`
-- `quests/<lifecycle-state>/`
+- `quests/*/*/` after the later lane-first topology landing
 
 Validation: `python mechanics/questbook/scripts/validate_questbook_lifecycle.py`
 
@@ -50,3 +50,41 @@ owner-local task claim.
 
 Next route: promote quest objects by state only when the owner lane and evidence
 path justify the move.
+
+### Lane-first quest topology
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns the center Questbook topology and public
+read models; lanes name owner route, while lifecycle state names current
+posture. Owner repositories still own repo-local task truth.
+
+Surfaces:
+
+- `QUESTBOOK.md`
+- `quests/README.md`
+- `quests/center/README.md`
+- `quests/agon/README.md`
+- `quests/experience/README.md`
+- `quests/*/README.md`
+- `quests/<lane>/<state>/AOA-Q-*`
+- `mechanics/questbook/DIRECTION.md`
+- `mechanics/questbook/PARTS.md`
+- `mechanics/questbook/scripts/build_questbook_index.py`
+- `mechanics/questbook/scripts/validate_questbook_lifecycle.py`
+- `mechanics/questbook/scripts/validate_questbook_index.py`
+- `generated/questbook_index.min.json`
+- `generated/questbook_frontier.min.json`
+
+Validation:
+
+- `python mechanics/questbook/scripts/validate_questbook_lifecycle.py`
+- `python mechanics/questbook/scripts/build_questbook_index.py --check`
+- `python mechanics/questbook/scripts/validate_questbook_index.py`
+
+Stop-lines: no root quest aliases, no root lifecycle source directories, no
+generated surface as quest authority, and no repo-local task truth in the center
+unless it is a federation obligation.
+
+Next route: use lane-first promotion for real quest movement, then harvest
+repeated quest families into the stronger owner mechanic or repository.

@@ -30,6 +30,8 @@ COMMANDS = [
     ("validate mechanics topology", [sys.executable, "scripts/validate_mechanics_topology.py"]),
     ("validate mechanic artifact topology", [sys.executable, "scripts/validate_mechanic_artifact_topology.py"]),
     ("validate questbook lifecycle", [sys.executable, "mechanics/questbook/scripts/validate_questbook_lifecycle.py"]),
+    ("check questbook index", [sys.executable, "mechanics/questbook/scripts/build_questbook_index.py", "--check"]),
+    ("validate questbook index", [sys.executable, "mechanics/questbook/scripts/validate_questbook_index.py"]),
     ("validate Experience distillation", [sys.executable, "mechanics/experience/scripts/validate_experience_distillation.py"]),
     ("check mechanic card index", [sys.executable, "scripts/build_mechanic_card_index.py", "--check"]),
     ("validate mechanic card index", [sys.executable, "scripts/validate_mechanic_card_index.py"]),

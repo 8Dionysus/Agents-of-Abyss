@@ -138,7 +138,7 @@ python -m pytest -q
 | `scripts/` | [`scripts/README`](../scripts/README.md) | builders, validators, release checks, and local guardrails |
 | `schemas/` | [`schemas/README`](../schemas/README.md) | JSON schema contracts for center-planted surfaces |
 | `tests/` | [`tests/README`](../tests/README.md) | regression tests for generated and center-contract surfaces |
-| `quests/` | [`quests/README`](../quests/README.md) | lifecycle item store for tracked obligations, not a second roadmap |
+| `quests/` | [`quests/README`](../quests/README.md) | lane-first lifecycle item store for tracked obligations, not a second roadmap |
 | `manifests/` | [`manifests/README`](../manifests/README.md) | owner-bound manifests and recurrence receipts |
 | `config/` | [`config/README`](../config/README.md) | development and validator configuration, not secrets |
 | `examples/` | [`examples/README`](../examples/README.md) | public-safe examples, not proof canon |

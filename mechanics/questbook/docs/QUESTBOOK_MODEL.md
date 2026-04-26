@@ -53,7 +53,8 @@ The center must not:
 - human surface: `QUESTBOOK.md`
 - canonical object: `work_quest_v1`
 - thin delegation projection: `quest_dispatch_v1`
-- source item store: `quests/<lifecycle-state>/AOA-Q-*`
+- source item store: `quests/<lane>/<state>/AOA-Q-*`
+- generated read models: `generated/questbook_index.min.json` and `generated/questbook_frontier.min.json`
 
 This naming avoids conflating the human-facing questbook concept with repo-specific operator intents such as `open_quest_book`.
 
@@ -73,8 +74,29 @@ QUESTBOOK uses two axes.
 - `dropped`
 
 The lifecycle state is not only prose. Quest source files live in the matching
-directory under `quests/`. Top-level `quests/AOA-Q-*` aliases are intentionally
-absent so every route lands on the source lifecycle lane.
+state directory under a lane in `quests/`. Top-level `quests/AOA-Q-*` aliases
+and root lifecycle directories such as `quests/triaged/` are intentionally
+absent so every route lands on `quests/<lane>/<state>/AOA-Q-*`.
+
+### Lane
+
+The lane names the owner route before the lifecycle state names the current
+posture.
+
+- `center`
+- `agon`
+- `experience`
+- `rpg`
+- `recurrence`
+- `questbook`
+- `antifragility`
+- `method-growth`
+- `release-support`
+- `tos-bridge`
+
+Use `center` for federation-level obligations that are not owned by a more
+specific mechanic lane. Use mechanic lanes when the quest ID family and owning
+route are already clear, such as `AOA-Q-AGON-*` or `AOA-Q-EXP-*`.
 
 Promotion is explicit:
 
@@ -160,4 +182,6 @@ If richer local notes are needed, keep them in ignored local overlays and refere
 
 ```bash
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/build_questbook_index.py --check
+python mechanics/questbook/scripts/validate_questbook_index.py
 ```

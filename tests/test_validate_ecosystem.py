@@ -115,12 +115,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         }
         for quest_id, state in required_states.items():
             write_text(
-                self.quests_dir / state / f"{quest_id}.yaml",
+                self.quests_dir / "center" / state / f"{quest_id}.yaml",
                 "\n".join(
                     (
                         "schema_version: work_quest_v1",
                         f"id: {quest_id}",
                         "repo: Agents-of-Abyss",
+                        "lane: center",
                         f"state: {state}",
                         "public_safe: true",
                     )
@@ -169,12 +170,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_valid_extra_quest_file_is_allowed(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0004.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0004.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0004",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "band: frontier",
                     "public_safe: true",
@@ -192,12 +194,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_questbook_rejects_band_section_mismatch(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0004.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0004.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0004",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "band: frontier",
                     "public_safe: true",
@@ -234,12 +237,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_questbook_rejects_band_listing_only_under_unmapped_section(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0004.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0004.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0004",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "band: frontier",
                     "public_safe: true",
@@ -281,12 +285,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             with self.subTest(bullet=bullet):
                 self.write_valid_surface()
                 write_text(
-                    self.quests_dir / "triaged" / "AOA-Q-0004.yaml",
+                    self.quests_dir / "center" / "triaged" / "AOA-Q-0004.yaml",
                     "\n".join(
                         (
                             "schema_version: work_quest_v1",
                             "id: AOA-Q-0004",
                             "repo: Agents-of-Abyss",
+                            "lane: center",
                             "state: triaged",
                             "band: frontier",
                             "public_safe: true",
@@ -326,12 +331,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_valid_second_wave_extra_quest_file_is_allowed(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0005.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0005.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0005",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "public_safe: true",
                 )
@@ -349,12 +355,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_valid_surface()
         self.write_rpg_architecture_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0006.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0006.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0006",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "public_safe: true",
                 )
@@ -372,12 +379,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_valid_surface()
         self.write_rpg_bridge_wave_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0007.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0007.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0007",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "public_safe: true",
                 )
@@ -396,12 +404,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_rpg_architecture_surface()
         self.write_rpg_runtime_projection_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0008.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0008.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0008",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "public_safe: true",
                 )
@@ -419,12 +428,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_valid_surface()
         self.write_rpg_bridge_wave_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0007.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0007.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0007",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "public_safe: true",
                 )
@@ -450,12 +460,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_valid_surface()
         self.write_rpg_runtime_projection_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0008.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0008.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0008",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "public_safe: true",
                 )
@@ -479,12 +490,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_rpg_architecture_surface()
         self.write_rpg_runtime_projection_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0008.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0008.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0008",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "public_safe: true",
                 )
@@ -523,12 +535,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.write_rpg_architecture_surface()
         self.write_rpg_runtime_projection_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0008.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0008.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0008",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "public_safe: true",
                 )
@@ -553,7 +566,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
     def test_missing_required_foundation_quest_fails(self) -> None:
         self.write_valid_surface()
-        (self.quests_dir / "captured" / "AOA-Q-0003.yaml").unlink()
+        (self.quests_dir / "center" / "captured" / "AOA-Q-0003.yaml").unlink()
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
@@ -564,7 +577,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_invalid_extra_quest_file_fails(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0004.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0004.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
@@ -586,12 +599,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_closed_extra_quest_must_not_stay_listed(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "done" / "AOA-Q-0004.yaml",
+            self.quests_dir / "center" / "done" / "AOA-Q-0004.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0004",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: done",
                     "public_safe: true",
                 )
@@ -612,12 +626,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def test_rpg_architecture_quest_requires_rfc_docs(self) -> None:
         self.write_valid_surface()
         write_text(
-            self.quests_dir / "triaged" / "AOA-Q-0006.yaml",
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0006.yaml",
             "\n".join(
                 (
                     "schema_version: work_quest_v1",
                     "id: AOA-Q-0006",
                     "repo: Agents-of-Abyss",
+                    "lane: center",
                     "state: triaged",
                     "public_safe: true",
                 )

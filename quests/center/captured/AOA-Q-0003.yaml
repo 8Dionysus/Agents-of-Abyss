@@ -3,6 +3,7 @@ id: AOA-Q-0003
 title: Plan the next QUESTBOOK contour after the foundation seams are proven
 summary: ''
 repo: Agents-of-Abyss
+lane: center
 owner_surface: center/contour-planning
 theme_ref: ''
 milestone_ref: ''

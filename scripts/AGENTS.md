@@ -49,9 +49,11 @@ Current scripts include:
   compact mesh checks
 - `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, and
   `validate_mechanic_readme_cards.py` for the mechanic card contract
-- `validate_mechanic_artifact_topology.py` and
-  `mechanics/questbook/scripts/validate_questbook_lifecycle.py` for mechanic artifact homes and the quest
-  lifecycle board
+- `validate_mechanic_artifact_topology.py`,
+  `mechanics/questbook/scripts/validate_questbook_lifecycle.py`,
+  `mechanics/questbook/scripts/build_questbook_index.py`, and
+  `mechanics/questbook/scripts/validate_questbook_index.py` for mechanic artifact homes, the quest
+  lifecycle board, and Questbook read models
 - `build_owner_request_queue.py`, `validate_owner_request_queue.py`,
   `validate_generated_owner_request_queue.py`, and
   `validate_owner_request_docs.py` for center-side owner request packets

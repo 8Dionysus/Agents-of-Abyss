@@ -5,10 +5,10 @@ Questbook is a center mechanic package in `Agents-of-Abyss`. It names the center
 ### Trigger
 Use when an obligation must survive the current session as a public, reviewable follow-up without becoming a second roadmap or private scratchpad.
 ### Center owns
-Federation-level quest mechanics, root public quest index posture, quest item placement, and obligation lifecycle language.
+Federation-level quest mechanics, root public quest index posture, lane-first quest item placement, generated read models, and obligation lifecycle language.
 ### Stronger owner split
 - Owner repositories own repo-local obligations and local task truth.
-- `quests/` holds public center quest items in lifecycle directories, not private scratch work.
+- `quests/` holds public quest items in lane-first lifecycle directories, not private scratch work.
 - `aoa-playbooks` owns recurring quest choreography when a quest becomes repeatable method.
 - `aoa-evals` owns proof obligations attached to quest closure.
 - `aoa-memo` owns lessons retained after quest completion.
@@ -18,7 +18,7 @@ Federation-level quest mechanics, root public quest index posture, quest item pl
 - Enough context to choose center quest placement or route the obligation to the owner repository.
 
 ### Outputs
-- Quest item, root questbook index update, owner-local task route, proof request, or closure note.
+- Quest item, root questbook index update, generated Questbook read model, owner-local task route, proof request, or closure note.
 - No private scratchpad and no parallel roadmap.
 
 ### Must not claim
@@ -30,6 +30,8 @@ Federation-level quest mechanics, root public quest index posture, quest item pl
 ```bash
 python scripts/validate_mechanics_topology.py --mechanic questbook
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/build_questbook_index.py --check
+python mechanics/questbook/scripts/validate_questbook_index.py
 python scripts/validate_mechanic_readme_cards.py --mechanic questbook
 python scripts/build_mechanic_card_index.py --check
 python scripts/validate_mechanic_card_index.py
@@ -52,6 +54,8 @@ A request packet is not owner acceptance. Keep `questbook` claims center-bounded
 ## Start here
 - [QUESTBOOK_MODEL](docs/QUESTBOOK_MODEL.md)
 - [QUESTBOOK_FIRST_WAVE](docs/QUESTBOOK_FIRST_WAVE.md)
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
 - [QUESTBOOK](../../QUESTBOOK.md)
 - [README](../../quests/README.md)
 - [LANDING_LOG](LANDING_LOG.md)
@@ -60,7 +64,7 @@ A request packet is not owner acceptance. Keep `questbook` claims center-bounded
 - [QUESTBOOK_OWNER_REPO_REQUESTS](docs/QUESTBOOK_OWNER_REPO_REQUESTS.md)
 
 ## Owner boundary
-Quest lifecycle and public obligation mechanics; root QUESTBOOK remains index and quests/ remains the lifecycle item store.
+Quest lifecycle and public obligation mechanics; root QUESTBOOK remains index and quests/ remains the lane-first lifecycle item store.
 The card above is the compact route. The docs listed in **Start here** remain the richer source surfaces for this mechanic. Generated card indexes may reflect this package, but they do not author meaning.
 ## Growth posture
-When this mechanic changes, keep the card small enough for a low-context agent to act safely, then place detailed doctrine in `docs/`, proof in the proof owner, memory in the memory owner, runtime in the runtime owner, and source meaning in the source owner.
+When this mechanic changes, keep active routes readable and functional. Place detailed doctrine in `docs/`, proof in the proof owner, memory in the memory owner, runtime in the runtime owner, and source meaning in the source owner.

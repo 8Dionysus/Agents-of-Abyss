@@ -72,9 +72,11 @@ been moved into part-local homes.
 
 Questbook is a mechanic, not a TODO pile. The root `QUESTBOOK.md` stays a compact
 frontier index, and `quests/` stays the public item store. Quest source objects
-live in lifecycle directories such as `quests/triaged/` and `quests/done/`;
-top-level `quests/AOA-Q-*` aliases are intentionally absent. The questbook
-package owns lifecycle, placement, closure, harvest, and owner-routing rules.
+live in lane-first lifecycle directories such as `quests/center/triaged/`,
+`quests/agon/triaged/`, and `quests/experience/triaged/`; top-level
+`quests/AOA-Q-*` aliases are intentionally absent. The questbook package owns
+lifecycle, placement, closure, harvest, generated read models, and
+owner-routing rules.
 
 Use quests when an obligation should survive the current diff as a public,
 reviewable game-object for agents. Do not use quests for private scratch work,
@@ -87,6 +89,8 @@ Run:
 ```bash
 python scripts/validate_mechanic_artifact_topology.py
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/build_questbook_index.py --check
+python mechanics/questbook/scripts/validate_questbook_index.py
 ```
 
 For release-bound work, also run:

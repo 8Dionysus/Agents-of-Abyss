@@ -8,7 +8,7 @@ This card applies to `quests/` and all descendants unless a nearer `AGENTS.md` n
 
 `quests/` holds the quest item store for public obligations, visible work items, and bounded follow-through records.
 
-Lifecycle directories are the source placement. Top-level `AOA-Q-*` aliases are intentionally absent; edit the lifecycle source file directly.
+Lane-first lifecycle directories are the source placement. Top-level `AOA-Q-*` aliases and root lifecycle directories are intentionally absent; edit `quests/<lane>/<state>/AOA-Q-*` directly.
 
 ## Read before editing
 
@@ -29,6 +29,8 @@ Run the narrowest relevant checks first. Usual checks for this district:
 ```bash
 python scripts/validate_mechanics_topology.py
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/build_questbook_index.py --check
+python mechanics/questbook/scripts/validate_questbook_index.py
 python scripts/validate_links.py
 python -m pytest -q
 ```

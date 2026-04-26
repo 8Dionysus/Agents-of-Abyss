@@ -2,9 +2,9 @@
 
 This questbook holds federation-level cross-repo obligations only. It does not absorb repo-local quest detail from sibling repositories.
 
-It is a root index, not a second roadmap. Program direction belongs in [ROADMAP](ROADMAP.md). Quest lifecycle law belongs in [mechanics/questbook/QUESTBOOK_MODEL](mechanics/questbook/docs/QUESTBOOK_MODEL.md). Backing quest files live in lifecycle directories under [`quests/`](quests/).
+It is a root index, not a second roadmap. Program direction belongs in [ROADMAP](ROADMAP.md). Quest lifecycle law belongs in [mechanics/questbook/QUESTBOOK_MODEL](mechanics/questbook/docs/QUESTBOOK_MODEL.md). Backing quest files live in lane-first lifecycle directories under [`quests/`](quests/).
 
-Top-level `quests/AOA-Q-*` aliases are intentionally absent. The lifecycle directory is the source placement for each quest object.
+Top-level `quests/AOA-Q-*` aliases are intentionally absent. The source placement for each quest object is `quests/<lane>/<state>/AOA-Q-*`.
 
 ## Frontier
 
@@ -31,9 +31,11 @@ Top-level `quests/AOA-Q-*` aliases are intentionally absent. The lifecycle direc
 
 ## Backing files
 
-- `quests/<lifecycle-state>/AOA-Q-*.yaml`
-- `quests/<lifecycle-state>/AOA-Q-*.md`
-- future center-level generated summaries only after a real builder and validator exist
+- `quests/center/<state>/AOA-Q-*.yaml`
+- `quests/agon/<state>/AOA-Q-AGON-*.md`
+- `quests/experience/<state>/AOA-Q-EXP-*.md`
+- future lane-specific families use the same `quests/<lane>/<state>/AOA-Q-*` contract
+- generated summaries: [`questbook_index`](generated/questbook_index.min.json) and [`questbook_frontier`](generated/questbook_frontier.min.json)
 
 ## Rule
 

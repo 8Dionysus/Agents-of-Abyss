@@ -3,6 +3,7 @@ id: AOA-Q-0001
 title: Publish the common QUESTBOOK model and first contour scope
 summary: ''
 repo: Agents-of-Abyss
+lane: center
 owner_surface: center/questbook-model
 theme_ref: ''
 milestone_ref: ''
