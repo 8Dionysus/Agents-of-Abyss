@@ -56,6 +56,7 @@ handoff expectations.
 
 ```bash
 python mechanics/agon/scripts/validate_agon_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic agon
 python scripts/validate_mechanic_landing_logs.py --mechanic agon
 python scripts/validate_mechanics_topology.py --mechanic agon
 python scripts/validate_mechanic_readme_cards.py --mechanic agon
@@ -84,6 +85,7 @@ python scripts/validate_owner_request_docs.py --mechanic agon
 - [ROADMAP](ROADMAP.md)
 - [OWNER_REQUESTS](OWNER_REQUESTS.md)
 - [PROVENANCE](PROVENANCE.md)
+- [artifact-map](artifact-map.json)
 
 ## Functioning parts
 
@@ -116,7 +118,8 @@ until the stronger owner lands the slice and proof routes are satisfied.
 
 Use [PROVENANCE](PROVENANCE.md) only when auditing how detailed source-docs,
 wave notes, handoffs, generated capsules, or model families feed the active
-parts. The active route stays on the part map above.
+parts. Use [artifact-map](artifact-map.json) only when auditing where old flat
+technical artifact paths landed. The active route stays on the part map above.
 
 ## Owner boundary
 

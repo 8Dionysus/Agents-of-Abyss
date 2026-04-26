@@ -21,10 +21,10 @@
     "sdk_hidden_write"
   ],
   "observed_surfaces": [
-    "mechanics/agon/config/agon_sophian_threshold.seed.json",
-    "mechanics/agon/generated/agon_sophian_threshold_registry.min.json",
-    "mechanics/agon/schemas/agon-sophian-threshold.schema.json",
-    "mechanics/agon/schemas/agon-sophian-threshold-registry.schema.json"
+    "mechanics/agon/parts/sophian-threshold/config/agon_sophian_threshold.seed.json",
+    "mechanics/agon/parts/sophian-threshold/generated/agon_sophian_threshold_registry.min.json",
+    "mechanics/agon/parts/sophian-threshold/schemas/agon-sophian-threshold.schema.json",
+    "mechanics/agon/parts/sophian-threshold/schemas/agon-sophian-threshold-registry.schema.json"
   ],
   "recurrence_posture": "observe_review_queue_only",
   "repo": "Agents-of-Abyss",

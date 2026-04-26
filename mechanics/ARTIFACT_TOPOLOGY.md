@@ -27,16 +27,18 @@ instead of preserving duplicate root entries.
 
 ## Mechanic lane
 
-Mechanic-owned artifacts live under their package:
+Mechanic-owned artifacts live under their package. For large mechanics with
+functioning parts, prefer the nearest owning part:
 
 ```text
 mechanics/<slug>/
-  schemas/
-  examples/
-  config/
-  generated/
-  scripts/
-  tests/
+  parts/<part>/
+    schemas/
+    examples/
+    config/
+    generated/
+    scripts/
+    tests/
 ```
 
 Use these homes when an artifact only makes sense inside the mechanic's owner
@@ -44,9 +46,9 @@ boundary. Examples:
 
 - Agon lawful moves, arena/session packets, duel kernels, retention/rank
   economy, KAG promotion paths, and gate-routing requests belong under
-  `mechanics/agon/`.
+  `mechanics/agon/parts/<part>/`.
 - Experience wave, office, service, governance, continuity, deployment, and
-  runtime-boundary contracts belong under `mechanics/experience/`.
+  runtime-boundary contracts belong under `mechanics/experience/parts/<part>/`.
 - RPG vocabulary overlays and adjunct projection contracts belong under
   `mechanics/rpg/`.
 - Antifragility pruning and via-negativa contract checks belong under
@@ -61,6 +63,10 @@ boundary. Examples:
 Do not add new root-authored mechanic artifacts. Add them to the owning
 mechanic package and update callers, validators, generated indexes, and docs to
 use that path directly.
+
+For part-based mechanics, do not recreate flat package aliases either. Use
+`mechanics/<slug>/artifact-map.json` as the receipt when old flat paths have
+been moved into part-local homes.
 
 ## Questbook
 

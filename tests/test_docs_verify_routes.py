@@ -154,7 +154,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         survival = read_text("mechanics/agon/legacy/raw/AGON_SURVIVAL_CRITERIA.md")
         audit = read_text("mechanics/agon/legacy/raw/AGON_DOUBT_AUDIT.md")
         baseline = read_text("mechanics/agon/legacy/raw/PRE_AGON_BASELINE.md")
-        readiness = read_text("mechanics/agon/generated/agon_imposition_readiness.min.json")
+        readiness = read_text("mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json")
 
         self.assertIn("mechanics/agon/README.md", readme)
         self.assertIn("Imposition Readiness", mechanics)
@@ -182,7 +182,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         repo_roles = read_text("docs/REPO_ROLES.md")
         move_language = read_text("mechanics/agon/legacy/raw/AGON_LAWFUL_MOVE_LANGUAGE.md")
         landing = read_text("mechanics/agon/legacy/raw/AGON_WAVE3_LANDING.md")
-        registry = read_text("mechanics/agon/generated/agon_lawful_move_registry.min.json")
+        registry = read_text("mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json")
 
         self.assertIn("mechanics/agon/README.md", readme)
         self.assertIn("Lawful Move Grammar", mechanics)
@@ -206,7 +206,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         repo_roles = read_text("docs/REPO_ROLES.md")
         binding = read_text("mechanics/agon/legacy/raw/AGON_MOVE_OWNER_BINDING.md")
         landing = read_text("mechanics/agon/legacy/raw/AGON_WAVE4_LANDING.md")
-        registry = read_text("mechanics/agon/generated/agon_move_owner_binding_registry.min.json")
+        registry = read_text("mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json")
 
         self.assertIn("mechanics/agon/README.md", readme)
         self.assertIn("Owner Binding", mechanics)
@@ -230,7 +230,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         repo_roles = read_text("docs/REPO_ROLES.md")
         handoff = read_text("mechanics/agon/legacy/raw/AGON_GATE_ROUTING_HANDOFF.md")
         landing = read_text("mechanics/agon/legacy/raw/AGON_WAVE5_CENTER_HANDOFF.md")
-        request = read_text("mechanics/agon/generated/agon_gate_routing_handoff_request.min.json")
+        request = read_text("mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json")
 
         self.assertIn("mechanics/agon/README.md", readme)
         self.assertIn("mechanics/README.md", docs_readme)
@@ -255,7 +255,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         handoff = read_text("mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_HANDOFF.md")
         owner_request = read_text("mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md")
         stop_lines = read_text("mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_STOP_LINES.md")
-        request = read_text("mechanics/agon/generated/agon_trial_playbook_request.min.json")
+        request = read_text("mechanics/agon/parts/trial-handoff/generated/agon_trial_playbook_request.min.json")
 
         self.assertIn("mechanics/agon/README.md", readme)
         self.assertIn("mechanics/README.md", docs_readme)

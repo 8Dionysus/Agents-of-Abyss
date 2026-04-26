@@ -249,9 +249,10 @@
       "agents_ref": "mechanics/agon/AGENTS.md",
       "canonical_docs": [
         "mechanics/agon/DIRECTION.md",
-        "mechanics/agon/PARTS.md",
-        "mechanics/agon/PROVENANCE.md",
-        "mechanics/agon/ROADMAP.md",
+    "mechanics/agon/PARTS.md",
+    "mechanics/agon/PROVENANCE.md",
+    "mechanics/agon/artifact-map.json",
+    "mechanics/agon/ROADMAP.md",
         "mechanics/agon/LANDING_LOG.md",
         "mechanics/agon/parts/imposition-readiness/README.md",
         "mechanics/agon/parts/lawful-move-grammar/README.md",
@@ -321,9 +322,10 @@
       "slug": "agon",
       "status": "landed",
       "title": "Agon",
-      "validation_refs": [
-        "mechanics/agon/scripts/validate_agon_distillation.py",
-        "scripts/validate_mechanic_landing_logs.py",
+  "validation_refs": [
+    "mechanics/agon/scripts/validate_agon_distillation.py",
+    "scripts/validate_mechanic_artifact_topology.py",
+    "scripts/validate_mechanic_landing_logs.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/validate_mechanic_readme_cards.py",
         "scripts/build_mechanic_card_index.py",

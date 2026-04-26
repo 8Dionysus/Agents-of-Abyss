@@ -2,8 +2,8 @@
   "component_id": "component:agon.retention-rank-economy-surfaces",
   "hidden_scheduler_allowed": false,
   "observes": [
-    "mechanics/agon/generated/agon_retention_rank_economy_registry.min.json",
-    "mechanics/agon/config/agon_retention_rank_economy.seed.json"
+    "mechanics/agon/parts/verdict-retention-rank/generated/agon_retention_rank_economy_registry.min.json",
+    "mechanics/agon/parts/verdict-retention-rank/config/agon_retention_rank_economy.seed.json"
   ],
   "owner_review_required": true,
   "recurrence_role": "observe_retention_rank_pressure_without_authority",

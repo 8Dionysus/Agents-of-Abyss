@@ -20,7 +20,7 @@
       "notes": "Observation only; no arena activation.",
       "owner_repo": "Agents-of-Abyss",
       "path_globs": [
-        "mechanics/agon/generated/agon_court_memo_stats_prebinding_request.min.json"
+        "mechanics/agon/parts/verdict-retention-rank/generated/agon_court_memo_stats_prebinding_request.min.json"
       ],
       "producer": "runtime_candidate_watch",
       "signal_rules": [

@@ -109,33 +109,33 @@ python -m pytest -q
 If you changed the Agon imposition surfaces, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_imposition_readiness.py --check
-python mechanics/agon/scripts/validate_agon_imposition_readiness.py
-python -m pytest -q mechanics/agon/tests/test_agon_imposition_readiness.py
+python mechanics/agon/parts/imposition-readiness/scripts/build_agon_imposition_readiness.py --check
+python mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py
+python -m pytest -q mechanics/agon/parts/imposition-readiness/tests/test_agon_imposition_readiness.py
 ```
 
 If you changed the Agon lawful move language surfaces, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check
-python mechanics/agon/scripts/validate_agon_lawful_moves.py
-python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py
+python mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py --check
+python mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py
+python -m pytest -q mechanics/agon/parts/lawful-move-grammar/tests/test_agon_lawful_moves.py
 ```
 
 If you changed the Agon move owner binding surfaces, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check
-python mechanics/agon/scripts/validate_agon_move_owner_bindings.py
-python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py
+python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check
+python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py
 ```
 
 If you changed the Agon gate routing handoff surfaces, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check
-python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py
-python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.py
+python mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py --check
+python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py
 ```
 
 If you changed the Experience Wave 1 surfaces, also run:

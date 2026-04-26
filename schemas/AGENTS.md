@@ -30,7 +30,7 @@ sources live under `mechanics/<slug>/schemas/`.
 `ecosystem-registry.schema.json` defines the contract for
 `generated/ecosystem_registry.min.json`.
 `agon-imposition-readiness.schema.json` defines the contract for
-`mechanics/agon/generated/agon_imposition_readiness.min.json`.
+`mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json`.
 `agon-lawful-move.schema.json` and `agon-lawful-move-registry.schema.json`
 define the contracts for the Wave III lawful move vocabulary and registry.
 `agon-move-owner-binding.schema.json` and
@@ -92,33 +92,33 @@ python scripts/validate_ecosystem.py
 After changing `agon-imposition-readiness.schema.json`, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_imposition_readiness.py --check
-python mechanics/agon/scripts/validate_agon_imposition_readiness.py
-python -m pytest -q mechanics/agon/tests/test_agon_imposition_readiness.py
+python mechanics/agon/parts/imposition-readiness/scripts/build_agon_imposition_readiness.py --check
+python mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py
+python -m pytest -q mechanics/agon/parts/imposition-readiness/tests/test_agon_imposition_readiness.py
 ```
 
 After changing the Wave III lawful move schemas, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check
-python mechanics/agon/scripts/validate_agon_lawful_moves.py
-python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py
+python mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py --check
+python mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py
+python -m pytest -q mechanics/agon/parts/lawful-move-grammar/tests/test_agon_lawful_moves.py
 ```
 
 After changing the Wave IV owner-binding schemas, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check
-python mechanics/agon/scripts/validate_agon_move_owner_bindings.py
-python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py
+python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check
+python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py
 ```
 
 After changing the Wave V gate-routing handoff schema, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check
-python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py
-python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.py
+python mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py --check
+python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py
 ```
 
 After changing the Experience Wave 1 schema, also run:

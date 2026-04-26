@@ -9,15 +9,20 @@ while downstream repositories prepare any real execution slices.
 - Keep lawful move language, owner binding, handoff routes, packets, verdict
   grammar, retention, rank, schools, and canon-restraint surfaces discoverable
   from the package.
-- Keep generated Agon registries and validators stable in root technical
-  districts until a later artifact migration is explicitly landed.
+- Keep active Agon technical artifacts in part-local homes so schemas, config,
+  generated capsules, examples, validators, and tests travel with the part that
+  owns their behavior.
 - Keep `LANDING_LOG.md` as the canonical Agon landing ledger.
 
 ## Next Work
 
-- Move non-doc Agon artifacts only after wrapper compatibility is designed.
 - Add owner-local landing receipts when sibling repositories adopt Agon slices.
-- Tighten package-local navigation around the largest model families.
+- Tighten package-local navigation only when a part becomes hard to operate,
+  not merely because its historical wave family was large.
+- Time has come when: an owner repository accepts an Agon slice. Future move:
+  record the owner-local receipt and update the relevant part route. Guardrail:
+  center docs must not claim live execution, proof, memory, runtime, rank, KAG,
+  or ToS authority before the owner lands it.
 
 ## Out Of Scope
 

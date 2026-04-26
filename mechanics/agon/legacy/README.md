@@ -7,6 +7,7 @@ active route.
 ## Layout
 
 - `raw/`: preserved `AGON_*` and `PRE_AGON_BASELINE` source files.
+- `artifacts/`: receipt route for the flat-to-part technical artifact move.
 - `INDEX.md`: every raw source mapped to an active part route.
 - `DISTILLATION_LOG.md`: dated accounting for raw-to-active distillation
   decisions.

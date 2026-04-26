@@ -1,0 +1,242 @@
+{
+  "entries": [
+    {
+      "allowed_effect": "owner_reviewable_retention_request_only",
+      "candidate_only": true,
+      "description": "Defines a candidate request for checking whether a lesson, scar pressure, or trial consequence survives later re-entry.",
+      "forbidden_effects": [
+        "automatic_schedule",
+        "memory_write",
+        "rank_mutation",
+        "trust_mutation"
+      ],
+      "id": "agon.retention.check_request.v1",
+      "inputs": [
+        "mechanical_trial_outcome_candidate",
+        "delta_receipt_candidate",
+        "scar_request_candidate",
+        "recurrence_review_pressure"
+      ],
+      "kind": "retention_check_request_model",
+      "live_authority": false,
+      "outputs": [
+        "retention_request_candidate"
+      ],
+      "owner": "Agents-of-Abyss",
+      "retention_check_types": [
+        "lesson_retention",
+        "trace_integrity_retention",
+        "closure_discipline_retention",
+        "summon_cost_retention",
+        "assistant_boundary_retention",
+        "prediction_accuracy_retention",
+        "contradiction_handling_retention"
+      ],
+      "review_required": true,
+      "status": "seeded_preprotocol_law"
+    },
+    {
+      "allowed_effect": "retention_window_candidate_only",
+      "candidate_only": true,
+      "description": "Defines named windows for future re-entry without creating hidden scheduling authority.",
+      "forbidden_effects": [
+        "hidden_scheduler_action",
+        "automatic_retest",
+        "background_daemon"
+      ],
+      "id": "agon.retention.window.v1",
+      "kind": "retention_window_model",
+      "live_authority": false,
+      "owner": "Agents-of-Abyss",
+      "review_required": true,
+      "status": "seeded_preprotocol_law",
+      "windows": [
+        "same_session_review",
+        "next_cycle_reentry",
+        "cross_trial_reentry",
+        "delayed_reentry",
+        "quarantine_recheck"
+      ]
+    },
+    {
+      "allowed_effect": "reviewable_result_candidate_only",
+      "candidate_only": true,
+      "description": "Defines candidate result states for retention checks without mutating agent standing.",
+      "forbidden_effects": [
+        "rank_mutation",
+        "trust_mutation",
+        "durable_scar_write"
+      ],
+      "id": "agon.retention.result_candidate.v1",
+      "kind": "retention_result_candidate_model",
+      "live_authority": false,
+      "owner": "Agents-of-Abyss",
+      "review_required": true,
+      "status": "seeded_preprotocol_law",
+      "statuses": [
+        "passed",
+        "failed_repeat_error",
+        "inconclusive",
+        "deferred_with_cost",
+        "needs_owner_review",
+        "quarantined"
+      ]
+    },
+    {
+      "allowed_effect": "rank_model_definition_only",
+      "candidate_only": true,
+      "description": "Separates actor standing from earned jurisdictions so that Summoner and Closer do not become decorative ranks.",
+      "earned_jurisdictions": [
+        {
+          "description": "May serve as witnessed support when owner-approved.",
+          "id": "jurisdiction.witness_seat"
+        },
+        {
+          "description": "May prepare adjudication requests; not live verdict authority.",
+          "id": "jurisdiction.judge_candidate_seat"
+        },
+        {
+          "description": "May draft visible costly summon intent; not live summon.",
+          "id": "jurisdiction.summon_intent_initiator"
+        },
+        {
+          "description": "May draft closure candidate; not grant closure.",
+          "id": "jurisdiction.closure_candidate"
+        },
+        {
+          "description": "May be nominated for future KAG/ToS review path; not promotion.",
+          "id": "jurisdiction.canon_candidate"
+        }
+      ],
+      "forbidden_effects": [
+        "rank_mutation",
+        "automatic_promotion",
+        "automatic_demotion"
+      ],
+      "id": "agon.rank.standing_ladder.v1",
+      "kind": "rank_standing_ladder_model",
+      "live_authority": false,
+      "owner": "Agents-of-Abyss",
+      "rank_ladder": [
+        {
+          "description": "May participate only in supervised mechanical trials; no special jurisdiction.",
+          "id": "rank.novice"
+        },
+        {
+          "description": "Has passed at least one witnessed trial with intact trace; may be considered for low-risk witness support.",
+          "id": "rank.witnessed"
+        },
+        {
+          "description": "Has a reviewed scar request and retention request candidate; not automatically promoted.",
+          "id": "rank.scarred"
+        },
+        {
+          "description": "Has repeated retained lessons and no unresolved authority breaches; eligible for stronger jurisdiction candidates.",
+          "id": "rank.trusted"
+        }
+      ],
+      "review_required": true,
+      "status": "seeded_preprotocol_law"
+    },
+    {
+      "allowed_effect": "owner_reviewable_mutation_candidate_only",
+      "candidate_only": true,
+      "description": "Defines promotion, suspension, restoration, revocation, or quarantine candidates without applying them.",
+      "forbidden_effects": [
+        "rank_mutation",
+        "trust_mutation",
+        "jurisdiction_grant"
+      ],
+      "id": "agon.rank.mutation_candidate.v1",
+      "kind": "rank_mutation_candidate_model",
+      "live_authority": false,
+      "mutation_candidate_types": [
+        "promote_standing",
+        "demote_standing",
+        "grant_jurisdiction_candidate",
+        "suspend_jurisdiction_candidate",
+        "restore_jurisdiction_candidate",
+        "quarantine_actor_candidate"
+      ],
+      "owner": "Agents-of-Abyss",
+      "review_required": true,
+      "status": "seeded_preprotocol_law"
+    },
+    {
+      "allowed_effect": "revocation_candidate_only",
+      "candidate_only": true,
+      "description": "Defines how repeated failures or authority breaches can produce reviewable loss-of-jurisdiction candidates.",
+      "forbidden_effects": [
+        "automatic_revocation",
+        "rank_mutation",
+        "trust_mutation"
+      ],
+      "id": "agon.rank.revocation_candidate.v1",
+      "kind": "jurisdiction_revocation_candidate_model",
+      "live_authority": false,
+      "owner": "Agents-of-Abyss",
+      "review_required": true,
+      "status": "seeded_preprotocol_law",
+      "triggers": [
+        "failed_repeat_error",
+        "assistant_contestant_drift",
+        "closure_breach_repeat",
+        "hidden_summon_attempt",
+        "trace_breach_repeat"
+      ]
+    },
+    {
+      "allowed_effect": "interlock_candidate_only",
+      "candidate_only": true,
+      "description": "Connects retention outcomes to rank pressure without allowing automatic standing or jurisdiction changes.",
+      "forbidden_effects": [
+        "automatic_promotion",
+        "automatic_demotion",
+        "automatic_jurisdiction_change"
+      ],
+      "id": "agon.retention.rank_interlock.v1",
+      "interlocks": [
+        {
+          "may_emit": "grant_jurisdiction_candidate",
+          "when": "retention_passed_repeatedly"
+        },
+        {
+          "may_emit": "suspend_jurisdiction_candidate",
+          "when": "retention_failed_repeat_error"
+        },
+        {
+          "may_emit": "deferred_with_cost_candidate",
+          "when": "retention_inconclusive"
+        },
+        {
+          "may_emit": "quarantine_actor_candidate",
+          "when": "authority_breach_repeats"
+        }
+      ],
+      "kind": "retention_rank_interlock_model",
+      "live_authority": false,
+      "owner": "Agents-of-Abyss",
+      "review_required": true,
+      "status": "seeded_preprotocol_law"
+    }
+  ],
+  "live_protocol": false,
+  "registry_id": "agon.retention_rank_economy.registry.v1",
+  "runtime_effect": "candidate_only",
+  "source_config": "mechanics/agon/parts/verdict-retention-rank/config/agon_retention_rank_economy.seed.json",
+  "status": "seeded_wave14_center_law",
+  "stop_lines": [
+    "no_live_verdict_authority",
+    "no_durable_scar_write",
+    "no_retention_execution_without_owner_review",
+    "no_rank_or_trust_mutation",
+    "no_closure_grant",
+    "no_live_summon",
+    "no_tree_of_sophia_promotion",
+    "no_kag_promotion",
+    "no_hidden_scheduler_action",
+    "no_assistant_contestant_drift",
+    "no_center_takeover_of_agent_eval_memo_stats_truth"
+  ],
+  "wave": "XIV"
+}
