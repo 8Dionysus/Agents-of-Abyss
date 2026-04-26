@@ -30,8 +30,6 @@ usable. When a boundary changes, review `PARTS.md`, `ROADMAP.md`,
 
 ## Validation
 
-Run:
-
 Use the central Questbook validation matrix in [Questbook AGENTS](../AGENTS.md#validation).
 
 ## Closeout

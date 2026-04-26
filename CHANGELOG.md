@@ -90,6 +90,9 @@ Tracking starts with the community-docs baseline for this repository.
 - Questbook post-change route review and validation centralization through
   `mechanics/questbook/AGENTS.md`, with lane/state default compression for
   Agon and Experience quest sources
+- Questbook source-contract hardening that rejects direct `legacy/raw`
+  references from source quest objects and routes preserved raw provenance
+  through mechanic `PROVENANCE.md` or `legacy/INDEX.md` bridges
 
 ### Changed
 

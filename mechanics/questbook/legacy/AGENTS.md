@@ -25,8 +25,6 @@ without indexing them and naming the active part they pressure.
 
 ## Validation
 
-Run:
-
 Use the central Questbook validation matrix in [Questbook AGENTS](../AGENTS.md#validation).
 
 ## Closeout

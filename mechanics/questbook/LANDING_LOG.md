@@ -24,6 +24,7 @@ Use this index before reading the full ledger:
 | Quest source contract runway | Quest source reviewability gained a strict YAML/Markdown contract path. |
 | Quest source contract full distillation | All Markdown quest sources now carry the strict source contract; no uncontracted Markdown source lane remains. |
 | Questbook route-default and validation centralization | Repeated quest defaults moved to lane READMEs, and executable validation commands are centralized in Questbook AGENTS. |
+| Quest source provenance bridge hardening | Quest sources route preserved raw provenance through PROVENANCE/legacy index bridges instead of direct raw paths. |
 
 Read the full entry only when the change touches that route, its surfaces, or
 its stop-lines. Current route starts at `mechanics/questbook/README.md`,
@@ -603,3 +604,42 @@ into every quest source.
 Next route: if a lane default becomes too broad, split the lane README section
 or create a lane-local route helper rather than duplicating boilerplate in
 quest files.
+
+### Quest source provenance bridge hardening
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns Questbook source-shape validation and
+center-side quest source hygiene. Mechanic packages own their provenance
+bridges and raw-source accounting.
+
+Surfaces:
+
+- `quests/agon/done/AOA-Q-AGON-0000-imposition-gate.md`
+- `quests/agon/ready/AOA-Q-AGON-0001-agent-recharter-entry.md`
+- `quests/center/triaged/AOA-Q-0003.yaml`
+- `generated/questbook_index.min.json`
+- `generated/questbook_frontier.min.json`
+- `generated/questbook_relations.min.json`
+- `mechanics/questbook/scripts/validate_questbook_source_contract.py`
+- `mechanics/questbook/tests/test_questbook_source_contract.py`
+- `mechanics/questbook/docs/AGENTS.md`
+- `mechanics/questbook/legacy/AGENTS.md`
+- `mechanics/questbook/parts/AGENTS.md`
+
+Validation:
+
+- `python mechanics/questbook/scripts/validate_questbook_source_contract.py`
+- `python mechanics/questbook/scripts/validate_questbook_lifecycle.py`
+- `python mechanics/questbook/scripts/build_questbook_index.py --check`
+- `python mechanics/questbook/scripts/validate_questbook_index.py`
+- `python mechanics/questbook/scripts/validate_quest_relations.py`
+- `python -m pytest -q mechanics/questbook/tests/test_questbook_source_contract.py mechanics/questbook/tests/test_questbook_lifecycle.py`
+
+Stop-lines: quest sources must not point directly at
+`mechanics/questbook/legacy/raw/`; preserved raw provenance remains reachable
+through `mechanics/questbook/PROVENANCE.md` or
+`mechanics/questbook/legacy/INDEX.md`.
+
+Next route: keep future quest-source evidence concise and bridge-based; audit
+raw source details only through the owning mechanic provenance surface.

@@ -43,6 +43,7 @@ REQUIRED_YAML_STRING_FIELDS = (
     "control_mode",
     "delegate_tier",
 )
+DIRECT_LEGACY_RAW_PATH_RE = re.compile(r"legacy/raw/")
 H1_RE = re.compile(r"^#\s+(.+?)\s*$", re.MULTILINE)
 QUEST_KEY_RE = re.compile(r"^(AOA-Q(?:-[A-Z]+)?-\d+)")
 SECTION_RE = re.compile(r"^##\s+(.+?)\s*$", re.MULTILINE)
@@ -72,6 +73,26 @@ def markdown_sections(text: str) -> dict[str, str]:
     return sections
 
 
+def contains_direct_legacy_raw_ref(value: Any) -> bool:
+    if isinstance(value, str):
+        return DIRECT_LEGACY_RAW_PATH_RE.search(value) is not None
+    if isinstance(value, dict):
+        return any(contains_direct_legacy_raw_ref(item) for item in value.values())
+    if isinstance(value, list):
+        return any(contains_direct_legacy_raw_ref(item) for item in value)
+    return False
+
+
+def validate_no_direct_legacy_raw_ref(path: Path, value: Any, problems: list[str]) -> None:
+    if contains_direct_legacy_raw_ref(value):
+        fail(
+            problems,
+            path,
+            "quest source must route preserved provenance through PROVENANCE.md "
+            "or legacy/INDEX.md, not direct legacy/raw refs",
+        )
+
+
 def validate_yaml_contract(path: Path, lane: str, state: str, payload: dict[str, Any], problems: list[str]) -> None:
     for field in REQUIRED_YAML_STRING_FIELDS:
         if not isinstance(payload.get(field), str) or not str(payload.get(field)).strip():
@@ -93,6 +114,8 @@ def validate_yaml_contract(path: Path, lane: str, state: str, payload: dict[str,
     if not isinstance(evidence, list) or not any(isinstance(item, str) and item.strip() for item in evidence):
         fail(problems, path, "evidence must contain at least one public evidence string")
 
+    validate_no_direct_legacy_raw_ref(path, payload, problems)
+
 
 def validate_markdown_contract(path: Path, lane: str, state: str, text: str, problems: list[str], stats: dict[str, int]) -> None:
     title = first_h1(text)
@@ -109,6 +132,8 @@ def validate_markdown_contract(path: Path, lane: str, state: str, text: str, pro
     if not has_contract:
         fail(problems, path, f"missing {MARKDOWN_CONTRACT_MARKER}")
         return
+
+    validate_no_direct_legacy_raw_ref(path, text, problems)
 
     stats["contract_markdown"] += 1
     sections = markdown_sections(text)
