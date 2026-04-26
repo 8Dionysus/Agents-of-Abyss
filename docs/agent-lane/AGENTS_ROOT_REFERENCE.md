@@ -39,10 +39,9 @@ Then branch by task:
 - process, mechanic, or engineering-philosophy route questions: `docs/MECHANICS.md`
 - method-centered growth or scenario-home questions: `mechanics/method-growth/docs/METHOD_SPINE.md`
 - adjunct RPG reflection or canonical vocabulary questions: `mechanics/rpg/docs/RPG_LAYER_MODEL.md` and `mechanics/rpg/docs/RPG_CANONICAL_TERMINOLOGY.md`
-- move-owner binding, owner-request, or pre-protocol stop-line questions:
-  `mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md`,
-  `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`, and
-  `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
+- Agon route, owner-request, or pre-protocol stop-line questions:
+  `mechanics/agon/README.md`, `mechanics/agon/PARTS.md`,
+  `mechanics/agon/OWNER_REQUESTS.md`, and `mechanics/agon/PROVENANCE.md`
 - gate-routing handoff, owner request, or stop-line questions:
   `mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md`,
   `mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
@@ -137,7 +136,7 @@ If the task touches the Agon move owner binding turn, also review:
 
 - `mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md`
 - `mechanics/agon/docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`
-- `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`
+- `mechanics/agon/OWNER_REQUESTS.md`
 - `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
 - `mechanics/agon/docs/AGON_WAVE4_LANDING.md`
 - `mechanics/agon/generated/agon_move_owner_binding_registry.min.json`

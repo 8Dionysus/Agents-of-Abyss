@@ -59,11 +59,9 @@ When deciding where something belongs:
    center decision narrows that contour. If it defines agonic actor form,
    civil/service assistant variants, requested owner landings, routing gates,
    trial scenarios, verdicts, scars, derived summaries, SDK helpers, runtime
-   services, or ToS canonization, route that slice to the owning layer named in
-   `mechanics/agon/docs/AGON_PREPARATION_POSTURE.md`, `mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md`,
-   `mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md`, `mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md`,
-   `mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md`, `mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md`,
-   and `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md`.
+   services, KAG projections, or ToS canonization, route that slice through
+   `mechanics/agon/README.md`, `mechanics/agon/PARTS.md`,
+   `mechanics/agon/OWNER_REQUESTS.md`, and `mechanics/agon/PROVENANCE.md`.
 
 ## Compact rule
 
