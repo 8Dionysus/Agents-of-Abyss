@@ -24,7 +24,10 @@ Questbook owns the mechanics of public obligations, quest lifecycle, placement,
 risk, difficulty, and harvest rules.
 
 Root `QUESTBOOK.md` remains the public index.
-`quests/` remains the quest item store. Source quest objects live under lifecycle directories; root-level `AOA-Q-*` aliases are intentionally absent.
+`quests/` remains the quest item store. Source quest objects live under
+lane-first lifecycle directories such as `quests/center/triaged/`,
+`quests/agon/triaged/`, and `quests/experience/triaged/`; root-level
+`AOA-Q-*` aliases and root lifecycle directories are intentionally absent.
 
 ## Validation
 
@@ -33,4 +36,6 @@ Run after package or quest-store changes:
 ```bash
 python scripts/validate_mechanics_topology.py --mechanic questbook
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/build_questbook_index.py --check
+python mechanics/questbook/scripts/validate_questbook_index.py
 ```

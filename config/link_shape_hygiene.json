@@ -653,6 +653,22 @@
       "required": false
     },
     {
+      "output": "generated/questbook_index.min.json",
+      "builder": "mechanics/questbook/scripts/build_questbook_index.py",
+      "check_args": [
+        "--check"
+      ],
+      "required": true
+    },
+    {
+      "output": "generated/questbook_frontier.min.json",
+      "builder": "mechanics/questbook/scripts/build_questbook_index.py",
+      "check_args": [
+        "--check"
+      ],
+      "required": true
+    },
+    {
       "output": "generated/owner_request_queue.min.json",
       "builder": "scripts/build_owner_request_queue.py",
       "check_args": [
@@ -695,6 +711,8 @@
     "python mechanics/experience/scripts/validate_experience_distillation.py",
     "python scripts/validate_mechanic_artifact_topology.py",
     "python mechanics/questbook/scripts/validate_questbook_lifecycle.py",
+    "python mechanics/questbook/scripts/build_questbook_index.py --check",
+    "python mechanics/questbook/scripts/validate_questbook_index.py",
     "python scripts/validate_agents_md_shape.py",
     "python scripts/validate_agents_mesh.py",
     "python scripts/build_agents_mesh_index.py --check",

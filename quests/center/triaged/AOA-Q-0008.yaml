@@ -3,6 +3,7 @@ id: AOA-Q-0008
 title: Define the RPG runtime/projection wave for the first body-facing AoA slice
 summary: Stage the runtime-owned collection and projection pass so the AoA RPG contour can become readable to services and frontend layers without mutating upstream meaning.
 repo: Agents-of-Abyss
+lane: center
 owner_surface: center/rpg-runtime-projection-wave
 theme_ref: ''
 milestone_ref: ''

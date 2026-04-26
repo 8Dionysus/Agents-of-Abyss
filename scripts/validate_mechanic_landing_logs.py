@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Agon and Experience landing logs."""
+"""Validate mechanic landing logs."""
 
 from __future__ import annotations
 
@@ -206,6 +206,39 @@ MECHANICS: dict[str, dict[str, object]] = {
             "mechanics/experience/parts/*/tests/test_*.py",
             "mechanics/experience/scripts/validate_experience_distillation.py",
             "mechanics/experience/tests/test_experience_distillation.py",
+        ),
+    },
+    "questbook": {
+        "path": "mechanics/questbook/LANDING_LOG.md",
+        "required_phrases": (
+            "Root mechanics topology migration",
+            "Quest lifecycle board activation",
+            "Lane-first quest topology",
+            "no root quest aliases",
+            "generated surface as quest authority",
+        ),
+        "required_surfaces": (
+            "mechanics/questbook/DIRECTION.md",
+            "mechanics/questbook/PARTS.md",
+            "mechanics/questbook/README.md",
+            "mechanics/questbook/ROADMAP.md",
+            "mechanics/questbook/docs/QUESTBOOK_MODEL.md",
+            "mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md",
+            "mechanics/questbook/scripts/build_questbook_index.py",
+            "mechanics/questbook/scripts/validate_questbook_lifecycle.py",
+            "mechanics/questbook/scripts/validate_questbook_index.py",
+            "generated/questbook_index.min.json",
+            "generated/questbook_frontier.min.json",
+            "QUESTBOOK.md",
+            "quests/README.md",
+            "quests/center/README.md",
+            "quests/agon/README.md",
+            "quests/experience/README.md",
+        ),
+        "glob_families": (
+            "quests/*/*/AOA-Q-*",
+            "mechanics/questbook/scripts/*questbook*.py",
+            "mechanics/questbook/tests/test_questbook_*.py",
         ),
     },
 }

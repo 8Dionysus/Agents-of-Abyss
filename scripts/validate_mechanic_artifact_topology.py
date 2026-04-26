@@ -67,8 +67,11 @@ METHOD_GROWTH_PREFIXES = (
     "test_validate_wave4_kernel_automation",
 )
 QUESTBOOK_PREFIXES = (
+    "build_questbook",
+    "questbook_",
+    "test_questbook",
+    "validate_questbook",
     "validate_questbook_lifecycle",
-    "test_questbook_lifecycle",
 )
 RPG_PREFIXES = ("dual_vocabulary_overlay",)
 
@@ -82,6 +85,8 @@ ROOT_ALLOWLIST = {
         "link_shape_hygiene.min.json",
         "mechanic_card_index.min.json",
         "owner_request_queue.min.json",
+        "questbook_frontier.min.json",
+        "questbook_index.min.json",
     },
     "schemas": {
         "center-entry-map.schema.json",

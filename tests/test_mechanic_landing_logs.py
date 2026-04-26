@@ -22,6 +22,11 @@ class MechanicLandingLogTests(unittest.TestCase):
 
         self.assertEqual(problems, [])
 
+    def test_questbook_landing_log_carries_lane_first_topology(self) -> None:
+        problems = validate_log("questbook")
+
+        self.assertEqual(problems, [])
+
 
 if __name__ == "__main__":
     unittest.main()

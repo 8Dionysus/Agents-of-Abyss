@@ -3,6 +3,7 @@ id: AOA-Q-0006
 title: Fix the runtime/frontend architecture law for the AoA RPG layer
 summary: Define the hard RFC, canonical vocabulary, and repo boundary map that let runtime and frontend grow without stealing meaning from source repos.
 repo: Agents-of-Abyss
+lane: center
 owner_surface: center/rpg-architecture
 theme_ref: ''
 milestone_ref: ''

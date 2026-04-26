@@ -382,7 +382,7 @@ progression path, or readable adjunct reflection.
 Quest surfaces:
 
 - [QUESTBOOK](../QUESTBOOK.md): public tracked surface for deferred obligations.
-- [`quests/`](../quests/): lifecycle item store for center, Agon, and Experience follow-through work.
+- [`quests/`](../quests/): lane-first lifecycle item store for center, Agon, Experience, and future mechanic follow-through work.
 - [QUESTBOOK_MODEL](questbook/docs/QUESTBOOK_MODEL.md): quest lifecycle, placement bands, risk, difficulty, and harvest rules.
 - [QUESTBOOK_FIRST_WAVE](questbook/docs/QUESTBOOK_FIRST_WAVE.md): first-wave guardrails.
 

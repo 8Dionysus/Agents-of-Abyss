@@ -3,6 +3,7 @@ id: AOA-Q-0005
 title: Define the second RPG reflection wave for skills as abilities and techniques as feats
 summary: Extend the adjunct RPG layer into execution and reusable-practice contours without collapsing skills, techniques, playbooks, or runtime layers.
 repo: Agents-of-Abyss
+lane: center
 owner_surface: center/rpg-second-wave
 theme_ref: ''
 milestone_ref: ''

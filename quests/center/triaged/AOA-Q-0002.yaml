@@ -3,6 +3,7 @@ id: AOA-Q-0002
 title: Define a source-owned quest dispatch seam without promoting routing into authority
 summary: ''
 repo: Agents-of-Abyss
+lane: center
 owner_surface: center/routing-boundary
 theme_ref: ''
 milestone_ref: ''

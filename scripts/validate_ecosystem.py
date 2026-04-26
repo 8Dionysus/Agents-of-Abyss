@@ -38,6 +38,28 @@ QUESTBOOK_SECTION_TO_BAND = {
 }
 QUEST_ID_RE = re.compile(r"`(AOA-Q-\d{4})`")
 MARKDOWN_BULLET_RE = re.compile(r"^[*+-]\s+")
+QUEST_LANES = {
+    "center",
+    "agon",
+    "experience",
+    "rpg",
+    "recurrence",
+    "questbook",
+    "antifragility",
+    "method-growth",
+    "release-support",
+    "tos-bridge",
+}
+QUEST_LIFECYCLE_STATES = {
+    "captured",
+    "triaged",
+    "ready",
+    "active",
+    "blocked",
+    "reanchor",
+    "done",
+    "dropped",
+}
 
 ALLOWED_STATUS = {
     "active",
@@ -451,12 +473,22 @@ def collect_quest_paths() -> dict[str, Path]:
     root_quest_files = sorted(path for path in QUESTS_PATH.glob("AOA-Q-*.yaml") if path.is_file())
     if root_quest_files:
         listed = ", ".join(path.relative_to(REPO_ROOT).as_posix() for path in root_quest_files)
-        fail(f"quest yaml files must live in lifecycle directories, not top-level quests: {listed}")
+        fail(f"quest yaml files must live in lane-first lifecycle directories, not top-level quests: {listed}")
+    old_lifecycle_dirs = sorted(path for path in QUESTS_PATH.iterdir() if path.is_dir() and path.name in QUEST_LIFECYCLE_STATES)
+    if old_lifecycle_dirs:
+        listed = ", ".join(path.relative_to(REPO_ROOT).as_posix() for path in old_lifecycle_dirs)
+        fail(f"quest lifecycle directories must live under a lane, not directly under quests: {listed}")
 
     quest_paths: dict[str, Path] = {}
-    for path in sorted(QUESTS_PATH.glob("*/AOA-Q-*.yaml")):
+    for path in sorted(QUESTS_PATH.glob("*/*/AOA-Q-*.yaml")):
         if not path.is_file():
             continue
+        lane = path.parent.parent.name
+        state = path.parent.name
+        if lane not in QUEST_LANES:
+            fail(f"{path.relative_to(REPO_ROOT).as_posix()} uses unsupported quest lane '{lane}'")
+        if state not in QUEST_LIFECYCLE_STATES:
+            fail(f"{path.relative_to(REPO_ROOT).as_posix()} uses unsupported quest lifecycle state '{state}'")
         quest_id = path.stem
         previous = quest_paths.get(quest_id)
         if previous is not None:
@@ -499,6 +531,18 @@ def validate_questbook_surface() -> None:
             fail(
                 f"{path.relative_to(REPO_ROOT).as_posix()} must target "
                 "repo 'Agents-of-Abyss'"
+            )
+        lane = path.parent.parent.name
+        if payload.get("lane") != lane:
+            fail(
+                f"{path.relative_to(REPO_ROOT).as_posix()} lane '{payload.get('lane')}' "
+                f"does not match path lane '{lane}'"
+            )
+        state = path.parent.name
+        if payload.get("state") != state:
+            fail(
+                f"{path.relative_to(REPO_ROOT).as_posix()} state '{payload.get('state')}' "
+                f"does not match path state '{state}'"
             )
 
         payload_id = payload.get("id")

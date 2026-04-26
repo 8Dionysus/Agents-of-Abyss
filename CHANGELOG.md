@@ -58,9 +58,13 @@ Tracking starts with the community-docs baseline for this repository.
 - `mechanics/ARTIFACT_TOPOLOGY.md` and
   `scripts/validate_mechanic_artifact_topology.py` for mechanic-owned schemas,
   examples, config, generated companions, scripts, and tests
-- Questbook lifecycle board validation through
-  `mechanics/questbook/scripts/validate_questbook_lifecycle.py`, lifecycle directories under
-  `quests/`, and checks that reject top-level `AOA-Q-*` aliases
+- Questbook lane-first lifecycle validation through
+  `mechanics/questbook/scripts/validate_questbook_lifecycle.py`,
+  `mechanics/questbook/scripts/build_questbook_index.py`,
+  `mechanics/questbook/scripts/validate_questbook_index.py`,
+  `generated/questbook_index.min.json`,
+  `generated/questbook_frontier.min.json`, and checks that reject top-level
+  `AOA-Q-*` aliases plus root lifecycle source directories
 
 ### Changed
 
@@ -128,9 +132,10 @@ Tracking starts with the community-docs baseline for this repository.
 - Agon, Experience, RPG, antifragility, and method-growth mechanic artifacts now
   live in mechanic-owned homes; root technical districts keep repo-wide
   contracts only and no longer carry mechanic artifact aliases
-- Questbook now uses lifecycle source placement instead of a flat quest pile:
-  `captured`, `triaged`, `ready`, `active`, `blocked`, `reanchor`, `done`, and
-  `dropped`
+- Questbook now uses lane-first lifecycle source placement instead of a flat
+  quest pile: `quests/center/`, `quests/agon/`, `quests/experience/`, and the
+  remaining mechanic lanes hold state directories such as `triaged`, `ready`,
+  `active`, `blocked`, `reanchor`, `done`, and `dropped`
 - detailed agent-lane and Codex audit references now live under
   `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
   narrow compatibility route into `mechanics/README.md`

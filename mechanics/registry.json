@@ -249,10 +249,10 @@
       "agents_ref": "mechanics/agon/AGENTS.md",
       "canonical_docs": [
         "mechanics/agon/DIRECTION.md",
-    "mechanics/agon/PARTS.md",
-    "mechanics/agon/PROVENANCE.md",
-    "mechanics/agon/artifact-map.json",
-    "mechanics/agon/ROADMAP.md",
+        "mechanics/agon/PARTS.md",
+        "mechanics/agon/PROVENANCE.md",
+        "mechanics/agon/artifact-map.json",
+        "mechanics/agon/ROADMAP.md",
         "mechanics/agon/LANDING_LOG.md",
         "mechanics/agon/parts/imposition-readiness/README.md",
         "mechanics/agon/parts/lawful-move-grammar/README.md",
@@ -322,10 +322,10 @@
       "slug": "agon",
       "status": "landed",
       "title": "Agon",
-  "validation_refs": [
-    "mechanics/agon/scripts/validate_agon_distillation.py",
-    "scripts/validate_mechanic_artifact_topology.py",
-    "scripts/validate_mechanic_landing_logs.py",
+      "validation_refs": [
+        "mechanics/agon/scripts/validate_agon_distillation.py",
+        "scripts/validate_mechanic_artifact_topology.py",
+        "scripts/validate_mechanic_landing_logs.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/validate_mechanic_readme_cards.py",
         "scripts/build_mechanic_card_index.py",
@@ -402,6 +402,8 @@
     {
       "agents_ref": "mechanics/questbook/AGENTS.md",
       "canonical_docs": [
+        "mechanics/questbook/PARTS.md",
+        "mechanics/questbook/DIRECTION.md",
         "mechanics/questbook/docs/QUESTBOOK_MODEL.md",
         "mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md",
         "QUESTBOOK.md",
@@ -409,7 +411,7 @@
         "mechanics/questbook/docs/QUESTBOOK_OWNER_REPO_REQUESTS.md"
       ],
       "card": {
-        "center_owns": "Federation-level quest mechanics, root public quest index posture, quest item placement, and obligation lifecycle language.",
+        "center_owns": "Federation-level quest mechanics, root public quest index posture, lane-first quest item placement, generated read models, and obligation lifecycle language.",
         "inputs": [
           "Deferred obligation, follow-up, risk, dependency, or public work item that must not be lost.",
           "Enough context to choose center quest placement or route the obligation to the owner repository."
@@ -419,12 +421,12 @@
           "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
         ],
         "outputs": [
-          "Quest item, root questbook index update, owner-local task route, proof request, or closure note.",
+          "Quest item, root questbook index update, generated Questbook read model, owner-local task route, proof request, or closure note.",
           "No private scratchpad and no parallel roadmap."
         ],
         "stronger_owner_split": [
           "Owner repositories own repo-local obligations and local task truth.",
-          "`quests/` holds public center quest items in lifecycle directories, not private scratch work.",
+          "`quests/` holds public quest items in lane-first lifecycle directories, not private scratch work.",
           "`aoa-playbooks` owns recurring quest choreography when a quest becomes repeatable method.",
           "`aoa-evals` owns proof obligations attached to quest closure.",
           "`aoa-memo` owns lessons retained after quest completion."
@@ -439,7 +441,7 @@
         "private scratchpad",
         "repo-local task sink"
       ],
-      "owner_boundary": "Quest lifecycle and public obligation mechanics; root QUESTBOOK remains index and quests/ remains lifecycle item store.",
+      "owner_boundary": "Quest lifecycle and public obligation mechanics; root QUESTBOOK remains index and quests/ remains lane-first lifecycle item store.",
       "owner_request_doc_ref": "mechanics/questbook/docs/QUESTBOOK_OWNER_REPO_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-QUESTBOOK-PLAYBOOKS-001",
@@ -455,6 +457,8 @@
       "validation_refs": [
         "scripts/validate_mechanics_topology.py",
         "mechanics/questbook/scripts/validate_questbook_lifecycle.py",
+        "mechanics/questbook/scripts/build_questbook_index.py",
+        "mechanics/questbook/scripts/validate_questbook_index.py",
         "scripts/validate_mechanic_readme_cards.py",
         "scripts/build_mechanic_card_index.py",
         "scripts/validate_mechanic_card_index.py",
