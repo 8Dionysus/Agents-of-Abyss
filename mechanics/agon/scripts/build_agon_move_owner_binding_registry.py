@@ -85,8 +85,12 @@ def require_non_empty_string_list(value: Any, *, move_id: str, field: str) -> li
 
 
 def collect_move_ids_from_wave3(root: Path = ROOT) -> set[str]:
-    seed = root / "config" / "agon_lawful_moves.seed.json"
-    registry = root / "generated" / "agon_lawful_move_registry.min.json"
+    package_root = root / "mechanics" / "agon"
+    if not package_root.exists():
+        package_root = root
+
+    seed = package_root / "config" / "agon_lawful_moves.seed.json"
+    registry = package_root / "generated" / "agon_lawful_move_registry.min.json"
 
     if seed.exists():
         data = read_json(seed)
