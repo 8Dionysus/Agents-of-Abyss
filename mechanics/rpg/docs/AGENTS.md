@@ -6,15 +6,13 @@ This card applies to `mechanics/rpg/docs/` and all descendant source documents.
 
 ## Role
 
-`mechanics/rpg/docs/` holds detailed center-source doctrine, models, waves, stop-lines, handoffs,
-packets, or support notes for the `RPG` mechanic. The package `README.md` remains the entry card;
-this docs directory holds the deeper material.
+`mechanics/rpg/docs/` holds detailed center-source doctrine, models, waves, stop-lines, handoffs, packets, and support notes for the `RPG` mechanic.
+The package `README.md` remains the entry card; this docs directory holds the deeper material.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/rpg/AGENTS.md`, `mechanics/rpg/README.md`,
-and the specific source document you are changing. If a generated surface mirrors this document,
-read the builder and validator before editing.
+Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/rpg/AGENTS.md`, `mechanics/rpg/README.md`, and the specific source document you are changing.
+If a generated surface mirrors this document, read the matching validator before editing.
 
 ## Boundaries
 
@@ -25,36 +23,18 @@ read the builder and validator before editing.
 
 ## Validation
 
-Run package and link checks:
-
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_links.py
-python scripts/validate_mechanic_readme_cards.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_mechanic_landing_logs.py --mechanic rpg
-python -m pytest -q
-```
-
-Run any targeted builder, validator, and test named by the generated or version-specific surface you touched.
+Use the package validation lane in `mechanics/rpg/AGENTS.md`.
+Run the owner-request block there when `RPG_OWNER_REPO_REQUESTS.md` changes.
 
 <!-- centralized-child-validation:start -->
 
 ### Centralized Child Validation
 
-Executable validation commands from child docs live here. Child docs should
-route to this section instead of carrying command blocks.
+Executable validation commands from child docs live here. Child docs should route to this section instead of carrying command blocks.
 
 #### `mechanics/rpg/docs/RPG_OWNER_REPO_REQUESTS.md`
 
-```bash
-python scripts/validate_owner_request_queue.py --mechanic rpg
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic rpg
-python scripts/validate_mechanics_topology.py --mechanic rpg
-```
+Use the RPG package AGENTS owner-request validation block.
 
 <!-- centralized-child-validation:end -->
 

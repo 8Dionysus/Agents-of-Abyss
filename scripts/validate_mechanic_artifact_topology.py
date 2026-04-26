@@ -76,7 +76,11 @@ QUESTBOOK_PREFIXES = (
     "validate_questbook_lifecycle",
     "validate_ready_owner_routes",
 )
-RPG_PREFIXES = ("dual_vocabulary_overlay",)
+RPG_PREFIXES = (
+    "dual_vocabulary_overlay",
+    "test_rpg",
+    "validate_rpg",
+)
 
 ROOT_ALLOWLIST = {
     "generated": {
