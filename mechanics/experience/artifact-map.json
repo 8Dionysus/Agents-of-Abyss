@@ -222,8 +222,9 @@
       "part": "adoption-federation",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_wave3_federation_adoption.example.json",
-      "path": "mechanics/experience/parts/adoption-federation/examples/experience_wave3_federation_adoption.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/adoption-federation/examples/experience_federation_adoption.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_wave3_federation_adoption.example.json"
     },
     {
       "kind": "example",
@@ -342,8 +343,9 @@
       "part": "adoption-federation",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-wave3-federation-adoption.schema.json",
-      "path": "mechanics/experience/parts/adoption-federation/schemas/experience-wave3-federation-adoption.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/adoption-federation/schemas/experience-federation-adoption.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-wave3-federation-adoption.schema.json"
     },
     {
       "kind": "schema",
@@ -728,8 +730,9 @@
       "part": "capture-kernel",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_wave1_flow.example.json",
-      "path": "mechanics/experience/parts/capture-kernel/examples/experience_wave1_flow.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/capture-kernel/examples/experience_capture_flow.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_wave1_flow.example.json"
     },
     {
       "kind": "schema",
@@ -744,8 +747,9 @@
       "part": "capture-kernel",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-wave1-flow.schema.json",
-      "path": "mechanics/experience/parts/capture-kernel/schemas/experience-wave1-flow.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/capture-kernel/schemas/experience-capture-flow.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-wave1-flow.schema.json"
     },
     {
       "kind": "schema",
@@ -962,8 +966,9 @@
       "part": "certification-proof",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_wave2_certification_watchtower.example.json",
-      "path": "mechanics/experience/parts/certification-proof/examples/experience_wave2_certification_watchtower.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/certification-proof/examples/experience_certification_watchtower.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_wave2_certification_watchtower.example.json"
     },
     {
       "kind": "example",
@@ -978,8 +983,9 @@
       "part": "certification-proof",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-wave2-certification-watchtower.schema.json",
-      "path": "mechanics/experience/parts/certification-proof/schemas/experience-wave2-certification-watchtower.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/certification-proof/schemas/experience-certification-watchtower.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-wave2-certification-watchtower.schema.json"
     },
     {
       "kind": "schema",
@@ -1196,16 +1202,18 @@
       "part": "compatibility-bridges",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json",
-      "path": "mechanics/experience/parts/compatibility-bridges/examples/experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/experience_agonic_pair_trials_arena_kernel.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json"
     },
     {
       "kind": "example",
       "part": "compatibility-bridges",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json",
-      "path": "mechanics/experience/parts/compatibility-bridges/examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/compatibility-bridges/examples/experience_epistemic_duel_model_forge.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_5_epistemic_duel_model_of_other_forge.example.json"
     },
     {
       "kind": "example",
@@ -1252,16 +1260,18 @@
       "part": "compatibility-bridges",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json",
-      "path": "mechanics/experience/parts/compatibility-bridges/schemas/experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/experience-agonic-pair-trials-arena-kernel.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json"
     },
     {
       "kind": "schema",
       "part": "compatibility-bridges",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json",
-      "path": "mechanics/experience/parts/compatibility-bridges/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/compatibility-bridges/schemas/experience-epistemic-duel-model-forge.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-v1-5-epistemic-duel-model-of-other-forge.schema.json"
     },
     {
       "kind": "schema",
@@ -1376,40 +1386,45 @@
       "part": "continuity-context",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v1_6_epistemic_memory_rank_reputation_engine.example.json",
-      "path": "mechanics/experience/parts/continuity-context/examples/experience_v1_6_epistemic_memory_rank_reputation_engine.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/continuity-context/examples/experience_memory_rank_reputation.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_6_epistemic_memory_rank_reputation_engine.example.json"
     },
     {
       "kind": "example",
       "part": "continuity-context",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v1_7_affective_economy_honor_treasury.example.json",
-      "path": "mechanics/experience/parts/continuity-context/examples/experience_v1_7_affective_economy_honor_treasury.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/continuity-context/examples/experience_affective_economy_honor_treasury.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_7_affective_economy_honor_treasury.example.json"
     },
     {
       "kind": "example",
       "part": "continuity-context",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v1_8_context_routing_nervous_system.example.json",
-      "path": "mechanics/experience/parts/continuity-context/examples/experience_v1_8_context_routing_nervous_system.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/continuity-context/examples/experience_context_routing.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_8_context_routing_nervous_system.example.json"
     },
     {
       "kind": "example",
       "part": "continuity-context",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v1_9_context_memory_weaving_continuity_loom.example.json",
-      "path": "mechanics/experience/parts/continuity-context/examples/experience_v1_9_context_memory_weaving_continuity_loom.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/continuity-context/examples/experience_continuity_loom.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_9_context_memory_weaving_continuity_loom.example.json"
     },
     {
       "kind": "example",
       "part": "continuity-context",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v2_0_living_workspace_continuity_runtime.example.json",
-      "path": "mechanics/experience/parts/continuity-context/examples/experience_v2_0_living_workspace_continuity_runtime.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/continuity-context/examples/experience_living_workspace_continuity_runtime.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v2_0_living_workspace_continuity_runtime.example.json"
     },
     {
       "kind": "example",
@@ -1448,40 +1463,45 @@
       "part": "continuity-context",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json",
-      "path": "mechanics/experience/parts/continuity-context/schemas/experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/continuity-context/schemas/experience-memory-rank-reputation.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json"
     },
     {
       "kind": "schema",
       "part": "continuity-context",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-v1-7-affective-economy-honor-treasury.schema.json",
-      "path": "mechanics/experience/parts/continuity-context/schemas/experience-v1-7-affective-economy-honor-treasury.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/continuity-context/schemas/experience-affective-economy-honor-treasury.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-v1-7-affective-economy-honor-treasury.schema.json"
     },
     {
       "kind": "schema",
       "part": "continuity-context",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-v1-8-context-routing-nervous-system.schema.json",
-      "path": "mechanics/experience/parts/continuity-context/schemas/experience-v1-8-context-routing-nervous-system.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/continuity-context/schemas/experience-context-routing.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-v1-8-context-routing-nervous-system.schema.json"
     },
     {
       "kind": "schema",
       "part": "continuity-context",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-v1-9-context-memory-weaving-continuity-loom.schema.json",
-      "path": "mechanics/experience/parts/continuity-context/schemas/experience-v1-9-context-memory-weaving-continuity-loom.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/continuity-context/schemas/experience-continuity-loom.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-v1-9-context-memory-weaving-continuity-loom.schema.json"
     },
     {
       "kind": "schema",
       "part": "continuity-context",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-v2-0-living-workspace-continuity-runtime.schema.json",
-      "path": "mechanics/experience/parts/continuity-context/schemas/experience-v2-0-living-workspace-continuity-runtime.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/continuity-context/schemas/experience-living-workspace-continuity-runtime.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-v2-0-living-workspace-continuity-runtime.schema.json"
     },
     {
       "kind": "schema",
@@ -1850,8 +1870,9 @@
       "part": "governance-polis",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_wave4_polis_constitution.example.json",
-      "path": "mechanics/experience/parts/governance-polis/examples/experience_wave4_polis_constitution.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/governance-polis/examples/experience_polis_constitution.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_wave4_polis_constitution.example.json"
     },
     {
       "kind": "example",
@@ -2010,8 +2031,9 @@
       "part": "governance-polis",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-wave4-polis-constitution.schema.json",
-      "path": "mechanics/experience/parts/governance-polis/schemas/experience-wave4-polis-constitution.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/governance-polis/schemas/experience-polis-constitution.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-wave4-polis-constitution.schema.json"
     },
     {
       "kind": "schema",
@@ -2357,16 +2379,18 @@
       "part": "office-operations",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v1_3_office_foundry_role_pairs.example.json",
-      "path": "mechanics/experience/parts/office-operations/examples/experience_v1_3_office_foundry_role_pairs.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/office-operations/examples/experience_office_foundry_role_pairs.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_3_office_foundry_role_pairs.example.json"
     },
     {
       "kind": "example",
       "part": "office-operations",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_wave5_sovereign_office.example.json",
-      "path": "mechanics/experience/parts/office-operations/examples/experience_wave5_sovereign_office.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/office-operations/examples/experience_sovereign_office.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_wave5_sovereign_office.example.json"
     },
     {
       "kind": "example",
@@ -2493,16 +2517,18 @@
       "part": "office-operations",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-v1-3-office-foundry-role-pairs.schema.json",
-      "path": "mechanics/experience/parts/office-operations/schemas/experience-v1-3-office-foundry-role-pairs.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/office-operations/schemas/experience-office-foundry-role-pairs.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-v1-3-office-foundry-role-pairs.schema.json"
     },
     {
       "kind": "schema",
       "part": "office-operations",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-wave5-sovereign-office.schema.json",
-      "path": "mechanics/experience/parts/office-operations/schemas/experience-wave5-sovereign-office.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/office-operations/schemas/experience-sovereign-office.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-wave5-sovereign-office.schema.json"
     },
     {
       "kind": "schema",
@@ -2914,8 +2940,9 @@
       "part": "release-deployment",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v1_0_event_kind_registry_v1.example.json",
-      "path": "mechanics/experience/parts/release-deployment/examples/experience_v1_0_event_kind_registry_v1.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/release-deployment/examples/experience_release_event_kind_registry_v1.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_0_event_kind_registry_v1.example.json"
     },
     {
       "kind": "example",
@@ -3122,8 +3149,9 @@
       "part": "release-deployment",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience_v1_0_event_kind_registry_v1.json",
-      "path": "mechanics/experience/parts/release-deployment/schemas/experience_v1_0_event_kind_registry_v1.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/release-deployment/schemas/experience_release_event_kind_registry_v1.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_0_event_kind_registry_v1.json"
     },
     {
       "kind": "schema",
@@ -3162,8 +3190,9 @@
       "part": "runtime-boundary",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v1_2_to_v2_0_bridge.example.json",
-      "path": "mechanics/experience/parts/runtime-boundary/examples/experience_v1_2_to_v2_0_bridge.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/runtime-boundary/examples/experience_runtime_boundary_bridge.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_2_to_v2_0_bridge.example.json"
     },
     {
       "kind": "schema",
@@ -3178,8 +3207,9 @@
       "part": "runtime-boundary",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-v1-2-v2-0-bridge.schema.json",
-      "path": "mechanics/experience/parts/runtime-boundary/schemas/experience-v1-2-v2-0-bridge.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/runtime-boundary/schemas/experience-runtime-boundary-bridge.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-v1-2-v2-0-bridge.schema.json"
     },
     {
       "kind": "schema",
@@ -3220,8 +3250,9 @@
       "part": "service-mesh",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/experience_v1_2_service_mesh_operations.example.json",
-      "path": "mechanics/experience/parts/service-mesh/examples/experience_v1_2_service_mesh_operations.example.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/service-mesh/examples/experience_service_mesh_operations.example.json",
+      "legacy_named": true,
+      "renamed_from": "experience_v1_2_service_mesh_operations.example.json"
     },
     {
       "kind": "example",
@@ -3236,8 +3267,9 @@
       "part": "service-mesh",
       "status": "active-part-artifact",
       "old_path": "mechanics/experience/schemas/experience-v1-2-service-mesh-operations.schema.json",
-      "path": "mechanics/experience/parts/service-mesh/schemas/experience-v1-2-service-mesh-operations.schema.json",
-      "legacy_named": true
+      "path": "mechanics/experience/parts/service-mesh/schemas/experience-service-mesh-operations.schema.json",
+      "legacy_named": true,
+      "renamed_from": "experience-v1-2-service-mesh-operations.schema.json"
     },
     {
       "kind": "schema",

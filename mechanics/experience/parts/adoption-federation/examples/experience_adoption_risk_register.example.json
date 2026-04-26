@@ -13,7 +13,7 @@
     ]
   },
   "payload": {
-    "wave": "v0.7",
+    "source_contour": "v0.7",
     "repo": "Agents-of-Abyss",
     "pattern_ref": "pattern.shared.wrong_surface_to_owner_landing.v1",
     "owner_surface": "Agents-of-Abyss",

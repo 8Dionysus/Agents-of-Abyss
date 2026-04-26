@@ -16,12 +16,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "office-operations" / "scripts" / "validate_office_role_pairs.py"
-    spec = importlib.util.spec_from_file_location("experience_v13_office_foundry_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "office-operations"
+        / "scripts"
+        / "validate_office_role_pairs.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_office_foundry_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -30,23 +41,38 @@ def load_validator():
 
 def load_example() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "office-operations" / "examples" / "experience_v1_3_office_foundry_role_pairs.example.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "office-operations"
+            / "examples"
+            / "experience_office_foundry_role_pairs.example.json"
+        ).read_text(encoding="utf-8")
     )
 
 
 def load_schema() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "office-operations" / "schemas" / "experience-v1-3-office-foundry-role-pairs.schema.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "office-operations"
+            / "schemas"
+            / "experience-office-foundry-role-pairs.schema.json"
+        ).read_text(encoding="utf-8")
     )
 
 
-def test_experience_v13_office_foundry_validator_passes() -> None:
+def test_experience_office_foundry_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/office-operations/scripts/validate_office_role_pairs.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/office-operations/scripts/validate_office_role_pairs.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -54,31 +80,35 @@ def test_experience_v13_office_foundry_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_v13_office_foundry_requires_source_archive() -> None:
+def test_experience_office_foundry_requires_source_archive() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     source = bad_payload["source_seed"]
     assert isinstance(source, dict)
-    source["archive_name"] = "aoa-experience-agonic-pair-trials-mechanical-arena-kernel-seed-v1_4.zip"
+    source["receipt_ref"] = (
+        "experience.seed.agonic-pair-trials-arena-kernel"
+    )
 
-    with pytest.raises(validator.ValidationError, match="archive_name|schema"):
+    with pytest.raises(validator.ValidationError, match="receipt_ref|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_rejects_runtime_activation() -> None:
+def test_experience_office_foundry_rejects_runtime_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_runtime_activation"] = True
 
-    with pytest.raises(validator.ValidationError, match="schema|live_runtime_activation"):
+    with pytest.raises(
+        validator.ValidationError, match="schema|live_runtime_activation"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_expanded_offices_exactly() -> None:
+def test_experience_office_foundry_requires_expanded_offices_exactly() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -87,11 +117,13 @@ def test_experience_v13_office_foundry_requires_expanded_offices_exactly() -> No
     assert isinstance(offices, list)
     offices.append("steward.agonic")
 
-    with pytest.raises(validator.ValidationError, match="expanded_service_offices|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="expanded_service_offices|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_rejects_hybrid_role_pair() -> None:
+def test_experience_office_foundry_rejects_hybrid_role_pair() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -104,7 +136,7 @@ def test_experience_v13_office_foundry_rejects_hybrid_role_pair() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_role_pair_kind_split() -> None:
+def test_experience_office_foundry_requires_role_pair_kind_split() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -133,7 +165,7 @@ def test_experience_v13_office_foundry_requires_role_pair_kind_split() -> None:
         "allow hybrid actor",
     ],
 )
-def test_experience_v13_office_foundry_rejects_codex_authority_leaks(
+def test_experience_office_foundry_rejects_codex_authority_leaks(
     forbidden_grant: str,
 ) -> None:
     validator = load_validator()
@@ -146,11 +178,13 @@ def test_experience_v13_office_foundry_rejects_codex_authority_leaks(
     assert isinstance(may, list)
     may.append(forbidden_grant)
 
-    with pytest.raises(validator.ValidationError, match="codex_may|forbidden office foundry authority"):
+    with pytest.raises(
+        validator.ValidationError, match="codex_may|forbidden office foundry authority"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_hard_guard_order() -> None:
+def test_experience_office_foundry_requires_hard_guard_order() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -163,7 +197,7 @@ def test_experience_v13_office_foundry_requires_hard_guard_order() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_blocks_same_actor_cross_kind() -> None:
+def test_experience_office_foundry_blocks_same_actor_cross_kind() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -178,7 +212,7 @@ def test_experience_v13_office_foundry_blocks_same_actor_cross_kind() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_rejects_active_landing_state() -> None:
+def test_experience_office_foundry_rejects_active_landing_state() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -206,7 +240,7 @@ def test_experience_v13_office_foundry_rejects_active_landing_state() -> None:
         "derived_layer",
     ],
 )
-def test_experience_v13_office_foundry_recharter_blocks_forbidden_requesters(
+def test_experience_office_foundry_recharter_blocks_forbidden_requesters(
     requester: str,
 ) -> None:
     validator = load_validator()
@@ -225,7 +259,9 @@ def test_experience_v13_office_foundry_recharter_blocks_forbidden_requesters(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_scar_candidate_only_no_durable_write() -> None:
+def test_experience_office_foundry_requires_scar_candidate_only_no_durable_write() -> (
+    None
+):
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -240,7 +276,7 @@ def test_experience_v13_office_foundry_requires_scar_candidate_only_no_durable_w
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_rejects_direct_tos_runtime_boundary() -> None:
+def test_experience_office_foundry_rejects_direct_tos_runtime_boundary() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -255,7 +291,7 @@ def test_experience_v13_office_foundry_rejects_direct_tos_runtime_boundary() -> 
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_rejects_routing_meaning_definition() -> None:
+def test_experience_office_foundry_rejects_routing_meaning_definition() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -270,7 +306,7 @@ def test_experience_v13_office_foundry_rejects_routing_meaning_definition() -> N
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_rejects_eval_scar_rank_closure_grant() -> None:
+def test_experience_office_foundry_rejects_eval_scar_rank_closure_grant() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -285,7 +321,9 @@ def test_experience_v13_office_foundry_rejects_eval_scar_rank_closure_grant() ->
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_archive_consistency_failure_on_disagreement() -> None:
+def test_experience_office_foundry_requires_archive_consistency_failure_on_disagreement() -> (
+    None
+):
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -300,7 +338,7 @@ def test_experience_v13_office_foundry_requires_archive_consistency_failure_on_d
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_assistant_self_recharter_denial() -> None:
+def test_experience_office_foundry_requires_assistant_self_recharter_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -315,7 +353,7 @@ def test_experience_v13_office_foundry_requires_assistant_self_recharter_denial(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_flow_owner_routing() -> None:
+def test_experience_office_foundry_requires_flow_owner_routing() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -328,7 +366,7 @@ def test_experience_v13_office_foundry_requires_flow_owner_routing() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_flow_stop_lines() -> None:
+def test_experience_office_foundry_requires_flow_stop_lines() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -352,7 +390,7 @@ def test_experience_v13_office_foundry_requires_flow_stop_lines() -> None:
         "KAG canon follows from this pattern",
     ],
 )
-def test_experience_v13_office_foundry_rejects_flow_authority_note_leaks(
+def test_experience_office_foundry_rejects_flow_authority_note_leaks(
     authority_note: str,
 ) -> None:
     validator = load_validator()
@@ -376,7 +414,7 @@ def test_experience_v13_office_foundry_rejects_flow_authority_note_leaks(
         "evals_as_certifier",
     ],
 )
-def test_experience_v13_office_foundry_requires_derived_layer_denials(
+def test_experience_office_foundry_requires_derived_layer_denials(
     derived_denial: str,
 ) -> None:
     validator = load_validator()
@@ -393,7 +431,7 @@ def test_experience_v13_office_foundry_requires_derived_layer_denials(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_runtime_owner_gate() -> None:
+def test_experience_office_foundry_requires_runtime_owner_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -404,11 +442,13 @@ def test_experience_v13_office_foundry_requires_runtime_owner_gate() -> None:
         if entry.get("repo") == "abyss-stack":
             entry["owns"] = "runtime activation storage guard events and workers"
 
-    with pytest.raises(validator.ValidationError, match="owner_split|runtime-owner gate"):
+    with pytest.raises(
+        validator.ValidationError, match="owner_split|runtime-owner gate"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_tos_runtime_write_denial() -> None:
+def test_experience_office_foundry_requires_tos_runtime_write_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -423,7 +463,7 @@ def test_experience_v13_office_foundry_requires_tos_runtime_write_denial() -> No
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_agents_no_hybrid_denial() -> None:
+def test_experience_office_foundry_requires_agents_no_hybrid_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -432,13 +472,15 @@ def test_experience_v13_office_foundry_requires_agents_no_hybrid_denial() -> Non
     assert isinstance(owner_split, list)
     for entry in owner_split:
         if entry.get("repo") == "aoa-agents":
-            entry["must_not"] = "grant self-release self-enroll self-certify or scar authority"
+            entry["must_not"] = (
+                "grant self-release self-enroll self-certify or scar authority"
+            )
 
     with pytest.raises(validator.ValidationError, match="owner_split|aoa-agents"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_kag_canon_denial() -> None:
+def test_experience_office_foundry_requires_kag_canon_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -453,7 +495,7 @@ def test_experience_v13_office_foundry_requires_kag_canon_denial() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_sdk_semantic_authority_denial() -> None:
+def test_experience_office_foundry_requires_sdk_semantic_authority_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -468,7 +510,7 @@ def test_experience_v13_office_foundry_requires_sdk_semantic_authority_denial() 
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_human_runtime_gate() -> None:
+def test_experience_office_foundry_requires_human_runtime_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -477,20 +519,24 @@ def test_experience_v13_office_foundry_requires_human_runtime_gate() -> None:
     assert isinstance(authority, dict)
     gates = authority["human_gates_required"]
     assert isinstance(gates, list)
-    gates.remove("runtime-owner gate before any service scheduler pair or worker activation")
+    gates.remove(
+        "runtime-owner gate before any service scheduler pair or worker activation"
+    )
 
     with pytest.raises(validator.ValidationError, match="human_gates_required"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v13_office_foundry_requires_all_owner_repos() -> None:
+def test_experience_office_foundry_requires_all_owner_repos() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     owner_split = bad_payload["owner_split"]
     assert isinstance(owner_split, list)
-    owner_split[:] = [entry for entry in owner_split if entry.get("repo") != "aoa-agents"]
+    owner_split[:] = [
+        entry for entry in owner_split if entry.get("repo") != "aoa-agents"
+    ]
 
     with pytest.raises(validator.ValidationError, match="owner_split|schema"):
         validator.validate_payload(bad_payload, schema)

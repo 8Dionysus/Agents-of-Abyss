@@ -8,7 +8,10 @@ import sys
 from pathlib import Path
 
 import pytest
-from jsonschema import Draft202012Validator, ValidationError as JSONSchemaValidationError
+from jsonschema import (
+    Draft202012Validator,
+    ValidationError as JSONSchemaValidationError,
+)
 
 
 def _repo_root() -> Path:
@@ -17,12 +20,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "scripts" / "validate_living_workspace_continuity.py"
-    spec = importlib.util.spec_from_file_location("experience_v20_living_workspace_runtime_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "continuity-context"
+        / "scripts"
+        / "validate_living_workspace_continuity.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_living_workspace_runtime_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -31,17 +45,29 @@ def load_validator():
 
 def load_example() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "examples" / "experience_v2_0_living_workspace_continuity_runtime.example.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "continuity-context"
+            / "examples"
+            / "experience_living_workspace_continuity_runtime.example.json"
+        ).read_text(encoding="utf-8")
     )
 
 
 def load_schema() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "schemas" / "experience-v2-0-living-workspace-continuity-runtime.schema.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "continuity-context"
+            / "schemas"
+            / "experience-living-workspace-continuity-runtime.schema.json"
+        ).read_text(encoding="utf-8")
     )
 
 
@@ -49,9 +75,12 @@ def validate_schema_only(payload: dict[str, object], schema: dict[str, object]) 
     Draft202012Validator(schema).validate(payload)
 
 
-def test_experience_v20_living_workspace_runtime_validator_passes() -> None:
+def test_experience_living_workspace_runtime_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/continuity-context/scripts/validate_living_workspace_continuity.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/continuity-context/scripts/validate_living_workspace_continuity.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -59,20 +88,24 @@ def test_experience_v20_living_workspace_runtime_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_v20_living_workspace_runtime_requires_source_archive() -> None:
+def test_experience_living_workspace_runtime_requires_source_archive() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     source = bad_payload["source_seed"]
     assert isinstance(source, dict)
-    source["archive_name"] = "aoa-experience-context-memory-weaving-continuity-loom-seed-v1_9.zip"
+    source["receipt_ref"] = (
+        "experience.seed.continuity-loom"
+    )
 
     with pytest.raises(validator.ValidationError, match="source_seed|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_schema_rejects_wrong_runtime_seam() -> None:
+def test_experience_living_workspace_runtime_schema_rejects_wrong_runtime_seam() -> (
+    None
+):
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
@@ -84,66 +117,82 @@ def test_experience_v20_living_workspace_runtime_schema_rejects_wrong_runtime_se
         validate_schema_only(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_rejects_live_activation() -> None:
+def test_experience_living_workspace_runtime_rejects_live_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_workspace_runtime_activation"] = True
 
-    with pytest.raises(validator.ValidationError, match="live_workspace_runtime_activation|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="live_workspace_runtime_activation|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_rejects_live_codex_continuity_installation() -> None:
+def test_experience_living_workspace_runtime_rejects_live_codex_continuity_installation() -> (
+    None
+):
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_codex_continuity_installation"] = True
 
-    with pytest.raises(validator.ValidationError, match="live_codex_continuity_installation|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="live_codex_continuity_installation|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_rejects_self_continuity_sovereignty() -> None:
+def test_experience_living_workspace_runtime_rejects_self_continuity_sovereignty() -> (
+    None
+):
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_self_continuity_sovereignty"] = True
 
-    with pytest.raises(validator.ValidationError, match="live_self_continuity_sovereignty|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="live_self_continuity_sovereignty|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_requires_wave9_predecessor() -> None:
+def test_experience_living_workspace_runtime_requires_continuity_predecessor() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/experience/legacy/raw/EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md")
+    predecessors.remove(
+        "experience.raw.continuity-loom"
+    )
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+    with pytest.raises(validator.ValidationError, match="predecessor_receipt_refs|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_requires_workspace_install_predecessor() -> None:
+def test_experience_living_workspace_runtime_requires_workspace_install_predecessor() -> (
+    None
+):
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("8Dionysus:docs/WORKSPACE_INSTALL.md")
+    predecessors.remove("public-entry.workspace-install")
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+    with pytest.raises(validator.ValidationError, match="predecessor_receipt_refs|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_schema_rejects_wrong_projection_owner() -> None:
+def test_experience_living_workspace_runtime_schema_rejects_wrong_projection_owner() -> (
+    None
+):
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
@@ -155,7 +204,9 @@ def test_experience_v20_living_workspace_runtime_schema_rejects_wrong_projection
         validate_schema_only(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_requires_tos_owned_runtime_boundary_review() -> None:
+def test_experience_living_workspace_runtime_requires_tos_owned_runtime_boundary_review() -> (
+    None
+):
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -168,7 +219,9 @@ def test_experience_v20_living_workspace_runtime_requires_tos_owned_runtime_boun
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_requires_tos_owned_runtime_boundary_flow_step() -> None:
+def test_experience_living_workspace_runtime_requires_tos_owned_runtime_boundary_flow_step() -> (
+    None
+):
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -181,7 +234,9 @@ def test_experience_v20_living_workspace_runtime_requires_tos_owned_runtime_boun
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_schema_rejects_wrong_integrity_flow_owner() -> None:
+def test_experience_living_workspace_runtime_schema_rejects_wrong_integrity_flow_owner() -> (
+    None
+):
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
@@ -193,7 +248,9 @@ def test_experience_v20_living_workspace_runtime_schema_rejects_wrong_integrity_
         validate_schema_only(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_requires_runtime_owner_human_gate() -> None:
+def test_experience_living_workspace_runtime_requires_runtime_owner_human_gate() -> (
+    None
+):
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -202,7 +259,9 @@ def test_experience_v20_living_workspace_runtime_requires_runtime_owner_human_ga
     assert isinstance(authority, dict)
     gates = authority["human_gates_required"]
     assert isinstance(gates, list)
-    gates.remove("runtime-owner gate before install storage cache worker scheduler daemon or background resume")
+    gates.remove(
+        "runtime-owner gate before install storage cache worker scheduler daemon or background resume"
+    )
 
     with pytest.raises(validator.ValidationError, match="authority|schema"):
         validator.validate_payload(bad_payload, schema)
@@ -230,7 +289,7 @@ def test_experience_v20_living_workspace_runtime_requires_runtime_owner_human_ga
         "no_raw_archive_or_generated_runtime_promotion",
     ],
 )
-def test_experience_v20_living_workspace_runtime_requires_hard_guards(guard: str) -> None:
+def test_experience_living_workspace_runtime_requires_hard_guards(guard: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -243,7 +302,9 @@ def test_experience_v20_living_workspace_runtime_requires_hard_guards(guard: str
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_schema_rejects_missing_hard_guard() -> None:
+def test_experience_living_workspace_runtime_schema_rejects_missing_hard_guard() -> (
+    None
+):
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
@@ -255,7 +316,7 @@ def test_experience_v20_living_workspace_runtime_schema_rejects_missing_hard_gua
         validate_schema_only(bad_payload, schema)
 
 
-def test_experience_v20_living_workspace_runtime_rejects_active_landing_state() -> None:
+def test_experience_living_workspace_runtime_rejects_active_landing_state() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -280,7 +341,9 @@ def test_experience_v20_living_workspace_runtime_rejects_active_landing_state() 
         "workspace_sovereignty_claim_allowed",
     ],
 )
-def test_experience_v20_living_workspace_runtime_blocks_projection_leaks(field: str) -> None:
+def test_experience_living_workspace_runtime_blocks_projection_leaks(
+    field: str,
+) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -303,7 +366,7 @@ def test_experience_v20_living_workspace_runtime_blocks_projection_leaks(field: 
         "direct_tos_runtime_write_allowed",
     ],
 )
-def test_experience_v20_living_workspace_runtime_blocks_authority_leaks(field: str) -> None:
+def test_experience_living_workspace_runtime_blocks_authority_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -326,7 +389,7 @@ def test_experience_v20_living_workspace_runtime_blocks_authority_leaks(field: s
         "route_loop_ignored_allowed",
     ],
 )
-def test_experience_v20_living_workspace_runtime_blocks_integrity_leaks(field: str) -> None:
+def test_experience_living_workspace_runtime_blocks_integrity_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -349,7 +412,7 @@ def test_experience_v20_living_workspace_runtime_blocks_integrity_leaks(field: s
         "dashboard_or_state_machine_authority_allowed",
     ],
 )
-def test_experience_v20_living_workspace_runtime_blocks_runtime_leaks(field: str) -> None:
+def test_experience_living_workspace_runtime_blocks_runtime_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()

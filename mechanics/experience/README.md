@@ -73,6 +73,7 @@ python scripts/validate_owner_request_docs.py --mechanic experience
 - [ROADMAP](ROADMAP.md)
 - [OWNER_REQUESTS](OWNER_REQUESTS.md)
 - [artifact-map](artifact-map.json)
+- [provenance-receipts](provenance-receipts.json)
 - [PROVENANCE](PROVENANCE.md)
 
 ## Functioning parts
@@ -97,11 +98,16 @@ A request packet is not owner acceptance. Keep `experience` claims center-bounde
 ## Historical provenance
 
 Use [PROVENANCE](PROVENANCE.md) only when auditing how archived source packets
-were distilled. The active user route is the part map above.
+were distilled. Active artifacts name older sources through
+[provenance-receipts](provenance-receipts.json), so the user route stays on the
+part map above.
 
 ## Owner boundary
 
-Center contracts and stop-lines through Wave 1-5 and v1.2-v2.0; live workspace, offices, runtime, routing, proof, KAG, memory, and ToS authority remain owner-local.
+Center contracts and stop-lines for capture, certification, adoption,
+governance, office, service, continuity, compatibility, and runtime-boundary
+contours; live workspace, offices, runtime, routing, proof, KAG, memory, and ToS
+authority remain owner-local.
 
 ## Growth posture
 

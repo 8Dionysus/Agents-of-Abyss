@@ -110,6 +110,15 @@ def test_part_validators_do_not_direct_read_raw_legacy() -> None:
     assert not [problem for problem in problems if "direct-read legacy/raw" in problem]
 
 
+def test_active_artifacts_do_not_use_release_contour_identity() -> None:
+    module = load_validator()
+    problems: list[str] = []
+
+    module.validate_active_artifact_names(problems)
+
+    assert problems == []
+
+
 def test_raw_legacy_readme_uses_package_validator_route() -> None:
     readme = (
         ROOT / "mechanics" / "experience" / "legacy" / "raw" / "README.md"

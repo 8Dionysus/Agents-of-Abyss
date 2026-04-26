@@ -71,7 +71,7 @@
     "payload": {
       "type": "object",
       "required": [
-        "wave",
+        "source_contour",
         "repo",
         "pattern_ref",
         "owner_surface",
@@ -81,7 +81,7 @@
       ],
       "additionalProperties": false,
       "properties": {
-        "wave": {
+        "source_contour": {
           "type": "string"
         },
         "repo": {

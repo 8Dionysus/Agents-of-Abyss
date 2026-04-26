@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience Wave 1 center kernel surfaces."""
+"""Validate the Experience capture kernel center surfaces."""
 
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ SCHEMA_PATH = (
     / "parts"
     / "capture-kernel"
     / "schemas"
-    / "experience-wave1-flow.schema.json"
+    / "experience-capture-flow.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -36,13 +36,13 @@ EXAMPLE_PATH = (
     / "parts"
     / "capture-kernel"
     / "examples"
-    / "experience_wave1_flow.example.json"
+    / "experience_capture_flow.example.json"
 )
 
 EXPECTED_SOURCE_SEEDS = [
-    "aoa-experience-mechanic-seed-v0_1.zip",
-    "aoa-experience-runtime-capture-seed-v0_2.zip",
-    "aoa-experience-pilot-integration-seed-v0_3.zip",
+    "experience.seed.mechanic",
+    "experience.seed.runtime-capture",
+    "experience.seed.pilot-integration",
 ]
 EXPECTED_EVENT_ORDER = [
     "friction_observed",
@@ -71,7 +71,7 @@ FORBIDDEN_PROJECTION_FIELDS = {
 
 
 class ValidationError(RuntimeError):
-    """Raised when an Experience Wave 1 surface drifts."""
+    """Raised when an Experience capture kernel surface drifts."""
 
 
 def fail(message: str) -> None:
@@ -96,7 +96,7 @@ def require_files() -> None:
         if not path.exists()
     ]
     if missing:
-        fail("missing Experience Wave 1 files: " + ", ".join(missing))
+        fail("missing Experience capture kernel files: " + ", ".join(missing))
 
 
 def require_dict(value: Any, label: str) -> dict[str, Any]:
@@ -112,17 +112,19 @@ def require_list(value: Any, label: str) -> list[Any]:
 
 
 def validate_schema(schema: dict[str, Any]) -> None:
-    if schema.get("title") != "experience_wave1_flow_v1":
+    if schema.get("title") != "experience_capture_flow_v1":
         fail(
-            "mechanics/experience/parts/capture-kernel/schemas/experience-wave1-flow.schema.json title must be experience_wave1_flow_v1"
+            "mechanics/experience/parts/capture-kernel/schemas/experience-capture-flow.schema.json title must be experience_capture_flow_v1"
         )
     if schema.get("additionalProperties") is not False:
-        fail("experience Wave 1 schema must reject additional top-level properties")
+        fail(
+            "Experience capture kernel schema must reject additional top-level properties"
+        )
     required = require_list(schema.get("required"), "schema.required")
     for key in (
         "schema_version",
-        "wave",
-        "source_seeds",
+        "contract_ref",
+        "source_receipt_refs",
         "candidate",
         "events",
         "verdict",
@@ -144,18 +146,20 @@ def validate_example_matches_schema(
         key=lambda error: list(error.path),
     )
     if errors:
-        fail(f"Experience Wave 1 example does not match schema: {errors[0].message}")
+        fail(
+            f"Experience capture kernel example does not match schema: {errors[0].message}"
+        )
 
 
 def validate_flow(flow: dict[str, Any]) -> None:
-    if flow.get("schema_version") != "experience_wave1_flow_v1":
-        fail("example schema_version must be experience_wave1_flow_v1")
-    if flow.get("wave") != "experience_wave1":
-        fail("example wave must be experience_wave1")
+    if flow.get("schema_version") != "experience_capture_flow_v1":
+        fail("example schema_version must be experience_capture_flow_v1")
+    if flow.get("contract_ref") != "experience_capture_flow":
+        fail("example contract_ref must be experience_capture_flow")
     if flow.get("status") != "center_kernel_seeded":
         fail("example status must be center_kernel_seeded")
-    if flow.get("source_seeds") != EXPECTED_SOURCE_SEEDS:
-        fail("example source_seeds must preserve the v0.1-v0.3 Wave 1 order")
+    if flow.get("source_receipt_refs") != EXPECTED_SOURCE_SEEDS:
+        fail("example source_receipt_refs must preserve the source-seed order")
 
     candidate = require_dict(flow.get("candidate"), "candidate")
     candidate_ref = candidate.get("candidate_ref")
@@ -170,9 +174,9 @@ def validate_flow(flow: dict[str, Any]) -> None:
         for index, event in enumerate(events)
     ]
     if kinds[: len(EXPECTED_EVENT_ORDER)] != EXPECTED_EVENT_ORDER:
-        fail("events must preserve the Wave 1 ordered spine")
+        fail("events must preserve the capture kernel ordered spine")
     if len(set(kinds)) != len(kinds):
-        fail("events must not repeat Wave 1 event kinds in the center example")
+        fail("events must not repeat capture kernel event kinds in the center example")
 
     event_ids: list[str] = []
     for index, raw_event in enumerate(events):
@@ -228,7 +232,7 @@ def validate_flow(flow: dict[str, Any]) -> None:
         "owner_local_only",
         "blocked",
     }:
-        fail("projection.status is not a valid inert Wave 1 projection status")
+        fail("projection.status is not a valid inert capture kernel projection status")
     forbidden_present = sorted(FORBIDDEN_PROJECTION_FIELDS.intersection(projection))
     if forbidden_present:
         fail(
@@ -274,7 +278,7 @@ def main() -> int:
         for error in errors:
             print(f"[error] {error}", file=sys.stderr)
         return 1
-    print("ok: Experience Wave 1 center kernel is valid")
+    print("ok: Experience capture kernel center is valid")
     return 0
 
 

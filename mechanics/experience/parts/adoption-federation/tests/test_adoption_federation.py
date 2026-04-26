@@ -17,8 +17,9 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
-WAVE3_PREFIXES = (
+FEDERATION_PREFIXES = (
     "adoption_",
     "agent_adoption_",
     "agent_kind_",
@@ -50,8 +51,18 @@ WAVE3_PREFIXES = (
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "scripts" / "validate_adoption_federation.py"
-    spec = importlib.util.spec_from_file_location("experience_wave3_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "adoption-federation"
+        / "scripts"
+        / "validate_adoption_federation.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_federation_adoption_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -59,44 +70,120 @@ def load_validator():
 
 
 def load_example() -> dict[str, object]:
-    return json.loads((ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "examples" / "experience_wave3_federation_adoption.example.json").read_text())
+    return json.loads(
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "adoption-federation"
+            / "examples"
+            / "experience_federation_adoption.example.json"
+        ).read_text()
+    )
 
 
 def load_contract(stem: str) -> tuple[dict[str, object], dict[str, object]]:
-    schema_path = ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "schemas" / f"{stem}_v1.json"
-    if stem == "experience_wave3_federation_adoption":
-        schema_path = ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "schemas" / "experience-wave3-federation-adoption.schema.json"
-    example_path = ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "examples" / f"{stem}.example.json"
+    schema_path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "adoption-federation"
+        / "schemas"
+        / f"{stem}_v1.json"
+    )
+    if stem == "experience_federation_adoption":
+        schema_path = (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "adoption-federation"
+            / "schemas"
+            / "experience-federation-adoption.schema.json"
+        )
+    example_path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "adoption-federation"
+        / "examples"
+        / f"{stem}.example.json"
+    )
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
     example = json.loads(example_path.read_text(encoding="utf-8"))
     return schema, example
 
 
-def wave3_stems() -> set[str]:
+def federation_stems() -> set[str]:
     stems: set[str] = set()
-    for example_path in sorted((ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "examples").glob("*.example.json")):
+    for example_path in sorted(
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "adoption-federation"
+            / "examples"
+        ).glob("*.example.json")
+    ):
         stem = example_path.name.removesuffix(".example.json")
         if stem.endswith("_v1"):
             continue
-        if stem.startswith(WAVE3_PREFIXES):
+        if stem.startswith(FEDERATION_PREFIXES):
             stems.add(stem)
-    for schema_path in sorted((ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "schemas").glob("*_v1.json")):
+    for schema_path in sorted(
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "adoption-federation"
+            / "schemas"
+        ).glob("*_v1.json")
+    ):
         stem = schema_path.name.removesuffix("_v1.json")
-        if not (ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "examples" / f"{stem}.example.json").exists() and (
-            ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "examples" / f"{stem}_v1.example.json"
-        ).exists():
+        if (
+            not (
+                ROOT
+                / "mechanics"
+                / "experience"
+                / "parts"
+                / "adoption-federation"
+                / "examples"
+                / f"{stem}.example.json"
+            ).exists()
+            and (
+                ROOT
+                / "mechanics"
+                / "experience"
+                / "parts"
+                / "adoption-federation"
+                / "examples"
+                / f"{stem}_v1.example.json"
+            ).exists()
+        ):
             continue
-        if stem.startswith(WAVE3_PREFIXES):
+        if stem.startswith(FEDERATION_PREFIXES):
             stems.add(stem)
-    stems.add("experience_wave3_federation_adoption")
+    stems.add("experience_federation_adoption")
     return stems
 
 
-def validation_errors(schema: dict[str, object], value: dict[str, object]) -> list[object]:
-    return sorted(Draft202012Validator(schema).iter_errors(value), key=lambda error: list(error.path))
+def validation_errors(
+    schema: dict[str, object], value: dict[str, object]
+) -> list[object]:
+    return sorted(
+        Draft202012Validator(schema).iter_errors(value),
+        key=lambda error: list(error.path),
+    )
 
 
-def assert_invalid(schema: dict[str, object], value: dict[str, object], label: str) -> None:
+def assert_invalid(
+    schema: dict[str, object], value: dict[str, object], label: str
+) -> None:
     errors = validation_errors(schema, value)
     assert errors, f"{label} unexpectedly validated"
 
@@ -117,9 +204,12 @@ def wrong_type_value(value: object) -> object:
     return "not-null"
 
 
-def test_experience_wave3_validator_passes() -> None:
+def test_experience_federation_adoption_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/adoption-federation/scripts/validate_adoption_federation.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/adoption-federation/scripts/validate_adoption_federation.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -127,7 +217,7 @@ def test_experience_wave3_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_wave3_rejects_codex_kag_promotion() -> None:
+def test_experience_federation_adoption_rejects_codex_kag_promotion() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -141,7 +231,7 @@ def test_experience_wave3_rejects_codex_kag_promotion() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave3_rejects_direct_tos_write() -> None:
+def test_experience_federation_adoption_rejects_direct_tos_write() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -155,7 +245,7 @@ def test_experience_wave3_rejects_direct_tos_write() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave3_requires_ordered_adoption_rollback() -> None:
+def test_experience_federation_adoption_requires_ordered_adoption_rollback() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -167,7 +257,7 @@ def test_experience_wave3_requires_ordered_adoption_rollback() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave3_requires_owner_consent_step() -> None:
+def test_experience_federation_adoption_requires_owner_consent_step() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -179,7 +269,7 @@ def test_experience_wave3_requires_owner_consent_step() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave3_requires_retention_step() -> None:
+def test_experience_federation_adoption_requires_retention_step() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -191,7 +281,7 @@ def test_experience_wave3_requires_retention_step() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave3_rejects_routing_meaning_theft() -> None:
+def test_experience_federation_adoption_rejects_routing_meaning_theft() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -205,20 +295,50 @@ def test_experience_wave3_rejects_routing_meaning_theft() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_seeded_wave3_examples_validate_against_schemas() -> None:
-    stems = wave3_stems()
+def test_seeded_federation_examples_validate_against_schemas() -> None:
+    stems = federation_stems()
     assert stems
     missing_pairs: list[str] = []
     for stem in sorted(stems):
-        schema_path = ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "schemas" / f"{stem}_v1.json"
-        if stem == "experience_wave3_federation_adoption":
-            schema_path = ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "schemas" / "experience-wave3-federation-adoption.schema.json"
-        example_path = ROOT / "mechanics" / "experience" / "parts" / "adoption-federation" / "examples" / f"{stem}.example.json"
+        schema_path = (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "adoption-federation"
+            / "schemas"
+            / f"{stem}_v1.json"
+        )
+        if stem == "experience_federation_adoption":
+            schema_path = (
+                ROOT
+                / "mechanics"
+                / "experience"
+                / "parts"
+                / "adoption-federation"
+                / "schemas"
+                / "experience-federation-adoption.schema.json"
+            )
+        example_path = (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "adoption-federation"
+            / "examples"
+            / f"{stem}.example.json"
+        )
         if not schema_path.exists():
-            missing_pairs.append(f"{example_path.relative_to(ROOT)} -> {schema_path.relative_to(ROOT)}")
+            missing_pairs.append(
+                f"{example_path.relative_to(ROOT)} -> {schema_path.relative_to(ROOT)}"
+            )
         if not example_path.exists():
-            missing_pairs.append(f"{schema_path.relative_to(ROOT)} -> {example_path.relative_to(ROOT)}")
-    assert not missing_pairs, "missing wave3 contract pair(s): " + ", ".join(missing_pairs)
+            missing_pairs.append(
+                f"{schema_path.relative_to(ROOT)} -> {example_path.relative_to(ROOT)}"
+            )
+    assert not missing_pairs, "missing federation contract pair(s): " + ", ".join(
+        missing_pairs
+    )
 
     for stem in sorted(stems):
         schema, example = load_contract(stem)
@@ -227,8 +347,8 @@ def test_seeded_wave3_examples_validate_against_schemas() -> None:
         assert not errors, f"{stem}: {errors[0].message if errors else ''}"
 
 
-def test_seeded_wave3_schemas_reject_escape_hatches() -> None:
-    stems = wave3_stems()
+def test_seeded_federation_schemas_reject_escape_hatches() -> None:
+    stems = federation_stems()
     assert stems
     for stem in sorted(stems):
         schema, example = load_contract(stem)
@@ -249,11 +369,15 @@ def test_seeded_wave3_schemas_reject_escape_hatches() -> None:
             with_unknown_payload = copy.deepcopy(example)
             assert isinstance(with_unknown_payload["payload"], dict)
             with_unknown_payload["payload"]["contract_escape"] = "loose-payload"
-            assert_invalid(schema, with_unknown_payload, f"{stem} unknown payload field")
+            assert_invalid(
+                schema, with_unknown_payload, f"{stem} unknown payload field"
+            )
 
             if payload:
                 key = next(iter(payload))
                 with_wrong_payload_type = copy.deepcopy(example)
                 assert isinstance(with_wrong_payload_type["payload"], dict)
                 with_wrong_payload_type["payload"][key] = wrong_type_value(payload[key])
-                assert_invalid(schema, with_wrong_payload_type, f"{stem} wrong payload type")
+                assert_invalid(
+                    schema, with_wrong_payload_type, f"{stem} wrong payload type"
+                )

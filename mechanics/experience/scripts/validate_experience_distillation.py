@@ -23,6 +23,7 @@ LEGACY_ROOT = EXPERIENCE_ROOT / "legacy"
 RAW_ROOT = LEGACY_ROOT / "raw"
 PARTS_ROOT = EXPERIENCE_ROOT / "parts"
 ARTIFACT_MAP_PATH = EXPERIENCE_ROOT / "artifact-map.json"
+PROVENANCE_RECEIPTS_PATH = EXPERIENCE_ROOT / "provenance-receipts.json"
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 PROVENANCE_PATH = EXPERIENCE_ROOT / "PROVENANCE.md"
 MECHANICS_ATLAS_PATH = REPO_ROOT / "mechanics" / "README.md"
@@ -124,6 +125,45 @@ ACTIVE_ROUTE_POLLUTION_PATTERNS = (
     "raw files",
     "named by any raw",
     "touching legacy provenance",
+)
+
+ACTIVE_RELEASE_CONTOUR_FILENAME_RE = re.compile(
+    r"(?:experience[-_]wave\d+|experience[-_]v\d+(?:[-_]\d+)*|"
+    r"test_experience_(?:wave\d+|v\d+)|validate_experience_(?:wave\d+|v\d+))",
+    re.IGNORECASE,
+)
+ACTIVE_RELEASE_CONTOUR_IDENTITY_RE = re.compile(
+    r"\bexperience[-_](?:wave\d+|v\d+(?:[-_]\d+)*)", re.IGNORECASE
+)
+ACTIVE_RELEASE_CONTOUR_PY_RE = re.compile(
+    r"\b(?:Experience\s+(?:Wave\s*\d+|v\d)|"
+    r"(?:test|validate)_experience_(?:wave\d+|v\d+)|"
+    r"WAVE\d+_CONTRACTS|wave\d+_stems|test_seeded_wave\d+|__wave\d+)",
+    re.IGNORECASE,
+)
+ACTIVE_RELEASE_CONTOUR_VALUE_RE = re.compile(r"\bwave\d+", re.IGNORECASE)
+ACTIVE_RELEASE_CONTOUR_VALUE_ALLOW_RE = re.compile(
+    r"(?:legacy/raw/|AGON_WAVE\d+|seed_aoa_experience_wave0)", re.IGNORECASE
+)
+ACTIVE_ARTIFACT_IDENTITY_KEYS = {
+    "bridge_id",
+    "campaign_ref",
+    "contract_ref",
+    "flow_id",
+    "planting_id",
+    "schema_id",
+}
+RECEIPT_ID_RE = re.compile(r"^[a-z0-9]+(?:[.-][a-z0-9]+)*$")
+ACTIVE_DIRECT_PROVENANCE_RE = re.compile(
+    r"(?:mechanics/experience/legacy/raw/|"
+    r"Dionysus:seed_staging/|"
+    r"seed_staging/future/seed_aoa_experience_|"
+    r"mechanics/agon/docs/|"
+    r"mechanics/method-growth/docs/|"
+    r"mechanics/recurrence/docs/|"
+    r"8Dionysus:docs/|"
+    r"docs/FEDERATION_RULES\.md|"
+    r"aoa-experience-[A-Za-z0-9_-]+-seed-v)"
 )
 
 STALE_ROADMAP_PATTERNS = (
@@ -417,6 +457,10 @@ def load_artifact_map() -> dict[str, object]:
     return json.loads(ARTIFACT_MAP_PATH.read_text(encoding="utf-8"))
 
 
+def load_provenance_receipts() -> dict[str, object]:
+    return json.loads(PROVENANCE_RECEIPTS_PATH.read_text(encoding="utf-8"))
+
+
 def read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
@@ -478,6 +522,7 @@ def validate_root_surfaces(problems: list[str]) -> None:
     for name in ROOT_SURFACES:
         require_file(EXPERIENCE_ROOT / name, problems)
     require_file(ARTIFACT_MAP_PATH, problems)
+    require_file(PROVENANCE_RECEIPTS_PATH, problems)
     for name in LEGACY_SURFACES:
         require_file(LEGACY_ROOT / name, problems)
     require_file(EXPERIENCE_ROOT / "docs" / "AGENTS.md", problems)
@@ -787,6 +832,235 @@ def validate_artifact_map(problems: list[str]) -> None:
                     )
 
 
+def validate_provenance_receipts(problems: list[str]) -> set[str]:
+    if not PROVENANCE_RECEIPTS_PATH.is_file():
+        problems.append(f"missing file: {rel(PROVENANCE_RECEIPTS_PATH)}")
+        return set()
+
+    try:
+        data = load_provenance_receipts()
+    except json.JSONDecodeError as exc:
+        problems.append(f"{rel(PROVENANCE_RECEIPTS_PATH)}: invalid JSON: {exc}")
+        return set()
+
+    if data.get("schema_version") != "aoa_experience_provenance_receipts_v1":
+        problems.append(
+            f"{rel(PROVENANCE_RECEIPTS_PATH)}: schema_version must be aoa_experience_provenance_receipts_v1"
+        )
+    if data.get("mechanic") != "experience":
+        problems.append(f"{rel(PROVENANCE_RECEIPTS_PATH)}: mechanic must be experience")
+    if data.get("source_of_truth") != "mechanics/experience/PROVENANCE.md":
+        problems.append(
+            f"{rel(PROVENANCE_RECEIPTS_PATH)}: source_of_truth must point to PROVENANCE.md"
+        )
+
+    receipts = data.get("receipts")
+    if not isinstance(receipts, list) or not receipts:
+        problems.append(
+            f"{rel(PROVENANCE_RECEIPTS_PATH)}: receipts must be a non-empty list"
+        )
+        return set()
+
+    ids: set[str] = set()
+    sources: set[str] = set()
+    for index, item in enumerate(receipts):
+        if not isinstance(item, dict):
+            problems.append(
+                f"{rel(PROVENANCE_RECEIPTS_PATH)}: receipt {index} must be an object"
+            )
+            continue
+
+        receipt_id = str(item.get("id", ""))
+        if not receipt_id:
+            problems.append(
+                f"{rel(PROVENANCE_RECEIPTS_PATH)}: receipt {index} missing id"
+            )
+        elif receipt_id in ids:
+            problems.append(
+                f"{rel(PROVENANCE_RECEIPTS_PATH)}: duplicate receipt id {receipt_id}"
+            )
+        elif not RECEIPT_ID_RE.match(receipt_id):
+            problems.append(
+                f"{rel(PROVENANCE_RECEIPTS_PATH)}: invalid receipt id {receipt_id!r}"
+            )
+        elif re.search(r"(?:^|[.-])wave\d+|(?:^|[.-])v\d", receipt_id, re.IGNORECASE):
+            problems.append(
+                f"{rel(PROVENANCE_RECEIPTS_PATH)}: receipt id carries release-contour naming {receipt_id!r}"
+            )
+        ids.add(receipt_id)
+
+        for key in ("kind", "owner", "source_ref", "purpose"):
+            if not isinstance(item.get(key), str) or not str(item.get(key)).strip():
+                problems.append(
+                    f"{rel(PROVENANCE_RECEIPTS_PATH)}: receipt {receipt_id or index} missing {key}"
+                )
+
+        source_ref = str(item.get("source_ref", ""))
+        if source_ref in sources:
+            problems.append(
+                f"{rel(PROVENANCE_RECEIPTS_PATH)}: duplicate source_ref {source_ref}"
+            )
+        sources.add(source_ref)
+        if source_ref.startswith("mechanics/") or source_ref.startswith("docs/"):
+            source_path = source_ref.split("#", 1)[0]
+            if not (REPO_ROOT / source_path).is_file():
+                problems.append(
+                    f"{rel(PROVENANCE_RECEIPTS_PATH)}: source_ref missing on disk: {source_ref}"
+                )
+
+        consumers = item.get("active_consumers")
+        if not isinstance(consumers, list) or not consumers:
+            problems.append(
+                f"{rel(PROVENANCE_RECEIPTS_PATH)}: receipt {receipt_id or index} must list active_consumers"
+            )
+            consumers = []
+        for consumer in consumers:
+            if consumer not in PART_SLUGS:
+                problems.append(
+                    f"{rel(PROVENANCE_RECEIPTS_PATH)}: receipt {receipt_id or index} has invalid active_consumer {consumer!r}"
+                )
+
+        must_not_claim = item.get("must_not_claim")
+        if not isinstance(must_not_claim, list) or not must_not_claim:
+            problems.append(
+                f"{rel(PROVENANCE_RECEIPTS_PATH)}: receipt {receipt_id or index} must list must_not_claim"
+            )
+
+    return ids
+
+
+def validate_active_receipt_refs(receipt_ids: set[str], problems: list[str]) -> None:
+    for path in PARTS_ROOT.rglob("*"):
+        if not path.is_file() or path.suffix not in ACTIVE_TEXT_SUFFIXES:
+            continue
+
+        text = read(path)
+        if ACTIVE_DIRECT_PROVENANCE_RE.search(text):
+            problems.append(
+                f"{rel(path)}: active part artifact carries direct provenance/source path instead of receipt id"
+            )
+
+        if path.suffix != ".json":
+            continue
+
+        try:
+            payload = json.loads(text)
+        except json.JSONDecodeError as exc:
+            problems.append(
+                f"{rel(path)}: invalid JSON while checking receipt refs: {exc}"
+            )
+            continue
+
+        def visit(value: object, pointer: str) -> None:
+            if isinstance(value, dict):
+                for key, child in value.items():
+                    child_pointer = f"{pointer}/{key}" if pointer else key
+                    if key == "receipt_ref" or key.endswith("_receipt_ref"):
+                        child_value = (
+                            child.get("const")
+                            if isinstance(child, dict) and isinstance(child.get("const"), str)
+                            else child
+                        )
+                        if not isinstance(child_value, str) or child_value not in receipt_ids:
+                            problems.append(
+                                f"{rel(path)}:{child_pointer}: unknown receipt ref {child_value!r}"
+                            )
+                    if key.endswith("_receipt_refs"):
+                        child_values = (
+                            child.get("const")
+                            if isinstance(child, dict) and isinstance(child.get("const"), list)
+                            else child
+                        )
+                        if isinstance(child, dict) and "const" not in child:
+                            pass
+                        elif not isinstance(child_values, list):
+                            problems.append(
+                                f"{rel(path)}:{child_pointer}: receipt refs must be a list"
+                            )
+                        else:
+                            for index, item in enumerate(child_values):
+                                if not isinstance(item, str) or item not in receipt_ids:
+                                    problems.append(
+                                        f"{rel(path)}:{child_pointer}/{index}: unknown receipt ref {item!r}"
+                                    )
+                    visit(child, child_pointer)
+            elif isinstance(value, list):
+                for index, child in enumerate(value):
+                    child_pointer = f"{pointer}/{index}" if pointer else str(index)
+                    visit(child, child_pointer)
+
+        visit(payload, "")
+
+
+def validate_active_artifact_names(problems: list[str]) -> None:
+    for path in PARTS_ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+
+        if ACTIVE_RELEASE_CONTOUR_FILENAME_RE.search(path.name):
+            problems.append(
+                f"{rel(path)}: active artifact filename carries release-contour identity"
+            )
+
+        if path.suffix == ".py":
+            text = read(path)
+            if ACTIVE_RELEASE_CONTOUR_PY_RE.search(text):
+                problems.append(
+                    f"{rel(path)}: active Python test/validator identity carries release-contour naming"
+                )
+
+        if path.suffix != ".json":
+            continue
+
+        try:
+            payload = json.loads(read(path))
+        except json.JSONDecodeError as exc:
+            problems.append(
+                f"{rel(path)}: invalid JSON while checking active names: {exc}"
+            )
+            continue
+
+        def visit(value: object, pointer: str) -> None:
+            if isinstance(value, dict):
+                for key, child in value.items():
+                    child_pointer = f"{pointer}/{key}" if pointer else key
+                    if "wave" in key.lower():
+                        problems.append(
+                            f"{rel(path)}:{child_pointer}: active JSON key must use functional naming, not wave"
+                        )
+                    if (
+                        key in ACTIVE_ARTIFACT_IDENTITY_KEYS
+                        and isinstance(child, str)
+                        and ACTIVE_RELEASE_CONTOUR_IDENTITY_RE.search(child)
+                    ):
+                        problems.append(
+                            f"{rel(path)}:{child_pointer}: active identity carries release-contour value {child!r}"
+                        )
+                    if (
+                        isinstance(child, str)
+                        and ACTIVE_RELEASE_CONTOUR_VALUE_RE.search(child)
+                        and not ACTIVE_RELEASE_CONTOUR_VALUE_ALLOW_RE.search(child)
+                    ):
+                        problems.append(
+                            f"{rel(path)}:{child_pointer}: active JSON value carries wave contour {child!r}"
+                        )
+                    visit(child, child_pointer)
+            elif isinstance(value, list):
+                for index, child in enumerate(value):
+                    child_pointer = f"{pointer}/{index}" if pointer else str(index)
+                    if (
+                        isinstance(child, str)
+                        and ACTIVE_RELEASE_CONTOUR_VALUE_RE.search(child)
+                        and not ACTIVE_RELEASE_CONTOUR_VALUE_ALLOW_RE.search(child)
+                    ):
+                        problems.append(
+                            f"{rel(path)}:{child_pointer}: active JSON list value carries wave contour {child!r}"
+                        )
+                    visit(child, child_pointer)
+
+        visit(payload, "")
+
+
 def validate_no_stale_active_refs(problems: list[str]) -> None:
     for path in active_text_files():
         text = read(path)
@@ -898,6 +1172,10 @@ def validate_registry(problems: list[str]) -> None:
         problems.append(
             "mechanics/registry.json: experience canonical_docs must include PROVENANCE.md bridge"
         )
+    if "mechanics/experience/provenance-receipts.json" not in canonical:
+        problems.append(
+            "mechanics/registry.json: experience canonical_docs must include provenance-receipts.json"
+        )
     for required_doc in (
         "mechanics/experience/ROADMAP.md",
         "mechanics/experience/LANDING_LOG.md",
@@ -949,11 +1227,14 @@ def parse_args() -> argparse.Namespace:
 
 def validate(selected: set[str] | None = None) -> list[str]:
     problems: list[str] = []
+    receipt_ids = validate_provenance_receipts(problems)
     validate_root_surfaces(problems)
     validate_parts(selected, problems)
     validate_raw_sources(problems)
     validate_raw_source_requirements(problems)
     validate_artifact_map(problems)
+    validate_active_receipt_refs(receipt_ids, problems)
+    validate_active_artifact_names(problems)
     validate_no_stale_active_refs(problems)
     validate_active_docs_are_lean(problems)
     validate_route_surfaces(problems)

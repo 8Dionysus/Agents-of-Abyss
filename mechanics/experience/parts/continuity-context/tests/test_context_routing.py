@@ -16,12 +16,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "scripts" / "validate_context_routing.py"
-    spec = importlib.util.spec_from_file_location("experience_v18_context_routing_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "continuity-context"
+        / "scripts"
+        / "validate_context_routing.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_context_routing_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -30,23 +41,38 @@ def load_validator():
 
 def load_example() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "examples" / "experience_v1_8_context_routing_nervous_system.example.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "continuity-context"
+            / "examples"
+            / "experience_context_routing.example.json"
+        ).read_text(encoding="utf-8")
     )
 
 
 def load_schema() -> dict[str, object]:
     return json.loads(
-        (ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "schemas" / "experience-v1-8-context-routing-nervous-system.schema.json").read_text(
-            encoding="utf-8"
-        )
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "continuity-context"
+            / "schemas"
+            / "experience-context-routing.schema.json"
+        ).read_text(encoding="utf-8")
     )
 
 
-def test_experience_v18_context_routing_validator_passes() -> None:
+def test_experience_context_routing_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/continuity-context/scripts/validate_context_routing.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/continuity-context/scripts/validate_context_routing.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -54,31 +80,35 @@ def test_experience_v18_context_routing_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_v18_context_routing_requires_source_archive() -> None:
+def test_experience_context_routing_requires_source_archive() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     source = bad_payload["source_seed"]
     assert isinstance(source, dict)
-    source["archive_name"] = "aoa-experience-affective-economy-honor-treasury-seed-v1_7.zip"
+    source["receipt_ref"] = (
+        "experience.seed.affective-economy-honor-treasury"
+    )
 
     with pytest.raises(validator.ValidationError, match="source_seed|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v18_context_routing_rejects_live_context_routing_activation() -> None:
+def test_experience_context_routing_rejects_live_context_routing_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_context_routing_activation"] = True
 
-    with pytest.raises(validator.ValidationError, match="live_context_routing_activation|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="live_context_routing_activation|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v18_context_routing_rejects_live_owner_override() -> None:
+def test_experience_context_routing_rejects_live_owner_override() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -89,33 +119,35 @@ def test_experience_v18_context_routing_rejects_live_owner_override() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v18_context_routing_requires_v17_predecessor() -> None:
+def test_experience_context_routing_requires_v17_predecessor() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/experience/legacy/raw/EXPERIENCE_V1_7_AFFECTIVE_ECONOMY_HONOR_TREASURY.md")
+    predecessors.remove(
+        "experience.raw.affective-economy-honor-treasury"
+    )
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+    with pytest.raises(validator.ValidationError, match="predecessor_receipt_refs|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v18_context_routing_requires_gate_routing_handoff_predecessor() -> None:
+def test_experience_context_routing_requires_gate_routing_handoff_predecessor() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md")
+    predecessors.remove("agon.gate-routing-handoff")
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+    with pytest.raises(validator.ValidationError, match="predecessor_receipt_refs|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v18_context_routing_requires_eval_owned_service_to_agon_gate() -> None:
+def test_experience_context_routing_requires_eval_owned_service_to_agon_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -128,7 +160,7 @@ def test_experience_v18_context_routing_requires_eval_owned_service_to_agon_gate
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v18_context_routing_requires_tos_owned_dossier_boundary() -> None:
+def test_experience_context_routing_requires_tos_owned_dossier_boundary() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -141,7 +173,7 @@ def test_experience_v18_context_routing_requires_tos_owned_dossier_boundary() ->
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v18_context_routing_requires_service_to_agon_human_gate() -> None:
+def test_experience_context_routing_requires_service_to_agon_human_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -176,7 +208,7 @@ def test_experience_v18_context_routing_requires_service_to_agon_human_gate() ->
         "no_stats_memo_or_routing_as_authority",
     ],
 )
-def test_experience_v18_context_routing_requires_hard_guards(guard: str) -> None:
+def test_experience_context_routing_requires_hard_guards(guard: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -189,7 +221,7 @@ def test_experience_v18_context_routing_requires_hard_guards(guard: str) -> None
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v18_context_routing_rejects_active_landing_state() -> None:
+def test_experience_context_routing_rejects_active_landing_state() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -215,7 +247,7 @@ def test_experience_v18_context_routing_rejects_active_landing_state() -> None:
         "direct_tos_write_allowed",
     ],
 )
-def test_experience_v18_context_routing_blocks_authority_leaks(field: str) -> None:
+def test_experience_context_routing_blocks_authority_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -239,7 +271,7 @@ def test_experience_v18_context_routing_blocks_authority_leaks(field: str) -> No
         "symbolic_overreach_allowed",
     ],
 )
-def test_experience_v18_context_routing_blocks_budget_leaks(field: str) -> None:
+def test_experience_context_routing_blocks_budget_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -262,7 +294,7 @@ def test_experience_v18_context_routing_blocks_budget_leaks(field: str) -> None:
         "automatic_runtime_failover_allowed",
     ],
 )
-def test_experience_v18_context_routing_blocks_escalation_leaks(field: str) -> None:
+def test_experience_context_routing_blocks_escalation_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -285,7 +317,7 @@ def test_experience_v18_context_routing_blocks_escalation_leaks(field: str) -> N
         "hidden_scheduler_allowed",
     ],
 )
-def test_experience_v18_context_routing_blocks_memory_runtime_leaks(field: str) -> None:
+def test_experience_context_routing_blocks_memory_runtime_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()

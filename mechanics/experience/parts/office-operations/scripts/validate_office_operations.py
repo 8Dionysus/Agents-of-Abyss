@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience Wave 5 sovereign office center surfaces."""
+"""Validate the Experience sovereign office center surfaces."""
 
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ SCHEMA_PATH = (
     / "parts"
     / "office-operations"
     / "schemas"
-    / "experience-wave5-sovereign-office.schema.json"
+    / "experience-sovereign-office.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -36,12 +36,12 @@ EXAMPLE_PATH = (
     / "parts"
     / "office-operations"
     / "examples"
-    / "experience_wave5_sovereign_office.example.json"
+    / "experience_sovereign_office.example.json"
 )
 
 EXPECTED_SOURCE_SEEDS = [
-    "aoa-experience-installation-sovereign-release-seed-v1_0.zip",
-    "aoa-experience-live-office-expansion-seed-v1_1.zip",
+    "experience.seed.sovereign-release",
+    "experience.seed.live-office-expansion",
 ]
 INSTALLATION_ORDER = [
     "seed_prepared",
@@ -119,7 +119,7 @@ NON_PRIMARY_UNTIL_PROMOTED = {
 
 
 class ValidationError(RuntimeError):
-    """Raised when an Experience Wave 5 surface drifts."""
+    """Raised when an Experience sovereign office surface drifts."""
 
 
 def fail(message: str) -> None:
@@ -156,21 +156,21 @@ def require_files() -> None:
         if not path.exists()
     ]
     if missing:
-        fail("missing Experience Wave 5 files: " + ", ".join(missing))
+        fail("missing Experience sovereign office files: " + ", ".join(missing))
 
 
 def validate_schema(schema: dict[str, Any], example: dict[str, Any]) -> None:
-    if schema.get("title") != "experience_wave5_sovereign_office_v1":
-        fail("Wave 5 schema title must be experience_wave5_sovereign_office_v1")
+    if schema.get("title") != "experience_sovereign_office_v1":
+        fail("sovereign office schema title must be experience_sovereign_office_v1")
     if schema.get("additionalProperties") is not False:
-        fail("Wave 5 schema must reject additional top-level properties")
+        fail("sovereign office schema must reject additional top-level properties")
     Draft202012Validator.check_schema(schema)
     errors = sorted(
         Draft202012Validator(schema).iter_errors(example),
         key=lambda error: list(error.path),
     )
     if errors:
-        fail(f"Wave 5 example does not match schema: {errors[0].message}")
+        fail(f"sovereign office example does not match schema: {errors[0].message}")
 
 
 def validate_flow_order(flow: dict[str, Any], key: str, expected: list[str]) -> None:
@@ -283,14 +283,14 @@ def validate_office_contract(flow: dict[str, Any]) -> None:
 
 
 def validate_example(flow: dict[str, Any]) -> None:
-    if flow.get("schema_version") != "experience_wave5_sovereign_office_v1":
-        fail("example schema_version must be experience_wave5_sovereign_office_v1")
-    if flow.get("wave") != "experience_wave5":
-        fail("example wave must be experience_wave5")
+    if flow.get("schema_version") != "experience_sovereign_office_v1":
+        fail("example schema_version must be experience_sovereign_office_v1")
+    if flow.get("contract_ref") != "experience_sovereign_office":
+        fail("example contract_ref must be experience_sovereign_office")
     if flow.get("status") != "sovereign_release_live_office_expansion_contract_gated":
-        fail("example status must keep Wave 5 contract-gated")
-    if flow.get("source_seeds") != EXPECTED_SOURCE_SEEDS:
-        fail("example source_seeds must preserve v1.0 before v1.1")
+        fail("example status must keep sovereign office contract-gated")
+    if flow.get("source_receipt_refs") != EXPECTED_SOURCE_SEEDS:
+        fail("example source_receipt_refs must preserve v1.0 before v1.1")
 
     validate_flow_order(flow, "installation_flow", INSTALLATION_ORDER)
     validate_flow_order(flow, "office_train_flow", OFFICE_TRAIN_ORDER)
@@ -325,7 +325,7 @@ def main() -> int:
         for error in errors:
             print(f"[error] {error}", file=sys.stderr)
         return 1
-    print("ok: Experience Wave 5 sovereign office center is valid")
+    print("ok: Experience sovereign office center is valid")
     return 0
 
 

@@ -17,12 +17,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "scripts" / "validate_affective_economy.py"
-    spec = importlib.util.spec_from_file_location("experience_v17_affective_honor_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "continuity-context"
+        / "scripts"
+        / "validate_affective_economy.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_affective_honor_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -32,8 +43,13 @@ def load_validator():
 def load_example() -> dict[str, object]:
     return json.loads(
         (
-            ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "examples"
-            / "experience_v1_7_affective_economy_honor_treasury.example.json"
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "continuity-context"
+            / "examples"
+            / "experience_affective_economy_honor_treasury.example.json"
         ).read_text(encoding="utf-8")
     )
 
@@ -41,15 +57,23 @@ def load_example() -> dict[str, object]:
 def load_schema() -> dict[str, object]:
     return json.loads(
         (
-            ROOT / "mechanics" / "experience" / "parts" / "continuity-context" / "schemas"
-            / "experience-v1-7-affective-economy-honor-treasury.schema.json"
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "continuity-context"
+            / "schemas"
+            / "experience-affective-economy-honor-treasury.schema.json"
         ).read_text(encoding="utf-8")
     )
 
 
-def test_experience_v17_affective_honor_validator_passes() -> None:
+def test_experience_affective_honor_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/continuity-context/scripts/validate_affective_economy.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/continuity-context/scripts/validate_affective_economy.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -57,68 +81,80 @@ def test_experience_v17_affective_honor_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_v17_affective_honor_requires_source_archive() -> None:
+def test_experience_affective_honor_requires_source_archive() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     source = bad_payload["source_seed"]
     assert isinstance(source, dict)
-    source["archive_name"] = "aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6.zip"
+    source["receipt_ref"] = (
+        "experience.seed.memory-rank-reputation"
+    )
 
     with pytest.raises(validator.ValidationError, match="source_seed|archive|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v17_affective_honor_rejects_live_affect_governance() -> None:
+def test_experience_affective_honor_rejects_live_affect_governance() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_affect_governance"] = True
 
-    with pytest.raises(validator.ValidationError, match="schema|live_affect_governance"):
+    with pytest.raises(
+        validator.ValidationError, match="schema|live_affect_governance"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v17_affective_honor_rejects_live_honor_treasury_activation() -> None:
+def test_experience_affective_honor_rejects_live_honor_treasury_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_honor_treasury_activation"] = True
 
-    with pytest.raises(validator.ValidationError, match="schema|live_honor_treasury_activation"):
+    with pytest.raises(
+        validator.ValidationError, match="schema|live_honor_treasury_activation"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v17_affective_honor_requires_v16_predecessor() -> None:
+def test_experience_affective_honor_requires_memory_rank_predecessor() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/experience/legacy/raw/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md")
+    predecessors.remove(
+        "experience.raw.memory-rank-reputation"
+    )
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|bridge spine|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="predecessor_receipt_refs|bridge spine|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v17_affective_honor_requires_wave7_handoff_predecessor() -> None:
+def test_experience_affective_honor_requires_agon_handoff_predecessor() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/agon/docs/AGON_WAVE7_CENTER_HANDOFF.md")
+    predecessors.remove("agon.center-handoff")
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|bridge spine|schema"):
+    with pytest.raises(
+        validator.ValidationError, match="predecessor_receipt_refs|bridge spine|schema"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v17_affective_honor_requires_eval_owned_rights_gate() -> None:
+def test_experience_affective_honor_requires_eval_owned_rights_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -146,7 +182,7 @@ def test_experience_v17_affective_honor_requires_eval_owned_rights_gate() -> Non
         "no_direct_tree_of_sophia_or_kag_canon",
     ],
 )
-def test_experience_v17_affective_honor_requires_hard_guards(guard: str) -> None:
+def test_experience_affective_honor_requires_hard_guards(guard: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -159,7 +195,7 @@ def test_experience_v17_affective_honor_requires_hard_guards(guard: str) -> None
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v17_affective_honor_rejects_active_landing_state() -> None:
+def test_experience_affective_honor_rejects_active_landing_state() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -183,7 +219,7 @@ def test_experience_v17_affective_honor_rejects_active_landing_state() -> None:
         "direct_rights_grant_allowed",
     ],
 )
-def test_experience_v17_affective_honor_blocks_affect_evidence_leaks(field: str) -> None:
+def test_experience_affective_honor_blocks_affect_evidence_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -204,7 +240,7 @@ def test_experience_v17_affective_honor_blocks_affect_evidence_leaks(field: str)
         "direct_rights_revocation_allowed",
     ],
 )
-def test_experience_v17_affective_honor_blocks_honor_debt_leaks(field: str) -> None:
+def test_experience_affective_honor_blocks_honor_debt_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -226,7 +262,7 @@ def test_experience_v17_affective_honor_blocks_honor_debt_leaks(field: str) -> N
         "assistant_verdict_authority_allowed",
     ],
 )
-def test_experience_v17_affective_honor_blocks_assistant_affect_leaks(field: str) -> None:
+def test_experience_affective_honor_blocks_assistant_affect_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -248,7 +284,7 @@ def test_experience_v17_affective_honor_blocks_assistant_affect_leaks(field: str
         "dashboard_as_verdict_allowed",
     ],
 )
-def test_experience_v17_affective_honor_blocks_routing_and_stats_leaks(field: str) -> None:
+def test_experience_affective_honor_blocks_routing_and_stats_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -270,7 +306,7 @@ def test_experience_v17_affective_honor_blocks_routing_and_stats_leaks(field: st
         "hidden_ledger_allowed",
     ],
 )
-def test_experience_v17_affective_honor_blocks_memory_and_runtime_leaks(field: str) -> None:
+def test_experience_affective_honor_blocks_memory_and_runtime_leaks(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -293,7 +329,7 @@ def test_experience_v17_affective_honor_blocks_memory_and_runtime_leaks(field: s
         "kag_canonization_allowed",
     ],
 )
-def test_experience_v17_affective_honor_blocks_tos_and_kag_authority(field: str) -> None:
+def test_experience_affective_honor_blocks_tos_and_kag_authority(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -318,7 +354,7 @@ def test_experience_v17_affective_honor_blocks_tos_and_kag_authority(field: str)
         "promote KAG canon",
     ],
 )
-def test_experience_v17_affective_honor_rejects_codex_authority_leaks(
+def test_experience_affective_honor_rejects_codex_authority_leaks(
     forbidden_grant: str,
 ) -> None:
     validator = load_validator()
@@ -333,7 +369,7 @@ def test_experience_v17_affective_honor_rejects_codex_authority_leaks(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v17_affective_honor_requires_assistant_rewrite_denial() -> None:
+def test_experience_affective_honor_requires_assistant_rewrite_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -346,7 +382,7 @@ def test_experience_v17_affective_honor_requires_assistant_rewrite_denial() -> N
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v17_affective_honor_requires_eval_rights_gate_human_gate() -> None:
+def test_experience_affective_honor_requires_eval_rights_gate_human_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -368,7 +404,7 @@ def test_experience_v17_affective_honor_requires_eval_rights_gate_human_gate() -
         "honor_as_sovereign_score",
     ],
 )
-def test_experience_v17_affective_honor_requires_derived_layer_denials(
+def test_experience_affective_honor_requires_derived_layer_denials(
     derived_denial: str,
 ) -> None:
     validator = load_validator()
@@ -395,7 +431,7 @@ def test_experience_v17_affective_honor_requires_derived_layer_denials(
         "generated output becomes truth",
     ],
 )
-def test_experience_v17_affective_honor_rejects_flow_authority_note_leaks(
+def test_experience_affective_honor_rejects_flow_authority_note_leaks(
     authority_note: str,
 ) -> None:
     validator = load_validator()
@@ -410,7 +446,7 @@ def test_experience_v17_affective_honor_rejects_flow_authority_note_leaks(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v17_affective_honor_schema_rejects_law_drift() -> None:
+def test_experience_affective_honor_schema_rejects_law_drift() -> None:
     payload = load_example()
     schema = load_schema()
     payload["affective_honor_law"][0] = "allow_affect_to_grant_rights"
@@ -420,10 +456,10 @@ def test_experience_v17_affective_honor_schema_rejects_law_drift() -> None:
     assert errors
 
 
-def test_experience_v17_affective_honor_schema_rejects_predecessor_drift() -> None:
+def test_experience_affective_honor_schema_rejects_predecessor_drift() -> None:
     payload = load_example()
     schema = load_schema()
-    predecessors = payload["predecessor_surfaces"]
+    predecessors = payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
     predecessors[0] = "docs/WRONG_PREDECESSOR.md"
 
@@ -432,7 +468,7 @@ def test_experience_v17_affective_honor_schema_rejects_predecessor_drift() -> No
     assert errors
 
 
-def test_experience_v17_affective_honor_schema_rejects_flow_authority_note_drift() -> None:
+def test_experience_affective_honor_schema_rejects_flow_authority_note_drift() -> None:
     payload = load_example()
     schema = load_schema()
     flow = payload["affective_flow"]
@@ -444,7 +480,7 @@ def test_experience_v17_affective_honor_schema_rejects_flow_authority_note_drift
     assert errors
 
 
-def test_experience_v17_affective_honor_schema_rejects_owner_split_drift() -> None:
+def test_experience_affective_honor_schema_rejects_owner_split_drift() -> None:
     payload = load_example()
     schema = load_schema()
     owner_split = payload["owner_split"]
@@ -456,7 +492,7 @@ def test_experience_v17_affective_honor_schema_rejects_owner_split_drift() -> No
     assert errors
 
 
-def test_experience_v17_affective_honor_schema_rejects_quarantine_drift() -> None:
+def test_experience_affective_honor_schema_rejects_quarantine_drift() -> None:
     payload = load_example()
     schema = load_schema()
     quarantined = payload["quarantined_surfaces"]

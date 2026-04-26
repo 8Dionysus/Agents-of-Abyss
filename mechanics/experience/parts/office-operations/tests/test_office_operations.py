@@ -16,12 +16,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "office-operations" / "scripts" / "validate_office_operations.py"
-    spec = importlib.util.spec_from_file_location("experience_wave5_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "office-operations"
+        / "scripts"
+        / "validate_office_operations.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_sovereign_office_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -29,12 +40,25 @@ def load_validator():
 
 
 def load_example() -> dict[str, object]:
-    return json.loads((ROOT / "mechanics" / "experience" / "parts" / "office-operations" / "examples" / "experience_wave5_sovereign_office.example.json").read_text())
+    return json.loads(
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "office-operations"
+            / "examples"
+            / "experience_sovereign_office.example.json"
+        ).read_text()
+    )
 
 
-def test_experience_wave5_validator_passes() -> None:
+def test_experience_sovereign_office_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/office-operations/scripts/validate_office_operations.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/office-operations/scripts/validate_office_operations.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -42,11 +66,11 @@ def test_experience_wave5_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_wave5_requires_v10_before_v11() -> None:
+def test_experience_sovereign_office_requires_v10_before_v11() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
-    seeds = bad_flow["source_seeds"]
+    seeds = bad_flow["source_receipt_refs"]
     assert isinstance(seeds, list)
     seeds.reverse()
 
@@ -54,7 +78,7 @@ def test_experience_wave5_requires_v10_before_v11() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave5_rejects_codex_train_approval_authority() -> None:
+def test_experience_sovereign_office_rejects_codex_train_approval_authority() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -68,7 +92,7 @@ def test_experience_wave5_rejects_codex_train_approval_authority() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave5_rejects_assistant_self_enroll_escape() -> None:
+def test_experience_sovereign_office_rejects_assistant_self_enroll_escape() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -82,7 +106,7 @@ def test_experience_wave5_rejects_assistant_self_enroll_escape() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave5_requires_notary_first_office() -> None:
+def test_experience_sovereign_office_requires_notary_first_office() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -94,7 +118,7 @@ def test_experience_wave5_requires_notary_first_office() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave5_blocks_direct_tos_runtime_write() -> None:
+def test_experience_sovereign_office_blocks_direct_tos_runtime_write() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -102,11 +126,13 @@ def test_experience_wave5_blocks_direct_tos_runtime_write() -> None:
     assert isinstance(office, dict)
     office["direct_tos_runtime_write_allowed"] = True
 
-    with pytest.raises(validator.ValidationError, match="direct_tos_runtime_write_allowed"):
+    with pytest.raises(
+        validator.ValidationError, match="direct_tos_runtime_write_allowed"
+    ):
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave5_requires_ordered_train_gate_before_seal() -> None:
+def test_experience_sovereign_office_requires_ordered_train_gate_before_seal() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -118,13 +144,15 @@ def test_experience_wave5_requires_ordered_train_gate_before_seal() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave5_requires_all_owner_repos() -> None:
+def test_experience_sovereign_office_requires_all_owner_repos() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
     owner_split = bad_flow["owner_split"]
     assert isinstance(owner_split, list)
-    owner_split[:] = [item for item in owner_split if item.get("repo") != "Tree-of-Sophia"]
+    owner_split[:] = [
+        item for item in owner_split if item.get("repo") != "Tree-of-Sophia"
+    ]
 
     with pytest.raises(validator.ValidationError, match="owner_split is missing"):
         validator.validate_example(bad_flow)

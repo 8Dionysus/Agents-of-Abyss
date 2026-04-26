@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience v1.3 office foundry role-pairs center contract."""
+"""Validate the Experience office foundry role-pairs center contract."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ SCHEMA_PATH = (
     / "parts"
     / "office-operations"
     / "schemas"
-    / "experience-v1-3-office-foundry-role-pairs.schema.json"
+    / "experience-office-foundry-role-pairs.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -35,22 +35,22 @@ EXAMPLE_PATH = (
     / "parts"
     / "office-operations"
     / "examples"
-    / "experience_v1_3_office_foundry_role_pairs.example.json"
+    / "experience_office_foundry_role_pairs.example.json"
 )
 
-SOURCE_ARCHIVE = "aoa-experience-office-foundry-role-pairs-seed-v1_3.zip"
+SOURCE_ARCHIVE = "experience.seed.office-role-pairs"
 SOURCE_SHA256 = "d7ccb771f742540fcee0becdbfc79de69c2f97b5704ac067029fec23fef90648"
 
 EXPECTED_PREDECESSORS = [
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/legacy/raw/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_SERVICE_MESH_LAW.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.sovereign-office",
+    "experience.raw.live-office-expansion",
+    "experience.raw.service-mesh-law",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.service-mesh-operations",
+    "experience.raw.runtime-authority-boundary",
+    "agon.pre-protocol-stop-lines",
 ]
 
 EXPECTED_EXISTING_SERVICE_OFFICES = [
@@ -397,8 +397,8 @@ def assert_phrase_present(items: list[str], phrase: str, surface: str) -> None:
 
 
 def validate_schema(schema: dict[str, Any], payload: dict[str, Any]) -> None:
-    if schema.get("title") != "experience_v1_3_office_foundry_role_pairs_v1":
-        fail("schema title must remain experience_v1_3_office_foundry_role_pairs_v1")
+    if schema.get("title") != "experience_office_foundry_role_pairs_v1":
+        fail("schema title must remain experience_office_foundry_role_pairs_v1")
     if schema.get("additionalProperties") is not False:
         fail("schema must reject additional top-level properties")
     Draft202012Validator.check_schema(schema)
@@ -422,16 +422,16 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         fail("live_runtime_activation must remain false")
 
     source = payload["source_seed"]
-    if source["archive_name"] != SOURCE_ARCHIVE:
-        fail("source_seed.archive_name must preserve the v1.3 archive")
+    if source["receipt_ref"] != SOURCE_ARCHIVE:
+        fail("source_seed.receipt_ref must preserve the v1.3 archive")
     if source["sha256"] != SOURCE_SHA256:
         fail("source_seed.sha256 must preserve the Dionysus intake checksum")
     if source["claim_limit"] != "archive_readable_not_owner_ready":
         fail("source_seed.claim_limit must deny owner readiness")
 
-    if payload["predecessor_surfaces"] != EXPECTED_PREDECESSORS:
+    if payload["predecessor_receipt_refs"] != EXPECTED_PREDECESSORS:
         fail(
-            "predecessor_surfaces must preserve Dionysus, v1.2, runtime, and Agon order"
+            "predecessor_receipt_refs must preserve Dionysus, v1.2, runtime, and Agon order"
         )
     if payload["existing_service_offices"] != EXPECTED_EXISTING_SERVICE_OFFICES:
         fail("existing_service_offices must preserve the pre-v1.3 service offices")
@@ -595,7 +595,7 @@ def validate_files() -> None:
 
 def main() -> int:
     validate_files()
-    print("ok: Experience v1.3 office foundry role-pairs center contract is valid")
+    print("ok: Experience office foundry role-pairs center contract is valid")
     return 0
 
 

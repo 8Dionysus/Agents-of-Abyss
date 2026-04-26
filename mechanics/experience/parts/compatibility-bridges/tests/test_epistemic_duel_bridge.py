@@ -16,12 +16,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "compatibility-bridges" / "scripts" / "validate_epistemic_duel_bridge.py"
-    spec = importlib.util.spec_from_file_location("experience_v15_epistemic_duel_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "compatibility-bridges"
+        / "scripts"
+        / "validate_epistemic_duel_bridge.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_epistemic_duel_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -31,8 +42,13 @@ def load_validator():
 def load_example() -> dict[str, object]:
     return json.loads(
         (
-            ROOT / "mechanics" / "experience" / "parts" / "compatibility-bridges" / "examples"
-            / "experience_v1_5_epistemic_duel_model_of_other_forge.example.json"
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "compatibility-bridges"
+            / "examples"
+            / "experience_epistemic_duel_model_forge.example.json"
         ).read_text(encoding="utf-8")
     )
 
@@ -40,15 +56,23 @@ def load_example() -> dict[str, object]:
 def load_schema() -> dict[str, object]:
     return json.loads(
         (
-            ROOT / "mechanics" / "experience" / "parts" / "compatibility-bridges" / "schemas"
-            / "experience-v1-5-epistemic-duel-model-of-other-forge.schema.json"
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "compatibility-bridges"
+            / "schemas"
+            / "experience-epistemic-duel-model-forge.schema.json"
         ).read_text(encoding="utf-8")
     )
 
 
-def test_experience_v15_epistemic_duel_validator_passes() -> None:
+def test_experience_epistemic_duel_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/compatibility-bridges/scripts/validate_epistemic_duel_bridge.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/compatibility-bridges/scripts/validate_epistemic_duel_bridge.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -56,20 +80,22 @@ def test_experience_v15_epistemic_duel_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_v15_epistemic_duel_requires_source_archive() -> None:
+def test_experience_epistemic_duel_requires_source_archive() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     source = bad_payload["source_seed"]
     assert isinstance(source, dict)
-    source["archive_name"] = "aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6.zip"
+    source["receipt_ref"] = (
+        "experience.seed.memory-rank-reputation"
+    )
 
-    with pytest.raises(validator.ValidationError, match="archive_name|schema"):
+    with pytest.raises(validator.ValidationError, match="receipt_ref|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_rejects_live_duel_activation() -> None:
+def test_experience_epistemic_duel_rejects_live_duel_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -80,40 +106,46 @@ def test_experience_v15_epistemic_duel_rejects_live_duel_activation() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_rejects_live_runtime_activation() -> None:
+def test_experience_epistemic_duel_rejects_live_runtime_activation() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     bad_payload["live_runtime_activation"] = True
 
-    with pytest.raises(validator.ValidationError, match="schema|live_runtime_activation"):
+    with pytest.raises(
+        validator.ValidationError, match="schema|live_runtime_activation"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_current_agon_epistemic_predecessors() -> None:
+def test_experience_epistemic_duel_requires_current_agon_epistemic_predecessors() -> (
+    None
+):
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/agon/docs/AGON_MODEL_OF_OTHER_LAW.md")
+    predecessors.remove("agon.model-of-other-law")
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+    with pytest.raises(validator.ValidationError, match="predecessor_receipt_refs|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_v14_mechanical_predecessor() -> None:
+def test_experience_epistemic_duel_requires_v14_mechanical_predecessor() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
-    predecessors = bad_payload["predecessor_surfaces"]
+    predecessors = bad_payload["predecessor_receipt_refs"]
     assert isinstance(predecessors, list)
-    predecessors.remove("mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md")
+    predecessors.remove(
+        "experience.raw.agonic-pair-trials-arena-kernel"
+    )
 
-    with pytest.raises(validator.ValidationError, match="predecessor_surfaces|schema"):
+    with pytest.raises(validator.ValidationError, match="predecessor_receipt_refs|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
@@ -132,7 +164,7 @@ def test_experience_v15_epistemic_duel_requires_v14_mechanical_predecessor() -> 
         "no_direct_tree_of_sophia_or_kag_canon",
     ],
 )
-def test_experience_v15_epistemic_duel_requires_hard_guards(guard: str) -> None:
+def test_experience_epistemic_duel_requires_hard_guards(guard: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -145,7 +177,7 @@ def test_experience_v15_epistemic_duel_requires_hard_guards(guard: str) -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_rejects_active_landing_state() -> None:
+def test_experience_epistemic_duel_rejects_active_landing_state() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -160,7 +192,7 @@ def test_experience_v15_epistemic_duel_rejects_active_landing_state() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_blocks_unsealed_model_of_other() -> None:
+def test_experience_epistemic_duel_blocks_unsealed_model_of_other() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -182,7 +214,7 @@ def test_experience_v15_epistemic_duel_blocks_unsealed_model_of_other() -> None:
         "stale_model_allowed",
     ],
 )
-def test_experience_v15_epistemic_duel_blocks_bad_model_of_other_claims(field: str) -> None:
+def test_experience_epistemic_duel_blocks_bad_model_of_other_claims(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -195,7 +227,7 @@ def test_experience_v15_epistemic_duel_blocks_bad_model_of_other_claims(field: s
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_fair_model_inputs() -> None:
+def test_experience_epistemic_duel_requires_fair_model_inputs() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -204,11 +236,14 @@ def test_experience_v15_epistemic_duel_requires_fair_model_inputs() -> None:
     assert isinstance(trials, list)
     trials[0]["must_include"].remove("fair_representation")
 
-    with pytest.raises(validator.ValidationError, match="schema|epistemic_trial_requests|sealed_model_of_other_prediction"):
+    with pytest.raises(
+        validator.ValidationError,
+        match="schema|epistemic_trial_requests|sealed_model_of_other_prediction",
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_blocks_mind_reading_in_trial_request() -> None:
+def test_experience_epistemic_duel_blocks_mind_reading_in_trial_request() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -217,11 +252,14 @@ def test_experience_v15_epistemic_duel_blocks_mind_reading_in_trial_request() ->
     assert isinstance(trials, list)
     trials[0]["must_not_include"].remove("mind_reading_claim")
 
-    with pytest.raises(validator.ValidationError, match="schema|epistemic_trial_requests|sealed_model_of_other_prediction"):
+    with pytest.raises(
+        validator.ValidationError,
+        match="schema|epistemic_trial_requests|sealed_model_of_other_prediction",
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_rejects_countermodel_trial_authority_leak() -> None:
+def test_experience_epistemic_duel_rejects_countermodel_trial_authority_leak() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -233,11 +271,13 @@ def test_experience_v15_epistemic_duel_rejects_countermodel_trial_authority_leak
     countermodel["authority"] = "live truth verdict authority allowed"
     countermodel["must_not_include"] = []
 
-    with pytest.raises(validator.ValidationError, match="schema|epistemic_trial_requests"):
+    with pytest.raises(
+        validator.ValidationError, match="schema|epistemic_trial_requests"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_blocks_posthoc_prediction_edit() -> None:
+def test_experience_epistemic_duel_blocks_posthoc_prediction_edit() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -250,7 +290,7 @@ def test_experience_v15_epistemic_duel_blocks_posthoc_prediction_edit() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_blocks_prediction_score_as_verdict() -> None:
+def test_experience_epistemic_duel_blocks_prediction_score_as_verdict() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -274,7 +314,7 @@ def test_experience_v15_epistemic_duel_blocks_prediction_score_as_verdict() -> N
         ("closure_consensus", "consensus_without_revision_allowed"),
     ],
 )
-def test_experience_v15_epistemic_duel_blocks_revision_and_consensus_drift(
+def test_experience_epistemic_duel_blocks_revision_and_consensus_drift(
     section: str,
     field: str,
 ) -> None:
@@ -290,7 +330,7 @@ def test_experience_v15_epistemic_duel_blocks_revision_and_consensus_drift(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_blocks_open_contradiction_closure() -> None:
+def test_experience_epistemic_duel_blocks_open_contradiction_closure() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -313,7 +353,7 @@ def test_experience_v15_epistemic_duel_blocks_open_contradiction_closure() -> No
         "verdict_may_mutate_actor_or_standing",
     ],
 )
-def test_experience_v15_epistemic_duel_blocks_truth_verdict_authority(field: str) -> None:
+def test_experience_epistemic_duel_blocks_truth_verdict_authority(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -338,7 +378,9 @@ def test_experience_v15_epistemic_duel_blocks_truth_verdict_authority(field: str
         "honor_mutation_allowed",
     ],
 )
-def test_experience_v15_epistemic_duel_blocks_memory_and_standing_mutation(field: str) -> None:
+def test_experience_epistemic_duel_blocks_memory_and_standing_mutation(
+    field: str,
+) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -362,7 +404,7 @@ def test_experience_v15_epistemic_duel_blocks_memory_and_standing_mutation(field
         "kag_source_truth_claim_allowed",
     ],
 )
-def test_experience_v15_epistemic_duel_blocks_tos_and_kag_authority(field: str) -> None:
+def test_experience_epistemic_duel_blocks_tos_and_kag_authority(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -385,7 +427,7 @@ def test_experience_v15_epistemic_duel_blocks_tos_and_kag_authority(field: str) 
         "deployment_daemon_allowed",
     ],
 )
-def test_experience_v15_epistemic_duel_blocks_runtime_storage(field: str) -> None:
+def test_experience_epistemic_duel_blocks_runtime_storage(field: str) -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -398,7 +440,7 @@ def test_experience_v15_epistemic_duel_blocks_runtime_storage(field: str) -> Non
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_blocks_raw_generated_output_as_truth() -> None:
+def test_experience_epistemic_duel_blocks_raw_generated_output_as_truth() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -424,7 +466,7 @@ def test_experience_v15_epistemic_duel_blocks_raw_generated_output_as_truth() ->
         "start scoring job",
     ],
 )
-def test_experience_v15_epistemic_duel_rejects_codex_authority_leaks(
+def test_experience_epistemic_duel_rejects_codex_authority_leaks(
     forbidden_grant: str,
 ) -> None:
     validator = load_validator()
@@ -435,11 +477,14 @@ def test_experience_v15_epistemic_duel_rejects_codex_authority_leaks(
     assert isinstance(may, list)
     may.append(forbidden_grant)
 
-    with pytest.raises(validator.ValidationError, match="codex_may|forbidden epistemic duel authority|schema"):
+    with pytest.raises(
+        validator.ValidationError,
+        match="codex_may|forbidden epistemic duel authority|schema",
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_assistant_deep_modeling_denial() -> None:
+def test_experience_epistemic_duel_requires_assistant_deep_modeling_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -463,7 +508,7 @@ def test_experience_v15_epistemic_duel_requires_assistant_deep_modeling_denial()
         "model_of_other_as_truth",
     ],
 )
-def test_experience_v15_epistemic_duel_requires_derived_layer_denials(
+def test_experience_epistemic_duel_requires_derived_layer_denials(
     derived_denial: str,
 ) -> None:
     validator = load_validator()
@@ -478,7 +523,7 @@ def test_experience_v15_epistemic_duel_requires_derived_layer_denials(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_kag_owner_gate() -> None:
+def test_experience_epistemic_duel_requires_kag_owner_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -503,7 +548,7 @@ def test_experience_v15_epistemic_duel_requires_kag_owner_gate() -> None:
         "generated output becomes truth",
     ],
 )
-def test_experience_v15_epistemic_duel_rejects_flow_authority_note_leaks(
+def test_experience_epistemic_duel_rejects_flow_authority_note_leaks(
     authority_note: str,
 ) -> None:
     validator = load_validator()
@@ -518,7 +563,7 @@ def test_experience_v15_epistemic_duel_rejects_flow_authority_note_leaks(
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_all_owner_repos() -> None:
+def test_experience_epistemic_duel_requires_all_owner_repos() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -531,7 +576,7 @@ def test_experience_v15_epistemic_duel_requires_all_owner_repos() -> None:
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_rejects_routing_owner_authority_leak() -> None:
+def test_experience_epistemic_duel_rejects_routing_owner_authority_leak() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -540,14 +585,16 @@ def test_experience_v15_epistemic_duel_rejects_routing_owner_authority_leak() ->
     assert isinstance(owner_split, list)
     for entry in owner_split:
         if entry.get("repo") == "aoa-routing":
-            entry["owns"] = "live dispatch authority, route truth verdicts, and owner meaning"
+            entry["owns"] = (
+                "live dispatch authority, route truth verdicts, and owner meaning"
+            )
             entry["must_not"] = "none"
 
     with pytest.raises(validator.ValidationError, match="schema|owner_split"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_agents_deep_modeling_denial() -> None:
+def test_experience_epistemic_duel_requires_agents_deep_modeling_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -556,13 +603,17 @@ def test_experience_v15_epistemic_duel_requires_agents_deep_modeling_denial() ->
     assert isinstance(owner_split, list)
     for entry in owner_split:
         if entry.get("repo") == "aoa-agents":
-            entry["must_not"] = "grant assistant contestant judge truth verdict scar writer retention executor or hybrid mask authority"
+            entry["must_not"] = (
+                "grant assistant contestant judge truth verdict scar writer retention executor or hybrid mask authority"
+            )
 
     with pytest.raises(validator.ValidationError, match="owner_split|aoa-agents"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_evals_no_live_truth_verdict_denial() -> None:
+def test_experience_epistemic_duel_requires_evals_no_live_truth_verdict_denial() -> (
+    None
+):
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -571,13 +622,15 @@ def test_experience_v15_epistemic_duel_requires_evals_no_live_truth_verdict_deni
     assert isinstance(owner_split, list)
     for entry in owner_split:
         if entry.get("repo") == "aoa-evals":
-            entry["must_not"] = "certify epistemic closure mutate rank write memory grant scars or execute retention"
+            entry["must_not"] = (
+                "certify epistemic closure mutate rank write memory grant scars or execute retention"
+            )
 
     with pytest.raises(validator.ValidationError, match="owner_split|aoa-evals"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_memo_no_durable_memory_denial() -> None:
+def test_experience_epistemic_duel_requires_memo_no_durable_memory_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -592,7 +645,7 @@ def test_experience_v15_epistemic_duel_requires_memo_no_durable_memory_denial() 
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_kag_owner_review_denial() -> None:
+def test_experience_epistemic_duel_requires_kag_owner_review_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -607,7 +660,7 @@ def test_experience_v15_epistemic_duel_requires_kag_owner_review_denial() -> Non
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_runtime_owner_split_gate() -> None:
+def test_experience_epistemic_duel_requires_runtime_owner_split_gate() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -616,13 +669,17 @@ def test_experience_v15_epistemic_duel_requires_runtime_owner_split_gate() -> No
     assert isinstance(owner_split, list)
     for entry in owner_split:
         if entry.get("repo") == "abyss-stack":
-            entry["owns"] = "runtime storage workers scoring jobs deployment ports services and session persistence"
+            entry["owns"] = (
+                "runtime storage workers scoring jobs deployment ports services and session persistence"
+            )
 
-    with pytest.raises(validator.ValidationError, match="owner_split|runtime-owner gate"):
+    with pytest.raises(
+        validator.ValidationError, match="owner_split|runtime-owner gate"
+    ):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_tos_direct_write_denial() -> None:
+def test_experience_epistemic_duel_requires_tos_direct_write_denial() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
@@ -637,20 +694,22 @@ def test_experience_v15_epistemic_duel_requires_tos_direct_write_denial() -> Non
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_requires_quarantine_of_generated_outputs() -> None:
+def test_experience_epistemic_duel_requires_quarantine_of_generated_outputs() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()
     bad_payload = copy.deepcopy(payload)
     quarantine = bad_payload["quarantined_surfaces"]
     assert isinstance(quarantine, list)
-    quarantine.remove("archive-local generated verdict scar retention rank memory dashboard and storage artifacts")
+    quarantine.remove(
+        "archive-local generated verdict scar retention rank memory dashboard and storage artifacts"
+    )
 
     with pytest.raises(validator.ValidationError, match="quarantined_surfaces|schema"):
         validator.validate_payload(bad_payload, schema)
 
 
-def test_experience_v15_epistemic_duel_preserves_dry_run_only_evidence() -> None:
+def test_experience_epistemic_duel_preserves_dry_run_only_evidence() -> None:
     validator = load_validator()
     payload = load_example()
     schema = load_schema()

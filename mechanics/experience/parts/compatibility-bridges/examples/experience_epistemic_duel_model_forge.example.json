@@ -1,0 +1,537 @@
+{
+  "schema_version": "experience_epistemic_duel_model_forge_v1",
+  "planting_id": "experience_epistemic_duel_model_forge_center_contract",
+  "campaign_ref": "epistemic_duel_model_forge",
+  "status": "center_epistemic_duel_model_of_other_contract_landed",
+  "runtime_effect": "none",
+  "live_duel_activation": false,
+  "live_runtime_activation": false,
+  "source_seed": {
+    "receipt_ref": "experience.seed.epistemic-duel-model-forge",
+    "sha256": "51349824b23af2da3434e0ba6ce95fe6c5faf32bdb449b98e793d2912c73ff05",
+    "claim_limit": "archive_readable_not_owner_ready"
+  },
+  "predecessor_receipt_refs": [
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.service-mesh-operations",
+    "experience.raw.office-role-pairs",
+    "experience.raw.agonic-pair-trials-arena-kernel",
+    "agon.model-of-other-law",
+    "agon.epistemic-agon",
+    "agon.epistemic-move-extension-model",
+    "agon.epistemic-owner-handoffs",
+    "agon.epistemic-duel-landing",
+    "agon.epistemic-duel-stop-lines",
+    "agon.retention-rank-landing",
+    "agon.retention-rank-stop-lines",
+    "agon.duel-kernel-model",
+    "agon.mechanical-trials-over-duel-kernel",
+    "agon.sealed-commit-model",
+    "agon.state-packet-model",
+    "agon.contradiction-closure-summon-law",
+    "agon.verdict-delta-scar-bridge",
+    "agon.delta-receipt-model",
+    "agon.retention-rank-economy",
+    "experience.raw.runtime-authority-boundary",
+    "agon.pre-protocol-stop-lines"
+  ],
+  "epistemic_duel_law": [
+    "no_model_of_other_without_sealed_prediction",
+    "no_prediction_reveal_before_commit",
+    "no_prediction_accuracy_without_actual_moves",
+    "no_countermodel_pressure_without_fair_representation",
+    "no_hypothesis_revision_without_epistemic_delta",
+    "no_false_consensus_over_material_open_contradiction",
+    "no_confidence_laundering",
+    "no_caricature_or_mind_reading_claim",
+    "no_codex_truth_verdict",
+    "no_rank_reputation_memory_or_scar_mutation",
+    "no_direct_tree_of_sophia_or_kag_canon"
+  ],
+  "epistemic_trial_requests": [
+    {
+      "trial": "sealed_model_of_other_prediction",
+      "owner": "Agents-of-Abyss",
+      "input_boundary": "predicted thesis reasoning move objection confidence evidence refs and uncertainty floor",
+      "output_candidate": "model_prediction_candidate",
+      "must_include": [
+        "evidence_refs",
+        "uncertainty_floor",
+        "fair_representation",
+        "predicted_reasoning_move"
+      ],
+      "must_not_include": [
+        "mind_reading_claim",
+        "hidden_inner_state_fact",
+        "caricature_model",
+        "posthoc_edit"
+      ],
+      "live_execution": false,
+      "authority": "center_law_only"
+    },
+    {
+      "trial": "prediction_accuracy_scoring",
+      "owner": "aoa-evals",
+      "input_boundary": "sealed prediction actual other moves and reveal integrity evidence",
+      "output_candidate": "prediction_accuracy_report_candidate",
+      "must_include": [
+        "actual_moves",
+        "reveal_integrity",
+        "mismatch_trace",
+        "uncertainty_retained"
+      ],
+      "must_not_include": [
+        "truth_verdict",
+        "rank_delta",
+        "scar_write",
+        "memory_write"
+      ],
+      "live_execution": false,
+      "authority": "bounded_eval_request_only"
+    },
+    {
+      "trial": "countermodel_pressure",
+      "owner": "aoa-playbooks",
+      "input_boundary": "opposing thesis fair representation weak-link hypothesis and counter pressure",
+      "output_candidate": "countermodel_pressure_candidate",
+      "must_include": [
+        "fair_representation",
+        "strongest_objection",
+        "pressure_trace",
+        "revision_condition"
+      ],
+      "must_not_include": [
+        "assistant_deep_modeling",
+        "hidden_summon",
+        "forced_consensus",
+        "automatic_doctrine_rewrite"
+      ],
+      "live_execution": false,
+      "authority": "playbook_request_only"
+    },
+    {
+      "trial": "hypothesis_revision_and_bifurcation_quality",
+      "owner": "aoa-evals",
+      "input_boundary": "before claim pressure event after claim delta depth and branch viability",
+      "output_candidate": "epistemic_delta_or_bifurcation_candidate",
+      "must_include": [
+        "before_after_claims",
+        "delta_depth",
+        "future_effect_claim",
+        "open_tension_record"
+      ],
+      "must_not_include": [
+        "shallow_delta",
+        "false_consensus",
+        "durable_scar",
+        "retention_execution"
+      ],
+      "live_execution": false,
+      "authority": "verdict_draft_request_only"
+    }
+  ],
+  "epistemic_flow": [
+    {
+      "order": 1,
+      "kind": "source_seed_received",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "Dionysus archive is transport evidence; center may name v1.5 epistemic duel law only",
+      "stop_lines": [
+        "no raw archive replay",
+        "no generated clean-flow promotion"
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "mechanical_arena_predecessor_checked",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "v1.4 mechanical arena remains predecessor law; v1.5 may only add epistemic pressure boundary",
+      "stop_lines": [
+        "no live duel",
+        "no arena redefinition"
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "epistemic_charter_requested",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "charter is required before any later owner-local epistemic duel can be considered",
+      "stop_lines": [
+        "no center-created live duel",
+        "no truth court"
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "model_of_other_sealed",
+      "owner": "aoa-evals",
+      "authority_note": "sealed prediction may be checked as candidate evidence but cannot become mind-reading truth",
+      "stop_lines": [
+        "no unsealed model",
+        "no mind-reading claim"
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "prediction_reveal_checked",
+      "owner": "aoa-evals",
+      "authority_note": "reveal integrity is a bounded check after actual moves, not a verdict",
+      "stop_lines": [
+        "no posthoc prediction edit",
+        "no reveal before commit"
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "prediction_accuracy_requested",
+      "owner": "aoa-evals",
+      "authority_note": "prediction accuracy may produce a report candidate but cannot alter standing ledgers or memory",
+      "stop_lines": [
+        "no score as verdict",
+        "no rank mutation"
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "countermodel_pressure_requested",
+      "owner": "aoa-playbooks",
+      "authority_note": "countermodel pressure requires fair representation and remains choreography request only",
+      "stop_lines": [
+        "no caricature",
+        "no assistant deep modeling"
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "hypothesis_revision_required",
+      "owner": "aoa-evals",
+      "authority_note": "revision requires explicit before after and future effect claims without automatic doctrine rewrite",
+      "stop_lines": [
+        "no revision without delta",
+        "no automatic doctrine rewrite"
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "bifurcation_quality_gate_required",
+      "owner": "aoa-evals",
+      "authority_note": "bifurcation quality may preserve incompatible branches without forcing false consensus",
+      "stop_lines": [
+        "no false consensus",
+        "no closure over material open contradiction"
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "epistemic_delta_receipt_requested",
+      "owner": "aoa-memo",
+      "authority_note": "memo may receive delta candidates after owner review but cannot write durable memory here",
+      "stop_lines": [
+        "no shallow delta",
+        "no durable memory write"
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "scar_retention_rank_boundary_checked",
+      "owner": "aoa-memo",
+      "authority_note": "scar retention rank reputation trust and honor stay request-only until owner-local gates land",
+      "stop_lines": [
+        "no durable scar write",
+        "no retention or rank execution"
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "owner_landing_or_recharter_request_declared",
+      "owner": "Agents-of-Abyss",
+      "authority_note": "future epistemic work returns to owner-local landing or human recharter as requests",
+      "stop_lines": [
+        "no runtime storage activation",
+        "no direct Tree-of-Sophia or KAG canon"
+      ]
+    }
+  ],
+  "hard_guards": [
+    "no_live_duel_activation",
+    "no_live_runtime_activation",
+    "no_assistant_contestant",
+    "no_assistant_deep_modeling",
+    "no_unsealed_model_of_other",
+    "no_posthoc_prediction_tamper",
+    "no_caricature_model",
+    "no_mind_reading_claim",
+    "no_missing_model_of_other",
+    "no_confidence_laundering",
+    "no_false_consensus_over_material_open_contradiction",
+    "no_revision_without_delta",
+    "no_shallow_epistemic_delta",
+    "no_codex_truth_verdict",
+    "no_rank_reputation_trust_honor_memory_scar_retention_mutation",
+    "no_direct_tree_of_sophia_or_kag_canon"
+  ],
+  "blocking_contracts": {
+    "activation_state": {
+      "allowed_landing_states": [
+        "draft",
+        "proposed",
+        "reviewed",
+        "blocked",
+        "quarantined",
+        "candidate_only"
+      ],
+      "active_allowed_during_landing": false,
+      "live_duel_allowed": false,
+      "live_runtime_allowed": false
+    },
+    "model_of_other_integrity": {
+      "sealed_prediction_required": true,
+      "reveal_after_commit_required": true,
+      "fair_representation_required": true,
+      "evidence_refs_required": true,
+      "uncertainty_floor_required": true,
+      "caricature_allowed": false,
+      "mind_reading_claim_allowed": false,
+      "hidden_inner_state_fact_claim_allowed": false,
+      "stale_model_allowed": false
+    },
+    "contestant_and_assistant_boundary": {
+      "primary_contestant_kinds": [
+        "agonic"
+      ],
+      "assistant_primary_contestant_allowed": false,
+      "assistant_deep_modeling_allowed": false,
+      "assistant_judge_allowed": false,
+      "assistant_truth_verdict_allowed": false,
+      "assistant_witness_only": true
+    },
+    "prediction_scoring": {
+      "actual_moves_required": true,
+      "reveal_integrity_required": true,
+      "posthoc_prediction_edit_allowed": false,
+      "prediction_score_is_verdict": false,
+      "prediction_score_may_mutate_standing": false
+    },
+    "revision_delta": {
+      "explicit_epistemic_delta_required": true,
+      "minimum_delta_depth": "behavior_changing_candidate",
+      "revision_without_delta_allowed": false,
+      "shallow_delta_allowed": false,
+      "automatic_doctrine_rewrite_allowed": false
+    },
+    "closure_consensus": {
+      "material_open_contradiction_blocks_closure": true,
+      "false_consensus_allowed": false,
+      "confidence_laundering_allowed": false,
+      "consensus_without_revision_allowed": false,
+      "closure_without_trace_allowed": false
+    },
+    "verdict_boundary": {
+      "allowed_issuer_kinds": [
+        "evaluator",
+        "operator",
+        "council"
+      ],
+      "codex_truth_verdict_allowed": false,
+      "assistant_truth_verdict_allowed": false,
+      "runtime_truth_verdict_allowed": false,
+      "eval_live_verdict_authority_allowed": false,
+      "verdict_may_mutate_actor_or_standing": false
+    },
+    "memory_rank_boundary": {
+      "memory_candidate_only_required": true,
+      "scar_candidate_only_required": true,
+      "retention_candidate_only_required": true,
+      "durable_memory_write_allowed": false,
+      "durable_scar_write_allowed": false,
+      "retention_execution_allowed": false,
+      "rank_mutation_allowed": false,
+      "reputation_mutation_allowed": false,
+      "trust_mutation_allowed": false,
+      "honor_mutation_allowed": false
+    },
+    "tos_kag_boundary": {
+      "runtime_write_allowed": false,
+      "direct_node_path_allowed": false,
+      "tos_canon_write_allowed": false,
+      "kag_promotion_allowed": false,
+      "kag_canonization_allowed": false,
+      "kag_source_truth_claim_allowed": false,
+      "dossier_candidate_only": true
+    },
+    "runtime_storage": {
+      "runtime_worker_activation_allowed": false,
+      "storage_record_authoritative": false,
+      "host_port_open_allowed": false,
+      "scheduler_loop_allowed": false,
+      "scoring_job_allowed": false,
+      "deployment_daemon_allowed": false
+    },
+    "archive_consistency": {
+      "clean_flow_may_inform_contract": true,
+      "raw_generated_output_copied_as_truth": false,
+      "fixture_generated_result_disagreement_allowed": false,
+      "archive_scripts_tests_copied_as_owner_truth": false,
+      "archive_pycache_allowed_in_owner_repo": false
+    }
+  },
+  "authority": {
+    "contract_effect": "center_epistemic_duel_model_of_other_law_only",
+    "codex_may": [
+      "simulate model-of-other contract checks",
+      "collect seed dry-run evidence",
+      "propose owner-local epistemic duel requests",
+      "run validators",
+      "prepare model divergence review packets"
+    ],
+    "codex_must_not": [
+      "activate live duel",
+      "activate live runtime",
+      "issue truth verdict",
+      "certify epistemic closure",
+      "enroll assistant as contestant",
+      "perform assistant deep modeling",
+      "claim mind-reading truth",
+      "accept caricature model",
+      "launder confidence",
+      "force false consensus",
+      "write durable memory",
+      "write durable scar",
+      "execute retention",
+      "mutate rank reputation trust or honor",
+      "promote KAG canon",
+      "write directly to Tree-of-Sophia",
+      "promote generated clean-flow output to owner truth",
+      "copy raw archive proposals into owner truth"
+    ],
+    "assistant_must_not": [
+      "become primary contestant",
+      "become judge",
+      "issue truth verdict",
+      "perform deep adversarial modeling",
+      "claim mind-reading truth",
+      "write memory",
+      "write scars",
+      "execute retention",
+      "mutate rank reputation trust or honor",
+      "promote KAG canon",
+      "write directly to Tree-of-Sophia",
+      "self-enroll into epistemic duel"
+    ],
+    "derived_layers_must_not": [
+      "stats_as_proof",
+      "memo_as_truth",
+      "routing_as_owner",
+      "kag_as_canon",
+      "sdk_as_authority",
+      "evals_as_live_verdict_authority",
+      "playbooks_as_runtime",
+      "runtime_as_doctrine",
+      "dionysus_as_runtime",
+      "model_of_other_as_truth"
+    ],
+    "human_gates_required": [
+      "operator epistemic-duel acceptance",
+      "owner-local model-of-other eligibility approval",
+      "owner-local eval approval before verdict bundle use",
+      "owner-local memo approval before scar retention or memory intake",
+      "runtime-owner gate before storage workers scoring jobs ports schedulers services or daemons",
+      "Tree-of-Sophia review before canon or interpretive intake",
+      "KAG owner review before pattern promotion"
+    ]
+  },
+  "owner_split": [
+    {
+      "repo": "Agents-of-Abyss",
+      "owns": "center epistemic duel law model-of-other boundary source bridge flow hard guards and authority stop-lines",
+      "must_not": "replace owner-local role proof memory routing runtime KAG ToS or verdict truth"
+    },
+    {
+      "repo": "aoa-agents",
+      "owns": "agonic contestant eligibility assistant witness limits role posture and no-assistant-deep-modeling policy after owner-local landing",
+      "must_not": "grant assistant contestant judge truth verdict deep adversarial modeling scar writer retention executor or hybrid mask authority"
+    },
+    {
+      "repo": "aoa-evals",
+      "owns": "prediction accuracy bifurcation quality delta depth false consensus confidence laundering and revision-quality checks",
+      "must_not": "issue live truth verdicts certify epistemic closure mutate rank write memory grant scars or execute retention"
+    },
+    {
+      "repo": "aoa-playbooks",
+      "owns": "recurring epistemic trial choreography countermodel pressure routes fallback posture and owner-review run routes",
+      "must_not": "execute live duel sessions become runtime or grant truth verdict scar rank memory retention KAG or ToS authority"
+    },
+    {
+      "repo": "aoa-memo",
+      "owns": "memory scar retention prediction-error and epistemic delta intake candidates only after owner review",
+      "must_not": "make memory truth write durable memory write durable scars execute retention or mutate future behavior rights"
+    },
+    {
+      "repo": "aoa-stats",
+      "owns": "derived epistemic duel dashboards prediction accuracy summaries delta-depth rollups and pressure metrics",
+      "must_not": "become proof score truth verdict rank reputation honor or quest authority"
+    },
+    {
+      "repo": "aoa-routing",
+      "owns": "advisory epistemic gate model-divergence false-consensus and owner-escalation route candidates",
+      "must_not": "open live gates own meaning grant dispatch authority or route as truth verdict"
+    },
+    {
+      "repo": "aoa-sdk",
+      "owns": "typed packet helpers API contracts validation helpers and control-plane seams only",
+      "must_not": "become semantic runtime truth verdict memory scar retention rank or storage authority"
+    },
+    {
+      "repo": "aoa-kag",
+      "owns": "derived epistemic pattern model-of-other and bifurcation candidates only",
+      "must_not": "become canon force Tree-of-Sophia uptake claim source truth or promote KAG without owner review"
+    },
+    {
+      "repo": "aoa-skills",
+      "owns": "bounded epistemic duel workflows extracted from owner-accepted patterns",
+      "must_not": "grant live move truth verdict model authority scar rank retention memory KAG ToS or runtime authority"
+    },
+    {
+      "repo": "aoa-techniques",
+      "owns": "reusable model-of-other countermodel pressure concept-map delta and false-consensus detection practice after owner acceptance",
+      "must_not": "grant live duel canon truth verdict scar rank retention memory KAG ToS or runtime authority"
+    },
+    {
+      "repo": "abyss-stack",
+      "owns": "runtime storage workers scoring jobs deployment ports services and session persistence only after a separate runtime-owner gate",
+      "must_not": "activate runtime from this center landing"
+    },
+    {
+      "repo": "Tree-of-Sophia",
+      "owns": "canon and interpretive review through its own path",
+      "must_not": "receive direct runtime writes node paths canon writes or unreviewed epistemic duel dossiers"
+    },
+    {
+      "repo": "Dionysus",
+      "owns": "source lineage staged intake and later harvest trace",
+      "must_not": "become runtime owner doctrine or live epistemic duel source of truth"
+    },
+    {
+      "repo": "8Dionysus",
+      "owns": "shared-root projection law where workspace projection surfaces are affected",
+      "must_not": "absorb epistemic duel truth"
+    }
+  ],
+  "quarantined_surfaces": [
+    "archive-local generated/epistemic_duel_clean_flow runtime-like examples",
+    "archive-local generated verdict scar retention rank memory dashboard and storage artifacts",
+    "archive-local repo/* owner proposals outside this center contract",
+    "archive-local quests/AOA-Q-EXP-15xx files",
+    "archive-local scripts and tests as transport evidence only",
+    "archive-local runtime storage records workers scoring jobs and generated catalogs"
+  ],
+  "seed_dry_run_evidence": {
+    "archive_integrity": "unzip_t_passed",
+    "schema_example_pairs": 47,
+    "json_files": 146,
+    "seed_tests_passed": 12,
+    "claim_limit": "dry_run_only_not_owner_readiness"
+  }
+}

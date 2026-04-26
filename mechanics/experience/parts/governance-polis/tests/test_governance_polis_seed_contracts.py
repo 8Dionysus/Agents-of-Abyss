@@ -14,66 +14,86 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
-ROOT = _repo_root()
-ENUM_ESCAPE_VALUE = "__wave4_not_allowed__"
-ARTIFACT_MAP_PATH = ROOT / "mechanics" / "experience" / "artifact-map.json"
-ARTIFACTS_BY_OLD = {
-    item["old_path"]: ROOT / item["path"]
-    for item in json.loads(ARTIFACT_MAP_PATH.read_text(encoding="utf-8"))["artifacts"]
-}
 
-WAVE4_CONTRACTS = (
-    ('experience_appeal', 'experience_appeal_v1.json'),
-    ('experience_authority_conflict', 'experience_authority_conflict_v1.json'),
-    ('experience_charter_amendment', 'experience_charter_amendment_v1.json'),
-    ('experience_conflict_of_interest_record', 'experience_conflict_of_interest_record_v1.json'),
-    ('experience_council_member', 'experience_council_member_v1.json'),
-    ('experience_council_session', 'experience_council_session_v1.json'),
-    ('experience_council_vote', 'experience_council_vote_v1.json'),
-    ('experience_cross_kind_conflict', 'experience_cross_kind_conflict_v1.json'),
-    ('experience_dispute_record', 'experience_dispute_record_v1.json'),
-    ('experience_governance_audit_record', 'experience_governance_audit_record_v1.json'),
-    ('experience_governance_case', 'experience_governance_case_v1.json'),
-    ('experience_governance_dashboard', 'experience_governance_dashboard_v1.json'),
-    ('experience_governance_decision', 'experience_governance_decision_v1.json'),
-    ('experience_governance_event_kind_registry', 'experience_governance_event_kind_registry_v1.json'),
-    ('experience_governance_packet', 'experience_governance_packet_v1.json'),
-    ('experience_governance_state', 'experience_governance_state_v1.json'),
-    ('experience_operator_decision', 'experience_operator_decision_v1.json'),
-    ('experience_policy_change', 'experience_policy_change_v1.json'),
-    ('experience_policy_precedent', 'experience_policy_precedent_v1.json'),
-    ('experience_quarantine_order', 'experience_quarantine_order_v1.json'),
-    ('experience_release_hold', 'experience_release_hold_v1.json'),
-    ('experience_retirement_decision', 'experience_retirement_decision_v1.json'),
-    ('experience_revocation_decision', 'experience_revocation_decision_v1.json'),
-    ('experience_stay_order', 'experience_stay_order_v1.json'),
-    ('experience_tos_dossier_governance_review', 'experience_tos_dossier_governance_review_v1.json'),
-    ('experience_veto', 'experience_veto_v1.json'),
-    ('appeal_expiry_job_v1', 'appeal_expiry_job_v1.json'),
-    ('appeal_record_v1', 'appeal_record_v1.json'),
-    ('authority_resolution_v1', 'authority_resolution_v1.json'),
-    ('constitution_runtime_authority_policy_v1', 'constitution_runtime_authority_policy_v1.json'),
-    ('constitution_runtime_event_kind_registry_v1', 'constitution_runtime_event_kind_registry_v1.json'),
-    ('constitution_runtime_job_v1', 'constitution_runtime_job_v1.json'),
-    ('constitution_runtime_snapshot_v1', 'constitution_runtime_snapshot_v1.json'),
-    ('council_schedule_v1', 'council_schedule_v1.json'),
-    ('decision_replay_event_v1', 'decision_replay_event_v1.json'),
-    ('decision_replay_report_v1', 'decision_replay_report_v1.json'),
-    ('governance_case_queue_v1', 'governance_case_queue_v1.json'),
-    ('governance_runtime_case_v1', 'governance_runtime_case_v1.json'),
-    ('governance_runtime_dashboard_v1', 'governance_runtime_dashboard_v1.json'),
-    ('precedent_index_entry_v1', 'precedent_index_entry_v1.json'),
-    ('runtime_policy_lock_v1', 'runtime_policy_lock_v1.json'),
-    ('sealed_decision_record_v1', 'sealed_decision_record_v1.json'),
-    ('sealed_vote_commit_v1', 'sealed_vote_commit_v1.json'),
-    ('stay_order_enforcement_v1', 'stay_order_enforcement_v1.json'),
-    ('stay_order_v1', 'stay_order_v1.json'),
-    ('vote_reveal_v1', 'vote_reveal_v1.json'),
+ROOT = _repo_root()
+ENUM_ESCAPE_VALUE = "__polis_not_allowed__"
+ARTIFACT_MAP_PATH = ROOT / "mechanics" / "experience" / "artifact-map.json"
+ARTIFACTS = json.loads(ARTIFACT_MAP_PATH.read_text(encoding="utf-8"))["artifacts"]
+ARTIFACTS_BY_OLD = {item["old_path"]: ROOT / item["path"] for item in ARTIFACTS}
+
+POLIS_CONTRACTS = (
+    ("experience_appeal", "experience_appeal_v1.json"),
+    ("experience_authority_conflict", "experience_authority_conflict_v1.json"),
+    ("experience_charter_amendment", "experience_charter_amendment_v1.json"),
+    (
+        "experience_conflict_of_interest_record",
+        "experience_conflict_of_interest_record_v1.json",
+    ),
+    ("experience_council_member", "experience_council_member_v1.json"),
+    ("experience_council_session", "experience_council_session_v1.json"),
+    ("experience_council_vote", "experience_council_vote_v1.json"),
+    ("experience_cross_kind_conflict", "experience_cross_kind_conflict_v1.json"),
+    ("experience_dispute_record", "experience_dispute_record_v1.json"),
+    (
+        "experience_governance_audit_record",
+        "experience_governance_audit_record_v1.json",
+    ),
+    ("experience_governance_case", "experience_governance_case_v1.json"),
+    ("experience_governance_dashboard", "experience_governance_dashboard_v1.json"),
+    ("experience_governance_decision", "experience_governance_decision_v1.json"),
+    (
+        "experience_governance_event_kind_registry",
+        "experience_governance_event_kind_registry_v1.json",
+    ),
+    ("experience_governance_packet", "experience_governance_packet_v1.json"),
+    ("experience_governance_state", "experience_governance_state_v1.json"),
+    ("experience_operator_decision", "experience_operator_decision_v1.json"),
+    ("experience_policy_change", "experience_policy_change_v1.json"),
+    ("experience_policy_precedent", "experience_policy_precedent_v1.json"),
+    ("experience_quarantine_order", "experience_quarantine_order_v1.json"),
+    ("experience_release_hold", "experience_release_hold_v1.json"),
+    ("experience_retirement_decision", "experience_retirement_decision_v1.json"),
+    ("experience_revocation_decision", "experience_revocation_decision_v1.json"),
+    ("experience_stay_order", "experience_stay_order_v1.json"),
+    (
+        "experience_tos_dossier_governance_review",
+        "experience_tos_dossier_governance_review_v1.json",
+    ),
+    ("experience_veto", "experience_veto_v1.json"),
+    ("appeal_expiry_job_v1", "appeal_expiry_job_v1.json"),
+    ("appeal_record_v1", "appeal_record_v1.json"),
+    ("authority_resolution_v1", "authority_resolution_v1.json"),
+    (
+        "constitution_runtime_authority_policy_v1",
+        "constitution_runtime_authority_policy_v1.json",
+    ),
+    (
+        "constitution_runtime_event_kind_registry_v1",
+        "constitution_runtime_event_kind_registry_v1.json",
+    ),
+    ("constitution_runtime_job_v1", "constitution_runtime_job_v1.json"),
+    ("constitution_runtime_snapshot_v1", "constitution_runtime_snapshot_v1.json"),
+    ("council_schedule_v1", "council_schedule_v1.json"),
+    ("decision_replay_event_v1", "decision_replay_event_v1.json"),
+    ("decision_replay_report_v1", "decision_replay_report_v1.json"),
+    ("governance_case_queue_v1", "governance_case_queue_v1.json"),
+    ("governance_runtime_case_v1", "governance_runtime_case_v1.json"),
+    ("governance_runtime_dashboard_v1", "governance_runtime_dashboard_v1.json"),
+    ("precedent_index_entry_v1", "precedent_index_entry_v1.json"),
+    ("runtime_policy_lock_v1", "runtime_policy_lock_v1.json"),
+    ("sealed_decision_record_v1", "sealed_decision_record_v1.json"),
+    ("sealed_vote_commit_v1", "sealed_vote_commit_v1.json"),
+    ("stay_order_enforcement_v1", "stay_order_enforcement_v1.json"),
+    ("stay_order_v1", "stay_order_v1.json"),
+    ("vote_reveal_v1", "vote_reveal_v1.json"),
 )
 
 
-
 def artifact_path(kind: str, name: str) -> Path:
+    for item in ARTIFACTS:
+        path = Path(item["path"])
+        if len(path.parts) >= 2 and path.parts[-2] == kind and path.name == name:
+            return ROOT / item["path"]
     old_path = "/".join(("mechanics", "experience", kind, name))
     try:
         return ARTIFACTS_BY_OLD[old_path]
@@ -81,7 +101,9 @@ def artifact_path(kind: str, name: str) -> Path:
         raise AssertionError(f"artifact map missing {old_path}") from exc
 
 
-def load_contract(stem: str, schema_file: str) -> tuple[dict[str, object], dict[str, object]]:
+def load_contract(
+    stem: str, schema_file: str
+) -> tuple[dict[str, object], dict[str, object]]:
     schema_path = artifact_path("schemas", schema_file)
     example_path = artifact_path("examples", f"{stem}.example.json")
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
@@ -89,8 +111,13 @@ def load_contract(stem: str, schema_file: str) -> tuple[dict[str, object], dict[
     return schema, example
 
 
-def validation_errors(schema: dict[str, object], value: dict[str, object]) -> list[object]:
-    return sorted(Draft202012Validator(schema).iter_errors(value), key=lambda error: list(error.path))
+def validation_errors(
+    schema: dict[str, object], value: dict[str, object]
+) -> list[object]:
+    return sorted(
+        Draft202012Validator(schema).iter_errors(value),
+        key=lambda error: list(error.path),
+    )
 
 
 def wrong_type_value(value: object) -> object:
@@ -169,7 +196,9 @@ def delete_path(value: object, path: tuple[object, ...]) -> None:
         del cursor[last]
 
 
-def walk_values(value: object, path: tuple[object, ...] = ()) -> list[tuple[tuple[object, ...], object]]:
+def walk_values(
+    value: object, path: tuple[object, ...] = ()
+) -> list[tuple[tuple[object, ...], object]]:
     found: list[tuple[tuple[object, ...], object]] = []
     if isinstance(value, dict):
         for key, child in value.items():
@@ -184,7 +213,9 @@ def walk_values(value: object, path: tuple[object, ...] = ()) -> list[tuple[tupl
     return found
 
 
-def object_paths(value: object, path: tuple[object, ...] = ()) -> list[tuple[object, ...]]:
+def object_paths(
+    value: object, path: tuple[object, ...] = ()
+) -> list[tuple[object, ...]]:
     found: list[tuple[object, ...]] = []
     if isinstance(value, dict):
         found.append(path)
@@ -196,7 +227,9 @@ def object_paths(value: object, path: tuple[object, ...] = ()) -> list[tuple[obj
     return found
 
 
-def array_paths(value: object, path: tuple[object, ...] = ()) -> list[tuple[object, ...]]:
+def array_paths(
+    value: object, path: tuple[object, ...] = ()
+) -> list[tuple[object, ...]]:
     found: list[tuple[object, ...]] = []
     if isinstance(value, dict):
         for key, child in value.items():
@@ -219,7 +252,9 @@ def schema_properties(schema: object) -> dict[str, object]:
     return props if isinstance(props, dict) else {}
 
 
-def required_paths(schema: object, example: object, path: tuple[object, ...] = ()) -> list[tuple[object, ...]]:
+def required_paths(
+    schema: object, example: object, path: tuple[object, ...] = ()
+) -> list[tuple[object, ...]]:
     found: list[tuple[object, ...]] = []
     if not isinstance(schema, dict):
         return found
@@ -238,7 +273,9 @@ def required_paths(schema: object, example: object, path: tuple[object, ...] = (
     return found
 
 
-def constrained_paths(schema: object, example: object, keyword: str, path: tuple[object, ...] = ()) -> list[tuple[tuple[object, ...], object]]:
+def constrained_paths(
+    schema: object, example: object, keyword: str, path: tuple[object, ...] = ()
+) -> list[tuple[tuple[object, ...], object]]:
     found: list[tuple[tuple[object, ...], object]] = []
     if not isinstance(schema, dict):
         return found
@@ -247,53 +284,73 @@ def constrained_paths(schema: object, example: object, keyword: str, path: tuple
     if schema_type(schema) == "object" and isinstance(example, dict):
         for key, prop in schema_properties(schema).items():
             if key in example:
-                found.extend(constrained_paths(prop, example[key], keyword, (*path, key)))
+                found.extend(
+                    constrained_paths(prop, example[key], keyword, (*path, key))
+                )
     if schema_type(schema) == "array" and isinstance(example, list) and example:
-        found.extend(constrained_paths(schema.get("items"), example[0], keyword, (*path, 0)))
+        found.extend(
+            constrained_paths(schema.get("items"), example[0], keyword, (*path, 0))
+        )
     return found
 
 
-class ExperienceWave4SeedContractTests(unittest.TestCase):
-    def assert_invalid(self, schema: dict[str, object], value: dict[str, object], label: str) -> None:
+class ExperiencePolisSeedContractTests(unittest.TestCase):
+    def assert_invalid(
+        self, schema: dict[str, object], value: dict[str, object], label: str
+    ) -> None:
         errors = validation_errors(schema, value)
         self.assertTrue(errors, f"{label} unexpectedly validated")
 
-    def test_experience_wave4_examples_match_schemas(self) -> None:
-        self.assertTrue(WAVE4_CONTRACTS)
+    def test_experience_polis_constitution_examples_match_schemas(self) -> None:
+        self.assertTrue(POLIS_CONTRACTS)
         missing_pairs: list[str] = []
-        for stem, schema_file in WAVE4_CONTRACTS:
+        for stem, schema_file in POLIS_CONTRACTS:
             schema_path = artifact_path("schemas", schema_file)
             example_path = artifact_path("examples", f"{stem}.example.json")
             if not schema_path.exists():
-                missing_pairs.append(f"{example_path.relative_to(ROOT)} -> {schema_path.relative_to(ROOT)}")
+                missing_pairs.append(
+                    f"{example_path.relative_to(ROOT)} -> {schema_path.relative_to(ROOT)}"
+                )
             if not example_path.exists():
-                missing_pairs.append(f"{schema_path.relative_to(ROOT)} -> {example_path.relative_to(ROOT)}")
-        self.assertFalse(missing_pairs, "missing wave4 contract pair(s): " + ", ".join(missing_pairs))
+                missing_pairs.append(
+                    f"{schema_path.relative_to(ROOT)} -> {example_path.relative_to(ROOT)}"
+                )
+        self.assertFalse(
+            missing_pairs, "missing polis contract pair(s): " + ", ".join(missing_pairs)
+        )
 
-        for stem, schema_file in WAVE4_CONTRACTS:
+        for stem, schema_file in POLIS_CONTRACTS:
             with self.subTest(stem=stem):
                 schema, example = load_contract(stem, schema_file)
                 Draft202012Validator.check_schema(schema)
                 errors = validation_errors(schema, example)
-                self.assertFalse(errors, f"{stem}: {errors[0].message}" if errors else stem)
+                self.assertFalse(
+                    errors, f"{stem}: {errors[0].message}" if errors else stem
+                )
 
-    def test_experience_wave4_schemas_reject_unknown_fields(self) -> None:
+    def test_experience_polis_constitution_schemas_reject_unknown_fields(self) -> None:
         exercised = 0
-        for stem, schema_file in WAVE4_CONTRACTS:
+        for stem, schema_file in POLIS_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path in object_paths(example):
                 exercised += 1
-                with self.subTest(stem=stem, path=".".join(str(part) for part in path) or "top"):
+                with self.subTest(
+                    stem=stem, path=".".join(str(part) for part in path) or "top"
+                ):
                     mutated = copy.deepcopy(example)
                     target = get_path(mutated, path) if path else mutated
                     self.assertIsInstance(target, dict)
                     target["contract_escape"] = "loose-field"
-                    self.assert_invalid(schema, mutated, f"{stem} unknown field at {path}")
-        self.assertGreater(exercised, 0, "no wave4 object fields were exercised")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} unknown field at {path}"
+                    )
+        self.assertGreater(exercised, 0, "no polis object fields were exercised")
 
-    def test_experience_wave4_schemas_reject_wrong_types_for_every_field(self) -> None:
+    def test_experience_polis_constitution_schemas_reject_wrong_types_for_every_field(
+        self,
+    ) -> None:
         exercised = 0
-        for stem, schema_file in WAVE4_CONTRACTS:
+        for stem, schema_file in POLIS_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path, value in walk_values(example):
                 exercised += 1
@@ -301,23 +358,27 @@ class ExperienceWave4SeedContractTests(unittest.TestCase):
                     mutated = copy.deepcopy(example)
                     set_path(mutated, path, wrong_type_value(value))
                     self.assert_invalid(schema, mutated, f"{stem} wrong type at {path}")
-        self.assertGreater(exercised, 0, "no wave4 fields were exercised")
+        self.assertGreater(exercised, 0, "no polis fields were exercised")
 
-    def test_experience_wave4_schemas_reject_missing_required_fields(self) -> None:
+    def test_experience_polis_constitution_schemas_reject_missing_required_fields(
+        self,
+    ) -> None:
         exercised = 0
-        for stem, schema_file in WAVE4_CONTRACTS:
+        for stem, schema_file in POLIS_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path in required_paths(schema, example):
                 exercised += 1
                 with self.subTest(stem=stem, path=".".join(str(part) for part in path)):
                     mutated = copy.deepcopy(example)
                     delete_path(mutated, path)
-                    self.assert_invalid(schema, mutated, f"{stem} missing required field at {path}")
-        self.assertGreater(exercised, 0, "no wave4 required fields were exercised")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} missing required field at {path}"
+                    )
+        self.assertGreater(exercised, 0, "no polis required fields were exercised")
 
-    def test_experience_wave4_schemas_reject_bad_array_items(self) -> None:
+    def test_experience_polis_constitution_schemas_reject_bad_array_items(self) -> None:
         exercised = 0
-        for stem, schema_file in WAVE4_CONTRACTS:
+        for stem, schema_file in POLIS_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path in array_paths(example):
                 value = get_path(example, path)
@@ -325,20 +386,32 @@ class ExperienceWave4SeedContractTests(unittest.TestCase):
                     continue
                 exercised += 1
                 replacement = [wrong_type_value(value[0])] if value else [12345]
-                with self.subTest(stem=stem, path=".".join(str(part) for part in path), case="wrong-item"):
+                with self.subTest(
+                    stem=stem,
+                    path=".".join(str(part) for part in path),
+                    case="wrong-item",
+                ):
                     mutated = copy.deepcopy(example)
                     set_path(mutated, path, replacement)
-                    self.assert_invalid(schema, mutated, f"{stem} wrong array item at {path}")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} wrong array item at {path}"
+                    )
                 if not value or isinstance(value[0], str):
-                    with self.subTest(stem=stem, path=".".join(str(part) for part in path), case="empty-string"):
+                    with self.subTest(
+                        stem=stem,
+                        path=".".join(str(part) for part in path),
+                        case="empty-string",
+                    ):
                         mutated = copy.deepcopy(example)
                         set_path(mutated, path, [""])
-                        self.assert_invalid(schema, mutated, f"{stem} empty string array item at {path}")
-        self.assertGreater(exercised, 0, "no wave4 array fields were exercised")
+                        self.assert_invalid(
+                            schema, mutated, f"{stem} empty string array item at {path}"
+                        )
+        self.assertGreater(exercised, 0, "no polis array fields were exercised")
 
-    def test_experience_wave4_schemas_reject_const_escapes(self) -> None:
+    def test_experience_polis_constitution_schemas_reject_const_escapes(self) -> None:
         exercised = 0
-        for stem, schema_file in WAVE4_CONTRACTS:
+        for stem, schema_file in POLIS_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path, _const_value in constrained_paths(schema, example, "const"):
                 if not path:
@@ -347,12 +420,14 @@ class ExperienceWave4SeedContractTests(unittest.TestCase):
                 with self.subTest(stem=stem, path=".".join(str(part) for part in path)):
                     mutated = copy.deepcopy(example)
                     set_path(mutated, path, const_escape_value(get_path(example, path)))
-                    self.assert_invalid(schema, mutated, f"{stem} const escape at {path}")
-        self.assertGreater(exercised, 0, "no wave4 const fields were exercised")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} const escape at {path}"
+                    )
+        self.assertGreater(exercised, 0, "no polis const fields were exercised")
 
-    def test_experience_wave4_schemas_reject_enum_escapes(self) -> None:
+    def test_experience_polis_constitution_schemas_reject_enum_escapes(self) -> None:
         exercised = 0
-        for stem, schema_file in WAVE4_CONTRACTS:
+        for stem, schema_file in POLIS_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path, _enum_values in constrained_paths(schema, example, "enum"):
                 if not path:
@@ -361,19 +436,29 @@ class ExperienceWave4SeedContractTests(unittest.TestCase):
                 with self.subTest(stem=stem, path=".".join(str(part) for part in path)):
                     mutated = copy.deepcopy(example)
                     set_path(mutated, path, ENUM_ESCAPE_VALUE)
-                    self.assert_invalid(schema, mutated, f"{stem} enum escape at {path}")
-        self.assertGreater(exercised, 0, "no wave4 enum fields were exercised")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} enum escape at {path}"
+                    )
+        self.assertGreater(exercised, 0, "no polis enum fields were exercised")
 
-    def test_experience_wave4_schemas_reject_invalid_numeric_ranges(self) -> None:
-        for stem, schema_file in WAVE4_CONTRACTS:
+    def test_experience_polis_constitution_schemas_reject_invalid_numeric_ranges(
+        self,
+    ) -> None:
+        for stem, schema_file in POLIS_CONTRACTS:
             schema, example = load_contract(stem, schema_file)
             for path, value in walk_values(example):
                 if not isinstance(value, (int, float)) or isinstance(value, bool):
                     continue
-                with self.subTest(stem=stem, path=".".join(str(part) for part in path), case="negative"):
+                with self.subTest(
+                    stem=stem,
+                    path=".".join(str(part) for part in path),
+                    case="negative",
+                ):
                     mutated = copy.deepcopy(example)
                     set_path(mutated, path, -1)
-                    self.assert_invalid(schema, mutated, f"{stem} negative number at {path}")
+                    self.assert_invalid(
+                        schema, mutated, f"{stem} negative number at {path}"
+                    )
 
 
 if __name__ == "__main__":

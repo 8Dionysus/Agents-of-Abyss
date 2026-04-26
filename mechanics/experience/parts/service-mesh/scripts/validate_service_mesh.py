@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience v1.2 service mesh operations center contract."""
+"""Validate the Experience service mesh operations center contract."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ SCHEMA_PATH = (
     / "parts"
     / "service-mesh"
     / "schemas"
-    / "experience-v1-2-service-mesh-operations.schema.json"
+    / "experience-service-mesh-operations.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -35,21 +35,21 @@ EXAMPLE_PATH = (
     / "parts"
     / "service-mesh"
     / "examples"
-    / "experience_v1_2_service_mesh_operations.example.json"
+    / "experience_service_mesh_operations.example.json"
 )
 
-SOURCE_ARCHIVE = "aoa-experience-service-mesh-operations-seed-v1_2.zip"
+SOURCE_ARCHIVE = "experience.seed.service-mesh-operations"
 SOURCE_SHA256 = "df829241ac629770635290e5da2742b81e4d5575270c94a92c34a95f4bbacb85"
 
 EXPECTED_PREDECESSORS = [
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/legacy/raw/EXPERIENCE_WAVE5_SOVEREIGN_OFFICE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_1_LIVE_OFFICE_EXPANSION.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_SERVICE_MESH_LAW.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.sovereign-office",
+    "experience.raw.live-office-expansion",
+    "experience.raw.service-mesh-law",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.runtime-authority-boundary",
+    "agon.pre-protocol-stop-lines",
 ]
 
 EXPECTED_PRIMARY_OFFICES = [
@@ -222,8 +222,8 @@ def assert_phrase_present(items: list[str], phrase: str, surface: str) -> None:
 
 
 def validate_schema(schema: dict[str, Any], payload: dict[str, Any]) -> None:
-    if schema.get("title") != "experience_v1_2_service_mesh_operations_v1":
-        fail("schema title must remain experience_v1_2_service_mesh_operations_v1")
+    if schema.get("title") != "experience_service_mesh_operations_v1":
+        fail("schema title must remain experience_service_mesh_operations_v1")
     if schema.get("additionalProperties") is not False:
         fail("schema must reject additional top-level properties")
     Draft202012Validator.check_schema(schema)
@@ -247,16 +247,16 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         fail("live_service_activation must remain false")
 
     source = payload["source_seed"]
-    if source["archive_name"] != SOURCE_ARCHIVE:
-        fail("source_seed.archive_name must preserve the v1.2 archive")
+    if source["receipt_ref"] != SOURCE_ARCHIVE:
+        fail("source_seed.receipt_ref must preserve the v1.2 archive")
     if source["sha256"] != SOURCE_SHA256:
         fail("source_seed.sha256 must preserve the Dionysus intake checksum")
     if source["claim_limit"] != "archive_readable_not_runtime_ready":
         fail("source_seed.claim_limit must deny runtime readiness")
 
-    if payload["predecessor_surfaces"] != EXPECTED_PREDECESSORS:
+    if payload["predecessor_receipt_refs"] != EXPECTED_PREDECESSORS:
         fail(
-            "predecessor_surfaces must preserve Dionysus, v1.1, bridge, runtime, and Agon order"
+            "predecessor_receipt_refs must preserve Dionysus, v1.1, bridge, runtime, and Agon order"
         )
     if payload["primary_offices"] != EXPECTED_PRIMARY_OFFICES:
         fail("primary_offices must preserve the v1.2 primary office contour")
@@ -395,7 +395,7 @@ def validate_files() -> None:
 
 def main() -> int:
     validate_files()
-    print("ok: Experience v1.2 service mesh operations center contract is valid")
+    print("ok: Experience service mesh operations center contract is valid")
     return 0
 
 

@@ -16,12 +16,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "governance-polis" / "scripts" / "validate_governance_polis.py"
-    spec = importlib.util.spec_from_file_location("experience_wave4_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "governance-polis"
+        / "scripts"
+        / "validate_governance_polis.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_polis_constitution_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -29,12 +40,25 @@ def load_validator():
 
 
 def load_example() -> dict[str, object]:
-    return json.loads((ROOT / "mechanics" / "experience" / "parts" / "governance-polis" / "examples" / "experience_wave4_polis_constitution.example.json").read_text())
+    return json.loads(
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "governance-polis"
+            / "examples"
+            / "experience_polis_constitution.example.json"
+        ).read_text()
+    )
 
 
-def test_experience_wave4_validator_passes() -> None:
+def test_experience_polis_constitution_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/governance-polis/scripts/validate_governance_polis.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/governance-polis/scripts/validate_governance_polis.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -42,11 +66,11 @@ def test_experience_wave4_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_wave4_requires_v08_before_v09() -> None:
+def test_experience_polis_constitution_requires_v08_before_v09() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
-    seeds = bad_flow["source_seeds"]
+    seeds = bad_flow["source_receipt_refs"]
     assert isinstance(seeds, list)
     seeds.reverse()
 
@@ -54,7 +78,7 @@ def test_experience_wave4_requires_v08_before_v09() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave4_rejects_codex_vote_authority() -> None:
+def test_experience_polis_constitution_rejects_codex_vote_authority() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -68,7 +92,9 @@ def test_experience_wave4_rejects_codex_vote_authority() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave4_rejects_missing_assistant_recharter_block() -> None:
+def test_experience_polis_constitution_rejects_missing_assistant_recharter_block() -> (
+    None
+):
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -82,7 +108,9 @@ def test_experience_wave4_rejects_missing_assistant_recharter_block() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave4_requires_ordered_runtime_seal_before_reveal() -> None:
+def test_experience_polis_constitution_requires_ordered_runtime_seal_before_reveal() -> (
+    None
+):
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -94,13 +122,15 @@ def test_experience_wave4_requires_ordered_runtime_seal_before_reveal() -> None:
         validator.validate_example(bad_flow)
 
 
-def test_experience_wave4_requires_all_owner_repos() -> None:
+def test_experience_polis_constitution_requires_all_owner_repos() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
     owner_split = bad_flow["owner_split"]
     assert isinstance(owner_split, list)
-    owner_split[:] = [item for item in owner_split if item.get("repo") != "Tree-of-Sophia"]
+    owner_split[:] = [
+        item for item in owner_split if item.get("repo") != "Tree-of-Sophia"
+    ]
 
     with pytest.raises(validator.ValidationError, match="owner_split is missing"):
         validator.validate_example(bad_flow)

@@ -16,12 +16,23 @@ def _repo_root() -> Path:
             return candidate
     raise RuntimeError("repo root not found")
 
+
 ROOT = _repo_root()
 
 
 def load_validator():
-    path = ROOT / "mechanics" / "experience" / "parts" / "capture-kernel" / "scripts" / "validate_capture_kernel.py"
-    spec = importlib.util.spec_from_file_location("experience_wave1_validator_test", path)
+    path = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "parts"
+        / "capture-kernel"
+        / "scripts"
+        / "validate_capture_kernel.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "experience_capture_flow_validator_test", path
+    )
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -29,12 +40,25 @@ def load_validator():
 
 
 def load_example() -> dict[str, object]:
-    return json.loads((ROOT / "mechanics" / "experience" / "parts" / "capture-kernel" / "examples" / "experience_wave1_flow.example.json").read_text(encoding="utf-8"))
+    return json.loads(
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "capture-kernel"
+            / "examples"
+            / "experience_capture_flow.example.json"
+        ).read_text(encoding="utf-8")
+    )
 
 
-def test_experience_wave1_validator_passes() -> None:
+def test_experience_capture_flow_validator_passes() -> None:
     result = subprocess.run(
-        [sys.executable, "mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py"],
+        [
+            sys.executable,
+            "mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py",
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -42,7 +66,7 @@ def test_experience_wave1_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
-def test_experience_wave1_rejects_out_of_order_flow() -> None:
+def test_experience_capture_flow_rejects_out_of_order_flow() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -54,7 +78,7 @@ def test_experience_wave1_rejects_out_of_order_flow() -> None:
         validator.validate_flow(bad_flow)
 
 
-def test_experience_wave1_rejects_projection_runtime_fields() -> None:
+def test_experience_capture_flow_rejects_projection_runtime_fields() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)
@@ -66,7 +90,7 @@ def test_experience_wave1_rejects_projection_runtime_fields() -> None:
         validator.validate_flow(bad_flow)
 
 
-def test_experience_wave1_rejects_memory_write_by_center() -> None:
+def test_experience_capture_flow_rejects_memory_write_by_center() -> None:
     validator = load_validator()
     flow = load_example()
     bad_flow = copy.deepcopy(flow)

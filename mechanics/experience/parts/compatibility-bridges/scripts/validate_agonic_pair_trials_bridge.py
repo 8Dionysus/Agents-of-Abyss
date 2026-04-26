@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience v1.4 mechanical arena kernel center contract."""
+"""Validate the Experience mechanical arena kernel center contract."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ SCHEMA_PATH = (
     / "parts"
     / "compatibility-bridges"
     / "schemas"
-    / "experience-v1-4-agonic-pair-trials-mechanical-arena-kernel.schema.json"
+    / "experience-agonic-pair-trials-arena-kernel.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -35,37 +35,37 @@ EXAMPLE_PATH = (
     / "parts"
     / "compatibility-bridges"
     / "examples"
-    / "experience_v1_4_agonic_pair_trials_mechanical_arena_kernel.example.json"
+    / "experience_agonic_pair_trials_arena_kernel.example.json"
 )
 
 SOURCE_ARCHIVE = (
-    "aoa-experience-agonic-pair-trials-mechanical-arena-kernel-seed-v1_4.zip"
+    "experience.seed.agonic-pair-trials-arena-kernel"
 )
 SOURCE_SHA256 = "c62a9c38b662ad7c62405c7ca2ac75fe5ea7cc05f13e001a141ad60cf2f5f404"
 
 EXPECTED_PREDECESSORS = [
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
-    "mechanics/agon/docs/AGON_ARENA_SESSION_MODEL.md",
-    "mechanics/agon/docs/AGON_CHARTER_AND_SEAT_MODEL.md",
-    "mechanics/agon/docs/AGON_SEALED_COMMIT_MODEL.md",
-    "mechanics/agon/docs/AGON_STATE_PACKET_MODEL.md",
-    "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md",
-    "mechanics/agon/docs/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
-    "mechanics/agon/docs/AGON_DUEL_KERNEL_MODEL.md",
-    "mechanics/agon/docs/AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE12_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE13_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE14_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE15_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE16_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE17_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE18_STOP_LINES.md",
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.service-mesh-operations",
+    "experience.raw.office-role-pairs",
+    "agon.arena-session-model",
+    "agon.charter-and-seat-model",
+    "agon.sealed-commit-model",
+    "agon.state-packet-model",
+    "agon.contradiction-closure-summon-law",
+    "agon.verdict-delta-scar-bridge",
+    "agon.duel-kernel-model",
+    "agon.mechanical-trials-over-duel-kernel",
+    "experience.raw.runtime-authority-boundary",
+    "agon.pre-protocol-stop-lines",
+    "agon.sealed-commit-stop-lines",
+    "agon.model-of-other-stop-lines",
+    "agon.retention-rank-stop-lines",
+    "agon.epistemic-duel-stop-lines",
+    "agon.contradiction-closure-stop-lines",
+    "agon.affective-honor-stop-lines",
+    "agon.arena-session-landing-stop-lines",
 ]
 
 EXPECTED_ARENA_KERNEL_LAW = [
@@ -474,13 +474,8 @@ def assert_phrase_present(items: list[str], phrase: str, surface: str) -> None:
 
 
 def validate_schema(schema: dict[str, Any], payload: dict[str, Any]) -> None:
-    if (
-        schema.get("title")
-        != "experience_v1_4_agonic_pair_trials_mechanical_arena_kernel_v1"
-    ):
-        fail(
-            "schema title must remain experience_v1_4_agonic_pair_trials_mechanical_arena_kernel_v1"
-        )
+    if schema.get("title") != "experience_agonic_pair_trials_arena_kernel_v1":
+        fail("schema title must remain experience_agonic_pair_trials_arena_kernel_v1")
     if schema.get("additionalProperties") is not False:
         fail("schema must reject additional top-level properties")
     Draft202012Validator.check_schema(schema)
@@ -506,16 +501,16 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         fail("live_runtime_activation must remain false")
 
     source = payload["source_seed"]
-    if source["archive_name"] != SOURCE_ARCHIVE:
-        fail("source_seed.archive_name must preserve the v1.4 archive")
+    if source["receipt_ref"] != SOURCE_ARCHIVE:
+        fail("source_seed.receipt_ref must preserve the v1.4 archive")
     if source["sha256"] != SOURCE_SHA256:
         fail("source_seed.sha256 must preserve the Dionysus intake checksum")
     if source["claim_limit"] != "archive_readable_not_owner_ready":
         fail("source_seed.claim_limit must deny owner readiness")
 
-    if payload["predecessor_surfaces"] != EXPECTED_PREDECESSORS:
+    if payload["predecessor_receipt_refs"] != EXPECTED_PREDECESSORS:
         fail(
-            "predecessor_surfaces must preserve Dionysus, v1.2, v1.3, current Agon law, runtime, and stop-line order"
+            "predecessor_receipt_refs must preserve Dionysus, v1.2, v1.3, current Agon law, runtime, and stop-line order"
         )
     if payload["arena_kernel_law"] != EXPECTED_ARENA_KERNEL_LAW:
         fail("arena_kernel_law must preserve the exact mechanical arena law")
@@ -690,7 +685,7 @@ def validate_files() -> None:
 def main() -> int:
     validate_files()
     print(
-        "ok: Experience v1.4 agonic pair trials mechanical arena kernel center contract is valid"
+        "ok: Experience agonic pair trials mechanical arena kernel center contract is valid"
     )
     return 0
 

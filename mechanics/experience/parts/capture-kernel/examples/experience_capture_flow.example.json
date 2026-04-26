@@ -1,0 +1,162 @@
+{
+  "schema_version": "experience_capture_flow_v1",
+  "contract_ref": "experience_capture_flow",
+  "status": "center_kernel_seeded",
+  "source_receipt_refs": [
+    "experience.seed.mechanic",
+    "experience.seed.runtime-capture",
+    "experience.seed.pilot-integration"
+  ],
+  "candidate": {
+    "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+    "title": "Review-loop pilot for recurring planting friction",
+    "friction_refs": [
+      "experience.friction.seed_archives_need_owner_native_landing"
+    ],
+    "recurrence_ref": "experience.recurrence.seed_archive_wave_planning",
+    "intended_owner_repo": "aoa-playbooks",
+    "status": "accepted_for_owner_landing"
+  },
+  "events": [
+    {
+      "event_id": "experience.event.capture.001",
+      "kind": "friction_observed",
+      "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+      "summary": "External seed archives carried useful mechanics but could not be copied directly into owner repos.",
+      "actor_role": "operator",
+      "evidence_refs": [
+        "/home/dionysus/Загрузки/experience.seed.mechanic"
+      ]
+    },
+    {
+      "event_id": "experience.event.capture.002",
+      "kind": "recurrence_detected",
+      "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+      "summary": "The same adaptation risk appears again in runtime capture and pilot integration seeds.",
+      "actor_role": "codex",
+      "evidence_refs": [
+        "/home/dionysus/Загрузки/experience.seed.runtime-capture",
+        "/home/dionysus/Загрузки/experience.seed.pilot-integration"
+      ]
+    },
+    {
+      "event_id": "experience.event.capture.003",
+      "kind": "candidate_declared",
+      "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+      "summary": "A bounded pilot candidate is declared for owner-native review choreography.",
+      "actor_role": "codex",
+      "evidence_refs": [
+        "experience.raw.capture-kernel"
+      ]
+    },
+    {
+      "event_id": "experience.event.capture.004",
+      "kind": "review_verdict_recorded",
+      "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+      "summary": "The candidate is accepted only for owner review and does not bypass repository gates.",
+      "actor_role": "reviewer",
+      "evidence_refs": [
+        "mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py"
+      ]
+    },
+    {
+      "event_id": "experience.event.capture.005",
+      "kind": "memory_gate_decided",
+      "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+      "summary": "Durable memory is allowed only as a requested memo candidate after owner review.",
+      "actor_role": "memory-keeper",
+      "evidence_refs": [
+        "experience.raw.capture-kernel.stop-lines"
+      ]
+    },
+    {
+      "event_id": "experience.event.capture.006",
+      "kind": "owner_route_selected",
+      "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+      "summary": "The pilot choreography belongs first in aoa-playbooks, with proof, memory, routing, and stats as subordinate follow-through.",
+      "actor_role": "router",
+      "evidence_refs": [
+        "experience.raw.capture-kernel.owner-split"
+      ]
+    },
+    {
+      "event_id": "experience.event.capture.007",
+      "kind": "projection_proposed",
+      "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+      "summary": "Projection remains a dry-run owner-local proposal until the target repository accepts it.",
+      "actor_role": "coder",
+      "evidence_refs": [
+        "mechanics/experience/parts/capture-kernel/schemas/experience-capture-flow.schema.json"
+      ]
+    }
+  ],
+  "verdict": {
+    "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+    "decision": "accepted_for_owner_landing",
+    "reviewer_role": "operator_review",
+    "rationale": "The candidate preserves the v0.1-v0.3 mechanics while keeping owner landing review-gated.",
+    "evidence_refs": [
+      "experience.raw.capture-kernel",
+      "mechanics/experience/parts/capture-kernel/examples/experience_capture_flow.example.json"
+    ]
+  },
+  "memory_gate": {
+    "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+    "decision": "memo_candidate",
+    "owner_repo": "aoa-memo",
+    "rationale": "The recurrence is useful enough to request later recall, but no memory object is written by the center.",
+    "write_performed": false
+  },
+  "owner_route": {
+    "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+    "primary_repo": "aoa-playbooks",
+    "downstream_repos": [
+      "aoa-evals",
+      "aoa-memo",
+      "aoa-routing",
+      "aoa-stats"
+    ],
+    "non_authority_repos": [
+      "Agents-of-Abyss",
+      "aoa-stats",
+      "aoa-routing",
+      "aoa-sdk"
+    ],
+    "routing_status": "owner_review_required"
+  },
+  "projection": {
+    "candidate_ref": "experience.candidate.capture.review_loop_pilot",
+    "status": "proposed_dry_run",
+    "allowed_surfaces": [
+      "owner-local docs",
+      "owner-local examples",
+      "owner-local validators",
+      "reviewed pilot playbook"
+    ],
+    "must_not": [
+      "execute hidden runtime",
+      "write durable memory",
+      "treat derived stats as verdict",
+      "route around owner review",
+      "activate deployment"
+    ]
+  },
+  "authority": {
+    "center_owns": [
+      "experience capture vocabulary",
+      "ordered flow spine",
+      "owner-route stop-lines",
+      "projection non-authority rule"
+    ],
+    "not_owned_here": [
+      "runtime activation",
+      "durable memory write",
+      "owner-repo landing",
+      "derived observability truth",
+      "projection execution",
+      "pilot choreography implementation",
+      "SDK control-plane decision"
+    ],
+    "runtime_effect": "none"
+  }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience v1.5 epistemic duel center contract."""
+"""Validate the Experience epistemic duel center contract."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ SCHEMA_PATH = (
     / "parts"
     / "compatibility-bridges"
     / "schemas"
-    / "experience-v1-5-epistemic-duel-model-of-other-forge.schema.json"
+    / "experience-epistemic-duel-model-forge.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -35,37 +35,37 @@ EXAMPLE_PATH = (
     / "parts"
     / "compatibility-bridges"
     / "examples"
-    / "experience_v1_5_epistemic_duel_model_of_other_forge.example.json"
+    / "experience_epistemic_duel_model_forge.example.json"
 )
 
-SOURCE_ARCHIVE = "aoa-experience-epistemic-duel-model-of-other-forge-seed-v1_5.zip"
+SOURCE_ARCHIVE = "experience.seed.epistemic-duel-model-forge"
 SOURCE_SHA256 = "51349824b23af2da3434e0ba6ce95fe6c5faf32bdb449b98e793d2912c73ff05"
 
 EXPECTED_PREDECESSORS = [
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
-    "mechanics/agon/docs/AGON_MODEL_OF_OTHER_LAW.md",
-    "mechanics/agon/docs/AGON_EPISTEMIC_AGON.md",
-    "mechanics/agon/docs/AGON_EPISTEMIC_MOVE_EXTENSION_MODEL.md",
-    "mechanics/agon/docs/AGON_EPISTEMIC_OWNER_HANDOFFS.md",
-    "mechanics/agon/docs/AGON_WAVE15_LANDING.md",
-    "mechanics/agon/docs/AGON_WAVE15_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE14_LANDING.md",
-    "mechanics/agon/docs/AGON_WAVE14_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_DUEL_KERNEL_MODEL.md",
-    "mechanics/agon/docs/AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md",
-    "mechanics/agon/docs/AGON_SEALED_COMMIT_MODEL.md",
-    "mechanics/agon/docs/AGON_STATE_PACKET_MODEL.md",
-    "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md",
-    "mechanics/agon/docs/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
-    "mechanics/agon/docs/AGON_DELTA_RECEIPT_MODEL.md",
-    "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.service-mesh-operations",
+    "experience.raw.office-role-pairs",
+    "experience.raw.agonic-pair-trials-arena-kernel",
+    "agon.model-of-other-law",
+    "agon.epistemic-agon",
+    "agon.epistemic-move-extension-model",
+    "agon.epistemic-owner-handoffs",
+    "agon.epistemic-duel-landing",
+    "agon.epistemic-duel-stop-lines",
+    "agon.retention-rank-landing",
+    "agon.retention-rank-stop-lines",
+    "agon.duel-kernel-model",
+    "agon.mechanical-trials-over-duel-kernel",
+    "agon.sealed-commit-model",
+    "agon.state-packet-model",
+    "agon.contradiction-closure-summon-law",
+    "agon.verdict-delta-scar-bridge",
+    "agon.delta-receipt-model",
+    "agon.retention-rank-economy",
+    "experience.raw.runtime-authority-boundary",
+    "agon.pre-protocol-stop-lines",
 ]
 
 EXPECTED_EPISTEMIC_DUEL_LAW = [
@@ -554,10 +554,8 @@ def assert_phrase_present(items: list[str], phrase: str, surface: str) -> None:
 
 
 def validate_schema(schema: dict[str, Any], payload: dict[str, Any]) -> None:
-    if schema.get("title") != "experience_v1_5_epistemic_duel_model_of_other_forge_v1":
-        fail(
-            "schema title must remain experience_v1_5_epistemic_duel_model_of_other_forge_v1"
-        )
+    if schema.get("title") != "experience_epistemic_duel_model_forge_v1":
+        fail("schema title must remain experience_epistemic_duel_model_forge_v1")
     if schema.get("additionalProperties") is not False:
         fail("schema must reject additional top-level properties")
     Draft202012Validator.check_schema(schema)
@@ -583,16 +581,16 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         fail("live_runtime_activation must remain false")
 
     source = payload["source_seed"]
-    if source["archive_name"] != SOURCE_ARCHIVE:
-        fail("source_seed.archive_name must preserve the v1.5 archive")
+    if source["receipt_ref"] != SOURCE_ARCHIVE:
+        fail("source_seed.receipt_ref must preserve the v1.5 archive")
     if source["sha256"] != SOURCE_SHA256:
         fail("source_seed.sha256 must preserve the Dionysus intake checksum")
     if source["claim_limit"] != "archive_readable_not_owner_ready":
         fail("source_seed.claim_limit must deny owner readiness")
 
-    if payload["predecessor_surfaces"] != EXPECTED_PREDECESSORS:
+    if payload["predecessor_receipt_refs"] != EXPECTED_PREDECESSORS:
         fail(
-            "predecessor_surfaces must preserve Dionysus, Wave 1-4, current Agon epistemic law, runtime, and stop-line order"
+            "predecessor_receipt_refs must preserve Dionysus, legacy center contracts, current Agon epistemic law, runtime, and stop-line order"
         )
     if payload["epistemic_duel_law"] != EXPECTED_EPISTEMIC_DUEL_LAW:
         fail("epistemic_duel_law must preserve the exact v1.5 law order")
@@ -816,9 +814,7 @@ def main() -> int:
     schema = read_json(SCHEMA_PATH)
     payload = read_json(EXAMPLE_PATH)
     validate_payload(payload, schema)
-    print(
-        "ok: Experience v1.5 epistemic duel model-of-other forge center contract is valid"
-    )
+    print("ok: Experience epistemic duel model-of-other forge center contract is valid")
     return 0
 
 

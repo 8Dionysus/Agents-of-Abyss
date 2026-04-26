@@ -11,6 +11,8 @@ Experience is the center mechanic for making lived work reviewable. The active p
 - `OWNER_REQUESTS.md`: center-side owner request packet.
 - `LANDING_LOG.md`: canonical landing ledger.
 - `ROADMAP.md`: future contour, not a historical ledger.
+- `provenance-receipts.json`: receipt IDs used by active artifacts when they
+  must cite older packets, seed inputs, or sibling surfaces.
 - `PROVENANCE.md`: the only active bridge back to archival accounting.
 
 ## Functioning parts
@@ -29,6 +31,10 @@ Experience is the center mechanic for making lived work reviewable. The active p
 ## Distillation law
 
 New waves, bridge packets, and long exploratory surfaces must not become the active route by accumulation. After a packet lands, distill the surviving function into the relevant part `README.md`, `CONTRACT.md`, or `VALIDATION.md`, then update archival accounting through `PROVENANCE.md`.
+
+Schemas, examples, validators, and tests cite older packets or sibling surfaces
+through receipt IDs from `provenance-receipts.json`; do not reintroduce direct
+source paths into active part artifacts.
 
 A functioning part should make three things clear:
 

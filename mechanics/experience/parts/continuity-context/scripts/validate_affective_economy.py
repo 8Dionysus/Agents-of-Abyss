@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience v1.7 affective economy center contract."""
+"""Validate the Experience affective economy center contract."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ SCHEMA_PATH = (
     / "parts"
     / "continuity-context"
     / "schemas"
-    / "experience-v1-7-affective-economy-honor-treasury.schema.json"
+    / "experience-affective-economy-honor-treasury.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -35,32 +35,32 @@ EXAMPLE_PATH = (
     / "parts"
     / "continuity-context"
     / "examples"
-    / "experience_v1_7_affective_economy_honor_treasury.example.json"
+    / "experience_affective_economy_honor_treasury.example.json"
 )
 
-SOURCE_ARCHIVE = "aoa-experience-affective-economy-honor-treasury-seed-v1_7.zip"
+SOURCE_ARCHIVE = "experience.seed.affective-economy-honor-treasury"
 SOURCE_SHA256 = "328872f61d4ffa16fdfd1315bf90c48ff4cfa7960b9b500275f6c8872bfe338e"
 
 EXPECTED_PREDECESSORS = [
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_6_EPISTEMIC_MEMORY_RANK_REPUTATION_ENGINE.md",
-    "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
-    "mechanics/agon/docs/AGON_DELTA_RECEIPT_MODEL.md",
-    "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md",
-    "mechanics/agon/docs/AGON_WAVE7_CENTER_HANDOFF.md",
-    "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_OWNER_REQUEST.md",
-    "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE16_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE17_LANDING.md",
-    "mechanics/agon/docs/AGON_WAVE17_STOP_LINES.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md",
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.service-mesh-operations",
+    "experience.raw.office-role-pairs",
+    "experience.raw.agonic-pair-trials-arena-kernel",
+    "experience.raw.epistemic-duel-model-forge",
+    "experience.raw.memory-rank-reputation",
+    "agon.retention-rank-economy",
+    "agon.delta-receipt-model",
+    "agon.contradiction-closure-summon-law",
+    "agon.center-handoff",
+    "agon.court-memo-stats-prebinding-owner-request",
+    "agon.court-memo-stats-prebinding-stop-lines",
+    "agon.contradiction-closure-stop-lines",
+    "agon.affective-honor-landing",
+    "agon.affective-honor-stop-lines",
+    "experience.raw.runtime-authority-boundary",
+    "method-growth.owner-landing-and-pruning",
 ]
 
 EXPECTED_AFFECTIVE_HONOR_LAW = [
@@ -202,7 +202,7 @@ EXPECTED_REQUESTS = [
 
 EXPECTED_FLOW_KINDS = [
     "source_seed_received",
-    "wave6_rank_predecessor_checked",
+    "rank_predecessor_checked",
     "affective_charter_requested",
     "affect_signal_review_requested",
     "honor_debt_review_requested",
@@ -232,7 +232,7 @@ EXPECTED_FLOW_OWNERS = [
 
 EXPECTED_FLOW_STOP_LINES = [
     ["no raw archive replay", "no generated clean-flow promotion"],
-    ["no wave17 collapse", "no predecessor erasure"],
+    ["no honor-law collapse", "no predecessor erasure"],
     ["no center-created live affect governance", "no treasury by declaration"],
     ["no affect without evidence", "no consciousness claim"],
     ["no honor debt without ttl", "no direct rights revocation"],
@@ -554,17 +554,15 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     require(
         payload["source_seed"]
         == {
-            "archive_name": SOURCE_ARCHIVE,
-            "seed_id": "aoa-experience-affective-economy-honor-treasury-seed-v1_7",
-            "version": "v1.7",
+            "receipt_ref": SOURCE_ARCHIVE,
             "sha256": SOURCE_SHA256,
             "claim_limit": "archive_readable_not_owner_ready",
         },
         "source_seed must preserve the v1.7 archive identity",
     )
     require(
-        payload["predecessor_surfaces"] == EXPECTED_PREDECESSORS,
-        "predecessor_surfaces must preserve the v1.7 bridge spine",
+        payload["predecessor_receipt_refs"] == EXPECTED_PREDECESSORS,
+        "predecessor_receipt_refs must preserve the v1.7 bridge spine",
     )
     require(
         payload["affective_honor_law"] == EXPECTED_AFFECTIVE_HONOR_LAW,
@@ -647,9 +645,7 @@ def main() -> int:
     schema = load_json(SCHEMA_PATH)
     payload = load_json(EXAMPLE_PATH)
     validate_payload(payload, schema)
-    print(
-        "ok: Experience v1.7 affective economy honor treasury center contract is valid"
-    )
+    print("ok: Experience affective economy honor treasury center contract is valid")
     return 0
 
 

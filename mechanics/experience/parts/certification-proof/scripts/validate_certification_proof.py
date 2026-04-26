@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience Wave 2 certification/watchtower center surfaces."""
+"""Validate the Experience certification/watchtower center surfaces."""
 
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ SCHEMA_PATH = (
     / "parts"
     / "certification-proof"
     / "schemas"
-    / "experience-wave2-certification-watchtower.schema.json"
+    / "experience-certification-watchtower.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -36,12 +36,12 @@ EXAMPLE_PATH = (
     / "parts"
     / "certification-proof"
     / "examples"
-    / "experience_wave2_certification_watchtower.example.json"
+    / "experience_certification_watchtower.example.json"
 )
 
 EXPECTED_SOURCE_SEEDS = [
-    "aoa-experience-certification-forge-seed-v0_4.zip",
-    "aoa-experience-deployment-watchtower-seed-v0_5.zip",
+    "experience.seed.certification-forge",
+    "experience.seed.deployment-watchtower",
 ]
 CERTIFICATION_ORDER = [
     "experience_patch_proposal",
@@ -93,7 +93,7 @@ REQUIRED_OWNER_REPOS = {
 
 
 class ValidationError(RuntimeError):
-    """Raised when an Experience Wave 2 surface drifts."""
+    """Raised when an Experience certification/watchtower surface drifts."""
 
 
 def fail(message: str) -> None:
@@ -130,21 +130,27 @@ def require_files() -> None:
         if not path.exists()
     ]
     if missing:
-        fail("missing Experience Wave 2 files: " + ", ".join(missing))
+        fail("missing Experience certification/watchtower files: " + ", ".join(missing))
 
 
 def validate_schema(schema: dict[str, Any], example: dict[str, Any]) -> None:
-    if schema.get("title") != "experience_wave2_certification_watchtower_v1":
-        fail("Wave 2 schema title must be experience_wave2_certification_watchtower_v1")
+    if schema.get("title") != "experience_certification_watchtower_v1":
+        fail(
+            "certification/watchtower schema title must be experience_certification_watchtower_v1"
+        )
     if schema.get("additionalProperties") is not False:
-        fail("Wave 2 schema must reject additional top-level properties")
+        fail(
+            "certification/watchtower schema must reject additional top-level properties"
+        )
     Draft202012Validator.check_schema(schema)
     errors = sorted(
         Draft202012Validator(schema).iter_errors(example),
         key=lambda error: list(error.path),
     )
     if errors:
-        fail(f"Wave 2 example does not match schema: {errors[0].message}")
+        fail(
+            f"certification/watchtower example does not match schema: {errors[0].message}"
+        )
 
 
 def validate_flow_order(flow: dict[str, Any], key: str, expected: list[str]) -> None:
@@ -168,16 +174,14 @@ def validate_flow_order(flow: dict[str, Any], key: str, expected: list[str]) -> 
 
 
 def validate_example(flow: dict[str, Any]) -> None:
-    if flow.get("schema_version") != "experience_wave2_certification_watchtower_v1":
-        fail(
-            "example schema_version must be experience_wave2_certification_watchtower_v1"
-        )
-    if flow.get("wave") != "experience_wave2":
-        fail("example wave must be experience_wave2")
+    if flow.get("schema_version") != "experience_certification_watchtower_v1":
+        fail("example schema_version must be experience_certification_watchtower_v1")
+    if flow.get("contract_ref") != "experience_certification_watchtower":
+        fail("example contract_ref must be experience_certification_watchtower")
     if flow.get("status") != "certification_active_watchtower_contract_only":
         fail("example status must keep v0.5 contract-only until v0.4 is green")
-    if flow.get("source_seeds") != EXPECTED_SOURCE_SEEDS:
-        fail("example source_seeds must preserve v0.4 before v0.5")
+    if flow.get("source_receipt_refs") != EXPECTED_SOURCE_SEEDS:
+        fail("example source_receipt_refs must preserve v0.4 before v0.5")
 
     validate_flow_order(flow, "certification_flow", CERTIFICATION_ORDER)
     validate_flow_order(flow, "deployment_flow", DEPLOYMENT_ORDER)
@@ -249,7 +253,7 @@ def main() -> int:
         for error in errors:
             print(f"[error] {error}", file=sys.stderr)
         return 1
-    print("ok: Experience Wave 2 certification/watchtower center is valid")
+    print("ok: Experience certification/watchtower center is valid")
     return 0
 
 

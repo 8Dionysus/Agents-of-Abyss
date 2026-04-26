@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience v2.0 living workspace continuity runtime center contract."""
+"""Validate the Experience living workspace continuity runtime center contract."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ SCHEMA_PATH = (
     / "parts"
     / "continuity-context"
     / "schemas"
-    / "experience-v2-0-living-workspace-continuity-runtime.schema.json"
+    / "experience-living-workspace-continuity-runtime.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -35,13 +35,11 @@ EXAMPLE_PATH = (
     / "parts"
     / "continuity-context"
     / "examples"
-    / "experience_v2_0_living_workspace_continuity_runtime.example.json"
+    / "experience_living_workspace_continuity_runtime.example.json"
 )
 
 SOURCE_SEED = {
-    "archive_name": "aoa-experience-living-workspace-continuity-runtime-seed-v2_0.zip",
-    "seed_id": "aoa-experience-living-workspace-continuity-runtime-seed-v2_0",
-    "version": "v2.0",
+    "receipt_ref": "experience.seed.living-workspace-continuity-runtime",
     "sha256": "2247d4095c52412512063bcac1b07b6db83539ac4597bd9b67a82adc3ba26d71",
     "claim_limit": "archive_readable_not_runtime_owner_ready",
     "runtime_seam": ".codex/continuity",
@@ -49,17 +47,17 @@ SOURCE_SEED = {
 }
 
 EXPECTED_PREDECESSORS = [
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_8_CONTEXT_ROUTING_NERVOUS_SYSTEM.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_9_CONTEXT_MEMORY_WEAVING_CONTINUITY_LOOM.md",
-    "mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md",
-    "docs/FEDERATION_RULES.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_REPO_LANDING_ORDER.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_TOS_CANDIDATE_BOUNDARY.md",
-    "8Dionysus:docs/WORKSPACE_INSTALL.md",
-    "8Dionysus:docs/CODEX_PLANE_REGENERATION.md",
-    "mechanics/agon/docs/AGON_WAVE10_LANDING.md",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.context-routing",
+    "experience.raw.continuity-loom",
+    "recurrence.self-agency-continuity",
+    "aoa.federation-rules",
+    "experience.raw.runtime-authority-boundary",
+    "experience.raw.repo-landing-order",
+    "experience.raw.tos-candidate-boundary",
+    "public-entry.workspace-install",
+    "public-entry.codex-plane-regeneration",
+    "agon.runtime-boundary-landing",
 ]
 
 EXPECTED_RUNTIME_LAW = [
@@ -275,12 +273,12 @@ EXPECTED_FLOW = [
     },
     {
         "order": 2,
-        "kind": "wave9_continuity_predecessor_checked",
+        "kind": "continuity_predecessor_checked",
         "owner": "Agents-of-Abyss",
         "authority_note": "v1.9 continuity loom remains predecessor law; v2.0 may not outrun continuity boundaries already fixed in the center",
         "stop_lines": [
             "no predecessor erasure",
-            "no living-workspace runtime before wave9 boundary",
+            "no living-workspace runtime before continuity-loom boundary",
         ],
     },
     {
@@ -289,7 +287,7 @@ EXPECTED_FLOW = [
         "owner": "Agents-of-Abyss",
         "authority_note": "charter is required before any install projection runtime or live-run surface can land elsewhere",
         "stop_lines": [
-            "no experience wave x naming",
+            "no release-contour naming",
             "no center-created runtime activation",
         ],
     },
@@ -524,8 +522,8 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         "must preserve v2.0 seed provenance",
     )
     expect_equal(
-        "predecessor_surfaces",
-        payload["predecessor_surfaces"],
+        "predecessor_receipt_refs",
+        payload["predecessor_receipt_refs"],
         EXPECTED_PREDECESSORS,
         "must preserve the v2.0 predecessor chain",
     )
@@ -589,9 +587,7 @@ def main() -> int:
     schema = load_json(SCHEMA_PATH)
     payload = load_json(EXAMPLE_PATH)
     validate_payload(payload, schema)
-    print(
-        "ok: Experience v2.0 living workspace continuity runtime center contract is valid"
-    )
+    print("ok: Experience living workspace continuity runtime center contract is valid")
     return 0
 
 

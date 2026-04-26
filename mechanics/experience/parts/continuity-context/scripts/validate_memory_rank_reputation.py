@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Experience v1.6 rank/reputation center contract."""
+"""Validate the Experience rank/reputation center contract."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ SCHEMA_PATH = (
     / "parts"
     / "continuity-context"
     / "schemas"
-    / "experience-v1-6-epistemic-memory-rank-reputation-engine.schema.json"
+    / "experience-memory-rank-reputation.schema.json"
 )
 EXAMPLE_PATH = (
     ROOT
@@ -35,29 +35,29 @@ EXAMPLE_PATH = (
     / "parts"
     / "continuity-context"
     / "examples"
-    / "experience_v1_6_epistemic_memory_rank_reputation_engine.example.json"
+    / "experience_memory_rank_reputation.example.json"
 )
 
-SOURCE_ARCHIVE = "aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6.zip"
+SOURCE_ARCHIVE = "experience.seed.memory-rank-reputation"
 SOURCE_SHA256 = "51e403eb0ca9ac384b1edba959b67bdf457efc5813ba3aa7577e94ee87591475"
 
 EXPECTED_PREDECESSORS = [
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.md",
-    "Dionysus:seed_staging/future/seed_aoa_experience_wave0_v1_2_to_v2_0_intake_pack.map.yaml",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_TO_V2_0_BRIDGE.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_2_SERVICE_MESH_OPERATIONS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_3_OFFICE_FOUNDRY_ROLE_PAIRS.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_4_AGONIC_PAIR_TRIALS_MECHANICAL_ARENA_KERNEL.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_V1_5_EPISTEMIC_DUEL_MODEL_OF_OTHER_FORGE.md",
-    "mechanics/agon/docs/AGON_WAVE14_LANDING.md",
-    "mechanics/agon/docs/AGON_WAVE14_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
-    "mechanics/agon/docs/AGON_RETENTION_OWNER_HANDOFFS.md",
-    "mechanics/agon/docs/AGON_RANK_JURISDICTION_MODEL.md",
-    "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md",
-    "mechanics/agon/docs/AGON_WAVE15_LANDING.md",
-    "mechanics/agon/docs/AGON_WAVE15_STOP_LINES.md",
-    "mechanics/experience/legacy/raw/EXPERIENCE_RUNTIME_AUTHORITY_BOUNDARY.md",
+    "dionysus.experience-intake-note",
+    "dionysus.experience-intake-map",
+    "experience.raw.runtime-boundary-bridge",
+    "experience.raw.service-mesh-operations",
+    "experience.raw.office-role-pairs",
+    "experience.raw.agonic-pair-trials-arena-kernel",
+    "experience.raw.epistemic-duel-model-forge",
+    "agon.retention-rank-landing",
+    "agon.retention-rank-stop-lines",
+    "agon.retention-rank-economy",
+    "agon.retention-owner-handoffs",
+    "agon.rank-jurisdiction-model",
+    "agon.contradiction-closure-summon-law",
+    "agon.epistemic-duel-landing",
+    "agon.epistemic-duel-stop-lines",
+    "experience.raw.runtime-authority-boundary",
 ]
 
 EXPECTED_RANK_REPUTATION_LAW = [
@@ -179,7 +179,7 @@ EXPECTED_REQUESTS = [
 
 EXPECTED_FLOW_KINDS = [
     "source_seed_received",
-    "wave5_epistemic_predecessor_checked",
+    "epistemic_duel_predecessor_checked",
     "consequence_charter_requested",
     "reputation_event_review_requested",
     "memo_intake_candidate_requested",
@@ -207,7 +207,7 @@ EXPECTED_FLOW_OWNERS = [
 
 EXPECTED_FLOW_STOP_LINES = [
     ["no raw archive replay", "no generated clean-flow promotion"],
-    ["no wave16 collapse", "no predecessor erasure"],
+    ["no rank-law collapse", "no predecessor erasure"],
     ["no center-created live standing", "no rights by declaration"],
     ["no reputation without evidence", "no direct rights grant"],
     ["no durable memory write", "no memo as truth"],
@@ -556,17 +556,15 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     require(
         payload["source_seed"]
         == {
-            "archive_name": SOURCE_ARCHIVE,
-            "seed_id": "aoa-experience-epistemic-memory-rank-reputation-engine-seed-v1_6",
-            "version": "v1.6",
+            "receipt_ref": SOURCE_ARCHIVE,
             "sha256": SOURCE_SHA256,
             "claim_limit": "archive_readable_not_owner_ready",
         },
         "source_seed must preserve the v1.6 archive identity",
     )
     require(
-        payload["predecessor_surfaces"] == EXPECTED_PREDECESSORS,
-        "predecessor_surfaces must preserve the v1.6 bridge spine",
+        payload["predecessor_receipt_refs"] == EXPECTED_PREDECESSORS,
+        "predecessor_receipt_refs must preserve the v1.6 bridge spine",
     )
     require(
         payload["rank_reputation_law"] == EXPECTED_RANK_REPUTATION_LAW,
@@ -658,7 +656,7 @@ def main() -> int:
     payload = load_json(EXAMPLE_PATH)
     validate_payload(payload, schema)
     print(
-        "ok: Experience v1.6 epistemic memory rank reputation engine center contract is valid"
+        "ok: Experience epistemic memory rank reputation engine center contract is valid"
     )
     return 0
 
