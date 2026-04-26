@@ -72,6 +72,7 @@ QUESTBOOK_PREFIXES = (
     "test_questbook",
     "validate_questbook",
     "validate_questbook_lifecycle",
+    "validate_ready_owner_routes",
 )
 RPG_PREFIXES = ("dual_vocabulary_overlay",)
 

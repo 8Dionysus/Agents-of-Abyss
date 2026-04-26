@@ -95,8 +95,6 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
                 (
                     "# QUESTBOOK.md — Agents-of-Abyss",
                     "",
-                    "- `AOA-Q-0001`",
-                    "- `AOA-Q-0002`",
                     "- `AOA-Q-0003`",
                 )
             )
@@ -109,9 +107,9 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         )
         self.quests_dir.mkdir(parents=True, exist_ok=True)
         required_states = {
-            "AOA-Q-0001": "triaged",
-            "AOA-Q-0002": "triaged",
-            "AOA-Q-0003": "captured",
+            "AOA-Q-0001": "done",
+            "AOA-Q-0002": "done",
+            "AOA-Q-0003": "triaged",
         }
         for quest_id, state in required_states.items():
             write_text(
@@ -566,7 +564,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
     def test_missing_required_foundation_quest_fails(self) -> None:
         self.write_valid_surface()
-        (self.quests_dir / "center" / "captured" / "AOA-Q-0003.yaml").unlink()
+        (self.quests_dir / "center" / "triaged" / "AOA-Q-0003.yaml").unlink()
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
