@@ -24,7 +24,7 @@ A center release should make it easy to answer:
 1. Keep the scope bounded to center-owned meaning.
 2. Update `CHANGELOG.md` with a latest tagged section in the `Summary / Validation / Notes` shape.
 3. Run the repo-level release verifier:
-   - `python scripts/release_check.py`
+   - use [release-support docs AGENTS](AGENTS.md#validation) for the executable command.
 4. Run the federation preflight audit when the center release is part of a wider release pass:
    - `aoa release audit /srv --phase preflight --repo Agents-of-Abyss --strict --json`
 5. Merge the release-prep PR to `main`.

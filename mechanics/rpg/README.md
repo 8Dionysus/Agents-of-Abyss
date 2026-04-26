@@ -28,16 +28,7 @@ Adjunct RPG reflection posture, progression-reading vocabulary, boundary map, an
 - role-canon mutation
 
 ### Validation
-```bash
-python scripts/validate_mechanics_topology.py --mechanic rpg
-python scripts/validate_mechanic_readme_cards.py --mechanic rpg
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic rpg
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic rpg
-```
+Use the validation lane in [mechanics/rpg/AGENTS.md](AGENTS.md#validation) for executable commands.
 ### Next route
 - For role truth, route to `aoa-agents`; for skills, route to `aoa-skills`; for campaign method, route to `aoa-playbooks`; for runtime state, route to `abyss-stack` after runtime gates.
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.

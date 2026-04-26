@@ -21,8 +21,4 @@ flat aliases or use this district as the normal working route.
 
 ## Validation
 
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic agon
-python -m pytest -q mechanics/agon/tests mechanics/agon/parts
-```
+Use the validation lane in [mechanics/agon/legacy/AGENTS.md](../AGENTS.md#validation) for executable commands.

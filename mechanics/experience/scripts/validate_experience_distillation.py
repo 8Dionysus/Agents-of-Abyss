@@ -22,6 +22,7 @@ EXPERIENCE_ROOT = REPO_ROOT / "mechanics" / "experience"
 LEGACY_ROOT = EXPERIENCE_ROOT / "legacy"
 RAW_ROOT = LEGACY_ROOT / "raw"
 PARTS_ROOT = EXPERIENCE_ROOT / "parts"
+PARTS_AGENTS_PATH = PARTS_ROOT / "AGENTS.md"
 ARTIFACT_MAP_PATH = EXPERIENCE_ROOT / "artifact-map.json"
 PROVENANCE_RECEIPTS_PATH = EXPERIENCE_ROOT / "provenance-receipts.json"
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
@@ -590,6 +591,7 @@ def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
         readme = read(readme_path) if readme_path.exists() else ""
         contract = read(contract_path) if contract_path.exists() else ""
         validation = read(validation_path) if validation_path.exists() else ""
+        parts_agents = read(PARTS_AGENTS_PATH) if PARTS_AGENTS_PATH.exists() else ""
         if "## Legacy raw sources" in readme or "## Primary raw provenance" in readme:
             problems.append(
                 f"{rel(readme_path)}: active part README carries archival source inventory"
@@ -601,9 +603,12 @@ def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
                 problems.append(
                     f"{rel(contract_path)}: missing part-specific stop-line phrase {phrase!r}"
                 )
-        if f"validate_experience_distillation.py --part {slug}" not in validation:
+        if (
+            f"validate_experience_distillation.py --part {slug}" not in validation
+            and f"validate_experience_distillation.py --part {slug}" not in parts_agents
+        ):
             problems.append(
-                f"{rel(validation_path)}: missing targeted distillation command"
+                f"{rel(validation_path)}: missing targeted distillation command in validation route"
             )
         for phrase in VAGUE_VALIDATION_PHRASES:
             if contains_phrase(validation, phrase):

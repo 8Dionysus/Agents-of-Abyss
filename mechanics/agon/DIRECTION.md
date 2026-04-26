@@ -61,8 +61,4 @@ A functioning part should make three things clear:
 
 ## Validation
 
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic agon
-python scripts/validate_mechanic_readme_cards.py --mechanic agon
-```
+Use the validation lane in [mechanics/agon/AGENTS.md](AGENTS.md#validation) for executable commands.

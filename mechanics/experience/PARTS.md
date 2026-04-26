@@ -37,10 +37,7 @@ direct paths.
 
 ## Validation
 
-```bash
-python mechanics/experience/scripts/validate_experience_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic experience
-```
+Use the validation lane in [mechanics/experience/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 Use the package `README.md` for full mechanic-card validation and
 `OWNER_REQUESTS.md` for owner-request queue validation.

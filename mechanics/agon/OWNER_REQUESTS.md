@@ -61,13 +61,7 @@ distilled; do not treat detailed source-doc accounting as owner acceptance.
 
 ## Validation
 
-```bash
-python scripts/validate_owner_request_queue.py --mechanic agon
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic agon
-python scripts/validate_mechanics_topology.py --mechanic agon
-```
+Use the validation lane in [mechanics/agon/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 ## Next route
 

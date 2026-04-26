@@ -24,10 +24,23 @@ SURFACE_ROUTE_MODE_EXEMPTIONS = {
     "mechanics/README.md": {"low-context-agent"},
 }
 
+SURFACE_VALIDATION_AUTHORITY_REFS = {
+    "mechanics/README.md": "mechanics/AGENTS.md",
+    "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md": "mechanics/release-support/docs/AGENTS.md",
+}
+
 
 def read_ref(ref: str) -> str:
     path = CENTER_ENTRY_MAP_PATH if ref == "generated/center_entry_map.min.json" else resolve_local_ref(ref)
     return path.read_text(encoding="utf-8")
+
+
+def validation_text_for(ref: str) -> str:
+    text = read_ref(ref)
+    authority_ref = SURFACE_VALIDATION_AUTHORITY_REFS.get(ref)
+    if authority_ref:
+        text += "\n" + read_ref(authority_ref)
+    return text
 
 
 def has_contract_pointer(text: str) -> bool:
@@ -55,7 +68,7 @@ def collect_problems() -> list[str]:
             problems.append(f"{ref}: missing pointer to {ROUTE_CONTRACT_REF}")
 
     for ref in HUMAN_ENTRY_SURFACES:
-        text = read_ref(ref)
+        text = validation_text_for(ref)
         for command in BASELINE_VALIDATION_COMMANDS:
             if command not in text:
                 problems.append(f"{ref}: missing baseline validation command '{command}'")

@@ -26,6 +26,31 @@ python scripts/validate_mechanic_landing_logs.py --mechanic experience
 python scripts/validate_links.py
 ```
 
+<!-- centralized-child-validation:start -->
+
+### Centralized Child Validation
+
+Executable validation commands from child docs live here. Child docs should
+route to this section instead of carrying command blocks.
+
+#### `mechanics/experience/legacy/README.md`
+
+```bash
+python mechanics/experience/scripts/validate_experience_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic experience
+python scripts/validate_mechanic_landing_logs.py --mechanic experience
+```
+
+#### `mechanics/experience/legacy/artifacts/README.md`
+
+```bash
+python mechanics/experience/scripts/validate_experience_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic experience
+python -m pytest -q mechanics/experience/tests mechanics/experience/parts
+```
+
+<!-- centralized-child-validation:end -->
+
 ## Closeout
 
 Report raw files moved or edited, index and distillation-log updates, active part surfaces updated, and checks run or skipped.

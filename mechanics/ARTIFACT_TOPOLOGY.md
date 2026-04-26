@@ -86,15 +86,8 @@ temporary plans, or roadmap duplication.
 
 Run:
 
-```bash
-python scripts/validate_mechanic_artifact_topology.py
-python mechanics/questbook/scripts/validate_questbook_lifecycle.py
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-```
+Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 For release-bound work, also run:
 
-```bash
-python scripts/release_check.py
-```
+Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.

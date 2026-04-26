@@ -1,3 +1,3 @@
 # Execution Passport Validation
 
-Use the central Questbook validation matrix in [Questbook AGENTS](../../AGENTS.md#validation).
+Executable validation commands live in [Questbook parts AGENTS](../AGENTS.md#validation). Use the part-specific route named there.

@@ -41,13 +41,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../../generat
 
 ## Validation
 
-```bash
-python scripts/validate_owner_request_queue.py --mechanic tos-bridge
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic tos-bridge
-python scripts/validate_mechanics_topology.py --mechanic tos-bridge
-```
+Use the validation lane in [mechanics/tos-bridge/docs/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 ## Next route
 

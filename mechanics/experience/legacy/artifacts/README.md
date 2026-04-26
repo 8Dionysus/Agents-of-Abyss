@@ -20,8 +20,4 @@ flat aliases or use this district as the normal working route.
 
 ## Validation
 
-```bash
-python mechanics/experience/scripts/validate_experience_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic experience
-python -m pytest -q mechanics/experience/tests mechanics/experience/parts
-```
+Use the validation lane in [mechanics/experience/legacy/AGENTS.md](../AGENTS.md#validation) for executable commands.

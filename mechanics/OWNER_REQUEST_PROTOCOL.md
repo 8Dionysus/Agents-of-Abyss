@@ -75,10 +75,4 @@ Every request in [`mechanics/owner-request-queue.json`](owner-request-queue.json
 
 ## Validation
 
-```bash
-python scripts/validate_owner_request_queue.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py
-python scripts/validate_mechanics_topology.py
-```
+Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.

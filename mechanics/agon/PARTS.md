@@ -42,10 +42,7 @@ source-file inventories.
 
 ## Validation
 
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic agon
-```
+Use the validation lane in [mechanics/agon/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 Use the package `README.md` for full mechanic-card validation and
 `OWNER_REQUESTS.md` for owner-request queue validation.

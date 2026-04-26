@@ -12,6 +12,7 @@ Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card, `README.
 
 Do not use this lane to override owner-local truth, generated-source boundaries, sibling-repo authority, release validation contracts, live runtime, hidden memory sovereignty, or ToS-authored meaning.
 
+
 ## Closeout
 
 Closeout must name changed active parts, whether `PROVENANCE.md` was consulted, owner requests affected, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
@@ -73,3 +74,53 @@ Use `python scripts/validate_mechanic_artifact_topology.py --mechanic experience
 Use `python scripts/validate_mechanic_landing_logs.py --mechanic experience` after landing-log or surface-chain changes.
 Use the nearest `parts/<part>/scripts/*.py` and `parts/<part>/tests/test_*.py`
 for part-specific artifact surfaces.
+
+<!-- centralized-child-validation:start -->
+
+### Centralized Child Validation
+
+Executable validation commands from child docs live here. Child docs should
+route to this section instead of carrying command blocks.
+
+#### `mechanics/experience/DIRECTION.md`
+
+```bash
+python mechanics/experience/scripts/validate_experience_distillation.py
+python scripts/validate_mechanics_topology.py --mechanic experience
+python scripts/validate_mechanic_readme_cards.py --mechanic experience
+```
+
+#### `mechanics/experience/OWNER_REQUESTS.md`
+
+```bash
+python scripts/validate_owner_request_queue.py --mechanic experience
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
+python scripts/validate_owner_request_docs.py --mechanic experience
+python scripts/validate_mechanics_topology.py --mechanic experience
+```
+
+#### `mechanics/experience/PARTS.md`
+
+```bash
+python mechanics/experience/scripts/validate_experience_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic experience
+```
+
+#### `mechanics/experience/README.md`
+
+```bash
+python mechanics/experience/scripts/validate_experience_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic experience
+python scripts/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/validate_mechanics_topology.py --mechanic experience
+python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/build_mechanic_card_index.py --check
+python scripts/validate_mechanic_card_index.py
+python scripts/validate_owner_request_queue.py --mechanic experience
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
+python scripts/validate_owner_request_docs.py --mechanic experience
+```
+
+<!-- centralized-child-validation:end -->

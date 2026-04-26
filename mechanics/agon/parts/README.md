@@ -20,6 +20,4 @@ owner boundary, validation, and next route.
 
 ## Validation
 
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-```
+Use the validation lane in [mechanics/agon/parts/AGENTS.md](AGENTS.md#validation) for executable commands.

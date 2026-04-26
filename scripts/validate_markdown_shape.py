@@ -55,6 +55,48 @@ def check_file(root: Path, target: dict[str, object], defaults: dict[str, object
     return problems
 
 
+def active_mechanic_markdown_paths(root: Path) -> list[Path]:
+    mechanics_root = root / "mechanics"
+    if not mechanics_root.is_dir():
+        return []
+    paths: list[Path] = []
+    for path in sorted(mechanics_root.rglob("*.md")):
+        rel_parts = path.relative_to(root).parts
+        if path.name == "AGENTS.md":
+            continue
+        if path.name == "LANDING_LOG.md":
+            continue
+        if "legacy" in rel_parts:
+            continue
+        paths.append(path)
+    return paths
+
+
+def check_mechanic_child_validation_routes(root: Path) -> list[str]:
+    problems: list[str] = []
+    command_needles = (
+        "```bash",
+        "```sh",
+        "```shell",
+        "`python scripts/",
+        "`python mechanics/",
+        "`python -m pytest",
+        "python scripts/",
+        "python mechanics/",
+        "python -m pytest",
+        "scripts/release_check.py",
+    )
+    for path in active_mechanic_markdown_paths(root):
+        rel = path.relative_to(root).as_posix()
+        text = path.read_text(encoding="utf-8")
+        for line_number, line in enumerate(text.splitlines(), start=1):
+            if any(needle in line for needle in command_needles):
+                problems.append(
+                    f"{rel}:{line_number}: executable validation command belongs in nearest AGENTS.md"
+                )
+    return problems
+
+
 def configured_targets(config: dict[str, object]) -> list[dict[str, object]]:
     shape = config.get("markdown_shape", {})
     targets = list(shape.get("targets", [])) + list(shape.get("directory_readme_gates", []))
@@ -74,6 +116,8 @@ def validate(root: Path, explicit_targets: list[str] | None = None) -> list[str]
     problems: list[str] = []
     for target in targets:
         problems.extend(check_file(root, target, shape))
+    if not explicit_targets:
+        problems.extend(check_mechanic_child_validation_routes(root))
     return problems
 
 

@@ -60,8 +60,4 @@ A functioning part should make three things clear:
 
 ## Validation
 
-```bash
-python mechanics/experience/scripts/validate_experience_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
-```
+Use the validation lane in [mechanics/experience/AGENTS.md](AGENTS.md#validation) for executable commands.

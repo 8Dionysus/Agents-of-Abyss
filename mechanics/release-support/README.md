@@ -25,17 +25,7 @@ Center release posture, public claim boundaries, federation release protocol, re
 - roadmap history as changelog
 
 ### Validation
-```bash
-python scripts/validate_mechanics_topology.py --mechanic release-support
-python scripts/release_check.py
-python scripts/validate_mechanic_readme_cards.py --mechanic release-support
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic release-support
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic release-support
-```
+Use the validation lane in [mechanics/release-support/AGENTS.md](AGENTS.md#validation) for executable commands.
 ### Next route
 - For sibling release truth, route to the sibling repository before claiming support.
 - For proof-dependent claims, route to `aoa-evals`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
