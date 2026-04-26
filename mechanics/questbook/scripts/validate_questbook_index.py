@@ -11,10 +11,12 @@ from pathlib import Path
 from questbook_lifecycle_common import (
     GENERATED_FRONTIER_PATH,
     GENERATED_INDEX_PATH,
+    GENERATED_RELATIONS_PATH,
     LIFECYCLE_STATES,
     OPEN_STATES,
     QUEST_LANES,
     REPO_ROOT,
+    RELATION_TYPES,
     iter_quest_sources,
     rel,
 )
@@ -100,24 +102,61 @@ def validate_frontier(frontier: object, index: object, problems: list[str]) -> N
         problems.append(f"{rel(GENERATED_FRONTIER_PATH)} must not list closed quest paths: {', '.join(leaked_closed)}")
 
 
+def validate_relations(relations: object, index: object, problems: list[str]) -> None:
+    if not isinstance(relations, dict):
+        problems.append(f"{rel(GENERATED_RELATIONS_PATH)} must contain a JSON object")
+        return
+    if relations.get("schema_version") != "aoa_questbook_relations_v1":
+        problems.append(f"{rel(GENERATED_RELATIONS_PATH)} schema_version must be aoa_questbook_relations_v1")
+    if relations.get("source_index") != "generated/questbook_index.min.json":
+        problems.append(f"{rel(GENERATED_RELATIONS_PATH)} must reference generated/questbook_index.min.json")
+    if relations.get("relation_types") != list(RELATION_TYPES):
+        problems.append(f"{rel(GENERATED_RELATIONS_PATH)} relation_types must match Questbook relation registry")
+    quests = relations.get("quests")
+    if not isinstance(quests, list):
+        problems.append(f"{rel(GENERATED_RELATIONS_PATH)} quests must be a list")
+        return
+    if not isinstance(index, dict):
+        return
+    index_ids = {
+        str(item.get("id"))
+        for item in index.get("quests", [])
+        if isinstance(item, dict) and item.get("id")
+    }
+    relation_ids = {
+        str(item.get("id"))
+        for item in quests
+        if isinstance(item, dict) and item.get("id")
+    }
+    unknown = sorted(relation_ids - index_ids)
+    if unknown:
+        problems.append(f"{rel(GENERATED_RELATIONS_PATH)} lists unknown quest ids: {', '.join(unknown)}")
+
+
 def validate_fresh(problems: list[str]) -> None:
     builder = load_builder()
     expected_index = builder.build_index()
     expected_frontier = builder.build_frontier(expected_index)
+    expected_relations = builder.build_relation_map(expected_index)
     current_index = GENERATED_INDEX_PATH.read_text(encoding="utf-8") if GENERATED_INDEX_PATH.exists() else ""
     current_frontier = GENERATED_FRONTIER_PATH.read_text(encoding="utf-8") if GENERATED_FRONTIER_PATH.exists() else ""
+    current_relations = GENERATED_RELATIONS_PATH.read_text(encoding="utf-8") if GENERATED_RELATIONS_PATH.exists() else ""
     if current_index != stable_json(expected_index):
         problems.append(f"{rel(GENERATED_INDEX_PATH)} is stale")
     if current_frontier != stable_json(expected_frontier):
         problems.append(f"{rel(GENERATED_FRONTIER_PATH)} is stale")
+    if current_relations != stable_json(expected_relations):
+        problems.append(f"{rel(GENERATED_RELATIONS_PATH)} is stale")
 
 
 def main() -> int:
     problems: list[str] = []
     index = read_json(GENERATED_INDEX_PATH, problems)
     frontier = read_json(GENERATED_FRONTIER_PATH, problems)
+    relations = read_json(GENERATED_RELATIONS_PATH, problems)
     validate_index(index, problems)
     validate_frontier(frontier, index, problems)
+    validate_relations(relations, index, problems)
     validate_fresh(problems)
     if problems:
         print("Questbook generated index validation failed:")

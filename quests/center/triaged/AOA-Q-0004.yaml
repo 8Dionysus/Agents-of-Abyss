@@ -25,6 +25,9 @@ complexity_basis:
   verification: 2
 parent: null
 depends_on: []
+relations:
+  parent:
+    - AOA-Q-0003
 activation:
   mode: manual
   note: open when the first bounded RPG reflection slice is ready to be staged

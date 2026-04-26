@@ -257,3 +257,39 @@ not permission to close ready quests without receipts.
 Next route: use the route index to process Experience ready quests inside AoA
 without mutating sibling repositories; only later carry specific request IDs to
 owners when that becomes the chosen lane.
+
+### Quest relation model
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns center-side Questbook relation law,
+source quest relation metadata, and generated read models. Lanes and owner
+repositories still own their quest meaning, lifecycle movement, acceptance, and
+closure proof.
+
+Surfaces:
+
+- `mechanics/questbook/docs/QUESTBOOK_MODEL.md`
+- `mechanics/questbook/docs/quest-relations.md`
+- `mechanics/questbook/scripts/questbook_lifecycle_common.py`
+- `mechanics/questbook/scripts/build_questbook_index.py`
+- `mechanics/questbook/scripts/validate_questbook_index.py`
+- `mechanics/questbook/scripts/validate_quest_relations.py`
+- `mechanics/questbook/tests/test_questbook_lifecycle.py`
+- `quests/center/*/AOA-Q-000*.yaml`
+- `generated/questbook_relations.min.json`
+
+Validation:
+
+- `python mechanics/questbook/scripts/validate_questbook_lifecycle.py`
+- `python mechanics/questbook/scripts/build_questbook_index.py --check`
+- `python mechanics/questbook/scripts/validate_questbook_index.py`
+- `python mechanics/questbook/scripts/validate_quest_relations.py`
+
+Stop-lines: `sidequest` is route visibility only; it does not move ownership,
+create dependencies, close quests, prove owner acceptance, or authorize runtime
+activation.
+
+Next route: use the relation map to keep center, RPG-shaped, Agon, Experience,
+and future lane contours visible until a deliberate reanchor creates stronger
+lane-local quest objects.

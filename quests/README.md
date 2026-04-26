@@ -6,6 +6,11 @@ It is not a private scratchpad and not a second roadmap. Program direction belon
 
 Quest sources live in lane-first lifecycle directories. Top-level `AOA-Q-*` aliases are intentionally absent; route directly to `quests/<lane>/<state>/AOA-Q-*`.
 
+Quest relations such as `parent`, `sidequest`, and `blocked_by` are source
+metadata, not lane moves. Relation law lives in
+[`quest-relations.md`](../mechanics/questbook/docs/quest-relations.md), and
+the read model is [`questbook_relations`](../generated/questbook_relations.min.json).
+
 ## Lanes
 
 | Lane | Use |
@@ -78,4 +83,5 @@ Each lane may contain:
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python mechanics/questbook/scripts/build_questbook_index.py --check
 python mechanics/questbook/scripts/validate_questbook_index.py
+python mechanics/questbook/scripts/validate_quest_relations.py
 ```

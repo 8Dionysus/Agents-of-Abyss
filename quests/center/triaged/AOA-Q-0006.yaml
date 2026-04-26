@@ -27,6 +27,9 @@ parent: null
 depends_on:
   - AOA-Q-0004
   - AOA-Q-0005
+relations:
+  parent:
+    - AOA-Q-0003
 activation:
   mode: manual
   note: open when the runtime/frontend contour is ready to be fixed without widening source ownership

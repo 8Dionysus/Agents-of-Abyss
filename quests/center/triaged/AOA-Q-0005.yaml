@@ -26,6 +26,9 @@ complexity_basis:
 parent: null
 depends_on:
   - AOA-Q-0004
+relations:
+  parent:
+    - AOA-Q-0003
 activation:
   mode: manual
   note: open when the abilities-and-feats slice is ready to be staged after first-wave progression/proof landings

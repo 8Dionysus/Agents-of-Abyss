@@ -28,6 +28,9 @@ depends_on:
   - AOA-Q-0004
   - AOA-Q-0005
   - AOA-Q-0006
+relations:
+  parent:
+    - AOA-Q-0003
 activation:
   mode: manual
   note: open when the bridge between proof, composition, and navigation is ready to be staged

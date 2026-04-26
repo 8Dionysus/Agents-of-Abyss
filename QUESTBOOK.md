@@ -6,6 +6,11 @@ It is a root index, not a second roadmap. Program direction belongs in [ROADMAP]
 
 Top-level `quests/AOA-Q-*` aliases are intentionally absent. The source placement for each quest object is `quests/<lane>/<state>/AOA-Q-*`.
 
+Quest relations are summarized in
+[`questbook_relations`](generated/questbook_relations.min.json) and explained
+in [`quest-relations`](mechanics/questbook/docs/quest-relations.md). A
+`sidequest` relation is route visibility, not ownership transfer or closure.
+
 ## Frontier
 
 - `AOA-Q-0004` - define the first adjunct RPG reflection layer without mutating quest or role canon.
@@ -34,7 +39,7 @@ Top-level `quests/AOA-Q-*` aliases are intentionally absent. The source placemen
 - `quests/agon/<state>/AOA-Q-AGON-*.md`
 - `quests/experience/<state>/AOA-Q-EXP-*.md`
 - future lane-specific families use the same `quests/<lane>/<state>/AOA-Q-*` contract
-- generated summaries: [`questbook_index`](generated/questbook_index.min.json) and [`questbook_frontier`](generated/questbook_frontier.min.json)
+- generated summaries: [`questbook_index`](generated/questbook_index.min.json), [`questbook_frontier`](generated/questbook_frontier.min.json), and [`questbook_relations`](generated/questbook_relations.min.json)
 
 ## Rule
 

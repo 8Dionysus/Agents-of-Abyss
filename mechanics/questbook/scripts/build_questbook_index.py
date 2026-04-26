@@ -6,15 +6,17 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 
 from questbook_lifecycle_common import (
     GENERATED_FRONTIER_PATH,
     GENERATED_INDEX_PATH,
+    GENERATED_RELATIONS_PATH,
     LIFECYCLE_STATES,
     OPEN_STATES,
     QUEST_LANES,
+    RELATION_TYPES,
     iter_quest_sources,
 )
 
@@ -81,6 +83,53 @@ def build_frontier(index: dict[str, object]) -> dict[str, object]:
     }
 
 
+def build_relation_map(index: dict[str, object]) -> dict[str, object]:
+    entries = index.get("quests", [])
+    if not isinstance(entries, list):
+        entries = []
+
+    quests: list[dict[str, object]] = []
+    edge_count = 0
+    for item in entries:
+        if not isinstance(item, dict):
+            continue
+        relations = item.get("relations")
+        if not isinstance(relations, dict) or not relations:
+            continue
+        normalized: dict[str, list[str]] = {}
+        for relation_type in sorted(relations):
+            refs = relations.get(relation_type)
+            if not isinstance(refs, list):
+                continue
+            string_refs = [str(ref) for ref in refs]
+            if string_refs:
+                normalized[str(relation_type)] = string_refs
+                edge_count += len(string_refs)
+        if not normalized:
+            continue
+        quests.append(
+            {
+                "id": item.get("id"),
+                "lane": item.get("lane"),
+                "state": item.get("state"),
+                "path": item.get("path"),
+                "relations": normalized,
+            }
+        )
+
+    return {
+        "schema_version": "aoa_questbook_relations_v1",
+        "source_index": "generated/questbook_index.min.json",
+        "relation_types": list(RELATION_TYPES),
+        "counts": {
+            "quests_with_relations": len(quests),
+            "relation_edges": edge_count,
+        },
+        "quests": sorted(quests, key=lambda item: str(item.get("id"))),
+        "generated_note": "Read model only; quest source files and Questbook model author meaning.",
+    }
+
+
 def write_or_check(path: Path, payload: dict[str, object], check: bool, problems: list[str]) -> None:
     rendered = stable_json(payload)
     if check:
@@ -99,9 +148,11 @@ def main() -> int:
 
     index = build_index()
     frontier = build_frontier(index)
+    relations = build_relation_map(index)
     problems: list[str] = []
     write_or_check(GENERATED_INDEX_PATH, index, args.check, problems)
     write_or_check(GENERATED_FRONTIER_PATH, frontier, args.check, problems)
+    write_or_check(GENERATED_RELATIONS_PATH, relations, args.check, problems)
     if problems:
         print("Questbook generated index check failed:")
         for problem in problems:

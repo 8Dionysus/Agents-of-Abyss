@@ -1,6 +1,6 @@
 # Questbook Parts
 
-Questbook has three active parts.
+Questbook has four active parts.
 
 ## Public Index
 
@@ -16,9 +16,9 @@ Questbook has three active parts.
 
 ## Generated Views
 
-- Source: [`generated/questbook_index.min.json`](../../generated/questbook_index.min.json) and [`generated/questbook_frontier.min.json`](../../generated/questbook_frontier.min.json)
+- Source: [`generated/questbook_index.min.json`](../../generated/questbook_index.min.json), [`generated/questbook_frontier.min.json`](../../generated/questbook_frontier.min.json), and [`generated/questbook_relations.min.json`](../../generated/questbook_relations.min.json)
 - Builder: [`build_questbook_index.py`](scripts/build_questbook_index.py)
-- Validators: [`validate_questbook_lifecycle.py`](scripts/validate_questbook_lifecycle.py), [`validate_questbook_index.py`](scripts/validate_questbook_index.py)
+- Validators: [`validate_questbook_lifecycle.py`](scripts/validate_questbook_lifecycle.py), [`validate_questbook_index.py`](scripts/validate_questbook_index.py), [`validate_quest_relations.py`](scripts/validate_quest_relations.py)
 - Boundary: generated views summarize quest source files; they never author quest meaning.
 
 ## Owner Handoffs
