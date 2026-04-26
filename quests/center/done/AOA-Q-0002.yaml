@@ -25,6 +25,9 @@ complexity_basis:
   verification: 2
 parent: null
 depends_on: []
+relations:
+  parent:
+    - AOA-Q-0001
 activation:
   mode: on_review_of
   ref: AOA-Q-0001

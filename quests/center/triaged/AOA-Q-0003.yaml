@@ -25,6 +25,17 @@ complexity_basis:
   verification: 1
 parent: null
 depends_on: []
+relations:
+  parent:
+    - AOA-Q-0001
+  related:
+    - AOA-Q-0002
+  sidequest:
+    - AOA-Q-0004
+    - AOA-Q-0005
+    - AOA-Q-0006
+    - AOA-Q-0007
+    - AOA-Q-0008
 activation:
   mode: manual
   ref: AOA-Q-0002

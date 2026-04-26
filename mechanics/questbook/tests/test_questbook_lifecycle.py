@@ -61,6 +61,17 @@ class QuestbookLifecycleTests(unittest.TestCase):
         )
         self.assertEqual(validate.returncode, 0, validate.stdout)
 
+    def test_relation_map_accepts_current_board(self) -> None:
+        result = subprocess.run(
+            [sys.executable, "mechanics/questbook/scripts/validate_quest_relations.py"],
+            cwd=REPO_ROOT,
+            check=False,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout)
+
     def test_experience_ready_owner_routes_accept_current_board(self) -> None:
         result = subprocess.run(
             [sys.executable, "mechanics/questbook/scripts/validate_ready_owner_routes.py"],

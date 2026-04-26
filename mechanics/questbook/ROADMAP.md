@@ -6,7 +6,9 @@ The package owns questbook mechanics while `QUESTBOOK.md` remains the root
 public index and `quests/` remains the lane-first lifecycle item store.
 
 Quest source placement is now `quests/<lane>/<state>/AOA-Q-*`; generated
-Questbook views are read models built from that source layout.
+Questbook views are read models built from that source layout. Relation shape
+is now explicit through `parent`, `sidequest`, and dependency-style relations
+without transferring lane ownership.
 
 ## Next Work
 
@@ -28,6 +30,8 @@ Questbook views are read models built from that source layout.
 - Keep the Experience ready owner-route index current while AoA remains the
   active work lane, so sibling-owner handoffs stay explicit without mutating
   sibling repositories.
+- Keep quest relations visible enough for cross-lane routing while preventing
+  `sidequest` from becoming ownership, dependency, or automatic closure.
 - Tighten markdown quest object shape after the lane-first source layout proves
   stable across several real promotions.
 - Harvest repeated quest families into owner-local mechanics, playbooks, evals,
@@ -41,6 +45,8 @@ Questbook views are read models built from that source layout.
   that readers can no longer tell which quest can honestly move next.
 - Review `quests/<lane>/ready/` when ready items start mixing owner-acceptance
   review, owner-request updates, and true execution work in one pile.
+- Promote a related cluster into lane-local quest objects when `sidequest`
+  visibility is no longer enough to explain owner action cleanly.
 - Promote a recurring quest pattern when it appears twice in one lane or three
   times across lanes.
 - Add a stricter markdown quest contract when title/path review no longer

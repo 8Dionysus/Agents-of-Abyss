@@ -38,4 +38,5 @@ python scripts/validate_mechanics_topology.py --mechanic questbook
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python mechanics/questbook/scripts/build_questbook_index.py --check
 python mechanics/questbook/scripts/validate_questbook_index.py
+python mechanics/questbook/scripts/validate_quest_relations.py
 ```

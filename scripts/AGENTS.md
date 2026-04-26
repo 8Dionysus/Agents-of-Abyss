@@ -53,7 +53,8 @@ Current scripts include:
   `mechanics/questbook/scripts/validate_questbook_lifecycle.py`,
   `mechanics/questbook/scripts/build_questbook_index.py`, and
   `mechanics/questbook/scripts/validate_questbook_index.py` for mechanic artifact homes, the quest
-  lifecycle board, and Questbook read models
+  lifecycle board, and Questbook read models; add
+  `mechanics/questbook/scripts/validate_quest_relations.py` when quest relation shape changes
 - `build_owner_request_queue.py`, `validate_owner_request_queue.py`,
   `validate_generated_owner_request_queue.py`, and
   `validate_owner_request_docs.py` for center-side owner request packets

@@ -25,6 +25,10 @@ complexity_basis:
   verification: 2
 parent: null
 depends_on: []
+relations:
+  sidequest:
+    - AOA-Q-0002
+    - AOA-Q-0003
 activation:
   mode: immediate
 anchor_ref:

@@ -70,6 +70,7 @@ QUESTBOOK_PREFIXES = (
     "build_questbook",
     "questbook_",
     "test_questbook",
+    "validate_quest_relations",
     "validate_questbook",
     "validate_questbook_lifecycle",
     "validate_ready_owner_routes",
@@ -88,6 +89,7 @@ ROOT_ALLOWLIST = {
         "owner_request_queue.min.json",
         "questbook_frontier.min.json",
         "questbook_index.min.json",
+        "questbook_relations.min.json",
     },
     "schemas": {
         "center-entry-map.schema.json",

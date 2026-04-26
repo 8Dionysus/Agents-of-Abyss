@@ -27,6 +27,9 @@ parent: null
 depends_on:
   - AOA-Q-0006
   - AOA-Q-0007
+relations:
+  parent:
+    - AOA-Q-0003
 activation:
   mode: manual
   note: open when the RPG contour needs a runtime body and frontend-readable bundles

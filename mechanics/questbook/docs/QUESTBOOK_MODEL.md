@@ -54,7 +54,9 @@ The center must not:
 - canonical object: `work_quest_v1`
 - thin delegation projection: `quest_dispatch_v1`
 - source item store: `quests/<lane>/<state>/AOA-Q-*`
-- generated read models: `generated/questbook_index.min.json` and `generated/questbook_frontier.min.json`
+- generated read models: `generated/questbook_index.min.json`,
+  `generated/questbook_frontier.min.json`, and
+  `generated/questbook_relations.min.json`
 
 This naming avoids conflating the human-facing questbook concept with repo-specific operator intents such as `open_quest_book`.
 
@@ -139,6 +141,52 @@ of readiness.
 
 Use bands instead of fixed calendar horizons when the build tempo is event-driven.
 
+## Relation model
+
+Quest relations make cross-lane shape visible without moving ownership.
+
+Relation vocabulary:
+
+- `parent` - broader quest, contour, or source obligation that gives this quest context.
+- `sidequest` - related playable route that may advance in parallel or branch from the parent route.
+- `related` - non-directional connection worth keeping visible.
+- `blocks` - this quest blocks the referenced quest.
+- `blocked_by` - this quest waits on the referenced quest.
+- `reanchors_to` - this quest should move or be reread through the referenced quest.
+- `supersedes` - this quest replaces the referenced quest.
+- `superseded_by` - this quest was replaced by the referenced quest.
+
+`sidequest` is not ownership, dependency, or automatic closure. It marks a
+route worth seeing from the current quest while preserving lane, lifecycle
+state, and owner evidence.
+
+YAML quest sources may declare relations directly:
+
+```yaml
+relations:
+  parent:
+    - AOA-Q-0003
+  sidequest:
+    - AOA-Q-RPG-0001
+```
+
+Markdown quest sources may use a compact relation section:
+
+```markdown
+## Relations
+
+- parent: `AOA-Q-0003`
+- sidequest: `AOA-Q-EXP-0041`
+```
+
+Compatibility fields are projected into the relation read model:
+
+- YAML `parent` becomes `relations.parent` when present.
+- YAML `depends_on` becomes `relations.blocked_by`.
+
+The source file remains authoritative. `generated/questbook_relations.min.json`
+is a read model for routing and validation only.
+
 ## Execution passport
 
 Every quest carries:
@@ -207,4 +255,5 @@ If richer local notes are needed, keep them in ignored local overlays and refere
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python mechanics/questbook/scripts/build_questbook_index.py --check
 python mechanics/questbook/scripts/validate_questbook_index.py
+python mechanics/questbook/scripts/validate_quest_relations.py
 ```

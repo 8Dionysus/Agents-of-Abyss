@@ -62,9 +62,14 @@ Tracking starts with the community-docs baseline for this repository.
   `mechanics/questbook/scripts/validate_questbook_lifecycle.py`,
   `mechanics/questbook/scripts/build_questbook_index.py`,
   `mechanics/questbook/scripts/validate_questbook_index.py`,
+  `mechanics/questbook/scripts/validate_quest_relations.py`,
   `generated/questbook_index.min.json`,
   `generated/questbook_frontier.min.json`, and checks that reject top-level
   `AOA-Q-*` aliases plus root lifecycle source directories
+- Questbook relation law through
+  `mechanics/questbook/docs/quest-relations.md` and
+  `generated/questbook_relations.min.json`, using `parent`, `sidequest`,
+  `blocked_by`, and related route metadata without moving quest ownership
 
 ### Changed
 
@@ -154,6 +159,10 @@ Tracking starts with the community-docs baseline for this repository.
   Experience contract quests into `done` and stronger-owner follow-through into
   `ready`, preserving runtime, proof, memory, KAG, ToS, SDK, stats, and office
   acceptance as owner-local routes instead of center claims
+- Questbook center quests now carry explicit relation metadata: the foundation
+  contour links `AOA-Q-0001` through `AOA-Q-0003`, and RPG-shaped center
+  quests `AOA-Q-0004` through `AOA-Q-0008` remain center-owned while visible as
+  `sidequest` routes from the next-contour quest
 - detailed agent-lane and Codex audit references now live under
   `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
   narrow compatibility route into `mechanics/README.md`

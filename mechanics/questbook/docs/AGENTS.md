@@ -34,6 +34,7 @@ python scripts/validate_links.py
 python scripts/validate_mechanic_readme_cards.py
 python scripts/validate_mechanics_topology.py
 python scripts/validate_mechanic_landing_logs.py --mechanic questbook
+python mechanics/questbook/scripts/validate_quest_relations.py
 python -m pytest -q
 ```
 

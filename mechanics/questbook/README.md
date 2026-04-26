@@ -32,6 +32,7 @@ python scripts/validate_mechanics_topology.py --mechanic questbook
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python mechanics/questbook/scripts/build_questbook_index.py --check
 python mechanics/questbook/scripts/validate_questbook_index.py
+python mechanics/questbook/scripts/validate_quest_relations.py
 python scripts/validate_mechanic_readme_cards.py --mechanic questbook
 python scripts/build_mechanic_card_index.py --check
 python scripts/validate_mechanic_card_index.py
@@ -53,6 +54,7 @@ A request packet is not owner acceptance. Keep `questbook` claims center-bounded
 
 ## Start here
 - [QUESTBOOK_MODEL](docs/QUESTBOOK_MODEL.md)
+- [QUEST_RELATIONS](docs/quest-relations.md)
 - [QUESTBOOK_FIRST_WAVE](docs/QUESTBOOK_FIRST_WAVE.md)
 - [DIRECTION](DIRECTION.md)
 - [PARTS](PARTS.md)
