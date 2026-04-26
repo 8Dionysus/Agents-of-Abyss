@@ -118,6 +118,12 @@ Tracking starts with the community-docs baseline for this repository.
   provenance bridge, and `legacy/raw` provenance accounting; `docs/` is only a
   compatibility route, while `mechanics/agon/OWNER_REQUESTS.md` and the central
   owner-request queue carry the current stronger-owner asks
+- Experience owner-request coverage now includes playbooks, SDK helpers, stats
+  summaries, skills, and reusable techniques, so Questbook `ready` items route
+  through explicit request packets instead of implicit sibling-owner hints
+- Questbook now keeps an AoA-side Experience ready owner-route index and
+  validator, mapping each ready Experience quest to `ORQ-EXPERIENCE-*` packets
+  without mutating or overclaiming sibling-owner acceptance
 - Agon config seeds, generated capsules, schemas, examples, part validators,
   and part tests now live under their owning
   `mechanics/agon/parts/<part>/` homes, with
@@ -136,6 +142,18 @@ Tracking starts with the community-docs baseline for this repository.
   quest pile: `quests/center/`, `quests/agon/`, `quests/experience/`, and the
   remaining mechanic lanes hold state directories such as `triaged`, `ready`,
   `active`, `blocked`, `reanchor`, `done`, and `dropped`
+- Questbook now has its first center lane promotion pilot: the source-owned
+  dispatch seam quest is closed with sibling-owner evidence, the next contour
+  quest is unblocked into triage, and active lane README gates explain promotion
+  and stop-lines before broad Agon or Experience passes
+- Questbook now activates the Agon lane by moving center-landed Agon contour
+  quests into `done` and owner-followthrough obligations into `ready`, leaving
+  the next Agon work focused on owner acceptance and receipt review rather than
+  a flat historical triage pile
+- Questbook now activates the Experience lane by moving center-planted
+  Experience contract quests into `done` and stronger-owner follow-through into
+  `ready`, preserving runtime, proof, memory, KAG, ToS, SDK, stats, and office
+  acceptance as owner-local routes instead of center claims
 - detailed agent-lane and Codex audit references now live under
   `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
   narrow compatibility route into `mechanics/README.md`

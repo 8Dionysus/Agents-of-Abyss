@@ -61,6 +61,24 @@ class QuestbookLifecycleTests(unittest.TestCase):
         )
         self.assertEqual(validate.returncode, 0, validate.stdout)
 
+    def test_experience_ready_owner_routes_accept_current_board(self) -> None:
+        result = subprocess.run(
+            [sys.executable, "mechanics/questbook/scripts/validate_ready_owner_routes.py"],
+            cwd=REPO_ROOT,
+            check=False,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout)
+
+    def test_active_lane_readmes_have_route_notes(self) -> None:
+        for lane in ("center", "agon", "experience"):
+            readme = (REPO_ROOT / "quests" / lane / "README.md").read_text(encoding="utf-8")
+            for heading in ("## Lane route", "## Promotion rule", "## Stop-lines"):
+                with self.subTest(lane=lane, heading=heading):
+                    self.assertIn(heading, readme)
+
 
 if __name__ == "__main__":
     unittest.main()

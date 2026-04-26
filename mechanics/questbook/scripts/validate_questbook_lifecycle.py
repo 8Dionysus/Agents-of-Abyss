@@ -36,6 +36,15 @@ def validate_lane_dirs(problems: list[str]) -> None:
         for phrase in ("lifecycle subdirectories", "Do not create top-level `AOA-Q-*` aliases"):
             if phrase not in text:
                 fail(problems, f"{rel(readme)} must say: {phrase}")
+        has_sources = any(
+            state_dir.is_dir() and any(state_dir.glob("AOA-Q-*"))
+            for state_dir in lane_dir.iterdir()
+            if state_dir.name != "README.md"
+        )
+        if has_sources:
+            for heading in ("## Lane route", "## Promotion rule", "## Stop-lines"):
+                if heading not in text:
+                    fail(problems, f"{rel(readme)} must include active-lane heading: {heading}")
 
 
 def validate_root_entries_absent(problems: list[str]) -> None:

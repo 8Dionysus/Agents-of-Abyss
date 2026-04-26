@@ -59,6 +59,11 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 | `ORQ-EXPERIENCE-AGENTS-001` | `experience` | `aoa-agents` | `requested` | `P1` | Office, role-pair, actor, and handoff posture |
 | `ORQ-EXPERIENCE-KAG-001` | `experience` | `aoa-kag` | `requested` | `P2` | Derived workspace and experience-ready knowledge projections |
 | `ORQ-EXPERIENCE-TOS-001` | `experience` | `Tree-of-Sophia` | `requested` | `P1` | ToS meaning boundaries touched by experience contracts |
+| `ORQ-EXPERIENCE-PLAYBOOKS-001` | `experience` | `aoa-playbooks` | `requested` | `P1` | Experience adoption, release, office, and service choreography |
+| `ORQ-EXPERIENCE-SDK-001` | `experience` | `aoa-sdk` | `requested` | `P1` | Typed install, runtime, train, and helper API carriers for Experience routes |
+| `ORQ-EXPERIENCE-STATS-001` | `experience` | `aoa-stats` | `requested` | `P2` | Experience dashboards, watch summaries, and derived movement readouts |
+| `ORQ-EXPERIENCE-SKILLS-001` | `experience` | `aoa-skills` | `requested` | `P2` | Experience receipt, adoption, release, and service operation skills |
+| `ORQ-EXPERIENCE-TECHNIQUES-001` | `experience` | `aoa-techniques` | `requested` | `P2` | Reusable Experience adoption, deployment, office, and service practice |
 | `ORQ-AGON-PLAYBOOKS-001` | `agon` | `aoa-playbooks` | `requested` | `P0` | Agon trial choreography and repeatable duel routes |
 | `ORQ-AGON-EVALS-001` | `agon` | `aoa-evals` | `requested` | `P0` | Verdict proof, evaluation discipline, and regression evidence |
 | `ORQ-AGON-MEMO-001` | `agon` | `aoa-memo` | `requested` | `P0` | Scars, retention memory, and bounded lessons |
@@ -98,7 +103,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 
 - `method-growth` -> [METHOD_GROWTH_OWNER_REPO_REQUESTS.md](method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `Dionysus`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`
 - `recurrence` -> [RECURRENCE_OWNER_REPO_REQUESTS.md](recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md); owners: `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`
-- `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`
+- `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`, `aoa-playbooks`, `aoa-sdk`, `aoa-stats`, `aoa-skills`, `aoa-techniques`
 - `agon` -> [OWNER_REQUESTS.md](agon/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-routing`, `aoa-agents`, `abyss-stack`, `aoa-kag`, `Tree-of-Sophia`
 - `antifragility` -> [ANTIFRAGILITY_OWNER_REPO_REQUESTS.md](antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-playbooks`
 - `questbook` -> [QUESTBOOK_OWNER_REPO_REQUESTS.md](questbook/docs/QUESTBOOK_OWNER_REPO_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-routing`

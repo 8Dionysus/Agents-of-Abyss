@@ -8,7 +8,6 @@ Top-level `quests/AOA-Q-*` aliases are intentionally absent. The source placemen
 
 ## Frontier
 
-- `AOA-Q-0002` - define the source-owned quest dispatch seam without promoting routing into authority.
 - `AOA-Q-0004` - define the first adjunct RPG reflection layer without mutating quest or role canon.
 - `AOA-Q-0006` - fix the runtime/frontend architecture law for the AoA RPG layer.
 - `AOA-Q-0007` - define the RPG bridge wave for unlock proof, party composition, and derived navigation.

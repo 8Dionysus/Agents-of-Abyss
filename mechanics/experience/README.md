@@ -21,6 +21,11 @@ Experience center contracts, release posture, stop-lines, adoption route languag
 - `aoa-routing` owns live routing behavior and context router implementation.
 - `aoa-evals` owns adoption proof, certification checks, and regression evidence.
 - `aoa-agents` owns actor, office, role, and handoff posture.
+- `aoa-playbooks` owns recurring adoption, release, office, and service choreography.
+- `aoa-sdk` owns typed helper and compatibility API surfaces.
+- `aoa-stats` owns derived observability and movement summaries.
+- `aoa-skills` owns executable workflow skill truth.
+- `aoa-techniques` owns reusable practice and technique truth.
 - `Tree-of-Sophia` owns ToS-authored meaning and canon.
 - Future owner-local repositories own live office and workspace behavior.
 
@@ -41,6 +46,7 @@ Experience center contracts, release posture, stop-lines, adoption route languag
 - live router engine authority
 - owner-local activation, office installation, or adoption
 - proof verdicts, certification truth, or regression evidence before `aoa-evals` lands them
+- recurring choreography, helper availability, derived-summary proof, executable skill truth, or reusable technique truth
 - `aoa-kag` projections as source-authored meaning
 - ToS-authored meaning or canon
 
@@ -63,7 +69,7 @@ python scripts/validate_owner_request_docs.py --mechanic experience
 ### Next route
 
 - For runtime or live workspace activation, route to `abyss-stack` and the relevant owner-local gate.
-- For memory, route to `aoa-memo`; for adoption proof, route to `aoa-evals`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
+- For memory, route to `aoa-memo`; for adoption proof, route to `aoa-evals`; for recurring choreography, route to `aoa-playbooks`; for helper surfaces, route to `aoa-sdk`; for derived summaries, route to `aoa-stats`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
 
 ## Active route
 
@@ -106,8 +112,9 @@ part map above.
 
 Center contracts and stop-lines for capture, certification, adoption,
 governance, office, service, continuity, compatibility, and runtime-boundary
-contours; live workspace, offices, runtime, routing, proof, KAG, memory, and ToS
-authority remain owner-local.
+contours; live workspace, offices, runtime, routing, proof, KAG, memory,
+playbooks, SDK helpers, stats summaries, skills, techniques, and ToS authority
+remain owner-local.
 
 ## Growth posture
 

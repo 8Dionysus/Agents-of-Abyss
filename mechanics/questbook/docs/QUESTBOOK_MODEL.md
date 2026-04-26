@@ -98,14 +98,37 @@ Use `center` for federation-level obligations that are not owned by a more
 specific mechanic lane. Use mechanic lanes when the quest ID family and owning
 route are already clear, such as `AOA-Q-AGON-*` or `AOA-Q-EXP-*`.
 
-Promotion is explicit:
+## Promotion protocol
+
+Promotion is a source move, not only a label change. Move the quest file to the
+matching lifecycle directory and update the quest's `state` field in the same
+diff.
+
+Before promoting:
+
+- read the quest source file, the lane README, and the named anchor surface
+- confirm the lane is still the honest owner route
+- confirm the next action can be understood without raw session history
+- keep public-safe wording; do not paste private local notes into quest source
+
+State transitions:
 
 - `captured` -> `triaged` when the owner lane, band, and rough acceptance are known
-- `triaged` -> `ready` when the next action can be taken without raw history
+- `triaged` -> `ready` when the next action can be taken from the quest, its lane README, and its anchor
 - `ready` -> `active` only while an owner lane is actually advancing it
 - `active` -> `done`, `blocked`, `reanchor`, or `dropped` when the current move ends
 - `blocked` -> `ready` only after the named dependency changes
 - `reanchor` -> `captured` or `triaged` after the route is honestly reset
+
+After promoting:
+
+- update root `QUESTBOOK.md` only when the public frontier or near contour changes
+- update the mechanic `LANDING_LOG.md` when the promotion changes Questbook mechanics or proves a new route
+- rebuild the generated Questbook read models
+- run the lifecycle and generated-index validators
+
+Do not promote a quest just because it is old. Age is a review signal, not proof
+of readiness.
 
 ### Placement band
 

@@ -8,7 +8,7 @@ owner_surface: center/routing-boundary
 theme_ref: ''
 milestone_ref: ''
 kind: seam
-state: triaged
+state: done
 band: frontier
 difficulty: d4_architecture
 risk: r2_contract
@@ -34,16 +34,19 @@ anchor_ref:
   ref: aoa-routing/docs/QUEST_ROUTING_SEAM.md
 handoff_role: federation-maintainer
 evidence:
-  - source-owned dispatch contract is documented
-  - routing-only consumption rule is explicit
-  - aoa-agents and aoa-routing seams align
+  - repo:aoa-routing/docs/QUEST_ROUTING_SEAM.md documents routing-only quest consumption
+  - repo:aoa-agents/generated/quest_dispatch.min.json publishes source-owned dispatch projections
+  - routing and agent surfaces keep source quest meaning outside the router
 harvest:
   target: routing
 opened_at: '2026-03-31'
-touched_at: '2026-03-31'
+touched_at: '2026-04-26'
 tags:
   - routing
   - dispatch
   - ownership
-notes: ''
+notes: >-
+  Closed by the center lane promotion pilot after the routing seam and
+  source-owned agent dispatch projection were both visible as public-safe
+  owner surfaces.
 public_safe: true

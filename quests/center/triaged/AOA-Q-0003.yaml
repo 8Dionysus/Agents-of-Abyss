@@ -8,7 +8,7 @@ owner_surface: center/contour-planning
 theme_ref: ''
 milestone_ref: ''
 kind: rollout
-state: captured
+state: triaged
 band: near
 difficulty: d3_seam
 risk: r1_repo_local
@@ -26,9 +26,9 @@ complexity_basis:
 parent: null
 depends_on: []
 activation:
-  mode: on_review_of
+  mode: manual
   ref: AOA-Q-0002
-  note: wait for first contour seam proof
+  note: unblocked after the first source-owned quest dispatch seam proof
 anchor_ref:
   artifact: first_wave_doc
   ref: mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md
@@ -40,11 +40,12 @@ evidence:
 harvest:
   target: none
 opened_at: '2026-03-31'
-touched_at: '2026-03-31'
+touched_at: '2026-04-26'
 tags:
   - contour
   - adoption
 notes: >-
-  The next contour opens only after the foundation seams are proven and does
-  not include ATM10-Agent in this planting line.
+  The foundation seam is now proven enough for triage. Keep the next contour
+  near until the first high-volume lane activation pass shows whether the
+  pressure belongs in Questbook, RPG, Agon, Experience, or a stronger owner.
 public_safe: true

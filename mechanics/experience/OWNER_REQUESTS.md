@@ -23,6 +23,11 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 | `ORQ-EXPERIENCE-AGENTS-001` | `aoa-agents` | `requested` | `P1` | Office, role-pair, actor, and handoff posture | Role contracts for offices, service assistants, role pairs, jurisdiction, and handoff boundaries. | Role claim proof routes to `aoa-evals` when public or operational. |
 | `ORQ-EXPERIENCE-KAG-001` | `aoa-kag` | `requested` | `P2` | Derived workspace and experience-ready knowledge projections | Provenance-aware derived lifts from accepted source surfaces without source-authority transfer. | Derived-readiness claims route to `aoa-evals`. |
 | `ORQ-EXPERIENCE-TOS-001` | `Tree-of-Sophia` | `requested` | `P1` | ToS meaning boundaries touched by experience contracts | ToS-owned source or concept node decision whenever experience surfaces touch Sophian meaning. | AoA can only support; ToS-owned acceptance is the authority. |
+| `ORQ-EXPERIENCE-PLAYBOOKS-001` | `aoa-playbooks` | `requested` | `P1` | Experience adoption, release, office, and service choreography | Playbook-owned route for adoption, release dry-runs, rollback drills, office follow-through, and service choreography. | Scenario outcomes and public claims route to `aoa-evals` before promotion. |
+| `ORQ-EXPERIENCE-SDK-001` | `aoa-sdk` | `requested` | `P1` | Typed install, runtime, train, and helper API carriers for Experience routes | SDK-owned helper or API surface that carries Experience route packets without becoming semantic, runtime, or owner-acceptance authority. | Compatibility evidence routes through `aoa-evals` when helper claims become public or operational. |
+| `ORQ-EXPERIENCE-STATS-001` | `aoa-stats` | `requested` | `P2` | Experience dashboards, watch summaries, and derived movement readouts | Stats-owned summary surfaces for certification, adoption, release, office, and service movement. | Stats summaries are not proof; proof routes to `aoa-evals` and owner-local receipts. |
+| `ORQ-EXPERIENCE-SKILLS-001` | `aoa-skills` | `requested` | `P2` | Experience receipt, adoption, release, and service operation skills | Skill-owned workflow with trigger, procedure, risks, verification, and stop-lines for Experience operations or receipt generation. | Workflow quality and public claims route to `aoa-evals` before promotion. |
+| `ORQ-EXPERIENCE-TECHNIQUES-001` | `aoa-techniques` | `requested` | `P2` | Reusable Experience adoption, deployment, office, and service practice | Technique-owned reusable practice note that extracts repeatable Experience method without carrying owner-local truth or runtime authority. | Technique usefulness routes through `aoa-evals` or reviewed owner receipts when claims become public. |
 
 ## Center sources
 
@@ -33,6 +38,8 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 - [certification-proof contract](parts/certification-proof/CONTRACT.md)
 - [continuity-context contract](parts/continuity-context/CONTRACT.md)
 - [office-operations contract](parts/office-operations/CONTRACT.md)
+- [release-deployment contract](parts/release-deployment/CONTRACT.md)
+- [service-mesh contract](parts/service-mesh/CONTRACT.md)
 - [runtime-boundary contract](parts/runtime-boundary/CONTRACT.md)
 - [compatibility-bridges contract](parts/compatibility-bridges/CONTRACT.md)
 
@@ -48,6 +55,11 @@ distilled; do not treat archive accounting as owner acceptance.
 - `ORQ-EXPERIENCE-AGENTS-001`: The center must not create hybrid-agent authority.
 - `ORQ-EXPERIENCE-KAG-001`: `aoa-kag` projections must not become source-authored meaning.
 - `ORQ-EXPERIENCE-TOS-001`: The center must not write ToS canon.
+- `ORQ-EXPERIENCE-PLAYBOOKS-001`: The center must not claim recurring Experience choreography or owner-followthrough playbook truth.
+- `ORQ-EXPERIENCE-SDK-001`: The center must not claim SDK helper availability, install API truth, or typed runtime authority.
+- `ORQ-EXPERIENCE-STATS-001`: The center must not treat Experience dashboards or stats summaries as proof, certification, or owner acceptance.
+- `ORQ-EXPERIENCE-SKILLS-001`: The center must not claim executable Experience skill truth or approval authority.
+- `ORQ-EXPERIENCE-TECHNIQUES-001`: The center must not turn Experience technique hints into canonical reusable practice without technique-owner landing.
 
 ## Validation
 
