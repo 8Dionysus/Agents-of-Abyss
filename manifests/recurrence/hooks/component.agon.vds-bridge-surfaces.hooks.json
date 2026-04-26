@@ -7,7 +7,7 @@
       "emits": "review_queue_candidate",
       "hook_id": "agon.vds.registry.drift",
       "watches": [
-        "mechanics/agon/generated/agon_vds_bridge_registry.min.json"
+        "mechanics/agon/parts/verdict-retention-rank/generated/agon_vds_bridge_registry.min.json"
       ]
     },
     {

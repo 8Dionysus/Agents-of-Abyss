@@ -64,9 +64,9 @@ quests/
 After merging the wave into the root of `Agents-of-Abyss`:
 
 ```bash
-python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check
-python mechanics/agon/scripts/validate_agon_lawful_moves.py
-python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py
+python mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py --check
+python mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py
+python -m pytest -q mechanics/agon/parts/lawful-move-grammar/tests/test_agon_lawful_moves.py
 ```
 
 ## Landing rule

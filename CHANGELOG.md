@@ -114,6 +114,11 @@ Tracking starts with the community-docs baseline for this repository.
   provenance bridge, and `legacy/raw` provenance accounting; `docs/` is only a
   compatibility route, while `mechanics/agon/OWNER_REQUESTS.md` and the central
   owner-request queue carry the current stronger-owner asks
+- Agon config seeds, generated capsules, schemas, examples, part validators,
+  and part tests now live under their owning
+  `mechanics/agon/parts/<part>/` homes, with
+  `mechanics/agon/artifact-map.json` and `mechanics/agon/legacy/artifacts/`
+  preserving the flat-path receipt
 - Agon, Experience, RPG, antifragility, and method-growth mechanic artifacts now
   live in mechanic-owned homes; root technical districts keep repo-wide
   contracts only and no longer carry mechanic artifact aliases
@@ -184,18 +189,18 @@ Tracking starts with the community-docs baseline for this repository.
 ### Validation
 
 - `python scripts/release_check.py`
-- `python mechanics/agon/scripts/build_agon_imposition_readiness.py --check`
-- `python mechanics/agon/scripts/validate_agon_imposition_readiness.py`
-- `python -m pytest -q mechanics/agon/tests/test_agon_imposition_readiness.py`
-- `python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check`
-- `python mechanics/agon/scripts/validate_agon_lawful_moves.py`
-- `python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py`
-- `python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check`
-- `python mechanics/agon/scripts/validate_agon_move_owner_bindings.py`
-- `python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py`
-- `python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check`
-- `python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py`
-- `python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.py`
+- `python mechanics/agon/parts/imposition-readiness/scripts/build_agon_imposition_readiness.py --check`
+- `python mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py`
+- `python -m pytest -q mechanics/agon/parts/imposition-readiness/tests/test_agon_imposition_readiness.py`
+- `python mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py --check`
+- `python mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py`
+- `python -m pytest -q mechanics/agon/parts/lawful-move-grammar/tests/test_agon_lawful_moves.py`
+- `python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check`
+- `python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py`
+- `python -m pytest -q mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py`
+- `python mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py --check`
+- `python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py`
+- `python -m pytest -q mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py`
 
 ### Notes
 

@@ -45,12 +45,12 @@ for Wave E link, Markdown shape, status vocabulary, and generated freshness
 guardrails.
 `generated/agents_mesh.min.json` is the compact machine-facing mirror for the
 Wave F AGENTS-card mesh.
-`mechanics/agon/generated/agon_imposition_readiness.min.json` is the tracked Wave 0 readiness capsule for the center-owned Agon imposition gate.
-`mechanics/agon/generated/agon_lawful_move_registry.min.json` is the tracked Wave III lawful
+`mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json` is the tracked Wave 0 readiness capsule for the center-owned Agon imposition gate.
+`mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json` is the tracked Wave III lawful
 move registry for the center-owned pre-protocol legal vocabulary.
-`mechanics/agon/generated/agon_move_owner_binding_registry.min.json` is the tracked Wave IV
+`mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json` is the tracked Wave IV
 owner-binding registry for the center-owned pre-protocol owner-binding law.
-`mechanics/agon/generated/agon_gate_routing_handoff_request.min.json` is the tracked Wave V
+`mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json` is the tracked Wave V
 center handoff request for thin pre-protocol Agon gate routing.
 
 This directory is derived in purpose, but the registry is currently maintained as a tracked JSON artifact inside this repository.
@@ -126,9 +126,9 @@ When editing `agon_imposition_readiness.min.json`:
 - keep it aligned with `mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md`,
   `mechanics/agon/legacy/raw/AGON_SURVIVAL_CRITERIA.md`, `mechanics/agon/legacy/raw/AGON_DOUBT_AUDIT.md`,
   `mechanics/agon/legacy/raw/PRE_AGON_BASELINE.md`, and
-  `mechanics/agon/schemas/agon-imposition-readiness.schema.json`
-- treat `mechanics/agon/scripts/build_agon_imposition_readiness.py` as the canonical builder
-  and `mechanics/agon/scripts/validate_agon_imposition_readiness.py` as the explicit Wave 0
+  `mechanics/agon/parts/imposition-readiness/schemas/agon-imposition-readiness.schema.json`
+- treat `mechanics/agon/parts/imposition-readiness/scripts/build_agon_imposition_readiness.py` as the canonical builder
+  and `mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py` as the explicit Wave 0
   validator
 - keep the capsule additive and witness-shaped; it must not become a shadow
   arena protocol or readiness government
@@ -138,9 +138,9 @@ When editing `agon_lawful_move_registry.min.json`:
 - keep it aligned with `mechanics/agon/legacy/raw/AGON_LAWFUL_MOVE_LANGUAGE.md`,
   `mechanics/agon/legacy/raw/AGON_MOVE_REGISTRY_MODEL.md`,
   `mechanics/agon/legacy/raw/AGON_MOVE_OWNER_HANDOFFS.md`, and
-  `mechanics/agon/config/agon_lawful_moves.seed.json`
-- treat `mechanics/agon/scripts/build_agon_lawful_move_registry.py` as the canonical builder
-  and `mechanics/agon/scripts/validate_agon_lawful_moves.py` as the explicit Wave III
+  `mechanics/agon/parts/lawful-move-grammar/config/agon_lawful_moves.seed.json`
+- treat `mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py` as the canonical builder
+  and `mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py` as the explicit Wave III
   validator
 - keep every move explicitly pre-protocol; the registry must not become a
   shadow arena runtime, verdict government, scar ledger, or retention engine
@@ -151,9 +151,9 @@ When editing `agon_move_owner_binding_registry.min.json`:
   `mechanics/agon/legacy/raw/AGON_MOVE_BINDING_MATRIX_MODEL.md`,
   `mechanics/agon/legacy/raw/AGON_OWNER_REPO_REQUESTS.md`,
   `mechanics/agon/legacy/raw/AGON_PRE_PROTOCOL_STOP_LINES.md`, and
-  `mechanics/agon/config/agon_move_owner_bindings.seed.json`
-- treat `mechanics/agon/scripts/build_agon_move_owner_binding_registry.py` as the canonical
-  builder and `mechanics/agon/scripts/validate_agon_move_owner_bindings.py` as the explicit
+  `mechanics/agon/parts/owner-binding/config/agon_move_owner_bindings.seed.json`
+- treat `mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py` as the canonical
+  builder and `mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py` as the explicit
   Wave IV validator
 - keep `Agents-of-Abyss` as the legal owner on every binding while all
   non-center owner references stay `requested_not_landed`
@@ -167,9 +167,9 @@ When editing `agon_gate_routing_handoff_request.min.json`:
   `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
   `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_STOP_LINES.md`,
   `mechanics/agon/legacy/raw/AGON_WAVE5_CENTER_HANDOFF.md`, and
-  `mechanics/agon/config/agon_gate_routing_handoff_request.seed.json`
-- treat `mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py` as the canonical
-  builder and `mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py` as the
+  `mechanics/agon/parts/gate-routing/config/agon_gate_routing_handoff_request.seed.json`
+- treat `mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py` as the canonical
+  builder and `mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py` as the
   explicit Wave V validator
 - keep the handoff explicitly pre-protocol; it must not become a shadow arena
   activation record, routing-owned Agon law, verdict government, scar ledger,
@@ -218,33 +218,33 @@ python scripts/validate_generated_freshness.py
 After changing the Agon readiness capsule, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_imposition_readiness.py --check
-python mechanics/agon/scripts/validate_agon_imposition_readiness.py
-python -m pytest -q mechanics/agon/tests/test_agon_imposition_readiness.py
+python mechanics/agon/parts/imposition-readiness/scripts/build_agon_imposition_readiness.py --check
+python mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py
+python -m pytest -q mechanics/agon/parts/imposition-readiness/tests/test_agon_imposition_readiness.py
 ```
 
 After changing the Agon lawful move registry, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check
-python mechanics/agon/scripts/validate_agon_lawful_moves.py
-python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py
+python mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py --check
+python mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py
+python -m pytest -q mechanics/agon/parts/lawful-move-grammar/tests/test_agon_lawful_moves.py
 ```
 
 After changing the Agon move owner binding registry, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check
-python mechanics/agon/scripts/validate_agon_move_owner_bindings.py
-python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py
+python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check
+python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py
 ```
 
 After changing the Agon gate routing handoff request, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check
-python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py
-python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.py
+python mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py --check
+python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py
 ```
 
 A registry edit is only done when the JSON, the schema, and the center-layer prose still agree.

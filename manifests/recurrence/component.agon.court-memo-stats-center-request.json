@@ -41,7 +41,7 @@
     }
   ],
   "candidate_targets": [
-    "mechanics/agon/generated/agon_court_memo_stats_prebinding_request.min.json"
+    "mechanics/agon/parts/verdict-retention-rank/generated/agon_court_memo_stats_prebinding_request.min.json"
   ],
   "component_ref": "component:agon:court-memo-stats-center-request",
   "contract_surfaces": [
@@ -55,7 +55,7 @@
     "stale_after_days": 14
   },
   "generated_surfaces": [
-    "mechanics/agon/generated/agon_court_memo_stats_prebinding_request.min.json"
+    "mechanics/agon/parts/verdict-retention-rank/generated/agon_court_memo_stats_prebinding_request.min.json"
   ],
   "observation_inputs": [
     {
@@ -63,7 +63,7 @@
       "kind": "other",
       "notes": "Wave VII center request surface.",
       "path_globs": [
-        "mechanics/agon/generated/agon_court_memo_stats_prebinding_request.min.json"
+        "mechanics/agon/parts/verdict-retention-rank/generated/agon_court_memo_stats_prebinding_request.min.json"
       ]
     },
     {
@@ -78,7 +78,7 @@
   ],
   "owner_repo": "Agents-of-Abyss",
   "proof_surfaces": [
-    "python mechanics/agon/scripts/validate_agon_court_memo_stats_prebinding_request.py"
+    "python mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_court_memo_stats_prebinding_request.py"
   ],
   "rollback_anchors": [
     "mechanics/agon/legacy/raw/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md"
@@ -105,7 +105,7 @@
     }
   ],
   "source_inputs": [
-    "mechanics/agon/config/agon_court_memo_stats_prebinding_request.seed.json"
+    "mechanics/agon/parts/verdict-retention-rank/config/agon_court_memo_stats_prebinding_request.seed.json"
   ],
   "tags": [
     "agon",

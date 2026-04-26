@@ -1,0 +1,65 @@
+import importlib.util
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+
+def _repo_root() -> Path:
+    for candidate in Path(__file__).resolve().parents:
+        if (candidate / "mechanics" / "registry.json").is_file():
+            return candidate
+    raise RuntimeError("repo root not found")
+
+ROOT = _repo_root()
+
+
+def _load_script(path: Path):
+    spec = importlib.util.spec_from_file_location(path.stem, path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_agon_duel_kernel_model_registry_build_check():
+    result = subprocess.run([sys.executable, 'mechanics/agon/parts/duel-kernel/scripts/build_agon_duel_kernel_model_registry.py', '--check'], text=True, capture_output=True)
+    assert result.returncode == 0, result.stderr
+
+
+def test_agon_duel_kernel_model_registry_validates():
+    result = subprocess.run([sys.executable, 'mechanics/agon/parts/duel-kernel/scripts/validate_agon_duel_kernel_models.py'], text=True, capture_output=True)
+    assert result.returncode == 0, result.stderr
+
+
+def test_agon_duel_kernel_model_registry_rejects_repeated_earlier_phase(tmp_path: Path):
+    validator = _load_script(ROOT / "mechanics" / "agon" / "parts" / "duel-kernel" / "scripts" / "validate_agon_duel_kernel_models.py")
+    registry = json.loads(
+        (
+            ROOT / "mechanics" / "agon" / "parts" / "duel-kernel" / "generated" / "agon_duel_kernel_model_registry.min.json"
+        ).read_text(encoding="utf-8")
+    )
+    registry["kernels"][0]["event_sequence"].append("kernel.commit_phase_opened")
+
+    registry_path = tmp_path / "agon_duel_kernel_model_registry.min.json"
+    registry_path.write_text(json.dumps(registry), encoding="utf-8")
+    validator.REG = registry_path
+
+    assert validator.main() == 1
+
+
+def test_agon_duel_kernel_model_registry_rejects_non_string_event_entries(tmp_path: Path, capsys):
+    validator = _load_script(ROOT / "mechanics" / "agon" / "parts" / "duel-kernel" / "scripts" / "validate_agon_duel_kernel_models.py")
+    registry = json.loads(
+        (
+            ROOT / "mechanics" / "agon" / "parts" / "duel-kernel" / "generated" / "agon_duel_kernel_model_registry.min.json"
+        ).read_text(encoding="utf-8")
+    )
+    registry["kernels"][0]["event_sequence"][3] = {"bad": "event"}
+
+    registry_path = tmp_path / "agon_duel_kernel_model_registry.min.json"
+    registry_path.write_text(json.dumps(registry), encoding="utf-8")
+    validator.REG = registry_path
+
+    assert validator.main() == 1
+    assert "event_sequence entries must be strings" in capsys.readouterr().err

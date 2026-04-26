@@ -84,12 +84,12 @@
     }
   ],
   "candidate_targets": [
-    "mechanics/agon/generated/agon_imposition_readiness.min.json",
-    "mechanics/agon/generated/agon_lawful_move_registry.min.json",
-    "mechanics/agon/generated/agon_move_owner_binding_registry.min.json",
-    "mechanics/agon/generated/agon_gate_routing_handoff_request.min.json",
-    "mechanics/agon/generated/agon_trial_playbook_request.min.json",
-    "mechanics/agon/generated/agon_recurrence_adapter_request.min.json"
+    "mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json",
+    "mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json",
+    "mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json",
+    "mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json",
+    "mechanics/agon/parts/trial-handoff/generated/agon_trial_playbook_request.min.json",
+    "mechanics/agon/parts/recurrence-adapter/generated/agon_recurrence_adapter_request.min.json"
   ],
   "component_ref": "component:agon:center-surfaces",
   "consumer_edges": [
@@ -142,12 +142,12 @@
     "stale_after_days": 14
   },
   "generated_surfaces": [
-    "mechanics/agon/generated/agon_imposition_readiness.min.json",
-    "mechanics/agon/generated/agon_lawful_move_registry.min.json",
-    "mechanics/agon/generated/agon_move_owner_binding_registry.min.json",
-    "mechanics/agon/generated/agon_gate_routing_handoff_request.min.json",
-    "mechanics/agon/generated/agon_trial_playbook_request.min.json",
-    "mechanics/agon/generated/agon_recurrence_adapter_request.min.json"
+    "mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json",
+    "mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json",
+    "mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json",
+    "mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json",
+    "mechanics/agon/parts/trial-handoff/generated/agon_trial_playbook_request.min.json",
+    "mechanics/agon/parts/recurrence-adapter/generated/agon_recurrence_adapter_request.min.json"
   ],
   "observation_inputs": [
     {
@@ -169,23 +169,23 @@
   ],
   "owner_repo": "Agents-of-Abyss",
   "proof_surfaces": [
-    "python mechanics/agon/scripts/validate_agon_imposition_readiness.py",
-    "python mechanics/agon/scripts/validate_agon_lawful_moves.py",
-    "python mechanics/agon/scripts/validate_agon_move_owner_bindings.py",
-    "python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py",
-    "python mechanics/agon/scripts/validate_agon_trial_playbook_request.py",
-    "python mechanics/agon/scripts/validate_agon_recurrence_adapter_request.py"
+    "python mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py",
+    "python mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py",
+    "python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py",
+    "python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py",
+    "python mechanics/agon/parts/trial-handoff/scripts/validate_agon_trial_playbook_request.py",
+    "python mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_adapter_request.py"
   ],
   "refresh_routes": [
     {
       "action": "revalidate",
       "commands": [
-        "python mechanics/agon/scripts/validate_agon_imposition_readiness.py",
-        "python mechanics/agon/scripts/validate_agon_lawful_moves.py",
-        "python mechanics/agon/scripts/validate_agon_move_owner_bindings.py",
-        "python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py",
-        "python mechanics/agon/scripts/validate_agon_trial_playbook_request.py",
-        "python mechanics/agon/scripts/validate_agon_recurrence_adapter_request.py"
+        "python mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py",
+        "python mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py",
+        "python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py",
+        "python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py",
+        "python mechanics/agon/parts/trial-handoff/scripts/validate_agon_trial_playbook_request.py",
+        "python mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_adapter_request.py"
       ],
       "notes": "Owner-local validation path. Recurrence may suggest this route; it must not run it as hidden authority."
     }
@@ -222,11 +222,11 @@
     }
   ],
   "source_inputs": [
-    "mechanics/agon/config/agon_lawful_moves.seed.json",
-    "mechanics/agon/config/agon_move_owner_bindings.seed.json",
-    "mechanics/agon/config/agon_gate_routing_handoff_request.seed.json",
-    "mechanics/agon/config/agon_trial_playbook_request.seed.json",
-    "mechanics/agon/config/agon_recurrence_adapter_request.seed.json"
+    "mechanics/agon/parts/lawful-move-grammar/config/agon_lawful_moves.seed.json",
+    "mechanics/agon/parts/owner-binding/config/agon_move_owner_bindings.seed.json",
+    "mechanics/agon/parts/gate-routing/config/agon_gate_routing_handoff_request.seed.json",
+    "mechanics/agon/parts/trial-handoff/config/agon_trial_playbook_request.seed.json",
+    "mechanics/agon/parts/recurrence-adapter/config/agon_recurrence_adapter_request.seed.json"
   ],
   "tags": [
     "agon",

@@ -20,6 +20,7 @@ AGON_ROOT = REPO_ROOT / "mechanics" / "agon"
 PARTS_ROOT = AGON_ROOT / "parts"
 LEGACY_ROOT = AGON_ROOT / "legacy"
 RAW_ROOT = LEGACY_ROOT / "raw"
+ARTIFACT_MAP_PATH = AGON_ROOT / "artifact-map.json"
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 
 PART_SLUGS = (
@@ -53,10 +54,22 @@ LEGACY_SURFACES = (
     "README.md",
     "INDEX.md",
     "DISTILLATION_LOG.md",
+    "artifacts/README.md",
     "raw/README.md",
 )
 
 PART_SURFACES = ("README.md", "CONTRACT.md", "VALIDATION.md")
+PART_ARTIFACT_DIRS = ("schemas", "examples", "config", "generated", "scripts", "tests")
+PART_ARTIFACT_KINDS = {"schema", "example", "config", "generated", "script", "test"}
+PART_ARTIFACT_STATUSES = {
+    "active-part-schema",
+    "active-part-example",
+    "active-part-config",
+    "active-part-generated",
+    "active-part-script",
+    "active-part-test",
+}
+PACKAGE_ARTIFACT_STATUSES = {"package-validator", "package-test"}
 
 ACTIVE_TEXT_SURFACES = (
     "README.md",
@@ -93,6 +106,84 @@ OWNER_REQUEST_IDS = (
 
 def read_text(rel: str) -> str:
     return (AGON_ROOT / rel).read_text(encoding="utf-8")
+
+
+def rel(path: Path) -> str:
+    return path.relative_to(REPO_ROOT).as_posix()
+
+
+def validate_artifact_map(problems: list[str]) -> None:
+    if not ARTIFACT_MAP_PATH.is_file():
+        problems.append(f"missing Agon artifact map: {rel(ARTIFACT_MAP_PATH)}")
+        return
+
+    data = json.loads(ARTIFACT_MAP_PATH.read_text(encoding="utf-8"))
+    if data.get("schema_version") != "aoa_agon_artifact_map_v1":
+        problems.append(f"{rel(ARTIFACT_MAP_PATH)}: invalid schema_version")
+    if data.get("mechanic") != "agon":
+        problems.append(f"{rel(ARTIFACT_MAP_PATH)}: mechanic must be agon")
+    if tuple(data.get("parts", ())) != PART_SLUGS:
+        problems.append(f"{rel(ARTIFACT_MAP_PATH)}: parts must match active Agon part order")
+
+    listed_paths: set[str] = set()
+    seen_old: set[str] = set()
+    seen_new: set[str] = set()
+    artifacts = data.get("artifacts")
+    if not isinstance(artifacts, list) or not artifacts:
+        problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifacts must be a non-empty list")
+        artifacts = []
+
+    for index, item in enumerate(artifacts):
+        if not isinstance(item, dict):
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} must be an object")
+            continue
+        kind = str(item.get("kind", ""))
+        part = str(item.get("part", ""))
+        status = str(item.get("status", ""))
+        old_path = str(item.get("old_path", ""))
+        new_path = str(item.get("path", ""))
+
+        if kind not in PART_ARTIFACT_KINDS:
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid kind {kind!r}")
+        if old_path in seen_old:
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: duplicate old_path {old_path}")
+        if new_path in seen_new:
+            problems.append(f"{rel(ARTIFACT_MAP_PATH)}: duplicate path {new_path}")
+        seen_old.add(old_path)
+        seen_new.add(new_path)
+
+        if part == "package":
+            if status not in PACKAGE_ARTIFACT_STATUSES:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: package artifact {index} has invalid status {status!r}")
+            if old_path != new_path:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: package artifact path changed: {new_path}")
+        else:
+            if part not in PART_SLUGS:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid part {part!r}")
+            if status not in PART_ARTIFACT_STATUSES:
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: artifact {index} has invalid status {status!r}")
+            expected_prefix = f"mechanics/agon/parts/{part}/"
+            if not new_path.startswith(expected_prefix):
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: {new_path} must live under {expected_prefix}")
+            if not (REPO_ROOT / new_path).is_file():
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: mapped artifact missing: {new_path}")
+            else:
+                listed_paths.add(new_path)
+            if (REPO_ROOT / old_path).exists():
+                problems.append(f"{rel(ARTIFACT_MAP_PATH)}: old flat artifact still exists: {old_path}")
+
+    for part in PART_SLUGS:
+        part_dir = PARTS_ROOT / part
+        for dirname in PART_ARTIFACT_DIRS:
+            artifact_dir = part_dir / dirname
+            if not artifact_dir.exists():
+                continue
+            for path in artifact_dir.iterdir():
+                if not path.is_file() or path.name == "README.md":
+                    continue
+                path_ref = rel(path)
+                if path_ref not in listed_paths:
+                    problems.append(f"{path_ref}: part artifact is not listed in artifact-map.json")
 
 
 def validate() -> list[str]:
@@ -176,6 +267,10 @@ def validate() -> list[str]:
             problems.append(f"PROVENANCE.md: missing legacy route phrase {phrase!r}")
     if "Agon legacy raw provenance district" not in landing_log:
         problems.append("LANDING_LOG.md: missing Agon legacy raw provenance district entry")
+    if "Agon part artifact homes" not in landing_log:
+        problems.append("LANDING_LOG.md: missing Agon part artifact homes entry")
+
+    validate_artifact_map(problems)
 
     active_texts = {
         rel: (AGON_ROOT / rel).read_text(encoding="utf-8")

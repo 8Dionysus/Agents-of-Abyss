@@ -164,7 +164,7 @@ Current surfaces:
 - `mechanics/agon/legacy/raw/AGON_DOUBT_AUDIT.md`
 - `mechanics/agon/legacy/raw/PRE_AGON_BASELINE.md`
 - `mechanics/agon/legacy/raw/AGON_WAVE0_LANDING.md`
-- `mechanics/agon/generated/agon_imposition_readiness.min.json`
+- `mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json`
 
 Purpose:
 - place the current federation under Agon scrutiny without starting the arena
@@ -188,7 +188,7 @@ Current surfaces:
 - `mechanics/agon/legacy/raw/AGON_MOVE_REGISTRY_MODEL.md`
 - `mechanics/agon/legacy/raw/AGON_MOVE_OWNER_HANDOFFS.md`
 - `mechanics/agon/legacy/raw/AGON_WAVE3_LANDING.md`
-- `mechanics/agon/generated/agon_lawful_move_registry.min.json`
+- `mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json`
 
 Purpose:
 - give Agon a first legal vocabulary after the imposition gate and actor-side
@@ -214,7 +214,7 @@ Current surfaces:
 - `mechanics/agon/OWNER_REQUESTS.md`
 - `mechanics/agon/legacy/raw/AGON_PRE_PROTOCOL_STOP_LINES.md`
 - `mechanics/agon/legacy/raw/AGON_WAVE4_LANDING.md`
-- `mechanics/agon/generated/agon_move_owner_binding_registry.min.json`
+- `mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json`
 
 Purpose:
 - bind each lawful move to the owner repositories that must later carry
@@ -241,7 +241,7 @@ Current surfaces:
 - `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_OWNER_REQUEST.md`
 - `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_STOP_LINES.md`
 - `mechanics/agon/legacy/raw/AGON_WAVE5_CENTER_HANDOFF.md`
-- `mechanics/agon/generated/agon_gate_routing_handoff_request.min.json`
+- `mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json`
 
 Purpose:
 - accept one thin pre-protocol handoff from `aoa-routing` when ordinary
@@ -265,7 +265,7 @@ Current surfaces:
 - `mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md`
 - `mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_STOP_LINES.md`
 - `mechanics/agon/legacy/raw/AGON_WAVE6_CENTER_HANDOFF.md`
-- `mechanics/agon/generated/agon_trial_playbook_request.min.json`
+- `mechanics/agon/parts/trial-handoff/generated/agon_trial_playbook_request.min.json`
 
 Purpose:
 - hand one bounded Agon slice to `aoa-playbooks`: recurring mechanical trial

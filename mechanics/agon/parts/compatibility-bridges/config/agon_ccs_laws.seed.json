@@ -1,0 +1,257 @@
+{
+  "assistant_boundary": {
+    "assistant_may": [
+      "prepare_receipt",
+      "surface_scope_breach",
+      "preserve_trace_context",
+      "handoff_to_agonic_actor",
+      "prepare_summon_intent_dossier"
+    ],
+    "assistant_must_not": [
+      "become_contestant",
+      "grant_closure",
+      "initiate_summon",
+      "issue_verdict",
+      "write_scar",
+      "mutate_rank",
+      "promote_to_tree_of_sophia"
+    ]
+  },
+  "home_repo": "Agents-of-Abyss",
+  "interlocks": [
+    {
+      "from_law": "agon.law.contradiction.material_open_blocks_closure",
+      "interlock_id": "contradiction_blocks_closure",
+      "rule": "if any material contradiction is open, closure eligibility is false",
+      "to_law": "agon.law.closure.earned_jurisdiction"
+    },
+    {
+      "from_law": "agon.law.closure.earned_jurisdiction",
+      "interlock_id": "closure_denial_can_request_summon_review",
+      "rule": "closure denial may support summon intent only when the missing force is explicitly named and cost is accepted",
+      "to_law": "agon.law.summon.costly_visible_intent"
+    },
+    {
+      "from_law": "agon.law.summon.costly_visible_intent",
+      "interlock_id": "summon_cannot_bypass_contradiction",
+      "rule": "summon cannot make an open material contradiction disappear; it may only bring a force to resolve, localize, defer or bifurcate it",
+      "to_law": "agon.law.contradiction.material_open_blocks_closure"
+    }
+  ],
+  "law_families": [
+    {
+      "allowed_lawful_moves": [
+        "mark_contradiction",
+        "localize_contradiction",
+        "defer_with_cost",
+        "deny_closure"
+      ],
+      "law_family": "contradiction",
+      "law_id": "agon.law.contradiction.material_open_blocks_closure",
+      "ledger_storage": "not_defined_by_wave10",
+      "materiality_dimensions": [
+        "closure_relevant",
+        "evidence_relevant",
+        "trace_relevant",
+        "scope_relevant",
+        "canon_relevant"
+      ],
+      "not_granted": [
+        "verdict_authority",
+        "durable_scar_write",
+        "retention_execution",
+        "rank_mutation"
+      ],
+      "owner_handoffs": {
+        "eval_precheck": "agon.eval.contradiction_status_precheck",
+        "memo_candidate": "agon.memo.rupture_candidate_intake",
+        "routing_trigger": "open_material_contradiction",
+        "stats_summary": "agon.stats.contradiction_integrity_summary"
+      },
+      "required_notice_packet": "agon.contradiction_notice",
+      "reserved_entry_shape": [
+        "contradiction_id",
+        "locus",
+        "materiality",
+        "severity",
+        "status",
+        "raised_by",
+        "evidence_refs",
+        "closure_blocking",
+        "next_required_review"
+      ],
+      "statement": "An open material contradiction blocks lawful closure until it is resolved, localized, deferred with explicit cost, or bifurcated.",
+      "status_model": [
+        "open",
+        "localized",
+        "resolved",
+        "deferred_with_cost",
+        "bifurcated",
+        "invalidated"
+      ]
+    },
+    {
+      "allowed_lawful_moves": [
+        "deny_closure",
+        "request_closure_review",
+        "probe_trace",
+        "request_evidence",
+        "flag_scope_breach"
+      ],
+      "closure_predicates": [
+        {
+          "precheck": "agon.eval.trace_integrity_precheck",
+          "predicate": "trace_integrity_satisfied",
+          "required": true
+        },
+        {
+          "precheck": "agon.eval.evidence_floor_precheck",
+          "predicate": "evidence_floor_satisfied",
+          "required": true
+        },
+        {
+          "precheck": "agon.eval.contradiction_status_precheck",
+          "predicate": "no_open_material_contradiction",
+          "required": true
+        },
+        {
+          "precheck": "agon.eval.assistant_boundary_precheck",
+          "predicate": "scope_boundary_clear",
+          "required": true
+        },
+        {
+          "precheck": "future.witness.receipt_check",
+          "predicate": "witness_requirements_satisfied",
+          "required": true
+        },
+        {
+          "precheck": "future.arena.jurisdiction_check",
+          "predicate": "closure_right_present",
+          "required": true
+        }
+      ],
+      "denial_reasons": [
+        "broken_trace",
+        "evidence_floor_collapse",
+        "open_material_contradiction",
+        "unresolved_scope_breach",
+        "missing_witness_receipt",
+        "actor_lacks_closure_jurisdiction",
+        "assistant_contestant_drift"
+      ],
+      "earned_jurisdiction": {
+        "future_jurisdictions": [
+          "closer",
+          "judge_candidate",
+          "arena_charter_closure_delegate"
+        ],
+        "granted_by_wave10": false,
+        "revocable": true
+      },
+      "law_family": "closure",
+      "law_id": "agon.law.closure.earned_jurisdiction",
+      "not_granted": [
+        "live_closure",
+        "verdict_authority",
+        "durable_scar_write",
+        "rank_mutation"
+      ],
+      "owner_handoffs": {
+        "eval_precheck": "agon.eval.closure_legality_precheck",
+        "memo_candidate": "agon.memo.delta_chronicle_candidate",
+        "routing_trigger": "contested_closure",
+        "stats_summary": "agon.stats.closure_discipline_summary"
+      },
+      "statement": "Closure is an earned jurisdiction and cannot be granted while trace, evidence, contradiction, scope, witness or assistant-boundary requirements are unmet."
+    },
+    {
+      "allowed_lawful_moves": [
+        "request_summon_intent",
+        "request_witness",
+        "challenge_claim",
+        "request_evidence"
+      ],
+      "cost_model": {
+        "cost_currency": "future_arena_budget_or_jurisdiction",
+        "cost_required": true,
+        "granted_by_wave10": false
+      },
+      "law_family": "summon",
+      "law_id": "agon.law.summon.costly_visible_intent",
+      "not_granted": [
+        "live_summon",
+        "summon_initiator_jurisdiction",
+        "hidden_scheduler_action",
+        "rank_mutation"
+      ],
+      "owner_handoffs": {
+        "eval_precheck": "agon.eval.summon_intent_precheck",
+        "memo_candidate": "agon.memo.trial_chronicle_candidate",
+        "routing_trigger": "summon_intent_requires_review",
+        "stats_summary": "agon.stats.summon_pressure_summary"
+      },
+      "prohibitions": [
+        "hidden_summon",
+        "assistant_initiated_summon",
+        "summon_without_need_statement",
+        "summon_after_the_fact",
+        "summon_as_false_closure",
+        "summon_to_bypass_evidence_floor"
+      ],
+      "required_intent_fields": [
+        "summon_type",
+        "requested_actor_or_office",
+        "need_statement",
+        "expected_delta",
+        "cost_acknowledgement",
+        "visibility",
+        "review_route",
+        "failure_mode"
+      ],
+      "statement": "Summon is costly, visible, reviewable intent; hidden summon and panic-button summon are unlawful.",
+      "summon_types": [
+        "utility",
+        "adversarial",
+        "perspective",
+        "witness"
+      ],
+      "visibility_requirements": [
+        "declared_before_use",
+        "traceable_request",
+        "reviewable_cost",
+        "owner_visible_handoff"
+      ]
+    }
+  ],
+  "live_protocol": false,
+  "registry_id": "agon.ccs_law.registry.v1",
+  "runtime_effect": "none",
+  "source_dependencies": {
+    "arena_session_models": "mechanics/agon/parts/packet-arena/generated/agon_arena_session_model_registry.min.json",
+    "court_prebinding": "aoa-evals/generated/agon_eval_prebinding_registry.min.json",
+    "gate_routing": "mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json",
+    "lawful_moves": "mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json",
+    "memo_prebinding": "aoa-memo/generated/agon_memo_prebinding_registry.min.json",
+    "owner_bindings": "mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json",
+    "state_packets": "mechanics/agon/parts/packet-arena/generated/agon_state_packet_registry.min.json",
+    "stats_prebinding": "aoa-stats/generated/agon_stats_prebinding_registry.min.json",
+    "trial_playbooks": "mechanics/agon/parts/trial-handoff/generated/agon_trial_playbook_request.min.json"
+  },
+  "status": "seeded_pre_protocol_law",
+  "stop_lines": [
+    "no_live_arena_session",
+    "no_runtime_state_transition",
+    "no_live_move_execution",
+    "no_verdict_authority",
+    "no_durable_scar_write",
+    "no_retention_execution",
+    "no_rank_mutation",
+    "no_tree_of_sophia_promotion",
+    "no_hidden_scheduler_action",
+    "no_assistant_contestant_drift",
+    "no_center_takeover_of_eval_memo_stats_truth"
+  ],
+  "title": "Contradiction / Closure / Summon Law",
+  "version": "0.1.0",
+  "wave": "X"
+}

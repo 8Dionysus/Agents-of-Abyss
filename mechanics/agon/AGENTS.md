@@ -47,7 +47,9 @@ writes.
 - `ROADMAP.md`: current and next Agon contour.
 - `LANDING_LOG.md`: canonical Agon landing ledger.
 - `PROVENANCE.md`: controlled bridge to detailed source-doc and wave accounting.
-- `docs/`: detailed source-doc route only.
+- `artifact-map.json`: old flat artifact path to active part-home receipt.
+- `legacy/`: provenance and artifact receipts; enter through `PROVENANCE.md`.
+- `docs/`: compatibility route only.
 
 ## Post-change route review
 
@@ -78,5 +80,5 @@ after schema, example, config, generated artifact, script, or test placement
 changes.
 Use `python scripts/validate_mechanic_landing_logs.py --mechanic agon` after
 landing-log or surface-chain changes.
-Use the nearest `scripts/*agon*.py` and `tests/test_agon_*.py` for generated or
-model-specific changes.
+Use the nearest part-local `scripts/*agon*.py` and `tests/test_agon_*.py` for
+generated or model-specific changes.

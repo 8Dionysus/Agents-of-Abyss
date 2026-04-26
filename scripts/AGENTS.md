@@ -60,19 +60,19 @@ Current scripts include:
 - `agon_imposition_common.py` for the canonical Agon Wave 0 capsule payload,
   local-reference checks, and shared build/validate entrypoints
 - `build_agon_imposition_readiness.py` for deterministic rebuild or stale-check
-  of `mechanics/agon/generated/agon_imposition_readiness.min.json`
+  of `mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json`
 - `validate_agon_imposition_readiness.py` for the explicit Wave 0 readiness
   contract check
 - `build_agon_lawful_move_registry.py` for deterministic rebuild or stale-check
-  of `mechanics/agon/generated/agon_lawful_move_registry.min.json`
+  of `mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json`
 - `validate_agon_lawful_moves.py` for the explicit Wave III lawful move
   vocabulary contract check
 - `build_agon_move_owner_binding_registry.py` for deterministic rebuild or
-  stale-check of `mechanics/agon/generated/agon_move_owner_binding_registry.min.json`
+  stale-check of `mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json`
 - `validate_agon_move_owner_bindings.py` for the explicit Wave IV move owner
   binding contract check
 - `build_agon_gate_routing_handoff_request.py` for deterministic rebuild or
-  stale-check of `mechanics/agon/generated/agon_gate_routing_handoff_request.min.json`
+  stale-check of `mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json`
 - `validate_agon_gate_routing_handoff_request.py` for the explicit Wave V
   gate-routing handoff contract check
 - `validate_experience_wave1.py` for the first center-owned experience-capture
@@ -139,33 +139,33 @@ python scripts/release_check.py
 After changing the Agon Wave 0 builder or validator, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_imposition_readiness.py --check
-python mechanics/agon/scripts/validate_agon_imposition_readiness.py
-python -m pytest -q mechanics/agon/tests/test_agon_imposition_readiness.py
+python mechanics/agon/parts/imposition-readiness/scripts/build_agon_imposition_readiness.py --check
+python mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py
+python -m pytest -q mechanics/agon/parts/imposition-readiness/tests/test_agon_imposition_readiness.py
 ```
 
 After changing the Agon Wave III builder or validator, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_lawful_move_registry.py --check
-python mechanics/agon/scripts/validate_agon_lawful_moves.py
-python -m pytest -q mechanics/agon/tests/test_agon_lawful_moves.py
+python mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py --check
+python mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py
+python -m pytest -q mechanics/agon/parts/lawful-move-grammar/tests/test_agon_lawful_moves.py
 ```
 
 After changing the Agon Wave IV builder or validator, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_move_owner_binding_registry.py --check
-python mechanics/agon/scripts/validate_agon_move_owner_bindings.py
-python -m pytest -q mechanics/agon/tests/test_agon_move_owner_bindings.py
+python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check
+python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py
 ```
 
 After changing the Agon Wave V builder or validator, also run:
 
 ```bash
-python mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py --check
-python mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py
-python -m pytest -q mechanics/agon/tests/test_agon_gate_routing_handoff_request.py
+python mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py --check
+python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py
 ```
 
 After changing the Experience Wave 1 validator, also run:

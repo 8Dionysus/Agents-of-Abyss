@@ -1,0 +1,1271 @@
+{
+  "schema_version": "aoa_agon_artifact_map_v1",
+  "mechanic": "agon",
+  "created": "2026-04-25",
+  "purpose": "Machine-readable map from legacy-flat Agon artifact paths into active functioning part homes.",
+  "route_rule": "Use parts/<part>/ for current working artifacts; use PROVENANCE.md and legacy/ only for archive evidence.",
+  "parts": [
+    "imposition-readiness",
+    "lawful-move-grammar",
+    "owner-binding",
+    "gate-routing",
+    "trial-handoff",
+    "recurrence-adapter",
+    "packet-arena",
+    "duel-kernel",
+    "verdict-retention-rank",
+    "epistemic-kag",
+    "sophian-threshold",
+    "compatibility-bridges"
+  ],
+  "artifacts": [
+    {
+      "kind": "config",
+      "part": "compatibility-bridges",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_ccs_laws.seed.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/config/agon_ccs_laws.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "compatibility-bridges",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_slc.seed.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/config/agon_slc.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_campaign_model.example.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/examples/agon_campaign_model.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_closure_law.example.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/examples/agon_closure_law.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_contradiction_law.example.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/examples/agon_contradiction_law.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_lineage_candidate.example.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/examples/agon_lineage_candidate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_school_candidate.example.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/examples/agon_school_candidate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "compatibility-bridges",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_summon_law.example.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/examples/agon_summon_law.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "compatibility-bridges",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_ccs_law_registry.min.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/generated/agon_ccs_law_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "compatibility-bridges",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_slc_registry.min.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/generated/agon_slc_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-ccs-law-registry.schema.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/schemas/agon-ccs-law-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-contradiction-closure-summon-law.schema.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/schemas/agon-contradiction-closure-summon-law.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-school-lineage-campaign-registry.schema.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/schemas/agon-school-lineage-campaign-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "compatibility-bridges",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-school-lineage-campaign.schema.json",
+      "path": "mechanics/agon/parts/compatibility-bridges/schemas/agon-school-lineage-campaign.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "compatibility-bridges",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_ccs_law_registry.py",
+      "path": "mechanics/agon/parts/compatibility-bridges/scripts/build_agon_ccs_law_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "compatibility-bridges",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_slc_registry.py",
+      "path": "mechanics/agon/parts/compatibility-bridges/scripts/build_agon_slc_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "compatibility-bridges",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_ccs_laws.py",
+      "path": "mechanics/agon/parts/compatibility-bridges/scripts/validate_agon_ccs_laws.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "compatibility-bridges",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_slc_registry.py",
+      "path": "mechanics/agon/parts/compatibility-bridges/scripts/validate_agon_slc_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "compatibility-bridges",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_ccs_laws.py",
+      "path": "mechanics/agon/parts/compatibility-bridges/tests/test_agon_ccs_laws.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "compatibility-bridges",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_slc_registry.py",
+      "path": "mechanics/agon/parts/compatibility-bridges/tests/test_agon_slc_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "duel-kernel",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_duel_kernel_models.seed.json",
+      "path": "mechanics/agon/parts/duel-kernel/config/agon_duel_kernel_models.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "duel-kernel",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_mechanical_trial_suites.seed.json",
+      "path": "mechanics/agon/parts/duel-kernel/config/agon_mechanical_trial_suites.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "duel-kernel",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_duel_kernel_model.example.json",
+      "path": "mechanics/agon/parts/duel-kernel/examples/agon_duel_kernel_model.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "duel-kernel",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_mechanical_trial_suite.example.json",
+      "path": "mechanics/agon/parts/duel-kernel/examples/agon_mechanical_trial_suite.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "duel-kernel",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_duel_kernel_model_registry.min.json",
+      "path": "mechanics/agon/parts/duel-kernel/generated/agon_duel_kernel_model_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "duel-kernel",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_mechanical_trial_suite_registry.min.json",
+      "path": "mechanics/agon/parts/duel-kernel/generated/agon_mechanical_trial_suite_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "duel-kernel",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-duel-kernel-model-registry.schema.json",
+      "path": "mechanics/agon/parts/duel-kernel/schemas/agon-duel-kernel-model-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "duel-kernel",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-duel-kernel-model.schema.json",
+      "path": "mechanics/agon/parts/duel-kernel/schemas/agon-duel-kernel-model.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "duel-kernel",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-mechanical-trial-suite-registry.schema.json",
+      "path": "mechanics/agon/parts/duel-kernel/schemas/agon-mechanical-trial-suite-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "duel-kernel",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-mechanical-trial-suite.schema.json",
+      "path": "mechanics/agon/parts/duel-kernel/schemas/agon-mechanical-trial-suite.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "duel-kernel",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_duel_kernel_model_registry.py",
+      "path": "mechanics/agon/parts/duel-kernel/scripts/build_agon_duel_kernel_model_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "duel-kernel",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_mechanical_trial_suite_registry.py",
+      "path": "mechanics/agon/parts/duel-kernel/scripts/build_agon_mechanical_trial_suite_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "duel-kernel",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_duel_kernel_models.py",
+      "path": "mechanics/agon/parts/duel-kernel/scripts/validate_agon_duel_kernel_models.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "duel-kernel",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_mechanical_trial_suites.py",
+      "path": "mechanics/agon/parts/duel-kernel/scripts/validate_agon_mechanical_trial_suites.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "duel-kernel",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_duel_kernel_models.py",
+      "path": "mechanics/agon/parts/duel-kernel/tests/test_agon_duel_kernel_models.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "duel-kernel",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_mechanical_trial_suites.py",
+      "path": "mechanics/agon/parts/duel-kernel/tests/test_agon_mechanical_trial_suites.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "epistemic-kag",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_epistemic_agon.seed.json",
+      "path": "mechanics/agon/parts/epistemic-kag/config/agon_epistemic_agon.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "epistemic-kag",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_kag_promotion_path.seed.json",
+      "path": "mechanics/agon/parts/epistemic-kag/config/agon_kag_promotion_path.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "epistemic-kag",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_epistemic_component.example.json",
+      "path": "mechanics/agon/parts/epistemic-kag/examples/agon_epistemic_component.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "epistemic-kag",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_epistemic_move_extension.example.json",
+      "path": "mechanics/agon/parts/epistemic-kag/examples/agon_epistemic_move_extension.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "epistemic-kag",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_kag_evidence_bundle.example.json",
+      "path": "mechanics/agon/parts/epistemic-kag/examples/agon_kag_evidence_bundle.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "epistemic-kag",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_kag_promotion_candidate.example.json",
+      "path": "mechanics/agon/parts/epistemic-kag/examples/agon_kag_promotion_candidate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "epistemic-kag",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_epistemic_agon_registry.min.json",
+      "path": "mechanics/agon/parts/epistemic-kag/generated/agon_epistemic_agon_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "epistemic-kag",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_kag_promotion_path_registry.min.json",
+      "path": "mechanics/agon/parts/epistemic-kag/generated/agon_kag_promotion_path_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "epistemic-kag",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-epistemic-agon-registry.schema.json",
+      "path": "mechanics/agon/parts/epistemic-kag/schemas/agon-epistemic-agon-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "epistemic-kag",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-epistemic-agon.schema.json",
+      "path": "mechanics/agon/parts/epistemic-kag/schemas/agon-epistemic-agon.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "epistemic-kag",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-kag-promotion-path-registry.schema.json",
+      "path": "mechanics/agon/parts/epistemic-kag/schemas/agon-kag-promotion-path-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "epistemic-kag",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-kag-promotion-path.schema.json",
+      "path": "mechanics/agon/parts/epistemic-kag/schemas/agon-kag-promotion-path.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "epistemic-kag",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_epistemic_agon_registry.py",
+      "path": "mechanics/agon/parts/epistemic-kag/scripts/build_agon_epistemic_agon_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "epistemic-kag",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_kag_promotion_path_registry.py",
+      "path": "mechanics/agon/parts/epistemic-kag/scripts/build_agon_kag_promotion_path_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "epistemic-kag",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_epistemic_agon.py",
+      "path": "mechanics/agon/parts/epistemic-kag/scripts/validate_agon_epistemic_agon.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "epistemic-kag",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_kag_promotion_path_registry.py",
+      "path": "mechanics/agon/parts/epistemic-kag/scripts/validate_agon_kag_promotion_path_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "epistemic-kag",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_epistemic_agon.py",
+      "path": "mechanics/agon/parts/epistemic-kag/tests/test_agon_epistemic_agon.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "epistemic-kag",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_kag_promotion_path_registry.py",
+      "path": "mechanics/agon/parts/epistemic-kag/tests/test_agon_kag_promotion_path_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "gate-routing",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_gate_routing_handoff_request.seed.json",
+      "path": "mechanics/agon/parts/gate-routing/config/agon_gate_routing_handoff_request.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "gate-routing",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_gate_routing_handoff_request.example.json",
+      "path": "mechanics/agon/parts/gate-routing/examples/agon_gate_routing_handoff_request.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "gate-routing",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_gate_routing_handoff_request.min.json",
+      "path": "mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "gate-routing",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-gate-routing-handoff-request.schema.json",
+      "path": "mechanics/agon/parts/gate-routing/schemas/agon-gate-routing-handoff-request.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "gate-routing",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_gate_routing_handoff_request.py",
+      "path": "mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "gate-routing",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_gate_routing_handoff_request.py",
+      "path": "mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "gate-routing",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_gate_routing_handoff_request.py",
+      "path": "mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "imposition-readiness",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_doubt_audit.example.json",
+      "path": "mechanics/agon/parts/imposition-readiness/examples/agon_doubt_audit.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "imposition-readiness",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_imposition_readiness.min.json",
+      "path": "mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "imposition-readiness",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-imposition-readiness.schema.json",
+      "path": "mechanics/agon/parts/imposition-readiness/schemas/agon-imposition-readiness.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "imposition-readiness",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/agon_imposition_common.py",
+      "path": "mechanics/agon/parts/imposition-readiness/scripts/agon_imposition_common.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "imposition-readiness",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_imposition_readiness.py",
+      "path": "mechanics/agon/parts/imposition-readiness/scripts/build_agon_imposition_readiness.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "imposition-readiness",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_imposition_readiness.py",
+      "path": "mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "imposition-readiness",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_imposition_readiness.py",
+      "path": "mechanics/agon/parts/imposition-readiness/tests/test_agon_imposition_readiness.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "lawful-move-grammar",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_lawful_moves.seed.json",
+      "path": "mechanics/agon/parts/lawful-move-grammar/config/agon_lawful_moves.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "lawful-move-grammar",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_lawful_move.example.json",
+      "path": "mechanics/agon/parts/lawful-move-grammar/examples/agon_lawful_move.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "lawful-move-grammar",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_lawful_move_registry.min.json",
+      "path": "mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "lawful-move-grammar",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-lawful-move-registry.schema.json",
+      "path": "mechanics/agon/parts/lawful-move-grammar/schemas/agon-lawful-move-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "lawful-move-grammar",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-lawful-move.schema.json",
+      "path": "mechanics/agon/parts/lawful-move-grammar/schemas/agon-lawful-move.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "lawful-move-grammar",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_lawful_move_registry.py",
+      "path": "mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "lawful-move-grammar",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_lawful_moves.py",
+      "path": "mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "lawful-move-grammar",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_lawful_moves.py",
+      "path": "mechanics/agon/parts/lawful-move-grammar/tests/test_agon_lawful_moves.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "owner-binding",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_move_owner_bindings.seed.json",
+      "path": "mechanics/agon/parts/owner-binding/config/agon_move_owner_bindings.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "owner-binding",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_move_owner_binding.example.json",
+      "path": "mechanics/agon/parts/owner-binding/examples/agon_move_owner_binding.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "owner-binding",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_move_owner_binding_registry.min.json",
+      "path": "mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "owner-binding",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-move-owner-binding-registry.schema.json",
+      "path": "mechanics/agon/parts/owner-binding/schemas/agon-move-owner-binding-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "owner-binding",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-move-owner-binding.schema.json",
+      "path": "mechanics/agon/parts/owner-binding/schemas/agon-move-owner-binding.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "owner-binding",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_move_owner_binding_registry.py",
+      "path": "mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "owner-binding",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_move_owner_bindings.py",
+      "path": "mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "owner-binding",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_move_owner_bindings.py",
+      "path": "mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "package",
+      "status": "package-validator",
+      "old_path": "mechanics/agon/scripts/validate_agon_distillation.py",
+      "path": "mechanics/agon/scripts/validate_agon_distillation.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "package",
+      "status": "package-test",
+      "old_path": "mechanics/agon/tests/test_agon_distillation.py",
+      "path": "mechanics/agon/tests/test_agon_distillation.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "packet-arena",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_arena_session_models.seed.json",
+      "path": "mechanics/agon/parts/packet-arena/config/agon_arena_session_models.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "packet-arena",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_state_packets.seed.json",
+      "path": "mechanics/agon/parts/packet-arena/config/agon_state_packets.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "packet-arena",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_arena_session_model.example.json",
+      "path": "mechanics/agon/parts/packet-arena/examples/agon_arena_session_model.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "packet-arena",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_move_declaration_packet.example.json",
+      "path": "mechanics/agon/parts/packet-arena/examples/agon_move_declaration_packet.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "packet-arena",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_reveal_view_packet.example.json",
+      "path": "mechanics/agon/parts/packet-arena/examples/agon_reveal_view_packet.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "packet-arena",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_sealed_commit_packet.example.json",
+      "path": "mechanics/agon/parts/packet-arena/examples/agon_sealed_commit_packet.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "packet-arena",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_arena_session_model_registry.min.json",
+      "path": "mechanics/agon/parts/packet-arena/generated/agon_arena_session_model_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "packet-arena",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_state_packet_registry.min.json",
+      "path": "mechanics/agon/parts/packet-arena/generated/agon_state_packet_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "packet-arena",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-arena-session-model-registry.schema.json",
+      "path": "mechanics/agon/parts/packet-arena/schemas/agon-arena-session-model-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "packet-arena",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-arena-session-model.schema.json",
+      "path": "mechanics/agon/parts/packet-arena/schemas/agon-arena-session-model.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "packet-arena",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-state-packet-registry.schema.json",
+      "path": "mechanics/agon/parts/packet-arena/schemas/agon-state-packet-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "packet-arena",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-state-packet.schema.json",
+      "path": "mechanics/agon/parts/packet-arena/schemas/agon-state-packet.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "packet-arena",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_arena_session_model_registry.py",
+      "path": "mechanics/agon/parts/packet-arena/scripts/build_agon_arena_session_model_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "packet-arena",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_state_packet_registry.py",
+      "path": "mechanics/agon/parts/packet-arena/scripts/build_agon_state_packet_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "packet-arena",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_arena_session_models.py",
+      "path": "mechanics/agon/parts/packet-arena/scripts/validate_agon_arena_session_models.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "packet-arena",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_state_packets.py",
+      "path": "mechanics/agon/parts/packet-arena/scripts/validate_agon_state_packets.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "packet-arena",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_arena_session_models.py",
+      "path": "mechanics/agon/parts/packet-arena/tests/test_agon_arena_session_models.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "packet-arena",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_state_packets.py",
+      "path": "mechanics/agon/parts/packet-arena/tests/test_agon_state_packets.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "recurrence-adapter",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_recurrence_adapter_request.seed.json",
+      "path": "mechanics/agon/parts/recurrence-adapter/config/agon_recurrence_adapter_request.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "recurrence-adapter",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_recurrence_adapter_request.example.json",
+      "path": "mechanics/agon/parts/recurrence-adapter/examples/agon_recurrence_adapter_request.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "recurrence-adapter",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_recurrence_adapter_request.min.json",
+      "path": "mechanics/agon/parts/recurrence-adapter/generated/agon_recurrence_adapter_request.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "recurrence-adapter",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-recurrence-adapter-request.schema.json",
+      "path": "mechanics/agon/parts/recurrence-adapter/schemas/agon-recurrence-adapter-request.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "recurrence-adapter",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_recurrence_adapter_request.py",
+      "path": "mechanics/agon/parts/recurrence-adapter/scripts/build_agon_recurrence_adapter_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "recurrence-adapter",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_recurrence_adapter_request.py",
+      "path": "mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_adapter_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "recurrence-adapter",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_recurrence_adapter_request.py",
+      "path": "mechanics/agon/parts/recurrence-adapter/tests/test_agon_recurrence_adapter_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "sophian-threshold",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_sophian_threshold.seed.json",
+      "path": "mechanics/agon/parts/sophian-threshold/config/agon_sophian_threshold.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "sophian-threshold",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_kag_boundary_to_tos.example.json",
+      "path": "mechanics/agon/parts/sophian-threshold/examples/agon_kag_boundary_to_tos.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "sophian-threshold",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_sophian_threshold_registry.example.json",
+      "path": "mechanics/agon/parts/sophian-threshold/examples/agon_sophian_threshold_registry.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "sophian-threshold",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_sophian_threshold_registry.min.json",
+      "path": "mechanics/agon/parts/sophian-threshold/generated/agon_sophian_threshold_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "sophian-threshold",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-sophian-threshold-registry.schema.json",
+      "path": "mechanics/agon/parts/sophian-threshold/schemas/agon-sophian-threshold-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "sophian-threshold",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-sophian-threshold.schema.json",
+      "path": "mechanics/agon/parts/sophian-threshold/schemas/agon-sophian-threshold.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "sophian-threshold",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_sophian_threshold_registry.py",
+      "path": "mechanics/agon/parts/sophian-threshold/scripts/build_agon_sophian_threshold_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "sophian-threshold",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_sophian_threshold_registry.py",
+      "path": "mechanics/agon/parts/sophian-threshold/scripts/validate_agon_sophian_threshold_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "sophian-threshold",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_sophian_threshold_registry.py",
+      "path": "mechanics/agon/parts/sophian-threshold/tests/test_agon_sophian_threshold_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "trial-handoff",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_trial_playbook_request.seed.json",
+      "path": "mechanics/agon/parts/trial-handoff/config/agon_trial_playbook_request.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "trial-handoff",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_trial_playbook_request.example.json",
+      "path": "mechanics/agon/parts/trial-handoff/examples/agon_trial_playbook_request.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "trial-handoff",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_trial_playbook_request.min.json",
+      "path": "mechanics/agon/parts/trial-handoff/generated/agon_trial_playbook_request.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "trial-handoff",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-trial-playbook-request.schema.json",
+      "path": "mechanics/agon/parts/trial-handoff/schemas/agon-trial-playbook-request.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "trial-handoff",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_trial_playbook_request.py",
+      "path": "mechanics/agon/parts/trial-handoff/scripts/build_agon_trial_playbook_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "trial-handoff",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_trial_playbook_request.py",
+      "path": "mechanics/agon/parts/trial-handoff/scripts/validate_agon_trial_playbook_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "trial-handoff",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_trial_playbook_request.py",
+      "path": "mechanics/agon/parts/trial-handoff/tests/test_agon_trial_playbook_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "verdict-retention-rank",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_court_memo_stats_prebinding_request.seed.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/config/agon_court_memo_stats_prebinding_request.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "verdict-retention-rank",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_retention_rank_economy.seed.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/config/agon_retention_rank_economy.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "config",
+      "part": "verdict-retention-rank",
+      "status": "active-part-config",
+      "old_path": "mechanics/agon/config/agon_vds_bridges.seed.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/config/agon_vds_bridges.seed.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "verdict-retention-rank",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_concept_map_delta_candidate.example.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/examples/agon_concept_map_delta_candidate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "verdict-retention-rank",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_court_memo_stats_prebinding_request.example.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/examples/agon_court_memo_stats_prebinding_request.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "verdict-retention-rank",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_delta_receipt_candidate.example.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/examples/agon_delta_receipt_candidate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "verdict-retention-rank",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_inscription_bundle_candidate.example.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/examples/agon_inscription_bundle_candidate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "verdict-retention-rank",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_rank_jurisdiction_ladder.example.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/examples/agon_rank_jurisdiction_ladder.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "verdict-retention-rank",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_rank_mutation_candidate.example.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/examples/agon_rank_mutation_candidate.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "verdict-retention-rank",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_retention_check_request.example.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/examples/agon_retention_check_request.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "verdict-retention-rank",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_scar_request.example.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/examples/agon_scar_request.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "verdict-retention-rank",
+      "status": "active-part-example",
+      "old_path": "mechanics/agon/examples/agon_verdict_draft.example.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/examples/agon_verdict_draft.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "verdict-retention-rank",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_court_memo_stats_prebinding_request.min.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/generated/agon_court_memo_stats_prebinding_request.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "verdict-retention-rank",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_retention_rank_economy_registry.min.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/generated/agon_retention_rank_economy_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "generated",
+      "part": "verdict-retention-rank",
+      "status": "active-part-generated",
+      "old_path": "mechanics/agon/generated/agon_vds_bridge_registry.min.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/generated/agon_vds_bridge_registry.min.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "verdict-retention-rank",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-court-memo-stats-prebinding-request.schema.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/schemas/agon-court-memo-stats-prebinding-request.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "verdict-retention-rank",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-retention-rank-economy-registry.schema.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/schemas/agon-retention-rank-economy-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "verdict-retention-rank",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-retention-rank-economy.schema.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/schemas/agon-retention-rank-economy.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "verdict-retention-rank",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-vds-bridge-registry.schema.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/schemas/agon-vds-bridge-registry.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "schema",
+      "part": "verdict-retention-rank",
+      "status": "active-part-schema",
+      "old_path": "mechanics/agon/schemas/agon-vds-bridge.schema.json",
+      "path": "mechanics/agon/parts/verdict-retention-rank/schemas/agon-vds-bridge.schema.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "verdict-retention-rank",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_court_memo_stats_prebinding_request.py",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/build_agon_court_memo_stats_prebinding_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "verdict-retention-rank",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_retention_rank_economy_registry.py",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/build_agon_retention_rank_economy_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "verdict-retention-rank",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/build_agon_vds_bridge_registry.py",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/build_agon_vds_bridge_registry.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "verdict-retention-rank",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_court_memo_stats_prebinding_request.py",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_court_memo_stats_prebinding_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "verdict-retention-rank",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_retention_rank_economy.py",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_retention_rank_economy.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "verdict-retention-rank",
+      "status": "active-part-script",
+      "old_path": "mechanics/agon/scripts/validate_agon_vds_bridges.py",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_vds_bridges.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "verdict-retention-rank",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_court_memo_stats_prebinding_request.py",
+      "path": "mechanics/agon/parts/verdict-retention-rank/tests/test_agon_court_memo_stats_prebinding_request.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "verdict-retention-rank",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_retention_rank_economy.py",
+      "path": "mechanics/agon/parts/verdict-retention-rank/tests/test_agon_retention_rank_economy.py",
+      "legacy_named": false
+    },
+    {
+      "kind": "test",
+      "part": "verdict-retention-rank",
+      "status": "active-part-test",
+      "old_path": "mechanics/agon/tests/test_agon_vds_bridges.py",
+      "path": "mechanics/agon/parts/verdict-retention-rank/tests/test_agon_vds_bridges.py",
+      "legacy_named": false
+    }
+  ]
+}

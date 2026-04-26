@@ -23,6 +23,7 @@ MECHANIC_SLUGS = (
 )
 ARTIFACT_DIRS = ("schemas", "examples", "config", "generated", "scripts", "tests")
 EXPERIENCE_ARTIFACT_MAP = REPO_ROOT / "mechanics" / "experience" / "artifact-map.json"
+AGON_ARTIFACT_MAP = REPO_ROOT / "mechanics" / "agon" / "artifact-map.json"
 
 AGON_PREFIXES = ("agon", "test_agon", "build_agon", "validate_agon")
 ANTIFRAGILITY_PREFIXES = (
@@ -207,6 +208,100 @@ def validate_experience_part_artifacts(selected: set[str] | None, problems: list
                     problems.append(f"{path_ref} is not registered in mechanics/experience/artifact-map.json")
 
 
+def validate_agon_part_artifacts(selected: set[str] | None, problems: list[str]) -> None:
+    if selected and "agon" not in selected:
+        return
+    if not AGON_ARTIFACT_MAP.is_file():
+        problems.append(f"missing Agon artifact map: {rel(AGON_ARTIFACT_MAP)}")
+        return
+    data = json.loads(AGON_ARTIFACT_MAP.read_text(encoding="utf-8"))
+    if data.get("schema_version") != "aoa_agon_artifact_map_v1":
+        problems.append(f"{rel(AGON_ARTIFACT_MAP)} has invalid schema_version")
+    if data.get("mechanic") != "agon":
+        problems.append(f"{rel(AGON_ARTIFACT_MAP)} must declare mechanic=agon")
+
+    valid_kinds = {"schema", "example", "config", "generated", "script", "test"}
+    valid_statuses = {
+        "active-part-schema",
+        "active-part-example",
+        "active-part-config",
+        "active-part-generated",
+        "active-part-script",
+        "active-part-test",
+    }
+    package_statuses = {"package-validator", "package-test"}
+    mapped_paths: set[str] = set()
+    seen_old: set[str] = set()
+    seen_new: set[str] = set()
+    parts = set(data.get("parts", []))
+    for index, item in enumerate(data.get("artifacts", [])):
+        if not isinstance(item, dict):
+            problems.append(f"{rel(AGON_ARTIFACT_MAP)} artifact {index} must be an object")
+            continue
+        kind = str(item.get("kind", ""))
+        part = str(item.get("part", ""))
+        status = str(item.get("status", ""))
+        old_path = str(item.get("old_path", ""))
+        new_path = str(item.get("path", ""))
+        if kind not in valid_kinds:
+            problems.append(f"{rel(AGON_ARTIFACT_MAP)} artifact {index} has invalid kind {kind!r}")
+        if old_path in seen_old:
+            problems.append(f"{rel(AGON_ARTIFACT_MAP)} duplicates old_path {old_path}")
+        if new_path in seen_new:
+            problems.append(f"{rel(AGON_ARTIFACT_MAP)} duplicates path {new_path}")
+        seen_old.add(old_path)
+        seen_new.add(new_path)
+
+        if part == "package":
+            if status not in package_statuses:
+                problems.append(f"{rel(AGON_ARTIFACT_MAP)} package artifact {index} has invalid status {status!r}")
+            if old_path != new_path:
+                problems.append(f"{rel(AGON_ARTIFACT_MAP)} package artifact path must remain stable: {new_path}")
+        else:
+            if part not in parts:
+                problems.append(f"{rel(AGON_ARTIFACT_MAP)} artifact {index} has invalid part {part!r}")
+            if status not in valid_statuses:
+                problems.append(f"{rel(AGON_ARTIFACT_MAP)} artifact {index} has invalid status {status!r}")
+            expected = f"mechanics/agon/parts/{part}/"
+            if not new_path.startswith(expected):
+                problems.append(f"{rel(AGON_ARTIFACT_MAP)} maps {new_path} outside {expected}")
+            if not (REPO_ROOT / new_path).is_file():
+                problems.append(f"{rel(AGON_ARTIFACT_MAP)} maps missing artifact: {new_path}")
+            else:
+                mapped_paths.add(new_path)
+            if (REPO_ROOT / old_path).exists():
+                problems.append(f"{rel(AGON_ARTIFACT_MAP)} old flat artifact still exists: {old_path}")
+
+    agon_root = REPO_ROOT / "mechanics" / "agon"
+    root_allowlist = {
+        "scripts": {"validate_agon_distillation.py"},
+        "tests": {"test_agon_distillation.py"},
+    }
+    for dirname in ARTIFACT_DIRS:
+        artifact_dir = agon_root / dirname
+        if artifact_dir.exists():
+            for artifact in artifact_dir.iterdir():
+                if not artifact.is_file() or artifact.name == "README.md":
+                    continue
+                if artifact.name not in root_allowlist.get(dirname, set()):
+                    problems.append(f"{rel(artifact)} is flat Agon artifact; move it to a part-local home")
+
+    parts_root = agon_root / "parts"
+    for part in parts_root.iterdir() if parts_root.is_dir() else []:
+        if not part.is_dir():
+            continue
+        for dirname in ARTIFACT_DIRS:
+            artifact_dir = part / dirname
+            if not artifact_dir.exists():
+                continue
+            for artifact in artifact_dir.iterdir():
+                if not artifact.is_file() or artifact.name == "README.md":
+                    continue
+                path_ref = rel(artifact)
+                if path_ref not in mapped_paths:
+                    problems.append(f"{path_ref} is not registered in mechanics/agon/artifact-map.json")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mechanic", choices=MECHANIC_SLUGS, action="append")
@@ -221,6 +316,7 @@ def main() -> int:
     validate_root_artifacts(selected, problems)
     validate_mechanic_sources(selected, problems)
     validate_experience_part_artifacts(selected, problems)
+    validate_agon_part_artifacts(selected, problems)
     if problems:
         print("Mechanic artifact topology validation failed:")
         for problem in problems:

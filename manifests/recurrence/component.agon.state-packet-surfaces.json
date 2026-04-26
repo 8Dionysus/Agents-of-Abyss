@@ -13,10 +13,10 @@
     "auto_modify_owner_repo"
   ],
   "observed_surfaces": [
-    "mechanics/agon/config/agon_state_packets.seed.json",
-    "mechanics/agon/generated/agon_state_packet_registry.min.json",
-    "mechanics/agon/schemas/agon-state-packet.schema.json",
-    "mechanics/agon/schemas/agon-state-packet-registry.schema.json"
+    "mechanics/agon/parts/packet-arena/config/agon_state_packets.seed.json",
+    "mechanics/agon/parts/packet-arena/generated/agon_state_packet_registry.min.json",
+    "mechanics/agon/parts/packet-arena/schemas/agon-state-packet.schema.json",
+    "mechanics/agon/parts/packet-arena/schemas/agon-state-packet-registry.schema.json"
   ],
   "owner_repo": "Agents-of-Abyss",
   "review_lanes": [

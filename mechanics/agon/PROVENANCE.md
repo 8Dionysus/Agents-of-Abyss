@@ -40,9 +40,12 @@ history into the active route.
   part route.
 - `legacy/raw/`: preserved source documents, models, wave notes, handoffs, and
   stop-lines.
+- `legacy/artifacts/README.md`: receipt route for the flat technical artifact
+  migration.
 - `docs/`: compatibility route only.
-- `config/`, `generated/`, `schemas/`, `examples/`, `scripts/`, `tests/`:
-  package-local technical artifacts for Agon model families.
+- `artifact-map.json`: machine-readable old-path to part-home artifact map.
+- `parts/<part>/{config,generated,schemas,examples,scripts,tests}/`:
+  active technical artifacts for the owning Agon part.
 - `LANDING_LOG.md`: checked landing ledger.
 - `ROADMAP.md`: future contour and unresolved route pressure.
 
