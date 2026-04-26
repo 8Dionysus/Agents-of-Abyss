@@ -25,9 +25,9 @@
   "observed_surfaces": [
     "mechanics/agon/config/agon_arena_session_models.seed.json",
     "mechanics/agon/generated/agon_arena_session_model_registry.min.json",
-    "mechanics/agon/docs/AGON_ARENA_SESSION_MODEL.md",
-    "mechanics/agon/docs/AGON_SESSION_LIFECYCLE_MODEL.md",
-    "mechanics/agon/docs/AGON_CHARTER_AND_SEAT_MODEL.md"
+    "mechanics/agon/legacy/raw/AGON_ARENA_SESSION_MODEL.md",
+    "mechanics/agon/legacy/raw/AGON_SESSION_LIFECYCLE_MODEL.md",
+    "mechanics/agon/legacy/raw/AGON_CHARTER_AND_SEAT_MODEL.md"
   ],
   "owner_repo": "Agents-of-Abyss",
   "review_lanes": [

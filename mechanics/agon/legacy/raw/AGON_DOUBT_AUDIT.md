@@ -20,7 +20,7 @@ Every repository or surface under review must answer:
 | surface | current value | Agon suspicion | initial direction |
 |---|---|---|---|
 | `Agents-of-Abyss` center | Names the federation, maps layers, states rules, routes readers. | The center may confuse Agon law with total ownership. | Survive with stricter non-empire law. |
-| `mechanics/agon/docs/AGON_PREPARATION_POSTURE.md` | Conservative holding boundary for future Agon. | Preparation can become a comfortable delay. | Recharter through imposition posture, do not delete. |
+| `mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md` | Conservative holding boundary for future Agon. | Preparation can become a comfortable delay. | Recharter through imposition posture, do not delete. |
 | `aoa-agents` | Owns role/persona meaning and role contracts. | Current role-bearing actors are not yet full subject-bearing or kind-split actors. | Recharter in Wave I and Wave II. |
 | `aoa-techniques` | Owns reusable practice. | Practice may impersonate lawful arena moves. | Survive; later map practice to moves without owning protocol law. |
 | `aoa-skills` | Owns bounded execution workflows. | Skills may become hidden protocol moves without admissibility law. | Survive; later receive lawful move constraints. |

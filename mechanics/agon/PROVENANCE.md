@@ -36,7 +36,11 @@ history into the active route.
 
 ## Detailed districts
 
-- `docs/`: detailed source documents, models, wave notes, handoffs, and stop-lines.
+- `legacy/INDEX.md`: detailed map from every preserved raw source to its active
+  part route.
+- `legacy/raw/`: preserved source documents, models, wave notes, handoffs, and
+  stop-lines.
+- `docs/`: compatibility route only.
 - `config/`, `generated/`, `schemas/`, `examples/`, `scripts/`, `tests/`:
   package-local technical artifacts for Agon model families.
 - `LANDING_LOG.md`: checked landing ledger.

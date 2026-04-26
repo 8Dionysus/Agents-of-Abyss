@@ -14,13 +14,13 @@
   "surfaces": [
     "mechanics/agon/generated/agon_slc_registry.min.json",
     "mechanics/agon/config/agon_slc.seed.json",
-    "mechanics/agon/docs/AGON_SCHOOLS_LINEAGES_CAMPAIGNS.md",
-    "mechanics/agon/docs/AGON_SCHOOL_MODEL.md",
-    "mechanics/agon/docs/AGON_LINEAGE_MODEL.md",
-    "mechanics/agon/docs/AGON_CAMPAIGN_MODEL.md",
-    "mechanics/agon/docs/AGON_CAMPAIGN_OWNER_HANDOFFS.md",
-    "mechanics/agon/docs/AGON_WAVE16_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE16_LANDING.md"
+    "mechanics/agon/legacy/raw/AGON_SCHOOLS_LINEAGES_CAMPAIGNS.md",
+    "mechanics/agon/legacy/raw/AGON_SCHOOL_MODEL.md",
+    "mechanics/agon/legacy/raw/AGON_LINEAGE_MODEL.md",
+    "mechanics/agon/legacy/raw/AGON_CAMPAIGN_MODEL.md",
+    "mechanics/agon/legacy/raw/AGON_CAMPAIGN_OWNER_HANDOFFS.md",
+    "mechanics/agon/legacy/raw/AGON_WAVE16_STOP_LINES.md",
+    "mechanics/agon/legacy/raw/AGON_WAVE16_LANDING.md"
   ],
   "title": "Wave XVI Agents-of-Abyss surfaces",
   "wave": "XVI"

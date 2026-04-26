@@ -8,7 +8,7 @@
       "id": "agon.affective-honor-landing",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE17_LANDING.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE17_LANDING.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "continuity-context"
@@ -24,7 +24,7 @@
       "id": "agon.affective-honor-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE17_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE17_STOP_LINES.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -41,7 +41,7 @@
       "id": "agon.arena-session-landing-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE18_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE18_STOP_LINES.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges"
@@ -57,7 +57,7 @@
       "id": "agon.arena-session-model",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_ARENA_SESSION_MODEL.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_ARENA_SESSION_MODEL.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -74,7 +74,7 @@
       "id": "agon.arena-session-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_ARENA_SESSION_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_ARENA_SESSION_STOP_LINES.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "continuity-context"
@@ -89,7 +89,7 @@
       "id": "agon.center-handoff",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE7_CENTER_HANDOFF.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE7_CENTER_HANDOFF.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "continuity-context"
@@ -105,7 +105,7 @@
       "id": "agon.charter-and-seat-model",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_CHARTER_AND_SEAT_MODEL.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_CHARTER_AND_SEAT_MODEL.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "compatibility-bridges"
@@ -120,7 +120,7 @@
       "id": "agon.context-landing",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE8_LANDING.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE8_LANDING.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "continuity-context"
@@ -136,7 +136,7 @@
       "id": "agon.continuity-landing",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE9_LANDING.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE9_LANDING.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "continuity-context"
@@ -152,7 +152,7 @@
       "id": "agon.contradiction-closure-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE16_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE16_STOP_LINES.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -169,7 +169,7 @@
       "id": "agon.contradiction-closure-summon-law",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_CONTRADICTION_CLOSURE_SUMMON_LAW.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -186,7 +186,7 @@
       "id": "agon.court-memo-stats-prebinding-handoff",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_COURT_MEMO_STATS_PREBINDING_HANDOFF.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "continuity-context"
@@ -201,7 +201,7 @@
       "id": "agon.court-memo-stats-prebinding-owner-request",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_OWNER_REQUEST.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_COURT_MEMO_STATS_PREBINDING_OWNER_REQUEST.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "continuity-context"
@@ -216,7 +216,7 @@
       "id": "agon.court-memo-stats-prebinding-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_COURT_MEMO_STATS_PREBINDING_STOP_LINES.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "continuity-context"
@@ -232,7 +232,7 @@
       "id": "agon.delta-receipt-model",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_DELTA_RECEIPT_MODEL.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_DELTA_RECEIPT_MODEL.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "compatibility-bridges",
@@ -248,7 +248,7 @@
       "id": "agon.duel-kernel-model",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_DUEL_KERNEL_MODEL.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_DUEL_KERNEL_MODEL.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges"
@@ -264,7 +264,7 @@
       "id": "agon.epistemic-agon",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_EPISTEMIC_AGON.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_EPISTEMIC_AGON.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges"
@@ -280,7 +280,7 @@
       "id": "agon.epistemic-duel-landing",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE15_LANDING.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE15_LANDING.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -297,7 +297,7 @@
       "id": "agon.epistemic-duel-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE15_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE15_STOP_LINES.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -314,7 +314,7 @@
       "id": "agon.epistemic-move-extension-model",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_EPISTEMIC_MOVE_EXTENSION_MODEL.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_EPISTEMIC_MOVE_EXTENSION_MODEL.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "compatibility-bridges"
@@ -329,7 +329,7 @@
       "id": "agon.epistemic-owner-handoffs",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_EPISTEMIC_OWNER_HANDOFFS.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_EPISTEMIC_OWNER_HANDOFFS.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "compatibility-bridges"
@@ -344,7 +344,7 @@
       "id": "agon.gate-routing-handoff",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_GATE_ROUTING_HANDOFF.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "continuity-context"
@@ -359,7 +359,7 @@
       "id": "agon.gate-routing-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_GATE_ROUTING_STOP_LINES.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "continuity-context"
@@ -374,7 +374,7 @@
       "id": "agon.lawful-move-language",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_LAWFUL_MOVE_LANGUAGE.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "runtime-boundary"
@@ -389,7 +389,7 @@
       "id": "agon.mechanical-trials-over-duel-kernel",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_MECHANICAL_TRIALS_OVER_DUEL_KERNEL.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges"
@@ -405,7 +405,7 @@
       "id": "agon.model-of-other-law",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_MODEL_OF_OTHER_LAW.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_MODEL_OF_OTHER_LAW.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -422,7 +422,7 @@
       "id": "agon.model-of-other-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE13_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE13_STOP_LINES.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges"
@@ -438,7 +438,7 @@
       "id": "agon.move-owner-binding",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_MOVE_OWNER_BINDING.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "runtime-boundary"
@@ -453,7 +453,7 @@
       "id": "agon.pre-protocol-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_PRE_PROTOCOL_STOP_LINES.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -473,7 +473,7 @@
       "id": "agon.rank-jurisdiction-model",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_RANK_JURISDICTION_MODEL.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_RANK_JURISDICTION_MODEL.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "continuity-context"
@@ -489,7 +489,7 @@
       "id": "agon.retention-owner-handoffs",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_RETENTION_OWNER_HANDOFFS.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_RETENTION_OWNER_HANDOFFS.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "continuity-context"
@@ -504,7 +504,7 @@
       "id": "agon.retention-rank-economy",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_RETENTION_RANK_ECONOMY.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_RETENTION_RANK_ECONOMY.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -522,7 +522,7 @@
       "id": "agon.retention-rank-landing",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE14_LANDING.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE14_LANDING.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -539,7 +539,7 @@
       "id": "agon.retention-rank-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE14_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE14_STOP_LINES.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges",
@@ -556,7 +556,7 @@
       "id": "agon.runtime-boundary-landing",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE10_LANDING.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE10_LANDING.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "continuity-context"
@@ -572,7 +572,7 @@
       "id": "agon.runtime-boundary-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE10_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE10_STOP_LINES.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "continuity-context"
@@ -588,7 +588,7 @@
       "id": "agon.sealed-commit-model",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_SEALED_COMMIT_MODEL.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_SEALED_COMMIT_MODEL.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "compatibility-bridges",
@@ -604,7 +604,7 @@
       "id": "agon.sealed-commit-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_WAVE12_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_WAVE12_STOP_LINES.md",
       "purpose": "Agon-owned boundary or stop-line evidence referenced by Experience without moving Agon authority.",
       "active_consumers": [
         "compatibility-bridges"
@@ -620,7 +620,7 @@
       "id": "agon.state-packet-model",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_STATE_PACKET_MODEL.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_STATE_PACKET_MODEL.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "compatibility-bridges",
@@ -636,7 +636,7 @@
       "id": "agon.trial-playbook-handoff",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "continuity-context",
@@ -652,7 +652,7 @@
       "id": "agon.trial-playbook-stop-lines",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_STOP_LINES.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "continuity-context"
@@ -667,7 +667,7 @@
       "id": "agon.verdict-delta-scar-bridge",
       "kind": "sibling-mechanic-surface",
       "owner": "mechanics/agon",
-      "source_ref": "mechanics/agon/docs/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
+      "source_ref": "mechanics/agon/legacy/raw/AGON_VERDICT_DELTA_SCAR_BRIDGE.md",
       "purpose": "Active Experience references this owner surface through a receipt ID so part contracts stay concise and ownership remains visible.",
       "active_consumers": [
         "compatibility-bridges"

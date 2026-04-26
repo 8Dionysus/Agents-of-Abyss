@@ -137,7 +137,7 @@ Current route:
 - `mechanics/agon/PROVENANCE.md`
 
 Current surface:
-- `mechanics/agon/docs/AGON_PREPARATION_POSTURE.md`
+- `mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md`
 
 Purpose:
 - keep the future Agon holding boundary explicit before any protocol package or
@@ -159,11 +159,11 @@ Main question:
 Repository: `Agents-of-Abyss` for the center-owned Wave 0 turn.
 
 Current surfaces:
-- `mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md`
-- `mechanics/agon/docs/AGON_SURVIVAL_CRITERIA.md`
-- `mechanics/agon/docs/AGON_DOUBT_AUDIT.md`
-- `mechanics/agon/docs/PRE_AGON_BASELINE.md`
-- `mechanics/agon/docs/AGON_WAVE0_LANDING.md`
+- `mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md`
+- `mechanics/agon/legacy/raw/AGON_SURVIVAL_CRITERIA.md`
+- `mechanics/agon/legacy/raw/AGON_DOUBT_AUDIT.md`
+- `mechanics/agon/legacy/raw/PRE_AGON_BASELINE.md`
+- `mechanics/agon/legacy/raw/AGON_WAVE0_LANDING.md`
 - `mechanics/agon/generated/agon_imposition_readiness.min.json`
 
 Purpose:
@@ -184,10 +184,10 @@ Main question:
 Repository: `Agents-of-Abyss` for the center-owned Wave III turn.
 
 Current surfaces:
-- `mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md`
-- `mechanics/agon/docs/AGON_MOVE_REGISTRY_MODEL.md`
-- `mechanics/agon/docs/AGON_MOVE_OWNER_HANDOFFS.md`
-- `mechanics/agon/docs/AGON_WAVE3_LANDING.md`
+- `mechanics/agon/legacy/raw/AGON_LAWFUL_MOVE_LANGUAGE.md`
+- `mechanics/agon/legacy/raw/AGON_MOVE_REGISTRY_MODEL.md`
+- `mechanics/agon/legacy/raw/AGON_MOVE_OWNER_HANDOFFS.md`
+- `mechanics/agon/legacy/raw/AGON_WAVE3_LANDING.md`
 - `mechanics/agon/generated/agon_lawful_move_registry.min.json`
 
 Purpose:
@@ -209,11 +209,11 @@ Main question:
 Repository: `Agents-of-Abyss` for the center-owned Wave IV turn.
 
 Current surfaces:
-- `mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md`
-- `mechanics/agon/docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`
+- `mechanics/agon/legacy/raw/AGON_MOVE_OWNER_BINDING.md`
+- `mechanics/agon/legacy/raw/AGON_MOVE_BINDING_MATRIX_MODEL.md`
 - `mechanics/agon/OWNER_REQUESTS.md`
-- `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
-- `mechanics/agon/docs/AGON_WAVE4_LANDING.md`
+- `mechanics/agon/legacy/raw/AGON_PRE_PROTOCOL_STOP_LINES.md`
+- `mechanics/agon/legacy/raw/AGON_WAVE4_LANDING.md`
 - `mechanics/agon/generated/agon_move_owner_binding_registry.min.json`
 
 Purpose:
@@ -237,10 +237,10 @@ Main question:
 Repository: `Agents-of-Abyss` for the center-owned Wave V turn.
 
 Current surfaces:
-- `mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md`
-- `mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`
-- `mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md`
-- `mechanics/agon/docs/AGON_WAVE5_CENTER_HANDOFF.md`
+- `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_HANDOFF.md`
+- `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_OWNER_REQUEST.md`
+- `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_STOP_LINES.md`
+- `mechanics/agon/legacy/raw/AGON_WAVE5_CENTER_HANDOFF.md`
 - `mechanics/agon/generated/agon_gate_routing_handoff_request.min.json`
 
 Purpose:
@@ -261,10 +261,10 @@ Main question:
 Repository: `Agents-of-Abyss` for the center-owned Wave VI turn.
 
 Current surfaces:
-- `mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md`
-- `mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md`
-- `mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md`
-- `mechanics/agon/docs/AGON_WAVE6_CENTER_HANDOFF.md`
+- `mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_HANDOFF.md`
+- `mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md`
+- `mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_STOP_LINES.md`
+- `mechanics/agon/legacy/raw/AGON_WAVE6_CENTER_HANDOFF.md`
 - `mechanics/agon/generated/agon_trial_playbook_request.min.json`
 
 Purpose:

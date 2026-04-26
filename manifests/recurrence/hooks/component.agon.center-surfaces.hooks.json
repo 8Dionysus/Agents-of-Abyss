@@ -114,7 +114,7 @@
       "notes": "Observation only. This hook binding must not create arena sessions, verdicts, scars, or automatic owner mutations.",
       "owner_repo": "Agents-of-Abyss",
       "path_globs": [
-        "docs/AGON_*.md"
+        "mechanics/agon/legacy/raw/AGON_*.md"
       ],
       "producer": "harvest_pattern_watch",
       "signal_rules": [

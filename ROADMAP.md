@@ -90,7 +90,7 @@ hardening, not a new implementation layer. Its current checked surface is:
   `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md` and
   `mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md`
 - Agon preparation holding boundary:
-  `mechanics/agon/docs/AGON_PREPARATION_POSTURE.md`
+  `mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md`
 - current kernel-wave automation boundary checks:
   `mechanics/method-growth/scripts/validate_wave4_kernel_automation.py`
 - mechanic landing ledgers:

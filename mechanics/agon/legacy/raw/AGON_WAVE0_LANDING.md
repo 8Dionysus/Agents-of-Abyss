@@ -32,7 +32,7 @@ After this seed lands cleanly, update public route surfaces only if the release 
 
 Suggested future edits, not included in this seed:
 
-- add `mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md` to the README route table;
+- add `mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md` to the README route table;
 - add the generated readiness capsule to the machine-facing center entry route if desired;
 - add a roadmap note that Agon has moved from preparation to imposition audit;
 - open Wave I in `aoa-agents` as Agonic Actor Rechartering.

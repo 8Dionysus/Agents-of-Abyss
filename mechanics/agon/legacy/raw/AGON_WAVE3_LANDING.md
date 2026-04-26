@@ -37,13 +37,13 @@ The validator expects the center to have at least:
 README.md
 CHARTER.md
 docs/LAYERS.md
-mechanics/agon/docs/AGON_PREPARATION_POSTURE.md
+mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md
 ```
 
 If Wave 0 was already planted, it should also have:
 
 ```text
-mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md
+mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md
 mechanics/agon/generated/agon_imposition_readiness.min.json
 ```
 
