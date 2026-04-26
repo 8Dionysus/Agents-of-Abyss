@@ -44,43 +44,38 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             patch.object(validate_ecosystem, "QUESTS_PATH", self.quests_dir),
             patch.object(
                 validate_ecosystem,
-                "RPG_ARCHITECTURE_RFC_PATH",
-                self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_ARCHITECTURE_RFC.md",
+                "RPG_SOURCE_BOUNDARY_PATH",
+                self.repo_root / "mechanics" / "rpg" / "parts" / "source-boundary" / "README.md",
             ),
             patch.object(
                 validate_ecosystem,
                 "RPG_CANONICAL_TERMINOLOGY_PATH",
-                self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_CANONICAL_TERMINOLOGY.md",
-            ),
-            patch.object(
-                validate_ecosystem,
-                "RPG_BOUNDARY_MAP_PATH",
-                self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_BOUNDARY_MAP.md",
+                self.repo_root / "mechanics" / "rpg" / "parts" / "vocabulary-overlay" / "TERMINOLOGY.md",
             ),
             patch.object(
                 validate_ecosystem,
                 "DUAL_VOCABULARY_SCHEMA_PATH",
-                self.repo_root / "mechanics" / "rpg" / "schemas" / "dual_vocabulary_overlay.schema.json",
+                self.repo_root / "mechanics" / "rpg" / "parts" / "vocabulary-overlay" / "schemas" / "dual_vocabulary_overlay.schema.json",
             ),
             patch.object(
                 validate_ecosystem,
                 "DUAL_VOCABULARY_EXAMPLE_PATH",
-                self.repo_root / "mechanics" / "rpg" / "examples" / "dual_vocabulary_overlay.example.json",
+                self.repo_root / "mechanics" / "rpg" / "parts" / "vocabulary-overlay" / "examples" / "dual_vocabulary_overlay.example.json",
             ),
             patch.object(
                 validate_ecosystem,
                 "DUAL_VOCABULARY_GENERATED_PATH",
-                self.repo_root / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json",
+                self.repo_root / "mechanics" / "rpg" / "parts" / "vocabulary-overlay" / "generated" / "dual_vocabulary_overlay.json",
             ),
             patch.object(
                 validate_ecosystem,
-                "RPG_BRIDGE_WAVE_PATH",
-                self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_BRIDGE_WAVE.md",
+                "RPG_QUEST_CAMPAIGN_PATH",
+                self.repo_root / "mechanics" / "rpg" / "parts" / "quest-campaign" / "README.md",
             ),
             patch.object(
                 validate_ecosystem,
-                "RPG_RUNTIME_PROJECTION_WAVE_PATH",
-                self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md",
+                "RPG_RUNTIME_PROJECTION_PATH",
+                self.repo_root / "mechanics" / "rpg" / "parts" / "runtime-projection" / "README.md",
             ),
         )
         for patcher in self.patches:
@@ -129,26 +124,23 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
     def write_rpg_architecture_surface(self) -> None:
         write_text(
-            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_ARCHITECTURE_RFC.md",
+            self.repo_root / "mechanics" / "rpg" / "parts" / "source-boundary" / "README.md",
             "The RPG layer MUST remain a reflection and orchestration layer.\n"
-            "One universal power score MUST NOT become authoritative.\n",
-        )
-        write_text(
-            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_CANONICAL_TERMINOLOGY.md",
-            "the machine vocabulary stays stable\n"
-            "dual_vocabulary_overlay_v1\n",
-        )
-        write_text(
-            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_BOUNDARY_MAP.md",
+            "One universal power score MUST NOT become authoritative.\n"
             "The repo that already owns meaning keeps owning meaning.\n"
             "1. source meaning wins\n",
         )
-        copy_repo_text(self.repo_root, "mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json")
-        copy_repo_text(self.repo_root, "mechanics/rpg/examples/dual_vocabulary_overlay.example.json")
+        write_text(
+            self.repo_root / "mechanics" / "rpg" / "parts" / "vocabulary-overlay" / "TERMINOLOGY.md",
+            "the machine vocabulary stays stable\n"
+            "dual_vocabulary_overlay_v1\n",
+        )
+        copy_repo_text(self.repo_root, "mechanics/rpg/parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json")
+        copy_repo_text(self.repo_root, "mechanics/rpg/parts/vocabulary-overlay/examples/dual_vocabulary_overlay.example.json")
 
     def write_rpg_bridge_wave_surface(self) -> None:
         write_text(
-            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_BRIDGE_WAVE.md",
+            self.repo_root / "mechanics" / "rpg" / "parts" / "quest-campaign" / "README.md",
             "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership.\n"
             "`aoa-routing` may orient. It does not own proof, party doctrine, or quest meaning.\n"
             "do not create a universal rank or power score here\n"
@@ -157,13 +149,13 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
     def write_rpg_runtime_projection_surface(self) -> None:
         write_text(
-            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_RUNTIME_PROJECTION_WAVE.md",
+            self.repo_root / "mechanics" / "rpg" / "parts" / "runtime-projection" / "README.md",
             "This document defines the first body-facing rollout for the AoA RPG reflection contour.\n"
             "It is the pass where the contour stops being only a federation of ideas and gains runtime-owned read models, generated transport collections, and a bounded projection seam.\n"
             "Let the body carry the contour.\n"
             "Do not let it rewrite the soul.\n",
         )
-        copy_repo_text(self.repo_root, "mechanics/rpg/generated/dual_vocabulary_overlay.json")
+        copy_repo_text(self.repo_root, "mechanics/rpg/parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json")
 
     def test_valid_extra_quest_file_is_allowed(self) -> None:
         self.write_valid_surface()
@@ -444,7 +436,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0007`\n",
         )
         write_text(
-            self.repo_root / "mechanics" / "rpg" / "docs" / "RPG_BRIDGE_WAVE.md",
+            self.repo_root / "mechanics" / "rpg" / "parts" / "quest-campaign" / "README.md",
             "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership.\n",
         )
 
@@ -475,11 +467,11 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             self.questbook_path,
             self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
         )
-        (self.repo_root / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json").unlink()
+        (self.repo_root / "mechanics" / "rpg" / "parts" / "vocabulary-overlay" / "generated" / "dual_vocabulary_overlay.json").unlink()
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
-            "missing required file: mechanics/rpg/generated/dual_vocabulary_overlay.json",
+            "missing required file: mechanics/rpg/parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json",
         ):
             validate_ecosystem.validate_questbook_surface()
 
@@ -506,12 +498,12 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
         )
         write_text(
-            self.repo_root / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json",
+            self.repo_root / "mechanics" / "rpg" / "parts" / "vocabulary-overlay" / "generated" / "dual_vocabulary_overlay.json",
             json.dumps(
                 {
                     key: value
                     for key, value in json.loads(
-                        (self.repo_root / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json").read_text(
+                        (self.repo_root / "mechanics" / "rpg" / "parts" / "vocabulary-overlay" / "generated" / "dual_vocabulary_overlay.json").read_text(
                             encoding="utf-8"
                         )
                     ).items()
@@ -551,7 +543,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
         )
 
-        generated_path = self.repo_root / "mechanics" / "rpg" / "generated" / "dual_vocabulary_overlay.json"
+        generated_path = self.repo_root / "mechanics" / "rpg" / "parts" / "vocabulary-overlay" / "generated" / "dual_vocabulary_overlay.json"
         payload = json.loads(generated_path.read_text(encoding="utf-8"))
         payload["entries"][0]["canonical_key"] = payload["entries"][1]["canonical_key"]
         generated_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
@@ -644,7 +636,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
-            "missing required file: mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md",
+            "missing required file: mechanics/rpg/parts/source-boundary/README.md",
         ):
             validate_ecosystem.validate_questbook_surface()
 

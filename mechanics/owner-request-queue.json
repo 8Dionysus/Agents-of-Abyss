@@ -1050,9 +1050,12 @@
     {
       "center_sources": [
         "mechanics/rpg/README.md",
-        "mechanics/rpg/docs/RPG_LAYER_MODEL.md",
-        "mechanics/rpg/docs/RPG_BOUNDARY_MAP.md",
-        "mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md"
+        "mechanics/rpg/PARTS.md",
+        "mechanics/rpg/parts/source-boundary/README.md",
+        "mechanics/rpg/parts/progression-unlocks/README.md",
+        "mechanics/rpg/parts/quest-campaign/README.md",
+        "mechanics/rpg/parts/runtime-projection/README.md",
+        "mechanics/rpg/parts/owner-handoffs/README.md"
       ],
       "center_status": "landed",
       "handoff_surface_hint": "aoa-agents/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-RPG-AGENTS-001",
@@ -1073,9 +1076,12 @@
     {
       "center_sources": [
         "mechanics/rpg/README.md",
-        "mechanics/rpg/docs/RPG_LAYER_MODEL.md",
-        "mechanics/rpg/docs/RPG_BOUNDARY_MAP.md",
-        "mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md"
+        "mechanics/rpg/PARTS.md",
+        "mechanics/rpg/parts/source-boundary/README.md",
+        "mechanics/rpg/parts/progression-unlocks/README.md",
+        "mechanics/rpg/parts/quest-campaign/README.md",
+        "mechanics/rpg/parts/runtime-projection/README.md",
+        "mechanics/rpg/parts/owner-handoffs/README.md"
       ],
       "center_status": "landed",
       "handoff_surface_hint": "aoa-skills/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-RPG-SKILLS-001",
@@ -1096,9 +1102,12 @@
     {
       "center_sources": [
         "mechanics/rpg/README.md",
-        "mechanics/rpg/docs/RPG_LAYER_MODEL.md",
-        "mechanics/rpg/docs/RPG_BOUNDARY_MAP.md",
-        "mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md"
+        "mechanics/rpg/PARTS.md",
+        "mechanics/rpg/parts/source-boundary/README.md",
+        "mechanics/rpg/parts/progression-unlocks/README.md",
+        "mechanics/rpg/parts/quest-campaign/README.md",
+        "mechanics/rpg/parts/runtime-projection/README.md",
+        "mechanics/rpg/parts/owner-handoffs/README.md"
       ],
       "center_status": "landed",
       "handoff_surface_hint": "aoa-playbooks/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-RPG-PLAYBOOKS-001",
@@ -1119,9 +1128,12 @@
     {
       "center_sources": [
         "mechanics/rpg/README.md",
-        "mechanics/rpg/docs/RPG_LAYER_MODEL.md",
-        "mechanics/rpg/docs/RPG_BOUNDARY_MAP.md",
-        "mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md"
+        "mechanics/rpg/PARTS.md",
+        "mechanics/rpg/parts/source-boundary/README.md",
+        "mechanics/rpg/parts/progression-unlocks/README.md",
+        "mechanics/rpg/parts/quest-campaign/README.md",
+        "mechanics/rpg/parts/runtime-projection/README.md",
+        "mechanics/rpg/parts/owner-handoffs/README.md"
       ],
       "center_status": "landed",
       "handoff_surface_hint": "aoa-evals/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-RPG-EVALS-001",
@@ -1142,9 +1154,12 @@
     {
       "center_sources": [
         "mechanics/rpg/README.md",
-        "mechanics/rpg/docs/RPG_LAYER_MODEL.md",
-        "mechanics/rpg/docs/RPG_BOUNDARY_MAP.md",
-        "mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md"
+        "mechanics/rpg/PARTS.md",
+        "mechanics/rpg/parts/source-boundary/README.md",
+        "mechanics/rpg/parts/progression-unlocks/README.md",
+        "mechanics/rpg/parts/quest-campaign/README.md",
+        "mechanics/rpg/parts/runtime-projection/README.md",
+        "mechanics/rpg/parts/owner-handoffs/README.md"
       ],
       "center_status": "landed",
       "handoff_surface_hint": "abyss-stack/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-RPG-STACK-001",
@@ -1165,9 +1180,12 @@
     {
       "center_sources": [
         "mechanics/rpg/README.md",
-        "mechanics/rpg/docs/RPG_LAYER_MODEL.md",
-        "mechanics/rpg/docs/RPG_BOUNDARY_MAP.md",
-        "mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md"
+        "mechanics/rpg/PARTS.md",
+        "mechanics/rpg/parts/source-boundary/README.md",
+        "mechanics/rpg/parts/progression-unlocks/README.md",
+        "mechanics/rpg/parts/quest-campaign/README.md",
+        "mechanics/rpg/parts/runtime-projection/README.md",
+        "mechanics/rpg/parts/owner-handoffs/README.md"
       ],
       "center_status": "landed",
       "handoff_surface_hint": "aoa-stats/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-RPG-STATS-001",

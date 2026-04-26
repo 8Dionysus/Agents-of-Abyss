@@ -38,7 +38,9 @@ Then branch by task:
 
 - process, mechanic, or engineering-philosophy route questions: `docs/MECHANICS.md`
 - method-centered growth or scenario-home questions: `mechanics/method-growth/docs/METHOD_SPINE.md`
-- adjunct RPG reflection or canonical vocabulary questions: `mechanics/rpg/docs/RPG_LAYER_MODEL.md` and `mechanics/rpg/docs/RPG_CANONICAL_TERMINOLOGY.md`
+- adjunct RPG reflection or canonical vocabulary questions:
+  `mechanics/rpg/PARTS.md`, `mechanics/rpg/parts/source-boundary/README.md`,
+  and `mechanics/rpg/parts/vocabulary-overlay/TERMINOLOGY.md`
 - Agon route, owner-request, or pre-protocol stop-line questions:
   `mechanics/agon/README.md`, `mechanics/agon/PARTS.md`,
   `mechanics/agon/OWNER_REQUESTS.md`, and `mechanics/agon/PROVENANCE.md`

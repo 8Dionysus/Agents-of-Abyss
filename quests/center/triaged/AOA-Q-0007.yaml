@@ -35,8 +35,8 @@ activation:
   mode: manual
   note: open when the bridge between proof, composition, and navigation is ready to be staged
 anchor_ref:
-  artifact: rpg_bridge_wave
-  ref: mechanics/rpg/docs/RPG_BRIDGE_WAVE.md
+  artifact: rpg_quest_campaign
+  ref: mechanics/rpg/parts/quest-campaign/README.md
   note: the bridge must stay narrow, cited, and non-authoritative
 handoff_role: federation-maintainer
 evidence:

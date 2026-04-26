@@ -8,9 +8,9 @@ It names the stronger owner slices that must land outside `Agents-of-Abyss` befo
 
 Each request is a handoff candidate. A request packet is not owner acceptance. It may be copied into an owner-local issue, document, branch, or receipt, but it remains center-side until the owner repository accepts it.
 
-Source queue: [`mechanics/owner-request-queue.json`](../../../mechanics/owner-request-queue.json)
+Source queue: [`mechanics/owner-request-queue.json`](../owner-request-queue.json)
 
-Generated companion: [`generated/owner_request_queue.min.json`](../../../generated/owner_request_queue.min.json)
+Generated companion: [`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json)
 
 ## Requests
 
@@ -25,10 +25,13 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../../generat
 
 ## Center sources
 
-- [README.md](../../../mechanics/rpg/README.md)
-- [RPG_LAYER_MODEL.md](../../../mechanics/rpg/docs/RPG_LAYER_MODEL.md)
-- [RPG_BOUNDARY_MAP.md](../../../mechanics/rpg/docs/RPG_BOUNDARY_MAP.md)
-- [RPG_ARCHITECTURE_RFC.md](../../../mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md)
+- [README.md](README.md)
+- [PARTS.md](PARTS.md)
+- [source-boundary](parts/source-boundary/README.md)
+- [progression-unlocks](parts/progression-unlocks/README.md)
+- [quest-campaign](parts/quest-campaign/README.md)
+- [runtime-projection](parts/runtime-projection/README.md)
+- [owner-handoffs](parts/owner-handoffs/README.md)
 
 ## Stop-lines
 
@@ -41,7 +44,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../../generat
 
 ## Validation
 
-Use the validation lane in [mechanics/rpg/docs/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the validation lane in [mechanics/rpg/AGENTS.md](AGENTS.md#validation) for executable commands.
 
 ## Next route
 

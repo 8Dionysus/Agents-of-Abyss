@@ -735,7 +735,41 @@
       "kind": "mechanic-docs-card",
       "status": "required",
       "owner": "Agents-of-Abyss",
-      "notes": "Deep docs card for RPG.",
+      "notes": "Compatibility docs card for RPG.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/rpg/parts/AGENTS.md",
+      "scope": "mechanics/rpg/parts/",
+      "kind": "mechanic-parts-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Active parts card for RPG.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/rpg/legacy/AGENTS.md",
+      "scope": "mechanics/rpg/legacy/",
+      "kind": "mechanic-legacy-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Legacy provenance card for RPG.",
       "required_headings": [
         "# AGENTS.md",
         "## Applies to",

@@ -34,8 +34,8 @@ activation:
   mode: manual
   note: open when the runtime/frontend contour is ready to be fixed without widening source ownership
 anchor_ref:
-  artifact: rpg_architecture_rfc
-  ref: mechanics/rpg/docs/RPG_ARCHITECTURE_RFC.md
+  artifact: rpg_source_boundary_and_vocabulary_overlay
+  ref: mechanics/rpg/parts/source-boundary/README.md
   note: this RFC must hold the line between source meaning, proof, runtime, and presentation
 handoff_role: federation-maintainer
 evidence:

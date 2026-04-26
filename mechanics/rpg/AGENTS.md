@@ -12,15 +12,23 @@ It makes cross-owner work easier to see without changing the owner of roles, ski
 ## Read before editing
 
 Read root `AGENTS.md`, `mechanics/AGENTS.md`, this card, `mechanics/rpg/README.md`, and `mechanics/rpg/DIRECTION.md` before changing this package.
-For detailed doctrine, read the specific source document under `mechanics/rpg/docs/`.
-For vocabulary artifacts, read `mechanics/rpg/docs/RPG_CANONICAL_TERMINOLOGY.md` before touching schema, example, or generated overlay files.
+For active doctrine, start from `mechanics/rpg/PARTS.md` and the relevant part under `mechanics/rpg/parts/`.
+For historical evidence, use `mechanics/rpg/PROVENANCE.md` first; consult `legacy/raw/` only through that route.
+For vocabulary artifacts, read `mechanics/rpg/parts/vocabulary-overlay/TERMINOLOGY.md` before touching schema, example, generated overlay, or validator files.
 
 ## Boundaries
 
 - Do not turn RPG terms into hidden ontology, runtime ledger authority, role canon, proof verdicts, or quest ownership.
 - Do not let presentation labels replace canonical machine keys.
 - Do not treat generated RPG artifacts as authored meaning; they must mirror the terminology and schema contract.
-- If RPG creates a stronger-owner request, update `mechanics/rpg/docs/RPG_OWNER_REPO_REQUESTS.md` and the owner-request queue surfaces instead of pretending the owner accepted it.
+- Do not cite raw legacy sources as active law; distill needed material into a part and record provenance.
+- If RPG creates a stronger-owner request, update `mechanics/rpg/OWNER_REQUESTS.md` and the owner-request queue surfaces instead of pretending the owner accepted it.
+
+## Post-change Route Review
+
+After RPG changes, check whether the next agent can start from `README.md`, `DIRECTION.md`, `PARTS.md`, and the relevant active part without reading raw legacy.
+If an active part needs history, distill the rule into the part and route the evidence through `PROVENANCE.md`, `legacy/INDEX.md`, and `legacy/DISTILLATION_LOG.md`.
+Update `ROADMAP.md` only when the change creates a useful future route, and update `LANDING_LOG.md` only when the landing is reviewable.
 
 ## Validation
 
@@ -30,10 +38,12 @@ Run the narrow RPG lane after package changes:
 python scripts/validate_mechanics_topology.py --mechanic rpg
 python scripts/validate_mechanic_readme_cards.py --mechanic rpg
 python scripts/validate_mechanic_landing_logs.py --mechanic rpg
-python mechanics/rpg/scripts/validate_rpg_dual_vocabulary_overlay.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic rpg
+python mechanics/rpg/scripts/validate_rpg_distillation.py
+python mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py
 python scripts/build_mechanic_card_index.py --check
 python scripts/validate_mechanic_card_index.py
-python -m pytest -q mechanics/rpg/tests
+python -m pytest -q mechanics/rpg/tests mechanics/rpg/parts/vocabulary-overlay/tests
 ```
 
 If owner requests changed, also run:
@@ -63,10 +73,12 @@ Executable validation commands from child docs live here. Child docs should rout
 python scripts/validate_mechanics_topology.py --mechanic rpg
 python scripts/validate_mechanic_readme_cards.py --mechanic rpg
 python scripts/validate_mechanic_landing_logs.py --mechanic rpg
-python mechanics/rpg/scripts/validate_rpg_dual_vocabulary_overlay.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic rpg
+python mechanics/rpg/scripts/validate_rpg_distillation.py
+python mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py
 python scripts/build_mechanic_card_index.py --check
 python scripts/validate_mechanic_card_index.py
-python -m pytest -q mechanics/rpg/tests
+python -m pytest -q mechanics/rpg/tests mechanics/rpg/parts/vocabulary-overlay/tests
 python scripts/validate_owner_request_queue.py --mechanic rpg
 python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py

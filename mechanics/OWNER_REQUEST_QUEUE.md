@@ -107,7 +107,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 - `agon` -> [OWNER_REQUESTS.md](agon/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-routing`, `aoa-agents`, `abyss-stack`, `aoa-kag`, `Tree-of-Sophia`
 - `antifragility` -> [ANTIFRAGILITY_OWNER_REPO_REQUESTS.md](antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-playbooks`
 - `questbook` -> [OWNER_REQUESTS.md](questbook/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-routing`
-- `rpg` -> [RPG_OWNER_REPO_REQUESTS.md](rpg/docs/RPG_OWNER_REPO_REQUESTS.md); owners: `aoa-agents`, `aoa-skills`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`, `aoa-stats`
+- `rpg` -> [OWNER_REQUESTS.md](rpg/OWNER_REQUESTS.md); owners: `aoa-agents`, `aoa-skills`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`, `aoa-stats`
 - `tos-bridge` -> [TOS_BRIDGE_OWNER_REPO_REQUESTS.md](tos-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md); owners: `Tree-of-Sophia`, `aoa-kag`, `aoa-routing`, `aoa-memo`, `aoa-evals`, `aoa-playbooks`
 - `release-support` -> [RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md](release-support/docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md); owners: `aoa-evals`, `aoa-stats`, `aoa-routing`, `aoa-sdk`, `8Dionysus`
 

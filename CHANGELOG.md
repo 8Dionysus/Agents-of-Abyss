@@ -93,10 +93,13 @@ Tracking starts with the community-docs baseline for this repository.
 - Questbook source-contract hardening that rejects direct `legacy/raw`
   references from source quest objects and routes preserved raw provenance
   through mechanic `PROVENANCE.md` or `legacy/INDEX.md` bridges
+- RPG active parts and legacy provenance distillation through `mechanics/rpg/PARTS.md`,
+  `mechanics/rpg/PROVENANCE.md`, `mechanics/rpg/legacy/`, and
+  `mechanics/rpg/scripts/validate_rpg_distillation.py`
 - RPG dual-vocabulary overlay validation through
-  `mechanics/rpg/scripts/validate_rpg_dual_vocabulary_overlay.py` and package
-  tests that keep terminology, schema, example, and generated overlay keys in
-  lockstep
+  `mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py`
+  and part-local tests that keep terminology, schema, example, and generated
+  overlay keys in lockstep
 - `mechanics/rpg/DIRECTION.md` to define RPG as world grammar for agent work,
   not a toy layer or decorative game skin
 
