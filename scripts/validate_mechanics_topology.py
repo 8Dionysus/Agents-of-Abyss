@@ -39,7 +39,7 @@ HISTORICAL_REFERENCE_PATHS = {
     "docs/agent-lane/AGENTS_ROOT_REFERENCE.md",
 }
 OLD_ACTIVE_PATTERNS = (
-    r"(?<!mechanics/agon/)docs/AGON_[A-Z0-9_]+\.md",
+    r"(?:^|/)docs/AGON_[A-Z0-9_]+\.md",
     r"(?<!mechanics/experience/)docs/EXPERIENCE_[A-Z0-9_]+\.md",
     r"(?<!mechanics/rpg/)docs/RPG_[A-Z0-9_]+\.md",
     r"(?<!mechanics/antifragility/)docs/(?:ANTIFRAGILITY|VIA_NEGATIVA)[A-Z0-9_]*\.md",

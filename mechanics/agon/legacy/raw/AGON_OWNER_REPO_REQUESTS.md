@@ -1,11 +1,11 @@
 # Agon Owner Request Route
 
 The canonical Agon owner-request packet is now
-[`../OWNER_REQUESTS.md`](../OWNER_REQUESTS.md).
+[`../../OWNER_REQUESTS.md`](../../OWNER_REQUESTS.md).
 
-This compatibility route remains so older links keep resolving. Do not update
-request meaning here; update `mechanics/agon/OWNER_REQUESTS.md` and the central
-owner-request queue instead.
+This raw receipt remains as historical provenance for the Wave IV owner-binding
+route. Do not update request meaning here; update
+`mechanics/agon/OWNER_REQUESTS.md` and the central owner-request queue instead.
 
 ## Validation
 

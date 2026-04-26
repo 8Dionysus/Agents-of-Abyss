@@ -11,6 +11,6 @@
   "surface_refs": [
     "mechanics/agon/generated/agon_duel_kernel_model_registry.min.json",
     "mechanics/agon/config/agon_duel_kernel_models.seed.json",
-    "mechanics/agon/docs/AGON_DUEL_KERNEL_MODEL.md"
+    "mechanics/agon/legacy/raw/AGON_DUEL_KERNEL_MODEL.md"
   ]
 }

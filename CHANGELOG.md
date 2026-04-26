@@ -110,10 +110,10 @@ Tracking starts with the community-docs baseline for this repository.
 - Experience provenance checks now live in the package-level distillation
   validator, active part validators no longer direct-read `legacy/raw`, and
   `release-deployment` now has a local validator and test route
-- Agon now routes active work through concise functioning parts and a single
-  provenance bridge; `mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md` is kept
-  as a compatibility route, while `mechanics/agon/OWNER_REQUESTS.md` and the
-  central owner-request queue carry the current stronger-owner asks
+- Agon now routes active work through concise functioning parts, a single
+  provenance bridge, and `legacy/raw` provenance accounting; `docs/` is only a
+  compatibility route, while `mechanics/agon/OWNER_REQUESTS.md` and the central
+  owner-request queue carry the current stronger-owner asks
 - Agon, Experience, RPG, antifragility, and method-growth mechanic artifacts now
   live in mechanic-owned homes; root technical districts keep repo-wide
   contracts only and no longer carry mechanic artifact aliases

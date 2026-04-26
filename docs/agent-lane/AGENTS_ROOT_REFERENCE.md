@@ -43,10 +43,10 @@ Then branch by task:
   `mechanics/agon/README.md`, `mechanics/agon/PARTS.md`,
   `mechanics/agon/OWNER_REQUESTS.md`, and `mechanics/agon/PROVENANCE.md`
 - gate-routing handoff, owner request, or stop-line questions:
-  `mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md`,
-  `mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
-  `mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md`, and
-  `mechanics/agon/docs/AGON_WAVE5_CENTER_HANDOFF.md`
+  `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_HANDOFF.md`,
+  `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_OWNER_REQUEST.md`,
+  `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_STOP_LINES.md`, and
+  `mechanics/agon/legacy/raw/AGON_WAVE5_CENTER_HANDOFF.md`
 - witness / compost, counterpart bridge, or ToS support waves: the relevant compact doctrine note under `docs/`
 
 Nearest-file precedence applies inside:
@@ -134,19 +134,19 @@ If the task touches method, quest reflection, or canonical vocabulary, also revi
 
 If the task touches the Agon move owner binding turn, also review:
 
-- `mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md`
-- `mechanics/agon/docs/AGON_MOVE_BINDING_MATRIX_MODEL.md`
+- `mechanics/agon/legacy/raw/AGON_MOVE_OWNER_BINDING.md`
+- `mechanics/agon/legacy/raw/AGON_MOVE_BINDING_MATRIX_MODEL.md`
 - `mechanics/agon/OWNER_REQUESTS.md`
-- `mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md`
-- `mechanics/agon/docs/AGON_WAVE4_LANDING.md`
+- `mechanics/agon/legacy/raw/AGON_PRE_PROTOCOL_STOP_LINES.md`
+- `mechanics/agon/legacy/raw/AGON_WAVE4_LANDING.md`
 - `mechanics/agon/generated/agon_move_owner_binding_registry.min.json`
 
 If the task touches the Agon gate routing handoff turn, also review:
 
-- `mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md`
-- `mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md`
-- `mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md`
-- `mechanics/agon/docs/AGON_WAVE5_CENTER_HANDOFF.md`
+- `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_HANDOFF.md`
+- `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_OWNER_REQUEST.md`
+- `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_STOP_LINES.md`
+- `mechanics/agon/legacy/raw/AGON_WAVE5_CENTER_HANDOFF.md`
 - `mechanics/agon/generated/agon_gate_routing_handoff_request.min.json`
 
 If you edit `docs/`, `generated/`, `schemas/`, or `scripts/`, read the local

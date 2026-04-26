@@ -70,7 +70,7 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
         "mechanics/method-growth/scripts/validate_candidate_lineage_contract.py",
         "mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md",
         "mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md",
-        "mechanics/agon/docs/AGON_PREPARATION_POSTURE.md",
+        "mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md",
         "mechanics/method-growth/scripts/validate_wave4_kernel_automation.py",
         "mechanics/agon/LANDING_LOG.md",
         "mechanics/experience/LANDING_LOG.md",
@@ -88,11 +88,11 @@ def test_roadmap_names_released_agon_imposition_gate_surfaces() -> None:
     assert "mechanics/agon/LANDING_LOG.md" in roadmap
 
     unreleased_surfaces = [
-        "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
-        "mechanics/agon/docs/AGON_SURVIVAL_CRITERIA.md",
-        "mechanics/agon/docs/AGON_DOUBT_AUDIT.md",
-        "mechanics/agon/docs/PRE_AGON_BASELINE.md",
-        "mechanics/agon/docs/AGON_WAVE0_LANDING.md",
+        "mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md",
+        "mechanics/agon/legacy/raw/AGON_SURVIVAL_CRITERIA.md",
+        "mechanics/agon/legacy/raw/AGON_DOUBT_AUDIT.md",
+        "mechanics/agon/legacy/raw/PRE_AGON_BASELINE.md",
+        "mechanics/agon/legacy/raw/AGON_WAVE0_LANDING.md",
         "mechanics/agon/generated/agon_imposition_readiness.min.json",
         "mechanics/agon/schemas/agon-imposition-readiness.schema.json",
         "mechanics/agon/examples/agon_doubt_audit.example.json",
@@ -113,10 +113,10 @@ def test_roadmap_names_released_agon_lawful_move_language_surfaces() -> None:
     assert "mechanics/agon/LANDING_LOG.md" in roadmap
 
     unreleased_surfaces = [
-        "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
-        "mechanics/agon/docs/AGON_MOVE_REGISTRY_MODEL.md",
-        "mechanics/agon/docs/AGON_MOVE_OWNER_HANDOFFS.md",
-        "mechanics/agon/docs/AGON_WAVE3_LANDING.md",
+        "mechanics/agon/legacy/raw/AGON_LAWFUL_MOVE_LANGUAGE.md",
+        "mechanics/agon/legacy/raw/AGON_MOVE_REGISTRY_MODEL.md",
+        "mechanics/agon/legacy/raw/AGON_MOVE_OWNER_HANDOFFS.md",
+        "mechanics/agon/legacy/raw/AGON_WAVE3_LANDING.md",
         "mechanics/agon/config/agon_lawful_moves.seed.json",
         "mechanics/agon/generated/agon_lawful_move_registry.min.json",
         "mechanics/agon/schemas/agon-lawful-move.schema.json",
@@ -139,11 +139,11 @@ def test_roadmap_names_released_agon_move_owner_binding_surfaces() -> None:
     assert "mechanics/agon/LANDING_LOG.md" in roadmap
 
     unreleased_surfaces = [
-        "mechanics/agon/docs/AGON_MOVE_OWNER_BINDING.md",
-        "mechanics/agon/docs/AGON_MOVE_BINDING_MATRIX_MODEL.md",
-        "mechanics/agon/docs/AGON_OWNER_REPO_REQUESTS.md",
-        "mechanics/agon/docs/AGON_PRE_PROTOCOL_STOP_LINES.md",
-        "mechanics/agon/docs/AGON_WAVE4_LANDING.md",
+        "mechanics/agon/legacy/raw/AGON_MOVE_OWNER_BINDING.md",
+        "mechanics/agon/legacy/raw/AGON_MOVE_BINDING_MATRIX_MODEL.md",
+        "mechanics/agon/legacy/raw/AGON_OWNER_REPO_REQUESTS.md",
+        "mechanics/agon/legacy/raw/AGON_PRE_PROTOCOL_STOP_LINES.md",
+        "mechanics/agon/legacy/raw/AGON_WAVE4_LANDING.md",
         "mechanics/agon/config/agon_move_owner_bindings.seed.json",
         "mechanics/agon/generated/agon_move_owner_binding_registry.min.json",
         "mechanics/agon/schemas/agon-move-owner-binding.schema.json",
@@ -166,10 +166,10 @@ def test_roadmap_names_released_agon_gate_routing_handoff_surfaces() -> None:
     assert "mechanics/agon/LANDING_LOG.md" in roadmap
 
     unreleased_surfaces = [
-        "mechanics/agon/docs/AGON_GATE_ROUTING_HANDOFF.md",
-        "mechanics/agon/docs/AGON_GATE_ROUTING_OWNER_REQUEST.md",
-        "mechanics/agon/docs/AGON_GATE_ROUTING_STOP_LINES.md",
-        "mechanics/agon/docs/AGON_WAVE5_CENTER_HANDOFF.md",
+        "mechanics/agon/legacy/raw/AGON_GATE_ROUTING_HANDOFF.md",
+        "mechanics/agon/legacy/raw/AGON_GATE_ROUTING_OWNER_REQUEST.md",
+        "mechanics/agon/legacy/raw/AGON_GATE_ROUTING_STOP_LINES.md",
+        "mechanics/agon/legacy/raw/AGON_WAVE5_CENTER_HANDOFF.md",
         "mechanics/agon/config/agon_gate_routing_handoff_request.seed.json",
         "mechanics/agon/generated/agon_gate_routing_handoff_request.min.json",
         "mechanics/agon/schemas/agon-gate-routing-handoff-request.schema.json",
@@ -191,10 +191,10 @@ def test_roadmap_names_released_agon_trial_playbook_handoff_surfaces() -> None:
     assert "mechanics/agon/LANDING_LOG.md" in roadmap
 
     unreleased_surfaces = [
-        "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
-        "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md",
-        "mechanics/agon/docs/AGON_TRIAL_PLAYBOOK_STOP_LINES.md",
-        "mechanics/agon/docs/AGON_WAVE6_CENTER_HANDOFF.md",
+        "mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
+        "mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md",
+        "mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_STOP_LINES.md",
+        "mechanics/agon/legacy/raw/AGON_WAVE6_CENTER_HANDOFF.md",
         "mechanics/agon/config/agon_trial_playbook_request.seed.json",
         "mechanics/agon/generated/agon_trial_playbook_request.min.json",
         "mechanics/agon/schemas/agon-trial-playbook-request.schema.json",

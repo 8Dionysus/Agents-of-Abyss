@@ -54,7 +54,7 @@ A surface that cannot show this is not automatically deleted. It is marked for o
 
 ## Relation to `AGON_PREPARATION_POSTURE`
 
-`mechanics/agon/docs/AGON_PREPARATION_POSTURE.md` remains the historical and conservative holding boundary.
+`mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md` remains the historical and conservative holding boundary.
 
 This document does not supersede it by contradiction. It supersedes it by pressure.
 

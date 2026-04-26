@@ -23,11 +23,11 @@ REQUIRED_FILES = [
     "README.md",
     "CHARTER.md",
     "docs/LAYERS.md",
-    "mechanics/agon/docs/AGON_PREPARATION_POSTURE.md",
-    "mechanics/agon/docs/AGON_LAWFUL_MOVE_LANGUAGE.md",
-    "mechanics/agon/docs/AGON_MOVE_REGISTRY_MODEL.md",
-    "mechanics/agon/docs/AGON_MOVE_OWNER_HANDOFFS.md",
-    "mechanics/agon/docs/AGON_WAVE3_LANDING.md",
+    "mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md",
+    "mechanics/agon/legacy/raw/AGON_LAWFUL_MOVE_LANGUAGE.md",
+    "mechanics/agon/legacy/raw/AGON_MOVE_REGISTRY_MODEL.md",
+    "mechanics/agon/legacy/raw/AGON_MOVE_OWNER_HANDOFFS.md",
+    "mechanics/agon/legacy/raw/AGON_WAVE3_LANDING.md",
     "mechanics/agon/schemas/agon-lawful-move.schema.json",
     "mechanics/agon/schemas/agon-lawful-move-registry.schema.json",
     "mechanics/agon/config/agon_lawful_moves.seed.json",
@@ -35,7 +35,7 @@ REQUIRED_FILES = [
 ]
 
 OPTIONAL_WAVE0_FILES = [
-    "mechanics/agon/docs/AGON_IMPOSITION_POSTURE.md",
+    "mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md",
     "mechanics/agon/generated/agon_imposition_readiness.min.json",
 ]
 

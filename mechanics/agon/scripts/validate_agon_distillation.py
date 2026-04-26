@@ -18,6 +18,8 @@ def _repo_root() -> Path:
 REPO_ROOT = _repo_root()
 AGON_ROOT = REPO_ROOT / "mechanics" / "agon"
 PARTS_ROOT = AGON_ROOT / "parts"
+LEGACY_ROOT = AGON_ROOT / "legacy"
+RAW_ROOT = LEGACY_ROOT / "raw"
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 
 PART_SLUGS = (
@@ -46,13 +48,30 @@ ROOT_SURFACES = (
     "AGENTS.md",
 )
 
+LEGACY_SURFACES = (
+    "AGENTS.md",
+    "README.md",
+    "INDEX.md",
+    "DISTILLATION_LOG.md",
+    "raw/README.md",
+)
+
 PART_SURFACES = ("README.md", "CONTRACT.md", "VALIDATION.md")
 
-ACTIVE_TEXT_SURFACES = ROOT_SURFACES + ("parts/README.md", "parts/AGENTS.md")
+ACTIVE_TEXT_SURFACES = (
+    "README.md",
+    "DIRECTION.md",
+    "PARTS.md",
+    "OWNER_REQUESTS.md",
+    "AGENTS.md",
+    "parts/README.md",
+    "parts/AGENTS.md",
+)
 
 ACTIVE_ROUTE_POLLUTION_PATTERNS = (
     "low-context",
     "small enough",
+    "legacy/raw",
     "Legacy raw",
     "raw source",
     "raw sources",
@@ -86,6 +105,13 @@ def validate() -> list[str]:
         elif not path.read_text(encoding="utf-8").endswith("\n"):
             problems.append(f"{rel}: missing final newline")
 
+    for rel in LEGACY_SURFACES:
+        path = LEGACY_ROOT / rel
+        if not path.is_file():
+            problems.append(f"missing Agon legacy surface: legacy/{rel}")
+        elif not path.read_text(encoding="utf-8").endswith("\n"):
+            problems.append(f"legacy/{rel}: missing final newline")
+
     for slug in PART_SLUGS:
         part_dir = PARTS_ROOT / slug
         if not part_dir.is_dir():
@@ -102,8 +128,10 @@ def validate() -> list[str]:
     direction = read_text("DIRECTION.md")
     parts = read_text("PARTS.md")
     provenance = read_text("PROVENANCE.md")
+    landing_log = read_text("LANDING_LOG.md")
     owner_requests = read_text("OWNER_REQUESTS.md")
-    compatibility = read_text("docs/AGON_OWNER_REPO_REQUESTS.md")
+    compatibility = read_text("docs/README.md")
+    legacy_index = (LEGACY_ROOT / "INDEX.md").read_text(encoding="utf-8")
 
     for rel in ("DIRECTION.md", "PARTS.md", "OWNER_REQUESTS.md", "PROVENANCE.md"):
         if f"({rel})" not in readme:
@@ -123,8 +151,31 @@ def validate() -> list[str]:
         if rid not in owner_requests:
             problems.append(f"OWNER_REQUESTS.md: missing request id {rid}")
 
-    if "../OWNER_REQUESTS.md" not in compatibility:
-        problems.append("docs/AGON_OWNER_REPO_REQUESTS.md: must route to OWNER_REQUESTS.md")
+    for rel in ("../DIRECTION.md", "../PARTS.md", "../PROVENANCE.md", "../OWNER_REQUESTS.md"):
+        if rel not in compatibility:
+            problems.append(f"docs/README.md: must route to {rel}")
+
+    docs_files = sorted(path.name for path in (AGON_ROOT / "docs").glob("*.md"))
+    if docs_files != ["AGENTS.md", "README.md"]:
+        problems.append("docs/: must contain only AGENTS.md and README.md compatibility surfaces")
+
+    raw_docs = sorted(path.name for path in RAW_ROOT.glob("*.md") if path.name != "README.md")
+    if "PRE_AGON_BASELINE.md" not in raw_docs:
+        problems.append("legacy/raw/: missing PRE_AGON_BASELINE.md")
+    if not any(name.startswith("AGON_") for name in raw_docs):
+        problems.append("legacy/raw/: missing AGON_* raw sources")
+    for name in raw_docs:
+        path = RAW_ROOT / name
+        if not path.read_text(encoding="utf-8").endswith("\n"):
+            problems.append(f"legacy/raw/{name}: missing final newline")
+        if f"`{name}`" not in legacy_index:
+            problems.append(f"legacy/INDEX.md: missing raw source `{name}`")
+
+    for phrase in ("legacy/INDEX.md", "legacy/raw/", "docs/`: compatibility route"):
+        if phrase not in provenance:
+            problems.append(f"PROVENANCE.md: missing legacy route phrase {phrase!r}")
+    if "Agon legacy raw provenance district" not in landing_log:
+        problems.append("LANDING_LOG.md: missing Agon legacy raw provenance district entry")
 
     active_texts = {
         rel: (AGON_ROOT / rel).read_text(encoding="utf-8")

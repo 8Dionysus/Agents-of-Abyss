@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from docs_thematic_common import load_classifier, validate_classifier_shape, REPO_ROOT
 EXTERNAL_PATTERN_TARGETS = {
+    ("mechanics/agon/legacy/raw/AGON_*.md", "mechanics/agon/legacy/raw"),
     ("docs/EXPERIENCE_*.md", "mechanics/experience/legacy/raw"),
 }
 def main()->int:

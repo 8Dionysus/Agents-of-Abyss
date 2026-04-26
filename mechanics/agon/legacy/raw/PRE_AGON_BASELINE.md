@@ -21,7 +21,7 @@ This phrase means:
 
 The baseline may claim current release cleanliness, current documented ownership boundaries, current generated registry validity, and current public route validity.
 
-It may claim that Agon has a preparation posture if `mechanics/agon/docs/AGON_PREPARATION_POSTURE.md` exists.
+It may claim that Agon has a preparation posture if `mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md` exists.
 
 It may not claim that the federation is Agon-ready.
 
@@ -36,7 +36,7 @@ Before or during Wave 0 landing, capture the current state of:
 - `docs/LAYERS.md`;
 - `docs/FEDERATION_RULES.md`;
 - `mechanics/antifragility/docs/ANTI_AUTHORITY_RULES.md`;
-- `mechanics/agon/docs/AGON_PREPARATION_POSTURE.md`;
+- `mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md`;
 - `ROADMAP.md`;
 - compact generated center surfaces;
 - current validation commands and test state.

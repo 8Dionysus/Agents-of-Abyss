@@ -237,10 +237,10 @@
   ],
   "pattern_migrations": [
     {
-      "source_glob": "docs/AGON_*.md",
-      "target_dir": "docs/agon",
+      "source_glob": "mechanics/agon/legacy/raw/AGON_*.md",
+      "target_dir": "mechanics/agon/legacy/raw",
       "district": "agon",
-      "reason": "flat Agon historical records move to docs/agon"
+      "reason": "Agon historical records now route to preserved raw provenance before distillation into mechanics/agon parts"
     },
     {
       "source_glob": "docs/EXPERIENCE_*.md",

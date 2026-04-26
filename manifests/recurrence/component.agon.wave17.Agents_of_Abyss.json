@@ -16,12 +16,12 @@
   "surfaces": [
     "mechanics/agon/generated/agon_kag_promotion_path_registry.min.json",
     "mechanics/agon/config/agon_kag_promotion_path.seed.json",
-    "mechanics/agon/docs/AGON_KAG_PROMOTION_PATH.md",
-    "mechanics/agon/docs/AGON_KAG_PROMOTION_CANDIDATE_MODEL.md",
-    "mechanics/agon/docs/AGON_KAG_SURVIVAL_CRITERIA.md",
-    "mechanics/agon/docs/AGON_KAG_OWNER_HANDOFFS.md",
-    "mechanics/agon/docs/AGON_WAVE17_STOP_LINES.md",
-    "mechanics/agon/docs/AGON_WAVE17_LANDING.md"
+    "mechanics/agon/legacy/raw/AGON_KAG_PROMOTION_PATH.md",
+    "mechanics/agon/legacy/raw/AGON_KAG_PROMOTION_CANDIDATE_MODEL.md",
+    "mechanics/agon/legacy/raw/AGON_KAG_SURVIVAL_CRITERIA.md",
+    "mechanics/agon/legacy/raw/AGON_KAG_OWNER_HANDOFFS.md",
+    "mechanics/agon/legacy/raw/AGON_WAVE17_STOP_LINES.md",
+    "mechanics/agon/legacy/raw/AGON_WAVE17_LANDING.md"
   ],
   "title": "Wave XVII Agents-of-Abyss surfaces",
   "wave": "XVII"
