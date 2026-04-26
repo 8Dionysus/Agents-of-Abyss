@@ -20,5 +20,8 @@ Active destinations:
 - `parts/owner-handoffs/`
 - `parts/lane-owner-routes/`
 
+`INDEX.md` records which first-wave source pressures fed each active route and
+marks later derived routes separately.
+
 Stop-line: legacy preserves provenance; it is not the normal first route for
 current Questbook edits.
