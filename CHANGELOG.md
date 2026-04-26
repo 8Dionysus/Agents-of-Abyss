@@ -67,9 +67,22 @@ Tracking starts with the community-docs baseline for this repository.
   `generated/questbook_frontier.min.json`, and checks that reject top-level
   `AOA-Q-*` aliases plus root lifecycle source directories
 - Questbook relation law through
-  `mechanics/questbook/docs/quest-relations.md` and
+  `mechanics/questbook/parts/relation-shape/README.md` and
   `generated/questbook_relations.min.json`, using `parent`, `sidequest`,
   `blocked_by`, and related route metadata without moving quest ownership
+- Questbook narrow source docs for lifecycle law, execution-passport fields,
+  harvest thresholds, and lane owner-route contracts, plus
+  `mechanics/questbook/parts/lane-owner-routes/experience-ready-owner-routes.json` and
+  `mechanics/questbook/scripts/build_ready_owner_routes.py` for
+  registry-backed ready-route projections
+- Questbook `parts/`, `legacy/`, and `PROVENANCE.md` surfaces so active
+  obligation mechanics have functioning part packages while first-contour
+  source history stays behind an explicit provenance bridge
+- Questbook parts registry and distillation validator through
+  `mechanics/questbook/parts/registry.json`,
+  `mechanics/questbook/scripts/validate_questbook_distillation.py`, and
+  package tests that keep active part contracts, validation files, index
+  coverage, and legacy provenance routing synchronized
 
 ### Changed
 
@@ -163,6 +176,21 @@ Tracking starts with the community-docs baseline for this repository.
   contour links `AOA-Q-0001` through `AOA-Q-0003`, and RPG-shaped center
   quests `AOA-Q-0004` through `AOA-Q-0008` remain center-owned while visible as
   `sidequest` routes from the next-contour quest
+- Questbook root entry surfaces now split route-card, direction, roadmap,
+  parts, and landing-ledger roles more cleanly, with a top landing-log index
+  and refreshed AGENTS guidance for relation, generated, and owner-request
+  edits
+- Questbook `QUESTBOOK_MODEL.md` is now a compact model spine; lifecycle,
+  execution, harvest, relation, and ready owner-route details live in focused
+  package-local sources, and the Experience ready owner-route table is rebuilt
+  from JSON instead of edited by hand
+- Questbook active guidance now routes through `mechanics/questbook/parts/`;
+  `docs/` is compatibility-only, `QUESTBOOK_FIRST_WAVE.md` moved to
+  `legacy/raw/`, and Questbook owner request packets moved to
+  `mechanics/questbook/OWNER_REQUESTS.md`
+- Questbook part additions, retirements, validation routes, and direct
+  legacy/raw references are now blocked by a package-level distillation gate
+  that is also run from `scripts/release_check.py`
 - detailed agent-lane and Codex audit references now live under
   `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
   narrow compatibility route into `mechanics/README.md`

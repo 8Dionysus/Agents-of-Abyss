@@ -193,7 +193,7 @@ def validate_compatibility_routes() -> list[str]:
     questbook = REPO_ROOT / "QUESTBOOK.md"
     if questbook.exists():
         questbook_text = questbook.read_text(encoding="utf-8")
-        if "mechanics/questbook/docs/QUESTBOOK_MODEL.md" not in questbook_text:
+        if "mechanics/questbook/parts/model-spine/README.md" not in questbook_text:
             problems.append("QUESTBOOK.md: must route quest lifecycle law to mechanics/questbook")
     if not (REPO_ROOT / "quests").is_dir():
         problems.append("quests/: quest item store missing")

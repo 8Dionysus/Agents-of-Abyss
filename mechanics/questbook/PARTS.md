@@ -1,28 +1,58 @@
 # Questbook Parts
 
-Questbook has four active parts.
+This file is the active map of functioning Questbook parts. Each part owns a
+real slice of the mechanic: purpose, boundary, validation, and next route.
+Legacy source contours stay outside the working path.
 
-## Public Index
+## Part Map
 
-- Source: [`QUESTBOOK.md`](../../QUESTBOOK.md)
-- Role: compact human-facing frontier and near-obligation index.
-- Boundary: it lists public center obligations; it does not own lifecycle law or full quest history.
+| Part | Center function | Stronger owner route |
+|---|---|---|
+| [Model Spine](parts/model-spine/README.md) | compact Questbook model, source-of-truth map, and shared stop-lines | owner repositories keep quest meaning; center only names common law |
+| [Public Index](parts/public-index/README.md) | root public frontier and near-obligation index posture | source quest objects own detail |
+| [Quest Store](parts/quest-store/README.md) | lane-first source object layout under `quests/<lane>/<state>/AOA-Q-*` | lanes and owner repositories keep acceptance evidence |
+| [Lifecycle Law](parts/lifecycle-law/README.md) | lifecycle states, lane placement, promotion protocol, and bands | owner repositories prove acceptance and closure |
+| [Generated Views](parts/generated-views/README.md) | compact index, frontier, and relation read models | generated views never author quest meaning |
+| [Relation Shape](parts/relation-shape/README.md) | `parent`, `sidequest`, dependency-style, and reanchor relation vocabulary | relations do not transfer ownership or close quests |
+| [Execution Passport](parts/execution-passport/README.md) | difficulty, risk, control, delegation, and reviewability vocabulary | proof and acceptance stay with owner-local evidence |
+| [Harvest Route](parts/harvest-route/README.md) | repeated-pattern thresholds and promotion targets | reusable practice, proof, playbook, skill, memo, or route truth lands with stronger owners |
+| [Owner Handoffs](parts/owner-handoffs/README.md) | center-side owner request packets and queue route | stronger owners accept, reject, land, or prove the request |
+| [Lane Owner Routes](parts/lane-owner-routes/README.md) | ready quest to owner-request registries and generated route tables | owner repositories still own acceptance, proof, landing, and closure |
 
-## Quest Store
+## Active Part Contract
 
-- Source: [`quests/`](../../quests/)
-- Role: lane-first source objects at `quests/<lane>/<state>/AOA-Q-*`.
-- Boundary: lane chooses owner route, state chooses lifecycle posture.
+Every part keeps three working surfaces:
 
-## Generated Views
+- `README.md`: what the part is for and where to start.
+- `CONTRACT.md`: owner boundary, stop-lines, and allowed outputs.
+- `VALIDATION.md`: commands and tests.
 
-- Source: [`generated/questbook_index.min.json`](../../generated/questbook_index.min.json), [`generated/questbook_frontier.min.json`](../../generated/questbook_frontier.min.json), and [`generated/questbook_relations.min.json`](../../generated/questbook_relations.min.json)
-- Builder: [`build_questbook_index.py`](scripts/build_questbook_index.py)
-- Validators: [`validate_questbook_lifecycle.py`](scripts/validate_questbook_lifecycle.py), [`validate_questbook_index.py`](scripts/validate_questbook_index.py), [`validate_quest_relations.py`](scripts/validate_quest_relations.py)
-- Boundary: generated views summarize quest source files; they never author quest meaning.
+The part list is machine-checked through
+[`parts/registry.json`](parts/registry.json). Add or retire a part there only
+when the matching README, contract, validation, indexes, and provenance route
+are ready together.
 
-## Owner Handoffs
+A part may grow, split, merge, shrink, or retire when that improves its
+function and keeps the route cleaner. The move should leave the active path
+easier to follow, not merely smaller.
 
-- Source: [`QUESTBOOK_OWNER_REPO_REQUESTS.md`](docs/QUESTBOOK_OWNER_REPO_REQUESTS.md)
-- Role: requests to stronger owners when quest mechanics must become repeatable choreography, proof, memory, or route behavior.
-- Boundary: request packets are not owner acceptance.
+## Provenance Bridge
+
+Historical source accounting is deliberately outside part docs. Use
+[PROVENANCE](PROVENANCE.md) when a task must audit which old contour fed an
+active part. Active part docs should not grow source-file inventories.
+
+## Validation
+
+```bash
+python scripts/validate_mechanics_topology.py --mechanic questbook
+python scripts/validate_mechanic_readme_cards.py --mechanic questbook
+python scripts/validate_mechanic_landing_logs.py --mechanic questbook
+python mechanics/questbook/scripts/validate_questbook_lifecycle.py
+python mechanics/questbook/scripts/build_questbook_index.py --check
+python mechanics/questbook/scripts/validate_questbook_index.py
+python mechanics/questbook/scripts/validate_quest_relations.py
+python mechanics/questbook/scripts/build_ready_owner_routes.py --check
+python mechanics/questbook/scripts/validate_ready_owner_routes.py
+python mechanics/questbook/scripts/validate_questbook_distillation.py
+```

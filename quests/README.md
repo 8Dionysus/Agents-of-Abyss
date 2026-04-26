@@ -2,13 +2,13 @@
 
 This directory holds tracked AoA obligations that should survive the current diff.
 
-It is not a private scratchpad and not a second roadmap. Program direction belongs in [`ROADMAP.md`](../ROADMAP.md). The root quest index is [`QUESTBOOK.md`](../QUESTBOOK.md). Quest lifecycle law lives in [`mechanics/questbook/docs/QUESTBOOK_MODEL.md`](../mechanics/questbook/docs/QUESTBOOK_MODEL.md).
+It is not a private scratchpad and not a second roadmap. Program direction belongs in [`ROADMAP.md`](../ROADMAP.md). The root quest index is [`QUESTBOOK.md`](../QUESTBOOK.md). Questbook model law starts in [`model-spine`](../mechanics/questbook/parts/model-spine/README.md), and lifecycle detail lives in [`lifecycle-law`](../mechanics/questbook/parts/lifecycle-law/README.md).
 
 Quest sources live in lane-first lifecycle directories. Top-level `AOA-Q-*` aliases are intentionally absent; route directly to `quests/<lane>/<state>/AOA-Q-*`.
 
 Quest relations such as `parent`, `sidequest`, and `blocked_by` are source
 metadata, not lane moves. Relation law lives in
-[`quest-relations.md`](../mechanics/questbook/docs/quest-relations.md), and
+[`relation-shape`](../mechanics/questbook/parts/relation-shape/README.md), and
 the read model is [`questbook_relations`](../generated/questbook_relations.min.json).
 
 ## Lanes
@@ -71,7 +71,7 @@ Each lane may contain:
 ## Before Editing
 
 1. Check [`QUESTBOOK.md`](../QUESTBOOK.md).
-2. Check [`mechanics/questbook/docs/QUESTBOOK_MODEL.md`](../mechanics/questbook/docs/QUESTBOOK_MODEL.md).
+2. Check [`mechanics/questbook/parts/model-spine/README.md`](../mechanics/questbook/parts/model-spine/README.md) and the narrow Questbook part for the route you are touching.
 3. If the quest touches a mechanic, check [`mechanics/README.md`](../mechanics/README.md).
 4. Choose the lane first, then the lifecycle state.
 5. Keep the owner split explicit.

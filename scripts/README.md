@@ -15,7 +15,7 @@ topology, hygiene, and shared validators.
 | Center builders | `build_center_entry_map.py` | build compact center-entry surfaces |
 | Center validators | `validate_center_entry_map.py`, `validate_ecosystem.py` | check center and registry contracts |
 | Mechanic scripts | `mechanics/<slug>/scripts/*.py` | mechanic-owned validators and builders called directly |
-| Mechanics validators | `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, `validate_mechanic_readme_cards.py`, `validate_mechanic_artifact_topology.py`, `validate_questbook_lifecycle.py`, `build_questbook_index.py`, `validate_questbook_index.py`, `validate_quest_relations.py` | check mechanic cards, artifact homes, quest lifecycle board, Questbook generated views, relation maps, and generated card index |
+| Mechanics validators | `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, `validate_mechanic_readme_cards.py`, `validate_mechanic_artifact_topology.py`, `validate_questbook_lifecycle.py`, `build_questbook_index.py`, `validate_questbook_index.py`, `validate_quest_relations.py`, `build_ready_owner_routes.py`, `validate_ready_owner_routes.py` | check mechanic cards, artifact homes, quest lifecycle board, Questbook generated views, relation maps, ready owner-route projections, and generated card index |
 | Owner-request validators | `build_owner_request_queue.py`, `validate_owner_request_queue.py`, `validate_generated_owner_request_queue.py`, `validate_owner_request_docs.py` | check center-side owner request packets |
 | Docs thematic validators | `plan_docs_thematic_cleanup.py`, `build_docs_thematic_index.py`, `validate_docs_thematic_*.py` | check docs district cleanup grammar |
 | Link and shape hygiene | `repair_known_link_drifts.py`, `validate_links.py`, `validate_status_vocabulary.py`, `build_link_shape_hygiene_index.py`, `validate_generated_freshness.py`, `validate_hygiene_suite.py` | check local links, status words, generated freshness, and Wave E hygiene mirrors |
@@ -49,6 +49,7 @@ python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python mechanics/questbook/scripts/build_questbook_index.py --check
 python mechanics/questbook/scripts/validate_questbook_index.py
 python mechanics/questbook/scripts/validate_quest_relations.py
+python mechanics/questbook/scripts/validate_questbook_distillation.py
 python scripts/build_mechanic_card_index.py --check
 python scripts/validate_mechanic_card_index.py
 python scripts/build_owner_request_queue.py --check

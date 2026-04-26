@@ -2,13 +2,13 @@
 
 This questbook holds federation-level cross-repo obligations only. It does not absorb repo-local quest detail from sibling repositories.
 
-It is a root index, not a second roadmap. Program direction belongs in [ROADMAP](ROADMAP.md). Quest lifecycle law belongs in [mechanics/questbook/QUESTBOOK_MODEL](mechanics/questbook/docs/QUESTBOOK_MODEL.md). Backing quest files live in lane-first lifecycle directories under [`quests/`](quests/).
+It is a root index, not a second roadmap. Program direction belongs in [ROADMAP](ROADMAP.md). Questbook model law starts in [mechanics/questbook/model-spine](mechanics/questbook/parts/model-spine/README.md), and lifecycle detail lives in [lifecycle-law](mechanics/questbook/parts/lifecycle-law/README.md). Backing quest files live in lane-first lifecycle directories under [`quests/`](quests/).
 
 Top-level `quests/AOA-Q-*` aliases are intentionally absent. The source placement for each quest object is `quests/<lane>/<state>/AOA-Q-*`.
 
 Quest relations are summarized in
 [`questbook_relations`](generated/questbook_relations.min.json) and explained
-in [`quest-relations`](mechanics/questbook/docs/quest-relations.md). A
+in [`relation-shape`](mechanics/questbook/parts/relation-shape/README.md). A
 `sidequest` relation is route visibility, not ownership transfer or closure.
 
 ## Frontier

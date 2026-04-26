@@ -19,8 +19,8 @@ SCHEMA_PATH = REPO_ROOT / "schemas" / "ecosystem-registry.schema.json"
 SUPPORTING_INVENTORY_PATH = REPO_ROOT / "generated" / "federation_supporting_inventory.min.json"
 SUPPORTING_SCHEMA_PATH = REPO_ROOT / "schemas" / "federation-supporting-inventory.schema.json"
 QUESTBOOK_PATH = REPO_ROOT / "QUESTBOOK.md"
-QUESTBOOK_MODEL_PATH = REPO_ROOT / "mechanics" / "questbook" / "docs" / "QUESTBOOK_MODEL.md"
-QUESTBOOK_FIRST_WAVE_PATH = REPO_ROOT / "mechanics" / "questbook" / "docs" / "QUESTBOOK_FIRST_WAVE.md"
+QUESTBOOK_MODEL_PATH = REPO_ROOT / "mechanics" / "questbook" / "parts" / "model-spine" / "README.md"
+QUESTBOOK_FIRST_WAVE_PATH = REPO_ROOT / "mechanics" / "questbook" / "legacy" / "raw" / "QUESTBOOK_FIRST_WAVE.md"
 QUESTS_PATH = REPO_ROOT / "quests"
 REQUIRED_QUEST_IDS = ("AOA-Q-0001", "AOA-Q-0002", "AOA-Q-0003")
 CLOSED_QUEST_STATES = {"done", "dropped"}
@@ -640,12 +640,12 @@ def validate_questbook_surface() -> None:
         validate_dual_vocabulary_generated_payload(generated_payload, schema_payload)
 
     if "ATM10-Agent" in first_wave_text:
-        fail("mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")
+        fail("mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")
 
     required_phrase = "It is a foundation pass, not a new numbered AoA wave."
     if required_phrase not in first_wave_text:
         fail(
-            "mechanics/questbook/docs/QUESTBOOK_FIRST_WAVE.md must state that the contour is not "
+            "mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md must state that the contour is not "
             "a new numbered AoA wave"
         )
 

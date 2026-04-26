@@ -1,0 +1,201 @@
+{
+  "schema_version": "aoa_questbook_parts_registry_v1",
+  "mechanic": "questbook",
+  "canonical_index": "mechanics/questbook/PARTS.md",
+  "parts_index": "mechanics/questbook/parts/README.md",
+  "legacy_bridge": "mechanics/questbook/PROVENANCE.md",
+  "legacy_index": "mechanics/questbook/legacy/INDEX.md",
+  "parts": [
+    {
+      "slug": "model-spine",
+      "title": "Model Spine",
+      "role": "compact Questbook model and source-of-truth router",
+      "readme": "mechanics/questbook/parts/model-spine/README.md",
+      "contract": "mechanics/questbook/parts/model-spine/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/model-spine/VALIDATION.md",
+      "source_surfaces": [
+        "mechanics/questbook/README.md",
+        "mechanics/questbook/DIRECTION.md",
+        "mechanics/questbook/PARTS.md"
+      ],
+      "generated_surfaces": [],
+      "validation_commands": [
+        "python scripts/validate_mechanics_topology.py --mechanic questbook",
+        "python scripts/validate_mechanic_readme_cards.py --mechanic questbook",
+        "python scripts/validate_links.py"
+      ]
+    },
+    {
+      "slug": "public-index",
+      "title": "Public Index",
+      "role": "root public QUESTBOOK.md posture",
+      "readme": "mechanics/questbook/parts/public-index/README.md",
+      "contract": "mechanics/questbook/parts/public-index/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/public-index/VALIDATION.md",
+      "source_surfaces": [
+        "QUESTBOOK.md"
+      ],
+      "generated_surfaces": [],
+      "validation_commands": [
+        "python scripts/validate_ecosystem.py",
+        "python mechanics/questbook/scripts/validate_questbook_lifecycle.py",
+        "python mechanics/questbook/scripts/build_questbook_index.py --check"
+      ]
+    },
+    {
+      "slug": "quest-store",
+      "title": "Quest Store",
+      "role": "lane-first source object store under quests/",
+      "readme": "mechanics/questbook/parts/quest-store/README.md",
+      "contract": "mechanics/questbook/parts/quest-store/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/quest-store/VALIDATION.md",
+      "source_surfaces": [
+        "quests/README.md"
+      ],
+      "generated_surfaces": [],
+      "validation_commands": [
+        "python mechanics/questbook/scripts/validate_questbook_lifecycle.py",
+        "python mechanics/questbook/scripts/build_questbook_index.py --check",
+        "python mechanics/questbook/scripts/validate_questbook_index.py"
+      ]
+    },
+    {
+      "slug": "lifecycle-law",
+      "title": "Lifecycle Law",
+      "role": "states, lanes, promotion, and placement bands",
+      "readme": "mechanics/questbook/parts/lifecycle-law/README.md",
+      "contract": "mechanics/questbook/parts/lifecycle-law/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/lifecycle-law/VALIDATION.md",
+      "source_surfaces": [
+        "mechanics/questbook/parts/model-spine/README.md",
+        "quests/README.md"
+      ],
+      "generated_surfaces": [
+        "generated/questbook_index.min.json",
+        "generated/questbook_frontier.min.json"
+      ],
+      "validation_commands": [
+        "python mechanics/questbook/scripts/validate_questbook_lifecycle.py",
+        "python mechanics/questbook/scripts/build_questbook_index.py --check",
+        "python mechanics/questbook/scripts/validate_questbook_index.py"
+      ]
+    },
+    {
+      "slug": "generated-views",
+      "title": "Generated Views",
+      "role": "compact generated read models and freshness checks",
+      "readme": "mechanics/questbook/parts/generated-views/README.md",
+      "contract": "mechanics/questbook/parts/generated-views/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/generated-views/VALIDATION.md",
+      "source_surfaces": [
+        "quests/README.md"
+      ],
+      "generated_surfaces": [
+        "generated/questbook_index.min.json",
+        "generated/questbook_frontier.min.json",
+        "generated/questbook_relations.min.json"
+      ],
+      "validation_commands": [
+        "python mechanics/questbook/scripts/build_questbook_index.py --check",
+        "python mechanics/questbook/scripts/validate_questbook_index.py",
+        "python mechanics/questbook/scripts/validate_quest_relations.py",
+        "python scripts/validate_generated_freshness.py"
+      ]
+    },
+    {
+      "slug": "relation-shape",
+      "title": "Relation Shape",
+      "role": "cross-quest relation vocabulary and validation",
+      "readme": "mechanics/questbook/parts/relation-shape/README.md",
+      "contract": "mechanics/questbook/parts/relation-shape/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/relation-shape/VALIDATION.md",
+      "source_surfaces": [
+        "quests/README.md"
+      ],
+      "generated_surfaces": [
+        "generated/questbook_relations.min.json"
+      ],
+      "validation_commands": [
+        "python mechanics/questbook/scripts/validate_quest_relations.py",
+        "python mechanics/questbook/scripts/build_questbook_index.py --check"
+      ]
+    },
+    {
+      "slug": "execution-passport",
+      "title": "Execution Passport",
+      "role": "difficulty, risk, control, and delegation vocabulary",
+      "readme": "mechanics/questbook/parts/execution-passport/README.md",
+      "contract": "mechanics/questbook/parts/execution-passport/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/execution-passport/VALIDATION.md",
+      "source_surfaces": [
+        "quests/README.md"
+      ],
+      "generated_surfaces": [],
+      "validation_commands": [
+        "python mechanics/questbook/scripts/validate_questbook_lifecycle.py",
+        "python scripts/validate_links.py"
+      ]
+    },
+    {
+      "slug": "harvest-route",
+      "title": "Harvest Route",
+      "role": "repeated-pattern thresholds and promotion targets",
+      "readme": "mechanics/questbook/parts/harvest-route/README.md",
+      "contract": "mechanics/questbook/parts/harvest-route/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/harvest-route/VALIDATION.md",
+      "source_surfaces": [
+        "mechanics/questbook/DIRECTION.md",
+        "mechanics/questbook/ROADMAP.md"
+      ],
+      "generated_surfaces": [],
+      "validation_commands": [
+        "python scripts/validate_mechanics_topology.py --mechanic questbook",
+        "python scripts/validate_owner_request_queue.py --mechanic questbook",
+        "python scripts/validate_links.py"
+      ]
+    },
+    {
+      "slug": "owner-handoffs",
+      "title": "Owner Handoffs",
+      "role": "center-side request packets to stronger owners",
+      "readme": "mechanics/questbook/parts/owner-handoffs/README.md",
+      "contract": "mechanics/questbook/parts/owner-handoffs/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/owner-handoffs/VALIDATION.md",
+      "source_surfaces": [
+        "mechanics/questbook/OWNER_REQUESTS.md",
+        "mechanics/owner-request-queue.json"
+      ],
+      "generated_surfaces": [
+        "generated/owner_request_queue.min.json"
+      ],
+      "validation_commands": [
+        "python scripts/validate_owner_request_queue.py --mechanic questbook",
+        "python scripts/build_owner_request_queue.py --check",
+        "python scripts/validate_generated_owner_request_queue.py",
+        "python scripts/validate_owner_request_docs.py --mechanic questbook"
+      ]
+    },
+    {
+      "slug": "lane-owner-routes",
+      "title": "Lane Owner Routes",
+      "role": "ready quest to owner-request registry maps",
+      "readme": "mechanics/questbook/parts/lane-owner-routes/README.md",
+      "contract": "mechanics/questbook/parts/lane-owner-routes/CONTRACT.md",
+      "validation": "mechanics/questbook/parts/lane-owner-routes/VALIDATION.md",
+      "source_surfaces": [
+        "mechanics/questbook/parts/lane-owner-routes/experience-ready-owner-routes.json",
+        "mechanics/owner-request-queue.json",
+        "quests/experience/ready"
+      ],
+      "generated_surfaces": [
+        "mechanics/questbook/parts/lane-owner-routes/experience-ready-owner-routes.md"
+      ],
+      "validation_commands": [
+        "python mechanics/questbook/scripts/build_ready_owner_routes.py --check",
+        "python mechanics/questbook/scripts/validate_ready_owner_routes.py",
+        "python scripts/validate_owner_request_queue.py --mechanic experience",
+        "python scripts/validate_owner_request_docs.py --mechanic experience"
+      ]
+    }
+  ]
+}

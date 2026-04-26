@@ -54,7 +54,14 @@ Current scripts include:
   `mechanics/questbook/scripts/build_questbook_index.py`, and
   `mechanics/questbook/scripts/validate_questbook_index.py` for mechanic artifact homes, the quest
   lifecycle board, and Questbook read models; add
-  `mechanics/questbook/scripts/validate_quest_relations.py` when quest relation shape changes
+  `mechanics/questbook/scripts/validate_quest_relations.py` when quest
+  relation shape changes, and
+  `mechanics/questbook/scripts/build_ready_owner_routes.py --check` plus
+  `mechanics/questbook/scripts/validate_ready_owner_routes.py` when ready
+  owner-route registries change; run
+  `mechanics/questbook/scripts/validate_questbook_distillation.py` when
+  Questbook parts, contracts, validation files, registry entries, or legacy
+  provenance routes change
 - `build_owner_request_queue.py`, `validate_owner_request_queue.py`,
   `validate_generated_owner_request_queue.py`, and
   `validate_owner_request_docs.py` for center-side owner request packets

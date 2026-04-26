@@ -67,6 +67,7 @@ METHOD_GROWTH_PREFIXES = (
     "test_validate_wave4_kernel_automation",
 )
 QUESTBOOK_PREFIXES = (
+    "build_ready_owner_routes",
     "build_questbook",
     "questbook_",
     "test_questbook",

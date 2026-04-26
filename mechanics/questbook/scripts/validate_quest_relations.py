@@ -19,7 +19,7 @@ from questbook_lifecycle_common import (
 
 
 BUILDER_PATH = REPO_ROOT / "mechanics" / "questbook" / "scripts" / "build_questbook_index.py"
-RELATION_MODEL_PATH = REPO_ROOT / "mechanics" / "questbook" / "docs" / "quest-relations.md"
+RELATION_MODEL_PATH = REPO_ROOT / "mechanics" / "questbook" / "parts" / "relation-shape" / "README.md"
 
 
 def stable_json(payload: object) -> str:

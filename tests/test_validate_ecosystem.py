@@ -33,8 +33,8 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         self.temp_dir = Path(tempfile.mkdtemp(prefix="aoa_center_questbook_"))
         self.repo_root = self.temp_dir / "Agents-of-Abyss"
         self.questbook_path = self.repo_root / "QUESTBOOK.md"
-        self.questbook_model_path = self.repo_root / "mechanics" / "questbook" / "docs" / "QUESTBOOK_MODEL.md"
-        self.first_wave_path = self.repo_root / "mechanics" / "questbook" / "docs" / "QUESTBOOK_FIRST_WAVE.md"
+        self.questbook_model_path = self.repo_root / "mechanics" / "questbook" / "parts" / "model-spine" / "README.md"
+        self.first_wave_path = self.repo_root / "mechanics" / "questbook" / "legacy" / "raw" / "QUESTBOOK_FIRST_WAVE.md"
         self.quests_dir = self.repo_root / "quests"
         self.patches = (
             patch.object(validate_ecosystem, "REPO_ROOT", self.repo_root),

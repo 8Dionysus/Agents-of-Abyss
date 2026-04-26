@@ -135,7 +135,7 @@ A request packet is not owner acceptance. Owner repositories land operational tr
 | Experience | Which staged experience contract, office/service posture, seed intake, duel pressure, continuity loom, or runtime boundary is relevant? | planted center contracts through v2.0 | [Experience](experience/README.md) | live workspace runtime or owner-local activation |
 | Agon | Which pressure, lawful move, duel, arena, packet, verdict, retention, rank, school, canon, or threshold boundary is relevant? | center-owned pre-protocol law and candidate grammar | [Agon](agon/README.md) | live arena execution or assistant contestant authority |
 | Antifragility and subtraction | What stress, degraded mode, evidence, pruning, or anti-authority posture applies? | center doctrine | [ANTIFRAGILITY](antifragility/docs/ANTIFRAGILITY.md), [VIA_NEGATIVA](antifragility/docs/VIA_NEGATIVA.md) | one-score health or deletion theater |
-| Questbook | What obligation must survive the current diff as a public tracked follow-up? | public obligation model | [QUESTBOOK](../QUESTBOOK.md), [QUESTBOOK_MODEL](questbook/docs/QUESTBOOK_MODEL.md) | second roadmap or private scratchpad |
+| Questbook | What obligation must survive the current diff as a public tracked follow-up? | public obligation model | [QUESTBOOK](../QUESTBOOK.md), [model-spine](questbook/parts/model-spine/README.md) | second roadmap or private scratchpad |
 | RPG reflection | How can progression, questlines, campaigns, roles, and feats be read without rewriting ownership? | adjunct reflection layer | [RPG_LAYER_MODEL](rpg/docs/RPG_LAYER_MODEL.md), [RPG_ARCHITECTURE_RFC](rpg/docs/RPG_ARCHITECTURE_RFC.md) | hidden ontology or runtime ledger |
 | ToS bridge, witness, compost | How can AoA support ToS without authoring ToS meaning? | support doctrine and seams | [COUNTERPART_BRIDGE](tos-bridge/docs/COUNTERPART_BRIDGE.md), [WITNESS_COMPOST](tos-bridge/docs/WITNESS_COMPOST.md) | AoA-authored ToS canon |
 | Release, audit, public support | Which claims can the center publicly support? | release and CI posture | [PUBLIC_SUPPORT_POSTURE](release-support/docs/PUBLIC_SUPPORT_POSTURE.md), [FEDERATION_RELEASE_PROTOCOL](release-support/docs/FEDERATION_RELEASE_PROTOCOL.md), [RELEASING](release-support/docs/RELEASING.md) | unverified public claim |
@@ -383,8 +383,8 @@ Quest surfaces:
 
 - [QUESTBOOK](../QUESTBOOK.md): public tracked surface for deferred obligations.
 - [`quests/`](../quests/): lane-first lifecycle item store for center, Agon, Experience, and future mechanic follow-through work.
-- [QUESTBOOK_MODEL](questbook/docs/QUESTBOOK_MODEL.md): quest lifecycle, placement bands, risk, difficulty, and harvest rules.
-- [QUESTBOOK_FIRST_WAVE](questbook/docs/QUESTBOOK_FIRST_WAVE.md): first-wave guardrails.
+- [Questbook model spine](questbook/parts/model-spine/README.md): Questbook spine and route map to lifecycle, execution-passport, harvest, relation, and owner-route parts.
+- [Questbook legacy first wave](questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md): preserved first-contour guardrails.
 
 RPG reflection surfaces:
 
