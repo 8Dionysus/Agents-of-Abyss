@@ -54,6 +54,24 @@ def test_active_docs_reject_direct_raw_legacy_links(monkeypatch) -> None:
     assert any("legacy/raw" in problem for problem in problems)
 
 
+def test_validation_commands_are_centralized(monkeypatch) -> None:
+    module = load_validator()
+    original_read = module.read
+    target = ROOT / "mechanics" / "questbook" / "parts" / "README.md"
+
+    def fake_read(path: Path) -> str:
+        if path == target:
+            return "## Validation\n\n```bash\npython scripts/validate_links.py\n```\n"
+        return original_read(path)
+
+    monkeypatch.setattr(module, "read", fake_read)
+    problems: list[str] = []
+
+    module.validate_validation_commands_are_centralized(problems)
+
+    assert any("must route validation commands" in problem for problem in problems)
+
+
 def test_legacy_index_maps_raw_sources_to_active_parts() -> None:
     module = load_validator()
     problems: list[str] = []

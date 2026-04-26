@@ -40,7 +40,4 @@ exists, the Markdown table is a projection and must not be edited by hand.
 
 ## Validation
 
-```bash
-python mechanics/questbook/scripts/build_ready_owner_routes.py --check
-python mechanics/questbook/scripts/validate_ready_owner_routes.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../../AGENTS.md#validation).

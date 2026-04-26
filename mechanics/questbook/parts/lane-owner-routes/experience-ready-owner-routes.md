@@ -79,7 +79,4 @@ or a replacement for `mechanics/experience/OWNER_REQUESTS.md`.
 
 ## Validation
 
-```bash
-python mechanics/questbook/scripts/build_ready_owner_routes.py --check
-python mechanics/questbook/scripts/validate_ready_owner_routes.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../../AGENTS.md#validation).

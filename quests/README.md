@@ -2,7 +2,7 @@
 
 This directory holds tracked AoA obligations that should survive the current diff.
 
-It is not a private scratchpad and not a second roadmap. Program direction belongs in [`ROADMAP.md`](../ROADMAP.md). The root quest index is [`QUESTBOOK.md`](../QUESTBOOK.md). Questbook model law starts in [`model-spine`](../mechanics/questbook/parts/model-spine/README.md), and lifecycle detail lives in [`lifecycle-law`](../mechanics/questbook/parts/lifecycle-law/README.md).
+It is not a private scratchpad and not a second roadmap. Program direction belongs in [`ROADMAP.md`](../ROADMAP.md). The root quest index is [`QUESTBOOK.md`](../QUESTBOOK.md). Questbook model law starts in [`model-spine`](../mechanics/questbook/parts/model-spine/README.md), source reviewability lives in [`source-contract`](../mechanics/questbook/parts/source-contract/README.md), and lifecycle detail lives in [`lifecycle-law`](../mechanics/questbook/parts/lifecycle-law/README.md).
 
 Quest sources live in lane-first lifecycle directories. Top-level `AOA-Q-*` aliases are intentionally absent; route directly to `quests/<lane>/<state>/AOA-Q-*`.
 
@@ -71,7 +71,7 @@ Each lane may contain:
 ## Before Editing
 
 1. Check [`QUESTBOOK.md`](../QUESTBOOK.md).
-2. Check [`mechanics/questbook/parts/model-spine/README.md`](../mechanics/questbook/parts/model-spine/README.md) and the narrow Questbook part for the route you are touching.
+2. Check [`mechanics/questbook/parts/model-spine/README.md`](../mechanics/questbook/parts/model-spine/README.md), [`source-contract`](../mechanics/questbook/parts/source-contract/README.md), and the narrow Questbook part for the route you are touching.
 3. If the quest touches a mechanic, check [`mechanics/README.md`](../mechanics/README.md).
 4. Choose the lane first, then the lifecycle state.
 5. Keep the owner split explicit.
@@ -79,9 +79,4 @@ Each lane may contain:
 
 ## Validation
 
-```bash
-python mechanics/questbook/scripts/validate_questbook_lifecycle.py
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-python mechanics/questbook/scripts/validate_quest_relations.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../mechanics/questbook/AGENTS.md#validation).

@@ -10,6 +10,7 @@ their own obligation meaning and acceptance evidence.
 - lane README route note
 - source quest object
 - lifecycle state move
+- source contract marker for strict Markdown quests
 
 ## Stop-lines
 
@@ -17,3 +18,5 @@ their own obligation meaning and acceptance evidence.
 - Do not create root lifecycle directories such as `quests/ready/`.
 - Do not move owner-local task truth into AoA center unless it is a federation
   obligation.
+- Do not create Markdown quest sources without
+  `source_contract: quest_markdown_contract_v1`.

@@ -1,5 +1,11 @@
 # AOA-Q-EXP-0094: Stay Order Enforcement
 
+source_contract: quest_markdown_contract_v1
+
+## Quest
+
+Track the obligation named by this quest and route it through the reviewability sections below.
+
 ## Aim
 
 Land the v0.9 constitution-runtime seam for `stay-order-enforcement`.
@@ -11,3 +17,19 @@ Land the v0.9 constitution-runtime seam for `stay-order-enforcement`.
 - replay/audit surface exists where relevant;
 - no direct ToS runtime write;
 - no Codex sovereign action.
+
+## Owner Route
+
+Lane/state defaults: [experience done defaults](../README.md#done-defaults).
+
+## Next Action
+
+Lane/state defaults: [experience done defaults](../README.md#done-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [experience done defaults](../README.md#done-defaults).
+
+## Stop-lines
+
+Lane/state defaults: [experience done defaults](../README.md#done-defaults).

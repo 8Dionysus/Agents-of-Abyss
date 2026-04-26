@@ -62,6 +62,7 @@ The center must not:
 |---|---|
 | Human index | [`QUESTBOOK.md`](../../../../QUESTBOOK.md) |
 | Source item store | [`quests/`](../../../../quests/) |
+| Source object reviewability | [`source-contract`](../source-contract/README.md) |
 | Lifecycle, lanes, promotion, and bands | [`lifecycle-law`](../lifecycle-law/README.md) |
 | Relation vocabulary and relation read model | [`relation-shape`](../relation-shape/README.md) |
 | Difficulty, risk, control, and delegation | [`execution-passport`](../execution-passport/README.md) |
@@ -100,11 +101,4 @@ repo-specific operator intents such as `open_quest_book`.
 
 ## Validation
 
-```bash
-python mechanics/questbook/scripts/validate_questbook_lifecycle.py
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-python mechanics/questbook/scripts/validate_quest_relations.py
-python mechanics/questbook/scripts/build_ready_owner_routes.py --check
-python mechanics/questbook/scripts/validate_ready_owner_routes.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../../AGENTS.md#validation).

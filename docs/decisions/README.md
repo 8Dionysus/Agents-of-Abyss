@@ -14,6 +14,7 @@ Keep this district reviewable and labeled. A reader or agent should know whether
 | [`2026-04-10-federation-release-contract`](2026-04-10-federation-release-contract.md) | decision record for federation release contract |
 | [`2026-04-11-growth-refinery-lineage-route`](2026-04-11-growth-refinery-lineage-route.md) | decision record for growth refinery lineage routing |
 | [`2026-04-26-questbook-model-spine-and-route-registries`](2026-04-26-questbook-model-spine-and-route-registries.md) | decision record for Questbook model split and registry-backed route tables |
+| [`2026-04-26-questbook-source-contract-full-distillation`](2026-04-26-questbook-source-contract-full-distillation.md) | decision record for promoting Markdown quest sources to the strict source contract |
 
 ## Must not claim
 

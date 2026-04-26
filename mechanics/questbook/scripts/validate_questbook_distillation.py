@@ -28,6 +28,8 @@ PROVENANCE_PATH = QUESTBOOK_ROOT / "PROVENANCE.md"
 LEGACY_INDEX_PATH = LEGACY_ROOT / "INDEX.md"
 PARTS_INDEX_PATH = QUESTBOOK_ROOT / "PARTS.md"
 PARTS_README_PATH = PARTS_ROOT / "README.md"
+QUESTBOOK_AGENTS_PATH = QUESTBOOK_ROOT / "AGENTS.md"
+QUESTS_ROOT = REPO_ROOT / "quests"
 
 PART_FILE_NAMES = ("README.md", "CONTRACT.md", "VALIDATION.md")
 CONTRACT_HEADINGS = ("## Owner Boundary", "## Allowed Outputs", "## Stop-lines")
@@ -162,19 +164,16 @@ def validate_part_files(part: dict[str, Any], selected: set[str] | None, problem
                 if heading not in text:
                     problems.append(f"{rel(path)} must include {heading}")
         elif filename == "VALIDATION.md":
-            if "```bash" not in text:
-                problems.append(f"{rel(path)} must include a bash validation block")
-            if "\npython " not in text:
-                problems.append(f"{rel(path)} must include at least one python validation command")
+            if "AGENTS.md#validation" not in text:
+                problems.append(f"{rel(path)} must route validation through Questbook AGENTS.md")
 
-    validation_path = part_dir / "VALIDATION.md"
-    if validation_path.is_file():
-        validation_text = read(validation_path)
+    if QUESTBOOK_AGENTS_PATH.is_file():
+        agents_text = read(QUESTBOOK_AGENTS_PATH)
         commands = part.get("validation_commands", [])
         if isinstance(commands, list):
             for command in commands:
-                if isinstance(command, str) and command not in validation_text:
-                    problems.append(f"{rel(validation_path)} missing registry command: {command}")
+                if isinstance(command, str) and command not in agents_text:
+                    problems.append(f"{rel(QUESTBOOK_AGENTS_PATH)} missing registry command: {command}")
 
 
 def validate_command_targets(part: dict[str, Any], problems: list[str]) -> None:
@@ -231,6 +230,22 @@ def active_markdown_paths() -> list[Path]:
     return [path for path in paths if LEGACY_ROOT not in path.parents]
 
 
+def questbook_markdown_paths() -> list[Path]:
+    paths = sorted(QUESTBOOK_ROOT.rglob("*.md"))
+    if QUESTS_ROOT.is_dir():
+        paths.extend(sorted(QUESTS_ROOT.rglob("*.md")))
+    return paths
+
+
+def validate_validation_commands_are_centralized(problems: list[str]) -> None:
+    for path in questbook_markdown_paths():
+        if path == QUESTBOOK_AGENTS_PATH:
+            continue
+        text = read(path)
+        if "```bash" in text:
+            problems.append(f"{rel(path)} must route validation commands through {rel(QUESTBOOK_AGENTS_PATH)}")
+
+
 def validate_no_direct_raw_links(problems: list[str]) -> None:
     for path in active_markdown_paths():
         text = read(path)
@@ -284,6 +299,7 @@ def validate(selected: set[str] | None = None) -> list[str]:
         validate_command_targets(part, problems)
     validate_indexes(parts, problems)
     validate_no_direct_raw_links(problems)
+    validate_validation_commands_are_centralized(problems)
     validate_provenance_bridge(problems)
     validate_legacy_index(problems)
     if selected:

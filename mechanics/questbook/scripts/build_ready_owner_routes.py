@@ -89,10 +89,8 @@ def render_markdown(registry: dict[str, Any], output: Path = DEFAULT_OUTPUT) -> 
             "",
             "## Validation",
             "",
-            "```bash",
-            "python mechanics/questbook/scripts/build_ready_owner_routes.py --check",
-            "python mechanics/questbook/scripts/validate_ready_owner_routes.py",
-            "```",
+            "Use the central Questbook validation matrix in "
+            "[Questbook AGENTS](../../AGENTS.md#validation).",
             "",
         ]
     )

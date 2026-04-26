@@ -1,5 +1,11 @@
 # AOA-Q-EXP-0083: adoption-dashboard
 
+source_contract: quest_markdown_contract_v1
+
+## Quest
+
+Track the obligation named by this quest and route it through the reviewability sections below.
+
 ## Aim
 
 Land v0.7 adoption forge surface `adoption-dashboard`.
@@ -15,3 +21,19 @@ Land v0.7 adoption forge surface `adoption-dashboard`.
 ## Exit
 
 Quest exits when the adoption path either produces a bounded owner-local patch or an explicit blocked/quarantined decision.
+
+## Owner Route
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).
+
+## Next Action
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).
+
+## Stop-lines
+
+Lane/state defaults: [experience ready defaults](../README.md#ready-defaults).

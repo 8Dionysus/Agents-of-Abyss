@@ -49,23 +49,7 @@ quest item placement, generated read models, and obligation lifecycle language.
 
 ### Validation
 
-```bash
-python scripts/validate_mechanics_topology.py --mechanic questbook
-python mechanics/questbook/scripts/validate_questbook_lifecycle.py
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-python mechanics/questbook/scripts/validate_quest_relations.py
-python mechanics/questbook/scripts/build_ready_owner_routes.py --check
-python mechanics/questbook/scripts/validate_ready_owner_routes.py
-python mechanics/questbook/scripts/validate_questbook_distillation.py
-python scripts/validate_mechanic_readme_cards.py --mechanic questbook
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic questbook
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic questbook
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](AGENTS.md#validation).
 
 ### Next route
 
@@ -77,6 +61,8 @@ python scripts/validate_owner_request_docs.py --mechanic questbook
 ## Start Here
 
 - Model spine: [`parts/model-spine`](parts/model-spine/README.md)
+- Source contract:
+  [`parts/source-contract`](parts/source-contract/README.md)
 - Lifecycle law: [`parts/lifecycle-law`](parts/lifecycle-law/README.md)
 - Execution passport:
   [`parts/execution-passport`](parts/execution-passport/README.md)

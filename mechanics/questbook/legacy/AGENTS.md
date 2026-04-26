@@ -27,12 +27,7 @@ without indexing them and naming the active part they pressure.
 
 Run:
 
-```bash
-python mechanics/questbook/scripts/validate_questbook_distillation.py
-python scripts/validate_mechanic_landing_logs.py --mechanic questbook
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-```
+Use the central Questbook validation matrix in [Questbook AGENTS](../AGENTS.md#validation).
 
 ## Closeout
 
