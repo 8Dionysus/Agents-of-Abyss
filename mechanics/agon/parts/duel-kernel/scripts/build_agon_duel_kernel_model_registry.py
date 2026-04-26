@@ -19,7 +19,7 @@ def build():
     kernels = data.get('kernels', [])
     return {
         'registry_id': data['registry_id'],
-        'wave': data.get('wave', 'XII'),
+        'lineage_ref': data.get('lineage_ref', 'duel-kernel'),
         'count': len(kernels),
         'runtime_posture': data.get('runtime_posture'),
         'kernels': kernels,

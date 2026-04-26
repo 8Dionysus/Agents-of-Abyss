@@ -8,7 +8,7 @@
     "schema_version",
     "generated_by",
     "source",
-    "wave",
+    "lineage_ref",
     "status",
     "counts",
     "non_goals",
@@ -24,8 +24,8 @@
     "source": {
       "type": "string"
     },
-    "wave": {
-      "const": "III"
+    "lineage_ref": {
+      "const": "lawful-move-grammar"
     },
     "status": {
       "const": "pre_protocol_lawful_move_language"

@@ -111,7 +111,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -224,7 +224,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -355,7 +355,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -468,7 +468,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -599,7 +599,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -712,7 +712,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -843,7 +843,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -974,7 +974,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -1105,7 +1105,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -1218,7 +1218,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -1331,7 +1331,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -1462,7 +1462,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -1593,7 +1593,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -1688,7 +1688,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -1801,7 +1801,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -1932,7 +1932,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -2045,7 +2045,7 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     },
     {
       "assistant_boundary": "assistant_service_actor may support only service-compatible clarity, receipt, escalation, and boundary work; no contestant, judge, closer, summon initiator, scar writer, or ToS promotion authority is granted",
@@ -2158,14 +2158,14 @@
         "must not promote to Tree-of-Sophia",
         "must not let assistants become hidden contestants"
       ],
-      "wave": "IV"
+      "lineage_ref": "owner-binding"
     }
   ],
   "schema_version": "agon-move-owner-bindings.seed/0.1",
-  "scope": "bind Wave III lawful moves to owner repos and future candidate surfaces without creating live protocol behavior",
+  "scope": "bind lawful-move-grammar route lawful moves to owner repos and future candidate surfaces without creating live protocol behavior",
   "source_move_registry": "mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json",
   "source_move_seed": "mechanics/agon/parts/lawful-move-grammar/config/agon_lawful_moves.seed.json",
   "status": "pre_protocol_owner_binding_seed",
   "title": "Agon move owner binding",
-  "wave": "IV"
+  "lineage_ref": "owner-binding"
 }

@@ -192,5 +192,5 @@
     "no_runtime_substrate_claim"
   ],
   "target_repo": "aoa-playbooks",
-  "wave": "VI"
+  "lineage_ref": "trial-handoff"
 }

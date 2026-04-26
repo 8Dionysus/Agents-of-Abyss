@@ -228,7 +228,7 @@
       },
       "packet_class": "move",
       "packet_type": "agon.move_declaration",
-      "purpose": "Declare an intended lawful move using the Wave III move vocabulary without executing it as a live move.",
+      "purpose": "Declare an intended lawful move using the lawful-move-grammar route move vocabulary without executing it as a live move.",
       "recommended_previous_surfaces": [
         "mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json",
         "mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json"
@@ -508,7 +508,7 @@
         "packet_refs",
         "remaining_open_issues",
         "blocked_authorities",
-        "recommended_next_wave_owner"
+        "recommended_next_owner"
       ]
     },
     {
@@ -543,9 +543,9 @@
       ]
     }
   ],
-  "previous_wave_required": "Wave VIII Arena Session Model",
+  "previous_route_required": "packet-arena route Arena Session Model",
   "primary_purpose": "Define sealed commit and state packet grammar for future arena sessions without creating runtime sessions or verdict authority.",
-  "registry_id": "agon.state_packet_models.wave9",
+  "registry_id": "agon.state_packet_models.registry.v1",
   "runtime_effect": "none",
   "status": "seeded_pre_protocol_packet_model",
   "stop_lines": [
@@ -561,7 +561,7 @@
     "no_assistant_contestant_drift",
     "no_center_takeover_of_owner_truth"
   ],
-  "title": "Agon Wave IX state packet models",
+  "title": "Agon state-packet route state packet models",
   "version": "0.1.0",
-  "wave": "IX"
+  "lineage_ref": "state-packets"
 }

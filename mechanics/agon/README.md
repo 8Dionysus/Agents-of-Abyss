@@ -117,9 +117,10 @@ until the stronger owner lands the slice and proof routes are satisfied.
 ## Source provenance
 
 Use [PROVENANCE](PROVENANCE.md) only when auditing how detailed source-docs,
-wave notes, handoffs, generated capsules, or model families feed the active
-parts. Use [artifact-map](artifact-map.json) only when auditing where old flat
-technical artifact paths landed. The active route stays on the part map above.
+source contours, handoffs, generated capsules, or model families feed the
+active parts. Use [artifact-map](artifact-map.json) only when auditing where old
+flat technical artifact paths landed. The active route stays on the part map
+above.
 
 ## Owner boundary
 

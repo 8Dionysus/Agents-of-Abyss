@@ -18,11 +18,9 @@ READINESS_PATH = REPO_ROOT / "mechanics" / "agon" / "parts" / "imposition-readin
 SCHEMA_REF = "mechanics/agon/parts/imposition-readiness/schemas/agon-imposition-readiness.schema.json"
 
 AUTHORITY_REFS = (
-    "mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md",
-    "mechanics/agon/legacy/raw/AGON_SURVIVAL_CRITERIA.md",
-    "mechanics/agon/legacy/raw/AGON_DOUBT_AUDIT.md",
-    "mechanics/agon/legacy/raw/PRE_AGON_BASELINE.md",
-    "mechanics/agon/legacy/raw/AGON_WAVE0_LANDING.md",
+    "mechanics/agon/PROVENANCE.md",
+    "mechanics/agon/PARTS.md",
+    "mechanics/agon/OWNER_REQUESTS.md",
 )
 
 BASELINE_REFS = (
@@ -32,7 +30,7 @@ BASELINE_REFS = (
     "docs/LAYERS.md",
     "docs/FEDERATION_RULES.md",
     "mechanics/antifragility/docs/ANTI_AUTHORITY_RULES.md",
-    "mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md",
+    "mechanics/agon/DIRECTION.md",
     "ROADMAP.md",
 )
 
@@ -90,90 +88,90 @@ OWNER_HANDOFFS: tuple[dict[str, str], ...] = (
         "concern": "Agonic actor form and civil/service assistant split",
         "owner": "aoa-agents",
         "boundary": "Own role-facing actor form, kind split, office posture, refusal posture, and eligibility; do not own arena protocol, scars, verdicts, runtime packets, or ToS promotion.",
-        "next_wave": "Wave I and Wave II rechartering",
+        "next_route": "agonic-actor-recharter route and assistant-civil-recharter route rechartering",
     },
     {
         "concern": "Reusable pressure-handling practice",
         "owner": "aoa-techniques",
         "boundary": "Own reusable practice patterns only; do not define lawful arena sessions.",
-        "next_wave": "Wave III language of lawful moves input",
+        "next_route": "lawful-move-grammar route language of lawful moves input",
     },
     {
         "concern": "Bounded executable moves",
         "owner": "aoa-skills",
         "boundary": "Own execution workflows only; admissibility and protocol law remain center-owned.",
-        "next_wave": "Wave III language of lawful moves input",
+        "next_route": "lawful-move-grammar route language of lawful moves input",
     },
     {
         "concern": "Arena entry detection",
         "owner": "aoa-routing",
         "boundary": "Own thin gates and next-hop hints; do not judge truth or own session lifecycle.",
-        "next_wave": "After actor formation and protocol kernel",
+        "next_route": "After actor formation and protocol kernel",
     },
     {
         "concern": "Trial rituals and early mechanical campaigns",
         "owner": "aoa-playbooks",
         "boundary": "Own recurring scenario choreography; do not become arena sovereignty.",
-        "next_wave": "After protocol kernel and lawful moves",
+        "next_route": "After protocol kernel and lawful moves",
     },
     {
         "concern": "Session verdicts and breach checks",
         "owner": "aoa-evals",
         "boundary": "Own proof and bounded verdict surfaces; do not become readiness government.",
-        "next_wave": "After center protocol kernel",
+        "next_route": "After center protocol kernel",
     },
     {
         "concern": "Scars, delta history, and retention recall",
         "owner": "aoa-memo",
         "boundary": "Own memory truth; do not certify present health or proof.",
-        "next_wave": "After center protocol kernel and eval verdict surface",
+        "next_route": "After center protocol kernel and eval verdict surface",
     },
     {
         "concern": "Derived Agon movement summaries",
         "owner": "aoa-stats",
         "boundary": "Own derived observability; do not become score authority or judge.",
-        "next_wave": "After proof and memory receipts exist",
+        "next_route": "After proof and memory receipts exist",
     },
     {
         "concern": "Derived survivor structures",
         "owner": "aoa-kag",
         "boundary": "Own derived lifts only; do not replace source meaning or ToS canon.",
-        "next_wave": "After retention and proof-backed survivor candidates exist",
+        "next_route": "After retention and proof-backed survivor candidates exist",
     },
     {
         "concern": "Typed helper seams and control-plane support",
         "owner": "aoa-sdk",
         "boundary": "Support protocol consumption only after protocol surfaces exist; do not hide policy in helpers.",
-        "next_wave": "After protocol kernel is stable",
+        "next_route": "After protocol kernel is stable",
     },
     {
         "concern": "Durable runtime body",
         "owner": "abyss-stack",
         "boundary": "Run services only after law, proof, memory, routing, and persistence contracts exist.",
-        "next_wave": "Late runtime wave",
+        "next_route": "Only after law, proof, memory, routing, and persistence contracts exist",
     },
     {
         "concern": "Slow canonization",
         "owner": "Tree-of-Sophia",
         "boundary": "Own source-first canonization; no direct arena write path.",
-        "next_wave": "Only after memo, eval, KAG, and ToS-owned review",
+        "next_route": "Only after memo, eval, KAG, and ToS-owned review",
     },
 )
 
 STOP_LINES = (
-    "Do not claim a live Agon runtime in Wave 0.",
+    "Do not claim a live Agon runtime in imposition-readiness route.",
     "Do not create a new Agon-of-Abyss sibling repository.",
-    "Do not add arena session, lawful move, contradiction ledger, verdict, scar, or retention schemas in Wave 0.",
+    "Do not add arena session, lawful move, contradiction ledger, verdict, scar, or retention schemas in imposition-readiness route.",
     "Do not treat release-clean as Agon-ready.",
     "Do not let assistants become hidden contestants.",
     "Do not let stats, evals, memo, routing, SDK, runtime, or KAG become sovereign over Agon.",
     "Do not write directly from arena outcomes into Tree-of-Sophia canon.",
 )
 
-NEXT_ALLOWED_WAVES = (
-    "Wave I: Agonic Actor Rechartering in aoa-agents",
-    "Wave II: Assistant Civil Rechartering in aoa-agents",
-    "Wave II.5: Formation Trial before lawful move language",
+NEXT_ALLOWED_ROUTES = (
+    "agonic-actor-recharter route: Agonic Actor Rechartering in aoa-agents",
+    "assistant-civil-recharter route: Assistant Civil Rechartering in aoa-agents",
+    "formation-trial route: Formation Trial before lawful move language",
 )
 
 VERDICTS = ("survive", "recharter", "defer", "prune", "quarantine")
@@ -201,7 +199,7 @@ def build_payload() -> dict[str, Any]:
         "owner_handoffs": [dict(handoff) for handoff in OWNER_HANDOFFS],
         "stop_lines": list(STOP_LINES),
         "validation_refs": list(VALIDATION_REFS),
-        "next_allowed_waves": list(NEXT_ALLOWED_WAVES),
+        "next_allowed_routes": list(NEXT_ALLOWED_ROUTES),
     }
     validate_payload(payload, check_refs=False)
     return payload
@@ -225,7 +223,7 @@ def validate_payload(payload: dict[str, Any], *, check_refs: bool) -> None:
         "owner_handoffs",
         "stop_lines",
         "validation_refs",
-        "next_allowed_waves",
+        "next_allowed_routes",
     }
     missing = sorted(required - set(payload))
     if missing:
@@ -241,7 +239,7 @@ def validate_payload(payload: dict[str, Any], *, check_refs: bool) -> None:
     if set(payload["verdicts"]) != set(VERDICTS):
         raise ValueError("verdicts must contain exactly the five Agon survival verdicts")
     if len(payload["survival_axes"]) < 8:
-        raise ValueError("survival_axes must contain the Wave 0 survival lens")
+        raise ValueError("survival_axes must contain the imposition-readiness route survival lens")
     if len(payload["owner_handoffs"]) < 10:
         raise ValueError("owner_handoffs must name the federation owners affected by Agon")
     if check_refs:

@@ -19,13 +19,13 @@
     "target_repo": {
       "const": "aoa-playbooks"
     },
-    "wave": {
-      "const": "VI"
+    "lineage_ref": {
+      "const": "trial-handoff"
     }
   },
   "required": [
     "schema_version",
-    "wave",
+    "lineage_ref",
     "target_repo",
     "requested_trial_playbooks",
     "stop_lines",

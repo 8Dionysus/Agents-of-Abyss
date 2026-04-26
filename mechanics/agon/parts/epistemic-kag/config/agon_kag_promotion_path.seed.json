@@ -63,7 +63,7 @@
         "no_stats_as_promotion_authority",
         "no_eval_as_promotion_authority"
       ],
-      "wave": "XVII"
+      "lineage_ref": "kag-promotion-path"
     },
     {
       "assistant_contestant_allowed": false,
@@ -128,7 +128,7 @@
         "no_stats_as_promotion_authority",
         "no_eval_as_promotion_authority"
       ],
-      "wave": "XVII"
+      "lineage_ref": "kag-promotion-path"
     },
     {
       "assistant_contestant_allowed": false,
@@ -192,7 +192,7 @@
         "no_stats_as_promotion_authority",
         "no_eval_as_promotion_authority"
       ],
-      "wave": "XVII"
+      "lineage_ref": "kag-promotion-path"
     },
     {
       "assistant_contestant_allowed": false,
@@ -256,7 +256,7 @@
         "no_stats_as_promotion_authority",
         "no_eval_as_promotion_authority"
       ],
-      "wave": "XVII"
+      "lineage_ref": "kag-promotion-path"
     },
     {
       "assistant_contestant_allowed": false,
@@ -320,7 +320,7 @@
         "no_stats_as_promotion_authority",
         "no_eval_as_promotion_authority"
       ],
-      "wave": "XVII"
+      "lineage_ref": "kag-promotion-path"
     },
     {
       "assistant_contestant_allowed": false,
@@ -384,7 +384,7 @@
         "no_stats_as_promotion_authority",
         "no_eval_as_promotion_authority"
       ],
-      "wave": "XVII"
+      "lineage_ref": "kag-promotion-path"
     },
     {
       "assistant_contestant_allowed": false,
@@ -421,7 +421,7 @@
         "recurrence_or_retention_support"
       ],
       "promotion_status": "candidate_only",
-      "purpose": "Boundary that KAG candidates are not Tree of Sophia candidates until a separate Sophian threshold wave.",
+      "purpose": "Boundary that KAG candidates are not Tree of Sophia candidates until a separate Sophian-threshold route.",
       "required_inputs": [
         "kag_candidate_ref",
         "tos_export_forbidden_until_review"
@@ -447,7 +447,7 @@
         "no_stats_as_promotion_authority",
         "no_eval_as_promotion_authority"
       ],
-      "wave": "XVII"
+      "lineage_ref": "kag-promotion-path"
     },
     {
       "assistant_contestant_allowed": false,
@@ -511,7 +511,7 @@
         "no_stats_as_promotion_authority",
         "no_eval_as_promotion_authority"
       ],
-      "wave": "XVII"
+      "lineage_ref": "kag-promotion-path"
     },
     {
       "assistant_contestant_allowed": false,
@@ -575,7 +575,7 @@
         "no_stats_as_promotion_authority",
         "no_eval_as_promotion_authority"
       ],
-      "wave": "XVII"
+      "lineage_ref": "kag-promotion-path"
     },
     {
       "assistant_contestant_allowed": false,
@@ -639,11 +639,11 @@
         "no_stats_as_promotion_authority",
         "no_eval_as_promotion_authority"
       ],
-      "wave": "XVII"
+      "lineage_ref": "kag-promotion-path"
     }
   ],
   "registry_id": "agon.kag_promotion_path.registry.v1",
   "runtime_posture": "candidate_only",
-  "wave": "XVII",
-  "wave_name": "KAG Promotion Path"
+  "lineage_ref": "kag-promotion-path",
+  "lineage_title": "KAG Promotion Path"
 }

@@ -47,7 +47,7 @@
         "no_campaign_as_live_arena",
         "no_center_takeover_of_owner_truth"
       ],
-      "wave": "XVI"
+      "lineage_ref": "school-lineage-campaign"
     },
     {
       "authority_posture": "non_authority",
@@ -94,7 +94,7 @@
         "no_campaign_as_live_arena",
         "no_center_takeover_of_owner_truth"
       ],
-      "wave": "XVI"
+      "lineage_ref": "school-lineage-campaign"
     },
     {
       "authority_posture": "non_authority",
@@ -141,7 +141,7 @@
         "no_campaign_as_live_arena",
         "no_center_takeover_of_owner_truth"
       ],
-      "wave": "XVI"
+      "lineage_ref": "school-lineage-campaign"
     },
     {
       "authority_posture": "non_authority",
@@ -188,7 +188,7 @@
         "no_campaign_as_live_arena",
         "no_center_takeover_of_owner_truth"
       ],
-      "wave": "XVI"
+      "lineage_ref": "school-lineage-campaign"
     },
     {
       "authority_posture": "non_authority",
@@ -235,7 +235,7 @@
         "no_campaign_as_live_arena",
         "no_center_takeover_of_owner_truth"
       ],
-      "wave": "XVI"
+      "lineage_ref": "school-lineage-campaign"
     },
     {
       "authority_posture": "non_authority",
@@ -282,7 +282,7 @@
         "no_campaign_as_live_arena",
         "no_center_takeover_of_owner_truth"
       ],
-      "wave": "XVI"
+      "lineage_ref": "school-lineage-campaign"
     },
     {
       "authority_posture": "non_authority",
@@ -329,7 +329,7 @@
         "no_campaign_as_live_arena",
         "no_center_takeover_of_owner_truth"
       ],
-      "wave": "XVI"
+      "lineage_ref": "school-lineage-campaign"
     },
     {
       "authority_posture": "non_authority",
@@ -376,7 +376,7 @@
         "no_campaign_as_live_arena",
         "no_center_takeover_of_owner_truth"
       ],
-      "wave": "XVI"
+      "lineage_ref": "school-lineage-campaign"
     },
     {
       "authority_posture": "non_authority",
@@ -423,7 +423,7 @@
         "no_campaign_as_live_arena",
         "no_center_takeover_of_owner_truth"
       ],
-      "wave": "XVI"
+      "lineage_ref": "school-lineage-campaign"
     },
     {
       "authority_posture": "non_authority",
@@ -470,9 +470,9 @@
         "no_campaign_as_live_arena",
         "no_center_takeover_of_owner_truth"
       ],
-      "wave": "XVI"
+      "lineage_ref": "school-lineage-campaign"
     }
   ],
-  "wave": "XVI",
-  "wave_name": "Schools / Lineages / Campaigns"
+  "lineage_ref": "school-lineage-campaign",
+  "lineage_title": "Schools / Lineages / Campaigns"
 }

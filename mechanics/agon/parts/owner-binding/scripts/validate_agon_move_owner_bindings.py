@@ -29,12 +29,12 @@ from build_agon_move_owner_binding_registry import (  # noqa: E402
 def main() -> int:
     try:
         config = read_json(CONFIG_PATH)
-        validate_config(config, require_wave3=True)
+        validate_config(config, require_lawful_move=True)
         expected = build_registry(config)
         actual = read_json(GENERATED_PATH)
         if actual != expected:
             raise ValidationError(f"{GENERATED_PATH} is stale; rerun build_agon_move_owner_binding_registry.py")
-        print(f"ok: {expected['total_bindings']} Agon Wave IV owner bindings validated")
+        print(f"ok: {expected['total_bindings']} Agon owner-binding route owner bindings validated")
         return 0
     except ValidationError as exc:
         print(f"error: {exc}", file=sys.stderr)

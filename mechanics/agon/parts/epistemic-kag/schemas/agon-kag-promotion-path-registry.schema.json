@@ -83,8 +83,8 @@
           "minItems": 1,
           "type": "array"
         },
-        "wave": {
-          "const": "XVII"
+        "lineage_ref": {
+          "const": "kag-promotion-path"
         }
       },
       "required": [
@@ -105,7 +105,7 @@
         "runtime_effect",
         "source_truth_posture",
         "stop_lines",
-        "wave"
+        "lineage_ref"
       ],
       "title": "agon-kag-promotion-path.schema.json item contract",
       "type": "object"
@@ -135,17 +135,17 @@
     "runtime_posture": {
       "const": "candidate_only"
     },
-    "wave": {
-      "const": "XVII"
+    "lineage_ref": {
+      "const": "kag-promotion-path"
     },
-    "wave_name": {
+    "lineage_title": {
       "const": "KAG Promotion Path"
     }
   },
   "required": [
     "registry_id",
-    "wave",
-    "wave_name",
+    "lineage_ref",
+    "lineage_title",
     "runtime_posture",
     "count",
     "kag_promotion_components",

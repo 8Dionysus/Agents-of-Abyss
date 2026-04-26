@@ -16,7 +16,7 @@
     "produces",
     "future_owner_handoffs",
     "status",
-    "wave",
+    "lineage_ref",
     "live_protocol",
     "runtime_effect",
     "center_owns",
@@ -113,8 +113,8 @@
     "status": {
       "const": "seeded_pre_protocol"
     },
-    "wave": {
-      "const": "III"
+    "lineage_ref": {
+      "const": "lawful-move-grammar"
     },
     "live_protocol": {
       "const": false

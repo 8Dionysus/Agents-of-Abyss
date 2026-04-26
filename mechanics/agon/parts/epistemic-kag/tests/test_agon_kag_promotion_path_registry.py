@@ -8,9 +8,9 @@ def _repo_root() -> pathlib.Path:
 
 ROOT = _repo_root()
 
-def test_wave17_registry_shape():
+def test_kag_promotion_registry_shape():
     reg = json.loads((ROOT / 'mechanics/agon/parts/epistemic-kag/generated/agon_kag_promotion_path_registry.min.json').read_text(encoding='utf-8'))
-    assert reg['wave'] == 'XVII'
+    assert reg['lineage_ref'] == 'kag-promotion-path'
     assert reg['count'] == 10
     assert len(reg['kag_promotion_components']) == 10
     for item in reg['kag_promotion_components']:

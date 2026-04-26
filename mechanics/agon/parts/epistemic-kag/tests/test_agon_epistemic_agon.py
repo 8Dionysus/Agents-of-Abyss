@@ -10,7 +10,7 @@ ROOT = _repo_root()
 
 def test_generated_registry_shape():
     reg = json.loads((ROOT / 'mechanics/agon/parts/epistemic-kag/generated/agon_epistemic_agon_registry.min.json').read_text(encoding='utf-8'))
-    assert reg['wave'] == 'XV'
+    assert reg['lineage_ref'] == 'epistemic-agon'
     assert reg['runtime_posture'] in ('candidate_only', 'pre_protocol_candidate_only')
     assert reg['count'] == 8
     assert len(reg['epistemic_components']) == 8

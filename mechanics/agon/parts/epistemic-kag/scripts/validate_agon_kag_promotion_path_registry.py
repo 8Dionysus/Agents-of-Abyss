@@ -23,8 +23,8 @@ REGISTRY_SCHEMA = ROOT / 'mechanics/agon/parts/epistemic-kag/schemas/agon-kag-pr
 BUILDER = ROOT / 'mechanics/agon/parts/epistemic-kag/scripts/build_agon_kag_promotion_path_registry.py'
 ITEM_KEY = 'kag_promotion_components'
 REGISTRY_ID = 'agon.kag_promotion_path.registry.v1'
-WAVE = 'XVII'
-WAVE_NAME = 'KAG Promotion Path'
+LINEAGE_REF = 'kag-promotion-path'
+LINEAGE_TITLE = 'KAG Promotion Path'
 RUNTIME_POSTURE = 'candidate_only'
 EXPECTED_COUNT = 10
 UNIQUE_KEY_FIELD = 'component_id'
@@ -76,8 +76,8 @@ def require_string_list(value: Any, field: str, key: str) -> str | None:
 def validate_source_metadata(source: dict[str, Any]) -> str | None:
     expected = {
         'registry_id': REGISTRY_ID,
-        'wave': WAVE,
-        'wave_name': WAVE_NAME,
+        'lineage_ref': LINEAGE_REF,
+        'lineage_title': LINEAGE_TITLE,
         'runtime_posture': RUNTIME_POSTURE,
     }
     for field, expected_value in expected.items():
@@ -90,8 +90,8 @@ def validate_item(item: dict[str, Any]) -> str | None:
     key = item.get(UNIQUE_KEY_FIELD)
     if not isinstance(key, str) or not key:
         return f'missing {UNIQUE_KEY_FIELD}'
-    if item.get('wave') != WAVE:
-        return f'{key} wave must be {WAVE}'
+    if item.get('lineage_ref') != LINEAGE_REF:
+        return f'{key} lineage_ref must be {LINEAGE_REF}'
     if item.get('live_protocol') is not False:
         return f'{key} live_protocol must be false'
     if item.get('assistant_contestant_allowed') is not False:

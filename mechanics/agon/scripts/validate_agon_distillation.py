@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -89,6 +90,15 @@ ACTIVE_ROUTE_POLLUTION_PATTERNS = (
     "raw source",
     "raw sources",
     "archival sources consulted",
+    "wave",
+    "Wave",
+)
+
+ACTIVE_PART_ARTIFACT_POLLUTION_PATTERNS = (
+    re.compile(r"\bwave\b", re.IGNORECASE),
+    re.compile(r"legacy/raw", re.IGNORECASE),
+    re.compile(r"AGON_WAVE", re.IGNORECASE),
+    re.compile(r"PRE_AGON", re.IGNORECASE),
 )
 
 OWNER_REQUEST_IDS = (
@@ -186,6 +196,20 @@ def validate_artifact_map(problems: list[str]) -> None:
                     problems.append(f"{path_ref}: part artifact is not listed in artifact-map.json")
 
 
+def validate_active_part_artifact_hygiene(problems: list[str]) -> None:
+    """Keep active part files free of legacy source names and wave-era routing."""
+    for path in sorted(PARTS_ROOT.rglob("*")):
+        if not path.is_file() or "__pycache__" in path.parts:
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        for pattern in ACTIVE_PART_ARTIFACT_POLLUTION_PATTERNS:
+            if pattern.search(text):
+                problems.append(f"{rel(path)}: active part artifact pollution pattern: {pattern.pattern}")
+
+
 def validate() -> list[str]:
     problems: list[str] = []
 
@@ -271,6 +295,7 @@ def validate() -> list[str]:
         problems.append("LANDING_LOG.md: missing Agon part artifact homes entry")
 
     validate_artifact_map(problems)
+    validate_active_part_artifact_hygiene(problems)
 
     active_texts = {
         rel: (AGON_ROOT / rel).read_text(encoding="utf-8")

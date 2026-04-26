@@ -63,10 +63,10 @@
     "tos_canonization_allowed": {
       "const": false
     },
-    "wave": {
-      "const": "XVIII"
+    "lineage_ref": {
+      "const": "sophian-threshold"
     },
-    "wave_name": {
+    "lineage_title": {
       "const": "Sophian Threshold"
     }
   },
@@ -84,8 +84,8 @@
     "review_status",
     "runtime_effect",
     "tos_canonization_allowed",
-    "wave",
-    "wave_name"
+    "lineage_ref",
+    "lineage_title"
   ],
   "title": "agon-sophian-threshold.schema.json item contract",
   "type": "object"

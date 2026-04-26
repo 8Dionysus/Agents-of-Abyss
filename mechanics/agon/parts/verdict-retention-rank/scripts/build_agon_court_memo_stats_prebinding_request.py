@@ -26,7 +26,7 @@ def build(config: dict) -> dict:
     return {
         'schema_version': REGISTRY_SCHEMA,
         'source': str(CONFIG.relative_to(ROOT)),
-        'wave': config.get('wave'),
+        'lineage_ref': config.get('lineage_ref'),
         'owner_repo': config.get('owner_repo'),
         'status': config.get('status'),
         'live_protocol': config.get('live_protocol'),

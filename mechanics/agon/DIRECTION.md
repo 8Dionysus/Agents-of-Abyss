@@ -13,9 +13,10 @@ ledger, roadmap, owner-request packet, or source-document bridge.
 - `OWNER_REQUESTS.md`: center-side owner request packet.
 - `LANDING_LOG.md`: canonical landing ledger.
 - `ROADMAP.md`: future contour, not a historical ledger.
-- `PROVENANCE.md`: the only active bridge back to detailed source-doc and wave
+- `PROVENANCE.md`: the only active bridge back to detailed source-doc
   accounting.
-- `docs/`: detailed source documents, models, waves, handoffs, and stop-lines.
+- `legacy/`: preserved source documents, models, handoffs, and stop-lines.
+- `docs/`: compatibility route only.
 
 ## Current direction
 
@@ -28,7 +29,7 @@ ledger, roadmap, owner-request packet, or source-document bridge.
   routing, agents, runtime, KAG, and ToS acceptance stay with their stronger
   owners.
 - Keep landed history in `LANDING_LOG.md` and future pressure in `ROADMAP.md`.
-- Keep new waves or packets distilled into a functioning part instead of
+- Keep new source contours or packets distilled into a functioning part instead of
   expanding a flat docs route.
 
 Active parts stay in this order: `imposition-readiness`,
@@ -39,9 +40,9 @@ Active parts stay in this order: `imposition-readiness`,
 
 ## Distillation law
 
-New wave notes, handoff packets, and long exploratory surfaces must not become
-the active route by accumulation. After a packet lands, distill the surviving
-function into the relevant part `README.md`, `CONTRACT.md`, or
+New source notes, handoff packets, and long exploratory surfaces must not
+become the active route by accumulation. After a packet lands, distill the
+surviving function into the relevant part `README.md`, `CONTRACT.md`, or
 `VALIDATION.md`, then update source accounting through `PROVENANCE.md`.
 
 A functioning part should make three things clear:
@@ -56,7 +57,7 @@ A functioning part should make three things clear:
 - Do not claim assistant contestant, judge, closer, or scar-writer authority.
 - Do not claim live rank mutation, durable memory mutation, runtime dispatch,
   proof verdict, KAG canon, or ToS canon write authority.
-- Do not let detailed wave or model files become the primary route.
+- Do not let detailed source or model files become the primary route.
 
 ## Validation
 

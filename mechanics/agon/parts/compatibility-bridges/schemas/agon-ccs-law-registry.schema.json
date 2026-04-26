@@ -29,14 +29,14 @@
       "minItems": 1,
       "type": "array"
     },
-    "wave": {
-      "const": "X"
+    "lineage_ref": {
+      "const": "ccs-bridge"
     }
   },
   "required": [
     "registry_id",
     "version",
-    "wave",
+    "lineage_ref",
     "home_repo",
     "status",
     "live_protocol",

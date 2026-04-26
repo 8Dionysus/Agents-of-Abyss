@@ -22,42 +22,42 @@
       "surface": "docs/RECURRENCE_WIRING_PLAN.md"
     },
     {
-      "relation": "Agon Wave 0 Agon Imposition Gate",
+      "relation": "Agon imposition-readiness route Agon Imposition Gate",
       "repo": "Agents-of-Abyss",
       "surface": "mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json"
     },
     {
-      "relation": "Agon Wave I Agonic Actor Rechartering",
+      "relation": "Agon agonic-actor-recharter route Agonic Actor Rechartering",
       "repo": "aoa-agents",
       "surface": "generated/agent_agonic_formation_index.min.json"
     },
     {
-      "relation": "Agon Wave II Assistant Civil Rechartering",
+      "relation": "Agon assistant-civil-recharter route Assistant Civil Rechartering",
       "repo": "aoa-agents",
       "surface": "generated/assistant_civil_formation_index.min.json"
     },
     {
-      "relation": "Agon Wave II.5 Formation Trial",
+      "relation": "Agon formation-trial route Formation Trial",
       "repo": "aoa-agents",
       "surface": "generated/agent_formation_trial.min.json"
     },
     {
-      "relation": "Agon Wave III Lawful Move Language",
+      "relation": "Agon lawful-move-grammar route Lawful Move Language",
       "repo": "Agents-of-Abyss",
       "surface": "mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json"
     },
     {
-      "relation": "Agon Wave IV Move Owner Binding",
+      "relation": "Agon owner-binding route Move Owner Binding",
       "repo": "Agents-of-Abyss",
       "surface": "mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json"
     },
     {
-      "relation": "Agon Wave V Agon Gate Routing",
+      "relation": "Agon gate-routing route Agon Gate Routing",
       "repo": "aoa-routing",
       "surface": "generated/agon_gate_routing_registry.min.json"
     },
     {
-      "relation": "Agon Wave VI Trial Playbooks",
+      "relation": "Agon trial-handoff route Trial Playbooks",
       "repo": "aoa-playbooks",
       "surface": "generated/agon_trial_playbook_registry.min.json"
     }
@@ -65,8 +65,8 @@
   "interlude": "R4",
   "live_protocol": false,
   "name": "Agon Recurrence Adapter",
-  "next_wave_enablement": [
-    "Wave VII may build Court / Memo / Stats Prebinding over recurrence review surfaces.",
+  "next_enablement": [
+    "court/memo/stats prebinding route may build Court / Memo / Stats Prebinding over recurrence review surfaces.",
     "Future eval, memo, and stats surfaces must consume recurrence signals as review pressure, not as automatic verdicts."
   ],
   "owner_repo": "Agents-of-Abyss",
@@ -85,12 +85,12 @@
       ],
       "review_lane": "general",
       "target_repo": "Agents-of-Abyss",
-      "waves": [
-        "0",
-        "III",
-        "IV",
-        "V",
-        "VI"
+      "lineage_refs": [
+        "imposition-readiness",
+        "lawful-move-grammar",
+        "owner-binding",
+        "gate-routing",
+        "trial-handoff"
       ]
     },
     {
@@ -104,10 +104,10 @@
       ],
       "review_lane": "general",
       "target_repo": "aoa-agents",
-      "waves": [
-        "I",
-        "II",
-        "II.5"
+      "lineage_refs": [
+        "agonic-actor-recharter",
+        "assistant-civil-recharter",
+        "formation-trial"
       ]
     },
     {
@@ -119,8 +119,8 @@
       ],
       "review_lane": "general",
       "target_repo": "aoa-routing",
-      "waves": [
-        "V"
+      "lineage_refs": [
+        "gate-routing"
       ]
     },
     {
@@ -132,8 +132,8 @@
       ],
       "review_lane": "general",
       "target_repo": "aoa-playbooks",
-      "waves": [
-        "VI"
+      "lineage_refs": [
+        "trial-handoff"
       ]
     },
     {
@@ -145,8 +145,8 @@
       ],
       "review_lane": "general",
       "target_repo": "aoa-techniques",
-      "waves": [
-        "IV"
+      "lineage_refs": [
+        "owner-binding"
       ]
     },
     {
@@ -158,8 +158,8 @@
       ],
       "review_lane": "general",
       "target_repo": "aoa-skills",
-      "waves": [
-        "IV"
+      "lineage_refs": [
+        "owner-binding"
       ]
     }
   ],

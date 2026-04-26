@@ -84,7 +84,7 @@ def require_non_empty_string_list(value: Any, *, move_id: str, field: str) -> li
     return value
 
 
-def collect_move_ids_from_wave3(root: Path = ROOT) -> set[str]:
+def collect_move_ids_from_lawful_move(root: Path = ROOT) -> set[str]:
     package_root = root / "mechanics" / "agon"
     if not package_root.exists():
         package_root = root
@@ -104,16 +104,16 @@ def collect_move_ids_from_wave3(root: Path = ROOT) -> set[str]:
         return {m["move_id"] for m in moves}
 
     raise ValidationError(
-        "Wave IV strict check requires Wave III lawful move language. "
+        "owner-binding route strict check requires lawful-move-grammar route lawful move language. "
         "Expected mechanics/agon/parts/lawful-move-grammar/config/agon_lawful_moves.seed.json or mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json."
     )
 
 
-def validate_config(config: dict[str, Any], *, require_wave3: bool = False, root: Path = ROOT) -> None:
+def validate_config(config: dict[str, Any], *, require_lawful_move: bool = False, root: Path = ROOT) -> None:
     if config.get("schema_version") != "agon-move-owner-bindings.seed/0.1":
         raise ValidationError("unexpected schema_version")
-    if config.get("wave") != "IV":
-        raise ValidationError("wave must be IV")
+    if config.get("lineage_ref") != "owner-binding":
+        raise ValidationError("lineage_ref must be owner-binding")
     if config.get("status") != "pre_protocol_owner_binding_seed":
         raise ValidationError("unexpected status")
 
@@ -125,13 +125,13 @@ def validate_config(config: dict[str, Any], *, require_wave3: bool = False, root
     if len(move_ids) != len(set(move_ids)):
         raise ValidationError("duplicate move_id in bindings")
 
-    if require_wave3:
-        wave3_ids = collect_move_ids_from_wave3(root)
-        if set(move_ids) != wave3_ids:
-            missing = sorted(wave3_ids - set(move_ids))
-            extra = sorted(set(move_ids) - wave3_ids)
+    if require_lawful_move:
+        lawful_move_ids = collect_move_ids_from_lawful_move(root)
+        if set(move_ids) != lawful_move_ids:
+            missing = sorted(lawful_move_ids - set(move_ids))
+            extra = sorted(set(move_ids) - lawful_move_ids)
             raise ValidationError(
-                f"Wave IV binding move set does not match Wave III moves; missing={missing}; extra={extra}"
+                f"owner-binding route binding move set does not match lawful-move-grammar route moves; missing={missing}; extra={extra}"
             )
 
     for binding in bindings:
@@ -143,8 +143,8 @@ def validate_config(config: dict[str, Any], *, require_wave3: bool = False, root
             raise ValidationError(f"{move_id}: invalid move_class {move_class!r}")
         if not move_id.startswith(f"agon.move.{move_class}."):
             raise ValidationError(f"{move_id}: move_id class segment must match move_class {move_class!r}")
-        if binding.get("wave") != "IV":
-            raise ValidationError(f"{move_id}: wave must be IV")
+        if binding.get("lineage_ref") != "owner-binding":
+            raise ValidationError(f"{move_id}: lineage_ref must be owner-binding")
         if binding.get("binding_status") != "seeded_pre_protocol_owner_binding":
             raise ValidationError(f"{move_id}: invalid binding_status")
         if binding.get("live_protocol") is not False:
@@ -201,7 +201,7 @@ def validate_config(config: dict[str, Any], *, require_wave3: bool = False, root
 
 
 def build_registry(config: dict[str, Any]) -> dict[str, Any]:
-    validate_config(config, require_wave3=False)
+    validate_config(config, require_lawful_move=False)
 
     owner_counts: Counter[str] = Counter()
     class_counts: Counter[str] = Counter()
@@ -231,7 +231,7 @@ def build_registry(config: dict[str, Any]) -> dict[str, Any]:
 
     return {
         "schema_version": "agon-move-owner-binding-registry/0.1",
-        "wave": "IV",
+        "lineage_ref": "owner-binding",
         "title": "Agon move owner binding registry",
         "status": "pre_protocol_owner_binding",
         "source_move_registry": config["source_move_registry"],
@@ -250,12 +250,12 @@ def build_registry(config: dict[str, Any]) -> dict[str, Any]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="fail if generated output is stale")
-    parser.add_argument("--strict-wave3-check", action="store_true", help="also compare with Wave III move ids")
+    parser.add_argument("--strict-lawful_move-check", action="store_true", help="also compare with lawful-move-grammar route move ids")
     args = parser.parse_args(argv)
 
     try:
         config = read_json(CONFIG_PATH)
-        validate_config(config, require_wave3=args.strict_wave3_check)
+        validate_config(config, require_lawful_move=args.strict_lawful_move_check)
         registry = build_registry(config)
 
         if args.check:

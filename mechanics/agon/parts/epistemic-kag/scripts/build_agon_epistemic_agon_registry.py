@@ -20,9 +20,9 @@ OUT = ROOT / "mechanics" / "agon" / "parts" / "epistemic-kag" / "generated" / "a
 ITEM_KEY = "epistemic_components"
 MOVE_EXTENSIONS_KEY = "epistemic_move_extensions"
 REGISTRY_ID = "agon.epistemic_agon.registry.v1"
-WAVE = "XV"
+LINEAGE_REF = "epistemic-agon"
 RUNTIME_POSTURE = "candidate_only"
-REQUIRED_SOURCE_FIELDS = ("registry_id", "wave", "runtime_posture", ITEM_KEY, MOVE_EXTENSIONS_KEY)
+REQUIRED_SOURCE_FIELDS = ("registry_id", "lineage_ref", "runtime_posture", ITEM_KEY, MOVE_EXTENSIONS_KEY)
 
 
 class BuildError(ValueError):
@@ -47,8 +47,8 @@ def load_source() -> dict[str, Any]:
             raise BuildError(f"missing source field {field}")
     if data["registry_id"] != REGISTRY_ID:
         raise BuildError(f"registry_id must be {REGISTRY_ID}")
-    if data["wave"] != WAVE:
-        raise BuildError(f"wave must be {WAVE}")
+    if data["lineage_ref"] != LINEAGE_REF:
+        raise BuildError(f"lineage_ref must be {LINEAGE_REF}")
     if data["runtime_posture"] != RUNTIME_POSTURE:
         raise BuildError(f"runtime_posture must be {RUNTIME_POSTURE}")
     if not isinstance(data[ITEM_KEY], list):
@@ -64,7 +64,7 @@ def build() -> dict[str, Any]:
     move_extensions = data[MOVE_EXTENSIONS_KEY]
     return {
         "registry_id": REGISTRY_ID,
-        "wave": WAVE,
+        "lineage_ref": LINEAGE_REF,
         "runtime_posture": RUNTIME_POSTURE,
         "count": len(items),
         "move_extension_count": len(move_extensions),

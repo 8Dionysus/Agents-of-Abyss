@@ -93,10 +93,10 @@ def main() -> int:
         if missing:
             return fail(f'{sid}: missing lifecycle phases: {sorted(missing)}')
         phase_status = {p.get('phase_id'): p.get('phase_status') for p in record.get('lifecycle', [])}
-        if phase_status.get('sealed_commit_slot') != 'reserved_for_wave9_state_packets':
-            return fail(f'{sid}: sealed_commit_slot must be reserved for Wave IX')
-        if phase_status.get('reveal_slot') != 'reserved_for_wave9_state_packets':
-            return fail(f'{sid}: reveal_slot must be reserved for Wave IX')
+        if phase_status.get('sealed_commit_slot') != 'reserved_for_state_packet_commit_reveal':
+            return fail(f'{sid}: sealed_commit_slot must be reserved for state-packet route')
+        if phase_status.get('reveal_slot') != 'reserved_for_state_packet_commit_reveal':
+            return fail(f'{sid}: reveal_slot must be reserved for state-packet route')
         contestants = ((record.get('seats') or {}).get('contestants') or {})
         if contestants.get('required_kind') != 'agonic' or contestants.get('cannot_be_assistant') is not True:
             return fail(f'{sid}: contestants must require agonic kind and block assistants')

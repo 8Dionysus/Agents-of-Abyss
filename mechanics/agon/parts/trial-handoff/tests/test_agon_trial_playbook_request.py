@@ -23,7 +23,7 @@ def test_agon_trial_playbook_request_build_check():
 def test_agon_trial_playbook_request_shape():
     data = json.loads((ROOT / "mechanics" / "agon" / "parts" / "trial-handoff" / "generated" / "agon_trial_playbook_request.min.json").read_text(encoding="utf-8"))
     assert data["schema_version"] == "agon-trial-playbook-request-v1"
-    assert data["wave"] == "VI"
+    assert data["lineage_ref"] == "trial-handoff"
     assert data["live_protocol"] is False
     assert data["runtime_effect"] == "none"
     assert data["trial_count"] == len(data["requested_trial_playbooks"])

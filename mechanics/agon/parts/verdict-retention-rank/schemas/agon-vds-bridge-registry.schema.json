@@ -32,14 +32,14 @@
     "version": {
       "type": "string"
     },
-    "wave": {
-      "const": "XI"
+    "lineage_ref": {
+      "const": "verdict-delta-scar"
     }
   },
   "required": [
     "registry_id",
     "version",
-    "wave",
+    "lineage_ref",
     "status",
     "live_protocol",
     "runtime_effect",

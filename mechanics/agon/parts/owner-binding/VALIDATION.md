@@ -1,7 +1,7 @@
 # Owner Binding Validation
 
 ```bash
-python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check --strict-wave3-check
+python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check --strict-lawful_move-check
 python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py
 python -m pytest -q mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py
 python scripts/validate_owner_request_docs.py --mechanic agon

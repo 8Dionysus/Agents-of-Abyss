@@ -289,5 +289,5 @@
   ],
   "registry_id": "agon.epistemic_agon.registry.v1",
   "runtime_posture": "candidate_only",
-  "wave": "XV"
+  "lineage_ref": "epistemic-agon"
 }

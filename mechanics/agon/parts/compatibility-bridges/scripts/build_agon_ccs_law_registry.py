@@ -34,7 +34,7 @@ def build(seed: dict) -> dict:
     return {
         'registry_id': seed['registry_id'],
         'version': seed['version'],
-        'wave': seed['wave'],
+        'lineage_ref': seed['lineage_ref'],
         'status': seed['status'],
         'home_repo': seed['home_repo'],
         'live_protocol': False,

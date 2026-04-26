@@ -19,8 +19,8 @@ SRC = ROOT / 'mechanics/agon/parts/epistemic-kag/config/agon_kag_promotion_path.
 OUT = ROOT / 'mechanics/agon/parts/epistemic-kag/generated/agon_kag_promotion_path_registry.min.json'
 ITEM_KEY = 'kag_promotion_components'
 REGISTRY_ID = 'agon.kag_promotion_path.registry.v1'
-WAVE = 'XVII'
-WAVE_NAME = 'KAG Promotion Path'
+LINEAGE_REF = 'kag-promotion-path'
+LINEAGE_TITLE = 'KAG Promotion Path'
 RUNTIME_POSTURE = 'candidate_only'
 
 
@@ -34,8 +34,8 @@ def load_source() -> dict[str, Any]:
     data = json.loads(SRC.read_text(encoding='utf-8'))
     expected_metadata = {
         'registry_id': REGISTRY_ID,
-        'wave': WAVE,
-        'wave_name': WAVE_NAME,
+        'lineage_ref': LINEAGE_REF,
+        'lineage_title': LINEAGE_TITLE,
         'runtime_posture': RUNTIME_POSTURE,
     }
     for field, expected in expected_metadata.items():
@@ -52,8 +52,8 @@ def build() -> dict[str, Any]:
     items = data[ITEM_KEY]
     return {
         'registry_id': REGISTRY_ID,
-        'wave': WAVE,
-        'wave_name': WAVE_NAME,
+        'lineage_ref': LINEAGE_REF,
+        'lineage_title': LINEAGE_TITLE,
         'runtime_posture': RUNTIME_POSTURE,
         'count': len(items),
         ITEM_KEY: items,

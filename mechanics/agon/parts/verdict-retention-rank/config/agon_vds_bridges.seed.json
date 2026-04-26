@@ -39,7 +39,7 @@
         "orders_requested",
         "prohibited_orders"
       ],
-      "statement": "A future adjudication slot may emit a verdict draft candidate, but Wave XI does not issue live verdicts."
+      "statement": "A future adjudication slot may emit a verdict draft candidate, but verdict/delta/scar route does not issue live verdicts."
     },
     {
       "component_class": "delta_receipt_candidate",
@@ -128,14 +128,14 @@
         "trace_integrity",
         "closure_discipline"
       ],
-      "statement": "A future verdict draft may request that `aoa-memo` consider a durable scar, but Wave XI itself writes no scar."
+      "statement": "A future verdict draft may request that `aoa-memo` consider a durable scar, but verdict/delta/scar route itself writes no scar."
     },
     {
       "component_class": "retention_request",
       "component_id": "agon.bridge.retention_request.v1",
       "must_have": {
         "hidden_scheduler_allowed": false,
-        "scheduler_authority": "not_granted_by_wave11"
+        "scheduler_authority": "not_granted_by_verdict_delta_scar_route"
       },
       "not_granted": [
         "retention_execution",
@@ -158,7 +158,7 @@
         "scheduler_authority",
         "hidden_scheduler_allowed"
       ],
-      "statement": "A future bridge may request retention follow-up, but Wave XI cannot execute retention checks or schedule hidden automation."
+      "statement": "A future bridge may request retention follow-up, but verdict/delta/scar route cannot execute retention checks or schedule hidden automation."
     },
     {
       "component_class": "inscription_bundle_candidate",
@@ -324,5 +324,5 @@
   ],
   "title": "Verdict / Delta / Scar Bridge",
   "version": "0.1.0",
-  "wave": "XI"
+  "lineage_ref": "verdict-delta-scar"
 }

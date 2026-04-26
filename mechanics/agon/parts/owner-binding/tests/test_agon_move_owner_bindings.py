@@ -38,13 +38,13 @@ def test_agon_move_owner_binding_registry_is_current() -> None:
     assert result.returncode == 0, result.stderr + result.stdout
 
 
-def test_agon_move_owner_binding_registry_strict_wave3_check_is_current() -> None:
+def test_agon_move_owner_binding_registry_strict_lawful_move_check_is_current() -> None:
     result = subprocess.run(
         [
             sys.executable,
             "mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py",
             "--check",
-            "--strict-wave3-check",
+            "--strict-lawful_move-check",
         ],
         cwd=ROOT,
         text=True,
@@ -67,7 +67,7 @@ def test_agon_move_owner_binding_validator_cli_is_current() -> None:
 
 def test_agon_move_owner_binding_registry_shape() -> None:
     data = json.loads((ROOT / "mechanics" / "agon" / "parts" / "owner-binding" / "generated" / "agon_move_owner_binding_registry.min.json").read_text())
-    assert data["wave"] == "IV"
+    assert data["lineage_ref"] == "owner-binding"
     assert data["status"] == "pre_protocol_owner_binding"
     assert data["total_bindings"] == 18
     assert data["owner_counts"]["Agents-of-Abyss"] == 18

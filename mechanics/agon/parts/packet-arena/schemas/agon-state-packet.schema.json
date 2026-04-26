@@ -94,15 +94,15 @@
     "session_model_id": {
       "type": "string"
     },
-    "wave": {
-      "const": "IX"
+    "lineage_ref": {
+      "const": "state-packets"
     }
   },
   "required": [
     "protocol",
     "packet_type",
     "packet_id",
-    "wave",
+    "lineage_ref",
     "live_protocol",
     "runtime_effect",
     "actor",

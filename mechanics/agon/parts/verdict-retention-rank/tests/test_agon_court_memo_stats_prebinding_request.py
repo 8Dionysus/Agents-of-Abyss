@@ -16,11 +16,11 @@ def run(cmd):
     return subprocess.run([sys.executable, *cmd], cwd=ROOT, text=True, capture_output=True)
 
 
-def test_wave7_generated_surface_is_current():
+def test_court_memo_stats_generated_surface_is_current():
     result = run(['mechanics/agon/parts/verdict-retention-rank/scripts/build_agon_court_memo_stats_prebinding_request.py', '--check'])
     assert result.returncode == 0, result.stderr
 
 
-def test_wave7_validator_passes():
+def test_court_memo_stats_validator_passes():
     result = run(['mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_court_memo_stats_prebinding_request.py'])
     assert result.returncode == 0, result.stderr

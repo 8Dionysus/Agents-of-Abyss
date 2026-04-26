@@ -39,8 +39,8 @@ def main() -> int:
     data = json.loads(REQ.read_text(encoding="utf-8"))
     if data.get("schema_version") != "agon-trial-playbook-request-v1":
         return fail("schema_version must be agon-trial-playbook-request-v1")
-    if data.get("wave") != "VI":
-        return fail("wave must be VI")
+    if data.get("lineage_ref") != "trial-handoff":
+        return fail("lineage_ref must be trial-handoff")
     if data.get("target_repo") != "aoa-playbooks":
         return fail("target_repo must be aoa-playbooks")
     if data.get("live_protocol") is not False:

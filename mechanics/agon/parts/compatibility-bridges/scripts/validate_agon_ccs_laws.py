@@ -43,11 +43,11 @@ def validate() -> None:
     closure_predicates = {p['predicate'] for p in closure['closure_predicates']}
     assert 'no_open_material_contradiction' in closure_predicates, 'closure must check open material contradiction'
     assert 'actor_lacks_closure_jurisdiction' in closure['denial_reasons'], 'closure must deny missing jurisdiction'
-    assert closure['earned_jurisdiction']['granted_by_wave10'] is False, 'wave X must not grant closer jurisdiction'
+    assert closure['earned_jurisdiction']['granted_by_center_law'] is False, 'ccs bridge must not grant closer jurisdiction'
 
     assert 'hidden_summon' in summon['prohibitions'], 'summon law must forbid hidden summon'
     assert 'assistant_initiated_summon' in summon['prohibitions'], 'summon law must forbid assistant-initiated summon'
-    assert summon['cost_model']['granted_by_wave10'] is False, 'wave X must not grant summon currency or jurisdiction'
+    assert summon['cost_model']['granted_by_center_law'] is False, 'ccs bridge must not grant summon currency or jurisdiction'
 
     interlocks = {i['interlock_id'] for i in seed['interlocks']}
     assert 'contradiction_blocks_closure' in interlocks, 'missing contradiction->closure interlock'

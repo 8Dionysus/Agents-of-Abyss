@@ -20,7 +20,7 @@ ITEM_KEY = 'threshold_components'
 
 def test_generated_registry_shape():
     reg = json.loads(GENERATED.read_text(encoding='utf-8'))
-    assert reg['wave'] == 'XVIII'
+    assert reg['lineage_ref'] == 'sophian-threshold'
     assert reg['count'] == EXPECTED_COUNT
     assert len(reg[ITEM_KEY]) == EXPECTED_COUNT
     assert all(item.get('live_protocol') is False for item in reg[ITEM_KEY])

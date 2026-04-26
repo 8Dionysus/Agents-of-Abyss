@@ -48,7 +48,7 @@
       ],
       "law_family": "contradiction",
       "law_id": "agon.law.contradiction.material_open_blocks_closure",
-      "ledger_storage": "not_defined_by_wave10",
+      "ledger_storage": "not_defined_by_ccs_bridge",
       "materiality_dimensions": [
         "closure_relevant",
         "evidence_relevant",
@@ -145,7 +145,7 @@
           "judge_candidate",
           "arena_charter_closure_delegate"
         ],
-        "granted_by_wave10": false,
+        "granted_by_center_law": false,
         "revocable": true
       },
       "law_family": "closure",
@@ -174,7 +174,7 @@
       "cost_model": {
         "cost_currency": "future_arena_budget_or_jurisdiction",
         "cost_required": true,
-        "granted_by_wave10": false
+        "granted_by_center_law": false
       },
       "law_family": "summon",
       "law_id": "agon.law.summon.costly_visible_intent",
@@ -253,5 +253,5 @@
   ],
   "title": "Contradiction / Closure / Summon Law",
   "version": "0.1.0",
-  "wave": "X"
+  "lineage_ref": "ccs-bridge"
 }

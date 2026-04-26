@@ -11,6 +11,40 @@ Agon remains center-owned here as law, vocabulary, stop-line, and owner-binding
 doctrine. It is not live arena execution, not assistant contestant authority,
 not runtime substrate, and not ToS canon write authority.
 
+## Route index for agents
+
+Read this index before scanning the full ledger. It names the current Agon
+shape without requiring every older landing entry to be re-read.
+
+- Current active route: `mechanics/agon/README.md`,
+  `mechanics/agon/DIRECTION.md`, `mechanics/agon/PARTS.md`,
+  `mechanics/agon/parts/README.md`, and the relevant part README.
+- Current proof and placement route: `mechanics/agon/artifact-map.json` and the
+  relevant part-local schemas, examples, config, generated capsules, scripts,
+  or tests.
+- Current owner pressure route: `mechanics/agon/OWNER_REQUESTS.md`.
+- Current future-pressure route: `mechanics/agon/ROADMAP.md`.
+- Current provenance bridge: `mechanics/agon/PROVENANCE.md`; use it only when
+  auditing source provenance or receipt history.
+
+Key recent landings:
+
+- [Agon root route surface cleanup](#agon-root-route-surface-cleanup) clarifies
+  the roles of root Agon markdown surfaces.
+- [Agon active artifact lineage polish](#agon-active-artifact-lineage-polish)
+  keeps active technical artifacts on functional part lineage names.
+- [Agon active route distillation](#agon-active-route-distillation) is the main
+  route from source families into active parts and owner requests.
+- [Agon part artifact homes](#agon-part-artifact-homes) keeps schemas,
+  examples, config, generated capsules, validators, and tests beside their
+  owning parts.
+- [Agon legacy raw provenance district](#agon-legacy-raw-provenance-district)
+  preserves detailed source history without making it the working route.
+
+Older source-contour entries remain historical landing receipts. They should
+not be the first route for new work unless a task specifically audits the
+original landing contour.
+
 ## How to update this log
 
 Every landing entry uses the same shape:
@@ -25,6 +59,40 @@ Every landing entry uses the same shape:
 When a change touches Agon docs, generated capsules, schemas, seed config,
 examples, validators, or tests, update the relevant entry here or explain in
 the PR why the change is not a landing change.
+
+### Agon root route surface cleanup
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` keeps root Agon markdown surfaces
+role-specific: direction names the current operating line, parts map active
+functions, roadmap tracks future pressure, provenance bridges receipt history,
+and owner requests stay center-side handoff packets.
+
+Surfaces:
+
+- `mechanics/agon/AGENTS.md`
+- `mechanics/agon/README.md`
+- `mechanics/agon/DIRECTION.md`
+- `mechanics/agon/PARTS.md`
+- `mechanics/agon/LANDING_LOG.md`
+- `mechanics/agon/ROADMAP.md`
+- `mechanics/agon/OWNER_REQUESTS.md`
+- `mechanics/agon/PROVENANCE.md`
+
+Validation:
+
+- `python mechanics/agon/scripts/validate_agon_distillation.py`
+- `python scripts/validate_markdown_shape.py`
+- `python scripts/validate_mechanic_readme_cards.py --mechanic agon`
+- `python scripts/validate_mechanic_landing_logs.py --mechanic agon`
+
+Stop-lines: root markdown surfaces must not become competing part maps,
+technical artifact ledgers, source-file inventories, or owner-acceptance
+receipts.
+
+Next route: future root-md changes should update only the surface whose role
+actually moved, then run the narrow Agon distillation and shape checks.
 
 ### Agon legacy raw provenance district
 
@@ -101,6 +169,42 @@ part unless that part actually owns the behavior.
 Next route: when a part gains new schemas, config, generated capsules,
 validators, or tests, land them in that part home and update
 `mechanics/agon/artifact-map.json` only if the move changes artifact topology.
+
+### Agon active artifact lineage polish
+
+Status: landed.
+
+Owner boundary: `Agents-of-Abyss` keeps active Agon seeds, schemas, examples,
+generated capsules, validators, and tests expressed through functional part
+lineage names; historical wave source labels remain receipt/provenance
+language, not the operating vocabulary inside active part artifacts.
+
+Surfaces:
+
+- `mechanics/agon/parts/*/config/agon_*.seed.json`
+- `mechanics/agon/parts/*/generated/agon_*.min.json`
+- `mechanics/agon/parts/*/schemas/agon-*.schema.json`
+- `mechanics/agon/parts/*/examples/agon_*.example.json`
+- `mechanics/agon/parts/*/scripts/*agon*.py`
+- `mechanics/agon/parts/*/tests/test_agon_*.py`
+- `mechanics/agon/scripts/validate_agon_distillation.py`
+- `mechanics/agon/ROADMAP.md`
+
+Validation:
+
+- `find mechanics/agon/parts -path '*/scripts/build_agon_*.py' -exec python {} --check \;`
+- `find mechanics/agon/parts -path '*/scripts/validate_agon_*.py' -exec python {} \;`
+- `python mechanics/agon/scripts/validate_agon_distillation.py`
+- `python scripts/validate_mechanic_artifact_topology.py --mechanic agon`
+- `python -m pytest -q mechanics/agon/tests mechanics/agon/parts`
+
+Stop-lines: do not let active part artifacts direct agents into legacy raw
+sources, do not expose old wave labels as the active route vocabulary, and do
+not collapse generated schema versions or model versions into landing history.
+
+Next route: if a future source contour changes part behavior, update the
+owning part artifacts first, then the generated capsules and package
+distillation validator.
 
 ### Agon active route distillation
 

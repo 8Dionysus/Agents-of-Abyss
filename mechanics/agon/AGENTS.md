@@ -46,8 +46,8 @@ writes.
 - `OWNER_REQUESTS.md`: center-side owner request packet.
 - `ROADMAP.md`: current and next Agon contour.
 - `LANDING_LOG.md`: canonical Agon landing ledger.
-- `PROVENANCE.md`: controlled bridge to detailed source-doc and wave accounting.
-- `artifact-map.json`: old flat artifact path to active part-home receipt.
+- `PROVENANCE.md`: controlled bridge to detailed source-doc accounting.
+- `artifact-map.json`: old flat artifact path to active part-home receipts.
 - `legacy/`: provenance and artifact receipts; enter through `PROVENANCE.md`.
 - `docs/`: compatibility route only.
 

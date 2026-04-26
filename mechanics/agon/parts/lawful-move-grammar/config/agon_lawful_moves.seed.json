@@ -1,6 +1,6 @@
 {
   "schema_version": "agon-lawful-moves.seed/0.1",
-  "wave": "III",
+  "lineage_ref": "lawful-move-grammar",
   "title": "Agon lawful move language",
   "status": "pre_protocol_language_seed",
   "scope": "center-owned lawful move vocabulary only; no live arena runtime",
@@ -42,7 +42,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -96,7 +96,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -153,7 +153,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -208,7 +208,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -265,7 +265,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -321,7 +321,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -376,7 +376,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -433,7 +433,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -490,7 +490,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -547,7 +547,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -601,7 +601,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -655,7 +655,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -708,7 +708,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -762,7 +762,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -815,7 +815,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -872,7 +872,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -929,7 +929,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [
@@ -986,7 +986,7 @@
         ]
       },
       "status": "seeded_pre_protocol",
-      "wave": "III",
+      "lineage_ref": "lawful-move-grammar",
       "live_protocol": false,
       "runtime_effect": "none",
       "center_owns": [

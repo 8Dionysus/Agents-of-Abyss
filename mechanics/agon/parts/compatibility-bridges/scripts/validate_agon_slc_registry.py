@@ -40,7 +40,7 @@ def load_json(path: pathlib.Path) -> Any:
 
 
 def load_builder():
-    spec = importlib.util.spec_from_file_location('_agon_wave16_builder', BUILDER)
+    spec = importlib.util.spec_from_file_location('_agon_slc_bridge_builder', BUILDER)
     module = importlib.util.module_from_spec(spec)
     if spec.loader is None:
         raise RuntimeError(f'cannot load builder {BUILDER}')
@@ -70,8 +70,8 @@ def validate_item(item: dict[str, Any]) -> str | None:
     key = item.get(UNIQUE_KEY_FIELD)
     if not isinstance(key, str) or not key:
         return f'missing {UNIQUE_KEY_FIELD}'
-    if item.get('wave') != 'XVI':
-        return f'{key} wave must be XVI'
+    if item.get('lineage_ref') != 'school-lineage-campaign':
+        return f'{key} lineage_ref must be school-lineage-campaign'
     if item.get('live_protocol') is not False:
         return f'{key} live_protocol must be false'
     if item.get('assistant_contestant_allowed') is not None and item.get('assistant_contestant_allowed') is not False:
@@ -113,10 +113,10 @@ def validate() -> int:
             return fail(f'missing schema {schema_path}')
 
     source = load_json(SRC)
-    if source.get('wave') != 'XVI':
-        return fail('source wave must be XVI')
-    if source.get('wave_name') != 'Schools / Lineages / Campaigns':
-        return fail('source wave_name mismatch')
+    if source.get('lineage_ref') != 'school-lineage-campaign':
+        return fail('source lineage_ref must be school-lineage-campaign')
+    if source.get('lineage_title') != 'Schools / Lineages / Campaigns':
+        return fail('source lineage_title mismatch')
     if source.get('runtime_posture') != 'candidate_only':
         return fail('source runtime_posture must be candidate_only')
     items = source.get(ITEM_KEY)

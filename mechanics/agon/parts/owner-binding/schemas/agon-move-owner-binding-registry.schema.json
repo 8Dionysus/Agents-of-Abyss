@@ -44,13 +44,13 @@
       "minimum": 1,
       "type": "integer"
     },
-    "wave": {
-      "const": "IV"
+    "lineage_ref": {
+      "const": "owner-binding"
     }
   },
   "required": [
     "schema_version",
-    "wave",
+    "lineage_ref",
     "title",
     "status",
     "source_move_registry",

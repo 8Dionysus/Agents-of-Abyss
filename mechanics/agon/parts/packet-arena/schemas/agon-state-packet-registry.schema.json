@@ -22,7 +22,7 @@
       "type": "array"
     },
     "registry_id": {
-      "const": "agon.state_packet_models.wave9"
+      "const": "agon.state_packet_models.registry.v1"
     },
     "runtime_effect": {
       "const": "none"
@@ -33,15 +33,15 @@
     "version": {
       "type": "string"
     },
-    "wave": {
-      "const": "IX"
+    "lineage_ref": {
+      "const": "state-packets"
     }
   },
   "required": [
     "registry_id",
     "version",
     "status",
-    "wave",
+    "lineage_ref",
     "live_protocol",
     "runtime_effect",
     "packet_count",

@@ -262,5 +262,5 @@
       "trial_id": "agon.trial.mechanical.expensive_summon_intent.v0"
     }
   ],
-  "wave": "XIII"
+  "lineage_ref": "mechanical-trial-suite"
 }
