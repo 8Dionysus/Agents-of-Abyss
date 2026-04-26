@@ -13,17 +13,19 @@ It may not claim hidden ontology, runtime progression state, role canon, proof v
 
 ## Active Direction
 
-- Keep `RPG_LAYER_MODEL`, `RPG_BOUNDARY_MAP`, and `RPG_ARCHITECTURE_RFC` as the model and boundary spine.
 - Keep `DIRECTION.md` as the current law for RPG as world grammar, not toy layer.
-- Keep `RPG_CANONICAL_TERMINOLOGY` aligned with the dual-vocabulary overlay schema, example, and generated mirror.
-- Keep `RPG_OWNER_REPO_REQUESTS` aligned with the owner-request queue whenever RPG produces owner-local work.
+- Keep `PARTS.md` and `parts/` as the active working surface for RPG sub-mechanics.
+- Keep `PROVENANCE.md` and `legacy/` as audit and recovery surfaces, not default reading paths.
+- Keep `parts/vocabulary-overlay/TERMINOLOGY.md` aligned with the dual-vocabulary overlay schema, example, and generated mirror.
+- Keep `OWNER_REQUESTS.md` aligned with the owner-request queue whenever RPG produces owner-local work.
 - Route quest objects through `mechanics/questbook/` and `quests/` rather than inventing RPG-local quest authority.
 - Prepare runtime projection only through explicit `abyss-stack` gates.
 
 ## When Time Comes
 
-- Create `parts/` only when repeated RPG work needs active subpackages rather than a small source-doc package.
-- Create `legacy/` only when current wave docs become receipts rather than active contours.
+- Split, merge, or retire parts when the active map no longer matches how agents actually use RPG.
+- Add a new part only when a repeated RPG form has a clear owner boundary, stop-lines, and validation route.
+- Move stale contours into legacy only after their active rules have been distilled.
 - Re-anchor the old center RPG quest IDs only when the Questbook lane is ready to move them without losing owner history.
 - Add owner-local adapters only after the owning repository accepts the request and lands proof.
 

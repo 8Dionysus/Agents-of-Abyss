@@ -126,7 +126,7 @@ A request packet is not owner acceptance. Owner repositories land operational tr
 | Agon | Which pressure, lawful move, duel, arena, packet, verdict, retention, rank, school, canon, or threshold boundary is relevant? | center-owned pre-protocol law and candidate grammar | [Agon](agon/README.md) | live arena execution or assistant contestant authority |
 | Antifragility and subtraction | What stress, degraded mode, evidence, pruning, or anti-authority posture applies? | center doctrine | [ANTIFRAGILITY](antifragility/docs/ANTIFRAGILITY.md), [VIA_NEGATIVA](antifragility/docs/VIA_NEGATIVA.md) | one-score health or deletion theater |
 | Questbook | What obligation must survive the current diff as a public tracked follow-up? | public obligation model | [QUESTBOOK](../QUESTBOOK.md), [model-spine](questbook/parts/model-spine/README.md) | second roadmap or private scratchpad |
-| RPG reflection | How can progression, questlines, campaigns, roles, and feats be read without rewriting ownership? | adjunct reflection layer | [RPG_LAYER_MODEL](rpg/docs/RPG_LAYER_MODEL.md), [RPG_ARCHITECTURE_RFC](rpg/docs/RPG_ARCHITECTURE_RFC.md) | hidden ontology or runtime ledger |
+| RPG reflection | How can progression, questlines, campaigns, roles, and feats be read without rewriting ownership? | adjunct reflection layer | [RPG](rpg/README.md), [PARTS](rpg/PARTS.md), [source-boundary](rpg/parts/source-boundary/README.md), [vocabulary-overlay](rpg/parts/vocabulary-overlay/README.md) | hidden ontology or runtime ledger |
 | ToS bridge, witness, compost | How can AoA support ToS without authoring ToS meaning? | support doctrine and seams | [COUNTERPART_BRIDGE](tos-bridge/docs/COUNTERPART_BRIDGE.md), [WITNESS_COMPOST](tos-bridge/docs/WITNESS_COMPOST.md) | AoA-authored ToS canon |
 | Release, audit, public support | Which claims can the center publicly support? | release and CI posture | [PUBLIC_SUPPORT_POSTURE](release-support/docs/PUBLIC_SUPPORT_POSTURE.md), [FEDERATION_RELEASE_PROTOCOL](release-support/docs/FEDERATION_RELEASE_PROTOCOL.md), [RELEASING](release-support/docs/RELEASING.md) | unverified public claim |
 
@@ -351,11 +351,11 @@ Quest surfaces:
 
 RPG reflection surfaces:
 
-- [RPG_LAYER_MODEL](rpg/docs/RPG_LAYER_MODEL.md): adjunct RPG reflection layer.
-- [RPG_FIRST_WAVE](rpg/docs/RPG_FIRST_WAVE.md) and [RPG_SECOND_WAVE](rpg/docs/RPG_SECOND_WAVE.md): staged reflection contours.
-- [RPG_SKILLS_AND_FEATS](rpg/docs/RPG_SKILLS_AND_FEATS.md): skill/feat reading, not skill ownership.
-- [RPG_ARCHITECTURE_RFC](rpg/docs/RPG_ARCHITECTURE_RFC.md): four-plane split of source meaning, proof/witness, runtime/session, and presentation/theme.
-- [RPG_CANONICAL_TERMINOLOGY](rpg/docs/RPG_CANONICAL_TERMINOLOGY.md) and [RPG_BOUNDARY_MAP](rpg/docs/RPG_BOUNDARY_MAP.md): terms and boundaries.
+- [RPG](rpg/README.md): package entry and mechanic card.
+- [PARTS](rpg/PARTS.md): active RPG sub-mechanic map.
+- [source-boundary](rpg/parts/source-boundary/README.md): source, proof, runtime, and presentation precedence.
+- [vocabulary-overlay](rpg/parts/vocabulary-overlay/README.md): stable machine keys and themed labels.
+- [PROVENANCE](rpg/PROVENANCE.md): bridge to preserved legacy raw sources when history is needed.
 
 Boundary:
 

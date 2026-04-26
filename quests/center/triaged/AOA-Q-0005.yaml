@@ -33,8 +33,8 @@ activation:
   mode: manual
   note: open when the abilities-and-feats slice is ready to be staged after first-wave progression/proof landings
 anchor_ref:
-  artifact: rpg_skills_and_feats
-  ref: mechanics/rpg/docs/RPG_SKILLS_AND_FEATS.md
+  artifact: rpg_progression_unlocks
+  ref: mechanics/rpg/parts/progression-unlocks/README.md
   note: the second-wave model must stay adjunct and multi-repo
 handoff_role: federation-maintainer
 evidence:

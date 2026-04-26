@@ -24,6 +24,7 @@ MECHANIC_SLUGS = (
 ARTIFACT_DIRS = ("schemas", "examples", "config", "generated", "scripts", "tests")
 EXPERIENCE_ARTIFACT_MAP = REPO_ROOT / "mechanics" / "experience" / "artifact-map.json"
 AGON_ARTIFACT_MAP = REPO_ROOT / "mechanics" / "agon" / "artifact-map.json"
+RPG_VOCABULARY_PART = REPO_ROOT / "mechanics" / "rpg" / "parts" / "vocabulary-overlay"
 
 AGON_PREFIXES = ("agon", "test_agon", "build_agon", "validate_agon")
 ANTIFRAGILITY_PREFIXES = (
@@ -315,6 +316,35 @@ def validate_agon_part_artifacts(selected: set[str] | None, problems: list[str])
                     problems.append(f"{path_ref} is not registered in mechanics/agon/artifact-map.json")
 
 
+def validate_rpg_part_artifacts(selected: set[str] | None, problems: list[str]) -> None:
+    if selected and "rpg" not in selected:
+        return
+    required = (
+        "schemas/dual_vocabulary_overlay.schema.json",
+        "examples/dual_vocabulary_overlay.example.json",
+        "generated/dual_vocabulary_overlay.json",
+        "scripts/validate_vocabulary_overlay.py",
+        "tests/test_vocabulary_overlay.py",
+    )
+    for path_ref in required:
+        path = RPG_VOCABULARY_PART / path_ref
+        if not path.is_file():
+            problems.append(f"missing RPG vocabulary part artifact: {rel(path)}")
+    rpg_root = REPO_ROOT / "mechanics" / "rpg"
+    old_artifact_dirs = ("schemas", "examples", "generated")
+    for dirname in old_artifact_dirs:
+        path = rpg_root / dirname
+        if path.exists():
+            problems.append(f"{rel(path)} is a flat RPG artifact directory; keep vocabulary artifacts under parts/vocabulary-overlay")
+    old_files = (
+        rpg_root / "scripts" / "validate_rpg_dual_vocabulary_overlay.py",
+        rpg_root / "tests" / "test_rpg_dual_vocabulary_overlay.py",
+    )
+    for path in old_files:
+        if path.exists():
+            problems.append(f"{rel(path)} is an old flat RPG artifact; keep source under parts/vocabulary-overlay")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mechanic", choices=MECHANIC_SLUGS, action="append")
@@ -330,6 +360,7 @@ def main() -> int:
     validate_mechanic_sources(selected, problems)
     validate_experience_part_artifacts(selected, problems)
     validate_agon_part_artifacts(selected, problems)
+    validate_rpg_part_artifacts(selected, problems)
     if problems:
         print("Mechanic artifact topology validation failed:")
         for problem in problems:

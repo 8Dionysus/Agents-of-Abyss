@@ -9,8 +9,13 @@ It should make agent work more legible, consequential, and inhabitable without b
 - `DIRECTION.md`: current operating direction for RPG as world grammar.
 - `ROADMAP.md`: future contour, not a historical ledger.
 - `LANDING_LOG.md`: canonical landing ledger.
-- `docs/`: source models, boundary maps, terminology, and wave contours.
-- `schemas/`, `examples/`, and `generated/`: checked vocabulary overlay surfaces.
+- `PARTS.md`: active part map.
+- `parts/`: working RPG sub-mechanics.
+- `parts/vocabulary-overlay/`: checked terminology, schema, example, generated mirror, and validator.
+- `OWNER_REQUESTS.md`: center-side stronger-owner request packets.
+- `PROVENANCE.md`: bridge to legacy evidence when active parts need historical support.
+- `legacy/`: preserved historical sources and distillation receipts.
+- `docs/`: compatibility route only.
 
 ## Current Direction
 

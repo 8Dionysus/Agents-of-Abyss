@@ -16,14 +16,16 @@ VALIDATOR = (
     ROOT
     / "mechanics"
     / "rpg"
+    / "parts"
+    / "vocabulary-overlay"
     / "scripts"
-    / "validate_rpg_dual_vocabulary_overlay.py"
+    / "validate_vocabulary_overlay.py"
 )
 
 
 def load_validator():
     spec = importlib.util.spec_from_file_location(
-        "validate_rpg_dual_vocabulary_overlay", VALIDATOR
+        "validate_vocabulary_overlay", VALIDATOR
     )
     assert spec is not None
     assert spec.loader is not None

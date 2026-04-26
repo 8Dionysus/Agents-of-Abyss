@@ -13,13 +13,13 @@ from typing import Any
 from jsonschema import Draft202012Validator
 
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
-RPG_ROOT = REPO_ROOT / "mechanics" / "rpg"
+REPO_ROOT = Path(__file__).resolve().parents[5]
+PART_ROOT = REPO_ROOT / "mechanics" / "rpg" / "parts" / "vocabulary-overlay"
 
-TERMINOLOGY_PATH = RPG_ROOT / "docs" / "RPG_CANONICAL_TERMINOLOGY.md"
-SCHEMA_PATH = RPG_ROOT / "schemas" / "dual_vocabulary_overlay.schema.json"
-EXAMPLE_PATH = RPG_ROOT / "examples" / "dual_vocabulary_overlay.example.json"
-GENERATED_PATH = RPG_ROOT / "generated" / "dual_vocabulary_overlay.json"
+TERMINOLOGY_PATH = PART_ROOT / "TERMINOLOGY.md"
+SCHEMA_PATH = PART_ROOT / "schemas" / "dual_vocabulary_overlay.schema.json"
+EXAMPLE_PATH = PART_ROOT / "examples" / "dual_vocabulary_overlay.example.json"
+GENERATED_PATH = PART_ROOT / "generated" / "dual_vocabulary_overlay.json"
 
 SCHEMA_VERSION = "dual_vocabulary_overlay_v1"
 ACTION_KEYS = ("inspect", "expand", "handoff", "verify", "reanchor")
@@ -122,38 +122,38 @@ def validate() -> list[str]:
     expected_keys = first_frontend_minimum_keys(terminology)
     if len(expected_keys) != 26:
         problems.append(
-            "mechanics/rpg/docs/RPG_CANONICAL_TERMINOLOGY.md: first frontend minimum must resolve to 26 keys"
+            "mechanics/rpg/parts/vocabulary-overlay/TERMINOLOGY.md: first frontend minimum must resolve to 26 keys"
         )
     if len(expected_keys) != len(set(expected_keys)):
         problems.append(
-            "mechanics/rpg/docs/RPG_CANONICAL_TERMINOLOGY.md: first frontend minimum has duplicate keys"
+            "mechanics/rpg/parts/vocabulary-overlay/TERMINOLOGY.md: first frontend minimum has duplicate keys"
         )
 
     schema_keys = schema_required_keys(schema)
     if schema_keys != expected_keys:
         problems.append(
-            "mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json: required canonical keys must match terminology order"
+            "mechanics/rpg/parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json: required canonical keys must match terminology order"
         )
 
     entries_schema = schema.get("properties", {}).get("entries", {})
     if entries_schema.get("minItems") != len(expected_keys):
-        problems.append("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json: minItems must match required key count")
+        problems.append("mechanics/rpg/parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json: minItems must match required key count")
     if entries_schema.get("maxItems") != len(expected_keys):
-        problems.append("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json: maxItems must match required key count")
+        problems.append("mechanics/rpg/parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json: maxItems must match required key count")
 
     if schema.get("title") != SCHEMA_VERSION:
-        problems.append("mechanics/rpg/schemas/dual_vocabulary_overlay.schema.json: title must match schema_version")
+        problems.append("mechanics/rpg/parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json: title must match schema_version")
 
     validator = Draft202012Validator(schema)
     validate_json_payload(
-        label="mechanics/rpg/examples/dual_vocabulary_overlay.example.json",
+        label="mechanics/rpg/parts/vocabulary-overlay/examples/dual_vocabulary_overlay.example.json",
         payload=example,
         validator=validator,
         expected_keys=expected_keys,
         problems=problems,
     )
     validate_json_payload(
-        label="mechanics/rpg/generated/dual_vocabulary_overlay.json",
+        label="mechanics/rpg/parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json",
         payload=generated,
         validator=validator,
         expected_keys=expected_keys,
@@ -165,9 +165,9 @@ def validate() -> list[str]:
     if comparable_example != comparable_generated:
         problems.append("RPG example and generated overlay must match apart from notes")
     if "Generated twin" not in str(generated.get("notes", "")):
-        problems.append("mechanics/rpg/generated/dual_vocabulary_overlay.json: notes must name generated twin posture")
+        problems.append("mechanics/rpg/parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json: notes must name generated twin posture")
     if "Example only" not in str(example.get("notes", "")):
-        problems.append("mechanics/rpg/examples/dual_vocabulary_overlay.example.json: notes must name example posture")
+        problems.append("mechanics/rpg/parts/vocabulary-overlay/examples/dual_vocabulary_overlay.example.json: notes must name example posture")
 
     return problems
 

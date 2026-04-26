@@ -52,11 +52,14 @@ Use the validation lane in [mechanics/rpg/AGENTS.md](AGENTS.md#validation) for e
 ## Start Here
 
 - Direction: [DIRECTION](DIRECTION.md)
-- Route model: [RPG_LAYER_MODEL](docs/RPG_LAYER_MODEL.md) and [RPG_ARCHITECTURE_RFC](docs/RPG_ARCHITECTURE_RFC.md)
-- Boundaries: [RPG_BOUNDARY_MAP](docs/RPG_BOUNDARY_MAP.md)
-- Vocabulary overlay: [RPG_CANONICAL_TERMINOLOGY](docs/RPG_CANONICAL_TERMINOLOGY.md), [schema](schemas/dual_vocabulary_overlay.schema.json), [example](examples/dual_vocabulary_overlay.example.json), and [generated overlay](generated/dual_vocabulary_overlay.json)
-- Waves and bridge contours: [RPG_FIRST_WAVE](docs/RPG_FIRST_WAVE.md), [RPG_SECOND_WAVE](docs/RPG_SECOND_WAVE.md), [RPG_SKILLS_AND_FEATS](docs/RPG_SKILLS_AND_FEATS.md), [RPG_BRIDGE_WAVE](docs/RPG_BRIDGE_WAVE.md), and [RPG_RUNTIME_PROJECTION_WAVE](docs/RPG_RUNTIME_PROJECTION_WAVE.md)
-- Owner requests: [RPG_OWNER_REPO_REQUESTS](docs/RPG_OWNER_REPO_REQUESTS.md)
+- Parts atlas: [PARTS](PARTS.md) and [parts](parts/)
+- World grammar: [world-grammar](parts/world-grammar/README.md)
+- Source boundaries: [source-boundary](parts/source-boundary/README.md)
+- Vocabulary overlay: [vocabulary-overlay](parts/vocabulary-overlay/README.md), [terminology](parts/vocabulary-overlay/TERMINOLOGY.md), [schema](parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json), [example](parts/vocabulary-overlay/examples/dual_vocabulary_overlay.example.json), and [generated overlay](parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json)
+- Quest and progression contours: [quest-campaign](parts/quest-campaign/README.md) and [progression-unlocks](parts/progression-unlocks/README.md)
+- Runtime and handoff contours: [runtime-projection](parts/runtime-projection/README.md) and [owner-handoffs](parts/owner-handoffs/README.md)
+- Provenance: [PROVENANCE](PROVENANCE.md) and [legacy](legacy/)
+- Owner requests: [OWNER_REQUESTS](OWNER_REQUESTS.md)
 - Status: [LANDING_LOG](LANDING_LOG.md) and [ROADMAP](ROADMAP.md)
 
 ## Working Law
@@ -75,4 +78,5 @@ The authored route starts from docs and owner boundaries, then becomes machine-c
 
 Adjunct RPG reflection for progression and navigation; role, skill, technique, playbook, quest item, and runtime truth remain owner-local.
 The card above is the compact route.
-The documents listed in **Start Here** remain the richer source surfaces for this mechanic.
+The parts listed in **Start Here** are the active mechanic surfaces.
+Legacy wave sources remain preserved, but active work should route through `PROVENANCE.md` before consulting them.
