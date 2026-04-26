@@ -93,6 +93,12 @@ Tracking starts with the community-docs baseline for this repository.
 - Questbook source-contract hardening that rejects direct `legacy/raw`
   references from source quest objects and routes preserved raw provenance
   through mechanic `PROVENANCE.md` or `legacy/INDEX.md` bridges
+- RPG dual-vocabulary overlay validation through
+  `mechanics/rpg/scripts/validate_rpg_dual_vocabulary_overlay.py` and package
+  tests that keep terminology, schema, example, and generated overlay keys in
+  lockstep
+- `mechanics/rpg/DIRECTION.md` to define RPG as world grammar for agent work,
+  not a toy layer or decorative game skin
 
 ### Changed
 
@@ -207,6 +213,11 @@ Tracking starts with the community-docs baseline for this repository.
 - Questbook Markdown sources now point generic owner-route, next-action,
   acceptance-evidence, and stop-line defaults to lane README sections instead
   of repeating the same route text in every quest file
+- RPG root surfaces now separate entry card, roadmap, landing ledger,
+  vocabulary overlay, owner requests, and wave contours, with RPG included in
+  mechanic landing-log validation and release checks
+- RPG now has explicit direction for when game language should deepen routing,
+  judgment, memory, proof, and consequence, and when it should stay silent
 - active mechanic child docs now route executable validation through the
   nearest `AGENTS.md`, with Markdown shape validation guarding against command
   drift back into child docs

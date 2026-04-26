@@ -27,6 +27,11 @@ class MechanicLandingLogTests(unittest.TestCase):
 
         self.assertEqual(problems, [])
 
+    def test_rpg_landing_log_carries_vocabulary_overlay_contract(self) -> None:
+        problems = validate_log("rpg")
+
+        self.assertEqual(problems, [])
+
 
 if __name__ == "__main__":
     unittest.main()

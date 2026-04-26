@@ -38,6 +38,7 @@ COMMANDS = [
     ("validate Experience ready owner routes", [sys.executable, "mechanics/questbook/scripts/validate_ready_owner_routes.py"]),
     ("validate Questbook distillation", [sys.executable, "mechanics/questbook/scripts/validate_questbook_distillation.py"]),
     ("validate Experience distillation", [sys.executable, "mechanics/experience/scripts/validate_experience_distillation.py"]),
+    ("validate RPG dual vocabulary overlay", [sys.executable, "mechanics/rpg/scripts/validate_rpg_dual_vocabulary_overlay.py"]),
     ("check mechanic card index", [sys.executable, "scripts/build_mechanic_card_index.py", "--check"]),
     ("validate mechanic card index", [sys.executable, "scripts/validate_mechanic_card_index.py"]),
     ("check owner request queue", [sys.executable, "scripts/build_owner_request_queue.py", "--check"]),
