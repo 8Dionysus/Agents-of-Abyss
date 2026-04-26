@@ -38,6 +38,33 @@ def test_agon_move_owner_binding_registry_is_current() -> None:
     assert result.returncode == 0, result.stderr + result.stdout
 
 
+def test_agon_move_owner_binding_registry_strict_wave3_check_is_current() -> None:
+    result = subprocess.run(
+        [
+            sys.executable,
+            "mechanics/agon/scripts/build_agon_move_owner_binding_registry.py",
+            "--check",
+            "--strict-wave3-check",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    assert result.returncode == 0, result.stderr + result.stdout
+
+
+def test_agon_move_owner_binding_validator_cli_is_current() -> None:
+    result = subprocess.run(
+        [sys.executable, "mechanics/agon/scripts/validate_agon_move_owner_bindings.py"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    assert result.returncode == 0, result.stderr + result.stdout
+
+
 def test_agon_move_owner_binding_registry_shape() -> None:
     data = json.loads((ROOT / "mechanics" / "agon" / "generated" / "agon_move_owner_binding_registry.min.json").read_text())
     assert data["wave"] == "IV"
