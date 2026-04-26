@@ -12,10 +12,11 @@ Move from conservative Agon preparation to system-wide Agon scrutiny without cla
 
 ## Acceptance checks
 
-- `mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md` exists and names the new review sovereignty.
-- `mechanics/agon/legacy/raw/AGON_SURVIVAL_CRITERIA.md` defines survive/recharter/defer/prune/quarantine.
-- `mechanics/agon/legacy/raw/AGON_DOUBT_AUDIT.md` gives the first audit frame for current repositories.
-- `mechanics/agon/legacy/raw/PRE_AGON_BASELINE.md` separates release-clean from Agon-ready.
+- `mechanics/agon/PROVENANCE.md` routes the pre-Agon baseline, imposition
+  posture, survival criteria, and doubt audit source family through the
+  `imposition-readiness` active part.
+- `mechanics/agon/legacy/INDEX.md` preserves the detailed raw-source map
+  behind the provenance bridge without becoming the active route.
 - `mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json` is deterministic and validates.
 - No new sibling repository is created.
 - No arena runtime, session protocol, verdict, scar, or ToS write path is introduced.

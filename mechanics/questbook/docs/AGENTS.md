@@ -23,8 +23,6 @@ contracts, owner requests, landing logs, or provenance accounting.
 
 ## Validation
 
-Run:
-
 Use the central Questbook validation matrix in [Questbook AGENTS](../AGENTS.md#validation).
 
 ## Closeout

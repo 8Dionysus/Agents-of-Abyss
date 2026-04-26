@@ -109,6 +109,76 @@ Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
     assert any("## Owner Route" in problem and "must not be empty" in problem for problem in problems)
 
 
+def test_marked_markdown_rejects_direct_legacy_raw_refs() -> None:
+    module = load_validator()
+    problems: list[str] = []
+    stats = {"yaml": 0, "contract_markdown": 0}
+    path = ROOT / "quests" / "agon" / "ready" / "AOA-Q-AGON-9999-example.md"
+    text = """# AOA-Q-AGON-9999: Example
+
+source_contract: quest_markdown_contract_v1
+
+## Quest
+
+Example quest.
+
+## Owner Route
+
+mechanics/agon/legacy/raw/AGON_EXAMPLE.md
+
+## Next Action
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+
+## Stop-lines
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+"""
+
+    module.validate_markdown_contract(path, "agon", "ready", text, problems, stats)
+
+    assert any("direct legacy/raw refs" in problem for problem in problems)
+
+
+def test_marked_markdown_allows_legacy_raw_stop_line_phrase() -> None:
+    module = load_validator()
+    problems: list[str] = []
+    stats = {"yaml": 0, "contract_markdown": 0}
+    path = ROOT / "quests" / "agon" / "ready" / "AOA-Q-AGON-9999-example.md"
+    text = """# AOA-Q-AGON-9999: Example
+
+source_contract: quest_markdown_contract_v1
+
+## Quest
+
+Example quest.
+
+## Owner Route
+
+Route through mechanics/agon/PROVENANCE.md.
+
+## Next Action
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+
+## Acceptance Evidence
+
+Lane/state defaults: [agon ready defaults](../README.md#ready-defaults).
+
+## Stop-lines
+
+Do not route through legacy/raw.
+"""
+
+    module.validate_markdown_contract(path, "agon", "ready", text, problems, stats)
+
+    assert not any("direct legacy/raw refs" in problem for problem in problems)
+
+
 def test_yaml_contract_requires_public_evidence() -> None:
     module = load_validator()
     path = ROOT / "quests" / "center" / "triaged" / "AOA-Q-9999.yaml"
@@ -134,3 +204,34 @@ def test_yaml_contract_requires_public_evidence() -> None:
     module.validate_yaml_contract(path, "center", "triaged", payload, problems)
 
     assert any("evidence" in problem for problem in problems)
+
+
+def test_yaml_contract_rejects_direct_legacy_raw_refs() -> None:
+    module = load_validator()
+    path = ROOT / "quests" / "center" / "triaged" / "AOA-Q-9999.yaml"
+    payload = {
+        "schema_version": "work_quest_v1",
+        "id": "AOA-Q-9999",
+        "title": "Example",
+        "repo": "Agents-of-Abyss",
+        "lane": "center",
+        "owner_surface": "center/example",
+        "kind": "seam",
+        "state": "triaged",
+        "band": "near",
+        "difficulty": "d1_patch",
+        "risk": "r1_repo_local",
+        "control_mode": "human_codex_copilot",
+        "delegate_tier": "planner",
+        "evidence": ["public evidence"],
+        "public_safe": True,
+        "anchor_ref": {
+            "artifact": "raw",
+            "ref": "mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md",
+        },
+    }
+    problems: list[str] = []
+
+    module.validate_yaml_contract(path, "center", "triaged", payload, problems)
+
+    assert any("direct legacy/raw refs" in problem for problem in problems)
