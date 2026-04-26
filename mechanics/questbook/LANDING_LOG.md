@@ -23,26 +23,14 @@ Use this index before reading the full ledger:
 | Questbook distillation gate | Active parts, contracts, validation files, and legacy bridge are now release-checked together. |
 
 Read the full entry only when the change touches that route, its surfaces, or
-its stop-lines. The current active route surfaces are
-`mechanics/questbook/README.md`,
+its stop-lines. Current route starts at `mechanics/questbook/README.md`,
 `mechanics/questbook/DIRECTION.md`, `mechanics/questbook/PARTS.md`,
-`mechanics/questbook/PROVENANCE.md`,
-`mechanics/questbook/ROADMAP.md`,
 `mechanics/questbook/parts/README.md`,
-`mechanics/questbook/parts/registry.json`,
-`mechanics/questbook/parts/model-spine/README.md`,
-`mechanics/questbook/parts/public-index/README.md`,
-`mechanics/questbook/parts/quest-store/README.md`,
-`mechanics/questbook/parts/lifecycle-law/README.md`,
-`mechanics/questbook/parts/generated-views/README.md`,
-`mechanics/questbook/parts/relation-shape/README.md`,
-`mechanics/questbook/parts/execution-passport/README.md`,
-`mechanics/questbook/parts/harvest-route/README.md`,
-`mechanics/questbook/parts/owner-handoffs/README.md`,
-`mechanics/questbook/parts/lane-owner-routes/README.md`,
-`mechanics/questbook/scripts/validate_questbook_distillation.py`,
-`QUESTBOOK.md`, and
-`quests/README.md`.
+`mechanics/questbook/parts/registry.json`, and
+`mechanics/questbook/PROVENANCE.md`. Detailed part routes are indexed by
+`mechanics/questbook/PARTS.md` and
+`mechanics/questbook/parts/registry.json`; source quest objects remain surfaced
+through root `QUESTBOOK.md` and `quests/README.md`.
 
 ## Entries
 

@@ -22,30 +22,20 @@ the authority; generated relation views only summarize them.
   or source meaning.
 - Generated relation maps are read models, not quest authority.
 
-## Foundation contour
+## Current Snapshot Route
 
-- `AOA-Q-0001` has sidequests `AOA-Q-0002` and `AOA-Q-0003`.
-- `AOA-Q-0002` has parent `AOA-Q-0001`.
-- `AOA-Q-0003` has parent `AOA-Q-0001`, is related to `AOA-Q-0002`, and has
-  sidequests `AOA-Q-0004`, `AOA-Q-0005`, `AOA-Q-0006`, `AOA-Q-0007`, and
-  `AOA-Q-0008`.
+Concrete edges live in source quest files and generated read models.
 
-## RPG-shaped center cluster
+Current foundation contour:
 
-`AOA-Q-0004` through `AOA-Q-0008` remain in the center lane until a deliberate
-reanchor creates RPG-lane source objects. The relation map may show them as
-sidequests from the next-contour quest, but that does not silently move them.
+- `AOA-Q-0001` remains the broader foundation parent for `AOA-Q-0002` and
+  `AOA-Q-0003`.
+- `AOA-Q-0004` through `AOA-Q-0008` remain center-lane side routes under
+  `AOA-Q-0003` until deliberate RPG-lane reanchor.
 
-Current shape:
-
-- `AOA-Q-0004` has parent `AOA-Q-0003`.
-- `AOA-Q-0005` has parent `AOA-Q-0003` and is blocked by `AOA-Q-0004`.
-- `AOA-Q-0006` has parent `AOA-Q-0003` and is blocked by `AOA-Q-0004` and
-  `AOA-Q-0005`.
-- `AOA-Q-0007` has parent `AOA-Q-0003` and is blocked by `AOA-Q-0004`,
-  `AOA-Q-0005`, and `AOA-Q-0006`.
-- `AOA-Q-0008` has parent `AOA-Q-0003` and is blocked by `AOA-Q-0006` and
-  `AOA-Q-0007`.
+Do not update this part for every graph edge. Update the source quest relation
+metadata, rebuild generated Questbook views, and use this part only when the
+relation vocabulary or stop-lines change.
 
 ## Validation
 

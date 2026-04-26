@@ -96,7 +96,6 @@ python scripts/validate_owner_request_docs.py --mechanic questbook
 ## Specialized Routes
 
 - Relation shape: [`parts/relation-shape`](parts/relation-shape/README.md)
-- First contour provenance: [`PROVENANCE.md`](PROVENANCE.md)
 - Owner-request packets: [`OWNER_REQUESTS.md`](OWNER_REQUESTS.md)
 - Experience ready owner routing:
   [`experience-ready-owner-routes.md`](parts/lane-owner-routes/experience-ready-owner-routes.md)
@@ -114,5 +113,7 @@ but they do not author meaning.
 ## Growth Posture
 
 When this mechanic changes, keep active routes readable and functional. Place
-detailed doctrine in `docs/`, proof in the proof owner, memory in the memory
-owner, runtime in the runtime owner, and source meaning in the source owner.
+active doctrine in the owning part, keep `docs/` compatibility-only, and route
+legacy accounting through `PROVENANCE.md`. Proof belongs in the proof owner,
+memory in the memory owner, runtime in the runtime owner, and source meaning in
+the source owner.

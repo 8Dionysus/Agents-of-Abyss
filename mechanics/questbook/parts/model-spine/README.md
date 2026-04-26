@@ -67,7 +67,6 @@ The center must not:
 | Difficulty, risk, control, and delegation | [`execution-passport`](../execution-passport/README.md) |
 | Harvest thresholds and promotion targets | [`harvest-route`](../harvest-route/README.md) |
 | Lane owner-route maps | [`lane-owner-routes`](../lane-owner-routes/README.md) |
-| First contour provenance | [`PROVENANCE.md`](../../PROVENANCE.md) |
 
 Generated read models:
 
