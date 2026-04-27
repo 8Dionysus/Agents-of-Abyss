@@ -116,6 +116,9 @@ Tracking starts with the community-docs baseline for this repository.
 - RPG part usability guardrails through a part-local playable-obligation
   worked route, `Route Check` sections in active part READMEs, and
   `Required Before Output` gates in active part contracts
+- RPG ready-to-carry owner request packets in `mechanics/rpg/OWNER_REQUESTS.md`,
+  with validator coverage that keeps sibling-owner handoff cards requested,
+  receipt-linked, and distinct from owner acceptance
 
 ### Changed
 

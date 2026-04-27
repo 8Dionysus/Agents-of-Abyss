@@ -136,3 +136,43 @@ def test_worked_route_example_is_single_and_complete() -> None:
     module.validate_worked_route_example(problems)
 
     assert problems == []
+
+
+def test_owner_request_packets_are_ready_to_carry() -> None:
+    module = load_validator()
+
+    problems: list[str] = []
+    module.validate_owner_request_packets(problems)
+
+    assert problems == []
+
+
+def test_owner_request_packets_reject_acceptance_drift(tmp_path, monkeypatch) -> None:
+    module = load_validator()
+    repo = tmp_path / "repo"
+    rpg = repo / "mechanics" / "rpg"
+    rpg.mkdir(parents=True)
+    (rpg / "OWNER_REQUESTS.md").write_text(
+        """# RPG Owner-repo Requests
+
+## Ready-to-carry packets
+
+They do not mark the request accepted, landed, proved, or activated.
+
+### ORQ-RPG-AGENTS-001
+
+Carry to: `aoa-agents`
+
+Status: `accepted`.
+""",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(module, "REPO_ROOT", repo)
+    monkeypatch.setattr(module, "RPG_ROOT", rpg)
+    monkeypatch.setattr(module, "OWNER_REQUEST_PACKETS", (("ORQ-RPG-AGENTS-001", "aoa-agents"),))
+
+    problems: list[str] = []
+    module.validate_owner_request_packets(problems)
+
+    assert "mechanics/rpg/OWNER_REQUESTS.md: ORQ-RPG-AGENTS-001 must remain requested, not accepted" in problems
+    assert "mechanics/rpg/OWNER_REQUESTS.md: ORQ-RPG-AGENTS-001 missing packet field Acceptance signal:" in problems

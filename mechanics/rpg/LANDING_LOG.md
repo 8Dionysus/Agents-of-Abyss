@@ -13,6 +13,7 @@ Canonical landing ledger for the RPG mechanic.
 - RPG and Questbook now share a playable obligation bridge for derived quest readings without moving quest ownership or lifecycle authority.
 - RPG now has one worked playable-obligation route example that shows ordinary task to quest route to RPG reading to proof route to owner handoff without becoming a reusable quest template.
 - RPG parts now use explicit route checks and output gates so every part can act as a small working organ without adding more long-form doctrine.
+- RPG owner requests now carry ready-to-carry handoff packets so sibling owners can accept, reject, land, or prove slices without reading center requests as acceptance.
 
 ## Entries
 
@@ -313,3 +314,23 @@ Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python
 Stop-lines: no new doctrine sprawl, no hidden owner transfer, no proof verdict, no runtime activation, no quest lifecycle claim, and no universal score.
 
 Next route: grow individual parts only when their route check exposes a repeated form that needs a new checked surface.
+
+### RPG ready-to-carry owner request packets
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns center-side request packets and stop-lines; `aoa-agents`, `aoa-skills`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`, and `aoa-stats` still accept, reject, land, prove, or defer their own slices.
+
+Surfaces:
+
+- `mechanics/rpg/OWNER_REQUESTS.md`
+- `mechanics/rpg/scripts/validate_rpg_distillation.py`
+- `mechanics/rpg/tests/test_rpg_distillation.py`
+- `mechanics/rpg/LANDING_LOG.md`
+- `CHANGELOG.md`
+
+Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python -m pytest -q mechanics/rpg/tests`
+
+Stop-lines: ready-to-carry packets are not owner acceptance, owner landing, proof verdict, runtime activation, stats authority, role canon, skill canon, playbook choreography, or quest closure.
+
+Next route: carry the relevant `ORQ-RPG-*` card into the owner repository only when that owner is ready to accept or decline the slice, then return an owner-local receipt before updating queue refs.
