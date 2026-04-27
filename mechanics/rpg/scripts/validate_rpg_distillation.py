@@ -126,6 +126,27 @@ WORKED_ROUTE_REQUIRED_PHRASES = (
     "runtime projection remains an owner handoff, not center activation",
     "Do not claim quest closure, proof completion, runtime activation, owner acceptance, reward authority, or memory ownership from this example.",
 )
+OWNER_REQUEST_PACKETS = (
+    ("ORQ-RPG-AGENTS-001", "aoa-agents"),
+    ("ORQ-RPG-SKILLS-001", "aoa-skills"),
+    ("ORQ-RPG-PLAYBOOKS-001", "aoa-playbooks"),
+    ("ORQ-RPG-EVALS-001", "aoa-evals"),
+    ("ORQ-RPG-STACK-001", "abyss-stack"),
+    ("ORQ-RPG-STATS-001", "aoa-stats"),
+)
+OWNER_REQUEST_PACKET_REQUIRED_FIELDS = (
+    "Carry to:",
+    "Status:",
+    "Center asks for:",
+    "Why this owner:",
+    "Center sources:",
+    "Owner landing should decide:",
+    "Acceptance signal:",
+    "Proof route:",
+    "Stop-lines:",
+    "Do not carry as:",
+    "Return receipt:",
+)
 ACTIVE_LEGACY_LANGUAGE_PATTERNS = (
     (re.compile(r"\bwave\b", re.IGNORECASE), "should not use wave-era language in active route"),
     (re.compile(r"first body-facing rollout", re.IGNORECASE), "should not keep rollout-era prose in active route"),
@@ -294,6 +315,37 @@ def validate_worked_route_example(problems: list[str]) -> None:
         problems.append(f"{rel(path)} should not carry copy-paste command blocks")
 
 
+def validate_owner_request_packets(problems: list[str]) -> None:
+    path = RPG_ROOT / "OWNER_REQUESTS.md"
+    text = read_text(path)
+    if "## Ready-to-carry packets" not in text:
+        problems.append(f"{rel(path)}: missing ready-to-carry packets section")
+        return
+    if "They do not mark the request accepted, landed, proved, or activated." not in text:
+        problems.append(f"{rel(path)}: missing no-acceptance rule for ready-to-carry packets")
+    for request_id, owner_repo in OWNER_REQUEST_PACKETS:
+        match = re.search(
+            rf"^### {re.escape(request_id)}\n(?P<body>.*?)(?=^### |\Z)",
+            text,
+            re.MULTILINE | re.DOTALL,
+        )
+        if match is None:
+            problems.append(f"{rel(path)}: missing ready-to-carry packet {request_id}")
+            continue
+        body = match.group("body")
+        for field in OWNER_REQUEST_PACKET_REQUIRED_FIELDS:
+            if field not in body:
+                problems.append(f"{rel(path)}: {request_id} missing packet field {field}")
+        if f"Carry to: `{owner_repo}`" not in body:
+            problems.append(f"{rel(path)}: {request_id} does not carry to `{owner_repo}`")
+        if "Status: `requested`, not accepted." not in body:
+            problems.append(f"{rel(path)}: {request_id} must remain requested, not accepted")
+        if "owner_landing_ref" not in body or "owner_proof_ref" not in body:
+            problems.append(f"{rel(path)}: {request_id} return receipt must name owner landing/proof refs")
+        if "generated/owner_request_queue.min.json" not in body:
+            problems.append(f"{rel(path)}: {request_id} return receipt must route generated queue rebuild")
+
+
 def validate_registry(problems: list[str]) -> None:
     registry = json.loads((REPO_ROOT / "mechanics" / "registry.json").read_text(encoding="utf-8"))
     entry = next((item for item in registry.get("mechanics", []) if item.get("slug") == "rpg"), None)
@@ -355,6 +407,7 @@ def validate() -> list[str]:
     validate_usage_contract(problems)
     validate_playable_obligation_route(problems)
     validate_worked_route_example(problems)
+    validate_owner_request_packets(problems)
     validate_registry(problems)
     validate_vocabulary_overlay(problems)
     return problems
