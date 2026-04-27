@@ -79,4 +79,4 @@ The authored route starts from docs and owner boundaries, then becomes machine-c
 Adjunct RPG reflection for progression and navigation; role, skill, technique, playbook, quest item, and runtime truth remain owner-local.
 The card above is the compact route.
 The parts listed in **Start Here** are the active mechanic surfaces.
-Legacy wave sources remain preserved, but active work should route through `PROVENANCE.md` before consulting them.
+Historical sources remain preserved, but active work should route through `PROVENANCE.md` before consulting them.

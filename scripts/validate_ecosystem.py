@@ -579,9 +579,9 @@ def validate_questbook_surface() -> None:
 
     if "AOA-Q-0006" in actual_ids:
         source_boundary_text = read_text(RPG_SOURCE_BOUNDARY_PATH)
-        if "The RPG layer MUST remain a reflection and orchestration layer." not in source_boundary_text:
+        if "RPG reflects existing AoA surfaces, but source owners keep meaning." not in source_boundary_text:
             fail("mechanics/rpg/parts/source-boundary/README.md must keep the reflection-layer core rule explicit")
-        if "One universal power score MUST NOT become authoritative." not in source_boundary_text:
+        if "universal power score" not in source_boundary_text:
             fail("mechanics/rpg/parts/source-boundary/README.md must keep the anti-power-score law explicit")
 
         canonical_terms_text = read_text(RPG_CANONICAL_TERMINOLOGY_PATH)
@@ -590,7 +590,7 @@ def validate_questbook_surface() -> None:
         if "dual_vocabulary_overlay_v1" not in canonical_terms_text:
             fail("mechanics/rpg/parts/vocabulary-overlay/TERMINOLOGY.md must reference dual_vocabulary_overlay_v1")
 
-        if "The repo that already owns meaning keeps owning meaning." not in source_boundary_text:
+        if "The repository that owns the source object keeps the meaning." not in source_boundary_text:
             fail("mechanics/rpg/parts/source-boundary/README.md must keep the ownership law explicit")
         if "1. source meaning wins" not in source_boundary_text:
             fail("mechanics/rpg/parts/source-boundary/README.md must keep the precedence rule explicit")
@@ -611,24 +611,24 @@ def validate_questbook_surface() -> None:
 
     if "AOA-Q-0007" in actual_ids:
         bridge_wave_text = read_text(RPG_QUEST_CAMPAIGN_PATH)
-        if "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership." not in bridge_wave_text:
+        if "It makes long work playable and memorable without taking quest objects from Questbook" not in bridge_wave_text:
             fail("mechanics/rpg/parts/quest-campaign/README.md must keep the bridge-purpose law explicit")
-        if "`aoa-routing` may orient. It does not own proof, party doctrine, or quest meaning." not in bridge_wave_text:
+        if "routing help is useful, but proof and source meaning remain outside this part" not in bridge_wave_text:
             fail("mechanics/rpg/parts/quest-campaign/README.md must keep routing non-authority explicit")
-        if "do not create a universal rank or power score here" not in bridge_wave_text:
+        if "a label would imply quest closure, proof completion, or a universal rank" not in bridge_wave_text:
             fail("mechanics/rpg/parts/quest-campaign/README.md must keep the anti-power-score bridge rule explicit")
-        if "This wave is a bridge, not a throne." not in bridge_wave_text:
-            fail("mechanics/rpg/parts/quest-campaign/README.md must keep the anti-throne rule explicit")
+        if "## Use When" not in bridge_wave_text or "## Do Not Use When" not in bridge_wave_text:
+            fail("mechanics/rpg/parts/quest-campaign/README.md must keep the active-route shape explicit")
 
     if "AOA-Q-0008" in actual_ids:
         runtime_projection_text = read_text(RPG_RUNTIME_PROJECTION_PATH)
-        if "This document defines the first body-facing rollout for the AoA RPG reflection contour." not in runtime_projection_text:
-            fail("mechanics/rpg/parts/runtime-projection/README.md must keep the body-facing role explicit")
-        if "It is the pass where the contour stops being only a federation of ideas and gains runtime-owned read models, generated transport collections, and a bounded projection seam." not in runtime_projection_text:
-            fail("mechanics/rpg/parts/runtime-projection/README.md must keep the body-facing transition explicit")
-        if "Let the body carry the contour." not in runtime_projection_text:
-            fail("mechanics/rpg/parts/runtime-projection/README.md must keep the body-carries-the-contour rule explicit")
-        if "Do not let it rewrite the soul." not in runtime_projection_text:
+        if "It names what a runtime or frontend projection would need" not in runtime_projection_text:
+            fail("mechanics/rpg/parts/runtime-projection/README.md must keep the projection role explicit")
+        if "read models, transport bundles, or session-state hints need a source-boundary check" not in runtime_projection_text:
+            fail("mechanics/rpg/parts/runtime-projection/README.md must keep the projection transition explicit")
+        if "the task would create live runtime state from center docs" not in runtime_projection_text:
+            fail("mechanics/rpg/parts/runtime-projection/README.md must keep the runtime-state stop-line explicit")
+        if "projection would rewrite source meaning" not in runtime_projection_text:
             fail("mechanics/rpg/parts/runtime-projection/README.md must keep the anti-rewrite rule explicit")
 
         generated_payload = read_json(DUAL_VOCABULARY_GENERATED_PATH)

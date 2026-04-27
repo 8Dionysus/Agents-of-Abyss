@@ -102,6 +102,10 @@ Tracking starts with the community-docs baseline for this repository.
   overlay keys in lockstep
 - `mechanics/rpg/DIRECTION.md` to define RPG as world grammar for agent work,
   not a toy layer or decorative game skin
+- RPG active-route polish that gives every part `README.md` the same
+  `Use When` / `Do Not Use When` / `Active Outputs` / `Next Route` shape and
+  rejects wave-era language from active RPG routes, with ecosystem validation
+  aligned to the distilled active wording
 
 ### Changed
 

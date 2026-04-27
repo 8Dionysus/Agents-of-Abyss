@@ -8,6 +8,7 @@ Canonical landing ledger for the RPG mechanic.
 - RPG vocabulary overlay and route polish made the dual-vocabulary contract machine-checkable; the active overlay now lives in `mechanics/rpg/parts/vocabulary-overlay/`.
 - RPG world-grammar direction defined when game language strengthens agent work and when it must stay silent.
 - RPG active parts and legacy provenance distillation moved working doctrine into `mechanics/rpg/parts/` and kept raw wave notes as receipts.
+- RPG active-route polish made every part entry follow one concise route shape and made wave-era prose invalid in active RPG routes.
 
 ## Entries
 
@@ -166,3 +167,33 @@ Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python
 Stop-lines: no active route starts from raw legacy, no flat `docs/RPG_*.md` source docs, no flat RPG artifact alias directories, no owner acceptance claim, no runtime activation claim, no universal power score, no presentation-label overwrite of canonical keys.
 
 Next route: route future RPG changes through the specific active part; consult `mechanics/rpg/PROVENANCE.md` only when a historical receipt is needed, then distill rather than dragging raw sources into working docs.
+
+### RPG active-route polish and wave-noise guardrails
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns concise RPG part routes and validator guardrails; legacy raw sources remain receipts, and stronger owner repositories still own role, skill, proof, quest, runtime, playbook, memory, and derived summary truth.
+
+Surfaces:
+
+- `mechanics/rpg/README.md`
+- `mechanics/rpg/PARTS.md`
+- `mechanics/rpg/parts/world-grammar/README.md`
+- `mechanics/rpg/parts/source-boundary/README.md`
+- `mechanics/rpg/parts/vocabulary-overlay/README.md`
+- `mechanics/rpg/parts/vocabulary-overlay/TERMINOLOGY.md`
+- `mechanics/rpg/parts/quest-campaign/README.md`
+- `mechanics/rpg/parts/progression-unlocks/README.md`
+- `mechanics/rpg/parts/runtime-projection/README.md`
+- `mechanics/rpg/parts/owner-handoffs/README.md`
+- `mechanics/rpg/scripts/validate_rpg_distillation.py`
+- `mechanics/rpg/tests/test_rpg_distillation.py`
+- `scripts/validate_ecosystem.py`
+- `tests/test_validate_ecosystem.py`
+- `CHANGELOG.md`
+
+Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python scripts/validate_ecosystem.py`; `python -m pytest -q mechanics/rpg/tests tests/test_validate_ecosystem.py`
+
+Stop-lines: no wave-era phrasing, raw-source filenames, direct legacy/raw routing, decorative slogans, owner acceptance claim, runtime activation claim, universal power score, or presentation-label overwrite of canonical keys in active RPG routes.
+
+Next route: keep future RPG part changes in the concise active-route shape; if historical detail is needed, route through `mechanics/rpg/PROVENANCE.md` and update the relevant part only after distillation.

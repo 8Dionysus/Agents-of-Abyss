@@ -2,19 +2,28 @@
 
 This part owns the active RPG reading of quests, questlines, campaigns, parties, navigation cards, and chronicles.
 
-What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership.
+It makes long work playable and memorable without taking quest objects from Questbook, campaign choreography from `aoa-playbooks`, or chronicles from `aoa-memo`.
 
-## Active Function
+## Use When
 
-- make quest obligations playable without moving quest ownership
-- read long-horizon work as campaigns without owning choreography
-- keep party and chronicle language bounded by owner routes
-- `aoa-routing` may orient. It does not own proof, party doctrine, or quest meaning.
-- do not create a universal rank or power score here
+- a quest obligation needs a readable RPG route without moving the quest object
+- long-horizon work needs a campaign reading without claiming playbook choreography
+- a party, navigation card, or chronicle note would improve handoff or memory
+- routing help is useful, but proof and source meaning remain outside this part
 
-## Final Rule
+## Do Not Use When
 
-This wave is a bridge, not a throne.
+- the work only needs a Questbook state change
+- campaign order belongs in `aoa-playbooks`
+- a chronicle belongs in `aoa-memo`
+- a label would imply quest closure, proof completion, or a universal rank
+
+## Active Outputs
+
+- quest reading
+- campaign route suggestion
+- party or navigation note
+- chronicle question routed to `aoa-memo`
 
 ## Next Route
 

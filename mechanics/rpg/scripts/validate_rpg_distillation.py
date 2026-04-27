@@ -60,6 +60,18 @@ VOCAB_ARTIFACTS = (
     "tests/test_vocabulary_overlay.py",
 )
 ACTIVE_DOC_ALLOWLIST = {"PROVENANCE.md", "LANDING_LOG.md", "AGENTS.md"}
+PART_README_REQUIRED_HEADINGS = (
+    "## Use When",
+    "## Do Not Use When",
+    "## Active Outputs",
+    "## Next Route",
+)
+ACTIVE_LEGACY_LANGUAGE_PATTERNS = (
+    (re.compile(r"\bwave\b", re.IGNORECASE), "should not use wave-era language in active route"),
+    (re.compile(r"first body-facing rollout", re.IGNORECASE), "should not keep rollout-era prose in active route"),
+    (re.compile(r"rewrite the soul", re.IGNORECASE), "should not keep poetic runtime-projection slogans in active route"),
+    (re.compile(r"\bthrone\b", re.IGNORECASE), "should not keep bridge-wave slogans in active route"),
+)
 
 
 def rel(path: Path) -> str:
@@ -140,10 +152,25 @@ def validate_active_docs_are_clean(problems: list[str]) -> None:
             problems.append(f"{rel(path)} should route through PROVENANCE.md instead of legacy/raw")
         if raw_name_pattern.search(text):
             problems.append(f"{rel(path)} should not expose raw RPG_* filenames in active route")
+        for pattern, message in ACTIVE_LEGACY_LANGUAGE_PATTERNS:
+            if pattern.search(text):
+                problems.append(f"{rel(path)} {message}")
     for path in (RPG_ROOT / "parts").rglob("*.md"):
         text = read_text(path)
         if "legacy/raw" in text or raw_name_pattern.search(text):
             problems.append(f"{rel(path)} should stay active and not expose raw legacy source names")
+        for pattern, message in ACTIVE_LEGACY_LANGUAGE_PATTERNS:
+            if pattern.search(text):
+                problems.append(f"{rel(path)} {message}")
+
+
+def validate_part_readme_shape(problems: list[str]) -> None:
+    for slug in PART_SLUGS:
+        path = RPG_ROOT / "parts" / slug / "README.md"
+        text = read_text(path)
+        for heading in PART_README_REQUIRED_HEADINGS:
+            if heading not in text:
+                problems.append(f"{rel(path)}: missing active-route heading {heading}")
 
 
 def validate_registry(problems: list[str]) -> None:
@@ -199,6 +226,7 @@ def validate() -> list[str]:
         return problems
     validate_provenance(problems)
     validate_active_docs_are_clean(problems)
+    validate_part_readme_shape(problems)
     validate_registry(problems)
     validate_vocabulary_overlay(problems)
     return problems

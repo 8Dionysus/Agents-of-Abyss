@@ -69,3 +69,34 @@ def test_active_route_rejects_direct_raw_legacy_refs(tmp_path, monkeypatch) -> N
     assert "mechanics/rpg/README.md should not expose raw RPG_* filenames in active route" in problems
     assert "mechanics/rpg/parts/world-grammar/README.md should stay active and not expose raw legacy source names" in problems
     assert not any(problem.startswith("mechanics/rpg/PROVENANCE.md") for problem in problems)
+
+
+def test_active_route_rejects_wave_language(tmp_path, monkeypatch) -> None:
+    module = load_validator()
+    repo = tmp_path / "repo"
+    rpg = repo / "mechanics" / "rpg"
+    part = rpg / "parts" / "quest-campaign"
+    part.mkdir(parents=True)
+    (rpg / "README.md").write_text("This first wave is active again.\n", encoding="utf-8")
+    (part / "README.md").write_text(
+        "## Use When\n\nThis wave is a bridge, not a throne.\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(module, "REPO_ROOT", repo)
+    monkeypatch.setattr(module, "RPG_ROOT", rpg)
+
+    problems: list[str] = []
+    module.validate_active_docs_are_clean(problems)
+
+    assert "mechanics/rpg/README.md should not use wave-era language in active route" in problems
+    assert any(problem.endswith("should not use wave-era language in active route") for problem in problems)
+    assert any(problem.endswith("should not keep bridge-wave slogans in active route") for problem in problems)
+
+
+def test_part_readmes_use_common_active_route_shape() -> None:
+    module = load_validator()
+
+    problems: list[str] = []
+    module.validate_part_readme_shape(problems)
+
+    assert problems == []
