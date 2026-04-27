@@ -94,6 +94,9 @@ RPG_PREFIXES = (
     "test_rpg",
     "validate_rpg",
 )
+RELEASE_SUPPORT_PREFIXES = (
+    "validate_release_support",
+)
 
 ROOT_ALLOWLIST = {
     "generated": {
@@ -136,6 +139,8 @@ def mechanic_for_name(name: str) -> str | None:
         return "questbook"
     if name.startswith(RPG_PREFIXES):
         return "rpg"
+    if name.startswith(RELEASE_SUPPORT_PREFIXES):
+        return "release-support"
     return None
 
 

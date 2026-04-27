@@ -21,15 +21,24 @@ This file applies to `mechanics/release-support/`.
 
 ## Role
 
-Release-support owns public support posture, federation release protocol,
-releasing procedure, and direction-surface routing.
+Release-support owns center state-transition gates, public support posture,
+federation release protocol, center release procedure, direction-surface
+routing, changelog/roadmap/landing-log separation, owner handoff stop-lines,
+and rollback/return posture.
 
-It does not turn unverified future work into public claims.
+It does not turn unverified future work into public claims, owner acceptance,
+proof verdicts, runtime truth, or public projection authority.
 
 ## Validation
 
 Run `python scripts/validate_mechanics_topology.py --mechanic release-support`
 after package changes.
+
+For active-part or transition-law changes, run:
+
+```bash
+python mechanics/release-support/scripts/validate_release_support_distillation.py
+```
 
 <!-- centralized-child-validation:start -->
 
@@ -41,11 +50,37 @@ route to this section instead of carrying command blocks.
 #### `mechanics/release-support/README.md`
 
 ```bash
+python mechanics/release-support/scripts/validate_release_support_distillation.py
 python scripts/validate_mechanics_topology.py --mechanic release-support
 python scripts/release_check.py
 python scripts/validate_mechanic_readme_cards.py --mechanic release-support
 python scripts/build_mechanic_card_index.py --check
 python scripts/validate_mechanic_card_index.py
+python scripts/validate_owner_request_queue.py --mechanic release-support
+python scripts/build_owner_request_queue.py --check
+python scripts/validate_generated_owner_request_queue.py
+python scripts/validate_owner_request_docs.py --mechanic release-support
+python scripts/validate_mechanic_landing_logs.py --mechanic release-support
+```
+
+#### `mechanics/release-support/DIRECTION.md`
+
+```bash
+python mechanics/release-support/scripts/validate_release_support_distillation.py
+python scripts/validate_mechanics_topology.py --mechanic release-support
+```
+
+#### `mechanics/release-support/PARTS.md`
+
+```bash
+python mechanics/release-support/scripts/validate_release_support_distillation.py
+python scripts/validate_mechanic_artifact_topology.py --mechanic release-support
+```
+
+#### `mechanics/release-support/OWNER_REQUESTS.md`
+
+```bash
+python mechanics/release-support/scripts/validate_release_support_distillation.py
 python scripts/validate_owner_request_queue.py --mechanic release-support
 python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py

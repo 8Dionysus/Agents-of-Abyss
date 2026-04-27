@@ -33,6 +33,7 @@ COMMANDS = [
     ("validate Recurrence mechanic", [sys.executable, "mechanics/recurrence/scripts/validate_recurrence_mechanic.py"]),
     ("validate Checkpoint mechanic", [sys.executable, "mechanics/checkpoint/scripts/validate_checkpoint_mechanic.py"]),
     ("validate Antifragility mechanic", [sys.executable, "mechanics/antifragility/scripts/validate_antifragility_distillation.py"]),
+    ("validate Release-support mechanic", [sys.executable, "mechanics/release-support/scripts/validate_release_support_distillation.py"]),
     ("validate quest source contract", [sys.executable, "mechanics/questbook/scripts/validate_questbook_source_contract.py"]),
     ("validate questbook lifecycle", [sys.executable, "mechanics/questbook/scripts/validate_questbook_lifecycle.py"]),
     ("check questbook index", [sys.executable, "mechanics/questbook/scripts/build_questbook_index.py", "--check"]),

@@ -4,6 +4,10 @@ This repository is the constitutional center of the AoA federation.
 
 Its release flow is repo-local, but it also anchors the shared federation release doctrine.
 
+For non-GitHub transition claims, use the active release-support parts before
+touching this runbook. This file is the center GitHub release route, not the
+whole definition of release.
+
 See also:
 
 - [Federation Release Protocol](FEDERATION_RELEASE_PROTOCOL.md)
@@ -18,6 +22,8 @@ A center release should make it easy to answer:
 - which federation release rules or surfaces changed
 - how the center claims were revalidated
 - what still belongs in sibling repos rather than the center
+- which internal state transitions became supportable, landed, public,
+  requested, or rollback-bounded
 
 ## Recommended release flow
 
@@ -38,3 +44,5 @@ A center release should make it easy to answer:
 
 - The center may define federation release doctrine, but it must not absorb sibling repo release meaning.
 - The center release verifier stays repo-owned and bounded.
+- Mechanic landings, quest closeouts, checkpoint bridges, and owner requests
+  may be release-support transitions without being GitHub Releases.

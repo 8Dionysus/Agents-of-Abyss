@@ -804,43 +804,69 @@
     {
       "agents_ref": "mechanics/release-support/AGENTS.md",
       "canonical_docs": [
+        "mechanics/release-support/DIRECTION.md",
+        "mechanics/release-support/PARTS.md",
+        "mechanics/release-support/OWNER_MAP.md",
+        "mechanics/release-support/PROVENANCE.md",
+        "mechanics/release-support/OWNER_REQUESTS.md",
         "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         "mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md",
         "mechanics/release-support/docs/RELEASING.md",
         "mechanics/release-support/docs/DIRECTION_SURFACES.md",
-        "mechanics/release-support/docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md"
+        "mechanics/release-support/docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md",
+        "mechanics/release-support/parts/README.md",
+        "mechanics/release-support/parts/state-transition-gate/README.md",
+        "mechanics/release-support/parts/public-claim-gate/README.md",
+        "mechanics/release-support/parts/release-runbook/README.md",
+        "mechanics/release-support/parts/changelog-roadmap-split/README.md",
+        "mechanics/release-support/parts/landing-closeout/README.md",
+        "mechanics/release-support/parts/owner-handoff-packet/README.md",
+        "mechanics/release-support/parts/sibling-evidence-route/README.md",
+        "mechanics/release-support/parts/rollback-return/README.md",
+        "mechanics/release-support/parts/direction-surface-review/README.md"
       ],
       "card": {
-        "center_owns": "Center release posture, public claim boundaries, federation release protocol, release runbook, and roadmap/changelog/direction separation.",
-        "inputs": [
-          "Public claim, release note, roadmap change, direction update, audit finding, or support statement.",
-          "Source evidence sufficient to decide whether the center may support the claim."
-        ],
-        "next_route": [
-          "For sibling release truth, route to the sibling repository before claiming support.",
-          "For proof-dependent claims, route to `aoa-evals`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
-        ],
-        "outputs": [
-          "Supportable claim, stop-line, release checklist route, direction-surface update, audit route, or sibling handoff.",
-          "No unverified public claim and no substitution of roadmap history for changelog truth."
-        ],
+        "trigger": "Use when a transition claim, public claim, release surface, changelog, roadmap, landing log, direction surface, support posture, owner handoff, checkpoint closeout, quest closeout, audit route, or rollback route must be checked.",
+        "center_owns": "Center state-transition vocabulary, release posture, public claim boundaries, federation release protocol, center release runbook, direction-surface routing, changelog/roadmap/landing-log split, and owner handoff stop-lines.",
         "stronger_owner_split": [
-          "Sibling repositories own their local release truth and implementation evidence.",
-          "`aoa-evals` owns proof evidence for quality or regression claims.",
+          "Sibling repositories own their local release truth, implementation evidence, and acceptance receipts.",
+          "Owning mechanics own their content, maturity, active parts, and landing logs.",
+          "`aoa-evals` owns proof evidence for quality, regression, and public-claim support.",
+          "`aoa-stats` owns derived release and transition movement summaries.",
+          "`aoa-routing` owns route and entry ABI updates.",
+          "`aoa-sdk` owns typed helper and compatibility support for release consumers.",
+          "`8Dionysus` owns public projection after center and owner evidence align.",
+          "`abyss-stack` owns runtime deployment and rollback truth.",
           "Generated surfaces reflect source truth but do not author release truth."
         ],
-        "trigger": "Use when a public claim, release surface, changelog, roadmap, direction surface, support posture, or audit route must be checked."
+        "inputs": [
+          "Public claim, release note, roadmap change, direction update, landing log entry, mechanic maturity claim, quest or checkpoint closeout, audit finding, support statement, owner request, or rollback-sensitive transition.",
+          "Source evidence sufficient to decide whether the center may support the transition claim."
+        ],
+        "outputs": [
+          "Supportable claim, state-transition gate, release checklist route, changelog/roadmap/landing-log destination, direction-surface update, audit route, owner handoff packet, rollback route, or stop-line.",
+          "No unverified public claim, sibling acceptance claim, or substitution of roadmap history for changelog truth."
+        ],
+        "next_route": [
+          "For proof-dependent claims, route to `aoa-evals`; for sibling release truth or acceptance, route to the sibling repository.",
+          "For derived movement summaries, route to `aoa-stats`; for route/entry ABI support, route to `aoa-routing`; for typed helper support, route to `aoa-sdk`; for public projection, route to `8Dionysus`; for runtime deployment or rollback, route to `abyss-stack`.",
+          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ]
       },
       "docs_path": "mechanics/release-support/docs",
       "entry_ref": "mechanics/release-support/README.md",
       "landing_log_ref": "mechanics/release-support/LANDING_LOG.md",
       "must_not_claim": [
+        "GitHub-only definition of release",
         "unverified public claim",
         "sibling release truth",
-        "roadmap history as changelog"
+        "sibling acceptance without receipt",
+        "roadmap history as changelog",
+        "generated or derived release authority",
+        "hidden rollback safety"
       ],
-      "owner_boundary": "Center release posture and public claim boundaries; sibling repositories own local release truth.",
-      "owner_request_doc_ref": "mechanics/release-support/docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md",
+      "owner_boundary": "Center transition law, release posture, public support boundaries, direction-surface routing, and owner handoff stop-lines; owner repositories carry implementation, proof, runtime, projection, and acceptance truth.",
+      "owner_request_doc_ref": "mechanics/release-support/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-RELEASE-EVALS-001",
         "ORQ-RELEASE-STATS-001",
@@ -854,6 +880,7 @@
       "status": "landed",
       "title": "Release support",
       "validation_refs": [
+        "mechanics/release-support/scripts/validate_release_support_distillation.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/release_check.py",
         "scripts/validate_mechanic_readme_cards.py",
@@ -862,7 +889,8 @@
         "scripts/validate_owner_request_queue.py",
         "scripts/build_owner_request_queue.py",
         "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py"
+        "scripts/validate_owner_request_docs.py",
+        "scripts/validate_mechanic_landing_logs.py"
       ]
     }
   ],

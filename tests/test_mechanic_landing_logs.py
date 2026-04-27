@@ -52,6 +52,11 @@ class MechanicLandingLogTests(unittest.TestCase):
 
         self.assertEqual(problems, [])
 
+    def test_release_support_landing_log_carries_state_transition_distillation(self) -> None:
+        problems = validate_log("release-support")
+
+        self.assertEqual(problems, [])
+
 
 if __name__ == "__main__":
     unittest.main()

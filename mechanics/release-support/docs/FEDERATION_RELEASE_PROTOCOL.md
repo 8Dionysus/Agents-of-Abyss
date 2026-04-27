@@ -6,6 +6,13 @@ It is intentionally short.
 Owner repos still keep their own `mechanics/release-support/docs/RELEASING.md`, validators, and release claims.
 This center note only fixes the federation-wide cadence and the minimum shared contract.
 
+This protocol covers GitHub-level publication. The broader release-support
+mechanic covers internal state transitions such as mechanic landings,
+checkpoint closeouts, owner handoffs, public claims, and rollback-bound moves.
+Use [`../DIRECTION.md`](../DIRECTION.md) and
+[`../PARTS.md`](../PARTS.md) before treating a non-GitHub transition as
+supportable.
+
 ## Cadence
 
 An owner repo becomes release-due when any of these become true:
@@ -38,6 +45,11 @@ A release is done only when these agree in one landed state:
 - published GitHub Release
 - latest GitHub Release marker
 - GitHub Release body built from the latest changelog section
+
+For internal landings, "done" means the owning mechanic or repository has a
+checked landing, provenance route, owner boundary, validation result, and next
+owner route. Do not substitute an internal landing for a published GitHub
+Release, and do not substitute a GitHub Release for owner-local acceptance.
 
 ## Required preflight
 

@@ -108,11 +108,11 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 | `ORQ-TOSBRIDGE-MEMO-001` | `tos-bridge` | `aoa-memo` | `requested` | `P1` | Witness memory, provenance, and compost-facing recall |
 | `ORQ-TOSBRIDGE-EVALS-001` | `tos-bridge` | `aoa-evals` | `requested` | `P1` | Integrity and provenance proof for bridge support |
 | `ORQ-TOSBRIDGE-PLAYBOOKS-001` | `tos-bridge` | `aoa-playbooks` | `requested` | `P2` | Witness and compost scenario routes |
-| `ORQ-RELEASE-EVALS-001` | `release-support` | `aoa-evals` | `requested` | `P0` | Public claim proof for release and support posture |
-| `ORQ-RELEASE-STATS-001` | `release-support` | `aoa-stats` | `requested` | `P2` | Derived release movement summaries |
-| `ORQ-RELEASE-ROUTING-001` | `release-support` | `aoa-routing` | `requested` | `P2` | Release route and federation entry ABI updates |
-| `ORQ-RELEASE-SDK-001` | `release-support` | `aoa-sdk` | `requested` | `P3` | Compatibility helper support for release consumers |
-| `ORQ-RELEASE-PROFILE-001` | `release-support` | `8Dionysus` | `requested` | `P2` | Public projection and profile-route alignment |
+| `ORQ-RELEASE-EVALS-001` | `release-support` | `aoa-evals` | `requested` | `P0` | Public claim proof for release and state-transition support posture |
+| `ORQ-RELEASE-STATS-001` | `release-support` | `aoa-stats` | `requested` | `P2` | Derived release and transition movement summaries |
+| `ORQ-RELEASE-ROUTING-001` | `release-support` | `aoa-routing` | `requested` | `P2` | Release route, transition route, and federation entry ABI updates |
+| `ORQ-RELEASE-SDK-001` | `release-support` | `aoa-sdk` | `requested` | `P3` | Compatibility helper support for release and transition consumers |
+| `ORQ-RELEASE-PROFILE-001` | `release-support` | `8Dionysus` | `requested` | `P2` | Public projection and profile-route alignment for release and transition claims |
 
 ## Mechanic request docs
 
@@ -125,7 +125,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 - `questbook` -> [OWNER_REQUESTS.md](questbook/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-routing`
 - `rpg` -> [OWNER_REQUESTS.md](rpg/OWNER_REQUESTS.md); owners: `aoa-agents`, `aoa-skills`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`, `aoa-stats`
 - `tos-bridge` -> [TOS_BRIDGE_OWNER_REPO_REQUESTS.md](tos-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md); owners: `Tree-of-Sophia`, `aoa-kag`, `aoa-routing`, `aoa-memo`, `aoa-evals`, `aoa-playbooks`
-- `release-support` -> [RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md](release-support/docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md); owners: `aoa-evals`, `aoa-stats`, `aoa-routing`, `aoa-sdk`, `8Dionysus`
+- `release-support` -> [OWNER_REQUESTS.md](release-support/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-stats`, `aoa-routing`, `aoa-sdk`, `8Dionysus`
 
 ## Stop-lines
 

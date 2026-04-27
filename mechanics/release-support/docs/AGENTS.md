@@ -6,9 +6,10 @@ This card applies to `mechanics/release-support/docs/` and all descendant source
 
 ## Role
 
-`mechanics/release-support/docs/` holds detailed center-source doctrine, models, waves, stop-lines,
-handoffs, packets, or support notes for the `Release support` mechanic. The package `README.md`
-remains the entry card; this docs directory holds the deeper material.
+`mechanics/release-support/docs/` holds detailed center-source doctrine,
+models, stop-lines, handoffs, packets, or support notes for the `Release
+support` mechanic. The package `README.md` remains the entry card; `DIRECTION.md`
+and active `parts/` hold the default operating route.
 
 ## Read before editing
 
@@ -22,6 +23,7 @@ generated surface mirrors this document, read the builder and validator before e
 - Do not create owner-local activation claims, runtime claims, proof verdicts, memory objects, role contracts, playbook choreography, KAG canon, or ToS-authored meaning here.
 - If this document becomes historical, route it through landing, trace, or legacy posture instead of deleting provenance.
 - If this document creates a request to a stronger owner, update the owner-request queue rather than pretending the owner accepted it.
+- Do not make docs the default operating surface when a concise active part can carry the route.
 
 ## Validation
 
@@ -31,6 +33,7 @@ Run package and link checks:
 python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
 python scripts/validate_links.py
+python mechanics/release-support/scripts/validate_release_support_distillation.py
 python scripts/validate_mechanic_readme_cards.py
 python scripts/validate_mechanics_topology.py
 python scripts/validate_mechanic_landing_logs.py --mechanic release-support
