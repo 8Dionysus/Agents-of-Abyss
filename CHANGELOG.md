@@ -141,6 +141,14 @@ Tracking starts with the community-docs baseline for this repository.
   `mechanics/method-growth/OWNER_REQUESTS.md`, active `parts/`, and
   `mechanics/method-growth/scripts/validate_method_growth_mechanic.py`
   package coverage
+- Antifragility active-part distillation through
+  `mechanics/antifragility/DIRECTION.md`,
+  `mechanics/antifragility/PARTS.md`,
+  `mechanics/antifragility/OWNER_MAP.md`,
+  `mechanics/antifragility/PROVENANCE.md`,
+  `mechanics/antifragility/OWNER_REQUESTS.md`, active `parts/`, and
+  `mechanics/antifragility/scripts/validate_antifragility_distillation.py`
+  package coverage
 
 ### Changed
 
@@ -164,6 +172,14 @@ Tracking starts with the community-docs baseline for this repository.
 - `scripts/release_check.py` now includes the Method-growth package validator
   so active parts, provenance routing, owner-map boundaries, and owner-request
   sync stay under release discipline
+- `mechanics/registry.json`, `mechanics/owner-request-queue.json`, and
+  `mechanics/OWNER_REQUEST_QUEUE.md` now route Antifragility owner requests
+  through `mechanics/antifragility/OWNER_REQUESTS.md`, while
+  `mechanics/antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md` remains
+  a compatibility pointer
+- `scripts/release_check.py` now includes the Antifragility package validator
+  so stress review, via negativa, anti-authority boundaries, provenance
+  routing, and owner-request sync stay under release discipline
 - `generated/center_entry_map.min.json` and its schema now publish the
   `aoa_center_entry_map_v2` route contract with route modes, human paths,
   machine companions, and explicit `must_not_claim` stop-lines

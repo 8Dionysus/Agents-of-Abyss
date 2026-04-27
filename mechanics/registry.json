@@ -491,12 +491,25 @@
     {
       "agents_ref": "mechanics/antifragility/AGENTS.md",
       "canonical_docs": [
+        "mechanics/antifragility/DIRECTION.md",
+        "mechanics/antifragility/PARTS.md",
+        "mechanics/antifragility/OWNER_MAP.md",
+        "mechanics/antifragility/OWNER_REQUESTS.md",
+        "mechanics/antifragility/PROVENANCE.md",
         "mechanics/antifragility/docs/ANTIFRAGILITY.md",
         "mechanics/antifragility/docs/VIA_NEGATIVA.md",
         "mechanics/antifragility/docs/ANTI_AUTHORITY_RULES.md",
         "mechanics/antifragility/docs/ONE_IN_ONE_OUT.md",
         "mechanics/antifragility/FRAGILITY_BLACKLIST.md",
-        "mechanics/antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md"
+        "mechanics/antifragility/parts/README.md",
+        "mechanics/antifragility/parts/stress-review/README.md",
+        "mechanics/antifragility/parts/via-negativa/README.md",
+        "mechanics/antifragility/parts/authority-boundary/README.md",
+        "mechanics/antifragility/parts/sprawl-control/README.md",
+        "mechanics/antifragility/parts/fragility-registry/README.md",
+        "mechanics/antifragility/parts/repair-proof/README.md",
+        "mechanics/antifragility/parts/memory-return/README.md",
+        "mechanics/antifragility/parts/owner-handoff/README.md"
       ],
       "card": {
         "center_owns": "Center stress doctrine, via negativa, anti-authority posture, one-in-one-out pressure, and fragility blacklist posture.",
@@ -506,16 +519,19 @@
         ],
         "next_route": [
           "For owner-local cleanup, route to the owning repository; for repair proof, route to `aoa-evals`; for retained lessons, route to `aoa-memo`.",
+          "For recurring cleanup routes, route to `aoa-playbooks`; for derived summaries, route to `aoa-stats`.",
           "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
         ],
         "outputs": [
-          "Subtraction route, anti-authority stop-line, repair request, evidence request, or owner-local cleanup handoff.",
-          "No one-score health metric and no deletion theater."
+          "Subtraction route, anti-authority stop-line, repair request, evidence request, memory route, or owner-local cleanup handoff.",
+          "No one-score health metric, no deletion theater, and no owner-local cleanup authority."
         ],
         "stronger_owner_split": [
           "Owner repositories own their local deletion, repair, resilience, and incident evidence.",
           "`aoa-evals` owns repair proof and regression evidence.",
-          "`aoa-memo` owns incident lessons and retained memory."
+          "`aoa-memo` owns incident lessons and retained memory.",
+          "`aoa-stats` owns derived fragility windows without one-score health.",
+          "`aoa-playbooks` owns recurring cleanup and degraded-mode choreography."
         ],
         "trigger": "Use when stress, sprawl, authority inflation, cleanup pressure, degraded mode, or a fragile pattern needs bounded review."
       },
@@ -527,8 +543,8 @@
         "deletion theater",
         "owner-local cleanup authority"
       ],
-      "owner_boundary": "Center stress, subtraction, anti-authority, and fragility-pattern doctrine; owner repositories own local repair evidence.",
-      "owner_request_doc_ref": "mechanics/antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md",
+      "owner_boundary": "AoA owns antifragility law, subtraction vocabulary, anti-authority posture, and fragility-pattern routing; owner repositories own local repair, deletion, incident receipts, proof, memory, runtime behavior, and accepted cleanup execution.",
+      "owner_request_doc_ref": "mechanics/antifragility/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-ANTIFRAGILITY-EVALS-001",
         "ORQ-ANTIFRAGILITY-MEMO-001",
@@ -541,6 +557,7 @@
       "status": "landed",
       "title": "Antifragility",
       "validation_refs": [
+        "mechanics/antifragility/scripts/validate_antifragility_distillation.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/validate_mechanic_readme_cards.py",
         "scripts/build_mechanic_card_index.py",
@@ -548,7 +565,8 @@
         "scripts/validate_owner_request_queue.py",
         "scripts/build_owner_request_queue.py",
         "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py"
+        "scripts/validate_owner_request_docs.py",
+        "scripts/validate_mechanic_landing_logs.py"
       ]
     },
     {

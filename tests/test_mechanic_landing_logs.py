@@ -47,6 +47,11 @@ class MechanicLandingLogTests(unittest.TestCase):
 
         self.assertEqual(problems, [])
 
+    def test_antifragility_landing_log_carries_active_part_distillation(self) -> None:
+        problems = validate_log("antifragility")
+
+        self.assertEqual(problems, [])
+
 
 if __name__ == "__main__":
     unittest.main()

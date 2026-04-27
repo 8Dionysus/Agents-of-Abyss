@@ -6,9 +6,9 @@ This card applies to `mechanics/antifragility/docs/` and all descendant source d
 
 ## Role
 
-`mechanics/antifragility/docs/` holds detailed center-source doctrine, models, waves, stop-lines,
-handoffs, packets, or support notes for the `Antifragility` mechanic. The package `README.md`
-remains the entry card; this docs directory holds the deeper material.
+`mechanics/antifragility/docs/` holds detailed center-source doctrine and
+stop-lines for the `Antifragility` mechanic. The package `README.md` remains
+the entry card; active operation routes through package `PARTS.md`.
 
 ## Read before editing
 
@@ -21,23 +21,14 @@ generated surface mirrors this document, read the builder and validator before e
 - Keep detailed doctrine package-local and linked from the package README when it becomes an entry path.
 - Do not create owner-local activation claims, runtime claims, proof verdicts, memory objects, role contracts, playbook choreography, KAG canon, or ToS-authored meaning here.
 - If this document becomes historical, route it through landing, trace, or legacy posture instead of deleting provenance.
-- If this document creates a request to a stronger owner, update the owner-request queue rather than pretending the owner accepted it.
+- If this document creates a request to a stronger owner, update
+  `mechanics/antifragility/OWNER_REQUESTS.md` and the owner-request queue rather
+  than pretending the owner accepted it.
 
 ## Validation
 
-Run package and link checks:
-
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_links.py
-python scripts/validate_mechanic_readme_cards.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_mechanic_landing_logs.py --mechanic antifragility
-python -m pytest -q
-```
-
-Run any targeted builder, validator, and test named by the generated or version-specific surface you touched.
+Use the validation lane in
+[`mechanics/antifragility/AGENTS.md`](../AGENTS.md#validation).
 
 <!-- centralized-child-validation:start -->
 
@@ -49,6 +40,7 @@ route to this section instead of carrying command blocks.
 #### `mechanics/antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md`
 
 ```bash
+python mechanics/antifragility/scripts/validate_antifragility_distillation.py
 python scripts/validate_owner_request_queue.py --mechanic antifragility
 python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py
@@ -60,4 +52,6 @@ python scripts/validate_mechanics_topology.py --mechanic antifragility
 
 ## Closeout
 
-Report source docs changed, package README or registry updates needed, generated mirrors rebuilt or not rebuilt, owner-request status affected, and checks run or skipped.
+Report source docs changed, package README or registry updates needed,
+generated mirrors rebuilt or not rebuilt, owner-request status affected, and
+checks run or skipped.

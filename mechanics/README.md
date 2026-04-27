@@ -381,13 +381,16 @@ cleanup pressure.
 
 | Surface | Role |
 |---|---|
+| [Antifragility package](antifragility/README.md) | active route card |
+| [DIRECTION](antifragility/DIRECTION.md) | current growth posture |
+| [PARTS](antifragility/PARTS.md) | functioning part index |
 | [ANTIFRAGILITY](antifragility/docs/ANTIFRAGILITY.md) | stress should make the system more legible, bounded, and teachable |
-| [ANTIFRAGILITY_FIRST_WAVE](antifragility/docs/ANTIFRAGILITY_FIRST_WAVE.md) | first-wave antifragility scope |
 | [VIA_NEGATIVA](antifragility/docs/VIA_NEGATIVA.md) | subtraction as doctrine |
 | [ANTI_AUTHORITY_RULES](antifragility/docs/ANTI_AUTHORITY_RULES.md) | stop authority inflation |
 | [ONE_IN_ONE_OUT](antifragility/docs/ONE_IN_ONE_OUT.md) | sprawl pressure rule |
 | [FRAGILITY_BLACKLIST](../FRAGILITY_BLACKLIST.md) | known fragile patterns |
 | [DELETION_CANDIDATES](../docs/audits/DELETION_CANDIDATES.json) | deletion candidates |
+| [PROVENANCE](antifragility/PROVENANCE.md) | legacy/raw source bridge |
 
 Review questions:
 

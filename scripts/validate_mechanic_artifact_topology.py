@@ -31,6 +31,7 @@ AGON_PREFIXES = ("agon", "test_agon", "build_agon", "validate_agon")
 ANTIFRAGILITY_PREFIXES = (
     "deletion_candidate_list",
     "test_via_negativa_surfaces",
+    "validate_antifragility",
 )
 CHECKPOINT_PREFIXES = (
     "validate_checkpoint",

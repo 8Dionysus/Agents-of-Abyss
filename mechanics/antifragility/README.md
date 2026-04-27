@@ -1,55 +1,112 @@
 # Antifragility Mechanic
-Antifragility is a center mechanic package in `Agents-of-Abyss`. It names the center-owned route, stop-lines, and owner handoffs without taking operational truth from stronger owner repositories.
+
+Antifragility is the center mechanic for turning stress, sprawl, authority
+inflation, and cleanup pressure into clearer boundaries.
+
+It is not a deletion cult and not a health score. It asks what the system
+learned, what owner owns the repair, and what must become smaller, clearer, or
+better bounded after stress.
+
 ## Mechanic card
+
 - Status: `landed`
+
 ### Trigger
-Use when stress, sprawl, authority inflation, cleanup pressure, degraded mode, or a fragile pattern needs bounded review.
+
+Use when stress, sprawl, authority inflation, cleanup pressure, degraded mode,
+or a fragile pattern needs bounded review.
+
 ### Center owns
-Center stress doctrine, via negativa, anti-authority posture, one-in-one-out pressure, and fragility blacklist posture.
+
+Center stress doctrine, via negativa, anti-authority posture, one-in-one-out
+pressure, and fragility blacklist posture.
+
 ### Stronger owner split
-- Owner repositories own their local deletion, repair, resilience, and incident evidence.
+
+- Owner repositories own their local deletion, repair, resilience, and incident
+  evidence.
 - `aoa-evals` owns repair proof and regression evidence.
 - `aoa-memo` owns incident lessons and retained memory.
+- `aoa-stats` owns derived fragility windows without one-score health.
+- `aoa-playbooks` owns recurring cleanup and degraded-mode choreography.
 
 ### Inputs
-- Stress event, fragility pattern, deletion candidate, authority drift, or cleanup proposal.
-- Evidence that the change makes ownership, proof, or stop-lines clearer rather than merely smaller.
+
+- Stress event, fragility pattern, deletion candidate, authority drift, or
+  cleanup proposal.
+- Evidence that the change makes ownership, proof, or stop-lines clearer rather
+  than merely smaller.
 
 ### Outputs
-- Subtraction route, anti-authority stop-line, repair request, evidence request, or owner-local cleanup handoff.
-- No one-score health metric and no deletion theater.
+
+- Subtraction route, anti-authority stop-line, repair request, evidence request,
+  memory route, or owner-local cleanup handoff.
+- No one-score health metric, no deletion theater, and no owner-local cleanup
+  authority.
 
 ### Must not claim
+
 - one-score health
 - deletion theater
 - owner-local cleanup authority
 
 ### Validation
-Use the validation lane in [mechanics/antifragility/AGENTS.md](AGENTS.md#validation) for executable commands.
+
+Use the validation lane in [AGENTS.md](AGENTS.md#validation) for executable
+commands.
+
 ### Next route
-- For owner-local cleanup, route to the owning repository; for repair proof, route to `aoa-evals`; for retained lessons, route to `aoa-memo`.
-- For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
 
+- For owner-local cleanup, route to the owning repository; for repair proof,
+  route to `aoa-evals`; for retained lessons, route to `aoa-memo`.
+- For recurring cleanup routes, route to `aoa-playbooks`; for derived summaries,
+  route to `aoa-stats`.
+- For unclear owner, return to `docs/FEDERATION_RULES.md` and
+  `docs/REPO_ROLES.md`.
 
-## Owner-request queue
+## Start Here
 
-Use [`ANTIFRAGILITY_OWNER_REPO_REQUESTS.md`](docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md) when this mechanic produces an owner-local landing request. The central queue source is [`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the compact generated companion is [`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json).
+- [DIRECTION](DIRECTION.md): current purpose and growth posture.
+- [PARTS](PARTS.md): active functioning parts.
+- [OWNER_MAP](OWNER_MAP.md): owner routes and stop-lines.
+- [OWNER_REQUESTS](OWNER_REQUESTS.md): ready-to-carry owner packets.
+- [PROVENANCE](PROVENANCE.md): source-history bridge and trace.
+- [LANDING_LOG](LANDING_LOG.md): landing ledger.
+- [ROADMAP](ROADMAP.md): next work.
 
-A request packet is not owner acceptance. Keep `antifragility` claims center-bounded until the stronger owner lands the slice and proof routes are satisfied.
+## Active Doctrine
 
-## Start here
 - [ANTIFRAGILITY](docs/ANTIFRAGILITY.md)
 - [VIA_NEGATIVA](docs/VIA_NEGATIVA.md)
 - [ANTI_AUTHORITY_RULES](docs/ANTI_AUTHORITY_RULES.md)
 - [ONE_IN_ONE_OUT](docs/ONE_IN_ONE_OUT.md)
 - [FRAGILITY_BLACKLIST](FRAGILITY_BLACKLIST.md)
-- [LANDING_LOG](LANDING_LOG.md)
-- [ROADMAP](ROADMAP.md)
 
-- [ANTIFRAGILITY_OWNER_REPO_REQUESTS](docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md)
+The card above is the compact route. The active parts explain how to apply the
+doctrine without dragging old wave material into default agent context.
+Generated surfaces may reflect antifragility cards, queues, indexes, or
+manifests, but they do not author antifragility meaning.
+
+## Active Parts
+
+- [Stress Review](parts/stress-review/README.md)
+- [Via Negativa](parts/via-negativa/README.md)
+- [Authority Boundary](parts/authority-boundary/README.md)
+- [Sprawl Control](parts/sprawl-control/README.md)
+- [Fragility Registry](parts/fragility-registry/README.md)
+- [Repair Proof](parts/repair-proof/README.md)
+- [Memory Return](parts/memory-return/README.md)
+- [Owner Handoff](parts/owner-handoff/README.md)
 
 ## Owner boundary
-Center stress, subtraction, anti-authority, and fragility-pattern doctrine; owner repositories own local repair evidence.
-The card above is the compact route. The docs listed in **Start here** remain the richer source surfaces for this mechanic. Generated card indexes may reflect this package, but they do not author meaning.
+
+AoA owns antifragility law, subtraction vocabulary, anti-authority posture, and
+fragility-pattern routing. Owner repositories own local repair, deletion,
+incident receipts, proof, memory, runtime behavior, and accepted cleanup
+execution.
+
 ## Growth posture
-When this mechanic changes, keep the card small enough for a low-context agent to act safely, then place detailed doctrine in `docs/`, proof in the proof owner, memory in the memory owner, runtime in the runtime owner, and source meaning in the source owner.
+
+Antifragility should make the system easier to grow, not afraid to grow. A good
+antifragility change removes or narrows the thing that made future work harder
+while preserving provenance, proof routes, and owner acceptance boundaries.
