@@ -12,6 +12,11 @@ from validate_mechanic_landing_logs import validate_log
 
 
 class MechanicLandingLogTests(unittest.TestCase):
+    def test_checkpoint_landing_log_carries_center_boundary(self) -> None:
+        problems = validate_log("checkpoint")
+
+        self.assertEqual(problems, [])
+
     def test_agon_landing_log_carries_release_anchors(self) -> None:
         problems = validate_log("agon")
 

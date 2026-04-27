@@ -29,6 +29,7 @@ posture.
 - `experience`
 - `rpg`
 - `recurrence`
+- `checkpoint`
 - `questbook`
 - `antifragility`
 - `method-growth`

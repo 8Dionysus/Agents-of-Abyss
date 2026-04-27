@@ -20,6 +20,7 @@ the read model is [`questbook_relations`](../generated/questbook_relations.min.j
 | [`experience/`](experience/) | Experience obligations and staged contract follow-through |
 | [`rpg/`](rpg/) | RPG reflection, bridge, and runtime-projection obligations |
 | [`recurrence/`](recurrence/) | return, continuity, and re-entry obligations |
+| [`checkpoint/`](checkpoint/) | checkpoint carry, review, return, bridge, export, and owner-handoff obligations |
 | [`questbook/`](questbook/) | Questbook mechanic obligations about quest shape and lifecycle law |
 | [`antifragility/`](antifragility/) | antifragility, via negativa, and deletion-pressure obligations |
 | [`method-growth/`](method-growth/) | method-growth, candidate lineage, and owner landing obligations |

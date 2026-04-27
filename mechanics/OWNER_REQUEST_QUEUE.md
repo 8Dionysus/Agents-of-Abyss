@@ -52,6 +52,16 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 | `ORQ-RECURRENCE-PLAYBOOKS-001` | `recurrence` | `aoa-playbooks` | `requested` | `P1` | Recurring return choreography |
 | `ORQ-RECURRENCE-EVALS-001` | `recurrence` | `aoa-evals` | `requested` | `P1` | Drift and recovery-quality proof |
 | `ORQ-RECURRENCE-STACK-001` | `recurrence` | `abyss-stack` | `requested` | `P2` | Runtime wrappers for bounded re-entry after owner gates |
+| `ORQ-CHECKPOINT-SDK-001` | `checkpoint` | `aoa-sdk` | `requested` | `P0` | Checkpoint control panel and local ledgers |
+| `ORQ-CHECKPOINT-SKILLS-001` | `checkpoint` | `aoa-skills` | `requested` | `P0` | Checkpoint note protocol and closeout bridge skill |
+| `ORQ-CHECKPOINT-AGENTS-001` | `checkpoint` | `aoa-agents` | `requested` | `P1` | Self-agent checkpoint posture |
+| `ORQ-CHECKPOINT-MEMO-001` | `checkpoint` | `aoa-memo` | `requested` | `P1` | Inquiry checkpoint, state capsule, and writeback |
+| `ORQ-CHECKPOINT-PLAYBOOKS-001` | `checkpoint` | `aoa-playbooks` | `requested` | `P1` | Recurring checkpoint choreography |
+| `ORQ-CHECKPOINT-EVALS-001` | `checkpoint` | `aoa-evals` | `requested` | `P1` | Proof and regression reading |
+| `ORQ-CHECKPOINT-ROUTING-001` | `checkpoint` | `aoa-routing` | `requested` | `P2` | Re-entry hints |
+| `ORQ-CHECKPOINT-STATS-001` | `checkpoint` | `aoa-stats` | `requested` | `P2` | Derived checkpoint visibility |
+| `ORQ-CHECKPOINT-STACK-001` | `checkpoint` | `abyss-stack` | `requested` | `P1` | Runtime checkpoint exports and closeout receipts |
+| `ORQ-CHECKPOINT-DIONYSUS-001` | `checkpoint` | `Dionysus` | `requested` | `P2` | Reviewed checkpoint snapshots and seed-stage lineage |
 | `ORQ-EXPERIENCE-STACK-001` | `experience` | `abyss-stack` | `requested` | `P0` | Living workspace runtime and office infrastructure |
 | `ORQ-EXPERIENCE-MEMO-001` | `experience` | `aoa-memo` | `requested` | `P0` | Experience memory, provenance, recall, and continuity loom objects |
 | `ORQ-EXPERIENCE-ROUTING-001` | `experience` | `aoa-routing` | `requested` | `P1` | Context router and live route behavior for experience flows |
@@ -103,6 +113,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 
 - `method-growth` -> [METHOD_GROWTH_OWNER_REPO_REQUESTS.md](method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `Dionysus`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`
 - `recurrence` -> [RECURRENCE_OWNER_REPO_REQUESTS.md](recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md); owners: `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`
+- `checkpoint` -> [OWNER_REQUESTS.md](checkpoint/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-routing`, `aoa-stats`, `abyss-stack`, `Dionysus`
 - `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`, `aoa-playbooks`, `aoa-sdk`, `aoa-stats`, `aoa-skills`, `aoa-techniques`
 - `agon` -> [OWNER_REQUESTS.md](agon/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-routing`, `aoa-agents`, `abyss-stack`, `aoa-kag`, `Tree-of-Sophia`
 - `antifragility` -> [ANTIFRAGILITY_OWNER_REPO_REQUESTS.md](antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-playbooks`

@@ -11,6 +11,7 @@ REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 CANONICAL_SLUGS = (
     "method-growth",
     "recurrence",
+    "checkpoint",
     "experience",
     "agon",
     "antifragility",
