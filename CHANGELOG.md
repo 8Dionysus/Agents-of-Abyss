@@ -159,6 +159,15 @@ Tracking starts with the community-docs baseline for this repository.
   package coverage, widening release from GitHub-only posture into a
   state-transition mechanic for landings, closeouts, owner handoffs, public
   claims, and rollback routes
+- Boundary-bridge active-part distillation through
+  `mechanics/boundary-bridge/DIRECTION.md`,
+  `mechanics/boundary-bridge/PARTS.md`,
+  `mechanics/boundary-bridge/OWNER_MAP.md`,
+  `mechanics/boundary-bridge/PROVENANCE.md`,
+  `mechanics/boundary-bridge/OWNER_REQUESTS.md`, active `parts/`, and
+  `mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py`
+  package coverage, widening the old ToS-support route into a cross-owner
+  boundary bridge mechanic with ToS support as one part
 
 ### Changed
 

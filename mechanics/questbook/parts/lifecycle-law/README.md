@@ -34,7 +34,7 @@ posture.
 - `antifragility`
 - `method-growth`
 - `release-support`
-- `tos-bridge`
+- `boundary-bridge`
 
 Use `center` for federation-level obligations that are not owned by a more
 specific mechanic lane. Use mechanic lanes when the quest ID family and owning

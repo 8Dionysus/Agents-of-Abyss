@@ -102,12 +102,12 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 | `ORQ-RPG-EVALS-001` | `rpg` | `aoa-evals` | `requested` | `P1` | Progression proof and evidence-backed advancement |
 | `ORQ-RPG-STACK-001` | `rpg` | `abyss-stack` | `requested` | `P3` | Runtime ledger or session-state support after gates |
 | `ORQ-RPG-STATS-001` | `rpg` | `aoa-stats` | `requested` | `P2` | Derived progression summaries |
-| `ORQ-TOSBRIDGE-TOS-001` | `tos-bridge` | `Tree-of-Sophia` | `requested` | `P0` | ToS canon, source interpretation, and growth law touched by AoA support |
-| `ORQ-TOSBRIDGE-KAG-001` | `tos-bridge` | `aoa-kag` | `requested` | `P1` | Derived counterpart graph and bridge-ready projections |
-| `ORQ-TOSBRIDGE-ROUTING-001` | `tos-bridge` | `aoa-routing` | `requested` | `P1` | Tiny-entry handoff and bridge route surfaces |
-| `ORQ-TOSBRIDGE-MEMO-001` | `tos-bridge` | `aoa-memo` | `requested` | `P1` | Witness memory, provenance, and compost-facing recall |
-| `ORQ-TOSBRIDGE-EVALS-001` | `tos-bridge` | `aoa-evals` | `requested` | `P1` | Integrity and provenance proof for bridge support |
-| `ORQ-TOSBRIDGE-PLAYBOOKS-001` | `tos-bridge` | `aoa-playbooks` | `requested` | `P2` | Witness and compost scenario routes |
+| `ORQ-BRIDGE-TOS-001` | `boundary-bridge` | `Tree-of-Sophia` | `requested` | `P0` | ToS canon, source interpretation, and growth law touched by AoA support |
+| `ORQ-BRIDGE-KAG-001` | `boundary-bridge` | `aoa-kag` | `requested` | `P1` | Derived counterpart graph and bridge-ready projections |
+| `ORQ-BRIDGE-ROUTING-001` | `boundary-bridge` | `aoa-routing` | `requested` | `P1` | Boundary-aware handoff and bridge route surfaces |
+| `ORQ-BRIDGE-MEMO-001` | `boundary-bridge` | `aoa-memo` | `requested` | `P1` | Witness memory, provenance, and compost-facing recall |
+| `ORQ-BRIDGE-EVALS-001` | `boundary-bridge` | `aoa-evals` | `requested` | `P1` | Integrity and provenance proof for bridge support |
+| `ORQ-BRIDGE-PLAYBOOKS-001` | `boundary-bridge` | `aoa-playbooks` | `requested` | `P2` | Witness, compost, and owner-handoff scenario routes |
 | `ORQ-RELEASE-EVALS-001` | `release-support` | `aoa-evals` | `requested` | `P0` | Public claim proof for release and state-transition support posture |
 | `ORQ-RELEASE-STATS-001` | `release-support` | `aoa-stats` | `requested` | `P2` | Derived release and transition movement summaries |
 | `ORQ-RELEASE-ROUTING-001` | `release-support` | `aoa-routing` | `requested` | `P2` | Release route, transition route, and federation entry ABI updates |
@@ -124,7 +124,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 - `antifragility` -> [OWNER_REQUESTS.md](antifragility/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-playbooks`
 - `questbook` -> [OWNER_REQUESTS.md](questbook/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-routing`
 - `rpg` -> [OWNER_REQUESTS.md](rpg/OWNER_REQUESTS.md); owners: `aoa-agents`, `aoa-skills`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`, `aoa-stats`
-- `tos-bridge` -> [TOS_BRIDGE_OWNER_REPO_REQUESTS.md](tos-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md); owners: `Tree-of-Sophia`, `aoa-kag`, `aoa-routing`, `aoa-memo`, `aoa-evals`, `aoa-playbooks`
+- `boundary-bridge` -> [OWNER_REQUESTS.md](boundary-bridge/OWNER_REQUESTS.md); owners: `Tree-of-Sophia`, `aoa-kag`, `aoa-routing`, `aoa-memo`, `aoa-evals`, `aoa-playbooks`
 - `release-support` -> [OWNER_REQUESTS.md](release-support/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-stats`, `aoa-routing`, `aoa-sdk`, `8Dionysus`
 
 ## Stop-lines

@@ -1608,15 +1608,18 @@
     },
     {
       "center_sources": [
-        "mechanics/tos-bridge/README.md",
-        "mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md",
-        "mechanics/tos-bridge/docs/WITNESS_COMPOST.md",
-        "mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md"
+        "mechanics/boundary-bridge/README.md",
+        "mechanics/boundary-bridge/PARTS.md",
+        "mechanics/boundary-bridge/OWNER_MAP.md",
+        "mechanics/boundary-bridge/PROVENANCE.md",
+        "mechanics/boundary-bridge/docs/COUNTERPART_BRIDGE.md",
+        "mechanics/boundary-bridge/docs/WITNESS_COMPOST.md",
+        "mechanics/boundary-bridge/docs/TOS_GROWTH_SUPPORT.md"
       ],
       "center_status": "landed",
-      "handoff_surface_hint": "Tree-of-Sophia/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-TOSBRIDGE-TOS-001",
-      "id": "ORQ-TOSBRIDGE-TOS-001",
-      "mechanic": "tos-bridge",
+      "handoff_surface_hint": "Tree-of-Sophia/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-BRIDGE-TOS-001",
+      "id": "ORQ-BRIDGE-TOS-001",
+      "mechanic": "boundary-bridge",
       "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
       "owner_landing_ref": "",
       "owner_proof_ref": "",
@@ -1631,15 +1634,18 @@
     },
     {
       "center_sources": [
-        "mechanics/tos-bridge/README.md",
-        "mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md",
-        "mechanics/tos-bridge/docs/WITNESS_COMPOST.md",
-        "mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md"
+        "mechanics/boundary-bridge/README.md",
+        "mechanics/boundary-bridge/PARTS.md",
+        "mechanics/boundary-bridge/OWNER_MAP.md",
+        "mechanics/boundary-bridge/PROVENANCE.md",
+        "mechanics/boundary-bridge/docs/COUNTERPART_BRIDGE.md",
+        "mechanics/boundary-bridge/docs/WITNESS_COMPOST.md",
+        "mechanics/boundary-bridge/docs/TOS_GROWTH_SUPPORT.md"
       ],
       "center_status": "landed",
-      "handoff_surface_hint": "aoa-kag/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-TOSBRIDGE-KAG-001",
-      "id": "ORQ-TOSBRIDGE-KAG-001",
-      "mechanic": "tos-bridge",
+      "handoff_surface_hint": "aoa-kag/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-BRIDGE-KAG-001",
+      "id": "ORQ-BRIDGE-KAG-001",
+      "mechanic": "boundary-bridge",
       "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
       "owner_landing_ref": "",
       "owner_proof_ref": "",
@@ -1654,15 +1660,18 @@
     },
     {
       "center_sources": [
-        "mechanics/tos-bridge/README.md",
-        "mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md",
-        "mechanics/tos-bridge/docs/WITNESS_COMPOST.md",
-        "mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md"
+        "mechanics/boundary-bridge/README.md",
+        "mechanics/boundary-bridge/PARTS.md",
+        "mechanics/boundary-bridge/OWNER_MAP.md",
+        "mechanics/boundary-bridge/PROVENANCE.md",
+        "mechanics/boundary-bridge/docs/COUNTERPART_BRIDGE.md",
+        "mechanics/boundary-bridge/docs/WITNESS_COMPOST.md",
+        "mechanics/boundary-bridge/docs/TOS_GROWTH_SUPPORT.md"
       ],
       "center_status": "landed",
-      "handoff_surface_hint": "aoa-routing/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-TOSBRIDGE-ROUTING-001",
-      "id": "ORQ-TOSBRIDGE-ROUTING-001",
-      "mechanic": "tos-bridge",
+      "handoff_surface_hint": "aoa-routing/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-BRIDGE-ROUTING-001",
+      "id": "ORQ-BRIDGE-ROUTING-001",
+      "mechanic": "boundary-bridge",
       "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
       "owner_landing_ref": "",
       "owner_proof_ref": "",
@@ -1671,21 +1680,24 @@
       "priority": "P1",
       "proof_route": "Route behavior proof routes to `aoa-evals` when needed.",
       "queue_status": "requested",
-      "required_owner_landing": "Thin dispatch surface from AoA routes into ToS-owned tiny-entry seams without semantic override.",
-      "slice": "Tiny-entry handoff and bridge route surfaces",
-      "stop_line": "Routing must not become ToS authority."
+      "required_owner_landing": "Thin dispatch surface from AoA routes into owner-owned seams without semantic override.",
+      "slice": "Boundary-aware handoff and bridge route surfaces",
+      "stop_line": "Routing must not become owner authority."
     },
     {
       "center_sources": [
-        "mechanics/tos-bridge/README.md",
-        "mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md",
-        "mechanics/tos-bridge/docs/WITNESS_COMPOST.md",
-        "mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md"
+        "mechanics/boundary-bridge/README.md",
+        "mechanics/boundary-bridge/PARTS.md",
+        "mechanics/boundary-bridge/OWNER_MAP.md",
+        "mechanics/boundary-bridge/PROVENANCE.md",
+        "mechanics/boundary-bridge/docs/COUNTERPART_BRIDGE.md",
+        "mechanics/boundary-bridge/docs/WITNESS_COMPOST.md",
+        "mechanics/boundary-bridge/docs/TOS_GROWTH_SUPPORT.md"
       ],
       "center_status": "landed",
-      "handoff_surface_hint": "aoa-memo/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-TOSBRIDGE-MEMO-001",
-      "id": "ORQ-TOSBRIDGE-MEMO-001",
-      "mechanic": "tos-bridge",
+      "handoff_surface_hint": "aoa-memo/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-BRIDGE-MEMO-001",
+      "id": "ORQ-BRIDGE-MEMO-001",
+      "mechanic": "boundary-bridge",
       "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
       "owner_landing_ref": "",
       "owner_proof_ref": "",
@@ -1696,19 +1708,22 @@
       "queue_status": "requested",
       "required_owner_landing": "Witness memory objects with provenance, retention, forgetting, and recall posture.",
       "slice": "Witness memory, provenance, and compost-facing recall",
-      "stop_line": "Witness memory must not rewrite ToS meaning."
+      "stop_line": "Witness memory must not rewrite source meaning."
     },
     {
       "center_sources": [
-        "mechanics/tos-bridge/README.md",
-        "mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md",
-        "mechanics/tos-bridge/docs/WITNESS_COMPOST.md",
-        "mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md"
+        "mechanics/boundary-bridge/README.md",
+        "mechanics/boundary-bridge/PARTS.md",
+        "mechanics/boundary-bridge/OWNER_MAP.md",
+        "mechanics/boundary-bridge/PROVENANCE.md",
+        "mechanics/boundary-bridge/docs/COUNTERPART_BRIDGE.md",
+        "mechanics/boundary-bridge/docs/WITNESS_COMPOST.md",
+        "mechanics/boundary-bridge/docs/TOS_GROWTH_SUPPORT.md"
       ],
       "center_status": "landed",
-      "handoff_surface_hint": "aoa-evals/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-TOSBRIDGE-EVALS-001",
-      "id": "ORQ-TOSBRIDGE-EVALS-001",
-      "mechanic": "tos-bridge",
+      "handoff_surface_hint": "aoa-evals/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-BRIDGE-EVALS-001",
+      "id": "ORQ-BRIDGE-EVALS-001",
+      "mechanic": "boundary-bridge",
       "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
       "owner_landing_ref": "",
       "owner_proof_ref": "",
@@ -1719,19 +1734,22 @@
       "queue_status": "requested",
       "required_owner_landing": "Eval surface for source linkage, provenance, bridge reversibility, and non-authoring discipline.",
       "slice": "Integrity and provenance proof for bridge support",
-      "stop_line": "The center must not treat support posture as proof unless evidence lands."
+      "stop_line": "The center must not treat bridge posture as proof unless evidence lands."
     },
     {
       "center_sources": [
-        "mechanics/tos-bridge/README.md",
-        "mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md",
-        "mechanics/tos-bridge/docs/WITNESS_COMPOST.md",
-        "mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md"
+        "mechanics/boundary-bridge/README.md",
+        "mechanics/boundary-bridge/PARTS.md",
+        "mechanics/boundary-bridge/OWNER_MAP.md",
+        "mechanics/boundary-bridge/PROVENANCE.md",
+        "mechanics/boundary-bridge/docs/COUNTERPART_BRIDGE.md",
+        "mechanics/boundary-bridge/docs/WITNESS_COMPOST.md",
+        "mechanics/boundary-bridge/docs/TOS_GROWTH_SUPPORT.md"
       ],
       "center_status": "landed",
-      "handoff_surface_hint": "aoa-playbooks/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-TOSBRIDGE-PLAYBOOKS-001",
-      "id": "ORQ-TOSBRIDGE-PLAYBOOKS-001",
-      "mechanic": "tos-bridge",
+      "handoff_surface_hint": "aoa-playbooks/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-BRIDGE-PLAYBOOKS-001",
+      "id": "ORQ-BRIDGE-PLAYBOOKS-001",
+      "mechanic": "boundary-bridge",
       "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
       "owner_landing_ref": "",
       "owner_proof_ref": "",
@@ -1741,8 +1759,8 @@
       "proof_route": "Scenario proof routes to `aoa-evals`.",
       "queue_status": "requested",
       "required_owner_landing": "Playbook route for witness intake, compost cycle, handoff, review, and closure.",
-      "slice": "Witness and compost scenario routes",
-      "stop_line": "AoA scenario support must not become ToS canon."
+      "slice": "Witness, compost, and owner-handoff scenario routes",
+      "stop_line": "Scenario support must not become source canon."
     },
     {
       "center_sources": [

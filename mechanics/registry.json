@@ -737,60 +737,91 @@
       ]
     },
     {
-      "agents_ref": "mechanics/tos-bridge/AGENTS.md",
+      "agents_ref": "mechanics/boundary-bridge/AGENTS.md",
       "canonical_docs": [
-        "mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md",
-        "mechanics/tos-bridge/docs/WITNESS_COMPOST.md",
-        "mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md",
-        "mechanics/tos-bridge/docs/TOS_TEMPLATE_SUPPORT.md",
-        "mechanics/tos-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md",
-        "mechanics/tos-bridge/docs/TOS_SOIL_PREP_SUPPORT.md",
-        "mechanics/tos-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md"
+        "mechanics/boundary-bridge/DIRECTION.md",
+        "mechanics/boundary-bridge/PARTS.md",
+        "mechanics/boundary-bridge/OWNER_MAP.md",
+        "mechanics/boundary-bridge/PROVENANCE.md",
+        "mechanics/boundary-bridge/OWNER_REQUESTS.md",
+        "mechanics/boundary-bridge/docs/COUNTERPART_BRIDGE.md",
+        "mechanics/boundary-bridge/docs/WITNESS_COMPOST.md",
+        "mechanics/boundary-bridge/docs/TOS_GROWTH_SUPPORT.md",
+        "mechanics/boundary-bridge/docs/TOS_TEMPLATE_SUPPORT.md",
+        "mechanics/boundary-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md",
+        "mechanics/boundary-bridge/docs/TOS_SOIL_PREP_SUPPORT.md",
+        "mechanics/boundary-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md",
+        "mechanics/boundary-bridge/parts/README.md",
+        "mechanics/boundary-bridge/parts/boundary-contract/README.md",
+        "mechanics/boundary-bridge/parts/non-identity-guard/README.md",
+        "mechanics/boundary-bridge/parts/counterpart-edge/README.md",
+        "mechanics/boundary-bridge/parts/tos-support/README.md",
+        "mechanics/boundary-bridge/parts/witness-compost/README.md",
+        "mechanics/boundary-bridge/parts/derived-projection/README.md",
+        "mechanics/boundary-bridge/parts/owner-handoff/README.md",
+        "mechanics/boundary-bridge/parts/proof-review-route/README.md",
+        "mechanics/boundary-bridge/parts/compatibility-route/README.md",
+        "mechanics/boundary-bridge/legacy/AGENTS.md",
+        "mechanics/boundary-bridge/legacy/README.md",
+        "mechanics/boundary-bridge/legacy/raw/README.md"
       ],
       "card": {
-        "center_owns": "AoA support posture, route language, counterpart/witness/compost support boundaries, and non-authoring stop-lines.",
-        "inputs": [
-          "ToS support request, counterpart mapping, witness note, compost proposal, template support, lineage pilot support, or soil-prep support.",
-          "A source distinction between AoA support and ToS-authored meaning."
+        "trigger": "Use when one owner-owned surface must touch, support, cite, translate, project, route, or hand off to another owner-owned surface without becoming the other surface.",
+        "center_owns": "AoA center owns boundary-crossing doctrine, non-identity stop-lines, counterpart vocabulary, owner-handoff packets, and the first ToS-support reference bridge.",
+        "stronger_owner_split": [
+          "Source repositories own authored meaning, canon, source interpretation, and local truth.",
+          "`Tree-of-Sophia` owns ToS-authored meaning, source authority, node law, lineage, and canon-facing review.",
+          "`aoa-kag` owns derived projections without source authority.",
+          "`aoa-routing` owns dispatch and route behavior without authored meaning.",
+          "`aoa-memo` owns memory and witness objects without proof or canon.",
+          "`aoa-evals` owns proof, verdict, and regression evidence.",
+          "`aoa-playbooks` owns recurring scenario choreography.",
+          "`aoa-sdk`, `abyss-stack`, and other owner repositories own their local adapters, runtime bodies, helpers, and implementation truth."
         ],
-        "next_route": [
-          "For ToS meaning, canon, or source interpretation, route to `Tree-of-Sophia` before making any claim.",
-          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        "inputs": [
+          "A request to connect, cite, support, project, translate, route, witness, or hand off across owner boundaries.",
+          "A named source owner and receiving owner.",
+          "The bridge mode: `counterpart`, `support`, `projection`, `handoff`, `compatibility`, `witness`, `proof`, or `ToS support`."
         ],
         "outputs": [
-          "Support route, witness/compost note, derived handoff, template support note, growth-support route, or soil-prep route.",
-          "No AoA-authored ToS canon and no source interpretation authority."
+          "A bounded bridge route, owner handoff, proof route, derived projection boundary, or ToS-support note.",
+          "Explicit non-identity, no-authority-transfer, and owner-acceptance stop-lines.",
+          "No hidden claim that the bridge proves sameness, transfers authority, or lands owner-local truth."
         ],
-        "stronger_owner_split": [
-          "`Tree-of-Sophia` owns ToS-authored meaning, canon, and source interpretation.",
-          "AoA owner repositories own only their local support, proof, memory, routing, or derived implementation surfaces."
-        ],
-        "trigger": "Use when AoA supports Tree-of-Sophia counterpart, witness, compost, template, growth, lineage, or soil-prep work without authoring ToS meaning."
+        "next_route": [
+          "For ToS meaning, canon, or source interpretation, route to `Tree-of-Sophia`.",
+          "For derived projection, route to `aoa-kag`; for dispatch behavior, route to `aoa-routing`; for memory or witness objects, route to `aoa-memo`; for proof, route to `aoa-evals`; for scenario choreography, route to `aoa-playbooks`.",
+          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ]
       },
-      "docs_path": "mechanics/tos-bridge/docs",
-      "entry_ref": "mechanics/tos-bridge/README.md",
-      "landing_log_ref": "mechanics/tos-bridge/LANDING_LOG.md",
+      "docs_path": "mechanics/boundary-bridge/docs",
+      "entry_ref": "mechanics/boundary-bridge/README.md",
+      "landing_log_ref": "mechanics/boundary-bridge/LANDING_LOG.md",
       "must_not_claim": [
-        "AoA-authored ToS canon",
-        "source interpretation authority",
-        "owner-local implementation truth"
+        "owner acceptance without owner-local receipt",
+        "identity between bridged surfaces",
+        "AoA-authored ToS canon or source interpretation",
+        "derived projection as source truth",
+        "routing, SDK, memory, runtime, or public projection as authority",
+        "proof before the proof or source owner lands evidence"
       ],
-      "owner_boundary": "AoA support posture for Tree-of-Sophia; ToS authored meaning and canon stay in Tree-of-Sophia.",
-      "owner_request_doc_ref": "mechanics/tos-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md",
+      "owner_boundary": "AoA owns bridge law, non-identity guardrails, owner request packets, and ToS-support route language; bridged owners own truth on each side.",
+      "owner_request_doc_ref": "mechanics/boundary-bridge/OWNER_REQUESTS.md",
       "owner_request_ids": [
-        "ORQ-TOSBRIDGE-TOS-001",
-        "ORQ-TOSBRIDGE-KAG-001",
-        "ORQ-TOSBRIDGE-ROUTING-001",
-        "ORQ-TOSBRIDGE-MEMO-001",
-        "ORQ-TOSBRIDGE-EVALS-001",
-        "ORQ-TOSBRIDGE-PLAYBOOKS-001"
+        "ORQ-BRIDGE-TOS-001",
+        "ORQ-BRIDGE-KAG-001",
+        "ORQ-BRIDGE-ROUTING-001",
+        "ORQ-BRIDGE-MEMO-001",
+        "ORQ-BRIDGE-EVALS-001",
+        "ORQ-BRIDGE-PLAYBOOKS-001"
       ],
-      "package_path": "mechanics/tos-bridge",
-      "roadmap_ref": "mechanics/tos-bridge/ROADMAP.md",
-      "slug": "tos-bridge",
+      "package_path": "mechanics/boundary-bridge",
+      "roadmap_ref": "mechanics/boundary-bridge/ROADMAP.md",
+      "slug": "boundary-bridge",
       "status": "landed",
-      "title": "ToS bridge",
+      "title": "Boundary bridge",
       "validation_refs": [
+        "mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/validate_mechanic_readme_cards.py",
         "scripts/build_mechanic_card_index.py",
@@ -798,7 +829,8 @@
         "scripts/validate_owner_request_queue.py",
         "scripts/build_owner_request_queue.py",
         "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py"
+        "scripts/validate_owner_request_docs.py",
+        "scripts/validate_mechanic_landing_logs.py"
       ]
     },
     {

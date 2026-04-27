@@ -1,6 +1,6 @@
-# tos-bridge Quest Lane
+# Boundary Bridge Quest Lane
 
-Tree-of-Sophia bridge and counterpart obligations.
+Boundary bridge, Tree-of-Sophia support, and counterpart obligations.
 
 Quest source files in this lane use lifecycle subdirectories only when items exist. The lifecycle states are `captured`, `triaged`, `ready`, `active`, `blocked`, `reanchor`, `done`, and `dropped`.
 

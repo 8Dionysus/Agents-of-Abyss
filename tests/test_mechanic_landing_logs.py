@@ -57,6 +57,11 @@ class MechanicLandingLogTests(unittest.TestCase):
 
         self.assertEqual(problems, [])
 
+    def test_boundary_bridge_landing_log_carries_tos_support_distillation(self) -> None:
+        problems = validate_log("boundary-bridge")
+
+        self.assertEqual(problems, [])
+
 
 if __name__ == "__main__":
     unittest.main()

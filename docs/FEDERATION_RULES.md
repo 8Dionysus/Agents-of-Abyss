@@ -132,7 +132,7 @@ It should remain a bounded derived layer:
 - KAG projections still point back to stronger sources
 - graph readiness still does not grant semantic sovereignty
 
-When KAG counterpart work grows, the bridge doctrine in `mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md` should stay the governing policy.
+When KAG counterpart work grows, the bridge doctrine in `mechanics/boundary-bridge/parts/counterpart-edge/README.md` and `mechanics/boundary-bridge/docs/COUNTERPART_BRIDGE.md` should stay the governing policy.
 
 ## Rule 16: witness and compost stay contract-first before runtime
 

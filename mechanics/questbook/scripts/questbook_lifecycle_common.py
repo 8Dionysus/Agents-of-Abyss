@@ -49,7 +49,7 @@ QUEST_LANES = (
     "antifragility",
     "method-growth",
     "release-support",
-    "tos-bridge",
+    "boundary-bridge",
 )
 
 ID_PREFIX_LANES = {
@@ -62,7 +62,8 @@ ID_PREFIX_LANES = {
     "AOA-Q-ANTIFRAGILITY-": "antifragility",
     "AOA-Q-METHOD-": "method-growth",
     "AOA-Q-RELEASE-": "release-support",
-    "AOA-Q-TOS-": "tos-bridge",
+    "AOA-Q-BRIDGE-": "boundary-bridge",
+    "AOA-Q-TOS-": "boundary-bridge",
 }
 
 RELATION_TYPES = (

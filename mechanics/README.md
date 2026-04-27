@@ -128,7 +128,7 @@ A request packet is not owner acceptance. Owner repositories land operational tr
 | Antifragility and subtraction | What stress, degraded mode, evidence, pruning, or anti-authority posture applies? | center doctrine | [ANTIFRAGILITY](antifragility/docs/ANTIFRAGILITY.md), [VIA_NEGATIVA](antifragility/docs/VIA_NEGATIVA.md) | one-score health or deletion theater |
 | Questbook | What obligation must survive the current diff as a public tracked follow-up? | public obligation model | [QUESTBOOK](../QUESTBOOK.md), [model-spine](questbook/parts/model-spine/README.md) | second roadmap or private scratchpad |
 | RPG reflection | How can progression, questlines, campaigns, roles, and feats be read without rewriting ownership? | adjunct reflection layer | [RPG](rpg/README.md), [PARTS](rpg/PARTS.md), [source-boundary](rpg/parts/source-boundary/README.md), [vocabulary-overlay](rpg/parts/vocabulary-overlay/README.md) | hidden ontology or runtime ledger |
-| ToS bridge, witness, compost | How can AoA support ToS without authoring ToS meaning? | support doctrine and seams | [COUNTERPART_BRIDGE](tos-bridge/docs/COUNTERPART_BRIDGE.md), [WITNESS_COMPOST](tos-bridge/docs/WITNESS_COMPOST.md) | AoA-authored ToS canon |
+| Boundary bridge, ToS support, witness, compost | How can AoA connect owner-owned surfaces without identity collapse or authority transfer? | bridge law and ToS-support doctrine | [Boundary bridge](boundary-bridge/README.md), [PARTS](boundary-bridge/PARTS.md), [tos-support](boundary-bridge/parts/tos-support/README.md) | identity collapse, AoA-authored ToS canon, or owner acceptance without receipt |
 | Release, audit, public support | Which transitions or claims can the center support, publish, hand off, or roll back? | state-transition and release posture | [Release support](release-support/README.md), [PARTS](release-support/PARTS.md), [PUBLIC_SUPPORT_POSTURE](release-support/docs/PUBLIC_SUPPORT_POSTURE.md) | GitHub-only release definition or unverified public claim |
 
 ## Constitutional polis
@@ -427,26 +427,27 @@ Boundary:
 - Progression evidence is not a global score.
 - Campaign language must not imply runtime ledger ownership.
 
-## ToS bridge, witness, and compost
+## Boundary Bridge, ToS Support, Witness, and Compost
 
-Use this branch when AoA supports `Tree-of-Sophia` or derived knowledge work
-without authoring ToS meaning.
+Use this branch when AoA connects owner-owned surfaces without identity
+collapse, authority transfer, or AoA-authored ToS meaning.
 
 | Surface | Role |
 |---|---|
 | [ROOTLINE](method-growth/docs/ROOTLINE.md) | trunk-first AoA x ToS coordination spine |
-| [COUNTERPART_BRIDGE](tos-bridge/docs/COUNTERPART_BRIDGE.md) | counterpart mappings stay derived, optional, and non-identity |
-| [WITNESS_COMPOST](tos-bridge/docs/WITNESS_COMPOST.md) | witness and compost pilot doctrine |
-| [TOS_GROWTH_SUPPORT](tos-bridge/docs/TOS_GROWTH_SUPPORT.md) | narrow support for ToS-owned growth law |
-| [TOS_TEMPLATE_SUPPORT](tos-bridge/docs/TOS_TEMPLATE_SUPPORT.md) | support around ToS templates without owning ToS scaffold truth |
-| [TOS_LINEAGE_PILOT_SUPPORT](tos-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md) | support around ToS lineage pilot work |
-| [TOS_SOIL_PREP_SUPPORT](tos-bridge/docs/TOS_SOIL_PREP_SUPPORT.md) | soil-preparation support without ToS authorship |
+| [Boundary bridge](boundary-bridge/README.md) | center mechanic card for non-identity bridge law |
+| [PARTS](boundary-bridge/PARTS.md) | active operating map for cross-owner bridge work |
+| [ToS Support](boundary-bridge/parts/tos-support/README.md) | support Tree-of-Sophia without authoring ToS meaning |
+| [COUNTERPART_BRIDGE](boundary-bridge/docs/COUNTERPART_BRIDGE.md) | counterpart mappings stay derived, optional, and non-identity |
+| [WITNESS_COMPOST](boundary-bridge/docs/WITNESS_COMPOST.md) | witness and compost pilot doctrine |
+| [OWNER_REQUESTS](boundary-bridge/OWNER_REQUESTS.md) | owner-local packets before bridge support is operational |
 
 Rule:
 
 `Tree-of-Sophia` owns authored knowledge meaning.
 
-AoA may route, support, derive, witness, or prepare.
+AoA may route, support, derive, witness, prepare, and hand off, but the bridge
+never transfers owner truth.
 
 It does not become ToS canon.
 

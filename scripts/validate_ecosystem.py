@@ -48,7 +48,7 @@ QUEST_LANES = {
     "antifragility",
     "method-growth",
     "release-support",
-    "tos-bridge",
+    "boundary-bridge",
 }
 QUEST_LIFECYCLE_STATES = {
     "captured",
