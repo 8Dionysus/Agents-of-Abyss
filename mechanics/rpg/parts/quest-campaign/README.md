@@ -4,6 +4,8 @@ This part owns the active RPG reading of quests, questlines, campaigns, parties,
 
 It makes long work playable and memorable without taking quest objects from Questbook, campaign choreography from `aoa-playbooks`, or chronicles from `aoa-memo`.
 
+Detailed quest-to-RPG reading shape lives in [Playable Obligation Reading](PLAYABLE_OBLIGATION.md).
+
 ## Use When
 
 - a quest obligation needs a readable RPG route without moving the quest object

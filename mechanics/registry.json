@@ -419,6 +419,7 @@
         "mechanics/questbook/parts/README.md",
         "mechanics/questbook/parts/registry.json",
         "mechanics/questbook/parts/model-spine/README.md",
+        "mechanics/questbook/parts/model-spine/RPG_PLAYABLE_READING.md",
         "mechanics/questbook/parts/public-index/README.md",
         "mechanics/questbook/parts/quest-store/README.md",
         "mechanics/questbook/parts/lifecycle-law/README.md",
@@ -499,6 +500,7 @@
       "agents_ref": "mechanics/rpg/AGENTS.md",
       "canonical_docs": [
         "mechanics/rpg/DIRECTION.md",
+        "mechanics/rpg/USAGE.md",
         "mechanics/rpg/PARTS.md",
         "mechanics/rpg/PROVENANCE.md",
         "mechanics/rpg/OWNER_REQUESTS.md",
@@ -507,6 +509,7 @@
         "mechanics/rpg/parts/vocabulary-overlay/README.md",
         "mechanics/rpg/parts/vocabulary-overlay/TERMINOLOGY.md",
         "mechanics/rpg/parts/quest-campaign/README.md",
+        "mechanics/rpg/parts/quest-campaign/PLAYABLE_OBLIGATION.md",
         "mechanics/rpg/parts/progression-unlocks/README.md",
         "mechanics/rpg/parts/runtime-projection/README.md",
         "mechanics/rpg/parts/owner-handoffs/README.md"

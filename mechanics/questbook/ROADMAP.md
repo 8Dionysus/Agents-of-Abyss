@@ -9,6 +9,8 @@ registry-backed Experience ready owner-route index. Active parts are now
 machine-checked through
 `parts/registry.json` and
 `mechanics/questbook/scripts/validate_questbook_distillation.py`.
+Questbook now has a reciprocal RPG playable reading bridge, but source quest
+objects remain plain Questbook truth unless a derived reading improves action.
 
 Current source placement is `quests/<lane>/<state>/AOA-Q-*`. Generated
 Questbook views are read models. Relation shape is explicit through `parent`,
@@ -41,6 +43,8 @@ there instead of duplicating command blocks.
   post-change route review when a new route consequence appears.
 - Harvest repeated quest families into owner-local mechanics, playbooks, evals,
   or memo surfaces instead of letting open quest lists become noisy.
+- Use RPG playable readings only when they improve action; do not add them to
+  every quest source as boilerplate.
 
 ## Review Routes
 

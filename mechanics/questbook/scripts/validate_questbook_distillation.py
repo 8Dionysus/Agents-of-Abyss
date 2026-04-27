@@ -30,6 +30,7 @@ PARTS_INDEX_PATH = QUESTBOOK_ROOT / "PARTS.md"
 PARTS_README_PATH = PARTS_ROOT / "README.md"
 QUESTBOOK_AGENTS_PATH = QUESTBOOK_ROOT / "AGENTS.md"
 QUESTS_ROOT = REPO_ROOT / "quests"
+RPG_PLAYABLE_READING_PATH = PARTS_ROOT / "model-spine" / "RPG_PLAYABLE_READING.md"
 
 PART_FILE_NAMES = ("README.md", "CONTRACT.md", "VALIDATION.md")
 CONTRACT_HEADINGS = ("## Owner Boundary", "## Allowed Outputs", "## Stop-lines")
@@ -38,6 +39,15 @@ ROOT_PART_LINK_RE = re.compile(r"\]\(parts/([a-z0-9-]+)/README\.md\)")
 LOCAL_PART_LINK_RE = re.compile(r"\]\(([a-z0-9-]+)/README\.md\)")
 DIRECT_RAW_LINK_RE = re.compile(
     r"(?:\]\(|`)?(?:\.\./)+legacy/raw/|(?:\]\()?legacy/raw/|mechanics/questbook/legacy/raw/"
+)
+RPG_PLAYABLE_READING_REQUIRED_PHRASES = (
+    "Questbook owns the source quest object",
+    "RPG may derive a playable reading only after the quest source is already legible",
+    "Do not add RPG readings to every quest file as boilerplate.",
+    "RPG language does not change lifecycle state.",
+    "RPG language does not close, promote, or reanchor quests.",
+    "mechanics/rpg/parts/quest-campaign/PLAYABLE_OBLIGATION.md",
+    "mechanics/rpg/USAGE.md",
 )
 
 
@@ -285,6 +295,17 @@ def validate_legacy_index(problems: list[str]) -> None:
         problems.append(f"{rel(LEGACY_INDEX_PATH)} must map raw sources to active parts")
 
 
+def validate_rpg_playable_reading_bridge(problems: list[str]) -> None:
+    if not RPG_PLAYABLE_READING_PATH.is_file():
+        problems.append(f"{rel(RPG_PLAYABLE_READING_PATH)}: missing RPG playable reading bridge")
+        return
+    text = read(RPG_PLAYABLE_READING_PATH)
+    normalized = " ".join(text.split())
+    for phrase in RPG_PLAYABLE_READING_REQUIRED_PHRASES:
+        if phrase not in text and phrase not in normalized:
+            problems.append(f"{rel(RPG_PLAYABLE_READING_PATH)} must say: {phrase}")
+
+
 def validate(selected: set[str] | None = None) -> list[str]:
     problems: list[str] = []
     registry = load_json(REGISTRY_PATH, problems)
@@ -302,6 +323,8 @@ def validate(selected: set[str] | None = None) -> list[str]:
     validate_validation_commands_are_centralized(problems)
     validate_provenance_bridge(problems)
     validate_legacy_index(problems)
+    if selected is None or "model-spine" in selected:
+        validate_rpg_playable_reading_bridge(problems)
     if selected:
         registered = {str(part["slug"]) for part in parts}
         for slug in sorted(selected - registered):

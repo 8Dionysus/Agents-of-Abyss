@@ -8,7 +8,7 @@ Legacy source contours stay outside the working path.
 
 | Part | Center function | Stronger owner route |
 |---|---|---|
-| [Model Spine](parts/model-spine/README.md) | compact Questbook model, source-of-truth map, and shared stop-lines | owner repositories keep quest meaning; center only names common law |
+| [Model Spine](parts/model-spine/README.md) | compact Questbook model, source-of-truth map, shared stop-lines, and RPG playable reading route | owner repositories keep quest meaning; center only names common law |
 | [Public Index](parts/public-index/README.md) | root public frontier and near-obligation index posture | source quest objects own detail |
 | [Quest Store](parts/quest-store/README.md) | lane-first source object layout under `quests/<lane>/<state>/AOA-Q-*` | lanes and owner repositories keep acceptance evidence |
 | [Source Contract](parts/source-contract/README.md) | reviewability contract for YAML and strict Markdown quest objects | source files carry obligation meaning; generated views only reflect them |

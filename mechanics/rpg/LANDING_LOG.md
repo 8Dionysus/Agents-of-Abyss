@@ -9,6 +9,8 @@ Canonical landing ledger for the RPG mechanic.
 - RPG world-grammar direction defined when game language strengthens agent work and when it must stay silent.
 - RPG active parts and legacy provenance distillation moved working doctrine into `mechanics/rpg/parts/` and kept raw wave notes as receipts.
 - RPG active-route polish made every part entry follow one concise route shape and made wave-era prose invalid in active RPG routes.
+- RPG usage contract landed a decision table for when RPG language belongs in a task and when plain repository language should win.
+- RPG and Questbook now share a playable obligation bridge for derived quest readings without moving quest ownership or lifecycle authority.
 
 ## Entries
 
@@ -197,3 +199,59 @@ Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python
 Stop-lines: no wave-era phrasing, raw-source filenames, direct legacy/raw routing, decorative slogans, owner acceptance claim, runtime activation claim, universal power score, or presentation-label overwrite of canonical keys in active RPG routes.
 
 Next route: keep future RPG part changes in the concise active-route shape; if historical detail is needed, route through `mechanics/rpg/PROVENANCE.md` and update the relevant part only after distillation.
+
+### RPG usage contract
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns the decision table for applying RPG language; stronger owner repositories still own source truth, proof, quest objects, runtime state, memory objects, role canon, skill canon, playbook choreography, and derived stats.
+
+Surfaces:
+
+- `mechanics/rpg/USAGE.md`
+- `mechanics/rpg/AGENTS.md`
+- `mechanics/rpg/README.md`
+- `mechanics/rpg/DIRECTION.md`
+- `mechanics/rpg/PARTS.md`
+- `mechanics/rpg/ROADMAP.md`
+- `mechanics/rpg/scripts/validate_rpg_distillation.py`
+- `mechanics/rpg/tests/test_rpg_distillation.py`
+- `mechanics/registry.json`
+- `CHANGELOG.md`
+
+Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python -m pytest -q mechanics/rpg/tests`; `python scripts/validate_mechanics_topology.py --mechanic rpg`; `python scripts/validate_mechanic_readme_cards.py --mechanic rpg`; `python scripts/build_mechanic_card_index.py --check`; `python scripts/validate_mechanic_card_index.py`
+
+Stop-lines: no decorative RPG layer, hidden owner transfer, runtime state claim, proof verdict, quest closure, universal power score, or presentation-label overwrite of canonical keys.
+
+Next route: use `mechanics/rpg/USAGE.md` before selecting an RPG part; for quest-shaped obligations, route first through Questbook and then attach RPG reading only as derived context.
+
+### RPG and Questbook playable obligation bridge
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns the RPG reading shape for playable obligations; Questbook owns source quest objects, lifecycle, lane placement, public index posture, generated read models, and source contracts.
+
+Surfaces:
+
+- `mechanics/rpg/parts/quest-campaign/PLAYABLE_OBLIGATION.md`
+- `mechanics/rpg/parts/quest-campaign/README.md`
+- `mechanics/rpg/README.md`
+- `mechanics/rpg/USAGE.md`
+- `mechanics/rpg/scripts/validate_rpg_distillation.py`
+- `mechanics/rpg/tests/test_rpg_distillation.py`
+- `mechanics/questbook/parts/model-spine/RPG_PLAYABLE_READING.md`
+- `mechanics/questbook/README.md`
+- `mechanics/questbook/PARTS.md`
+- `mechanics/questbook/parts/README.md`
+- `mechanics/questbook/parts/model-spine/README.md`
+- `mechanics/questbook/parts/registry.json`
+- `mechanics/questbook/scripts/validate_questbook_distillation.py`
+- `mechanics/questbook/tests/test_questbook_distillation.py`
+- `mechanics/registry.json`
+- `CHANGELOG.md`
+
+Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python mechanics/questbook/scripts/validate_questbook_distillation.py`; `python -m pytest -q mechanics/rpg/tests mechanics/questbook/tests/test_questbook_distillation.py`; `python scripts/validate_mechanics_topology.py --mechanic questbook`; `python scripts/validate_mechanics_topology.py --mechanic rpg`; `python scripts/validate_mechanic_readme_cards.py --mechanic questbook`; `python scripts/validate_mechanic_readme_cards.py --mechanic rpg`
+
+Stop-lines: no RPG quest lifecycle authority, quest closure, proof completion, owner acceptance, reward authority, universal score, runtime state, or boilerplate RPG fields across quest sources.
+
+Next route: use the bridge when a quest needs campaign, party, stake, proof route, unlock question, or consequence reading; keep source quest movement in Questbook.

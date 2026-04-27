@@ -9,14 +9,15 @@
     {
       "slug": "model-spine",
       "title": "Model Spine",
-      "role": "compact Questbook model and source-of-truth router",
+      "role": "compact Questbook model, source-of-truth router, and RPG playable reading route",
       "readme": "mechanics/questbook/parts/model-spine/README.md",
       "contract": "mechanics/questbook/parts/model-spine/CONTRACT.md",
       "validation": "mechanics/questbook/parts/model-spine/VALIDATION.md",
       "source_surfaces": [
         "mechanics/questbook/README.md",
         "mechanics/questbook/DIRECTION.md",
-        "mechanics/questbook/PARTS.md"
+        "mechanics/questbook/PARTS.md",
+        "mechanics/questbook/parts/model-spine/RPG_PLAYABLE_READING.md"
       ],
       "generated_surfaces": [],
       "validation_commands": [

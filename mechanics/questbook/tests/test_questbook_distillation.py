@@ -79,3 +79,12 @@ def test_legacy_index_maps_raw_sources_to_active_parts() -> None:
     module.validate_legacy_index(problems)
 
     assert problems == []
+
+
+def test_rpg_playable_reading_bridge_is_complete() -> None:
+    module = load_validator()
+    problems: list[str] = []
+
+    module.validate_rpg_playable_reading_bridge(problems)
+
+    assert problems == []

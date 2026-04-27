@@ -11,7 +11,7 @@ It makes cross-owner work easier to see without changing the owner of roles, ski
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, this card, `mechanics/rpg/README.md`, and `mechanics/rpg/DIRECTION.md` before changing this package.
+Read root `AGENTS.md`, `mechanics/AGENTS.md`, this card, `mechanics/rpg/README.md`, `mechanics/rpg/DIRECTION.md`, and `mechanics/rpg/USAGE.md` before changing this package.
 For active doctrine, start from `mechanics/rpg/PARTS.md` and the relevant part under `mechanics/rpg/parts/`.
 For historical evidence, use `mechanics/rpg/PROVENANCE.md` first; consult `legacy/raw/` only through that route.
 For vocabulary artifacts, read `mechanics/rpg/parts/vocabulary-overlay/TERMINOLOGY.md` before touching schema, example, generated overlay, or validator files.
@@ -26,7 +26,7 @@ For vocabulary artifacts, read `mechanics/rpg/parts/vocabulary-overlay/TERMINOLO
 
 ## Post-change Route Review
 
-After RPG changes, check whether the next agent can start from `README.md`, `DIRECTION.md`, `PARTS.md`, and the relevant active part without reading raw legacy.
+After RPG changes, check whether the next agent can start from `README.md`, `DIRECTION.md`, `USAGE.md`, `PARTS.md`, and the relevant active part without reading raw legacy.
 If an active part needs history, distill the rule into the part and route the evidence through `PROVENANCE.md`, `legacy/INDEX.md`, and `legacy/DISTILLATION_LOG.md`.
 Update `ROADMAP.md` only when the change creates a useful future route, and update `LANDING_LOG.md` only when the landing is reviewable.
 
