@@ -149,6 +149,16 @@ Tracking starts with the community-docs baseline for this repository.
   `mechanics/antifragility/OWNER_REQUESTS.md`, active `parts/`, and
   `mechanics/antifragility/scripts/validate_antifragility_distillation.py`
   package coverage
+- Release-support active-part distillation through
+  `mechanics/release-support/DIRECTION.md`,
+  `mechanics/release-support/PARTS.md`,
+  `mechanics/release-support/OWNER_MAP.md`,
+  `mechanics/release-support/PROVENANCE.md`,
+  `mechanics/release-support/OWNER_REQUESTS.md`, active `parts/`, and
+  `mechanics/release-support/scripts/validate_release_support_distillation.py`
+  package coverage, widening release from GitHub-only posture into a
+  state-transition mechanic for landings, closeouts, owner handoffs, public
+  claims, and rollback routes
 
 ### Changed
 
@@ -180,6 +190,15 @@ Tracking starts with the community-docs baseline for this repository.
 - `scripts/release_check.py` now includes the Antifragility package validator
   so stress review, via negativa, anti-authority boundaries, provenance
   routing, and owner-request sync stay under release discipline
+- `mechanics/registry.json`, `mechanics/owner-request-queue.json`, and
+  `mechanics/OWNER_REQUEST_QUEUE.md` now route Release-support owner requests
+  through `mechanics/release-support/OWNER_REQUESTS.md`, while
+  `mechanics/release-support/docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md`
+  remains a compatibility pointer
+- `scripts/release_check.py` now includes the Release-support package
+  validator so transition gates, public-claim gates, changelog/roadmap splits,
+  owner handoff packets, sibling evidence routes, and rollback posture stay
+  under release discipline
 - `generated/center_entry_map.min.json` and its schema now publish the
   `aoa_center_entry_map_v2` route contract with route modes, human paths,
   machine companions, and explicit `must_not_claim` stop-lines

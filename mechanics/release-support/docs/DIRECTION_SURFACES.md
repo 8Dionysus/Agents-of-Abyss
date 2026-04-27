@@ -8,6 +8,11 @@ It exists so cross-repo alignment work can distinguish between:
 - repositories whose direction lives in another repo-owned surface
 - the narrow cases where a non-roadmap surface remains the more honest entry door
 
+It is a direction map, not a release log. When a direction surface changes
+because a transition landed, use
+[`../parts/direction-surface-review/README.md`](../parts/direction-surface-review/README.md)
+to decide which entry surfaces must move.
+
 ## Rules
 
 - Treat the listed direction surface as the first repo-owned statement of current course.
@@ -40,3 +45,5 @@ It exists so cross-repo alignment work can distinguish between:
 
 - This note routes readers to owner truth. It does not replace repo-local validators, release checks, or generated entry capsules.
 - If a repository changes direction surface later, update its own entry docs first and then refresh this center map.
+- Do not use this map to claim that a sibling repository accepted a release or
+  landing; cite the owner repository receipt instead.

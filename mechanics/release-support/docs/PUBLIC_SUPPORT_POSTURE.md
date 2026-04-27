@@ -1,7 +1,15 @@
 # Public Support Posture
 
-This note records the public onboarding, support, release, and CI posture for the AoA center.
-It is about what the center may honestly claim, not about taking ownership away from sibling repositories.
+This note records the public onboarding, support, release, and CI posture for
+the AoA center.
+It is about what the center may honestly claim, not about taking ownership away
+from sibling repositories.
+
+Release-support now treats public claims as one kind of state transition. For
+the active operating route, start with
+[`DIRECTION.md`](../DIRECTION.md) and
+[`PARTS.md`](../PARTS.md), then return here when the transition becomes
+public-facing.
 
 ## Canonical route contract
 
@@ -47,6 +55,8 @@ The center may publicly support:
 - federation rules and source-of-truth boundaries
 - compact registry surfaces for the documented public contour
 - reviewable routing toward layer-owned repositories
+- checked state-transition posture when evidence, owner boundary, and rollback
+  route are named
 
 The center does not publicly support:
 
@@ -54,6 +64,8 @@ The center does not publicly support:
 - runtime guarantees that belong in `abyss-stack`
 - ToS-authored meaning that belongs in `Tree-of-Sophia`
 - typed consumer or control-plane guarantees that belong in `aoa-sdk`
+- owner acceptance that has not landed in the owner repository
+- release or landing stability that hides rollback debt
 
 ## Release semantics
 
@@ -71,6 +83,11 @@ An `Agents-of-Abyss` public claim is only honest when these stay aligned in the 
 
 This repository names the federation contour.
 It does not version or release the primary meaning of sibling repositories.
+
+For internal releases that are not GitHub releases, use
+[`parts/state-transition-gate`](../parts/state-transition-gate/README.md) and
+[`parts/landing-closeout`](../parts/landing-closeout/README.md) before
+promoting the claim into this public posture.
 
 ## CI tier map
 

@@ -129,7 +129,7 @@ A request packet is not owner acceptance. Owner repositories land operational tr
 | Questbook | What obligation must survive the current diff as a public tracked follow-up? | public obligation model | [QUESTBOOK](../QUESTBOOK.md), [model-spine](questbook/parts/model-spine/README.md) | second roadmap or private scratchpad |
 | RPG reflection | How can progression, questlines, campaigns, roles, and feats be read without rewriting ownership? | adjunct reflection layer | [RPG](rpg/README.md), [PARTS](rpg/PARTS.md), [source-boundary](rpg/parts/source-boundary/README.md), [vocabulary-overlay](rpg/parts/vocabulary-overlay/README.md) | hidden ontology or runtime ledger |
 | ToS bridge, witness, compost | How can AoA support ToS without authoring ToS meaning? | support doctrine and seams | [COUNTERPART_BRIDGE](tos-bridge/docs/COUNTERPART_BRIDGE.md), [WITNESS_COMPOST](tos-bridge/docs/WITNESS_COMPOST.md) | AoA-authored ToS canon |
-| Release, audit, public support | Which claims can the center publicly support? | release and CI posture | [PUBLIC_SUPPORT_POSTURE](release-support/docs/PUBLIC_SUPPORT_POSTURE.md), [FEDERATION_RELEASE_PROTOCOL](release-support/docs/FEDERATION_RELEASE_PROTOCOL.md), [RELEASING](release-support/docs/RELEASING.md) | unverified public claim |
+| Release, audit, public support | Which transitions or claims can the center support, publish, hand off, or roll back? | state-transition and release posture | [Release support](release-support/README.md), [PARTS](release-support/PARTS.md), [PUBLIC_SUPPORT_POSTURE](release-support/docs/PUBLIC_SUPPORT_POSTURE.md) | GitHub-only release definition or unverified public claim |
 
 ## Constitutional polis
 
@@ -452,11 +452,18 @@ It does not become ToS canon.
 
 ## Release, audit, and support posture
 
-Use this branch when a public claim, release surface, or audit route must be
-checked.
+Use this branch when a public claim, release surface, audit route, landing
+closeout, owner handoff, checkpoint or quest closeout, direction update, or
+rollback-sensitive transition must be checked.
 
 | Surface | Role |
 |---|---|
+| [Release support](release-support/README.md) | mechanic entry card |
+| [DIRECTION](release-support/DIRECTION.md) | release as state-transition direction |
+| [PARTS](release-support/PARTS.md) | active operating routes for transition claims |
+| [OWNER_MAP](release-support/OWNER_MAP.md) | stronger owner split for release-support moves |
+| [OWNER_REQUESTS](release-support/OWNER_REQUESTS.md) | center-side owner handoff packets |
+| [PROVENANCE](release-support/PROVENANCE.md) | source trace and legacy bridge |
 | [PUBLIC_SUPPORT_POSTURE](release-support/docs/PUBLIC_SUPPORT_POSTURE.md) | what the center may honestly claim |
 | [DIRECTION_SURFACES](release-support/docs/DIRECTION_SURFACES.md) | current direction surface per repo |
 | [FEDERATION_RELEASE_PROTOCOL](release-support/docs/FEDERATION_RELEASE_PROTOCOL.md) | shared release completeness contract |

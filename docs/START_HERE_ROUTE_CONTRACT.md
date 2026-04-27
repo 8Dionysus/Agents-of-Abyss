@@ -33,10 +33,10 @@ If one of those surfaces changes the route order or adds a new route mode, the o
 |---|---|---|---|
 | `first-reading` | humans, new agents, outside readers | understand the center without entering every district | `README.md` -> `CHARTER.md` -> `ECOSYSTEM_MAP.md` -> `docs/FEDERATION_RULES.md` |
 | `root-editing` | contributors, coding agents, maintainers | change root surfaces without making the root a warehouse | first reading -> `CONTRIBUTING.md` -> `docs/ROOT_SURFACE_LAW.md` |
-| `direction-change` | maintainers, release agents | update roadmap, phase, maturity, or release contour | first reading -> `ROADMAP.md` -> `mechanics/release-support/docs/DIRECTION_SURFACES.md` -> `CHANGELOG.md` |
+| `direction-change` | maintainers, release agents | update roadmap, phase, maturity, transition, or release contour | first reading -> `ROADMAP.md` -> `mechanics/release-support/DIRECTION.md` -> `mechanics/release-support/docs/DIRECTION_SURFACES.md` -> `CHANGELOG.md` |
 | `ownership-routing` | humans and agents deciding where work belongs | choose the owner repository for a change | first reading -> `docs/LAYERS.md` -> `docs/REPO_ROLES.md` |
-| `mechanic-change` | authors of Agon, Experience, recurrence, growth, quest/RPG, or ToS support surfaces | edit a process without stealing owner truth | first reading -> `mechanics/README.md` -> `mechanics/<slug>/README.md` -> the relevant stop-line surface |
-| `public-claim-validation` | release agents, public docs editors, reviewers | decide whether the center may honestly claim something | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` -> generated capsules -> validators |
+| `mechanic-change` | authors of Agon, Experience, recurrence, growth, quest/RPG, release-support, or ToS support surfaces | edit a process without stealing owner truth | first reading -> `mechanics/README.md` -> `mechanics/<slug>/README.md` -> the relevant stop-line surface |
+| `public-claim-validation` | release agents, public docs editors, reviewers | decide whether the center may honestly claim something | `mechanics/release-support/README.md` -> `mechanics/release-support/PARTS.md` -> `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` -> generated capsules -> validators |
 | `low-context-agent` | small models, retrieval systems, capsule-first agents | get a compact route before reading full docs | `generated/center_entry_map.min.json` |
 | `district-work` | contributors already inside a technical district | respect local file purpose and validation boundaries | root route -> local district `README.md` |
 
@@ -85,15 +85,17 @@ Root-editing changes must not create root files merely because a wave, note, aud
 
 ## Direction-change route
 
-Use this route before changing the roadmap, current phase, maturity posture, or public release contour.
+Use this route before changing the roadmap, current phase, maturity posture,
+state-transition contour, or public release contour.
 
 Read:
 
 1. first-reading route
 2. `ROADMAP.md`
-3. `mechanics/release-support/docs/DIRECTION_SURFACES.md`
-4. `CHANGELOG.md`
-5. `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` when the change affects public claims
+3. `mechanics/release-support/DIRECTION.md`
+4. `mechanics/release-support/docs/DIRECTION_SURFACES.md`
+5. `CHANGELOG.md`
+6. `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` when the change affects public claims
 
 Direction changes must distinguish:
 
@@ -149,15 +151,18 @@ Mechanic changes must name their owner split. A mechanic is healthy only when it
 
 ## Public-claim-validation route
 
-Use this route when a sentence sounds like a public promise.
+Use this route when a sentence sounds like a public promise or an internal
+transition is about to become public-facing.
 
 Read:
 
-1. `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`
-2. `CHARTER.md`
-3. `ECOSYSTEM_MAP.md`
-4. `docs/FEDERATION_RULES.md`
-5. generated capsules
+1. `mechanics/release-support/README.md`
+2. `mechanics/release-support/PARTS.md`
+3. `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`
+4. `CHARTER.md`
+5. `ECOSYSTEM_MAP.md`
+6. `docs/FEDERATION_RULES.md`
+7. generated capsules
 6. validators
 
 A center claim is honest only when the human docs, generated capsules, validators, and release posture agree in the same landed state.

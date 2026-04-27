@@ -51,7 +51,7 @@ Every public entry surface must expose the same route-mode vocabulary:
 | `root-editing` | you will add, move, delete, rename, or rewrite a root surface | `docs/ROOT_SURFACE_LAW.md` |
 | `direction-change` | you will change roadmap, phase, maturity, release contour, or declared direction | `ROADMAP.md` |
 | `ownership-routing` | you need to decide which repository owns a change | `docs/REPO_ROLES.md` |
-| `mechanic-change` | you will touch Agon, Experience, recurrence, method/growth, antifragility, quest/RPG, or ToS support | `mechanics/README.md` |
+| `mechanic-change` | you will touch Agon, Experience, recurrence, method/growth, antifragility, quest/RPG, release-support, or ToS support | `mechanics/README.md` |
 | `public-claim-validation` | a sentence sounds like a public promise | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` |
 | `low-context-agent` | you need a compact machine-facing route before full reading | `generated/center_entry_map.min.json` |
 | `district-work` | you are already inside a technical district | nearest local `README.md` |
@@ -67,6 +67,7 @@ Use this tree before trusting a claim made by the center:
 | Ownership law | Does the claim preserve source truth, derived truth, routing truth, runtime truth, and ToS-authored meaning as separate things? | [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) | Cross-check [docs/REPO_ROLES](docs/REPO_ROLES.md) and [release-support/PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md). |
 | Surface placement | Does this object deserve to live in the repository root? | [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) | If it is a wave receipt, audit artifact, future registry note, or generated object, route it away from root. |
 | Direction | Is this current program direction rather than an old contour, wave note, or copied promise? | [ROADMAP](ROADMAP.md) | Cross-check [release-support/DIRECTION_SURFACES](mechanics/release-support/docs/DIRECTION_SURFACES.md). |
+| Release support | Is a draft, quest, checkpoint, landing, handoff, public claim, or GitHub release becoming a supportable state transition? | [release-support](mechanics/release-support/README.md) | Use [release-support/PARTS](mechanics/release-support/PARTS.md) before public wording hardens. |
 | Machine contract | Can the compact surfaces and AGENTS mesh still rebuild and validate? | generated capsules, AGENTS cards, and validators | Run the commands below. |
 | Mechanic route | Is the claim about a process, engineering philosophy, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS support? | [mechanics/README](mechanics/README.md) | Use the package entry for that mechanic before editing the deeper surface. |
 | Audit route | Is this cleanup, pruning, or duplicate-meaning review? | [ECOSYSTEM_AUDIT_INDEX](ECOSYSTEM_AUDIT_INDEX.md) and [docs/audits](docs/audits/) | Keep audit evidence reviewable without promoting it into constitutional law. |
@@ -171,7 +172,7 @@ Treat this contour as a map of planted law, contracts, candidates, and proof sur
 | Antifragility and subtraction | stress discipline, degraded-mode evidence, pruning, and anti-authority cleanup | one-score health, deletion theater, or authority transfer | `mechanics/antifragility/docs/ANTIFRAGILITY.md`, `mechanics/antifragility/docs/VIA_NEGATIVA.md`, `FRAGILITY_BLACKLIST.md`, `docs/audits/DELETION_CANDIDATES.json` |
 | Quest/RPG reflection | public quest model, lifecycle quest board, and adjunct progression reading layer | runtime ledger, global score, or hidden ontology | `QUESTBOOK.md`, `quests/`, `mechanics/questbook/parts/model-spine/README.md`, `mechanics/questbook/parts/lifecycle-law/README.md`, `mechanics/rpg/PARTS.md` |
 | ToS support and counterpart work | AoA may route, support, witness, derive, and prepare ToS-adjacent seams | AoA-authored ToS meaning or direct ToS canon write | `mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md`, `mechanics/tos-bridge/docs/WITNESS_COMPOST.md`, `mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md`, `mechanics/tos-bridge/docs/TOS_TEMPLATE_SUPPORT.md`, `mechanics/tos-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md`, `mechanics/tos-bridge/docs/TOS_SOIL_PREP_SUPPORT.md` |
-| Release and support | public claims must align across human docs, generated capsules, and validators | release glamour without claim verification | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, `mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md`, `mechanics/release-support/docs/RELEASING.md`, `scripts/`, `tests/` |
+| Release and support | transition and public claims must align across human docs, generated capsules, validators, owner evidence, and rollback routes | release glamour without claim verification or GitHub-only release thinking | `mechanics/release-support/README.md`, `mechanics/release-support/PARTS.md`, `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, `mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md`, `mechanics/release-support/docs/RELEASING.md`, `scripts/`, `tests/` |
 
 ## Technical district gates
 

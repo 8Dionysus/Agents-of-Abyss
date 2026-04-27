@@ -68,7 +68,7 @@ Use the named route before widening a center claim:
 | `root-editing` | a root surface changes | `docs/ROOT_SURFACE_LAW.md` |
 | `direction-change` | roadmap, phase, maturity, or release contour changes | `ROADMAP.md` |
 | `ownership-routing` | ownership is unclear | `docs/REPO_ROLES.md` |
-| `mechanic-change` | Agon, Experience, recurrence, growth, antifragility, quest/RPG, or ToS support changes | `mechanics/README.md` |
+| `mechanic-change` | Agon, Experience, recurrence, growth, antifragility, quest/RPG, release-support, or ToS support changes | `mechanics/README.md` |
 | `public-claim-validation` | a sentence sounds like a public promise | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` |
 | `low-context-agent` | a compact machine route is needed first | `generated/center_entry_map.min.json` |
 | `district-work` | work is already inside a technical district | nearest local `README.md` |

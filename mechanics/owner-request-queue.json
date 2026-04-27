@@ -1747,6 +1747,10 @@
     {
       "center_sources": [
         "mechanics/release-support/README.md",
+        "mechanics/release-support/DIRECTION.md",
+        "mechanics/release-support/PARTS.md",
+        "mechanics/release-support/OWNER_MAP.md",
+        "mechanics/release-support/OWNER_REQUESTS.md",
         "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         "mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md",
         "mechanics/release-support/docs/DIRECTION_SURFACES.md"
@@ -1761,15 +1765,19 @@
       "owner_repo": "aoa-evals",
       "owner_role": "proof, verdict, regression, and claim-discipline canon",
       "priority": "P0",
-      "proof_route": "Proof lives in `aoa-evals`.",
+      "proof_route": "Proof lives in `aoa-evals`; center release-support may only name the need and route.",
       "queue_status": "requested",
-      "required_owner_landing": "Eval surface for release claims, quality claims, regressions, and supportable-public-claim boundaries.",
-      "slice": "Public claim proof for release and support posture",
-      "stop_line": "The center must not publish unverified public claims."
+      "required_owner_landing": "Eval surface for release claims, state-transition claims, quality claims, regressions, and supportable-public-claim boundaries.",
+      "slice": "Public claim proof for release and state-transition support posture",
+      "stop_line": "The center must not publish unverified public or transition claims."
     },
     {
       "center_sources": [
         "mechanics/release-support/README.md",
+        "mechanics/release-support/DIRECTION.md",
+        "mechanics/release-support/PARTS.md",
+        "mechanics/release-support/OWNER_MAP.md",
+        "mechanics/release-support/OWNER_REQUESTS.md",
         "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         "mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md",
         "mechanics/release-support/docs/DIRECTION_SURFACES.md"
@@ -1784,15 +1792,19 @@
       "owner_repo": "aoa-stats",
       "owner_role": "derived observability and evidence-linked summary layer",
       "priority": "P2",
-      "proof_route": "Stats claims cite source release and proof receipts.",
+      "proof_route": "Stats claims cite source release, landing, owner, and proof receipts.",
       "queue_status": "requested",
-      "required_owner_landing": "Derived windows over owner-local release receipts and bounded eval outputs.",
-      "slice": "Derived release movement summaries",
-      "stop_line": "Stats must not become release truth."
+      "required_owner_landing": "Derived windows over owner-local release receipts, mechanic landings, transition status, and bounded eval outputs.",
+      "slice": "Derived release and transition movement summaries",
+      "stop_line": "Stats must not become release or transition truth."
     },
     {
       "center_sources": [
         "mechanics/release-support/README.md",
+        "mechanics/release-support/DIRECTION.md",
+        "mechanics/release-support/PARTS.md",
+        "mechanics/release-support/OWNER_MAP.md",
+        "mechanics/release-support/OWNER_REQUESTS.md",
         "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         "mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md",
         "mechanics/release-support/docs/DIRECTION_SURFACES.md"
@@ -1809,13 +1821,17 @@
       "priority": "P2",
       "proof_route": "Route correctness may be evaluated by `aoa-evals`.",
       "queue_status": "requested",
-      "required_owner_landing": "Routing update that directs humans and agents to current release/support surfaces.",
-      "slice": "Release route and federation entry ABI updates",
-      "stop_line": "Routing must not author release truth."
+      "required_owner_landing": "Routing update that directs humans and agents to current release, transition, support, and public-claim surfaces.",
+      "slice": "Release route, transition route, and federation entry ABI updates",
+      "stop_line": "Routing must not author release, transition, or public claim truth."
     },
     {
       "center_sources": [
         "mechanics/release-support/README.md",
+        "mechanics/release-support/DIRECTION.md",
+        "mechanics/release-support/PARTS.md",
+        "mechanics/release-support/OWNER_MAP.md",
+        "mechanics/release-support/OWNER_REQUESTS.md",
         "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         "mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md",
         "mechanics/release-support/docs/DIRECTION_SURFACES.md"
@@ -1832,13 +1848,17 @@
       "priority": "P3",
       "proof_route": "Compatibility claims route to `aoa-evals`.",
       "queue_status": "requested",
-      "required_owner_landing": "Typed helper or compatibility seam for loading release-adjacent generated surfaces without owning meaning.",
-      "slice": "Compatibility helper support for release consumers",
-      "stop_line": "SDK support must not become release authority."
+      "required_owner_landing": "Typed helper or compatibility seam for loading release-adjacent and transition-adjacent generated surfaces without owning meaning.",
+      "slice": "Compatibility helper support for release and transition consumers",
+      "stop_line": "SDK support must not become release authority or transition authority."
     },
     {
       "center_sources": [
         "mechanics/release-support/README.md",
+        "mechanics/release-support/DIRECTION.md",
+        "mechanics/release-support/PARTS.md",
+        "mechanics/release-support/OWNER_MAP.md",
+        "mechanics/release-support/OWNER_REQUESTS.md",
         "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         "mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md",
         "mechanics/release-support/docs/DIRECTION_SURFACES.md"
@@ -1855,9 +1875,9 @@
       "priority": "P2",
       "proof_route": "Public projection claims must cite center and owner evidence.",
       "queue_status": "requested",
-      "required_owner_landing": "Profile or projection surface updated only after center support and owner evidence are aligned.",
-      "slice": "Public projection and profile-route alignment",
-      "stop_line": "Profile surfaces must not outrun the center or sibling owners."
+      "required_owner_landing": "Profile or projection surface updated only after center support, owner evidence, and public-claim gates are aligned.",
+      "slice": "Public projection and profile-route alignment for release and transition claims",
+      "stop_line": "Profile surfaces must not outrun the center, owner evidence, or proof routes."
     }
   ],
   "schema_version": "aoa_owner_request_queue_v1",
