@@ -46,6 +46,10 @@
     {
       "center_sources": [
         "mechanics/method-growth/README.md",
+        "mechanics/method-growth/DIRECTION.md",
+        "mechanics/method-growth/PARTS.md",
+        "mechanics/method-growth/OWNER_MAP.md",
+        "mechanics/method-growth/OWNER_REQUESTS.md",
         "mechanics/method-growth/docs/METHOD_SPINE.md",
         "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
         "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
@@ -69,6 +73,10 @@
     {
       "center_sources": [
         "mechanics/method-growth/README.md",
+        "mechanics/method-growth/DIRECTION.md",
+        "mechanics/method-growth/PARTS.md",
+        "mechanics/method-growth/OWNER_MAP.md",
+        "mechanics/method-growth/OWNER_REQUESTS.md",
         "mechanics/method-growth/docs/METHOD_SPINE.md",
         "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
         "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
@@ -92,6 +100,10 @@
     {
       "center_sources": [
         "mechanics/method-growth/README.md",
+        "mechanics/method-growth/DIRECTION.md",
+        "mechanics/method-growth/PARTS.md",
+        "mechanics/method-growth/OWNER_MAP.md",
+        "mechanics/method-growth/OWNER_REQUESTS.md",
         "mechanics/method-growth/docs/METHOD_SPINE.md",
         "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
         "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
@@ -115,6 +127,10 @@
     {
       "center_sources": [
         "mechanics/method-growth/README.md",
+        "mechanics/method-growth/DIRECTION.md",
+        "mechanics/method-growth/PARTS.md",
+        "mechanics/method-growth/OWNER_MAP.md",
+        "mechanics/method-growth/OWNER_REQUESTS.md",
         "mechanics/method-growth/docs/METHOD_SPINE.md",
         "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
         "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
@@ -138,6 +154,10 @@
     {
       "center_sources": [
         "mechanics/method-growth/README.md",
+        "mechanics/method-growth/DIRECTION.md",
+        "mechanics/method-growth/PARTS.md",
+        "mechanics/method-growth/OWNER_MAP.md",
+        "mechanics/method-growth/OWNER_REQUESTS.md",
         "mechanics/method-growth/docs/METHOD_SPINE.md",
         "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
         "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
@@ -161,6 +181,10 @@
     {
       "center_sources": [
         "mechanics/method-growth/README.md",
+        "mechanics/method-growth/DIRECTION.md",
+        "mechanics/method-growth/PARTS.md",
+        "mechanics/method-growth/OWNER_MAP.md",
+        "mechanics/method-growth/OWNER_REQUESTS.md",
         "mechanics/method-growth/docs/METHOD_SPINE.md",
         "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
         "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
@@ -180,6 +204,60 @@
       "required_owner_landing": "Bounded memory object or lesson surface that records provenance, retention reason, and recall route.",
       "slice": "Lessons, memory, and pruning receipts after owner landing",
       "stop_line": "The center must not hold primary memory truth."
+    },
+    {
+      "center_sources": [
+        "mechanics/method-growth/README.md",
+        "mechanics/method-growth/DIRECTION.md",
+        "mechanics/method-growth/PARTS.md",
+        "mechanics/method-growth/OWNER_MAP.md",
+        "mechanics/method-growth/OWNER_REQUESTS.md",
+        "mechanics/method-growth/docs/METHOD_SPINE.md",
+        "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
+        "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
+      ],
+      "center_status": "landed",
+      "handoff_surface_hint": "aoa-techniques/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-METHOD-TECHNIQUES-001",
+      "id": "ORQ-METHOD-TECHNIQUES-001",
+      "mechanic": "method-growth",
+      "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
+      "owner_landing_ref": "",
+      "owner_proof_ref": "",
+      "owner_repo": "aoa-techniques",
+      "owner_role": "reusable engineering practice canon",
+      "priority": "P1",
+      "proof_route": "Technique quality claims route to `aoa-evals` before public promotion.",
+      "queue_status": "requested",
+      "required_owner_landing": "Technique-owned reusable practice with procedure, boundaries, examples, and canonical-readiness posture.",
+      "slice": "Reusable practice promotion",
+      "stop_line": "The center must not become reusable-practice canon."
+    },
+    {
+      "center_sources": [
+        "mechanics/method-growth/README.md",
+        "mechanics/method-growth/DIRECTION.md",
+        "mechanics/method-growth/PARTS.md",
+        "mechanics/method-growth/OWNER_MAP.md",
+        "mechanics/method-growth/OWNER_REQUESTS.md",
+        "mechanics/method-growth/docs/METHOD_SPINE.md",
+        "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
+        "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
+      ],
+      "center_status": "landed",
+      "handoff_surface_hint": "aoa-stats/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-METHOD-STATS-001",
+      "id": "ORQ-METHOD-STATS-001",
+      "mechanic": "method-growth",
+      "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
+      "owner_landing_ref": "",
+      "owner_proof_ref": "",
+      "owner_repo": "aoa-stats",
+      "owner_role": "derived observability and movement summary layer",
+      "priority": "P2",
+      "proof_route": "Derived counts stay weaker than owner receipts and route to `aoa-evals` for public quality claims.",
+      "queue_status": "requested",
+      "required_owner_landing": "Derived summaries that read owner receipts without becoming route, proof, memory, or landing authority.",
+      "slice": "Derived method-growth visibility",
+      "stop_line": "The center must not treat derived growth summaries as proof, route authority, memory, or owner-local truth."
     },
     {
       "center_sources": [

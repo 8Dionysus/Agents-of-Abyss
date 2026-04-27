@@ -46,6 +46,8 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 | `ORQ-METHOD-EVALS-001` | `method-growth` | `aoa-evals` | `requested` | `P1` | Proof route for promoted candidates and reusable method claims |
 | `ORQ-METHOD-PLAYBOOKS-001` | `method-growth` | `aoa-playbooks` | `requested` | `P1` | Recurring method choreography after repeated work stabilizes |
 | `ORQ-METHOD-MEMO-001` | `method-growth` | `aoa-memo` | `requested` | `P2` | Lessons, memory, and pruning receipts after owner landing |
+| `ORQ-METHOD-TECHNIQUES-001` | `method-growth` | `aoa-techniques` | `requested` | `P1` | Reusable practice promotion |
+| `ORQ-METHOD-STATS-001` | `method-growth` | `aoa-stats` | `requested` | `P2` | Derived method-growth visibility |
 | `ORQ-RECURRENCE-SDK-001` | `recurrence` | `aoa-sdk` | `requested` | `P0` | Control-plane carry for recurrence manifests and reviewed handoffs |
 | `ORQ-RECURRENCE-ROUTING-001` | `recurrence` | `aoa-routing` | `requested` | `P1` | Re-entry route graph and return dispatch |
 | `ORQ-RECURRENCE-MEMO-001` | `recurrence` | `aoa-memo` | `requested` | `P0` | Anchor checkpoints, recall, and provenance for bounded continuity |
@@ -114,7 +116,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 
 ## Mechanic request docs
 
-- `method-growth` -> [METHOD_GROWTH_OWNER_REPO_REQUESTS.md](method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `Dionysus`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`
+- `method-growth` -> [OWNER_REQUESTS.md](method-growth/OWNER_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `Dionysus`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`, `aoa-techniques`, `aoa-stats`
 - `recurrence` -> [OWNER_REQUESTS.md](recurrence/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `aoa-stats`, `aoa-kag`, `abyss-stack`
 - `checkpoint` -> [OWNER_REQUESTS.md](checkpoint/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-routing`, `aoa-stats`, `abyss-stack`, `Dionysus`
 - `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`, `aoa-playbooks`, `aoa-sdk`, `aoa-stats`, `aoa-skills`, `aoa-techniques`
