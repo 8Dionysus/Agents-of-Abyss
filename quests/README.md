@@ -25,7 +25,7 @@ the read model is [`questbook_relations`](../generated/questbook_relations.min.j
 | [`antifragility/`](antifragility/) | antifragility, via negativa, and deletion-pressure obligations |
 | [`method-growth/`](method-growth/) | method-growth, candidate lineage, and owner landing obligations |
 | [`release-support/`](release-support/) | release posture, direction surface, and support protocol obligations |
-| [`tos-bridge/`](tos-bridge/) | Tree-of-Sophia bridge and counterpart obligations |
+| [`boundary-bridge/`](boundary-bridge/) | Boundary bridge, Tree-of-Sophia support, and counterpart obligations |
 
 ## Lifecycle States
 

@@ -135,7 +135,7 @@ Examples:
 - method and growth refinery
 - antifragility or via negativa
 - questbook or RPG reflection
-- ToS bridge, witness, or compost support
+- boundary bridge, ToS support, witness, or compost support
 - release, audit, or public support posture
 
 Read:

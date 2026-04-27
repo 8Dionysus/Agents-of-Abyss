@@ -19,7 +19,7 @@ MECHANIC_SLUGS = (
     "antifragility",
     "questbook",
     "rpg",
-    "tos-bridge",
+    "boundary-bridge",
     "release-support",
 )
 ARTIFACT_DIRS = ("schemas", "examples", "config", "generated", "scripts", "tests")
@@ -97,6 +97,10 @@ RPG_PREFIXES = (
 RELEASE_SUPPORT_PREFIXES = (
     "validate_release_support",
 )
+BOUNDARY_BRIDGE_PREFIXES = (
+    "validate_boundary_bridge",
+    "test_boundary_bridge",
+)
 
 ROOT_ALLOWLIST = {
     "generated": {
@@ -141,6 +145,8 @@ def mechanic_for_name(name: str) -> str | None:
         return "rpg"
     if name.startswith(RELEASE_SUPPORT_PREFIXES):
         return "release-support"
+    if name.startswith(BOUNDARY_BRIDGE_PREFIXES):
+        return "boundary-bridge"
     return None
 
 

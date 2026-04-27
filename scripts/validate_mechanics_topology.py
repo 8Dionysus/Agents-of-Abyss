@@ -22,7 +22,7 @@ CANONICAL_SLUGS = (
     "antifragility",
     "questbook",
     "rpg",
-    "tos-bridge",
+    "boundary-bridge",
     "release-support",
 )
 REQUIRED_PACKAGE_FILES = ("AGENTS.md", "README.md", "ROADMAP.md", "LANDING_LOG.md")
@@ -48,7 +48,7 @@ OLD_ACTIVE_PATTERNS = (
     r"(?<!mechanics/recurrence/)docs/(?:RECURRENCE_PRINCIPLE|SELF_AGENCY_CONTINUITY|COMPONENT_REFRESH_LAW)\.md",
     r"(?<!mechanics/method-growth/)docs/(?:ROOTLINE|METHOD_SPINE|REVIEWABLE_GROWTH_REFINERY|CANDIDATE_LINEAGE_CROSSWALK|OWNER_LANDING_AND_PRUNING)\.md",
     r"(?<!mechanics/questbook/)docs/(?:QUESTBOOK_MODEL|QUESTBOOK_FIRST_WAVE)\.md",
-    r"(?<!mechanics/tos-bridge/)docs/(?:COUNTERPART_BRIDGE|WITNESS_COMPOST|TOS_GROWTH_SUPPORT|TOS_TEMPLATE_SUPPORT|TOS_LINEAGE_PILOT_SUPPORT|TOS_SOIL_PREP_SUPPORT)\.md",
+    r"(?<!mechanics/boundary-bridge/)docs/(?:COUNTERPART_BRIDGE|WITNESS_COMPOST|TOS_GROWTH_SUPPORT|TOS_TEMPLATE_SUPPORT|TOS_LINEAGE_PILOT_SUPPORT|TOS_SOIL_PREP_SUPPORT)\.md",
     r"(?<!mechanics/release-support/)docs/(?:PUBLIC_SUPPORT_POSTURE|FEDERATION_RELEASE_PROTOCOL|RELEASING|DIRECTION_SURFACES)\.md",
 )
 

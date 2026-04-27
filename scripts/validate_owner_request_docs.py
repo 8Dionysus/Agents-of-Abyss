@@ -21,7 +21,7 @@ CANONICAL_SLUGS = (
     "antifragility",
     "questbook",
     "rpg",
-    "tos-bridge",
+    "boundary-bridge",
     "release-support",
 )
 CENTRAL_DOCS = {

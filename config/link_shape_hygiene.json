@@ -377,7 +377,7 @@
         "require_h2": true
       },
       {
-        "path": "mechanics/tos-bridge/README.md",
+        "path": "mechanics/boundary-bridge/README.md",
         "required": true,
         "min_lines": 20,
         "max_line_length": 700,

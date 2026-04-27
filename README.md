@@ -120,7 +120,16 @@ Everything else must justify its place through [docs/ROOT_SURFACE_LAW](docs/ROOT
 
 ## Branch by mechanism
 
-Use [mechanics/README](mechanics/README.md) as the single process gate when the question is **what kind of move is this?** rather than **which repository is this?** The atlas routes method/growth, recurrence/return/continuity, Agon, Experience, antifragility/subtraction, quest/RPG reflection, ToS bridge/witness/compost, release posture, machine companions, validators, owner splits, and stop-lines. Detailed mechanic landing history lives in [Agon LANDING_LOG](mechanics/agon/LANDING_LOG.md) and [Experience LANDING_LOG](mechanics/experience/LANDING_LOG.md), not in the root roadmap. The root deliberately keeps those branches behind one door so the polis remains a city gate, not a warehouse.
+Use [mechanics/README](mechanics/README.md) as the single process gate when
+the question is **what kind of move is this?** rather than **which repository
+is this?** The atlas routes method/growth, recurrence/return/continuity, Agon,
+Experience, antifragility/subtraction, quest/RPG reflection, boundary bridge
+and ToS-support work, release posture, machine companions, validators, owner
+splits, and stop-lines. Detailed mechanic landing history lives in
+[Agon LANDING_LOG](mechanics/agon/LANDING_LOG.md) and
+[Experience LANDING_LOG](mechanics/experience/LANDING_LOG.md), not in the root
+roadmap. The root deliberately keeps those branches behind one door so the
+polis remains a city gate, not a warehouse.
 
 ## Quick route table
 
@@ -171,7 +180,7 @@ Treat this contour as a map of planted law, contracts, candidates, and proof sur
 | Experience | staged center contracts through active parts, Wave 1-5 lineage, and v1.2 to v2.0 planting contours | live workspace runtime, hidden memory sovereignty, or owner-local activation | `mechanics/experience/README.md`, `mechanics/experience/PARTS.md`, and `mechanics/experience/PROVENANCE.md` |
 | Antifragility and subtraction | stress discipline, degraded-mode evidence, pruning, and anti-authority cleanup | one-score health, deletion theater, or authority transfer | `mechanics/antifragility/docs/ANTIFRAGILITY.md`, `mechanics/antifragility/docs/VIA_NEGATIVA.md`, `FRAGILITY_BLACKLIST.md`, `docs/audits/DELETION_CANDIDATES.json` |
 | Quest/RPG reflection | public quest model, lifecycle quest board, and adjunct progression reading layer | runtime ledger, global score, or hidden ontology | `QUESTBOOK.md`, `quests/`, `mechanics/questbook/parts/model-spine/README.md`, `mechanics/questbook/parts/lifecycle-law/README.md`, `mechanics/rpg/PARTS.md` |
-| ToS support and counterpart work | AoA may route, support, witness, derive, and prepare ToS-adjacent seams | AoA-authored ToS meaning or direct ToS canon write | `mechanics/tos-bridge/docs/COUNTERPART_BRIDGE.md`, `mechanics/tos-bridge/docs/WITNESS_COMPOST.md`, `mechanics/tos-bridge/docs/TOS_GROWTH_SUPPORT.md`, `mechanics/tos-bridge/docs/TOS_TEMPLATE_SUPPORT.md`, `mechanics/tos-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md`, `mechanics/tos-bridge/docs/TOS_SOIL_PREP_SUPPORT.md` |
+| Boundary bridge and ToS support | AoA may route, support, witness, derive, and prepare cross-owner seams without authority transfer | AoA-authored ToS meaning, identity collapse, or owner acceptance without owner-local receipt | `mechanics/boundary-bridge/README.md`, `mechanics/boundary-bridge/PARTS.md`, `mechanics/boundary-bridge/parts/tos-support/README.md`, `mechanics/boundary-bridge/docs/COUNTERPART_BRIDGE.md`, `mechanics/boundary-bridge/docs/WITNESS_COMPOST.md` |
 | Release and support | transition and public claims must align across human docs, generated capsules, validators, owner evidence, and rollback routes | release glamour without claim verification or GitHub-only release thinking | `mechanics/release-support/README.md`, `mechanics/release-support/PARTS.md`, `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, `mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md`, `mechanics/release-support/docs/RELEASING.md`, `scripts/`, `tests/` |
 
 ## Technical district gates

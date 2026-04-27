@@ -798,12 +798,12 @@
       ]
     },
     {
-      "path": "mechanics/tos-bridge/AGENTS.md",
-      "scope": "mechanics/tos-bridge/",
+      "path": "mechanics/boundary-bridge/AGENTS.md",
+      "scope": "mechanics/boundary-bridge/",
       "kind": "mechanic-package-card",
       "status": "required",
       "owner": "Agents-of-Abyss",
-      "notes": "Package card for ToS bridge.",
+      "notes": "Package card for Boundary bridge.",
       "required_headings": [
         "# AGENTS.md",
         "## Applies to",
@@ -815,12 +815,12 @@
       ]
     },
     {
-      "path": "mechanics/tos-bridge/docs/AGENTS.md",
-      "scope": "mechanics/tos-bridge/docs/",
+      "path": "mechanics/boundary-bridge/docs/AGENTS.md",
+      "scope": "mechanics/boundary-bridge/docs/",
       "kind": "mechanic-docs-card",
       "status": "required",
       "owner": "Agents-of-Abyss",
-      "notes": "Deep docs card for ToS bridge.",
+      "notes": "Deep docs card for Boundary bridge.",
       "required_headings": [
         "# AGENTS.md",
         "## Applies to",
