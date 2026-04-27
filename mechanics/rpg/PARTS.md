@@ -28,8 +28,17 @@ Every part `README.md` should stay short and use the same active-route shape:
 
 - `## Use When`
 - `## Do Not Use When`
+- `## Route Check`
 - `## Active Outputs`
 - `## Next Route`
+
+Every part `CONTRACT.md` should name what must be true before the part emits an
+output:
+
+- `## Center Owns`
+- `## Must Not Claim`
+- `## Allowed Outputs`
+- `## Required Before Output`
 
 A part may grow, split, merge, shrink, or retire when that improves the world grammar and keeps the route cleaner. The move should leave agent action easier to judge, not merely smaller.
 

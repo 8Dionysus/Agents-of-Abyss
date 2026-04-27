@@ -107,8 +107,6 @@ ROOT_ALLOWLIST = {
         "link_shape_hygiene.json",
     },
 }
-
-
 def mechanic_for_name(name: str) -> str | None:
     if name.startswith(AGON_PREFIXES) or name == "agon_imposition_common.py":
         return "agon"

@@ -19,3 +19,10 @@
 - request ID
 - owner route
 - proof route
+
+## Required Before Output
+
+- target owner repository is named
+- request ID or owner-request queue route is visible
+- stop-lines name what center cannot claim
+- acceptance, landing, proof completion, and activation remain separate states

@@ -11,6 +11,8 @@ Canonical landing ledger for the RPG mechanic.
 - RPG active-route polish made every part entry follow one concise route shape and made wave-era prose invalid in active RPG routes.
 - RPG usage contract landed a decision table for when RPG language belongs in a task and when plain repository language should win.
 - RPG and Questbook now share a playable obligation bridge for derived quest readings without moving quest ownership or lifecycle authority.
+- RPG now has one worked playable-obligation route example that shows ordinary task to quest route to RPG reading to proof route to owner handoff without becoming a reusable quest template.
+- RPG parts now use explicit route checks and output gates so every part can act as a small working organ without adding more long-form doctrine.
 
 ## Entries
 
@@ -255,3 +257,59 @@ Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python
 Stop-lines: no RPG quest lifecycle authority, quest closure, proof completion, owner acceptance, reward authority, universal score, runtime state, or boilerplate RPG fields across quest sources.
 
 Next route: use the bridge when a quest needs campaign, party, stake, proof route, unlock question, or consequence reading; keep source quest movement in Questbook.
+
+### RPG playable obligation worked route example
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns one explanatory worked route for RPG reflection; Questbook still owns quest lifecycle and source quest truth, while owner repositories keep proof, runtime, memory, and acceptance authority.
+
+Surfaces:
+
+- `mechanics/rpg/parts/quest-campaign/examples/playable-obligation-route.md`
+- `mechanics/rpg/README.md`
+- `mechanics/rpg/DIRECTION.md`
+- `mechanics/rpg/USAGE.md`
+- `mechanics/rpg/scripts/validate_rpg_distillation.py`
+- `mechanics/rpg/tests/test_rpg_distillation.py`
+- `mechanics/registry.json`
+
+Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python -m pytest -q mechanics/rpg/tests`
+
+Stop-lines: no repeated example boilerplate across quest sources, no quest lifecycle claim, no proof verdict, no runtime activation, no owner acceptance, and no memory ownership claim from the example.
+
+Next route: use the example only to understand the shape of a route; for live work, start from the source quest and the relevant owner surface.
+
+### RPG part usability route checks
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns the active RPG part route shape; stronger owner repositories still own role, skill, technique, proof, stats, quest, playbook, memo, runtime, and presentation authority.
+
+Surfaces:
+
+- `mechanics/rpg/PARTS.md`
+- `mechanics/rpg/ROADMAP.md`
+- `mechanics/rpg/parts/world-grammar/README.md`
+- `mechanics/rpg/parts/world-grammar/CONTRACT.md`
+- `mechanics/rpg/parts/source-boundary/README.md`
+- `mechanics/rpg/parts/source-boundary/CONTRACT.md`
+- `mechanics/rpg/parts/vocabulary-overlay/README.md`
+- `mechanics/rpg/parts/vocabulary-overlay/CONTRACT.md`
+- `mechanics/rpg/parts/quest-campaign/README.md`
+- `mechanics/rpg/parts/quest-campaign/CONTRACT.md`
+- `mechanics/rpg/parts/progression-unlocks/README.md`
+- `mechanics/rpg/parts/progression-unlocks/CONTRACT.md`
+- `mechanics/rpg/parts/runtime-projection/README.md`
+- `mechanics/rpg/parts/runtime-projection/CONTRACT.md`
+- `mechanics/rpg/parts/owner-handoffs/README.md`
+- `mechanics/rpg/parts/owner-handoffs/CONTRACT.md`
+- `mechanics/rpg/scripts/validate_rpg_distillation.py`
+- `mechanics/rpg/tests/test_rpg_distillation.py`
+- `CHANGELOG.md`
+
+Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python -m pytest -q mechanics/rpg/tests`
+
+Stop-lines: no new doctrine sprawl, no hidden owner transfer, no proof verdict, no runtime activation, no quest lifecycle claim, and no universal score.
+
+Next route: grow individual parts only when their route check exposes a repeated form that needs a new checked surface.

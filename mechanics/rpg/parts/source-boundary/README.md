@@ -23,6 +23,13 @@ The repository that owns the source object keeps the meaning. RPG may add a read
 3. runtime/session state carries current execution only
 4. presentation/theme labels remain derived
 
+## Route Check
+
+- Source object: identify the authored source, generated mirror, runtime state, proof object, or presentation label.
+- Owner route: keep the stronger owner closer than the RPG reflection.
+- Reading value: allow RPG language only as a visible reflection map.
+- Closeout: record which owner keeps meaning and what RPG did not claim.
+
 ## Active Outputs
 
 - source-boundary reminder

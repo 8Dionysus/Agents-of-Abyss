@@ -20,3 +20,10 @@
 - source-boundary reminder
 - owner route
 - reflection map proposal that remains non-authoritative until the owner lands it
+
+## Required Before Output
+
+- source owner is named
+- generated, runtime, proof, and presentation surfaces are separated when present
+- RPG reflection is marked as derived
+- unclear ownership routes back to federation and repo-role law

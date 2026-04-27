@@ -19,3 +19,10 @@
 - frontend projection boundary
 - transport contour
 - owner handoff to `abyss-stack`
+
+## Required Before Output
+
+- source meaning, proof, runtime, and presentation precedence are named
+- canonical keys survive any display label
+- `abyss-stack` owner route is explicit before implementation language appears
+- center docs do not imply live runtime state

@@ -14,6 +14,13 @@ This part owns the active RPG reading of rank, mastery axes, abilities, feats, r
 - the claim requires proof before a label can be useful
 - the label would mutate skill, technique, role, reputation, or stats authority
 
+## Route Check
+
+- Source object: name the role, skill, technique, proof, stat, or owner signal behind the proposed reading.
+- Owner route: send roles to `aoa-agents`, abilities to `aoa-skills`, feats to `aoa-techniques`, proof to `aoa-evals`, and summaries to `aoa-stats`.
+- Reading value: frame the output as an unlock question or label candidate, not a verdict.
+- Closeout: state what evidence exists and which owner would have to accept the advancement.
+
 ## Active Outputs
 
 - progression label candidate

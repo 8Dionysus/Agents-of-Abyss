@@ -102,6 +102,15 @@ def test_part_readmes_use_common_active_route_shape() -> None:
     assert problems == []
 
 
+def test_part_contracts_use_common_output_gate_shape() -> None:
+    module = load_validator()
+
+    problems: list[str] = []
+    module.validate_part_contract_shape(problems)
+
+    assert problems == []
+
+
 def test_usage_contract_is_complete() -> None:
     module = load_validator()
 
@@ -116,5 +125,14 @@ def test_playable_obligation_route_is_complete() -> None:
 
     problems: list[str] = []
     module.validate_playable_obligation_route(problems)
+
+    assert problems == []
+
+
+def test_worked_route_example_is_single_and_complete() -> None:
+    module = load_validator()
+
+    problems: list[str] = []
+    module.validate_worked_route_example(problems)
 
     assert problems == []

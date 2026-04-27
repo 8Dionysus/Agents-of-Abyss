@@ -17,3 +17,10 @@
 - a world-shaped route note
 - a clearer role or quest reading
 - a consequence, reputation, or unlock question routed to the owner
+
+## Required Before Output
+
+- source object is named in plain repository language
+- owner route is visible before RPG vocabulary appears
+- the reading adds action quality instead of decoration
+- stop-lines remain explicit when proof, runtime, quest, role, or memory authority is nearby

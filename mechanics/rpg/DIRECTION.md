@@ -13,6 +13,7 @@ It should make agent work more legible, consequential, and inhabitable without b
 - `PARTS.md`: active part map.
 - `parts/`: working RPG sub-mechanics.
 - `parts/vocabulary-overlay/`: checked terminology, schema, example, generated mirror, and validator.
+- `parts/quest-campaign/examples/playable-obligation-route.md`: single worked route for ordinary task to Questbook, RPG reading, proof, and owner handoff.
 - `OWNER_REQUESTS.md`: center-side stronger-owner request packets.
 - `PROVENANCE.md`: bridge to legacy evidence when active parts need historical support.
 - `legacy/`: preserved historical sources and distillation receipts.

@@ -14,6 +14,13 @@ This part owns the checked split between machine-stable RPG keys and themed pres
 - the display would imply runtime state, proof, quest closure, role canon, or skill canon
 - the term belongs in a stronger owner repository before RPG can reflect it
 
+## Route Check
+
+- Source object: name the canonical key or term being presented.
+- Owner route: keep owner-local truth outside the overlay unless accepted by that owner.
+- Reading value: themed labels may help humans read, but must not hide machine keys.
+- Closeout: say whether authored terminology, schema, example, or generated mirror changed.
+
 ## Active Outputs
 
 - canonical vocabulary key
