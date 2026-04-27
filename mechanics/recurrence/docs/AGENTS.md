@@ -6,9 +6,11 @@ This card applies to `mechanics/recurrence/docs/` and all descendant source docu
 
 ## Role
 
-`mechanics/recurrence/docs/` holds detailed center-source doctrine, models, waves, stop-lines,
-handoffs, packets, or support notes for the `Recurrence` mechanic. The package `README.md` remains
-the entry card; this docs directory holds the deeper material.
+`mechanics/recurrence/docs/` holds detailed center-source doctrine for the
+`Recurrence` mechanic. The package `README.md`, `DIRECTION.md`, `PARTS.md`,
+`OWNER_MAP.md`, `PROVENANCE.md`, and `OWNER_REQUESTS.md` hold the active entry,
+direction, part map, owner split, provenance bridge, and owner-request route.
+This docs directory holds deeper law.
 
 ## Read before editing
 
@@ -21,7 +23,9 @@ surface mirrors this document, read the builder and validator before editing.
 - Keep detailed doctrine package-local and linked from the package README when it becomes an entry path.
 - Do not create owner-local activation claims, runtime claims, proof verdicts, memory objects, role contracts, playbook choreography, KAG canon, or ToS-authored meaning here.
 - If this document becomes historical, route it through landing, trace, or legacy posture instead of deleting provenance.
-- If this document creates a request to a stronger owner, update the owner-request queue rather than pretending the owner accepted it.
+- If this document creates a request to a stronger owner, update
+  `mechanics/recurrence/OWNER_REQUESTS.md` and the owner-request queue rather
+  than pretending the owner accepted it.
 
 ## Validation
 
@@ -31,6 +35,7 @@ Run package and link checks:
 python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
 python scripts/validate_links.py
+python mechanics/recurrence/scripts/validate_recurrence_mechanic.py
 python scripts/validate_mechanic_readme_cards.py
 python scripts/validate_mechanics_topology.py
 python scripts/validate_mechanic_landing_logs.py --mechanic recurrence
@@ -46,9 +51,10 @@ Run any targeted builder, validator, and test named by the generated or version-
 Executable validation commands from child docs live here. Child docs should
 route to this section instead of carrying command blocks.
 
-#### `mechanics/recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md`
+#### `mechanics/recurrence/OWNER_REQUESTS.md`
 
 ```bash
+python mechanics/recurrence/scripts/validate_recurrence_mechanic.py
 python scripts/validate_owner_request_queue.py --mechanic recurrence
 python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py

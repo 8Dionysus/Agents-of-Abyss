@@ -121,7 +121,7 @@ A request packet is not owner acceptance. Owner repositories land operational tr
 | Constitutional polis | What does the center own, and what must stay outside it? | landed center law | [CHARTER](../CHARTER.md), [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md), [FEDERATION_RULES](../docs/FEDERATION_RULES.md), [ROOT_SURFACE_LAW](../docs/ROOT_SURFACE_LAW.md) | layer-owned truth or root-surface inflation |
 | Layer ownership | Which repository owns this object class? | landed route map | [LAYERS](../docs/LAYERS.md), [REPO_ROLES](../docs/REPO_ROLES.md) | convenience ownership transfer |
 | Method and growth refinery | How does repeated work move from donor or checkpoint to candidate, seed, owner landing, proof, method, memory, or derived summary? | center doctrine and cross-owner route | [METHOD_SPINE](method-growth/docs/METHOD_SPINE.md), [REVIEWABLE_GROWTH_REFINERY](method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md) | center-owned scenario canon |
-| Recurrence, return, continuity | How does AoA recover when a route loses its axis and must re-enter through a valid anchor? | bounded return law | [RECURRENCE_PRINCIPLE](recurrence/docs/RECURRENCE_PRINCIPLE.md), [SELF_AGENCY_CONTINUITY](recurrence/docs/SELF_AGENCY_CONTINUITY.md) | ambient continuity or hidden memory sovereignty |
+| Recurrence, return, continuity | How does AoA recover when a route loses its axis and must re-enter through a valid anchor? | bounded return law | [Recurrence](recurrence/README.md), [PARTS](recurrence/PARTS.md), [OWNER_MAP](recurrence/OWNER_MAP.md) | ambient continuity, hidden memory sovereignty, or automatic recursor spawn |
 | Checkpoint | How does intermediate state preserve, review, return, bridge, export, or hand off without stealing owner truth? | landed center law | [Checkpoint](checkpoint/README.md), [PARTS](checkpoint/PARTS.md), [OWNER_MAP](checkpoint/OWNER_MAP.md) | checkpoint implementation authority or owner acceptance |
 | Experience | Which staged experience contract, office/service posture, seed intake, duel pressure, continuity loom, or runtime boundary is relevant? | planted center contracts through v2.0 | [Experience](experience/README.md) | live workspace runtime or owner-local activation |
 | Agon | Which pressure, lawful move, duel, arena, packet, verdict, retention, rank, school, canon, or threshold boundary is relevant? | center-owned pre-protocol law and candidate grammar | [Agon](agon/README.md) | live arena execution or assistant contestant authority |
@@ -198,6 +198,17 @@ that continuity is ambient memory.
 
 Core law:
 
+- [DIRECTION](recurrence/DIRECTION.md): present contour for honest return,
+  bounded re-entry, and owner-local follow-through.
+- [PARTS](recurrence/PARTS.md): active recurrence parts for Anchor Return,
+  Continuity Window, Component Refresh, Control Plane Carry, Reentry Routing,
+  Memory Recall, Scenario Choreography, Proof Gates, Runtime Return, and
+  Recursor Boundary.
+- [OWNER_MAP](recurrence/OWNER_MAP.md): stronger-owner route map.
+- [OWNER_REQUESTS](recurrence/OWNER_REQUESTS.md): center-side owner-local
+  landing requests.
+- [PROVENANCE](recurrence/PROVENANCE.md): source trail and sibling evidence
+  bridge.
 - [RECURRENCE_PRINCIPLE](recurrence/docs/RECURRENCE_PRINCIPLE.md): when a route loses its axis, return to the last valid anchor before continuing.
 - [SELF_AGENCY_CONTINUITY](recurrence/docs/SELF_AGENCY_CONTINUITY.md): continuity means bounded duration with explicit anchors and reviewable return, not permissionless autonomy.
 - [COMPONENT_REFRESH_LAW](recurrence/docs/COMPONENT_REFRESH_LAW.md): drifting components refresh through owner-owned receipts, not mystical self-healing.
@@ -217,11 +228,15 @@ Vocabulary:
 Owner split:
 
 - `Agents-of-Abyss` owns center law and stop-lines.
+- `aoa-sdk` owns typed recurrence carry, manifests, graph closure, projections,
+  and reviewed handoff packets.
 - `aoa-routing` may point toward re-entry, but does not own recurrence meaning.
 - `aoa-memo` owns checkpoint, recall, and provenance surfaces.
 - `aoa-agents` owns role and handoff posture for returns between actors.
 - `aoa-playbooks` owns recurring return choreography.
 - `aoa-evals` owns drift and recovery-quality proof.
+- `aoa-stats` owns derived recurrence visibility.
+- `aoa-kag` owns derived regrounding toward stronger source refs.
 - `abyss-stack` owns runtime wrappers only after runtime-owner gates.
 
 ## Checkpoint

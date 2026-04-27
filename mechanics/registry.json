@@ -93,10 +93,26 @@
     {
       "agents_ref": "mechanics/recurrence/AGENTS.md",
       "canonical_docs": [
+        "mechanics/recurrence/DIRECTION.md",
+        "mechanics/recurrence/PARTS.md",
+        "mechanics/recurrence/OWNER_MAP.md",
+        "mechanics/recurrence/PROVENANCE.md",
+        "mechanics/recurrence/OWNER_REQUESTS.md",
         "mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md",
         "mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md",
         "mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md",
-        "mechanics/recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md"
+        "mechanics/recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md",
+        "mechanics/recurrence/parts/README.md",
+        "mechanics/recurrence/parts/anchor-return/README.md",
+        "mechanics/recurrence/parts/continuity-window/README.md",
+        "mechanics/recurrence/parts/component-refresh/README.md",
+        "mechanics/recurrence/parts/control-plane-carry/README.md",
+        "mechanics/recurrence/parts/reentry-routing/README.md",
+        "mechanics/recurrence/parts/memory-recall/README.md",
+        "mechanics/recurrence/parts/scenario-choreography/README.md",
+        "mechanics/recurrence/parts/proof-gates/README.md",
+        "mechanics/recurrence/parts/runtime-return/README.md",
+        "mechanics/recurrence/parts/recursor-boundary/README.md"
       ],
       "card": {
         "center_owns": "Center return law, drift/anchor/re-entry vocabulary, component refresh boundary, and safe-stop posture.",
@@ -113,11 +129,14 @@
           "No ambient continuity claim and no hidden memory sovereignty."
         ],
         "stronger_owner_split": [
+          "`aoa-sdk` owns typed recurrence carry, manifests, graph closure, projections, and reviewed handoff packets.",
           "`aoa-routing` owns local routing implementation and route graph behavior.",
           "`aoa-memo` owns checkpoint, recall, and provenance.",
           "`aoa-agents` owns role and handoff posture.",
           "`aoa-playbooks` owns recurring return choreography.",
           "`aoa-evals` owns drift and recovery-quality proof.",
+          "`aoa-stats` owns derived recurrence visibility.",
+          "`aoa-kag` owns derived regrounding toward stronger source refs.",
           "`abyss-stack` owns runtime wrappers after runtime-owner gates."
         ],
         "trigger": "Use when a route loses its axis, must return to a valid anchor, or needs bounded continuity across a handoff."
@@ -128,16 +147,21 @@
       "must_not_claim": [
         "ambient continuity",
         "hidden memory sovereignty",
-        "runtime self-healing"
+        "runtime self-healing",
+        "direct runtime resume",
+        "automatic recursor spawn"
       ],
-      "owner_boundary": "Center return and continuity law; memory, routing, choreography, proof, and runtime behavior remain owner-local.",
-      "owner_request_doc_ref": "mechanics/recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md",
+      "owner_boundary": "Center return and continuity law; typed carry, memory, routing, choreography, proof, derived visibility, regrounding, and runtime behavior remain owner-local.",
+      "owner_request_doc_ref": "mechanics/recurrence/OWNER_REQUESTS.md",
       "owner_request_ids": [
+        "ORQ-RECURRENCE-SDK-001",
         "ORQ-RECURRENCE-ROUTING-001",
         "ORQ-RECURRENCE-MEMO-001",
         "ORQ-RECURRENCE-AGENTS-001",
         "ORQ-RECURRENCE-PLAYBOOKS-001",
         "ORQ-RECURRENCE-EVALS-001",
+        "ORQ-RECURRENCE-STATS-001",
+        "ORQ-RECURRENCE-KAG-001",
         "ORQ-RECURRENCE-STACK-001"
       ],
       "package_path": "mechanics/recurrence",
@@ -146,6 +170,7 @@
       "status": "landed",
       "title": "Recurrence",
       "validation_refs": [
+        "mechanics/recurrence/scripts/validate_recurrence_mechanic.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/validate_mechanic_readme_cards.py",
         "scripts/build_mechanic_card_index.py",

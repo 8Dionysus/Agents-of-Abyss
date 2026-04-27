@@ -72,6 +72,10 @@ METHOD_GROWTH_PREFIXES = (
     "validate_wave4_kernel_automation",
     "test_validate_wave4_kernel_automation",
 )
+RECURRENCE_PREFIXES = (
+    "validate_recurrence",
+    "test_recurrence",
+)
 QUESTBOOK_PREFIXES = (
     "build_ready_owner_routes",
     "build_questbook",
@@ -123,6 +127,8 @@ def mechanic_for_name(name: str) -> str | None:
         return "experience"
     if name.startswith(METHOD_GROWTH_PREFIXES):
         return "method-growth"
+    if name.startswith(RECURRENCE_PREFIXES):
+        return "recurrence"
     if name.startswith(QUESTBOOK_PREFIXES):
         return "questbook"
     if name.startswith(RPG_PREFIXES):

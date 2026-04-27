@@ -2,7 +2,68 @@
 
 Canonical landing ledger for the recurrence mechanic.
 
+## Index
+
+- Recurrence active-part distillation: root package, active parts, provenance
+  bridge, owner map, owner requests, and package validation.
+- Root mechanics topology migration: first center recurrence package landing.
+
 ## Entries
+
+### Recurrence active-part distillation
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` owns recurrence law, active part route,
+owner-request packets, and provenance bridge. Owner repositories own typed carry,
+route behavior, memory/recall objects, role contracts, playbook choreography,
+proof, stats, regrounding, runtime return, and operator recovery.
+
+Surfaces:
+
+- `mechanics/recurrence/AGENTS.md`
+- `mechanics/recurrence/README.md`
+- `mechanics/recurrence/DIRECTION.md`
+- `mechanics/recurrence/PARTS.md`
+- `mechanics/recurrence/OWNER_MAP.md`
+- `mechanics/recurrence/PROVENANCE.md`
+- `mechanics/recurrence/OWNER_REQUESTS.md`
+- `mechanics/recurrence/ROADMAP.md`
+- `mechanics/recurrence/LANDING_LOG.md`
+- `mechanics/recurrence/parts/`
+- `mechanics/recurrence/parts/README.md`
+- `mechanics/recurrence/parts/anchor-return/README.md`
+- `mechanics/recurrence/parts/continuity-window/README.md`
+- `mechanics/recurrence/parts/component-refresh/README.md`
+- `mechanics/recurrence/parts/control-plane-carry/README.md`
+- `mechanics/recurrence/parts/reentry-routing/README.md`
+- `mechanics/recurrence/parts/memory-recall/README.md`
+- `mechanics/recurrence/parts/scenario-choreography/README.md`
+- `mechanics/recurrence/parts/proof-gates/README.md`
+- `mechanics/recurrence/parts/runtime-return/README.md`
+- `mechanics/recurrence/parts/recursor-boundary/README.md`
+- `mechanics/recurrence/scripts/validate_recurrence_mechanic.py`
+- `mechanics/recurrence/tests/test_recurrence_mechanic.py`
+- `mechanics/owner-request-queue.json`
+- `mechanics/OWNER_REQUEST_QUEUE.md`
+- `mechanics/registry.json`
+- `generated/mechanic_card_index.min.json`
+- `generated/owner_request_queue.min.json`
+- `scripts/validate_mechanic_landing_logs.py`
+- `CHANGELOG.md`
+
+Validation: `python mechanics/recurrence/scripts/validate_recurrence_mechanic.py`
+
+Stop-lines: no ambient continuity, hidden memory sovereignty, runtime
+self-healing, direct runtime resume, automatic recursor spawn, proof verdict, or
+owner acceptance from the center package.
+
+Next route: carry owner-local requests through `mechanics/recurrence/OWNER_REQUESTS.md`; route
+control-plane carry to `aoa-sdk`, re-entry behavior to `aoa-routing`, recall to
+`aoa-memo`, role/recursor posture to `aoa-agents`, recurring choreography to
+`aoa-playbooks`, proof to `aoa-evals`, derived summaries to `aoa-stats`,
+regrounding to `aoa-kag`, runtime return to `abyss-stack`, and operator
+recovery to `ATM10-Agent`.
 
 ### Root mechanics topology migration
 

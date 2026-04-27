@@ -46,11 +46,14 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 | `ORQ-METHOD-EVALS-001` | `method-growth` | `aoa-evals` | `requested` | `P1` | Proof route for promoted candidates and reusable method claims |
 | `ORQ-METHOD-PLAYBOOKS-001` | `method-growth` | `aoa-playbooks` | `requested` | `P1` | Recurring method choreography after repeated work stabilizes |
 | `ORQ-METHOD-MEMO-001` | `method-growth` | `aoa-memo` | `requested` | `P2` | Lessons, memory, and pruning receipts after owner landing |
+| `ORQ-RECURRENCE-SDK-001` | `recurrence` | `aoa-sdk` | `requested` | `P0` | Control-plane carry for recurrence manifests and reviewed handoffs |
 | `ORQ-RECURRENCE-ROUTING-001` | `recurrence` | `aoa-routing` | `requested` | `P1` | Re-entry route graph and return dispatch |
 | `ORQ-RECURRENCE-MEMO-001` | `recurrence` | `aoa-memo` | `requested` | `P0` | Anchor checkpoints, recall, and provenance for bounded continuity |
 | `ORQ-RECURRENCE-AGENTS-001` | `recurrence` | `aoa-agents` | `requested` | `P1` | Role and handoff posture for returns between actors |
 | `ORQ-RECURRENCE-PLAYBOOKS-001` | `recurrence` | `aoa-playbooks` | `requested` | `P1` | Recurring return choreography |
 | `ORQ-RECURRENCE-EVALS-001` | `recurrence` | `aoa-evals` | `requested` | `P1` | Drift and recovery-quality proof |
+| `ORQ-RECURRENCE-STATS-001` | `recurrence` | `aoa-stats` | `requested` | `P2` | Derived recurrence visibility |
+| `ORQ-RECURRENCE-KAG-001` | `recurrence` | `aoa-kag` | `requested` | `P2` | Recurrence regrounding toward source references |
 | `ORQ-RECURRENCE-STACK-001` | `recurrence` | `abyss-stack` | `requested` | `P2` | Runtime wrappers for bounded re-entry after owner gates |
 | `ORQ-CHECKPOINT-SDK-001` | `checkpoint` | `aoa-sdk` | `requested` | `P0` | Checkpoint control panel and local ledgers |
 | `ORQ-CHECKPOINT-SKILLS-001` | `checkpoint` | `aoa-skills` | `requested` | `P0` | Checkpoint note protocol and closeout bridge skill |
@@ -112,7 +115,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 ## Mechanic request docs
 
 - `method-growth` -> [METHOD_GROWTH_OWNER_REPO_REQUESTS.md](method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `Dionysus`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`
-- `recurrence` -> [RECURRENCE_OWNER_REPO_REQUESTS.md](recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md); owners: `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`
+- `recurrence` -> [OWNER_REQUESTS.md](recurrence/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `aoa-stats`, `aoa-kag`, `abyss-stack`
 - `checkpoint` -> [OWNER_REQUESTS.md](checkpoint/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-routing`, `aoa-stats`, `abyss-stack`, `Dionysus`
 - `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`, `aoa-playbooks`, `aoa-sdk`, `aoa-stats`, `aoa-skills`, `aoa-techniques`
 - `agon` -> [OWNER_REQUESTS.md](agon/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-routing`, `aoa-agents`, `abyss-stack`, `aoa-kag`, `Tree-of-Sophia`
