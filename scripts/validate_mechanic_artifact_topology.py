@@ -68,7 +68,9 @@ EXPERIENCE_PREFIXES = (
 METHOD_GROWTH_PREFIXES = (
     "lineage_contract_chain",
     "validate_candidate_lineage_contract",
+    "validate_method_growth",
     "test_validate_candidate_lineage_contract",
+    "test_method_growth",
     "validate_wave4_kernel_automation",
     "test_validate_wave4_kernel_automation",
 )

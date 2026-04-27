@@ -120,7 +120,7 @@ A request packet is not owner acceptance. Owner repositories land operational tr
 |---|---|---|---|---|
 | Constitutional polis | What does the center own, and what must stay outside it? | landed center law | [CHARTER](../CHARTER.md), [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md), [FEDERATION_RULES](../docs/FEDERATION_RULES.md), [ROOT_SURFACE_LAW](../docs/ROOT_SURFACE_LAW.md) | layer-owned truth or root-surface inflation |
 | Layer ownership | Which repository owns this object class? | landed route map | [LAYERS](../docs/LAYERS.md), [REPO_ROLES](../docs/REPO_ROLES.md) | convenience ownership transfer |
-| Method and growth refinery | How does repeated work move from donor or checkpoint to candidate, seed, owner landing, proof, method, memory, or derived summary? | center doctrine and cross-owner route | [METHOD_SPINE](method-growth/docs/METHOD_SPINE.md), [REVIEWABLE_GROWTH_REFINERY](method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md) | center-owned scenario canon |
+| Method and growth refinery | How does repeated work move from donor or checkpoint to candidate, seed, owner landing, proof, method, memory, or derived summary? | active center route package | [Method-growth](method-growth/README.md), [PARTS](method-growth/PARTS.md), [OWNER_MAP](method-growth/OWNER_MAP.md) | center-owned scenario canon or final object truth |
 | Recurrence, return, continuity | How does AoA recover when a route loses its axis and must re-enter through a valid anchor? | bounded return law | [Recurrence](recurrence/README.md), [PARTS](recurrence/PARTS.md), [OWNER_MAP](recurrence/OWNER_MAP.md) | ambient continuity, hidden memory sovereignty, or automatic recursor spawn |
 | Checkpoint | How does intermediate state preserve, review, return, bridge, export, or hand off without stealing owner truth? | landed center law | [Checkpoint](checkpoint/README.md), [PARTS](checkpoint/PARTS.md), [OWNER_MAP](checkpoint/OWNER_MAP.md) | checkpoint implementation authority or owner acceptance |
 | Experience | Which staged experience contract, office/service posture, seed intake, duel pressure, continuity loom, or runtime boundary is relevant? | planted center contracts through v2.0 | [Experience](experience/README.md) | live workspace runtime or owner-local activation |
@@ -164,6 +164,15 @@ Use this branch when the object is not just a task, but a repeated route that
 may become technique, skill, playbook, proof, memory, derived summary, or
 owner-local doctrine.
 
+Active package routes:
+
+- [Method-growth](method-growth/README.md): package card and owner boundary.
+- [DIRECTION](method-growth/DIRECTION.md): current direction and working standard.
+- [PARTS](method-growth/PARTS.md): active functioning parts.
+- [OWNER_MAP](method-growth/OWNER_MAP.md): center role and stronger owners.
+- [OWNER_REQUESTS](method-growth/OWNER_REQUESTS.md): ready-to-carry request packets.
+- [PROVENANCE](method-growth/PROVENANCE.md): source and sibling-evidence bridge.
+
 Core law:
 
 - [ROOTLINE](method-growth/docs/ROOTLINE.md) keeps the trunk-first coordination spine.
@@ -179,6 +188,7 @@ Owner split:
 |---|---|
 | Provisional carry and typed helper hints | `aoa-sdk` |
 | Reviewed candidate identity | `aoa-skills` |
+| Reusable practice | `aoa-techniques` |
 | Seed staging | `Dionysus` |
 | Final object truth | the final owner repo |
 | Proof | `aoa-evals` |

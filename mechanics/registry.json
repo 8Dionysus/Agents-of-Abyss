@@ -24,12 +24,28 @@
     {
       "agents_ref": "mechanics/method-growth/AGENTS.md",
       "canonical_docs": [
+        "mechanics/method-growth/DIRECTION.md",
+        "mechanics/method-growth/PARTS.md",
+        "mechanics/method-growth/OWNER_MAP.md",
+        "mechanics/method-growth/PROVENANCE.md",
+        "mechanics/method-growth/OWNER_REQUESTS.md",
         "mechanics/method-growth/docs/ROOTLINE.md",
         "mechanics/method-growth/docs/METHOD_SPINE.md",
         "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
         "mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md",
         "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md",
-        "mechanics/method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md"
+        "mechanics/method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md",
+        "mechanics/method-growth/parts/README.md",
+        "mechanics/method-growth/parts/donor-refinery/README.md",
+        "mechanics/method-growth/parts/candidate-lineage/README.md",
+        "mechanics/method-growth/parts/owner-landing/README.md",
+        "mechanics/method-growth/parts/pruning/README.md",
+        "mechanics/method-growth/parts/proof-route/README.md",
+        "mechanics/method-growth/parts/method-promotion/README.md",
+        "mechanics/method-growth/parts/technique-skill-split/README.md",
+        "mechanics/method-growth/parts/memory-writeback/README.md",
+        "mechanics/method-growth/parts/maturity-ladder/README.md",
+        "mechanics/method-growth/parts/growth-closeout/README.md"
       ],
       "card": {
         "center_owns": "Center growth route, lineage vocabulary, reviewable-growth discipline, and owner landing/pruning rules.",
@@ -51,6 +67,7 @@
           "`Dionysus` owns seed staging.",
           "`aoa-evals` owns proof.",
           "`aoa-playbooks` owns recurring method.",
+          "`aoa-techniques` owns reusable practice.",
           "`aoa-stats` owns derived summary.",
           "`aoa-memo` owns bounded memory and lessons.",
           "The final owner repository owns final object truth."
@@ -62,17 +79,24 @@
       "landing_log_ref": "mechanics/method-growth/LANDING_LOG.md",
       "must_not_claim": [
         "center-owned final object truth",
-        "owner-local activation"
+        "owner-local activation",
+        "proof verdict",
+        "memory canon",
+        "candidate_ref minting in center",
+        "seed_ref minting in center",
+        "object_ref minting in center"
       ],
-      "owner_boundary": "Center route from repeated work to candidate, seed, owner landing, proof, method, memory, and derived summary; final object truth remains owner-local.",
-      "owner_request_doc_ref": "mechanics/method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md",
+      "owner_boundary": "Center route from repeated work to candidate, seed, owner landing, proof, method, memory, derived summary, and pruning; final object truth remains owner-local.",
+      "owner_request_doc_ref": "mechanics/method-growth/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-METHOD-SKILLS-001",
         "ORQ-METHOD-SDK-001",
         "ORQ-METHOD-DIONYSUS-001",
         "ORQ-METHOD-EVALS-001",
         "ORQ-METHOD-PLAYBOOKS-001",
-        "ORQ-METHOD-MEMO-001"
+        "ORQ-METHOD-MEMO-001",
+        "ORQ-METHOD-TECHNIQUES-001",
+        "ORQ-METHOD-STATS-001"
       ],
       "package_path": "mechanics/method-growth",
       "roadmap_ref": "mechanics/method-growth/ROADMAP.md",
@@ -80,6 +104,7 @@
       "status": "landed",
       "title": "Method-growth",
       "validation_refs": [
+        "mechanics/method-growth/scripts/validate_method_growth_mechanic.py",
         "scripts/validate_mechanics_topology.py",
         "scripts/validate_mechanic_readme_cards.py",
         "scripts/build_mechanic_card_index.py",
@@ -87,7 +112,8 @@
         "scripts/validate_owner_request_queue.py",
         "scripts/build_owner_request_queue.py",
         "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py"
+        "scripts/validate_owner_request_docs.py",
+        "scripts/validate_mechanic_landing_logs.py"
       ]
     },
     {
