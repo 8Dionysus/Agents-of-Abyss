@@ -27,6 +27,7 @@ ROOT_SURFACES = (
     "AGENTS.md",
     "README.md",
     "DIRECTION.md",
+    "USAGE.md",
     "PARTS.md",
     "PROVENANCE.md",
     "ROADMAP.md",
@@ -59,12 +60,46 @@ VOCAB_ARTIFACTS = (
     "scripts/validate_vocabulary_overlay.py",
     "tests/test_vocabulary_overlay.py",
 )
+RPG_QUEST_CAMPAIGN_SURFACES = (
+    "PLAYABLE_OBLIGATION.md",
+)
 ACTIVE_DOC_ALLOWLIST = {"PROVENANCE.md", "LANDING_LOG.md", "AGENTS.md"}
 PART_README_REQUIRED_HEADINGS = (
     "## Use When",
     "## Do Not Use When",
     "## Active Outputs",
     "## Next Route",
+)
+USAGE_REQUIRED_HEADINGS = (
+    "## Use RPG When",
+    "## Use Plain Repo Language When",
+    "## Decision Table",
+    "## Application Sequence",
+    "## Stop-lines",
+    "## Post-change Route Review",
+    "## Next Route",
+)
+USAGE_REQUIRED_ROUTES = (
+    "mechanics/questbook/",
+    "aoa-playbooks",
+    "aoa-agents",
+    "aoa-skills",
+    "aoa-techniques",
+    "aoa-evals",
+    "aoa-memo",
+    "aoa-stats",
+    "abyss-stack",
+)
+PLAYABLE_OBLIGATION_REQUIRED_PHRASES = (
+    "Questbook owns source quest object truth.",
+    "RPG may add a derived reading only",
+    "`quest_ref`",
+    "`owner_route`",
+    "`proof_route`",
+    "`unlock_question`",
+    "RPG does not own quest lifecycle.",
+    "RPG does not close quests.",
+    "mechanics/questbook/parts/model-spine/RPG_PLAYABLE_READING.md",
 )
 ACTIVE_LEGACY_LANGUAGE_PATTERNS = (
     (re.compile(r"\bwave\b", re.IGNORECASE), "should not use wave-era language in active route"),
@@ -104,6 +139,8 @@ def validate_paths(problems: list[str]) -> None:
         require(part / "README.md", problems)
         require(part / "CONTRACT.md", problems)
         require(part / "VALIDATION.md", problems)
+    for surface in RPG_QUEST_CAMPAIGN_SURFACES:
+        require(RPG_ROOT / "parts" / "quest-campaign" / surface, problems)
     for artifact in VOCAB_ARTIFACTS:
         require(RPG_ROOT / "parts" / "vocabulary-overlay" / artifact, problems)
 
@@ -143,7 +180,9 @@ def validate_provenance(problems: list[str]) -> None:
 
 
 def validate_active_docs_are_clean(problems: list[str]) -> None:
-    raw_name_pattern = re.compile(r"RPG_[A-Z0-9_]+\.md")
+    raw_name_pattern = re.compile(
+        r"\b(?:" + "|".join(re.escape(raw) for raw in RAW_SOURCES) + r")\b"
+    )
     for path in RPG_ROOT.glob("*.md"):
         if path.name in ACTIVE_DOC_ALLOWLIST:
             continue
@@ -173,6 +212,33 @@ def validate_part_readme_shape(problems: list[str]) -> None:
                 problems.append(f"{rel(path)}: missing active-route heading {heading}")
 
 
+def validate_usage_contract(problems: list[str]) -> None:
+    path = RPG_ROOT / "USAGE.md"
+    text = read_text(path)
+    for heading in USAGE_REQUIRED_HEADINGS:
+        if heading not in text:
+            problems.append(f"{rel(path)}: missing usage heading {heading}")
+    for route in USAGE_REQUIRED_ROUTES:
+        if route not in text:
+            problems.append(f"{rel(path)}: missing owner route {route}")
+    for phrase in (
+        "Plain repository language wins when it is clearer.",
+        "Do not create a universal power score.",
+        "What is the source object?",
+        "Who owns the source truth?",
+    ):
+        if phrase not in text:
+            problems.append(f"{rel(path)}: missing usage rule {phrase!r}")
+
+
+def validate_playable_obligation_route(problems: list[str]) -> None:
+    path = RPG_ROOT / "parts" / "quest-campaign" / "PLAYABLE_OBLIGATION.md"
+    text = read_text(path)
+    for phrase in PLAYABLE_OBLIGATION_REQUIRED_PHRASES:
+        if phrase not in text:
+            problems.append(f"{rel(path)}: missing playable obligation rule {phrase!r}")
+
+
 def validate_registry(problems: list[str]) -> None:
     registry = json.loads((REPO_ROOT / "mechanics" / "registry.json").read_text(encoding="utf-8"))
     entry = next((item for item in registry.get("mechanics", []) if item.get("slug") == "rpg"), None)
@@ -184,6 +250,7 @@ def validate_registry(problems: list[str]) -> None:
     canonical_docs = set(entry.get("canonical_docs", []))
     required_docs = {
         "mechanics/rpg/DIRECTION.md",
+        "mechanics/rpg/USAGE.md",
         "mechanics/rpg/PARTS.md",
         "mechanics/rpg/PROVENANCE.md",
         "mechanics/rpg/OWNER_REQUESTS.md",
@@ -193,6 +260,7 @@ def validate_registry(problems: list[str]) -> None:
         for slug in PART_SLUGS
     )
     required_docs.add("mechanics/rpg/parts/vocabulary-overlay/TERMINOLOGY.md")
+    required_docs.add("mechanics/rpg/parts/quest-campaign/PLAYABLE_OBLIGATION.md")
     missing = sorted(required_docs - canonical_docs)
     for path_ref in missing:
         problems.append(f"mechanics/registry.json: RPG canonical_docs missing {path_ref}")
@@ -227,6 +295,8 @@ def validate() -> list[str]:
     validate_provenance(problems)
     validate_active_docs_are_clean(problems)
     validate_part_readme_shape(problems)
+    validate_usage_contract(problems)
+    validate_playable_obligation_route(problems)
     validate_registry(problems)
     validate_vocabulary_overlay(problems)
     return problems

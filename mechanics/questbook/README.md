@@ -61,6 +61,8 @@ Use the central Questbook validation matrix in [Questbook AGENTS](AGENTS.md#vali
 ## Start Here
 
 - Model spine: [`parts/model-spine`](parts/model-spine/README.md)
+- RPG playable reading route:
+  [`parts/model-spine/RPG_PLAYABLE_READING.md`](parts/model-spine/RPG_PLAYABLE_READING.md)
 - Source contract:
   [`parts/source-contract`](parts/source-contract/README.md)
 - Lifecycle law: [`parts/lifecycle-law`](parts/lifecycle-law/README.md)

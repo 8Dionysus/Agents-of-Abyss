@@ -106,6 +106,13 @@ Tracking starts with the community-docs baseline for this repository.
   `Use When` / `Do Not Use When` / `Active Outputs` / `Next Route` shape and
   rejects wave-era language from active RPG routes, with ecosystem validation
   aligned to the distilled active wording
+- RPG usage contract through `mechanics/rpg/USAGE.md`, with validator coverage
+  for when to use RPG language, when to stay plain, and which owner route keeps
+  source truth
+- RPG and Questbook playable obligation bridge through
+  `mechanics/rpg/parts/quest-campaign/PLAYABLE_OBLIGATION.md` and
+  `mechanics/questbook/parts/model-spine/RPG_PLAYABLE_READING.md`, keeping
+  Questbook source ownership separate from derived RPG readings
 
 ### Changed
 

@@ -8,7 +8,7 @@ requests, or legacy provenance only when needed.
 
 | Part | Role |
 |---|---|
-| [Model Spine](model-spine/README.md) | compact Questbook model and source-of-truth router |
+| [Model Spine](model-spine/README.md) | compact Questbook model, source-of-truth router, and RPG playable reading route |
 | [Public Index](public-index/README.md) | root public `QUESTBOOK.md` posture |
 | [Quest Store](quest-store/README.md) | lane-first source object store under `quests/` |
 | [Source Contract](source-contract/README.md) | reviewability contract for YAML and strict Markdown quest objects |

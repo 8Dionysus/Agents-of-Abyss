@@ -7,6 +7,7 @@ It should make agent work more legible, consequential, and inhabitable without b
 
 - `README.md`: package entry card and shortest route.
 - `DIRECTION.md`: current operating direction for RPG as world grammar.
+- `USAGE.md`: active decision surface for when to use RPG language and when to stay plain.
 - `ROADMAP.md`: future contour, not a historical ledger.
 - `LANDING_LOG.md`: canonical landing ledger.
 - `PARTS.md`: active part map.

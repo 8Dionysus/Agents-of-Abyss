@@ -2,6 +2,8 @@
 
 This file is the active map of functioning RPG parts. Each part owns a real slice of the mechanic: purpose, boundary, validation, and next route. Historical source contours stay outside the working path.
 
+Use [USAGE](USAGE.md) before choosing a part. It decides whether RPG language belongs in the task at all.
+
 ## Part Map
 
 | Part | Center function | Stronger owner route |

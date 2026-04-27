@@ -25,6 +25,7 @@ Use this index before reading the full ledger:
 | Quest source contract full distillation | All Markdown quest sources now carry the strict source contract; no uncontracted Markdown source lane remains. |
 | Questbook route-default and validation centralization | Repeated quest defaults moved to lane READMEs, and executable validation commands are centralized in Questbook AGENTS. |
 | Quest source provenance bridge hardening | Quest sources route preserved raw provenance through PROVENANCE/legacy index bridges instead of direct raw paths. |
+| RPG playable reading bridge | Questbook gained a reciprocal route for RPG playable obligation readings without moving quest source ownership. |
 
 Read the full entry only when the change touches that route, its surfaces, or
 its stop-lines. Current route starts at `mechanics/questbook/README.md`,
@@ -643,3 +644,44 @@ through `mechanics/questbook/PROVENANCE.md` or
 
 Next route: keep future quest-source evidence concise and bridge-based; audit
 raw source details only through the owning mechanic provenance surface.
+
+### RPG playable reading bridge
+
+Status: landed
+
+Owner boundary: Questbook owns source quest objects, lifecycle, lane placement,
+public index posture, generated read models, and source contracts. RPG owns only
+the derived playable reading shape for campaign, party, stake, proof route,
+unlock question, and consequence language.
+
+Surfaces:
+
+- `mechanics/questbook/parts/model-spine/RPG_PLAYABLE_READING.md`
+- `mechanics/questbook/README.md`
+- `mechanics/questbook/PARTS.md`
+- `mechanics/questbook/parts/README.md`
+- `mechanics/questbook/parts/model-spine/README.md`
+- `mechanics/questbook/parts/registry.json`
+- `mechanics/questbook/scripts/validate_questbook_distillation.py`
+- `mechanics/questbook/tests/test_questbook_distillation.py`
+- `mechanics/rpg/parts/quest-campaign/PLAYABLE_OBLIGATION.md`
+- `mechanics/rpg/USAGE.md`
+- `mechanics/registry.json`
+- `CHANGELOG.md`
+
+Validation:
+
+- `python mechanics/questbook/scripts/validate_questbook_distillation.py`
+- `python mechanics/rpg/scripts/validate_rpg_distillation.py`
+- `python -m pytest -q mechanics/questbook/tests/test_questbook_distillation.py mechanics/rpg/tests`
+- `python scripts/validate_mechanics_topology.py --mechanic questbook`
+- `python scripts/validate_mechanics_topology.py --mechanic rpg`
+- `python scripts/validate_mechanic_readme_cards.py --mechanic questbook`
+- `python scripts/validate_mechanic_readme_cards.py --mechanic rpg`
+
+Stop-lines: RPG readings do not change quest lifecycle, close quests, prove
+owner acceptance, replace source contracts, replace generated Questbook read
+models, or turn `sidequest` into dependency, owner transfer, or closure proof.
+
+Next route: use the reciprocal bridge only when a quest needs a playable
+reading; do not add RPG readings to every quest source as boilerplate.

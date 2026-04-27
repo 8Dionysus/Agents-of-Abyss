@@ -52,11 +52,13 @@ Use the validation lane in [mechanics/rpg/AGENTS.md](AGENTS.md#validation) for e
 ## Start Here
 
 - Direction: [DIRECTION](DIRECTION.md)
+- Usage contract: [USAGE](USAGE.md)
 - Parts atlas: [PARTS](PARTS.md) and [parts](parts/)
 - World grammar: [world-grammar](parts/world-grammar/README.md)
 - Source boundaries: [source-boundary](parts/source-boundary/README.md)
 - Vocabulary overlay: [vocabulary-overlay](parts/vocabulary-overlay/README.md), [terminology](parts/vocabulary-overlay/TERMINOLOGY.md), [schema](parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json), [example](parts/vocabulary-overlay/examples/dual_vocabulary_overlay.example.json), and [generated overlay](parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json)
 - Quest and progression contours: [quest-campaign](parts/quest-campaign/README.md) and [progression-unlocks](parts/progression-unlocks/README.md)
+- Playable obligation reading: [quest-campaign/PLAYABLE_OBLIGATION](parts/quest-campaign/PLAYABLE_OBLIGATION.md)
 - Runtime and handoff contours: [runtime-projection](parts/runtime-projection/README.md) and [owner-handoffs](parts/owner-handoffs/README.md)
 - Provenance: [PROVENANCE](PROVENANCE.md) and [legacy](legacy/)
 - Owner requests: [OWNER_REQUESTS](OWNER_REQUESTS.md)

@@ -100,3 +100,21 @@ def test_part_readmes_use_common_active_route_shape() -> None:
     module.validate_part_readme_shape(problems)
 
     assert problems == []
+
+
+def test_usage_contract_is_complete() -> None:
+    module = load_validator()
+
+    problems: list[str] = []
+    module.validate_usage_contract(problems)
+
+    assert problems == []
+
+
+def test_playable_obligation_route_is_complete() -> None:
+    module = load_validator()
+
+    problems: list[str] = []
+    module.validate_playable_obligation_route(problems)
+
+    assert problems == []
