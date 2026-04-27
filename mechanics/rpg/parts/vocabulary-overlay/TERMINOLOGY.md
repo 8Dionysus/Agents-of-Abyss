@@ -101,6 +101,4 @@ These keys are required by `dual_vocabulary_overlay_v1`.
 
 ## Final rule
 
-The frontend may sing.
-
-The canonical keys keep the score.
+Presentation may be expressive. Canonical keys remain visible and stable.

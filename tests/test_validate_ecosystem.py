@@ -125,9 +125,9 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def write_rpg_architecture_surface(self) -> None:
         write_text(
             self.repo_root / "mechanics" / "rpg" / "parts" / "source-boundary" / "README.md",
-            "The RPG layer MUST remain a reflection and orchestration layer.\n"
-            "One universal power score MUST NOT become authoritative.\n"
-            "The repo that already owns meaning keeps owning meaning.\n"
+            "RPG reflects existing AoA surfaces, but source owners keep meaning.\n"
+            "universal power score\n"
+            "The repository that owns the source object keeps the meaning.\n"
             "1. source meaning wins\n",
         )
         write_text(
@@ -141,19 +141,20 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
     def write_rpg_bridge_wave_surface(self) -> None:
         write_text(
             self.repo_root / "mechanics" / "rpg" / "parts" / "quest-campaign" / "README.md",
-            "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership.\n"
-            "`aoa-routing` may orient. It does not own proof, party doctrine, or quest meaning.\n"
-            "do not create a universal rank or power score here\n"
-            "This wave is a bridge, not a throne.\n",
+            "## Use When\n"
+            "It makes long work playable and memorable without taking quest objects from Questbook.\n"
+            "routing help is useful, but proof and source meaning remain outside this part\n"
+            "## Do Not Use When\n"
+            "a label would imply quest closure, proof completion, or a universal rank\n",
         )
 
     def write_rpg_runtime_projection_surface(self) -> None:
         write_text(
             self.repo_root / "mechanics" / "rpg" / "parts" / "runtime-projection" / "README.md",
-            "This document defines the first body-facing rollout for the AoA RPG reflection contour.\n"
-            "It is the pass where the contour stops being only a federation of ideas and gains runtime-owned read models, generated transport collections, and a bounded projection seam.\n"
-            "Let the body carry the contour.\n"
-            "Do not let it rewrite the soul.\n",
+            "It names what a runtime or frontend projection would need.\n"
+            "read models, transport bundles, or session-state hints need a source-boundary check\n"
+            "the task would create live runtime state from center docs\n"
+            "projection would rewrite source meaning\n",
         )
         copy_repo_text(self.repo_root, "mechanics/rpg/parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json")
 
@@ -437,12 +438,14 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         )
         write_text(
             self.repo_root / "mechanics" / "rpg" / "parts" / "quest-campaign" / "README.md",
-            "What remained was the bridge that lets proof, composition, and navigation speak to one another without collapsing repo ownership.\n",
+            "## Use When\n"
+            "It makes long work playable and memorable without taking quest objects from Questbook.\n"
+            "## Do Not Use When\n",
         )
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
-            "routing non-authority explicit|anti-throne rule explicit",
+            "routing non-authority explicit|anti-power-score bridge rule explicit",
         ):
             validate_ecosystem.validate_questbook_surface()
 

@@ -22,11 +22,18 @@ Every part keeps three working surfaces:
 - `CONTRACT.md`: owner boundary, stop-lines, and allowed outputs.
 - `VALIDATION.md`: validation route, with executable commands centralized in `AGENTS.md`.
 
+Every part `README.md` should stay short and use the same active-route shape:
+
+- `## Use When`
+- `## Do Not Use When`
+- `## Active Outputs`
+- `## Next Route`
+
 A part may grow, split, merge, shrink, or retire when that improves the world grammar and keeps the route cleaner. The move should leave agent action easier to judge, not merely smaller.
 
 ## Provenance Bridge
 
-Detailed source-doc accounting is deliberately outside part docs. Use [PROVENANCE](PROVENANCE.md) when a task must audit which RFC, wave contour, boundary map, or runtime projection fed a part. Active part docs should not grow source-file inventories.
+Detailed source-doc accounting is deliberately outside part docs. Use [PROVENANCE](PROVENANCE.md) when a task must audit which RFC, preserved contour, boundary map, or runtime projection fed a part. Active part docs should not grow source-file inventories.
 
 ## Validation
 

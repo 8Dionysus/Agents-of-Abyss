@@ -2,11 +2,24 @@
 
 This part owns the checked split between machine-stable RPG keys and themed presentation labels.
 
-## Active Function
+## Use When
 
-- keep canonical keys stable
-- allow themed labels without replacing canonical keys
-- keep the dual-vocabulary overlay public-safe and generated from active terminology
+- a runtime, frontend, or public display needs RPG labels without losing canonical keys
+- a new RPG term must be checked against the active terminology contract
+- a generated overlay needs to mirror the authored terminology
+
+## Do Not Use When
+
+- the label would replace a canonical key
+- the display would imply runtime state, proof, quest closure, role canon, or skill canon
+- the term belongs in a stronger owner repository before RPG can reflect it
+
+## Active Outputs
+
+- canonical vocabulary key
+- themed presentation label
+- checked example and generated overlay mirror
+- validation result
 
 ## Surfaces
 

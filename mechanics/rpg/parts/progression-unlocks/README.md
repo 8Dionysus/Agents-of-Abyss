@@ -2,12 +2,24 @@
 
 This part owns the active RPG reading of rank, mastery axes, abilities, feats, reputation, and unlock posture.
 
-## Active Function
+## Use When
 
-- keep progression multi-axis
-- require advancement and unlocks to remain evidence-backed
-- route abilities, feats, and reputation to stronger owners
-- reject universal power scores
+- a progression label needs to stay multi-axis and evidence-backed
+- an ability, feat, reputation, rank, or unlock question needs an owner route
+- RPG language can make advancement criteria more legible without becoming proof
+
+## Do Not Use When
+
+- a single score would flatten several kinds of progress
+- the claim requires proof before a label can be useful
+- the label would mutate skill, technique, role, reputation, or stats authority
+
+## Active Outputs
+
+- progression label candidate
+- unlock question
+- proof route
+- stronger-owner request
 
 ## Next Route
 

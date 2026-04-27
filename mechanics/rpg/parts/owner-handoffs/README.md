@@ -2,11 +2,24 @@
 
 This part owns the active RPG route from center-side reflection into stronger-owner requests.
 
-## Active Function
+## Use When
 
-- keep owner request IDs visible
-- prevent center-side requests from becoming owner acceptance
-- route role, skill, campaign, proof, runtime, and derived-summary slices to stronger owners
+- an RPG reading needs role, skill, campaign, proof, runtime, or stats work outside `Agents-of-Abyss`
+- an owner request ID should be carried into an owner repository
+- a future agent needs to distinguish center-side request from owner acceptance
+
+## Do Not Use When
+
+- the owner repository has already landed its own source truth
+- the center is trying to claim owner acceptance or operational activation
+- the request lacks a proof route or stop-line for the target owner
+
+## Active Outputs
+
+- owner request packet
+- request ID
+- owner route
+- proof route
 
 ## Next Route
 

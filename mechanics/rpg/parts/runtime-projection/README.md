@@ -2,21 +2,26 @@
 
 This part owns the active RPG route for runtime and frontend projection needs without activating runtime.
 
-This document defines the first body-facing rollout for the AoA RPG reflection contour.
-It is the pass where the contour stops being only a federation of ideas and gains runtime-owned read models, generated transport collections, and a bounded projection seam.
+It names what a runtime or frontend projection would need, then routes implementation to `abyss-stack` after owner gates.
 
-## Active Function
+## Use When
 
-- name projection objects and body-facing needs
-- keep runtime/session state with `abyss-stack`
-- keep frontend/theme projection derived and reviewable
-- keep source meaning stronger than runtime and presentation
+- RPG vocabulary needs a future runtime or frontend projection path
+- read models, transport bundles, or session-state hints need a source-boundary check
+- the projection must preserve source/proof/runtime/presentation precedence
 
-## Final Rule
+## Do Not Use When
 
-Let the body carry the contour.
+- the task would create live runtime state from center docs
+- UI labels would replace canonical keys
+- projection would rewrite source meaning, proof, role, skill, quest, or campaign truth
 
-Do not let it rewrite the soul.
+## Active Outputs
+
+- runtime projection request
+- frontend projection boundary
+- transport contour
+- owner handoff to `abyss-stack`
 
 ## Next Route
 
