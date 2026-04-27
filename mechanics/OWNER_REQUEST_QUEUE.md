@@ -121,7 +121,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 - `checkpoint` -> [OWNER_REQUESTS.md](checkpoint/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-routing`, `aoa-stats`, `abyss-stack`, `Dionysus`
 - `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`, `aoa-playbooks`, `aoa-sdk`, `aoa-stats`, `aoa-skills`, `aoa-techniques`
 - `agon` -> [OWNER_REQUESTS.md](agon/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-routing`, `aoa-agents`, `abyss-stack`, `aoa-kag`, `Tree-of-Sophia`
-- `antifragility` -> [ANTIFRAGILITY_OWNER_REPO_REQUESTS.md](antifragility/docs/ANTIFRAGILITY_OWNER_REPO_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-playbooks`
+- `antifragility` -> [OWNER_REQUESTS.md](antifragility/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-playbooks`
 - `questbook` -> [OWNER_REQUESTS.md](questbook/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-routing`
 - `rpg` -> [OWNER_REQUESTS.md](rpg/OWNER_REQUESTS.md); owners: `aoa-agents`, `aoa-skills`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`, `aoa-stats`
 - `tos-bridge` -> [TOS_BRIDGE_OWNER_REPO_REQUESTS.md](tos-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md); owners: `Tree-of-Sophia`, `aoa-kag`, `aoa-routing`, `aoa-memo`, `aoa-evals`, `aoa-playbooks`
