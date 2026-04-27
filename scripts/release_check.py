@@ -29,6 +29,7 @@ COMMANDS = [
     ("validate center entry map", [sys.executable, "scripts/validate_center_entry_map.py"]),
     ("validate mechanics topology", [sys.executable, "scripts/validate_mechanics_topology.py"]),
     ("validate mechanic artifact topology", [sys.executable, "scripts/validate_mechanic_artifact_topology.py"]),
+    ("validate Recurrence mechanic", [sys.executable, "mechanics/recurrence/scripts/validate_recurrence_mechanic.py"]),
     ("validate Checkpoint mechanic", [sys.executable, "mechanics/checkpoint/scripts/validate_checkpoint_mechanic.py"]),
     ("validate quest source contract", [sys.executable, "mechanics/questbook/scripts/validate_questbook_source_contract.py"]),
     ("validate questbook lifecycle", [sys.executable, "mechanics/questbook/scripts/validate_questbook_lifecycle.py"]),

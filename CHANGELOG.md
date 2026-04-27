@@ -128,6 +128,11 @@ Tracking starts with the community-docs baseline for this repository.
   `mechanics/checkpoint/tests/test_checkpoint_mechanic.py` to keep checkpoint
   law, owner boundaries, active parts, landing log, and raw-history stop-lines
   synchronized
+- Recurrence active-part distillation through `mechanics/recurrence/DIRECTION.md`,
+  `mechanics/recurrence/PARTS.md`, `mechanics/recurrence/OWNER_MAP.md`,
+  `mechanics/recurrence/PROVENANCE.md`,
+  `mechanics/recurrence/OWNER_REQUESTS.md`, active `parts/`, and package
+  validator/test coverage
 
 ### Changed
 
@@ -135,6 +140,14 @@ Tracking starts with the community-docs baseline for this repository.
   `generated/mechanic_card_index.min.json`, and
   `generated/owner_request_queue.min.json` now include Checkpoint between
   Recurrence and Experience as the center route for bounded intermediate state
+- `mechanics/registry.json`, `generated/mechanic_card_index.min.json`, and
+  `generated/owner_request_queue.min.json` now route Recurrence owner requests
+  through `mechanics/recurrence/OWNER_REQUESTS.md`, while
+  `mechanics/recurrence/docs/RECURRENCE_OWNER_REPO_REQUESTS.md` remains a
+  compatibility pointer
+- `scripts/release_check.py` now includes the Recurrence package validator so
+  active recurrence parts, owner map, provenance bridge, and owner-request
+  route stay under release discipline
 - `generated/center_entry_map.min.json` and its schema now publish the
   `aoa_center_entry_map_v2` route contract with route modes, human paths,
   machine companions, and explicit `must_not_claim` stop-lines

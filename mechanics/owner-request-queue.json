@@ -184,6 +184,29 @@
     {
       "center_sources": [
         "mechanics/recurrence/README.md",
+        "mechanics/recurrence/DIRECTION.md",
+        "mechanics/recurrence/PARTS.md",
+        "mechanics/recurrence/OWNER_MAP.md"
+      ],
+      "center_status": "landed",
+      "handoff_surface_hint": "aoa-sdk/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-RECURRENCE-SDK-001",
+      "id": "ORQ-RECURRENCE-SDK-001",
+      "mechanic": "recurrence",
+      "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
+      "owner_landing_ref": "",
+      "owner_proof_ref": "",
+      "owner_repo": "aoa-sdk",
+      "owner_role": "typed workspace integration and control-plane helper layer",
+      "priority": "P0",
+      "proof_route": "Compatibility and carry claims may route to `aoa-evals` when public.",
+      "queue_status": "requested",
+      "required_owner_landing": "Typed recurrence carry packet, manifest reader, graph-closure hint, projection boundary, or reviewed handoff helper that does not own recurrence meaning.",
+      "slice": "Control-plane carry for recurrence manifests and reviewed handoffs",
+      "stop_line": "The center must not treat SDK carry as owner acceptance, runtime activation, or recurrence truth."
+    },
+    {
+      "center_sources": [
+        "mechanics/recurrence/README.md",
         "mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md",
         "mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md",
         "mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md"
@@ -295,6 +318,52 @@
       "required_owner_landing": "Eval bundle for drift detection, anchor validity, recovery quality, and regression evidence.",
       "slice": "Drift and recovery-quality proof",
       "stop_line": "The center must not treat return doctrine as proof of successful recovery."
+    },
+    {
+      "center_sources": [
+        "mechanics/recurrence/README.md",
+        "mechanics/recurrence/PARTS.md",
+        "mechanics/recurrence/OWNER_MAP.md",
+        "mechanics/recurrence/PROVENANCE.md"
+      ],
+      "center_status": "landed",
+      "handoff_surface_hint": "aoa-stats/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-RECURRENCE-STATS-001",
+      "id": "ORQ-RECURRENCE-STATS-001",
+      "mechanic": "recurrence",
+      "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
+      "owner_landing_ref": "",
+      "owner_proof_ref": "",
+      "owner_repo": "aoa-stats",
+      "owner_role": "derived observability and movement summary layer",
+      "priority": "P2",
+      "proof_route": "Derived counts stay weaker than owner receipts and route to `aoa-evals` for public quality claims.",
+      "queue_status": "requested",
+      "required_owner_landing": "Derived recurrence summary surface that reads reviewed owner receipts without ingesting raw checkpoint or memory authority.",
+      "slice": "Derived recurrence visibility",
+      "stop_line": "The center must not treat recurrence counts as proof, memory, or owner-local truth."
+    },
+    {
+      "center_sources": [
+        "mechanics/recurrence/README.md",
+        "mechanics/recurrence/PARTS.md",
+        "mechanics/recurrence/OWNER_MAP.md",
+        "mechanics/recurrence/PROVENANCE.md"
+      ],
+      "center_status": "landed",
+      "handoff_surface_hint": "aoa-kag/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-RECURRENCE-KAG-001",
+      "id": "ORQ-RECURRENCE-KAG-001",
+      "mechanic": "recurrence",
+      "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
+      "owner_landing_ref": "",
+      "owner_proof_ref": "",
+      "owner_repo": "aoa-kag",
+      "owner_role": "derived provenance-aware knowledge substrate",
+      "priority": "P2",
+      "proof_route": "Rerouting and regrounding claims route to `aoa-evals` when they become public or operational.",
+      "queue_status": "requested",
+      "required_owner_landing": "Recurrence regrounding surface that points derived readings back to stronger source refs without becoming source meaning.",
+      "slice": "Recurrence regrounding toward source references",
+      "stop_line": "The center must not let KAG projection become source canon, memory canon, or recurrence proof."
     },
     {
       "center_sources": [
