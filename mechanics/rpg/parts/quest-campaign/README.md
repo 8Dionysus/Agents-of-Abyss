@@ -5,6 +5,7 @@ This part owns the active RPG reading of quests, questlines, campaigns, parties,
 It makes long work playable and memorable without taking quest objects from Questbook, campaign choreography from `aoa-playbooks`, or chronicles from `aoa-memo`.
 
 Detailed quest-to-RPG reading shape lives in [Playable Obligation Reading](PLAYABLE_OBLIGATION.md).
+The single worked route example lives in [playable-obligation-route](examples/playable-obligation-route.md); it is an example, not a template for every quest.
 
 ## Use When
 
@@ -19,6 +20,13 @@ Detailed quest-to-RPG reading shape lives in [Playable Obligation Reading](PLAYA
 - campaign order belongs in `aoa-playbooks`
 - a chronicle belongs in `aoa-memo`
 - a label would imply quest closure, proof completion, or a universal rank
+
+## Route Check
+
+- Source object: start from the quest object or public Questbook entry.
+- Owner route: keep quest lifecycle with Questbook and choreography with `aoa-playbooks`.
+- Reading value: RPG may add party, stake, campaign, proof, unlock, or consequence only when it improves the next move.
+- Closeout: name changed quest source, RPG reading, proof route, and owner handoff status separately.
 
 ## Active Outputs
 

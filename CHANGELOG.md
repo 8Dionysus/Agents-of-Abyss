@@ -113,6 +113,9 @@ Tracking starts with the community-docs baseline for this repository.
   `mechanics/rpg/parts/quest-campaign/PLAYABLE_OBLIGATION.md` and
   `mechanics/questbook/parts/model-spine/RPG_PLAYABLE_READING.md`, keeping
   Questbook source ownership separate from derived RPG readings
+- RPG part usability guardrails through a part-local playable-obligation
+  worked route, `Route Check` sections in active part READMEs, and
+  `Required Before Output` gates in active part contracts
 
 ### Changed
 

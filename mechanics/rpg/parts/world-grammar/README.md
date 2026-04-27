@@ -16,6 +16,13 @@ RPG language is useful only when it improves routing, judgment, memory, proof, o
 - a label would decorate the work without improving routing or judgment
 - the RPG term would imply owner authority, runtime state, proof, or quest closure
 
+## Route Check
+
+- Source object: name the real task, quest, proof claim, route, or owner object first.
+- Owner route: name the repository or mechanic that owns the underlying truth.
+- Reading value: keep the RPG form only if it improves routing, judgment, memory, proof, or consequence.
+- Closeout: say whether the RPG reading changed action, or whether plain language won.
+
 ## Active Outputs
 
 - concise RPG route note

@@ -16,6 +16,7 @@ It may not claim hidden ontology, runtime progression state, role canon, proof v
 - Keep `DIRECTION.md` as the current law for RPG as world grammar, not toy layer.
 - Keep `USAGE.md` as the active decision table for whether RPG language belongs in a task.
 - Keep `PARTS.md` and `parts/` as the active working surface for RPG sub-mechanics.
+- Keep every active part readable as a working organ: use `Route Check` in `README.md` and `Required Before Output` in `CONTRACT.md` before adding new surfaces.
 - Keep `PROVENANCE.md` and `legacy/` as audit and recovery surfaces, not default reading paths.
 - Keep `parts/vocabulary-overlay/TERMINOLOGY.md` aligned with the dual-vocabulary overlay schema, example, and generated mirror.
 - Keep `OWNER_REQUESTS.md` aligned with the owner-request queue whenever RPG produces owner-local work.

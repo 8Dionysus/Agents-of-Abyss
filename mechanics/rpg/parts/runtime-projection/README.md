@@ -16,6 +16,13 @@ It names what a runtime or frontend projection would need, then routes implement
 - UI labels would replace canonical keys
 - projection would rewrite source meaning, proof, role, skill, quest, or campaign truth
 
+## Route Check
+
+- Source object: name the vocabulary, route, quest, progression, or presentation surface to project.
+- Owner route: keep live service, storage, session, and frontend behavior in `abyss-stack`.
+- Reading value: define projection need, not activation.
+- Closeout: say whether a runtime owner request exists, changed, or stayed unopened.
+
 ## Active Outputs
 
 - runtime projection request

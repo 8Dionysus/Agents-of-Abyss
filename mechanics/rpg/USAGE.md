@@ -46,6 +46,13 @@ Plain repository language wins when it is clearer.
 5. If owner-local work is needed, create or update an owner request instead of claiming acceptance.
 6. Update `ROADMAP.md` only when the future route changes, and `LANDING_LOG.md` only when the landing is checked.
 
+## Worked Example
+
+Use [quest-campaign/playable-obligation-route](parts/quest-campaign/examples/playable-obligation-route.md)
+when an agent needs to see one complete ordinary task to Questbook to RPG
+reading to proof to owner handoff route.
+It is a worked route, not a template, and must not be copied into every quest.
+
 ## Stop-lines
 
 - Do not turn every task into a quest.

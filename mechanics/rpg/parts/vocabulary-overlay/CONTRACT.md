@@ -18,3 +18,10 @@
 - themed label
 - generated overlay mirror
 - validation result
+
+## Required Before Output
+
+- canonical key remains visible
+- themed label is demonstrably derived
+- schema, example, and generated mirror stay synchronized when vocabulary changes
+- owner-local role, skill, quest, proof, memory, and runtime claims stay outside the overlay
