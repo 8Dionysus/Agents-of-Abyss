@@ -43,6 +43,7 @@ QUEST_LANES = {
     "experience",
     "rpg",
     "recurrence",
+    "checkpoint",
     "questbook",
     "antifragility",
     "method-growth",

@@ -509,6 +509,23 @@
       ]
     },
     {
+      "path": "mechanics/checkpoint/AGENTS.md",
+      "scope": "mechanics/checkpoint/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for Checkpoint.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
       "path": "mechanics/experience/AGENTS.md",
       "scope": "mechanics/experience/",
       "kind": "mechanic-package-card",

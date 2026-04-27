@@ -19,6 +19,7 @@ REQUEST_ID_RE = re.compile(r"^ORQ-[A-Z0-9]+-[A-Z0-9]+-\d{3}$")
 CANONICAL_SLUGS = (
     "method-growth",
     "recurrence",
+    "checkpoint",
     "experience",
     "agon",
     "antifragility",

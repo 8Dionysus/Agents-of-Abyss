@@ -119,9 +119,22 @@ Tracking starts with the community-docs baseline for this repository.
 - RPG ready-to-carry owner request packets in `mechanics/rpg/OWNER_REQUESTS.md`,
   with validator coverage that keeps sibling-owner handoff cards requested,
   receipt-linked, and distinct from owner acceptance
+- Checkpoint as a landed center mechanic in `mechanics/checkpoint/`, with
+  active parts for session carry, review gates, return re-entry, closeout
+  bridge, runtime export, and owner handoff, plus owner-request packets for
+  `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`,
+  `aoa-evals`, `aoa-routing`, `aoa-stats`, `abyss-stack`, and `Dionysus`
+- `mechanics/checkpoint/scripts/validate_checkpoint_mechanic.py` and
+  `mechanics/checkpoint/tests/test_checkpoint_mechanic.py` to keep checkpoint
+  law, owner boundaries, active parts, landing log, and raw-history stop-lines
+  synchronized
 
 ### Changed
 
+- `mechanics/registry.json`, `mechanics/owner-request-queue.json`,
+  `generated/mechanic_card_index.min.json`, and
+  `generated/owner_request_queue.min.json` now include Checkpoint between
+  Recurrence and Experience as the center route for bounded intermediate state
 - `generated/center_entry_map.min.json` and its schema now publish the
   `aoa_center_entry_map_v2` route contract with route modes, human paths,
   machine companions, and explicit `must_not_claim` stop-lines

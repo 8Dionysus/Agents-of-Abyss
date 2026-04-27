@@ -122,6 +122,7 @@ A request packet is not owner acceptance. Owner repositories land operational tr
 | Layer ownership | Which repository owns this object class? | landed route map | [LAYERS](../docs/LAYERS.md), [REPO_ROLES](../docs/REPO_ROLES.md) | convenience ownership transfer |
 | Method and growth refinery | How does repeated work move from donor or checkpoint to candidate, seed, owner landing, proof, method, memory, or derived summary? | center doctrine and cross-owner route | [METHOD_SPINE](method-growth/docs/METHOD_SPINE.md), [REVIEWABLE_GROWTH_REFINERY](method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md) | center-owned scenario canon |
 | Recurrence, return, continuity | How does AoA recover when a route loses its axis and must re-enter through a valid anchor? | bounded return law | [RECURRENCE_PRINCIPLE](recurrence/docs/RECURRENCE_PRINCIPLE.md), [SELF_AGENCY_CONTINUITY](recurrence/docs/SELF_AGENCY_CONTINUITY.md) | ambient continuity or hidden memory sovereignty |
+| Checkpoint | How does intermediate state preserve, review, return, bridge, export, or hand off without stealing owner truth? | landed center law | [Checkpoint](checkpoint/README.md), [PARTS](checkpoint/PARTS.md), [OWNER_MAP](checkpoint/OWNER_MAP.md) | checkpoint implementation authority or owner acceptance |
 | Experience | Which staged experience contract, office/service posture, seed intake, duel pressure, continuity loom, or runtime boundary is relevant? | planted center contracts through v2.0 | [Experience](experience/README.md) | live workspace runtime or owner-local activation |
 | Agon | Which pressure, lawful move, duel, arena, packet, verdict, retention, rank, school, canon, or threshold boundary is relevant? | center-owned pre-protocol law and candidate grammar | [Agon](agon/README.md) | live arena execution or assistant contestant authority |
 | Antifragility and subtraction | What stress, degraded mode, evidence, pruning, or anti-authority posture applies? | center doctrine | [ANTIFRAGILITY](antifragility/docs/ANTIFRAGILITY.md), [VIA_NEGATIVA](antifragility/docs/VIA_NEGATIVA.md) | one-score health or deletion theater |
@@ -222,6 +223,40 @@ Owner split:
 - `aoa-playbooks` owns recurring return choreography.
 - `aoa-evals` owns drift and recovery-quality proof.
 - `abyss-stack` owns runtime wrappers only after runtime-owner gates.
+
+## Checkpoint
+
+Use this branch when work reaches an intermediate state that must survive
+session boundaries, review gates, return and re-entry, closeout bridging,
+runtime export, or owner handoff without becoming owner-local truth.
+
+Core law:
+
+- [CHECKPOINT_LAW](checkpoint/docs/CHECKPOINT_LAW.md): checkpoint is a bounded
+  intermediate form, not a hidden scheduler, proof verdict, memory canon,
+  runtime activation, stats truth, or owner acceptance.
+- [CHECKPOINT_OWNER_BOUNDARY](checkpoint/docs/CHECKPOINT_OWNER_BOUNDARY.md):
+  AoA owns checkpoint law and route grammar; sibling repositories own local
+  controls, protocol, proof, memory, runtime, stats, roles, and snapshots.
+- [OWNER_MAP](checkpoint/OWNER_MAP.md): each checkpoint pressure routes to the
+  repository that can actually land operational truth.
+- [PARTS](checkpoint/PARTS.md): active checkpoint routes are session carry,
+  review gate, return re-entry, closeout bridge, runtime export, and owner
+  handoff.
+
+Owner split:
+
+- `aoa-sdk` operates checkpoint controls, hooks, local ledgers, typed readers,
+  and closeout-context builders.
+- `aoa-skills` owns checkpoint-note protocol and explicit closeout bridge
+  skills.
+- `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-routing`,
+  `aoa-stats`, `Dionysus`, and `abyss-stack` own their local checkpoint
+  meanings after owner-local acceptance.
+
+Validation anchors:
+
+Use the validation lane in [mechanics/checkpoint/AGENTS.md](checkpoint/AGENTS.md#validation).
 
 ## Experience
 

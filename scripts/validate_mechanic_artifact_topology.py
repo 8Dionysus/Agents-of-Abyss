@@ -13,6 +13,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 MECHANIC_SLUGS = (
     "method-growth",
     "recurrence",
+    "checkpoint",
     "experience",
     "agon",
     "antifragility",
@@ -30,6 +31,10 @@ AGON_PREFIXES = ("agon", "test_agon", "build_agon", "validate_agon")
 ANTIFRAGILITY_PREFIXES = (
     "deletion_candidate_list",
     "test_via_negativa_surfaces",
+)
+CHECKPOINT_PREFIXES = (
+    "validate_checkpoint",
+    "test_checkpoint",
 )
 EXPERIENCE_PREFIXES = (
     "experience",
@@ -112,6 +117,8 @@ def mechanic_for_name(name: str) -> str | None:
         return "agon"
     if name.startswith(ANTIFRAGILITY_PREFIXES):
         return "antifragility"
+    if name.startswith(CHECKPOINT_PREFIXES):
+        return "checkpoint"
     if name.startswith(EXPERIENCE_PREFIXES):
         return "experience"
     if name.startswith(METHOD_GROWTH_PREFIXES):
