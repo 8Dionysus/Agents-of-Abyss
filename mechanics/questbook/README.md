@@ -58,7 +58,18 @@ Use the central Questbook validation matrix in [Questbook AGENTS](AGENTS.md#vali
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and
   `docs/REPO_ROLES.md`.
 
-## Start Here
+## Active route
+
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [LANDING_LOG](LANDING_LOG.md)
+- [ROADMAP](ROADMAP.md)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
+- [PROVENANCE](PROVENANCE.md)
+- [Root public index](../../QUESTBOOK.md)
+- [Quest item store](../../quests/README.md)
+
+## Functioning parts
 
 - Model spine: [`parts/model-spine`](parts/model-spine/README.md)
 - RPG playable reading route:
@@ -71,26 +82,40 @@ Use the central Questbook validation matrix in [Questbook AGENTS](AGENTS.md#vali
 - Harvest route: [`parts/harvest-route`](parts/harvest-route/README.md)
 - Lane owner-route contract:
   [`parts/lane-owner-routes`](parts/lane-owner-routes/README.md)
-- Active parts: [`PARTS.md`](PARTS.md)
+- Relation shape: [`parts/relation-shape`](parts/relation-shape/README.md)
 - Parts index: [`parts/README.md`](parts/README.md)
 - Parts registry: [`parts/registry.json`](parts/registry.json)
-- Direction: [`DIRECTION.md`](DIRECTION.md)
-- Roadmap: [`ROADMAP.md`](ROADMAP.md)
-- Landing ledger: [`LANDING_LOG.md`](LANDING_LOG.md)
-- Provenance bridge: [`PROVENANCE.md`](PROVENANCE.md)
-- Root public index: [`QUESTBOOK.md`](../../QUESTBOOK.md)
-- Quest item store: [`quests/README.md`](../../quests/README.md)
 
-## Specialized Routes
+## Owner-request queue
 
-- Relation shape: [`parts/relation-shape`](parts/relation-shape/README.md)
+Use [OWNER_REQUESTS](OWNER_REQUESTS.md) when this mechanic produces an
+owner-local obligation, ready-owner route, proof, memory, playbook, or closure
+request. The central queue source is
+[`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the
+compact generated companion is
+[`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json).
+Generated surfaces do not author meaning.
+
+A request packet is not owner acceptance. Keep `questbook` claims
+center-bounded until the stronger owner lands the slice and proof routes are
+satisfied.
+
+## Historical provenance
+
+Use [PROVENANCE](PROVENANCE.md) only when auditing how first-contour questbook
+sources, source-contract law, lifecycle law, or lane-owner route evidence feed
+the active parts. The default route stays on the active route and functioning
+parts above.
+
+## Specialized routes
+
 - Owner-request packets: [`OWNER_REQUESTS.md`](OWNER_REQUESTS.md)
 - Experience ready owner routing:
   [`experience-ready-owner-routes.md`](parts/lane-owner-routes/experience-ready-owner-routes.md)
 - Experience ready owner route registry:
   [`experience-ready-owner-routes.json`](parts/lane-owner-routes/experience-ready-owner-routes.json)
 
-## Owner Boundary
+## Owner boundary
 
 Quest lifecycle and public obligation mechanics; root QUESTBOOK remains index
 and quests/ remains lane-first lifecycle item store.
@@ -98,10 +123,10 @@ and quests/ remains lane-first lifecycle item store.
 Generated card indexes and generated Questbook views may reflect this package,
 but they do not author meaning.
 
-## Growth Posture
+## Growth posture
 
-When this mechanic changes, keep active routes readable and functional. Place
-active doctrine in the owning part, keep `docs/` compatibility-only, and route
-legacy accounting through `PROVENANCE.md`. Proof belongs in the proof owner,
-memory in the memory owner, runtime in the runtime owner, and source meaning in
-the source owner.
+When this mechanic changes, preserve a clean active route: update the relevant
+functioning part, rebuild generated questbook views when source quest files
+move, preserve landing history in `LANDING_LOG.md`, keep historical accounting
+behind `PROVENANCE.md`, and route proof, memory, playbook, runtime, and
+repo-local task truth to their stronger owners.

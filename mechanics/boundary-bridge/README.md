@@ -77,9 +77,17 @@ Use the validation lane in [AGENTS.md](AGENTS.md#validation).
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and
   `docs/REPO_ROLES.md`.
 
-## Active Parts
+## Active route
 
-Use [PARTS](PARTS.md) as the default operating map.
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [LANDING_LOG](LANDING_LOG.md)
+- [ROADMAP](ROADMAP.md)
+- [OWNER_MAP](OWNER_MAP.md)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
+- [PROVENANCE](PROVENANCE.md)
+
+## Functioning parts
 
 - [Boundary Contract](parts/boundary-contract/README.md)
 - [Non-Identity Guard](parts/non-identity-guard/README.md)
@@ -100,40 +108,34 @@ The central queue source is
 [`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the
 compact generated companion is
 [`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json).
+Generated surfaces do not author meaning.
 
-## Source Doctrine
+## Historical provenance
 
-The ToS-support documents remain active doctrine sources and are routed through
-[PROVENANCE](PROVENANCE.md). Open them when source trace matters, not as the
+Use [PROVENANCE](PROVENANCE.md) only when auditing how counterpart, witness,
+ToS-support, projection, owner-handoff, or compatibility source doctrine feeds
+the active parts. Open detailed docs when source trace matters, not as the
 default active route for every bridge change.
 
-## Source Surfaces
-
-- [DIRECTION.md](DIRECTION.md)
-- [PARTS.md](PARTS.md)
-- [OWNER_MAP.md](OWNER_MAP.md)
-- [PROVENANCE.md](PROVENANCE.md)
-- [OWNER_REQUESTS.md](OWNER_REQUESTS.md)
-- [COUNTERPART_BRIDGE.md](docs/COUNTERPART_BRIDGE.md)
-- [WITNESS_COMPOST.md](docs/WITNESS_COMPOST.md)
-- [TOS_GROWTH_SUPPORT.md](docs/TOS_GROWTH_SUPPORT.md)
-- [TOS_TEMPLATE_SUPPORT.md](docs/TOS_TEMPLATE_SUPPORT.md)
-- [TOS_LINEAGE_PILOT_SUPPORT.md](docs/TOS_LINEAGE_PILOT_SUPPORT.md)
-- [TOS_SOIL_PREP_SUPPORT.md](docs/TOS_SOIL_PREP_SUPPORT.md)
-- [TOS_BRIDGE_OWNER_REPO_REQUESTS.md](docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md)
-- [parts/README.md](parts/README.md)
-- [legacy/README.md](legacy/README.md)
-
-Generated surfaces may reflect boundary-bridge routes, queues, indexes, or
-cards, but they do not author boundary-bridge meaning.
+Canonical doctrine refs: [COUNTERPART_BRIDGE](docs/COUNTERPART_BRIDGE.md),
+[WITNESS_COMPOST](docs/WITNESS_COMPOST.md),
+[TOS_GROWTH_SUPPORT](docs/TOS_GROWTH_SUPPORT.md),
+[TOS_TEMPLATE_SUPPORT](docs/TOS_TEMPLATE_SUPPORT.md),
+[TOS_LINEAGE_PILOT_SUPPORT](docs/TOS_LINEAGE_PILOT_SUPPORT.md),
+[TOS_SOIL_PREP_SUPPORT](docs/TOS_SOIL_PREP_SUPPORT.md), and
+[TOS_BRIDGE_OWNER_REPO_REQUESTS](docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md).
 
 ## Owner boundary
 
 AoA owns the bridge law. The bridged owners own the truth on each side.
 
+Generated surfaces may reflect boundary-bridge routes, queues, indexes, or
+cards, but they do not author boundary-bridge meaning.
+
 ## Growth posture
 
-Grow this mechanic only when a new owner-boundary crossing repeats enough to
-need a reusable route. Do not make `boundary-bridge` a universal connector.
-It exists to keep boundaries legible while allowing support, translation,
-projection, proof, and handoff to happen without collapse.
+When this mechanic changes, preserve a clean active route: update the relevant
+functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
+accounting behind `PROVENANCE.md`, and route ToS, KAG, routing, memo, proof,
+playbook, SDK, runtime, and public projection claims to their stronger owners.
+Do not make `boundary-bridge` a universal connector.

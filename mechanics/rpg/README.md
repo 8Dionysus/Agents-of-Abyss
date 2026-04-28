@@ -49,37 +49,65 @@ Use the validation lane in [mechanics/rpg/AGENTS.md](AGENTS.md#validation) for e
 - For role truth, route to `aoa-agents`; for skills, route to `aoa-skills`; for campaign method, route to `aoa-playbooks`; for runtime state, route to `abyss-stack` after runtime gates.
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
 
-## Start Here
+## Active route
 
-- Direction: [DIRECTION](DIRECTION.md)
-- Usage contract: [USAGE](USAGE.md)
-- Parts atlas: [PARTS](PARTS.md) and [parts](parts/)
-- World grammar: [world-grammar](parts/world-grammar/README.md)
-- Source boundaries: [source-boundary](parts/source-boundary/README.md)
-- Vocabulary overlay: [vocabulary-overlay](parts/vocabulary-overlay/README.md), [terminology](parts/vocabulary-overlay/TERMINOLOGY.md), [schema](parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json), [example](parts/vocabulary-overlay/examples/dual_vocabulary_overlay.example.json), and [generated overlay](parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json)
-- Quest and progression contours: [quest-campaign](parts/quest-campaign/README.md) and [progression-unlocks](parts/progression-unlocks/README.md)
-- Playable obligation reading: [quest-campaign/PLAYABLE_OBLIGATION](parts/quest-campaign/PLAYABLE_OBLIGATION.md)
-- Worked route example: [quest-campaign/playable-obligation-route](parts/quest-campaign/examples/playable-obligation-route.md)
-- Runtime and handoff contours: [runtime-projection](parts/runtime-projection/README.md) and [owner-handoffs](parts/owner-handoffs/README.md)
-- Provenance: [PROVENANCE](PROVENANCE.md) and [legacy](legacy/)
-- Owner requests: [OWNER_REQUESTS](OWNER_REQUESTS.md)
-- Status: [LANDING_LOG](LANDING_LOG.md) and [ROADMAP](ROADMAP.md)
+- [DIRECTION](DIRECTION.md)
+- [USAGE](USAGE.md)
+- [PARTS](PARTS.md)
+- [LANDING_LOG](LANDING_LOG.md)
+- [ROADMAP](ROADMAP.md)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
+- [PROVENANCE](PROVENANCE.md)
 
-## Working Law
+## Functioning parts
 
-RPG is an overlay of legibility.
-It may provide names like class, rank, feat, party, quest, campaign, unlock, reputation, or resource when those names help agents navigate.
-The names remain adjunct labels unless the relevant owner repository lands the underlying object, proof, or runtime behavior.
+- [World Grammar](parts/world-grammar/README.md)
+- [Source Boundary](parts/source-boundary/README.md)
+- [Vocabulary Overlay](parts/vocabulary-overlay/README.md)
+- [Quest Campaign](parts/quest-campaign/README.md)
+- [Progression Unlocks](parts/progression-unlocks/README.md)
+- [Runtime Projection](parts/runtime-projection/README.md)
+- [Owner Handoffs](parts/owner-handoffs/README.md)
 
-RPG is allowed to grow as world grammar when the game form improves routing, judgment, memory, proof, or consequence.
-It should stay silent when game language would only decorate ordinary work.
+## Owner-request queue
 
-Generated surfaces may help transport the RPG vocabulary, but they do not author meaning.
-The authored route starts from docs and owner boundaries, then becomes machine-checkable through the package validator.
+Use [OWNER_REQUESTS](OWNER_REQUESTS.md) when this mechanic produces an
+owner-local role, skill, playbook, proof, quest, runtime, or presentation
+request. The central queue source is
+[`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the
+compact generated companion is
+[`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json).
+Generated surfaces do not author meaning.
 
-## Owner Boundary
+A request packet is not owner acceptance. Keep `rpg` claims center-bounded
+until the stronger owner lands the slice and proof routes are satisfied.
+
+## Historical provenance
+
+Use [PROVENANCE](PROVENANCE.md) only when auditing how RPG source history,
+terminology, playable obligation readings, worked examples, or preserved source
+material feed the active parts. The default route stays on the active route and
+functioning parts above.
+
+For vocabulary artifacts, start from
+[Vocabulary Overlay](parts/vocabulary-overlay/README.md), then use the
+terminology, schema, example, generated overlay, and validator named there.
+
+Canonical support refs:
+[TERMINOLOGY](parts/vocabulary-overlay/TERMINOLOGY.md),
+[PLAYABLE_OBLIGATION](parts/quest-campaign/PLAYABLE_OBLIGATION.md), and
+[playable-obligation-route](parts/quest-campaign/examples/playable-obligation-route.md).
+
+## Owner boundary
 
 Adjunct RPG reflection for progression and navigation; role, skill, technique, playbook, quest item, and runtime truth remain owner-local.
-The card above is the compact route.
-The parts listed in **Start Here** are the active mechanic surfaces.
-Historical sources remain preserved, but active work should route through `PROVENANCE.md` before consulting them.
+
+Generated surfaces may help transport the RPG vocabulary, but they do not
+author meaning.
+
+## Growth posture
+
+When this mechanic changes, preserve a clean active route: update the relevant
+functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
+accounting behind `PROVENANCE.md`, and route role, skill, playbook, proof,
+quest, runtime, and presentation claims to their stronger owners.

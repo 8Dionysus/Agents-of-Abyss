@@ -64,30 +64,18 @@ commands.
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and
   `docs/REPO_ROLES.md`.
 
-## Start Here
+## Active route
 
-- [DIRECTION](DIRECTION.md): current purpose and growth posture.
-- [PARTS](PARTS.md): active functioning parts.
-- [OWNER_MAP](OWNER_MAP.md): owner routes and stop-lines.
-- [OWNER_REQUESTS](OWNER_REQUESTS.md): ready-to-carry owner packets.
-- [PROVENANCE](PROVENANCE.md): source-history bridge and trace.
-- [LANDING_LOG](LANDING_LOG.md): landing ledger.
-- [ROADMAP](ROADMAP.md): next work.
-
-## Active Doctrine
-
-- [ANTIFRAGILITY](docs/ANTIFRAGILITY.md)
-- [VIA_NEGATIVA](docs/VIA_NEGATIVA.md)
-- [ANTI_AUTHORITY_RULES](docs/ANTI_AUTHORITY_RULES.md)
-- [ONE_IN_ONE_OUT](docs/ONE_IN_ONE_OUT.md)
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [LANDING_LOG](LANDING_LOG.md)
+- [ROADMAP](ROADMAP.md)
+- [OWNER_MAP](OWNER_MAP.md)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
 - [FRAGILITY_BLACKLIST](FRAGILITY_BLACKLIST.md)
+- [PROVENANCE](PROVENANCE.md)
 
-The card above is the compact route. The active parts explain how to apply the
-doctrine without dragging old wave material into default agent context.
-Generated surfaces may reflect antifragility cards, queues, indexes, or
-manifests, but they do not author antifragility meaning.
-
-## Active Parts
+## Functioning parts
 
 - [Stress Review](parts/stress-review/README.md)
 - [Via Negativa](parts/via-negativa/README.md)
@@ -98,6 +86,32 @@ manifests, but they do not author antifragility meaning.
 - [Memory Return](parts/memory-return/README.md)
 - [Owner Handoff](parts/owner-handoff/README.md)
 
+## Owner-request queue
+
+Use [OWNER_REQUESTS](OWNER_REQUESTS.md) when this mechanic produces an
+owner-local cleanup, proof, memory, stats, playbook, or owner-local repair
+request. The central queue source is
+[`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the
+compact generated companion is
+[`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json).
+Generated surfaces do not author meaning.
+
+A request packet is not owner acceptance. Keep `antifragility` claims
+center-bounded until the stronger owner lands the slice and proof routes are
+satisfied.
+
+## Historical provenance
+
+Use [PROVENANCE](PROVENANCE.md) only when auditing how stress doctrine,
+fragility tracking, via negativa, anti-authority rules, or legacy source
+material feed the active parts. The default route stays on the active route and
+functioning parts above.
+
+Canonical doctrine refs: [ANTIFRAGILITY](docs/ANTIFRAGILITY.md),
+[VIA_NEGATIVA](docs/VIA_NEGATIVA.md),
+[ANTI_AUTHORITY_RULES](docs/ANTI_AUTHORITY_RULES.md), and
+[ONE_IN_ONE_OUT](docs/ONE_IN_ONE_OUT.md).
+
 ## Owner boundary
 
 AoA owns antifragility law, subtraction vocabulary, anti-authority posture, and
@@ -105,8 +119,12 @@ fragility-pattern routing. Owner repositories own local repair, deletion,
 incident receipts, proof, memory, runtime behavior, and accepted cleanup
 execution.
 
+Generated surfaces may reflect antifragility cards, queues, indexes, or
+manifests, but they do not author antifragility meaning.
+
 ## Growth posture
 
-Antifragility should make the system easier to grow, not afraid to grow. A good
-antifragility change removes or narrows the thing that made future work harder
-while preserving provenance, proof routes, and owner acceptance boundaries.
+When this mechanic changes, preserve a clean active route: update the relevant
+functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
+accounting behind `PROVENANCE.md`, and route cleanup, proof, memory, stats,
+playbook, and runtime claims to their stronger owners.
