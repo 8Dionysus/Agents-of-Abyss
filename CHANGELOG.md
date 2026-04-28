@@ -179,6 +179,15 @@ Tracking starts with the community-docs baseline for this repository.
 - `mechanics/distillation/scripts/validate_distillation_mechanic.py` and
   package tests to keep Distillation law, active parts, owner requests,
   provenance boundaries, and raw-history stop-lines synchronized
+- Growth Cycle as a landed center mechanic in `mechanics/growth-cycle/`, with
+  active parts for checkpoint intake, reviewed closeout chains, donor harvest,
+  progression lift, route forks, automation opportunity scans, diagnosis gates,
+  repair cycles, quest promotion, and owner followthrough, plus owner-request
+  packets for `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-evals`, `aoa-memo`,
+  `aoa-playbooks`, `aoa-stats`, `aoa-routing`, `Dionysus`, and `abyss-stack`
+- `mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py` and
+  package tests to keep Growth Cycle law, active parts, owner requests,
+  provenance boundaries, and hidden-scheduler stop-lines synchronized
 
 ### Changed
 
@@ -202,6 +211,13 @@ Tracking starts with the community-docs baseline for this repository.
 - `scripts/release_check.py` now includes the Method-growth package validator
   so active parts, provenance routing, owner-map boundaries, and owner-request
   sync stay under release discipline
+- `mechanics/registry.json`, `mechanics/owner-request-queue.json`, and
+  `mechanics/OWNER_REQUEST_QUEUE.md` now route Growth Cycle owner requests
+  through `mechanics/growth-cycle/OWNER_REQUESTS.md`, while the center-entry
+  mechanic-change route names Growth Cycle as an active mechanic branch
+- `scripts/release_check.py` now includes the Growth Cycle package validator so
+  reviewed lifecycle routing, owner-map boundaries, and owner-request sync stay
+  under release discipline
 - `mechanics/registry.json`, `mechanics/owner-request-queue.json`, and
   `mechanics/OWNER_REQUEST_QUEUE.md` now route Antifragility owner requests
   through `mechanics/antifragility/OWNER_REQUESTS.md`, while
