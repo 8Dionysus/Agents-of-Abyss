@@ -2,7 +2,7 @@
 
 Canonical landing ledger for the questbook mechanic.
 
-## Current Index
+## Route index for agents
 
 Use this index before reading the full ledger:
 
@@ -36,6 +36,21 @@ its stop-lines. Current route starts at `mechanics/questbook/README.md`,
 `mechanics/questbook/PARTS.md` and
 `mechanics/questbook/parts/registry.json`; source quest objects remain surfaced
 through root `QUESTBOOK.md` and `quests/README.md`.
+
+## How to update this log
+
+Every landing entry uses the same shape:
+
+- `Status:`
+- `Owner boundary:`
+- `Surfaces:`
+- `Validation:`
+- `Stop-lines:`
+- `Next route:`
+
+When a change touches Questbook docs, parts, owner requests, source objects,
+generated views, validators, or tests, update the relevant entry here or
+explain in the PR why the change is not a landing change.
 
 ## Entries
 

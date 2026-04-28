@@ -2,7 +2,10 @@
 
 Canonical landing ledger for the RPG mechanic.
 
-## Current Index
+## Route index for agents
+
+Read this index before scanning the full ledger. It names the current shape of
+RPG without requiring every older landing entry to be re-read.
 
 - Root mechanics topology migration landed the package and first RPG contour sources; those raw sources now live in `mechanics/rpg/legacy/raw/`.
 - RPG vocabulary overlay and route polish made the dual-vocabulary contract machine-checkable; the active overlay now lives in `mechanics/rpg/parts/vocabulary-overlay/`.
@@ -14,6 +17,26 @@ Canonical landing ledger for the RPG mechanic.
 - RPG now has one worked playable-obligation route example that shows ordinary task to quest route to RPG reading to proof route to owner handoff without becoming a reusable quest template.
 - RPG parts now use explicit route checks and output gates so every part can act as a small working organ without adding more long-form doctrine.
 - RPG owner requests now carry ready-to-carry handoff packets so sibling owners can accept, reject, land, or prove slices without reading center requests as acceptance.
+
+Current active route: `mechanics/rpg/README.md`,
+`mechanics/rpg/DIRECTION.md`, `mechanics/rpg/USAGE.md`,
+`mechanics/rpg/PARTS.md`, `mechanics/rpg/parts/README.md`, and the relevant
+part README.
+
+## How to update this log
+
+Every landing entry uses the same shape:
+
+- `Status:`
+- `Owner boundary:`
+- `Surfaces:`
+- `Validation:`
+- `Stop-lines:`
+- `Next route:`
+
+When a change touches RPG docs, parts, owner requests, source bridges,
+validators, examples, or tests, update the relevant entry here or explain in
+the PR why the change is not a landing change.
 
 ## Entries
 

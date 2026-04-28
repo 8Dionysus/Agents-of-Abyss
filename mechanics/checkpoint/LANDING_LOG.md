@@ -2,11 +2,36 @@
 
 Canonical landing ledger for the Checkpoint mechanic.
 
-## Current Index
+## Route index for agents
+
+Read this index before scanning the full ledger. It names the current shape of
+Checkpoint without requiring every older landing entry to be re-read.
 
 - Checkpoint landed as center law, owner map, active parts, and owner-request
   route without moving implementation, runtime, memory, proof, routing, or stats
   authority into `Agents-of-Abyss`.
+- Current active route: `mechanics/checkpoint/README.md`,
+  `mechanics/checkpoint/DIRECTION.md`, `mechanics/checkpoint/PARTS.md`,
+  `mechanics/checkpoint/parts/README.md`, and the relevant part README.
+- Current owner pressure route: `mechanics/checkpoint/OWNER_REQUESTS.md`.
+- Current future-pressure route: `mechanics/checkpoint/ROADMAP.md`.
+- Current provenance bridge: `mechanics/checkpoint/PROVENANCE.md`; use it only
+  when auditing source provenance or sibling evidence history.
+
+## How to update this log
+
+Every landing entry uses the same shape:
+
+- `Status:`
+- `Owner boundary:`
+- `Surfaces:`
+- `Validation:`
+- `Stop-lines:`
+- `Next route:`
+
+When a change touches Checkpoint docs, parts, owner requests, source bridges,
+validators, or tests, update the relevant entry here or explain in the PR why
+the change is not a landing change.
 
 ## Entries
 

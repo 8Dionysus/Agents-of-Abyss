@@ -7,6 +7,20 @@ Do not start active work from raw runtime histories or sibling append logs. Use
 the active package files first, then return here only when an audit needs source
 lineage.
 
+## Current route first
+
+Start with the active surfaces:
+
+- [README](README.md)
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [parts/](parts/)
+- [OWNER_MAP](OWNER_MAP.md)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
+
+If those surfaces answer the task, stop there. Do not pull sibling inventories
+or runtime evidence into the active route.
+
 ## Center sources
 
 - `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`

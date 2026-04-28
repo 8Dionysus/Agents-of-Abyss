@@ -2,7 +2,7 @@
 
 This is the only active RPG surface that routes back to detailed source-doc accounting. Use it when you are auditing how an RPG source contour feeds an active part, not when you need the current operating contract.
 
-## Current Route First
+## Current route first
 
 Start with the active surfaces:
 
@@ -14,7 +14,7 @@ Start with the active surfaces:
 
 If those surfaces answer the task, stop there. Do not pull detailed source-doc history into the active route.
 
-## Source-Doc Map
+## Source-doc map
 
 | Active part | Preserved source families | Landing ledger |
 |---|---|---|
@@ -26,7 +26,7 @@ If those surfaces answer the task, stop there. Do not pull detailed source-doc h
 | `runtime-projection` | architecture RFC runtime/session plane and runtime projection wave | `LANDING_LOG.md` RPG parts and legacy distillation |
 | `owner-handoffs` | owner request packet and stronger-owner stop-lines | `LANDING_LOG.md` RPG parts and legacy distillation |
 
-## Detailed Districts
+## Detailed districts
 
 - `legacy/INDEX.md`: detailed map from preserved raw source files to active part routes.
 - `legacy/raw/`: preserved source documents, RFCs, wave notes, bridge contours, and projection notes.
@@ -37,6 +37,6 @@ If those surfaces answer the task, stop there. Do not pull detailed source-doc h
 - `LANDING_LOG.md`: checked landing ledger.
 - `ROADMAP.md`: future contour and unresolved route pressure.
 
-## Distillation Rule
+## Distillation rule
 
 When a detailed source changes current behavior, update the relevant active part first, then update this bridge and the landing ledger if the change is a checked landing. Active part docs must not grow per-source inventories.

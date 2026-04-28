@@ -2,11 +2,37 @@
 
 Canonical landing ledger for the release-support mechanic.
 
-## Index
+## Route index for agents
+
+Read this index before scanning the full ledger. It names the current shape of
+Release-support without requiring every older landing entry to be re-read.
 
 - Root mechanics topology migration: first package landing for center release
   posture and public claim boundaries.
 - Release-support state-transition distillation: release widened from GitHub-only posture into an internal state-transition mechanic with active parts.
+- Current active route: `mechanics/release-support/README.md`,
+  `mechanics/release-support/DIRECTION.md`,
+  `mechanics/release-support/PARTS.md`,
+  `mechanics/release-support/parts/README.md`, and the relevant part README.
+- Current owner pressure route: `mechanics/release-support/OWNER_REQUESTS.md`.
+- Current future-pressure route: `mechanics/release-support/ROADMAP.md`.
+- Current provenance bridge: `mechanics/release-support/PROVENANCE.md`; use it
+  only when auditing source provenance or release-support history.
+
+## How to update this log
+
+Every landing entry uses the same shape:
+
+- `Status:`
+- `Owner boundary:`
+- `Surfaces:`
+- `Validation:`
+- `Stop-lines:`
+- `Next route:`
+
+When a change touches Release-support docs, parts, owner requests, source
+bridges, validators, or tests, update the relevant entry here or explain in
+the PR why the change is not a landing change.
 
 ## Entries
 

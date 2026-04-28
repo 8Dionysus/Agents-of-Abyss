@@ -3,7 +3,24 @@
 Growth Cycle was landed from cross-repo reconnaissance of existing process
 signals, not from a single raw package.
 
-## Source Signals
+This bridge is for source audit and lineage review. It is not the current
+operating contract.
+
+## Current route first
+
+Start with the active surfaces:
+
+- [README](README.md)
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [parts/](parts/)
+- [OWNER_MAP](OWNER_MAP.md)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
+
+If those surfaces answer the task, stop there. Do not pull sibling source
+signals into the active route.
+
+## Source signals
 
 - `mechanics/checkpoint/`: checkpoint law, closeout bridge, owner handoff, and
   runtime export boundaries.
@@ -23,7 +40,7 @@ signals, not from a single raw package.
 - Sibling owner signals in `aoa-sdk`, `aoa-agents`, `aoa-evals`, `aoa-memo`,
   `aoa-playbooks`, `aoa-stats`, `aoa-routing`, `Dionysus`, and `abyss-stack`.
 
-## Distillation Rule
+## Distillation rule
 
 This package keeps only center law, route grammar, and owner split. It does not
 copy sibling implementation details or raw histories into active docs.

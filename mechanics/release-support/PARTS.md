@@ -4,7 +4,7 @@ The active parts are the default operating surface for release-support. Open the
 part that matches the transition being claimed, then route proof, adoption,
 publication, or rollback to the owner that must carry it.
 
-## Parts
+## Part map
 
 - [State Transition Gate](parts/state-transition-gate/README.md): decide
   whether a change has really moved state or only changed wording.
@@ -33,6 +33,21 @@ Do not open historical or raw source material by default. Use
 [PROVENANCE](PROVENANCE.md) when a transition needs source trace or old release
 doctrine context.
 
+## Active part contract
+
+Every part keeps three working surfaces:
+
+- `README.md`: when to use the part and where to start.
+- `CONTRACT.md`: center boundary, allowed outputs, and stop-lines.
+- `VALIDATION.md`: validation route, with executable commands centralized in
+  `parts/AGENTS.md`.
+
+A part may grow, split, merge, shrink, or retire when that improves its
+function and keeps the route cleaner. The move should leave the active path
+easier to follow, not merely smaller.
+
 ## Validation
 
-Use the validation lane in [AGENTS.md](AGENTS.md#validation).
+Use the validation lane in [mechanics/release-support/AGENTS.md](AGENTS.md#validation)
+for package commands and [parts/AGENTS.md](parts/AGENTS.md#validation) for part
+commands.

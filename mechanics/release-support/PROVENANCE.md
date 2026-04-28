@@ -3,8 +3,21 @@
 This file is the default bridge from active release-support parts to source
 doctrine and historical release context.
 
-Active parts should stay clean. If a future agent needs deeper context, start
-here, then open the source file named below.
+Use it when you are auditing how release-support source doctrine feeds an
+active part, not when you need the current operating contract.
+
+## Current route first
+
+Start with the active surfaces:
+
+- [README](README.md)
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [parts/](parts/)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
+
+If those surfaces answer the task, stop there. Do not pull historical release
+context into the active route.
 
 ## Active doctrine sources
 
@@ -34,7 +47,7 @@ listed here before any active part cites them.
 - `generated/*` files are generated companions, not source authority.
 - Owner-local release receipts remain in the owning repository.
 
-## Rule
+## Distillation rule
 
 Do not copy old release prose into active parts. Distill the route, keep the
 trace here, and leave owner-local truth with the owner repository.

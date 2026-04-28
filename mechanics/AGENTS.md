@@ -51,9 +51,18 @@ in `mechanics/registry.json`:
 - `### Validation`
 - `### Next route`
 
-The package `ROADMAP.md` is the forward contour. The package `LANDING_LOG.md`
-is the checked landing ledger. The package `docs/` directory holds detailed
-mechanic-owned doctrine, models, waves, handoffs, or support notes.
+The package `DIRECTION.md` owns current operating direction and should name the
+source-of-truth split before giving route guidance. The package `PARTS.md`
+owns the active part map and should describe active part contracts without
+turning into a source-file inventory. The package `PROVENANCE.md` is the
+active-first bridge back to historical accounting; it should tell agents to
+start from current surfaces and use provenance only when source lineage must be
+audited. The package `ROADMAP.md` is the forward contour, including a
+condition-based "When Time Comes" block when future work is likely but not
+ready. The package `LANDING_LOG.md` is the checked landing ledger and should
+begin with a route index plus update contract when it grows beyond one entry.
+The package `docs/` directory holds detailed mechanic-owned doctrine, models,
+waves, handoffs, or support notes.
 
 The package `AGENTS.md` is the local route law. It must name the active source
 surfaces, the post-change route review, the closeout contract, and the local
@@ -65,6 +74,12 @@ card, then route to active surfaces, functioning parts, owner-request queue,
 historical provenance, owner boundary, and growth posture. It should not become
 the deep doctrine store once `DIRECTION.md`, `PARTS.md`, `docs/`,
 `PROVENANCE.md`, and `LANDING_LOG.md` already own those concerns.
+
+Experience is the reference shape for `DIRECTION.md`, `PARTS.md`,
+`PROVENANCE.md`, `ROADMAP.md`, and `LANDING_LOG.md` only when the Experience
+surface is good for that document type. Check the reference first; copy the
+role discipline, not Experience-specific meaning. If Experience lacks the
+surface, as with `OWNER_MAP.md`, do not invent a forced parallel.
 
 Mechanic packages may also own artifact homes:
 

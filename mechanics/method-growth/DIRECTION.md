@@ -3,7 +3,24 @@
 Method-growth turns repeated work into reviewable routes without letting the
 center become the owner of every grown object.
 
-## Direction
+This file owns the current operating direction only. It does not replace the
+part map, landing ledger, roadmap, owner-request packet, owner map, or
+provenance bridge.
+
+## Source-of-truth split
+
+- `README.md`: package entry card and shortest route.
+- `DIRECTION.md`: current operating direction.
+- `PARTS.md`: active part map.
+- `parts/`: concise method-growth contracts.
+- `OWNER_MAP.md`: stronger-owner split.
+- `OWNER_REQUESTS.md`: center-side owner request packet.
+- `LANDING_LOG.md`: canonical landing ledger.
+- `ROADMAP.md`: future contour, not a historical ledger.
+- `PROVENANCE.md`: the only active bridge back to source accounting.
+- `docs/`: center doctrine for source lineage and method-growth routes.
+
+## Current direction
 
 The mechanic should make growth legible in this order:
 
@@ -35,3 +52,7 @@ lives in `docs/`. Source lineage and sibling evidence live behind
 Keep Method-growth as the bridge between healthy entropy and owner-shaped
 discipline: repeated work may grow, shrink, split, merge, become method, or be
 discarded, but the route must remain reviewable.
+
+## Validation
+
+Use the validation lane in [mechanics/method-growth/AGENTS.md](AGENTS.md#validation) for executable commands.

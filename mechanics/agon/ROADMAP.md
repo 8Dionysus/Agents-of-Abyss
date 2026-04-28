@@ -22,10 +22,21 @@ while downstream repositories prepare any real execution slices.
 - Add owner-local landing receipts when sibling repositories adopt Agon slices.
 - Tighten package-local navigation only when a part becomes hard to operate,
   not merely because its historical source family was large.
-- Time has come when: an owner repository accepts an Agon slice. Future move:
-  record the owner-local receipt and update the relevant part route. Guardrail:
-  center docs must not claim live execution, proof, memory, runtime, rank, KAG,
-  or ToS authority before the owner lands it.
+
+## When Time Comes
+
+Use this block for likely future moves that are not ready now. Each item should
+name the condition that means the time has come, the move to make, and the
+guardrail that keeps the active route clean.
+
+### Owner-local Agon receipts
+
+Time has come when: an owner repository accepts an Agon slice.
+
+Move: record the owner-local receipt and update the relevant part route.
+
+Guardrail: center docs must not claim live execution, proof, memory, runtime,
+rank, KAG, or ToS authority before the owner lands it.
 
 ## Out Of Scope
 

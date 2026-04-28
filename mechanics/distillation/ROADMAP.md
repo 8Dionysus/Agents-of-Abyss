@@ -5,6 +5,14 @@
 Distillation is landed as center law and route grammar. It defines how heavy
 material becomes active form without losing provenance or inflating authority.
 
+## Next Work
+
+- Keep active part routes short and source-linked.
+- Keep new heavy packets behind `PROVENANCE.md` and `legacy/` until the
+  surviving function has an active home.
+- Keep owner-request packets ready when a distilled object belongs in a
+  sibling repository.
+
 ## When the time comes
 
 - Add receipt schema support when multiple mechanics need shared receipt IDs
@@ -21,3 +29,11 @@ material becomes active form without losing provenance or inflating authority.
 - Do not centralize every local distillation validator too early.
 - Do not move raw source histories from other mechanics into this package.
 - Do not treat this mechanic as a universal summarizer.
+
+## Out Of Scope
+
+- Proof verdicts.
+- Memory canon.
+- Runtime activation.
+- ToS compost or canon authority.
+- Deleting raw history without a separate retention law.

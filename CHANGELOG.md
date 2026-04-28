@@ -53,6 +53,10 @@ Tracking starts with the community-docs baseline for this repository.
 - Experience-style mechanic `README.md` entry-card shape across center
   mechanics, standardizing active routes, functioning parts, owner-request
   queues, historical provenance bridges, owner boundaries, and growth posture
+- Experience-style remaining mechanic Markdown surface shape across center
+  mechanics, standardizing `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`,
+  `ROADMAP.md`, and `LANDING_LOG.md` roles after checking the Experience
+  reference for each document type
 - Experience active-part distillation through `mechanics/experience/DIRECTION.md`,
   `mechanics/experience/PARTS.md`, `mechanics/experience/parts/`,
   `mechanics/experience/PROVENANCE.md`, archived source packets, and

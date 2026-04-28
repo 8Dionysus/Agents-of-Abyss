@@ -3,7 +3,24 @@
 Questbook should make durable obligations playable without becoming a second
 roadmap.
 
-## Current Direction
+This file owns the current operating direction only. It does not replace the
+part map, landing ledger, roadmap, owner-request packet, quest source contract,
+or provenance bridge.
+
+## Source-of-truth split
+
+- `README.md`: package entry card and shortest route.
+- `DIRECTION.md`: current operating direction.
+- `PARTS.md`: active part map.
+- `parts/`: concise questbook contracts.
+- `OWNER_REQUESTS.md`: center-side owner request packet.
+- `LANDING_LOG.md`: canonical landing ledger.
+- `ROADMAP.md`: future contour, not a historical ledger.
+- `PROVENANCE.md`: the only active bridge back to legacy accounting.
+- `QUESTBOOK.md`: compact public obligation index.
+- `quests/`: source quest object store.
+
+## Current direction
 
 - Keep root `QUESTBOOK.md` compact and public-facing.
 - Keep source quest objects in `quests/<lane>/<state>/AOA-Q-*`.
@@ -24,7 +41,7 @@ roadmap.
 - Keep `docs/` as a compatibility route and `legacy/` as provenance, not as
   the normal working path.
 
-## Operating Posture
+## Operating posture
 
 - Public index stays short.
 - Source objects carry the durable obligation.
@@ -38,7 +55,7 @@ roadmap.
   landing-log, and provenance consequences before closeout.
 - Closure requires evidence, not just a cleaner board.
 
-## Time Has Come When
+## Time has come when
 
 - A lane gains enough active objects that its README needs a short local route
   note.
@@ -52,7 +69,7 @@ roadmap.
 - Sibling repositories are ready to accept owner-local questbooks without
   copying the center root index.
 
-## Stop-Lines
+## Stop-lines
 
 - Do not turn quests into private TODOs.
 - Do not use a generated Questbook view as source truth.
@@ -67,3 +84,7 @@ roadmap.
   contract.
 - Do not duplicate validation command blocks outside Questbook `AGENTS.md`.
 - Do not repeat generic lane/state defaults inside every quest source.
+
+## Validation
+
+Use the validation lane in [mechanics/questbook/AGENTS.md](AGENTS.md#validation) for executable commands.

@@ -3,7 +3,7 @@
 Active Distillation parts live here. Each part is a functioning route surface,
 not a source-file inventory.
 
-## Parts
+## Part map
 
 | Part | Owns | Stronger owner route |
 |---|---|---|
@@ -18,7 +18,22 @@ not a source-file inventory.
 | [Runtime Pack Boundary](parts/runtime-pack-boundary/README.md) | bound runtime `distillation_pack` as candidate output only | `aoa-agents`, `aoa-memo`, and `abyss-stack` own runtime/memo truth |
 | [Compost Boundary](parts/compost-boundary/README.md) | keep ToS compost separate from AoA operational distillation | `Tree-of-Sophia` owns compost, principle, and canon meaning |
 
-## Source route
+## Active part contract
+
+Current Distillation parts are README-first active contracts. Add
+`CONTRACT.md` or `VALIDATION.md` only when a part gains a checked artifact,
+owner-request packet, or executable validation route that needs its own local
+surface.
+
+A part may grow, split, merge, shrink, or retire when that improves its
+function and keeps the route cleaner. The move should leave the active path
+easier to follow, not merely smaller.
+
+## Provenance bridge
 
 Use [PROVENANCE](PROVENANCE.md) when a source route must be audited. Active part
 docs should not grow source-file inventories.
+
+## Validation
+
+Use the validation lane in [mechanics/distillation/AGENTS.md](AGENTS.md#validation) for executable commands.

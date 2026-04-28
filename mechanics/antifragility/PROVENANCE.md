@@ -3,8 +3,22 @@
 This file is the only default bridge from active antifragility parts to old
 wave/raw material.
 
-Active parts should stay clean. If a future agent needs historical context,
-start here, then open the raw file named below.
+Use it when you are auditing how old source material was distilled, not when
+you need the current operating contract.
+
+## Current route first
+
+Start with the active surfaces:
+
+- [README](README.md)
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [parts/](parts/)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
+- [FRAGILITY_BLACKLIST](FRAGILITY_BLACKLIST.md)
+
+If those surfaces answer the task, stop there. Do not pull raw history into
+the active route.
 
 ## Raw sources
 
@@ -29,7 +43,7 @@ start here, then open the raw file named below.
 - Owner-local proof, memory, runtime, stats, playbook, technique, and skill
   landings remain outside this package until their owners accept a request.
 
-## Rule
+## Distillation rule
 
 Do not copy raw wave text into active parts. Distill the route, keep the trace
 here, and leave owner-local truth with the owner repository.

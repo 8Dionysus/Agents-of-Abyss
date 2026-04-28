@@ -3,6 +3,23 @@
 Checkpoint should make growth easier to continue, review, return to, and hand
 off without increasing hidden authority.
 
+This file owns the current operating direction only. It does not replace the
+part map, landing ledger, roadmap, owner-request packet, owner map, or
+provenance bridge.
+
+## Source-of-truth split
+
+- `README.md`: package entry card and shortest route.
+- `DIRECTION.md`: current operating direction.
+- `PARTS.md`: active part map.
+- `parts/`: concise checkpoint contracts.
+- `OWNER_MAP.md`: stronger-owner split.
+- `OWNER_REQUESTS.md`: center-side owner request packet.
+- `LANDING_LOG.md`: canonical landing ledger.
+- `ROADMAP.md`: future contour, not a historical ledger.
+- `PROVENANCE.md`: the only active bridge back to source accounting.
+- `docs/`: center law and owner-boundary doctrine.
+
 The direction is not to build a new checkpoint empire. The direction is to make
 every intermediate state honest:
 
@@ -47,3 +64,7 @@ Use this block for future work that is likely but not yet worth landing:
   proves stable.
 - Split a new part only when one checkpoint form repeats across more than one
   owner route.
+
+## Validation
+
+Use the validation lane in [mechanics/checkpoint/AGENTS.md](AGENTS.md#validation) for executable commands.

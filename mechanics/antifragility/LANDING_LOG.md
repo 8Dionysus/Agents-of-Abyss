@@ -2,7 +2,10 @@
 
 Canonical landing ledger for the antifragility mechanic.
 
-## Current index
+## Route index for agents
+
+Read this index before scanning the full ledger. It names the current shape of
+Antifragility without requiring every older landing entry to be re-read.
 
 - Active package: `README`, `DIRECTION`, `PARTS`, `OWNER_MAP`,
   `OWNER_REQUESTS`, `PROVENANCE`, `ROADMAP`, `LANDING_LOG`.
@@ -10,6 +13,21 @@ Canonical landing ledger for the antifragility mechanic.
   fragility registry, repair proof, memory return, owner handoff.
 - The active part topology keeps historical source material behind the
   provenance bridge.
+
+## How to update this log
+
+Every landing entry uses the same shape:
+
+- `Status:`
+- `Owner boundary:`
+- `Surfaces:`
+- `Validation:`
+- `Stop-lines:`
+- `Next route:`
+
+When a change touches Antifragility docs, parts, owner requests, source
+bridges, validators, or tests, update the relevant entry here or explain in
+the PR why the change is not a landing change.
 
 ## Entries
 
