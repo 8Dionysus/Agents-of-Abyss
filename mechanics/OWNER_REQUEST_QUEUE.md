@@ -58,6 +58,16 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 | `ORQ-DISTILLATION-DIONYSUS-001` | `distillation` | `Dionysus` | `requested` | `P2` | Seed and donor staging preservation |
 | `ORQ-DISTILLATION-TOS-001` | `distillation` | `Tree-of-Sophia` | `requested` | `P0` | Compost and canon boundary |
 | `ORQ-DISTILLATION-STACK-001` | `distillation` | `abyss-stack` | `requested` | `P2` | Runtime storage and export plumbing |
+| `ORQ-GROWTHCYCLE-SDK-001` | `growth-cycle` | `aoa-sdk` | `requested` | `P0` | Checkpoint hooks, ledgers, and closeout context |
+| `ORQ-GROWTHCYCLE-SKILLS-001` | `growth-cycle` | `aoa-skills` | `requested` | `P0` | Executable cycle stage skills |
+| `ORQ-GROWTHCYCLE-AGENTS-001` | `growth-cycle` | `aoa-agents` | `requested` | `P1` | Self-agent checkpoint, progression, and health posture |
+| `ORQ-GROWTHCYCLE-EVALS-001` | `growth-cycle` | `aoa-evals` | `requested` | `P1` | Proof and regression verdicts for cycle claims |
+| `ORQ-GROWTHCYCLE-MEMO-001` | `growth-cycle` | `aoa-memo` | `requested` | `P1` | Memory writeback, recall, and failure lessons |
+| `ORQ-GROWTHCYCLE-PLAYBOOKS-001` | `growth-cycle` | `aoa-playbooks` | `requested` | `P1` | Recurring cycle choreography |
+| `ORQ-GROWTHCYCLE-STATS-001` | `growth-cycle` | `aoa-stats` | `requested` | `P2` | Derived cycle visibility |
+| `ORQ-GROWTHCYCLE-ROUTING-001` | `growth-cycle` | `aoa-routing` | `requested` | `P2` | Re-entry and next-route hints |
+| `ORQ-GROWTHCYCLE-DIONYSUS-001` | `growth-cycle` | `Dionysus` | `requested` | `P2` | Reviewed snapshots and seed lineage |
+| `ORQ-GROWTHCYCLE-STACK-001` | `growth-cycle` | `abyss-stack` | `requested` | `P1` | Runtime exports and health receipts |
 | `ORQ-RECURRENCE-SDK-001` | `recurrence` | `aoa-sdk` | `requested` | `P0` | Control-plane carry for recurrence manifests and reviewed handoffs |
 | `ORQ-RECURRENCE-ROUTING-001` | `recurrence` | `aoa-routing` | `requested` | `P1` | Re-entry route graph and return dispatch |
 | `ORQ-RECURRENCE-MEMO-001` | `recurrence` | `aoa-memo` | `requested` | `P0` | Anchor checkpoints, recall, and provenance for bounded continuity |
@@ -128,6 +138,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 
 - `method-growth` -> [OWNER_REQUESTS.md](method-growth/OWNER_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `Dionysus`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`, `aoa-techniques`, `aoa-stats`
 - `distillation` -> [OWNER_REQUESTS.md](distillation/OWNER_REQUESTS.md); owners: `aoa-techniques`, `aoa-skills`, `aoa-playbooks`, `aoa-agents`, `aoa-memo`, `aoa-evals`, `aoa-sdk`, `Dionysus`, `Tree-of-Sophia`, `abyss-stack`
+- `growth-cycle` -> [OWNER_REQUESTS.md](growth-cycle/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-evals`, `aoa-memo`, `aoa-playbooks`, `aoa-stats`, `aoa-routing`, `Dionysus`, `abyss-stack`
 - `recurrence` -> [OWNER_REQUESTS.md](recurrence/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `aoa-stats`, `aoa-kag`, `abyss-stack`
 - `checkpoint` -> [OWNER_REQUESTS.md](checkpoint/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-routing`, `aoa-stats`, `abyss-stack`, `Dionysus`
 - `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`, `aoa-playbooks`, `aoa-sdk`, `aoa-stats`, `aoa-skills`, `aoa-techniques`

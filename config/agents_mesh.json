@@ -492,6 +492,23 @@
       ]
     },
     {
+      "path": "mechanics/growth-cycle/AGENTS.md",
+      "scope": "mechanics/growth-cycle/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for Growth Cycle.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
       "path": "mechanics/recurrence/AGENTS.md",
       "scope": "mechanics/recurrence/",
       "kind": "mechanic-package-card",

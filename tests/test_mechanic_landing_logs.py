@@ -27,6 +27,11 @@ class MechanicLandingLogTests(unittest.TestCase):
 
         self.assertEqual(problems, [])
 
+    def test_growth_cycle_landing_log_carries_reviewed_lifecycle_route(self) -> None:
+        problems = validate_log("growth-cycle")
+
+        self.assertEqual(problems, [])
+
     def test_agon_landing_log_carries_release_anchors(self) -> None:
         problems = validate_log("agon")
 

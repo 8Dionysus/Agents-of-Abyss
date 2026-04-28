@@ -48,6 +48,7 @@ QUEST_LANES = {
     "antifragility",
     "method-growth",
     "distillation",
+    "growth-cycle",
     "release-support",
     "boundary-bridge",
 }

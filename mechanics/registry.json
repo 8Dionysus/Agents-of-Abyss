@@ -209,6 +209,103 @@
       ]
     },
     {
+      "agents_ref": "mechanics/growth-cycle/AGENTS.md",
+      "canonical_docs": [
+        "mechanics/growth-cycle/DIRECTION.md",
+        "mechanics/growth-cycle/PARTS.md",
+        "mechanics/growth-cycle/OWNER_MAP.md",
+        "mechanics/growth-cycle/PROVENANCE.md",
+        "mechanics/growth-cycle/OWNER_REQUESTS.md",
+        "mechanics/growth-cycle/docs/GROWTH_CYCLE_LAW.md",
+        "mechanics/growth-cycle/docs/GROWTH_CYCLE_OWNER_REPO_REQUESTS.md",
+        "mechanics/growth-cycle/parts/README.md",
+        "mechanics/growth-cycle/parts/checkpoint-intake/README.md",
+        "mechanics/growth-cycle/parts/reviewed-closeout-chain/README.md",
+        "mechanics/growth-cycle/parts/donor-harvest/README.md",
+        "mechanics/growth-cycle/parts/progression-lift/README.md",
+        "mechanics/growth-cycle/parts/route-forks/README.md",
+        "mechanics/growth-cycle/parts/automation-opportunity/README.md",
+        "mechanics/growth-cycle/parts/diagnosis-gate/README.md",
+        "mechanics/growth-cycle/parts/repair-cycle/README.md",
+        "mechanics/growth-cycle/parts/quest-promotion/README.md",
+        "mechanics/growth-cycle/parts/owner-followthrough/README.md"
+      ],
+      "card": {
+        "center_owns": "Center growth-cycle law, stage order, stop-lines, owner split, review gates, and handoff route grammar for reviewed agent-process lifecycle.",
+        "inputs": [
+          "Checkpoint note, reviewed closeout artifact, donor harvest candidate, progression evidence, route fork, automation candidate, diagnosis packet, repair packet, quest-shaped repeated unit, or owner-handoff pressure.",
+          "Enough reviewed evidence and owner context to decide which stage is next."
+        ],
+        "next_route": [
+          "For hooks, checkpoint ledgers, local control, and closeout context, route to `aoa-sdk`; for executable cycle steps, route to `aoa-skills`; for self-agent posture, route to `aoa-agents`.",
+          "For proof, route to `aoa-evals`; for memory, route to `aoa-memo`; for choreography, route to `aoa-playbooks`; for derived visibility, route to `aoa-stats`; for navigation hints, route to `aoa-routing`; for reviewed snapshots and seeds, route to `Dionysus`; for runtime exports and health receipts, route to `abyss-stack`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Stage route, next-skill hint, proof request, repair or diagnosis route, quest promotion decision request, owner request packet, memo handoff, or stats handoff.",
+          "No proof, memory canon, runtime activation, owner acceptance, hidden automation, or final progress claim unless the stronger owner lands it."
+        ],
+        "stronger_owner_split": [
+          "`aoa-sdk` owns hooks, checkpoint ledgers, closeout context, local control panel behavior, and typed cycle helpers.",
+          "`aoa-skills` owns executable donor, progression, diagnosis, repair, quest, automation, and fork skills.",
+          "`aoa-agents` owns self-agent checkpoint, approval, rollback, health, role, and progression posture.",
+          "`aoa-evals` owns proof, regression, verdict, repair quality, and progression quality.",
+          "`aoa-memo` owns memory writeback, recall, failure lessons, and checkpoint to memory boundaries.",
+          "`aoa-playbooks` owns recurring cycle choreography and campaign routes.",
+          "`aoa-stats` owns derived visibility from receipts and never raw authority.",
+          "`aoa-routing` owns re-entry and next-route hints without cycle meaning.",
+          "`Dionysus` owns reviewed snapshots and seed lineage when promotion is explicit.",
+          "`abyss-stack` owns runtime exports, runtime health receipts, and plumbing after runtime gates."
+        ],
+        "trigger": "Use when a reviewed work cycle or agent process must move through checkpoint, reviewed closeout, donor harvest, progression, route choice, automation scan, diagnosis, repair, quest promotion, or owner handoff without letting any one stage pretend to be the whole system."
+      },
+      "docs_path": "mechanics/growth-cycle/docs",
+      "entry_ref": "mechanics/growth-cycle/README.md",
+      "landing_log_ref": "mechanics/growth-cycle/LANDING_LOG.md",
+      "must_not_claim": [
+        "hook implementation authority",
+        "executable skill truth",
+        "proof verdict",
+        "memory canon",
+        "runtime activation",
+        "owner acceptance",
+        "hidden scheduler or autonomous self-repair",
+        "universal progression score",
+        "quest promotion authority without reviewed evidence",
+        "method-growth final object truth"
+      ],
+      "owner_boundary": "Center route law for reviewed agent-process growth across checkpoint, closeout, harvest, progression, route forks, automation scan, diagnosis, repair, quest promotion, and owner followthrough; hooks, skills, proof, memory, runtime, stats, playbooks, routes, seeds, and owner acceptance remain owner-local.",
+      "owner_request_doc_ref": "mechanics/growth-cycle/OWNER_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-GROWTHCYCLE-SDK-001",
+        "ORQ-GROWTHCYCLE-SKILLS-001",
+        "ORQ-GROWTHCYCLE-AGENTS-001",
+        "ORQ-GROWTHCYCLE-EVALS-001",
+        "ORQ-GROWTHCYCLE-MEMO-001",
+        "ORQ-GROWTHCYCLE-PLAYBOOKS-001",
+        "ORQ-GROWTHCYCLE-STATS-001",
+        "ORQ-GROWTHCYCLE-ROUTING-001",
+        "ORQ-GROWTHCYCLE-DIONYSUS-001",
+        "ORQ-GROWTHCYCLE-STACK-001"
+      ],
+      "package_path": "mechanics/growth-cycle",
+      "roadmap_ref": "mechanics/growth-cycle/ROADMAP.md",
+      "slug": "growth-cycle",
+      "status": "landed",
+      "title": "Growth Cycle",
+      "validation_refs": [
+        "mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py",
+        "scripts/validate_mechanics_topology.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py",
+        "scripts/validate_mechanic_landing_logs.py"
+      ]
+    },
+    {
       "agents_ref": "mechanics/recurrence/AGENTS.md",
       "canonical_docs": [
         "mechanics/recurrence/DIRECTION.md",

@@ -13,6 +13,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 MECHANIC_SLUGS = (
     "method-growth",
     "distillation",
+    "growth-cycle",
     "recurrence",
     "checkpoint",
     "experience",
@@ -80,6 +81,10 @@ DISTILLATION_PREFIXES = (
     "validate_distillation",
     "test_distillation",
 )
+GROWTH_CYCLE_PREFIXES = (
+    "validate_growth_cycle",
+    "test_growth_cycle",
+)
 RECURRENCE_PREFIXES = (
     "validate_recurrence",
     "test_recurrence",
@@ -144,6 +149,8 @@ def mechanic_for_name(name: str) -> str | None:
         return "method-growth"
     if name.startswith(DISTILLATION_PREFIXES):
         return "distillation"
+    if name.startswith(GROWTH_CYCLE_PREFIXES):
+        return "growth-cycle"
     if name.startswith(RECURRENCE_PREFIXES):
         return "recurrence"
     if name.startswith(QUESTBOOK_PREFIXES):
