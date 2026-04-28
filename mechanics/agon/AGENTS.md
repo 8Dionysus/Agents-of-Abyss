@@ -84,6 +84,18 @@ landing-log or surface-chain changes.
 Use the nearest part-local `scripts/*agon*.py` and `tests/test_agon_*.py` for
 generated or model-specific changes.
 
+High-risk Agon part checks that used to be preserved in the old root reference
+now live here:
+
+```bash
+python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check
+python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py
+python -m pytest -q mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py
+python mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py --check
+python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py
+python -m pytest -q mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py
+```
+
 <!-- centralized-child-validation:start -->
 
 ### Centralized Child Validation

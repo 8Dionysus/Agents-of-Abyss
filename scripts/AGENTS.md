@@ -37,7 +37,7 @@ Current scripts include:
   and shape hygiene, entry sync, center-entry, mechanics, generated freshness,
   ecosystem, and tests
 - `plan_docs_thematic_cleanup.py`, `build_docs_thematic_index.py`, and
-  `validate_docs_thematic_*.py` for Wave D docs district cleanup checks
+  `validate_docs_thematic_*.py` for docs thematic cleanup checks
 - `hygiene_common.py`, `repair_known_link_drifts.py`, `validate_links.py`,
   `validate_status_vocabulary.py`, `build_link_shape_hygiene_index.py`,
   `validate_link_shape_hygiene_index.py`, `validate_generated_freshness.py`,

@@ -109,30 +109,17 @@ gate.
 When an agent touches links, shape, status, generated capsules, or known repairs, use this route:
 
 1. Read this protocol.
-2. Read `docs/HYGIENE_GUARDRAIL_INDEX.md`.
-3. Inspect `config/link_shape_hygiene.json`.
+2. Read `HYGIENE_GUARDRAIL_INDEX.md`.
+3. Inspect `../../config/link_shape_hygiene.json`.
 4. Run the hygiene validators.
 5. If a finding crosses owner boundaries, route the semantic fix to the stronger owner.
 6. Keep any repair trace reviewable.
 
 ## Validation
 
-Run:
+Use `AGENTS.md` in this directory for the current command lane.
 
-```bash
-python scripts/repair_known_link_drifts.py --check
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_status_vocabulary.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_generated_freshness.py
-python scripts/validate_hygiene_suite.py
-python -m pytest -q
-```
-
-The broader repository suite may add ecosystem, mechanic, owner-request, or thematic-district checks around these commands.
+The broader repository suite may add ecosystem, mechanic, owner-request, or thematic-district checks around those commands.
 
 ## Future change rule
 

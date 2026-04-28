@@ -48,7 +48,7 @@ Use this route when the question is not only "is the claim true?" but "should th
 | civic law or public map | root |
 | contributor, security, conduct, or license surface | root |
 | compact civic index | root only while compact |
-| historical seed or wave receipt | `docs/landings/` or the nearest specific docs district |
+| historical seed or package receipt | owning `mechanics/<slug>/legacy/raw/` for mechanic-specific receipts, or `docs/traces/` for generic movement evidence |
 | audit candidate list or cleanup evidence | `docs/audits/` |
 | future registry design note | `docs/registry/` |
 | generated compact machine surface | `generated/` |
@@ -63,7 +63,7 @@ Current root-surface cleanup evidence lives in [docs/audits/ROOT_SURFACE_AUDIT_2
 - a key README or civic surface collapses into a few long lines
 - tables, code fences, or numbered paths become hard for humans or agents to parse
 - a technical district gains many files without a local README gate
-- a root file remains after its better home is planted in `docs/audits/`, `docs/registry/`, or `docs/landings/`
+- a root file remains after its better home is planted in `docs/audits/`, `docs/registry/`, `docs/traces/`, or `mechanics/<slug>/legacy/raw/`
 
 ### Constitutional drift
 

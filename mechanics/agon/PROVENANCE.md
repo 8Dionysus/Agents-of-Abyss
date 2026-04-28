@@ -22,7 +22,7 @@ history into the active route.
 | Active part | Detailed source families | Landing ledger |
 |---|---|---|
 | `imposition-readiness` | pre-Agon baseline, imposition posture, survival criteria, doubt audit, Wave 0 | `LANDING_LOG.md` entries through Agon imposition gate |
-| `lawful-move-grammar` | lawful move language, move registry model, move owner handoffs, Wave III | `LANDING_LOG.md` Agon lawful move language |
+| `lawful-move-grammar` | lawful move language, move registry model, move owner handoffs, Wave III seed and landing receipts | `LANDING_LOG.md` Agon lawful move language |
 | `owner-binding` | move owner binding, binding matrix, owner request packet, pre-protocol stop-lines, Wave IV | `LANDING_LOG.md` Agon move owner binding |
 | `gate-routing` | gate routing handoff, owner request, stop-lines, Wave V | `LANDING_LOG.md` Agon gate routing handoff |
 | `trial-handoff` | trial playbook handoff, owner request, stop-lines, Wave VI | `LANDING_LOG.md` Agon trial playbook handoff |

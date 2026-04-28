@@ -56,7 +56,6 @@ Entry routing is governed by `docs/START_HERE_ROUTE_CONTRACT.md`.
 4. `docs/FEDERATION_RULES.md`
 5. `ROADMAP.md`
 6. `README.md`
-7. For detailed preserved root branches, read `docs/agent-lane/AGENTS_ROOT_REFERENCE.md`.
 
 ## Route modes
 
@@ -90,6 +89,25 @@ Use the named route before widening a center claim:
 - typed helpers, compatibility, activation, or handoff tooling belongs in `aoa-sdk`
 - runtime budgets, service state, storage, or frontend presentation belongs in `abyss-stack`
 - skill, technique, eval, memo, routing, KAG, or stats meaning belongs in its owner repo
+
+## Hard no
+
+- Do not absorb technique, skill, eval, memo, role, playbook, routing, KAG, stats, runtime, or ToS source truth into the center.
+- Do not let generated registries, routing tables, compact indexes, or derived reports masquerade as source authority.
+- Do not turn the root README, docs root, or CHANGELOG into an archive of every package, wave, or session note.
+- Do not hide semantic changes under "docs-only" or "metadata-only" wording.
+- Do not harden long-arc direction into implementation claims unless the owning repository or mechanic surface moves with it.
+- Do not let quest, RPG, checkpoint, recurrence, progression, or self-agency language imply live runtime state, ledger ownership, or unreviewable autonomy.
+
+## Review-critical drift
+
+Treat these as high-risk findings in this center repository:
+
+- contradictions across `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, `ROADMAP.md`, and source-backed generated capsules
+- routing that points readers to the wrong owner repository or mechanic package
+- generated or derived surfaces changed without their source docs, builders, validators, or tests
+- public promises that are not supported by release-support evidence
+- center claims that silently absorb owner-local implementation, proof, runtime, memory, or ToS meaning
 
 ## Verify
 
@@ -126,12 +144,10 @@ python scripts/validate_ecosystem.py
 python -m pytest -q
 ```
 
-If an Agon owner-binding or gate-routing surface changes, also run the matching builder, validator, and targeted tests named in `docs/agent-lane/AGENTS_ROOT_REFERENCE.md`.
+If an Agon owner-binding or gate-routing surface changes, use
+`mechanics/agon/AGENTS.md` and `mechanics/agon/parts/AGENTS.md` for the
+matching builder, validator, and targeted tests.
 
 ## Report
 
 Close with the center surfaces changed, whether owner boundaries shifted, which neighboring repos are affected, and exactly which checks ran or did not run.
-
-## Full reference
-
-`docs/agent-lane/AGENTS_ROOT_REFERENCE.md` preserves the previous detailed root guidance for audits, Agon branches, review guidelines, and specialized validation paths.

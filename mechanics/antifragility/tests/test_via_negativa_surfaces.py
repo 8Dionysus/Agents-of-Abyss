@@ -62,6 +62,5 @@ def test_center_docs_route_to_via_negativa_surfaces() -> None:
     assert "ONE_IN_ONE_OUT.md" in mechanics
     assert "DELETION_CANDIDATES.json" in mechanics
 
-    assert "VIA_NEGATIVA.md" in docs_readme
-    assert "ANTI_AUTHORITY_RULES.md" in docs_readme
-    assert "ONE_IN_ONE_OUT.md" in docs_readme
+    assert "antifragility" in docs_readme
+    assert "mechanics/README.md" in docs_readme

@@ -1,0 +1,246 @@
+{
+  "schema_version": 2,
+  "purpose": "Keep docs/ current and route historical, evidential, and support material into named homes without creating empty mechanic doors.",
+  "current_root_allowlist": [
+    "AGENTS.md",
+    "README.md",
+    "FEDERATION_RULES.md",
+    "LAYERS.md",
+    "REPO_ROLES.md",
+    "ROOT_SURFACE_LAW.md",
+    "START_HERE_ROUTE_CONTRACT.md",
+    "MECHANICS.md"
+  ],
+  "districts": {
+    "audits": {
+      "path": "docs/audits",
+      "readme": "docs/audits/README.md",
+      "role": "Audit evidence, cleanup candidates, review protocols, and drift checks.",
+      "authority": "evidence_and_protocol",
+      "patterns": [
+        "AUDIT",
+        "CLEANUP",
+        "DRIFT",
+        "DELETION_CANDIDATES",
+        "BLACKLIST",
+        "REVIEW",
+        "PROOF_AUDIT",
+        "POSTMORTEM",
+        "RETRO",
+        "RETROSPECTIVE",
+        "INCIDENT",
+        "FAILURE",
+        "REPAIR"
+      ],
+      "must_not_claim": [
+        "Audit evidence is not law until adopted by a canonical surface."
+      ]
+    },
+    "guardrails": {
+      "path": "docs/guardrails",
+      "readme": "docs/guardrails/README.md",
+      "role": "Validator law, hygiene protocol, local AGENTS mesh law, generated index source maps, and docs cleanup classifier.",
+      "authority": "guardrail_source",
+      "patterns": [
+        "GUARDRAIL",
+        "HYGIENE",
+        "AGENTS_MESH",
+        "THEMATIC_DISTRICT",
+        "CURRENT_SURFACE",
+        "LINK_AND_SHAPE"
+      ],
+      "must_not_claim": [
+        "Guardrails verify route shape; they do not author center doctrine or mechanic truth."
+      ]
+    },
+    "registry": {
+      "path": "docs/registry",
+      "readme": "docs/registry/README.md",
+      "role": "Registry evolution, schema/capsule notes, and generated-index planning.",
+      "authority": "design_note",
+      "patterns": [
+        "REGISTRY",
+        "INVENTORY",
+        "SCHEMA",
+        "CAPSULE",
+        "INDEX",
+        "MAP"
+      ],
+      "must_not_claim": [
+        "Registry notes are not runtime truth or source meaning."
+      ]
+    },
+    "decisions": {
+      "path": "docs/decisions",
+      "readme": "docs/decisions/README.md",
+      "role": "Decision records explaining why a route, owner split, or placement was chosen.",
+      "authority": "decision_record",
+      "patterns": [
+        "DECISION",
+        "ADR",
+        "RFC",
+        "RATIONALE"
+      ],
+      "must_not_claim": [
+        "Decisions explain why; current surfaces define what."
+      ]
+    },
+    "traces": {
+      "path": "docs/traces",
+      "readme": "docs/traces/README.md",
+      "role": "Migration evidence, provenance logs, link rewrite traces, and move manifests.",
+      "authority": "provenance_trace",
+      "patterns": [
+        "TRACE",
+        "PROVENANCE",
+        "MIGRATION",
+        "BEFORE_AFTER",
+        "MOVE_LOG",
+        "LINK_REWRITE",
+        "MANIFEST",
+        "LANDING",
+        "SEED",
+        "RECEIPT"
+      ],
+      "must_not_claim": [
+        "Traces explain movement, not meaning."
+      ]
+    }
+  },
+  "tie_break_order": [
+    "audits",
+    "guardrails",
+    "registry",
+    "decisions",
+    "traces"
+  ],
+  "exact_migrations": [
+    {
+      "source": "docs/CODEX_AUDIT_PROTOCOL.md",
+      "target": "docs/audits/CODEX_AUDIT_PROTOCOL.md",
+      "district": "audits",
+      "link_target": "docs/audits/CODEX_AUDIT_PROTOCOL.md",
+      "reason": "audit protocol belongs with audit surfaces"
+    },
+    {
+      "source": "docs/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md",
+      "target": "docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md",
+      "district": "audits",
+      "link_target": "docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md",
+      "reason": "skill/proof audit bridge belongs with audit surfaces"
+    },
+    {
+      "source": "docs/AGENTS_MESH_INDEX.md",
+      "target": "docs/guardrails/AGENTS_MESH_INDEX.md",
+      "district": "guardrails",
+      "link_target": "docs/guardrails/AGENTS_MESH_INDEX.md",
+      "reason": "AGENTS mesh index is validator guardrail law, not center doctrine"
+    },
+    {
+      "source": "docs/AGENTS_MESH_PROTOCOL.md",
+      "target": "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
+      "district": "guardrails",
+      "link_target": "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
+      "reason": "AGENTS mesh protocol is validator guardrail law, not center doctrine"
+    },
+    {
+      "source": "docs/CURRENT_SURFACE_INDEX.md",
+      "target": "docs/guardrails/CURRENT_SURFACE_INDEX.md",
+      "district": "guardrails",
+      "link_target": "docs/guardrails/CURRENT_SURFACE_INDEX.md",
+      "reason": "docs root current-surface inventory belongs with guardrail maps"
+    },
+    {
+      "source": "docs/HYGIENE_GUARDRAIL_INDEX.md",
+      "target": "docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md",
+      "district": "guardrails",
+      "link_target": "docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md",
+      "reason": "hygiene index is validator guardrail law, not center doctrine"
+    },
+    {
+      "source": "docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
+      "target": "docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
+      "district": "guardrails",
+      "link_target": "docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
+      "reason": "link and shape hygiene protocol is validator guardrail law"
+    },
+    {
+      "source": "docs/THEMATIC_DISTRICT_PROTOCOL.md",
+      "target": "docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md",
+      "district": "guardrails",
+      "link_target": "docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md",
+      "reason": "docs thematic cleanup protocol is guardrail law"
+    },
+    {
+      "source": "docs/thematic_districts.json",
+      "target": "docs/guardrails/thematic_districts.json",
+      "district": "guardrails",
+      "link_target": "docs/guardrails/thematic_districts.json",
+      "reason": "docs cleanup classifier is guardrail config"
+    },
+    {
+      "source": "registry-v2-notes.md",
+      "target": "docs/registry/REGISTRY_V2_NOTES.md",
+      "district": "registry",
+      "link_target": "docs/registry/REGISTRY_V2_NOTES.md",
+      "reason": "future registry notes belong in registry district"
+    },
+    {
+      "source": "DELETION_CANDIDATES.json",
+      "target": "docs/audits/DELETION_CANDIDATES.json",
+      "district": "audits",
+      "link_target": "docs/audits/DELETION_CANDIDATES.json",
+      "reason": "deletion candidates are audit evidence"
+    }
+  ],
+  "pattern_migrations": [
+    {
+      "source_glob": "docs/*AUDIT*.md",
+      "target_dir": "docs/audits",
+      "district": "audits",
+      "reason": "flat audit records move to docs/audits"
+    },
+    {
+      "source_glob": "docs/*LANDING*.md",
+      "target_dir": "docs/traces",
+      "district": "traces",
+      "reason": "flat generic landing receipts move to docs/traces unless a mechanic owns them"
+    },
+    {
+      "source_glob": "docs/*SEED*.md",
+      "target_dir": "docs/traces",
+      "district": "traces",
+      "reason": "flat generic seed receipts move to docs/traces unless a mechanic owns them"
+    },
+    {
+      "source_glob": "docs/AGON_*.md",
+      "target_dir": "mechanics/agon/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/agon/legacy/raw",
+      "reason": "flat Agon records route to Agon legacy before active distillation"
+    },
+    {
+      "source_glob": "docs/EXPERIENCE_*.md",
+      "target_dir": "mechanics/experience/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/experience/legacy/raw",
+      "reason": "flat Experience records route to Experience legacy before active distillation"
+    },
+    {
+      "source_glob": "docs/RPG_*.md",
+      "target_dir": "mechanics/rpg/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/rpg/legacy/raw",
+      "reason": "flat RPG records route to RPG legacy before active distillation"
+    }
+  ],
+  "validation_refs": [
+    "python scripts/plan_docs_thematic_cleanup.py --check",
+    "python scripts/validate_docs_thematic_districts.py",
+    "python scripts/validate_docs_migration_map.py",
+    "python scripts/build_docs_thematic_index.py --check",
+    "python scripts/validate_docs_thematic_index.py"
+  ],
+  "generated_index_ref": "generated/docs_thematic_index.min.json",
+  "migration_manifest_ref": "docs/traces/DOCS_THEMATIC_MOVE_MANIFEST.json"
+}

@@ -1,6 +1,7 @@
 # Registry Notes
 
-This directory holds registry evolution notes and migration planning.
+This directory holds registry evolution notes and migration planning. It is a
+design lane, not a second registry.
 
 Current compact registry v1 still lives in `generated/ecosystem_registry.min.json` and is validated by the center validators. Design notes in this directory do not change the machine contract until schemas, builders, validators, generated surfaces, and prose references move together.
 
@@ -22,6 +23,9 @@ themselves.
 
 Do not use this district to absorb owner-local truth from sibling repositories.
 
+Do not add exploratory registry notes here unless they name the active machine
+contract they would eventually change.
+
 ## Promotion path
 
 A registry note becomes current only when a change names the surviving schema or
@@ -30,9 +34,4 @@ runs the relevant release checks.
 
 ## Validation
 
-```bash
-python scripts/plan_docs_thematic_cleanup.py --check
-python scripts/validate_docs_thematic_districts.py
-python scripts/build_docs_thematic_index.py --check
-python scripts/validate_docs_thematic_index.py
-```
+Use the nearest `AGENTS.md` for the current command lane.

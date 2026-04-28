@@ -15,7 +15,7 @@ A manifest is not a memory store, not a roadmap, and not a root civic surface.
 - Keep manifests tied to a source document, owner split, or validator.
 - Do not use manifests as hidden state.
 - Do not promote one-wave seed manifests to repository root.
-- If a manifest records a historical wave landing, prefer `docs/landings/`.
+- If a manifest records a historical mechanic landing, prefer the owning `mechanics/<slug>/legacy/raw/` plus that mechanic provenance bridge; use `docs/traces/` only for generic move evidence.
 - If a manifest becomes generated, move it under `generated/` and add the builder/validator route.
 
 ## Before editing

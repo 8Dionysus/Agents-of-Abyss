@@ -25,6 +25,7 @@ SURFACE_ROUTE_MODE_EXEMPTIONS = {
 }
 
 SURFACE_VALIDATION_AUTHORITY_REFS = {
+    "docs/README.md": "docs/AGENTS.md",
     "mechanics/README.md": "mechanics/AGENTS.md",
     "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md": "mechanics/release-support/docs/AGENTS.md",
 }

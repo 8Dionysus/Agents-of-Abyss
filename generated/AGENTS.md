@@ -98,16 +98,18 @@ When editing `owner_request_queue.min.json`:
 When editing `docs_thematic_index.min.json`:
 
 - rebuild it with `scripts/build_docs_thematic_index.py`
-- keep it aligned with `docs/thematic_districts.json`,
-  `docs/THEMATIC_DISTRICT_PROTOCOL.md`, and `docs/CURRENT_SURFACE_INDEX.md`
+- keep it aligned with `docs/guardrails/thematic_districts.json`,
+  `docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md`, and
+  `docs/guardrails/CURRENT_SURFACE_INDEX.md`
 - run `scripts/validate_docs_thematic_index.py`
 - do not cite it as stronger than the authored docs cleanup law
 
 When editing `link_shape_hygiene.min.json`:
 
 - rebuild it with `scripts/build_link_shape_hygiene_index.py`
-- keep it aligned with `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`,
-  `docs/HYGIENE_GUARDRAIL_INDEX.md`, and `config/link_shape_hygiene.json`
+- keep it aligned with `docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`,
+  `docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md`, and
+  `config/link_shape_hygiene.json`
 - run `scripts/validate_link_shape_hygiene_index.py` and
   `scripts/validate_generated_freshness.py`
 - do not cite it as stronger than the authored hygiene protocol or config
@@ -115,8 +117,9 @@ When editing `link_shape_hygiene.min.json`:
 When editing `agents_mesh.min.json`:
 
 - rebuild it with `scripts/build_agents_mesh_index.py`
-- keep it aligned with `config/agents_mesh.json`, `docs/AGENTS_MESH_PROTOCOL.md`,
-  `docs/AGENTS_MESH_INDEX.md`, and the registered `AGENTS.md` cards
+- keep it aligned with `config/agents_mesh.json`,
+  `docs/guardrails/AGENTS_MESH_PROTOCOL.md`,
+  `docs/guardrails/AGENTS_MESH_INDEX.md`, and the registered `AGENTS.md` cards
 - run `scripts/validate_agents_md_shape.py`, `scripts/validate_agents_mesh.py`,
   and `scripts/validate_agents_mesh_index.py`
 - do not cite it as stronger than the local cards it summarizes

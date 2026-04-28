@@ -699,7 +699,7 @@ Surfaces:
 - `mechanics/experience/parts/*/CONTRACT.md`
 - `mechanics/experience/parts/*/VALIDATION.md`
 - `mechanics/registry.json`
-- `docs/thematic_districts.json`
+- `docs/guardrails/thematic_districts.json`
 - `mechanics/experience/scripts/validate_experience_distillation.py`
 - `mechanics/experience/tests/test_experience_distillation.py`
 

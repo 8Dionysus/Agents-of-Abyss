@@ -66,7 +66,7 @@ A thin index should stay small enough to remain an entrance, not become a second
 
 A historical seed manifest or wave receipt that records what a wave planted, why it belonged, and how it was validated.
 
-Landing receipts belong under `docs/landings/` or a more specific district, not at repository root.
+Landing receipts belong under the owning `mechanics/<slug>/legacy/raw/` route when a mechanic owns them, or under `docs/traces/` for generic movement evidence. They do not belong at repository root.
 
 ### Audit artifact
 

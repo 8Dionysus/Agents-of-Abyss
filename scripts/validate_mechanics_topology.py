@@ -31,15 +31,12 @@ REQUIRED_PACKAGE_FILES = ("AGENTS.md", "README.md", "ROADMAP.md", "LANDING_LOG.m
 REQUIRED_LOG_FIELDS = ("Status:", "Owner boundary:", "Surfaces:", "Validation:", "Stop-lines:", "Next route:")
 TEXT_SUFFIXES = (".md", ".py", ".json", ".yaml", ".yml", ".toml", ".txt")
 HISTORICAL_REFERENCE_PREFIXES = (
-    "docs/landings/",
     "docs/audits/",
-    "docs/postmortems/",
     "docs/traces/",
 )
 HISTORICAL_REFERENCE_PATHS = {
     "CHANGELOG.md",
     "config/link_shape_hygiene.json",
-    "docs/agent-lane/AGENTS_ROOT_REFERENCE.md",
 }
 OLD_ACTIVE_PATTERNS = (
     r"(?:^|/)docs/AGON_[A-Z0-9_]+\.md",
@@ -82,7 +79,7 @@ def iter_text_files() -> list[Path]:
                 ".wave_a_backups/",
                 ".wave_b_backups/",
                 ".wave_c_backups/",
-                ".wave_d_backups/",
+                ".docs_thematic_backups/",
             )
         ):
             continue

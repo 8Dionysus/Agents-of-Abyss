@@ -81,7 +81,7 @@ Root-editing changes must state the root surface class:
 - agent lane
 - development requirement
 
-Root-editing changes must not create root files merely because a wave, note, audit, or future idea feels important. Historical receipts belong in `docs/landings/`. Audit artifacts belong in `docs/audits/`. Registry evolution belongs in `docs/registry/`. Generated objects belong in `generated/`.
+Root-editing changes must not create root files merely because a package, note, audit, or future idea feels important. Mechanic receipts belong in the owning `mechanics/<slug>/legacy/raw/` route. Generic movement traces belong in `docs/traces/`. Audit artifacts belong in `docs/audits/`. Registry evolution belongs in `docs/registry/`. Generated objects belong in `generated/`.
 
 ## Direction-change route
 
@@ -105,9 +105,9 @@ Direction changes must distinguish:
 - released history
 - owner-local commitments
 
-`ROADMAP.md` should not become the ledger of every wave. Mechanic landing
+`ROADMAP.md` should not become the ledger of every package. Mechanic landing
 history belongs in the relevant `LANDING_LOG`, repository release history
-belongs in `CHANGELOG.md`, historical receipts belong in `docs/landings/`, and
+belongs in `CHANGELOG.md`, historical receipts belong in the owning mechanic legacy or `docs/traces/`, and
 source detail remains in the relevant wave-specific docs.
 
 ## Ownership-routing route
