@@ -55,6 +55,11 @@ The package `ROADMAP.md` is the forward contour. The package `LANDING_LOG.md`
 is the checked landing ledger. The package `docs/` directory holds detailed
 mechanic-owned doctrine, models, waves, handoffs, or support notes.
 
+The package `AGENTS.md` is the local route law. It must name the active source
+surfaces, the post-change route review, the closeout contract, and the local
+validation route. It should follow the Experience-style shape without copying
+Experience-specific meaning into other mechanics.
+
 Mechanic packages may also own artifact homes:
 
 - `schemas/`

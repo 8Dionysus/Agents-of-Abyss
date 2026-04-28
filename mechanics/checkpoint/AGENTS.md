@@ -5,15 +5,6 @@
 This card applies to `mechanics/checkpoint/` and every nested path under that
 scope until a nearer `AGENTS.md` narrows the lane.
 
-## Role
-
-Checkpoint owns AoA center law for bounded intermediate states: session carry,
-review gates, return anchors, closeout bridges, runtime export boundaries, and
-owner handoffs.
-
-It does not own checkpoint implementation, memory canon, proof verdicts,
-runtime activation, route dispatch, stats truth, or owner-local acceptance.
-
 ## Read before editing
 
 Read root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
@@ -36,15 +27,59 @@ from runtime-local `.aoa/` logs or sibling raw histories.
   role, route, playbook, stats, or seed behavior, update the owner-request
   surfaces instead of claiming it in the center.
 
-## Post-change Route Review
+## Closeout
+
+Closeout must name changed checkpoint surfaces, whether `PROVENANCE.md` was
+consulted, owner requests affected, checks run, checks skipped, remaining risk,
+and the next owner route if checkpoint was only a waypoint.
+
+If `PROVENANCE.md` was consulted, name only the relevant source bridge or
+receipt section. Do not enumerate runtime logs or sibling histories unless the
+task specifically audited that evidence in depth.
+
+## Role
+
+Checkpoint owns AoA center law for bounded intermediate states: session carry,
+review gates, return anchors, closeout bridges, runtime export boundaries, and
+owner handoffs.
+
+It does not own checkpoint implementation, memory canon, proof verdicts,
+runtime activation, route dispatch, stats truth, or owner-local acceptance.
+
+## Source Surfaces
+
+- `README.md`: package entry and route.
+- `DIRECTION.md`: current active mechanic direction.
+- `PARTS.md`: active functioning-part map.
+- `parts/`: concise active checkpoint contracts.
+- `OWNER_MAP.md`: checkpoint owner boundary and stronger-owner split.
+- `OWNER_REQUESTS.md`: center-side owner request packet.
+- `ROADMAP.md`: current and next checkpoint contour.
+- `LANDING_LOG.md`: checked checkpoint landing ledger.
+- `PROVENANCE.md`: controlled bridge to source evidence.
+- `docs/`: detailed doctrine and support notes.
+
+## Post-change route review
 
 After checkpoint changes, check whether the next agent can start from
 `README.md`, `DIRECTION.md`, `PARTS.md`, and the relevant active part without
 reading raw runtime or sibling history.
 
-Update `OWNER_MAP.md` when ownership changes, `OWNER_REQUESTS.md` when an owner
-handoff changes, `ROADMAP.md` when future route pressure changes, and
-`LANDING_LOG.md` when a checked landing changes.
+Check whether the move changed:
+
+- `DIRECTION.md`: current checkpoint posture or return-anchor emphasis.
+- `PARTS.md`: active part boundaries or functioning-part map.
+- `OWNER_MAP.md`: owner boundary, stop-line, or handoff target.
+- `OWNER_REQUESTS.md` and `mechanics/owner-request-queue.json`: runtime,
+  memory, proof, route, role, playbook, stats, or SDK asks.
+- `ROADMAP.md`: future route pressure or unresolved checkpoint contour.
+- `LANDING_LOG.md`: a checked landing or planted contract.
+- `PROVENANCE.md`: source bridge, receipt route, or archive map.
+- `mechanics/registry.json` and generated indexes: card-facing route, owner
+  boundary, validation refs, or public summaries.
+
+Only update a surface when its meaning moved. Leave it untouched when the
+change does not affect its job.
 
 ## Validation
 
@@ -75,9 +110,3 @@ For release-readiness or cross-mechanic edits, finish with:
 ```bash
 python scripts/release_check.py
 ```
-
-## Closeout
-
-Closeout must name changed checkpoint surfaces, archival sources consulted
-through `PROVENANCE.md`, owner requests affected, checks run, checks skipped,
-remaining risk, and the next owner route if checkpoint was only a waypoint.

@@ -8,20 +8,11 @@ that scope until a nearer `AGENTS.md` narrows the lane.
 ## Read before editing
 
 Read root `AGENTS.md`, `mechanics/AGENTS.md`, this card, and
-`mechanics/boundary-bridge/README.md` before changing files in this lane.
+`mechanics/boundary-bridge/README.md`, `DIRECTION.md`, `PARTS.md`,
+`OWNER_MAP.md`, and `OWNER_REQUESTS.md` before changing files in this lane.
 
-## Role
-
-Boundary bridge owns AoA center doctrine for crossing owner boundaries without
-identity collapse, authority transfer, or hidden implementation claim.
-
-It may describe support, counterpart edges, ToS support, witness/compost
-routes, derived projections, owner handoffs, proof routes, and compatibility
-routes.
-
-It does not author ToS meaning, owner-local implementation truth, KAG source
-authority, routing meaning, memory truth, proof verdicts, runtime behavior, or
-public projection authority.
+Use `PROVENANCE.md` only when source lineage or bridge history matters. Do not
+start from legacy material.
 
 ## Boundaries
 
@@ -39,6 +30,61 @@ public projection authority.
 - If a new recurring bridge shape appears, update `PARTS.md`, `OWNER_MAP.md`,
   `PROVENANCE.md`, `LANDING_LOG.md`, and `ROADMAP.md` only when their future
   meaning actually changes.
+
+## Closeout
+
+Closeout must name changed active parts, source doctrine consulted through
+`PROVENANCE.md`, owner requests affected, checks run, checks skipped,
+remaining risk, and the next owner route if this lane was only a waypoint.
+
+If `PROVENANCE.md` was consulted, name only the relevant bridge, archive map,
+or receipt section. Do not enumerate raw bridge sources unless the task
+specifically audited archive evidence in depth.
+
+## Role
+
+Boundary bridge owns AoA center doctrine for crossing owner boundaries without
+identity collapse, authority transfer, or hidden implementation claim.
+
+It may describe support, counterpart edges, ToS support, witness/compost
+routes, derived projections, owner handoffs, proof routes, and compatibility
+routes.
+
+It does not author ToS meaning, owner-local implementation truth, KAG source
+authority, routing meaning, memory truth, proof verdicts, runtime behavior, or
+public projection authority.
+
+## Source Surfaces
+
+- `README.md`: package entry and route.
+- `DIRECTION.md`: current active mechanic direction.
+- `PARTS.md`: active functioning-part map.
+- `parts/`: concise active bridge contracts.
+- `OWNER_MAP.md`: bridge-side owner boundary map.
+- `OWNER_REQUESTS.md`: center-side owner request packet.
+- `ROADMAP.md`: current and next bridge contour.
+- `LANDING_LOG.md`: checked boundary-bridge landing ledger.
+- `PROVENANCE.md`: controlled bridge to legacy and source accounting.
+- `legacy/`: archival source material, not active law.
+- `docs/`: detailed doctrine and support notes.
+
+## Post-change route review
+
+After any boundary-bridge change, check whether the move changed:
+
+- `DIRECTION.md`: current bridge posture or boundary emphasis.
+- `PARTS.md`: active bridge shape, part boundary, or route map.
+- `OWNER_MAP.md`: owner split, stop-line, or handoff target.
+- `OWNER_REQUESTS.md` and `mechanics/owner-request-queue.json`: stronger-owner
+  requests, proof routes, or compatibility handoffs.
+- `ROADMAP.md`: future bridge pressure or unresolved transition contour.
+- `LANDING_LOG.md`: a checked landing or superseded bridge contract.
+- `PROVENANCE.md`: source bridge, archive map, or receipt route.
+- `mechanics/registry.json` and generated indexes: card-facing route, owner
+  boundary, validation refs, or public summaries.
+
+Only update a surface when its meaning moved. Leave it untouched when the
+change does not affect its job.
 
 ## Validation
 
@@ -82,9 +128,3 @@ python scripts/validate_mechanic_landing_logs.py --mechanic boundary-bridge
 ```
 
 <!-- centralized-child-validation:end -->
-
-## Closeout
-
-Closeout must name changed active parts, source doctrine consulted through
-`PROVENANCE.md`, owner requests affected, checks run, checks skipped,
-remaining risk, and the next owner route if this lane was only a waypoint.

@@ -35,6 +35,51 @@ authority.
   `PROVENANCE.md`; owner-local asks belong in `OWNER_REQUESTS.md`.
 - Agon-specific recurrence files remain under `mechanics/agon/`.
 
+## Closeout
+
+Closeout must name changed active parts, whether `PROVENANCE.md` was consulted,
+owner requests affected, checks run, checks skipped, remaining risk, and the
+next owner route if this lane was only a waypoint.
+
+If `PROVENANCE.md` was consulted, name only the relevant return, continuity,
+or receipt section. Do not enumerate sibling histories unless the task
+specifically audited that evidence in depth.
+
+## Source Surfaces
+
+- `README.md`: package entry and route.
+- `DIRECTION.md`: current active mechanic direction.
+- `PARTS.md`: active functioning-part map.
+- `parts/`: concise active recurrence contracts.
+- `OWNER_MAP.md`: recurrence owner boundary and stronger-owner split.
+- `OWNER_REQUESTS.md`: center-side owner request packet.
+- `ROADMAP.md`: current and next recurrence contour.
+- `LANDING_LOG.md`: checked recurrence landing ledger.
+- `PROVENANCE.md`: controlled bridge to source evidence.
+- `docs/`: detailed doctrine and support notes.
+
+## Post-change route review
+
+After any recurrence change, check whether the next agent can start from
+`README.md`, `DIRECTION.md`, `PARTS.md`, and the relevant active part without
+opening sibling history or raw evidence.
+
+Check whether the move changed:
+
+- `DIRECTION.md`: current return, continuity, or re-entry posture.
+- `PARTS.md`: active part boundaries or functioning-part map.
+- `OWNER_MAP.md`: owner boundary, stop-line, or handoff target.
+- `OWNER_REQUESTS.md` and `mechanics/owner-request-queue.json`: runtime,
+  memory, proof, role, route, SDK, or owner-local asks.
+- `ROADMAP.md`: future route pressure or unresolved recurrence contour.
+- `LANDING_LOG.md`: a checked landing or planted contract.
+- `PROVENANCE.md`: source bridge, receipt route, or archive map.
+- `mechanics/registry.json` and generated indexes: card-facing route, owner
+  boundary, validation refs, or public summaries.
+
+Only update a surface when its meaning moved. Leave it untouched when the
+change does not affect its job.
+
 ## Validation
 
 Run the recurrence package validator after package changes:
@@ -77,9 +122,3 @@ python -m pytest -q mechanics/recurrence/tests/test_recurrence_mechanic.py
 ```
 
 <!-- centralized-child-validation:end -->
-
-## Closeout
-
-Closeout must name changed active parts, owner requests affected, whether
-`PROVENANCE.md` was actually consulted, checks run, checks skipped, remaining
-risk, and the next owner route if this lane was only a waypoint.
