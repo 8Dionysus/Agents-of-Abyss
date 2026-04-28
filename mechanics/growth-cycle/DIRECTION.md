@@ -3,6 +3,23 @@
 Growth Cycle should make agent-process growth easier to continue, inspect,
 repair, promote, and hand off without hiding authority in the loop.
 
+This file owns the current operating direction only. It does not replace the
+part map, landing ledger, roadmap, owner-request packet, owner map, or
+provenance bridge.
+
+## Source-of-truth split
+
+- `README.md`: package entry card and shortest route.
+- `DIRECTION.md`: current operating direction.
+- `PARTS.md`: active part map.
+- `parts/`: concise growth-cycle contracts.
+- `OWNER_MAP.md`: stronger-owner split.
+- `OWNER_REQUESTS.md`: center-side owner request packet.
+- `LANDING_LOG.md`: canonical landing ledger.
+- `ROADMAP.md`: future contour, not a historical ledger.
+- `PROVENANCE.md`: the only active bridge back to source accounting.
+- `docs/`: center law and owner-request doctrine.
+
 The direction is not to create one master process. The direction is to keep the
 cycle readable:
 
@@ -48,3 +65,7 @@ Use this block for future work that is likely but not yet worth landing:
   generated companions, scripts, or tests beyond the package validator.
 - Add a cross-repo cycle dashboard only after `aoa-stats` has owner-local
   receipts to read.
+
+## Validation
+
+Use the validation lane in [mechanics/growth-cycle/AGENTS.md](AGENTS.md#validation) for executable commands.

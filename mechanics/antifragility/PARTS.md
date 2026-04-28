@@ -4,7 +4,7 @@ The active parts are the default operating surface. They are intentionally
 short: open the part that matches the move, then route to the owner that must
 carry proof, memory, cleanup, or choreography.
 
-## Parts
+## Part map
 
 - [Stress Review](parts/stress-review/README.md): turn stress into bounded
   evidence, degraded posture, and adaptation route.
@@ -28,6 +28,21 @@ carry proof, memory, cleanup, or choreography.
 Do not open historical source material by default. Use
 [PROVENANCE](PROVENANCE.md) when a change needs the old wave source trace.
 
+## Active part contract
+
+Every part keeps three working surfaces:
+
+- `README.md`: when to use the part and where to start.
+- `CONTRACT.md`: center boundary, allowed outputs, and stop-lines.
+- `VALIDATION.md`: validation route, with executable commands centralized in
+  `parts/AGENTS.md`.
+
+A part may grow, split, merge, shrink, or retire when that improves its
+function and keeps the route cleaner. The move should leave the active path
+easier to follow, not merely smaller.
+
 ## Validation
 
-Use the validation lane in [AGENTS.md](AGENTS.md#validation).
+Use the validation lane in [mechanics/antifragility/AGENTS.md](AGENTS.md#validation)
+for package commands and [parts/AGENTS.md](parts/AGENTS.md#validation) for part
+commands.

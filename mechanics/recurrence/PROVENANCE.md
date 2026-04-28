@@ -7,7 +7,21 @@ Do not start active work from sibling inventories, runtime logs, or old wave
 receipts. Use the active package files first, then return here only when an
 audit needs source lineage.
 
-## Center Sources
+## Current route first
+
+Start with the active surfaces:
+
+- [README](README.md)
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [parts/](parts/)
+- [OWNER_MAP](OWNER_MAP.md)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
+
+If those surfaces answer the task, stop there. Do not pull sibling inventories,
+runtime evidence, manifests, or seed-pack receipts into the active route.
+
+## Center sources
 
 - `mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md`
 - `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md`
@@ -21,7 +35,7 @@ audit needs source lineage.
 - `manifests/recurrence/README.md`
 - `manifests/recurrence/AGENTS.md`
 
-## Sibling Source Surfaces
+## Sibling source surfaces
 
 - `aoa-sdk/docs/RECURRENCE_CONTROL_PLANE.md`
 - `aoa-sdk/docs/RETURN_REENTRY_SEAM.md`
@@ -50,7 +64,7 @@ audit needs source lineage.
 - `aoa-skills/.agents/skills/aoa-checkpoint-closeout-bridge/SKILL.md`
 - `aoa-techniques/TECHNIQUE_INDEX.md`
 
-## Runtime And Peripheral Evidence
+## Runtime and peripheral evidence
 
 - `abyss-stack/Configs/docs/RECURRENCE_RUNTIME_POLICY.md`
 - `abyss-stack/Configs/agent-api/return-policy.yaml`
@@ -61,7 +75,7 @@ audit needs source lineage.
 - `Dionysus/archive/seed_pack_exports/aoa-wave9-self-agency-continuity-pack-2026-04-12-summary.md`
 - `Dionysus/archive/seed_pack_exports/aoa-wave10-component-refresh-pack-2026-04-12-summary.md`
 
-## Manifest Evidence
+## Manifest evidence
 
 Recurrence manifests were observed across `Agents-of-Abyss`, `8Dionysus`,
 `Tree-of-Sophia`, `aoa-agents`, `aoa-evals`, `aoa-kag`, `aoa-memo`,
@@ -72,7 +86,7 @@ The active center package does not copy those manifests. It routes their
 authority through [OWNER_MAP](OWNER_MAP.md) and keeps manifest behavior in the
 owning repositories.
 
-## Distillation Notes
+## Distillation notes
 
 - The center landing keeps source law, part map, owner map, and stop-lines.
 - `aoa-sdk` remains the control-plane implementation owner.

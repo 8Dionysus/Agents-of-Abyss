@@ -9,6 +9,23 @@ PR merge, a GitHub Release, a mechanic landing, a quest closeout, a checkpoint
 bridge, a public README claim, an owner-request packet, or a sibling-repo
 adoption route.
 
+This file owns the current operating direction only. It does not replace the
+part map, landing ledger, roadmap, owner-request packet, owner map, or
+provenance bridge.
+
+## Source-of-truth split
+
+- `README.md`: package entry card and shortest route.
+- `DIRECTION.md`: current operating direction.
+- `PARTS.md`: active part map.
+- `parts/`: concise release-support contracts.
+- `OWNER_MAP.md`: stronger-owner split.
+- `OWNER_REQUESTS.md`: center-side owner request packet.
+- `LANDING_LOG.md`: canonical landing ledger.
+- `ROADMAP.md`: future contour, not a historical ledger.
+- `PROVENANCE.md`: the only active bridge back to source accounting.
+- `docs/`: public support, release protocol, and direction-surface doctrine.
+
 ## Current contour
 
 Release support is the center mechanic for honest transition claims:
@@ -64,3 +81,7 @@ Release routing routes to `aoa-routing`. Compatibility helpers route to
 `aoa-sdk`. Public projection routes to `8Dionysus`. Runtime deployment truth
 routes to `abyss-stack`. Mechanic-local content remains with the owning
 mechanic.
+
+## Validation
+
+Use the validation lane in [mechanics/release-support/AGENTS.md](AGENTS.md#validation) for executable commands.

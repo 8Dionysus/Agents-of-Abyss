@@ -2,6 +2,35 @@
 
 Canonical landing ledger for the method-growth mechanic.
 
+## Route index for agents
+
+Read this index before scanning the full ledger. It names the current shape of
+Method-growth without requiring every older landing entry to be re-read.
+
+- Current active route: `mechanics/method-growth/README.md`,
+  `mechanics/method-growth/DIRECTION.md`,
+  `mechanics/method-growth/PARTS.md`,
+  `mechanics/method-growth/parts/README.md`, and the relevant part README.
+- Current owner pressure route: `mechanics/method-growth/OWNER_REQUESTS.md`.
+- Current future-pressure route: `mechanics/method-growth/ROADMAP.md`.
+- Current provenance bridge: `mechanics/method-growth/PROVENANCE.md`; use it
+  only when auditing source provenance or sibling evidence history.
+
+## How to update this log
+
+Every landing entry uses the same shape:
+
+- `Status:`
+- `Owner boundary:`
+- `Surfaces:`
+- `Validation:`
+- `Stop-lines:`
+- `Next route:`
+
+When a change touches Method-growth docs, parts, owner requests, source
+bridges, validators, or tests, update the relevant entry here or explain in
+the PR why the change is not a landing change.
+
 ## Entries
 
 ### Method-growth active-part distillation

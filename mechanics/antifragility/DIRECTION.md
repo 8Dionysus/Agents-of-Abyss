@@ -3,6 +3,24 @@
 Antifragility keeps AoA able to grow after stress without becoming heavier,
 more centralized, or more theatrical.
 
+This file owns the current operating direction only. It does not replace the
+part map, landing ledger, roadmap, owner-request packet, owner map, or
+provenance bridge.
+
+## Source-of-truth split
+
+- `README.md`: package entry card and shortest route.
+- `DIRECTION.md`: current operating direction.
+- `PARTS.md`: active part map.
+- `parts/`: concise operating contracts.
+- `OWNER_MAP.md`: stronger-owner split.
+- `OWNER_REQUESTS.md`: center-side owner request packet.
+- `LANDING_LOG.md`: canonical landing ledger.
+- `ROADMAP.md`: future contour, not a historical ledger.
+- `PROVENANCE.md`: the only active bridge back to source accounting.
+- `FRAGILITY_BLACKLIST.md`: mechanic-owned blacklist source; root copy is a
+  route shim only.
+
 The current direction is practical:
 
 - stress should leave clearer owner boundaries
@@ -44,3 +62,7 @@ When a thing is not done now but clearly belongs later, record the condition in
 Owner-local repair routes to the owner repository. Proof routes to `aoa-evals`.
 Retained lessons route to `aoa-memo`. Recurring cleanup choreography routes to
 `aoa-playbooks`. Derived visibility routes to `aoa-stats`.
+
+## Validation
+
+Use the validation lane in [mechanics/antifragility/AGENTS.md](AGENTS.md#validation) for executable commands.

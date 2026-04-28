@@ -2,11 +2,35 @@
 
 This log records checked center landings for Growth Cycle.
 
-## Index
+## Route index for agents
+
+Read this index before scanning the full ledger. It names the current shape of
+Growth Cycle without requiring every older landing entry to be re-read.
 
 | Entry | Status | Key point |
 |---|---|---|
 | [Center Growth Cycle landing](#center-growth-cycle-landing) | landed | Establishes the reviewed lifecycle route and owner split. |
+
+Current active route: `mechanics/growth-cycle/README.md`,
+`mechanics/growth-cycle/DIRECTION.md`, `mechanics/growth-cycle/PARTS.md`,
+`mechanics/growth-cycle/parts/README.md`, and the relevant part README.
+
+## How to update this log
+
+Every landing entry uses the same shape:
+
+- `Status:`
+- `Owner boundary:`
+- `Surfaces:`
+- `Validation:`
+- `Stop-lines:`
+- `Next route:`
+
+When a change touches Growth Cycle docs, parts, owner requests, source bridges,
+validators, or tests, update the relevant entry here or explain in the PR why
+the change is not a landing change.
+
+## Entries
 
 ### Center Growth Cycle landing
 

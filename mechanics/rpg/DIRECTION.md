@@ -101,3 +101,7 @@ When that happens, grow RPG deliberately: name the form, bind the owner, add pro
 
 RPG should make the project feel like a world because the work has consequence.
 It must never make the project feel like a game because the language became decorative.
+
+## Validation
+
+Use the validation lane in [mechanics/rpg/AGENTS.md](AGENTS.md#validation) for executable commands.

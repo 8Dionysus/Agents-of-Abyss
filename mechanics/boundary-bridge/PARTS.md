@@ -4,7 +4,7 @@ Active parts are the default operating surface for boundary-bridge work. Use
 the part that matches the crossing, then route proof, adoption, projection, or
 implementation to the owner that must carry it.
 
-## Parts
+## Part map
 
 - [Boundary Contract](parts/boundary-contract/README.md): name the two sides,
   owner roles, bridge mode, and non-transfer rule before crossing.
@@ -32,6 +32,21 @@ Do not open wave-era ToS support documents by default. Use
 [PROVENANCE](PROVENANCE.md) when a bridge needs source trace, old route
 history, or ToS-specific source doctrine.
 
+## Active part contract
+
+Every part keeps three working surfaces:
+
+- `README.md`: when to use the part and where to start.
+- `CONTRACT.md`: center boundary, allowed outputs, and stop-lines.
+- `VALIDATION.md`: validation route, with executable commands centralized in
+  `parts/AGENTS.md`.
+
+A part may grow, split, merge, shrink, or retire when that improves its
+function and keeps the route cleaner. The move should leave the active path
+easier to follow, not merely smaller.
+
 ## Validation
 
-Use the validation lane in [AGENTS.md](AGENTS.md#validation).
+Use the validation lane in [mechanics/boundary-bridge/AGENTS.md](AGENTS.md#validation)
+for package commands and [parts/AGENTS.md](parts/AGENTS.md#validation) for part
+commands.

@@ -2,6 +2,35 @@
 
 Canonical landing ledger for the boundary-bridge mechanic.
 
+## Route index for agents
+
+Read this index before scanning the full ledger. It names the current shape of
+Boundary Bridge without requiring every older landing entry to be re-read.
+
+- Current active route: `mechanics/boundary-bridge/README.md`,
+  `mechanics/boundary-bridge/DIRECTION.md`,
+  `mechanics/boundary-bridge/PARTS.md`,
+  `mechanics/boundary-bridge/parts/README.md`, and the relevant part README.
+- Current owner pressure route: `mechanics/boundary-bridge/OWNER_REQUESTS.md`.
+- Current future-pressure route: `mechanics/boundary-bridge/ROADMAP.md`.
+- Current provenance bridge: `mechanics/boundary-bridge/PROVENANCE.md`; use it
+  only when auditing source provenance or bridge history.
+
+## How to update this log
+
+Every landing entry uses the same shape:
+
+- `Status:`
+- `Owner boundary:`
+- `Surfaces:`
+- `Validation:`
+- `Stop-lines:`
+- `Next route:`
+
+When a change touches Boundary Bridge docs, parts, owner requests, source
+bridges, validators, or tests, update the relevant entry here or explain in
+the PR why the change is not a landing change.
+
 ## Entries
 
 ### Root mechanics topology migration

@@ -58,7 +58,7 @@ there instead of duplicating command blocks.
 - Future lanes: add lane README route notes before a lane becomes difficult to
   scan from `quests/README.md` alone.
 
-## Time Has Come When
+## When Time Comes
 
 - Add lane README route notes when a lane gains enough active quests to need
   local orientation.

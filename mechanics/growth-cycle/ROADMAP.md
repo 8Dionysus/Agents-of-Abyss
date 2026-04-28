@@ -7,7 +7,7 @@ is intentionally light: it gives agents a stage map and owner split, while
 leaving implementation, proof, memory, runtime, stats, and playbook behavior to
 the owning repositories.
 
-## Near
+## Next Work
 
 - Keep owner-request packets ready to carry when sibling repositories begin
   landing local Growth Cycle surfaces.
@@ -17,7 +17,7 @@ the owning repositories.
   Questbook, Antifragility, Release-support, and Recurrence without duplicating
   their active law.
 
-## Later
+## Later Work
 
 - Add part-local schemas or examples only after real owner receipts prove the
   shape is repeated.
@@ -35,3 +35,10 @@ Use this block for future work that is likely but not yet worth landing:
   obligation rather than private process residue.
 - Add an eval bundle once public claims about repair, progression, or
   automation opportunity need defended evidence.
+
+## Out Of Scope
+
+- Hidden scheduler behavior.
+- Autonomous self-repair claims.
+- Universal progression scores.
+- Owner-local hook, skill, proof, memory, runtime, stats, or playbook truth.

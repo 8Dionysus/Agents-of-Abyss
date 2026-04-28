@@ -2,11 +2,36 @@
 
 Canonical landing ledger for the Distillation mechanic.
 
-## Current Index
+## Route index for agents
+
+Read this index before scanning the full ledger. It names the current shape of
+Distillation without requiring every older landing entry to be re-read.
 
 - Distillation landed as center law, active parts, owner map, and owner-request
   route without moving technique, skill, playbook, runtime, memory, proof, seed,
   SDK, ToS, or infrastructure authority into `Agents-of-Abyss`.
+- Current active route: `mechanics/distillation/README.md`,
+  `mechanics/distillation/DIRECTION.md`, `mechanics/distillation/PARTS.md`,
+  `mechanics/distillation/parts/README.md`, and the relevant part README.
+- Current owner pressure route: `mechanics/distillation/OWNER_REQUESTS.md`.
+- Current future-pressure route: `mechanics/distillation/ROADMAP.md`.
+- Current provenance bridge: `mechanics/distillation/PROVENANCE.md`; use it
+  only when auditing source provenance or raw-to-active history.
+
+## How to update this log
+
+Every landing entry uses the same shape:
+
+- `Status:`
+- `Owner boundary:`
+- `Surfaces:`
+- `Validation:`
+- `Stop-lines:`
+- `Next route:`
+
+When a change touches Distillation docs, parts, owner requests, source bridges,
+validators, or tests, update the relevant entry here or explain in the PR why
+the change is not a landing change.
 
 ## Entries
 
