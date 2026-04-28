@@ -31,9 +31,9 @@ context into the active route.
 
 ## Legacy raw sources
 
-No raw source file was moved during this landing. The current docs remain
-active doctrine because they are still the public route surfaces consumed by
-entry maps, validators, and tests.
+| Raw source | Distilled into | Notes |
+|---|---|---|
+| [FEDERATION_RELEASE_ROLLOUT_RETROSPECTIVE_2026_04_10](legacy/raw/FEDERATION_RELEASE_ROLLOUT_RETROSPECTIVE_2026_04_10.md) | `parts/release-runbook`, `parts/sibling-evidence-route`, `parts/state-transition-gate`, `parts/rollback-return` | Historical federation release retrospective; use only when auditing why release-support treats release as a complete state transition. |
 
 Future historical release packets belong under `legacy/raw/` and should be
 listed here before any active part cites them.

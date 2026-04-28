@@ -34,6 +34,7 @@ REQUIRED_TOP_LEVEL = (
     "legacy/AGENTS.md",
     "legacy/README.md",
     "legacy/raw/README.md",
+    "legacy/raw/FEDERATION_RELEASE_ROLLOUT_RETROSPECTIVE_2026_04_10.md",
 )
 
 PARTS = (
@@ -203,7 +204,7 @@ def validate_provenance_boundary(problems: list[str]) -> None:
         "PUBLIC_SUPPORT_POSTURE",
         "FEDERATION_RELEASE_PROTOCOL",
         "DIRECTION_SURFACES",
-        "No raw source file was moved during this landing.",
+        "FEDERATION_RELEASE_ROLLOUT_RETROSPECTIVE_2026_04_10",
     ):
         if term not in provenance:
             problems.append(f"mechanics/release-support/PROVENANCE.md: missing provenance term {term!r}")

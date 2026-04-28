@@ -36,9 +36,4 @@ An audit artifact is not authority by itself. It becomes actionable only when:
 
 ## Validation
 
-```bash
-python scripts/plan_docs_thematic_cleanup.py --check
-python scripts/validate_docs_thematic_districts.py
-python scripts/build_docs_thematic_index.py --check
-python scripts/validate_docs_thematic_index.py
-```
+Use the nearest `AGENTS.md` for the current command lane.

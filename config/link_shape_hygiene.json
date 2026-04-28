@@ -1,8 +1,8 @@
 {
   "schema": "aoa.link_shape_hygiene.v1",
   "purpose": "Guard local links, Markdown shape, status vocabularies, generated freshness, and known link-drift repairs without becoming a source-of-truth layer.",
-  "protocol_ref": "docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
-  "index_ref": "docs/HYGIENE_GUARDRAIL_INDEX.md",
+  "protocol_ref": "docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
+  "index_ref": "docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md",
   "generated_ref": "generated/link_shape_hygiene.min.json",
   "link_validation": {
     "scan_globs": [
@@ -35,20 +35,6 @@
         "old": "(RECURRENCE_PRINCIPLE.md)",
         "new": "(../mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md)",
         "reason": "Recurrence principle is mechanic-local, not a flat docs neighbor."
-      },
-      {
-        "id": "landings-agon-log-mechanic-route",
-        "file": "docs/landings/README.md",
-        "old": "](../AGON_LANDING_LOG.md)",
-        "new": "](../../mechanics/agon/LANDING_LOG.md)",
-        "reason": "Agon landing log moved from flat docs into the mechanics/agon package."
-      },
-      {
-        "id": "landings-experience-log-mechanic-route",
-        "file": "docs/landings/README.md",
-        "old": "](../EXPERIENCE_LANDING_LOG.md)",
-        "new": "](../../mechanics/experience/LANDING_LOG.md)",
-        "reason": "Experience landing log moved from flat docs into the mechanics/experience package."
       },
       {
         "id": "antifragility-via-negativa-local-route",
@@ -199,7 +185,7 @@
         "require_h2": true
       },
       {
-        "path": "docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
+        "path": "docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
         "required": true,
         "min_lines": 45,
         "max_line_length": 900,
@@ -207,7 +193,7 @@
         "require_h2": true
       },
       {
-        "path": "docs/HYGIENE_GUARDRAIL_INDEX.md",
+        "path": "docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md",
         "required": true,
         "min_lines": 35,
         "max_line_length": 900,
@@ -215,7 +201,7 @@
         "require_h2": true
       },
       {
-        "path": "docs/AGENTS_MESH_PROTOCOL.md",
+        "path": "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
         "required": true,
         "min_lines": 35,
         "max_line_length": 900,
@@ -223,7 +209,7 @@
         "require_h2": true
       },
       {
-        "path": "docs/AGENTS_MESH_INDEX.md",
+        "path": "docs/guardrails/AGENTS_MESH_INDEX.md",
         "required": true,
         "min_lines": 15,
         "max_line_length": 900,
@@ -399,7 +385,7 @@
         "require_h2": true
       },
       {
-        "path": "docs/THEMATIC_DISTRICT_PROTOCOL.md",
+        "path": "docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md",
         "required": true,
         "min_lines": 30,
         "max_line_length": 700,
@@ -407,17 +393,9 @@
         "require_h2": true
       },
       {
-        "path": "docs/CURRENT_SURFACE_INDEX.md",
+        "path": "docs/guardrails/CURRENT_SURFACE_INDEX.md",
         "required": true,
         "min_lines": 25,
-        "max_line_length": 700,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
-        "path": "docs/agent-lane/README.md",
-        "required": true,
-        "min_lines": 20,
         "max_line_length": 700,
         "require_h1": true,
         "require_h2": true
@@ -439,39 +417,7 @@
         "require_h2": true
       },
       {
-        "path": "docs/postmortems/README.md",
-        "required": true,
-        "min_lines": 20,
-        "max_line_length": 700,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
         "path": "docs/traces/README.md",
-        "required": true,
-        "min_lines": 20,
-        "max_line_length": 700,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
-        "path": "docs/agon/README.md",
-        "required": true,
-        "min_lines": 20,
-        "max_line_length": 700,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
-        "path": "docs/experience/README.md",
-        "required": true,
-        "min_lines": 20,
-        "max_line_length": 700,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
-        "path": "docs/legacy/README.md",
         "required": true,
         "min_lines": 20,
         "max_line_length": 700,
@@ -482,14 +428,6 @@
         "path": "docs/registry/README.md",
         "required": true,
         "min_lines": 20,
-        "max_line_length": 700,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
-        "path": "docs/landings/README.md",
-        "required": true,
-        "min_lines": 14,
         "max_line_length": 700,
         "require_h1": true,
         "require_h2": true
@@ -563,6 +501,14 @@
         "required": true,
         "min_lines": 30,
         "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "docs/guardrails/README.md",
+        "required": true,
+        "min_lines": 25,
+        "max_line_length": 900,
         "require_h1": true,
         "require_h2": true
       }

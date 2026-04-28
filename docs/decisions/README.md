@@ -16,6 +16,7 @@ Keep this district reviewable and labeled. A reader or agent should know whether
 | [`2026-04-26-questbook-model-spine-and-route-registries`](2026-04-26-questbook-model-spine-and-route-registries.md) | decision record for Questbook model split and registry-backed route tables |
 | [`2026-04-26-questbook-source-contract-full-distillation`](2026-04-26-questbook-source-contract-full-distillation.md) | decision record for promoting Markdown quest sources to the strict source contract |
 | [`2026-04-26-mechanics-validation-command-authority`](2026-04-26-mechanics-validation-command-authority.md) | decision record for keeping active mechanic validation commands in AGENTS lanes |
+| [`2026-04-28-docs-guardrails-and-mechanic-receipts`](2026-04-28-docs-guardrails-and-mechanic-receipts.md) | decision record for the `docs/guardrails/` home and mechanic-owned receipt routing |
 
 ## Must not claim
 
@@ -25,13 +26,8 @@ Do not use this district to absorb owner-local truth from sibling repositories.
 
 ## Promotion path
 
-A document in this district may influence current law only when a change names the surviving canonical surface, updates links, rebuilds generated indexes, and runs the Wave D validators.
+A document in this district may influence current law only when a change names the surviving canonical surface, updates links, rebuilds generated indexes, and runs the docs thematic cleanup validators.
 
 ## Validation
 
-```bash
-python scripts/plan_docs_thematic_cleanup.py --check
-python scripts/validate_docs_thematic_districts.py
-python scripts/build_docs_thematic_index.py --check
-python scripts/validate_docs_thematic_index.py
-```
+Use the nearest `AGENTS.md` for the current command lane.

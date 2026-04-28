@@ -18,6 +18,8 @@ Release-support without requiring every older landing entry to be re-read.
 - Current future-pressure route: `mechanics/release-support/ROADMAP.md`.
 - Current provenance bridge: `mechanics/release-support/PROVENANCE.md`; use it
   only when auditing source provenance or release-support history.
+- Current raw legacy route: `mechanics/release-support/legacy/raw/`; do not use
+  raw release retrospectives as the active operating path.
 
 ## How to update this log
 
@@ -112,3 +114,31 @@ Next route: carry release proof to `aoa-evals`, derived release movement to
 `aoa-stats`, route ABI to `aoa-routing`, helper support to `aoa-sdk`, public
 projection to `8Dionysus`, runtime deployment/rollback to `abyss-stack`, and
 content changes to the owning mechanic or sibling repository.
+
+### Release retrospective owner-route cleanup
+
+Status: landed
+
+Owner boundary: `Agents-of-Abyss` keeps the historical release retrospective as
+release-support raw evidence. Active release law remains in release-support
+parts and docs; generic `docs/` districts do not own release-support repair
+history.
+
+Surfaces:
+
+- `mechanics/release-support/legacy/raw/FEDERATION_RELEASE_ROLLOUT_RETROSPECTIVE_2026_04_10.md`
+- `mechanics/release-support/legacy/raw/README.md`
+- `mechanics/release-support/PROVENANCE.md`
+- `mechanics/release-support/LANDING_LOG.md`
+- `docs/guardrails/thematic_districts.json`
+- `generated/docs_thematic_index.min.json`
+
+Validation: `python mechanics/release-support/scripts/validate_release_support_distillation.py`; `python scripts/validate_docs_thematic_districts.py`; `python scripts/release_check.py`
+
+Stop-lines: no generic docs postmortems shelf for one owner-bound release
+receipt, no raw retrospective as active release law, and no owner-repo release
+truth absorbed into the center.
+
+Next route: use active release-support parts for current behavior; use
+`mechanics/release-support/PROVENANCE.md` only when historical release context
+is needed.

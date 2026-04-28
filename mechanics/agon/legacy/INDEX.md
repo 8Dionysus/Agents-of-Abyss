@@ -24,6 +24,7 @@ behind that bridge.
 - `AGON_MOVE_OWNER_HANDOFFS.md` -> part: [`lawful-move-grammar`](../parts/lawful-move-grammar/README.md); status: `active-distilled`; title: Agon Move Owner Handoffs
 - `AGON_MOVE_REGISTRY_MODEL.md` -> part: [`lawful-move-grammar`](../parts/lawful-move-grammar/README.md); status: `active-distilled`; title: Agon Move Registry Model
 - `AGON_WAVE3_LANDING.md` -> part: [`lawful-move-grammar`](../parts/lawful-move-grammar/README.md); status: `active-distilled`; title: Agon Wave III Landing
+- `AGON_WAVE3_SEED_MANIFEST.md` -> part: [`lawful-move-grammar`](../parts/lawful-move-grammar/README.md); status: `legacy-indexed`; title: Agon Wave III Seed Manifest
 
 ### Owner Binding
 

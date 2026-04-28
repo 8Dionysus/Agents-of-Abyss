@@ -146,6 +146,8 @@ Use for high-value issues that would materially break trust, boundaries, or oper
 - generated surfaces drifting from their sources
 - verification claims that were not actually checked
 - bounded claims that overstate what evidence supports
+- center claims that absorb owner-local implementation, proof, runtime,
+  memory, or ToS meaning
 - bootstrap, runtime, or dry-run posture weakened without explicit callout
 
 Do not spend review budget on low-value nits unless the task explicitly requests them.

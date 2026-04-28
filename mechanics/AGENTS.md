@@ -133,7 +133,7 @@ When a mechanic output would become runtime, proof, memory, role, playbook, KAG,
 - `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, `docs/LAYERS.md`, and `docs/REPO_ROLES.md` remain governance surfaces.
 - `QUESTBOOK.md` remains a root public obligation index; `mechanics/questbook/` owns questbook mechanics.
 - `quests/` remains the quest item store; lane-first lifecycle directories own source placement, and top-level `AOA-Q-*` aliases are intentionally absent.
-- `docs/landings/` remains an archive and receipt district, not a canonical mechanic log.
+- Mechanic receipts remain in the owning `mechanics/<slug>/legacy/raw/` route and provenance bridge, not in empty docs districts.
 - Generated card indexes reflect package entries; they do not author mechanic truth.
 
 ## Editing posture

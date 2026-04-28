@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-from docs_thematic_common import DOC_ROOT_REQUIRED,DISTRICT_README_HEADINGS,build_plan,load_classifier,validate_classifier_shape,REPO_ROOT
+from docs_thematic_common import CLASSIFIER_REL,DOC_ROOT_REQUIRED,DISTRICT_README_HEADINGS,build_plan,load_classifier,validate_classifier_shape,REPO_ROOT
 def main()->int:
     repo_root=REPO_ROOT; docs=repo_root/'docs'; errors=[]
     if not docs.exists(): raise SystemExit('missing docs directory')
@@ -17,13 +17,17 @@ def main()->int:
     leftovers=build_plan(repo_root,c)
     if leftovers: errors.append('flat docs still classify into districts: '+', '.join(i['source'] for i in leftovers))
     docs_readme=(docs/'README.md').read_text(encoding='utf-8') if (docs/'README.md').exists() else ''
+    docs_agents=(docs/'AGENTS.md').read_text(encoding='utf-8') if (docs/'AGENTS.md').exists() else ''
+    guardrails_agents=(repo_root/'docs'/'guardrails'/'AGENTS.md').read_text(encoding='utf-8') if (repo_root/'docs'/'guardrails'/'AGENTS.md').exists() else ''
     for d in c.get('districts',{}).values():
         if d['path'].replace('docs/','')+'/' not in docs_readme and d['path'] not in docs_readme: errors.append(f'docs/README.md does not mention {d["path"]}')
     for cmd in c.get('validation_refs',[]):
-        if cmd not in docs_readme: errors.append(f'docs/README.md missing validation command: {cmd}')
+        if cmd not in docs_agents and cmd not in guardrails_agents: errors.append(f'docs AGENTS cards missing validation command: {cmd}')
     root_law=(docs/'ROOT_SURFACE_LAW.md').read_text(encoding='utf-8') if (docs/'ROOT_SURFACE_LAW.md').exists() else ''
-    for required in ['Wave D','THEMATIC_DISTRICT_PROTOCOL','docs root']:
+    for required in ['docs thematic cleanup','guardrails','docs root']:
         if required not in root_law: errors.append(f'ROOT_SURFACE_LAW.md missing {required!r}')
+    if str(CLASSIFIER_REL) not in docs_readme and str(CLASSIFIER_REL) not in guardrails_agents:
+        errors.append(f'docs surfaces do not mention classifier {CLASSIFIER_REL}')
     if errors: raise SystemExit('docs thematic district validation failed:\n- '+'\n- '.join(errors))
     print('docs thematic districts validated'); return 0
 if __name__=='__main__': raise SystemExit(main())

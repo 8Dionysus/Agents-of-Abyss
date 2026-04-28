@@ -2,6 +2,11 @@
 
 This is a no-blame retrospective for the April 10, 2026 owner-repo release pass.
 
+Current release-support work should not start here. Use
+`mechanics/release-support/README.md`, `PARTS.md`, and `PROVENANCE.md` first.
+This file is retained as raw historical evidence for the release-support
+mechanic.
+
 ## What went wrong
 
 - code, changelog, tag, README, and GitHub Release were treated as neighboring tasks rather than one release contract

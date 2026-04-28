@@ -125,182 +125,38 @@ Purpose:
 Main question:
 - what source-linked knowledge world is being cultivated?
 
-## Agon preparation protocol posture
+## Center mechanics overlay
 
-Repository: `Agents-of-Abyss` for the center-owned preparation note.
+Repository: `Agents-of-Abyss`
+
+Purpose:
+- keep cross-layer mechanics legible without turning this layer map into a mechanic ledger
+- route active mechanic law to `mechanics/<slug>/`
+- keep mechanic legacy, receipts, generated part artifacts, and owner requests inside the owning mechanic package
+
+Main question:
+- which center mechanic shapes the work, and which owner repository must carry the next real implementation or proof?
 
 Current route:
-- `mechanics/agon/README.md`
-- `mechanics/agon/DIRECTION.md`
-- `mechanics/agon/PARTS.md`
-- `mechanics/agon/OWNER_REQUESTS.md`
-- `mechanics/agon/PROVENANCE.md`
+- `mechanics/README.md` for the full mechanics atlas
+- `mechanics/registry.json` for machine-checked mechanic package metadata
+- `generated/mechanic_card_index.min.json` for compact routing
 
-Current surface:
-- `mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md`
+## Active mechanic packages
 
-Purpose:
-- keep the future Agon holding boundary explicit before any protocol package or
-  runtime body exists
-- keep Agon inside the center as a provisional future bounded constitutional
-  protocol contour unless a later reviewed center decision narrows it
-- prevent a premature new sibling repository, ToS arena drift, or runtime
-  substrate ownership drift
-- route future actor form, routing gates, trial playbooks, eval verdicts,
-  memory scars, derived summaries, KAG lifts, SDK helpers, and runtime services
-  back to their owning layers
+| Mechanic | Use when | Route |
+|---|---|---|
+| method-growth | repeated patterns need reviewable growth, lineage, method capture, or pruning | `mechanics/method-growth/README.md` |
+| distillation | raw packets, waves, or legacy material must become light active form | `mechanics/distillation/README.md` |
+| growth-cycle | harvest, progression, self-diagnosis, or repair loops need bounded routing | `mechanics/growth-cycle/README.md` |
+| recurrence | return, continuity, re-entry, or durable boundedness is at stake | `mechanics/recurrence/README.md` |
+| checkpoint | an intermediate state must be captured without becoming final authority | `mechanics/checkpoint/README.md` |
+| experience | staged contracts, office/service posture, continuity, and runtime boundaries are involved | `mechanics/experience/README.md` |
+| agon | pressure, lawful move language, arena readiness, verdict contour, owner binding, or trial handoff is involved | `mechanics/agon/README.md` |
+| antifragility | subtraction, degraded mode, via negativa, or authority inflation must be checked | `mechanics/antifragility/README.md` |
+| questbook | obligations should survive as public, reviewable game objects rather than TODO noise | `mechanics/questbook/README.md` |
+| rpg | game-language overlay helps route quests, progression, proof, and handoff without becoming a toy layer | `mechanics/rpg/README.md` |
+| boundary-bridge | cross-owner transition needs support without ownership collapse | `mechanics/boundary-bridge/README.md` |
+| release-support | public claims, internal releases, and transition proof need one support route | `mechanics/release-support/README.md` |
 
-Main question:
-- how can AoA prepare the arena without starting it or absorbing neighboring
-  owner truth?
-
-## Agon imposition gate
-
-Repository: `Agents-of-Abyss` for the center-owned Wave 0 turn.
-
-Current surfaces:
-- `mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md`
-- `mechanics/agon/legacy/raw/AGON_SURVIVAL_CRITERIA.md`
-- `mechanics/agon/legacy/raw/AGON_DOUBT_AUDIT.md`
-- `mechanics/agon/legacy/raw/PRE_AGON_BASELINE.md`
-- `mechanics/agon/legacy/raw/AGON_WAVE0_LANDING.md`
-- `mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json`
-
-Purpose:
-- place the current federation under Agon scrutiny without starting the arena
-- define survive/recharter/defer/prune/quarantine as the first center-owned
-  Agon verdict scale
-- capture a named pre-Agon baseline so later cuts are judged against a visible
-  before-image
-- keep actor, proof, memory, routing, runtime, and ToS handoffs explicit while
-  the center remains the owner of the imposition law only
-
-Main question:
-- which current surfaces deserve to survive Agon scrutiny, and what must be
-  rechartered before lawful moves or runtime claims begin?
-
-## Agon lawful move language
-
-Repository: `Agents-of-Abyss` for the center-owned Wave III turn.
-
-Current surfaces:
-- `mechanics/agon/legacy/raw/AGON_LAWFUL_MOVE_LANGUAGE.md`
-- `mechanics/agon/legacy/raw/AGON_MOVE_REGISTRY_MODEL.md`
-- `mechanics/agon/legacy/raw/AGON_MOVE_OWNER_HANDOFFS.md`
-- `mechanics/agon/legacy/raw/AGON_WAVE3_LANDING.md`
-- `mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json`
-
-Purpose:
-- give Agon a first legal vocabulary after the imposition gate and actor-side
-  rechartering work
-- keep lawful move names center-owned while routing reusable practice,
-  bounded execution, proof, memory, routing gates, playbook choreography, and
-  runtime implementation back to their owning layers
-- make every move explicitly pre-protocol so the center does not smuggle live
-  arena behavior into a registry
-
-Main question:
-- which legal move names can the center publish now without falsely claiming
-  live session authority, verdict logic, scars, retention, runtime packets, or
-  ToS canonization?
-
-## Agon move owner binding
-
-Repository: `Agents-of-Abyss` for the center-owned Wave IV turn.
-
-Current surfaces:
-- `mechanics/agon/legacy/raw/AGON_MOVE_OWNER_BINDING.md`
-- `mechanics/agon/legacy/raw/AGON_MOVE_BINDING_MATRIX_MODEL.md`
-- `mechanics/agon/OWNER_REQUESTS.md`
-- `mechanics/agon/legacy/raw/AGON_PRE_PROTOCOL_STOP_LINES.md`
-- `mechanics/agon/legacy/raw/AGON_WAVE4_LANDING.md`
-- `mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json`
-
-Purpose:
-- bind each lawful move to the owner repositories that must later carry
-  practice, bounded execution, proof, routing, scenario choreography,
-  memory intake, derived observability, or actor-form constraints
-- keep `Agents-of-Abyss` as the center owner of legal move vocabulary and
-  owner-binding law while neighboring repositories remain only requested,
-  not landed, companions
-- keep every owner request pre-protocol so the center does not smuggle live
-  arena behavior, verdicts, scars, retention, or ToS promotion into a
-  binding matrix
-
-Main question:
-- which future owner obligations can the center publish now without falsely
-  claiming that practice, workflows, proof, routing, scenario, memory,
-  stats, or actor slices have already landed in their owning repositories?
-
-## Agon gate routing handoff
-
-Repository: `Agents-of-Abyss` for the center-owned Wave V turn.
-
-Current surfaces:
-- `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_HANDOFF.md`
-- `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_OWNER_REQUEST.md`
-- `mechanics/agon/legacy/raw/AGON_GATE_ROUTING_STOP_LINES.md`
-- `mechanics/agon/legacy/raw/AGON_WAVE5_CENTER_HANDOFF.md`
-- `mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json`
-
-Purpose:
-- accept one thin pre-protocol handoff from `aoa-routing` when ordinary
-  service, routing, or routine cognitive handling is no longer enough
-- keep `Agents-of-Abyss` as the owner of Agon law while routing remains only
-  a gate-candidate and next-hop surface
-- keep every routing gate hint explicitly below arena activation so the center
-  does not smuggle live session, verdict, scar, retention, rank, runtime, or
-  ToS authority into navigation
-
-Main question:
-- which routing conditions can honestly emit a center-facing Agon gate
-  candidate without falsely claiming arena activation or routing-owned law?
-
-## Agon trial playbook handoff
-
-Repository: `Agents-of-Abyss` for the center-owned Wave VI turn.
-
-Current surfaces:
-- `mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_HANDOFF.md`
-- `mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md`
-- `mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_STOP_LINES.md`
-- `mechanics/agon/legacy/raw/AGON_WAVE6_CENTER_HANDOFF.md`
-- `mechanics/agon/parts/trial-handoff/generated/agon_trial_playbook_request.min.json`
-
-Purpose:
-- hand one bounded Agon slice to `aoa-playbooks`: recurring mechanical trial
-  choreography for pressure families that now need repeatable scenario routes
-- keep `Agents-of-Abyss` as the owner of Agon law, lawful move vocabulary,
-  owner boundaries, and stop-lines while `aoa-playbooks` owns only trial
-  choreography
-- keep every trial route explicitly pre-protocol so the center does not smuggle
-  live session, verdict, scar, retention, rank, runtime, or ToS authority into
-  scenario composition
-
-Main question:
-- which recurring mechanical Agon trials can honestly become playbook-owned
-  choreography now without falsely claiming live arena authority?
-
-## Experience v1.5 epistemic duel model-of-other forge
-
-Repository: `Agents-of-Abyss` for the center-owned Wave 5 turn of the current
-v1.2-v2.0 planting campaign. It is not `Experience Wave 5`.
-
-Current surfaces:
-- `mechanics/experience/parts/compatibility-bridges/README.md`
-- `mechanics/experience/parts/compatibility-bridges/examples/experience_v1_5_epistemic_duel_model_of_other_forge.example.json`
-- `mechanics/experience/parts/compatibility-bridges/schemas/experience-v1-5-epistemic-duel-model-of-other-forge.schema.json`
-
-Purpose:
-- extend the v1.4 mechanical arena kernel into epistemic duel pressure without
-  starting a live duel or runtime
-- require sealed model-of-other prediction before reveal and scoring
-- route countermodel pressure, revision quality, memory, KAG, routing, runtime,
-  and ToS handoffs to their owning layers
-- forbid assistant contestants, assistant deep modeling, truth verdicts,
-  standing mutation, durable memory or scar writes, retention execution, and
-  direct ToS/KAG canon promotion
-
-Main question:
-- which epistemic duel constraints can the center name now without claiming
-  live arena authority or downstream owner truth?
+Mechanic detail belongs in package `DIRECTION.md`, `PARTS.md`, `LANDING_LOG.md`, `PROVENANCE.md`, and `OWNER_REQUESTS.md`, not in this layer map.

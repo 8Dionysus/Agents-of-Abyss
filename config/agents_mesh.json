@@ -1,6 +1,6 @@
 {
   "schema_version": "aoa_agents_mesh_v1",
-  "authority_ref": "docs/AGENTS_MESH_PROTOCOL.md",
+  "authority_ref": "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
   "root_agents_ref": "AGENTS.md",
   "route_contract_ref": "docs/START_HERE_ROUTE_CONTRACT.md",
   "generated_ref": "generated/agents_mesh.min.json",
@@ -254,12 +254,12 @@
       ]
     },
     {
-      "path": "docs/agent-lane/AGENTS.md",
-      "scope": "docs/agent-lane/",
+      "path": "docs/guardrails/AGENTS.md",
+      "scope": "docs/guardrails/",
       "kind": "docs-thematic-district-card",
       "status": "required",
       "owner": "Agents-of-Abyss",
-      "notes": "Thematic docs district card.",
+      "notes": "Local guardrail card for docs cleanup, hygiene, generated freshness, and AGENTS mesh surfaces.",
       "required_headings": [
         "# AGENTS.md",
         "## Applies to",
@@ -273,23 +273,6 @@
     {
       "path": "docs/audits/AGENTS.md",
       "scope": "docs/audits/",
-      "kind": "docs-thematic-district-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Thematic docs district card.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
-      "path": "docs/landings/AGENTS.md",
-      "scope": "docs/landings/",
       "kind": "docs-thematic-district-card",
       "status": "required",
       "owner": "Agents-of-Abyss",
@@ -339,76 +322,8 @@
       ]
     },
     {
-      "path": "docs/postmortems/AGENTS.md",
-      "scope": "docs/postmortems/",
-      "kind": "docs-thematic-district-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Thematic docs district card.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
       "path": "docs/traces/AGENTS.md",
       "scope": "docs/traces/",
-      "kind": "docs-thematic-district-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Thematic docs district card.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
-      "path": "docs/agon/AGENTS.md",
-      "scope": "docs/agon/",
-      "kind": "docs-thematic-district-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Thematic docs district card.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
-      "path": "docs/experience/AGENTS.md",
-      "scope": "docs/experience/",
-      "kind": "docs-thematic-district-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Thematic docs district card.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
-      "path": "docs/legacy/AGENTS.md",
-      "scope": "docs/legacy/",
       "kind": "docs-thematic-district-card",
       "status": "required",
       "owner": "Agents-of-Abyss",

@@ -1,6 +1,6 @@
 # Agon Wave III Seed Manifest - Lawful Move Language
 
-Moved from root `SEED_MANIFEST.md` during the root-surface cleanup pass. This is a wave receipt, not a root manifest for the entire repository.
+Moved from root `SEED_MANIFEST.md` during the root-surface cleanup pass, then from the old `docs/landings/` receipt district into Agon legacy when mechanic-specific receipts were routed to their owning packages. This is a wave receipt, not a root manifest for the entire repository.
 
 Target repository: `Agents-of-Abyss`.
 
@@ -32,6 +32,8 @@ Neighboring repositories keep their own truths:
 - `Tree-of-Sophia` owns slow source-first canonization.
 
 ## Files planted
+
+This list preserves the original landing shape. Current active homes are routed through `../INDEX.md`, `../../PROVENANCE.md`, and the lawful-move-grammar part.
 
 ```text
 docs/

@@ -35,16 +35,16 @@ Tracking starts with the community-docs baseline for this repository.
   `*OWNER_REPO_REQUESTS.md` packets, `generated/owner_request_queue.min.json`,
   and owner-request validators for center-side handoff tracking
 - docs thematic district cleanup law through
-  `docs/THEMATIC_DISTRICT_PROTOCOL.md`, `docs/CURRENT_SURFACE_INDEX.md`,
-  `docs/thematic_districts.json`, `generated/docs_thematic_index.min.json`,
+  `docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md`, `docs/guardrails/CURRENT_SURFACE_INDEX.md`,
+  `docs/guardrails/thematic_districts.json`, `generated/docs_thematic_index.min.json`,
   district README gates, and docs-thematic validators
 - Wave E link and shape hygiene guardrails through
-  `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`,
-  `docs/HYGIENE_GUARDRAIL_INDEX.md`,
+  `docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`,
+  `docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md`,
   `config/link_shape_hygiene.json`, `generated/link_shape_hygiene.min.json`,
   local-link/status/freshness validators, and exact known-repair traces
-- Wave F AGENTS mesh guardrails through `docs/AGENTS_MESH_PROTOCOL.md`,
-  `docs/AGENTS_MESH_INDEX.md`, `config/agents_mesh.json`,
+- Wave F AGENTS mesh guardrails through `docs/guardrails/AGENTS_MESH_PROTOCOL.md`,
+  `docs/guardrails/AGENTS_MESH_INDEX.md`, `config/agents_mesh.json`,
   `generated/agents_mesh.min.json`, local `AGENTS.md` district cards, mesh
   validators, and regression tests
 - Experience-style mechanic `AGENTS.md` route law across center mechanics,
@@ -201,6 +201,14 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- docs guardrail law now lives under `docs/guardrails/`, with
+  `docs/README.md` and `docs/AGENTS.md` kept as compact routes; empty
+  `docs/agon/`, `docs/experience/`, `docs/legacy/`, `docs/landings/`, and
+  `docs/postmortems/` doors were removed in favor of mechanic-owned
+  legacy/provenance routes; the federation release retrospective now lives
+  under `mechanics/release-support/legacy/raw/`
+- docs traces now use a function-named link/shape hygiene apply manifest
+  instead of an active wave-named trace path
 - root `mechanics/*.md` surfaces now have a stricter source-of-truth split:
   `mechanics/README.md` stays a compact atlas, `mechanics/AGENTS.md` owns
   editing and validation law, artifact topology owns placement rules, and the
@@ -369,9 +377,10 @@ Tracking starts with the community-docs baseline for this repository.
 - active mechanic child docs now route executable validation through the
   nearest `AGENTS.md`, with Markdown shape validation guarding against command
   drift back into child docs
-- detailed agent-lane and Codex audit references now live under
-  `docs/agent-lane/` and `docs/audits/`, while `docs/MECHANICS.md` remains a
-  narrow compatibility route into `mechanics/README.md`
+- detailed Codex audit references now live under `docs/audits/`, while
+  `docs/MECHANICS.md` remains a narrow compatibility route into
+  `mechanics/README.md`; the old agent-lane reference cache was distilled into
+  root and mechanic `AGENTS.md` surfaces and removed
 - stale links from old flat docs paths into mechanic packages and root docs
   audit surfaces now route through exact, manifest-backed repair rules
 

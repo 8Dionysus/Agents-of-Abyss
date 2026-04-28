@@ -3,15 +3,15 @@ import json
 from pathlib import Path
 from typing import Any
 REPO_ROOT=Path(__file__).resolve().parents[1]
-CLASSIFIER_REL=Path('docs/thematic_districts.json')
+CLASSIFIER_REL=Path('docs/guardrails/thematic_districts.json')
 INDEX_REL=Path('generated/docs_thematic_index.min.json')
-DOC_ROOT_REQUIRED=['README.md','AGENTS.md','THEMATIC_DISTRICT_PROTOCOL.md','CURRENT_SURFACE_INDEX.md','thematic_districts.json']
+DOC_ROOT_REQUIRED=['README.md','AGENTS.md','FEDERATION_RULES.md','LAYERS.md','REPO_ROLES.md','ROOT_SURFACE_LAW.md','START_HERE_ROUTE_CONTRACT.md','MECHANICS.md']
 DISTRICT_README_HEADINGS=['# ','## District law','## Current surfaces','## Must not claim','## Promotion path','## Validation']
 def load_classifier(repo_root:Path|None=None)->dict[str,Any]:
     root=repo_root or REPO_ROOT
     return json.loads((root/CLASSIFIER_REL).read_text(encoding='utf-8'))
 def render_index(classifier:dict[str,Any])->str:
-    data={'schema_version':classifier['schema_version'],'source':str(CLASSIFIER_REL),'purpose':'Compact machine-facing map of docs thematic districts.','generated_rule':'Reflects docs/thematic_districts.json; does not author meaning.','current_root_allowlist':classifier.get('current_root_allowlist',[]),'districts':{name:{'path':d['path'],'readme':d['readme'],'role':d['role'],'authority':d['authority'],'current_route':d.get('current_route')} for name,d in classifier.get('districts',{}).items()},'exact_migration_count':len(classifier.get('exact_migrations',[])),'pattern_migration_count':len(classifier.get('pattern_migrations',[])),'validation_refs':classifier.get('validation_refs',[])}
+    data={'schema_version':classifier['schema_version'],'source':str(CLASSIFIER_REL),'purpose':'Compact machine-facing map of docs thematic districts.','generated_rule':'Reflects docs/guardrails/thematic_districts.json; does not author meaning.','current_root_allowlist':classifier.get('current_root_allowlist',[]),'districts':{name:{'path':d['path'],'readme':d['readme'],'role':d['role'],'authority':d['authority'],'current_route':d.get('current_route')} for name,d in classifier.get('districts',{}).items()},'exact_migration_count':len(classifier.get('exact_migrations',[])),'pattern_migration_count':len(classifier.get('pattern_migrations',[])),'validation_refs':classifier.get('validation_refs',[])}
     return json.dumps(data,separators=(',',':'),ensure_ascii=False)+'\n'
 def normalize_name(path:Path|str)->str: return Path(path).name.upper().replace('-','_')
 def validate_classifier_shape(classifier:dict[str,Any])->list[str]:

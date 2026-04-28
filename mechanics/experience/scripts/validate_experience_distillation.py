@@ -28,7 +28,7 @@ PROVENANCE_RECEIPTS_PATH = EXPERIENCE_ROOT / "provenance-receipts.json"
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 PROVENANCE_PATH = EXPERIENCE_ROOT / "PROVENANCE.md"
 MECHANICS_ATLAS_PATH = REPO_ROOT / "mechanics" / "README.md"
-THEMATIC_DISTRICTS_PATH = REPO_ROOT / "docs" / "thematic_districts.json"
+THEMATIC_DISTRICTS_PATH = REPO_ROOT / "docs" / "guardrails" / "thematic_districts.json"
 
 PART_SLUGS = (
     "capture-kernel",
@@ -1127,13 +1127,13 @@ def validate_thematic_experience_route(problems: list[str]) -> None:
     ]
     if len(matches) != 1:
         problems.append(
-            "docs/thematic_districts.json: expected one docs/EXPERIENCE_*.md migration route"
+            "docs/guardrails/thematic_districts.json: expected one docs/EXPERIENCE_*.md migration route"
         )
         return
     target = matches[0].get("target_dir")
     if target != "mechanics/experience/legacy/raw":
         problems.append(
-            "docs/thematic_districts.json: docs/EXPERIENCE_*.md must route to mechanics/experience/legacy/raw"
+            "docs/guardrails/thematic_districts.json: docs/EXPERIENCE_*.md must route to mechanics/experience/legacy/raw"
         )
 
 

@@ -43,8 +43,8 @@
       "status": "active",
       "owner": "Agents-of-Abyss",
       "role": "source config for local link repair, Markdown shape, status vocabulary, and generated freshness guardrails",
-      "source_ref": "docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
-      "index_ref": "docs/HYGIENE_GUARDRAIL_INDEX.md",
+      "source_ref": "docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
+      "index_ref": "docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md",
       "generated_refs": [
         "generated/link_shape_hygiene.min.json"
       ],
@@ -81,8 +81,8 @@
       "status": "active",
       "owner": "Agents-of-Abyss",
       "role": "source config for required AGENTS-card coverage, shape headings, exemptions, and compact mesh metadata",
-      "source_ref": "docs/AGENTS_MESH_PROTOCOL.md",
-      "index_ref": "docs/AGENTS_MESH_INDEX.md",
+      "source_ref": "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
+      "index_ref": "docs/guardrails/AGENTS_MESH_INDEX.md",
       "generated_refs": [
         "generated/agents_mesh.min.json"
       ],

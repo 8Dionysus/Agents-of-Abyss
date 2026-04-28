@@ -22,7 +22,7 @@ in [`relation-shape`](mechanics/questbook/parts/relation-shape/README.md). A
 
 - `AOA-Q-0003` - shape the next contour after foundation proof without widening too early.
 - `AOA-Q-0005` - define the second RPG reflection wave for skills as abilities and techniques as feats.
-- Root-surface follow-through - after [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) lands, decide whether more wave landing receipts should remain in `docs/` root or move into `docs/landings/` as a later structural pass.
+- Root-surface follow-through - after [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) lands, keep mechanic receipts in the owning `mechanics/<slug>/legacy/raw/` route and generic movement evidence in `docs/traces/`.
 - Registry v2 follow-through - use [docs/registry/REGISTRY_V2_NOTES](docs/registry/REGISTRY_V2_NOTES.md) only after schema, validator, generated registry, and prose migration are planned together.
 
 ## Blocked / reanchor

@@ -8,6 +8,11 @@ class DocsMigrationMapTests(unittest.TestCase):
     def test_all_exact_migrations_target_known_districts(self):
         for item in self.c['exact_migrations']:
             d=self.c['districts'][item['district']]; self.assertTrue(item['target'].startswith(d['path']+'/'))
+    def test_external_pattern_routes_are_explicit(self):
+        for item in self.c['pattern_migrations']:
+            d=self.c['districts'][item['district']]
+            if item['target_dir'] != d['path']:
+                self.assertIn('external_owner_route', item)
     def test_no_current_root_allowlist_item_is_exact_moved(self):
         allow=set(self.c['current_root_allowlist']); moved={Path(i['source']).name for i in self.c['exact_migrations']}; self.assertFalse(allow & moved)
 if __name__=='__main__': unittest.main()

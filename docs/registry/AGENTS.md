@@ -11,8 +11,8 @@ This card applies to `docs/registry/` and all descendants unless a nearer `AGENT
 ## Read before editing
 
 Read root `AGENTS.md`, then `docs/AGENTS.md`, then `docs/README.md`. If this district is affected by
-Wave D thematic cleanup, also read `docs/THEMATIC_DISTRICT_PROTOCOL.md` and
-`docs/CURRENT_SURFACE_INDEX.md` when present.
+docs thematic cleanup, also read `docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md` and
+`docs/guardrails/CURRENT_SURFACE_INDEX.md` when present.
 
 ## Boundaries
 

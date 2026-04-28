@@ -11,7 +11,7 @@ def rewrite_links(repo_root:Path,moves:list[dict[str,str]]):
     mapping={m['source']:m.get('link_target',m['target']) for m in moves}
     changed=[]
     for md in sorted(repo_root.rglob('*.md')):
-        if any(part in {'.git','.wave_d_backups','__pycache__'} for part in md.parts): continue
+        if any(part in {'.git','.docs_thematic_backups','__pycache__'} for part in md.parts): continue
         text=md.read_text(encoding='utf-8'); original=text
         for old,new in mapping.items():
             old_name=Path(old).name; new_for_file=rel_link(md,new,repo_root); old_for_file=rel_link(md,old,repo_root)
@@ -22,7 +22,7 @@ def rewrite_links(repo_root:Path,moves:list[dict[str,str]]):
             md.write_text(text,encoding='utf-8'); changed.append(str(md.relative_to(repo_root)))
     return changed
 def apply_moves(repo_root:Path,moves:list[dict[str,str]],backup:bool):
-    backup_root=repo_root/'.wave_d_backups'/datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ'); applied=[]
+    backup_root=repo_root/'.docs_thematic_backups'/datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ'); applied=[]
     for move in moves:
         source=repo_root/move['source']; target=repo_root/move['target']
         if not source.exists(): continue
@@ -36,7 +36,7 @@ def apply_moves(repo_root:Path,moves:list[dict[str,str]],backup:bool):
         else: shutil.move(str(source),str(target)); status='moved'
         applied.append({**move,'status':status})
     links=rewrite_links(repo_root,applied)
-    trace=repo_root/'docs'/'traces'/'WAVE_D_MOVE_MANIFEST.json'; trace.parent.mkdir(parents=True,exist_ok=True)
+    trace=repo_root/'docs'/'traces'/'DOCS_THEMATIC_MOVE_MANIFEST.json'; trace.parent.mkdir(parents=True,exist_ok=True)
     trace.write_text(json.dumps({'schema_version':1,'created_utc':datetime.now(timezone.utc).isoformat(),'moves':applied,'link_update_files':links},indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def main()->int:
     parser=argparse.ArgumentParser(); parser.add_argument('--repo-root',default=str(REPO_ROOT)); parser.add_argument('--apply',action='store_true'); parser.add_argument('--check',action='store_true'); parser.add_argument('--no-backup',action='store_true'); args=parser.parse_args(); repo_root=Path(args.repo_root).resolve()

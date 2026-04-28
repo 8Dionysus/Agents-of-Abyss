@@ -40,10 +40,4 @@ The AGENTS mesh must not claim hidden autonomy, memory sovereignty, live runtime
 
 ## Validation
 
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_generated_freshness.py
-```
+Use `AGENTS.md` in this directory for the current command lane.

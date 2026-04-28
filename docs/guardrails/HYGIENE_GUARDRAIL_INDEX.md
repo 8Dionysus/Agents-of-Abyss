@@ -2,7 +2,7 @@
 
 This index names the guardrails for link and shape hygiene.
 
-The protocol lives in `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`. The machine-facing mirror lives in `generated/link_shape_hygiene.min.json`. The source config lives in `config/link_shape_hygiene.json`.
+The protocol lives in `LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`. The machine-facing mirror lives in `../../generated/link_shape_hygiene.min.json`. The source config lives in `../../config/link_shape_hygiene.json`.
 
 ## Guardrail table
 
@@ -20,12 +20,13 @@ The protocol lives in `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`. The machine-fac
 
 | Surface | Role |
 |---|---|
-| `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md` | human law for link and shape hygiene |
-| `docs/HYGIENE_GUARDRAIL_INDEX.md` | human index for guardrails |
+| `docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md` | human law for link and shape hygiene |
+| `docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md` | human index for guardrails |
 | `config/link_shape_hygiene.json` | source config for validators and generated mirror |
 | `generated/link_shape_hygiene.min.json` | compact machine-facing mirror |
 | `generated/agents_mesh.min.json` | required generated freshness target for AGENTS mesh |
-| `docs/traces/HYGIENE_REPAIR_MANIFEST.json` | optional repair trace written by the apply script |
+| `docs/traces/HYGIENE_REPAIR_MANIFEST.json` | optional repair trace written by the repair helper |
+| `docs/traces/LINK_SHAPE_HYGIENE_APPLY_MANIFEST_2026_04_25.json` | historical apply manifest for the link/shape hygiene package |
 
 ## What counts as success
 
@@ -48,19 +49,6 @@ To add a status vocabulary, add the vocabulary, then add a status check entry th
 
 ## Validation
 
-Run:
-
-```bash
-python scripts/repair_known_link_drifts.py --check
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_status_vocabulary.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_generated_freshness.py
-python scripts/validate_hygiene_suite.py
-python -m pytest -q
-```
+Use `AGENTS.md` in this directory for the current command lane.
 
 A future agent should be able to add a district or generated capsule by changing the config and tests, not by memorizing a private checklist.
