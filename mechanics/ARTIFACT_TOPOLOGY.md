@@ -61,29 +61,23 @@ boundary. Examples:
 - Quest lifecycle schemas, quest projections, quest validators, and quest
   closure checks belong under `mechanics/questbook/`.
 
-## No Root Aliases
+When a mechanic-owned artifact moves, update callers, validators, generated
+indexes, and docs to use the owning path directly; do not add root or flat
+package aliases as convenience copies.
 
-Do not add new root-authored mechanic artifacts. Add them to the owning
-mechanic package and update callers, validators, generated indexes, and docs to
-use that path directly.
-
-For part-based mechanics, do not recreate flat package aliases either. Use
-`mechanics/<slug>/artifact-map.json` as the receipt when old flat paths have
-been moved into part-local homes.
+Package-local `legacy/raw`, seed, and landing receipt districts are allowed
+when they preserve source lineage without becoming alternate active routes.
 
 ## Questbook
 
-Questbook is a mechanic, not a TODO pile. The root `QUESTBOOK.md` stays a compact
-frontier index, and `quests/` stays the public item store. Quest source objects
-live in lane-first lifecycle directories such as `quests/center/triaged/`,
-`quests/agon/triaged/`, and `quests/experience/triaged/`; top-level
-`quests/AOA-Q-*` aliases are intentionally absent. The questbook package owns
-lifecycle, placement, closure, harvest, generated read models, and
-owner-routing rules.
+Questbook is the one intentional root-store exception: `mechanics/questbook/`
+owns quest lifecycle, placement, closure, harvest, generated read models, and
+owner-routing rules, while root `QUESTBOOK.md` stays a compact frontier index
+and `quests/` stays the public item store.
 
-Use quests when an obligation should survive the current diff as a public,
-reviewable game-object for agents. Do not use quests for private scratch work,
-temporary plans, or roadmap duplication.
+Use `quests/` only for public, reviewable obligations that should survive the
+current diff. Do not use it for private scratch work, temporary plans, or
+roadmap duplication.
 
 ## Validation
 

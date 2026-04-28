@@ -183,33 +183,12 @@ notes as substitutes for package-local truth.
 | [recurrence](recurrence/README.md) | [SELF_AGENCY_CONTINUITY](recurrence/docs/SELF_AGENCY_CONTINUITY.md), [COMPONENT_REFRESH_LAW](recurrence/docs/COMPONENT_REFRESH_LAW.md), [RECURRENCE_PRINCIPLE](recurrence/docs/RECURRENCE_PRINCIPLE.md), [PARTS](recurrence/PARTS.md) |
 | [checkpoint](checkpoint/README.md) | [CHECKPOINT_LAW](checkpoint/docs/CHECKPOINT_LAW.md), [CHECKPOINT_OWNER_BOUNDARY](checkpoint/docs/CHECKPOINT_OWNER_BOUNDARY.md), [PARTS](checkpoint/PARTS.md) |
 | [experience](experience/README.md) | [DIRECTION](experience/DIRECTION.md), [PARTS](experience/PARTS.md), [LANDING_LOG](experience/LANDING_LOG.md), [PROVENANCE](experience/PROVENANCE.md), [OWNER_REQUESTS](experience/OWNER_REQUESTS.md) |
-| [agon](agon/README.md) | [DIRECTION](agon/DIRECTION.md), [PARTS](agon/PARTS.md), [LANDING_LOG](agon/LANDING_LOG.md), [PROVENANCE](agon/PROVENANCE.md), [legacy index](agon/legacy/INDEX.md) |
+| [agon](agon/README.md) | [PARTS](agon/PARTS.md), [DIRECTION](agon/DIRECTION.md), [LANDING_LOG](agon/LANDING_LOG.md), [PROVENANCE](agon/PROVENANCE.md), [legacy index](agon/legacy/INDEX.md) |
 | [antifragility](antifragility/README.md) | [ANTIFRAGILITY](antifragility/docs/ANTIFRAGILITY.md), [VIA_NEGATIVA](antifragility/docs/VIA_NEGATIVA.md), [ANTI_AUTHORITY_RULES](antifragility/docs/ANTI_AUTHORITY_RULES.md), [ONE_IN_ONE_OUT](antifragility/docs/ONE_IN_ONE_OUT.md), [FRAGILITY_BLACKLIST](../FRAGILITY_BLACKLIST.md), [DELETION_CANDIDATES.json](../docs/audits/DELETION_CANDIDATES.json) |
 | [questbook](questbook/README.md) | [model-spine](questbook/parts/model-spine/README.md), [source-contract](questbook/parts/source-contract/README.md), [relation-shape](questbook/parts/relation-shape/README.md), [quests](../quests/) |
 | [rpg](rpg/README.md) | [source-boundary](rpg/parts/source-boundary/README.md), [vocabulary-overlay](rpg/parts/vocabulary-overlay/README.md), [quest-campaign](rpg/parts/quest-campaign/README.md), [USAGE](rpg/USAGE.md) |
 | [boundary-bridge](boundary-bridge/README.md) | [ToS Support](boundary-bridge/parts/tos-support/README.md), [COUNTERPART_BRIDGE](boundary-bridge/docs/COUNTERPART_BRIDGE.md), [WITNESS_COMPOST](boundary-bridge/docs/WITNESS_COMPOST.md) |
 | [release-support](release-support/README.md) | [PUBLIC_SUPPORT_POSTURE](release-support/docs/PUBLIC_SUPPORT_POSTURE.md), [DIRECTION_SURFACES](release-support/docs/DIRECTION_SURFACES.md), [FEDERATION_RELEASE_PROTOCOL](release-support/docs/FEDERATION_RELEASE_PROTOCOL.md), [RELEASING](release-support/docs/RELEASING.md) |
-
-## Agon Quick Map
-
-Agon has many active parts, so this atlas keeps a name index for route
-discovery only. Use [Agon PARTS](agon/PARTS.md) and part-local files for
-meaning.
-
-| Part | Route |
-|---|---|
-| Imposition Readiness | [imposition-readiness](agon/parts/imposition-readiness/README.md) |
-| Lawful Move Grammar | [lawful-move-grammar](agon/parts/lawful-move-grammar/README.md) |
-| Owner Binding | [owner-binding](agon/parts/owner-binding/README.md) |
-| Gate Routing | [gate-routing](agon/parts/gate-routing/README.md) |
-| Trial Handoff | [trial-handoff](agon/parts/trial-handoff/README.md) |
-| Recurrence Adapter | [recurrence-adapter](agon/parts/recurrence-adapter/README.md) |
-| Packet Arena | [packet-arena](agon/parts/packet-arena/README.md) |
-| Duel Kernel | [duel-kernel](agon/parts/duel-kernel/README.md) |
-| Verdict Retention Rank | [verdict-retention-rank](agon/parts/verdict-retention-rank/README.md) |
-| Epistemic KAG | [epistemic-kag](agon/parts/epistemic-kag/README.md) |
-| Sophian Threshold | [sophian-threshold](agon/parts/sophian-threshold/README.md) |
-| Compatibility Bridges | [compatibility-bridges](agon/parts/compatibility-bridges/README.md) |
 
 ## Artifact Placement
 

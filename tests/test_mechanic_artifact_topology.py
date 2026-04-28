@@ -10,6 +10,14 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 class MechanicArtifactTopologyTests(unittest.TestCase):
+    def test_artifact_topology_keeps_alias_rule_inside_placement_law(self) -> None:
+        topology = (REPO_ROOT / "mechanics" / "ARTIFACT_TOPOLOGY.md").read_text()
+        self.assertNotIn("## No Root Aliases", topology)
+        self.assertIn("do not add root or flat", topology)
+        self.assertIn("Package-local `legacy/raw`, seed, and landing receipt districts are allowed", topology)
+        self.assertIn("without becoming alternate active routes", topology)
+        self.assertIn("Questbook is the one intentional root-store exception", topology)
+
     def test_validator_accepts_current_topology(self) -> None:
         result = subprocess.run(
             [sys.executable, "scripts/validate_mechanic_artifact_topology.py"],
