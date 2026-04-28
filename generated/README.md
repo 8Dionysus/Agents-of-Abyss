@@ -17,8 +17,8 @@ Root `generated/` contains only root-owned compact mirrors and indexes.
 | `mechanic_card_index.min.json` | compact reflection of mechanic package entry cards |
 | `owner_request_queue.min.json` | compact center-side owner request queue |
 | `docs_thematic_index.min.json` | compact map of docs thematic districts |
-| `link_shape_hygiene.min.json` | compact mirror of Wave E hygiene guardrails |
-| `agents_mesh.min.json` | compact mirror of Wave F AGENTS-card coverage |
+| `link_shape_hygiene.min.json` | compact mirror of link and shape hygiene guardrails |
+| `agents_mesh.min.json` | compact mirror of AGENTS-card coverage |
 | mechanic generated companions | generated companions under `mechanics/<slug>/generated/` |
 
 ## Rules

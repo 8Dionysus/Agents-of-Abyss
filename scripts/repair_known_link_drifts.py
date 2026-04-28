@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check or apply exact known link-drift repairs from Wave E config."""
+"""Check or apply exact known link-drift repairs from hygiene config."""
 from __future__ import annotations
 
 import argparse
@@ -48,12 +48,12 @@ def apply_or_check(root: Path, *, apply: bool, write_manifest: bool) -> tuple[li
             problems.append(f"{rel}: stale link fragment remains for {entry.get('id')}: {old} -> {new}")
         manifest.append(record)
     if write_manifest:
-        trace_path = root / "docs/traces/WAVE_E_HYGIENE_REPAIR_MANIFEST.json"
+        trace_path = root / "docs/traces/HYGIENE_REPAIR_MANIFEST.json"
         trace_path.parent.mkdir(parents=True, exist_ok=True)
         trace_path.write_text(
             json.dumps(
                 {
-                    "schema": "aoa.wave_e_hygiene_repair_manifest.v1",
+                    "schema": "aoa.link_shape_hygiene_repair_manifest.v1",
                     "generated_at": datetime.now(timezone.utc).isoformat(),
                     "repairs": manifest,
                 },

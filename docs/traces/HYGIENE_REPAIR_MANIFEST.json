@@ -66,5 +66,5 @@
       "status": "applied"
     }
   ],
-  "schema": "aoa.wave_e_hygiene_repair_manifest.v1"
+  "schema": "aoa.link_shape_hygiene_repair_manifest.v1"
 }

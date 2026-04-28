@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the Wave E hygiene suite in a stable order."""
+"""Run the link and shape hygiene suite in a stable order."""
 from __future__ import annotations
 
 import subprocess
@@ -29,11 +29,11 @@ def main() -> int:
         if result.returncode != 0:
             failures.append(" ".join(cmd))
     if failures:
-        print("Wave E hygiene suite failed:")
+        print("Link and shape hygiene suite failed:")
         for failure in failures:
             print(f" - {failure}")
         return 1
-    print("Wave E hygiene suite passed.")
+    print("Link and shape hygiene suite passed.")
     return 0
 
 

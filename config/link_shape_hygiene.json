@@ -1,6 +1,5 @@
 {
   "schema": "aoa.link_shape_hygiene.v1",
-  "wave": "E",
   "purpose": "Guard local links, Markdown shape, status vocabularies, generated freshness, and known link-drift repairs without becoming a source-of-truth layer.",
   "protocol_ref": "docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
   "index_ref": "docs/HYGIENE_GUARDRAIL_INDEX.md",
@@ -19,7 +18,6 @@
       "venv/**",
       "node_modules/**",
       "__pycache__/**",
-      ".wave_*_backups/**",
       "docs/traces/conflicts/**"
     ],
     "ignore_schemes": [
@@ -718,6 +716,7 @@
     }
   ],
   "validation_commands": [
+    "python scripts/validate_config_registry.py",
     "python scripts/repair_known_link_drifts.py --check",
     "python scripts/validate_links.py",
     "python scripts/validate_markdown_shape.py",

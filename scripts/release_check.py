@@ -14,6 +14,7 @@ COMMANDS = [
     ("validate docs migration map", [sys.executable, "scripts/validate_docs_migration_map.py"]),
     ("check docs thematic index", [sys.executable, "scripts/build_docs_thematic_index.py", "--check"]),
     ("validate docs thematic index", [sys.executable, "scripts/validate_docs_thematic_index.py"]),
+    ("validate config registry", [sys.executable, "scripts/validate_config_registry.py"]),
     ("check known link repairs", [sys.executable, "scripts/repair_known_link_drifts.py", "--check"]),
     ("validate local markdown links", [sys.executable, "scripts/validate_links.py"]),
     ("validate markdown shape", [sys.executable, "scripts/validate_markdown_shape.py"]),

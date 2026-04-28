@@ -1,6 +1,6 @@
 # Hygiene Guardrail Index
 
-This index names the Wave E guardrails for link and shape hygiene.
+This index names the guardrails for link and shape hygiene.
 
 The protocol lives in `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`. The machine-facing mirror lives in `generated/link_shape_hygiene.min.json`. The source config lives in `config/link_shape_hygiene.json`.
 
@@ -20,16 +20,16 @@ The protocol lives in `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`. The machine-fac
 
 | Surface | Role |
 |---|---|
-| `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md` | human law for Wave E hygiene |
+| `docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md` | human law for link and shape hygiene |
 | `docs/HYGIENE_GUARDRAIL_INDEX.md` | human index for guardrails |
 | `config/link_shape_hygiene.json` | source config for validators and generated mirror |
 | `generated/link_shape_hygiene.min.json` | compact machine-facing mirror |
-| `generated/agents_mesh.min.json` | required generated freshness target for Wave F AGENTS mesh |
-| `docs/traces/WAVE_E_HYGIENE_REPAIR_MANIFEST.json` | optional repair trace written by the apply script |
+| `generated/agents_mesh.min.json` | required generated freshness target for AGENTS mesh |
+| `docs/traces/HYGIENE_REPAIR_MANIFEST.json` | optional repair trace written by the apply script |
 
 ## What counts as success
 
-Wave E is successful when:
+The hygiene guardrail is successful when:
 
 1. no known stale link fragment remains;
 2. local Markdown links resolve to existing repository paths;
