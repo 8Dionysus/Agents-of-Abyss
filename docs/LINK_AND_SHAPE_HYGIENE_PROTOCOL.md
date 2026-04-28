@@ -1,12 +1,12 @@
 # Link and Shape Hygiene Protocol
 
-This protocol is the Wave E guardrail for local links, Markdown shape, status vocabulary, generated freshness, and known link-drift repair inside `Agents-of-Abyss`.
+This protocol is the guardrail for local links, Markdown shape, status vocabulary, generated freshness, and known link-drift repair inside `Agents-of-Abyss`.
 
 It does not author constitutional meaning. It keeps surfaces reachable, readable, and mechanically checkable so source-owned meaning can keep moving without losing its signs.
 
 ## Scope
 
-Wave E owns hygiene checks for these failure modes:
+This protocol owns hygiene checks for these failure modes:
 
 - local Markdown links that point to files which no longer exist;
 - old flat links that should now point into a mechanic package or thematic district;
@@ -16,7 +16,7 @@ Wave E owns hygiene checks for these failure modes:
 - generated capsules that are hand-edited or stale;
 - known link repairs that remain tribal knowledge instead of becoming a checkable rule.
 
-Wave E does not decide whether a doctrine is true. It only checks whether the map, shape, and generated mirrors still let an agent reach the stronger source.
+This protocol does not decide whether a doctrine is true. It only checks whether the map, shape, and generated mirrors still let an agent reach the stronger source.
 
 ## Ownership boundary
 
@@ -83,7 +83,7 @@ The shape target list lives in `config/link_shape_hygiene.json`. Future files sh
 
 Status words are small laws. They should not mutate casually.
 
-Wave E validates status strings from configured JSON files against named vocabularies. This keeps `planted`, `landed`, `requested`, `operational`, and related words from becoming ornamental fog.
+The hygiene guardrail validates status strings from configured JSON files against named vocabularies. This keeps `planted`, `landed`, `requested`, `operational`, and related words from becoming ornamental fog.
 
 Adding a new status requires updating the vocabulary config and explaining why the existing ladder could not express the state.
 
@@ -93,7 +93,7 @@ Generated capsules may accelerate agent entry. They must not author meaning.
 
 A generated surface is fresh only when its builder can reproduce it in `--check` mode. If a builder is absent and the surface is optional, the freshness check skips it. If the surface is required, absence fails.
 
-The Wave E generated capsule is:
+The generated hygiene capsule is:
 
 ```text
 generated/link_shape_hygiene.min.json

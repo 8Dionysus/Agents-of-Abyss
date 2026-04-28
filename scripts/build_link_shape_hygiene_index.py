@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the compact Wave E hygiene index."""
+"""Build the compact link and shape hygiene index."""
 from __future__ import annotations
 
 import argparse
@@ -53,7 +53,6 @@ def build(root: Path) -> dict[str, object]:
     ]
     return {
         "schema": "aoa.link_shape_hygiene_index.v1",
-        "wave": "E",
         "purpose": config.get("purpose"),
         "protocol_ref": config.get("protocol_ref"),
         "index_ref": config.get("index_ref"),

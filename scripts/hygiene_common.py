@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Shared helpers for Wave E link and shape hygiene validators."""
+"""Shared helpers for link and shape hygiene validators."""
 from __future__ import annotations
 
 import fnmatch
@@ -18,7 +18,6 @@ DEFAULT_EXCLUDE_GLOBS = [
     "venv/**",
     "node_modules/**",
     "__pycache__/**",
-    ".wave_*_backups/**",
 ]
 
 

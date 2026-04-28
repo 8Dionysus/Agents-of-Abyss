@@ -41,11 +41,11 @@ Current scripts include:
 - `hygiene_common.py`, `repair_known_link_drifts.py`, `validate_links.py`,
   `validate_status_vocabulary.py`, `build_link_shape_hygiene_index.py`,
   `validate_link_shape_hygiene_index.py`, `validate_generated_freshness.py`,
-  and `validate_hygiene_suite.py` for Wave E link, Markdown shape, status
+  and `validate_hygiene_suite.py` for link, Markdown shape, status
   vocabulary, generated freshness, and known-repair guardrails
 - `agents_mesh_common.py`, `validate_agents_md_shape.py`,
   `validate_agents_mesh.py`, `build_agents_mesh_index.py`, and
-  `validate_agents_mesh_index.py` for Wave F AGENTS-card coverage, shape, and
+  `validate_agents_mesh_index.py` for AGENTS-card coverage, shape, and
   compact mesh checks
 - `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, and
   `validate_mechanic_readme_cards.py` for the mechanic card contract
@@ -65,6 +65,8 @@ Current scripts include:
 - `build_owner_request_queue.py`, `validate_owner_request_queue.py`,
   `validate_generated_owner_request_queue.py`, and
   `validate_owner_request_docs.py` for center-side owner request packets
+- `validate_config_registry.py` for root config inventory, consumer, generated
+  mirror, and add-change contract checks
 - `validate_candidate_lineage_contract.py` for the narrow cross-repo Growth Refinery example-chain witness
 - `validate_wave4_kernel_automation.py` for the reviewed wave 4 next-kernel and automation follow-through seam across sibling repos
 - `agon_imposition_common.py` for the canonical Agon Wave 0 capsule payload,
@@ -129,6 +131,7 @@ python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
+python scripts/validate_config_registry.py
 python scripts/repair_known_link_drifts.py --check
 python scripts/validate_links.py
 python scripts/validate_markdown_shape.py

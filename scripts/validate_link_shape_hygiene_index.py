@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the compact Wave E hygiene index."""
+"""Validate the compact link and shape hygiene index."""
 from __future__ import annotations
 
 import argparse
@@ -12,7 +12,6 @@ from hygiene_common import GENERATED_PATH, load_json  # noqa: E402
 
 REQUIRED_KEYS = {
     "schema",
-    "wave",
     "purpose",
     "protocol_ref",
     "index_ref",
@@ -35,8 +34,6 @@ def validate(root: Path) -> list[str]:
         problems.append(f"{GENERATED_PATH}: missing key {key}")
     if data.get("schema") != "aoa.link_shape_hygiene_index.v1":
         problems.append(f"{GENERATED_PATH}: unexpected schema {data.get('schema')!r}")
-    if data.get("wave") != "E":
-        problems.append(f"{GENERATED_PATH}: unexpected wave {data.get('wave')!r}")
     guardrails = data.get("guardrails")
     if not isinstance(guardrails, list) or not guardrails:
         problems.append(f"{GENERATED_PATH}: guardrails must be a non-empty list")

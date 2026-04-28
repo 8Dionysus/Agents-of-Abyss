@@ -11,6 +11,7 @@ only root-owned contract tests.
 
 - a generated surface changes
 - a schema contract changes
+- a root config registry or config consumer contract changes
 - a validator changes
 - a link, Markdown shape, status vocabulary, or generated freshness guardrail changes
 - an AGENTS-card mesh, local card, or mesh index changes
@@ -42,13 +43,14 @@ For Experience active-part or provenance-bridge changes, run:
 python mechanics/experience/scripts/validate_experience_distillation.py
 ```
 
-For Wave E hygiene, run:
+For link and shape hygiene changes, run:
 
 ```bash
+python scripts/validate_config_registry.py
 python scripts/validate_hygiene_suite.py
 ```
 
-For Wave F AGENTS mesh changes, run:
+For AGENTS mesh changes, run:
 
 ```bash
 python scripts/validate_agents_md_shape.py

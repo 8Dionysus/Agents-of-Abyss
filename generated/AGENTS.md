@@ -41,10 +41,10 @@ center-side owner request packets.
 `generated/docs_thematic_index.min.json` is the compact machine-facing map of
 docs thematic districts.
 `generated/link_shape_hygiene.min.json` is the compact machine-facing mirror
-for Wave E link, Markdown shape, status vocabulary, and generated freshness
+for link, Markdown shape, status vocabulary, and generated freshness
 guardrails.
 `generated/agents_mesh.min.json` is the compact machine-facing mirror for the
-Wave F AGENTS-card mesh.
+AGENTS-card mesh.
 `mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json` is the tracked Wave 0 readiness capsule for the center-owned Agon imposition gate.
 `mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json` is the tracked Wave III lawful
 move registry for the center-owned pre-protocol legal vocabulary.

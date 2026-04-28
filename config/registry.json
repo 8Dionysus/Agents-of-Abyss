@@ -1,0 +1,109 @@
+{
+  "schema_version": "aoa_config_registry_v1",
+  "purpose": "Map root configuration sources to their protocols, consumers, generated mirrors, and validation routes without turning config into doctrine or runtime state.",
+  "owner": "Agents-of-Abyss",
+  "district_ref": "config/README.md",
+  "agents_ref": "config/AGENTS.md",
+  "validation_commands": [
+    "python scripts/validate_config_registry.py",
+    "python scripts/validate_hygiene_suite.py",
+    "python scripts/validate_agents_md_shape.py",
+    "python scripts/validate_agents_mesh.py",
+    "python scripts/build_agents_mesh_index.py --check",
+    "python scripts/validate_agents_mesh_index.py",
+    "python scripts/validate_generated_freshness.py",
+    "python scripts/release_check.py"
+  ],
+  "configs": [
+    {
+      "id": "config-registry",
+      "path": "config/registry.json",
+      "status": "active",
+      "owner": "Agents-of-Abyss",
+      "role": "root config district registry and add-change checklist",
+      "source_ref": "config/README.md",
+      "generated_refs": [],
+      "consumers": [
+        "scripts/validate_config_registry.py",
+        "tests/test_config_registry.py"
+      ],
+      "validation_commands": [
+        "python scripts/validate_config_registry.py",
+        "python -m pytest -q tests/test_config_registry.py"
+      ],
+      "must_not_claim": [
+        "runtime configuration authority",
+        "secret storage",
+        "mechanic-owned seed config ownership"
+      ]
+    },
+    {
+      "id": "link-shape-hygiene",
+      "path": "config/link_shape_hygiene.json",
+      "status": "active",
+      "owner": "Agents-of-Abyss",
+      "role": "source config for local link repair, Markdown shape, status vocabulary, and generated freshness guardrails",
+      "source_ref": "docs/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md",
+      "index_ref": "docs/HYGIENE_GUARDRAIL_INDEX.md",
+      "generated_refs": [
+        "generated/link_shape_hygiene.min.json"
+      ],
+      "consumers": [
+        "scripts/hygiene_common.py",
+        "scripts/repair_known_link_drifts.py",
+        "scripts/validate_links.py",
+        "scripts/validate_markdown_shape.py",
+        "scripts/validate_status_vocabulary.py",
+        "scripts/build_link_shape_hygiene_index.py",
+        "scripts/validate_link_shape_hygiene_index.py",
+        "scripts/validate_generated_freshness.py",
+        "scripts/validate_hygiene_suite.py"
+      ],
+      "validation_commands": [
+        "python scripts/repair_known_link_drifts.py --check",
+        "python scripts/validate_links.py",
+        "python scripts/validate_markdown_shape.py",
+        "python scripts/validate_status_vocabulary.py",
+        "python scripts/build_link_shape_hygiene_index.py --check",
+        "python scripts/validate_link_shape_hygiene_index.py",
+        "python scripts/validate_generated_freshness.py",
+        "python scripts/validate_hygiene_suite.py"
+      ],
+      "must_not_claim": [
+        "authored doctrine",
+        "owner-local mechanic truth",
+        "runtime configuration authority"
+      ]
+    },
+    {
+      "id": "agents-mesh",
+      "path": "config/agents_mesh.json",
+      "status": "active",
+      "owner": "Agents-of-Abyss",
+      "role": "source config for required AGENTS-card coverage, shape headings, exemptions, and compact mesh metadata",
+      "source_ref": "docs/AGENTS_MESH_PROTOCOL.md",
+      "index_ref": "docs/AGENTS_MESH_INDEX.md",
+      "generated_refs": [
+        "generated/agents_mesh.min.json"
+      ],
+      "consumers": [
+        "scripts/agents_mesh_common.py",
+        "scripts/validate_agents_md_shape.py",
+        "scripts/validate_agents_mesh.py",
+        "scripts/build_agents_mesh_index.py",
+        "scripts/validate_agents_mesh_index.py"
+      ],
+      "validation_commands": [
+        "python scripts/validate_agents_md_shape.py",
+        "python scripts/validate_agents_mesh.py",
+        "python scripts/build_agents_mesh_index.py --check",
+        "python scripts/validate_agents_mesh_index.py"
+      ],
+      "must_not_claim": [
+        "AGENTS card authorship",
+        "constitutional override authority",
+        "owner-local implementation truth"
+      ]
+    }
+  ]
+}

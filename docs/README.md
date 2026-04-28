@@ -111,7 +111,7 @@ python -m pytest -q
 | [`THEMATIC_DISTRICT_PROTOCOL`](THEMATIC_DISTRICT_PROTOCOL.md) | how old, historical, evidential, and transitional docs move into districts |
 | [`CURRENT_SURFACE_INDEX`](CURRENT_SURFACE_INDEX.md) | thin index of current docs root surfaces and districts |
 | [`LINK_AND_SHAPE_HYGIENE_PROTOCOL`](LINK_AND_SHAPE_HYGIENE_PROTOCOL.md) | how local links, Markdown shape, status vocabularies, and generated freshness stay checkable |
-| [`HYGIENE_GUARDRAIL_INDEX`](HYGIENE_GUARDRAIL_INDEX.md) | thin index of Wave E hygiene scripts, config, generated mirror, and traces |
+| [`HYGIENE_GUARDRAIL_INDEX`](HYGIENE_GUARDRAIL_INDEX.md) | thin index of hygiene scripts, config, generated mirror, and traces |
 | [`MECHANICS`](../mechanics/README.md) | the branch atlas for processes and engineering philosophy |
 
 
