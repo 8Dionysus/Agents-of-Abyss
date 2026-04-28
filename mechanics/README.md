@@ -177,18 +177,18 @@ notes as substitutes for package-local truth.
 
 | Package | Active anchors |
 |---|---|
-| `method-growth` | [ROOTLINE](method-growth/docs/ROOTLINE.md), [METHOD_SPINE](method-growth/docs/METHOD_SPINE.md), [REVIEWABLE_GROWTH_REFINERY](method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md), [CANDIDATE_LINEAGE_CROSSWALK](method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md), `mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md` |
-| `distillation` | [DISTILLATION_LAW](distillation/docs/DISTILLATION_LAW.md), [PARTS](distillation/PARTS.md), [PROVENANCE](distillation/PROVENANCE.md) |
-| `growth-cycle` | [GROWTH_CYCLE_LAW](growth-cycle/docs/GROWTH_CYCLE_LAW.md), [PARTS](growth-cycle/PARTS.md), [PROVENANCE](growth-cycle/PROVENANCE.md) |
-| `recurrence` | `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md`, `mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md`, [RECURRENCE_PRINCIPLE](recurrence/docs/RECURRENCE_PRINCIPLE.md), [PARTS](recurrence/PARTS.md) |
-| `checkpoint` | [CHECKPOINT_LAW](checkpoint/docs/CHECKPOINT_LAW.md), [CHECKPOINT_OWNER_BOUNDARY](checkpoint/docs/CHECKPOINT_OWNER_BOUNDARY.md), [PARTS](checkpoint/PARTS.md) |
-| `experience` | [DIRECTION](experience/DIRECTION.md), [PARTS](experience/PARTS.md), [LANDING_LOG](experience/LANDING_LOG.md), [PROVENANCE](experience/PROVENANCE.md), [OWNER_REQUESTS](experience/OWNER_REQUESTS.md) |
-| `agon` | [DIRECTION](agon/DIRECTION.md), [PARTS](agon/PARTS.md), [LANDING_LOG](agon/LANDING_LOG.md), [agon/PROVENANCE.md](agon/PROVENANCE.md), [agon/legacy/INDEX.md](agon/legacy/INDEX.md) |
-| `antifragility` | [ANTIFRAGILITY](antifragility/docs/ANTIFRAGILITY.md), [VIA_NEGATIVA](antifragility/docs/VIA_NEGATIVA.md), [ANTI_AUTHORITY_RULES](antifragility/docs/ANTI_AUTHORITY_RULES.md), [ONE_IN_ONE_OUT](antifragility/docs/ONE_IN_ONE_OUT.md), [FRAGILITY_BLACKLIST](../FRAGILITY_BLACKLIST.md), [DELETION_CANDIDATES.json](../docs/audits/DELETION_CANDIDATES.json) |
-| `questbook` | [model-spine](questbook/parts/model-spine/README.md), [source-contract](questbook/parts/source-contract/README.md), [relation-shape](questbook/parts/relation-shape/README.md), [`quests/`](../quests/) |
-| `rpg` | [source-boundary](rpg/parts/source-boundary/README.md), [vocabulary-overlay](rpg/parts/vocabulary-overlay/README.md), [quest-campaign](rpg/parts/quest-campaign/README.md), [USAGE](rpg/USAGE.md) |
-| `boundary-bridge` | [ToS Support](boundary-bridge/parts/tos-support/README.md), [COUNTERPART_BRIDGE](boundary-bridge/docs/COUNTERPART_BRIDGE.md), [WITNESS_COMPOST](boundary-bridge/docs/WITNESS_COMPOST.md) |
-| `release-support` | [PUBLIC_SUPPORT_POSTURE](release-support/docs/PUBLIC_SUPPORT_POSTURE.md), [DIRECTION_SURFACES](release-support/docs/DIRECTION_SURFACES.md), [FEDERATION_RELEASE_PROTOCOL](release-support/docs/FEDERATION_RELEASE_PROTOCOL.md), [RELEASING](release-support/docs/RELEASING.md) |
+| [method-growth](method-growth/README.md) | [ROOTLINE](method-growth/docs/ROOTLINE.md), [METHOD_SPINE](method-growth/docs/METHOD_SPINE.md), [REVIEWABLE_GROWTH_REFINERY](method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md), [CANDIDATE_LINEAGE_CROSSWALK](method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md), [OWNER_LANDING_AND_PRUNING](method-growth/docs/OWNER_LANDING_AND_PRUNING.md) |
+| [distillation](distillation/README.md) | [DISTILLATION_LAW](distillation/docs/DISTILLATION_LAW.md), [PARTS](distillation/PARTS.md), [PROVENANCE](distillation/PROVENANCE.md) |
+| [growth-cycle](growth-cycle/README.md) | [GROWTH_CYCLE_LAW](growth-cycle/docs/GROWTH_CYCLE_LAW.md), [PARTS](growth-cycle/PARTS.md), [PROVENANCE](growth-cycle/PROVENANCE.md) |
+| [recurrence](recurrence/README.md) | [SELF_AGENCY_CONTINUITY](recurrence/docs/SELF_AGENCY_CONTINUITY.md), [COMPONENT_REFRESH_LAW](recurrence/docs/COMPONENT_REFRESH_LAW.md), [RECURRENCE_PRINCIPLE](recurrence/docs/RECURRENCE_PRINCIPLE.md), [PARTS](recurrence/PARTS.md) |
+| [checkpoint](checkpoint/README.md) | [CHECKPOINT_LAW](checkpoint/docs/CHECKPOINT_LAW.md), [CHECKPOINT_OWNER_BOUNDARY](checkpoint/docs/CHECKPOINT_OWNER_BOUNDARY.md), [PARTS](checkpoint/PARTS.md) |
+| [experience](experience/README.md) | [DIRECTION](experience/DIRECTION.md), [PARTS](experience/PARTS.md), [LANDING_LOG](experience/LANDING_LOG.md), [PROVENANCE](experience/PROVENANCE.md), [OWNER_REQUESTS](experience/OWNER_REQUESTS.md) |
+| [agon](agon/README.md) | [DIRECTION](agon/DIRECTION.md), [PARTS](agon/PARTS.md), [LANDING_LOG](agon/LANDING_LOG.md), [PROVENANCE](agon/PROVENANCE.md), [legacy index](agon/legacy/INDEX.md) |
+| [antifragility](antifragility/README.md) | [ANTIFRAGILITY](antifragility/docs/ANTIFRAGILITY.md), [VIA_NEGATIVA](antifragility/docs/VIA_NEGATIVA.md), [ANTI_AUTHORITY_RULES](antifragility/docs/ANTI_AUTHORITY_RULES.md), [ONE_IN_ONE_OUT](antifragility/docs/ONE_IN_ONE_OUT.md), [FRAGILITY_BLACKLIST](../FRAGILITY_BLACKLIST.md), [DELETION_CANDIDATES.json](../docs/audits/DELETION_CANDIDATES.json) |
+| [questbook](questbook/README.md) | [model-spine](questbook/parts/model-spine/README.md), [source-contract](questbook/parts/source-contract/README.md), [relation-shape](questbook/parts/relation-shape/README.md), [quests](../quests/) |
+| [rpg](rpg/README.md) | [source-boundary](rpg/parts/source-boundary/README.md), [vocabulary-overlay](rpg/parts/vocabulary-overlay/README.md), [quest-campaign](rpg/parts/quest-campaign/README.md), [USAGE](rpg/USAGE.md) |
+| [boundary-bridge](boundary-bridge/README.md) | [ToS Support](boundary-bridge/parts/tos-support/README.md), [COUNTERPART_BRIDGE](boundary-bridge/docs/COUNTERPART_BRIDGE.md), [WITNESS_COMPOST](boundary-bridge/docs/WITNESS_COMPOST.md) |
+| [release-support](release-support/README.md) | [PUBLIC_SUPPORT_POSTURE](release-support/docs/PUBLIC_SUPPORT_POSTURE.md), [DIRECTION_SURFACES](release-support/docs/DIRECTION_SURFACES.md), [FEDERATION_RELEASE_PROTOCOL](release-support/docs/FEDERATION_RELEASE_PROTOCOL.md), [RELEASING](release-support/docs/RELEASING.md) |
 
 ## Agon Quick Map
 
