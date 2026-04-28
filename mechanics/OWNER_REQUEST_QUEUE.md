@@ -6,6 +6,10 @@ The queue does not make mechanics operational. It prevents the center from prete
 
 Source data lives in [`owner-request-queue.json`](owner-request-queue.json). The compact machine companion is [`generated/owner_request_queue.min.json`](../generated/owner_request_queue.min.json).
 
+The vocabulary and advancement rules live in
+[`OWNER_REQUEST_PROTOCOL.md`](OWNER_REQUEST_PROTOCOL.md). This file keeps the
+human index readable.
+
 ## Queue grammar
 
 A request says:
@@ -18,15 +22,10 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 
 ## Request status vocabulary
 
-| Status | Meaning |
-|---|---|
-| `queued` | The center has identified an owner-local slice, but no full request packet is ready yet. |
-| `requested` | A center-side request packet exists and may be handed to the owner repository; this is not owner acceptance. |
-| `accepted` | The owner repository has accepted scope in an owner-local issue, document, branch, or equivalent receipt. |
-| `landed` | The owner repository has landed the requested surface and the required proof or receipt is linked. |
-| `blocked` | The request cannot advance until an explicit blocker is resolved. |
-| `superseded` | The request has been replaced by another request ID and must point to that successor. |
-| `retired` | The request is intentionally kept as historical context and must not be treated as active. |
+The canonical vocabulary is defined in
+[`OWNER_REQUEST_PROTOCOL.md#request-status-vocabulary`](OWNER_REQUEST_PROTOCOL.md#request-status-vocabulary).
+Do not redefine it here. If a status meaning changes, update the protocol, the
+source JSON, validators, generated queue, and package request docs together.
 
 ## How agents use the queue
 
