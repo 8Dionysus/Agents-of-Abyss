@@ -48,6 +48,7 @@ QUEST_LANES = (
     "questbook",
     "antifragility",
     "method-growth",
+    "distillation",
     "release-support",
     "boundary-bridge",
 )
@@ -61,6 +62,7 @@ ID_PREFIX_LANES = {
     "AOA-Q-QUESTBOOK-": "questbook",
     "AOA-Q-ANTIFRAGILITY-": "antifragility",
     "AOA-Q-METHOD-": "method-growth",
+    "AOA-Q-DISTILLATION-": "distillation",
     "AOA-Q-RELEASE-": "release-support",
     "AOA-Q-BRIDGE-": "boundary-bridge",
     "AOA-Q-TOS-": "boundary-bridge",

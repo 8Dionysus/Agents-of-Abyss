@@ -12,6 +12,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MECHANIC_SLUGS = (
     "method-growth",
+    "distillation",
     "recurrence",
     "checkpoint",
     "experience",
@@ -75,6 +76,10 @@ METHOD_GROWTH_PREFIXES = (
     "validate_wave4_kernel_automation",
     "test_validate_wave4_kernel_automation",
 )
+DISTILLATION_PREFIXES = (
+    "validate_distillation",
+    "test_distillation",
+)
 RECURRENCE_PREFIXES = (
     "validate_recurrence",
     "test_recurrence",
@@ -137,6 +142,8 @@ def mechanic_for_name(name: str) -> str | None:
         return "experience"
     if name.startswith(METHOD_GROWTH_PREFIXES):
         return "method-growth"
+    if name.startswith(DISTILLATION_PREFIXES):
+        return "distillation"
     if name.startswith(RECURRENCE_PREFIXES):
         return "recurrence"
     if name.startswith(QUESTBOOK_PREFIXES):

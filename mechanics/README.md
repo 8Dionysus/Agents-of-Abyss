@@ -121,6 +121,7 @@ A request packet is not owner acceptance. Owner repositories land operational tr
 | Constitutional polis | What does the center own, and what must stay outside it? | landed center law | [CHARTER](../CHARTER.md), [ECOSYSTEM_MAP](../ECOSYSTEM_MAP.md), [FEDERATION_RULES](../docs/FEDERATION_RULES.md), [ROOT_SURFACE_LAW](../docs/ROOT_SURFACE_LAW.md) | layer-owned truth or root-surface inflation |
 | Layer ownership | Which repository owns this object class? | landed route map | [LAYERS](../docs/LAYERS.md), [REPO_ROLES](../docs/REPO_ROLES.md) | convenience ownership transfer |
 | Method and growth refinery | How does repeated work move from donor or checkpoint to candidate, seed, owner landing, proof, method, memory, or derived summary? | active center route package | [Method-growth](method-growth/README.md), [PARTS](method-growth/PARTS.md), [OWNER_MAP](method-growth/OWNER_MAP.md) | center-owned scenario canon or final object truth |
+| Distillation | How does heavy source material become active form without losing provenance or inflating authority? | landed center route package | [Distillation](distillation/README.md), [PARTS](distillation/PARTS.md), [OWNER_MAP](distillation/OWNER_MAP.md) | summary-as-proof, memory canon, runtime activation, owner acceptance, or ToS canon |
 | Recurrence, return, continuity | How does AoA recover when a route loses its axis and must re-enter through a valid anchor? | bounded return law | [Recurrence](recurrence/README.md), [PARTS](recurrence/PARTS.md), [OWNER_MAP](recurrence/OWNER_MAP.md) | ambient continuity, hidden memory sovereignty, or automatic recursor spawn |
 | Checkpoint | How does intermediate state preserve, review, return, bridge, export, or hand off without stealing owner truth? | landed center law | [Checkpoint](checkpoint/README.md), [PARTS](checkpoint/PARTS.md), [OWNER_MAP](checkpoint/OWNER_MAP.md) | checkpoint implementation authority or owner acceptance |
 | Experience | Which staged experience contract, office/service posture, seed intake, duel pressure, continuity loom, or runtime boundary is relevant? | planted center contracts through v2.0 | [Experience](experience/README.md) | live workspace runtime or owner-local activation |
@@ -195,6 +196,45 @@ Owner split:
 | Recurring method | `aoa-playbooks` |
 | Derived summary | `aoa-stats` |
 | Bounded memory and lessons | `aoa-memo` |
+
+Validation anchors:
+
+Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
+
+## Distillation
+
+Use this branch when material is too heavy, raw, historical, exploratory,
+runtime-shaped, or witness-facing to be an active route, but something inside it
+must survive as current function.
+
+Active package routes:
+
+- [Distillation](distillation/README.md): package card and owner boundary.
+- [DIRECTION](distillation/DIRECTION.md): current direction and working standard.
+- [PARTS](distillation/PARTS.md): active functioning parts.
+- [OWNER_MAP](distillation/OWNER_MAP.md): center role and stronger owners.
+- [OWNER_REQUESTS](distillation/OWNER_REQUESTS.md): ready-to-carry request packets.
+- [PROVENANCE](distillation/PROVENANCE.md): source and future archive bridge.
+
+Core law:
+
+- [DISTILLATION_LAW](distillation/docs/DISTILLATION_LAW.md) keeps the sequence
+  source route, review state, active function, and owner boundary explicit.
+
+Owner split:
+
+| Slice | Stronger owner |
+|---|---|
+| Reusable distillation practice | `aoa-techniques` |
+| Executable workflow | `aoa-skills` |
+| Recurring scenario | `aoa-playbooks` |
+| Runtime distill phase and artifact contract | `aoa-agents` |
+| Memory writeback candidates | `aoa-memo` |
+| Provenance-preservation proof | `aoa-evals` |
+| Typed helpers and readers | `aoa-sdk` |
+| Seed and donor staging | `Dionysus` |
+| Compost, principle, and canon meaning | `Tree-of-Sophia` |
+| Runtime storage and exports | `abyss-stack` |
 
 Validation anchors:
 

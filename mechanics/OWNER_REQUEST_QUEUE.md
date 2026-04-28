@@ -48,6 +48,16 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 | `ORQ-METHOD-MEMO-001` | `method-growth` | `aoa-memo` | `requested` | `P2` | Lessons, memory, and pruning receipts after owner landing |
 | `ORQ-METHOD-TECHNIQUES-001` | `method-growth` | `aoa-techniques` | `requested` | `P1` | Reusable practice promotion |
 | `ORQ-METHOD-STATS-001` | `method-growth` | `aoa-stats` | `requested` | `P2` | Derived method-growth visibility |
+| `ORQ-DISTILLATION-TECHNIQUES-001` | `distillation` | `aoa-techniques` | `requested` | `P1` | Reusable distillation practice canon |
+| `ORQ-DISTILLATION-SKILLS-001` | `distillation` | `aoa-skills` | `requested` | `P1` | Executable distillation workflows |
+| `ORQ-DISTILLATION-PLAYBOOKS-001` | `distillation` | `aoa-playbooks` | `requested` | `P1` | Recurring distillation scenarios |
+| `ORQ-DISTILLATION-AGENTS-001` | `distillation` | `aoa-agents` | `requested` | `P1` | Runtime distill phase and artifact posture |
+| `ORQ-DISTILLATION-MEMO-001` | `distillation` | `aoa-memo` | `requested` | `P1` | Memory writeback candidates |
+| `ORQ-DISTILLATION-EVALS-001` | `distillation` | `aoa-evals` | `requested` | `P0` | Provenance-preservation and abstraction proof |
+| `ORQ-DISTILLATION-SDK-001` | `distillation` | `aoa-sdk` | `requested` | `P2` | Typed helpers and control-panel support |
+| `ORQ-DISTILLATION-DIONYSUS-001` | `distillation` | `Dionysus` | `requested` | `P2` | Seed and donor staging preservation |
+| `ORQ-DISTILLATION-TOS-001` | `distillation` | `Tree-of-Sophia` | `requested` | `P0` | Compost and canon boundary |
+| `ORQ-DISTILLATION-STACK-001` | `distillation` | `abyss-stack` | `requested` | `P2` | Runtime storage and export plumbing |
 | `ORQ-RECURRENCE-SDK-001` | `recurrence` | `aoa-sdk` | `requested` | `P0` | Control-plane carry for recurrence manifests and reviewed handoffs |
 | `ORQ-RECURRENCE-ROUTING-001` | `recurrence` | `aoa-routing` | `requested` | `P1` | Re-entry route graph and return dispatch |
 | `ORQ-RECURRENCE-MEMO-001` | `recurrence` | `aoa-memo` | `requested` | `P0` | Anchor checkpoints, recall, and provenance for bounded continuity |
@@ -117,6 +127,7 @@ It is a **request packet**, not an implementation, verdict, memory object, runti
 ## Mechanic request docs
 
 - `method-growth` -> [OWNER_REQUESTS.md](method-growth/OWNER_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `Dionysus`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`, `aoa-techniques`, `aoa-stats`
+- `distillation` -> [OWNER_REQUESTS.md](distillation/OWNER_REQUESTS.md); owners: `aoa-techniques`, `aoa-skills`, `aoa-playbooks`, `aoa-agents`, `aoa-memo`, `aoa-evals`, `aoa-sdk`, `Dionysus`, `Tree-of-Sophia`, `abyss-stack`
 - `recurrence` -> [OWNER_REQUESTS.md](recurrence/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `aoa-stats`, `aoa-kag`, `abyss-stack`
 - `checkpoint` -> [OWNER_REQUESTS.md](checkpoint/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-routing`, `aoa-stats`, `abyss-stack`, `Dionysus`
 - `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`, `aoa-playbooks`, `aoa-sdk`, `aoa-stats`, `aoa-skills`, `aoa-techniques`

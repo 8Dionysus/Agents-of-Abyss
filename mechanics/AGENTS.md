@@ -125,6 +125,7 @@ python scripts/validate_owner_request_queue.py
 python scripts/build_owner_request_queue.py --check
 python scripts/validate_generated_owner_request_queue.py
 python scripts/validate_owner_request_docs.py
+python mechanics/distillation/scripts/validate_distillation_mechanic.py
 ```
 
 For release-bound mechanics changes, also run:
@@ -202,6 +203,7 @@ python scripts/validate_generated_freshness.py
 python scripts/validate_hygiene_suite.py
 python scripts/validate_ecosystem.py
 python -m pytest -q
+python mechanics/distillation/scripts/validate_distillation_mechanic.py
 python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv
 python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv
 ```

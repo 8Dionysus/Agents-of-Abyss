@@ -218,7 +218,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "route_mode": "mechanic-change",
         "priority": 5,
         "audience": ["mechanic-author", "coding-agent", "reviewer"],
-        "need": "edit Agon, Experience, recurrence, method/growth, antifragility, quest/RPG, release-support, or ToS support without stealing owner truth",
+        "need": "edit Agon, Experience, recurrence, method/growth, distillation, antifragility, quest/RPG, release-support, or boundary bridge without stealing owner truth",
         "surface_ref": "mechanics/README.md",
         "human_path": [
             "README.md",

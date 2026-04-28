@@ -18,6 +18,7 @@ GENERATED_PATH = REPO_ROOT / "generated" / "owner_request_queue.min.json"
 REQUEST_ID_RE = re.compile(r"^ORQ-[A-Z0-9]+-[A-Z0-9]+-\d{3}$")
 CANONICAL_SLUGS = (
     "method-growth",
+    "distillation",
     "recurrence",
     "checkpoint",
     "experience",
