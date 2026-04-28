@@ -60,6 +60,12 @@ surfaces, the post-change route review, the closeout contract, and the local
 validation route. It should follow the Experience-style shape without copying
 Experience-specific meaning into other mechanics.
 
+The package `README.md` should stay entry-card shaped: start with the mechanic
+card, then route to active surfaces, functioning parts, owner-request queue,
+historical provenance, owner boundary, and growth posture. It should not become
+the deep doctrine store once `DIRECTION.md`, `PARTS.md`, `docs/`,
+`PROVENANCE.md`, and `LANDING_LOG.md` already own those concerns.
+
 Mechanic packages may also own artifact homes:
 
 - `schemas/`

@@ -66,6 +66,12 @@ Each package README must include these headings in this order:
 | `### Validation` | exact commands for this mechanic card and topology |
 | `### Next route` | where implementation, proof, memory, runtime, role, KAG, or ToS meaning goes next |
 
+After the mechanic card, the README should stay a lightweight entry route:
+`## Active route`, `## Functioning parts`, `## Owner-request queue`,
+`## Historical provenance`, `## Owner boundary`, and `## Growth posture`.
+Keep deeper doctrine in the linked owner surfaces instead of expanding the
+README into a second manual.
+
 Status vocabulary:
 
 | Status | Meaning |
@@ -127,7 +133,7 @@ A request packet is not owner acceptance. Owner repositories land operational tr
 | Checkpoint | How does intermediate state preserve, review, return, bridge, export, or hand off without stealing owner truth? | landed center law | [Checkpoint](checkpoint/README.md), [PARTS](checkpoint/PARTS.md), [OWNER_MAP](checkpoint/OWNER_MAP.md) | checkpoint implementation authority or owner acceptance |
 | Experience | Which staged experience contract, office/service posture, seed intake, duel pressure, continuity loom, or runtime boundary is relevant? | planted center contracts through v2.0 | [Experience](experience/README.md) | live workspace runtime or owner-local activation |
 | Agon | Which pressure, lawful move, duel, arena, packet, verdict, retention, rank, school, canon, or threshold boundary is relevant? | center-owned pre-protocol law and candidate grammar | [Agon](agon/README.md) | live arena execution or assistant contestant authority |
-| Antifragility and subtraction | What stress, degraded mode, evidence, pruning, or anti-authority posture applies? | center doctrine | [ANTIFRAGILITY](antifragility/docs/ANTIFRAGILITY.md), [VIA_NEGATIVA](antifragility/docs/VIA_NEGATIVA.md) | one-score health or deletion theater |
+| Antifragility and subtraction | What stress, degraded mode, evidence, pruning, or anti-authority posture applies? | center doctrine | [Antifragility](antifragility/README.md), [PARTS](antifragility/PARTS.md), [OWNER_MAP](antifragility/OWNER_MAP.md) | one-score health or deletion theater |
 | Questbook | What obligation must survive the current diff as a public tracked follow-up? | public obligation model | [QUESTBOOK](../QUESTBOOK.md), [model-spine](questbook/parts/model-spine/README.md) | second roadmap or private scratchpad |
 | RPG reflection | How can progression, questlines, campaigns, roles, and feats be read without rewriting ownership? | adjunct reflection layer | [RPG](rpg/README.md), [PARTS](rpg/PARTS.md), [source-boundary](rpg/parts/source-boundary/README.md), [vocabulary-overlay](rpg/parts/vocabulary-overlay/README.md) | hidden ontology or runtime ledger |
 | Boundary bridge, ToS support, witness, compost | How can AoA connect owner-owned surfaces without identity collapse or authority transfer? | bridge law and ToS-support doctrine | [Boundary bridge](boundary-bridge/README.md), [PARTS](boundary-bridge/PARTS.md), [tos-support](boundary-bridge/parts/tos-support/README.md) | identity collapse, AoA-authored ToS canon, or owner acceptance without receipt |

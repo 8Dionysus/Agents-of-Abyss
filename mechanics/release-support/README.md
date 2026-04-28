@@ -79,23 +79,17 @@ Use the validation lane in [AGENTS.md](AGENTS.md#validation).
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and
   `docs/REPO_ROLES.md`.
 
-## Start here
+## Active route
 
 - [DIRECTION](DIRECTION.md)
 - [PARTS](PARTS.md)
-- [parts/README](parts/README.md)
+- [LANDING_LOG](LANDING_LOG.md)
+- [ROADMAP](ROADMAP.md)
 - [OWNER_MAP](OWNER_MAP.md)
 - [OWNER_REQUESTS](OWNER_REQUESTS.md)
 - [PROVENANCE](PROVENANCE.md)
-- [PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md)
-- [FEDERATION_RELEASE_PROTOCOL](docs/FEDERATION_RELEASE_PROTOCOL.md)
-- [RELEASING](docs/RELEASING.md)
-- [DIRECTION_SURFACES](docs/DIRECTION_SURFACES.md)
-- [RELEASE_SUPPORT_OWNER_REPO_REQUESTS](docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md)
-- [LANDING_LOG](LANDING_LOG.md)
-- [ROADMAP](ROADMAP.md)
 
-## Active parts
+## Functioning parts
 
 - [State Transition Gate](parts/state-transition-gate/README.md)
 - [Public Claim Gate](parts/public-claim-gate/README.md)
@@ -106,6 +100,34 @@ Use the validation lane in [AGENTS.md](AGENTS.md#validation).
 - [Sibling Evidence Route](parts/sibling-evidence-route/README.md)
 - [Rollback Return](parts/rollback-return/README.md)
 - [Direction Surface Review](parts/direction-surface-review/README.md)
+
+## Owner-request queue
+
+Use [OWNER_REQUESTS](OWNER_REQUESTS.md) when this mechanic produces a release,
+proof, runtime, public projection, SDK, or sibling-owner handoff request. The
+central queue source is
+[`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the
+compact generated companion is
+[`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json).
+Generated surfaces do not author meaning.
+
+A request packet is not owner acceptance. Keep `release-support` claims
+center-bounded until the stronger owner lands the slice and proof routes are
+satisfied.
+
+## Historical provenance
+
+Use [PROVENANCE](PROVENANCE.md) only when auditing how public support posture,
+federation release protocol, release procedure, direction-surface doctrine, or
+owner-repo requests feed the active parts. The default route stays on the
+active route and functioning parts above.
+
+Canonical doctrine refs:
+[PUBLIC_SUPPORT_POSTURE](docs/PUBLIC_SUPPORT_POSTURE.md),
+[FEDERATION_RELEASE_PROTOCOL](docs/FEDERATION_RELEASE_PROTOCOL.md),
+[RELEASING](docs/RELEASING.md),
+[DIRECTION_SURFACES](docs/DIRECTION_SURFACES.md), and
+[RELEASE_SUPPORT_OWNER_REPO_REQUESTS](docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md).
 
 ## Owner boundary
 
@@ -119,7 +141,8 @@ author meaning.
 
 ## Growth posture
 
-When this mechanic changes, keep active parts light and operational. Put source
-trace in `PROVENANCE.md`, owner-local requests in `OWNER_REQUESTS.md`, proof in
-`aoa-evals`, runtime in `abyss-stack`, projection in `8Dionysus`, and released
-repository history in root `CHANGELOG.md`.
+When this mechanic changes, preserve a clean active route: update the relevant
+functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
+accounting behind `PROVENANCE.md`, and route proof, runtime, public projection,
+SDK, sibling acceptance, and released repository history to their stronger
+owners.

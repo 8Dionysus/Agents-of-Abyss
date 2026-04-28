@@ -84,27 +84,17 @@ Use the validation lane in [mechanics/growth-cycle/AGENTS.md](AGENTS.md#validati
   receipts, route to `abyss-stack`; for unclear owner, return to
   `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
 
-## Start Here
+## Active route
 
-- Direction: [DIRECTION](DIRECTION.md)
-- Parts atlas: [PARTS](PARTS.md) and [parts](parts/)
-- Center law: [GROWTH_CYCLE_LAW](docs/GROWTH_CYCLE_LAW.md)
-- Owner boundaries: [OWNER_MAP](OWNER_MAP.md)
-- Owner requests: [OWNER_REQUESTS](OWNER_REQUESTS.md) and [GROWTH_CYCLE_OWNER_REPO_REQUESTS](docs/GROWTH_CYCLE_OWNER_REPO_REQUESTS.md)
-- Provenance: [PROVENANCE](PROVENANCE.md)
-- Status: [LANDING_LOG](LANDING_LOG.md) and [ROADMAP](ROADMAP.md)
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [LANDING_LOG](LANDING_LOG.md)
+- [ROADMAP](ROADMAP.md)
+- [OWNER_MAP](OWNER_MAP.md)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
+- [PROVENANCE](PROVENANCE.md)
 
-## Working Law
-
-Growth Cycle is the route law for reviewed process movement. It says which
-stage should happen next, which owner owns the stronger truth, and what must
-remain provisional until review, proof, memory, runtime, or owner-local landing
-exists.
-
-Generated surfaces may reflect Growth Cycle cards, queues, or indexes, but they
-do not author Growth Cycle meaning.
-
-## Active Parts
+## Functioning parts
 
 - [Checkpoint Intake](parts/checkpoint-intake/README.md)
 - [Reviewed Closeout Chain](parts/reviewed-closeout-chain/README.md)
@@ -117,8 +107,43 @@ do not author Growth Cycle meaning.
 - [Quest Promotion](parts/quest-promotion/README.md)
 - [Owner Followthrough](parts/owner-followthrough/README.md)
 
-## Owner Boundary
+## Owner-request queue
+
+Use [OWNER_REQUESTS](OWNER_REQUESTS.md) when this mechanic produces an
+owner-local hook, skill, proof, memory, runtime, role, route, playbook, stats,
+seed, or quest request. The central queue source is
+[`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the
+compact generated companion is
+[`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json).
+Generated surfaces do not author meaning.
+
+A request packet is not owner acceptance. Keep `growth-cycle` claims
+center-bounded until the stronger owner lands the slice and proof routes are
+satisfied.
+
+## Historical provenance
+
+Use [PROVENANCE](PROVENANCE.md) only when auditing how checkpoint, closeout,
+donor, progression, diagnosis, repair, quest, or owner-followthrough evidence
+feeds the active parts. The default route stays on the active route and
+functioning parts above.
+
+Canonical doctrine refs: [GROWTH_CYCLE_LAW](docs/GROWTH_CYCLE_LAW.md) and
+[GROWTH_CYCLE_OWNER_REPO_REQUESTS](docs/GROWTH_CYCLE_OWNER_REPO_REQUESTS.md).
+
+## Owner boundary
 
 AoA owns the law and route grammar for Growth Cycle. Owner repositories decide
 what local hook, skill, proof, memory, runtime, quest, stats, or playbook
 behavior means inside their own domains.
+
+Generated surfaces may reflect Growth Cycle cards, queues, or indexes, but they
+do not author Growth Cycle meaning.
+
+## Growth posture
+
+When this mechanic changes, preserve a clean active route: update the relevant
+functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
+accounting behind `PROVENANCE.md`, and route hook, skill, proof, memory,
+runtime, role, route, playbook, stats, seed, and quest claims to their stronger
+owners.

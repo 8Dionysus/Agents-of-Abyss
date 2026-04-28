@@ -102,7 +102,7 @@ Generated surfaces do not author meaning.
 A request packet is not owner acceptance. Keep `agon` claims center-bounded
 until the stronger owner lands the slice and proof routes are satisfied.
 
-## Source provenance
+## Historical provenance
 
 Use [PROVENANCE](PROVENANCE.md) only when auditing how detailed source-docs,
 source contours, handoffs, generated capsules, or model families feed the

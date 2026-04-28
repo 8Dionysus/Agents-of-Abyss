@@ -56,20 +56,17 @@ Use the validation lane in [mechanics/recurrence/AGENTS.md](AGENTS.md#validation
 - For memory, route to `aoa-memo`; for routing behavior, route to `aoa-routing`; for runtime wrappers, route to `abyss-stack` after runtime gates.
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
 
-## Start Here
+## Active route
 
-- Direction: [DIRECTION](DIRECTION.md)
-- Parts atlas: [PARTS](PARTS.md) and [parts](parts/)
-- Owner map: [OWNER_MAP](OWNER_MAP.md)
-- Owner requests: [OWNER_REQUESTS](OWNER_REQUESTS.md)
-- Provenance bridge: [PROVENANCE](PROVENANCE.md)
-- Center law: [RECURRENCE_PRINCIPLE](docs/RECURRENCE_PRINCIPLE.md)
-- Continuity law: [SELF_AGENCY_CONTINUITY](docs/SELF_AGENCY_CONTINUITY.md)
-- Component law: [COMPONENT_REFRESH_LAW](docs/COMPONENT_REFRESH_LAW.md)
-- Compatibility route: [RECURRENCE_OWNER_REPO_REQUESTS](docs/RECURRENCE_OWNER_REPO_REQUESTS.md)
-- Status: [LANDING_LOG](LANDING_LOG.md) and [ROADMAP](ROADMAP.md)
+- [DIRECTION](DIRECTION.md)
+- [PARTS](PARTS.md)
+- [LANDING_LOG](LANDING_LOG.md)
+- [ROADMAP](ROADMAP.md)
+- [OWNER_MAP](OWNER_MAP.md)
+- [OWNER_REQUESTS](OWNER_REQUESTS.md)
+- [PROVENANCE](PROVENANCE.md)
 
-## Active Parts
+## Functioning parts
 
 - [Anchor Return](parts/anchor-return/README.md)
 - [Continuity Window](parts/continuity-window/README.md)
@@ -94,22 +91,34 @@ A request packet is not owner acceptance. Keep `recurrence` claims
 center-bounded until the stronger owner lands the slice and proof routes are
 satisfied.
 
-## Owner Boundary
+## Historical provenance
+
+Use [PROVENANCE](PROVENANCE.md) only when auditing how recurrence principle,
+self-agency continuity, component refresh law, or owner request doctrine feeds
+the active parts. The default route stays on the active route and functioning
+parts above.
+
+Canonical doctrine refs: [RECURRENCE_PRINCIPLE](docs/RECURRENCE_PRINCIPLE.md),
+[SELF_AGENCY_CONTINUITY](docs/SELF_AGENCY_CONTINUITY.md),
+[COMPONENT_REFRESH_LAW](docs/COMPONENT_REFRESH_LAW.md), and
+[RECURRENCE_OWNER_REPO_REQUESTS](docs/RECURRENCE_OWNER_REPO_REQUESTS.md).
+
+## Owner boundary
 
 Center return and continuity law; typed carry, memory, routing, choreography,
 proof, derived visibility, regrounding, and runtime behavior remain
 owner-local.
-The card above is the compact route. The docs listed in **Start Here** remain
-the richer source surfaces for this mechanic. Generated surfaces may reflect
-recurrence cards, queues, indexes, or manifests, but they do not author
-recurrence meaning.
 
 AoA owns recurrence law. `aoa-sdk` carries recurrence control-plane evidence.
 Owner repositories own local recurrence behavior.
 
-## Growth Posture
+Generated surfaces may reflect recurrence cards, queues, indexes, or manifests,
+but they do not author recurrence meaning.
 
-When this mechanic changes, keep active parts lean, owner-routed, and
-provenance-aware. Put detailed doctrine in `docs/`, proof in the proof owner,
-memory in the memory owner, runtime in the runtime owner, control-plane carry
-in `aoa-sdk`, and source meaning in the source owner.
+## Growth posture
+
+When this mechanic changes, preserve a clean active route: update the relevant
+functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
+accounting behind `PROVENANCE.md`, and route proof, memory, runtime,
+control-plane carry, routing, stats, KAG, and source meaning to their stronger
+owners.

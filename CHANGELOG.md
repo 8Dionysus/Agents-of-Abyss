@@ -50,6 +50,9 @@ Tracking starts with the community-docs baseline for this repository.
 - Experience-style mechanic `AGENTS.md` route law across center mechanics,
   standardizing active source surfaces, post-change route review, closeout
   provenance discipline, and local validation routes
+- Experience-style mechanic `README.md` entry-card shape across center
+  mechanics, standardizing active routes, functioning parts, owner-request
+  queues, historical provenance bridges, owner boundaries, and growth posture
 - Experience active-part distillation through `mechanics/experience/DIRECTION.md`,
   `mechanics/experience/PARTS.md`, `mechanics/experience/parts/`,
   `mechanics/experience/PROVENANCE.md`, archived source packets, and
