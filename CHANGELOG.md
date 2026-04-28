@@ -168,6 +168,17 @@ Tracking starts with the community-docs baseline for this repository.
   `mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py`
   package coverage, widening the old ToS-support route into a cross-owner
   boundary bridge mechanic with ToS support as one part
+- Distillation as a landed center mechanic in `mechanics/distillation/`, with
+  active parts for raw intake, raw preservation, provenance bridges, active
+  extraction, noise pruning, receipt indexes, candidate handoffs, validation
+  gates, runtime-pack boundaries, and ToS compost boundaries, plus owner-request
+  packets for `aoa-techniques`, `aoa-skills`, `aoa-playbooks`, `aoa-agents`,
+  `aoa-memo`, `aoa-evals`, `aoa-sdk`, `Dionysus`, `Tree-of-Sophia`, and
+  `abyss-stack`, with a `quests/distillation/` lane for future distillation
+  obligations
+- `mechanics/distillation/scripts/validate_distillation_mechanic.py` and
+  package tests to keep Distillation law, active parts, owner requests,
+  provenance boundaries, and raw-history stop-lines synchronized
 
 ### Changed
 

@@ -47,6 +47,7 @@ QUEST_LANES = {
     "questbook",
     "antifragility",
     "method-growth",
+    "distillation",
     "release-support",
     "boundary-bridge",
 }

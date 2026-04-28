@@ -30,6 +30,7 @@ COMMANDS = [
     ("validate mechanics topology", [sys.executable, "scripts/validate_mechanics_topology.py"]),
     ("validate mechanic artifact topology", [sys.executable, "scripts/validate_mechanic_artifact_topology.py"]),
     ("validate Method-growth mechanic", [sys.executable, "mechanics/method-growth/scripts/validate_method_growth_mechanic.py"]),
+    ("validate Distillation mechanic", [sys.executable, "mechanics/distillation/scripts/validate_distillation_mechanic.py"]),
     ("validate Recurrence mechanic", [sys.executable, "mechanics/recurrence/scripts/validate_recurrence_mechanic.py"]),
     ("validate Checkpoint mechanic", [sys.executable, "mechanics/checkpoint/scripts/validate_checkpoint_mechanic.py"]),
     ("validate Antifragility mechanic", [sys.executable, "mechanics/antifragility/scripts/validate_antifragility_distillation.py"]),

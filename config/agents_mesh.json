@@ -475,6 +475,23 @@
       ]
     },
     {
+      "path": "mechanics/distillation/AGENTS.md",
+      "scope": "mechanics/distillation/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Package card for Distillation.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
       "path": "mechanics/recurrence/AGENTS.md",
       "scope": "mechanics/recurrence/",
       "kind": "mechanic-package-card",

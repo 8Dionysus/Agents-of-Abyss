@@ -14,6 +14,7 @@ QUEUE_PATH = REPO_ROOT / "mechanics" / "owner-request-queue.json"
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 CANONICAL_SLUGS = (
     "method-growth",
+    "distillation",
     "recurrence",
     "checkpoint",
     "experience",

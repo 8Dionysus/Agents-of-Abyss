@@ -10,6 +10,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 CANONICAL_SLUGS = (
     "method-growth",
+    "distillation",
     "recurrence",
     "checkpoint",
     "experience",
