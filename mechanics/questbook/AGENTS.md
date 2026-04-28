@@ -5,21 +5,11 @@
 This card applies to `mechanics/questbook/` and every nested path under that
 scope until a nearer `AGENTS.md` narrows the lane.
 
-## Role
-
-Questbook owns the mechanics of public obligations, quest lifecycle, placement,
-risk, difficulty, relations, and harvest rules.
-
-Root `QUESTBOOK.md` remains the public index. `quests/` remains the quest item
-store. Source quest objects live under lane-first lifecycle directories such as
-`quests/center/triaged/`, `quests/agon/ready/`, and `quests/experience/done/`;
-root-level `AOA-Q-*` aliases and root lifecycle directories are intentionally
-absent.
-
 ## Read before editing
 
-Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or
-protocol surface before changing files in this lane.
+Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
+`README.md`, `DIRECTION.md`, `PARTS.md`, and the nearest route surface before
+changing files in this lane.
 
 For source-law changes, read `parts/model-spine/README.md` first, then the
 narrow part source it points to. For relation changes, also read
@@ -40,17 +30,44 @@ touching quest files.
 - Generated Questbook surfaces summarize source quest files; they do not author
   quest meaning.
 
-## Editing route
+## Closeout
 
-- If the source quest files change, rebuild generated Questbook views.
-- If relation shape changes, run relation validation.
-- If an owner-request route changes, rebuild the ready-owner route projection,
-  validate the owner-request queue, and validate owner-request docs.
-- If package entry surfaces change, validate mechanic topology and README cards.
-- Keep executable validation commands in this file. Other Questbook Markdown
-  surfaces should route here instead of duplicating command blocks.
+Closeout must name changed active parts, source quest lanes affected, generated
+mirrors rebuilt or not rebuilt, owner-request status affected, checks run,
+checks skipped, remaining risk, and the next owner route if this lane was only a
+waypoint.
 
-## Post-change Route Review
+If `PROVENANCE.md` was consulted, name only the relevant model, archive map, or
+receipt section. Do not enumerate raw legacy sources unless the task
+specifically audited archive evidence in depth.
+
+## Role
+
+Questbook owns the mechanics of public obligations, quest lifecycle, placement,
+risk, difficulty, relations, and harvest rules.
+
+Root `QUESTBOOK.md` remains the public index. `quests/` remains the quest item
+store. Source quest objects live under lane-first lifecycle directories such as
+`quests/center/triaged/`, `quests/agon/ready/`, and `quests/experience/done/`;
+root-level `AOA-Q-*` aliases and root lifecycle directories are intentionally
+absent.
+
+## Source Surfaces
+
+- `README.md`: package entry and route.
+- `DIRECTION.md`: current active mechanic direction.
+- `PARTS.md`: active functioning-part map.
+- `parts/`: concise active questbook contracts.
+- `OWNER_REQUESTS.md`: center-side owner request packet.
+- `ROADMAP.md`: current and next questbook contour.
+- `LANDING_LOG.md`: checked questbook landing ledger.
+- `PROVENANCE.md`: controlled bridge to legacy and source accounting.
+- `legacy/`: archival source material, not active law.
+- `quests/`: source quest item store outside the mechanic package.
+- `generated/`: generated questbook views that mirror source quest files.
+- `docs/`: detailed doctrine and support notes.
+
+## Post-change route review
 
 Before closeout, review the changed route rather than only the changed file:
 
@@ -65,6 +82,14 @@ Before closeout, review the changed route rather than only the changed file:
   index and make sure the active route did not move into legacy/raw.
 - Repeated defaults appear in quest sources: move the default to the lane
   README and keep only a short per-quest route to it.
+- Future route pressure changed: update `ROADMAP.md` only when the trigger is
+  concrete and useful.
+- Checked landing changed: update `LANDING_LOG.md`.
+- Card-facing route, owner boundary, validation refs, or public summaries
+  changed: update `mechanics/registry.json` and generated indexes.
+
+Keep executable validation commands in this file. Other Questbook Markdown
+surfaces should route here instead of duplicating command blocks.
 
 ## Validation
 
@@ -99,9 +124,3 @@ python -m pytest -q mechanics/questbook/tests
 
 Use `python scripts/release_check.py` when route, generated, validation, or
 release-facing surfaces change together.
-
-## Closeout
-
-Closeout must name changed surfaces, generated mirrors rebuilt or not rebuilt,
-owner-request status affected, checks run, checks skipped, remaining risk, and
-the next owner route if this lane was only a waypoint.

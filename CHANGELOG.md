@@ -47,6 +47,9 @@ Tracking starts with the community-docs baseline for this repository.
   `docs/AGENTS_MESH_INDEX.md`, `config/agents_mesh.json`,
   `generated/agents_mesh.min.json`, local `AGENTS.md` district cards, mesh
   validators, and regression tests
+- Experience-style mechanic `AGENTS.md` route law across center mechanics,
+  standardizing active source surfaces, post-change route review, closeout
+  provenance discipline, and local validation routes
 - Experience active-part distillation through `mechanics/experience/DIRECTION.md`,
   `mechanics/experience/PARTS.md`, `mechanics/experience/parts/`,
   `mechanics/experience/PROVENANCE.md`, archived source packets, and
