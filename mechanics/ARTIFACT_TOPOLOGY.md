@@ -9,6 +9,9 @@ quest rules that make its contracts usable.
 This topology keeps root technical districts as repository-wide lanes while
 moving mechanic-owned substance into mechanic homes.
 
+This file owns placement law only. It does not list every moved file, preserve
+old aliases, or replace mechanic-local `artifact-map.json` receipts.
+
 ## Root lane
 
 Root technical districts own repository-wide contracts:
@@ -83,11 +86,5 @@ reviewable game-object for agents. Do not use quests for private scratch work,
 temporary plans, or roadmap duplication.
 
 ## Validation
-
-Run:
-
-Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
-
-For release-bound work, also run:
 
 Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.

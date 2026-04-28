@@ -6,6 +6,10 @@ Mechanic cards answer **what kind of move is this?** The owner-request queue ans
 
 The center may write request packets, stop-lines, source references, and route hints. The center may not accept the request on behalf of the owner repository, land owner-local truth, write memory, issue verdicts, mutate roles, run runtime, or author Tree-of-Sophia meaning.
 
+This file owns request grammar and vocabulary. The current human index lives in
+[`OWNER_REQUEST_QUEUE.md`](OWNER_REQUEST_QUEUE.md); the source data lives in
+[`owner-request-queue.json`](owner-request-queue.json).
+
 ## Request anatomy
 
 Every request in [`mechanics/owner-request-queue.json`](owner-request-queue.json) must contain:

@@ -201,6 +201,11 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- root `mechanics/*.md` surfaces now have a stricter source-of-truth split:
+  `mechanics/README.md` stays a compact atlas, `mechanics/AGENTS.md` owns
+  editing and validation law, artifact topology owns placement rules, and the
+  owner-request protocol owns queue vocabulary while the queue stays a human
+  index
 - `mechanics/registry.json`, `mechanics/owner-request-queue.json`,
   `generated/mechanic_card_index.min.json`, and
   `generated/owner_request_queue.min.json` now include Checkpoint between

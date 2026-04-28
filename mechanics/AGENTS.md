@@ -13,8 +13,6 @@ Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or 
 
 Closeout must name changed surfaces, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
 
-This file applies to the root `mechanics/` tree.
-
 ## Role
 
 `mechanics/` is the canonical home for center-level AoA mechanics that cross
@@ -26,6 +24,27 @@ truth, or owner-local implementation.
 Mechanics packages explain how a kind of move grows, repeats, returns, gets
 tested, becomes visible, or stays bounded. They must keep the owning repository
 boundary explicit.
+
+## Root Markdown Split
+
+Root `mechanics/*.md` files are route surfaces for the mechanics tree. Keep
+their ownership narrow:
+
+- `mechanics/AGENTS.md` owns mechanics-tree law, editing posture, closeout, and
+  centralized validation.
+- `mechanics/README.md` owns the atlas, compass, route contract, and mechanic
+  card contract.
+- `mechanics/ARTIFACT_TOPOLOGY.md` owns artifact placement law for root
+  technical districts versus mechanic homes.
+- `mechanics/OWNER_REQUEST_PROTOCOL.md` owns owner-request fields, status and
+  priority vocabulary, advancement rules, and queue stop-lines.
+- `mechanics/OWNER_REQUEST_QUEUE.md` owns the human request index and package
+  request routes.
+
+Do not let these root files duplicate package doctrine. If a detail belongs to
+one mechanic, route to that package's `README.md`, `DIRECTION.md`, `PARTS.md`,
+`OWNER_MAP.md`, `OWNER_REQUESTS.md`, `PROVENANCE.md`, `LANDING_LOG.md`,
+`ROADMAP.md`, `docs/`, or part-local surface.
 
 ## Package law
 
