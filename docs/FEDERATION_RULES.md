@@ -147,61 +147,22 @@ That pilot should keep:
 Full runtime instrumentation belongs later in `abyss-stack`.
 This wave should not smuggle runtime implementation claims into the center.
 
-## Rule 17: ToS growth law stays ToS-owned even when AoA assists
-
-`Tree-of-Sophia` owns:
-- calibration of meaning
-- human-reviewed curation judgment
-- growth law for deepening, node creation, and branch formation
-
-AoA may assist with reviewable support around those surfaces.
-It does not become the author of philosophical stance or the owning home of ToS growth doctrine.
-
-When this support is named in the center:
-- route readers back to `Tree-of-Sophia`
-- keep the human-reviewed boundary explicit
-- avoid turning support language into substitute authorship
-
-## Rule 18: ToS corpus scaffold stays ToS-owned even when AoA routes to it
-
-`Tree-of-Sophia` owns:
-- stable public node IDs
-- source-node and concept-node templates
-- corpus-facing scaffold example discipline
-
-AoA may route readers toward those surfaces and support neighboring implementation work.
-It does not become the author of ToS node identity, template meaning, or corpus-facing examples.
-
-## Rule 19: ToS lineage pilots stay ToS-owned even when AoA supports them
-
-`Tree-of-Sophia` owns:
-- bounded lineage pilots
-- the node meanings inside those pilots
-- the branch-facing example discipline those pilots rely on
-
-AoA may route readers toward those surfaces and keep support reviewable.
-It does not become the author of the pilot branch or its conceptual force.
-
-## Rule 20: ToS soil prep stays ToS-owned even when AoA supports it
+## Rule 17: ToS support returns to ToS-owned meaning
 
 `Tree-of-Sophia` owns:
 
-- context-node template meaning
-- manual corpus-entry gating
-- pre-expansion soil doctrine
-- the judgment of when wider world-thought expansion is actually active
+- growth law for calibration, curation judgment, node creation, and branch formation
+- corpus scaffold law for public node IDs, source-node templates, concept-node templates, and examples
+- lineage-pilot meaning and branch-facing example discipline
+- soil-preparation doctrine, context-node template meaning, and manual corpus-entry gating
+- public tiny-entry seams for human and small-model entry
 
-AoA may route readers toward those surfaces and keep support reviewable.
-It does not become the author of ToS preparation doctrine, and it should not rename preparation into active expansion.
+AoA support around those surfaces stays reviewable, names the ToS owner route,
+and keeps the human-reviewed boundary visible. `aoa-routing` may hand off into
+ToS seams, and `aoa-kag` may derive bounded readiness surfaces from them. Those
+support paths return readers to `Tree-of-Sophia` for authored meaning.
 
-## Rule 21: ToS tiny-entry seams stay ToS-owned even when downstream layers consume them
-
-`Tree-of-Sophia` may publish source-owned tiny-entry seams for human and small-model entry.
-
-`aoa-routing` may hand off into those seams, and `aoa-kag` may derive bounded readiness surfaces from them.
-Neither downstream layer becomes ToS authority by doing so.
-
-## Rule 22: self-agency continuity stays bounded by anchors and owner splits
+## Rule 18: self-agency continuity stays bounded by anchors and owner splits
 
 AoA may name a long-arc self-agency continuity route.
 
@@ -225,7 +186,7 @@ It must not treat doctrine as permission to absorb:
 Continuity is bounded duration with explicit anchors and governed return, not
 runtime autonomy.
 
-## Rule 23: component refresh stays owner-owned and reviewable
+## Rule 19: component refresh stays owner-owned and reviewable
 
 AoA may name a component-refresh route when one internal technical surface
 shows repeated drift, staleness, or hand-patched maintenance pressure.

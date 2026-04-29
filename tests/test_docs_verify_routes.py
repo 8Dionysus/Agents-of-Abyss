@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import unittest
 from pathlib import Path
 
@@ -9,6 +10,11 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 def read_text(relative_path: str) -> str:
     return (REPO_ROOT / relative_path).read_text(encoding="utf-8")
+
+
+def mechanic_slugs() -> list[str]:
+    registry = json.loads((REPO_ROOT / "mechanics/registry.json").read_text(encoding="utf-8"))
+    return [item["slug"] for item in registry["mechanics"]]
 
 
 class DocsVerifyRoutesTestCase(unittest.TestCase):
@@ -61,6 +67,15 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertTrue(
             (REPO_ROOT / "docs/decisions/2026-04-09-aoa-stats-public-layer.md").exists()
         )
+
+    def test_repo_roles_routes_mechanics_through_atlas_without_package_specific_paths(self) -> None:
+        repo_roles = read_text("docs/REPO_ROLES.md")
+
+        self.assertIn("mechanic-shaped", repo_roles)
+        self.assertIn("mechanics/README.md", repo_roles)
+        for slug in mechanic_slugs():
+            with self.subTest(slug=slug):
+                self.assertNotIn(f"mechanics/{slug}", repo_roles)
 
     def test_direction_surfaces_map_routes_sdk_stats_and_seed_garden_through_root_roadmaps(self) -> None:
         direction_surfaces = read_text("mechanics/release-support/docs/DIRECTION_SURFACES.md")
@@ -147,8 +162,10 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("agon/legacy/INDEX.md", mechanics)
         self.assertIn("PROVENANCE", docs_readme)
         self.assertIn("Agon preparation holding boundary", roadmap)
-        self.assertIn("mechanics/agon/README.md", layers)
-        self.assertIn("future Agon law", repo_roles)
+        self.assertIn("mechanics/README.md", layers)
+        self.assertIn("mechanic-shaped", repo_roles)
+        self.assertIn("mechanics/README.md", repo_roles)
+        self.assertNotIn("mechanics/agon/", repo_roles)
         self.assertIn("Agon is not a live implementation layer yet", posture)
         self.assertIn("holding boundary", posture)
         self.assertIn("civil/service", posture)
@@ -177,8 +194,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("agon/legacy/INDEX.md", mechanics)
         self.assertIn("PROVENANCE", docs_readme)
         self.assertIn("Agon imposition gate", landing_log)
-        self.assertIn("mechanics/agon/README.md", layers)
-        self.assertIn("mechanics/agon/PROVENANCE.md", repo_roles)
+        self.assertIn("mechanics/README.md", layers)
+        self.assertIn("mechanics/README.md", repo_roles)
         self.assertIn("Agon is now an imposed review lens", posture)
         self.assertIn("Agon is still not a live implementation layer", posture)
         self.assertIn("survive", survival)
@@ -207,8 +224,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("agon/legacy/INDEX.md", mechanics)
         self.assertIn("PROVENANCE", docs_readme)
         self.assertIn("Agon lawful move language", landing_log)
-        self.assertIn("mechanics/agon/README.md", layers)
-        self.assertIn("mechanics/agon/PROVENANCE.md", repo_roles)
+        self.assertIn("mechanics/README.md", layers)
+        self.assertIn("mechanics/README.md", repo_roles)
         self.assertIn("lawful tongue", move_language)
         self.assertIn("pre-protocol", landing)
         self.assertIn("\"live_protocol\":false", registry)
@@ -232,8 +249,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("agon/legacy/INDEX.md", mechanics)
         self.assertIn("PROVENANCE", docs_readme)
         self.assertIn("Agon move owner binding", landing_log)
-        self.assertIn("mechanics/agon/README.md", layers)
-        self.assertIn("mechanics/agon/OWNER_REQUESTS.md", repo_roles)
+        self.assertIn("mechanics/README.md", layers)
+        self.assertIn("mechanics/README.md", repo_roles)
         self.assertIn("owner gravity", binding)
         self.assertIn("requested_not_landed", landing)
         self.assertIn("\"status\":\"pre_protocol_owner_binding\"", registry)
@@ -257,8 +274,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("agon/PROVENANCE.md", mechanics)
         self.assertIn("agon/legacy/INDEX.md", mechanics)
         self.assertIn("Agon gate routing handoff", landing_log)
-        self.assertIn("mechanics/agon/README.md", layers)
-        self.assertIn("mechanics/agon/PARTS.md", repo_roles)
+        self.assertIn("mechanics/README.md", layers)
+        self.assertIn("mechanics/README.md", repo_roles)
         self.assertIn("may grow a thin pre-protocol gate surface", handoff)
         self.assertIn("gate hint is not arena activation", landing)
         self.assertIn("\"status\":\"seeded_center_handoff_request\"", request)
@@ -283,8 +300,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("agon/PROVENANCE.md", mechanics)
         self.assertIn("agon/legacy/INDEX.md", mechanics)
         self.assertIn("Agon trial playbook handoff", landing_log)
-        self.assertIn("mechanics/agon/README.md", layers)
-        self.assertIn("mechanics/agon/PARTS.md", repo_roles)
+        self.assertIn("mechanics/README.md", layers)
+        self.assertIn("mechanics/README.md", repo_roles)
         self.assertIn("Trial playbooks rehearse the arena. They do not open it.", handoff)
         self.assertIn("requests that `aoa-playbooks` land", owner_request)
         self.assertIn("pre-protocol choreography wave", stop_lines)

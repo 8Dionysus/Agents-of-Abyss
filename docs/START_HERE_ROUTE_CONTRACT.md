@@ -163,7 +163,7 @@ Read:
 5. `ECOSYSTEM_MAP.md`
 6. `docs/FEDERATION_RULES.md`
 7. generated capsules
-6. validators
+8. validators
 
 A center claim is honest only when the human docs, generated capsules, validators, and release posture agree in the same landed state.
 
