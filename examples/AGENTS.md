@@ -6,7 +6,7 @@ This card applies to `examples/` and all descendants unless a nearer `AGENTS.md`
 
 ## Role
 
-`examples/` holds illustrative examples for humans and agents. Examples help readers understand patterns without becoming canonical source truth.
+`examples/` holds public-safe worked examples for the AoA center. Examples help readers apply route contracts, placement rules, and owner boundaries without becoming canonical source truth.
 
 ## Read before editing
 
@@ -16,9 +16,25 @@ Use the nearest README for local file purpose. Use source docs, schemas, generat
 
 ## Boundaries
 
-- Do not let examples become the only statement of a rule.
-- Do not cite examples as stronger than docs, schemas, mechanics cards, or owner repos.
-- Keep examples small, clear, and linked to their source contract.
+- Keep root examples centered on center routes, root placement, owner-routing, and public-entry posture.
+- Keep mechanic behavior examples in the owning mechanic package.
+- Keep sibling implementation examples in the owning sibling repository.
+- Link every root example to the source surfaces that own the rule being demonstrated.
+- Keep examples small, public-safe, and free of secrets, private paths, tokens, and live runtime assumptions.
+- Treat examples as illustrative surfaces below docs, schemas, generated contracts, validators, tests, and owner repositories.
+- Do not let examples override or silently replace the source surface they illustrate.
+
+## Required Shape
+
+Every root example Markdown file outside `README.md` and `AGENTS.md` must include:
+
+- `## Source Surfaces`
+- `## Demonstrates`
+- `## Boundary`
+- `## Checks`
+- `## Closeout`
+
+The local README must index every root example file.
 
 ## Validation
 
@@ -27,6 +43,7 @@ Run the narrowest relevant checks first. Usual checks for this district:
 ```bash
 python scripts/validate_links.py
 python scripts/validate_markdown_shape.py
+python -m pytest -q tests/test_examples_district.py
 python -m pytest -q
 ```
 
