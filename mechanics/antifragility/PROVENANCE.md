@@ -37,8 +37,8 @@ the active route.
 
 ## External provenance anchors
 
-- `docs/audits/DELETION_CANDIDATES.json` remains an inspect-first audit
-  surface.
+- `mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` remains an inspect-first
+  audit evidence surface.
 - Root `FRAGILITY_BLACKLIST.md` remains a compatibility route only.
 - Owner-local proof, memory, runtime, stats, playbook, technique, and skill
   landings remain outside this package until their owners accept a request.

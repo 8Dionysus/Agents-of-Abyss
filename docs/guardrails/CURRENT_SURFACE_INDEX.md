@@ -32,12 +32,11 @@ This index explains which `docs/` surfaces are current and which districts hold 
 | District | Use | Current-law caution |
 |---|---|---|
 | `docs/guardrails/` | validator law, hygiene law, classifier config, and generated source maps | guardrails verify shape; they do not author doctrine |
-| `docs/audits/` | audit evidence and protocols | evidence is not law until adopted by a canonical surface |
 | `docs/registry/` | registry evolution notes | design notes are not generated-capsule truth until builders and validators land |
 | `docs/decisions/` | decision records | decisions explain why, current surfaces define what |
 | `docs/traces/` | move manifests, link rewrites, and provenance | traces explain movement, not meaning |
 
-Mechanic-owned surfaces are routed through `mechanics/<slug>/`, not through empty `docs/<slug>/` districts.
+Audit work is routed through `mechanics/audit/`. Mechanic-owned surfaces are routed through `mechanics/<slug>/`, not through empty `docs/<slug>/` districts.
 
 ## Validation
 

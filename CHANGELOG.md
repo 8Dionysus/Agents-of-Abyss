@@ -198,6 +198,12 @@ Tracking starts with the community-docs baseline for this repository.
 - `mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py` and
   package tests to keep Growth Cycle law, active parts, owner requests,
   provenance boundaries, and hidden-scheduler stop-lines synchronized
+- Audit as a planted center mechanic in `mechanics/audit/`, with active parts
+  for source maps, evidence ledgers, risk signals, finding lifecycle, owner
+  routing, validation gates, campaign routes, and audit event bridges
+- `mechanics/audit/scripts/validate_audit_distillation.py` and package tests
+  to keep Audit law, active parts, owner requests, legacy provenance, and
+  archive-to-active stop-lines synchronized
 
 ### Changed
 
@@ -209,6 +215,13 @@ Tracking starts with the community-docs baseline for this repository.
   under `mechanics/release-support/legacy/raw/`
 - docs traces now use a function-named link/shape hygiene apply manifest
   instead of an active wave-named trace path
+- `docs/audits/` is no longer an active docs district; its useful sources now
+  live under `mechanics/audit/legacy/raw/`, while active audit route grammar
+  lives in `mechanics/audit/README.md`, `PARTS.md`, `PROVENANCE.md`, and
+  `docs/AUDIT_LAW.md`
+- root audit, root-surface, and antifragility routes now point to the Audit
+  mechanic and `mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` instead
+  of preserving a docs-audits door
 - root `mechanics/*.md` surfaces now have a stricter source-of-truth split:
   `mechanics/README.md` stays a compact atlas, `mechanics/AGENTS.md` owns
   editing and validation law, artifact topology owns placement rules, and the
@@ -240,6 +253,13 @@ Tracking starts with the community-docs baseline for this repository.
   mechanic-change route names Growth Cycle as an active mechanic branch
 - `scripts/release_check.py` now includes the Growth Cycle package validator so
   reviewed lifecycle routing, owner-map boundaries, and owner-request sync stay
+  under release discipline
+- `mechanics/registry.json`, `mechanics/owner-request-queue.json`, and
+  generated mechanic and owner-request indexes now include Audit owner requests
+  for `aoa-evals`, `aoa-memo`, `aoa-playbooks`, `aoa-skills`, `aoa-agents`,
+  and `aoa-stats`
+- `scripts/release_check.py` now includes the Audit package validator so
+  evidence posture, finding routes, owner handoffs, and legacy provenance stay
   under release discipline
 - `mechanics/registry.json`, `mechanics/owner-request-queue.json`, and
   `mechanics/OWNER_REQUEST_QUEUE.md` now route Antifragility owner requests

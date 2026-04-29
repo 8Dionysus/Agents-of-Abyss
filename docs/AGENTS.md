@@ -23,7 +23,7 @@ For mechanic work, leave this lane and read `../mechanics/AGENTS.md` plus the ne
 - Do not use `docs/` to override owner-local truth, generated-source boundaries, sibling-repo authority, or release validation contracts.
 - Keep flat `docs/` files limited to current center doctrine, current route law, owner maps, and compatibility routes.
 - Put docs guardrail law under `guardrails/`.
-- Put audit evidence, decisions, registry notes, and traces in their named districts.
+- Put audit evidence in `../mechanics/audit/`, and put decisions, registry notes, and traces in their named districts.
 - Put mechanic receipts and mechanic legacy under `../mechanics/<slug>/legacy/`, not under empty `docs/<slug>/` doors.
 
 ## Role of this directory

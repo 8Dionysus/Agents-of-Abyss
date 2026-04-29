@@ -49,6 +49,7 @@ QUEST_LANES = {
     "method-growth",
     "distillation",
     "growth-cycle",
+    "audit",
     "release-support",
     "boundary-bridge",
 }

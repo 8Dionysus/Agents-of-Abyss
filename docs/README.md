@@ -18,7 +18,7 @@ For the shortest center overview, read:
 6. [`ROADMAP`](../ROADMAP.md)
 7. [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md)
 
-Then use [`MECHANICS`](../mechanics/README.md) as the branch point for center-level processes: method/growth, recurrence/return/continuity, checkpoint, Experience, Agon, antifragility, Questbook, RPG, boundary bridge, distillation, growth cycle, and release support.
+Then use [`MECHANICS`](../mechanics/README.md) as the branch point for center-level processes: method/growth, recurrence/return/continuity, checkpoint, Experience, Agon, antifragility, Questbook, RPG, boundary bridge, audit, distillation, growth cycle, and release support.
 
 The route modes behind this entry surface are governed by [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md).
 
@@ -67,7 +67,7 @@ This docs map mirrors, but does not replace, the canonical route contract.
 | Public support | Check whether the claim can be stated publicly and validated. | [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) |
 | Machine contract | Check compact machine-facing capsules. | [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md), [`generated/center_entry_map.min.json`](../generated/center_entry_map.min.json), [`generated/ecosystem_registry.min.json`](../generated/ecosystem_registry.min.json), [`generated/federation_supporting_inventory.min.json`](../generated/federation_supporting_inventory.min.json) |
 | Mechanic route | Check process-specific owner splits and stop-lines. | [`MECHANICS`](../mechanics/README.md), relevant package `README.md`, `PARTS.md`, `LANDING_LOG.md`, and `PROVENANCE.md` |
-| Audit route | Check cleanup and drift review surfaces. | [`audits/`](audits/), [`ECOSYSTEM_AUDIT_INDEX`](../ECOSYSTEM_AUDIT_INDEX.md) |
+| Audit route | Check cleanup, drift review, evidence posture, and finding routes. | [`audit`](../mechanics/audit/README.md), [`ECOSYSTEM_AUDIT_INDEX`](../ECOSYSTEM_AUDIT_INDEX.md) |
 
 ## Validation
 
@@ -94,12 +94,11 @@ For mechanic-specific changes, use [`../mechanics/AGENTS.md`](../mechanics/AGENT
 |---|---|
 | `docs/` root | stable center doctrine and maps that are too deep for repository root but still center-level |
 | [`docs/guardrails/`](guardrails/) | docs cleanup, link/shape hygiene, generated freshness, and AGENTS mesh guardrails |
-| [`docs/audits/`](audits/) | audit evidence, cleanup candidates, and root-surface review artifacts |
 | [`docs/registry/`](registry/) | registry evolution notes and future schema/migration planning |
 | [`docs/decisions/`](decisions/) | decision records explaining why a route or placement was chosen |
 | [`docs/traces/`](traces/) | migration evidence, move manifests, link-rewrite traces, and provenance logs |
 
-Mechanic history and active mechanic law belong under [`mechanics/`](../mechanics/), not under empty `docs/<mechanic>/` doors.
+Audit evidence now belongs under [`mechanics/audit/`](../mechanics/audit/). Mechanic history and active mechanic law belong under [`mechanics/`](../mechanics/), not under empty `docs/<mechanic>/` doors.
 
 ## Root-adjacent technical districts
 
@@ -129,6 +128,7 @@ Use these clusters for orientation only. Deep branch routing belongs in [`MECHAN
 | Questbook and RPG | [`questbook`](../mechanics/questbook/README.md), [`rpg`](../mechanics/rpg/README.md) | obligations, questlines, progression, or adjunct campaign vocabulary is needed |
 | Boundary bridge | [`boundary-bridge`](../mechanics/boundary-bridge/README.md) | AoA supports cross-owner work while preserving source-owned meaning and owner-local authority |
 | Distillation and growth cycle | [`distillation`](../mechanics/distillation/README.md), [`growth-cycle`](../mechanics/growth-cycle/README.md) | raw material must become active form, or harvest/diagnosis/repair/progression must stay reusable |
+| Audit | [`audit`](../mechanics/audit/README.md) | evidence, risk, finding, validation, cleanup, or owner-route visibility is needed |
 | Release support | [`release-support`](../mechanics/release-support/README.md) | a transition, public claim, release, or audit route needs verification |
 
 ## Recommended reading paths
@@ -161,7 +161,7 @@ Use these clusters for orientation only. Deep branch routing belongs in [`MECHAN
 2. Read [`THEMATIC_DISTRICT_PROTOCOL`](guardrails/THEMATIC_DISTRICT_PROTOCOL.md).
 3. Check [`CURRENT_SURFACE_INDEX`](guardrails/CURRENT_SURFACE_INDEX.md).
 4. Check [`FRAGILITY_BLACKLIST`](../FRAGILITY_BLACKLIST.md).
-5. Check [`audits/ROOT_SURFACE_AUDIT_2026_04_24`](audits/ROOT_SURFACE_AUDIT_2026_04_24.md).
+5. Check [`audit provenance`](../mechanics/audit/PROVENANCE.md) if old root-surface review evidence matters.
 6. Move, merge, or delete only with a surviving canonical home.
 
 ## Notes

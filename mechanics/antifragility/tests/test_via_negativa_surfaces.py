@@ -16,7 +16,7 @@ REPO_ROOT = _repo_root()
 
 def test_deletion_candidates_surface_stays_owner_aware() -> None:
     root_candidate_path = REPO_ROOT / "DELETION_CANDIDATES.json"
-    candidate_path = REPO_ROOT / "docs" / "audits" / "DELETION_CANDIDATES.json"
+    candidate_path = REPO_ROOT / "mechanics" / "audit" / "legacy" / "raw" / "DELETION_CANDIDATES.json"
 
     assert not root_candidate_path.exists()
     assert candidate_path.exists()

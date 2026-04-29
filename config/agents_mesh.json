@@ -271,23 +271,6 @@
       ]
     },
     {
-      "path": "docs/audits/AGENTS.md",
-      "scope": "docs/audits/",
-      "kind": "docs-thematic-district-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Thematic docs district card.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
       "path": "docs/registry/AGENTS.md",
       "scope": "docs/registry/",
       "kind": "docs-thematic-district-card",
@@ -770,6 +753,74 @@
       "status": "required",
       "owner": "Agents-of-Abyss",
       "notes": "Deep docs card for Boundary bridge.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/audit/AGENTS.md",
+      "scope": "mechanics/audit/",
+      "kind": "mechanic-package-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Audit mechanic package card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/audit/docs/AGENTS.md",
+      "scope": "mechanics/audit/docs/",
+      "kind": "mechanic-docs-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Audit docs local card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/audit/parts/AGENTS.md",
+      "scope": "mechanics/audit/parts/",
+      "kind": "mechanic-parts-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Audit parts local card.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
+      "path": "mechanics/audit/legacy/AGENTS.md",
+      "scope": "mechanics/audit/legacy/",
+      "kind": "mechanic-legacy-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Audit legacy local card.",
       "required_headings": [
         "# AGENTS.md",
         "## Applies to",

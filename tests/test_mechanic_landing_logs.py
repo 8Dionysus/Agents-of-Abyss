@@ -67,6 +67,11 @@ class MechanicLandingLogTests(unittest.TestCase):
 
         self.assertEqual(problems, [])
 
+    def test_audit_landing_log_carries_mechanic_landing(self) -> None:
+        problems = validate_log("audit")
+
+        self.assertEqual(problems, [])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T05:04:18.257808+00:00",
+  "generated_at": "2026-04-29T15:37:03.884319+00:00",
   "repairs": [
     {
       "file": "docs/FEDERATION_RULES.md",
@@ -7,23 +7,7 @@
       "new": "(../mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md)",
       "old": "(RECURRENCE_PRINCIPLE.md)",
       "reason": "Recurrence principle is mechanic-local, not a flat docs neighbor.",
-      "status": "applied"
-    },
-    {
-      "file": "docs/landings/README.md",
-      "id": "landings-agon-log-mechanic-route",
-      "new": "](../../mechanics/agon/LANDING_LOG.md)",
-      "old": "](../AGON_LANDING_LOG.md)",
-      "reason": "Agon landing log moved from flat docs into the mechanics/agon package.",
-      "status": "applied"
-    },
-    {
-      "file": "docs/landings/README.md",
-      "id": "landings-experience-log-mechanic-route",
-      "new": "](../../mechanics/experience/LANDING_LOG.md)",
-      "old": "](../EXPERIENCE_LANDING_LOG.md)",
-      "reason": "Experience landing log moved from flat docs into the mechanics/experience package.",
-      "status": "applied"
+      "status": "already-clean"
     },
     {
       "file": "mechanics/antifragility/FRAGILITY_BLACKLIST.md",
@@ -31,15 +15,15 @@
       "new": "[VIA_NEGATIVA](docs/VIA_NEGATIVA.md)",
       "old": "[docs/VIA_NEGATIVA](mechanics/antifragility/docs/VIA_NEGATIVA.md)",
       "reason": "Mechanic-local doctrine should route relative to the antifragility package root.",
-      "status": "applied"
+      "status": "already-clean"
     },
     {
       "file": "mechanics/antifragility/FRAGILITY_BLACKLIST.md",
       "id": "antifragility-deletion-candidates-audit-route",
-      "new": "[docs/audits/DELETION_CANDIDATES.json](../../docs/audits/DELETION_CANDIDATES.json)",
+      "new": "[audit provenance](../audit/PROVENANCE.md)",
       "old": "[docs/audits/DELETION_CANDIDATES.json](docs/audits/DELETION_CANDIDATES.json)",
-      "reason": "Deletion candidates are root docs audit evidence, not antifragility-local files.",
-      "status": "applied"
+      "reason": "Deletion candidates moved into Audit legacy raw; antifragility should route to the audit evidence home.",
+      "status": "already-clean"
     },
     {
       "file": "mechanics/antifragility/FRAGILITY_BLACKLIST.md",
@@ -47,7 +31,7 @@
       "new": "[docs/ROOT_SURFACE_LAW](../../docs/ROOT_SURFACE_LAW.md)",
       "old": "[docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md)",
       "reason": "Root surface law remains under root docs governance.",
-      "status": "applied"
+      "status": "already-clean"
     },
     {
       "file": "mechanics/method-growth/docs/ROOTLINE.md",
@@ -55,7 +39,7 @@
       "new": "[RECURRENCE_PRINCIPLE](../../recurrence/docs/RECURRENCE_PRINCIPLE.md)",
       "old": "[RECURRENCE_PRINCIPLE](RECURRENCE_PRINCIPLE.md)",
       "reason": "Rootline recurrence reference crosses from method-growth docs to recurrence doctrine.",
-      "status": "applied"
+      "status": "already-clean"
     },
     {
       "file": "mechanics/release-support/docs/RELEASING.md",
@@ -63,7 +47,7 @@
       "new": "[CHANGELOG](../../../CHANGELOG.md)",
       "old": "[CHANGELOG](../CHANGELOG.md)",
       "reason": "Repo changelog stays at repository root, three levels above release-support docs.",
-      "status": "applied"
+      "status": "already-clean"
     }
   ],
   "schema": "aoa.link_shape_hygiene_repair_manifest.v1"

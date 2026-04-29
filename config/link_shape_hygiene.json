@@ -47,8 +47,8 @@
         "id": "antifragility-deletion-candidates-audit-route",
         "file": "mechanics/antifragility/FRAGILITY_BLACKLIST.md",
         "old": "[docs/audits/DELETION_CANDIDATES.json](docs/audits/DELETION_CANDIDATES.json)",
-        "new": "[docs/audits/DELETION_CANDIDATES.json](../../docs/audits/DELETION_CANDIDATES.json)",
-        "reason": "Deletion candidates are root docs audit evidence, not antifragility-local files."
+        "new": "[audit provenance](../audit/PROVENANCE.md)",
+        "reason": "Deletion candidates moved into Audit legacy raw; antifragility should route to the audit evidence home."
       },
       {
         "id": "antifragility-root-surface-law-route",
@@ -401,14 +401,6 @@
         "require_h2": true
       },
       {
-        "path": "docs/audits/README.md",
-        "required": true,
-        "min_lines": 18,
-        "max_line_length": 700,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
         "path": "docs/decisions/README.md",
         "required": true,
         "min_lines": 20,
@@ -509,6 +501,38 @@
         "required": true,
         "min_lines": 25,
         "max_line_length": 900,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/audit/README.md",
+        "required": true,
+        "min_lines": 60,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/audit/PARTS.md",
+        "required": true,
+        "min_lines": 35,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/audit/docs/AUDIT_LAW.md",
+        "required": true,
+        "min_lines": 25,
+        "max_line_length": 700,
+        "require_h1": true,
+        "require_h2": true
+      },
+      {
+        "path": "mechanics/audit/PROVENANCE.md",
+        "required": true,
+        "min_lines": 25,
+        "max_line_length": 700,
         "require_h1": true,
         "require_h2": true
       }

@@ -22,6 +22,7 @@ MECHANIC_SLUGS = (
     "questbook",
     "rpg",
     "boundary-bridge",
+    "audit",
     "release-support",
 )
 ARTIFACT_DIRS = ("schemas", "examples", "config", "generated", "scripts", "tests")
@@ -111,6 +112,10 @@ BOUNDARY_BRIDGE_PREFIXES = (
     "validate_boundary_bridge",
     "test_boundary_bridge",
 )
+AUDIT_PREFIXES = (
+    "validate_audit",
+    "test_audit",
+)
 
 ROOT_ALLOWLIST = {
     "generated": {
@@ -161,6 +166,8 @@ def mechanic_for_name(name: str) -> str | None:
         return "release-support"
     if name.startswith(BOUNDARY_BRIDGE_PREFIXES):
         return "boundary-bridge"
+    if name.startswith(AUDIT_PREFIXES):
+        return "audit"
     return None
 
 
