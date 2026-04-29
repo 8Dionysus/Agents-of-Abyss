@@ -142,21 +142,18 @@ Current route:
 - `mechanics/registry.json` for machine-checked mechanic package metadata
 - `generated/mechanic_card_index.min.json` for compact routing
 
-## Active mechanic packages
+## Mechanic Selection
 
-| Mechanic | Use when | Route |
-|---|---|---|
-| method-growth | repeated patterns need reviewable growth, lineage, method capture, or pruning | `mechanics/method-growth/README.md` |
-| distillation | raw packets, waves, or legacy material must become light active form | `mechanics/distillation/README.md` |
-| growth-cycle | harvest, progression, self-diagnosis, or repair loops need bounded routing | `mechanics/growth-cycle/README.md` |
-| recurrence | return, continuity, re-entry, or durable boundedness is at stake | `mechanics/recurrence/README.md` |
-| checkpoint | an intermediate state must be captured without becoming final authority | `mechanics/checkpoint/README.md` |
-| experience | staged contracts, office/service posture, continuity, and runtime boundaries are involved | `mechanics/experience/README.md` |
-| agon | pressure, lawful move language, arena readiness, verdict contour, owner binding, or trial handoff is involved | `mechanics/agon/README.md` |
-| antifragility | subtraction, degraded mode, via negativa, or authority inflation must be checked | `mechanics/antifragility/README.md` |
-| questbook | obligations should survive as public, reviewable game objects rather than TODO noise | `mechanics/questbook/README.md` |
-| rpg | game-language overlay helps route quests, progression, proof, and handoff without becoming a toy layer | `mechanics/rpg/README.md` |
-| boundary-bridge | cross-owner transition needs support without ownership collapse | `mechanics/boundary-bridge/README.md` |
-| release-support | public claims, internal releases, and transition proof need one support route | `mechanics/release-support/README.md` |
+Mechanic selection lives in:
 
-Mechanic detail belongs in package `DIRECTION.md`, `PARTS.md`, `LANDING_LOG.md`, `PROVENANCE.md`, and `OWNER_REQUESTS.md`, not in this layer map.
+- `mechanics/README.md` for the human atlas
+- `mechanics/registry.json` for checked package metadata
+- `generated/mechanic_card_index.min.json` for compact routing
+
+After selecting a mechanic, continue through the package `README.md`,
+`DIRECTION.md`, `PARTS.md`, `LANDING_LOG.md`, `PROVENANCE.md`, and
+`OWNER_REQUESTS.md` when those surfaces exist.
+
+This layer map stays at the conceptual layer boundary: it names the mechanics
+overlay and routes to the atlas, while package detail stays with the owning
+mechanic.

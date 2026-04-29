@@ -52,16 +52,9 @@ When deciding where something belongs:
 6. If it defines dispatch across layers, it probably belongs in `aoa-routing`.
 7. If it defines machine-first summary surfaces or derived observability windows, it probably belongs in `aoa-stats`.
 8. If it defines ecosystem-level identity or federation boundaries, it belongs here.
-9. If it defines future Agon law, imposition audit, owner binding law, arena
-   lifecycle, lawful moves, gate-routing handoff, trial-playbook handoff,
-   contradiction-ledger posture, or promotion discipline, route it here first
-   as center-owned protocol preparation and imposition unless a later reviewed
-   center decision narrows that contour. If it defines agonic actor form,
-   civil/service assistant variants, requested owner landings, routing gates,
-   trial scenarios, verdicts, scars, derived summaries, SDK helpers, runtime
-   services, KAG projections, or ToS canonization, route that slice through
-   `mechanics/agon/README.md`, `mechanics/agon/PARTS.md`,
-   `mechanics/agon/OWNER_REQUESTS.md`, and `mechanics/agon/PROVENANCE.md`.
+9. If it is mechanic-shaped, start with `mechanics/README.md` and the owning
+   mechanic package. Use the package `README.md`, `PARTS.md`,
+   `OWNER_REQUESTS.md`, and `PROVENANCE.md` when those surfaces exist.
 
 ## Compact rule
 
