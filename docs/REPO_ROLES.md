@@ -36,9 +36,9 @@ Use it when the question is not only "what exists?" but also:
 
 ## Supporting consumer surfaces
 
-| repository | role in the wider system | compact registry v1 note |
+| repository | role in the wider system | registry posture |
 |---|---|---|
-| `aoa-sdk` | typed local-first consumer and orchestration surface for source-owned AoA repositories | routed from the center, but intentionally outside compact registry v1 |
+| `aoa-sdk` | typed local-first consumer and orchestration surface for source-owned AoA repositories | routed from the center through `generated/federation_supporting_inventory.min.json`, but intentionally outside ecosystem registry v2 |
 
 ## Routing rule of thumb
 
@@ -69,5 +69,6 @@ Source repositories own meaning.
 Meta repositories own maps.
 Derived repositories own bounded lifts, views, and access layers.
 
-Compact registry v1 covers the center, the public AoA layers, and the adjacent system anchors listed in the ecosystem map.
-Supporting consumer surfaces stay routable from the center but remain outside compact registry v1 until a later map version says otherwise.
+Ecosystem registry v2 covers the center, the public AoA layers, and the adjacent system anchors listed in the ecosystem map.
+It uses separate `visibility`, `maturity`, `relation`, and `kind` axes so public contour, maturity posture, and repository relationship stay legible.
+Supporting consumer surfaces stay routable from the center but remain in the companion supporting inventory unless a later public map explicitly promotes them into the ecosystem registry.

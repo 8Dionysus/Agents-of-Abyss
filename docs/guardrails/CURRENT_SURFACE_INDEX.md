@@ -32,7 +32,6 @@ This index explains which `docs/` surfaces are current and which districts hold 
 | District | Use | Current-law caution |
 |---|---|---|
 | `docs/guardrails/` | validator law, hygiene law, classifier config, and generated source maps | guardrails verify shape; they do not author doctrine |
-| `docs/registry/` | registry evolution notes | design notes are not generated-capsule truth until builders and validators land |
 | `docs/decisions/` | decision records | decisions explain why, current surfaces define what |
 | `docs/traces/` | move manifests, link rewrites, and provenance | traces explain movement, not meaning |
 

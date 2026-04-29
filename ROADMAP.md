@@ -22,7 +22,7 @@ Adjacent system anchors include:
 - `Tree-of-Sophia`
 - `abyss-stack`
 
-Supporting inventory surfaces currently kept outside compact registry v1
+Supporting inventory surfaces currently kept outside ecosystem registry v2
 include:
 - `aoa-sdk` as the typed local-first consumer and control-plane support layer
 
@@ -64,7 +64,7 @@ The current center framing also includes its first bounded cross-repo entry and 
 - keep `aoa-stats` public as a derived observability layer that summarizes movement without becoming proof, route, or score authority
 - keep the thin federation entry ABI in `aoa-routing` additive and non-authoritative
 - keep the experimental federation spine and export-readiness posture in `aoa-kag` bounded and derived
-- keep `aoa-sdk` visible in `generated/federation_supporting_inventory.min.json` as a typed supporting consumer and control-plane surface without collapsing it into compact registry v1 or center authority
+- keep `aoa-sdk` visible in `generated/federation_supporting_inventory.min.json` as a typed supporting consumer and control-plane surface without collapsing it into ecosystem registry v2 or center authority
 - keep the public ToS tiny-entry seam source-owned even when downstream layers consume it
 
 ### Current release contour
@@ -112,13 +112,13 @@ stop-lines.
 Goals:
 - align `Agents-of-Abyss` with the documented public federation contour that already exists
 - update the README, charter, ecosystem map, layers, and federation rules
-- correct the ecosystem registry without breaking the current validator surface
+- keep the ecosystem registry accurate without breaking the current validator surface
 - make AoA legible again from the center outward
 
 Exit signals:
 - center docs no longer contradict the profile or layer repositories
 - all current public AoA layers are named in the center
-- `generated/ecosystem_registry.min.json` reflects the public federation accurately enough for v1
+- `generated/ecosystem_registry.min.json` reflects the public federation with the current v2 axes
 
 ## Phase 2: center discipline and routing alignment
 
@@ -196,9 +196,9 @@ Goals:
 ## Phase 6: ecosystem registry v2
 
 Goals:
-- split visibility, maturity, and relation into clearer axes
-- update schema and validator
-- migrate machine-readable registry surfaces without breaking the center’s role as public map
+- keep visibility, maturity, relation, and kind as separate axes
+- keep schema, validator, generated registry, roadmap, ecosystem map, and public support posture aligned
+- preserve the center's role as public map without absorbing supporting consumers into center authority
 
 ## Standing direction
 

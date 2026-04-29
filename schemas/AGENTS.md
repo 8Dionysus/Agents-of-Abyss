@@ -75,7 +75,7 @@ When editing the schema:
 - update the matching validator or builder when the allowed shape or allowed
   values change
 - prefer additive clarity over casual churn
-- make shared-maturity and status changes intentionally, because they change public interpretation
+- make visibility, maturity, relation, and kind changes intentionally, because they change public interpretation
 
 Do not widen the schema casually just to make inconsistent data pass.
 If the schema changes, the docs and registry should explain why.

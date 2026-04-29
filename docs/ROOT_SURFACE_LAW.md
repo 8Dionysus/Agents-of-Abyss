@@ -22,7 +22,7 @@ A surface that is merely interesting, historical, local to one package, generate
 
 A file may remain flat under `docs/` only when it is current center doctrine, current route law, owner map support, or a compatibility route that protects a known public entrypoint.
 
-Historical receipts, audit evidence, registry notes, decisions, traces, mechanic-specific legacy records, and superseded aliases need named homes. Empty route doors are not homes.
+Historical receipts, audit evidence, decisions, traces, mechanic-specific legacy records, and superseded aliases need named homes. Registry contract changes must land through schemas, generated capsules, validators, and aligned source docs rather than parked design-note doors. Empty route doors are not homes.
 
 The docs thematic cleanup guardrails are defined by:
 
@@ -49,7 +49,7 @@ The docs thematic cleanup guardrails are defined by:
 | One-mechanic seed manifest or landing receipt | `mechanics/<slug>/legacy/raw/` plus that mechanic `PROVENANCE.md` | useful receipt, not civic law |
 | Owner-bound release retrospective | `mechanics/release-support/legacy/raw/` plus release-support `PROVENANCE.md` | release repair learning belongs to the release-support mechanic |
 | Generic move manifest or link rewrite trace | `docs/traces/` | traces explain movement, not meaning |
-| Future registry design note | `docs/registry/` | design evolution belongs beside registry planning, not beside the constitution |
+| Registry contract change | `schemas/`, `generated/`, validators, and a decision record when the route changes | registry evolution becomes real only when the machine contract and source docs move together |
 | Audit candidate list | `mechanics/audit/legacy/raw/` plus `mechanics/audit/PROVENANCE.md` | review evidence should be inspectable but not displayed as a civic front-door peer |
 | Generated artifact | `generated/` | generated surfaces must remain machine-facing and reproducible |
 | Experiment or scratchpad | owner repo, mechanic legacy, or untracked local notes | the root must not preserve every thought as public law |
@@ -73,7 +73,6 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 | Existing surface | Decision | New home or status | Why |
 |---|---|---|---|
 | `SEED_MANIFEST.md` | move | `mechanics/agon/legacy/raw/AGON_WAVE3_SEED_MANIFEST.md` | it is an Agon Wave III receipt, not a root manifest for the whole repository |
-| `registry-v2-notes.md` | move | `docs/registry/REGISTRY_V2_NOTES.md` | it is a future registry design note and belongs near registry evolution |
 | `DELETION_CANDIDATES.json` | move | `mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` | it is an inspect-first audit artifact, not a civic root surface |
 | `.github/pull_request_template.md` | remove | keep `.github/PULL_REQUEST_TEMPLATE.md` | duplicate PR templates with different casing create template ambiguity |
 | `FRAGILITY_BLACKLIST.md` | keep, narrow | root index to `mechanics/antifragility/docs/VIA_NEGATIVA.md` and `mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` | useful root pattern index if compact |
@@ -90,7 +89,7 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 | guardrail law and classifier | keep under | `docs/guardrails/` | validator law, hygiene law, mesh law, and classifier config belong together |
 | active agent guidance | promote into owner `AGENTS.md`, validator, mechanic card, or audit protocol | agent rules should not sit in a preserved reference cache |
 | audit protocol/evidence | move or keep under | `mechanics/audit/` or `mechanics/audit/legacy/raw/` | review surfaces belong with the audit mechanic |
-| registry design note | move or keep under | `docs/registry/` | registry evolution belongs beside registry planning |
+| registry contract change | land through | schema, generated capsule, validator, source docs, and decision record when needed | registry evolution should not live as an unexecuted docs tail |
 | decision record | keep or move into | `docs/decisions/` | decisions explain why; current surfaces define what |
 | owner-bound retrospective | move into owner legacy | `mechanics/<slug>/legacy/raw/` plus `PROVENANCE.md` | repair learning should live with the process that can act on it |
 | generic review retrospective | move into | `mechanics/audit/legacy/raw/` plus `PROVENANCE.md` when distilled | center-generic review learning is audit evidence, not a standing docs district |

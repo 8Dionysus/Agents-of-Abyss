@@ -679,12 +679,12 @@ class ValidateRegistryTests(unittest.TestCase):
     def write_registry(self, payload: dict[str, object]) -> None:
         write_text(self.registry_path, json.dumps(payload, indent=2) + "\n")
 
-    def test_valid_documented_v1_registry_passes(self) -> None:
+    def test_valid_documented_v2_registry_passes(self) -> None:
         self.write_valid_registry()
 
         validate_ecosystem.validate_registry()
 
-    def test_missing_documented_v1_repo_fails(self) -> None:
+    def test_missing_documented_v2_repo_fails(self) -> None:
         self.write_valid_registry()
         payload = self.read_registry()
         payload["repos"] = [
@@ -696,7 +696,7 @@ class ValidateRegistryTests(unittest.TestCase):
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
-            "missing documented v1 repos: aoa-stats",
+            "missing documented v2 repos: aoa-stats",
         ):
             validate_ecosystem.validate_registry()
 
@@ -730,15 +730,31 @@ class ValidateRegistryTests(unittest.TestCase):
         ):
             validate_ecosystem.validate_registry()
 
-    def test_supporting_consumer_surface_is_out_of_scope_for_compact_v1(self) -> None:
+    def test_wrong_relation_for_documented_repo_fails(self) -> None:
+        self.write_valid_registry()
+        payload = self.read_registry()
+        for repo in payload["repos"]:
+            if isinstance(repo, dict) and repo.get("name") == "aoa-routing":
+                repo["relation"] = "derived-layer"
+                break
+        self.write_registry(payload)
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            r"relation for 'aoa-routing' must equal 'routing-layer'",
+        ):
+            validate_ecosystem.validate_registry()
+
+    def test_supporting_consumer_surface_is_out_of_scope_for_registry_v2(self) -> None:
         self.write_valid_registry()
         payload = self.read_registry()
         payload["repos"].append(
             {
                 "name": "aoa-sdk",
                 "role": "consumer-surface",
-                "status": "active",
-                "shared_maturity": "seed",
+                "visibility": "public",
+                "maturity": "active",
+                "relation": "supporting-consumer",
                 "kind": "related",
             }
         )
@@ -746,7 +762,7 @@ class ValidateRegistryTests(unittest.TestCase):
 
         with self.assertRaisesRegex(
             validate_ecosystem.ValidationError,
-            "outside compact v1 scope: aoa-sdk",
+            "outside ecosystem registry v2 scope: aoa-sdk",
         ):
             validate_ecosystem.validate_registry()
 

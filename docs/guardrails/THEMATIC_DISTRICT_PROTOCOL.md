@@ -9,7 +9,6 @@ This protocol keeps `docs/` readable as the center grows.
 | District | Role |
 |---|---|
 | `docs/guardrails/` | validator law, hygiene protocol, AGENTS mesh law, generated index source maps, and docs cleanup classifier |
-| `docs/registry/` | registry evolution, schema/capsule notes, generated-index planning, and inventory design |
 | `docs/decisions/` | decision records explaining why a route, owner split, or doctrine placement was chosen |
 | `docs/traces/` | migration evidence, provenance logs, link-rewrite traces, move manifests, and generic receipts |
 
@@ -34,7 +33,7 @@ A district document may influence current law only through an explicit promotion
 2. preserve provenance,
 3. update links and generated indexes,
 4. run validators,
-5. explain whether old material remains receipt, audit, decision, trace, mechanic legacy record, owner retrospective, or registry note.
+5. explain whether old material remains receipt, audit, decision, trace, mechanic legacy record, owner retrospective, or generated/schema contract evidence.
 
 ## Migration rule
 

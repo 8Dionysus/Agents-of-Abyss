@@ -56,6 +56,11 @@ Tracking starts with the community-docs baseline for this repository.
   coverage, and AGENTS closeout reminders for durable structural, ownership,
   workflow, route-law, validator-authority, public-contract, and topology
   changes
+- ecosystem registry v2 through
+  `schemas/ecosystem-registry.schema.json`,
+  `generated/ecosystem_registry.min.json`,
+  `scripts/validate_ecosystem.py`, updated public contour docs, and removal of
+  the temporary `docs/registry/` design-note district
 - Experience-style mechanic `AGENTS.md` route law across center mechanics,
   standardizing active source surfaces, post-change route review, closeout
   provenance discipline, and local validation routes
