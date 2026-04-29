@@ -26,11 +26,11 @@ Keep `docs/README.md` as a route map and keep validation command lanes in `AGENT
 
 Do not keep a generic `docs/postmortems/` shelf for one owner-bound release
 retrospective. Release repair learning belongs under the release-support
-mechanic legacy/provenance route unless it is center-generic audit evidence.
+mechanic legacy/provenance route unless it belongs in the Audit mechanic.
 
 Do not keep a generic `docs/agent-lane/` shelf for a preserved root
 `AGENTS.md` snapshot. Active agent rules must live in root or nearest owner
-`AGENTS.md`, a validator, a mechanic package, or the audit protocol.
+`AGENTS.md`, a validator, or a mechanic package.
 
 ## Consequences
 

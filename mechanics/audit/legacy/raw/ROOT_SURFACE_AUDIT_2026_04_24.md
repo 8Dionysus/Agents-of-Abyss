@@ -48,7 +48,7 @@ The resulting risk is not only visual clutter. It is authority drift. A file pla
 
 This cleanup creates durable next steps rather than placeholders:
 
-1. Use [docs/ROOT_SURFACE_LAW](../ROOT_SURFACE_LAW.md) before any future root addition.
+1. Use [docs/ROOT_SURFACE_LAW](../../../../docs/ROOT_SURFACE_LAW.md) before any future root addition.
 2. Use `docs/landings/` as the receiving district for root-level historical receipts.
 3. Use `docs/registry/` for registry evolution notes before schema work.
 4. Use `docs/audits/` for inspect-first candidate lists and cleanup evidence.

@@ -32,7 +32,7 @@ class OwnerRequestQueueTests(unittest.TestCase):
         mechanics = {request["mechanic"] for request in payload["requests"]}
         self.assertEqual(
             mechanics,
-            {"method-growth", "distillation", "growth-cycle", "recurrence", "checkpoint", "experience", "agon", "antifragility", "questbook", "rpg", "boundary-bridge", "release-support"},
+            {"method-growth", "distillation", "growth-cycle", "recurrence", "checkpoint", "experience", "agon", "antifragility", "questbook", "rpg", "boundary-bridge", "audit", "release-support"},
         )
 
 

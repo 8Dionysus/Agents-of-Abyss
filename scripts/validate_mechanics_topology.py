@@ -25,18 +25,26 @@ CANONICAL_SLUGS = (
     "questbook",
     "rpg",
     "boundary-bridge",
+    "audit",
     "release-support",
 )
 REQUIRED_PACKAGE_FILES = ("AGENTS.md", "README.md", "ROADMAP.md", "LANDING_LOG.md")
 REQUIRED_LOG_FIELDS = ("Status:", "Owner boundary:", "Surfaces:", "Validation:", "Stop-lines:", "Next route:")
 TEXT_SUFFIXES = (".md", ".py", ".json", ".yaml", ".yml", ".toml", ".txt")
 HISTORICAL_REFERENCE_PREFIXES = (
-    "docs/audits/",
     "docs/traces/",
+    "mechanics/audit/legacy/raw/",
 )
 HISTORICAL_REFERENCE_PATHS = {
     "CHANGELOG.md",
     "config/link_shape_hygiene.json",
+    "mechanics/audit/PROVENANCE.md",
+    "mechanics/audit/LANDING_LOG.md",
+    "mechanics/audit/legacy/INDEX.md",
+    "mechanics/audit/legacy/raw/DOCS_AUDITS_AGENTS.md",
+    "mechanics/audit/legacy/raw/DOCS_AUDITS_README.md",
+    "mechanics/audit/legacy/raw/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md",
+    "mechanics/audit/legacy/raw/ROOT_SURFACE_AUDIT_2026_04_24.md",
 }
 OLD_ACTIVE_PATTERNS = (
     r"(?:^|/)docs/AGON_[A-Z0-9_]+\.md",

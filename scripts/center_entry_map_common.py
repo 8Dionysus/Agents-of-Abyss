@@ -151,7 +151,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "machine_surface_refs": ["generated/center_entry_map.min.json"],
         "verification_refs": [
             "ECOSYSTEM_AUDIT_INDEX.md",
-            "docs/audits/ROOT_SURFACE_AUDIT_2026_04_24.md",
+            "mechanics/audit/PROVENANCE.md",
         ],
         "must_not_claim": [
             "a root file belongs in root because it was created during a wave",
@@ -218,7 +218,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "route_mode": "mechanic-change",
         "priority": 5,
         "audience": ["mechanic-author", "coding-agent", "reviewer"],
-        "need": "edit Agon, Experience, recurrence, method/growth, distillation, growth-cycle, antifragility, quest/RPG, release-support, or boundary bridge without stealing owner truth",
+        "need": "edit Agon, Experience, recurrence, method/growth, distillation, growth-cycle, audit, antifragility, quest/RPG, release-support, or boundary bridge without stealing owner truth",
         "surface_ref": "mechanics/README.md",
         "human_path": [
             "README.md",

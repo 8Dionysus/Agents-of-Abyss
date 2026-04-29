@@ -191,7 +191,7 @@ def validate_owner_requests(problems: list[str]) -> None:
 
 def validate_provenance_boundary(problems: list[str]) -> None:
     provenance = read(PACKAGE_ROOT / "PROVENANCE.md")
-    for term in ("ANTIFRAGILITY_FIRST_WAVE", "VIA_NEGATIVA_CHECKLIST", "docs/audits/DELETION_CANDIDATES.json"):
+    for term in ("ANTIFRAGILITY_FIRST_WAVE", "VIA_NEGATIVA_CHECKLIST", "mechanics/audit/legacy/raw/DELETION_CANDIDATES.json"):
         if term not in provenance:
             problems.append(f"mechanics/antifragility/PROVENANCE.md: missing provenance term {term!r}")
     allowed = {

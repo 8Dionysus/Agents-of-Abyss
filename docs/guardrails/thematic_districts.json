@@ -12,30 +12,6 @@
     "MECHANICS.md"
   ],
   "districts": {
-    "audits": {
-      "path": "docs/audits",
-      "readme": "docs/audits/README.md",
-      "role": "Audit evidence, cleanup candidates, review protocols, and drift checks.",
-      "authority": "evidence_and_protocol",
-      "patterns": [
-        "AUDIT",
-        "CLEANUP",
-        "DRIFT",
-        "DELETION_CANDIDATES",
-        "BLACKLIST",
-        "REVIEW",
-        "PROOF_AUDIT",
-        "POSTMORTEM",
-        "RETRO",
-        "RETROSPECTIVE",
-        "INCIDENT",
-        "FAILURE",
-        "REPAIR"
-      ],
-      "must_not_claim": [
-        "Audit evidence is not law until adopted by a canonical surface."
-      ]
-    },
     "guardrails": {
       "path": "docs/guardrails",
       "readme": "docs/guardrails/README.md",
@@ -108,27 +84,12 @@
     }
   },
   "tie_break_order": [
-    "audits",
     "guardrails",
     "registry",
     "decisions",
     "traces"
   ],
   "exact_migrations": [
-    {
-      "source": "docs/CODEX_AUDIT_PROTOCOL.md",
-      "target": "docs/audits/CODEX_AUDIT_PROTOCOL.md",
-      "district": "audits",
-      "link_target": "docs/audits/CODEX_AUDIT_PROTOCOL.md",
-      "reason": "audit protocol belongs with audit surfaces"
-    },
-    {
-      "source": "docs/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md",
-      "target": "docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md",
-      "district": "audits",
-      "link_target": "docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md",
-      "reason": "skill/proof audit bridge belongs with audit surfaces"
-    },
     {
       "source": "docs/AGENTS_MESH_INDEX.md",
       "target": "docs/guardrails/AGENTS_MESH_INDEX.md",
@@ -184,21 +145,71 @@
       "district": "registry",
       "link_target": "docs/registry/REGISTRY_V2_NOTES.md",
       "reason": "future registry notes belong in registry district"
-    },
-    {
-      "source": "DELETION_CANDIDATES.json",
-      "target": "docs/audits/DELETION_CANDIDATES.json",
-      "district": "audits",
-      "link_target": "docs/audits/DELETION_CANDIDATES.json",
-      "reason": "deletion candidates are audit evidence"
     }
   ],
   "pattern_migrations": [
     {
+      "source_glob": "DELETION_CANDIDATES.json",
+      "target_dir": "mechanics/audit/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/audit/legacy/raw",
+      "reason": "root deletion-candidate evidence routes to Audit legacy before active distillation"
+    },
+    {
+      "source_glob": "docs/*DELETION_CANDIDATES*",
+      "target_dir": "mechanics/audit/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/audit/legacy/raw",
+      "reason": "deletion-candidate evidence routes to Audit legacy before active distillation"
+    },
+    {
+      "source_glob": "docs/*RETROSPECTIVE*.md",
+      "target_dir": "mechanics/audit/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/audit/legacy/raw",
+      "reason": "flat retrospective records route to Audit legacy before active distillation"
+    },
+    {
+      "source_glob": "docs/*RETRO*.md",
+      "target_dir": "mechanics/audit/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/audit/legacy/raw",
+      "reason": "flat retrospective records route to Audit legacy before active distillation"
+    },
+    {
+      "source_glob": "docs/*POSTMORTEM*.md",
+      "target_dir": "mechanics/audit/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/audit/legacy/raw",
+      "reason": "flat postmortem-style review records route to Audit legacy before active distillation"
+    },
+    {
+      "source_glob": "docs/*REVIEW*.md",
+      "target_dir": "mechanics/audit/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/audit/legacy/raw",
+      "reason": "flat review records route to Audit legacy before active distillation"
+    },
+    {
+      "source_glob": "docs/*DRIFT*.md",
+      "target_dir": "mechanics/audit/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/audit/legacy/raw",
+      "reason": "flat drift review records route to Audit legacy before active distillation"
+    },
+    {
+      "source_glob": "docs/*CLEANUP*.md",
+      "target_dir": "mechanics/audit/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/audit/legacy/raw",
+      "reason": "flat cleanup review records route to Audit legacy before active distillation"
+    },
+    {
       "source_glob": "docs/*AUDIT*.md",
-      "target_dir": "docs/audits",
-      "district": "audits",
-      "reason": "flat audit records move to docs/audits"
+      "target_dir": "mechanics/audit/legacy/raw",
+      "district": "traces",
+      "external_owner_route": "mechanics/audit/legacy/raw",
+      "reason": "flat audit records route to Audit legacy before active distillation"
     },
     {
       "source_glob": "docs/*LANDING*.md",

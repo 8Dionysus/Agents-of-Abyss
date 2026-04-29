@@ -50,9 +50,9 @@ The docs thematic cleanup guardrails are defined by:
 | Owner-bound release retrospective | `mechanics/release-support/legacy/raw/` plus release-support `PROVENANCE.md` | release repair learning belongs to the release-support mechanic |
 | Generic move manifest or link rewrite trace | `docs/traces/` | traces explain movement, not meaning |
 | Future registry design note | `docs/registry/` | design evolution belongs beside registry planning, not beside the constitution |
-| Audit candidate list | `docs/audits/` | review evidence should be inspectable but not displayed as a civic front-door peer |
+| Audit candidate list | `mechanics/audit/legacy/raw/` plus `mechanics/audit/PROVENANCE.md` | review evidence should be inspectable but not displayed as a civic front-door peer |
 | Generated artifact | `generated/` | generated surfaces must remain machine-facing and reproducible |
-| Experiment or scratchpad | `docs/audits/`, owner repo, mechanic legacy, or untracked local notes | the root must not preserve every thought as public law |
+| Experiment or scratchpad | owner repo, mechanic legacy, or untracked local notes | the root must not preserve every thought as public law |
 | Repo-local semantic change | owner repository | the center must not absorb layer truth |
 | Duplicate platform file | one canonical platform file | duplicate names with different casing create review and platform ambiguity |
 
@@ -74,9 +74,9 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 |---|---|---|---|
 | `SEED_MANIFEST.md` | move | `mechanics/agon/legacy/raw/AGON_WAVE3_SEED_MANIFEST.md` | it is an Agon Wave III receipt, not a root manifest for the whole repository |
 | `registry-v2-notes.md` | move | `docs/registry/REGISTRY_V2_NOTES.md` | it is a future registry design note and belongs near registry evolution |
-| `DELETION_CANDIDATES.json` | move | `docs/audits/DELETION_CANDIDATES.json` | it is an inspect-first audit artifact, not a civic root surface |
+| `DELETION_CANDIDATES.json` | move | `mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` | it is an inspect-first audit artifact, not a civic root surface |
 | `.github/pull_request_template.md` | remove | keep `.github/PULL_REQUEST_TEMPLATE.md` | duplicate PR templates with different casing create template ambiguity |
-| `FRAGILITY_BLACKLIST.md` | keep, narrow | root index to `mechanics/antifragility/docs/VIA_NEGATIVA.md` and `docs/audits/DELETION_CANDIDATES.json` | useful root pattern index if compact |
+| `FRAGILITY_BLACKLIST.md` | keep, narrow | root index to `mechanics/antifragility/docs/VIA_NEGATIVA.md` and `mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` | useful root pattern index if compact |
 | `QUESTBOOK.md` | keep, narrow | root quest index | useful only while it stays federation-level and does not become a second roadmap |
 | `ECOSYSTEM_AUDIT_INDEX.md` | keep, clean | root audit router | useful root index if it routes rather than storing every audit detail |
 | `GLOSSARY.md` | keep | root vocabulary companion | useful compact vocabulary if aligned with center docs |
@@ -89,11 +89,11 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 | mechanic compatibility route | keep flat and narrow | `docs/MECHANICS.md` | existing entrypoint that routes to `mechanics/README.md` |
 | guardrail law and classifier | keep under | `docs/guardrails/` | validator law, hygiene law, mesh law, and classifier config belong together |
 | active agent guidance | promote into owner `AGENTS.md`, validator, mechanic card, or audit protocol | agent rules should not sit in a preserved reference cache |
-| audit protocol/evidence | move or keep under | `docs/audits/` | review surfaces belong together |
+| audit protocol/evidence | move or keep under | `mechanics/audit/` or `mechanics/audit/legacy/raw/` | review surfaces belong with the audit mechanic |
 | registry design note | move or keep under | `docs/registry/` | registry evolution belongs beside registry planning |
 | decision record | keep or move into | `docs/decisions/` | decisions explain why; current surfaces define what |
 | owner-bound retrospective | move into owner legacy | `mechanics/<slug>/legacy/raw/` plus `PROVENANCE.md` | repair learning should live with the process that can act on it |
-| generic review retrospective | move into | `docs/audits/` | center-generic review learning is audit evidence, not a standing district |
+| generic review retrospective | move into | `mechanics/audit/legacy/raw/` plus `PROVENANCE.md` when distilled | center-generic review learning is audit evidence, not a standing docs district |
 | move manifest/provenance log | move into | `docs/traces/` | traces explain movement, not meaning |
 | mechanic-specific legacy docs | move into | `mechanics/<slug>/legacy/raw/` | current mechanic doctrine routes through the owning mechanic package |
 | superseded aliases | avoid by default | surviving canonical home plus provenance note | do not create empty docs doors for compatibility alone |

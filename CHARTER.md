@@ -33,7 +33,7 @@ AoA exists to support sustained intellectual and technical work through:
 | Federation rules | the discipline that keeps source truth, derived truth, routing truth, runtime truth, and authored knowledge truth separate |
 | Program-level direction | roadmap-level direction and maturity crosswalks, without repo-local implementation promises |
 | Center mechanics | constitutional stop-lines, owner-split law, and pre-protocol grammar for mechanics such as Agon and Experience |
-| Root surface governance | the law that decides what belongs in root and what must move into docs, audits, generated surfaces, quests, or owner repos |
+| Root surface governance | the law that decides what belongs in root and what must move into docs, mechanics/audit, generated surfaces, quests, or owner repos |
 | Center-entry capsules | compact machine-facing surfaces that help low-context agents orient without replacing human docs |
 
 ## What this repository does not own

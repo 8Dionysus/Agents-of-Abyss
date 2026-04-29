@@ -9,20 +9,16 @@ This protocol keeps `docs/` readable as the center grows.
 | District | Role |
 |---|---|
 | `docs/guardrails/` | validator law, hygiene protocol, AGENTS mesh law, generated index source maps, and docs cleanup classifier |
-| `docs/audits/` | audit evidence, cleanup candidates, drift review, review protocols, and inspect-first lists |
 | `docs/registry/` | registry evolution, schema/capsule notes, generated-index planning, and inventory design |
 | `docs/decisions/` | decision records explaining why a route, owner split, or doctrine placement was chosen |
 | `docs/traces/` | migration evidence, provenance logs, link-rewrite traces, move manifests, and generic receipts |
 
 Mechanic-owned history is not a docs district. It belongs under `mechanics/<slug>/legacy/` and should be connected through that mechanic's `PROVENANCE.md` or `LANDING_LOG.md`.
 
-Owner-bound retrospectives are also owner history. Put them in the owning
-mechanic or repository legacy route; use `docs/audits/` only for center-generic
-review evidence.
+Audit evidence, cleanup review, drift review, and inspect-first candidate lists now route through `mechanics/audit/`. Owner-bound retrospectives are also owner history. Put them in the owning mechanic or repository legacy route.
 
 Agent guidance is not a docs archive class. Promote active rules into the root
-or nearest owner `AGENTS.md`, a validator, a mechanic package, or the audit
-protocol.
+or nearest owner `AGENTS.md`, a validator, or a mechanic package.
 
 ## Current root rule
 

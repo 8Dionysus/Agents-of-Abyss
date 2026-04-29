@@ -20,6 +20,7 @@ CANONICAL_SLUGS = (
     "questbook",
     "rpg",
     "boundary-bridge",
+    "audit",
     "release-support",
 )
 

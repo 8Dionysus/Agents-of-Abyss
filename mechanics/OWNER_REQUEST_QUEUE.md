@@ -127,6 +127,12 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-BRIDGE-MEMO-001` | `boundary-bridge` | `aoa-memo` | `requested` | `P1` | Witness memory, provenance, and compost-facing recall |
 | `ORQ-BRIDGE-EVALS-001` | `boundary-bridge` | `aoa-evals` | `requested` | `P1` | Integrity and provenance proof for bridge support |
 | `ORQ-BRIDGE-PLAYBOOKS-001` | `boundary-bridge` | `aoa-playbooks` | `requested` | `P2` | Witness, compost, and owner-handoff scenario routes |
+| `ORQ-AUDIT-EVALS-001` | `audit` | `aoa-evals` | `requested` | `P1` | Proof-strength route for audit findings |
+| `ORQ-AUDIT-MEMO-001` | `audit` | `aoa-memo` | `requested` | `P2` | Durable evidence and memory writeback route |
+| `ORQ-AUDIT-PLAYBOOKS-001` | `audit` | `aoa-playbooks` | `requested` | `P2` | Recurring audit campaign choreography |
+| `ORQ-AUDIT-SKILLS-001` | `audit` | `aoa-skills` | `requested` | `P2` | Executable audit workflow skill shape |
+| `ORQ-AUDIT-AGENTS-001` | `audit` | `aoa-agents` | `requested` | `P3` | Audit-facing role and handoff posture |
+| `ORQ-AUDIT-STATS-001` | `audit` | `aoa-stats` | `requested` | `P3` | Derived audit movement summaries |
 | `ORQ-RELEASE-EVALS-001` | `release-support` | `aoa-evals` | `requested` | `P0` | Public claim proof for release and state-transition support posture |
 | `ORQ-RELEASE-STATS-001` | `release-support` | `aoa-stats` | `requested` | `P2` | Derived release and transition movement summaries |
 | `ORQ-RELEASE-ROUTING-001` | `release-support` | `aoa-routing` | `requested` | `P2` | Release route, transition route, and federation entry ABI updates |
@@ -146,6 +152,7 @@ source JSON, validators, generated queue, and package request docs together.
 - `questbook` -> [OWNER_REQUESTS.md](questbook/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-routing`
 - `rpg` -> [OWNER_REQUESTS.md](rpg/OWNER_REQUESTS.md); owners: `aoa-agents`, `aoa-skills`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`, `aoa-stats`
 - `boundary-bridge` -> [OWNER_REQUESTS.md](boundary-bridge/OWNER_REQUESTS.md); owners: `Tree-of-Sophia`, `aoa-kag`, `aoa-routing`, `aoa-memo`, `aoa-evals`, `aoa-playbooks`
+- `audit` -> [OWNER_REQUESTS.md](audit/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-playbooks`, `aoa-skills`, `aoa-agents`, `aoa-stats`
 - `release-support` -> [OWNER_REQUESTS.md](release-support/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-stats`, `aoa-routing`, `aoa-sdk`, `8Dionysus`
 
 ## Stop-lines

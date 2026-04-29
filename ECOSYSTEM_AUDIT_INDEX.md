@@ -2,7 +2,7 @@
 
 This file is the compact audit routing surface for Codex and human reviewers.
 
-Use it with `AGENTS.md`, [docs/audits/CODEX_AUDIT_PROTOCOL](docs/audits/CODEX_AUDIT_PROTOCOL.md), [docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE](docs/audits/CODEX_SKILL_PROOF_AUDIT_BRIDGE.md), and [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md).
+Use it with `AGENTS.md`, [audit mechanic](mechanics/audit/README.md), [audit provenance](mechanics/audit/PROVENANCE.md), and [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md).
 
 It exists to answer five questions fast:
 
@@ -49,12 +49,12 @@ Use this route when the question is not only "is the claim true?" but "should th
 | contributor, security, conduct, or license surface | root |
 | compact civic index | root only while compact |
 | historical seed or package receipt | owning `mechanics/<slug>/legacy/raw/` for mechanic-specific receipts, or `docs/traces/` for generic movement evidence |
-| audit candidate list or cleanup evidence | `docs/audits/` |
+| audit candidate list or cleanup evidence | `mechanics/audit/` and `mechanics/audit/legacy/raw/` |
 | future registry design note | `docs/registry/` |
 | generated compact machine surface | `generated/` |
 | owner-local semantic change | owning repository |
 
-Current root-surface cleanup evidence lives in [docs/audits/ROOT_SURFACE_AUDIT_2026_04_24](docs/audits/ROOT_SURFACE_AUDIT_2026_04_24.md).
+Current root-surface cleanup evidence is preserved through [audit provenance](mechanics/audit/PROVENANCE.md) and the raw receipt [ROOT_SURFACE_AUDIT_2026_04_24](mechanics/audit/legacy/raw/ROOT_SURFACE_AUDIT_2026_04_24.md).
 
 ## Drift signatures worth flagging immediately
 
@@ -63,7 +63,7 @@ Current root-surface cleanup evidence lives in [docs/audits/ROOT_SURFACE_AUDIT_2
 - a key README or civic surface collapses into a few long lines
 - tables, code fences, or numbered paths become hard for humans or agents to parse
 - a technical district gains many files without a local README gate
-- a root file remains after its better home is planted in `docs/audits/`, `docs/registry/`, `docs/traces/`, or `mechanics/<slug>/legacy/raw/`
+- a root file remains after its better home is planted in `mechanics/audit/`, `docs/registry/`, `docs/traces/`, or `mechanics/<slug>/legacy/raw/`
 
 ### Constitutional drift
 

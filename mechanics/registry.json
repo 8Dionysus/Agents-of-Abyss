@@ -955,8 +955,22 @@
         "mechanics/boundary-bridge/legacy/raw/README.md"
       ],
       "card": {
-        "trigger": "Use when one owner-owned surface must touch, support, cite, translate, project, route, or hand off to another owner-owned surface without becoming the other surface.",
         "center_owns": "AoA center owns boundary-crossing doctrine, non-identity stop-lines, counterpart vocabulary, owner-handoff packets, and the first ToS-support reference bridge.",
+        "inputs": [
+          "A request to connect, cite, support, project, translate, route, witness, or hand off across owner boundaries.",
+          "A named source owner and receiving owner.",
+          "The bridge mode: `counterpart`, `support`, `projection`, `handoff`, `compatibility`, `witness`, `proof`, or `ToS support`."
+        ],
+        "next_route": [
+          "For ToS meaning, canon, or source interpretation, route to `Tree-of-Sophia`.",
+          "For derived projection, route to `aoa-kag`; for dispatch behavior, route to `aoa-routing`; for memory or witness objects, route to `aoa-memo`; for proof, route to `aoa-evals`; for scenario choreography, route to `aoa-playbooks`.",
+          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "A bounded bridge route, owner handoff, proof route, derived projection boundary, or ToS-support note.",
+          "Explicit non-identity, no-authority-transfer, and owner-acceptance stop-lines.",
+          "No hidden claim that the bridge proves sameness, transfers authority, or lands owner-local truth."
+        ],
         "stronger_owner_split": [
           "Source repositories own authored meaning, canon, source interpretation, and local truth.",
           "`Tree-of-Sophia` owns ToS-authored meaning, source authority, node law, lineage, and canon-facing review.",
@@ -967,21 +981,7 @@
           "`aoa-playbooks` owns recurring scenario choreography.",
           "`aoa-sdk`, `abyss-stack`, and other owner repositories own their local adapters, runtime bodies, helpers, and implementation truth."
         ],
-        "inputs": [
-          "A request to connect, cite, support, project, translate, route, witness, or hand off across owner boundaries.",
-          "A named source owner and receiving owner.",
-          "The bridge mode: `counterpart`, `support`, `projection`, `handoff`, `compatibility`, `witness`, `proof`, or `ToS support`."
-        ],
-        "outputs": [
-          "A bounded bridge route, owner handoff, proof route, derived projection boundary, or ToS-support note.",
-          "Explicit non-identity, no-authority-transfer, and owner-acceptance stop-lines.",
-          "No hidden claim that the bridge proves sameness, transfers authority, or lands owner-local truth."
-        ],
-        "next_route": [
-          "For ToS meaning, canon, or source interpretation, route to `Tree-of-Sophia`.",
-          "For derived projection, route to `aoa-kag`; for dispatch behavior, route to `aoa-routing`; for memory or witness objects, route to `aoa-memo`; for proof, route to `aoa-evals`; for scenario choreography, route to `aoa-playbooks`.",
-          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
-        ]
+        "trigger": "Use when one owner-owned surface must touch, support, cite, translate, project, route, or hand off to another owner-owned surface without becoming the other surface."
       },
       "docs_path": "mechanics/boundary-bridge/docs",
       "entry_ref": "mechanics/boundary-bridge/README.md",
@@ -1023,6 +1023,100 @@
       ]
     },
     {
+      "agents_ref": "mechanics/audit/AGENTS.md",
+      "canonical_docs": [
+        "mechanics/audit/DIRECTION.md",
+        "mechanics/audit/PARTS.md",
+        "mechanics/audit/OWNER_MAP.md",
+        "mechanics/audit/PROVENANCE.md",
+        "mechanics/audit/OWNER_REQUESTS.md",
+        "mechanics/audit/docs/AUDIT_LAW.md",
+        "mechanics/audit/docs/AUDIT_OWNER_REPO_REQUESTS.md",
+        "mechanics/audit/parts/README.md",
+        "mechanics/audit/parts/source-map/README.md",
+        "mechanics/audit/parts/evidence-ledger/README.md",
+        "mechanics/audit/parts/risk-signal/README.md",
+        "mechanics/audit/parts/finding-lifecycle/README.md",
+        "mechanics/audit/parts/owner-routing/README.md",
+        "mechanics/audit/parts/validation-gate/README.md",
+        "mechanics/audit/parts/campaign-route/README.md",
+        "mechanics/audit/parts/audit-event-bridge/README.md",
+        "mechanics/audit/legacy/AGENTS.md",
+        "mechanics/audit/legacy/README.md",
+        "mechanics/audit/legacy/INDEX.md",
+        "mechanics/audit/legacy/raw/README.md"
+      ],
+      "card": {
+        "center_owns": "Audit grammar, finding lifecycle, evidence-ledger posture, owner routing, validation honesty, and campaign route language for center work.",
+        "inputs": [
+          "Source surface, changed diff, route claim, finding candidate, drift signal, cleanup pressure, validation result, generated report, owner request, or archived audit receipt.",
+          "Enough context to identify the owning surface and the next honest route."
+        ],
+        "next_route": [
+          "For proof, comparison, regression, or verdicts, route to `aoa-evals`.",
+          "For memory writeback, route to `aoa-memo`; for recurring audit campaigns, route to `aoa-playbooks`; for executable audit workflows, route to `aoa-skills`; for reusable practice, route to `aoa-techniques`; for derived movement summaries, route to `aoa-stats`.",
+          "For release readiness or public claims, route to `mechanics/release-support`; for fragility, pruning, and deletion candidates, route to `mechanics/antifragility`; for checkpoint evidence, route to `mechanics/checkpoint`; for owner uncertainty, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Source map, evidence ledger, risk signal, finding packet, owner route, validation gate result, campaign route, or event bridge.",
+          "No proof verdict, owner-local remediation, runtime authority, memory truth, release support, generated authority, or archive evidence as active law."
+        ],
+        "stronger_owner_split": [
+          "Source repositories own the surface being audited and any owner-local remediation.",
+          "`aoa-evals` owns proof verdicts, regression evidence, comparison gates, and quality claims.",
+          "`aoa-memo` owns durable memory, recall objects, and memory writeback.",
+          "`aoa-playbooks` owns recurring audit choreography and campaign routes.",
+          "`aoa-skills` owns executable audit workflows.",
+          "`aoa-techniques` owns reusable audit techniques.",
+          "`aoa-stats` owns derived observability and movement summaries.",
+          "`mechanics/release-support` owns release readiness, public-claim, and transition support.",
+          "`abyss-stack`, `aoa-sdk`, `aoa-routing`, `aoa-kag`, `aoa-agents`, `8Dionysus`, and `Tree-of-Sophia` own their local authority surfaces."
+        ],
+        "trigger": "Use when a surface, claim, route, owner boundary, evidence trail, or change result must be seen clearly enough to route the next honest move."
+      },
+      "docs_path": "mechanics/audit/docs",
+      "entry_ref": "mechanics/audit/README.md",
+      "landing_log_ref": "mechanics/audit/LANDING_LOG.md",
+      "must_not_claim": [
+        "proof verdict",
+        "owner-local remediation",
+        "runtime authority",
+        "memory truth",
+        "release support authority",
+        "generated authority",
+        "archive evidence as active law",
+        "private scratch notes as public audit evidence",
+        "cleanup candidate as deletion approval"
+      ],
+      "owner_boundary": "Center audit grammar and route discipline for seeing source ownership, evidence, risk, finding state, validation posture, campaign shape, and next route. Proof, remediation, runtime, memory, release, generated, and source-authored authority remain owner-local.",
+      "owner_request_doc_ref": "mechanics/audit/OWNER_REQUESTS.md",
+      "owner_request_ids": [
+        "ORQ-AUDIT-EVALS-001",
+        "ORQ-AUDIT-MEMO-001",
+        "ORQ-AUDIT-PLAYBOOKS-001",
+        "ORQ-AUDIT-SKILLS-001",
+        "ORQ-AUDIT-AGENTS-001",
+        "ORQ-AUDIT-STATS-001"
+      ],
+      "package_path": "mechanics/audit",
+      "roadmap_ref": "mechanics/audit/ROADMAP.md",
+      "slug": "audit",
+      "status": "planted",
+      "title": "Audit",
+      "validation_refs": [
+        "mechanics/audit/scripts/validate_audit_distillation.py",
+        "scripts/validate_mechanics_topology.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_owner_request_queue.py",
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py",
+        "scripts/validate_mechanic_landing_logs.py"
+      ]
+    },
+    {
       "agents_ref": "mechanics/release-support/AGENTS.md",
       "canonical_docs": [
         "mechanics/release-support/DIRECTION.md",
@@ -1047,8 +1141,20 @@
         "mechanics/release-support/parts/direction-surface-review/README.md"
       ],
       "card": {
-        "trigger": "Use when a transition claim, public claim, release surface, changelog, roadmap, landing log, direction surface, support posture, owner handoff, checkpoint closeout, quest closeout, audit route, or rollback route must be checked.",
         "center_owns": "Center state-transition vocabulary, release posture, public claim boundaries, federation release protocol, center release runbook, direction-surface routing, changelog/roadmap/landing-log split, and owner handoff stop-lines.",
+        "inputs": [
+          "Public claim, release note, roadmap change, direction update, landing log entry, mechanic maturity claim, quest or checkpoint closeout, audit finding, support statement, owner request, or rollback-sensitive transition.",
+          "Source evidence sufficient to decide whether the center may support the transition claim."
+        ],
+        "next_route": [
+          "For proof-dependent claims, route to `aoa-evals`; for sibling release truth or acceptance, route to the sibling repository.",
+          "For derived movement summaries, route to `aoa-stats`; for route/entry ABI support, route to `aoa-routing`; for typed helper support, route to `aoa-sdk`; for public projection, route to `8Dionysus`; for runtime deployment or rollback, route to `abyss-stack`.",
+          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+        ],
+        "outputs": [
+          "Supportable claim, state-transition gate, release checklist route, changelog/roadmap/landing-log destination, direction-surface update, audit route, owner handoff packet, rollback route, or stop-line.",
+          "No unverified public claim, sibling acceptance claim, or substitution of roadmap history for changelog truth."
+        ],
         "stronger_owner_split": [
           "Sibling repositories own their local release truth, implementation evidence, and acceptance receipts.",
           "Owning mechanics own their content, maturity, active parts, and landing logs.",
@@ -1060,19 +1166,7 @@
           "`abyss-stack` owns runtime deployment and rollback truth.",
           "Generated surfaces reflect source truth but do not author release truth."
         ],
-        "inputs": [
-          "Public claim, release note, roadmap change, direction update, landing log entry, mechanic maturity claim, quest or checkpoint closeout, audit finding, support statement, owner request, or rollback-sensitive transition.",
-          "Source evidence sufficient to decide whether the center may support the transition claim."
-        ],
-        "outputs": [
-          "Supportable claim, state-transition gate, release checklist route, changelog/roadmap/landing-log destination, direction-surface update, audit route, owner handoff packet, rollback route, or stop-line.",
-          "No unverified public claim, sibling acceptance claim, or substitution of roadmap history for changelog truth."
-        ],
-        "next_route": [
-          "For proof-dependent claims, route to `aoa-evals`; for sibling release truth or acceptance, route to the sibling repository.",
-          "For derived movement summaries, route to `aoa-stats`; for route/entry ABI support, route to `aoa-routing`; for typed helper support, route to `aoa-sdk`; for public projection, route to `8Dionysus`; for runtime deployment or rollback, route to `abyss-stack`.",
-          "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
-        ]
+        "trigger": "Use when a transition claim, public claim, release surface, changelog, roadmap, landing log, direction surface, support posture, owner handoff, checkpoint closeout, quest closeout, audit route, or rollback route must be checked."
       },
       "docs_path": "mechanics/release-support/docs",
       "entry_ref": "mechanics/release-support/README.md",

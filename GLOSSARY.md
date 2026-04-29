@@ -72,7 +72,7 @@ Landing receipts belong under the owning `mechanics/<slug>/legacy/raw/` route wh
 
 A reviewable cleanup, drift, pruning, or verification artifact.
 
-Audit artifacts belong under `docs/audits/` unless they are a very compact root index such as `ECOSYSTEM_AUDIT_INDEX.md` or `FRAGILITY_BLACKLIST.md`.
+Audit route grammar belongs under `mechanics/audit/`. Historical audit receipts belong under `mechanics/audit/legacy/raw/` unless another owner has a more specific legacy route. Compact root indexes such as `ECOSYSTEM_AUDIT_INDEX.md` or `FRAGILITY_BLACKLIST.md` may stay flat only while they remain route surfaces.
 
 ### Source repository
 
