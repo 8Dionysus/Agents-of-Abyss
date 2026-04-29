@@ -23,6 +23,7 @@ Decision records explain why; current surfaces define what.
 | [`2026-04-29-decision-memory-gate`](2026-04-29-decision-memory-gate.md) | decision record for AGENTS-led decision review and repo-local validation |
 | [`2026-04-29-docs-root-source-tightening`](2026-04-29-docs-root-source-tightening.md) | decision record for keeping root docs as role-specific maps and routing detail to canonical homes |
 | [`2026-04-29-ecosystem-registry-v2-landing`](2026-04-29-ecosystem-registry-v2-landing.md) | decision record for landing registry v2 and removing the registry-note district |
+| [`2026-04-29-root-examples-district-contract`](2026-04-29-root-examples-district-contract.md) | decision record for keeping root examples as center-owned worked route examples |
 | [`2026-04-29-traces-mode-hardening`](2026-04-29-traces-mode-hardening.md) | decision record for keeping traces as repo-level movement receipts with validation |
 
 ## Record shape
