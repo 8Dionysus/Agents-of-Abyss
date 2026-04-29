@@ -95,7 +95,7 @@ For mechanic-specific changes, use [`../mechanics/AGENTS.md`](../mechanics/AGENT
 | `docs/` root | stable center doctrine and maps that are too deep for repository root but still center-level |
 | [`docs/guardrails/`](guardrails/) | docs cleanup, link/shape hygiene, generated freshness, and AGENTS mesh guardrails |
 | [`docs/decisions/`](decisions/) | decision records explaining why a route or placement was chosen |
-| [`docs/traces/`](traces/) | migration evidence, move manifests, link-rewrite traces, and provenance logs |
+| [`docs/traces/`](traces/) | repo-level movement receipts, apply manifests, link-repair traces, and migration conflicts |
 
 Audit evidence now belongs under [`mechanics/audit/`](../mechanics/audit/). Mechanic history and active mechanic law belong under [`mechanics/`](../mechanics/), not under empty `docs/<mechanic>/` doors.
 

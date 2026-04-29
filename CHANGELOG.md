@@ -61,6 +61,10 @@ Tracking starts with the community-docs baseline for this repository.
   `generated/ecosystem_registry.min.json`,
   `scripts/validate_ecosystem.py`, updated public contour docs, and removal of
   the temporary `docs/registry/` design-note district
+- traces-mode hardening through `docs/traces/AGENTS.md`,
+  `docs/traces/README.md`, `scripts/validate_traces_district.py`, release-check
+  coverage, and a decision record that keeps generic movement receipts separate
+  from mechanic legacy, audit evidence, and decisions
 - Experience-style mechanic `AGENTS.md` route law across center mechanics,
   standardizing active source surfaces, post-change route review, closeout
   provenance discipline, and local validation routes

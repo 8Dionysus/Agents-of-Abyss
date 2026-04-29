@@ -38,6 +38,8 @@ Current scripts include:
   ecosystem, and tests
 - `plan_docs_thematic_cleanup.py`, `build_docs_thematic_index.py`, and
   `validate_docs_thematic_*.py` for docs thematic cleanup checks
+- `validate_traces_district.py` for `docs/traces/` receipt placement, index,
+  and schema-shape checks
 - `hygiene_common.py`, `repair_known_link_drifts.py`, `validate_links.py`,
   `validate_status_vocabulary.py`, `build_link_shape_hygiene_index.py`,
   `validate_link_shape_hygiene_index.py`, `validate_generated_freshness.py`,
@@ -129,6 +131,7 @@ python -m pip install -r requirements-dev.txt
 python scripts/plan_docs_thematic_cleanup.py --check
 python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
+python scripts/validate_traces_district.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
 python scripts/validate_config_registry.py

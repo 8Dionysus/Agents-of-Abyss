@@ -77,6 +77,7 @@ For docs-root or guardrail topology changes:
 python scripts/plan_docs_thematic_cleanup.py --check
 python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
+python scripts/validate_traces_district.py
 python scripts/validate_decision_records.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py

@@ -10,7 +10,7 @@ This protocol keeps `docs/` readable as the center grows.
 |---|---|
 | `docs/guardrails/` | validator law, hygiene protocol, AGENTS mesh law, generated index source maps, and docs cleanup classifier |
 | `docs/decisions/` | decision records explaining why a route, owner split, or doctrine placement was chosen |
-| `docs/traces/` | migration evidence, provenance logs, link-rewrite traces, move manifests, and generic receipts |
+| `docs/traces/` | repo-level movement receipts, link-repair traces, apply manifests, and migration conflict records |
 
 Mechanic-owned history is not a docs district. It belongs under `mechanics/<slug>/legacy/` and should be connected through that mechanic's `PROVENANCE.md` or `LANDING_LOG.md`.
 
@@ -18,6 +18,10 @@ Audit evidence, cleanup review, drift review, and inspect-first candidate lists 
 
 Agent guidance is not a docs archive class. Promote active rules into the root
 or nearest owner `AGENTS.md`, a validator, or a mechanic package.
+
+Trace evidence is not a docs archive class either. Put generic movement
+receipts in `docs/traces/`; put mechanic-specific source traces in the owning
+mechanic's `legacy/raw/` route and provenance bridge.
 
 ## Current root rule
 

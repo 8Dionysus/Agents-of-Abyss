@@ -48,7 +48,7 @@ The docs thematic cleanup guardrails are defined by:
 |---|---|---|
 | One-mechanic seed manifest or landing receipt | `mechanics/<slug>/legacy/raw/` plus that mechanic `PROVENANCE.md` | useful receipt, not civic law |
 | Owner-bound release retrospective | `mechanics/release-support/legacy/raw/` plus release-support `PROVENANCE.md` | release repair learning belongs to the release-support mechanic |
-| Generic move manifest or link rewrite trace | `docs/traces/` | traces explain movement, not meaning |
+| Generic move manifest, apply receipt, or link-repair trace | `docs/traces/` | traces explain movement, not meaning |
 | Registry contract change | `schemas/`, `generated/`, validators, and a decision record when the route changes | registry evolution becomes real only when the machine contract and source docs move together |
 | Audit candidate list | `mechanics/audit/legacy/raw/` plus `mechanics/audit/PROVENANCE.md` | review evidence should be inspectable but not displayed as a civic front-door peer |
 | Generated artifact | `generated/` | generated surfaces must remain machine-facing and reproducible |
@@ -93,7 +93,7 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 | decision record | keep or move into | `docs/decisions/` | decisions explain why; current surfaces define what |
 | owner-bound retrospective | move into owner legacy | `mechanics/<slug>/legacy/raw/` plus `PROVENANCE.md` | repair learning should live with the process that can act on it |
 | generic review retrospective | move into | `mechanics/audit/legacy/raw/` plus `PROVENANCE.md` when distilled | center-generic review learning is audit evidence, not a standing docs district |
-| move manifest/provenance log | move into | `docs/traces/` | traces explain movement, not meaning |
+| generic movement receipt or link-repair trace | move into | `docs/traces/` | traces explain movement, not meaning |
 | mechanic-specific legacy docs | move into | `mechanics/<slug>/legacy/raw/` | current mechanic doctrine routes through the owning mechanic package |
 | superseded aliases | avoid by default | surviving canonical home plus provenance note | do not create empty docs doors for compatibility alone |
 
