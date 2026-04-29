@@ -1,8 +1,7 @@
 # Questbook Source Contract Full Distillation
 
-Date: 2026-04-26
-
 Status: accepted
+Date: 2026-04-26
 
 ## Context
 
@@ -15,7 +14,7 @@ That staging choice kept the first change small, but it left a durable split:
 YAML quests and new Markdown quests were strict, while old Markdown quests
 could still bypass the same source reviewability contract.
 
-## Options
+## Options considered
 
 - Keep uncontracted Markdown as a migration lane.
 - Convert only active or ready Markdown quests.
@@ -55,10 +54,15 @@ evidence route, and stop-lines in the file itself.
 - If repeated owner-route defaults become noisy again, the next route is
   lane-local route splitting without weakening per-quest reviewability.
 
-## Canonical Surfaces
+## Source surfaces
 
 - `mechanics/questbook/parts/source-contract/`
 - `mechanics/questbook/scripts/validate_questbook_source_contract.py`
 - `quests/<lane>/<state>/AOA-Q-*`
 - `mechanics/questbook/LANDING_LOG.md`
 - `mechanics/questbook/legacy/DISTILLATION_LOG.md`
+
+## Follow-up route
+
+Route future quest-source compression through lane-local defaults and
+`mechanics/questbook/AGENTS.md`; do not weaken the per-quest source contract.

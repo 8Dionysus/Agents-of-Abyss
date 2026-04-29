@@ -47,7 +47,7 @@ Stage ownership stays split:
 `aoa-stats` remains derived-only.
 `aoa-memo` remains memory-only.
 
-## Why this path
+## Rationale
 
 - The route needed a shared name before cross-repo rollout could stay honest.
 - Existing owner repos already had the right boundary posture.
@@ -63,3 +63,18 @@ Stage ownership stays split:
   into score, routing, or memory sovereignty
 - cross-repo rollout can now use one shared route grammar without inventing a
   new lineage empire
+
+## Source surfaces
+
+- `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`
+- `mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`
+- `mechanics/method-growth/docs/METHOD_SPINE.md`
+- `aoa-sdk`
+- `aoa-skills`
+- `Dionysus`
+- final owner repositories
+
+## Follow-up route
+
+Route future stage changes through `mechanics/method-growth/` and the owning
+stage repository before adding new lineage authority.

@@ -1,10 +1,12 @@
 # Decisions District
 
-This district holds Decision records explaining why a route, owner split, or placement was chosen.
+This district holds decision records explaining why a route, owner split, or placement was chosen.
 
 ## District law
 
 Keep this district reviewable and labeled. A reader or agent should know whether a surface is current law, evidence, historical receipt, transition note, or compatibility reference before citing it.
+
+Decision records explain why; current surfaces define what.
 
 ## Current surfaces
 
@@ -17,6 +19,22 @@ Keep this district reviewable and labeled. A reader or agent should know whether
 | [`2026-04-26-questbook-source-contract-full-distillation`](2026-04-26-questbook-source-contract-full-distillation.md) | decision record for promoting Markdown quest sources to the strict source contract |
 | [`2026-04-26-mechanics-validation-command-authority`](2026-04-26-mechanics-validation-command-authority.md) | decision record for keeping active mechanic validation commands in AGENTS lanes |
 | [`2026-04-28-docs-guardrails-and-mechanic-receipts`](2026-04-28-docs-guardrails-and-mechanic-receipts.md) | decision record for the `docs/guardrails/` home and mechanic-owned receipt routing |
+| [`2026-04-29-audit-mechanic-planting`](2026-04-29-audit-mechanic-planting.md) | decision record for planting Audit as a center mechanic |
+| [`2026-04-29-decision-memory-gate`](2026-04-29-decision-memory-gate.md) | decision record for AGENTS-led decision review and repo-local validation |
+
+## Record shape
+
+Use [TEMPLATE](TEMPLATE.md) for new records. The standard shape is:
+
+- `Status`
+- `Date`
+- `Context`
+- `Options considered`
+- `Decision`
+- `Rationale`
+- `Consequences`
+- `Source surfaces`
+- `Follow-up route`
 
 ## Must not claim
 

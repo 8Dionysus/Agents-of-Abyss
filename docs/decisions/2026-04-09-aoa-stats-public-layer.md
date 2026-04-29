@@ -45,7 +45,7 @@ Its registry posture stays intentionally modest:
 - `shared_maturity=seed`
 - `kind=derived`
 
-## Why this path
+## Rationale
 
 - `aoa-stats` already owns real published contracts and generated surfaces.
 - The center was already depending on `aoa-stats` doctrine in antifragility notes.
@@ -57,3 +57,17 @@ Its registry posture stays intentionally modest:
 - Center docs and validator-backed registry checks must now treat `aoa-stats` as part of the documented public federation contour.
 - The supporting inventory remains for non-public supporting surfaces such as `aoa-sdk`.
 - Future center edits must preserve the boundary that `aoa-stats` derives and summarizes movement without replacing source-owned meaning or bounded proof.
+
+## Source surfaces
+
+- `CHARTER.md`
+- `ECOSYSTEM_MAP.md`
+- `ROADMAP.md`
+- `docs/LAYERS.md`
+- `docs/REPO_ROLES.md`
+- `generated/ecosystem_registry.min.json`
+
+## Follow-up route
+
+Route future proof or score-sovereignty pressure to `aoa-evals`, `aoa-stats`,
+and the owning source repository before changing center public-layer posture.
