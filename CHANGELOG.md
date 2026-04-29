@@ -47,6 +47,11 @@ Tracking starts with the community-docs baseline for this repository.
   `docs/guardrails/AGENTS_MESH_INDEX.md`, `config/agents_mesh.json`,
   `generated/agents_mesh.min.json`, local `AGENTS.md` district cards, mesh
   validators, and regression tests
+- decision-record memory gates through `docs/decisions/TEMPLATE.md`,
+  `scripts/validate_decision_records.py`, regression coverage, release-check
+  coverage, and AGENTS closeout reminders for durable structural, ownership,
+  workflow, route-law, validator-authority, public-contract, and topology
+  changes
 - Experience-style mechanic `AGENTS.md` route law across center mechanics,
   standardizing active source surfaces, post-change route review, closeout
   provenance discipline, and local validation routes

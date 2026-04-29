@@ -81,6 +81,14 @@ Use the named route before widening a center claim:
 - Self-agency, recurrence, quest, progression, checkpoint, or growth language must stay bounded, reviewable, evidence-linked, and reversible.
 - Report what changed, what was verified, what was not verified, and where the next agent should resume.
 
+## Decision review
+
+After structural, ownership, workflow, route-law, validator-authority,
+public-contract, or topology changes, check whether future agents will need a
+decision record to understand why the path was chosen. Use
+`docs/decisions/AGENTS.md` and `docs/decisions/README.md` for the local rule.
+If no record is needed, say so in closeout.
+
 ## Route away when
 
 - source-linked knowledge or interpretation belongs in `Tree-of-Sophia`
@@ -117,6 +125,7 @@ Run the narrowest relevant center check. Default center integrity:
 python scripts/plan_docs_thematic_cleanup.py --check
 python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
+python scripts/validate_decision_records.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
 python scripts/repair_known_link_drifts.py --check

@@ -152,6 +152,10 @@ When editing a mechanic:
 10. Run `scripts/validate_mechanic_artifact_topology.py` when schemas,
     examples, config, generated artifacts, scripts, tests, or quest routing move
     between root districts and mechanic homes.
+11. Run a decision review when a mechanic change alters topology, owner split,
+    workflow expectation, route law, validator authority, public contract, or a
+    durable placement rule. Use `docs/decisions/AGENTS.md` when future agents
+    need the rationale.
 
 Do not touch these surfaces mechanically. The post-change review is a route check:
 change only the files whose future-facing meaning actually moved.

@@ -62,6 +62,13 @@ When editing:
 
 Do not let this directory become a shadow corpus for techniques, skills, evals, memory objects, runtime configs, mechanic packets, or ToS-authored meaning.
 
+## Decision review
+
+When a docs change chooses a durable route, owner split, placement law,
+validator authority, workflow expectation, or public contract, review whether
+`decisions/` needs a decision record. Use `decisions/AGENTS.md` for the record
+shape. If no record is needed, say so in closeout.
+
 ## Validation
 
 For docs-root or guardrail topology changes:
@@ -70,6 +77,7 @@ For docs-root or guardrail topology changes:
 python scripts/plan_docs_thematic_cleanup.py --check
 python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
+python scripts/validate_decision_records.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
 python scripts/repair_known_link_drifts.py --check
