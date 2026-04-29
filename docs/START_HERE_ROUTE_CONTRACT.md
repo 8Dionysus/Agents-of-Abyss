@@ -234,6 +234,7 @@ Run:
 
 ```bash
 python scripts/repair_known_link_drifts.py --check
+python scripts/validate_traces_district.py
 python scripts/validate_links.py
 python scripts/validate_markdown_shape.py
 python scripts/validate_status_vocabulary.py

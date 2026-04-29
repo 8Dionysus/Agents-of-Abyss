@@ -76,6 +76,7 @@ Use this tree before trusting a claim made by the center:
 python scripts/plan_docs_thematic_cleanup.py --check
 python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
+python scripts/validate_traces_district.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
 python scripts/repair_known_link_drifts.py --check

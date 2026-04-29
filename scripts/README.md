@@ -18,7 +18,7 @@ topology, hygiene, and shared validators.
 | Mechanics validators | `build_mechanic_card_index.py`, `validate_mechanic_card_index.py`, `validate_mechanic_readme_cards.py`, `validate_mechanic_artifact_topology.py`, `validate_questbook_lifecycle.py`, `build_questbook_index.py`, `validate_questbook_index.py`, `validate_quest_relations.py`, `build_ready_owner_routes.py`, `validate_ready_owner_routes.py` | check mechanic cards, artifact homes, quest lifecycle board, Questbook generated views, relation maps, ready owner-route projections, and generated card index |
 | Owner-request validators | `build_owner_request_queue.py`, `validate_owner_request_queue.py`, `validate_generated_owner_request_queue.py`, `validate_owner_request_docs.py` | check center-side owner request packets |
 | Config registry | `validate_config_registry.py` | check root config inventory, consumers, generated mirrors, and add-change contract |
-| Docs thematic validators | `plan_docs_thematic_cleanup.py`, `build_docs_thematic_index.py`, `validate_docs_thematic_*.py` | check docs district cleanup grammar |
+| Docs thematic validators | `plan_docs_thematic_cleanup.py`, `build_docs_thematic_index.py`, `validate_docs_thematic_*.py`, `validate_traces_district.py` | check docs district cleanup grammar and trace receipt placement |
 | Link and shape hygiene | `repair_known_link_drifts.py`, `validate_links.py`, `validate_status_vocabulary.py`, `build_link_shape_hygiene_index.py`, `validate_generated_freshness.py`, `validate_hygiene_suite.py` | check local links, status words, generated freshness, and hygiene mirrors |
 | AGENTS mesh | `validate_agents_md_shape.py`, `validate_agents_mesh.py`, `build_agents_mesh_index.py`, `validate_agents_mesh_index.py` | check local AGENTS-card shape, coverage, and generated mesh |
 | Release checks | `release_check.py` | guard public release posture |
@@ -38,6 +38,7 @@ topology, hygiene, and shared validators.
 python scripts/plan_docs_thematic_cleanup.py --check
 python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
+python scripts/validate_traces_district.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
 python scripts/validate_config_registry.py

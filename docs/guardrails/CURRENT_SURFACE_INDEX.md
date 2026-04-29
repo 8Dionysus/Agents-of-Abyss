@@ -33,7 +33,7 @@ This index explains which `docs/` surfaces are current and which districts hold 
 |---|---|---|
 | `docs/guardrails/` | validator law, hygiene law, classifier config, and generated source maps | guardrails verify shape; they do not author doctrine |
 | `docs/decisions/` | decision records | decisions explain why, current surfaces define what |
-| `docs/traces/` | move manifests, link rewrites, and provenance | traces explain movement, not meaning |
+| `docs/traces/` | movement receipts, link repairs, apply manifests, and migration conflicts | traces explain movement, not meaning |
 
 Audit work is routed through `mechanics/audit/`. Mechanic-owned surfaces are routed through `mechanics/<slug>/`, not through empty `docs/<slug>/` districts.
 

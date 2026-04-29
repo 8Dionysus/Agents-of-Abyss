@@ -47,7 +47,7 @@
     "traces": {
       "path": "docs/traces",
       "readme": "docs/traces/README.md",
-      "role": "Migration evidence, provenance logs, link rewrite traces, and move manifests.",
+      "role": "Repo-level movement receipts, link-repair traces, apply manifests, and migration conflict records.",
       "authority": "provenance_trace",
       "patterns": [
         "TRACE",
@@ -224,6 +224,7 @@
     "python scripts/plan_docs_thematic_cleanup.py --check",
     "python scripts/validate_docs_thematic_districts.py",
     "python scripts/validate_docs_migration_map.py",
+    "python scripts/validate_traces_district.py",
     "python scripts/build_docs_thematic_index.py --check",
     "python scripts/validate_docs_thematic_index.py"
   ],

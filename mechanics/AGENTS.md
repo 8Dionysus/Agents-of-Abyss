@@ -134,6 +134,8 @@ When a mechanic output would become runtime, proof, memory, role, playbook, KAG,
 - `QUESTBOOK.md` remains a root public obligation index; `mechanics/questbook/` owns questbook mechanics.
 - `quests/` remains the quest item store; lane-first lifecycle directories own source placement, and top-level `AOA-Q-*` aliases are intentionally absent.
 - Mechanic receipts remain in the owning `mechanics/<slug>/legacy/raw/` route and provenance bridge, not in empty docs districts.
+- Generic repo movement traces may live in `docs/traces/`; mechanic-specific
+  source traces stay in the owning mechanic's legacy/provenance route.
 - Generated card indexes reflect package entries; they do not author mechanic truth.
 
 ## Editing posture

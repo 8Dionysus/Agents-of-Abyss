@@ -15,6 +15,7 @@ The protocol lives in `LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`. The machine-facing m
 | Generated freshness validation | `scripts/validate_generated_freshness.py` | configured builders and outputs | stale-generated report | active |
 | Hygiene index build | `scripts/build_link_shape_hygiene_index.py` | protocol and config | `generated/link_shape_hygiene.min.json` | active |
 | Hygiene index validation | `scripts/validate_link_shape_hygiene_index.py` | generated capsule | structural report | active |
+| Traces district validation | `scripts/validate_traces_district.py` | `docs/traces/` | receipt placement report | active |
 
 ## Source surfaces
 
@@ -25,8 +26,8 @@ The protocol lives in `LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`. The machine-facing m
 | `config/link_shape_hygiene.json` | source config for validators and generated mirror |
 | `generated/link_shape_hygiene.min.json` | compact machine-facing mirror |
 | `generated/agents_mesh.min.json` | required generated freshness target for AGENTS mesh |
-| `docs/traces/HYGIENE_REPAIR_MANIFEST.json` | optional repair trace written by the repair helper |
-| `docs/traces/LINK_SHAPE_HYGIENE_APPLY_MANIFEST_2026_04_25.json` | historical apply manifest for the link/shape hygiene package |
+| `docs/traces/HYGIENE_REPAIR_MANIFEST.json` | optional repair trace written by the repair helper; evidence only |
+| `docs/traces/LINK_SHAPE_HYGIENE_APPLY_MANIFEST_2026_04_25.json` | historical apply manifest for the link/shape hygiene package; evidence only |
 
 ## What counts as success
 
