@@ -13,6 +13,8 @@ class DocsMigrationMapTests(unittest.TestCase):
             d=self.c['districts'][item['district']]
             if item['target_dir'] != d['path']:
                 self.assertIn('external_owner_route', item)
+                self.assertEqual(item['external_owner_route'], item['target_dir'])
+                self.assertTrue((ROOT/item['external_owner_route']).is_dir(), item['external_owner_route'])
     def test_no_current_root_allowlist_item_is_exact_moved(self):
         allow=set(self.c['current_root_allowlist']); moved={Path(i['source']).name for i in self.c['exact_migrations']}; self.assertFalse(allow & moved)
 if __name__=='__main__': unittest.main()

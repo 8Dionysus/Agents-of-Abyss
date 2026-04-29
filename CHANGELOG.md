@@ -38,6 +38,10 @@ Tracking starts with the community-docs baseline for this repository.
   `docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md`, `docs/guardrails/CURRENT_SURFACE_INDEX.md`,
   `docs/guardrails/thematic_districts.json`, `generated/docs_thematic_index.min.json`,
   district README gates, and docs-thematic validators
+- guardrail scale hardening for docs thematic districts, including
+  guardrail-index coverage, existing external owner-route checks,
+  classifier-owned docs-root allowlist validation, and release-check coverage
+  checks for docs guardrail validation commands
 - Wave E link and shape hygiene guardrails through
   `docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`,
   `docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md`,

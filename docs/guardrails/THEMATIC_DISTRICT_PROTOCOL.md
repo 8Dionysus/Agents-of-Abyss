@@ -46,6 +46,13 @@ Do not move source truth into this repository. The docs thematic cleanup only cl
 
 `generated/docs_thematic_index.min.json` reflects `docs/guardrails/thematic_districts.json`. It does not author meaning.
 
+## Guardrail growth rule
+
+When `docs/guardrails/` gains a new guardrail family, land it as a complete
+route: human law, source input, generated mirror when useful, validator, tests,
+release-check coverage, and index links. A handwritten warning without a
+validator is an audit or roadmap signal, not an active guardrail.
+
 ## Validation
 
 Use `AGENTS.md` in this directory for the current command lane.

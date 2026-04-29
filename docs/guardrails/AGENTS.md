@@ -24,6 +24,9 @@ For AGENTS mesh work, read `AGENTS_MESH_PROTOCOL.md`, `AGENTS_MESH_INDEX.md`, an
 - Do not recreate empty docs districts for mechanics. Route mechanic records to `mechanics/<slug>/legacy/` and active mechanic work to `mechanics/<slug>/`.
 - Keep validation commands here or in the nearest `AGENTS.md`; keep README surfaces map-like.
 - Generated mirrors remain evidence only and must be rebuilt from their source config.
+- Do not add prose-only guardrails. A new guardrail family needs human law,
+  source input, validator/test coverage, release-check coverage, and an owner
+  boundary in the same change.
 
 ## Validation
 
