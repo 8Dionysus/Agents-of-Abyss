@@ -29,23 +29,6 @@
         "Guardrails verify route shape; they do not author center doctrine or mechanic truth."
       ]
     },
-    "registry": {
-      "path": "docs/registry",
-      "readme": "docs/registry/README.md",
-      "role": "Registry evolution, schema/capsule notes, and generated-index planning.",
-      "authority": "design_note",
-      "patterns": [
-        "REGISTRY",
-        "INVENTORY",
-        "SCHEMA",
-        "CAPSULE",
-        "INDEX",
-        "MAP"
-      ],
-      "must_not_claim": [
-        "Registry notes are not runtime truth or source meaning."
-      ]
-    },
     "decisions": {
       "path": "docs/decisions",
       "readme": "docs/decisions/README.md",
@@ -85,7 +68,6 @@
   },
   "tie_break_order": [
     "guardrails",
-    "registry",
     "decisions",
     "traces"
   ],
@@ -138,13 +120,6 @@
       "district": "guardrails",
       "link_target": "docs/guardrails/thematic_districts.json",
       "reason": "docs cleanup classifier is guardrail config"
-    },
-    {
-      "source": "registry-v2-notes.md",
-      "target": "docs/registry/REGISTRY_V2_NOTES.md",
-      "district": "registry",
-      "link_target": "docs/registry/REGISTRY_V2_NOTES.md",
-      "reason": "future registry notes belong in registry district"
     }
   ],
   "pattern_migrations": [

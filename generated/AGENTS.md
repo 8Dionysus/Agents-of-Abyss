@@ -30,8 +30,8 @@ Mechanic-owned generated sources live under
 than the mechanic package source.
 
 `generated/ecosystem_registry.min.json` is the current compact machine-readable registry for AoA center-layer routing.
-It summarizes repository names, roles, statuses, shared maturity, and kind for the public ecosystem map.
-`generated/federation_supporting_inventory.min.json` is the companion machine-readable inventory for supporting consumer/control-plane surfaces that stay outside compact registry v1.
+It summarizes repository names, roles, visibility, maturity, relation, and kind for the public ecosystem map.
+`generated/federation_supporting_inventory.min.json` is the companion machine-readable inventory for supporting consumer/control-plane surfaces that stay outside ecosystem registry v2.
 `generated/center_entry_map.min.json` is the compact machine-facing route
 capsule for the shared `Start here` contract.
 `generated/mechanic_card_index.min.json` is the compact machine-facing
@@ -62,10 +62,10 @@ When editing `ecosystem_registry.min.json` or `federation_supporting_inventory.m
 
 - edit mechanic-owned generated companions directly under `mechanics/<slug>/generated/`
 - keep it aligned with `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, and `docs/FEDERATION_RULES.md`
-- preserve the current field contract around `name`, `role`, `status`, `shared_maturity`, and `kind`
+- preserve the current field contract around `name`, `role`, `visibility`, `maturity`, `relation`, and `kind`
 - keep entries compact, explicit, and reviewable
 - do not smuggle layer-owned implementation detail, speculative repos, or private assumptions into the registry
-- keep compact registry v1 and supporting inventory boundaries explicit instead of blurring them together
+- keep ecosystem registry v2 and supporting inventory boundaries explicit instead of blurring them together
 - prefer the smallest coherent change that keeps the center more legible
 
 When editing `center_entry_map.min.json`:

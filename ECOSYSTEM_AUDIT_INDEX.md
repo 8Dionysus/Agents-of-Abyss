@@ -50,7 +50,7 @@ Use this route when the question is not only "is the claim true?" but "should th
 | compact civic index | root only while compact |
 | historical seed or package receipt | owning `mechanics/<slug>/legacy/raw/` for mechanic-specific receipts, or `docs/traces/` for generic movement evidence |
 | audit candidate list or cleanup evidence | `mechanics/audit/` and `mechanics/audit/legacy/raw/` |
-| future registry design note | `docs/registry/` |
+| registry contract change | `schemas/`, `generated/`, validators, aligned source docs, and `docs/decisions/` when the route changes |
 | generated compact machine surface | `generated/` |
 | owner-local semantic change | owning repository |
 
@@ -63,7 +63,7 @@ Current root-surface cleanup evidence is preserved through [audit provenance](me
 - a key README or civic surface collapses into a few long lines
 - tables, code fences, or numbered paths become hard for humans or agents to parse
 - a technical district gains many files without a local README gate
-- a root file remains after its better home is planted in `mechanics/audit/`, `docs/registry/`, `docs/traces/`, or `mechanics/<slug>/legacy/raw/`
+- a root file remains after its better home is planted in `mechanics/audit/`, `docs/traces/`, `docs/decisions/`, schemas/generated validators, or `mechanics/<slug>/legacy/raw/`
 
 ### Constitutional drift
 

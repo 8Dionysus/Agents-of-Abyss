@@ -50,7 +50,7 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
     assert "aoa-sdk" not in registry_names
     assert "`aoa-sdk`" in roadmap
     assert "supporting inventory" in roadmap_lower
-    assert "compact registry v1" in roadmap_lower
+    assert "ecosystem registry v2" in roadmap_lower
 
     current_release_surfaces = [
         "README.md",

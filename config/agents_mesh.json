@@ -271,23 +271,6 @@
       ]
     },
     {
-      "path": "docs/registry/AGENTS.md",
-      "scope": "docs/registry/",
-      "kind": "docs-thematic-district-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Thematic docs district card.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
       "path": "docs/decisions/AGENTS.md",
       "scope": "docs/decisions/",
       "kind": "docs-thematic-district-card",

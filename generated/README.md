@@ -13,7 +13,7 @@ Root `generated/` contains only root-owned compact mirrors and indexes.
 |---|---|
 | `center_entry_map.min.json` | compact center-entry map for low-context orientation |
 | `ecosystem_registry.min.json` | compact public AoA contour registry |
-| `federation_supporting_inventory.min.json` | supporting consumers and adjacent support surfaces outside compact registry v1 |
+| `federation_supporting_inventory.min.json` | supporting consumers and adjacent support surfaces outside ecosystem registry v2 |
 | `mechanic_card_index.min.json` | compact reflection of mechanic package entry cards |
 | `owner_request_queue.min.json` | compact center-side owner request queue |
 | `docs_thematic_index.min.json` | compact map of docs thematic districts |

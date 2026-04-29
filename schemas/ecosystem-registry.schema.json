@@ -1,14 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://agents-of-abyss/schemas/ecosystem-registry.schema.json",
-  "title": "AoA ecosystem registry",
+  "title": "AoA ecosystem registry v2",
   "type": "object",
   "additionalProperties": false,
   "required": ["version", "ecosystem", "repos"],
   "properties": {
     "version": {
       "type": "integer",
-      "minimum": 1
+      "const": 2
     },
     "ecosystem": {
       "type": "string",
@@ -20,7 +20,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["name", "role", "status", "shared_maturity", "kind"],
+        "required": ["name", "role", "visibility", "maturity", "relation", "kind"],
         "properties": {
           "name": {
             "type": "string",
@@ -30,22 +30,30 @@
             "type": "string",
             "minLength": 3
           },
-          "status": {
+          "visibility": {
             "type": "string",
             "enum": [
-              "active",
-              "bootstrap",
-              "planned",
-              "active-private",
-              "active-conceptual",
-              "related",
-              "experimental",
-              "deprecated"
+              "public",
+              "private"
             ]
           },
-          "shared_maturity": {
+          "maturity": {
             "type": "string",
-            "enum": ["seed", "proven", "promoted", "canonical", "deprecated"]
+            "enum": ["concept", "bootstrap", "active", "stable", "deprecated"]
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "center",
+              "source-layer",
+              "derived-layer",
+              "routing-layer",
+              "substrate",
+              "counterpart",
+              "supporting-consumer",
+              "public-projection",
+              "private-project"
+            ]
           },
           "kind": {
             "type": "string",

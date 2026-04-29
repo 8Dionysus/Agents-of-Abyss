@@ -76,19 +76,104 @@ ALLOWED_STATUS = {
 }
 ALLOWED_SHARED_MATURITY = {"seed", "proven", "promoted", "canonical", "deprecated"}
 ALLOWED_KIND = {"meta", "source", "derived", "related"}
-DOCUMENTED_REGISTRY_V1 = {
-    "Agents-of-Abyss": {"role": "ecosystem-center", "kind": "meta"},
-    "aoa-techniques": {"role": "practice-canon", "kind": "source"},
-    "aoa-skills": {"role": "execution-canon", "kind": "source"},
-    "aoa-evals": {"role": "proof-canon", "kind": "source"},
-    "aoa-memo": {"role": "memory-layer", "kind": "source"},
-    "aoa-agents": {"role": "agent-layer", "kind": "source"},
-    "aoa-playbooks": {"role": "scenario-composition-layer", "kind": "source"},
-    "aoa-stats": {"role": "derived-observability-layer", "kind": "derived"},
-    "aoa-routing": {"role": "navigation-layer", "kind": "derived"},
-    "aoa-kag": {"role": "derived-knowledge-substrate", "kind": "derived"},
-    "Tree-of-Sophia": {"role": "knowledge-architecture-counterpart", "kind": "related"},
-    "abyss-stack": {"role": "infrastructure-substrate", "kind": "related"},
+ALLOWED_VISIBILITY = {"public", "private"}
+ALLOWED_MATURITY = {"concept", "bootstrap", "active", "stable", "deprecated"}
+ALLOWED_RELATION = {
+    "center",
+    "source-layer",
+    "derived-layer",
+    "routing-layer",
+    "substrate",
+    "counterpart",
+    "supporting-consumer",
+    "public-projection",
+    "private-project",
+}
+DOCUMENTED_REGISTRY_V2 = {
+    "Agents-of-Abyss": {
+        "role": "ecosystem-center",
+        "kind": "meta",
+        "visibility": "public",
+        "maturity": "active",
+        "relation": "center",
+    },
+    "aoa-techniques": {
+        "role": "practice-canon",
+        "kind": "source",
+        "visibility": "public",
+        "maturity": "active",
+        "relation": "source-layer",
+    },
+    "aoa-skills": {
+        "role": "execution-canon",
+        "kind": "source",
+        "visibility": "public",
+        "maturity": "active",
+        "relation": "source-layer",
+    },
+    "aoa-evals": {
+        "role": "proof-canon",
+        "kind": "source",
+        "visibility": "public",
+        "maturity": "active",
+        "relation": "source-layer",
+    },
+    "aoa-memo": {
+        "role": "memory-layer",
+        "kind": "source",
+        "visibility": "public",
+        "maturity": "bootstrap",
+        "relation": "source-layer",
+    },
+    "aoa-agents": {
+        "role": "agent-layer",
+        "kind": "source",
+        "visibility": "public",
+        "maturity": "bootstrap",
+        "relation": "source-layer",
+    },
+    "aoa-playbooks": {
+        "role": "scenario-composition-layer",
+        "kind": "source",
+        "visibility": "public",
+        "maturity": "bootstrap",
+        "relation": "source-layer",
+    },
+    "aoa-stats": {
+        "role": "derived-observability-layer",
+        "kind": "derived",
+        "visibility": "public",
+        "maturity": "bootstrap",
+        "relation": "derived-layer",
+    },
+    "aoa-routing": {
+        "role": "navigation-layer",
+        "kind": "derived",
+        "visibility": "public",
+        "maturity": "bootstrap",
+        "relation": "routing-layer",
+    },
+    "aoa-kag": {
+        "role": "derived-knowledge-substrate",
+        "kind": "derived",
+        "visibility": "public",
+        "maturity": "bootstrap",
+        "relation": "derived-layer",
+    },
+    "Tree-of-Sophia": {
+        "role": "knowledge-architecture-counterpart",
+        "kind": "related",
+        "visibility": "public",
+        "maturity": "concept",
+        "relation": "counterpart",
+    },
+    "abyss-stack": {
+        "role": "infrastructure-substrate",
+        "kind": "related",
+        "visibility": "public",
+        "maturity": "active",
+        "relation": "substrate",
+    },
 }
 DOCUMENTED_SUPPORTING_SURFACES = {
     "aoa-sdk": {
@@ -319,8 +404,8 @@ def validate_registry() -> None:
         if key not in payload:
             fail(f"ecosystem registry is missing required key '{key}'")
 
-    if not isinstance(payload["version"], int) or payload["version"] < 1:
-        fail("registry 'version' must be an integer >= 1")
+    if payload["version"] != 2:
+        fail("registry 'version' must equal 2")
     if payload["ecosystem"] != "AoA":
         fail("registry 'ecosystem' must equal 'AoA'")
 
@@ -329,21 +414,22 @@ def validate_registry() -> None:
         fail("registry 'repos' must be a non-empty list")
 
     seen_names: set[str] = set()
-    expected_names = set(DOCUMENTED_REGISTRY_V1)
+    expected_names = set(DOCUMENTED_REGISTRY_V2)
 
     for index, repo in enumerate(repos):
         location = f"repos[{index}]"
         if not isinstance(repo, dict):
             fail(f"{location} must be an object")
 
-        for key in ("name", "role", "status", "shared_maturity", "kind"):
+        for key in ("name", "role", "visibility", "maturity", "relation", "kind"):
             if key not in repo:
                 fail(f"{location} is missing required key '{key}'")
 
         name = repo["name"]
         role = repo["role"]
-        status = repo["status"]
-        shared_maturity = repo["shared_maturity"]
+        visibility = repo["visibility"]
+        maturity = repo["maturity"]
+        relation = repo["relation"]
         kind = repo["kind"]
 
         if not isinstance(name, str) or len(name) < 3:
@@ -354,39 +440,35 @@ def validate_registry() -> None:
 
         if not isinstance(role, str) or len(role) < 3:
             fail(f"{location}.role must be a string of length >= 3")
-        if status not in ALLOWED_STATUS:
-            fail(f"{location}.status '{status}' is not allowed")
-        if shared_maturity not in ALLOWED_SHARED_MATURITY:
-            fail(f"{location}.shared_maturity '{shared_maturity}' is not allowed")
+        if visibility not in ALLOWED_VISIBILITY:
+            fail(f"{location}.visibility '{visibility}' is not allowed")
+        if maturity not in ALLOWED_MATURITY:
+            fail(f"{location}.maturity '{maturity}' is not allowed")
+        if relation not in ALLOWED_RELATION:
+            fail(f"{location}.relation '{relation}' is not allowed")
         if kind not in ALLOWED_KIND:
             fail(f"{location}.kind '{kind}' is not allowed")
 
-        expected_entry = DOCUMENTED_REGISTRY_V1.get(name)
+        expected_entry = DOCUMENTED_REGISTRY_V2.get(name)
         if expected_entry is not None:
-            expected_role = expected_entry["role"]
-            expected_kind = expected_entry["kind"]
-            if role != expected_role:
-                fail(
-                    f"{location}.role for '{name}' must equal "
-                    f"'{expected_role}'"
-                )
-            if kind != expected_kind:
-                fail(
-                    f"{location}.kind for '{name}' must equal "
-                    f"'{expected_kind}'"
-                )
+            for field_name in ("role", "visibility", "maturity", "relation", "kind"):
+                if repo[field_name] != expected_entry[field_name]:
+                    fail(
+                        f"{location}.{field_name} for '{name}' must equal "
+                        f"'{expected_entry[field_name]}'"
+                    )
 
     missing_expected = sorted(expected_names - seen_names)
     if missing_expected:
         fail(
-            "ecosystem registry is missing documented v1 repos: "
+            "ecosystem registry is missing documented v2 repos: "
             + ", ".join(missing_expected)
         )
 
     unexpected_repos = sorted(seen_names - expected_names)
     if unexpected_repos:
         fail(
-            "ecosystem registry contains repos outside compact v1 scope: "
+            "ecosystem registry contains repos outside ecosystem registry v2 scope: "
             + ", ".join(unexpected_repos)
         )
 

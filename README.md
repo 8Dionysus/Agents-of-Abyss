@@ -17,7 +17,7 @@ This README is human-first and agent-useful. A person should see the city before
 | Axis | Current sober status | Highest aim |
 |---|---|---|
 | Constitutional center | Proven center surface for identity, layer map, federation rules, and program-level direction. | A stable civic root for the AoA federation: clear enough for humans, strict enough for agents. |
-| Federation contour | Compact registry v1 names the public AoA contour and adjacent anchors. Supporting consumers are tracked separately. | Every layer can grow without stealing another layer's truth. |
+| Federation contour | Ecosystem registry v2 names the public AoA contour through separate visibility, maturity, relation, and kind axes. Supporting consumers are tracked separately. | Every layer can grow without stealing another layer's truth. |
 | Root surface governance | Root surface law is planted, first root-leak cleanup is defined, and technical districts now get local gates. | The root should stay a city gate: lawful, readable, sparse, and strict about what belongs nearby. |
 | Mechanics | Agon, Experience, recurrence/return, growth, quest/RPG reflection, antifragility, and ToS support are mostly center contracts, doctrine, or pre-protocol routes. | A readable engineering philosophy where every mechanic has a home, owner split, stop-line, and verification path. |
 | Runtime | The center does not run the body. Runtime belongs to `abyss-stack` or later owner-local gates. | Runtime can enact validated mechanics without becoming the source of law or meaning. |
@@ -65,7 +65,7 @@ Use this tree before trusting a claim made by the center:
 | Authority | Is this actually a center-owned claim? | [CHARTER](CHARTER.md) | The claim must fit the center's ownership boundary. |
 | Contour | Does the current map name the repo, layer, or adjacent anchor being discussed? | [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) | Cross-check [`generated/ecosystem_registry.min.json`](generated/ecosystem_registry.min.json) and [`generated/federation_supporting_inventory.min.json`](generated/federation_supporting_inventory.min.json). |
 | Ownership law | Does the claim preserve source truth, derived truth, routing truth, runtime truth, and ToS-authored meaning as separate things? | [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) | Cross-check [docs/REPO_ROLES](docs/REPO_ROLES.md) and [release-support/PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md). |
-| Surface placement | Does this object deserve to live in the repository root? | [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) | If it is a wave receipt, audit artifact, future registry note, or generated object, route it away from root. |
+| Surface placement | Does this object deserve to live in the repository root? | [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) | If it is a wave receipt, audit artifact, design note, or generated object, route it away from root. |
 | Direction | Is this current program direction rather than an old contour, wave note, or copied promise? | [ROADMAP](ROADMAP.md) | Cross-check [release-support/DIRECTION_SURFACES](mechanics/release-support/docs/DIRECTION_SURFACES.md). |
 | Release support | Is a draft, quest, checkpoint, landing, handoff, public claim, or GitHub release becoming a supportable state transition? | [release-support](mechanics/release-support/README.md) | Use [release-support/PARTS](mechanics/release-support/PARTS.md) before public wording hardens. |
 | Machine contract | Can the compact surfaces and AGENTS mesh still rebuild and validate? | generated capsules, AGENTS cards, and validators | Run the commands below. |
@@ -145,7 +145,7 @@ polis remains a city gate, not a warehouse.
 | `aoa-agents` | role contracts, persona boundaries, handoff posture | you need to define who acts and under what role contract | skill corpus, runtime identity, or memory store |
 | `aoa-playbooks` | recurring scenario composition and method routes | a repeated multi-layer scenario needs choreography, fallback posture, and expected evidence | single-skill execution or proof canon |
 | `aoa-kag` | derived knowledge substrate and retrieval/graph-ready lifts | authoritative sources need provenance-aware derived structures | source-authored meaning or ToS canon |
-| `aoa-sdk` | typed local-first consumer and helper spine | you need loading, integration, compatibility, or controlled orchestration helpers | constitutional authority or compact registry membership |
+| `aoa-sdk` | typed local-first consumer and helper spine | you need loading, integration, compatibility, or controlled orchestration helpers | constitutional authority or ecosystem registry membership |
 | `Dionysus` | seed garden and staging surface | an intake pack, seed, or staging trace must be preserved before owner landing | final owner truth |
 | `Tree-of-Sophia` | source-first living knowledge architecture and authored ToS meaning | the work concerns source-linked knowledge, concept nodes, lineage, or ToS growth law | AoA operational authority |
 | `abyss-stack` | runtime, deployment, storage, services, lifecycle | the question is about the body the system runs on | AoA constitutional truth or ToS-authored meaning |
@@ -172,7 +172,7 @@ Treat this contour as a map of planted law, contracts, candidates, and proof sur
 
 | Contour | Current status | Do not read as | Primary surfaces |
 |---|---|---|---|
-| Public center map | landed public route and registry v1 | a claim that the center owns every object it names | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, generated registry capsules |
+| Public center map | landed public route and registry v2 | a claim that the center owns every object it names | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, generated registry capsules |
 | Root surface governance | civic root law, completed root-leak cleanup route, district gates, link/shape hygiene, and AGENTS mesh guardrails | permission to hide history, delete without review, or turn district READMEs or AGENTS cards into doctrine catalogs | `docs/ROOT_SURFACE_LAW.md`, `docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`, `docs/guardrails/AGENTS_MESH_PROTOCOL.md`, `mechanics/audit/PROVENANCE.md`, `scripts/validate_hygiene_suite.py`, local district READMEs and AGENTS cards |
 | Method and growth | center doctrine and cross-owner route | a new lineage layer or center-owned method corpus | `mechanics/method-growth/docs/METHOD_SPINE.md`, `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`, `mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`, `mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md` |
 | Recurrence and continuity | bounded return to valid anchors | ambient continuity, hidden memory, or runtime autonomy | `mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md`, `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md`, `mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md` |

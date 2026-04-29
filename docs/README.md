@@ -94,7 +94,6 @@ For mechanic-specific changes, use [`../mechanics/AGENTS.md`](../mechanics/AGENT
 |---|---|
 | `docs/` root | stable center doctrine and maps that are too deep for repository root but still center-level |
 | [`docs/guardrails/`](guardrails/) | docs cleanup, link/shape hygiene, generated freshness, and AGENTS mesh guardrails |
-| [`docs/registry/`](registry/) | registry evolution notes and future schema/migration planning |
 | [`docs/decisions/`](decisions/) | decision records explaining why a route or placement was chosen |
 | [`docs/traces/`](traces/) | migration evidence, move manifests, link-rewrite traces, and provenance logs |
 

@@ -29,11 +29,11 @@ It names the federation. It does not absorb the inner truth of every repository 
 | `aoa-routing` | navigation and dispatch layer | cross-repo routing hints, dispatch surfaces, navigation posture, lightweight indexes, and a thin federation entry ABI | primary authored truth of other layers | bootstrap -> seed |
 | `aoa-kag` | derived knowledge substrate | provenance-aware lifts, graph-ready projections, retrieval-ready structures, and bounded federation readiness surfaces derived from authoritative sources | source-authored truth of ToS or other layer-owned corpora | bootstrap -> seed |
 
-## Supporting consumers outside compact registry v1
+## Supporting consumers outside ecosystem registry v2
 
 | Repository | Role | Owns | Registry posture |
 |---|---|---|---|
-| `aoa-sdk` | typed local-first consumer and helper spine | loading, integration, compatibility helpers, typed helper seams, and controlled orchestration support | tracked in `generated/federation_supporting_inventory.min.json`, not compact registry v1 |
+| `aoa-sdk` | typed local-first consumer and helper spine | loading, integration, compatibility helpers, typed helper seams, and controlled orchestration support | tracked in `generated/federation_supporting_inventory.min.json`, not ecosystem registry v2 |
 
 ## Adjacent system anchors
 
@@ -51,7 +51,7 @@ It names the federation. It does not absorb the inner truth of every repository 
 
 ## Scope note
 
-Compact registry v1 follows the center + public AoA layers + adjacent anchors contour in this file. Supporting consumer surfaces, such as `aoa-sdk`, remain outside compact registry v1 by design and appear in the companion machine-readable supporting inventory at `generated/federation_supporting_inventory.min.json`.
+Ecosystem registry v2 follows the center + public AoA layers + adjacent anchors contour in this file. It splits public naming into `visibility`, `maturity`, `relation`, and `kind` axes so status, role, and ownership do not collapse into one field. Supporting consumer surfaces, such as `aoa-sdk`, remain outside ecosystem registry v2 by design and appear in the companion machine-readable supporting inventory at `generated/federation_supporting_inventory.min.json`.
 
 ## Reading rule
 
