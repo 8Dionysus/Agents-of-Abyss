@@ -5,11 +5,12 @@ from typing import Any
 REPO_ROOT=Path(__file__).resolve().parents[1]
 CLASSIFIER_REL=Path('docs/guardrails/thematic_districts.json')
 INDEX_REL=Path('generated/docs_thematic_index.min.json')
-DOC_ROOT_REQUIRED=['README.md','AGENTS.md','FEDERATION_RULES.md','LAYERS.md','REPO_ROLES.md','ROOT_SURFACE_LAW.md','START_HERE_ROUTE_CONTRACT.md','MECHANICS.md']
 DISTRICT_README_HEADINGS=['# ','## District law','## Current surfaces','## Must not claim','## Promotion path','## Validation']
 def load_classifier(repo_root:Path|None=None)->dict[str,Any]:
     root=repo_root or REPO_ROOT
     return json.loads((root/CLASSIFIER_REL).read_text(encoding='utf-8'))
+def current_root_allowlist(classifier:dict[str,Any])->list[str]:
+    return [str(item) for item in classifier.get('current_root_allowlist',[])]
 def render_index(classifier:dict[str,Any])->str:
     data={'schema_version':classifier['schema_version'],'source':str(CLASSIFIER_REL),'purpose':'Compact machine-facing map of docs thematic districts.','generated_rule':'Reflects docs/guardrails/thematic_districts.json; does not author meaning.','current_root_allowlist':classifier.get('current_root_allowlist',[]),'districts':{name:{'path':d['path'],'readme':d['readme'],'role':d['role'],'authority':d['authority'],'current_route':d.get('current_route')} for name,d in classifier.get('districts',{}).items()},'exact_migration_count':len(classifier.get('exact_migrations',[])),'pattern_migration_count':len(classifier.get('pattern_migrations',[])),'validation_refs':classifier.get('validation_refs',[])}
     return json.dumps(data,separators=(',',':'),ensure_ascii=False)+'\n'
@@ -19,6 +20,9 @@ def validate_classifier_shape(classifier:dict[str,Any])->list[str]:
     if classifier.get('schema_version')!=2: errors.append('schema_version must be 2')
     for key in ['current_root_allowlist','districts','tie_break_order','exact_migrations','pattern_migrations','validation_refs']:
         if key not in classifier: errors.append(f'missing classifier key: {key}')
+    allowlist=classifier.get('current_root_allowlist',[])
+    if not isinstance(allowlist,list) or not all(isinstance(item,str) for item in allowlist): errors.append('current_root_allowlist must be a list of strings')
+    if len(allowlist)!=len(set(allowlist)): errors.append('current_root_allowlist must not contain duplicates')
     districts=classifier.get('districts',{})
     if set(classifier.get('tie_break_order',[]))!=set(districts): errors.append('tie_break_order must name exactly all districts')
     seen_sources=set(); seen_targets=set()

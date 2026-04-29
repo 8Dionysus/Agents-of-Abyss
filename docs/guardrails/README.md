@@ -28,6 +28,17 @@ Do not place mechanic-owned history here. Mechanic receipts belong under `mechan
 
 A guardrail change becomes current only when the source config or protocol, generated mirror, validators, tests, and docs links move together.
 
+## Scale contract
+
+New guardrail families must be active, not decorative. A future guardrail belongs
+here only when it has a named human law surface, a source config or explicit
+source input, a validation route, test coverage, release-check coverage, and a
+clear owner boundary.
+
+Do not add prose-only guardrails. If a rule cannot yet be checked, route it to
+the owning mechanic, decision record, roadmap, or audit finding until it has a
+reviewable validation path.
+
 ## Validation
 
 Use [`AGENTS.md`](AGENTS.md) for the current command lane.
