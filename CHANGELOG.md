@@ -9,6 +9,9 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Added
 
+- `assets/agents-of-abyss-cycle-map.svg` as a papyrus-style public README
+  diagram for the AoA constitutional cycle, showing entry claims, route modes,
+  center law, mechanics, proof districts, owner handoff, and return.
 - `docs/START_HERE_ROUTE_CONTRACT.md` as the canonical route-mode contract for
   public entry, root editing, direction changes, ownership routing, mechanic
   changes, public claim validation, low-context agents, and district work
