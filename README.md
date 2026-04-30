@@ -79,6 +79,11 @@ python scripts/validate_docs_migration_map.py
 python scripts/validate_traces_district.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py
+python scripts/validate_config_registry.py
+python scripts/validate_schema_registry.py
+python scripts/validate_manifests_registry.py
+python scripts/validate_scripts_district.py
+python scripts/validate_tests_district.py
 python scripts/repair_known_link_drifts.py --check
 python scripts/validate_links.py
 python scripts/validate_markdown_shape.py

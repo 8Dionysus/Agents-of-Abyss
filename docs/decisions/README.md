@@ -29,6 +29,7 @@ Decision records explain why; current surfaces define what.
 | [`2026-04-29-traces-mode-hardening`](2026-04-29-traces-mode-hardening.md) | decision record for keeping traces as repo-level movement receipts with validation |
 | [`2026-04-30-root-schema-district-contract`](2026-04-30-root-schema-district-contract.md) | decision record for keeping root schemas as center contracts with registry-backed validation |
 | [`2026-04-30-root-scripts-district-contract`](2026-04-30-root-scripts-district-contract.md) | decision record for keeping root scripts as registry-backed center tooling |
+| [`2026-04-30-root-tests-district-contract`](2026-04-30-root-tests-district-contract.md) | decision record for keeping root tests as registry-backed center proof surface |
 
 ## Record shape
 

@@ -19,7 +19,7 @@ constitutional authority by themselves.
 |---|---|
 | `release-gate` | public release check orchestration |
 | `center-entry` | center entry map building, route parity, and validation |
-| `root-registries` | root config, schema, manifest, and ecosystem registry validation |
+| `root-registries` | root config, schema, manifest, technical district, and ecosystem registry validation |
 | `docs-districts` | root docs district cleanup, indexes, decisions, and trace receipts |
 | `hygiene` | link, Markdown, status vocabulary, generated freshness, and known-repair guardrails |
 | `agents-mesh` | AGENTS-card shape, coverage, and compact mesh indexes |
