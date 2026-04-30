@@ -1,68 +1,56 @@
 # Tests District
 
-This directory holds regression tests for center contracts, generated surfaces, validators, and documentation guardrails.
+`tests/` holds root-owned regression and contract tests for the AoA center.
+Mechanic-owned tests live with the owning mechanic or part.
 
-Tests protect bounded claims. They do not replace proof canon in `aoa-evals` and do not grant authority beyond the claims they check.
+Tests protect bounded claims. They do not replace proof canon in `aoa-evals`
+and do not grant authority beyond the claims they check.
 
-Mechanic-owned tests live in `mechanics/<slug>/tests/`. Root `tests/` keeps
-only root-owned contract tests.
+## Current Surface
 
-## Use this directory when
+| Surface | Role |
+|---|---|
+| [`registry.json`](registry.json) | canonical map of root test families, root test files, and mechanic test-home routes |
 
-- a generated surface changes
-- a schema contract changes
-- a root config registry or config consumer contract changes
-- a validator changes
-- a link, Markdown shape, status vocabulary, or generated freshness guardrail changes
-- an AGENTS-card mesh, local card, or mesh index changes
-- an Agon, Experience, RPG, antifragility, method-growth, or Questbook contract changes
-- an Experience active part or provenance bridge changes
-- a Questbook item changes lifecycle placement
-- a release or root-surface guardrail needs regression protection
+## Test Families
 
-## Rules
+| Family | Role |
+|---|---|
+| `agents-mesh` | AGENTS-card shape, coverage, and generated mesh tests |
+| `entry-and-roadmap` | center entry, route sync, roadmap, and public route tests |
+| `root-districts` | config, schemas, scripts, manifests, examples, and generated district tests |
+| `docs-districts` | docs migration, thematic indexes, decisions, and trace district tests |
+| `hygiene` | link, Markdown shape, status vocabulary, generated freshness, and known repair tests |
+| `mechanics-topology` | mechanic registry, cards, artifact homes, and landing ledger tests |
+| `owner-requests` | owner request queue and owner request document tests |
+| `ecosystem-contract` | ecosystem registry, Questbook center surface, and cross-mechanic route tests |
+| `tests-district` | tests district registry and route-shape tests |
 
-- Pair tests with the smallest claim they protect.
-- Do not turn tests into hidden source-of-truth prose.
-- Keep test names close to the surface they guard.
-- If a test encodes a constitutional rule, make sure the human-readable rule exists in `docs/` or root civic docs.
-- Avoid broad snapshot tests that make intentional evolution hard to review.
+## Test Homes
 
-## Baseline command
+| Home | Role |
+|---|---|
+| `tests/test*.py` | root-owned center tests registered in `tests/registry.json` |
+| `mechanics/<slug>/tests/` | mechanic-level tests |
+| `mechanics/<slug>/parts/<part>/tests/` | part-local mechanic tests |
 
-```bash
-python -m pytest -q
-```
+## Source Order
 
-Run targeted validators before or alongside pytest when a generated surface,
-schema, or hygiene guardrail changes.
+When a test and another surface disagree, read authority in this order:
 
-For Experience active-part or provenance-bridge changes, run:
+1. owner source document, mechanic package, or root district README
+2. schema, registry, config, builder, or validator that defines the contract
+3. test assertion
+4. generated or derived consumer surface
 
-```bash
-python mechanics/experience/scripts/validate_experience_distillation.py
-```
+## Editing Route
 
-For link and shape hygiene changes, run:
+- Add root tests here only for root-owned center contracts.
+- Add mechanic tests under the owning mechanic or part.
+- Update `registry.json` when a root test or mechanic test-home route changes.
+- Keep assertions close to the claim they protect.
+- Keep fixtures compact and clearly non-authoritative.
 
-```bash
-python scripts/validate_config_registry.py
-python scripts/validate_hygiene_suite.py
-```
+## Validation
 
-For AGENTS mesh changes, run:
-
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-```
-
-For Questbook lifecycle changes, run:
-
-```bash
-python mechanics/questbook/scripts/validate_questbook_lifecycle.py
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-```
+Use the validation lane in [`AGENTS.md`](AGENTS.md#validation).

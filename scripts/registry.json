@@ -37,14 +37,15 @@
     },
     {
       "family_id": "root-registries",
-      "role": "root config, schema, manifest, and ecosystem registry validation",
+      "role": "root config, schema, manifest, technical district, and ecosystem registry validation",
       "source_ref": "docs/ROOT_SURFACE_LAW.md",
       "paths": [
         "scripts/validate_config_registry.py",
         "scripts/validate_ecosystem.py",
         "scripts/validate_manifests_registry.py",
         "scripts/validate_schema_registry.py",
-        "scripts/validate_scripts_district.py"
+        "scripts/validate_scripts_district.py",
+        "scripts/validate_tests_district.py"
       ],
       "must_not_claim": [
         "registry metadata as source doctrine"

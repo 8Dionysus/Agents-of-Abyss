@@ -1,0 +1,209 @@
+{
+  "schema_version": "aoa_tests_registry_v1",
+  "authority_ref": "tests/README.md",
+  "agents_ref": "tests/AGENTS.md",
+  "root_policy": {
+    "root_test_glob": "tests/test*.py",
+    "root_role": "root-owned center regression and contract tests",
+    "ignored_local_artifact_globs": [
+      "tests/__pycache__/**",
+      ".pytest_cache/**"
+    ]
+  },
+  "test_families": [
+    {
+      "family_id": "agents-mesh",
+      "role": "AGENTS-card shape, coverage, and generated mesh tests",
+      "source_ref": "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
+      "paths": [
+        "tests/test_agents_md_shape.py",
+        "tests/test_agents_mesh.py",
+        "tests/test_agents_mesh_index.py"
+      ],
+      "validation_refs": [
+        "scripts/validate_agents_md_shape.py",
+        "scripts/validate_agents_mesh.py",
+        "scripts/build_agents_mesh_index.py",
+        "scripts/validate_agents_mesh_index.py"
+      ],
+      "must_not_claim": [
+        "AGENTS coverage proves owner-local truth is complete"
+      ]
+    },
+    {
+      "family_id": "entry-and-roadmap",
+      "role": "center entry, route sync, roadmap, and public route tests",
+      "source_ref": "docs/START_HERE_ROUTE_CONTRACT.md",
+      "paths": [
+        "tests/test_center_entry_map.py",
+        "tests/test_docs_verify_routes.py",
+        "tests/test_entry_surface_sync.py",
+        "tests/test_roadmap_parity.py"
+      ],
+      "validation_refs": [
+        "scripts/build_center_entry_map.py",
+        "scripts/validate_center_entry_map.py",
+        "scripts/validate_entry_surface_sync.py"
+      ],
+      "must_not_claim": [
+        "roadmap or entry tests replace owner-local route review"
+      ]
+    },
+    {
+      "family_id": "root-districts",
+      "role": "config, schemas, scripts, manifests, examples, and generated district tests",
+      "source_ref": "docs/ROOT_SURFACE_LAW.md",
+      "paths": [
+        "tests/test_config_registry.py",
+        "tests/test_examples_district.py",
+        "tests/test_generated_district.py",
+        "tests/test_manifests_district.py",
+        "tests/test_schema_district.py",
+        "tests/test_scripts_district.py"
+      ],
+      "validation_refs": [
+        "scripts/validate_config_registry.py",
+        "scripts/validate_generated_freshness.py",
+        "scripts/validate_manifests_registry.py",
+        "scripts/validate_schema_registry.py",
+        "scripts/validate_scripts_district.py"
+      ],
+      "must_not_claim": [
+        "district registry metadata as source doctrine"
+      ]
+    },
+    {
+      "family_id": "docs-districts",
+      "role": "docs migration, thematic indexes, decisions, and trace district tests",
+      "source_ref": "docs/README.md",
+      "paths": [
+        "tests/test_decision_records.py",
+        "tests/test_docs_migration_map.py",
+        "tests/test_docs_thematic_cleanup.py",
+        "tests/test_docs_thematic_index.py",
+        "tests/test_validate_traces_district.py"
+      ],
+      "validation_refs": [
+        "scripts/validate_decision_records.py",
+        "scripts/validate_docs_migration_map.py",
+        "scripts/validate_docs_thematic_districts.py",
+        "scripts/validate_docs_thematic_index.py",
+        "scripts/validate_traces_district.py"
+      ],
+      "must_not_claim": [
+        "historical receipts as current law"
+      ]
+    },
+    {
+      "family_id": "hygiene",
+      "role": "link, Markdown shape, status vocabulary, generated freshness, and known repair tests",
+      "source_ref": "docs/guardrails/README.md",
+      "paths": [
+        "tests/test_generated_freshness.py",
+        "tests/test_link_shape_hygiene_index.py",
+        "tests/test_markdown_shape.py",
+        "tests/test_repair_known_link_drifts.py",
+        "tests/test_status_vocabulary.py",
+        "tests/test_validate_links.py"
+      ],
+      "validation_refs": [
+        "scripts/repair_known_link_drifts.py",
+        "scripts/validate_generated_freshness.py",
+        "scripts/validate_hygiene_suite.py",
+        "scripts/validate_links.py",
+        "scripts/validate_markdown_shape.py",
+        "scripts/validate_status_vocabulary.py"
+      ],
+      "must_not_claim": [
+        "hygiene checks as semantic approval"
+      ]
+    },
+    {
+      "family_id": "mechanics-topology",
+      "role": "mechanic registry, cards, artifact homes, and landing ledger tests",
+      "source_ref": "mechanics/README.md",
+      "paths": [
+        "tests/test_mechanic_artifact_topology.py",
+        "tests/test_mechanic_card_index.py",
+        "tests/test_mechanic_landing_logs.py",
+        "tests/test_mechanic_readme_cards.py",
+        "tests/test_mechanics_topology.py"
+      ],
+      "validation_refs": [
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_artifact_topology.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_mechanic_landing_logs.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/validate_mechanics_topology.py"
+      ],
+      "must_not_claim": [
+        "mechanic tests as owner acceptance in sibling repos"
+      ]
+    },
+    {
+      "family_id": "owner-requests",
+      "role": "owner request queue and owner request document tests",
+      "source_ref": "mechanics/OWNER_REQUEST_PROTOCOL.md",
+      "paths": [
+        "tests/test_generated_owner_request_queue.py",
+        "tests/test_owner_request_docs.py",
+        "tests/test_owner_request_queue.py"
+      ],
+      "validation_refs": [
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py",
+        "scripts/validate_owner_request_queue.py"
+      ],
+      "must_not_claim": [
+        "owner request readiness as downstream implementation"
+      ]
+    },
+    {
+      "family_id": "ecosystem-contract",
+      "role": "ecosystem registry, Questbook center surface, and cross-mechanic route tests",
+      "source_ref": "ECOSYSTEM_MAP.md",
+      "paths": [
+        "tests/test_validate_ecosystem.py"
+      ],
+      "validation_refs": [
+        "scripts/validate_ecosystem.py"
+      ],
+      "must_not_claim": [
+        "ecosystem validation as proof of sibling implementation state"
+      ]
+    },
+    {
+      "family_id": "tests-district",
+      "role": "tests district registry and route-shape tests",
+      "source_ref": "tests/README.md",
+      "paths": [
+        "tests/test_tests_district.py"
+      ],
+      "validation_refs": [
+        "scripts/validate_tests_district.py"
+      ],
+      "must_not_claim": [
+        "test registry coverage as proof quality by itself"
+      ]
+    }
+  ],
+  "test_home_globs": [
+    {
+      "home_ref": "test-home:mechanic-root",
+      "owner_scope": "mechanic",
+      "path_glob": "mechanics/*/tests"
+    },
+    {
+      "home_ref": "test-home:mechanic-part",
+      "owner_scope": "mechanic-part",
+      "path_glob": "mechanics/*/parts/*/tests"
+    }
+  ],
+  "validation_commands": [
+    "python scripts/validate_tests_district.py",
+    "python -m pytest -q tests/test_tests_district.py",
+    "python scripts/release_check.py"
+  ]
+}
