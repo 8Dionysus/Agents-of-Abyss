@@ -259,8 +259,8 @@ python -m pytest -q
 python mechanics/audit/scripts/validate_audit_distillation.py
 python mechanics/distillation/scripts/validate_distillation_mechanic.py
 python mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py
-python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv
-python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv
+python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv/AbyssOS
+python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv/AbyssOS
 ```
 
 <!-- centralized-child-validation:end -->

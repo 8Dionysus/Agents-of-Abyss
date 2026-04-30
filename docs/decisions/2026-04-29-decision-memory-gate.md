@@ -55,7 +55,7 @@ surface reviewable.
 
 ## Source surfaces
 
-- `/srv/8Dionysus/AGENTS.md`
+- `/srv/AbyssOS/8Dionysus/AGENTS.md`
 - `/srv/AGENTS.md`
 - `AGENTS.md`
 - `docs/AGENTS.md`

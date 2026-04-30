@@ -70,8 +70,8 @@ python mechanics/method-growth/scripts/validate_method_growth_mechanic.py
 #### `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`
 
 ```bash
-python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv
-python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv
+python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv/AbyssOS
+python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv/AbyssOS
 ```
 
 <!-- centralized-child-validation:end -->
