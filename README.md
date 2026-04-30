@@ -30,6 +30,10 @@ repository-local.
 This repository is strongest when it clarifies ownership. It is weakest when it
 tries to become every layer at once.
 
+## Constitutional Cycle
+
+<img src="assets/agents-of-abyss-cycle-map.svg" alt="Papyrus styled Agents of Abyss constitutional cycle map showing entry claims, route modes, center law, mechanics, proof districts, owner handoff, and return through the AoA ecosystem." width="100%">
+
 ## Start Here
 
 Read only what matches your entry need.
