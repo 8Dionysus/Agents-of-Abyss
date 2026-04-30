@@ -11,6 +11,7 @@ from center_entry_map_common import (  # noqa: E402
     ENTRY_SURFACE_REFS,
     REQUIRED_ROUTE_MODES,
     VALIDATION_BASELINE_REF,
+    build_payload,
     resolve_local_ref,
 )
 from validate_entry_surface_sync import (  # noqa: E402
@@ -58,6 +59,13 @@ class EntrySurfaceSyncTests(unittest.TestCase):
             SURFACE_VALIDATION_AUTHORITY_REFS["mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md"],
             "mechanics/release-support/docs/AGENTS.md",
         )
+
+    def test_mechanic_change_route_uses_registry_instead_of_manual_package_list(self) -> None:
+        payload = build_payload()
+        route = next(item for item in payload["routes"] if item["route_id"] == "mechanic-change")
+        self.assertIn("mechanics/registry.json", route["need"])
+        self.assertIn("mechanics/registry.json", route["machine_surface_refs"])
+        self.assertNotIn("Agon, Experience", route["need"])
 
     def test_validation_baseline_surface_names_all_baseline_commands(self) -> None:
         text = resolve_local_ref(VALIDATION_BASELINE_REF).read_text(encoding="utf-8")

@@ -19,7 +19,7 @@ This README is human-first and agent-useful. A person should see the city before
 | Constitutional center | Proven center surface for identity, layer map, federation rules, and program-level direction. | A stable civic root for the AoA federation: clear enough for humans, strict enough for agents. |
 | Federation contour | Ecosystem registry v2 names the public AoA contour through separate visibility, maturity, relation, and kind axes. Supporting consumers are tracked separately. | Every layer can grow without stealing another layer's truth. |
 | Root surface governance | Root surface law is planted, first root-leak cleanup is defined, and technical districts now get local gates. | The root should stay a city gate: lawful, readable, sparse, and strict about what belongs nearby. |
-| Mechanics | Agon, Experience, recurrence/return, growth, quest/RPG reflection, antifragility, and ToS support are mostly center contracts, doctrine, or pre-protocol routes. | A readable engineering philosophy where every mechanic has a home, owner split, stop-line, and verification path. |
+| Mechanics | Center mechanics now live in `mechanics/<slug>/` packages with local route law, owner splits, stop-lines, and validation lanes. | A readable engineering philosophy where every mechanic has a home, owner split, stop-line, and verification path. |
 | Runtime | The center does not run the body. Runtime belongs to `abyss-stack` or later owner-local gates. | Runtime can enact validated mechanics without becoming the source of law or meaning. |
 | Self-agency | Continuity is anchor-bound and reviewable. No permissionless autonomy, hidden memory sovereignty, or live arena authority is claimed here. | Long-horizon agency can preserve continuity, revise method, and return to anchors without losing provenance or human judgment. |
 
@@ -51,7 +51,7 @@ Every public entry surface must expose the same route-mode vocabulary:
 | `root-editing` | you will add, move, delete, rename, or rewrite a root surface | `docs/ROOT_SURFACE_LAW.md` |
 | `direction-change` | you will change roadmap, horizon posture, maturity, owner-route pressure, future trigger, release contour, or declared direction | `ROADMAP.md` |
 | `ownership-routing` | you need to decide which repository owns a change | `docs/REPO_ROLES.md` |
-| `mechanic-change` | you will touch Agon, Experience, recurrence, method/growth, antifragility, quest/RPG, release-support, or ToS support | `mechanics/README.md` |
+| `mechanic-change` | you will touch a center mechanic package, process route, stop-line, owner split, or mechanic-facing validation lane | `mechanics/README.md` |
 | `public-claim-validation` | a sentence sounds like a public promise | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` |
 | `low-context-agent` | you need a compact machine-facing route before full reading | `generated/center_entry_map.min.json` |
 | `district-work` | you are already inside a technical district | nearest local `README.md` |
@@ -69,7 +69,7 @@ Use this tree before trusting a claim made by the center:
 | Direction | Is this current program direction rather than an old contour, wave note, or copied promise? | [ROADMAP](ROADMAP.md) | Cross-check [release-support/DIRECTION_SURFACES](mechanics/release-support/docs/DIRECTION_SURFACES.md). |
 | Release support | Is a draft, quest, checkpoint, landing, handoff, public claim, or GitHub release becoming a supportable state transition? | [release-support](mechanics/release-support/README.md) | Use [release-support/PARTS](mechanics/release-support/PARTS.md) before public wording hardens. |
 | Machine contract | Can the compact surfaces and AGENTS mesh still rebuild and validate? | generated capsules, AGENTS cards, and validators | Run the commands below. |
-| Mechanic route | Is the claim about a process, engineering philosophy, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS support? | [mechanics/README](mechanics/README.md) | Use the package entry for that mechanic before editing the deeper surface. |
+| Mechanic route | Is the claim about a process, engineering philosophy, or center mechanic package? | [mechanics/README](mechanics/README.md) | Use the package entry for that mechanic before editing the deeper surface. |
 | Audit route | Is this cleanup, pruning, drift, or duplicate-meaning review? | [ECOSYSTEM_AUDIT_INDEX](ECOSYSTEM_AUDIT_INDEX.md) and [audit](mechanics/audit/README.md) | Keep audit evidence reviewable without promoting it into constitutional law. |
 
 ```bash
@@ -128,10 +128,8 @@ Everything else must justify its place through [docs/ROOT_SURFACE_LAW](docs/ROOT
 
 Use [mechanics/README](mechanics/README.md) as the single process gate when
 the question is **what kind of move is this?** rather than **which repository
-is this?** The atlas routes method/growth, recurrence/return/continuity, Agon,
-Experience, antifragility/subtraction, quest/RPG reflection, boundary bridge
-and ToS-support work, release posture, machine companions, validators, owner
-splits, and stop-lines. Detailed mechanic landing history lives in
+is this?** The atlas routes current center mechanics, machine companions,
+validators, owner splits, and stop-lines. Detailed mechanic landing history lives in
 [Agon LANDING_LOG](mechanics/agon/LANDING_LOG.md) and
 [Experience LANDING_LOG](mechanics/experience/LANDING_LOG.md), not in the root
 roadmap. The root deliberately keeps those branches behind one door so the

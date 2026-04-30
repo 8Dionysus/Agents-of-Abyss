@@ -41,7 +41,7 @@ For small-model and low-context entry, use `generated/center_entry_map.min.json`
 | `root-editing` | protects public root surfaces from becoming a warehouse |
 | `direction-change` | separates current direction from released history and future wishes |
 | `ownership-routing` | points work to the right owner without transferring truth |
-| `mechanic-change` | keeps Agon, Experience, recurrence, growth, quest/RPG, antifragility, and ToS support bounded |
+| `mechanic-change` | keeps center mechanic packages bounded by their owner split, stop-lines, and validation routes |
 | `public-claim-validation` | checks whether a sentence can be honestly stated by the center |
 | `low-context-agent` | gives compact route help while preserving human source docs |
 | `district-work` | keeps local technical gates local and subordinate to center law |
