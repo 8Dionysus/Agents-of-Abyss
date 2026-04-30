@@ -12,6 +12,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 CENTER_ENTRY_MAP_PATH = REPO_ROOT / "generated" / "center_entry_map.min.json"
 SCHEMA_REF = "schemas/center-entry-map.schema.json"
 ROUTE_CONTRACT_REF = "docs/START_HERE_ROUTE_CONTRACT.md"
+VALIDATION_BASELINE_REF = "docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md"
 
 ROUTE_MODE_ORDER = (
     "first-reading",
@@ -37,6 +38,7 @@ ENTRY_SURFACE_REFS = (
 )
 
 MACHINE_CONTRACT_REFS = (
+    VALIDATION_BASELINE_REF,
     "generated/center_entry_map.min.json",
     "schemas/center-entry-map.schema.json",
     "scripts/center_entry_map_common.py",
@@ -69,6 +71,7 @@ BASELINE_VALIDATION_COMMANDS = (
 )
 
 VALIDATION_REFS = (
+    VALIDATION_BASELINE_REF,
     "scripts/repair_known_link_drifts.py",
     "scripts/validate_links.py",
     "scripts/validate_markdown_shape.py",

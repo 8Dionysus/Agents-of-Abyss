@@ -12,6 +12,7 @@ from center_entry_map_common import (
     ENTRY_SURFACE_REFS,
     REQUIRED_ROUTE_MODES,
     SURFACE_PAYLOAD,
+    VALIDATION_BASELINE_REF,
     VALIDATION_REFS,
     build_payload,
 )
@@ -74,6 +75,7 @@ class CenterEntryMapTests(unittest.TestCase):
         payload = build_payload()
         for ref in VALIDATION_REFS:
             self.assertIn(ref, payload["validation_refs"])
+        self.assertIn(VALIDATION_BASELINE_REF, payload["validation_refs"])
         self.assertIn("scripts/validate_entry_surface_sync.py", payload["validation_refs"])
         self.assertIn("tests/test_entry_surface_sync.py", payload["validation_refs"])
 

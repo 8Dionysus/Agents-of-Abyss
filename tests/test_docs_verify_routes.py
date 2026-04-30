@@ -1,11 +1,15 @@
 from __future__ import annotations
 
 import json
+import sys
 import unittest
 from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+from center_entry_map_common import BASELINE_VALIDATION_COMMANDS, VALIDATION_BASELINE_REF  # noqa: E402
 
 
 def read_text(relative_path: str) -> str:
@@ -23,6 +27,10 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
             "docs/README.md": "docs/AGENTS.md",
             "mechanics/README.md": "mechanics/AGENTS.md",
         }
+        baseline_text = read_text(VALIDATION_BASELINE_REF)
+        for command in BASELINE_VALIDATION_COMMANDS:
+            self.assertIn(command, baseline_text)
+
         for relative_path in (
             "README.md",
             "docs/README.md",
@@ -38,8 +46,11 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
                 if authority_ref:
                     self.assertIn("AGENTS.md#validation", text)
                     text += "\n" + read_text(authority_ref)
-                self.assertIn("python scripts/validate_ecosystem.py", text)
-                self.assertIn("python -m pytest -q", text)
+                has_inline_battery = (
+                    "python scripts/validate_ecosystem.py" in text
+                    and "python -m pytest -q" in text
+                )
+                self.assertTrue(has_inline_battery or VALIDATION_BASELINE_REF in text)
 
     def test_readme_keeps_aoa_sdk_outside_ecosystem_registry_v2_but_routes_to_supporting_inventory(self) -> None:
         readme = read_text("README.md")
