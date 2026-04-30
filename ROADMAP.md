@@ -200,6 +200,21 @@ Goals:
 - keep schema, validator, generated registry, roadmap, ecosystem map, and public support posture aligned
 - preserve the center's role as public map without absorbing supporting consumers into center authority
 
+## When the time comes
+
+Use this block for likely center-wide work that is not useful to land now but
+has a clear future trigger.
+
+- Normalize root validators around `--repo-root` when cross-checkout,
+  temporary-worktree, or packaged validation reuse becomes common enough to
+  justify touching many scripts at once.
+- Add JSON Schema contracts for district registries such as
+  `scripts/registry.json` only when another tool consumes those registries
+  directly, or when Python-only validation stops being enough.
+- Extract shared validator helper patterns only after the repetition is visible
+  across several root districts and the extraction would simplify future
+  checks.
+
 ## Standing direction
 
 Across all phases:

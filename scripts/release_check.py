@@ -19,6 +19,7 @@ COMMANDS = [
     ("validate config registry", [sys.executable, "scripts/validate_config_registry.py"]),
     ("validate schema registry", [sys.executable, "scripts/validate_schema_registry.py"]),
     ("validate manifests registry", [sys.executable, "scripts/validate_manifests_registry.py"]),
+    ("validate scripts district", [sys.executable, "scripts/validate_scripts_district.py"]),
     ("check known link repairs", [sys.executable, "scripts/repair_known_link_drifts.py", "--check"]),
     ("validate local markdown links", [sys.executable, "scripts/validate_links.py"]),
     ("validate markdown shape", [sys.executable, "scripts/validate_markdown_shape.py"]),
