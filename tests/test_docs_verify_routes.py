@@ -65,7 +65,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         roadmap = read_text("ROADMAP.md")
 
         self.assertIn("`aoa-stats` | derived observability and machine-first summaries", readme)
-        self.assertIn("- `aoa-stats`", charter)
+        self.assertIn("`aoa-stats` owns derived views, not authority", charter)
         self.assertIn("`aoa-stats` | derived observability layer", ecosystem_map)
         self.assertIn("- `aoa-stats`", roadmap)
 
