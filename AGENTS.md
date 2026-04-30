@@ -6,11 +6,19 @@ This root card applies to the whole repository unless a nearer nested `AGENTS.md
 
 ## Role
 
-This AGENTS card keeps local work inside the Agents-of-Abyss center lane, names the nearest owner boundary, and routes wider claims back to the root card.
+This AGENTS card keeps local work inside the Agents-of-Abyss center lane, names
+the nearest owner boundary, and routes wider claims to the owning surface.
+
+It is the agent-facing route law for this repository. It does not replace
+`README.md`, `CONTRIBUTING.md`, `docs/START_HERE_ROUTE_CONTRACT.md`, or local
+owner truth.
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or protocol surface before changing files in this lane.
+Read this root card first. Then read the nearest nested `AGENTS.md` for every
+touched path, followed by the route-mode surface and the nearest
+`README.md`, protocol, schema, builder, validator, or source surface that owns
+the local claim.
 
 ## Boundaries
 
@@ -22,9 +30,9 @@ Run the nearest validator named by this card. For release-facing changes, also r
 
 ## Closeout
 
-Closeout must name changed surfaces, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
-
-Root route card for `Agents-of-Abyss`.
+Closeout must name changed surfaces, checks run, checks skipped, remaining risk,
+decision review result, and the next owner route if this lane was only a
+waypoint.
 
 ## Purpose
 
@@ -49,6 +57,24 @@ It does not own:
 ## Start here
 
 Entry routing is governed by `docs/START_HERE_ROUTE_CONTRACT.md`.
+
+For first reading or outside orientation, use the canonical first-reading route:
+
+1. `README.md`
+2. `CHARTER.md`
+3. `ECOSYSTEM_MAP.md`
+4. `docs/FEDERATION_RULES.md`
+
+For agent editing, use the operational route:
+
+1. this `AGENTS.md`
+2. nearest nested `AGENTS.md` for every touched path
+3. route-mode surface from the table below
+4. nearest local `README.md`, protocol, schema, builder, validator, or source
+   surface
+5. narrowest relevant validator before broader gates
+
+For center authority surfaces, also read:
 
 1. `CHARTER.md`
 2. `ECOSYSTEM_MAP.md`
@@ -91,6 +117,9 @@ If no record is needed, say so in closeout.
 
 ## GitHub landing workflow
 
+Root `AGENTS.md` owns the repository-wide branch, PR, CI, and merge route.
+`.github/AGENTS.md` owns the GitHub-native files that support it.
+
 When the user asks to commit, push, and merge in this repository, use this route:
 
 1. Start from a clean branch based on current `origin/main`.
@@ -99,14 +128,32 @@ When the user asks to commit, push, and merge in this repository, use this route
    skipped checks, and remaining risk.
 4. Wait for GitHub `Repo Validation` to finish. If it fails, fix the branch and
    wait for the new result.
-5. Merge through GitHub after green validation. Prefer a merge commit when the
-   repository permits it. If the repository only permits squash or rebase for
-   that PR, use the permitted GitHub merge method and report which method landed.
+5. Merge through GitHub after green validation. Current repository settings
+   reject merge commits; use squash unless settings change. If GitHub reports a
+   different allowed method for a future PR, use the allowed method and report
+   which method landed.
 6. Return to `main`, fast-forward from `origin/main`, and confirm the worktree is
    clean before closeout.
 
 If GitHub status or merge permissions cannot be observed, stop the landing route
 and report the exact blocker instead of guessing.
+
+## Post-change route review
+
+Before closeout, check whether the change actually affects these surfaces. Update
+only the ones that moved; otherwise say no update was needed.
+
+- `ROADMAP.md` when direction, phase, maturity, or future work changed
+- `CHANGELOG.md` when release-visible behavior, public docs, validation, or
+  repository structure changed
+- `docs/decisions/` when future agents need the rationale for a route,
+  ownership, workflow, validator, public-contract, or topology choice
+- generated surfaces, builders, validators, and tests when a source-backed
+  machine capsule changed
+- mechanic `LANDING_LOG.md`, `OWNER_REQUESTS.md`, `PARTS.md`, or `PROVENANCE.md`
+  when a mechanic landing, owner request, active part, or legacy bridge changed
+- `QUESTBOOK.md` or `quests/` when a durable obligation should survive the diff
+- neighboring owner repositories when the change routes or constrains their truth
 
 ## Route away when
 
@@ -138,44 +185,29 @@ Treat these as high-risk findings in this center repository:
 
 ## Verify
 
-Run the narrowest relevant center check. Default center integrity:
+Run the narrowest relevant center check first. For release-facing or repo-wide
+changes, run the full gate:
 
 ```bash
-python scripts/plan_docs_thematic_cleanup.py --check
-python scripts/validate_docs_thematic_districts.py
-python scripts/validate_docs_migration_map.py
-python scripts/validate_decision_records.py
-python scripts/build_docs_thematic_index.py --check
-python scripts/validate_docs_thematic_index.py
-python scripts/repair_known_link_drifts.py --check
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_status_vocabulary.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_entry_surface_sync.py
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/validate_mechanics_topology.py
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_mechanic_landing_logs.py
-python scripts/validate_generated_freshness.py
-python scripts/validate_hygiene_suite.py
-python scripts/validate_ecosystem.py
-python -m pytest -q
+python scripts/release_check.py
 ```
+
+The entry-surface baseline command set is
+`docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`. Keep that surface,
+`scripts/center_entry_map_common.py`, `scripts/validate_entry_surface_sync.py`,
+and `scripts/release_check.py` aligned when the center-wide validation route
+changes.
 
 If an Agon owner-binding or gate-routing surface changes, use
 `mechanics/agon/AGENTS.md` and `mechanics/agon/parts/AGENTS.md` for the
 matching builder, validator, and targeted tests.
 
+`scripts/release_check.py` owns the expanded default gate. Prefer keeping this
+root card short and using local `AGENTS.md` cards for lane-specific commands.
+
 ## Report
 
-Close with the center surfaces changed, whether owner boundaries shifted, which neighboring repos are affected, and exactly which checks ran or did not run.
+Close with the center surfaces changed, whether owner boundaries shifted, which
+neighboring repos are affected, whether post-change route review changed any
+follow-up surface, and exactly which checks ran or did not run. If a PR was
+merged, name the GitHub merge method that landed.

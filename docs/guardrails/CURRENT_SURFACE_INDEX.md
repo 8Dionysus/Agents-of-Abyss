@@ -26,6 +26,7 @@ This index explains which `docs/` surfaces are current and which districts hold 
 | `docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md` | thin hygiene index |
 | `docs/guardrails/AGENTS_MESH_PROTOCOL.md` | local agent-card coverage and shape guardrail law |
 | `docs/guardrails/AGENTS_MESH_INDEX.md` | thin AGENTS mesh index |
+| `docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md` | entry-surface baseline command set |
 
 ## Thematic districts
 

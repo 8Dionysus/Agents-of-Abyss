@@ -6,7 +6,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from center_entry_map_common import ENTRY_SURFACE_REFS, REQUIRED_ROUTE_MODES  # noqa: E402
+from center_entry_map_common import (  # noqa: E402
+    BASELINE_VALIDATION_COMMANDS,
+    ENTRY_SURFACE_REFS,
+    REQUIRED_ROUTE_MODES,
+    VALIDATION_BASELINE_REF,
+    resolve_local_ref,
+)
 from validate_entry_surface_sync import (  # noqa: E402
     SURFACE_ROUTE_MODE_EXEMPTIONS,
     SURFACE_VALIDATION_AUTHORITY_REFS,
@@ -52,6 +58,15 @@ class EntrySurfaceSyncTests(unittest.TestCase):
             SURFACE_VALIDATION_AUTHORITY_REFS["mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md"],
             "mechanics/release-support/docs/AGENTS.md",
         )
+
+    def test_validation_baseline_surface_names_all_baseline_commands(self) -> None:
+        text = resolve_local_ref(VALIDATION_BASELINE_REF).read_text(encoding="utf-8")
+        for command in BASELINE_VALIDATION_COMMANDS:
+            self.assertIn(command, text)
+
+    def test_root_agents_can_point_to_validation_baseline(self) -> None:
+        text = Path("AGENTS.md").read_text(encoding="utf-8")
+        self.assertIn(VALIDATION_BASELINE_REF, text)
 
 
 if __name__ == "__main__":

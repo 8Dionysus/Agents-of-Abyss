@@ -18,6 +18,10 @@ For link, shape, status, or freshness work, read `LINK_AND_SHAPE_HYGIENE_PROTOCO
 
 For AGENTS mesh work, read `AGENTS_MESH_PROTOCOL.md`, `AGENTS_MESH_INDEX.md`, and `../../config/agents_mesh.json`.
 
+For entry-surface validation work, read
+`ENTRY_SURFACE_VALIDATION_BASELINE.md`, `../../scripts/center_entry_map_common.py`,
+and `../../scripts/validate_entry_surface_sync.py`.
+
 ## Boundaries
 
 - Guardrails verify route shape; they do not author doctrine, mechanic law, generated meaning, or sibling-repo truth.
@@ -61,6 +65,15 @@ python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
 python scripts/build_agents_mesh_index.py --check
 python scripts/validate_agents_mesh_index.py
+```
+
+For entry-surface validation changes:
+
+```bash
+python scripts/validate_entry_surface_sync.py
+python scripts/build_center_entry_map.py --check
+python scripts/validate_center_entry_map.py
+python -m pytest -q tests/test_entry_surface_sync.py tests/test_center_entry_map.py
 ```
 
 ## Closeout

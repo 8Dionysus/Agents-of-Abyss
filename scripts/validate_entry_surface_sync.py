@@ -11,6 +11,7 @@ from center_entry_map_common import (
     ENTRY_SURFACE_REFS,
     REQUIRED_ROUTE_MODES,
     ROUTE_CONTRACT_REF,
+    VALIDATION_BASELINE_REF,
     VALIDATION_REFS,
     build_payload,
     resolve_local_ref,
@@ -48,8 +49,22 @@ def has_contract_pointer(text: str) -> bool:
     return ROUTE_CONTRACT_REF in text or Path(ROUTE_CONTRACT_REF).name in text
 
 
+def has_validation_baseline_pointer(text: str) -> bool:
+    return VALIDATION_BASELINE_REF in text or Path(VALIDATION_BASELINE_REF).name in text
+
+
 def collect_problems() -> list[str]:
     problems: list[str] = []
+
+    try:
+        baseline_text = read_ref(VALIDATION_BASELINE_REF)
+    except Exception as exc:  # pragma: no cover - reported as data problem
+        baseline_text = ""
+        problems.append(f"{VALIDATION_BASELINE_REF}: cannot read validation baseline: {exc}")
+
+    for command in BASELINE_VALIDATION_COMMANDS:
+        if command not in baseline_text:
+            problems.append(f"{VALIDATION_BASELINE_REF}: missing baseline validation command '{command}'")
 
     for ref in ENTRY_SURFACE_REFS:
         try:
@@ -70,9 +85,14 @@ def collect_problems() -> list[str]:
 
     for ref in HUMAN_ENTRY_SURFACES:
         text = validation_text_for(ref)
+        if has_validation_baseline_pointer(text):
+            continue
         for command in BASELINE_VALIDATION_COMMANDS:
             if command not in text:
-                problems.append(f"{ref}: missing baseline validation command '{command}'")
+                problems.append(
+                    f"{ref}: missing baseline validation command '{command}' "
+                    f"or pointer to {VALIDATION_BASELINE_REF}"
+                )
 
     payload = build_payload()
     for ref in VALIDATION_REFS:

@@ -13,6 +13,7 @@ Every public entry surface must agree on the same route modes.
 
 The route modes are reflected in:
 
+- `docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`
 - `README.md`
 - `docs/README.md`
 - `mechanics/README.md`
@@ -226,6 +227,10 @@ Each route must publish:
 - `must_not_claim`
 
 The compact route should be useful to an agent without encouraging it to skip human docs.
+
+The center-wide validation baseline lives in
+`docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`. Entry surfaces may point
+there instead of repeating the full baseline command list inline.
 
 ## Validation
 

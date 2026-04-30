@@ -225,6 +225,14 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- root `AGENTS.md` now separates first-reading from agent-editing entry,
+  names post-change route review obligations, records the current squash-merge
+  GitHub landing route, and points to the guardrail-owned entry validation
+  baseline while routing broad checks through `scripts/release_check.py`
+- entry-surface validation baseline authority now lives in
+  `docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`; entry surfaces may
+  point to that baseline instead of repeating every command inline, while
+  `scripts/validate_entry_surface_sync.py` and tests keep the baseline complete
 - docs guardrail law now lives under `docs/guardrails/`, with
   `docs/README.md` and `docs/AGENTS.md` kept as compact routes; empty
   `docs/agon/`, `docs/experience/`, `docs/legacy/`, `docs/landings/`, and
