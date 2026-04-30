@@ -241,6 +241,9 @@ Tracking starts with the community-docs baseline for this repository.
   and supporting-inventory companions, separates current maturity from growth
   direction, and aligns SDK, projection, and seed-staging wording with the
   charter boundary
+- `ROADMAP.md` now uses horizon-based center direction, explicit update rules,
+  and clearer splits between root roadmap, mechanic roadmaps, landing logs,
+  changelog history, quests, and owner-repository direction
 - docs guardrail law now lives under `docs/guardrails/`, with
   `docs/README.md` and `docs/AGENTS.md` kept as compact routes; empty
   `docs/agon/`, `docs/experience/`, `docs/legacy/`, `docs/landings/`, and

@@ -91,7 +91,7 @@ Use the named route before widening a center claim:
 |---|---|---|
 | `first-reading` | you need the shortest honest center overview | `README.md` |
 | `root-editing` | a root surface changes | `docs/ROOT_SURFACE_LAW.md` |
-| `direction-change` | roadmap, phase, maturity, or release contour changes | `ROADMAP.md` |
+| `direction-change` | roadmap, horizon posture, maturity, owner-route pressure, future trigger, or release contour changes | `ROADMAP.md` |
 | `ownership-routing` | ownership is unclear | `docs/REPO_ROLES.md` |
 | `mechanic-change` | Agon, Experience, recurrence, growth, antifragility, quest/RPG, release-support, or ToS support changes | `mechanics/README.md` |
 | `public-claim-validation` | a sentence sounds like a public promise | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` |
@@ -143,7 +143,9 @@ and report the exact blocker instead of guessing.
 Before closeout, check whether the change actually affects these surfaces. Update
 only the ones that moved; otherwise say no update was needed.
 
-- `ROADMAP.md` when direction, phase, maturity, or future work changed
+- `ROADMAP.md` when center-wide direction, horizon posture, maturity,
+  owner-route pressure, registry/entry contour, release-support direction, or a
+  concrete future trigger changed
 - `CHANGELOG.md` when release-visible behavior, public docs, validation, or
   repository structure changed
 - `docs/decisions/` when future agents need the rationale for a route,

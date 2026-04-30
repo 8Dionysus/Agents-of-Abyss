@@ -1,204 +1,156 @@
 # AoA Ecosystem Roadmap
 
-This roadmap tracks the growth of the AoA ecosystem at the program level. It is not the roadmap of any one specialized repository.
+This roadmap tracks the growth of the AoA ecosystem at the program level. It is
+the center-wide direction surface for `Agents-of-Abyss`, not the roadmap of any
+one specialized repository or mechanic.
 
-## Current phase
+## Authority
 
-AoA is moving from center bootstrap into federation alignment.
+Root `ROADMAP.md` owns:
 
-The current documented public federation contour includes:
-- `Agents-of-Abyss`
-- `aoa-techniques`
-- `aoa-skills`
-- `aoa-evals`
-- `aoa-stats`
-- `aoa-routing`
-- `aoa-memo`
-- `aoa-agents`
-- `aoa-playbooks`
-- `aoa-kag`
+- center-wide direction
+- program horizons
+- maturity posture
+- owner-route pressure
+- registry and entry contour pressure
+- release-support direction
+- concrete future triggers that belong to the center
 
-Adjacent system anchors include:
-- `Tree-of-Sophia`
-- `abyss-stack`
+It does not own mechanic-local roadmaps, checked landing history, release
+history, owner acceptance, quest state, or sibling-repository implementation
+direction.
 
-Supporting inventory surfaces currently kept outside ecosystem registry v2
-include:
-- `aoa-sdk` as the typed local-first consumer and control-plane support layer
+Use the stronger surface when the change is narrower:
 
-The current center-declared growth move after the trunk-first structural wave is method-centered, continuity-aware, and then counterpart-bridge oriented:
-- give scenario-level method a real home in `aoa-playbooks`
-- make one reviewable growth-refinery route explicit without creating a new lineage layer
-- keep self-agency continuity bounded through explicit anchors, bounded revision windows, and governed reanchor rather than runtime-autonomy mythology
-- keep component refresh owner-owned through reviewed drift hints, owner receipts, and explicit refresh boundaries rather than mystical self-healing
-- keep donor intake source-first and refinement-shaped
-- keep ecosystem maturity claims evidence-backed and cross-repo legible
-- keep KAG bounded while counterpart mappings become explicit, optional, and non-identity
-- make witness and compost public and reviewable before any deeper runtime instrumentation wave
-- support ToS growth law explicitly without letting AoA author ToS meaning
-- support ToS corpus scaffold work explicitly without letting AoA author template or node identity meaning
-- support the first ToS lineage pilot explicitly without letting AoA author the branch itself
-- support ToS soil preparation explicitly without letting AoA rename it into active expansion
-- prepare the Agon holding boundary explicitly without starting Agon, minting a
-  new sibling repository, turning ToS into an arena, or pushing protocol law into
-  runtime and control-plane layers
-- impose Agon as a center-owned audit gate that judges existing surfaces by
-  survival criteria without starting a live arena, runtime service, or new
-  sibling repository
-- plant the first lawful move vocabulary as center-owned pre-protocol legal
-  language without turning move names into live sessions, runtime packets,
-  verdict law, scars, retention, or ToS authority
-- bind each lawful move to future owner repositories without turning owner
-  requests into landed practice, workflow, proof, routing, scenario,
-  memory, stats, actor, or ToS authority
-- hand one bounded choreography slice to `aoa-playbooks` so the first
-  mechanical Agon trials become repeatable without turning scenario
-  composition into live arena law, verdict authority, scars, retention,
-  runtime substrate, or ToS promotion
-- plant the v1.5 epistemic duel model-of-other forge center contract so sealed
-  prediction, reveal scoring, countermodel pressure, revision, and bifurcation
-  quality can be named without activating live duel/runtime authority, truth
-  verdicts, standing or memory mutation, scars, retention, or ToS/KAG canon
+- mechanic-local future pressure: `mechanics/<slug>/ROADMAP.md`
+- checked mechanic landings: `mechanics/<slug>/LANDING_LOG.md`
+- released repository history: `CHANGELOG.md`
+- durable obligations: `QUESTBOOK.md` and `quests/`
+- sibling implementation direction: the sibling repository direction surface
+- public claim support: `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`
 
-The current center framing also includes its first bounded cross-repo entry and readiness-alignment surfaces:
-- keep `aoa-stats` public as a derived observability layer that summarizes movement without becoming proof, route, or score authority
-- keep the thin federation entry ABI in `aoa-routing` additive and non-authoritative
-- keep the experimental federation spine and export-readiness posture in `aoa-kag` bounded and derived
-- keep `aoa-sdk` visible in `generated/federation_supporting_inventory.min.json` as a typed supporting consumer and control-plane surface without collapsing it into ecosystem registry v2 or center authority
-- keep the public ToS tiny-entry seam source-owned even when downstream layers consume it
+## Update Rule
 
-### Current release contour
+Update this roadmap when a change moves center-wide direction, horizon posture,
+maturity posture, owner-route pressure, registry or entry contour,
+release-support direction, or a concrete future trigger.
 
-The live center contour for `v0.2.3` is roadmap continuity and owner-boundary
-hardening, not a new implementation layer. Its current checked surface is:
+Do not update this roadmap for a local mechanic landing, release note, owner
+request, quest, checkpoint, or generated refresh unless it changes one of those
+center-wide directions. Route those changes to their owning surfaces instead.
 
-- center public route and support posture:
-  `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`,
-  `docs/FEDERATION_RULES.md`, `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, and
-  `mechanics/release-support/docs/DIRECTION_SURFACES.md`
-- compact center and support capsules:
-  `generated/center_entry_map.min.json`,
-  `generated/ecosystem_registry.min.json`, and
-  `generated/federation_supporting_inventory.min.json`
-- reviewable growth-refinery and post-candidate owner followthrough doctrine:
-  `mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`,
-  `mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`,
-  `mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md`,
-  `mechanics/method-growth/examples/lineage_contract_chain.example.json`, and
-  `mechanics/method-growth/scripts/validate_candidate_lineage_contract.py`
-- self-agency continuity and component refresh stop-lines:
-  `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md` and
-  `mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md`
-- Agon preparation holding boundary:
-  `mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md`
-- current kernel-wave automation boundary checks:
-  `mechanics/method-growth/scripts/validate_wave4_kernel_automation.py`
-- mechanic landing ledgers:
-  `mechanics/agon/LANDING_LOG.md` and `mechanics/experience/LANDING_LOG.md`
+Before closeout, ask: did this change move the center's direction, or did it
+only land a local surface?
 
-This contour lets the center name the route, validators, and stop-lines while
-leaving checkpoint carry, candidate identity, seed staging, owner landing,
-derived summaries, recurring method, and future Agon-related handoffs in their
-owning repositories.
+## Current Center Direction
 
-Detailed Agon wave landings now live in `mechanics/agon/LANDING_LOG.md`; detailed
-Experience planting history now lives in `mechanics/experience/LANDING_LOG.md`.
-`ROADMAP.md` keeps the direction and current contour, while LANDING_LOG
-surfaces keep the wave ledger, validators, surfaces, owner boundaries, and
-stop-lines.
+AoA is moving from center bootstrap into federation alignment through a root
+that is lighter, clearer, and stricter about owner truth.
 
-## Phase 1: center realignment
+The current public federation contour is named in
+[`ECOSYSTEM_MAP.md`](ECOSYSTEM_MAP.md) and reflected in
+[`generated/ecosystem_registry.min.json`](generated/ecosystem_registry.min.json).
+Supporting consumers outside registry v2, including `aoa-sdk`, are reflected in
+[`generated/federation_supporting_inventory.min.json`](generated/federation_supporting_inventory.min.json).
 
-Goals:
-- align `Agents-of-Abyss` with the documented public federation contour that already exists
-- update the README, charter, ecosystem map, layers, and federation rules
-- keep the ecosystem registry accurate without breaking the current validator surface
-- make AoA legible again from the center outward
+The current center move is:
 
-Exit signals:
-- center docs no longer contradict the profile or layer repositories
-- all current public AoA layers are named in the center
-- `generated/ecosystem_registry.min.json` reflects the public federation with the current v2 axes
+- keep the constitutional route clear from `CHARTER.md` through
+  `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, and this roadmap
+- finish the root-document pass without turning root into a warehouse
+- keep mechanics active in their packages while root names only center-wide
+  pressure
+- prepare owner descent into sibling repositories with clean owner requests,
+  not center-side implementation claims
+- keep release-support, registry, entry, and generated capsules aligned with
+  human-facing direction
 
-## Phase 2: center discipline and routing alignment
+## Current Released Contour
 
-Goals:
-- keep `aoa-routing` thin while the federation broadens
-- prevent the center from becoming a duplicate home of layer-owned detail
-- preserve explicit handoff boundaries between practice, execution, proof, memory, roles, playbooks, and derived knowledge substrate work
+The released center contour for `v0.2.3` is roadmap continuity and
+owner-boundary hardening, not a new implementation layer.
 
-## Phase 3: memory and role maturation
+Current checked anchors:
 
-Goals:
-- mature `aoa-memo` into a clearer public memory layer
-- mature `aoa-agents` into explicit role-contract and handoff surfaces
-- ensure both remain distinct from routing and evaluation layers
+| Anchor | Surface |
+|---|---|
+| Center route and authority | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md` |
+| Direction and public-claim support | `ROADMAP.md`, `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, `mechanics/release-support/docs/DIRECTION_SURFACES.md` |
+| Compact machine companions | `generated/center_entry_map.min.json`, `generated/ecosystem_registry.min.json`, `generated/federation_supporting_inventory.min.json` |
+| Growth and recurrence law | `mechanics/method-growth/README.md`, `mechanics/recurrence/README.md`, `mechanics/checkpoint/README.md`, `mechanics/growth-cycle/README.md` |
+| Mechanic landing ledgers | `mechanics/agon/LANDING_LOG.md`, `mechanics/experience/LANDING_LOG.md` |
 
-## Phase 4: scenario composition maturity
+Detailed Agon wave landings live in `mechanics/agon/LANDING_LOG.md`.
+Detailed Experience planting history lives in
+`mechanics/experience/LANDING_LOG.md`.
 
-Goals:
-- mature `aoa-playbooks` as the home of recurring multi-layer scenarios
-- keep it distinct from primary skill canon and primary eval canon
-- let scenario-level method become an authored object instead of a scattered folklore route
+`ROADMAP.md` keeps current direction and future contour. `LANDING_LOG.md`
+surfaces keep checked landings, validators, owner boundaries, and stop-lines.
+`CHANGELOG.md` keeps released repository history.
 
-## Phase 5: derived substrate discipline
+## Horizon: Center Clarity
 
-Goals:
-- mature `aoa-kag` as a provenance-aware derived layer
-- keep its relationship to authoritative sources explicit
-- prevent source meaning from being silently re-authored in derived structures
-- allow bounded counterpart-edge views without turning KAG into a graph-sovereign source empire
+| Field | Direction |
+|---|---|
+| Current posture | The center has a stronger root route: `AGENTS.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md`, and root technical districts now have clearer roles. |
+| Next honest move | Finish reviewing remaining root documents without adding new root doors or duplicating mechanic packages. |
+| Guardrail | Root surfaces stay civic, compact, and source-of-truth aware; historical detail routes to the owning district or mechanic. |
 
-## Phase 5a: counterpart bridge doctrine
+## Horizon: Owner Descent
 
-Goals:
-- make counterpart mapping between ToS and AoA explicit, optional, and reviewable
-- keep conceptual origin in `Tree-of-Sophia`
-- keep operational meaning in the source AoA repositories that own it
-- let `aoa-kag` materialize only bounded derived projections of those bridges
+| Field | Direction |
+|---|---|
+| Current posture | Center mechanics now produce owner requests and handoff packets, but most operational truth still belongs in sibling repositories. |
+| Next honest move | After AoA root is clean, descend through owner repositories and land their local slices with repo-local validation. |
+| Guardrail | Center request does not become owner acceptance; sibling repositories carry implementation, proof, memory, runtime, role, and projection truth. |
 
-## Phase 5b: witness and compost pilot
+## Horizon: Mechanics Maturity
 
-Goals:
-- make a public witness contract explicit before runtime trace machinery expands
-- make a public compost-cycle doctrine explicit before ToS growth seeds reopen
-- bind the pair through one playbook-owned route and bounded proof surfaces
-- keep `abyss-stack` out of scope until the contracts are stable
+| Field | Direction |
+|---|---|
+| Current posture | Mechanics live in `mechanics/<slug>/` with local `README.md`, `ROADMAP.md`, `LANDING_LOG.md`, `PARTS.md`, owner maps, and provenance surfaces. |
+| Next honest move | Let each mechanic mature locally while root watches only cross-center pressure and owner-route consequences. |
+| Guardrail | Root roadmap does not index every mechanic roadmap and does not copy mechanic future work. |
 
-## Phase 5c: ToS growth law support
+## Horizon: Registry And Entry
 
-Goals:
-- route readers and contributors toward ToS-owned calibration, curation, and growth-law doctrine
-- keep AoA support reviewable without turning the center into a second home of ToS meaning
-- preserve the human-reviewed boundary as AI-amplified ToS growth becomes explicit
+| Field | Direction |
+|---|---|
+| Current posture | Ecosystem registry v2, supporting inventory, center entry map, AGENTS mesh, and docs guardrails keep human and machine entry aligned. |
+| Next honest move | Keep registry v2 stable through the root-document pass; consider registry v3 only after remaining root surfaces and technical districts finish review. |
+| Guardrail | Generated capsules reflect source docs and validators; they do not author center truth. |
 
-## Phase 5d: ToS corpus scaffold support
+## Horizon: Boundary Bridge
 
-Goals:
-- route readers and contributors toward ToS-owned stable IDs, node templates, and scaffold examples
-- keep AoA support lightweight and reviewable rather than turning the center into a second template home
-- preserve the source-of-truth boundary as ToS opens its first public corpus scaffold
+| Field | Direction |
+|---|---|
+| Current posture | Boundary bridge and ToS-support law are planted through mechanic packages and source-of-truth rules. |
+| Next honest move | Carry AoA/ToS, KAG, routing, memo, eval, witness, compost, and counterpart-edge work through explicit owner routes. |
+| Guardrail | Bridges connect owners without identity collapse or authority transfer. |
 
-## Phase 5e: ToS lineage pilot support
+## Horizon: Release And Support
 
-Goals:
-- route readers and contributors toward the first ToS-owned bounded lineage pilot
-- keep AoA support narrow, reviewable, and non-authoring
-- preserve the branch boundary so the pilot does not silently become wider world-thought expansion
+| Field | Direction |
+|---|---|
+| Current posture | Release-support treats release as a state transition: public claims, rollback, handoff, changelog, roadmap, and landing-log splits are now explicit. |
+| Next honest move | Keep public claims aligned across human docs, generated capsules, validators, owner evidence, and GitHub validation. |
+| Guardrail | No roadmap history as changelog truth, no unverified public claim, and no sibling acceptance without owner receipt. |
 
-## Phase 5f: ToS soil prep support
+## Horizon: Runtime Readiness
 
-Goals:
-- route readers and contributors toward ToS-owned context-node law, manual entry gating, and pre-expansion soil doctrine
-- keep AoA support narrow, reviewable, and non-authoring while tree motion remains paused
-- preserve the boundary between preparation work and active wider world-thought expansion
+| Field | Direction |
+|---|---|
+| Current posture | Runtime remains outside center authority; `abyss-stack` owns the system body and `aoa-sdk` supports typed helper/control-plane paths. |
+| Next honest move | Prepare runtime-facing contracts only after law, proof, memory, routing, owner receipts, and rollback paths are clear. |
+| Guardrail | Doctrine is not runtime. SDK helper shape is not constitutional authority. |
 
-## Phase 6: ecosystem registry v2
+## Horizon: Growth Continuity
 
-Goals:
-- keep visibility, maturity, relation, and kind as separate axes
-- keep schema, validator, generated registry, roadmap, ecosystem map, and public support posture aligned
-- preserve the center's role as public map without absorbing supporting consumers into center authority
+| Field | Direction |
+|---|---|
+| Current posture | Recurrence, checkpoint, growth-cycle, distillation, audit, and antifragility now give AoA routes for return, compression, repair, and controlled growth. |
+| Next honest move | Use those mechanics to keep future work reviewable and owner-routed without loading root with process detail. |
+| Guardrail | Continuity is anchor-bound and reviewable, not hidden memory sovereignty or ambient autonomy. |
 
 ## When the time comes
 
@@ -215,9 +167,14 @@ has a clear future trigger.
   across several root districts and the extraction would simplify future
   checks.
 
-## Standing direction
+An item belongs here only when its trigger is concrete and center-wide. If the
+future pressure is mechanic-local, use `mechanics/<slug>/ROADMAP.md`. If it is a
+durable obligation, use `QUESTBOOK.md` and `quests/`.
 
-Across all phases:
+## Standing Direction
+
+Across all horizons:
+
 - protect source-of-truth boundaries
 - keep growth modular
 - keep the center legible

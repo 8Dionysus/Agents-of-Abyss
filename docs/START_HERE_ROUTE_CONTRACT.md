@@ -34,7 +34,7 @@ If one of those surfaces changes the route order or adds a new route mode, the o
 |---|---|---|---|
 | `first-reading` | humans, new agents, outside readers | understand the center without entering every district | `README.md` -> `CHARTER.md` -> `ECOSYSTEM_MAP.md` -> `docs/FEDERATION_RULES.md` |
 | `root-editing` | contributors, coding agents, maintainers | change root surfaces without making the root a warehouse | first reading -> `CONTRIBUTING.md` -> `docs/ROOT_SURFACE_LAW.md` |
-| `direction-change` | maintainers, release agents | update roadmap, phase, maturity, transition, or release contour | first reading -> `ROADMAP.md` -> `mechanics/release-support/DIRECTION.md` -> `mechanics/release-support/docs/DIRECTION_SURFACES.md` -> `CHANGELOG.md` |
+| `direction-change` | maintainers, release agents | update roadmap, horizon posture, maturity, owner-route pressure, future trigger, transition, or release contour | first reading -> `ROADMAP.md` -> `mechanics/release-support/DIRECTION.md` -> `mechanics/release-support/docs/DIRECTION_SURFACES.md` -> `CHANGELOG.md` |
 | `ownership-routing` | humans and agents deciding where work belongs | choose the owner repository for a change | first reading -> `docs/LAYERS.md` -> `docs/REPO_ROLES.md` |
 | `mechanic-change` | authors of Agon, Experience, recurrence, growth, quest/RPG, release-support, or ToS support surfaces | edit a process without stealing owner truth | first reading -> `mechanics/README.md` -> `mechanics/<slug>/README.md` -> the relevant stop-line surface |
 | `public-claim-validation` | release agents, public docs editors, reviewers | decide whether the center may honestly claim something | `mechanics/release-support/README.md` -> `mechanics/release-support/PARTS.md` -> `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` -> generated capsules -> validators |
@@ -86,8 +86,9 @@ Root-editing changes must not create root files merely because a package, note, 
 
 ## Direction-change route
 
-Use this route before changing the roadmap, current phase, maturity posture,
-state-transition contour, or public release contour.
+Use this route before changing the roadmap, horizon posture, maturity posture,
+owner-route pressure, future trigger, state-transition contour, or public
+release contour.
 
 Read:
 
@@ -100,16 +101,19 @@ Read:
 
 Direction changes must distinguish:
 
-- current state
+- current center direction
+- horizon posture
 - next work
 - long-horizon direction
 - released history
 - owner-local commitments
 
-`ROADMAP.md` should not become the ledger of every package. Mechanic landing
-history belongs in the relevant `LANDING_LOG`, repository release history
-belongs in `CHANGELOG.md`, historical receipts belong in the owning mechanic legacy or `docs/traces/`, and
-source detail remains in the relevant wave-specific docs.
+`ROADMAP.md` should not become the ledger of every package or the index of
+every mechanic roadmap. Mechanic-local future pressure belongs in the relevant
+`mechanics/<slug>/ROADMAP.md`, mechanic landing history belongs in the relevant
+`LANDING_LOG.md`, repository release history belongs in `CHANGELOG.md`,
+historical receipts belong in the owning mechanic legacy or `docs/traces/`,
+and durable obligations belong in `QUESTBOOK.md` and `quests/`.
 
 ## Ownership-routing route
 
