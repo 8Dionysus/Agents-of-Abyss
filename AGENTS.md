@@ -89,6 +89,25 @@ decision record to understand why the path was chosen. Use
 `docs/decisions/AGENTS.md` and `docs/decisions/README.md` for the local rule.
 If no record is needed, say so in closeout.
 
+## GitHub landing workflow
+
+When the user asks to commit, push, and merge in this repository, use this route:
+
+1. Start from a clean branch based on current `origin/main`.
+2. Commit only the intended diff with a message that names the changed surface.
+3. Push the branch and open a pull request with changed surfaces, validation,
+   skipped checks, and remaining risk.
+4. Wait for GitHub `Repo Validation` to finish. If it fails, fix the branch and
+   wait for the new result.
+5. Merge through GitHub after green validation. Prefer a merge commit when the
+   repository permits it. If the repository only permits squash or rebase for
+   that PR, use the permitted GitHub merge method and report which method landed.
+6. Return to `main`, fast-forward from `origin/main`, and confirm the worktree is
+   clean before closeout.
+
+If GitHub status or merge permissions cannot be observed, stop the landing route
+and report the exact blocker instead of guessing.
+
 ## Route away when
 
 - source-linked knowledge or interpretation belongs in `Tree-of-Sophia`

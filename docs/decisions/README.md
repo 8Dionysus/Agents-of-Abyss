@@ -31,6 +31,7 @@ Decision records explain why; current surfaces define what.
 | [`2026-04-30-root-scripts-district-contract`](2026-04-30-root-scripts-district-contract.md) | decision record for keeping root scripts as registry-backed center tooling |
 | [`2026-04-30-root-tests-district-contract`](2026-04-30-root-tests-district-contract.md) | decision record for keeping root tests as registry-backed center proof surface |
 | [`2026-04-30-spark-session-lane-contract`](2026-04-30-spark-session-lane-contract.md) | decision record for keeping Spark as a registry-backed done-or-handoff agent lane |
+| [`2026-04-30-github-landing-workflow`](2026-04-30-github-landing-workflow.md) | decision record for making branch, PR, CI, and merge landing explicit in root AGENTS guidance |
 
 ## Record shape
 
