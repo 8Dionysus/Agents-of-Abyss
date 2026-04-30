@@ -28,6 +28,7 @@ Decision records explain why; current surfaces define what.
 | [`2026-04-29-root-manifest-district-contract`](2026-04-29-root-manifest-district-contract.md) | decision record for keeping root manifests as registry/control surface while Agon recurrence records live with their owning part |
 | [`2026-04-29-traces-mode-hardening`](2026-04-29-traces-mode-hardening.md) | decision record for keeping traces as repo-level movement receipts with validation |
 | [`2026-04-30-root-schema-district-contract`](2026-04-30-root-schema-district-contract.md) | decision record for keeping root schemas as center contracts with registry-backed validation |
+| [`2026-04-30-root-scripts-district-contract`](2026-04-30-root-scripts-district-contract.md) | decision record for keeping root scripts as registry-backed center tooling |
 
 ## Record shape
 

@@ -1,0 +1,154 @@
+{
+  "schema_version": "aoa_scripts_registry_v1",
+  "authority_ref": "scripts/README.md",
+  "agents_ref": "scripts/AGENTS.md",
+  "root_policy": {
+    "root_python_glob": "scripts/*.py",
+    "root_role": "root-owned center builders, validators, release checks, and shared helper modules",
+    "ignored_local_artifact_globs": [
+      "scripts/__pycache__/**"
+    ]
+  },
+  "script_families": [
+    {
+      "family_id": "release-gate",
+      "role": "public release check orchestration",
+      "source_ref": "mechanics/release-support/README.md",
+      "paths": [
+        "scripts/release_check.py"
+      ],
+      "must_not_claim": [
+        "release success without the commands it orchestrates passing"
+      ]
+    },
+    {
+      "family_id": "center-entry",
+      "role": "center entry map building, route parity, and validation",
+      "source_ref": "docs/START_HERE_ROUTE_CONTRACT.md",
+      "paths": [
+        "scripts/build_center_entry_map.py",
+        "scripts/center_entry_map_common.py",
+        "scripts/validate_center_entry_map.py",
+        "scripts/validate_entry_surface_sync.py"
+      ],
+      "must_not_claim": [
+        "public route authority beyond the source route contract"
+      ]
+    },
+    {
+      "family_id": "root-registries",
+      "role": "root config, schema, manifest, and ecosystem registry validation",
+      "source_ref": "docs/ROOT_SURFACE_LAW.md",
+      "paths": [
+        "scripts/validate_config_registry.py",
+        "scripts/validate_ecosystem.py",
+        "scripts/validate_manifests_registry.py",
+        "scripts/validate_schema_registry.py",
+        "scripts/validate_scripts_district.py"
+      ],
+      "must_not_claim": [
+        "registry metadata as source doctrine"
+      ]
+    },
+    {
+      "family_id": "docs-districts",
+      "role": "root docs district cleanup, indexes, decisions, and trace receipts",
+      "source_ref": "docs/README.md",
+      "paths": [
+        "scripts/build_docs_thematic_index.py",
+        "scripts/docs_thematic_common.py",
+        "scripts/plan_docs_thematic_cleanup.py",
+        "scripts/validate_decision_records.py",
+        "scripts/validate_docs_migration_map.py",
+        "scripts/validate_docs_thematic_districts.py",
+        "scripts/validate_docs_thematic_index.py",
+        "scripts/validate_traces_district.py"
+      ],
+      "must_not_claim": [
+        "historical receipts as current law"
+      ]
+    },
+    {
+      "family_id": "hygiene",
+      "role": "link, Markdown, status vocabulary, generated freshness, and known-repair guardrails",
+      "source_ref": "docs/guardrails/README.md",
+      "paths": [
+        "scripts/build_link_shape_hygiene_index.py",
+        "scripts/hygiene_common.py",
+        "scripts/repair_known_link_drifts.py",
+        "scripts/validate_generated_freshness.py",
+        "scripts/validate_hygiene_suite.py",
+        "scripts/validate_link_shape_hygiene_index.py",
+        "scripts/validate_links.py",
+        "scripts/validate_markdown_shape.py",
+        "scripts/validate_status_vocabulary.py"
+      ],
+      "must_not_claim": [
+        "style checks as semantic approval"
+      ]
+    },
+    {
+      "family_id": "agents-mesh",
+      "role": "AGENTS-card shape, coverage, and compact mesh indexes",
+      "source_ref": "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
+      "paths": [
+        "scripts/agents_mesh_common.py",
+        "scripts/build_agents_mesh_index.py",
+        "scripts/validate_agents_md_shape.py",
+        "scripts/validate_agents_mesh.py",
+        "scripts/validate_agents_mesh_index.py",
+        "scripts/validate_nested_agents.py"
+      ],
+      "must_not_claim": [
+        "AGENTS coverage as proof that owner-local truth is complete"
+      ]
+    },
+    {
+      "family_id": "mechanics-topology",
+      "role": "mechanics package topology, cards, artifact homes, and landing logs",
+      "source_ref": "mechanics/README.md",
+      "paths": [
+        "scripts/build_mechanic_card_index.py",
+        "scripts/validate_mechanic_artifact_topology.py",
+        "scripts/validate_mechanic_card_index.py",
+        "scripts/validate_mechanic_landing_logs.py",
+        "scripts/validate_mechanic_readme_cards.py",
+        "scripts/validate_mechanics_topology.py"
+      ],
+      "must_not_claim": [
+        "mechanic validation as owner acceptance in sibling repos"
+      ]
+    },
+    {
+      "family_id": "owner-requests",
+      "role": "center-side owner request queue building and validation",
+      "source_ref": "mechanics/README.md",
+      "paths": [
+        "scripts/build_owner_request_queue.py",
+        "scripts/validate_generated_owner_request_queue.py",
+        "scripts/validate_owner_request_docs.py",
+        "scripts/validate_owner_request_queue.py"
+      ],
+      "must_not_claim": [
+        "owner request readiness as downstream implementation"
+      ]
+    }
+  ],
+  "script_home_globs": [
+    {
+      "home_ref": "script-home:mechanic-root",
+      "owner_scope": "mechanic",
+      "path_glob": "mechanics/*/scripts"
+    },
+    {
+      "home_ref": "script-home:mechanic-part",
+      "owner_scope": "mechanic-part",
+      "path_glob": "mechanics/*/parts/*/scripts"
+    }
+  ],
+  "validation_commands": [
+    "python scripts/validate_scripts_district.py",
+    "python -m pytest -q tests/test_scripts_district.py",
+    "python scripts/release_check.py"
+  ]
+}
