@@ -88,6 +88,9 @@ Tracking starts with the community-docs baseline for this repository.
 - root technical folders now document and validate repo-level function instead
   of holding mechanic-owned artifacts; mechanic-owned schemas, examples,
   manifests, scripts, and tests are routed to their packages where appropriate
+- `pytest.ini` now collects active tests from root `tests/`, `mechanics/`, and
+  `Spark/tests` while excluding legacy, cache, and build directories from the
+  default root pytest run
 - `scripts/release_check.py` now runs the expanded repo gate across docs,
   mechanics, questbook, generated surfaces, config, manifests, schemas,
   scripts, tests, Spark, ecosystem validation, and pytest
@@ -109,9 +112,12 @@ Tracking starts with the community-docs baseline for this repository.
 ### Validation
 
 - `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "polish unreleased changelog after root docs and mechanics release prep" --mutation-surface public-share --json`
+- `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "polish root pytest collection contract for current mechanics topology" --mutation-surface repo-config --json`
 - `python scripts/validate_markdown_shape.py --target CHANGELOG.md`
+- `python scripts/validate_tests_district.py`
 - `python scripts/validate_links.py`
 - `git diff --check`
+- `python -m pytest -q`
 - `python scripts/release_check.py`
 
 ### Notes
