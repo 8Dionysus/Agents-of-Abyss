@@ -2,80 +2,76 @@
 
 ## Applies to
 
-This card applies to `Spark/` and every nested path under that scope until a nearer `AGENTS.md` narrows the lane.
+This card applies to `Spark/` and every nested path under that scope until a
+nearer `AGENTS.md` narrows the lane.
 
 ## Role
 
-This AGENTS card keeps local work inside the Agents-of-Abyss center lane, names the nearest owner boundary, and routes wider claims back to the root card.
+`Spark/` is the fast session lane for GPT-5.3-Codex-Spark style work. It
+stores session-contained scenarios, launch prompts, result contracts, handoff
+contracts, and validation for small bounded loops.
+
+Spark is an agent lane, not a new source of constitutional authority.
+Its core execution rule is done-or-handoff.
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or protocol surface before changing files in this lane.
+Read root `AGENTS.md`, `Spark/README.md`, this card, `Spark/registry.json`, and
+the scenario `README.md` plus `PROMPT.md` for the lane being touched.
+
+Use `Spark/SWARM.md` only when a Spark swarm is explicitly requested.
 
 ## Boundaries
 
-Do not use this lane to override owner-local truth, generated-source boundaries, sibling-repo authority, or release validation contracts.
+- One Spark session uses one scenario and one bounded scope.
+- A Spark session must end as `done` or `handoff`; do not depend on an
+  in-session switch to a larger model.
+- If the task needs deeper architecture, owner-local judgment, or broad
+  synthesis, leave a portable handoff in `Spark/handoffs/open/`.
+- Store reusable completed evidence in `Spark/results/` only when it will help a
+  later session; ordinary closeout stays in the conversation or PR.
+- Do not use Spark to override owner-local truth, generated-source boundaries,
+  sibling-repo authority, release validation contracts, or mechanic law.
+- Do not turn `Spark/` into a mechanic package. It is a launch and handoff lane
+  for work that belongs to existing owners.
+
+## Scenario Law
+
+Every scenario must be registered in `Spark/registry.json` and must provide:
+
+- `README.md` with scope, done signal, stop-line, and handoff route
+- `PROMPT.md` that can launch a standalone Spark session
+- `templates/result.md`
+- `templates/handoff.md`
+- `examples/result.example.md`
 
 ## Validation
 
-Run the nearest validator named by this card. For release-facing changes, also run `python scripts/release_check.py`.
+Run the narrowest relevant checks first. Usual checks for this lane:
+
+```bash
+python Spark/scripts/validate_spark_lane.py
+python -m pytest -q Spark/tests/test_spark_lane.py
+python scripts/validate_agents_md_shape.py
+python scripts/validate_agents_mesh.py
+python scripts/build_agents_mesh_index.py --check
+python scripts/validate_agents_mesh_index.py
+```
+
+For release-facing Spark lane changes, also run:
+
+```bash
+python scripts/release_check.py
+```
 
 ## Closeout
 
-Closeout must name changed surfaces, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
-
-This file only governs work started from `Spark/`.
-
-The root `AGENTS.md` remains authoritative for repository identity, ownership boundaries, reading order, and validation commands. This local file only narrows how GPT-5.3-Codex-Spark should behave when used as the fast-loop lane.
-
-If `SWARM.md` exists in this directory, treat it as queue / swarm context. This `AGENTS.md` is the operating policy for Spark work.
-
-## Default Spark posture
-
-- Use Spark for short-loop work where a small diff is enough.
-- Start with a map: task, files, risks, and validation path.
-- Prefer one bounded patch per loop.
-- Read the nearest source docs before editing.
-- Use the narrowest relevant validation already documented by the repo.
-- Report exactly what was and was not checked.
-- Escalate instead of widening into a broad architectural rewrite.
-
-## Spark is strongest here for
-
-- route-table cleanup and cross-link repair
-- center-layer wording normalization
-- small map, glossary, or generated-surface alignment when the owning meaning already exists
-- tight audits of source-of-truth language
-- small changelog or roadmap wording repairs that do not redefine the program
-
-## Do not widen Spark here into
-
-- federation-rule redesign
-- layer-boundary redefinition
-- moving source-owned meaning from a specialized repository into the center
-- broad cross-repo synthesis or policy invention
-- large regeneration or migration work spanning many AoA layers
-
-## Local done signal
-
-A Spark task is done here when:
-
-- AoA is easier to navigate after the edit
-- the center is clearer without becoming fatter
-- source-of-truth boundaries are sharper
-- specialized layer meaning was linked, not absorbed
-- the nearest validator or manual consistency pass was run when relevant
+Report scenario registry entries changed, scenario files touched, handoffs or
+results added, validation run, validation skipped, remaining risk, and the next
+owner route when Spark was only a waypoint.
 
 ## Local note
 
-Spark should act as a center-layer gardener here: prune, align, clarify, and stop before it starts founding a new constitution.
-
-## Reporting contract
-
-Always report:
-
-- the restated task and touched scope
-- which files or surfaces changed
-- whether the change was semantic, structural, or clarity-only
-- what validation actually ran
-- what still needs a slower model or human review
+Spark should act as a fast center-layer gardener: prune, align, clarify, test,
+or route. It stops when the scoped lane is done, and it hands off when the work
+needs a slower session.

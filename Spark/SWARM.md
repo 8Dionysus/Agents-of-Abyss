@@ -1,113 +1,74 @@
-# Spark Swarm Recipe — Agents-of-Abyss
+# Spark Swarm
 
-Рекомендуемый путь назначения: `Spark/SWARM.md`
+Use this file only when a user explicitly asks for a Spark swarm. Ordinary
+Spark work starts from one scenario in `Spark/registry.json`.
 
-## Для чего этот рой
-Используй Spark здесь очень бережно: для ecosystem registry, layer map coherence, boundary language drift, link cleanup и micro-patches в canonical center-layer surfaces. Этот рой не должен переписывать AoA doctrine целиком и не должен тянуть сюда layer-owned meaning.
+## Swarm Rule
 
-## Читать перед стартом
-- `README.md`
-- `CHARTER.md`
-- `ECOSYSTEM_MAP.md`
-- `docs/LAYERS.md`
-- `docs/FEDERATION_RULES.md`
-- `ROADMAP.md`
+A swarm still follows the Spark lane contract:
 
-## Форма роя
-- **Coordinator**: выбирает один center-layer seam
-- **Drift Auditor**: ищет inconsistency между README / CHARTER / map / rules
-- **Micro-Patcher**: делает минимальный patch
-- **Verifier**: запускает `python scripts/validate_ecosystem.py`
-- **Boundary Keeper**: следит за ecosystem truth vs layer truth
+- one coordinator
+- one registered scenario per worker
+- one bounded file family per writer
+- no in-session switch to a larger model
+- every lane ends as `done` or `handoff`
 
-## Параллельные дорожки
-- Lane A: registry / role / ownership wording
-- Lane B: link and cross-doc consistency
-- Lane C: validate center-layer surface
-- Не запускай больше одного пишущего агента на одну и ту же семью файлов.
+## Read Before Launch
 
-## Allowed
-- чинить `generated/ecosystem_registry.min.json` aligned surfaces
-- прояснять repository roles и center-layer ownership assumptions
-- устранять boundary-language drift
-- делать micro-patches ради legibility и coherence
+- root `AGENTS.md`
+- `Spark/README.md`
+- `Spark/AGENTS.md`
+- `Spark/registry.json`
+- scenario `README.md` and `PROMPT.md` for every assigned lane
 
-## Forbidden
-- тащить сюда technique/skill/eval/memo/agent/runtime specifics как primary meaning
-- переписывать сразу полдоктрины
-- размывать distinction between ecosystem truth and layer truth
-- пытаться лечить sibling-layer bugs inside the center repo
+## Roles
 
-## Launch packet для координатора
+| Role | Work |
+|---|---|
+| Coordinator | chooses the scenario, exact scope, risks, and validation path |
+| Scout | reads and reports findings without editing |
+| Builder | makes one bounded patch inside the assigned scope |
+| Verifier | runs the named validation and reports skipped checks |
+| Boundary Keeper | checks that Spark did not absorb stronger owner truth |
+
+## Parallel Lanes
+
+Allowed parallelism:
+
+- one audit lane plus one verifier lane
+- one builder lane per disjoint file family
+- one boundary review lane after a patch exists
+
+Do not run two writers on the same family of files.
+
+## Coordinator Launch Packet
+
 ```text
-We are working in Agents-of-Abyss with a one-repo one-swarm setup.
-Pick exactly one center-layer seam:
-- ecosystem registry
-- repository role wording
-- ownership boundary drift
-- link / cross-doc consistency
-- one minimal canonical clarification
+We are working in Agents-of-Abyss through Spark.
+Choose one registered scenario from Spark/registry.json.
 
 Return:
-1. the seam
-2. exact files to touch
-3. whether generated registry is affected
-4. which layer-owned meanings must remain untouched
+1. scenario id
+2. exact scope
+3. files to read first
+4. expected done signal
+5. handoff condition
+6. validation command
 ```
 
-## Промпт для Scout
-```text
-Audit only. Do not edit.
-Return:
-- exact inconsistency or drift
-- files involved
-- whether the problem lives here or actually belongs in a sibling layer repo
-- impact on ecosystem legibility
-- validation implications
-```
+## Worker Launch Packet
 
-## Промпт для Builder
 ```text
-Make the smallest patch possible.
-Rules:
-- preserve this repo as the constitutional and ecosystem-center statement
-- keep layer ownership boundaries explicit
-- do not absorb sibling layer meaning
-- prefer micro-patches over sweeping rewrites
-```
-
-## Промпт для Verifier
-```text
-Run:
-- python -m pip install -r requirements-dev.txt
-- python scripts/validate_ecosystem.py
-Then report:
-- commands run
-- whether the ecosystem registry changed
-- whether repository roles and ownership assumptions stayed coherent
-```
-
-## Промпт для Boundary Keeper
-```text
-Review only for anti-scope.
-Check:
-- ecosystem truth remained separate from layer truth
-- no specialized layer meaning was absorbed
-- patch stayed canonical and high-level
-- any required sibling-repo follow-up is named explicitly
+You are a Spark worker.
+Read Spark/AGENTS.md, Spark/registry.json, and the assigned scenario.
+Finish the assigned scope or leave a handoff packet.
+Do not widen into another scenario.
+Report files read, files changed, validation run, skipped checks, and risk.
 ```
 
 ## Verify
+
 ```bash
-python -m pip install -r requirements-dev.txt
-python scripts/validate_ecosystem.py
+python Spark/scripts/validate_spark_lane.py
+python -m pytest -q Spark/tests/test_spark_lane.py
 ```
-
-## Done when
-- один center-layer seam стал яснее и когерентнее
-- validator реально прогнан
-- specialized layer meaning не был затянут в центр
-- любые sibling follow-ups названы явно
-
-## Handoff
-Если inconsistency живёт в одном из layer repos, фикси её там и потом возвращайся только для center-layer wording sync.

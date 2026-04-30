@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aoa_spark_handoff_v1",
+  "title": "Spark handoff packet",
+  "type": "object",
+  "required": [
+    "scenario",
+    "status",
+    "reason_for_handoff",
+    "scope_read",
+    "findings",
+    "files_likely_affected",
+    "validation_already_run",
+    "validation_still_needed",
+    "stop_line",
+    "suggested_next_prompt"
+  ],
+  "properties": {
+    "scenario": {
+      "type": "string"
+    },
+    "status": {
+      "const": "handoff"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,136 @@
+{
+  "schema_version": "aoa_spark_lane_registry_v1",
+  "authority_ref": "Spark/README.md",
+  "agents_ref": "Spark/AGENTS.md",
+  "swarm_ref": "Spark/SWARM.md",
+  "storage_refs": {
+    "handoffs": "Spark/handoffs/README.md",
+    "handoffs_open": "Spark/handoffs/open/README.md",
+    "handoffs_closed": "Spark/handoffs/closed/README.md",
+    "results": "Spark/results/README.md"
+  },
+  "schema_refs": {
+    "registry": "Spark/schemas/spark-registry.schema.json",
+    "result": "Spark/schemas/spark-result.schema.json",
+    "handoff": "Spark/schemas/spark-handoff.schema.json"
+  },
+  "scenarios": [
+    {
+      "scenario_id": "audit",
+      "role": "fast drift, noise, duplicate, and path audit",
+      "path": "Spark/scenarios/audit",
+      "prompt_ref": "Spark/scenarios/audit/PROMPT.md",
+      "result_template_ref": "Spark/scenarios/audit/templates/result.md",
+      "handoff_template_ref": "Spark/scenarios/audit/templates/handoff.md",
+      "result_example_ref": "Spark/scenarios/audit/examples/result.example.md",
+      "default_validation": [
+        "python Spark/scripts/validate_spark_lane.py"
+      ],
+      "done_signal": "audit findings are scoped, evidenced, and routed",
+      "stop_line": "do not rewrite the audited surface during audit-only work"
+    },
+    {
+      "scenario_id": "test-factory",
+      "role": "bounded test generation for an already clear contract",
+      "path": "Spark/scenarios/test-factory",
+      "prompt_ref": "Spark/scenarios/test-factory/PROMPT.md",
+      "result_template_ref": "Spark/scenarios/test-factory/templates/result.md",
+      "handoff_template_ref": "Spark/scenarios/test-factory/templates/handoff.md",
+      "result_example_ref": "Spark/scenarios/test-factory/examples/result.example.md",
+      "default_validation": [
+        "python -m pytest -q"
+      ],
+      "done_signal": "tests cover a named existing contract and pass locally",
+      "stop_line": "do not invent new semantics to make tests interesting"
+    },
+    {
+      "scenario_id": "diff-review",
+      "role": "review a concrete diff or PR for risks and missed checks",
+      "path": "Spark/scenarios/diff-review",
+      "prompt_ref": "Spark/scenarios/diff-review/PROMPT.md",
+      "result_template_ref": "Spark/scenarios/diff-review/templates/result.md",
+      "handoff_template_ref": "Spark/scenarios/diff-review/templates/handoff.md",
+      "result_example_ref": "Spark/scenarios/diff-review/examples/result.example.md",
+      "default_validation": [
+        "git diff --check"
+      ],
+      "done_signal": "findings are ordered by risk and tied to exact files",
+      "stop_line": "do not rewrite the diff while acting as reviewer"
+    },
+    {
+      "scenario_id": "registry-sync",
+      "role": "align README, AGENTS, registry, validator, and release gate surfaces",
+      "path": "Spark/scenarios/registry-sync",
+      "prompt_ref": "Spark/scenarios/registry-sync/PROMPT.md",
+      "result_template_ref": "Spark/scenarios/registry-sync/templates/result.md",
+      "handoff_template_ref": "Spark/scenarios/registry-sync/templates/handoff.md",
+      "result_example_ref": "Spark/scenarios/registry-sync/examples/result.example.md",
+      "default_validation": [
+        "python scripts/release_check.py"
+      ],
+      "done_signal": "registered paths and local docs agree with validators",
+      "stop_line": "do not create a new source of truth while syncing derived routes"
+    },
+    {
+      "scenario_id": "distillation-scout",
+      "role": "map legacy/raw material before deeper distillation",
+      "path": "Spark/scenarios/distillation-scout",
+      "prompt_ref": "Spark/scenarios/distillation-scout/PROMPT.md",
+      "result_template_ref": "Spark/scenarios/distillation-scout/templates/result.md",
+      "handoff_template_ref": "Spark/scenarios/distillation-scout/templates/handoff.md",
+      "result_example_ref": "Spark/scenarios/distillation-scout/examples/result.example.md",
+      "default_validation": [
+        "python Spark/scripts/validate_spark_lane.py"
+      ],
+      "done_signal": "legacy sources are mapped to likely active homes and risks",
+      "stop_line": "do not perform deep semantic distillation inside scout mode"
+    },
+    {
+      "scenario_id": "quest-triage",
+      "role": "turn durable tails into quest candidates without making a TODO pile",
+      "path": "Spark/scenarios/quest-triage",
+      "prompt_ref": "Spark/scenarios/quest-triage/PROMPT.md",
+      "result_template_ref": "Spark/scenarios/quest-triage/templates/result.md",
+      "handoff_template_ref": "Spark/scenarios/quest-triage/templates/handoff.md",
+      "result_example_ref": "Spark/scenarios/quest-triage/examples/result.example.md",
+      "default_validation": [
+        "python mechanics/questbook/scripts/validate_questbook_source_contract.py"
+      ],
+      "done_signal": "quest candidates are routed to the right lane or handoff",
+      "stop_line": "do not turn private scratch work into public quest obligations"
+    },
+    {
+      "scenario_id": "micro-patch",
+      "role": "make one small patch with local validation",
+      "path": "Spark/scenarios/micro-patch",
+      "prompt_ref": "Spark/scenarios/micro-patch/PROMPT.md",
+      "result_template_ref": "Spark/scenarios/micro-patch/templates/result.md",
+      "handoff_template_ref": "Spark/scenarios/micro-patch/templates/handoff.md",
+      "result_example_ref": "Spark/scenarios/micro-patch/examples/result.example.md",
+      "default_validation": [
+        "git diff --check"
+      ],
+      "done_signal": "one bounded patch is applied and validated",
+      "stop_line": "stop when the patch asks for a second owner or broader design"
+    },
+    {
+      "scenario_id": "release-prep",
+      "role": "run a fast release readiness pass before support hardens",
+      "path": "Spark/scenarios/release-prep",
+      "prompt_ref": "Spark/scenarios/release-prep/PROMPT.md",
+      "result_template_ref": "Spark/scenarios/release-prep/templates/result.md",
+      "handoff_template_ref": "Spark/scenarios/release-prep/templates/handoff.md",
+      "result_example_ref": "Spark/scenarios/release-prep/examples/result.example.md",
+      "default_validation": [
+        "python scripts/release_check.py"
+      ],
+      "done_signal": "release risks, checks, and owner routes are named",
+      "stop_line": "do not publish or tag from Spark without explicit user command"
+    }
+  ],
+  "validation_commands": [
+    "python Spark/scripts/validate_spark_lane.py",
+    "python -m pytest -q Spark/tests/test_spark_lane.py",
+    "python scripts/release_check.py"
+  ]
+}

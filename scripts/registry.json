@@ -145,6 +145,11 @@
       "home_ref": "script-home:mechanic-part",
       "owner_scope": "mechanic-part",
       "path_glob": "mechanics/*/parts/*/scripts"
+    },
+    {
+      "home_ref": "script-home:spark-lane",
+      "owner_scope": "agent-lane",
+      "path_glob": "Spark/scripts"
     }
   ],
   "validation_commands": [

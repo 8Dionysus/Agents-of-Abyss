@@ -199,6 +199,11 @@
       "home_ref": "test-home:mechanic-part",
       "owner_scope": "mechanic-part",
       "path_glob": "mechanics/*/parts/*/tests"
+    },
+    {
+      "home_ref": "test-home:spark-lane",
+      "owner_scope": "agent-lane",
+      "path_glob": "Spark/tests"
     }
   ],
   "validation_commands": [

@@ -30,6 +30,7 @@ Decision records explain why; current surfaces define what.
 | [`2026-04-30-root-schema-district-contract`](2026-04-30-root-schema-district-contract.md) | decision record for keeping root schemas as center contracts with registry-backed validation |
 | [`2026-04-30-root-scripts-district-contract`](2026-04-30-root-scripts-district-contract.md) | decision record for keeping root scripts as registry-backed center tooling |
 | [`2026-04-30-root-tests-district-contract`](2026-04-30-root-tests-district-contract.md) | decision record for keeping root tests as registry-backed center proof surface |
+| [`2026-04-30-spark-session-lane-contract`](2026-04-30-spark-session-lane-contract.md) | decision record for keeping Spark as a registry-backed done-or-handoff agent lane |
 
 ## Record shape
 
