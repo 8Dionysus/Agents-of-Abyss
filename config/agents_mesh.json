@@ -849,12 +849,12 @@
       ]
     },
     {
-      "path": "manifests/recurrence/AGENTS.md",
-      "scope": "manifests/recurrence/",
-      "kind": "nested-district-card",
+      "path": "mechanics/agon/parts/recurrence-adapter/manifests/AGENTS.md",
+      "scope": "mechanics/agon/parts/recurrence-adapter/manifests/",
+      "kind": "mechanic-part-manifest-card",
       "status": "required",
       "owner": "Agents-of-Abyss",
-      "notes": "Nested recurrence manifest district card.",
+      "notes": "Manifest home card for Agon recurrence adapter receipts.",
       "required_headings": [
         "# AGENTS.md",
         "## Applies to",

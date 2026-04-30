@@ -1,0 +1,53 @@
+{
+  "bindings": [
+    {
+      "hook_id": "detect_threshold_surface_drift",
+      "mode": "observe_only",
+      "target": "mechanics/agon/parts/sophian-threshold/generated/agon_sophian_threshold_registry.min.json"
+    },
+    {
+      "hook_id": "detect_canon_authority_leak",
+      "mode": "observe_only",
+      "target": "mechanics/agon/parts/sophian-threshold/config/agon_sophian_threshold.seed.json"
+    }
+  ],
+  "component_ref": "component:agon:sophian-threshold-surfaces",
+  "emits": [],
+  "hook_binding_ref": "component.agon.sophian-threshold-surfaces.hooks",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_hook_binding",
+  "must_not_emit": [
+    "live_verdict_authority",
+    "durable_scar_write",
+    "retention_execution",
+    "rank_mutation",
+    "trust_mutation",
+    "tree_of_sophia_canon_write",
+    "direct_tos_write",
+    "automatic_canonization",
+    "kag_as_canon",
+    "hidden_scheduler_action",
+    "assistant_contestant_drift",
+    "auto_doctrine_rewrite",
+    "center_takeover_of_owner_truth",
+    "eval_memo_stats_sovereignty",
+    "stats_as_canon_authority",
+    "eval_as_canon_authority",
+    "memo_as_canon_authority",
+    "sdk_hidden_write"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component.agon.sophian-threshold-surfaces",
+    "source_hook_ref": "component.agon.sophian-threshold-surfaces.hooks",
+    "source_schema_version": null,
+    "source_series_ref": "series-xviii",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_hook_manifest_v1",
+  "source_refs": []
+}

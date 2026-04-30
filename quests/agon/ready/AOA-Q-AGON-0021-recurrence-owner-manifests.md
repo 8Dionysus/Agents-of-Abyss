@@ -9,6 +9,9 @@ Track the obligation named by this quest and route it through the reviewability 
 ## Goal
 
 Review and land owner recurrence manifests for the current Agon surface set.
+AoA-local Agon recurrence receipts now live in
+`mechanics/agon/parts/recurrence-adapter/manifests/`; sibling owner records
+remain explicit owner-local requests until each target repository lands them.
 
 ## Owners
 
@@ -21,7 +24,9 @@ Review and land owner recurrence manifests for the current Agon surface set.
 
 ## Acceptance
 
-Each owner has a recurrence component manifest and hook binding set for its Agon surfaces.
+Each owner has a recurrence component manifest and hook binding set for its
+Agon surfaces, or the request remains named with an `owner-local://` route in
+the Agon recurrence adapter request.
 
 ## Owner Route
 

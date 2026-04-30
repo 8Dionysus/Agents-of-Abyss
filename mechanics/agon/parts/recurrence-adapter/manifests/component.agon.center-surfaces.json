@@ -1,0 +1,201 @@
+{
+  "component_ref": "component:agon:center-surfaces",
+  "description": "Center-owned Agon law and stop-line surfaces from the active center Agon route series.",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_component",
+  "manifest_ref": "manifest:agon:recurrence:center-surfaces",
+  "observed_surfaces": [
+    "mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json",
+    "mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json",
+    "mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json",
+    "mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json",
+    "mechanics/agon/parts/trial-handoff/generated/agon_trial_playbook_request.min.json",
+    "mechanics/agon/parts/recurrence-adapter/generated/agon_recurrence_adapter_request.min.json"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component:agon:center-surfaces",
+    "source_schema_version": "aoa_recurrence_component_v2",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "review_outputs": {
+    "beacon_rules": [
+      {
+        "beacon_ref": "agon.center.law_surface_drift",
+        "decision_surface": "mechanics/agon/PROVENANCE.md",
+        "kind": "canonical_pressure",
+        "match_categories": [
+          "change_pressure",
+          "review_signal"
+        ],
+        "match_signals": [
+          "agon_surface_changed",
+          "lawful_move_registry_changed",
+          "owner_binding_changed"
+        ],
+        "notes": "Center law drift should become review pressure, not hidden protocol activation.",
+        "observation_inputs": [
+          "change_signal",
+          "agon-center-generated-surfaces"
+        ],
+        "recommended_actions": [
+          "revalidate center Agon surfaces",
+          "open owner review only; do not mutate source repos"
+        ],
+        "status_ladder": [
+          "hint",
+          "watch",
+          "candidate",
+          "review_ready"
+        ],
+        "suppress_when": [
+          "live_protocol_claim_present",
+          "hidden_authority_detected"
+        ],
+        "target_repo": "Agents-of-Abyss",
+        "thresholds": {
+          "candidate_observations": 2,
+          "min_unique_evidence_refs": 2,
+          "min_unique_sources": 2,
+          "review_ready_observations": 3,
+          "watch_observations": 1
+        }
+      },
+      {
+        "beacon_ref": "agon.center.pre_protocol_handoff_pressure",
+        "decision_surface": "mechanics/agon/PROVENANCE.md",
+        "kind": "automation_seed_candidate",
+        "match_categories": [
+          "repeat_pattern",
+          "review_signal"
+        ],
+        "match_signals": [
+          "gate_handoff_changed",
+          "trial_handoff_changed",
+          "adapter_request_changed"
+        ],
+        "notes": "Repeated handoff changes may request wiring review without creating runtime authority.",
+        "observation_inputs": [
+          "agon-center-law-docs",
+          "agon-center-generated-surfaces"
+        ],
+        "recommended_actions": [
+          "refresh Agon recurrence adapter request",
+          "check stop-lines before wiring"
+        ],
+        "status_ladder": [
+          "hint",
+          "watch",
+          "candidate",
+          "review_ready"
+        ],
+        "suppress_when": [
+          "live_protocol_claim_present",
+          "hidden_authority_detected"
+        ],
+        "target_repo": "Agents-of-Abyss",
+        "thresholds": {
+          "candidate_observations": 2,
+          "min_unique_evidence_refs": 2,
+          "min_unique_sources": 2,
+          "review_ready_observations": 3,
+          "watch_observations": 1
+        }
+      }
+    ],
+    "consumer_edges": [
+      {
+        "kind": "handoff_home",
+        "notes": "Owner remains the review home for its own Agon recurrence signals.",
+        "required": true,
+        "suggested_action": "observe",
+        "suggested_commands": [],
+        "target": "mechanics/agon/PROVENANCE.md",
+        "target_repo": "Agents-of-Abyss"
+      }
+    ],
+    "drift_signals": [
+      {
+        "recommended_action": "revalidate",
+        "severity": "medium",
+        "signal": "agon_surface_changed_without_recurrence_review"
+      },
+      {
+        "recommended_action": "defer",
+        "severity": "high",
+        "signal": "agon_stop_line_blur_detected"
+      }
+    ],
+    "refresh_routes": [
+      {
+        "action": "revalidate",
+        "commands": [
+          "python mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py",
+          "python mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py",
+          "python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py",
+          "python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py",
+          "python mechanics/agon/parts/trial-handoff/scripts/validate_agon_trial_playbook_request.py",
+          "python mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_adapter_request.py"
+        ],
+        "notes": "Owner-local validation path. Recurrence may suggest this route; it must not run it as hidden authority."
+      }
+    ],
+    "rollback_anchors": [
+      "mechanics/agon/PROVENANCE.md"
+    ],
+    "signal_edges": [
+      {
+        "kind": "incubated_by_technique",
+        "notes": "Move law can request practice candidates; techniques do not own move law.",
+        "target": "component:agon:technique-binding-surfaces",
+        "target_repo": "aoa-techniques"
+      },
+      {
+        "kind": "implemented_by_skill",
+        "notes": "Move law can request bounded workflow candidates; skills do not own arena law.",
+        "target": "component:agon:skill-binding-surfaces",
+        "target_repo": "aoa-skills"
+      },
+      {
+        "kind": "composed_by_playbook",
+        "notes": "Trial choreography can provide recurrence evidence without issuing verdicts.",
+        "target": "component:agon:trial-playbook-surfaces",
+        "target_repo": "aoa-playbooks"
+      },
+      {
+        "kind": "proved_by_eval",
+        "notes": "Future proof bindings may use this evidence; recurrence does not create proof authority.",
+        "target": "component:evals:portable-proof-beacons",
+        "target_repo": "aoa-evals"
+      }
+    ]
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_component_manifest_v1",
+  "source_refs": [
+    "mechanics/agon/parts/lawful-move-grammar/config/agon_lawful_moves.seed.json",
+    "mechanics/agon/parts/owner-binding/config/agon_move_owner_bindings.seed.json",
+    "mechanics/agon/parts/gate-routing/config/agon_gate_routing_handoff_request.seed.json",
+    "mechanics/agon/parts/trial-handoff/config/agon_trial_playbook_request.seed.json",
+    "mechanics/agon/parts/recurrence-adapter/config/agon_recurrence_adapter_request.seed.json",
+    "mechanics/agon/PROVENANCE.md",
+    "python mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py",
+    "python mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py",
+    "python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py",
+    "python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py",
+    "python mechanics/agon/parts/trial-handoff/scripts/validate_agon_trial_playbook_request.py",
+    "python mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_adapter_request.py"
+  ],
+  "status": "active_receipt",
+  "stop_lines": [],
+  "tags": [
+    "agon",
+    "center",
+    "law",
+    "recurrence",
+    "adapter"
+  ]
+}

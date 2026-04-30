@@ -1,0 +1,46 @@
+{
+  "component_ref": "component:agon:ccs-law-surfaces",
+  "description": "Agon recurrence receipt for ccs-law-surfaces.",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_component",
+  "manifest_ref": "manifest:agon:recurrence:ccs-law-surfaces",
+  "observed_surfaces": [
+    "mechanics/agon/parts/compatibility-bridges/config/agon_ccs_laws.seed.json",
+    "mechanics/agon/parts/compatibility-bridges/generated/agon_ccs_law_registry.min.json",
+    "mechanics/agon/PROVENANCE.md"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component:agon:ccs-law-surfaces",
+    "source_schema_version": null,
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "review_outputs": {
+    "beacon_rules": [
+      "contradiction_law_drift",
+      "closure_predicate_drift",
+      "summon_visibility_drift",
+      "assistant_boundary_drift"
+    ]
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_component_manifest_v1",
+  "source_refs": [],
+  "status": "seeded_pre_protocol_recurrence_component",
+  "stop_lines": [
+    "no_live_arena_session",
+    "no_runtime_state_transition",
+    "no_live_move_execution",
+    "no_verdict_authority",
+    "no_durable_scar_write",
+    "no_retention_execution",
+    "no_rank_mutation",
+    "no_tree_of_sophia_promotion",
+    "no_hidden_scheduler_action",
+    "no_assistant_contestant_drift",
+    "no_center_takeover_of_eval_memo_stats_truth"
+  ]
+}

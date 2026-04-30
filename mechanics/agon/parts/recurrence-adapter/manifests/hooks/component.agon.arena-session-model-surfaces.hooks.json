@@ -1,0 +1,59 @@
+{
+  "bindings": [
+    {
+      "does_not": [
+        "auto_rebuild",
+        "open_session",
+        "issue_verdict"
+      ],
+      "emits": "review_queue_candidate",
+      "hook_ref": "agon.session-model.hook.registry_drift",
+      "observes": "mechanics/agon/parts/packet-arena/generated/agon_arena_session_model_registry.min.json"
+    },
+    {
+      "does_not": [
+        "mutate_owner_repo",
+        "write_memory",
+        "rank_agents"
+      ],
+      "emits": "owner_review_summary",
+      "hook_ref": "agon.session-model.hook.stop_line_drift",
+      "observes": "mechanics/agon/parts/packet-arena/config/agon_arena_session_models.seed.json"
+    }
+  ],
+  "component_ref": "component:agon:arena-session-model-surfaces",
+  "emits": [
+    "review_queue_candidate",
+    "owner_review_summary"
+  ],
+  "hook_binding_ref": "hooks:agon:recurrence:arena-session-model-surfaces",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_hook_binding",
+  "must_not_emit": [
+    "no_live_session_instance_creation",
+    "no_runtime_state_transition",
+    "no_sealed_commit_packet_definition",
+    "no_live_move_execution",
+    "no_verdict_authority",
+    "no_durable_scar_write",
+    "no_retention_execution",
+    "no_rank_mutation",
+    "no_tree_of_sophia_promotion",
+    "no_hidden_scheduler_action",
+    "no_assistant_contestant_drift",
+    "no_center_takeover_of_owner_truth"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component:agon:arena-session-model-surfaces",
+    "source_hook_ref": null,
+    "source_schema_version": "recurrence_hook_binding_set_v1",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_hook_manifest_v1",
+  "source_refs": []
+}

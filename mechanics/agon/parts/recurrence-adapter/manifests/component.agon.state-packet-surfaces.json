@@ -1,0 +1,45 @@
+{
+  "component_ref": "component:agon:state-packet-surfaces",
+  "description": "Agon recurrence receipt for state-packet-surfaces.",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_component",
+  "manifest_ref": "manifest:agon:recurrence:state-packet-surfaces",
+  "observed_surfaces": [
+    "mechanics/agon/parts/packet-arena/config/agon_state_packets.seed.json",
+    "mechanics/agon/parts/packet-arena/generated/agon_state_packet_registry.min.json",
+    "mechanics/agon/parts/packet-arena/schemas/agon-state-packet.schema.json",
+    "mechanics/agon/parts/packet-arena/schemas/agon-state-packet-registry.schema.json"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component:agon:state-packet-surfaces",
+    "source_schema_version": null,
+    "source_series_ref": "series-ix",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "review_outputs": {
+    "review_lanes": [
+      "state_packet_drift",
+      "sealed_commit_integrity",
+      "assistant_boundary_pressure"
+    ]
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_component_manifest_v1",
+  "source_refs": [],
+  "status": "seeded_pre_protocol_observation_target",
+  "stop_lines": [
+    "create_live_arena_session",
+    "execute_move",
+    "issue_verdict",
+    "grant_closure",
+    "write_durable_scar",
+    "schedule_retention_as_authority",
+    "mutate_rank",
+    "promote_to_tree_of_sophia",
+    "auto_modify_owner_repo"
+  ]
+}

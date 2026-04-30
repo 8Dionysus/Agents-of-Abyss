@@ -1,0 +1,32 @@
+{
+  "authority_ref": "manifests/README.md",
+  "manifest_homes": [
+    {
+      "component_glob": "mechanics/agon/parts/recurrence-adapter/manifests/component.*.json",
+      "home_ref": "manifest-home:agon-recurrence-adapter",
+      "manifest_classes": [
+        "agon_recurrence_component",
+        "agon_recurrence_hook_binding"
+      ],
+      "owner_mechanic": "agon",
+      "owner_part": "mechanics/agon/parts/recurrence-adapter",
+      "owner_repo": "Agents-of-Abyss",
+      "path": "mechanics/agon/parts/recurrence-adapter/manifests/",
+      "publication_scope": "mechanic-owned",
+      "source_refs": [
+        "mechanics/agon/parts/recurrence-adapter/README.md",
+        "mechanics/agon/parts/recurrence-adapter/generated/agon_recurrence_adapter_request.min.json",
+        "mechanics/recurrence/docs/RECURRENCE_PRINCIPLE.md"
+      ],
+      "hook_glob": "mechanics/agon/parts/recurrence-adapter/manifests/hooks/component.*.hooks.json",
+      "validator": "mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_manifests.py"
+    }
+  ],
+  "root_policy": {
+    "root_json_files": [
+      "registry.json"
+    ],
+    "root_role": "registry and routing only"
+  },
+  "schema_version": "aoa_manifests_registry_v1"
+}

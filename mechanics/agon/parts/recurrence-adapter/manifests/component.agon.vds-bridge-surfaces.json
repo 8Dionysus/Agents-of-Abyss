@@ -1,0 +1,40 @@
+{
+  "component_ref": "component:agon:vds-bridge-surfaces",
+  "description": "Agon recurrence receipt for vds-bridge-surfaces.",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_component",
+  "manifest_ref": "manifest:agon:recurrence:vds-bridge-surfaces",
+  "observed_surfaces": [
+    "mechanics/agon/parts/verdict-retention-rank/generated/agon_vds_bridge_registry.min.json",
+    "mechanics/agon/parts/verdict-retention-rank/config/agon_vds_bridges.seed.json",
+    "mechanics/agon/PROVENANCE.md"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component:agon:vds-bridge-surfaces",
+    "source_schema_version": null,
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "review_outputs": {
+    "may_emit": [
+      "review_queue_candidate",
+      "owner_summary_candidate",
+      "dossier_candidate"
+    ],
+    "observation_intent": "Detect drift in verdict, delta, scar, retention and inscription bridge surfaces before runtime activation."
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_component_manifest_v1",
+  "source_refs": [],
+  "status": "seeded_recurrence_observation_component",
+  "stop_lines": [
+    "live_verdict",
+    "scar_write",
+    "retention_execution",
+    "rank_mutation",
+    "tos_promotion"
+  ]
+}

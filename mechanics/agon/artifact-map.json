@@ -1266,6 +1266,22 @@
       "old_path": "mechanics/agon/tests/test_agon_vds_bridges.py",
       "path": "mechanics/agon/parts/verdict-retention-rank/tests/test_agon_vds_bridges.py",
       "legacy_named": false
+    },
+    {
+      "kind": "script",
+      "part": "recurrence-adapter",
+      "status": "active-part-script",
+      "path": "mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_manifests.py",
+      "legacy_named": false,
+      "old_path": "mechanics/agon/scripts/validate_agon_recurrence_manifests.py"
+    },
+    {
+      "kind": "test",
+      "part": "recurrence-adapter",
+      "status": "active-part-test",
+      "path": "mechanics/agon/parts/recurrence-adapter/tests/test_agon_recurrence_manifests.py",
+      "legacy_named": false,
+      "old_path": "mechanics/agon/tests/test_agon_recurrence_manifests.py"
     }
   ]
 }

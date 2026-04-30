@@ -8,7 +8,7 @@ Bind Wave VIII surfaces into the Agon Recurrence Adapter.
 
 Acceptance:
 
-- `component.agon.arena-session-model-surfaces.json` exists;
+- `mechanics/agon/parts/recurrence-adapter/manifests/component.agon.arena-session-model-surfaces.json` exists;
 - hook binding candidates observe registry drift and stop-line drift;
 - recurrence emits review surfaces only;
 - recurrence does not open sessions, mutate repos, or issue verdicts.

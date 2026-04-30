@@ -1,0 +1,41 @@
+{
+  "bindings": [
+    {
+      "decision_authority": false,
+      "emits": "recurrence.observation.retention_rank_pressure",
+      "source": "mechanics/agon/parts/verdict-retention-rank/generated/agon_retention_rank_economy_registry.min.json"
+    },
+    {
+      "decision_authority": false,
+      "emits": "recurrence.observation.owner_review_needed",
+      "source": "mechanics/agon/parts/verdict-retention-rank/config/agon_retention_rank_economy.seed.json"
+    }
+  ],
+  "component_ref": "component:agon:retention-rank-economy-surfaces",
+  "emits": [
+    "recurrence.observation.retention_rank_pressure",
+    "recurrence.observation.owner_review_needed"
+  ],
+  "hidden_scheduler_allowed": false,
+  "hook_binding_ref": "hooks:agon.retention-rank-economy-surfaces",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_hook_binding",
+  "must_not_emit": [],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": null,
+    "source_hook_ref": "hooks:agon.retention-rank-economy-surfaces",
+    "source_schema_version": null,
+    "source_series_ref": "series-xiv",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_hook_manifest_v1",
+  "source_refs": [
+    "mechanics/agon/parts/verdict-retention-rank/generated/agon_retention_rank_economy_registry.min.json",
+    "mechanics/agon/parts/verdict-retention-rank/config/agon_retention_rank_economy.seed.json"
+  ]
+}
