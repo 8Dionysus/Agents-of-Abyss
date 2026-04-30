@@ -22,6 +22,12 @@ def mechanic_slugs() -> list[str]:
 
 
 class DocsVerifyRoutesTestCase(unittest.TestCase):
+    def assert_readme_routes_to_mechanic_atlas(self, readme: str, slug: str | None = None) -> None:
+        self.assertIn("mechanics/README.md", readme)
+        self.assertIn("mechanics/registry.json", readme)
+        if slug:
+            self.assertIn(slug, readme)
+
     def test_public_and_operator_surfaces_include_full_bounded_battery(self) -> None:
         authority_by_surface = {
             "docs/README.md": "docs/AGENTS.md",
@@ -52,11 +58,15 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
                 )
                 self.assertTrue(has_inline_battery or VALIDATION_BASELINE_REF in text)
 
-    def test_readme_keeps_aoa_sdk_outside_ecosystem_registry_v2_but_routes_to_supporting_inventory(self) -> None:
+    def test_readme_routes_sdk_registry_detail_to_ecosystem_map_and_inventory(self) -> None:
         readme = read_text("README.md")
-        self.assertIn("aoa-sdk", readme)
-        self.assertIn("ecosystem registry membership", readme)
+        ecosystem_map = read_text("ECOSYSTEM_MAP.md")
+
+        self.assertIn("ECOSYSTEM_MAP.md", readme)
         self.assertIn("generated/federation_supporting_inventory.min.json", readme)
+        self.assertIn("aoa-sdk", ecosystem_map)
+        self.assertIn("outside ecosystem registry v2", ecosystem_map)
+        self.assertIn("generated/federation_supporting_inventory.min.json", ecosystem_map)
 
     def test_center_surfaces_name_aoa_stats_as_public_layer(self) -> None:
         readme = read_text("README.md")
@@ -66,7 +76,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         registry = json.loads((REPO_ROOT / "generated/ecosystem_registry.min.json").read_text(encoding="utf-8"))
         registry_names = {repo["name"] for repo in registry["repos"]}
 
-        self.assertIn("`aoa-stats` | derived observability and machine-first summaries", readme)
+        self.assertIn("ECOSYSTEM_MAP.md", readme)
+        self.assertIn("generated/ecosystem_registry.min.json", readme)
         self.assertIn("`aoa-stats` owns derived views, not authority", charter)
         self.assertIn("`aoa-stats` | derived observability layer", ecosystem_map)
         self.assertIn("generated/ecosystem_registry.min.json", roadmap)
@@ -141,7 +152,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         federation_rules = read_text("docs/FEDERATION_RULES.md")
         continuity = read_text("mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md")
 
-        self.assertIn("mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY", readme)
+        self.assert_readme_routes_to_mechanic_atlas(readme, "recurrence")
         self.assertIn("recurrence", docs_readme)
         self.assertIn("mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md", method_spine)
         self.assertIn("continuity_ref -> revision_window_ref -> reanchor_ref -> anchor_artifact_ref", continuity)
@@ -160,7 +171,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         refinery = read_text("mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md")
         component_refresh = read_text("mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md")
 
-        self.assertIn("mechanics/recurrence/docs/COMPONENT_REFRESH_LAW", readme)
+        self.assert_readme_routes_to_mechanic_atlas(readme, "recurrence")
         self.assertIn("recurrence", docs_readme)
         self.assertIn("mechanics/<slug>/ROADMAP.md", roadmap)
         self.assertIn("Component Refresh", recurrence_parts)
@@ -181,7 +192,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         repo_roles = read_text("docs/REPO_ROLES.md")
         posture = read_text("mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md")
 
-        self.assertIn("mechanics/agon/README.md", readme)
+        self.assert_readme_routes_to_mechanic_atlas(readme, "agon")
         self.assertNotIn("Agon Quick Map", mechanics)
         self.assertIn("Imposition Readiness", parts)
         self.assertIn("agon/PROVENANCE.md", mechanics)
@@ -215,7 +226,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         baseline = read_text("mechanics/agon/legacy/raw/PRE_AGON_BASELINE.md")
         readiness = read_text("mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json")
 
-        self.assertIn("mechanics/agon/README.md", readme)
+        self.assert_readme_routes_to_mechanic_atlas(readme, "agon")
         self.assertIn("Imposition Readiness", parts)
         self.assertIn("agon/PROVENANCE.md", mechanics)
         self.assertIn("agon/legacy/INDEX.md", mechanics)
@@ -245,7 +256,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         landing = read_text("mechanics/agon/legacy/raw/AGON_WAVE3_LANDING.md")
         registry = read_text("mechanics/agon/parts/lawful-move-grammar/generated/agon_lawful_move_registry.min.json")
 
-        self.assertIn("mechanics/agon/README.md", readme)
+        self.assert_readme_routes_to_mechanic_atlas(readme, "agon")
         self.assertIn("Lawful Move Grammar", parts)
         self.assertIn("agon/PROVENANCE.md", mechanics)
         self.assertIn("agon/legacy/INDEX.md", mechanics)
@@ -270,7 +281,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         landing = read_text("mechanics/agon/legacy/raw/AGON_WAVE4_LANDING.md")
         registry = read_text("mechanics/agon/parts/owner-binding/generated/agon_move_owner_binding_registry.min.json")
 
-        self.assertIn("mechanics/agon/README.md", readme)
+        self.assert_readme_routes_to_mechanic_atlas(readme, "agon")
         self.assertIn("Owner Binding", parts)
         self.assertIn("agon/PROVENANCE.md", mechanics)
         self.assertIn("agon/legacy/INDEX.md", mechanics)
@@ -295,7 +306,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         landing = read_text("mechanics/agon/legacy/raw/AGON_WAVE5_CENTER_HANDOFF.md")
         request = read_text("mechanics/agon/parts/gate-routing/generated/agon_gate_routing_handoff_request.min.json")
 
-        self.assertIn("mechanics/agon/README.md", readme)
+        self.assert_readme_routes_to_mechanic_atlas(readme, "agon")
         self.assertIn("mechanics/README.md", docs_readme)
         self.assertIn("Gate Routing", parts)
         self.assertIn("agon/PROVENANCE.md", mechanics)
@@ -321,7 +332,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         stop_lines = read_text("mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_STOP_LINES.md")
         request = read_text("mechanics/agon/parts/trial-handoff/generated/agon_trial_playbook_request.min.json")
 
-        self.assertIn("mechanics/agon/README.md", readme)
+        self.assert_readme_routes_to_mechanic_atlas(readme, "agon")
         self.assertIn("mechanics/README.md", docs_readme)
         self.assertIn("Trial Handoff", parts)
         self.assertIn("agon/PROVENANCE.md", mechanics)
@@ -346,8 +357,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         posture_agents = read_text("mechanics/release-support/docs/AGENTS.md")
 
         self.assertIn("generated/center_entry_map.min.json", readme)
-        self.assertIn("python scripts/build_center_entry_map.py --check", readme)
-        self.assertIn("python scripts/validate_center_entry_map.py", readme)
+        self.assertIn(VALIDATION_BASELINE_REF, readme)
         self.assertIn("generated/center_entry_map.min.json", posture)
         self.assertIn("AGENTS.md#validation", posture)
         self.assertIn("python scripts/build_center_entry_map.py --check", posture_agents)

@@ -225,6 +225,10 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- `README.md` now acts as a compact public front door for the center: claim
+  checks, route modes, mechanics, technical districts, and machine companions
+  route to their owning surfaces instead of duplicating Charter, Map, Roadmap,
+  or validation catalogs
 - root `AGENTS.md` now separates first-reading from agent-editing entry,
   names post-change route review obligations, records the current squash-merge
   GitHub landing route, and points to the guardrail-owned entry validation
