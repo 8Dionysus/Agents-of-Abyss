@@ -137,14 +137,6 @@
         "require_h2": true
       },
       {
-        "path": "FRAGILITY_BLACKLIST.md",
-        "required": true,
-        "min_lines": 10,
-        "max_line_length": 700,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
         "path": "ECOSYSTEM_AUDIT_INDEX.md",
         "required": true,
         "min_lines": 90,

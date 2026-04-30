@@ -4,7 +4,6 @@
   "card_contract_ref": "mechanics/README.md#mechanic-card-contract",
   "compatibility_routes": [
     "docs/MECHANICS.md",
-    "FRAGILITY_BLACKLIST.md",
     "QUESTBOOK.md"
   ],
   "generated_card_index_ref": "generated/mechanic_card_index.min.json",

@@ -18,8 +18,7 @@ provenance bridge.
 - `LANDING_LOG.md`: canonical landing ledger.
 - `ROADMAP.md`: future contour, not a historical ledger.
 - `PROVENANCE.md`: the only active bridge back to source accounting.
-- `FRAGILITY_BLACKLIST.md`: mechanic-owned blacklist source; root copy is a
-  route shim only.
+- `FRAGILITY_BLACKLIST.md`: mechanic-owned fragile-pattern route source.
 
 The current direction is practical:
 

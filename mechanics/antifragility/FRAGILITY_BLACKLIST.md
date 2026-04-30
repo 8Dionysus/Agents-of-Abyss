@@ -2,7 +2,10 @@
 
 This blacklist names patterns that should be removed, merged, narrowed, suppressed, quarantined, or refused before the ecosystem grows new surface area.
 
-It is a compact root index. Canonical subtraction doctrine lives in [VIA_NEGATIVA](docs/VIA_NEGATIVA.md). The old deletion-candidate packet is preserved through [audit provenance](../audit/PROVENANCE.md).
+It is the mechanic-owned fragile-pattern route surface. Canonical subtraction
+doctrine lives in [VIA_NEGATIVA](docs/VIA_NEGATIVA.md). The old
+deletion-candidate packet is preserved through
+[audit provenance](../audit/PROVENANCE.md).
 
 | Pattern | Fragility | Default response |
 |---|---|---|

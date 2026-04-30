@@ -1,10 +1,15 @@
 # AoA Glossary
 
-This glossary defines the compact working vocabulary used at the AoA ecosystem center.
+This glossary defines the compact working vocabulary used at the AoA ecosystem
+center.
 
-It should stay aligned with `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, `docs/LAYERS.md`, `docs/REPO_ROLES.md`, `docs/ROOT_SURFACE_LAW.md`, and `mechanics/README.md`.
+It should stay aligned with `CHARTER.md`, `ECOSYSTEM_MAP.md`,
+`docs/FEDERATION_RULES.md`, `docs/LAYERS.md`, `docs/REPO_ROLES.md`,
+`docs/ROOT_SURFACE_LAW.md`, `docs/START_HERE_ROUTE_CONTRACT.md`, and
+`mechanics/README.md`.
 
-It is not a replacement for those documents. It is the smallest stable vocabulary that keeps the federation legible.
+It is not a replacement for those documents. It gives short definitions and
+routes, not full doctrine.
 
 ## Center and federation vocabulary
 
@@ -64,15 +69,21 @@ A thin index should stay small enough to remain an entrance, not become a second
 
 ### Landing receipt
 
-A historical seed manifest or wave receipt that records what a wave planted, why it belonged, and how it was validated.
+A historical seed, package, or landing record that shows what was planted, why
+it belonged, and how it was validated.
 
-Landing receipts belong under the owning `mechanics/<slug>/legacy/raw/` route when a mechanic owns them, or under `docs/traces/` for generic movement evidence. They do not belong at repository root.
+Landing receipts belong under the owning `mechanics/<slug>/legacy/raw/` route
+when a mechanic owns them, or under `docs/traces/` for generic movement
+evidence. They do not belong at repository root.
 
 ### Audit artifact
 
 A reviewable cleanup, drift, pruning, or verification artifact.
 
-Audit route grammar belongs under `mechanics/audit/`. Historical audit receipts belong under `mechanics/audit/legacy/raw/` unless another owner has a more specific legacy route. Compact root indexes such as `ECOSYSTEM_AUDIT_INDEX.md` or `FRAGILITY_BLACKLIST.md` may stay flat only while they remain route surfaces.
+Audit route grammar belongs under `mechanics/audit/`. Historical audit receipts
+belong under `mechanics/audit/legacy/raw/` unless another owner has a more
+specific legacy route. Compact root indexes such as `ECOSYSTEM_AUDIT_INDEX.md`
+may stay flat only while they remain route surfaces.
 
 ### Source repository
 
@@ -300,19 +311,93 @@ A claim that states what is supported, under what conditions, and with what limi
 
 AoA prefers bounded claims over vague global assertions.
 
+## Route and evidence vocabulary
+
+### Route mode
+
+A named entry route from `docs/START_HERE_ROUTE_CONTRACT.md`.
+
+Route modes help a reader choose the right first surface before a change widens
+into root editing, direction change, ownership routing, mechanic work, public
+claim validation, low-context routing, or district work.
+
+### Entry surface
+
+A first-contact document, generated capsule, or route file used to enter a
+bounded part of the repository.
+
+Entry surfaces should point to stronger local truth rather than carrying every
+detail themselves.
+
+### Decision record
+
+A durable rationale record for a structural, ownership, workflow, route-law,
+validator-authority, public-contract, or topology choice.
+
+Decision records explain why a path was chosen. Current source surfaces define
+what the repository now does.
+
+### Trace
+
+A movement receipt that explains how files, links, routes, or generated surfaces
+were repaired or relocated.
+
+Traces belong in `docs/traces/` when they explain movement rather than meaning.
+
+### Manifest
+
+A structured inventory that names files, objects, or placement rules for a
+bounded route.
+
+A manifest becomes authoritative only through the source surface, schema,
+builder, validator, or owner package that governs it.
+
+### Owner request
+
+A ready-to-carry packet that asks a stronger owner repository to land its part
+of a center mechanic or route.
+
+An owner request is not owner acceptance. It keeps the center's ask legible
+until the owning repository lands evidence.
+
+### Landing log
+
+A mechanic-owned ledger of checked landings, validation anchors, owner
+boundaries, stop-lines, and next routes.
+
+Landing logs preserve mechanic history. They do not replace repository release
+history in `CHANGELOG.md`.
+
+### Provenance bridge
+
+A compact active route from current doctrine to preserved source history,
+legacy material, receipts, or sibling evidence.
+
+A provenance bridge lets the active surface stay light while keeping enough
+history for audit and reconstruction.
+
 ## Mechanics vocabulary
 
 ### Mechanics Atlas
 
 The branch map at `mechanics/README.md`.
 
-It routes center-level processes such as method/growth, recurrence, Agon, Experience, antifragility, quest/RPG reflection, ToS support, and release posture.
+It routes center-level mechanics such as method-growth, distillation, growth
+cycle, recurrence, checkpoint, Experience, Agon, antifragility, questbook, RPG,
+boundary-bridge, audit, and release-support.
 
 ### Mechanic
 
 A named engineering-philosophy route that determines what kind of move is happening.
 
 Mechanics do not override repository ownership. They clarify the route, stop-lines, validators, and owner split.
+
+### Part
+
+A functioning sub-route inside a mechanic package.
+
+Parts let a mechanic grow without forcing every active reader through raw
+history, long landing ledgers, or unrelated sibling routes.
 
 ### Owner split
 
@@ -350,6 +435,22 @@ The moment an object, method, proof, role, or implementation moves into the repo
 
 Owner landing should leave receipts and pruning pressure so the center does not keep stale copies.
 
+### Distillation
+
+The route that turns raw, legacy, donor, checkpoint, runtime, or witness-facing
+material into active form without losing provenance or inflating authority.
+
+Distillation is stronger than summarization because it preserves source
+boundaries, owner routes, active outputs, and validation gates.
+
+### Growth Cycle
+
+The reviewed lifecycle that connects checkpoint intake, closeout, harvest,
+progression, repair, quest promotion, and owner followthrough.
+
+Growth Cycle makes repeated agent work easier to carry forward without becoming
+a hidden scheduler.
+
 ### Recurrence
 
 A bounded return to a valid anchor when a route loses its axis.
@@ -368,11 +469,27 @@ Bounded duration with explicit anchors and reviewable re-entry.
 
 Continuity is not permissionless autonomy, hidden memory sovereignty, or a background daemon.
 
+### Checkpoint
+
+A bounded intermediate-state object or route that can preserve, review, return,
+bridge, export, or hand off work without stealing owner truth.
+
+Checkpoint belongs in the center as route law; implementation helpers and
+runtime storage belong to their stronger owners.
+
 ### Antifragility
 
 The discipline by which stress, failure, contradiction, or degraded mode leaves clearer evidence, boundaries, and adaptation paths.
 
 Antifragility is not one-score health.
+
+### Audit
+
+The mechanic that sees, evidences, risk-routes, validates, and hands off review
+findings.
+
+Audit improves visibility and route quality without becoming proof verdict,
+owner-local remediation, or archive authority.
 
 ### Via negativa
 
@@ -387,6 +504,23 @@ A quest is not a private scratchpad, and the root `QUESTBOOK.md` is not a second
 ### RPG reflection
 
 An adjunct reading layer that can describe quests, roles, progression, campaigns, and feats without rewriting ownership or creating a hidden runtime ledger.
+
+### Boundary-bridge
+
+The mechanic for connecting owner-owned surfaces without identity collapse or
+authority transfer.
+
+Boundary-bridge can support ToS/AoA counterpart routes, owner handoffs, and
+cross-repo transitions while leaving canon and acceptance with the stronger
+owner.
+
+### Release-support
+
+The mechanic for supported transitions: landings, closeouts, owner handoffs,
+public claims, rollback routes, and release records.
+
+Release-support is broader than GitHub release mechanics; it keeps transitions
+bounded, evidenced, and reversible.
 
 ### Witness
 
@@ -430,11 +564,16 @@ seed -> proven -> promoted -> canonical -> deprecated
 
 Repository-local ladders may remain narrower, but public cross-repo maturity claims should map back to this shared ladder explicitly.
 
+Mechanic-card status words such as `planted`, `landed`, `requested`,
+`operational`, and `deprecated` describe route readiness. They do not replace
+owner-local maturity or release evidence.
+
 ### Counterpart bridge
 
 A derived bridge between ToS conceptual surfaces and AoA operational surfaces.
 
-A counterpart bridge may support orientation or operational usefulness, but it must not become an identity claim.
+A counterpart bridge is now one boundary-bridge use case. It may support
+orientation or operational usefulness, but it must not become an identity claim.
 
 ### Analogy
 
@@ -518,6 +657,8 @@ Deprecation should be explicit rather than a silent fade.
 
 This glossary is a compact vocabulary companion to the AoA center.
 
-It should keep the federation legible without replacing the charter, layer model, federation rules, mechanics atlas, root surface law, or wave-specific doctrine.
+It should keep the federation legible without replacing the charter, layer
+model, federation rules, mechanics atlas, root surface law, or mechanic-owned
+doctrine.
 
 When there is conflict, the more specific owning document wins.

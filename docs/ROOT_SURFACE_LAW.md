@@ -37,7 +37,7 @@ The docs thematic cleanup guardrails are defined by:
 |---|---|---|---|
 | Civic law and public map | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md` | they define the center's identity, contour, and direction | must stay aligned with generated capsules and validators |
 | Public governance and legal | `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `LICENSE` | GitHub and contributors expect them there | must not become doctrine catalogs |
-| Thin civic indexes | `GLOSSARY.md`, `QUESTBOOK.md`, `ECOSYSTEM_AUDIT_INDEX.md`, `FRAGILITY_BLACKLIST.md` | they help humans and agents route quickly | must stay compact and link to deeper canonical docs |
+| Thin civic indexes | `GLOSSARY.md`, `QUESTBOOK.md`, `ECOSYSTEM_AUDIT_INDEX.md` | they help humans and agents route quickly | must stay compact and link to deeper canonical docs |
 | Agent lane | `AGENTS.md`, `.agents/`, `Spark/` | agent-facing work needs a stable local lane | must not become a substitute for civic docs |
 | Tooling and machine districts | `.github/`, `scripts/`, `schemas/`, `generated/`, `tests/`, `config/`, `examples/`, `manifests/`, `quests/`, `docs/`, `mechanics/` | tooling and repo structure expect stable directories | each district needs a local gate; generated objects stay generated; quests stay tracked obligations, not roadmap copies |
 | Development requirements | `.gitignore`, `requirements-dev.txt` | development hygiene | must stay technical and small |
@@ -75,7 +75,7 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 | `SEED_MANIFEST.md` | move | `mechanics/agon/legacy/raw/AGON_WAVE3_SEED_MANIFEST.md` | it is an Agon Wave III receipt, not a root manifest for the whole repository |
 | `DELETION_CANDIDATES.json` | move | `mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` | it is an inspect-first audit artifact, not a civic root surface |
 | `.github/pull_request_template.md` | remove | keep `.github/PULL_REQUEST_TEMPLATE.md` | duplicate PR templates with different casing create template ambiguity |
-| `FRAGILITY_BLACKLIST.md` | keep, narrow | root index to `mechanics/antifragility/docs/VIA_NEGATIVA.md` and `mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` | useful root pattern index if compact |
+| `FRAGILITY_BLACKLIST.md` | remove | `mechanics/antifragility/FRAGILITY_BLACKLIST.md` | active fragile-pattern routing belongs in the antifragility mechanic; no root route door is needed |
 | `QUESTBOOK.md` | keep, narrow | root quest index | useful only while it stays federation-level and does not become a second roadmap |
 | `ECOSYSTEM_AUDIT_INDEX.md` | keep, clean | root audit router | useful root index if it routes rather than storing every audit detail |
 | `GLOSSARY.md` | keep | root vocabulary companion | useful compact vocabulary if aligned with center docs |

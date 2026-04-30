@@ -62,6 +62,10 @@ class MechanicsTopologyTests(unittest.TestCase):
         self.assertFalse(list(docs.glob("EXPERIENCE_*.md")))
         self.assertFalse(list(docs.glob("RPG_*.md")))
 
+    def test_fragility_blacklist_is_mechanic_owned(self) -> None:
+        self.assertFalse((REPO_ROOT / "FRAGILITY_BLACKLIST.md").exists())
+        self.assertTrue((REPO_ROOT / "mechanics" / "antifragility" / "FRAGILITY_BLACKLIST.md").exists())
+
 
 if __name__ == "__main__":
     unittest.main()

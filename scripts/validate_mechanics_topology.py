@@ -196,8 +196,8 @@ def validate_compatibility_routes() -> list[str]:
     if mechanics_route.exists() and "mechanics/README.md" not in mechanics_route.read_text(encoding="utf-8"):
         problems.append("docs/MECHANICS.md: must route to mechanics/README.md")
     root_blacklist = REPO_ROOT / "FRAGILITY_BLACKLIST.md"
-    if root_blacklist.exists() and "mechanics/antifragility/FRAGILITY_BLACKLIST.md" not in root_blacklist.read_text(encoding="utf-8"):
-        problems.append("FRAGILITY_BLACKLIST.md: must route to antifragility source")
+    if root_blacklist.exists():
+        problems.append("FRAGILITY_BLACKLIST.md: root route removed; use mechanics/antifragility/FRAGILITY_BLACKLIST.md")
     questbook = REPO_ROOT / "QUESTBOOK.md"
     if questbook.exists():
         questbook_text = questbook.read_text(encoding="utf-8")
