@@ -49,7 +49,7 @@ Every public entry surface must expose the same route-mode vocabulary:
 |---|---|---|
 | `first-reading` | you need the shortest honest center overview | `README.md` |
 | `root-editing` | you will add, move, delete, rename, or rewrite a root surface | `docs/ROOT_SURFACE_LAW.md` |
-| `direction-change` | you will change roadmap, phase, maturity, release contour, or declared direction | `ROADMAP.md` |
+| `direction-change` | you will change roadmap, horizon posture, maturity, owner-route pressure, future trigger, release contour, or declared direction | `ROADMAP.md` |
 | `ownership-routing` | you need to decide which repository owns a change | `docs/REPO_ROLES.md` |
 | `mechanic-change` | you will touch Agon, Experience, recurrence, method/growth, antifragility, quest/RPG, release-support, or ToS support | `mechanics/README.md` |
 | `public-claim-validation` | a sentence sounds like a public promise | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` |

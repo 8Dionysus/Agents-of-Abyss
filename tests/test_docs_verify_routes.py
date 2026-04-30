@@ -63,11 +63,14 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         charter = read_text("CHARTER.md")
         ecosystem_map = read_text("ECOSYSTEM_MAP.md")
         roadmap = read_text("ROADMAP.md")
+        registry = json.loads((REPO_ROOT / "generated/ecosystem_registry.min.json").read_text(encoding="utf-8"))
+        registry_names = {repo["name"] for repo in registry["repos"]}
 
         self.assertIn("`aoa-stats` | derived observability and machine-first summaries", readme)
         self.assertIn("`aoa-stats` owns derived views, not authority", charter)
         self.assertIn("`aoa-stats` | derived observability layer", ecosystem_map)
-        self.assertIn("- `aoa-stats`", roadmap)
+        self.assertIn("generated/ecosystem_registry.min.json", roadmap)
+        self.assertIn("aoa-stats", registry_names)
 
     def test_ecosystem_map_separates_current_maturity_from_growth_direction(self) -> None:
         ecosystem_map = read_text("ECOSYSTEM_MAP.md")
@@ -151,6 +154,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
         roadmap = read_text("ROADMAP.md")
+        recurrence_parts = read_text("mechanics/recurrence/PARTS.md")
         method_spine = read_text("mechanics/method-growth/docs/METHOD_SPINE.md")
         federation_rules = read_text("docs/FEDERATION_RULES.md")
         refinery = read_text("mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md")
@@ -158,7 +162,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
 
         self.assertIn("mechanics/recurrence/docs/COMPONENT_REFRESH_LAW", readme)
         self.assertIn("recurrence", docs_readme)
-        self.assertIn("component refresh owner-owned", roadmap)
+        self.assertIn("mechanics/<slug>/ROADMAP.md", roadmap)
+        self.assertIn("Component Refresh", recurrence_parts)
         self.assertIn("mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md", method_spine)
         self.assertIn("mystical self-healing", federation_rules)
         self.assertIn("mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md", refinery)
@@ -171,6 +176,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         mechanics = read_text("mechanics/README.md")
         parts = read_text("mechanics/agon/PARTS.md")
         roadmap = read_text("ROADMAP.md")
+        landing_log = read_text("mechanics/agon/LANDING_LOG.md")
         layers = read_text("docs/LAYERS.md")
         repo_roles = read_text("docs/REPO_ROLES.md")
         posture = read_text("mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md")
@@ -181,7 +187,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("agon/PROVENANCE.md", mechanics)
         self.assertIn("agon/legacy/INDEX.md", mechanics)
         self.assertIn("PROVENANCE", docs_readme)
-        self.assertIn("Agon preparation holding boundary", roadmap)
+        self.assertIn("mechanics/<slug>/LANDING_LOG.md", roadmap)
+        self.assertIn("Agon preparation holding boundary", landing_log)
         self.assertIn("mechanics/README.md", layers)
         self.assertIn("mechanic-shaped", repo_roles)
         self.assertIn("mechanics/README.md", repo_roles)

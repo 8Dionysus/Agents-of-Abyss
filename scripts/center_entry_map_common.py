@@ -166,7 +166,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "route_mode": "direction-change",
         "priority": 3,
         "audience": ["maintainer", "release-agent", "roadmap-editor"],
-        "need": "update current phase, roadmap, maturity, or release contour",
+        "need": "update horizon posture, roadmap, maturity, owner-route pressure, future trigger, or release contour",
         "surface_ref": "ROADMAP.md",
         "human_path": [
             "README.md",
@@ -185,7 +185,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         ],
         "must_not_claim": [
             "future direction is already landed implementation",
-            "roadmap history replaces changelog or landing receipts",
+            "roadmap history replaces changelog, landing receipts, mechanic roadmaps, or quests",
         ],
     },
     {

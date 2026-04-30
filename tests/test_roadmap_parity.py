@@ -15,9 +15,34 @@ def load_json(relative_path: str) -> object:
     return json.loads((REPO_ROOT / relative_path).read_text(encoding="utf-8"))
 
 
+def test_roadmap_is_horizon_based_direction_surface() -> None:
+    roadmap = read_text("ROADMAP.md")
+
+    for heading in (
+        "## Authority",
+        "## Update Rule",
+        "## Current Center Direction",
+        "## Current Released Contour",
+        "## Horizon: Center Clarity",
+        "## Horizon: Owner Descent",
+        "## Horizon: Mechanics Maturity",
+        "## Horizon: Registry And Entry",
+        "## Horizon: Boundary Bridge",
+        "## Horizon: Release And Support",
+        "## Horizon: Runtime Readiness",
+        "## Horizon: Growth Continuity",
+        "## When the time comes",
+        "## Standing Direction",
+    ):
+        assert heading in roadmap
+
+    assert "## Current phase" not in roadmap
+    assert "## Phase " not in roadmap
+    assert "## Phase 5" not in roadmap
+
+
 def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
     roadmap = read_text("ROADMAP.md")
-    roadmap_lower = roadmap.lower()
     readme = read_text("README.md")
     changelog = read_text("CHANGELOG.md")
     registry = load_json("generated/ecosystem_registry.min.json")
@@ -26,11 +51,7 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
     assert "> Current release: `v0.2.3`" in readme
     assert "## [0.2.3] - 2026-04-23" in changelog
     assert "`v0.2.3`" in roadmap
-    assert "Current release contour" in roadmap
-    assert "roadmap continuity and owner-boundary" in roadmap
-    assert "leaving checkpoint carry, candidate identity, seed staging" in roadmap
-    assert "mechanics/agon/LANDING_LOG.md" in roadmap
-    assert "mechanics/experience/LANDING_LOG.md" in roadmap
+    assert "roadmap continuity and owner-boundary" in " ".join(roadmap.split())
 
     registry_names = {entry["name"] for entry in registry["repos"]}
     supporting_names = {entry["name"] for entry in supporting["repos"]}
@@ -44,14 +65,39 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
         "abyss-stack",
     }:
         assert name in registry_names
-        assert f"`{name}`" in roadmap
 
     assert "aoa-sdk" in supporting_names
     assert "aoa-sdk" not in registry_names
-    assert "`aoa-sdk`" in roadmap
-    assert "supporting inventory" in roadmap_lower
-    assert "ecosystem registry v2" in roadmap_lower
 
+    for surface in (
+        "ECOSYSTEM_MAP.md",
+        "generated/ecosystem_registry.min.json",
+        "generated/federation_supporting_inventory.min.json",
+        "generated/center_entry_map.min.json",
+    ):
+        assert surface in roadmap
+
+
+def test_roadmap_names_owning_surfaces_without_copying_their_ledgers() -> None:
+    roadmap = read_text("ROADMAP.md")
+
+    for surface in (
+        "mechanics/<slug>/ROADMAP.md",
+        "mechanics/<slug>/LANDING_LOG.md",
+        "CHANGELOG.md",
+        "QUESTBOOK.md",
+        "quests/",
+        "mechanics/agon/LANDING_LOG.md",
+        "mechanics/experience/LANDING_LOG.md",
+    ):
+        assert surface in roadmap
+
+    assert "Root roadmap does not index every mechanic roadmap" in roadmap
+    assert "Detailed Agon wave landings live in `mechanics/agon/LANDING_LOG.md`" in roadmap
+
+
+def test_current_released_contour_anchors_exist() -> None:
+    roadmap = read_text("ROADMAP.md")
     current_release_surfaces = [
         "README.md",
         "CHARTER.md",
@@ -63,15 +109,10 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
         "generated/center_entry_map.min.json",
         "generated/ecosystem_registry.min.json",
         "generated/federation_supporting_inventory.min.json",
-        "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
-        "mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md",
-        "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md",
-        "mechanics/method-growth/examples/lineage_contract_chain.example.json",
-        "mechanics/method-growth/scripts/validate_candidate_lineage_contract.py",
-        "mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md",
-        "mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md",
-        "mechanics/agon/legacy/raw/AGON_PREPARATION_POSTURE.md",
-        "mechanics/method-growth/scripts/validate_wave4_kernel_automation.py",
+        "mechanics/method-growth/README.md",
+        "mechanics/recurrence/README.md",
+        "mechanics/checkpoint/README.md",
+        "mechanics/growth-cycle/README.md",
         "mechanics/agon/LANDING_LOG.md",
         "mechanics/experience/LANDING_LOG.md",
     ]
@@ -80,14 +121,21 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
         assert surface in roadmap
 
 
-def test_roadmap_names_released_agon_imposition_gate_surfaces() -> None:
+def test_agon_landing_detail_stays_in_landing_log_not_root_roadmap() -> None:
     landing_log = read_text("mechanics/agon/LANDING_LOG.md")
     roadmap = read_text("ROADMAP.md")
 
-    assert "### Agon imposition gate" in landing_log
-    assert "mechanics/agon/LANDING_LOG.md" in roadmap
+    expected_landing_headings = (
+        "### Agon imposition gate",
+        "### Agon lawful move language",
+        "### Agon move owner binding",
+        "### Agon gate routing handoff",
+        "### Agon trial playbook handoff",
+    )
+    for heading in expected_landing_headings:
+        assert heading in landing_log
 
-    unreleased_surfaces = [
+    landing_only_surfaces = [
         "mechanics/agon/legacy/raw/AGON_IMPOSITION_POSTURE.md",
         "mechanics/agon/legacy/raw/AGON_SURVIVAL_CRITERIA.md",
         "mechanics/agon/legacy/raw/AGON_DOUBT_AUDIT.md",
@@ -99,20 +147,6 @@ def test_roadmap_names_released_agon_imposition_gate_surfaces() -> None:
         "mechanics/agon/parts/imposition-readiness/scripts/build_agon_imposition_readiness.py",
         "mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py",
         "mechanics/agon/parts/imposition-readiness/tests/test_agon_imposition_readiness.py",
-    ]
-    for surface in unreleased_surfaces:
-        assert (REPO_ROOT / surface).exists(), surface
-        assert surface in landing_log
-
-
-def test_roadmap_names_released_agon_lawful_move_language_surfaces() -> None:
-    landing_log = read_text("mechanics/agon/LANDING_LOG.md")
-    roadmap = read_text("ROADMAP.md")
-
-    assert "### Agon lawful move language" in landing_log
-    assert "mechanics/agon/LANDING_LOG.md" in roadmap
-
-    unreleased_surfaces = [
         "mechanics/agon/legacy/raw/AGON_LAWFUL_MOVE_LANGUAGE.md",
         "mechanics/agon/legacy/raw/AGON_MOVE_REGISTRY_MODEL.md",
         "mechanics/agon/legacy/raw/AGON_MOVE_OWNER_HANDOFFS.md",
@@ -125,20 +159,6 @@ def test_roadmap_names_released_agon_lawful_move_language_surfaces() -> None:
         "mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py",
         "mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py",
         "mechanics/agon/parts/lawful-move-grammar/tests/test_agon_lawful_moves.py",
-    ]
-    for surface in unreleased_surfaces:
-        assert (REPO_ROOT / surface).exists(), surface
-        assert surface in landing_log
-
-
-def test_roadmap_names_released_agon_move_owner_binding_surfaces() -> None:
-    landing_log = read_text("mechanics/agon/LANDING_LOG.md")
-    roadmap = read_text("ROADMAP.md")
-
-    assert "### Agon move owner binding" in landing_log
-    assert "mechanics/agon/LANDING_LOG.md" in roadmap
-
-    unreleased_surfaces = [
         "mechanics/agon/legacy/raw/AGON_MOVE_OWNER_BINDING.md",
         "mechanics/agon/legacy/raw/AGON_MOVE_BINDING_MATRIX_MODEL.md",
         "mechanics/agon/legacy/raw/AGON_OWNER_REPO_REQUESTS.md",
@@ -152,20 +172,6 @@ def test_roadmap_names_released_agon_move_owner_binding_surfaces() -> None:
         "mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py",
         "mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py",
         "mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py",
-    ]
-    for surface in unreleased_surfaces:
-        assert (REPO_ROOT / surface).exists(), surface
-        assert surface in landing_log
-
-
-def test_roadmap_names_released_agon_gate_routing_handoff_surfaces() -> None:
-    landing_log = read_text("mechanics/agon/LANDING_LOG.md")
-    roadmap = read_text("ROADMAP.md")
-
-    assert "### Agon gate routing handoff" in landing_log
-    assert "mechanics/agon/LANDING_LOG.md" in roadmap
-
-    unreleased_surfaces = [
         "mechanics/agon/legacy/raw/AGON_GATE_ROUTING_HANDOFF.md",
         "mechanics/agon/legacy/raw/AGON_GATE_ROUTING_OWNER_REQUEST.md",
         "mechanics/agon/legacy/raw/AGON_GATE_ROUTING_STOP_LINES.md",
@@ -177,20 +183,6 @@ def test_roadmap_names_released_agon_gate_routing_handoff_surfaces() -> None:
         "mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py",
         "mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py",
         "mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py",
-    ]
-    for surface in unreleased_surfaces:
-        assert (REPO_ROOT / surface).exists(), surface
-        assert surface in landing_log
-
-
-def test_roadmap_names_released_agon_trial_playbook_handoff_surfaces() -> None:
-    landing_log = read_text("mechanics/agon/LANDING_LOG.md")
-    roadmap = read_text("ROADMAP.md")
-
-    assert "### Agon trial playbook handoff" in landing_log
-    assert "mechanics/agon/LANDING_LOG.md" in roadmap
-
-    unreleased_surfaces = [
         "mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_HANDOFF.md",
         "mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_OWNER_REQUEST.md",
         "mechanics/agon/legacy/raw/AGON_TRIAL_PLAYBOOK_STOP_LINES.md",
@@ -203,6 +195,7 @@ def test_roadmap_names_released_agon_trial_playbook_handoff_surfaces() -> None:
         "mechanics/agon/parts/trial-handoff/scripts/validate_agon_trial_playbook_request.py",
         "mechanics/agon/parts/trial-handoff/tests/test_agon_trial_playbook_request.py",
     ]
-    for surface in unreleased_surfaces:
+    for surface in landing_only_surfaces:
         assert (REPO_ROOT / surface).exists(), surface
         assert surface in landing_log
+        assert surface not in roadmap
