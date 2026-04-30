@@ -237,6 +237,10 @@ Tracking starts with the community-docs baseline for this repository.
   operational route law, updates the center mechanics boundary to the current
   `mechanics/<slug>/` topology, and routes SDK, public projection, and seed
   staging truth to their stronger owners
+- `ECOSYSTEM_MAP.md` now states its public-contour authority, names registry
+  and supporting-inventory companions, separates current maturity from growth
+  direction, and aligns SDK, projection, and seed-staging wording with the
+  charter boundary
 - docs guardrail law now lives under `docs/guardrails/`, with
   `docs/README.md` and `docs/AGENTS.md` kept as compact routes; empty
   `docs/agon/`, `docs/experience/`, `docs/legacy/`, `docs/landings/`, and
