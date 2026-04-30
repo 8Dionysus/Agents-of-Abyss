@@ -233,6 +233,10 @@ Tracking starts with the community-docs baseline for this repository.
   `docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`; entry surfaces may
   point to that baseline instead of repeating every command inline, while
   `scripts/validate_entry_surface_sync.py` and tests keep the baseline complete
+- `CHARTER.md` now states the center's constitutional authority separately from
+  operational route law, updates the center mechanics boundary to the current
+  `mechanics/<slug>/` topology, and routes SDK, public projection, and seed
+  staging truth to their stronger owners
 - docs guardrail law now lives under `docs/guardrails/`, with
   `docs/README.md` and `docs/AGENTS.md` kept as compact routes; empty
   `docs/agon/`, `docs/experience/`, `docs/legacy/`, `docs/landings/`, and
