@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aoa_spark_lane_registry_v1",
+  "title": "Spark lane registry",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "authority_ref",
+    "agents_ref",
+    "swarm_ref",
+    "storage_refs",
+    "schema_refs",
+    "scenarios",
+    "validation_commands"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "aoa_spark_lane_registry_v1"
+    },
+    "authority_ref": {
+      "const": "Spark/README.md"
+    },
+    "agents_ref": {
+      "const": "Spark/AGENTS.md"
+    },
+    "swarm_ref": {
+      "const": "Spark/SWARM.md"
+    },
+    "scenarios": {
+      "type": "array",
+      "minItems": 1
+    }
+  },
+  "additionalProperties": true
+}

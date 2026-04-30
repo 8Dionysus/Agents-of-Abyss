@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aoa_spark_result_v1",
+  "title": "Spark result packet",
+  "type": "object",
+  "required": [
+    "scenario",
+    "status",
+    "scope",
+    "files_read",
+    "changes_made",
+    "validation_run",
+    "skipped_checks",
+    "remaining_risk"
+  ],
+  "properties": {
+    "scenario": {
+      "type": "string"
+    },
+    "status": {
+      "const": "done"
+    }
+  },
+  "additionalProperties": true
+}

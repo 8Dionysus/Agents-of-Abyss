@@ -33,6 +33,7 @@ and do not grant authority beyond the claims they check.
 | `tests/test*.py` | root-owned center tests registered in `tests/registry.json` |
 | `mechanics/<slug>/tests/` | mechanic-level tests |
 | `mechanics/<slug>/parts/<part>/tests/` | part-local mechanic tests |
+| `Spark/tests/` | Spark agent-lane tests |
 
 ## Source Order
 

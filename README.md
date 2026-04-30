@@ -195,6 +195,9 @@ Root-adjacent technical districts now have their own local gates: `generated/REA
 
 Use them when the question is no longer constitutional, but district-local: how builders, validators, generated capsules, schemas, manifests, tests, examples, or quest obligations should be handled.
 
+Spark has its own agent-lane gate at `Spark/README.md` for standalone fast
+sessions that must finish as done or handoff.
+
 ## Working rule
 
 AoA should grow by making the polis clearer, not fatter. Add reviewable layers, owner-local contracts, and machine-checkable surfaces. Do not turn the center into a warehouse for every future object.
