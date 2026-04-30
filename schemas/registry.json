@@ -1,0 +1,89 @@
+{
+  "authority_ref": "schemas/README.md",
+  "root_policy": {
+    "root_json_files": [
+      "center-entry-map.schema.json",
+      "ecosystem-registry.schema.json",
+      "federation-supporting-inventory.schema.json",
+      "registry.json"
+    ],
+    "root_role": "root-owned center schema contracts and schema-home routing"
+  },
+  "root_schemas": [
+    {
+      "generated_refs": [
+        "generated/center_entry_map.min.json"
+      ],
+      "owner_repo": "Agents-of-Abyss",
+      "owner_surface": "docs/START_HERE_ROUTE_CONTRACT.md",
+      "path": "schemas/center-entry-map.schema.json",
+      "publication_scope": "center-entry",
+      "source_refs": [
+        "scripts/center_entry_map_common.py"
+      ],
+      "test_refs": [
+        "tests/test_center_entry_map.py"
+      ],
+      "validator_refs": [
+        "scripts/build_center_entry_map.py",
+        "scripts/validate_center_entry_map.py"
+      ]
+    },
+    {
+      "generated_refs": [
+        "generated/ecosystem_registry.min.json"
+      ],
+      "owner_repo": "Agents-of-Abyss",
+      "owner_surface": "ECOSYSTEM_MAP.md",
+      "path": "schemas/ecosystem-registry.schema.json",
+      "publication_scope": "ecosystem-registry",
+      "source_refs": [
+        "README.md",
+        "CHARTER.md",
+        "ECOSYSTEM_MAP.md",
+        "docs/LAYERS.md",
+        "docs/FEDERATION_RULES.md",
+        "docs/decisions/2026-04-29-ecosystem-registry-v2-landing.md"
+      ],
+      "test_refs": [
+        "tests/test_validate_ecosystem.py"
+      ],
+      "validator_refs": [
+        "scripts/validate_ecosystem.py"
+      ]
+    },
+    {
+      "generated_refs": [
+        "generated/federation_supporting_inventory.min.json"
+      ],
+      "owner_repo": "Agents-of-Abyss",
+      "owner_surface": "docs/FEDERATION_RULES.md",
+      "path": "schemas/federation-supporting-inventory.schema.json",
+      "publication_scope": "federation-support",
+      "source_refs": [
+        "README.md",
+        "docs/FEDERATION_RULES.md",
+        "generated/ecosystem_registry.min.json"
+      ],
+      "test_refs": [
+        "tests/test_validate_ecosystem.py"
+      ],
+      "validator_refs": [
+        "scripts/validate_ecosystem.py"
+      ]
+    }
+  ],
+  "schema_home_globs": [
+    {
+      "home_ref": "schema-home:mechanic-root",
+      "owner_scope": "mechanic",
+      "path_glob": "mechanics/*/schemas"
+    },
+    {
+      "home_ref": "schema-home:mechanic-part",
+      "owner_scope": "mechanic-part",
+      "path_glob": "mechanics/*/parts/*/schemas"
+    }
+  ],
+  "schema_version": "aoa_schema_registry_v1"
+}
