@@ -7,12 +7,14 @@ re-enter through a valid route instead of becoming ambient continuity.
 
 - [CONTRACT](CONTRACT.md)
 - [VALIDATION](VALIDATION.md)
+- [Manifests](manifests/README.md)
 
 ## Center function
 
 - name recurrence adapter requests
 - keep return posture visible
 - prevent hidden memory or automatic re-entry
+- publish recurrence component and hook receipts in the part-local manifest home
 
 ## Next route
 

@@ -1,0 +1,102 @@
+{
+  "component_ref": "component:agon:court-memo-stats-center-request",
+  "description": "Center-owned request for court, memory, and stats prebinding.",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_component",
+  "manifest_ref": "manifest:agon:recurrence:court-memo-stats-center-request",
+  "observed_surfaces": [
+    "mechanics/agon/parts/verdict-retention-rank/generated/agon_court_memo_stats_prebinding_request.min.json"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component:agon:court-memo-stats-center-request",
+    "source_schema_version": "aoa_recurrence_component_v2",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "review_outputs": {
+    "beacon_rules": [
+      {
+        "beacon_ref": "agon.prebinding.center_pressure",
+        "kind": "review_signal",
+        "match_categories": [
+          "change_pressure",
+          "review_signal"
+        ],
+        "match_signals": [
+          "prebinding_request_changed",
+          "prebinding_owner_gap_detected"
+        ],
+        "notes": "Center request drift can ask for review; it must not activate the arena.",
+        "observation_inputs": [
+          "agon-prebinding-center-request",
+          "agon-prebinding-center-docs"
+        ],
+        "recommended_actions": [
+          "review owner prebinding status",
+          "do not create arena protocol"
+        ],
+        "status_ladder": [
+          "hint",
+          "watch",
+          "candidate",
+          "review_ready"
+        ],
+        "suppress_when": [
+          "live_verdict_authority_claim_present",
+          "durable_scar_write_claim_present"
+        ],
+        "target_repo": "Agents-of-Abyss",
+        "thresholds": {
+          "candidate_observations": 2,
+          "min_unique_evidence_refs": 2,
+          "min_unique_sources": 2,
+          "review_ready_observations": 3,
+          "watch_observations": 1
+        }
+      }
+    ],
+    "rollback_anchors": [
+      "mechanics/agon/PROVENANCE.md"
+    ],
+    "signal_edges": [
+      {
+        "kind": "proved_by_eval",
+        "notes": "Court prebinding receives proof pressure only.",
+        "target": "component:agon:court-prebinding-surfaces",
+        "target_repo": "aoa-evals"
+      },
+      {
+        "kind": "remembered_by_memo",
+        "notes": "Memo prebinding receives candidate memory pressure only.",
+        "target": "component:agon:memory-prebinding-surfaces",
+        "target_repo": "aoa-memo"
+      },
+      {
+        "kind": "observed_by_stats",
+        "notes": "Stats prebinding receives derived observability pressure only.",
+        "target": "component:agon:stats-prebinding-surfaces",
+        "target_repo": "aoa-stats"
+      }
+    ]
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_component_manifest_v1",
+  "source_refs": [
+    "mechanics/agon/parts/verdict-retention-rank/config/agon_court_memo_stats_prebinding_request.seed.json",
+    "mechanics/agon/PROVENANCE.md",
+    "python mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_court_memo_stats_prebinding_request.py"
+  ],
+  "status": "active_receipt",
+  "stop_lines": [],
+  "tags": [
+    "agon",
+    "prebinding",
+    "court",
+    "memo",
+    "stats",
+    "recurrence"
+  ]
+}

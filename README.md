@@ -186,7 +186,7 @@ Treat this contour as a map of planted law, contracts, candidates, and proof sur
 
 ## Technical district gates
 
-Root-adjacent technical districts now have their own local gates: `generated/README.md`, `scripts/README.md`, `schemas/README.md`, `tests/README.md`, `config/README.md`, `examples/README.md`, `manifests/README.md`, `manifests/recurrence/README.md`, and `quests/README.md`.
+Root-adjacent technical districts now have their own local gates: `generated/README.md`, `scripts/README.md`, `schemas/README.md`, `tests/README.md`, `config/README.md`, `examples/README.md`, `manifests/README.md`, and `quests/README.md`.
 
 Use them when the question is no longer constitutional, but district-local: how builders, validators, generated capsules, schemas, manifests, tests, examples, or quest obligations should be handled.
 

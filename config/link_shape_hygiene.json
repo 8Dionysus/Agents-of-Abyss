@@ -473,7 +473,7 @@
         "require_h2": true
       },
       {
-        "path": "manifests/recurrence/README.md",
+        "path": "mechanics/agon/parts/recurrence-adapter/manifests/README.md",
         "required": true,
         "min_lines": 20,
         "max_line_length": 700,

@@ -193,7 +193,6 @@ Local gates include:
 - `config/README.md`
 - `examples/README.md`
 - `manifests/README.md`
-- `manifests/recurrence/README.md`
 - `quests/README.md`
 
 A district README explains local purpose, not constitutional authority. When local guidance conflicts with center law, return to the stronger center surface and re-enter through a smaller change.

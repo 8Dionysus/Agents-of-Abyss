@@ -66,6 +66,20 @@ def main() -> int:
             return fail(f"component missing observed surfaces: {comp.get('component_ref')}")
         if "aoa-memo" in comp.get("target_repo", "") or "Tree-of-Sophia" in comp.get("target_repo", ""):
             return fail("adapter request must not target memo or ToS directly")
+        target_repo = comp.get("target_repo")
+        manifest_path = comp.get("manifest_path", "")
+        hook_manifest_path = comp.get("hook_manifest_path", "")
+        if target_repo == "Agents-of-Abyss":
+            if not (ROOT / manifest_path).is_file():
+                return fail(f"local manifest_path does not exist: {manifest_path}")
+            if not (ROOT / hook_manifest_path).is_file():
+                return fail(f"local hook_manifest_path does not exist: {hook_manifest_path}")
+        else:
+            owner_prefix = f"owner-local://{target_repo}/"
+            if not manifest_path.startswith(owner_prefix):
+                return fail(f"external manifest_path must use {owner_prefix}")
+            if not hook_manifest_path.startswith(owner_prefix):
+                return fail(f"external hook_manifest_path must use {owner_prefix}")
     print("agon recurrence adapter request validation passed")
     return 0
 

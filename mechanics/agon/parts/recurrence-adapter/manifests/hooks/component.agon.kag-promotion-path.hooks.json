@@ -1,0 +1,44 @@
+{
+  "bindings": [
+    {
+      "does_not_emit": [
+        "verdict",
+        "scar",
+        "rank_mutation",
+        "tos_promotion",
+        "kag_canonization"
+      ],
+      "emits": [
+        "recurrence_observation",
+        "owner_review_candidate",
+        "kag_promotion_pressure_candidate"
+      ],
+      "hook_id": "component.agon.kag-promotion-path.drift_watch",
+      "surface_globs": [
+        "mechanics/agon/parts/epistemic-kag/generated/agon_kag_promotion_path_registry.min.json",
+        "mechanics/agon/parts/epistemic-kag/config/agon_kag_promotion_path.seed.json",
+        "mechanics/agon/PROVENANCE.md"
+      ]
+    }
+  ],
+  "component_ref": "component:agon:kag-promotion-path",
+  "emits": [],
+  "hook_binding_ref": "component.agon.kag-promotion-path.hooks",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_hook_binding",
+  "must_not_emit": [],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component.agon.kag-promotion-path",
+    "source_hook_ref": "component.agon.kag-promotion-path.hooks",
+    "source_schema_version": null,
+    "source_series_ref": "series-xvii",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_hook_manifest_v1",
+  "source_refs": []
+}

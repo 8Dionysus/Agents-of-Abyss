@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "action": "emit_review_observation",
+      "event": "generated_surface_changed",
+      "hook_id": "agon.trial-suite.center.drift"
+    }
+  ],
+  "component_ref": "component:agon:mechanical-trial-suite-surfaces",
+  "emits": [],
+  "hook_binding_ref": "hooks.component.agon.mechanical-trial-suite-surfaces",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_hook_binding",
+  "must_not_emit": [],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component.agon.mechanical-trial-suite-surfaces",
+    "source_hook_ref": "hooks.component.agon.mechanical-trial-suite-surfaces",
+    "source_schema_version": null,
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_hook_manifest_v1",
+  "source_refs": []
+}

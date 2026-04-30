@@ -1,0 +1,34 @@
+{
+  "component_ref": "component:agon:duel-kernel-model-surfaces",
+  "description": "Agon recurrence receipt for duel-kernel-model-surfaces.",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_component",
+  "manifest_ref": "manifest:agon:recurrence:duel-kernel-model-surfaces",
+  "observed_surfaces": [],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component:agon:duel-kernel-model-surfaces",
+    "source_schema_version": null,
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "review_outputs": {
+    "recurrence_watch": [
+      "duel_kernel_model_drift",
+      "assistant_boundary_drift",
+      "event_sequence_drift",
+      "stop_line_drift"
+    ]
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_component_manifest_v1",
+  "source_refs": [
+    "mechanics/agon/parts/duel-kernel/generated/agon_duel_kernel_model_registry.min.json",
+    "mechanics/agon/parts/duel-kernel/config/agon_duel_kernel_models.seed.json",
+    "mechanics/agon/PROVENANCE.md"
+  ],
+  "status": "source_seed_receipt",
+  "stop_lines": []
+}

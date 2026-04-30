@@ -1,0 +1,29 @@
+{
+  "component_ref": "component:agon:mechanical-trial-suite-surfaces",
+  "description": "Agon recurrence receipt for mechanical-trial-suite-surfaces.",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_component",
+  "manifest_ref": "manifest:agon:recurrence:mechanical-trial-suite-surfaces",
+  "observed_surfaces": [
+    "mechanics/agon/parts/duel-kernel/generated/agon_mechanical_trial_suite_registry.min.json",
+    "mechanics/agon/PROVENANCE.md"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component.agon.mechanical-trial-suite-surfaces",
+    "source_schema_version": null,
+    "source_series_ref": "series-xiii",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "review_outputs": {
+    "observation_intent": "Detect drift in center trial-suite law, candidate outputs, assistant boundaries, and stop-lines."
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_component_manifest_v1",
+  "source_refs": [],
+  "status": "source_seed_receipt",
+  "stop_lines": []
+}

@@ -32,8 +32,9 @@ runtime evidence, manifests, or seed-pack receipts into the active route.
 - `mechanics/checkpoint/README.md`
 - `mechanics/checkpoint/parts/return-reentry/README.md`
 - `mechanics/agon/parts/recurrence-adapter/README.md`
-- `manifests/recurrence/README.md`
-- `manifests/recurrence/AGENTS.md`
+- `mechanics/agon/parts/recurrence-adapter/manifests/README.md`
+- `mechanics/agon/parts/recurrence-adapter/manifests/AGENTS.md`
+- `manifests/registry.json`
 
 ## Sibling source surfaces
 

@@ -1,0 +1,41 @@
+{
+  "bindings": [
+    {
+      "emits": "review_queue_candidate",
+      "hook_id": "agon.vds.registry.drift",
+      "watches": [
+        "mechanics/agon/parts/verdict-retention-rank/generated/agon_vds_bridge_registry.min.json"
+      ]
+    },
+    {
+      "emits": "owner_summary_candidate",
+      "hook_id": "agon.vds.stopline.drift",
+      "watches": [
+        "mechanics/agon/PROVENANCE.md"
+      ]
+    }
+  ],
+  "component_ref": "component:agon:vds-bridge-surfaces",
+  "emits": [
+    "review_queue_candidate",
+    "owner_summary_candidate"
+  ],
+  "hidden_scheduler_allowed": false,
+  "hook_binding_ref": "hooks:component:agon:vds-bridge-surfaces",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_hook_binding",
+  "must_not_emit": [],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component:agon:vds-bridge-surfaces",
+    "source_hook_ref": "hooks:component:agon:vds-bridge-surfaces",
+    "source_schema_version": null,
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_hook_manifest_v1",
+  "source_refs": []
+}

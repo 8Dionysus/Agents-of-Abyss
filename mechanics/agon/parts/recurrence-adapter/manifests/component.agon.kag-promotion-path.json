@@ -1,0 +1,40 @@
+{
+  "component_ref": "component:agon:kag-promotion-path",
+  "description": "KAG promotion path surfaces",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_component",
+  "manifest_ref": "manifest:agon:recurrence:kag-promotion-path",
+  "observed_surfaces": [
+    "mechanics/agon/parts/epistemic-kag/generated/agon_kag_promotion_path_registry.min.json",
+    "mechanics/agon/parts/epistemic-kag/config/agon_kag_promotion_path.seed.json",
+    "mechanics/agon/PROVENANCE.md"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component.agon.kag-promotion-path",
+    "source_schema_version": null,
+    "source_series_ref": "series-xvii",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "review_outputs": {
+    "observation_only": true
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_component_manifest_v1",
+  "source_refs": [],
+  "status": "source_seed_receipt",
+  "stop_lines": [
+    "open_arena_session",
+    "issue_verdict",
+    "write_scar",
+    "mutate_rank",
+    "promote_to_tree_of_sophia",
+    "canonicalize_kag",
+    "auto_rewrite_owner_repo",
+    "hidden_scheduler_action",
+    "single_event_promotion"
+  ]
+}

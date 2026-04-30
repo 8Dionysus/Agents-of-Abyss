@@ -1,0 +1,35 @@
+{
+  "component_ref": "component:agon:retention-rank-economy-surfaces",
+  "description": "Agon recurrence receipt for retention-rank-economy-surfaces.",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_component",
+  "manifest_ref": "manifest:agon:recurrence:retention-rank-economy-surfaces",
+  "observed_surfaces": [
+    "mechanics/agon/parts/verdict-retention-rank/generated/agon_retention_rank_economy_registry.min.json",
+    "mechanics/agon/parts/verdict-retention-rank/config/agon_retention_rank_economy.seed.json"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component:agon.retention-rank-economy-surfaces",
+    "source_schema_version": null,
+    "source_series_ref": "series-xiv",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "review_outputs": {
+    "hidden_scheduler_allowed": false,
+    "owner_review_required": true,
+    "recurrence_role": "observe_retention_rank_pressure_without_authority"
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_component_manifest_v1",
+  "source_refs": [],
+  "status": "source_seed_receipt",
+  "stop_lines": [
+    "no_hidden_scheduler_action",
+    "no_rank_or_trust_mutation",
+    "no_assistant_contestant_drift"
+  ]
+}

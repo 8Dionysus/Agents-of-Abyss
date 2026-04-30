@@ -1,0 +1,40 @@
+{
+  "component_ref": "component:agon:epistemic-agon-surfaces",
+  "description": "Agon recurrence receipt for epistemic-agon-surfaces.",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_component",
+  "manifest_ref": "manifest:agon:recurrence:epistemic-agon-surfaces",
+  "observed_surfaces": [
+    "mechanics/agon/parts/epistemic-kag/generated/agon_epistemic_agon_registry.min.json",
+    "mechanics/agon/parts/epistemic-kag/config/agon_epistemic_agon.seed.json"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "provenance": {
+    "source_component_ref": "component:agon:epistemic-agon-surfaces",
+    "source_schema_version": null,
+    "source_series_ref": "series-xv",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "review_outputs": {
+    "posture": "observation_only"
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_component_manifest_v1",
+  "source_refs": [],
+  "status": "source_seed_receipt",
+  "stop_lines": [
+    "live_verdict_authority",
+    "durable_scar_write",
+    "retention_execution",
+    "rank_mutation",
+    "trust_mutation",
+    "tree_of_sophia_promotion",
+    "kag_promotion",
+    "hidden_scheduler_action",
+    "assistant_contestant_drift",
+    "auto_doctrine_rewrite"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "bindings": [
+    {
+      "kind": "allowed_output",
+      "ref": "recurrence_observation"
+    },
+    {
+      "kind": "allowed_output",
+      "ref": "review_queue_candidate"
+    },
+    {
+      "kind": "allowed_output",
+      "ref": "owner_dossier_candidate"
+    }
+  ],
+  "component_ref": "component:agon:epistemic-agon-surfaces",
+  "emits": [
+    "recurrence_observation",
+    "review_queue_candidate",
+    "owner_dossier_candidate"
+  ],
+  "hook_binding_ref": "component:agon:epistemic-agon-surfaces.hooks",
+  "live_protocol": false,
+  "manifest_class": "agon_recurrence_hook_binding",
+  "must_not_emit": [
+    "live_verdict_authority",
+    "durable_scar_write",
+    "retention_execution",
+    "rank_mutation",
+    "trust_mutation",
+    "tree_of_sophia_promotion",
+    "kag_promotion",
+    "hidden_scheduler_action",
+    "assistant_contestant_drift",
+    "auto_doctrine_rewrite"
+  ],
+  "owner_mechanic": "agon",
+  "owner_part": "mechanics/agon/parts/recurrence-adapter",
+  "owner_repo": "Agents-of-Abyss",
+  "posture": "review_queue_only",
+  "provenance": {
+    "source_component_ref": "component:agon:epistemic-agon-surfaces",
+    "source_hook_ref": "component:agon:epistemic-agon-surfaces.hooks",
+    "source_schema_version": null,
+    "source_series_ref": "series-xv",
+    "source_bridge": "mechanics/agon/PROVENANCE.md",
+    "landing_ledger": "mechanics/agon/LANDING_LOG.md"
+  },
+  "runtime_effect": "none",
+  "schema_version": "aoa_agon_recurrence_hook_manifest_v1",
+  "source_refs": []
+}
