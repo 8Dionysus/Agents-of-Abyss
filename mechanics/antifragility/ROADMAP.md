@@ -22,7 +22,7 @@ execution.
 
 ## Next Work
 
-- Keep root `FRAGILITY_BLACKLIST.md` as a route shim only.
+- Keep fragile-pattern routing source-owned inside antifragility.
 - Keep active parts free of raw wave and checklist residue.
 - Use owner requests before claiming operational repair, memory, stats, or
   playbook behavior.

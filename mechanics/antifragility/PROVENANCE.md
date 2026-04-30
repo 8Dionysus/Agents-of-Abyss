@@ -39,7 +39,8 @@ the active route.
 
 - `mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` remains an inspect-first
   audit evidence surface.
-- Root `FRAGILITY_BLACKLIST.md` remains a compatibility route only.
+- The former root fragility route was removed after this package became the
+  source-owned fragile-pattern route.
 - Owner-local proof, memory, runtime, stats, playbook, technique, and skill
   landings remain outside this package until their owners accept a request.
 
