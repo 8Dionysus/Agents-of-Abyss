@@ -20,6 +20,17 @@ Use the nearest README for local file purpose. Use source docs, schemas, generat
 - Do not make CI green by weakening the guardrail being checked.
 - Do not add mutation or release behavior without an explicit human-visible path.
 
+## Platform sync
+
+Keep `.github/CODEOWNERS`, `.github/PULL_REQUEST_TEMPLATE.md`, and workflow
+expectations aligned with current root districts and guardrail paths. When a
+durable root lane is added or removed, update CODEOWNERS and the PR template in
+the same review when they are affected.
+
+The branch, PR, CI, and merge route is owned by the root `AGENTS.md` GitHub
+landing workflow. This district keeps the GitHub-native files aligned with that
+route.
+
 ## Validation
 
 Run the narrowest relevant checks first. Usual checks for this district:
