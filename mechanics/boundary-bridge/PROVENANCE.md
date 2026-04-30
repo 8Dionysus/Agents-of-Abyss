@@ -36,13 +36,13 @@ history into the active route.
 The ToS side of this bridge is stronger than AoA support language. Relevant
 ToS owner surfaces include:
 
-- `/srv/Tree-of-Sophia/BOUNDARIES.md`
-- `/srv/Tree-of-Sophia/docs/COUNTERPART_POLICY.md`
-- `/srv/Tree-of-Sophia/docs/CONTEXT_COMPOST.md`
-- `/srv/Tree-of-Sophia/docs/GROWTH_STRUCTURE.md`
-- `/srv/Tree-of-Sophia/docs/CALIBRATION_LINEAGE_PILOT.md`
-- `/srv/Tree-of-Sophia/docs/PRE_EXPANSION_SOIL.md`
-- `/srv/Tree-of-Sophia/docs/*_NODE_TEMPLATE.md`
+- `/srv/AbyssOS/Tree-of-Sophia/BOUNDARIES.md`
+- `/srv/AbyssOS/Tree-of-Sophia/docs/COUNTERPART_POLICY.md`
+- `/srv/AbyssOS/Tree-of-Sophia/docs/CONTEXT_COMPOST.md`
+- `/srv/AbyssOS/Tree-of-Sophia/docs/GROWTH_STRUCTURE.md`
+- `/srv/AbyssOS/Tree-of-Sophia/docs/CALIBRATION_LINEAGE_PILOT.md`
+- `/srv/AbyssOS/Tree-of-Sophia/docs/PRE_EXPANSION_SOIL.md`
+- `/srv/AbyssOS/Tree-of-Sophia/docs/*_NODE_TEMPLATE.md`
 
 These are provenance anchors for humans and agents working in the shared
 workspace. They are not files owned by this repository.
