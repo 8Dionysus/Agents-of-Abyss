@@ -1,30 +1,45 @@
 # Schema District
 
-This directory holds machine-readable shape contracts for center-planted surfaces.
+`schemas/` owns root-level machine-readable shape contracts for center
+publication surfaces. Mechanic-owned schemas live with their owning mechanic or
+part.
 
-A schema checks shape. It does not prove truth, grant authority, or replace the source document that gives meaning to the object.
+A schema constrains shape. Source docs, builders, validators, and owner
+surfaces still own meaning.
 
-Mechanic-owned schemas live in `mechanics/<slug>/schemas/`. Root `schemas/`
-contains only root-owned shape contracts.
+## Current Surface
 
-## Main families
+| Surface | Role |
+|---|---|
+| [`registry.json`](registry.json) | canonical registry of root schemas and schema-home routes |
 
-| Family | Examples | Meaning |
-|---|---|---|
-| Center and federation | `center-entry-map.schema.json`, `ecosystem-registry.schema.json` | compact center and registry contracts |
-| Mechanic schemas | `mechanics/<slug>/schemas/*` | mechanic-owned shape contracts |
+## Root Contracts
 
-## Rules
+| Schema | Consumer |
+|---|---|
+| [`center-entry-map.schema.json`](center-entry-map.schema.json) | `generated/center_entry_map.min.json` |
+| [`ecosystem-registry.schema.json`](ecosystem-registry.schema.json) | `generated/ecosystem_registry.min.json` |
+| [`federation-supporting-inventory.schema.json`](federation-supporting-inventory.schema.json) | `generated/federation_supporting_inventory.min.json` |
 
-- A schema must have a source document, builder, validator, or generated surface that explains why the shape exists.
-- A schema must not become the source of meaning by itself.
-- If a schema changes, update the nearest builder, validator, generated artifact, and test.
-- Do not widen a schema to make weak data pass.
-- Do not add runtime authority through a schema name or field.
+## Schema Homes
 
-## Before editing
+| Home | Role |
+|---|---|
+| `mechanics/<slug>/schemas/` | mechanic-level schema contracts |
+| `mechanics/<slug>/parts/<part>/schemas/` | part-local mechanic schema contracts |
 
-1. Identify the source document that owns the semantics.
-2. Identify the generated artifact or validator that consumes the schema.
-3. Check [`mechanics/README.md`](../mechanics/README.md) if the schema belongs to Agon, Experience, RPG, antifragility, questbook, or another mechanic.
-4. Run the nearest validator and `python -m pytest -q`.
+## Source Order
+
+When a schema and another surface disagree, read authority in this order:
+
+1. owner source document or mechanic package
+2. builder, validator, or seed config that produces the object
+3. schema contract
+4. generated or derived consumer surface
+
+## Editing Route
+
+- Add root schemas here only for root-owned center contracts.
+- Add mechanic schemas under the owning mechanic or part.
+- Update `registry.json` when a root schema or schema home route changes.
+- Keep generated surfaces, validators, and tests aligned with schema changes.
