@@ -77,7 +77,7 @@ material into this repository:
 | `root-editing` | add, move, delete, rename, or rewrite root surfaces |
 | `direction-change` | change roadmap, phase, maturity, release contour, or declared direction |
 | `ownership-routing` | decide which repository owns a change |
-| `mechanic-change` | edit center-level process, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS support |
+| `mechanic-change` | edit a center mechanic package, process route, stop-line, owner split, or mechanic-facing validation lane |
 | `public-claim-validation` | check whether public language is honest and supportable |
 | `low-context-agent` | use a compact machine route before full reading |
 | `district-work` | follow local README gates inside technical districts |
@@ -88,7 +88,7 @@ Use this check path:
 2. Read [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current documented public federation contour.
 3. Read [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth discipline.
 4. Read [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) before adding, moving, deleting, or renaming any root-level file.
-5. Read [mechanics/README](mechanics/README.md) before editing center-level process, Agon, Experience, recurrence, quest/RPG, antifragility, or ToS-support surfaces.
+5. Read [mechanics/README](mechanics/README.md) before editing center-level process or mechanic package surfaces.
 6. Read the relevant LANDING_LOG before editing Agon or Experience landing surfaces: [Agon LANDING_LOG](mechanics/agon/LANDING_LOG.md) or [Experience LANDING_LOG](mechanics/experience/LANDING_LOG.md).
 7. Read the local district README before changing `generated/`, `scripts/`, `schemas/`, `tests/`, `config/`, `examples/`, `manifests/`, or `quests/`.
    For mechanic-owned artifacts, route directly to `mechanics/<slug>/`.
@@ -163,7 +163,7 @@ python scripts/validate_ecosystem.py
 python -m pytest -q
 ```
 
-If the change touches Agon, Experience, generated capsules, schemas, quests, or release posture, run the nearest matching validator and test named by the affected surface.
+If the change touches a mechanic package, generated capsules, schemas, quests, or release posture, run the nearest matching validator and test named by the affected surface.
 
 ## Style guidance
 

@@ -36,7 +36,7 @@ If one of those surfaces changes the route order or adds a new route mode, the o
 | `root-editing` | contributors, coding agents, maintainers | change root surfaces without making the root a warehouse | first reading -> `CONTRIBUTING.md` -> `docs/ROOT_SURFACE_LAW.md` |
 | `direction-change` | maintainers, release agents | update roadmap, horizon posture, maturity, owner-route pressure, future trigger, transition, or release contour | first reading -> `ROADMAP.md` -> `mechanics/release-support/DIRECTION.md` -> `mechanics/release-support/docs/DIRECTION_SURFACES.md` -> `CHANGELOG.md` |
 | `ownership-routing` | humans and agents deciding where work belongs | choose the owner repository for a change | first reading -> `docs/LAYERS.md` -> `docs/REPO_ROLES.md` |
-| `mechanic-change` | authors of Agon, Experience, recurrence, growth, quest/RPG, release-support, or ToS support surfaces | edit a process without stealing owner truth | first reading -> `mechanics/README.md` -> `mechanics/<slug>/README.md` -> the relevant stop-line surface |
+| `mechanic-change` | authors of center mechanic packages | edit a process without stealing owner truth | first reading -> `mechanics/README.md` -> `mechanics/<slug>/README.md` -> the relevant stop-line surface |
 | `public-claim-validation` | release agents, public docs editors, reviewers | decide whether the center may honestly claim something | `mechanics/release-support/README.md` -> `mechanics/release-support/PARTS.md` -> `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` -> generated capsules -> validators |
 | `low-context-agent` | small models, retrieval systems, capsule-first agents | get a compact route before reading full docs | `generated/center_entry_map.min.json` |
 | `district-work` | contributors already inside a technical district | respect local file purpose and validation boundaries | root route -> local district `README.md` |
@@ -132,16 +132,9 @@ Ownership-routing changes must not move owner truth into the center because the 
 
 Use this route when the change touches an engineering-philosophy mechanic.
 
-Examples:
-
-- Agon
-- Experience
-- recurrence, return, or continuity
-- method and growth refinery
-- antifragility or via negativa
-- questbook or RPG reflection
-- boundary bridge, ToS support, witness, or compost support
-- release, audit, or public support posture
+The current package list lives in `mechanics/README.md` and
+`mechanics/registry.json`. Use the package entry instead of copying the full
+mechanic list into this route contract.
 
 Read:
 
@@ -263,7 +256,7 @@ python scripts/validate_ecosystem.py
 python -m pytest -q
 ```
 
-If a route change touches Agon, Experience, quests, schemas, generated surfaces, or release posture, run the nearest specific validator and test as well.
+If a route change touches a mechanic package, quests, schemas, generated surfaces, or release posture, run the nearest specific validator and test as well.
 
 ## Anti-stub rule
 

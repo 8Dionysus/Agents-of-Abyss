@@ -221,7 +221,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "route_mode": "mechanic-change",
         "priority": 5,
         "audience": ["mechanic-author", "coding-agent", "reviewer"],
-        "need": "edit Agon, Experience, recurrence, method/growth, distillation, growth-cycle, audit, antifragility, quest/RPG, release-support, or boundary bridge without stealing owner truth",
+        "need": "edit a center mechanic package listed in mechanics/registry.json, or its process route, stop-line, owner split, or validation lane, without stealing owner truth",
         "surface_ref": "mechanics/README.md",
         "human_path": [
             "README.md",
@@ -311,6 +311,9 @@ ROUTES: tuple[dict[str, object], ...] = (
             "scripts/README.md",
             "schemas/README.md",
             "tests/README.md",
+            "config/README.md",
+            "examples/README.md",
+            "manifests/README.md",
             "quests/README.md",
         ],
         "machine_surface_refs": ["generated/center_entry_map.min.json"],
