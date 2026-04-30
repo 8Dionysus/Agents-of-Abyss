@@ -69,6 +69,15 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("`aoa-stats` | derived observability layer", ecosystem_map)
         self.assertIn("- `aoa-stats`", roadmap)
 
+    def test_ecosystem_map_separates_current_maturity_from_growth_direction(self) -> None:
+        ecosystem_map = read_text("ECOSYSTEM_MAP.md")
+
+        self.assertIn("Current maturity", ecosystem_map)
+        self.assertIn("Growth direction", ecosystem_map)
+        self.assertNotIn("Maturity crosswalk", ecosystem_map)
+        self.assertIn("generated/ecosystem_registry.min.json", ecosystem_map)
+        self.assertIn("generated/federation_supporting_inventory.min.json", ecosystem_map)
+
     def test_docs_readme_routes_to_mechanics_and_decision_notes_remain_available(self) -> None:
         docs_readme = read_text("docs/README.md")
         mechanics = read_text("mechanics/README.md")
