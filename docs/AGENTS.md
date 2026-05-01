@@ -40,6 +40,8 @@ Important current docs-root surfaces:
 - `ROOT_SURFACE_LAW.md` governs root and docs-root placement.
 - `START_HERE_ROUTE_CONTRACT.md` governs public entry route modes.
 - `MECHANICS.md` is a compatibility route to `../mechanics/README.md`.
+- `RELEASING.md` is the repo-level GitHub release route required by release
+  preflight.
 - `organ-contract/` governs AbyssOS repo-organ alignment, surface states,
   first-cycle entry, and system event vocabulary.
 

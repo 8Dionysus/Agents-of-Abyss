@@ -57,6 +57,9 @@ No unreleased changes.
   and evidence-led audit routes
 - docs guardrail, decision-record, and traces districts with local `AGENTS.md`,
   README routing, validators, generated indexes, and release-check coverage
+- repo-level `docs/RELEASING.md` release route so federation release preflight
+  can verify the GitHub release entry while the release-support mechanic owns
+  the active runbook
 - AbyssOS organ-contract district with `organ-alignment` route mode, surface
   state vocabulary, first-cycle route, system event vocabulary, and validation
 - technical-district routing and validation for `config/`, `examples/`,
@@ -103,6 +106,8 @@ No unreleased changes.
 - `scripts/release_check.py` now runs the expanded repo gate across docs,
   mechanics, questbook, generated surfaces, config, manifests, schemas,
   scripts, tests, Spark, ecosystem validation, and pytest
+- mechanics topology validation now permits `docs/RELEASING.md` only as a
+  bounded repo-level route into the release-support runbook
 
 ### Removed
 
@@ -126,6 +131,13 @@ No unreleased changes.
 - `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "polish unreleased changelog after root docs and mechanics release prep" --mutation-surface public-share --json`
 - `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "polish root pytest collection contract for current mechanics topology" --mutation-surface repo-config --json`
 - `python scripts/validate_markdown_shape.py --target CHANGELOG.md`
+- `python scripts/validate_markdown_shape.py --target docs/RELEASING.md`
+- `python scripts/plan_docs_thematic_cleanup.py --check`
+- `python scripts/validate_docs_thematic_districts.py`
+- `python scripts/validate_decision_records.py`
+- `python scripts/build_docs_thematic_index.py --check`
+- `python scripts/validate_docs_thematic_index.py`
+- `aoa release audit /srv/AbyssOS --phase preflight --repo Agents-of-Abyss --strict --json`
 - `python scripts/validate_tests_district.py`
 - `python scripts/validate_organ_contract.py`
 - `python scripts/validate_entry_surface_sync.py`

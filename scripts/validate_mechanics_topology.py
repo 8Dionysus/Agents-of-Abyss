@@ -56,7 +56,7 @@ OLD_ACTIVE_PATTERNS = (
     r"(?<!mechanics/method-growth/)docs/(?:ROOTLINE|METHOD_SPINE|REVIEWABLE_GROWTH_REFINERY|CANDIDATE_LINEAGE_CROSSWALK|OWNER_LANDING_AND_PRUNING)\.md",
     r"(?<!mechanics/questbook/)docs/(?:QUESTBOOK_MODEL|QUESTBOOK_FIRST_WAVE)\.md",
     r"(?<!mechanics/boundary-bridge/)docs/(?:COUNTERPART_BRIDGE|WITNESS_COMPOST|TOS_GROWTH_SUPPORT|TOS_TEMPLATE_SUPPORT|TOS_LINEAGE_PILOT_SUPPORT|TOS_SOIL_PREP_SUPPORT)\.md",
-    r"(?<!mechanics/release-support/)docs/(?:PUBLIC_SUPPORT_POSTURE|FEDERATION_RELEASE_PROTOCOL|RELEASING|DIRECTION_SURFACES)\.md",
+    r"(?<!mechanics/release-support/)docs/(?:PUBLIC_SUPPORT_POSTURE|FEDERATION_RELEASE_PROTOCOL|DIRECTION_SURFACES)\.md",
 )
 
 
@@ -195,6 +195,11 @@ def validate_compatibility_routes() -> list[str]:
     mechanics_route = REPO_ROOT / "docs" / "MECHANICS.md"
     if mechanics_route.exists() and "mechanics/README.md" not in mechanics_route.read_text(encoding="utf-8"):
         problems.append("docs/MECHANICS.md: must route to mechanics/README.md")
+    release_route = REPO_ROOT / "docs" / "RELEASING.md"
+    if release_route.exists():
+        release_route_text = release_route.read_text(encoding="utf-8")
+        if "mechanics/release-support/docs/RELEASING.md" not in release_route_text:
+            problems.append("docs/RELEASING.md: must route to mechanics/release-support/docs/RELEASING.md")
     root_blacklist = REPO_ROOT / "FRAGILITY_BLACKLIST.md"
     if root_blacklist.exists():
         problems.append("FRAGILITY_BLACKLIST.md: root route removed; use mechanics/antifragility/FRAGILITY_BLACKLIST.md")
