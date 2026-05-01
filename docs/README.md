@@ -31,6 +31,7 @@ Entry route modes are governed by [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE
 | [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md) | root and docs-root placement law |
 | [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md) | public entry route modes |
 | [`MECHANICS`](MECHANICS.md) | compatibility route to [`mechanics/README`](../mechanics/README.md) |
+| [`RELEASING`](RELEASING.md) | repo-level GitHub release route required by release preflight |
 
 ## Districts
 
@@ -86,6 +87,7 @@ Guardrail operating surfaces:
 | Change | First route |
 |---|---|
 | Root or docs placement | [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md), [`THEMATIC_DISTRICT_PROTOCOL`](guardrails/THEMATIC_DISTRICT_PROTOCOL.md), [`CURRENT_SURFACE_INDEX`](guardrails/CURRENT_SURFACE_INDEX.md) |
+| GitHub release route | [`RELEASING`](RELEASING.md), then [`release-support`](../mechanics/release-support/README.md) |
 | Guardrail behavior | [`guardrails/AGENTS`](guardrails/AGENTS.md), then the affected guardrail source |
 | Decision rationale | [`decisions/AGENTS`](decisions/AGENTS.md), [`decisions/README`](decisions/README.md) |
 | Movement receipt | [`traces/AGENTS`](traces/AGENTS.md), [`traces/README`](traces/README.md) |

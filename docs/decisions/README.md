@@ -35,6 +35,7 @@ Decision records explain why; current surfaces define what.
 | [`2026-04-30-entry-validation-baseline`](2026-04-30-entry-validation-baseline.md) | decision record for routing entry-surface baseline commands through a guardrail surface instead of inline repetition |
 | [`2026-04-30-roadmap-horizon-direction-route`](2026-04-30-roadmap-horizon-direction-route.md) | decision record for making root roadmap a horizon-based center direction surface |
 | [`2026-04-30-organ-contract-center-law`](2026-04-30-organ-contract-center-law.md) | decision record for planting organ alignment as compact AoA center law |
+| [`2026-04-30-release-preflight-route-surface`](2026-04-30-release-preflight-route-surface.md) | decision record for keeping a repo-level release route while release-support owns the runbook |
 
 ## Record shape
 

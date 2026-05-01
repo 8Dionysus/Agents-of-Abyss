@@ -14,6 +14,7 @@ This index explains which `docs/` surfaces are current and which districts hold 
 | `docs/ROOT_SURFACE_LAW.md` | root placement law | current root and docs cleanup law |
 | `docs/START_HERE_ROUTE_CONTRACT.md` | route-mode contract | current entry contract |
 | `docs/MECHANICS.md` | compatibility route | routes old docs callers into `mechanics/README.md` |
+| `docs/RELEASING.md` | repo-level release route | required by release preflight and routes to `mechanics/release-support/` |
 
 ## Guardrail surfaces
 
