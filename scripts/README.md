@@ -21,6 +21,7 @@ constitutional authority by themselves.
 | `center-entry` | center entry map building, route parity, and validation |
 | `root-registries` | root config, schema, manifest, technical district, and ecosystem registry validation |
 | `docs-districts` | root docs district cleanup, indexes, decisions, and trace receipts |
+| `organ-contract` | AbyssOS repo-organ contract validation |
 | `hygiene` | link, Markdown, status vocabulary, generated freshness, and known-repair guardrails |
 | `agents-mesh` | AGENTS-card shape, coverage, and compact mesh indexes |
 | `mechanics-topology` | mechanics package topology, cards, artifact homes, and landing logs |

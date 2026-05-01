@@ -12,6 +12,7 @@ Root `ROADMAP.md` owns:
 - program horizons
 - maturity posture
 - owner-route pressure
+- organ-alignment contour
 - registry and entry contour pressure
 - release-support direction
 - concrete future triggers that belong to the center
@@ -32,8 +33,8 @@ Use the stronger surface when the change is narrower:
 ## Update Rule
 
 Update this roadmap when a change moves center-wide direction, horizon posture,
-maturity posture, owner-route pressure, registry or entry contour,
-release-support direction, or a concrete future trigger.
+maturity posture, owner-route pressure, organ-alignment contour, registry or
+entry contour, release-support direction, or a concrete future trigger.
 
 Do not update this roadmap for a local mechanic landing, release note, owner
 request, quest, checkpoint, or generated refresh unless it changes one of those
@@ -62,6 +63,8 @@ The current center move is:
   pressure
 - prepare owner descent into sibling repositories with clean owner requests,
   not center-side implementation claims
+- land the AbyssOS organ contract as a thin center route before applying it to
+  sibling repositories
 - keep release-support, registry, entry, and generated capsules aligned with
   human-facing direction
 
@@ -101,8 +104,16 @@ surfaces keep checked landings, validators, owner boundaries, and stop-lines.
 | Field | Direction |
 |---|---|
 | Current posture | Center mechanics now produce owner requests and handoff packets, but most operational truth still belongs in sibling repositories. |
-| Next honest move | After AoA root is clean, descend through owner repositories and land their local slices with repo-local validation. |
+| Next honest move | After AoA root is clean, descend through owner repositories through `docs/organ-contract/` and land their local slices with repo-local validation. |
 | Guardrail | Center request does not become owner acceptance; sibling repositories carry implementation, proof, memory, runtime, role, and projection truth. |
+
+## Horizon: Organ Alignment
+
+| Field | Direction |
+|---|---|
+| Current posture | AoA is planting a thin AbyssOS organ contract that names required route surfaces, surface states, first-cycle entry, and system events without becoming SDK, routing, or runtime implementation. |
+| Next honest move | Use the contract during sibling-repository descent, then decide whether a machine-readable organ registry is useful after real owner-local landings expose the stable shape. |
+| Guardrail | Organ alignment is connection law; `aoa-sdk`, `aoa-routing`, `abyss-stack`, and owner repositories carry implementation, dispatch, runtime, and local truth. |
 
 ## Horizon: Mechanics Maturity
 
@@ -163,6 +174,9 @@ has a clear future trigger.
 - Add JSON Schema contracts for district registries such as
   `scripts/registry.json` only when another tool consumes those registries
   directly, or when Python-only validation stops being enough.
+- Add a machine-readable organ registry only after sibling-repository descent
+  produces enough stable organ metadata for `aoa-sdk` or another consumer to
+  use directly.
 - Extract shared validator helper patterns only after the repetition is visible
   across several root districts and the extraction would simplify future
   checks.

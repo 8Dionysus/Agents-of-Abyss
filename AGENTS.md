@@ -94,6 +94,7 @@ Use the named route before widening a center claim:
 | `direction-change` | roadmap, horizon posture, maturity, owner-route pressure, future trigger, or release contour changes | `ROADMAP.md` |
 | `ownership-routing` | ownership is unclear | `docs/REPO_ROLES.md` |
 | `mechanic-change` | center mechanic package, process route, stop-line, owner split, or mechanic-facing validation changes | `mechanics/README.md` |
+| `organ-alignment` | repository organ posture, required route surfaces, surface-state vocabulary, first-cycle route, or cross-repo organ handoff changes | `docs/organ-contract/README.md` |
 | `public-claim-validation` | a sentence sounds like a public promise | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` |
 | `low-context-agent` | a compact machine route is needed first | `generated/center_entry_map.min.json` |
 | `district-work` | work is already inside a technical district | nearest local `README.md` |
@@ -144,8 +145,8 @@ Before closeout, check whether the change actually affects these surfaces. Updat
 only the ones that moved; otherwise say no update was needed.
 
 - `ROADMAP.md` when center-wide direction, horizon posture, maturity,
-  owner-route pressure, registry/entry contour, release-support direction, or a
-  concrete future trigger changed
+  owner-route pressure, organ-alignment contour, registry/entry contour,
+  release-support direction, or a concrete future trigger changed
 - `CHANGELOG.md` when release-visible behavior, public docs, validation, or
   repository structure changed
 - `docs/decisions/` when future agents need the rationale for a route,

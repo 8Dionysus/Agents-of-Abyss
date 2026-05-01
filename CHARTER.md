@@ -39,6 +39,7 @@ AoA exists to support sustained intellectual and technical work where:
 | Center mechanics law | the mechanic registry, owner-split law, stop-lines, pre-owner contracts, and package route expectations for `mechanics/<slug>/` |
 | Root surface governance | the law that decides what belongs in root and what must move into docs, mechanics/audit, generated surfaces, quests, or owner repos |
 | Center-entry capsules | compact machine-facing surfaces that help agents orient without replacing human docs or owner truth |
+| AbyssOS organ contract law | the minimum reviewable shape for connecting repositories as organs without taking over their local implementation |
 
 ## Routed to stronger owners
 
@@ -78,6 +79,7 @@ Before changing the center, check:
 1. [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current contour.
 2. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth law.
 3. [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) for root placement.
-4. [release-support/PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) for honest public claims.
-5. [AGENTS.md](AGENTS.md) for the operational editing route.
-6. Generated capsules and validators before claiming the change is complete.
+4. [docs/organ-contract](docs/organ-contract/README.md) for repo-organ alignment.
+5. [release-support/PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) for honest public claims.
+6. [AGENTS.md](AGENTS.md) for the operational editing route.
+7. Generated capsules and validators before claiming the change is complete.

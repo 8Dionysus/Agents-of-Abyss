@@ -18,6 +18,7 @@ without turning every entry document into a validation catalog.
 
 ```bash
 python scripts/repair_known_link_drifts.py --check
+python scripts/validate_organ_contract.py
 python scripts/validate_links.py
 python scripts/validate_markdown_shape.py
 python scripts/validate_status_vocabulary.py

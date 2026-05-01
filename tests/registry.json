@@ -95,6 +95,20 @@
       ]
     },
     {
+      "family_id": "organ-contract",
+      "role": "AbyssOS repo-organ contract and route-mode tests",
+      "source_ref": "docs/organ-contract/README.md",
+      "paths": [
+        "tests/test_organ_contract.py"
+      ],
+      "validation_refs": [
+        "scripts/validate_organ_contract.py"
+      ],
+      "must_not_claim": [
+        "organ contract tests as downstream owner acceptance"
+      ]
+    },
+    {
       "family_id": "hygiene",
       "role": "link, Markdown shape, status vocabulary, generated freshness, and known repair tests",
       "source_ref": "docs/guardrails/README.md",

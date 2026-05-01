@@ -54,7 +54,7 @@
     },
     "routes": {
       "type": "array",
-      "minItems": 8,
+      "minItems": 9,
       "items": {
         "$ref": "#/$defs/route"
       }
@@ -94,6 +94,7 @@
             "direction-change",
             "ownership-routing",
             "mechanic-change",
+            "organ-alignment",
             "public-claim-validation",
             "low-context-agent",
             "district-work"

@@ -18,7 +18,7 @@ For the shortest center overview, read:
 6. [`ROADMAP`](../ROADMAP.md)
 7. [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md)
 
-Entry route modes are governed by [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md): `first-reading`, `root-editing`, `direction-change`, `ownership-routing`, `mechanic-change`, `public-claim-validation`, `low-context-agent`, and `district-work`. Compact machine entry lives in [`generated/center_entry_map.min.json`](../generated/center_entry_map.min.json).
+Entry route modes are governed by [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md): `first-reading`, `root-editing`, `direction-change`, `ownership-routing`, `mechanic-change`, `organ-alignment`, `public-claim-validation`, `low-context-agent`, and `district-work`. Compact machine entry lives in [`generated/center_entry_map.min.json`](../generated/center_entry_map.min.json).
 
 ## Root Docs
 
@@ -39,6 +39,7 @@ Entry route modes are governed by [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE
 | [`guardrails/`](guardrails/) | docs cleanup, link/shape hygiene, generated freshness, and AGENTS mesh guardrails |
 | [`decisions/`](decisions/) | decision records explaining why a durable route or placement was chosen |
 | [`traces/`](traces/) | repo-level movement receipts, apply manifests, link-repair traces, and migration conflicts |
+| [`organ-contract/`](organ-contract/) | AbyssOS repo-organ alignment law, surface states, first-cycle route, and event vocabulary |
 
 Guardrail source maps:
 
@@ -78,6 +79,7 @@ Guardrail operating surfaces:
 | Which mechanic owns the process? | [`mechanics/README`](../mechanics/README.md), [`mechanics/registry.json`](../mechanics/registry.json), [`generated/mechanic_card_index.min.json`](../generated/mechanic_card_index.min.json) |
 | Does public wording have release support? | [`release-support`](../mechanics/release-support/README.md), [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) |
 | Does old material need distillation or audit routing? | [`audit`](../mechanics/audit/README.md), [`distillation`](../mechanics/distillation/README.md), relevant `PROVENANCE.md` |
+| Does this change alter how a repository connects as an AbyssOS organ? | [`organ-contract`](organ-contract/README.md), then [`REPO_ROLES`](REPO_ROLES.md) |
 
 ## Change Routes
 
@@ -88,16 +90,18 @@ Guardrail operating surfaces:
 | Decision rationale | [`decisions/AGENTS`](decisions/AGENTS.md), [`decisions/README`](decisions/README.md) |
 | Movement receipt | [`traces/AGENTS`](traces/AGENTS.md), [`traces/README`](traces/README.md) |
 | Mechanic law or package route | [`mechanics/AGENTS`](../mechanics/AGENTS.md), then the owning package `AGENTS.md` |
+| Repo-organ alignment | [`organ-contract/AGENTS`](organ-contract/AGENTS.md), then [`organ-contract/README`](organ-contract/README.md) |
 | Generated capsule contract | source doc, builder, schema, generated capsule, validator, and test together |
 
 ## Placement Signal
 
 Use `docs/` root for current center doctrine and route maps. Use a named
-district for guardrail law, decisions, and traces. Use `mechanics/<slug>/` for
-mechanic law, parts, landing history, provenance, owner requests, and legacy
-raw sources. Use sibling repositories for owner-local technique, skill, proof,
-memory, routing, role, playbook, KAG, stats, runtime, and ToS-authored meaning.
+district for guardrail law, decisions, traces, and organ-contract law. Use
+`mechanics/<slug>/` for mechanic law, parts, landing history, provenance, owner
+requests, and legacy raw sources. Use sibling repositories for owner-local
+technique, skill, proof, memory, routing, role, playbook, KAG, stats, runtime,
+and ToS-authored meaning.
 
 ## Notes
 
-This directory is a doctrine-and-map surface. Current center law stays here; mechanic truth lives in `mechanics/`; evidence districts keep decisions, traces, and guardrails discoverable in their own lanes.
+This directory is a doctrine-and-map surface. Current center law stays here; mechanic truth lives in `mechanics/`; evidence districts keep decisions, traces, and guardrails discoverable in their own lanes; organ-contract law stays compact and routes downstream implementation to the owner repositories.

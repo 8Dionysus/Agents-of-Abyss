@@ -13,6 +13,7 @@ COMMANDS = [
     ("validate docs thematic districts", [sys.executable, "scripts/validate_docs_thematic_districts.py"]),
     ("validate docs migration map", [sys.executable, "scripts/validate_docs_migration_map.py"]),
     ("validate traces district", [sys.executable, "scripts/validate_traces_district.py"]),
+    ("validate organ contract", [sys.executable, "scripts/validate_organ_contract.py"]),
     ("validate decision records", [sys.executable, "scripts/validate_decision_records.py"]),
     ("check docs thematic index", [sys.executable, "scripts/build_docs_thematic_index.py", "--check"]),
     ("validate docs thematic index", [sys.executable, "scripts/validate_docs_thematic_index.py"]),

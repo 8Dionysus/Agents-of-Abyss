@@ -45,6 +45,7 @@ Mechanic-facing route modes:
 | `direction-change` | update roadmap or release contour without turning history into doctrine |
 | `ownership-routing` | decide which owner repository owns operational truth |
 | `mechanic-change` | change a process, stop-line, owner split, or mechanic package |
+| `organ-alignment` | connect a repository to AbyssOS without making a mechanic own that repository |
 | `public-claim-validation` | check whether a mechanic claim can be publicly supported |
 | `district-work` | respect local gates for scripts, schemas, generated capsules, tests, and quests |
 
@@ -93,6 +94,8 @@ Machine companion:
 Validation:
 
 Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
+Center entry-surface baseline commands live in
+[`ENTRY_SURFACE_VALIDATION_BASELINE`](../docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md).
 
 The generated card index reflects `mechanics/registry.json` and the package
 README cards. It never authors mechanic meaning.

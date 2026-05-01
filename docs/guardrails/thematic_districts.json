@@ -64,12 +64,29 @@
       "must_not_claim": [
         "Traces explain movement, not meaning."
       ]
+    },
+    "organ-contract": {
+      "path": "docs/organ-contract",
+      "readme": "docs/organ-contract/README.md",
+      "role": "AbyssOS repo-organ alignment law, surface-state vocabulary, first-cycle route, and system event vocabulary.",
+      "authority": "organ_contract",
+      "patterns": [
+        "ORGAN",
+        "SURFACE_STATE",
+        "FIRST_CYCLE",
+        "SYSTEM_EVENT",
+        "EVENT_VOCABULARY"
+      ],
+      "must_not_claim": [
+        "Organ contracts define alignment law; they do not implement SDK, routing, runtime, proof, memory, role, or owner-local truth."
+      ]
     }
   },
   "tie_break_order": [
     "guardrails",
     "decisions",
-    "traces"
+    "traces",
+    "organ-contract"
   ],
   "exact_migrations": [
     {
@@ -225,6 +242,7 @@
     "python scripts/validate_docs_thematic_districts.py",
     "python scripts/validate_docs_migration_map.py",
     "python scripts/validate_traces_district.py",
+    "python scripts/validate_organ_contract.py",
     "python scripts/build_docs_thematic_index.py --check",
     "python scripts/validate_docs_thematic_index.py"
   ],
