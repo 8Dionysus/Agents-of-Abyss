@@ -48,10 +48,10 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
     registry = load_json("generated/ecosystem_registry.min.json")
     supporting = load_json("generated/federation_supporting_inventory.min.json")
 
-    assert "> Current release: `v0.2.3`" in readme
-    assert "## [0.2.3] - 2026-04-23" in changelog
-    assert "`v0.2.3`" in roadmap
-    assert "roadmap continuity and owner-boundary" in " ".join(roadmap.split())
+    assert "> Current release: `v0.4.0`" in readme
+    assert "## [0.4.0] - 2026-04-30" in changelog
+    assert "`v0.4.0`" in roadmap
+    assert "route-law, mechanic-package, and validator-backed center repository" in " ".join(roadmap.split())
 
     registry_names = {entry["name"] for entry in registry["repos"]}
     supporting_names = {entry["name"] for entry in supporting["repos"]}
@@ -106,6 +106,9 @@ def test_current_released_contour_anchors_exist() -> None:
         "docs/FEDERATION_RULES.md",
         "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md",
         "mechanics/release-support/docs/DIRECTION_SURFACES.md",
+        "docs/organ-contract/README.md",
+        "docs/organ-contract/ORGAN_CONTRACT.md",
+        "docs/organ-contract/FIRST_CYCLE.md",
         "generated/center_entry_map.min.json",
         "generated/ecosystem_registry.min.json",
         "generated/federation_supporting_inventory.min.json",

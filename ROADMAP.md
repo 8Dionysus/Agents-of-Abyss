@@ -45,8 +45,8 @@ only land a local surface?
 
 ## Current Center Direction
 
-AoA is moving from center bootstrap into federation alignment through a root
-that is lighter, clearer, and stricter about owner truth.
+AoA is moving from center bootstrap into federation descent through a root that
+is lighter, clearer, and stricter about owner truth.
 
 The current public federation contour is named in
 [`ECOSYSTEM_MAP.md`](ECOSYSTEM_MAP.md) and reflected in
@@ -58,20 +58,18 @@ The current center move is:
 
 - keep the constitutional route clear from `CHARTER.md` through
   `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, and this roadmap
-- finish the root-document pass without turning root into a warehouse
+- keep the root-document pass from regrowing into a warehouse
 - keep mechanics active in their packages while root names only center-wide
   pressure
-- prepare owner descent into sibling repositories with clean owner requests,
-  not center-side implementation claims
-- land the AbyssOS organ contract as a thin center route before applying it to
-  sibling repositories
+- descend into sibling repositories through clean owner requests and the
+  AbyssOS organ contract, not center-side implementation claims
 - keep release-support, registry, entry, and generated capsules aligned with
   human-facing direction
 
 ## Current Released Contour
 
-The released center contour for `v0.2.3` is roadmap continuity and
-owner-boundary hardening, not a new implementation layer.
+The released center contour for `v0.4.0` is the route-law, mechanic-package,
+and validator-backed center repository, not a new implementation layer.
 
 Current checked anchors:
 
@@ -79,6 +77,7 @@ Current checked anchors:
 |---|---|
 | Center route and authority | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md` |
 | Direction and public-claim support | `ROADMAP.md`, `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, `mechanics/release-support/docs/DIRECTION_SURFACES.md` |
+| AbyssOS organ alignment | `docs/organ-contract/README.md`, `docs/organ-contract/ORGAN_CONTRACT.md`, `docs/organ-contract/FIRST_CYCLE.md` |
 | Compact machine companions | `generated/center_entry_map.min.json`, `generated/ecosystem_registry.min.json`, `generated/federation_supporting_inventory.min.json` |
 | Growth and recurrence law | `mechanics/method-growth/README.md`, `mechanics/recurrence/README.md`, `mechanics/checkpoint/README.md`, `mechanics/growth-cycle/README.md` |
 | Mechanic landing ledgers | `mechanics/agon/LANDING_LOG.md`, `mechanics/experience/LANDING_LOG.md` |
@@ -96,7 +95,7 @@ surfaces keep checked landings, validators, owner boundaries, and stop-lines.
 | Field | Direction |
 |---|---|
 | Current posture | The center has a stronger root route: `AGENTS.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md`, and root technical districts now have clearer roles. |
-| Next honest move | Finish reviewing remaining root documents without adding new root doors or duplicating mechanic packages. |
+| Next honest move | Keep root surfaces compact while owner descent tests whether the center route stays readable under real downstream pressure. |
 | Guardrail | Root surfaces stay civic, compact, and source-of-truth aware; historical detail routes to the owning district or mechanic. |
 
 ## Horizon: Owner Descent
@@ -111,7 +110,7 @@ surfaces keep checked landings, validators, owner boundaries, and stop-lines.
 
 | Field | Direction |
 |---|---|
-| Current posture | AoA is planting a thin AbyssOS organ contract that names required route surfaces, surface states, first-cycle entry, and system events without becoming SDK, routing, or runtime implementation. |
+| Current posture | AoA has planted a thin AbyssOS organ contract that names required route surfaces, surface states, first-cycle entry, and system events without becoming SDK, routing, or runtime implementation. |
 | Next honest move | Use the contract during sibling-repository descent, then decide whether a machine-readable organ registry is useful after real owner-local landings expose the stable shape. |
 | Guardrail | Organ alignment is connection law; `aoa-sdk`, `aoa-routing`, `abyss-stack`, and owner repositories carry implementation, dispatch, runtime, and local truth. |
 
