@@ -7,6 +7,10 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+No unreleased changes.
+
+## [0.4.0] - 2026-04-30
+
 ### Summary
 
 - this release turns `Agents-of-Abyss` from a flat, docs-heavy center into a
@@ -116,6 +120,9 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Validation
 
+- `aoa skills enter /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "prepare Agents-of-Abyss v0.4.0 release" --json`
+- `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "prepare Agents-of-Abyss v0.4.0 release public surfaces" --mutation-surface public-share --json`
+- `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "prepare Agents-of-Abyss v0.4.0 release repo config" --mutation-surface repo-config --json`
 - `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "polish unreleased changelog after root docs and mechanics release prep" --mutation-surface public-share --json`
 - `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "polish root pytest collection contract for current mechanics topology" --mutation-surface repo-config --json`
 - `python scripts/validate_markdown_shape.py --target CHANGELOG.md`

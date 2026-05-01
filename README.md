@@ -14,7 +14,7 @@ Use this README as the public front door. Use the linked owner surfaces when the
 work becomes constitutional, directional, operational, mechanical, or
 repository-local.
 
-> Current release: `v0.2.3`. See [CHANGELOG](CHANGELOG.md) for release notes.
+> Current release: `v0.4.0`. See [CHANGELOG](CHANGELOG.md) for release notes.
 
 ## What This Repository Does
 
@@ -93,8 +93,8 @@ so this README can stay readable.
 
 ## Current Contour
 
-The released center contour for `v0.2.3` is roadmap continuity and
-owner-boundary hardening.
+The released center contour for `v0.4.0` is the route-law, mechanic-package,
+and validator-backed center repository.
 
 Current anchors:
 
@@ -104,6 +104,8 @@ Current anchors:
 - [ROADMAP](ROADMAP.md) for center-wide direction and future triggers
 - [mechanics](mechanics/README.md) for center mechanics and their local
   packages
+- [organ-contract](docs/organ-contract/README.md) for AbyssOS repo-organ
+  alignment
 - [generated capsules](generated/README.md) for compact machine companions
 - [release support](mechanics/release-support/README.md) for public claims,
   state transitions, handoffs, rollback routes, and changelog/roadmap split
