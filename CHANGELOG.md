@@ -53,6 +53,8 @@ Tracking starts with the community-docs baseline for this repository.
   and evidence-led audit routes
 - docs guardrail, decision-record, and traces districts with local `AGENTS.md`,
   README routing, validators, generated indexes, and release-check coverage
+- AbyssOS organ-contract district with `organ-alignment` route mode, surface
+  state vocabulary, first-cycle route, system event vocabulary, and validation
 - technical-district routing and validation for `config/`, `examples/`,
   `generated/`, `manifests/`, `schemas/`, `scripts/`, `tests/`, and `Spark/`
   so repo-level artifacts stay discoverable without becoming mechanic storage
@@ -68,6 +70,9 @@ Tracking starts with the community-docs baseline for this repository.
 - `CHARTER.md`, `ECOSYSTEM_MAP.md`, and `ROADMAP.md` now split constitutional
   authority, ecosystem contour, current maturity, growth direction, and future
   triggers instead of making the root roadmap carry mechanic-level detail
+- center entry routing now includes `organ-alignment` so downstream
+  repository descent has a checked route without making AoA a control-plane,
+  routing, runtime, or owner-local implementation repository
 - `CONTRIBUTING.md` now faces contributors rather than duplicating agent law;
   `GLOSSARY.md` stays a compact vocabulary route; `QUESTBOOK.md` stays a root
   index rather than a task pile; `ECOSYSTEM_AUDIT_INDEX.md` routes audit work
@@ -115,6 +120,10 @@ Tracking starts with the community-docs baseline for this repository.
 - `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "polish root pytest collection contract for current mechanics topology" --mutation-surface repo-config --json`
 - `python scripts/validate_markdown_shape.py --target CHANGELOG.md`
 - `python scripts/validate_tests_district.py`
+- `python scripts/validate_organ_contract.py`
+- `python scripts/validate_entry_surface_sync.py`
+- `python scripts/build_center_entry_map.py --check`
+- `python scripts/validate_center_entry_map.py`
 - `python scripts/validate_links.py`
 - `git diff --check`
 - `python -m pytest -q`

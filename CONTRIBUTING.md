@@ -53,6 +53,7 @@ material into this repository:
 | `direction-change` | change roadmap, horizon posture, maturity, owner-route pressure, future trigger, transition, or release contour |
 | `ownership-routing` | decide which repository owns a change |
 | `mechanic-change` | edit a center mechanic package, process route, stop-line, owner split, or mechanic-facing validation lane |
+| `organ-alignment` | align a repository as an AbyssOS organ without taking over its implementation |
 | `public-claim-validation` | check whether public language is honest and supportable |
 | `low-context-agent` | use a compact machine route before full reading |
 | `district-work` | follow local README gates inside technical districts |
@@ -61,6 +62,9 @@ For root files, also read
 [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md). For mechanic work, start at
 [mechanics/README](mechanics/README.md) and then read the package-local
 `AGENTS.md`.
+
+For repo-organ alignment, start at
+[docs/organ-contract/README](docs/organ-contract/README.md).
 
 ## Root and District Changes
 

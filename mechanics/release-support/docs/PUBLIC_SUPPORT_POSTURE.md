@@ -42,6 +42,7 @@ For small-model and low-context entry, use `generated/center_entry_map.min.json`
 | `direction-change` | separates current direction from released history and future wishes |
 | `ownership-routing` | points work to the right owner without transferring truth |
 | `mechanic-change` | keeps center mechanic packages bounded by their owner split, stop-lines, and validation routes |
+| `organ-alignment` | checks repo-organ posture before claiming downstream alignment |
 | `public-claim-validation` | checks whether a sentence can be honestly stated by the center |
 | `low-context-agent` | gives compact route help while preserving human source docs |
 | `district-work` | keeps local technical gates local and subordinate to center law |
@@ -54,6 +55,7 @@ The center may publicly support:
 - the current public layer map
 - federation rules and source-of-truth boundaries
 - compact registry surfaces for the documented public contour
+- repo-organ alignment law for reviewable downstream connection
 - reviewable routing toward layer-owned repositories
 - checked state-transition posture when evidence, owner boundary, and rollback
   route are named
@@ -103,5 +105,7 @@ The machine-facing center capsule has its own bounded rebuild loop:
 
 Use [release-support docs AGENTS](AGENTS.md#validation) for executable
 commands.
+Center entry-surface baseline commands live in
+[`ENTRY_SURFACE_VALIDATION_BASELINE`](../../../docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md).
 
 PR and push validation live in `.github/workflows/repo-validation.yml`.

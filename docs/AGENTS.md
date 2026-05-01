@@ -16,6 +16,9 @@ Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or 
 
 For root or docs placement work, read `ROOT_SURFACE_LAW.md`, `README.md`, and `guardrails/README.md`.
 
+For repo-organ alignment, read `organ-contract/AGENTS.md` and
+`organ-contract/README.md`.
+
 For mechanic work, leave this lane and read `../mechanics/AGENTS.md` plus the nearest `../mechanics/<slug>/AGENTS.md`.
 
 ## Boundaries
@@ -37,6 +40,8 @@ Important current docs-root surfaces:
 - `ROOT_SURFACE_LAW.md` governs root and docs-root placement.
 - `START_HERE_ROUTE_CONTRACT.md` governs public entry route modes.
 - `MECHANICS.md` is a compatibility route to `../mechanics/README.md`.
+- `organ-contract/` governs AbyssOS repo-organ alignment, surface states,
+  first-cycle entry, and system event vocabulary.
 
 Guardrail surfaces live in `guardrails/`:
 
@@ -78,6 +83,7 @@ python scripts/plan_docs_thematic_cleanup.py --check
 python scripts/validate_docs_thematic_districts.py
 python scripts/validate_docs_migration_map.py
 python scripts/validate_traces_district.py
+python scripts/validate_organ_contract.py
 python scripts/validate_decision_records.py
 python scripts/build_docs_thematic_index.py --check
 python scripts/validate_docs_thematic_index.py

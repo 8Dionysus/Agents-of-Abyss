@@ -21,6 +21,7 @@ and do not grant authority beyond the claims they check.
 | `entry-and-roadmap` | center entry, route sync, roadmap, and public route tests |
 | `root-districts` | config, schemas, scripts, manifests, examples, and generated district tests |
 | `docs-districts` | docs migration, thematic indexes, decisions, and trace district tests |
+| `organ-contract` | AbyssOS repo-organ contract and route-mode tests |
 | `hygiene` | link, Markdown shape, status vocabulary, generated freshness, and known repair tests |
 | `mechanics-topology` | mechanic registry, cards, artifact homes, and landing ledger tests |
 | `owner-requests` | owner request queue and owner request document tests |

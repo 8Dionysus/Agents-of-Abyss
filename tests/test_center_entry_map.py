@@ -54,6 +54,7 @@ class CenterEntryMapTests(unittest.TestCase):
         payload = build_payload()
         rendered = json.dumps(payload, separators=(",", ":"))
         self.assertIn("docs/START_HERE_ROUTE_CONTRACT.md", rendered)
+        self.assertIn("organ-alignment", rendered)
         self.assertIn("public-claim-validation", rendered)
         self.assertIn("must_not_claim", rendered)
         self.assertNotIn('"surface_ref":"scripts/', rendered)
@@ -76,13 +77,23 @@ class CenterEntryMapTests(unittest.TestCase):
         for ref in VALIDATION_REFS:
             self.assertIn(ref, payload["validation_refs"])
         self.assertIn(VALIDATION_BASELINE_REF, payload["validation_refs"])
+        self.assertIn("scripts/validate_organ_contract.py", payload["validation_refs"])
         self.assertIn("scripts/validate_entry_surface_sync.py", payload["validation_refs"])
         self.assertIn("tests/test_entry_surface_sync.py", payload["validation_refs"])
 
     def test_baseline_validation_commands_are_named(self) -> None:
+        self.assertIn("python scripts/validate_organ_contract.py", BASELINE_VALIDATION_COMMANDS)
         self.assertIn("python scripts/validate_entry_surface_sync.py", BASELINE_VALIDATION_COMMANDS)
         self.assertIn("python scripts/build_center_entry_map.py --check", BASELINE_VALIDATION_COMMANDS)
         self.assertIn("python -m pytest -q", BASELINE_VALIDATION_COMMANDS)
+
+    def test_organ_alignment_route_preserves_owner_boundaries(self) -> None:
+        payload = build_payload()
+        route = next(route for route in payload["routes"] if route["route_id"] == "organ-alignment")
+        self.assertEqual(route["surface_ref"], "docs/organ-contract/README.md")
+        self.assertIn("docs/organ-contract/ORGAN_CONTRACT.md", route["human_path"])
+        self.assertIn("docs/organ-contract/FIRST_CYCLE.md", route["human_path"])
+        self.assertTrue(any("owner acceptance" in item for item in route["must_not_claim"]))
 
 
 if __name__ == "__main__":

@@ -45,6 +45,7 @@ Read only what matches your entry need.
 | Current federation map | [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) |
 | Program direction | [ROADMAP](ROADMAP.md) |
 | Repository ownership routing | [REPO_ROLES](docs/REPO_ROLES.md) |
+| AbyssOS repo-organ alignment | [organ-contract](docs/organ-contract/README.md) |
 | Root file placement | [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) |
 | Center mechanics | [mechanics/README](mechanics/README.md) |
 | Agent editing route | [AGENTS](AGENTS.md), then the nearest nested `AGENTS.md` |
@@ -64,6 +65,7 @@ Every public entry surface exposes the same route-mode vocabulary.
 | `direction-change` | roadmap, horizon posture, maturity, owner-route pressure, future trigger, or release contour changes | [ROADMAP](ROADMAP.md) |
 | `ownership-routing` | you need to decide which repository owns a change | [REPO_ROLES](docs/REPO_ROLES.md) |
 | `mechanic-change` | you will touch a center mechanic package or its process route, stop-line, owner split, or validation lane | [mechanics/README](mechanics/README.md) |
+| `organ-alignment` | you will change repository organ posture, required route surfaces, surface states, first-cycle route, or cross-repo handoff expectations | [organ-contract](docs/organ-contract/README.md) |
 | `public-claim-validation` | a sentence sounds like a public promise | [PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) |
 | `low-context-agent` | you need a compact machine-facing route before full reading | [center_entry_map.min.json](generated/center_entry_map.min.json) |
 | `district-work` | you are already inside a technical district | nearest local `README.md` |
@@ -81,6 +83,7 @@ surface that can answer it.
 | Is this current direction rather than released history or mechanic-local planning? | [ROADMAP](ROADMAP.md) |
 | Is this a public promise that needs release support? | [PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) |
 | Is this a mechanic process, stop-line, owner split, or validation route? | [mechanics/README](mechanics/README.md) and [mechanics/registry.json](mechanics/registry.json) |
+| Does this alter how a repository connects as an AbyssOS organ? | [organ-contract](docs/organ-contract/README.md) |
 | Does the machine route still match the human route? | [ENTRY_SURFACE_VALIDATION_BASELINE](docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md) |
 
 Use [release_check.py](scripts/release_check.py) for broad release-facing or

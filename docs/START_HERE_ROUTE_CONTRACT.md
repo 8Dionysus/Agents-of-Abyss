@@ -16,6 +16,7 @@ The route modes are reflected in:
 - `docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`
 - `README.md`
 - `docs/README.md`
+- `docs/organ-contract/README.md`
 - `mechanics/README.md`
 - `mechanics/registry.json`
 - `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`
@@ -37,6 +38,7 @@ If one of those surfaces changes the route order or adds a new route mode, the o
 | `direction-change` | maintainers, release agents | update roadmap, horizon posture, maturity, owner-route pressure, future trigger, transition, or release contour | first reading -> `ROADMAP.md` -> `mechanics/release-support/DIRECTION.md` -> `mechanics/release-support/docs/DIRECTION_SURFACES.md` -> `CHANGELOG.md` |
 | `ownership-routing` | humans and agents deciding where work belongs | choose the owner repository for a change | first reading -> `docs/LAYERS.md` -> `docs/REPO_ROLES.md` |
 | `mechanic-change` | authors of center mechanic packages | edit a process without stealing owner truth | first reading -> `mechanics/README.md` -> `mechanics/<slug>/README.md` -> the relevant stop-line surface |
+| `organ-alignment` | maintainers, downstream owners, agents preparing repository descent | align a repository as an AbyssOS organ without taking over its implementation | first reading -> `docs/organ-contract/README.md` -> `docs/organ-contract/ORGAN_CONTRACT.md` -> `docs/organ-contract/FIRST_CYCLE.md` |
 | `public-claim-validation` | release agents, public docs editors, reviewers | decide whether the center may honestly claim something | `mechanics/release-support/README.md` -> `mechanics/release-support/PARTS.md` -> `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` -> generated capsules -> validators |
 | `low-context-agent` | small models, retrieval systems, capsule-first agents | get a compact route before reading full docs | `generated/center_entry_map.min.json` |
 | `district-work` | contributors already inside a technical district | respect local file purpose and validation boundaries | root route -> local district `README.md` |
@@ -147,6 +149,32 @@ Read:
 
 Mechanic changes must name their owner split. A mechanic is healthy only when it makes ownership easier to inspect.
 
+## Organ-alignment route
+
+Use this route when the change affects how a repository connects to AbyssOS as
+a reviewable organ.
+
+Read:
+
+1. first-reading route
+2. `docs/organ-contract/README.md`
+3. `docs/organ-contract/ORGAN_CONTRACT.md`
+4. `docs/organ-contract/SURFACE_STATES.md`
+5. `docs/organ-contract/FIRST_CYCLE.md`
+6. `docs/organ-contract/EVENTS.md`
+7. `docs/REPO_ROLES.md`
+8. the target repository `README.md` and `AGENTS.md` when the route leaves this repository
+
+Organ alignment changes must keep the center in its constitutional lane:
+
+- AoA may define the minimum reviewable organ shape.
+- `aoa-sdk` carries typed helpers, activation, compatibility, and control-plane implementation.
+- `aoa-routing` carries operational dispatch and navigation implementation.
+- sibling repositories carry owner-local object classes, proof, memory, role,
+  playbook, KAG, stats, runtime, and ToS-authored meaning.
+
+The first cycle is a starting grammar, not a permanent process engine.
+
 ## Public-claim-validation route
 
 Use this route when a sentence sounds like a public promise or an internal
@@ -235,6 +263,7 @@ Run:
 
 ```bash
 python scripts/repair_known_link_drifts.py --check
+python scripts/validate_organ_contract.py
 python scripts/validate_traces_district.py
 python scripts/validate_links.py
 python scripts/validate_markdown_shape.py

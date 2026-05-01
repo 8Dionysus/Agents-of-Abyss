@@ -70,6 +70,17 @@
       ]
     },
     {
+      "family_id": "organ-contract",
+      "role": "AbyssOS repo-organ contract validation",
+      "source_ref": "docs/organ-contract/README.md",
+      "paths": [
+        "scripts/validate_organ_contract.py"
+      ],
+      "must_not_claim": [
+        "organ contract validation as downstream implementation acceptance"
+      ]
+    },
+    {
       "family_id": "hygiene",
       "role": "link, Markdown, status vocabulary, generated freshness, and known-repair guardrails",
       "source_ref": "docs/guardrails/README.md",

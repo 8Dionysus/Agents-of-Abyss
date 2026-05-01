@@ -16,6 +16,7 @@ detail, or release promises. For those routes, use:
 - [CHARTER](CHARTER.md) to decide whether the center may make a claim at all
 - [docs/LAYERS](docs/LAYERS.md) to understand the conceptual layer
 - [docs/REPO_ROLES](docs/REPO_ROLES.md) to decide where a change belongs
+- [docs/organ-contract](docs/organ-contract/README.md) to align a repository as an AbyssOS organ
 - [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) to preserve source-of-truth discipline
 
 Machine companions:
@@ -46,7 +47,7 @@ If the question is "does the center have authority to say this?", return to
 
 | Repository | Role | Owns | Does not own | Current maturity | Growth direction |
 |---|---|---|---|---|---|
-| `Agents-of-Abyss` | constitutional polis and ecosystem center | ecosystem identity, layer map, federation rules, program-level direction, center mechanics law, root surface governance, center-entry capsules | technique truth, skill truth, eval truth, memory truth, agent truth, playbook truth, KAG truth, SDK/control-plane implementation, runtime infrastructure, ToS-authored corpus | active | proven center route and validator-backed public map |
+| `Agents-of-Abyss` | constitutional polis and ecosystem center | ecosystem identity, layer map, federation rules, program-level direction, center mechanics law, root surface governance, center-entry capsules, and AbyssOS organ contract law | technique truth, skill truth, eval truth, memory truth, agent truth, playbook truth, KAG truth, SDK/control-plane implementation, runtime infrastructure, ToS-authored corpus | active | proven center route and validator-backed public map |
 
 ## Public source-owned AoA layers
 
@@ -105,6 +106,7 @@ rather than one document's wording.
 When there is ambiguity, use this map as a route back to the owner:
 
 - the center names the federation
+- organ contract law names reviewable connection shape
 - source-owned layers author their primary object class
 - derived layers derive from owner-owned evidence
 - routing layers dispatch without authoring layer truth

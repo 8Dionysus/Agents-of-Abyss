@@ -30,6 +30,7 @@ class EntrySurfaceSyncTests(unittest.TestCase):
         self.assertIn("README.md", ENTRY_SURFACE_REFS)
         self.assertIn("AGENTS.md", ENTRY_SURFACE_REFS)
         self.assertIn("docs/README.md", ENTRY_SURFACE_REFS)
+        self.assertIn("docs/organ-contract/README.md", ENTRY_SURFACE_REFS)
         self.assertIn("docs/START_HERE_ROUTE_CONTRACT.md", ENTRY_SURFACE_REFS)
         self.assertIn("CONTRIBUTING.md", ENTRY_SURFACE_REFS)
         self.assertIn("mechanics/README.md", ENTRY_SURFACE_REFS)
@@ -44,6 +45,7 @@ class EntrySurfaceSyncTests(unittest.TestCase):
                 "direction-change",
                 "ownership-routing",
                 "mechanic-change",
+                "organ-alignment",
                 "public-claim-validation",
                 "low-context-agent",
                 "district-work",
