@@ -29,6 +29,9 @@ Experience without requiring every older landing entry to be re-read.
 
 Key recent landings:
 
+- [aoa-skills owner-request receipt sync](#aoa-skills-owner-request-receipt-sync)
+  records accepted skill-layer Experience pressure without claiming owner-local
+  execution.
 - [Experience root route surface cleanup](#experience-root-route-surface-cleanup)
   clarifies the roles of root Experience markdown surfaces.
 - [Experience provenance receipt indirection](#experience-provenance-receipt-indirection)
@@ -60,6 +63,32 @@ validators, or tests, update the relevant entry here or explain in the PR why
 the change is not a landing change.
 
 ## Landed center line
+
+### aoa-skills owner-request receipt sync
+
+Status: owner-request accepted.
+
+Owner boundary: the center records the `aoa-skills` acceptance receipt for
+`ORQ-EXPERIENCE-SKILLS-001` without claiming executable Experience skill truth,
+approval authority, release approval, assistant self-authority, runtime
+activation, or direct Tree-of-Sophia write authority.
+
+Surfaces:
+
+- `mechanics/experience/OWNER_REQUESTS.md`
+- `mechanics/owner-request-queue.json`
+- `mechanics/OWNER_REQUEST_QUEUE.md`
+- `generated/owner_request_queue.min.json`
+- Owner-local receipt in aoa-skills/mechanics/OWNER_REQUEST_RECEIPTS.md
+
+Validation: use the owner-request validation lane in `mechanics/AGENTS.md`.
+
+Stop-lines: Accepted is not landed. Existing `aoa-skills` Experience-shaped
+docs remain future package pressure until owner-local package, canonical skill
+bundle, or superseding receipt lands.
+
+Next route: Wait for `aoa-skills` Experience packaging or reviewed
+supersession before advancing this request to `landed`.
 
 ### Experience root route surface cleanup
 

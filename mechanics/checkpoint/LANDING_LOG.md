@@ -35,6 +35,30 @@ the change is not a landing change.
 
 ## Entries
 
+### aoa-skills owner-request receipt sync
+
+Status: owner-request landed
+
+Owner boundary: the center records the `aoa-skills` receipt for
+`ORQ-CHECKPOINT-SKILLS-001` without treating checkpoint notes as final harvest,
+progression, quest, proof, memory, runtime, route, or stats authority.
+
+Surfaces:
+
+- `mechanics/checkpoint/OWNER_REQUESTS.md`
+- `mechanics/owner-request-queue.json`
+- `mechanics/OWNER_REQUEST_QUEUE.md`
+- `generated/owner_request_queue.min.json`
+- Owner-local receipt in aoa-skills/mechanics/OWNER_REQUEST_RECEIPTS.md
+
+Validation: use the owner-request validation lane in `mechanics/AGENTS.md`.
+
+Stop-lines: Checkpoint-note and closeout-bridge skill landing remains lower
+authority than reviewed closeout execution.
+
+Next route: Keep SDK, role, memory, playbook, proof, routing, stats, runtime,
+and Dionysus checkpoint requests open until their owner-local receipts land.
+
 ### Center checkpoint mechanic landing
 
 Status: landed

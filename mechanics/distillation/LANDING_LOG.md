@@ -35,6 +35,31 @@ the change is not a landing change.
 
 ## Entries
 
+### aoa-skills owner-request receipt sync
+
+Status: owner-request accepted.
+
+Owner boundary: the center records the `aoa-skills` acceptance receipt for
+`ORQ-DISTILLATION-SKILLS-001` without claiming executable distillation workflow
+activation or generic skill-layer landing.
+
+Surfaces:
+
+- `mechanics/distillation/OWNER_REQUESTS.md`
+- `mechanics/owner-request-queue.json`
+- `mechanics/OWNER_REQUEST_QUEUE.md`
+- `generated/owner_request_queue.min.json`
+- Owner-local receipt in aoa-skills/mechanics/OWNER_REQUEST_RECEIPTS.md
+
+Validation: use the owner-request validation lane in `mechanics/AGENTS.md`.
+
+Stop-lines: Accepted is not landed. The center must not claim a general
+distillation skill package until `aoa-skills` lands one or supersedes the
+request.
+
+Next route: Wait for `aoa-skills` distillation package, canonical workflow, or
+superseding receipt before advancing this request to `landed`.
+
 ### Center distillation mechanic landing
 
 Status: landed

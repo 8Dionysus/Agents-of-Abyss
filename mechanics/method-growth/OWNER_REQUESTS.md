@@ -20,7 +20,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 
 | Request | Owner | Status | Priority | Slice | Required owner landing | Proof route |
 |---|---|---|---|---|---|---|
-| `ORQ-METHOD-SKILLS-001` | `aoa-skills` | `requested` | `P1` | Candidate skill identity and bounded execution shape | Owner-local candidate or skill-shaped object with trigger, procedure, risks, and verification boundaries. | Route proof to `aoa-evals` before promotion or public quality claims. |
+| `ORQ-METHOD-SKILLS-001` | `aoa-skills` | `landed` | `P1` | Candidate skill identity and bounded execution shape | Owner-local candidate or skill-shaped object with trigger, procedure, risks, and verification boundaries. | Route proof to `aoa-evals` before promotion or public quality claims. |
 | `ORQ-METHOD-SDK-001` | `aoa-sdk` | `requested` | `P2` | Provisional carry and typed helper hints | Typed helper seam or local-first carrier that can support candidate movement without owning meaning. | Compatibility evidence may route through `aoa-evals` when claims become public. |
 | `ORQ-METHOD-DIONYSUS-001` | `Dionysus` | `requested` | `P1` | Seed staging for candidate objects before owner landing | Seed packet or staging trace that preserves origin, source context, and intended owner without declaring final truth. | Closure evidence should point back to owner landing and pruning receipts. |
 | `ORQ-METHOD-EVALS-001` | `aoa-evals` | `requested` | `P1` | Proof route for promoted candidates and reusable method claims | Eval surface that states claim, evidence, blind spots, regression posture, and verdict boundary. | Proof itself is the owner-local landing route in `aoa-evals`. |

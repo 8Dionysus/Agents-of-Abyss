@@ -17,6 +17,9 @@ Tracking starts with the community-docs baseline for this repository.
 - first-reading, root-surface law, center authority, repository-role routing,
   roadmap, and generated entry-map routes now include `DESIGN.md` alongside
   the charter, ecosystem map, and federation rules.
+- `aoa-skills` owner-request entries now cite the owner-local receipt surface,
+  with Method-growth, Growth Cycle, Checkpoint, and RPG marked `landed`, and
+  Distillation, Experience, and Audit marked `accepted`.
 
 ## [0.4.0] - 2026-04-30
 

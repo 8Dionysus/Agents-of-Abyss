@@ -9,6 +9,7 @@ Growth Cycle without requiring every older landing entry to be re-read.
 
 | Entry | Status | Key point |
 |---|---|---|
+| [aoa-skills owner-request receipt sync](#aoa-skills-owner-request-receipt-sync) | landed | Records skill-layer cycle stage receipt without making skills final harvest authority. |
 | [Center Growth Cycle landing](#center-growth-cycle-landing) | landed | Establishes the reviewed lifecycle route and owner split. |
 
 Current active route: `mechanics/growth-cycle/README.md`,
@@ -31,6 +32,31 @@ validators, or tests, update the relevant entry here or explain in the PR why
 the change is not a landing change.
 
 ## Entries
+
+### aoa-skills owner-request receipt sync
+
+Status: owner-request landed
+
+Owner boundary: the center records the `aoa-skills` receipt for
+`ORQ-GROWTHCYCLE-SKILLS-001` without treating executable skills as final
+harvest, proof, memory, stats, runtime, or owner-acceptance authority.
+
+Surfaces:
+
+- `mechanics/growth-cycle/OWNER_REQUESTS.md`
+- `mechanics/owner-request-queue.json`
+- `mechanics/OWNER_REQUEST_QUEUE.md`
+- `generated/owner_request_queue.min.json`
+- Owner-local receipt in aoa-skills/mechanics/OWNER_REQUEST_RECEIPTS.md
+
+Validation: use the owner-request validation lane in `mechanics/AGENTS.md`.
+
+Stop-lines: Growth-cycle skill execution does not close donor harvest,
+progression, quest, proof, memory, playbook, runtime, or stats claims by
+itself.
+
+Next route: Keep sibling owner requests open until their owner-local receipts
+land.
 
 ### Center Growth Cycle landing
 

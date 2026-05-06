@@ -33,6 +33,30 @@ the PR why the change is not a landing change.
 
 ## Entries
 
+### aoa-skills owner-request receipt sync
+
+Status: owner-request landed.
+
+Owner boundary: the center records the `aoa-skills` receipt for
+`ORQ-METHOD-SKILLS-001` without claiming final skill truth, executable
+activation, proof, memory, or sibling-owner authority.
+
+Surfaces:
+
+- `mechanics/method-growth/OWNER_REQUESTS.md`
+- `mechanics/owner-request-queue.json`
+- `mechanics/OWNER_REQUEST_QUEUE.md`
+- `generated/owner_request_queue.min.json`
+- Owner-local receipt in aoa-skills/mechanics/OWNER_REQUEST_RECEIPTS.md
+
+Validation: use the owner-request validation lane in `mechanics/AGENTS.md`.
+
+Stop-lines: A landed `aoa-skills` receipt does not promote any candidate into
+canonical skill truth or public proof.
+
+Next route: Keep proof and public quality claims routed to `aoa-evals`; update
+this request again only if the owner-local receipt changes.
+
 ### Method-growth active-part distillation
 
 Status: landed

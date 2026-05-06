@@ -39,7 +39,7 @@ source JSON, validators, generated queue, and package request docs together.
 
 | Request | Mechanic | Owner | Status | Priority | Slice |
 |---|---|---|---|---|---|
-| `ORQ-METHOD-SKILLS-001` | `method-growth` | `aoa-skills` | `requested` | `P1` | Candidate skill identity and bounded execution shape |
+| `ORQ-METHOD-SKILLS-001` | `method-growth` | `aoa-skills` | `landed` | `P1` | Candidate skill identity and bounded execution shape |
 | `ORQ-METHOD-SDK-001` | `method-growth` | `aoa-sdk` | `requested` | `P2` | Provisional carry and typed helper hints |
 | `ORQ-METHOD-DIONYSUS-001` | `method-growth` | `Dionysus` | `requested` | `P1` | Seed staging for candidate objects before owner landing |
 | `ORQ-METHOD-EVALS-001` | `method-growth` | `aoa-evals` | `requested` | `P1` | Proof route for promoted candidates and reusable method claims |
@@ -48,7 +48,7 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-METHOD-TECHNIQUES-001` | `method-growth` | `aoa-techniques` | `requested` | `P1` | Reusable practice promotion |
 | `ORQ-METHOD-STATS-001` | `method-growth` | `aoa-stats` | `requested` | `P2` | Derived method-growth visibility |
 | `ORQ-DISTILLATION-TECHNIQUES-001` | `distillation` | `aoa-techniques` | `requested` | `P1` | Reusable distillation practice canon |
-| `ORQ-DISTILLATION-SKILLS-001` | `distillation` | `aoa-skills` | `requested` | `P1` | Executable distillation workflows |
+| `ORQ-DISTILLATION-SKILLS-001` | `distillation` | `aoa-skills` | `accepted` | `P1` | Executable distillation workflows |
 | `ORQ-DISTILLATION-PLAYBOOKS-001` | `distillation` | `aoa-playbooks` | `requested` | `P1` | Recurring distillation scenarios |
 | `ORQ-DISTILLATION-AGENTS-001` | `distillation` | `aoa-agents` | `requested` | `P1` | Runtime distill phase and artifact posture |
 | `ORQ-DISTILLATION-MEMO-001` | `distillation` | `aoa-memo` | `requested` | `P1` | Memory writeback candidates |
@@ -58,7 +58,7 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-DISTILLATION-TOS-001` | `distillation` | `Tree-of-Sophia` | `requested` | `P0` | Compost and canon boundary |
 | `ORQ-DISTILLATION-STACK-001` | `distillation` | `abyss-stack` | `requested` | `P2` | Runtime storage and export plumbing |
 | `ORQ-GROWTHCYCLE-SDK-001` | `growth-cycle` | `aoa-sdk` | `requested` | `P0` | Checkpoint hooks, ledgers, and closeout context |
-| `ORQ-GROWTHCYCLE-SKILLS-001` | `growth-cycle` | `aoa-skills` | `requested` | `P0` | Executable cycle stage skills |
+| `ORQ-GROWTHCYCLE-SKILLS-001` | `growth-cycle` | `aoa-skills` | `landed` | `P0` | Executable cycle stage skills |
 | `ORQ-GROWTHCYCLE-AGENTS-001` | `growth-cycle` | `aoa-agents` | `requested` | `P1` | Self-agent checkpoint, progression, and health posture |
 | `ORQ-GROWTHCYCLE-EVALS-001` | `growth-cycle` | `aoa-evals` | `requested` | `P1` | Proof and regression verdicts for cycle claims |
 | `ORQ-GROWTHCYCLE-MEMO-001` | `growth-cycle` | `aoa-memo` | `requested` | `P1` | Memory writeback, recall, and failure lessons |
@@ -77,7 +77,7 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-RECURRENCE-KAG-001` | `recurrence` | `aoa-kag` | `requested` | `P2` | Recurrence regrounding toward source references |
 | `ORQ-RECURRENCE-STACK-001` | `recurrence` | `abyss-stack` | `requested` | `P2` | Runtime wrappers for bounded re-entry after owner gates |
 | `ORQ-CHECKPOINT-SDK-001` | `checkpoint` | `aoa-sdk` | `requested` | `P0` | Checkpoint control panel and local ledgers |
-| `ORQ-CHECKPOINT-SKILLS-001` | `checkpoint` | `aoa-skills` | `requested` | `P0` | Checkpoint note protocol and closeout bridge skill |
+| `ORQ-CHECKPOINT-SKILLS-001` | `checkpoint` | `aoa-skills` | `landed` | `P0` | Checkpoint note protocol and closeout bridge skill |
 | `ORQ-CHECKPOINT-AGENTS-001` | `checkpoint` | `aoa-agents` | `requested` | `P1` | Self-agent checkpoint posture |
 | `ORQ-CHECKPOINT-MEMO-001` | `checkpoint` | `aoa-memo` | `requested` | `P1` | Inquiry checkpoint, state capsule, and writeback |
 | `ORQ-CHECKPOINT-PLAYBOOKS-001` | `checkpoint` | `aoa-playbooks` | `requested` | `P1` | Recurring checkpoint choreography |
@@ -96,7 +96,7 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-EXPERIENCE-PLAYBOOKS-001` | `experience` | `aoa-playbooks` | `requested` | `P1` | Experience adoption, release, office, and service choreography |
 | `ORQ-EXPERIENCE-SDK-001` | `experience` | `aoa-sdk` | `requested` | `P1` | Typed install, runtime, train, and helper API carriers for Experience routes |
 | `ORQ-EXPERIENCE-STATS-001` | `experience` | `aoa-stats` | `requested` | `P2` | Experience dashboards, watch summaries, and derived movement readouts |
-| `ORQ-EXPERIENCE-SKILLS-001` | `experience` | `aoa-skills` | `requested` | `P2` | Experience receipt, adoption, release, and service operation skills |
+| `ORQ-EXPERIENCE-SKILLS-001` | `experience` | `aoa-skills` | `accepted` | `P2` | Experience receipt, adoption, release, and service operation skills |
 | `ORQ-EXPERIENCE-TECHNIQUES-001` | `experience` | `aoa-techniques` | `requested` | `P2` | Reusable Experience adoption, deployment, office, and service practice |
 | `ORQ-AGON-PLAYBOOKS-001` | `agon` | `aoa-playbooks` | `requested` | `P0` | Agon trial choreography and repeatable duel routes |
 | `ORQ-AGON-EVALS-001` | `agon` | `aoa-evals` | `requested` | `P0` | Verdict proof, evaluation discipline, and regression evidence |
@@ -116,7 +116,7 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-QUESTBOOK-MEMO-001` | `questbook` | `aoa-memo` | `requested` | `P2` | Lessons retained after quest completion |
 | `ORQ-QUESTBOOK-ROUTING-001` | `questbook` | `aoa-routing` | `requested` | `P2` | Cross-repo obligation handoff and thin route surfaces |
 | `ORQ-RPG-AGENTS-001` | `rpg` | `aoa-agents` | `requested` | `P1` | Role, actor, and persona truth behind RPG reflection |
-| `ORQ-RPG-SKILLS-001` | `rpg` | `aoa-skills` | `requested` | `P1` | Skill and feat truth behind progression labels |
+| `ORQ-RPG-SKILLS-001` | `rpg` | `aoa-skills` | `landed` | `P1` | Skill and feat truth behind progression labels |
 | `ORQ-RPG-PLAYBOOKS-001` | `rpg` | `aoa-playbooks` | `requested` | `P1` | Campaign, scenario, and questline choreography |
 | `ORQ-RPG-EVALS-001` | `rpg` | `aoa-evals` | `requested` | `P1` | Progression proof and evidence-backed advancement |
 | `ORQ-RPG-STACK-001` | `rpg` | `abyss-stack` | `requested` | `P3` | Runtime ledger or session-state support after gates |
@@ -130,7 +130,7 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-AUDIT-EVALS-001` | `audit` | `aoa-evals` | `requested` | `P1` | Proof-strength route for audit findings |
 | `ORQ-AUDIT-MEMO-001` | `audit` | `aoa-memo` | `requested` | `P2` | Durable evidence and memory writeback route |
 | `ORQ-AUDIT-PLAYBOOKS-001` | `audit` | `aoa-playbooks` | `requested` | `P2` | Recurring audit campaign choreography |
-| `ORQ-AUDIT-SKILLS-001` | `audit` | `aoa-skills` | `requested` | `P2` | Executable audit workflow skill shape |
+| `ORQ-AUDIT-SKILLS-001` | `audit` | `aoa-skills` | `accepted` | `P2` | Executable audit workflow skill shape |
 | `ORQ-AUDIT-AGENTS-001` | `audit` | `aoa-agents` | `requested` | `P3` | Audit-facing role and handoff posture |
 | `ORQ-AUDIT-STATS-001` | `audit` | `aoa-stats` | `requested` | `P3` | Derived audit movement summaries |
 | `ORQ-RELEASE-EVALS-001` | `release-support` | `aoa-evals` | `requested` | `P0` | Public claim proof for release and state-transition support posture |
