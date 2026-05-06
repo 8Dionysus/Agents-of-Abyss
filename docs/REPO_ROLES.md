@@ -11,7 +11,7 @@ Use it when the question is not only "what exists?" but also:
 
 | repository | role | owns | does not own | primary artifacts | main question |
 |---|---|---|---|---|---|
-| `Agents-of-Abyss` | ecosystem center | ecosystem identity, charter, layer map, federation rules, ecosystem registry, program-level roadmap | specialized corpus truth, runtime infra, technique bundles, skill bundles, eval bundles, memory objects | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md`, `generated/ecosystem_registry.min.json` | what is AoA as a whole? |
+| `Agents-of-Abyss` | ecosystem center | ecosystem identity, system form, charter, layer map, federation rules, ecosystem registry, program-level roadmap | specialized corpus truth, runtime infra, technique bundles, skill bundles, eval bundles, memory objects | `README.md`, `CHARTER.md`, `DESIGN.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md`, `generated/ecosystem_registry.min.json` | what is AoA as a whole? |
 | `aoa-techniques` | practice canon | reusable techniques, origin evidence, checks, examples, technique-level derived surfaces | skill truth, eval truth, memory truth, cross-repo routing truth | `TECHNIQUE.md`, notes, checks, examples, technique catalogs | what practice is genuinely reusable? |
 | `aoa-skills` | execution canon | bounded agent-facing workflows, trigger boundaries, verification guidance, technique composition manifests | primary technique meaning, proof doctrine, memory objects, ecosystem-center governance | `SKILL.md`, `techniques.yaml`, agent policy files, skill support artifacts | how should an agent execute bounded work? |
 | `aoa-evals` | proof canon | bounded proof surfaces, verdict logic, scoring guidance, comparison modes, blind spots | workflow execution truth, technique truth, memory truth, ecosystem routing truth | `EVAL.md`, `eval.yaml`, evidence/support artifacts | what bounded claim can we honestly defend? |
@@ -51,7 +51,7 @@ When deciding where something belongs:
 5. If it defines role-bearing agents, it probably belongs in `aoa-agents`.
 6. If it defines dispatch across layers, it probably belongs in `aoa-routing`.
 7. If it defines machine-first summary surfaces or derived observability windows, it probably belongs in `aoa-stats`.
-8. If it defines ecosystem-level identity or federation boundaries, it belongs here.
+8. If it defines ecosystem-level identity, system form, or federation boundaries, it belongs here.
 9. If it is mechanic-shaped, start with `mechanics/README.md` and the owning
    mechanic package. Use the package `README.md`, `PARTS.md`,
    `OWNER_REQUESTS.md`, and `PROVENANCE.md` when those surfaces exist.

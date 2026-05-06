@@ -21,6 +21,7 @@ repository-local.
 | Function | Center surface |
 |---|---|
 | Names the AoA center and its authority boundary | [CHARTER](CHARTER.md) |
+| Describes the system form AoA should preserve while it grows | [DESIGN](DESIGN.md) |
 | Maps the current public federation contour | [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) |
 | Keeps source, derived, routing, runtime, memory, proof, and authored meaning separate | [FEDERATION_RULES](docs/FEDERATION_RULES.md) |
 | Routes work to the repository or mechanic that can carry it | [REPO_ROLES](docs/REPO_ROLES.md), [mechanics](mechanics/README.md) |
@@ -40,8 +41,9 @@ Read only what matches your entry need.
 
 | Need | Route |
 |---|---|
-| Shortest honest overview | this README, then [CHARTER](CHARTER.md), [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md), and [FEDERATION_RULES](docs/FEDERATION_RULES.md) |
+| Shortest honest overview | this README, then [CHARTER](CHARTER.md), [DESIGN](DESIGN.md), [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md), and [FEDERATION_RULES](docs/FEDERATION_RULES.md) |
 | Authority boundary | [CHARTER](CHARTER.md) |
+| System form | [DESIGN](DESIGN.md) |
 | Current federation map | [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) |
 | Program direction | [ROADMAP](ROADMAP.md) |
 | Repository ownership routing | [REPO_ROLES](docs/REPO_ROLES.md) |
@@ -78,6 +80,7 @@ surface that can answer it.
 | Claim question | Check |
 |---|---|
 | May the center say this at all? | [CHARTER](CHARTER.md) |
+| Does this preserve the system form AoA is growing toward? | [DESIGN](DESIGN.md) |
 | Is the named repository or anchor in the current public contour? | [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) and [ecosystem_registry.min.json](generated/ecosystem_registry.min.json) |
 | Does the wording preserve owner truth boundaries? | [FEDERATION_RULES](docs/FEDERATION_RULES.md) and [REPO_ROLES](docs/REPO_ROLES.md) |
 | Is this current direction rather than released history or mechanic-local planning? | [ROADMAP](ROADMAP.md) |
@@ -98,7 +101,7 @@ and validator-backed center repository.
 
 Current anchors:
 
-- [CHARTER](CHARTER.md), [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md), and
+- [CHARTER](CHARTER.md), [DESIGN](DESIGN.md), [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md), and
   [FEDERATION_RULES](docs/FEDERATION_RULES.md) for center law and source
   discipline
 - [ROADMAP](ROADMAP.md) for center-wide direction and future triggers

@@ -124,6 +124,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "human_path": [
             "README.md",
             "CHARTER.md",
+            "DESIGN.md",
             "ECOSYSTEM_MAP.md",
             "docs/FEDERATION_RULES.md",
         ],
@@ -150,6 +151,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "human_path": [
             "README.md",
             "CHARTER.md",
+            "DESIGN.md",
             "ECOSYSTEM_MAP.md",
             "docs/FEDERATION_RULES.md",
             "CONTRIBUTING.md",
@@ -175,6 +177,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "human_path": [
             "README.md",
             "CHARTER.md",
+            "DESIGN.md",
             "ECOSYSTEM_MAP.md",
             "docs/FEDERATION_RULES.md",
             "ROADMAP.md",
@@ -202,6 +205,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "human_path": [
             "README.md",
             "CHARTER.md",
+            "DESIGN.md",
             "ECOSYSTEM_MAP.md",
             "docs/FEDERATION_RULES.md",
             "docs/LAYERS.md",
@@ -230,6 +234,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "human_path": [
             "README.md",
             "CHARTER.md",
+            "DESIGN.md",
             "ECOSYSTEM_MAP.md",
             "docs/FEDERATION_RULES.md",
             "mechanics/README.md",
@@ -258,6 +263,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "human_path": [
             "README.md",
             "CHARTER.md",
+            "DESIGN.md",
             "ECOSYSTEM_MAP.md",
             "docs/FEDERATION_RULES.md",
             "docs/organ-contract/README.md",

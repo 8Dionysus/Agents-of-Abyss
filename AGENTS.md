@@ -62,8 +62,9 @@ For first reading or outside orientation, use the canonical first-reading route:
 
 1. `README.md`
 2. `CHARTER.md`
-3. `ECOSYSTEM_MAP.md`
-4. `docs/FEDERATION_RULES.md`
+3. `DESIGN.md`
+4. `ECOSYSTEM_MAP.md`
+5. `docs/FEDERATION_RULES.md`
 
 For agent editing, use the operational route:
 
@@ -77,11 +78,12 @@ For agent editing, use the operational route:
 For center authority surfaces, also read:
 
 1. `CHARTER.md`
-2. `ECOSYSTEM_MAP.md`
-3. `docs/LAYERS.md`
-4. `docs/FEDERATION_RULES.md`
-5. `ROADMAP.md`
-6. `README.md`
+2. `DESIGN.md`
+3. `ECOSYSTEM_MAP.md`
+4. `docs/LAYERS.md`
+5. `docs/FEDERATION_RULES.md`
+6. `ROADMAP.md`
+7. `README.md`
 
 ## Route modes
 
@@ -180,7 +182,7 @@ only the ones that moved; otherwise say no update was needed.
 
 Treat these as high-risk findings in this center repository:
 
-- contradictions across `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, `ROADMAP.md`, and source-backed generated capsules
+- contradictions across `README.md`, `CHARTER.md`, `DESIGN.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md`, `ROADMAP.md`, and source-backed generated capsules
 - routing that points readers to the wrong owner repository or mechanic package
 - generated or derived surfaces changed without their source docs, builders, validators, or tests
 - public promises that are not supported by release-support evidence

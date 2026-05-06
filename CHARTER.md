@@ -33,6 +33,7 @@ AoA exists to support sustained intellectual and technical work where:
 | Center-owned object | Meaning |
 |---|---|
 | Ecosystem identity | the public name, center posture, and high-level contour of AoA |
+| System form | the durable design shape AoA should preserve while it grows toward OS Abyss |
 | Layer map | the current public roles of source-owned, derived, routing, support, and adjacent surfaces |
 | Federation rules | the discipline that keeps source truth, derived truth, routing truth, runtime truth, and authored knowledge truth separate |
 | Program-level direction | roadmap-level direction and maturity crosswalks, without repo-local implementation promises |
@@ -69,17 +70,18 @@ When a center document begins to define repo-local behavior, it should shrink
 back to routing, stop-lines, or an explicit owner request.
 
 A root file is healthy when it serves the public civic surface. Historical
-receipts, audit artifacts, generated objects, and future design notes belong in
-their proper districts rather than beside the constitution.
+receipts, audit artifacts, generated objects, and unlanded design notes belong
+in their proper districts rather than beside the constitution.
 
 ## Review rule
 
 Before changing the center, check:
 
 1. [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) for the current contour.
-2. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth law.
-3. [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) for root placement.
-4. [docs/organ-contract](docs/organ-contract/README.md) for repo-organ alignment.
-5. [release-support/PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) for honest public claims.
-6. [AGENTS.md](AGENTS.md) for the operational editing route.
-7. Generated capsules and validators before claiming the change is complete.
+2. [DESIGN](DESIGN.md) for the system form being preserved.
+3. [docs/FEDERATION_RULES](docs/FEDERATION_RULES.md) for source-of-truth law.
+4. [docs/ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) for root placement.
+5. [docs/organ-contract](docs/organ-contract/README.md) for repo-organ alignment.
+6. [release-support/PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) for honest public claims.
+7. [AGENTS.md](AGENTS.md) for the operational editing route.
+8. Generated capsules and validators before claiming the change is complete.
