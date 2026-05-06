@@ -17,7 +17,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 | Request | Owner | Status | Priority | Slice | Required owner landing | Proof route |
 |---|---|---|---|---|---|---|
 | `ORQ-RPG-AGENTS-001` | `aoa-agents` | `requested` | `P1` | Role, actor, and persona truth behind RPG reflection | Role contracts and actor-seat definitions that RPG reflection may reference without mutating. | Role claims route to `aoa-evals` where needed. |
-| `ORQ-RPG-SKILLS-001` | `aoa-skills` | `requested` | `P1` | Skill and feat truth behind progression labels | Skill-owned object truth for feats, capability labels, triggers, and verification. | Skill claim proof routes to `aoa-evals`. |
+| `ORQ-RPG-SKILLS-001` | `aoa-skills` | `landed` | `P1` | Skill and feat truth behind progression labels | Skill-owned object truth for feats, capability labels, triggers, and verification. | Skill claim proof routes to `aoa-evals`. |
 | `ORQ-RPG-PLAYBOOKS-001` | `aoa-playbooks` | `requested` | `P1` | Campaign, scenario, and questline choreography | Playbook-owned campaign route, scenario sequence, fallback posture, and expected evidence. | Scenario progress proof routes to `aoa-evals`. |
 | `ORQ-RPG-EVALS-001` | `aoa-evals` | `requested` | `P1` | Progression proof and evidence-backed advancement | Eval surface for whether advancement, capability, or progress claims are defensible. | Proof lives in `aoa-evals`. |
 | `ORQ-RPG-STACK-001` | `abyss-stack` | `requested` | `P3` | Runtime ledger or session-state support after gates | Runtime ledger or state surface only after role, proof, and scenario owners have landed boundaries. | Runtime evidence routes through infrastructure receipts and evals. |
@@ -82,6 +82,8 @@ Center sources:
 Owner landing should decide: which skill objects, triggers, verification rules, ability labels, or feat reflections can be referenced by RPG without widening skill canon.
 
 Acceptance signal: an `aoa-skills` issue, document, branch, or receipt names `ORQ-RPG-SKILLS-001`, accepts the bounded slice, and states how skill truth remains owner-local.
+
+Owner-local receipt: `aoa-skills/mechanics/OWNER_REQUEST_RECEIPTS.md#orq-rpg-skills-001`.
 
 Proof route: skill claim proof routes to `aoa-evals` before public capability, unlock, or readiness claims.
 

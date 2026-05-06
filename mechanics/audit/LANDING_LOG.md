@@ -6,9 +6,36 @@ This is the canonical center landing ledger for the Audit mechanic.
 
 | Entry | Status | Route |
 |---|---|---|
+| [aoa-skills owner-request receipt sync](#aoa-skills-owner-request-receipt-sync) | accepted | `aoa-skills` accepts audit workflow pressure without landing a general audit package. |
 | [Audit mechanic planted](#audit-mechanic-planted) | planted | historical docs-audits material moved into `mechanics/audit/legacy/raw/`; active route created in `mechanics/audit/` |
 
 ## Entries
+
+### aoa-skills owner-request receipt sync
+
+Status: owner-request accepted
+
+Owner boundary: the center records the `aoa-skills` acceptance receipt for
+`ORQ-AUDIT-SKILLS-001` without claiming executable audit workflow truth,
+proof verdicts, remediation authority, memory truth, role activation, or
+derived-summary authority.
+
+Surfaces:
+
+- `mechanics/audit/OWNER_REQUESTS.md`
+- `mechanics/owner-request-queue.json`
+- `mechanics/OWNER_REQUEST_QUEUE.md`
+- `generated/owner_request_queue.min.json`
+- Owner-local receipt in aoa-skills/mechanics/OWNER_REQUEST_RECEIPTS.md
+
+Validation: use the owner-request validation lane in `mechanics/AGENTS.md`.
+
+Stop-lines: Accepted is not landed. Existing audit-adjacent skills do not cover
+the whole center Audit mechanic until an owner-local package, canonical
+workflow, or superseding receipt lands.
+
+Next route: Wait for `aoa-skills` audit package, canonical workflow, or
+superseding receipt before advancing this request to `landed`.
 
 ### Audit mechanic planted
 

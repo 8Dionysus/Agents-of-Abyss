@@ -17,6 +17,8 @@ RPG without requiring every older landing entry to be re-read.
 - RPG now has one worked playable-obligation route example that shows ordinary task to quest route to RPG reading to proof route to owner handoff without becoming a reusable quest template.
 - RPG parts now use explicit route checks and output gates so every part can act as a small working organ without adding more long-form doctrine.
 - RPG owner requests now carry ready-to-carry handoff packets so sibling owners can accept, reject, land, or prove slices without reading center requests as acceptance.
+- The `aoa-skills` owner-request receipt now lands the skill-layer
+  ability/loadout reader boundary without making RPG labels skill canon.
 
 Current active route: `mechanics/rpg/README.md`,
 `mechanics/rpg/DIRECTION.md`, `mechanics/rpg/USAGE.md`,
@@ -39,6 +41,31 @@ validators, examples, or tests, update the relevant entry here or explain in
 the PR why the change is not a landing change.
 
 ## Entries
+
+### aoa-skills owner-request receipt sync
+
+Status: owner-request landed
+
+Owner boundary: the center records the `aoa-skills` receipt for
+`ORQ-RPG-SKILLS-001` without treating RPG ability, feat, pack, or loadout
+language as canonical skill truth, technique truth, role truth, runtime
+inventory, progression proof, or scenario choreography.
+
+Surfaces:
+
+- `mechanics/rpg/OWNER_REQUESTS.md`
+- `mechanics/owner-request-queue.json`
+- `mechanics/OWNER_REQUEST_QUEUE.md`
+- `generated/owner_request_queue.min.json`
+- Owner-local receipt in aoa-skills/mechanics/OWNER_REQUEST_RECEIPTS.md
+
+Validation: use the owner-request validation lane in `mechanics/AGENTS.md`.
+
+Stop-lines: RPG labels must not become skill canon. Ability-card and loadout
+readers remain derived skill-layer reader surfaces.
+
+Next route: Keep role, playbook, proof, runtime, and stats RPG requests open
+until their owner-local receipts land.
 
 ### Root mechanics topology migration
 
