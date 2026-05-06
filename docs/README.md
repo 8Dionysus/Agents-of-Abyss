@@ -12,11 +12,12 @@ For the shortest center overview, read:
 
 1. [`README`](../README.md)
 2. [`CHARTER`](../CHARTER.md)
-3. [`ECOSYSTEM_MAP`](../ECOSYSTEM_MAP.md)
-4. [`FEDERATION_RULES`](FEDERATION_RULES.md)
-5. [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md)
-6. [`ROADMAP`](../ROADMAP.md)
-7. [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md)
+3. [`DESIGN`](../DESIGN.md)
+4. [`ECOSYSTEM_MAP`](../ECOSYSTEM_MAP.md)
+5. [`FEDERATION_RULES`](FEDERATION_RULES.md)
+6. [`ROOT_SURFACE_LAW`](ROOT_SURFACE_LAW.md)
+7. [`ROADMAP`](../ROADMAP.md)
+8. [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md)
 
 Entry route modes are governed by [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md): `first-reading`, `root-editing`, `direction-change`, `ownership-routing`, `mechanic-change`, `organ-alignment`, `public-claim-validation`, `low-context-agent`, and `district-work`. Compact machine entry lives in [`generated/center_entry_map.min.json`](../generated/center_entry_map.min.json).
 

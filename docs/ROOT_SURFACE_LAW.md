@@ -35,7 +35,7 @@ The docs thematic cleanup guardrails are defined by:
 
 | Class | Allowed examples | Why root is justified | Guardrail |
 |---|---|---|---|
-| Civic law and public map | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md` | they define the center's identity, contour, and direction | must stay aligned with generated capsules and validators |
+| Civic law and public map | `README.md`, `CHARTER.md`, `DESIGN.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md` | they define the center's identity, system form, contour, and direction | must stay aligned with generated capsules and validators |
 | Public governance and legal | `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `LICENSE` | GitHub and contributors expect them there | must not become doctrine catalogs |
 | Thin civic indexes | `GLOSSARY.md`, `QUESTBOOK.md`, `ECOSYSTEM_AUDIT_INDEX.md` | they help humans and agents route quickly | must stay compact and link to deeper canonical docs |
 | Agent lane | `AGENTS.md`, `.agents/`, `Spark/` | agent-facing work needs a stable local lane | must not become a substitute for civic docs |
@@ -79,6 +79,7 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 | `QUESTBOOK.md` | keep, narrow | root quest index | useful only while it stays federation-level and does not become a second roadmap |
 | `ECOSYSTEM_AUDIT_INDEX.md` | keep, clean | root audit router | useful root index if it routes rather than storing every audit detail |
 | `GLOSSARY.md` | keep | root vocabulary companion | useful compact vocabulary if aligned with center docs |
+| `DESIGN.md` | keep | root system-form surface | useful civic law when it preserves AoA shape without overriding charter, roadmap, map, federation rules, or owner-local truth |
 
 ## Docs thematic cleanup decisions
 

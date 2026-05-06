@@ -47,7 +47,7 @@ If the question is "does the center have authority to say this?", return to
 
 | Repository | Role | Owns | Does not own | Current maturity | Growth direction |
 |---|---|---|---|---|---|
-| `Agents-of-Abyss` | constitutional polis and ecosystem center | ecosystem identity, layer map, federation rules, program-level direction, center mechanics law, root surface governance, center-entry capsules, and AbyssOS organ contract law | technique truth, skill truth, eval truth, memory truth, agent truth, playbook truth, KAG truth, SDK/control-plane implementation, runtime infrastructure, ToS-authored corpus | active | proven center route and validator-backed public map |
+| `Agents-of-Abyss` | constitutional polis and ecosystem center | ecosystem identity, system form, layer map, federation rules, program-level direction, center mechanics law, root surface governance, center-entry capsules, and AbyssOS organ contract law | technique truth, skill truth, eval truth, memory truth, agent truth, playbook truth, KAG truth, SDK/control-plane implementation, runtime infrastructure, ToS-authored corpus | active | proven center route and validator-backed public map |
 
 ## Public source-owned AoA layers
 

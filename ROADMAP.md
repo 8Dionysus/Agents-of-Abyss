@@ -56,8 +56,8 @@ Supporting consumers outside registry v2, including `aoa-sdk`, are reflected in
 
 The current center move is:
 
-- keep the constitutional route clear from `CHARTER.md` through
-  `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, and this roadmap
+- keep the constitutional route clear from `CHARTER.md` and `DESIGN.md`
+  through `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, and this roadmap
 - keep the root-document pass from regrowing into a warehouse
 - keep mechanics active in their packages while root names only center-wide
   pressure
@@ -75,7 +75,7 @@ Current checked anchors:
 
 | Anchor | Surface |
 |---|---|
-| Center route and authority | `README.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md` |
+| Center route and authority | `README.md`, `CHARTER.md`, `DESIGN.md`, `ECOSYSTEM_MAP.md`, `docs/LAYERS.md`, `docs/FEDERATION_RULES.md` |
 | Direction and public-claim support | `ROADMAP.md`, `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, `mechanics/release-support/docs/DIRECTION_SURFACES.md` |
 | AbyssOS organ alignment | `docs/organ-contract/README.md`, `docs/organ-contract/ORGAN_CONTRACT.md`, `docs/organ-contract/FIRST_CYCLE.md` |
 | Compact machine companions | `generated/center_entry_map.min.json`, `generated/ecosystem_registry.min.json`, `generated/federation_supporting_inventory.min.json` |
@@ -94,7 +94,7 @@ surfaces keep checked landings, validators, owner boundaries, and stop-lines.
 
 | Field | Direction |
 |---|---|
-| Current posture | The center has a stronger root route: `AGENTS.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md`, and root technical districts now have clearer roles. |
+| Current posture | The center has a stronger root route: `AGENTS.md`, `CHARTER.md`, `DESIGN.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md`, and root technical districts now have clearer roles. |
 | Next honest move | Keep root surfaces compact while owner descent tests whether the center route stays readable under real downstream pressure. |
 | Guardrail | Root surfaces stay civic, compact, and source-of-truth aware; historical detail routes to the owning district or mechanic. |
 

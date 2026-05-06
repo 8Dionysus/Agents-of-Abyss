@@ -33,7 +33,7 @@ If one of those surfaces changes the route order or adds a new route mode, the o
 
 | Route mode | Audience | Job | Canonical path |
 |---|---|---|---|
-| `first-reading` | humans, new agents, outside readers | understand the center without entering every district | `README.md` -> `CHARTER.md` -> `ECOSYSTEM_MAP.md` -> `docs/FEDERATION_RULES.md` |
+| `first-reading` | humans, new agents, outside readers | understand the center without entering every district | `README.md` -> `CHARTER.md` -> `DESIGN.md` -> `ECOSYSTEM_MAP.md` -> `docs/FEDERATION_RULES.md` |
 | `root-editing` | contributors, coding agents, maintainers | change root surfaces without making the root a warehouse | first reading -> `CONTRIBUTING.md` -> `docs/ROOT_SURFACE_LAW.md` |
 | `direction-change` | maintainers, release agents | update roadmap, horizon posture, maturity, owner-route pressure, future trigger, transition, or release contour | first reading -> `ROADMAP.md` -> `mechanics/release-support/DIRECTION.md` -> `mechanics/release-support/docs/DIRECTION_SURFACES.md` -> `CHANGELOG.md` |
 | `ownership-routing` | humans and agents deciding where work belongs | choose the owner repository for a change | first reading -> `docs/LAYERS.md` -> `docs/REPO_ROLES.md` |
@@ -51,12 +51,14 @@ Read:
 
 1. `README.md`
 2. `CHARTER.md`
-3. `ECOSYSTEM_MAP.md`
-4. `docs/FEDERATION_RULES.md`
+3. `DESIGN.md`
+4. `ECOSYSTEM_MAP.md`
+5. `docs/FEDERATION_RULES.md`
 
 This route answers:
 
 - what the polis is
+- what system form AoA is preserving
 - what the federation is
 - what the center owns
 - what the center must not absorb

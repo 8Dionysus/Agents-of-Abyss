@@ -44,6 +44,7 @@ class CenterEntryMapTests(unittest.TestCase):
             [
                 "README.md",
                 "CHARTER.md",
+                "DESIGN.md",
                 "ECOSYSTEM_MAP.md",
                 "docs/FEDERATION_RULES.md",
             ],

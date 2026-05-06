@@ -7,7 +7,16 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
-No unreleased changes.
+### Added
+
+- `DESIGN.md` as the root system-form surface for AoA's long-horizon shape
+  toward OS Abyss.
+
+### Changed
+
+- first-reading, root-surface law, center authority, repository-role routing,
+  roadmap, and generated entry-map routes now include `DESIGN.md` alongside
+  the charter, ecosystem map, and federation rules.
 
 ## [0.4.0] - 2026-04-30
 
