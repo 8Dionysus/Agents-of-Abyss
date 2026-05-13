@@ -30,7 +30,7 @@ Decision records explain why; current surfaces define what.
 | [`2026-04-30-root-schema-district-contract`](2026-04-30-root-schema-district-contract.md) | decision record for keeping root schemas as center contracts with registry-backed validation |
 | [`2026-04-30-root-scripts-district-contract`](2026-04-30-root-scripts-district-contract.md) | decision record for keeping root scripts as registry-backed center tooling |
 | [`2026-04-30-root-tests-district-contract`](2026-04-30-root-tests-district-contract.md) | decision record for keeping root tests as registry-backed center proof surface |
-| [`2026-04-30-spark-session-lane-contract`](2026-04-30-spark-session-lane-contract.md) | decision record for keeping Spark as a registry-backed done-or-handoff agent lane |
+| [`2026-04-30-spark-session-lane-contract`](2026-04-30-spark-session-lane-contract.md) | historical decision record for the original Spark root lane contract, superseded for placement |
 | [`2026-04-30-github-landing-workflow`](2026-04-30-github-landing-workflow.md) | decision record for making branch, PR, CI, and merge landing explicit in root AGENTS guidance |
 | [`2026-04-30-entry-validation-baseline`](2026-04-30-entry-validation-baseline.md) | decision record for routing entry-surface baseline commands through a guardrail surface instead of inline repetition |
 | [`2026-04-30-roadmap-horizon-direction-route`](2026-04-30-roadmap-horizon-direction-route.md) | decision record for making root roadmap a horizon-based center direction surface |
@@ -38,6 +38,7 @@ Decision records explain why; current surfaces define what.
 | [`2026-04-30-release-preflight-route-surface`](2026-04-30-release-preflight-route-surface.md) | decision record for keeping a repo-level release route while release-support owns the runbook |
 | [`2026-05-06-root-design-surface`](2026-05-06-root-design-surface.md) | decision record for keeping `DESIGN.md` as the root system-form surface |
 | [`2026-05-13-agent-surface-design-root`](2026-05-13-agent-surface-design-root.md) | decision record for keeping `DESIGN.AGENTS.md` as the root agent-surface design form |
+| [`2026-05-13-codex-spark-agent-lane-home`](2026-05-13-codex-spark-agent-lane-home.md) | decision record for moving the Codex Spark lane under `.agents/spark/` |
 
 ## Record shape
 

@@ -160,7 +160,7 @@
     {
       "home_ref": "script-home:spark-lane",
       "owner_scope": "agent-lane",
-      "path_glob": "Spark/scripts"
+      "path_glob": ".agents/spark/scripts"
     }
   ],
   "validation_commands": [

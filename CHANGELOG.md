@@ -21,6 +21,8 @@ Tracking starts with the community-docs baseline for this repository.
   the charter, ecosystem map, and federation rules.
 - root AGENTS guidance, AGENTS mesh guardrails, and root-surface law now route
   agent-card shape and mesh-form changes through `DESIGN.AGENTS.md`.
+- the Codex Spark lane now lives at `.agents/spark/`, with release, pytest,
+  registry, and AGENTS mesh routes updated to that home.
 - `aoa-skills` owner-request entries now cite the owner-local receipt surface,
   with Method-growth, Growth Cycle, Checkpoint, and RPG marked `landed`, and
   Distillation, Experience, and Audit marked `accepted`.
@@ -79,7 +81,7 @@ Tracking starts with the community-docs baseline for this repository.
 - AbyssOS organ-contract district with `organ-alignment` route mode, surface
   state vocabulary, first-cycle route, system event vocabulary, and validation
 - technical-district routing and validation for `config/`, `examples/`,
-  `generated/`, `manifests/`, `schemas/`, `scripts/`, `tests/`, and `Spark/`
+  `generated/`, `manifests/`, `schemas/`, `scripts/`, `tests/`, and the Spark lane
   so repo-level artifacts stay discoverable without becoming mechanic storage
 
 ### Changed
@@ -117,11 +119,11 @@ Tracking starts with the community-docs baseline for this repository.
   of holding mechanic-owned artifacts; mechanic-owned schemas, examples,
   manifests, scripts, and tests are routed to their packages where appropriate
 - `pytest.ini` now collects active tests from root `tests/`, `mechanics/`, and
-  `Spark/tests` while excluding legacy, cache, and build directories from the
+  the Spark lane while excluding legacy, cache, and build directories from the
   default root pytest run
 - `scripts/release_check.py` now runs the expanded repo gate across docs,
   mechanics, questbook, generated surfaces, config, manifests, schemas,
-  scripts, tests, Spark, ecosystem validation, and pytest
+  scripts, tests, the Spark lane, ecosystem validation, and pytest
 - mechanics topology validation now permits `docs/RELEASING.md` only as a
   bounded repo-level route into the release-support runbook
 

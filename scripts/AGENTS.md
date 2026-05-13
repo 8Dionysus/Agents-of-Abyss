@@ -18,7 +18,7 @@ source surface named by the relevant registry family.
 
 Use mechanic package guidance for scripts under `mechanics/<slug>/scripts/` or
 `mechanics/<slug>/parts/<part>/scripts/`.
-Use `Spark/AGENTS.md` for scripts under `Spark/scripts/`.
+Use `.agents/spark/AGENTS.md` for scripts under `.agents/spark/scripts/`.
 
 ## Boundaries
 

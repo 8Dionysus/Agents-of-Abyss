@@ -217,7 +217,7 @@
     {
       "home_ref": "test-home:spark-lane",
       "owner_scope": "agent-lane",
-      "path_glob": "Spark/tests"
+      "path_glob": ".agents/spark/tests"
     }
   ],
   "validation_commands": [
