@@ -18,7 +18,7 @@ surface named by the relevant registry family.
 
 Use mechanic package guidance for tests under `mechanics/<slug>/tests/` or
 `mechanics/<slug>/parts/<part>/tests/`.
-Use `Spark/AGENTS.md` for tests under `Spark/tests/`.
+Use `.agents/spark/AGENTS.md` for tests under `.agents/spark/tests/`.
 
 ## Boundaries
 

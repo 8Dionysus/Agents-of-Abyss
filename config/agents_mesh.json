@@ -67,12 +67,12 @@
       ]
     },
     {
-      "path": "Spark/AGENTS.md",
-      "scope": "Spark/",
-      "kind": "top-level-district-card",
+      "path": ".agents/spark/AGENTS.md",
+      "scope": ".agents/spark/",
+      "kind": "agent-lane-card",
       "status": "required",
       "owner": "Agents-of-Abyss",
-      "notes": "New or upgraded local district card.",
+      "notes": "Codex Spark lane card nested under .agents.",
       "required_headings": [
         "# AGENTS.md",
         "## Applies to",

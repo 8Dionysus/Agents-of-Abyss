@@ -1,14 +1,15 @@
 # Spark Session Lane Contract
 
-Status: accepted
+Status: superseded
 Date: 2026-04-30
 
 ## Context
 
-`Spark/` existed as a fast-lane surface for GPT-5.3-Codex-Spark style work, but
-it only had local AGENTS guidance and a swarm note. The lane did not yet define
-how a Spark-only session should end, where unfinished work should go, or how
-future agents should validate scenario shape.
+At the time of this record, `Spark/` existed as a fast-lane surface for
+GPT-5.3-Codex-Spark style work, but it only had local AGENTS guidance and a
+swarm note. The lane did not yet define how a Spark-only session should end,
+where unfinished work should go, or how future agents should validate scenario
+shape.
 
 Spark sessions are expected to run separately from slower model sessions. That
 means unfinished work cannot rely on an in-session model switch.
@@ -22,11 +23,16 @@ means unfinished work cannot rely on an in-session model switch.
 
 ## Decision
 
-Spark remains a root agent lane. It now uses `Spark/registry.json` to define
-session-contained scenarios, and each scenario must provide a launch prompt,
-result template, handoff template, and example result. Work that Spark cannot
-finish moves into `Spark/handoffs/open/` as a portable packet. Reusable
-completed Spark results may live in `Spark/results/`.
+Spark remained a root agent lane at this point in the repository history. It
+used `Spark/registry.json` to define session-contained scenarios, and each
+scenario had to provide a launch prompt, result template, handoff template, and
+example result. Work that Spark could not finish moved into
+`Spark/handoffs/open/` as a portable packet. Reusable completed Spark results
+could live in `Spark/results/`.
+
+The placement part of this decision is superseded by
+[`2026-05-13-codex-spark-agent-lane-home`](2026-05-13-codex-spark-agent-lane-home.md).
+The done-or-handoff contract survives under `.agents/spark/`.
 
 ## Rationale
 
