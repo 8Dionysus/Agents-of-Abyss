@@ -37,6 +37,7 @@ Decision records explain why; current surfaces define what.
 | [`2026-04-30-organ-contract-center-law`](2026-04-30-organ-contract-center-law.md) | decision record for planting organ alignment as compact AoA center law |
 | [`2026-04-30-release-preflight-route-surface`](2026-04-30-release-preflight-route-surface.md) | decision record for keeping a repo-level release route while release-support owns the runbook |
 | [`2026-05-06-root-design-surface`](2026-05-06-root-design-surface.md) | decision record for keeping `DESIGN.md` as the root system-form surface |
+| [`2026-05-13-agent-surface-design-root`](2026-05-13-agent-surface-design-root.md) | decision record for keeping `DESIGN.AGENTS.md` as the root agent-surface design form |
 
 ## Record shape
 

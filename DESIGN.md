@@ -166,6 +166,8 @@ A future self can find the reason.
 [`docs/FEDERATION_RULES.md`](docs/FEDERATION_RULES.md) separates truth classes.
 [`ROADMAP.md`](ROADMAP.md) points direction.
 [`AGENTS.md`](AGENTS.md) routes agents.
+[`DESIGN.AGENTS.md`](DESIGN.AGENTS.md) holds the design form of the
+agent-facing layer.
 `DESIGN.md` holds the system form.
 
 ## Use by Agents
@@ -181,6 +183,7 @@ Agents should consult this file when a change alters:
 - generated companions
 - OS Abyss direction
 - human+AI operating posture
+- agent-facing layer design
 
 This file does not override local owner truth. It tells agents what kind of
 shape they are preserving.

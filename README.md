@@ -22,6 +22,7 @@ repository-local.
 |---|---|
 | Names the AoA center and its authority boundary | [CHARTER](CHARTER.md) |
 | Describes the system form AoA should preserve while it grows | [DESIGN](DESIGN.md) |
+| Describes the design form of agent-facing guidance and AGENTS mesh growth | [DESIGN.AGENTS](DESIGN.AGENTS.md) |
 | Maps the current public federation contour | [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) |
 | Keeps source, derived, routing, runtime, memory, proof, and authored meaning separate | [FEDERATION_RULES](docs/FEDERATION_RULES.md) |
 | Routes work to the repository or mechanic that can carry it | [REPO_ROLES](docs/REPO_ROLES.md), [mechanics](mechanics/README.md) |
@@ -44,6 +45,7 @@ Read only what matches your entry need.
 | Shortest honest overview | this README, then [CHARTER](CHARTER.md), [DESIGN](DESIGN.md), [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md), and [FEDERATION_RULES](docs/FEDERATION_RULES.md) |
 | Authority boundary | [CHARTER](CHARTER.md) |
 | System form | [DESIGN](DESIGN.md) |
+| Agent-surface design | [DESIGN.AGENTS](DESIGN.AGENTS.md) |
 | Current federation map | [ECOSYSTEM_MAP](ECOSYSTEM_MAP.md) |
 | Program direction | [ROADMAP](ROADMAP.md) |
 | Repository ownership routing | [REPO_ROLES](docs/REPO_ROLES.md) |
