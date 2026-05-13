@@ -78,7 +78,7 @@ Use root for:
 - public governance files expected by GitHub or contributors
 - thin civic indexes that route to deeper source surfaces
 - stable technical districts expected by tooling
-- agent-facing route law
+- agent-facing route law and design form
 
 Use the owning district or mechanic package for:
 

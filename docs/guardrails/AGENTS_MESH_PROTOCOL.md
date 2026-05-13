@@ -4,6 +4,9 @@
 
 The AGENTS mesh makes agent guidance local without letting local cards steal authority from source documents. A root card gives route choice and owner boundaries. District cards give local risk and validation. Package cards explain mechanic or thematic intent. Deep cards protect high-friction source surfaces.
 
+`DESIGN.AGENTS.md` describes the design form of this agent-facing layer. This
+protocol defines the current checkable mesh contract.
+
 ## Contract
 
 Every durable district that agents may edit should have a local `AGENTS.md` or an explicit exemption in `config/agents_mesh.json`.
@@ -25,6 +28,9 @@ Cards must be readable Markdown, not minified instruction blobs. They should mak
 2. Nearer `AGENTS.md` files own local file posture, local checks, and local risks.
 3. Source docs, schemas, builders, validators, and owner repositories own their own stronger claims.
 4. Generated mirrors reflect source contracts and do not author meaning.
+5. `DESIGN.AGENTS.md` shapes the agent-surface form; it does not replace the
+   root card, local cards, this protocol, config, validators, or generated
+   mirrors.
 
 ## Growth rule
 

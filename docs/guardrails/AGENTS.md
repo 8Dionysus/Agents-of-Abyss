@@ -16,7 +16,9 @@ For classifier or cleanup work, also read `THEMATIC_DISTRICT_PROTOCOL.md`, `CURR
 
 For link, shape, status, or freshness work, read `LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`, `HYGIENE_GUARDRAIL_INDEX.md`, and `../../config/link_shape_hygiene.json`.
 
-For AGENTS mesh work, read `AGENTS_MESH_PROTOCOL.md`, `AGENTS_MESH_INDEX.md`, and `../../config/agents_mesh.json`.
+For AGENTS mesh work, read `../../DESIGN.AGENTS.md`,
+`AGENTS_MESH_PROTOCOL.md`, `AGENTS_MESH_INDEX.md`, and
+`../../config/agents_mesh.json`.
 
 For entry-surface validation work, read
 `ENTRY_SURFACE_VALIDATION_BASELINE.md`, `../../scripts/center_entry_map_common.py`,

@@ -10,8 +10,8 @@ This AGENTS card keeps local work inside the Agents-of-Abyss center lane, names
 the nearest owner boundary, and routes wider claims to the owning surface.
 
 It is the agent-facing route law for this repository. It does not replace
-`README.md`, `CONTRIBUTING.md`, `docs/START_HERE_ROUTE_CONTRACT.md`, or local
-owner truth.
+`README.md`, `CONTRIBUTING.md`, `DESIGN.AGENTS.md`,
+`docs/START_HERE_ROUTE_CONTRACT.md`, or local owner truth.
 
 ## Read before editing
 
@@ -19,6 +19,10 @@ Read this root card first. Then read the nearest nested `AGENTS.md` for every
 touched path, followed by the route-mode surface and the nearest
 `README.md`, protocol, schema, builder, validator, or source surface that owns
 the local claim.
+
+For changes to `AGENTS.md` card shape, root-to-local precedence, generated
+agent-mesh companions, or portable agent guidance, also read
+`DESIGN.AGENTS.md`.
 
 ## Boundaries
 
@@ -151,6 +155,8 @@ only the ones that moved; otherwise say no update was needed.
   release-support direction, or a concrete future trigger changed
 - `CHANGELOG.md` when release-visible behavior, public docs, validation, or
   repository structure changed
+- `DESIGN.AGENTS.md` when agent-facing form, card shape, mesh posture,
+  closeout expectations, or portable agent guidance changed
 - `docs/decisions/` when future agents need the rationale for a route,
   ownership, workflow, validator, public-contract, or topology choice
 - generated surfaces, builders, validators, and tests when a source-backed

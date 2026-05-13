@@ -11,12 +11,16 @@ Tracking starts with the community-docs baseline for this repository.
 
 - `DESIGN.md` as the root system-form surface for AoA's long-horizon shape
   toward OS Abyss.
+- `DESIGN.AGENTS.md` as the root design-form surface for agent-facing guidance,
+  AGENTS mesh growth, closeout posture, and portable agent guidance.
 
 ### Changed
 
 - first-reading, root-surface law, center authority, repository-role routing,
   roadmap, and generated entry-map routes now include `DESIGN.md` alongside
   the charter, ecosystem map, and federation rules.
+- root AGENTS guidance, AGENTS mesh guardrails, and root-surface law now route
+  agent-card shape and mesh-form changes through `DESIGN.AGENTS.md`.
 - `aoa-skills` owner-request entries now cite the owner-local receipt surface,
   with Method-growth, Growth Cycle, Checkpoint, and RPG marked `landed`, and
   Distillation, Experience, and Audit marked `accepted`.

@@ -8,6 +8,7 @@ The AGENTS mesh gives every durable work district a local card. Root law stays a
 
 | Surface | Role |
 |---|---|
+| `DESIGN.AGENTS.md` | root design form for agent-facing guidance |
 | `AGENTS.md` | root route and boundary card |
 | `docs/guardrails/AGENTS_MESH_PROTOCOL.md` | mesh law and growth contract |
 | `config/agents_mesh.json` | source configuration for required cards and exemptions |
