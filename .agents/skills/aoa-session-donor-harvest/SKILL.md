@@ -70,11 +70,8 @@ Do not use this skill when:
   stable enough to deserve explicit automation-readiness classification
 - one optional handoff list to `aoa-automation-opportunity-scan`,
   `aoa-session-route-forks`,
-  `aoa-session-self-diagnose`, `aoa-session-progression-lift`, or
-  `aoa-quest-harvest`
-- hand off to `aoa-session-self-repair` only when the reviewed input already
-  includes a `DIAGNOSIS_PACKET`; otherwise route first to
-  `aoa-session-self-diagnose`
+  `aoa-session-self-diagnose`, `aoa-session-self-repair`,
+  `aoa-session-progression-lift`, or `aoa-quest-harvest`
 - one `HARVEST_PACKET_RECEIPT` using `references/stats-event-envelope.md` and
   `references/harvest-packet-receipt-schema.yaml`
 - one `CORE_SKILL_APPLICATION_RECEIPT` using
@@ -201,9 +198,9 @@ Do not use this skill when:
 
 ## Technique traceability
 Manifest-backed techniques:
-- AOA-T-0075 from `8Dionysus/aoa-techniques` at `b0f7e094bf81abaf0895a729d504a97f3af91ae8` using path `techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md` and sections: Intent, When to use, Inputs, Outputs, Core procedure, Contracts, Validation
-- AOA-T-0076 from `8Dionysus/aoa-techniques` at `b0f7e094bf81abaf0895a729d504a97f3af91ae8` using path `techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md` and sections: Intent, When to use, Outputs, Core procedure, Risks, Validation
-- AOA-T-0077 from `8Dionysus/aoa-techniques` at `b0f7e094bf81abaf0895a729d504a97f3af91ae8` using path `techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md` and sections: Inputs, Outputs, Contracts, Validation
+- AOA-T-0075 from `8Dionysus/aoa-techniques` at `3b1d5d623569aa4920b87280d0db0e911d2e29d5` using path `techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md` and sections: Intent, When to use, Inputs, Outputs, Core procedure, Contracts, Validation
+- AOA-T-0076 from `8Dionysus/aoa-techniques` at `3b1d5d623569aa4920b87280d0db0e911d2e29d5` using path `techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md` and sections: Intent, When to use, Outputs, Core procedure, Risks, Validation
+- AOA-T-0077 from `8Dionysus/aoa-techniques` at `3b1d5d623569aa4920b87280d0db0e911d2e29d5` using path `techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md` and sections: Inputs, Outputs, Contracts, Validation
 
 ## Adaptation points
 Project overlays may add:
