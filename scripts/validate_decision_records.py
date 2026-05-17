@@ -13,6 +13,7 @@ README_PATH = DECISIONS_DIR / "README.md"
 RECORD_NAME_RE = re.compile(r"^(?P<date>\d{4}-\d{2}-\d{2})-[a-z0-9]+(?:-[a-z0-9]+)*\.md$")
 DATE_RE = re.compile(r"^Date:\s*(?P<date>\d{4}-\d{2}-\d{2})\s*$", re.MULTILINE)
 STATUS_RE = re.compile(r"^Status:\s*(?P<status>[a-z][a-z0-9_-]*)\s*$", re.MULTILINE)
+HEADING_RE = re.compile(r"^##\s+.+$", re.MULTILINE)
 README_LINK_RE = re.compile(r"\((?P<path>\d{4}-\d{2}-\d{2}-[a-z0-9-]+\.md)\)")
 
 EXEMPT_FILES = {"AGENTS.md", "README.md", "TEMPLATE.md"}
@@ -56,14 +57,17 @@ def validate_record(path: Path) -> list[str]:
     if not text.startswith("# "):
         problems.append(f"{rel}: must start with an H1 title")
 
-    status_match = STATUS_RE.search(text)
+    first_section = HEADING_RE.search(text)
+    metadata_block = text[: first_section.start()] if first_section else text
+
+    status_match = STATUS_RE.search(metadata_block)
     if not status_match:
         problems.append(f"{rel}: missing top-level Status: <value>")
     elif status_match.group("status") not in STATUS_VALUES:
         allowed = ", ".join(sorted(STATUS_VALUES))
         problems.append(f"{rel}: unsupported status {status_match.group('status')!r}; allowed: {allowed}")
 
-    date_match = DATE_RE.search(text)
+    date_match = DATE_RE.search(metadata_block)
     if not date_match:
         problems.append(f"{rel}: missing top-level Date: YYYY-MM-DD")
     elif date_match.group("date") != match.group("date"):
@@ -72,7 +76,7 @@ def validate_record(path: Path) -> list[str]:
         )
 
     for section in REQUIRED_SECTIONS:
-        if section not in text:
+        if not re.search(rf"^{re.escape(section)}\s*$", text, re.MULTILINE):
             problems.append(f"{rel}: missing section {section}")
 
     return problems

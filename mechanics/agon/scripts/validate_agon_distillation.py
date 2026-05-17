@@ -95,7 +95,7 @@ ACTIVE_ROUTE_POLLUTION_PATTERNS = (
 )
 
 ACTIVE_PART_ARTIFACT_POLLUTION_PATTERNS = (
-    re.compile(r"\bwave\b", re.IGNORECASE),
+    re.compile(r"\bwave\d*\b", re.IGNORECASE),
     re.compile(r"legacy/raw", re.IGNORECASE),
     re.compile(r"AGON_WAVE", re.IGNORECASE),
     re.compile(r"PRE_AGON", re.IGNORECASE),

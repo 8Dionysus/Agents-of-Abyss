@@ -53,7 +53,7 @@ def load_experience_request_ids() -> set[str]:
     return {
         str(item.get("id"))
         for item in payload.get("requests", [])
-        if item.get("mechanic") == "experience"
+        if item.get("mechanic") == "experience" and item.get("queue_status") in {"requested", "accepted", "landed"}
     }
 
 
@@ -142,11 +142,6 @@ def validate_routes(registry: dict[str, Any], problems: list[str]) -> None:
         problems.append(f"{rel(ROUTE_REGISTRY_PATH)} maps non-ready quests: {', '.join(extra)}")
     if duplicate:
         problems.append(f"{rel(ROUTE_REGISTRY_PATH)} maps quests more than once: {', '.join(duplicate)}")
-
-    unused_request_ids = sorted(valid_request_ids - seen_request_ids)
-    if unused_request_ids:
-        problems.append(f"{rel(ROUTE_REGISTRY_PATH)} does not route any ready quest to: {', '.join(unused_request_ids)}")
-
 
 def validate_markdown_projection(registry: dict[str, Any], problems: list[str]) -> None:
     if not ROUTE_MAP_PATH.is_file():

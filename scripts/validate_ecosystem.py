@@ -404,8 +404,8 @@ def validate_registry() -> None:
         if key not in payload:
             fail(f"ecosystem registry is missing required key '{key}'")
 
-    if payload["version"] != 2:
-        fail("registry 'version' must equal 2")
+    if not isinstance(payload["version"], int) or payload["version"] != 2:
+        fail("registry 'version' must be integer 2")
     if payload["ecosystem"] != "AoA":
         fail("registry 'ecosystem' must equal 'AoA'")
 
@@ -667,8 +667,8 @@ def validate_questbook_surface() -> None:
         source_boundary_text = read_text(RPG_SOURCE_BOUNDARY_PATH)
         if "RPG reflects existing AoA surfaces, but source owners keep meaning." not in source_boundary_text:
             fail("mechanics/rpg/parts/source-boundary/README.md must keep the reflection-layer core rule explicit")
-        if "universal power score" not in source_boundary_text:
-            fail("mechanics/rpg/parts/source-boundary/README.md must keep the anti-power-score law explicit")
+        if "would create hidden ontology or a universal power score" not in source_boundary_text:
+            fail("mechanics/rpg/parts/source-boundary/README.md must keep the anti-power-score law explicitly prohibitive")
 
         canonical_terms_text = read_text(RPG_CANONICAL_TERMINOLOGY_PATH)
         if "the machine vocabulary stays stable" not in canonical_terms_text:

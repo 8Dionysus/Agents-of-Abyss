@@ -126,7 +126,7 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         write_text(
             self.repo_root / "mechanics" / "rpg" / "parts" / "source-boundary" / "README.md",
             "RPG reflects existing AoA surfaces, but source owners keep meaning.\n"
-            "universal power score\n"
+            "would create hidden ontology or a universal power score\n"
             "The repository that owns the source object keeps the meaning.\n"
             "1. source meaning wins\n",
         )
@@ -643,6 +643,41 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         ):
             validate_ecosystem.validate_questbook_surface()
 
+    def test_rpg_source_boundary_requires_prohibitive_power_score_law(self) -> None:
+        self.write_valid_surface()
+        self.write_rpg_architecture_surface()
+        write_text(
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0006.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0006",
+                    "repo: Agents-of-Abyss",
+                    "lane: center",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0006`\n",
+        )
+        write_text(
+            self.repo_root / "mechanics" / "rpg" / "parts" / "source-boundary" / "README.md",
+            "RPG reflects existing AoA surfaces, but source owners keep meaning.\n"
+            "universal power score\n"
+            "The repository that owns the source object keeps the meaning.\n"
+            "1. source meaning wins\n",
+        )
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "anti-power-score law explicitly prohibitive",
+        ):
+            validate_ecosystem.validate_questbook_surface()
+
 
 class ValidateRegistryTests(unittest.TestCase):
     def setUp(self) -> None:
@@ -683,6 +718,18 @@ class ValidateRegistryTests(unittest.TestCase):
         self.write_valid_registry()
 
         validate_ecosystem.validate_registry()
+
+    def test_registry_version_must_be_integer_two(self) -> None:
+        self.write_valid_registry()
+        payload = self.read_registry()
+        payload["version"] = 2.0
+        self.write_registry(payload)
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "registry 'version' must be integer 2",
+        ):
+            validate_ecosystem.validate_registry()
 
     def test_missing_documented_v2_repo_fails(self) -> None:
         self.write_valid_registry()

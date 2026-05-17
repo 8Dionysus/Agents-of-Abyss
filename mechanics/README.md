@@ -6,8 +6,9 @@ Use it after the first-reading route:
 
 1. `README.md`
 2. `CHARTER.md`
-3. `ECOSYSTEM_MAP.md`
-4. `docs/FEDERATION_RULES.md`
+3. `DESIGN.md`
+4. `ECOSYSTEM_MAP.md`
+5. `docs/FEDERATION_RULES.md`
 
 When a human or agent asks **what kind of move is this?**, this atlas points to
 the right mechanic, source split, stop-line, machine companion, owner request,

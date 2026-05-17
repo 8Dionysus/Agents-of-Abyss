@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import ast
 from pathlib import Path
 
 from docs_thematic_common import (
@@ -79,6 +80,46 @@ def require_docs_readme_routes(repo_root: Path, classifier: dict) -> list[str]:
     return errors
 
 
+def release_check_commands(release_text: str) -> set[str]:
+    """Return command strings from release_check.py COMMANDS.
+
+    release_check.py stores commands as Python argv lists, usually with
+    sys.executable as the first item. The docs classifier stores the readable
+    shell form, so normalize the executable to "python" before comparing.
+    """
+    try:
+        tree = ast.parse(release_text)
+    except SyntaxError:
+        return set()
+
+    commands: set[str] = set()
+    for node in ast.walk(tree):
+        if not isinstance(node, ast.Assign):
+            continue
+        if not any(isinstance(target, ast.Name) and target.id == "COMMANDS" for target in node.targets):
+            continue
+        if not isinstance(node.value, (ast.List, ast.Tuple)):
+            continue
+        for item in node.value.elts:
+            if not isinstance(item, (ast.List, ast.Tuple)) or len(item.elts) < 2:
+                continue
+            command_node = item.elts[1]
+            if not isinstance(command_node, (ast.List, ast.Tuple)):
+                continue
+            parts: list[str] = []
+            for index, arg in enumerate(command_node.elts):
+                if isinstance(arg, ast.Constant) and isinstance(arg.value, str):
+                    parts.append(arg.value)
+                elif index == 0:
+                    parts.append("python")
+                else:
+                    parts = []
+                    break
+            if parts:
+                commands.add(" ".join(parts))
+    return commands
+
+
 def require_validation_refs(repo_root: Path, classifier: dict) -> list[str]:
     docs_agents = repo_root / "docs" / "AGENTS.md"
     guardrails_agents = repo_root / "docs" / "guardrails" / "AGENTS.md"
@@ -88,13 +129,13 @@ def require_validation_refs(repo_root: Path, classifier: dict) -> list[str]:
         guardrails_agents.read_text(encoding="utf-8") if guardrails_agents.exists() else "",
     ]
     release_text = release_check.read_text(encoding="utf-8") if release_check.exists() else ""
+    release_commands = release_check_commands(release_text)
 
     errors: list[str] = []
     for command in classifier.get("validation_refs", []):
         if not any(command in surface for surface in surfaces):
             errors.append(f"docs AGENTS cards missing validation command: {command}")
-        script_name = command.split()[1] if command.startswith("python ") and len(command.split()) > 1 else None
-        if script_name and script_name not in release_text:
+        if command.startswith("python ") and command not in release_commands:
             errors.append(f"release_check.py missing docs guardrail command: {command}")
     return errors
 

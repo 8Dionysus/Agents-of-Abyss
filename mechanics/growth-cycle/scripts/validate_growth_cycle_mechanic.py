@@ -53,6 +53,7 @@ PART_README_HEADINGS = (
 OWNER_REQUEST_IDS = (
     "ORQ-GROWTHCYCLE-SDK-001",
     "ORQ-GROWTHCYCLE-SKILLS-001",
+    "ORQ-GROWTHCYCLE-TECHNIQUES-001",
     "ORQ-GROWTHCYCLE-AGENTS-001",
     "ORQ-GROWTHCYCLE-EVALS-001",
     "ORQ-GROWTHCYCLE-MEMO-001",
@@ -66,6 +67,7 @@ OWNER_REQUEST_IDS = (
 OWNER_REPOS = (
     "aoa-sdk",
     "aoa-skills",
+    "aoa-techniques",
     "aoa-agents",
     "aoa-evals",
     "aoa-memo",

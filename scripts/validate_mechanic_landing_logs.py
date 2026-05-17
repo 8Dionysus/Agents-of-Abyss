@@ -138,6 +138,7 @@ MECHANICS: dict[str, dict[str, object]] = {
             "mechanics/method-growth/LANDING_LOG.md",
             "mechanics/method-growth/docs/AGENTS.md",
             "mechanics/method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md",
+            "mechanics/method-growth/docs/ROOTLINE.md",
             "mechanics/method-growth/docs/METHOD_SPINE.md",
             "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
             "mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md",

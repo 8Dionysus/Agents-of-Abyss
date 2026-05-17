@@ -35,6 +35,17 @@ class OwnerRequestQueueTests(unittest.TestCase):
             {"method-growth", "distillation", "growth-cycle", "recurrence", "checkpoint", "experience", "agon", "antifragility", "questbook", "rpg", "boundary-bridge", "audit", "release-support"},
         )
 
+    def test_growth_cycle_routes_reusable_practice_to_techniques(self):
+        builder = load("build_owner_request_queue", "scripts/build_owner_request_queue.py")
+        payload = builder.build_payload()
+        request = next(
+            item
+            for item in payload["requests"]
+            if item["id"] == "ORQ-GROWTHCYCLE-TECHNIQUES-001"
+        )
+        self.assertEqual(request["owner_repo"], "aoa-techniques")
+        self.assertIn("Technique-owned reusable practices", request["required_owner_landing"])
+
 
 if __name__ == "__main__":
     unittest.main()

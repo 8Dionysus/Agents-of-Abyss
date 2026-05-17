@@ -54,6 +54,42 @@ def test_active_docs_reject_direct_raw_legacy_links(monkeypatch) -> None:
     assert any("legacy/raw" in problem for problem in problems)
 
 
+def test_active_docs_reject_backticked_raw_legacy_paths(monkeypatch) -> None:
+    module = load_validator()
+    original_read = module.read
+    target = ROOT / "mechanics" / "questbook" / "parts" / "README.md"
+
+    def fake_read(path: Path) -> str:
+        if path == target:
+            return "Use `legacy/raw` as the current route.\n"
+        return original_read(path)
+
+    monkeypatch.setattr(module, "read", fake_read)
+    problems: list[str] = []
+
+    module.validate_no_direct_raw_links(problems)
+
+    assert any("legacy/raw" in problem for problem in problems)
+
+
+def test_active_docs_allow_legacy_raw_stop_line_phrase(monkeypatch) -> None:
+    module = load_validator()
+    original_read = module.read
+    target = ROOT / "mechanics" / "questbook" / "parts" / "README.md"
+
+    def fake_read(path: Path) -> str:
+        if path == target:
+            return "Do not add legacy/raw links; route through PROVENANCE.md.\n"
+        return original_read(path)
+
+    monkeypatch.setattr(module, "read", fake_read)
+    problems: list[str] = []
+
+    module.validate_no_direct_raw_links(problems)
+
+    assert problems == []
+
+
 def test_validation_commands_are_centralized(monkeypatch) -> None:
     module = load_validator()
     original_read = module.read

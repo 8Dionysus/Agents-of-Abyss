@@ -159,6 +159,10 @@ def read_markdown_relations(path: Path) -> dict[str, list[str]]:
             break
         if not in_section:
             continue
+        if stripped.startswith(("-", "*")) and ":" in stripped:
+            valid_bullet = re.match(r"^\s*[-*]\s*[a-z_]+:\s*.+?\s*$", line)
+            if valid_bullet is None:
+                raise ValueError(f"{path}: malformed relation bullet: {stripped}")
         match = re.match(r"^\s*[-*]\s*([a-z_]+):\s*(.+?)\s*$", line)
         if not match:
             continue

@@ -38,7 +38,9 @@ SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ROOT_PART_LINK_RE = re.compile(r"\]\(parts/([a-z0-9-]+)/README\.md\)")
 LOCAL_PART_LINK_RE = re.compile(r"\]\(([a-z0-9-]+)/README\.md\)")
 DIRECT_RAW_LINK_RE = re.compile(
-    r"(?:\]\(|`)?(?:\.\./)+legacy/raw/|(?:\]\()?legacy/raw/|mechanics/questbook/legacy/raw/"
+    r"(?:\]\(|`)(?:\.\./)+legacy/raw(?:/|(?=[\s`),.;:]|$))|"
+    r"(?:\]\(|`)legacy/raw(?:/|(?=[\s`),.;:]|$))|"
+    r"mechanics/questbook/legacy/raw(?:/|(?=[\s`),.;:]|$))"
 )
 RPG_PLAYABLE_READING_REQUIRED_PHRASES = (
     "Questbook owns the source quest object",
@@ -244,7 +246,7 @@ def questbook_markdown_paths() -> list[Path]:
     paths = sorted(QUESTBOOK_ROOT.rglob("*.md"))
     if QUESTS_ROOT.is_dir():
         paths.extend(sorted(QUESTS_ROOT.rglob("*.md")))
-    return paths
+    return [path for path in paths if LEGACY_ROOT not in path.parents]
 
 
 def validate_validation_commands_are_centralized(problems: list[str]) -> None:

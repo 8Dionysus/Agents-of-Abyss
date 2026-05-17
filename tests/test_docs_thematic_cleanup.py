@@ -3,6 +3,7 @@ import sys, unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT/'scripts'))
 from docs_thematic_common import build_plan, load_classifier
+from validate_docs_thematic_districts import release_check_commands
 class DocsThematicCleanupTests(unittest.TestCase):
     def setUp(self): self.c=load_classifier(ROOT)
     def test_required_district_readmes_exist(self):
@@ -22,4 +23,7 @@ class DocsThematicCleanupTests(unittest.TestCase):
             if path.name in {'AGENTS.md','README.md'} or not path.is_file():
                 continue
             self.assertIn(path.name,text)
+    def test_release_check_commands_normalize_sys_executable(self):
+        text='COMMANDS = [("docs", [sys.executable, "scripts/validate_docs_thematic_districts.py"])]\n'
+        self.assertEqual(release_check_commands(text), {"python scripts/validate_docs_thematic_districts.py"})
 if __name__=='__main__': unittest.main()

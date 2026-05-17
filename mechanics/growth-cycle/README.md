@@ -110,8 +110,8 @@ Use the validation lane in [mechanics/growth-cycle/AGENTS.md](AGENTS.md#validati
 ## Owner-request queue
 
 Use [OWNER_REQUESTS](OWNER_REQUESTS.md) when this mechanic produces an
-owner-local hook, skill, proof, memory, runtime, role, route, playbook, stats,
-seed, or quest request. The central queue source is
+owner-local hook, skill, technique, proof, memory, runtime, role, route,
+playbook, stats, seed, or quest request. The central queue source is
 [`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the
 compact generated companion is
 [`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json).
@@ -134,16 +134,26 @@ Canonical doctrine refs: [GROWTH_CYCLE_LAW](docs/GROWTH_CYCLE_LAW.md) and
 ## Owner boundary
 
 AoA owns the law and route grammar for Growth Cycle. Owner repositories decide
-what local hook, skill, proof, memory, runtime, quest, stats, or playbook
-behavior means inside their own domains.
+what local hook, skill, technique, proof, memory, runtime, quest, stats, or
+playbook behavior means inside their own domains.
 
 Generated surfaces may reflect Growth Cycle cards, queues, or indexes, but they
 do not author Growth Cycle meaning.
+
+Reusable practice routes to `aoa-techniques`; executable workflows route to
+`aoa-skills`; recurring choreography routes to `aoa-playbooks`.
+
+For hooks, checkpoint ledgers, local control, and closeout context, route to
+`aoa-sdk`; for executable cycle steps, route to `aoa-skills`; for reusable
+practice, route to `aoa-techniques`; for self-agent posture, route to
+`aoa-agents`.
+
+`aoa-techniques` owns reusable practice and technique canon.
 
 ## Growth posture
 
 When this mechanic changes, preserve a clean active route: update the relevant
 functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
-accounting behind `PROVENANCE.md`, and route hook, skill, proof, memory,
-runtime, role, route, playbook, stats, seed, and quest claims to their stronger
-owners.
+accounting behind `PROVENANCE.md`, and route hook, skill, technique, proof,
+memory, runtime, role, route, playbook, stats, seed, and quest claims to their
+stronger owners.

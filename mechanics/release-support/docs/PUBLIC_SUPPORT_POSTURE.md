@@ -24,8 +24,9 @@ For ecosystem understanding, read in this order:
 
 1. `README.md`
 2. `CHARTER.md`
-3. `ECOSYSTEM_MAP.md`
-4. `docs/FEDERATION_RULES.md`
+3. `DESIGN.md`
+4. `ECOSYSTEM_MAP.md`
+5. `docs/FEDERATION_RULES.md`
 
 Stop there for a first-pass center view.
 Use `docs/LAYERS.md` and `ROADMAP.md` only when you need conceptual detail or declared direction after the overview.

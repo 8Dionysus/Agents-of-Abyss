@@ -324,14 +324,17 @@ def validate_owner_request_packets(problems: list[str]) -> None:
     if "They do not mark the request accepted, landed, proved, or activated." not in text:
         problems.append(f"{rel(path)}: missing no-acceptance rule for ready-to-carry packets")
     for request_id, owner_repo in OWNER_REQUEST_PACKETS:
-        match = re.search(
+        matches = list(re.finditer(
             rf"^### {re.escape(request_id)}\n(?P<body>.*?)(?=^### |\Z)",
             text,
             re.MULTILINE | re.DOTALL,
-        )
-        if match is None:
+        ))
+        if not matches:
             problems.append(f"{rel(path)}: missing ready-to-carry packet {request_id}")
             continue
+        if len(matches) > 1:
+            problems.append(f"{rel(path)}: duplicate ready-to-carry packet {request_id}")
+        match = matches[0]
         body = match.group("body")
         for field in OWNER_REQUEST_PACKET_REQUIRED_FIELDS:
             if field not in body:

@@ -110,6 +110,16 @@ AoA may use a shared maturity ladder across repos:
 Repository-local ladders may stay narrower or more specialized.
 But ecosystem-level claims should map back to the shared ladder explicitly rather than disguising local statuses as universal canon.
 
+Current ecosystem-registry maturity labels map back to the shared ladder this way:
+
+| Ecosystem label | Shared ladder posture |
+|---|---|
+| `concept` | `seed` |
+| `bootstrap` | `seed` |
+| `active` | `proven` |
+| `stable` | `canonical` |
+| `deprecated` | `deprecated` |
+
 ## Rule 14: counterpart mappings stay derived and non-identity
 
 Counterpart mappings between `Tree-of-Sophia` concepts and AoA operational forms may exist.

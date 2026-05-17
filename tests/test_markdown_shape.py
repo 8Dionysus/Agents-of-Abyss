@@ -62,6 +62,25 @@ class MarkdownShapeTest(unittest.TestCase):
         ok = subprocess.run([sys.executable, "scripts/validate_markdown_shape.py"], cwd=self.tempdir)
         self.assertEqual(ok.returncode, 0)
 
+    def test_child_docs_allow_non_validation_shell_fences(self) -> None:
+        (self.tempdir / "README.md").write_text("# Root\n\n## Gate\n", encoding="utf-8")
+        mechanic = self.tempdir / "mechanics/example"
+        mechanic.mkdir(parents=True)
+        (mechanic / "AGENTS.md").write_text("# AGENTS.md\n\n## Validation\n\nUse local checks.\n", encoding="utf-8")
+        (mechanic / "README.md").write_text(
+            "# Example\n\n## Shape\n\n```bash\necho hello\n```\n",
+            encoding="utf-8",
+        )
+
+        ok = subprocess.run(
+            [sys.executable, "scripts/validate_markdown_shape.py"],
+            cwd=self.tempdir,
+            text=True,
+            capture_output=True,
+        )
+
+        self.assertEqual(ok.returncode, 0, ok.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

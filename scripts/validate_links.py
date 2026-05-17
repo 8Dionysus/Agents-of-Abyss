@@ -44,8 +44,30 @@ def split_target(raw: str) -> str:
 def occurrences(path: Path) -> list[LinkOccurrence]:
     text = path.read_text(encoding="utf-8")
     found: list[LinkOccurrence] = []
+    fenced_ranges: list[tuple[int, int]] = []
+    in_fence = False
+    fence_start = 0
+    offset = 0
+    for line in text.splitlines(keepends=True):
+        stripped = line.lstrip()
+        if stripped.startswith("```") or stripped.startswith("~~~"):
+            if in_fence:
+                fenced_ranges.append((fence_start, offset + len(line)))
+                in_fence = False
+            else:
+                fence_start = offset
+                in_fence = True
+        offset += len(line)
+    if in_fence:
+        fenced_ranges.append((fence_start, len(text)))
+
+    def in_fenced_code(position: int) -> bool:
+        return any(start <= position < end for start, end in fenced_ranges)
+
     for kind, regex in (("link", INLINE_LINK_RE), ("image", IMAGE_LINK_RE), ("reference", REFERENCE_LINK_RE)):
         for match in regex.finditer(text):
+            if in_fenced_code(match.start()):
+                continue
             line = text.count("\n", 0, match.start()) + 1
             found.append(LinkOccurrence(path, line, split_target(match.group(1)), kind))
     return found

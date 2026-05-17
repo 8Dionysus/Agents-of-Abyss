@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 from pathlib import Path
 
 
@@ -147,3 +148,59 @@ def test_raw_legacy_readme_uses_package_validator_route() -> None:
         in readme
     )
     assert "python scripts/validate_experience_distillation.py" not in readme
+
+
+def test_receipt_ref_schema_without_explicit_values_is_shape_only(tmp_path, monkeypatch) -> None:
+    module = load_validator()
+    parts = tmp_path / "parts"
+    parts.mkdir()
+    (parts / "schema.json").write_text(
+        json.dumps(
+            {
+                "type": "object",
+                "properties": {
+                    "source_receipt_refs": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                    }
+                },
+            }
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(module, "PARTS_ROOT", parts)
+    monkeypatch.setattr(module, "REPO_ROOT", tmp_path)
+    problems: list[str] = []
+
+    module.validate_active_receipt_refs({"receipt:v1"}, problems)
+
+    assert problems == []
+
+
+def test_receipt_ref_schema_items_enum_is_validated(tmp_path, monkeypatch) -> None:
+    module = load_validator()
+    parts = tmp_path / "parts"
+    parts.mkdir()
+    (parts / "schema.json").write_text(
+        json.dumps(
+            {
+                "type": "object",
+                "properties": {
+                    "source_receipt_refs": {
+                        "type": "array",
+                        "items": {"enum": ["receipt:missing"]},
+                    }
+                },
+            }
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(module, "PARTS_ROOT", parts)
+    monkeypatch.setattr(module, "REPO_ROOT", tmp_path)
+    problems: list[str] = []
+
+    module.validate_active_receipt_refs({"receipt:v1"}, problems)
+
+    assert any("unknown receipt ref 'receipt:missing'" in problem for problem in problems)

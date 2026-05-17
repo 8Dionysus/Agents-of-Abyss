@@ -40,6 +40,13 @@ class ValidateLinksTest(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("broken local", result.stdout)
 
+    def test_fenced_markdown_examples_are_not_link_validated(self) -> None:
+        (self.tempdir / "README.md").write_text(
+            "# Root\n\n```markdown\n[Missing](docs/MISSING.md)\n```\n",
+            encoding="utf-8",
+        )
+        self.assertEqual(self.run_validator().returncode, 0)
+
 
 if __name__ == "__main__":
     unittest.main()

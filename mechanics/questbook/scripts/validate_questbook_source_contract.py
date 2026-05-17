@@ -43,7 +43,11 @@ REQUIRED_YAML_STRING_FIELDS = (
     "control_mode",
     "delegate_tier",
 )
-DIRECT_LEGACY_RAW_PATH_RE = re.compile(r"legacy/raw/")
+DIRECT_LEGACY_RAW_PATH_RE = re.compile(
+    r"(?:\]\(|`)(?:\.\./)+legacy/raw(?:/|(?=[\s`),.;:]|$))|"
+    r"(?:\]\(|`)legacy/raw(?:/|(?=[\s`),.;:]|$))|"
+    r"mechanics/[A-Za-z0-9_./-]*legacy/raw(?:/|(?=[\s`),.;:]|$))"
+)
 H1_RE = re.compile(r"^#\s+(.+?)\s*$", re.MULTILINE)
 QUEST_KEY_RE = re.compile(r"^(AOA-Q(?:-[A-Z]+)?-\d+)")
 SECTION_RE = re.compile(r"^##\s+(.+?)\s*$", re.MULTILINE)
