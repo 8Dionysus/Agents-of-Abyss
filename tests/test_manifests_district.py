@@ -1,11 +1,16 @@
 from __future__ import annotations
 
 import json
+import sys
 import unittest
 from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+import validate_manifests_registry  # noqa: E402
+
 MANIFESTS_ROOT = REPO_ROOT / "manifests"
 REGISTRY = MANIFESTS_ROOT / "registry.json"
 ROOT_README = MANIFESTS_ROOT / "README.md"
@@ -53,6 +58,12 @@ class ManifestsDistrictTestCase(unittest.TestCase):
         self.assertIn("python scripts/validate_manifests_registry.py", readme)
         self.assertIn("manifests/registry.json", agents)
         self.assertIn("Mechanic-owned component or hook records belong", agents)
+
+    def test_registry_paths_must_be_repo_relative(self) -> None:
+        absolute = validate_manifests_registry.repo_relative_path("/tmp/manifest-home", "home path")
+        escape = validate_manifests_registry.repo_relative_path("../manifest-home", "home path")
+        self.assertEqual(absolute, "home path must be repo-relative: /tmp/manifest-home")
+        self.assertEqual(escape, "home path escapes repository root: ../manifest-home")
 
 
 if __name__ == "__main__":

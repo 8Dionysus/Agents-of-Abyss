@@ -3,12 +3,18 @@
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 from hygiene_common import load_config  # noqa: E402
+
+
+VALIDATION_COMMAND_RE = re.compile(
+    r"(?<![\w/.-])(?:python\s+(?:scripts/|mechanics/|-m\s+pytest)|scripts/release_check\.py)"
+)
 
 
 def has_heading(lines: list[str], prefix: str) -> bool:
@@ -74,26 +80,38 @@ def active_mechanic_markdown_paths(root: Path) -> list[Path]:
 
 def check_mechanic_child_validation_routes(root: Path) -> list[str]:
     problems: list[str] = []
-    command_needles = (
-        "```bash",
-        "```sh",
-        "```shell",
-        "`python scripts/",
-        "`python mechanics/",
-        "`python -m pytest",
-        "python scripts/",
-        "python mechanics/",
-        "python -m pytest",
-        "scripts/release_check.py",
-    )
     for path in active_mechanic_markdown_paths(root):
         rel = path.relative_to(root).as_posix()
-        text = path.read_text(encoding="utf-8")
-        for line_number, line in enumerate(text.splitlines(), start=1):
-            if any(needle in line for needle in command_needles):
+        lines = path.read_text(encoding="utf-8").splitlines()
+        in_fence = False
+        fence_start = 0
+        fence_lines: list[str] = []
+        for line_number, line in enumerate(lines, start=1):
+            stripped = line.strip()
+            if stripped.startswith(("```", "~~~")):
+                if in_fence:
+                    if VALIDATION_COMMAND_RE.search("\n".join(fence_lines)):
+                        problems.append(
+                            f"{rel}:{fence_start}: executable validation command belongs in nearest AGENTS.md"
+                        )
+                    in_fence = False
+                    fence_lines = []
+                else:
+                    in_fence = True
+                    fence_start = line_number
+                    fence_lines = []
+                continue
+            if in_fence:
+                fence_lines.append(line)
+                continue
+            if VALIDATION_COMMAND_RE.search(line):
                 problems.append(
                     f"{rel}:{line_number}: executable validation command belongs in nearest AGENTS.md"
                 )
+        if in_fence and VALIDATION_COMMAND_RE.search("\n".join(fence_lines)):
+            problems.append(
+                f"{rel}:{fence_start}: executable validation command belongs in nearest AGENTS.md"
+            )
     return problems
 
 
@@ -112,7 +130,11 @@ def validate(root: Path, explicit_targets: list[str] | None = None) -> list[str]
     shape = config.get("markdown_shape", {})
     targets = configured_targets(config)
     if explicit_targets:
-        targets = [{"path": item, "required": True, "min_lines": 1} for item in explicit_targets]
+        configured_by_path = {str(target["path"]): target for target in targets}
+        targets = [
+            {**configured_by_path.get(item, {"path": item}), "required": True}
+            for item in explicit_targets
+        ]
     problems: list[str] = []
     for target in targets:
         problems.extend(check_file(root, target, shape))

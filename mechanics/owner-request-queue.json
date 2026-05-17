@@ -572,6 +572,32 @@
         "mechanics/growth-cycle/docs/GROWTH_CYCLE_OWNER_REPO_REQUESTS.md"
       ],
       "center_status": "landed",
+      "handoff_surface_hint": "aoa-techniques/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-GROWTHCYCLE-TECHNIQUES-001",
+      "id": "ORQ-GROWTHCYCLE-TECHNIQUES-001",
+      "mechanic": "growth-cycle",
+      "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
+      "owner_landing_ref": "",
+      "owner_proof_ref": "",
+      "owner_repo": "aoa-techniques",
+      "owner_role": "reusable practice and technique canon",
+      "priority": "P1",
+      "proof_route": "Technique claims require `aoa-techniques` acceptance; public quality claims may route to `aoa-evals`.",
+      "queue_status": "requested",
+      "required_owner_landing": "Technique-owned reusable practices from donor harvest, repair, closeout, and owner-followthrough remain practice canon only after technique-owner landing.",
+      "slice": "Reusable cycle practice",
+      "stop_line": "The center must not turn cycle practice hints into canonical reusable technique without technique-owner landing."
+    },
+    {
+      "center_sources": [
+        "mechanics/growth-cycle/README.md",
+        "mechanics/growth-cycle/DIRECTION.md",
+        "mechanics/growth-cycle/PARTS.md",
+        "mechanics/growth-cycle/OWNER_MAP.md",
+        "mechanics/growth-cycle/OWNER_REQUESTS.md",
+        "mechanics/growth-cycle/docs/GROWTH_CYCLE_LAW.md",
+        "mechanics/growth-cycle/docs/GROWTH_CYCLE_OWNER_REPO_REQUESTS.md"
+      ],
+      "center_status": "landed",
       "handoff_surface_hint": "aoa-agents/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-GROWTHCYCLE-AGENTS-001",
       "id": "ORQ-GROWTHCYCLE-AGENTS-001",
       "mechanic": "growth-cycle",

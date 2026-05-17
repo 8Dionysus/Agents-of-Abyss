@@ -103,7 +103,9 @@ QUESTBOOK_PREFIXES = (
 RPG_PREFIXES = (
     "dual_vocabulary_overlay",
     "test_rpg",
+    "test_vocabulary_overlay",
     "validate_rpg",
+    "validate_vocabulary_overlay",
 )
 RELEASE_SUPPORT_PREFIXES = (
     "validate_release_support",
@@ -317,6 +319,8 @@ def validate_agon_part_artifacts(selected: set[str] | None, problems: list[str])
                 problems.append(f"{rel(AGON_ARTIFACT_MAP)} package artifact {index} has invalid status {status!r}")
             if old_path != new_path:
                 problems.append(f"{rel(AGON_ARTIFACT_MAP)} package artifact path must remain stable: {new_path}")
+            if not (REPO_ROOT / new_path).is_file():
+                problems.append(f"{rel(AGON_ARTIFACT_MAP)} maps missing package artifact: {new_path}")
         else:
             if part not in parts:
                 problems.append(f"{rel(AGON_ARTIFACT_MAP)} artifact {index} has invalid part {part!r}")

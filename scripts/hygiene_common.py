@@ -18,6 +18,7 @@ DEFAULT_EXCLUDE_GLOBS = [
     "venv/**",
     "node_modules/**",
     "__pycache__/**",
+    ".wave_*_backups/**",
 ]
 
 

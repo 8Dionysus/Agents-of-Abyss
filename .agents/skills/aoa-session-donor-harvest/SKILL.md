@@ -70,8 +70,11 @@ Do not use this skill when:
   stable enough to deserve explicit automation-readiness classification
 - one optional handoff list to `aoa-automation-opportunity-scan`,
   `aoa-session-route-forks`,
-  `aoa-session-self-diagnose`, `aoa-session-self-repair`,
-  `aoa-session-progression-lift`, or `aoa-quest-harvest`
+  `aoa-session-self-diagnose`, `aoa-session-progression-lift`, or
+  `aoa-quest-harvest`
+- hand off to `aoa-session-self-repair` only when the reviewed input already
+  includes a `DIAGNOSIS_PACKET`; otherwise route first to
+  `aoa-session-self-diagnose`
 - one `HARVEST_PACKET_RECEIPT` using `references/stats-event-envelope.md` and
   `references/harvest-packet-receipt-schema.yaml`
 - one `CORE_SKILL_APPLICATION_RECEIPT` using

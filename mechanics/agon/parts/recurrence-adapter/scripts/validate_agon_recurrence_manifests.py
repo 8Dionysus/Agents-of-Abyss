@@ -129,6 +129,22 @@ def validate_hook(path: Path, data: dict) -> int:
     return 0
 
 
+def validate_local_request_file_path(component_ref: object, key: str, value: object) -> int:
+    if not isinstance(value, str) or not value:
+        return fail(f"local {key} must be a non-empty repository-relative path for {component_ref}")
+    path = Path(value)
+    if path.is_absolute():
+        return fail(f"local {key} must be repository-relative for {component_ref}: {value}")
+    local_path = (ROOT / path).resolve()
+    try:
+        local_path.relative_to(ROOT)
+    except ValueError:
+        return fail(f"local {key} escapes repository root for {component_ref}: {value}")
+    if not local_path.is_file():
+        return fail(f"local {key} does not exist for {component_ref}: {value}")
+    return 0
+
+
 def validate_adapter_request_paths() -> int:
     request = load_json(REQUEST)
     for component in request.get("requested_components", []):
@@ -140,9 +156,9 @@ def validate_adapter_request_paths() -> int:
                 ("manifest_path", manifest_path),
                 ("hook_manifest_path", hook_manifest_path),
             ):
-                local_path = ROOT / value
-                if not local_path.is_file():
-                    return fail(f"local {key} does not exist for {component.get('component_ref')}: {value}")
+                result = validate_local_request_file_path(component.get("component_ref"), key, value)
+                if result:
+                    return result
         else:
             expected_prefix = f"owner-local://{target_repo}/"
             if not manifest_path.startswith(expected_prefix):

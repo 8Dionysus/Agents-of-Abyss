@@ -47,7 +47,7 @@ HISTORICAL_REFERENCE_PATHS = {
     "mechanics/audit/legacy/raw/ROOT_SURFACE_AUDIT_2026_04_24.md",
 }
 OLD_ACTIVE_PATTERNS = (
-    r"(?:^|/)docs/AGON_[A-Z0-9_]+\.md",
+    r"docs/AGON_[A-Z0-9_]+\.md",
     r"(?<!mechanics/experience/)docs/EXPERIENCE_[A-Z0-9_]+\.md",
     r"(?<!mechanics/rpg/)docs/RPG_[A-Z0-9_]+\.md",
     r"(?<!mechanics/antifragility/)docs/(?:ANTIFRAGILITY|VIA_NEGATIVA)[A-Z0-9_]*\.md",
@@ -87,6 +87,7 @@ def iter_text_files() -> list[Path]:
                 ".wave_a_backups/",
                 ".wave_b_backups/",
                 ".wave_c_backups/",
+                ".wave_d_backups/",
                 ".docs_thematic_backups/",
             )
         ):
@@ -196,7 +197,9 @@ def validate_compatibility_routes() -> list[str]:
     if mechanics_route.exists() and "mechanics/README.md" not in mechanics_route.read_text(encoding="utf-8"):
         problems.append("docs/MECHANICS.md: must route to mechanics/README.md")
     release_route = REPO_ROOT / "docs" / "RELEASING.md"
-    if release_route.exists():
+    if not release_route.exists():
+        problems.append("docs/RELEASING.md: repo-level release route missing")
+    else:
         release_route_text = release_route.read_text(encoding="utf-8")
         if "mechanics/release-support/docs/RELEASING.md" not in release_route_text:
             problems.append("docs/RELEASING.md: must route to mechanics/release-support/docs/RELEASING.md")

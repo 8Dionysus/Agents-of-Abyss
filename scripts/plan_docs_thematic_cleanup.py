@@ -11,7 +11,7 @@ def rewrite_links(repo_root:Path,moves:list[dict[str,str]]):
     mapping={m['source']:m.get('link_target',m['target']) for m in moves}
     changed=[]
     for md in sorted(repo_root.rglob('*.md')):
-        if any(part in {'.git','.docs_thematic_backups','__pycache__'} for part in md.parts): continue
+        if any(part in {'.git','.docs_thematic_backups','.wave_d_backups','__pycache__'} for part in md.parts): continue
         text=md.read_text(encoding='utf-8'); original=text
         for old,new in mapping.items():
             old_name=Path(old).name; new_for_file=rel_link(md,new,repo_root); old_for_file=rel_link(md,old,repo_root)
@@ -26,6 +26,7 @@ def apply_moves(repo_root:Path,moves:list[dict[str,str]],backup:bool):
     for move in moves:
         source=repo_root/move['source']; target=repo_root/move['target']
         if not source.exists(): continue
+        if source.resolve()==target.resolve(): raise SystemExit(f"refusing self-target docs thematic migration: {move['source']}")
         target.parent.mkdir(parents=True,exist_ok=True)
         if backup:
             b=backup_root/move['source']; b.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(source,b)

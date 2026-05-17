@@ -16,6 +16,11 @@ def main() -> int:
     repo_root = Path(args.repo_root).resolve() if args.repo_root else repo_root_from()
     config = read_config(repo_root)
     errors: list[str] = []
+    config_exemptions = {
+        str(item.get("path", "")).rstrip("/")
+        for item in config.get("exemptions", [])
+        if isinstance(item, dict) and item.get("path")
+    }
 
     if config.get("schema_version") != "aoa_agents_mesh_v1":
         errors.append("config schema_version must be aoa_agents_mesh_v1")
@@ -35,7 +40,7 @@ def main() -> int:
         if not child.is_dir():
             continue
         name = child.name
-        if name in ROOT_DIR_EXEMPTIONS or name.startswith(".wave_"):
+        if name in ROOT_DIR_EXEMPTIONS or name.startswith(".wave_") or name in config_exemptions:
             continue
         if name not in configured_top_cards:
             errors.append(f"top-level directory lacks AGENTS mesh entry: {name}/")

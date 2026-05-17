@@ -20,6 +20,18 @@ def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def repo_relative_path(value: str, label: str) -> Path | str:
+    candidate = Path(value)
+    if candidate.is_absolute():
+        return f"{label} must be repo-relative: {value}"
+    resolved = (ROOT / candidate).resolve()
+    try:
+        resolved.relative_to(ROOT.resolve())
+    except ValueError:
+        return f"{label} escapes repository root: {value}"
+    return resolved
+
+
 def main() -> int:
     if not REGISTRY.exists():
         return fail("missing manifests/registry.json")
@@ -61,14 +73,18 @@ def main() -> int:
             if not isinstance(home.get(key), str) or not home[key]:
                 return fail(f"{home_ref} missing {key}")
 
-        home_path = ROOT / home["path"]
+        home_path = repo_relative_path(home["path"], f"{home_ref} path")
+        if isinstance(home_path, str):
+            return fail(home_path)
         if not home_path.is_dir():
             return fail(f"{home_ref} path does not exist: {home['path']}")
         for local_doc in ("README.md", "AGENTS.md"):
             if not (home_path / local_doc).is_file():
                 return fail(f"{home_ref} missing local {local_doc}")
 
-        validator = ROOT / home["validator"]
+        validator = repo_relative_path(home["validator"], f"{home_ref} validator")
+        if isinstance(validator, str):
+            return fail(validator)
         if not validator.is_file():
             return fail(f"{home_ref} validator does not exist: {home['validator']}")
 

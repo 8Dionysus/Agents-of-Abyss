@@ -23,6 +23,9 @@ def fail(problems: list[str], message: str) -> None:
 
 
 def validate_lane_dirs(problems: list[str]) -> None:
+    for lane_dir in sorted(path for path in QUESTS_DIR.iterdir() if path.is_dir()):
+        if lane_dir.name not in QUEST_LANES:
+            fail(problems, f"{rel(lane_dir)}: unknown quest lane directory")
     for lane in QUEST_LANES:
         lane_dir = QUESTS_DIR / lane
         if not lane_dir.is_dir():

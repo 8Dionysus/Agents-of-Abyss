@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 from center_entry_map_common import (
@@ -13,7 +14,6 @@ from center_entry_map_common import (
     ROUTE_CONTRACT_REF,
     VALIDATION_BASELINE_REF,
     VALIDATION_REFS,
-    build_payload,
     resolve_local_ref,
 )
 
@@ -84,7 +84,11 @@ def collect_problems() -> list[str]:
             problems.append(f"{ref}: missing pointer to {ROUTE_CONTRACT_REF}")
 
     for ref in HUMAN_ENTRY_SURFACES:
-        text = validation_text_for(ref)
+        try:
+            text = validation_text_for(ref)
+        except Exception as exc:  # pragma: no cover - reported as data problem
+            problems.append(f"{ref}: cannot read validation authority surface: {exc}")
+            continue
         if has_validation_baseline_pointer(text):
             continue
         for command in BASELINE_VALIDATION_COMMANDS:
@@ -94,10 +98,18 @@ def collect_problems() -> list[str]:
                     f"or pointer to {VALIDATION_BASELINE_REF}"
                 )
 
-    payload = build_payload()
-    for ref in VALIDATION_REFS:
-        if ref not in payload["validation_refs"]:
-            problems.append(f"generated payload: missing validation ref '{ref}'")
+    try:
+        generated_payload = json.loads(CENTER_ENTRY_MAP_PATH.read_text(encoding="utf-8"))
+    except Exception as exc:  # pragma: no cover - reported as data problem
+        generated_payload = {}
+        problems.append(f"generated/center_entry_map.min.json: cannot read generated map: {exc}")
+    generated_refs = generated_payload.get("validation_refs") if isinstance(generated_payload, dict) else None
+    if not isinstance(generated_refs, list):
+        problems.append("generated/center_entry_map.min.json: validation_refs must be a list")
+    else:
+        for ref in VALIDATION_REFS:
+            if ref not in generated_refs:
+                problems.append(f"generated/center_entry_map.min.json: missing validation ref '{ref}'")
 
     return problems
 

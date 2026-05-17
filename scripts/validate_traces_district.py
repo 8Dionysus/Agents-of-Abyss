@@ -123,8 +123,12 @@ def validate_traces(repo_root: Path) -> list[str]:
         errors.extend(_validate_json_trace(path, repo_root))
 
     conflicts = trace_dir / "conflicts"
-    if conflicts.exists() and "conflicts/" not in readme_text:
-        errors.append("docs/traces/README.md must document conflicts/ when it exists")
+    if conflicts.exists():
+        if "conflicts/" not in readme_text:
+            errors.append("docs/traces/README.md must document conflicts/ when it exists")
+        for path in sorted(conflicts.rglob("*")):
+            if path.is_file() and path.name not in readme_text and _rel(path, repo_root) not in readme_text:
+                errors.append(f"docs/traces/README.md does not index {_rel(path, repo_root)}")
 
     return errors
 

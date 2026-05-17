@@ -22,6 +22,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 |---|---|---|---|---|---|---|
 | `ORQ-GROWTHCYCLE-SDK-001` | `aoa-sdk` | `requested` | `P0` | Checkpoint hooks, ledgers, and closeout context | SDK-owned control panel, hooks, checkpoint ledgers, typed cycle helpers, and closeout-context builders stay explicit and inspectable. | Control behavior is validated in `aoa-sdk`; proof routes to `aoa-evals` when public claims need defense. |
 | `ORQ-GROWTHCYCLE-SKILLS-001` | `aoa-skills` | `landed` | `P0` | Executable cycle stage skills | Skill-owned workflows for donor harvest, progression lift, route forks, automation opportunity scan, diagnosis, repair, and quest harvest remain executable but lower-authority than owner acceptance. | Execution evidence routes to `aoa-evals` when verdict or quality claims are made. |
+| `ORQ-GROWTHCYCLE-TECHNIQUES-001` | `aoa-techniques` | `requested` | `P1` | Reusable cycle practice | Technique-owned reusable practices from donor harvest, repair, closeout, and owner-followthrough remain practice canon only after technique-owner landing. | Technique claims require `aoa-techniques` acceptance; public quality claims may route to `aoa-evals`. |
 | `ORQ-GROWTHCYCLE-AGENTS-001` | `aoa-agents` | `requested` | `P1` | Self-agent checkpoint, progression, and health posture | Agent-side approval, rollback, health, role boundary, and progression posture for reviewed cycles. | Role and progression claims route to `aoa-evals` when public or contested. |
 | `ORQ-GROWTHCYCLE-EVALS-001` | `aoa-evals` | `requested` | `P1` | Proof and regression verdicts for cycle claims | Eval surfaces that read cycle evidence for repair, progression, automation, and public support without treating center route language as verdict. | Proof lives in `aoa-evals`. |
 | `ORQ-GROWTHCYCLE-MEMO-001` | `aoa-memo` | `requested` | `P1` | Memory writeback, recall, and failure lessons | Memo-side writeback and recall surfaces keep cycle residue out of memory canon until reviewed. | Memory durability claims route to `aoa-evals`. |
@@ -43,6 +44,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 
 - `ORQ-GROWTHCYCLE-SDK-001`: The center must not treat SDK controls as Growth Cycle law.
 - `ORQ-GROWTHCYCLE-SKILLS-001`: The center must not treat executable skills as owner acceptance or final harvest authority.
+- `ORQ-GROWTHCYCLE-TECHNIQUES-001`: The center must not turn cycle practice hints into canonical reusable technique without technique-owner landing.
 - `ORQ-GROWTHCYCLE-AGENTS-001`: The center must not grant actor rights or progression truth through Growth Cycle wording.
 - `ORQ-GROWTHCYCLE-EVALS-001`: The center must not treat cycle evidence as proof verdict.
 - `ORQ-GROWTHCYCLE-MEMO-001`: The center must not turn cycle residue into memory canon.

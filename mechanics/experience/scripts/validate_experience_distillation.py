@@ -222,6 +222,26 @@ RAW_REF_RE = re.compile(r"mechanics/experience/legacy/raw/(EXPERIENCE_[A-Z0-9_]+
 PART_VALIDATOR_RAW_READ_PATTERN = 'ROOT / "mechanics" / "experience" / "legacy" / "raw"'
 
 RAW_DOC_TOKEN_REQUIREMENTS = {
+    "EXPERIENCE_V0_4_CERTIFICATION_FORGE.md": (
+        "release candidates",
+        "rollback drills",
+        "certification",
+    ),
+    "EXPERIENCE_V0_6_FEDERATION_HARVEST.md": (
+        "federation pattern candidate",
+        "owner route required",
+        "source-owner evidence",
+    ),
+    "EXPERIENCE_V0_8_POLIS_GOVERNANCE.md": (
+        "Governance decisions must be visible",
+        "Appeal and veto",
+        "owner-local adoption",
+    ),
+    "EXPERIENCE_V1_0_INSTALLATION_SOVEREIGN_RELEASE.md": (
+        "sovereign release seal",
+        "rollback drill",
+        "Codex may not certify",
+    ),
     "EXPERIENCE_WAVE1_KERNEL.md": (
         "friction_observed",
         "recurrence_detected",
@@ -956,29 +976,45 @@ def validate_active_receipt_refs(receipt_ids: set[str], problems: list[str]) -> 
             )
             continue
 
+        def explicit_ref_values(child: object) -> object:
+            if not isinstance(child, dict):
+                return child
+            if "const" in child:
+                return child["const"]
+            if "enum" in child:
+                return child["enum"]
+            items = child.get("items")
+            if isinstance(items, dict) and "enum" in items:
+                return items["enum"]
+            return None
+
         def visit(value: object, pointer: str) -> None:
             if isinstance(value, dict):
                 for key, child in value.items():
                     child_pointer = f"{pointer}/{key}" if pointer else key
                     if key == "receipt_ref" or key.endswith("_receipt_ref"):
-                        child_value = (
-                            child.get("const")
-                            if isinstance(child, dict) and isinstance(child.get("const"), str)
-                            else child
-                        )
+                        child_value = explicit_ref_values(child)
+                        if child_value is None:
+                            visit(child, child_pointer)
+                            continue
+                        if isinstance(child_value, list):
+                            for index, item in enumerate(child_value):
+                                if not isinstance(item, str) or item not in receipt_ids:
+                                    problems.append(
+                                        f"{rel(path)}:{child_pointer}/{index}: unknown receipt ref {item!r}"
+                                    )
+                            visit(child, child_pointer)
+                            continue
                         if not isinstance(child_value, str) or child_value not in receipt_ids:
                             problems.append(
                                 f"{rel(path)}:{child_pointer}: unknown receipt ref {child_value!r}"
                             )
                     if key.endswith("_receipt_refs"):
-                        child_values = (
-                            child.get("const")
-                            if isinstance(child, dict) and isinstance(child.get("const"), list)
-                            else child
-                        )
-                        if isinstance(child, dict) and "const" not in child:
-                            pass
-                        elif not isinstance(child_values, list):
+                        child_values = explicit_ref_values(child)
+                        if child_values is None:
+                            visit(child, child_pointer)
+                            continue
+                        if not isinstance(child_values, list):
                             problems.append(
                                 f"{rel(path)}:{child_pointer}: receipt refs must be a list"
                             )

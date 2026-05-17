@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import importlib.util
 import json
 import re
 import unittest
@@ -25,6 +26,15 @@ OLD_SERIES_FILE_TOKEN = "AGON_" + "WA" + "VE"
 OLD_ROOT_MANIFEST_PATH = "manifests" + "/recurrence"
 OLD_FLAT_GENERATED_GLOB = "generated/" + "agon_*.min.json"
 PRE_NORMALIZED_PREFIX = "legacy" + "_"
+VALIDATOR_PATH = (
+    REPO_ROOT
+    / "mechanics"
+    / "agon"
+    / "parts"
+    / "recurrence-adapter"
+    / "scripts"
+    / "validate_agon_recurrence_manifests.py"
+)
 
 
 def load_json(path: Path) -> dict:
@@ -41,6 +51,14 @@ def component_files() -> list[Path]:
 
 def hook_files() -> list[Path]:
     return sorted(HOOKS.glob("component.*.hooks.json"))
+
+
+def load_validator():
+    spec = importlib.util.spec_from_file_location("validate_agon_recurrence_manifests", VALIDATOR_PATH)
+    assert spec and spec.loader
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 class AgonRecurrenceManifestsTestCase(unittest.TestCase):
@@ -119,6 +137,17 @@ class AgonRecurrenceManifestsTestCase(unittest.TestCase):
                     prefix = f"owner-local://{component['target_repo']}/"
                     self.assertTrue(component["manifest_path"].startswith(prefix))
                     self.assertTrue(component["hook_manifest_path"].startswith(prefix))
+
+    def test_local_request_paths_must_stay_inside_repo(self) -> None:
+        validator = load_validator()
+        self.assertNotEqual(
+            validator.validate_local_request_file_path("component:test", "manifest_path", "/tmp/file.json"),
+            0,
+        )
+        self.assertNotEqual(
+            validator.validate_local_request_file_path("component:test", "manifest_path", "../file.json"),
+            0,
+        )
 
 
 if __name__ == "__main__":
