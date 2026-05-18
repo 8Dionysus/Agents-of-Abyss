@@ -108,6 +108,24 @@ def test_validation_commands_are_centralized(monkeypatch) -> None:
     assert any("must route validation commands" in problem for problem in problems)
 
 
+def test_non_validation_shell_examples_are_allowed(monkeypatch) -> None:
+    module = load_validator()
+    original_read = module.read
+    target = ROOT / "mechanics" / "questbook" / "parts" / "README.md"
+
+    def fake_read(path: Path) -> str:
+        if path == target:
+            return "## Example\n\n```bash\necho route-summary\n```\n"
+        return original_read(path)
+
+    monkeypatch.setattr(module, "read", fake_read)
+    problems: list[str] = []
+
+    module.validate_validation_commands_are_centralized(problems)
+
+    assert problems == []
+
+
 def test_legacy_index_maps_raw_sources_to_active_parts() -> None:
     module = load_validator()
     problems: list[str] = []

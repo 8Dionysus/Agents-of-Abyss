@@ -46,10 +46,12 @@ class ExamplesDistrictTestCase(unittest.TestCase):
 
     def test_root_examples_do_not_create_flat_mechanic_receipts(self) -> None:
         for path in example_markdown_paths():
-            rel = path.relative_to(EXAMPLES_ROOT).as_posix()
+            rel_path = path.relative_to(EXAMPLES_ROOT)
+            rel = rel_path.as_posix()
+            parts = rel_path.parts
             with self.subTest(example=rel):
-                self.assertNotIn("/legacy/raw/", rel)
-                self.assertNotIn("/parts/", rel)
+                self.assertNotIn("parts", parts)
+                self.assertNotIn(("legacy", "raw"), list(zip(parts, parts[1:])))
 
 
 if __name__ == "__main__":

@@ -19,6 +19,18 @@ class AgentsMeshTests(unittest.TestCase):
         for mechanic in registry.get("mechanics", []):
             self.assertIn(mechanic["agents_ref"], paths)
 
+    def test_local_stack_readiness_requires_items(self):
+        result = subprocess.run(
+            [sys.executable, ".agents/skills/aoa-local-stack-bringup/scripts/readiness_summary.py"],
+            input=json.dumps({"readiness_items": []}),
+            text=True,
+            capture_output=True,
+        )
+        self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+        payload = json.loads(result.stdout)
+        self.assertEqual(payload["overall"], "fail")
+        self.assertEqual(payload["counts"]["fail"], 1)
+
 
 if __name__ == "__main__":
     unittest.main()

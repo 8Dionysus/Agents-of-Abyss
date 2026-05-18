@@ -65,6 +65,10 @@ def summarize(payload: Any) -> dict[str, Any]:
         counts[severity] += 1
         normalized.append({"severity": severity, "label": str(item.get("label", "")).strip()})
 
+    if not normalized:
+        counts["fail"] += 1
+        normalized.append({"severity": "fail", "label": "no readiness items provided."})
+
     overall = "fail" if counts["fail"] else ("warn" if counts["warn"] else "ok")
     return {
         "skill": "aoa-local-stack-bringup",
