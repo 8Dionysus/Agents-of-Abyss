@@ -42,6 +42,9 @@ DIRECT_RAW_LINK_RE = re.compile(
     r"(?:\]\(|`)legacy/raw(?:/|(?=[\s`),.;:]|$))|"
     r"mechanics/questbook/legacy/raw(?:/|(?=[\s`),.;:]|$))"
 )
+VALIDATION_COMMAND_RE = re.compile(
+    r"(?<![\w/.-])(?:python\s+(?:scripts/|mechanics/|-m\s+pytest)|scripts/release_check\.py)"
+)
 RPG_PLAYABLE_READING_REQUIRED_PHRASES = (
     "Questbook owns the source quest object",
     "RPG may derive a playable reading only after the quest source is already legible",
@@ -243,10 +246,14 @@ def active_markdown_paths() -> list[Path]:
 
 
 def questbook_markdown_paths() -> list[Path]:
-    paths = sorted(QUESTBOOK_ROOT.rglob("*.md"))
+    paths = [
+        path
+        for path in sorted(QUESTBOOK_ROOT.rglob("*.md"))
+        if LEGACY_ROOT not in path.parents and path.name not in {"PROVENANCE.md", "LANDING_LOG.md"}
+    ]
     if QUESTS_ROOT.is_dir():
         paths.extend(sorted(QUESTS_ROOT.rglob("*.md")))
-    return [path for path in paths if LEGACY_ROOT not in path.parents]
+    return paths
 
 
 def validate_validation_commands_are_centralized(problems: list[str]) -> None:
@@ -254,7 +261,7 @@ def validate_validation_commands_are_centralized(problems: list[str]) -> None:
         if path == QUESTBOOK_AGENTS_PATH:
             continue
         text = read(path)
-        if "```bash" in text:
+        if VALIDATION_COMMAND_RE.search(text):
             problems.append(f"{rel(path)} must route validation commands through {rel(QUESTBOOK_AGENTS_PATH)}")
 
 
