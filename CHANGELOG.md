@@ -26,6 +26,9 @@ Tracking starts with the community-docs baseline for this repository.
 - `aoa-skills` owner-request entries now cite the owner-local receipt surface,
   with Method-growth, Growth Cycle, Checkpoint, and RPG marked `landed`, and
   Distillation, Experience, and Audit marked `accepted`.
+- Markdown hygiene validators now track matching fence delimiter type, and
+  projected `aoa-skills` session-growth skill contracts are refreshed from the
+  owner source.
 
 ## [0.4.0] - 2026-04-30
 

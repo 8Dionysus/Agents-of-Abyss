@@ -81,6 +81,39 @@ class MarkdownShapeTest(unittest.TestCase):
 
         self.assertEqual(ok.returncode, 0, ok.stdout)
 
+    def test_tilde_code_fences_must_balance(self) -> None:
+        (self.tempdir / "README.md").write_text("# Root\n\n## Gate\n~~~\n", encoding="utf-8")
+
+        bad = subprocess.run(
+            [sys.executable, "scripts/validate_markdown_shape.py"],
+            cwd=self.tempdir,
+            text=True,
+            capture_output=True,
+        )
+
+        self.assertNotEqual(bad.returncode, 0)
+        self.assertIn("unbalanced fenced code blocks", bad.stdout)
+
+    def test_mechanic_validation_scan_keeps_delimiter_types_separate(self) -> None:
+        (self.tempdir / "README.md").write_text("# Root\n\n## Gate\n", encoding="utf-8")
+        mechanic = self.tempdir / "mechanics/example"
+        mechanic.mkdir(parents=True)
+        (mechanic / "AGENTS.md").write_text("# AGENTS.md\n\n## Validation\n\nUse local checks.\n", encoding="utf-8")
+        (mechanic / "README.md").write_text(
+            "# Example\n\n## Validation\n\n```text\n~~~\npython scripts/validate_links.py\n```\n",
+            encoding="utf-8",
+        )
+
+        bad = subprocess.run(
+            [sys.executable, "scripts/validate_markdown_shape.py"],
+            cwd=self.tempdir,
+            text=True,
+            capture_output=True,
+        )
+
+        self.assertNotEqual(bad.returncode, 0)
+        self.assertIn("mechanics/example/README.md:5:", bad.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -11,7 +11,7 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
-from hygiene_common import iter_markdown_files, load_config, relpath  # noqa: E402
+from hygiene_common import iter_markdown_files, load_config, markdown_fence_marker, relpath  # noqa: E402
 
 INLINE_LINK_RE = re.compile(r"(?<!!)\[[^\]\n]+\]\(([^)\n]+)\)")
 IMAGE_LINK_RE = re.compile(r"!\[[^\]\n]*\]\(([^)\n]+)\)")
@@ -45,20 +45,21 @@ def occurrences(path: Path) -> list[LinkOccurrence]:
     text = path.read_text(encoding="utf-8")
     found: list[LinkOccurrence] = []
     fenced_ranges: list[tuple[int, int]] = []
-    in_fence = False
+    active_fence: tuple[str, int] | None = None
     fence_start = 0
     offset = 0
     for line in text.splitlines(keepends=True):
-        stripped = line.lstrip()
-        if stripped.startswith("```") or stripped.startswith("~~~"):
-            if in_fence:
-                fenced_ranges.append((fence_start, offset + len(line)))
-                in_fence = False
-            else:
+        marker = markdown_fence_marker(line)
+        if marker:
+            marker_type, marker_len = marker
+            if active_fence is None:
+                active_fence = marker
                 fence_start = offset
-                in_fence = True
+            elif marker_type == active_fence[0] and marker_len >= active_fence[1]:
+                fenced_ranges.append((fence_start, offset + len(line)))
+                active_fence = None
         offset += len(line)
-    if in_fence:
+    if active_fence is not None:
         fenced_ranges.append((fence_start, len(text)))
 
     def in_fenced_code(position: int) -> bool:
