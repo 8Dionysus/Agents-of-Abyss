@@ -523,6 +523,40 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
         ):
             validate_ecosystem.validate_questbook_surface()
 
+    def test_rpg_runtime_projection_surface_rejects_full_schema_violation(self) -> None:
+        self.write_valid_surface()
+        self.write_rpg_architecture_surface()
+        self.write_rpg_runtime_projection_surface()
+        write_text(
+            self.quests_dir / "center" / "triaged" / "AOA-Q-0008.yaml",
+            "\n".join(
+                (
+                    "schema_version: work_quest_v1",
+                    "id: AOA-Q-0008",
+                    "repo: Agents-of-Abyss",
+                    "lane: center",
+                    "state: triaged",
+                    "public_safe: true",
+                )
+            )
+            + "\n",
+        )
+        write_text(
+            self.questbook_path,
+            self.questbook_path.read_text(encoding="utf-8") + "- `AOA-Q-0008`\n",
+        )
+
+        generated_path = self.repo_root / "mechanics" / "rpg" / "parts" / "vocabulary-overlay" / "generated" / "dual_vocabulary_overlay.json"
+        payload = json.loads(generated_path.read_text(encoding="utf-8"))
+        payload["unexpected_future_field"] = "schema violation"
+        generated_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+        with self.assertRaisesRegex(
+            validate_ecosystem.ValidationError,
+            "violates schema at <root>: Additional properties are not allowed",
+        ):
+            validate_ecosystem.validate_questbook_surface()
+
     def test_rpg_runtime_projection_surface_rejects_duplicate_canonical_key(self) -> None:
         self.write_valid_surface()
         self.write_rpg_architecture_surface()

@@ -6,6 +6,8 @@ import re
 import sys
 from pathlib import Path
 
+from jsonschema import Draft202012Validator, SchemaError
+
 import validate_nested_agents
 
 try:
@@ -314,6 +316,14 @@ def validate_dual_vocabulary_generated_payload(payload: object, schema: dict[str
     if not isinstance(entries_schema, dict):
         fail("mechanics/rpg/parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json must define entries")
 
+    try:
+        Draft202012Validator.check_schema(schema)
+    except SchemaError as exc:
+        fail(
+            "mechanics/rpg/parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json "
+            f"is not a valid Draft 2020-12 schema: {exc.message}"
+        )
+
     for field_name in ("overlay_id", "theme_id", "language"):
         value = payload.get(field_name)
         if not isinstance(value, str) or not value:
@@ -392,6 +402,18 @@ def validate_dual_vocabulary_generated_payload(payload: object, schema: dict[str
         fail(
             "mechanics/rpg/parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json is missing required canonical_key values: "
             + ", ".join(missing_canonical_keys)
+        )
+
+    schema_errors = sorted(
+        Draft202012Validator(schema).iter_errors(payload),
+        key=lambda error: [str(part) for part in error.path],
+    )
+    if schema_errors:
+        error = schema_errors[0]
+        location = "/".join(str(part) for part in error.path) or "<root>"
+        fail(
+            "mechanics/rpg/parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json "
+            f"violates schema at {location}: {error.message}"
         )
 
 
