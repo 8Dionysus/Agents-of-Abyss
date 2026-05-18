@@ -58,7 +58,7 @@ Do not use this skill when:
   - candidate ref minted only after reviewed harvest
   - source cluster ref when the reviewed input carried one
   - reusable unit name
-  - unit kind: pattern, mechanic, utility, law, proof, recall, or route
+  - unit kind: pattern, mechanic, utility, law, proof, recall, route, or automation_candidate
   - owner shape: technique, skill, playbook, eval, memo, agent, or hold
   - owner hypothesis and owner repo recommendation
   - one chosen next artifact
@@ -88,7 +88,7 @@ Do not use this skill when:
 4. extract candidate reusable units, not topics; prefer explicit moves, laws, checklists, structures, routes, or proof patterns
 5. split merged candidates until each unit has one honest owner shape
 6. classify each kept candidate twice:
-   - by reuse kind: pattern, mechanic, utility, law, proof, recall, or route
+   - by reuse kind: pattern, mechanic, utility, law, proof, recall, route, or automation_candidate
    - by owner shape: technique, skill, playbook, eval, memo, agent, or hold
 7. mint `candidate_ref` only after the reviewed unit is bounded and the owner
    hypothesis plus nearest-wrong target are explicit
