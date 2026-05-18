@@ -47,6 +47,13 @@ class ValidateLinksTest(unittest.TestCase):
         )
         self.assertEqual(self.run_validator().returncode, 0)
 
+    def test_fenced_link_scan_keeps_delimiter_types_separate(self) -> None:
+        (self.tempdir / "README.md").write_text(
+            "# Root\n\n```markdown\n[Missing](docs/MISSING.md)\n~~~\n[Still Missing](docs/STILL.md)\n```\n",
+            encoding="utf-8",
+        )
+        self.assertEqual(self.run_validator().returncode, 0)
+
 
 if __name__ == "__main__":
     unittest.main()

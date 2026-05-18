@@ -4,11 +4,13 @@ from __future__ import annotations
 
 import fnmatch
 import json
+import re
 from pathlib import Path
 from typing import Any, Iterable
 
 CONFIG_PATH = Path("config/link_shape_hygiene.json")
 GENERATED_PATH = Path("generated/link_shape_hygiene.min.json")
+FENCE_MARKER_RE = re.compile(r"^[ \t]*(?P<marker>`{3,}|~{3,})(?P<trailing>.*)$")
 DEFAULT_EXCLUDE_GLOBS = [
     ".git/**",
     ".mypy_cache/**",
@@ -69,6 +71,15 @@ def iter_markdown_files(root: Path, config: dict[str, Any] | None = None) -> lis
                 continue
             found[rel] = path
     return [found[key] for key in sorted(found)]
+
+
+def markdown_fence_marker(line: str) -> tuple[str, int] | None:
+    """Return a Markdown fence marker type and length for fence-start lines."""
+    match = FENCE_MARKER_RE.match(line.rstrip())
+    if not match:
+        return None
+    marker = match.group("marker")
+    return marker[0], len(marker)
 
 
 def read_text(path: Path) -> str:

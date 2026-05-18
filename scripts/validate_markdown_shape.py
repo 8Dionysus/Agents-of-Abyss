@@ -9,7 +9,7 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
-from hygiene_common import load_config  # noqa: E402
+from hygiene_common import load_config, markdown_fence_marker  # noqa: E402
 
 
 VALIDATION_COMMAND_RE = re.compile(
@@ -22,11 +22,17 @@ def has_heading(lines: list[str], prefix: str) -> bool:
 
 
 def code_fences_balanced(lines: list[str]) -> bool:
-    count = 0
+    active_fence: tuple[str, int] | None = None
     for line in lines:
-        if line.strip().startswith("```"):
-            count += 1
-    return count % 2 == 0
+        marker = markdown_fence_marker(line)
+        if marker is None:
+            continue
+        marker_type, marker_len = marker
+        if active_fence is None:
+            active_fence = marker
+        elif marker_type == active_fence[0] and marker_len >= active_fence[1]:
+            active_fence = None
+    return active_fence is None
 
 
 def check_file(root: Path, target: dict[str, object], defaults: dict[str, object]) -> list[str]:
@@ -83,32 +89,34 @@ def check_mechanic_child_validation_routes(root: Path) -> list[str]:
     for path in active_mechanic_markdown_paths(root):
         rel = path.relative_to(root).as_posix()
         lines = path.read_text(encoding="utf-8").splitlines()
-        in_fence = False
+        active_fence: tuple[str, int] | None = None
         fence_start = 0
         fence_lines: list[str] = []
         for line_number, line in enumerate(lines, start=1):
-            stripped = line.strip()
-            if stripped.startswith(("```", "~~~")):
-                if in_fence:
+            marker = markdown_fence_marker(line)
+            if marker is not None:
+                marker_type, marker_len = marker
+                if active_fence is None:
+                    active_fence = marker
+                    fence_start = line_number
+                    fence_lines = []
+                    continue
+                if marker_type == active_fence[0] and marker_len >= active_fence[1]:
                     if VALIDATION_COMMAND_RE.search("\n".join(fence_lines)):
                         problems.append(
                             f"{rel}:{fence_start}: executable validation command belongs in nearest AGENTS.md"
                         )
-                    in_fence = False
+                    active_fence = None
                     fence_lines = []
-                else:
-                    in_fence = True
-                    fence_start = line_number
-                    fence_lines = []
-                continue
-            if in_fence:
+                    continue
+            if active_fence is not None:
                 fence_lines.append(line)
                 continue
             if VALIDATION_COMMAND_RE.search(line):
                 problems.append(
                     f"{rel}:{line_number}: executable validation command belongs in nearest AGENTS.md"
                 )
-        if in_fence and VALIDATION_COMMAND_RE.search("\n".join(fence_lines)):
+        if active_fence is not None and VALIDATION_COMMAND_RE.search("\n".join(fence_lines)):
             problems.append(
                 f"{rel}:{fence_start}: executable validation command belongs in nearest AGENTS.md"
             )
