@@ -41,6 +41,7 @@ If one of those surfaces changes the route order or adds a new route mode, the o
 | `organ-alignment` | maintainers, downstream owners, agents preparing repository descent | align a repository as an AbyssOS organ without taking over its implementation | first reading -> `docs/organ-contract/README.md` -> `docs/organ-contract/ORGAN_CONTRACT.md` -> `docs/organ-contract/FIRST_CYCLE.md` |
 | `public-claim-validation` | release agents, public docs editors, reviewers | decide whether the center may honestly claim something | `mechanics/release-support/README.md` -> `mechanics/release-support/PARTS.md` -> `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` -> generated capsules -> validators |
 | `low-context-agent` | small models, retrieval systems, capsule-first agents | get a compact route before reading full docs | `generated/center_entry_map.min.json` |
+| `local-memory-port` | coding agents, memory reviewers, center maintainers | create, inspect, validate, or export center-local memory candidates | `memo/AGENTS.md` -> `memo/README.md` |
 | `district-work` | contributors already inside a technical district | respect local file purpose and validation boundaries | root route -> local district `README.md` |
 
 ## First-reading route

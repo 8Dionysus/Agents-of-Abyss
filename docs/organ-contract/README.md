@@ -23,8 +23,8 @@ The entry route mode is `organ-alignment` in
 
 Route-mode context: `first-reading`, `root-editing`, `direction-change`,
 `ownership-routing`, `mechanic-change`, `organ-alignment`,
-`public-claim-validation`, `low-context-agent`, and `district-work` remain
-governed by the same route contract.
+`public-claim-validation`, `low-context-agent`, `local-memory-port`, and
+`district-work` remain governed by the same route contract.
 
 ## Current surfaces
 

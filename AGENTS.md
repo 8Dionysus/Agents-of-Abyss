@@ -103,6 +103,7 @@ Use the named route before widening a center claim:
 | `organ-alignment` | repository organ posture, required route surfaces, surface-state vocabulary, first-cycle route, or cross-repo organ handoff changes | `docs/organ-contract/README.md` |
 | `public-claim-validation` | a sentence sounds like a public promise | `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md` |
 | `low-context-agent` | a compact machine route is needed first | `generated/center_entry_map.min.json` |
+| `local-memory-port` | center-local memory candidate, receipt, export, or local note | `memo/AGENTS.md` |
 | `district-work` | work is already inside a technical district | nearest local `README.md` |
 
 ## AGENTS stack law

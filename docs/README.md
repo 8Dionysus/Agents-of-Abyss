@@ -19,7 +19,7 @@ For the shortest center overview, read:
 7. [`ROADMAP`](../ROADMAP.md)
 8. [`PUBLIC_SUPPORT_POSTURE`](../mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md)
 
-Entry route modes are governed by [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md): `first-reading`, `root-editing`, `direction-change`, `ownership-routing`, `mechanic-change`, `organ-alignment`, `public-claim-validation`, `low-context-agent`, and `district-work`. Compact machine entry lives in [`generated/center_entry_map.min.json`](../generated/center_entry_map.min.json).
+Entry route modes are governed by [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE_CONTRACT.md): `first-reading`, `root-editing`, `direction-change`, `ownership-routing`, `mechanic-change`, `organ-alignment`, `public-claim-validation`, `low-context-agent`, `local-memory-port`, and `district-work`. Compact machine entry lives in [`generated/center_entry_map.min.json`](../generated/center_entry_map.min.json).
 
 ## Root Docs
 

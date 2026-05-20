@@ -23,6 +23,7 @@ ROUTE_MODE_ORDER = (
     "organ-alignment",
     "public-claim-validation",
     "low-context-agent",
+    "local-memory-port",
     "district-work",
 )
 REQUIRED_ROUTE_MODES = ROUTE_MODE_ORDER
@@ -342,9 +343,32 @@ ROUTES: tuple[dict[str, object], ...] = (
         ],
     },
     {
+        "route_id": "local-memory-port",
+        "route_mode": "local-memory-port",
+        "priority": 9,
+        "audience": ["coding-agent", "memory-reviewer", "center-maintainer"],
+        "need": "create, inspect, validate, or export center-local memory candidates without promoting them to durable memory",
+        "surface_ref": "memo/AGENTS.md",
+        "human_path": [
+            "README.md",
+            "AGENTS.md",
+            "memo/AGENTS.md",
+            "memo/README.md",
+        ],
+        "machine_surface_refs": ["generated/center_entry_map.min.json"],
+        "verification_refs": [
+            "docs/START_HERE_ROUTE_CONTRACT.md",
+            "memo/AGENTS.md",
+        ],
+        "must_not_claim": [
+            "local memory candidates are durable central memory",
+            "the center owns aoa-memo reviewed memory authority",
+        ],
+    },
+    {
         "route_id": "district-work",
         "route_mode": "district-work",
-        "priority": 9,
+        "priority": 10,
         "audience": ["coding-agent", "district-editor", "reviewer"],
         "need": "work inside generated, scripts, schemas, tests, quests, manifests, config, or examples without confusing local gates with constitutional law",
         "surface_ref": "docs/README.md",

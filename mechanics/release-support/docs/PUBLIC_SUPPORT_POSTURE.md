@@ -46,6 +46,7 @@ For small-model and low-context entry, use `generated/center_entry_map.min.json`
 | `organ-alignment` | checks repo-organ posture before claiming downstream alignment |
 | `public-claim-validation` | checks whether a sentence can be honestly stated by the center |
 | `low-context-agent` | gives compact route help while preserving human source docs |
+| `local-memory-port` | keeps center-local memory candidates routed as candidates |
 | `district-work` | keeps local technical gates local and subordinate to center law |
 
 ## Public support posture

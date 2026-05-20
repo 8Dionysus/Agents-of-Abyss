@@ -48,6 +48,7 @@ Mechanic-facing route modes:
 | `mechanic-change` | change a process, stop-line, owner split, or mechanic package |
 | `organ-alignment` | connect a repository to AbyssOS without making a mechanic own that repository |
 | `public-claim-validation` | check whether a mechanic claim can be publicly supported |
+| `local-memory-port` | route center-local memory candidates without promoting them into mechanic truth |
 | `district-work` | respect local gates for scripts, schemas, generated capsules, tests, and quests |
 
 ## Mechanic Card Contract

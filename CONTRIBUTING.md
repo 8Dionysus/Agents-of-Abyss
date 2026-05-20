@@ -56,6 +56,7 @@ material into this repository:
 | `organ-alignment` | align a repository as an AbyssOS organ without taking over its implementation |
 | `public-claim-validation` | check whether public language is honest and supportable |
 | `low-context-agent` | use a compact machine route before full reading |
+| `local-memory-port` | work with center-local memory candidates, receipts, exports, or notes |
 | `district-work` | follow local README gates inside technical districts |
 
 For root files, also read
