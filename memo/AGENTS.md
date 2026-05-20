@@ -28,6 +28,26 @@ as generated read models. Use `candidates/` for proposed memory, `receipts/`
 for review or handoff traces, `exports/` for packets meant for `aoa-memo`, and
 `local/` for center-local memory that should stay here for now.
 
+## Candidate Route
+
+Create center-local candidates through the stack MCP helper from the
+`abyss-stack` source checkout:
+
+```bash
+AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
+PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli create-candidate \
+  --repo Agents-of-Abyss \
+  --evidence-ref docs/FEDERATION_RULES.md \
+  --claim "Agents-of-Abyss memory should move through reviewed local candidates before aoa-memo landing."
+```
+
+Then validate the emitted candidate path:
+
+```bash
+AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
+PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli validate-candidate path/to/candidate.json
+```
+
 ## Validation
 
 For local candidate checks through the stack MCP access plane:
