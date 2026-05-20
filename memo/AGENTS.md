@@ -23,9 +23,10 @@ candidates, receipts, exports, and local notes before reviewed landing in
 Use this port for `write_candidate_only` work. Do not turn local notes into
 center doctrine or durable memory without `aoa-memo` review.
 
-Use `candidates/` for proposed memory, `receipts/` for review or handoff traces,
-`exports/` for packets meant for `aoa-memo`, and `local/` for center-local
-memory that should stay here for now.
+Use `PORT.yaml` for the local port contract and `INDEX.md` / `index.min.json`
+as generated read models. Use `candidates/` for proposed memory, `receipts/`
+for review or handoff traces, `exports/` for packets meant for `aoa-memo`, and
+`local/` for center-local memory that should stay here for now.
 
 ## Validation
 
@@ -34,6 +35,8 @@ For local candidate checks through the stack MCP access plane:
 ```bash
 AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
 PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli brief --repo Agents-of-Abyss --intent "local memory route"
+python /srv/AbyssOS/aoa-memo/scripts/memory/validate_local_memo_port.py --path memo
+python /srv/AbyssOS/aoa-memo/scripts/memory/build_local_memo_port_index.py --path memo --check
 ```
 
 For release-facing center changes, run:

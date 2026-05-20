@@ -106,6 +106,21 @@ Use the named route before widening a center claim:
 | `local-memory-port` | center-local memory candidate, receipt, export, or local note | `memo/AGENTS.md` |
 | `district-work` | work is already inside a technical district | nearest local `README.md` |
 
+## Memory route
+
+Use `aoa_memo` when the task asks to recall, continue, preserve, compare with
+past work, recover after compaction, create a memory candidate, inspect local
+memo state, or route evidence into reviewed memory.
+
+- Need continuity or context: call `aoa_memo_brief` for this repository and the
+  current intent.
+- Need to preserve a center-local memory proposal: write through `memo/` and
+  validate the local port.
+- Need durable reviewed memory: export a reviewed-intake packet toward
+  `aoa-memo`; this repository does not land memo truth directly.
+- Need proof, runtime, KAG, role, or source meaning: route to the owning layer;
+  memo carries recall, provenance, and reviewable candidates.
+
 ## AGENTS stack law
 
 - Start with this root card, then follow the nearest nested `AGENTS.md` for every touched path.
