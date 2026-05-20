@@ -169,6 +169,23 @@
       ]
     },
     {
+      "path": "memo/AGENTS.md",
+      "scope": "memo/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Local memory port card for candidates, receipts, exports, and local notes.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
       "path": "quests/AGENTS.md",
       "scope": "quests/",
       "kind": "top-level-district-card",
