@@ -33,7 +33,7 @@ For local candidate checks through the stack MCP access plane:
 
 ```bash
 AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
-PYTHONPATH="$AOA_ABYSS_STACK_ROOT/MCP/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli brief --repo Agents-of-Abyss --intent "local memory route"
+PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli brief --repo Agents-of-Abyss --intent "local memory route"
 ```
 
 For release-facing center changes, run:
