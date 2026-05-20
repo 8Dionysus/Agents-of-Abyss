@@ -72,6 +72,7 @@ Every public entry surface exposes the same route-mode vocabulary.
 | `organ-alignment` | you will change repository organ posture, required route surfaces, surface states, first-cycle route, or cross-repo handoff expectations | [organ-contract](docs/organ-contract/README.md) |
 | `public-claim-validation` | a sentence sounds like a public promise | [PUBLIC_SUPPORT_POSTURE](mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md) |
 | `low-context-agent` | you need a compact machine-facing route before full reading | [center_entry_map.min.json](generated/center_entry_map.min.json) |
+| `local-memory-port` | center-local memory candidate, receipt, export, or local note changes | [memo/AGENTS](memo/AGENTS.md) |
 | `district-work` | you are already inside a technical district | nearest local `README.md` |
 
 ## Claim Check

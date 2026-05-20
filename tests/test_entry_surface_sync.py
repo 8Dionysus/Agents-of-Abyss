@@ -48,6 +48,7 @@ class EntrySurfaceSyncTests(unittest.TestCase):
                 "organ-alignment",
                 "public-claim-validation",
                 "low-context-agent",
+                "local-memory-port",
                 "district-work",
             ],
         )
