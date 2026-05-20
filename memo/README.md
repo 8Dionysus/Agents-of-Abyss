@@ -7,6 +7,8 @@ to future agents without making the center absorb `aoa-memo` authority.
 
 | Path | Use |
 |---|---|
+| `PORT.yaml` | center-local port contract |
+| `INDEX.md` / `index.min.json` | generated local read model over packets |
 | `candidates/` | proposed memory claims with evidence refs |
 | `receipts/` | accept, reject, validate, or forward traces |
 | `exports/` | reviewed-intake packets for `aoa-memo` |
