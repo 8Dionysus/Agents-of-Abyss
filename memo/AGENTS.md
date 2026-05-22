@@ -48,6 +48,21 @@ AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
 PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli validate-candidate path/to/candidate.json
 ```
 
+## Reviewed Landing Route
+
+When an export is ready to move from this local port toward durable reviewed
+memory, inspect it through the same MCP access plane:
+
+```bash
+AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
+PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli pending-exports --repo Agents-of-Abyss
+PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli landing-plan --repo Agents-of-Abyss --export-ref exports/path.reviewed-intake.json --run-dry-run
+```
+
+The landing plan is a readiness/dry-run route. The actual durable memory object
+lands only in `aoa-memo` through its reviewed intake script, generated read
+models, validators, and review.
+
 ## Validation
 
 For local candidate checks through the stack MCP access plane:
@@ -68,4 +83,4 @@ python scripts/release_check.py
 ## Closeout
 
 Report candidate path, evidence refs, validation result, and whether the item
-stayed local or was exported for reviewed intake.
+stayed local, was exported for reviewed intake, or was landed in `aoa-memo`.
