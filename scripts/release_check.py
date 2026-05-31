@@ -9,6 +9,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 COMMANDS = [
+    ("check decision lookup indexes", [sys.executable, "scripts/generate_decision_indexes.py", "--check"]),
     ("check docs thematic cleanup plan", [sys.executable, "scripts/plan_docs_thematic_cleanup.py", "--check"]),
     ("validate docs thematic districts", [sys.executable, "scripts/validate_docs_thematic_districts.py"]),
     ("validate docs migration map", [sys.executable, "scripts/validate_docs_migration_map.py"]),

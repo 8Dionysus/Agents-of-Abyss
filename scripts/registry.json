@@ -57,7 +57,9 @@
       "source_ref": "docs/README.md",
       "paths": [
         "scripts/build_docs_thematic_index.py",
+        "scripts/decision_indexes.py",
         "scripts/docs_thematic_common.py",
+        "scripts/generate_decision_indexes.py",
         "scripts/plan_docs_thematic_cleanup.py",
         "scripts/validate_decision_records.py",
         "scripts/validate_docs_migration_map.py",

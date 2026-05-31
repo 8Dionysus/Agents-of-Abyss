@@ -77,6 +77,7 @@
       "role": "docs migration, thematic indexes, decisions, and trace district tests",
       "source_ref": "docs/README.md",
       "paths": [
+        "tests/test_decision_indexes.py",
         "tests/test_decision_records.py",
         "tests/test_docs_migration_map.py",
         "tests/test_docs_thematic_cleanup.py",

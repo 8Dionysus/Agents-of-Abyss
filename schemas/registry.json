@@ -43,7 +43,7 @@
         "ECOSYSTEM_MAP.md",
         "docs/LAYERS.md",
         "docs/FEDERATION_RULES.md",
-        "docs/decisions/2026-04-29-ecosystem-registry-v2-landing.md"
+        "docs/decisions/AOA-CENTER-D-0011-ecosystem-registry-v2-landing.md"
       ],
       "test_refs": [
         "tests/test_validate_ecosystem.py"

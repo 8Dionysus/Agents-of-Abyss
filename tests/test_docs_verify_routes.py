@@ -99,7 +99,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("mechanics/README.md", docs_readme)
         self.assertIn("aoa-stats", mechanics)
         self.assertTrue(
-            (REPO_ROOT / "docs/decisions/2026-04-09-aoa-stats-public-layer.md").exists()
+            (REPO_ROOT / "docs/decisions/AOA-CENTER-D-0001-aoa-stats-public-layer.md").exists()
         )
 
     def test_repo_roles_routes_mechanics_through_atlas_without_package_specific_paths(self) -> None:

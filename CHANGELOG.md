@@ -29,6 +29,9 @@ Tracking starts with the community-docs baseline for this repository.
 - Markdown hygiene validators now track matching fence delimiter type, and
   projected `aoa-skills` session-growth skill contracts are refreshed from the
   owner source.
+- `docs/decisions/` now uses canonical `AOA-CENTER-D-####` decision IDs,
+  generated lookup indexes, and a release-check guard for stale decision
+  read models.
 
 ## [0.4.0] - 2026-04-30
 

@@ -39,8 +39,9 @@ Do not record a decision when the change is tiny, self-evident, purely local, or
 already explained by a more specific active source surface. In that case,
 closeout should say `Decision review: no record needed` with a short reason.
 
-Decision records must follow [TEMPLATE](TEMPLATE.md). They explain why; current
-source surfaces define what.
+Decision records must follow [TEMPLATE](TEMPLATE.md). Active records use
+canonical `AOA-CENTER-D-####` IDs and full canonical-ID filenames. They explain
+why; current source surfaces define what.
 
 ## Validation
 
@@ -48,6 +49,7 @@ Use docs and hygiene guardrails:
 
 ```bash
 python scripts/validate_decision_records.py
+python scripts/generate_decision_indexes.py --check
 python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
 python scripts/validate_links.py
