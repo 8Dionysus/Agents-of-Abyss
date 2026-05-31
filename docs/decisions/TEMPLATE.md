@@ -1,7 +1,19 @@
 # Decision Title
 
-Status: proposed
-Date: YYYY-MM-DD
+- Decision ID: AOA-CENTER-D-####
+
+## Status
+
+Proposed.
+
+## Index Metadata
+
+- Original date: YYYY-MM-DD
+- Surface classes: decision record
+- Center facets: decision index
+- Mechanic parents: none
+- Guard families: decision index/read-model
+- Posture: proposed rationale
 
 ## Context
 

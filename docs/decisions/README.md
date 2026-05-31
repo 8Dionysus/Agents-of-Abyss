@@ -1,68 +1,65 @@
 # Decisions District
 
-This district holds decision records explaining why a route, owner split, or placement was chosen.
+This district holds decision records explaining why a center route, owner split,
+placement law, or workflow expectation was chosen.
 
 ## District law
 
-Keep this district reviewable and labeled. A reader or agent should know whether a surface is current law, evidence, historical receipt, transition note, or compatibility reference before citing it.
-
 Decision records explain why; current surfaces define what.
+
+Use canonical `AOA-CENTER-D-####` decision IDs and full canonical-ID filenames:
+
+```text
+docs/decisions/AOA-CENTER-D-####-kebab-title.md
+```
+
+Previous date-prefixed decision paths are historical git/PR addresses only.
+Do not recreate them as compatibility aliases.
 
 ## Current surfaces
 
-| Surface | Role |
+Generated lookup indexes live under [`indexes/`](indexes/README.md):
+
+| Index | Use |
 |---|---|
-| [`2026-04-09-aoa-stats-public-layer`](2026-04-09-aoa-stats-public-layer.md) | decision record for `aoa-stats` as public derived layer |
-| [`2026-04-10-federation-release-contract`](2026-04-10-federation-release-contract.md) | decision record for federation release contract |
-| [`2026-04-11-growth-refinery-lineage-route`](2026-04-11-growth-refinery-lineage-route.md) | decision record for growth refinery lineage routing |
-| [`2026-04-26-questbook-model-spine-and-route-registries`](2026-04-26-questbook-model-spine-and-route-registries.md) | decision record for Questbook model split and registry-backed route tables |
-| [`2026-04-26-questbook-source-contract-full-distillation`](2026-04-26-questbook-source-contract-full-distillation.md) | decision record for promoting Markdown quest sources to the strict source contract |
-| [`2026-04-26-mechanics-validation-command-authority`](2026-04-26-mechanics-validation-command-authority.md) | decision record for keeping active mechanic validation commands in AGENTS lanes |
-| [`2026-04-28-docs-guardrails-and-mechanic-receipts`](2026-04-28-docs-guardrails-and-mechanic-receipts.md) | decision record for the `docs/guardrails/` home and mechanic-owned receipt routing |
-| [`2026-04-29-audit-mechanic-planting`](2026-04-29-audit-mechanic-planting.md) | decision record for planting Audit as a center mechanic |
-| [`2026-04-29-decision-memory-gate`](2026-04-29-decision-memory-gate.md) | decision record for AGENTS-led decision review and repo-local validation |
-| [`2026-04-29-docs-root-source-tightening`](2026-04-29-docs-root-source-tightening.md) | decision record for keeping root docs as role-specific maps and routing detail to canonical homes |
-| [`2026-04-29-ecosystem-registry-v2-landing`](2026-04-29-ecosystem-registry-v2-landing.md) | decision record for landing registry v2 and removing the registry-note district |
-| [`2026-04-29-generated-district-contract`](2026-04-29-generated-district-contract.md) | decision record for classifying root generated surfaces and keeping Questbook read models root-published |
-| [`2026-04-29-root-examples-district-contract`](2026-04-29-root-examples-district-contract.md) | decision record for keeping root examples as center-owned worked route examples |
-| [`2026-04-29-root-manifest-district-contract`](2026-04-29-root-manifest-district-contract.md) | decision record for keeping root manifests as registry/control surface while Agon recurrence records live with their owning part |
-| [`2026-04-29-traces-mode-hardening`](2026-04-29-traces-mode-hardening.md) | decision record for keeping traces as repo-level movement receipts with validation |
-| [`2026-04-30-root-schema-district-contract`](2026-04-30-root-schema-district-contract.md) | decision record for keeping root schemas as center contracts with registry-backed validation |
-| [`2026-04-30-root-scripts-district-contract`](2026-04-30-root-scripts-district-contract.md) | decision record for keeping root scripts as registry-backed center tooling |
-| [`2026-04-30-root-tests-district-contract`](2026-04-30-root-tests-district-contract.md) | decision record for keeping root tests as registry-backed center proof surface |
-| [`2026-04-30-spark-session-lane-contract`](2026-04-30-spark-session-lane-contract.md) | historical decision record for the original Spark root lane contract, superseded for placement |
-| [`2026-04-30-github-landing-workflow`](2026-04-30-github-landing-workflow.md) | decision record for making branch, PR, CI, and merge landing explicit in root AGENTS guidance |
-| [`2026-04-30-entry-validation-baseline`](2026-04-30-entry-validation-baseline.md) | decision record for routing entry-surface baseline commands through a guardrail surface instead of inline repetition |
-| [`2026-04-30-roadmap-horizon-direction-route`](2026-04-30-roadmap-horizon-direction-route.md) | decision record for making root roadmap a horizon-based center direction surface |
-| [`2026-04-30-organ-contract-center-law`](2026-04-30-organ-contract-center-law.md) | decision record for planting organ alignment as compact AoA center law |
-| [`2026-04-30-release-preflight-route-surface`](2026-04-30-release-preflight-route-surface.md) | decision record for keeping a repo-level release route while release-support owns the runbook |
-| [`2026-05-06-root-design-surface`](2026-05-06-root-design-surface.md) | decision record for keeping `DESIGN.md` as the root system-form surface |
-| [`2026-05-13-agent-surface-design-root`](2026-05-13-agent-surface-design-root.md) | decision record for keeping `DESIGN.AGENTS.md` as the root agent-surface design form |
-| [`2026-05-13-codex-spark-agent-lane-home`](2026-05-13-codex-spark-agent-lane-home.md) | decision record for moving the Codex Spark lane under `.agents/spark/` |
+| [By number](indexes/by-number.md) | canonical sequence and file path |
+| [By date](indexes/by-date.md) | original decision date |
+| [By surface class](indexes/by-surface.md) | center surface or district type |
+| [By center facet](indexes/by-center-facet.md) | federation, route, release, or guidance facet |
+| [By mechanic parent](indexes/by-mechanic.md) | center mechanic family affected |
+| [By validation or guard family](indexes/by-guard.md) | guard, validator, or workflow family |
+
+The indexes are generated read models from each record's `## Index Metadata`.
+They do not author meaning.
 
 ## Record shape
 
 Use [TEMPLATE](TEMPLATE.md) for new records. The standard shape is:
 
-- `Status`
-- `Date`
-- `Context`
-- `Options considered`
-- `Decision`
-- `Rationale`
-- `Consequences`
-- `Source surfaces`
-- `Follow-up route`
+- `- Decision ID: AOA-CENTER-D-####`
+- `## Status`
+- `## Index Metadata`
+- `## Context`
+- `## Options considered`
+- `## Decision`
+- `## Rationale`
+- `## Consequences`
+- `## Source surfaces`
+- `## Follow-up route`
 
 ## Must not claim
 
-Decisions explain why; current surfaces define what.
-
 Do not use this district to absorb owner-local truth from sibling repositories.
+
+Do not treat a generated decision index as stronger than its source decision
+record, and do not treat a decision record as stronger than the current source
+surface it routes to.
 
 ## Promotion path
 
-A document in this district may influence current law only when a change names the surviving canonical surface, updates links, rebuilds generated indexes, and runs the docs thematic cleanup validators.
+A document in this district may influence current law only when a change names
+the surviving canonical surface, updates links, rebuilds generated indexes, and
+runs the decision record validators.
 
 ## Validation
 
