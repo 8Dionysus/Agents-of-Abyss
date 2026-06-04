@@ -12,43 +12,43 @@ AGENTS_PATH = GENERATED_ROOT / "AGENTS.md"
 EXPECTED_ROOT_JSON = {
     "agents_mesh.min.json": {
         "class": "Root-built",
-        "builder": "scripts/build_agents_mesh_index.py",
-        "validator": "scripts/validate_agents_mesh_index.py",
+        "builder": "scripts/agents_mesh/build_agents_mesh_index.py",
+        "validator": "scripts/agents_mesh/validate_agents_mesh_index.py",
     },
     "center_entry_map.min.json": {
         "class": "Root-built",
-        "builder": "scripts/build_center_entry_map.py",
-        "validator": "scripts/validate_center_entry_map.py",
+        "builder": "scripts/center_entry/build_center_entry_map.py",
+        "validator": "scripts/center_entry/validate_center_entry_map.py",
     },
     "docs_thematic_index.min.json": {
         "class": "Root-built",
-        "builder": "scripts/build_docs_thematic_index.py",
-        "validator": "scripts/validate_docs_thematic_index.py",
+        "builder": "scripts/docs_districts/build_docs_thematic_index.py",
+        "validator": "scripts/docs_districts/validate_docs_thematic_index.py",
     },
     "ecosystem_registry.min.json": {
         "class": "Manual published summary",
         "builder": "manual, no builder",
-        "validator": "scripts/validate_ecosystem.py",
+        "validator": "scripts/root_registries/validate_ecosystem.py",
     },
     "federation_supporting_inventory.min.json": {
         "class": "Manual published summary",
         "builder": "manual, no builder",
-        "validator": "scripts/validate_ecosystem.py",
+        "validator": "scripts/root_registries/validate_ecosystem.py",
     },
     "link_shape_hygiene.min.json": {
         "class": "Root-built",
-        "builder": "scripts/build_link_shape_hygiene_index.py",
-        "validator": "scripts/validate_link_shape_hygiene_index.py",
+        "builder": "scripts/hygiene/build_link_shape_hygiene_index.py",
+        "validator": "scripts/hygiene/validate_link_shape_hygiene_index.py",
     },
     "mechanic_card_index.min.json": {
         "class": "Root-built",
-        "builder": "scripts/build_mechanic_card_index.py",
-        "validator": "scripts/validate_mechanic_card_index.py",
+        "builder": "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "validator": "scripts/mechanics_topology/validate_mechanic_card_index.py",
     },
     "owner_request_queue.min.json": {
         "class": "Root-built",
-        "builder": "scripts/build_owner_request_queue.py",
-        "validator": "scripts/validate_generated_owner_request_queue.py",
+        "builder": "scripts/owner_requests/build_owner_request_queue.py",
+        "validator": "scripts/owner_requests/validate_generated_owner_request_queue.py",
     },
     "questbook_frontier.min.json": {
         "class": "Mechanic-built root-published",

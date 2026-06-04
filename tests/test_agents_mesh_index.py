@@ -9,9 +9,9 @@ import unittest
 
 class AgentsMeshIndexTests(unittest.TestCase):
     def test_generated_agents_mesh_index_is_current(self):
-        build = subprocess.run([sys.executable, "scripts/build_agents_mesh_index.py", "--check"], text=True, capture_output=True)
+        build = subprocess.run([sys.executable, "scripts/agents_mesh/build_agents_mesh_index.py", "--check"], text=True, capture_output=True)
         self.assertEqual(build.returncode, 0, build.stdout + build.stderr)
-        validate = subprocess.run([sys.executable, "scripts/validate_agents_mesh_index.py"], text=True, capture_output=True)
+        validate = subprocess.run([sys.executable, "scripts/agents_mesh/validate_agents_mesh_index.py"], text=True, capture_output=True)
         self.assertEqual(validate.returncode, 0, validate.stdout + validate.stderr)
 
     def test_generated_agents_mesh_index_has_cards(self):

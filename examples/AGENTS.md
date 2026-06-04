@@ -41,8 +41,8 @@ The local README must index every root example file.
 Run the narrowest relevant checks first. Usual checks for this district:
 
 ```bash
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_markdown_shape.py
 python -m pytest -q tests/test_examples_district.py
 python -m pytest -q
 ```

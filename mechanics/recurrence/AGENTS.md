@@ -104,14 +104,14 @@ route to this section instead of carrying command blocks.
 ```bash
 python mechanics/recurrence/scripts/validate_recurrence_mechanic.py
 python -m pytest -q mechanics/recurrence/tests/test_recurrence_mechanic.py
-python scripts/validate_mechanics_topology.py --mechanic recurrence
-python scripts/validate_mechanic_readme_cards.py --mechanic recurrence
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic recurrence
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic recurrence
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic recurrence
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic recurrence
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic recurrence
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic recurrence
 ```
 
 #### `mechanics/recurrence/PARTS.md`

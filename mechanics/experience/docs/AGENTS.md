@@ -22,8 +22,8 @@ Run:
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
 ```
 
 ## Closeout

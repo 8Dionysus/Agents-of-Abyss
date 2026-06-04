@@ -15,8 +15,8 @@ SCRIPTS_DIR = REPO_ROOT / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-import decision_indexes  # noqa: E402
-import generate_decision_indexes  # noqa: E402
+from scripts.docs_districts import decision_indexes  # noqa: E402
+from scripts.docs_districts import generate_decision_indexes  # noqa: E402
 
 
 class DecisionIndexTests(unittest.TestCase):

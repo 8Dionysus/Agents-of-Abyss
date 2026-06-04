@@ -9,7 +9,7 @@ import unittest
 
 class AgentsMeshTests(unittest.TestCase):
     def test_agents_mesh_validator_passes(self):
-        result = subprocess.run([sys.executable, "scripts/validate_agents_mesh.py"], text=True, capture_output=True)
+        result = subprocess.run([sys.executable, "scripts/agents_mesh/validate_agents_mesh.py"], text=True, capture_output=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_mechanic_agents_refs_are_registered(self):

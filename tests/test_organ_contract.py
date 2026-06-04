@@ -12,7 +12,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 class OrganContractTests(unittest.TestCase):
     def test_validator_passes(self) -> None:
         result = subprocess.run(
-            [sys.executable, "scripts/validate_organ_contract.py"],
+            [sys.executable, "scripts/organ_contract/validate_organ_contract.py"],
             cwd=REPO_ROOT,
             check=False,
             text=True,

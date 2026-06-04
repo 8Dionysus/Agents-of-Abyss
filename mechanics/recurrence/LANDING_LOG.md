@@ -74,7 +74,7 @@ Surfaces:
 - `mechanics/registry.json`
 - `generated/mechanic_card_index.min.json`
 - `generated/owner_request_queue.min.json`
-- `scripts/validate_mechanic_landing_logs.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
 - `CHANGELOG.md`
 
 Validation: `python mechanics/recurrence/scripts/validate_recurrence_mechanic.py`
@@ -105,7 +105,7 @@ Surfaces:
 - `mechanics/recurrence/docs/SELF_AGENCY_CONTINUITY.md`
 - `mechanics/recurrence/docs/COMPONENT_REFRESH_LAW.md`
 
-Validation: `python scripts/validate_mechanics_topology.py --mechanic recurrence`
+Validation: `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic recurrence`
 
 Stop-lines: no hidden memory sovereignty, ambient continuity, or runtime
 self-healing authority.

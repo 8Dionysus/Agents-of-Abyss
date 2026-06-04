@@ -25,8 +25,8 @@ Use the nearest README for local file purpose. Use source docs, schemas, generat
 Run the narrowest relevant checks first. Usual checks for this district:
 
 ```bash
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_markdown_shape.py
 ```
 
 If a listed validator is not present in the checkout yet, report that explicitly and run the closest available guardrail.

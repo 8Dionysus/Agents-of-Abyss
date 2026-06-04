@@ -23,7 +23,7 @@ def run_script(*args: str) -> subprocess.CompletedProcess[str]:
 
 class MechanicReadmeCardTests(unittest.TestCase):
     def test_mechanic_readme_cards_validator_accepts_all_cards(self) -> None:
-        result = run_script("scripts/validate_mechanic_readme_cards.py")
+        result = run_script("scripts/mechanics_topology/validate_mechanic_readme_cards.py")
         self.assertEqual(result.returncode, 0, result.stdout)
 
     def test_every_mechanic_card_has_required_headings(self) -> None:

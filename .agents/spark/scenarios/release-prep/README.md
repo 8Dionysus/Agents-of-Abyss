@@ -22,4 +22,4 @@ acceptance, or multi-repo synthesis.
 
 ## Validation
 
-Run `python scripts/release_check.py` when local dependencies are available.
+Run `python scripts/release_gate/release_check.py` when local dependencies are available.

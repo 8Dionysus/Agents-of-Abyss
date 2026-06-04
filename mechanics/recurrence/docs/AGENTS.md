@@ -32,13 +32,13 @@ surface mirrors this document, read the builder and validator before editing.
 Run package and link checks:
 
 ```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_links.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/hygiene/validate_links.py
 python mechanics/recurrence/scripts/validate_recurrence_mechanic.py
-python scripts/validate_mechanic_readme_cards.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_mechanic_landing_logs.py --mechanic recurrence
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py
+python scripts/mechanics_topology/validate_mechanics_topology.py
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic recurrence
 python -m pytest -q
 ```
 
@@ -55,11 +55,11 @@ route to this section instead of carrying command blocks.
 
 ```bash
 python mechanics/recurrence/scripts/validate_recurrence_mechanic.py
-python scripts/validate_owner_request_queue.py --mechanic recurrence
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic recurrence
-python scripts/validate_mechanics_topology.py --mechanic recurrence
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic recurrence
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic recurrence
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic recurrence
 ```
 
 <!-- centralized-child-validation:end -->

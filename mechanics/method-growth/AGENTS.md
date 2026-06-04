@@ -87,12 +87,12 @@ Run the narrow package lane after changing Method-growth surfaces:
 
 ```bash
 python mechanics/method-growth/scripts/validate_method_growth_mechanic.py
-python scripts/validate_mechanics_topology.py --mechanic method-growth
-python scripts/validate_mechanic_readme_cards.py --mechanic method-growth
-python scripts/validate_owner_request_queue.py --mechanic method-growth
-python scripts/validate_owner_request_docs.py --mechanic method-growth
-python scripts/validate_mechanic_artifact_topology.py --mechanic method-growth
-python scripts/validate_mechanic_landing_logs.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic method-growth
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic method-growth
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic method-growth
 ```
 
 Run lineage witnesses when the growth-refinery chain changes:
@@ -105,12 +105,12 @@ python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --wor
 Run generated checks when registry, owner requests, or AGENTS surfaces change:
 
 ```bash
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/agents_mesh/build_agents_mesh_index.py --check
+python scripts/agents_mesh/validate_agents_mesh_index.py
 ```
 
 <!-- centralized-child-validation:start -->
@@ -124,24 +124,24 @@ route to this section instead of carrying command blocks.
 
 ```bash
 python mechanics/method-growth/scripts/validate_method_growth_mechanic.py
-python scripts/validate_mechanics_topology.py --mechanic method-growth
-python scripts/validate_mechanic_readme_cards.py --mechanic method-growth
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic method-growth
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic method-growth
-python scripts/validate_mechanic_landing_logs.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic method-growth
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic method-growth
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic method-growth
 ```
 
 #### `mechanics/method-growth/OWNER_REQUESTS.md`
 
 ```bash
-python scripts/validate_owner_request_queue.py --mechanic method-growth
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic method-growth
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic method-growth
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic method-growth
 python mechanics/method-growth/scripts/validate_method_growth_mechanic.py
 ```
 

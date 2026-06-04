@@ -112,9 +112,9 @@ Surfaces:
 Validation:
 
 - `python mechanics/experience/scripts/validate_experience_distillation.py`
-- `python scripts/validate_markdown_shape.py`
-- `python scripts/validate_mechanic_readme_cards.py --mechanic experience`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
+- `python scripts/hygiene/validate_markdown_shape.py`
+- `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience`
 
 Stop-lines: root markdown surfaces must not become competing part maps,
 validation ledgers, archive inventories, or owner-acceptance receipts.
@@ -250,8 +250,8 @@ Surfaces:
 Validation:
 
 - `python mechanics/experience/scripts/validate_experience_distillation.py`
-- `python scripts/validate_mechanic_artifact_topology.py --mechanic experience`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience`
 - `python -m pytest -q mechanics/experience/tests mechanics/experience/parts`
 
 Stop-lines: no flat Experience artifact aliases, no hidden legacy-first route,
@@ -662,7 +662,7 @@ Surfaces:
 Validation:
 
 - `python mechanics/experience/scripts/validate_experience_distillation.py`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience`
 - `python -m pytest -q mechanics/experience/tests/test_experience_distillation.py`
 
 Stop-lines: no archived packet becomes the primary active route by
@@ -695,7 +695,7 @@ Surfaces:
 Validation:
 
 - `python mechanics/experience/scripts/validate_experience_distillation.py`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience`
 - `python -m pytest -q mechanics/experience/tests/test_experience_distillation.py`
 
 Stop-lines: active part docs must not carry archival inventories, per-source
@@ -735,10 +735,10 @@ Surfaces:
 Validation:
 
 - `python mechanics/experience/scripts/validate_experience_distillation.py`
-- `python scripts/validate_mechanic_readme_cards.py --mechanic experience`
-- `python scripts/validate_mechanics_topology.py --mechanic experience`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
-- `python scripts/release_check.py`
+- `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience`
+- `python scripts/release_gate/release_check.py`
 
 Stop-lines: active route surfaces must not carry stale flat-doc routes,
 service-model notes, source-list load, or duplicated paths; owner-request
@@ -771,8 +771,8 @@ Validation:
 
 - `python mechanics/experience/scripts/validate_experience_distillation.py`
 - `python mechanics/experience/parts/release-deployment/scripts/validate_release_deployment.py`
-- `python scripts/validate_mechanic_artifact_topology.py --mechanic experience`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience`
 - `python -m pytest -q mechanics/experience/tests mechanics/experience/parts`
 
 Stop-lines: active part validators must not read the archival packet district

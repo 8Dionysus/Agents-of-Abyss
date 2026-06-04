@@ -151,7 +151,7 @@ When editing a mechanic:
 7. Update `mechanics/registry.json` when a package, owner boundary, card field, required surface, or validation route changes.
 8. Rebuild the generated card index when card-facing registry fields change.
 9. Rebuild the owner-request queue when request-facing registry or queue fields change.
-10. Run `scripts/validate_mechanic_artifact_topology.py` when schemas,
+10. Run `scripts/mechanics_topology/validate_mechanic_artifact_topology.py` when schemas,
     examples, config, generated artifacts, scripts, tests, or quest routing move
     between root districts and mechanic homes.
 11. Run a decision review when a mechanic change alters topology, owner split,
@@ -167,15 +167,15 @@ change only the files whose future-facing meaning actually moved.
 Run the narrow mechanic validators:
 
 ```bash
-python scripts/validate_mechanic_readme_cards.py
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_mechanic_artifact_topology.py
-python scripts/validate_owner_request_queue.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/mechanics_topology/validate_mechanics_topology.py
+python scripts/mechanics_topology/validate_mechanic_artifact_topology.py
+python scripts/owner_requests/validate_owner_request_queue.py
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py
 python mechanics/audit/scripts/validate_audit_distillation.py
 python mechanics/distillation/scripts/validate_distillation_mechanic.py
 python mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py
@@ -184,9 +184,9 @@ python mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py
 For release-bound mechanics changes, also run:
 
 ```bash
-python scripts/validate_markdown_shape.py
-python scripts/validate_mechanic_landing_logs.py
-python scripts/validate_ecosystem.py
+python scripts/hygiene/validate_markdown_shape.py
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py
+python scripts/root_registries/validate_ecosystem.py
 python -m pytest -q
 ```
 
@@ -200,61 +200,61 @@ route to this section instead of carrying command blocks.
 #### `mechanics/ARTIFACT_TOPOLOGY.md`
 
 ```bash
-python scripts/validate_mechanic_artifact_topology.py
+python scripts/mechanics_topology/validate_mechanic_artifact_topology.py
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python mechanics/questbook/scripts/build_questbook_index.py --check
 python mechanics/questbook/scripts/validate_questbook_index.py
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```
 
 #### `mechanics/OWNER_REQUEST_PROTOCOL.md`
 
 ```bash
-python scripts/validate_owner_request_queue.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py
-python scripts/validate_mechanics_topology.py
+python scripts/owner_requests/validate_owner_request_queue.py
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py
+python scripts/mechanics_topology/validate_mechanics_topology.py
 ```
 
 #### `mechanics/OWNER_REQUEST_QUEUE.md`
 
 ```bash
-python scripts/validate_owner_request_queue.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py
-python scripts/validate_mechanics_topology.py
+python scripts/owner_requests/validate_owner_request_queue.py
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py
+python scripts/mechanics_topology/validate_mechanics_topology.py
 ```
 
 #### `mechanics/README.md`
 
 ```bash
-python scripts/validate_mechanic_readme_cards.py
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_owner_request_queue.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py
-python scripts/repair_known_link_drifts.py --check
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_status_vocabulary.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_entry_surface_sync.py
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/validate_mechanic_landing_logs.py
-python scripts/validate_generated_freshness.py
-python scripts/validate_hygiene_suite.py
-python scripts/validate_ecosystem.py
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/mechanics_topology/validate_mechanics_topology.py
+python scripts/owner_requests/validate_owner_request_queue.py
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py
+python scripts/hygiene/repair_known_link_drifts.py --check
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_markdown_shape.py
+python scripts/hygiene/validate_status_vocabulary.py
+python scripts/hygiene/build_link_shape_hygiene_index.py --check
+python scripts/hygiene/validate_link_shape_hygiene_index.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/agents_mesh/build_agents_mesh_index.py --check
+python scripts/agents_mesh/validate_agents_mesh_index.py
+python scripts/center_entry/validate_entry_surface_sync.py
+python scripts/center_entry/build_center_entry_map.py --check
+python scripts/center_entry/validate_center_entry_map.py
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py
+python scripts/hygiene/validate_generated_freshness.py
+python scripts/hygiene/validate_hygiene_suite.py
+python scripts/root_registries/validate_ecosystem.py
 python -m pytest -q
 python mechanics/audit/scripts/validate_audit_distillation.py
 python mechanics/distillation/scripts/validate_distillation_mechanic.py

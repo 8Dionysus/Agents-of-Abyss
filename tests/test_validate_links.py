@@ -18,16 +18,16 @@ class ValidateLinksTest(unittest.TestCase):
             "link_validation": {"scan_globs": ["**/*.md"], "exclude_globs": [], "ignore_schemes": ["http", "https", "mailto", "tel", "data"]}
         }), encoding="utf-8")
         scripts = self.tempdir / "scripts"
-        scripts.mkdir()
+        (scripts / "hygiene").mkdir(parents=True)
         repo_scripts = Path(__file__).resolve().parents[1] / "scripts"
-        shutil.copy(repo_scripts / "hygiene_common.py", scripts / "hygiene_common.py")
-        shutil.copy(repo_scripts / "validate_links.py", scripts / "validate_links.py")
+        shutil.copy(repo_scripts / "hygiene" / "hygiene_common.py", scripts / "hygiene" / "hygiene_common.py")
+        shutil.copy(repo_scripts / "hygiene" / "validate_links.py", scripts / "hygiene" / "validate_links.py")
 
     def tearDown(self) -> None:
         shutil.rmtree(self.tempdir)
 
     def run_validator(self) -> subprocess.CompletedProcess[str]:
-        return subprocess.run([sys.executable, "scripts/validate_links.py"], cwd=self.tempdir, text=True, capture_output=True)
+        return subprocess.run([sys.executable, "scripts/hygiene/validate_links.py"], cwd=self.tempdir, text=True, capture_output=True)
 
     def test_valid_local_link_passes(self) -> None:
         (self.tempdir / "README.md").write_text("# Root\n\n[Docs](docs/README.md)\n", encoding="utf-8")

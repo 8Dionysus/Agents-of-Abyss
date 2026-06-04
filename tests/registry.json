@@ -21,10 +21,10 @@
         "tests/test_agents_mesh_index.py"
       ],
       "validation_refs": [
-        "scripts/validate_agents_md_shape.py",
-        "scripts/validate_agents_mesh.py",
-        "scripts/build_agents_mesh_index.py",
-        "scripts/validate_agents_mesh_index.py"
+        "scripts/agents_mesh/validate_agents_md_shape.py",
+        "scripts/agents_mesh/validate_agents_mesh.py",
+        "scripts/agents_mesh/build_agents_mesh_index.py",
+        "scripts/agents_mesh/validate_agents_mesh_index.py"
       ],
       "must_not_claim": [
         "AGENTS coverage proves owner-local truth is complete"
@@ -41,9 +41,9 @@
         "tests/test_roadmap_parity.py"
       ],
       "validation_refs": [
-        "scripts/build_center_entry_map.py",
-        "scripts/validate_center_entry_map.py",
-        "scripts/validate_entry_surface_sync.py"
+        "scripts/center_entry/build_center_entry_map.py",
+        "scripts/center_entry/validate_center_entry_map.py",
+        "scripts/center_entry/validate_entry_surface_sync.py"
       ],
       "must_not_claim": [
         "roadmap or entry tests replace owner-local route review"
@@ -62,11 +62,11 @@
         "tests/test_scripts_district.py"
       ],
       "validation_refs": [
-        "scripts/validate_config_registry.py",
-        "scripts/validate_generated_freshness.py",
-        "scripts/validate_manifests_registry.py",
-        "scripts/validate_schema_registry.py",
-        "scripts/validate_scripts_district.py"
+        "scripts/root_registries/validate_config_registry.py",
+        "scripts/hygiene/validate_generated_freshness.py",
+        "scripts/root_registries/validate_manifests_registry.py",
+        "scripts/root_registries/validate_schema_registry.py",
+        "scripts/root_registries/validate_scripts_district.py"
       ],
       "must_not_claim": [
         "district registry metadata as source doctrine"
@@ -85,11 +85,11 @@
         "tests/test_validate_traces_district.py"
       ],
       "validation_refs": [
-        "scripts/validate_decision_records.py",
-        "scripts/validate_docs_migration_map.py",
-        "scripts/validate_docs_thematic_districts.py",
-        "scripts/validate_docs_thematic_index.py",
-        "scripts/validate_traces_district.py"
+        "scripts/docs_districts/validate_decision_records.py",
+        "scripts/docs_districts/validate_docs_migration_map.py",
+        "scripts/docs_districts/validate_docs_thematic_districts.py",
+        "scripts/docs_districts/validate_docs_thematic_index.py",
+        "scripts/docs_districts/validate_traces_district.py"
       ],
       "must_not_claim": [
         "historical receipts as current law"
@@ -103,7 +103,7 @@
         "tests/test_organ_contract.py"
       ],
       "validation_refs": [
-        "scripts/validate_organ_contract.py"
+        "scripts/organ_contract/validate_organ_contract.py"
       ],
       "must_not_claim": [
         "organ contract tests as downstream owner acceptance"
@@ -122,12 +122,12 @@
         "tests/test_validate_links.py"
       ],
       "validation_refs": [
-        "scripts/repair_known_link_drifts.py",
-        "scripts/validate_generated_freshness.py",
-        "scripts/validate_hygiene_suite.py",
-        "scripts/validate_links.py",
-        "scripts/validate_markdown_shape.py",
-        "scripts/validate_status_vocabulary.py"
+        "scripts/hygiene/repair_known_link_drifts.py",
+        "scripts/hygiene/validate_generated_freshness.py",
+        "scripts/hygiene/validate_hygiene_suite.py",
+        "scripts/hygiene/validate_links.py",
+        "scripts/hygiene/validate_markdown_shape.py",
+        "scripts/hygiene/validate_status_vocabulary.py"
       ],
       "must_not_claim": [
         "hygiene checks as semantic approval"
@@ -145,12 +145,12 @@
         "tests/test_mechanics_topology.py"
       ],
       "validation_refs": [
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_artifact_topology.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_mechanic_landing_logs.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/validate_mechanics_topology.py"
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/validate_mechanics_topology.py"
       ],
       "must_not_claim": [
         "mechanic tests as owner acceptance in sibling repos"
@@ -166,10 +166,10 @@
         "tests/test_owner_request_queue.py"
       ],
       "validation_refs": [
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py",
-        "scripts/validate_owner_request_queue.py"
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py",
+        "scripts/owner_requests/validate_owner_request_queue.py"
       ],
       "must_not_claim": [
         "owner request readiness as downstream implementation"
@@ -183,7 +183,7 @@
         "tests/test_validate_ecosystem.py"
       ],
       "validation_refs": [
-        "scripts/validate_ecosystem.py"
+        "scripts/root_registries/validate_ecosystem.py"
       ],
       "must_not_claim": [
         "ecosystem validation as proof of sibling implementation state"
@@ -197,7 +197,7 @@
         "tests/test_tests_district.py"
       ],
       "validation_refs": [
-        "scripts/validate_tests_district.py"
+        "scripts/root_registries/validate_tests_district.py"
       ],
       "must_not_claim": [
         "test registry coverage as proof quality by itself"
@@ -222,8 +222,8 @@
     }
   ],
   "validation_commands": [
-    "python scripts/validate_tests_district.py",
+    "python scripts/root_registries/validate_tests_district.py",
     "python -m pytest -q tests/test_tests_district.py",
-    "python scripts/release_check.py"
+    "python scripts/release_gate/release_check.py"
   ]
 }

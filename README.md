@@ -92,7 +92,7 @@ surface that can answer it.
 | Does this alter how a repository connects as an AbyssOS organ? | [organ-contract](docs/organ-contract/README.md) |
 | Does the machine route still match the human route? | [ENTRY_SURFACE_VALIDATION_BASELINE](docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md) |
 
-Use [release_check.py](scripts/release_check.py) for broad release-facing or
+Use [release_check.py](scripts/release_gate/release_check.py) for broad release-facing or
 repo-wide validation. The baseline command set lives in
 [ENTRY_SURFACE_VALIDATION_BASELINE](docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md)
 so this README can stay readable.

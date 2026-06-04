@@ -21,8 +21,8 @@ For AGENTS mesh work, read `../../DESIGN.AGENTS.md`,
 `../../config/agents_mesh.json`.
 
 For entry-surface validation work, read
-`ENTRY_SURFACE_VALIDATION_BASELINE.md`, `../../scripts/center_entry_map_common.py`,
-and `../../scripts/validate_entry_surface_sync.py`.
+`ENTRY_SURFACE_VALIDATION_BASELINE.md`, `../../scripts/center_entry/center_entry_map_common.py`,
+and `../../scripts/center_entry/validate_entry_surface_sync.py`.
 
 ## Boundaries
 
@@ -39,42 +39,42 @@ and `../../scripts/validate_entry_surface_sync.py`.
 For docs cleanup classifier or district changes:
 
 ```bash
-python scripts/plan_docs_thematic_cleanup.py --check
-python scripts/validate_docs_thematic_districts.py
-python scripts/validate_docs_migration_map.py
-python scripts/validate_traces_district.py
-python scripts/build_docs_thematic_index.py --check
-python scripts/validate_docs_thematic_index.py
+python scripts/docs_districts/plan_docs_thematic_cleanup.py --check
+python scripts/docs_districts/validate_docs_thematic_districts.py
+python scripts/docs_districts/validate_docs_migration_map.py
+python scripts/docs_districts/validate_traces_district.py
+python scripts/docs_districts/build_docs_thematic_index.py --check
+python scripts/docs_districts/validate_docs_thematic_index.py
 ```
 
 For link, shape, status, and freshness guardrail changes:
 
 ```bash
-python scripts/repair_known_link_drifts.py --check
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_status_vocabulary.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/validate_generated_freshness.py
-python scripts/validate_hygiene_suite.py
+python scripts/hygiene/repair_known_link_drifts.py --check
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_markdown_shape.py
+python scripts/hygiene/validate_status_vocabulary.py
+python scripts/hygiene/build_link_shape_hygiene_index.py --check
+python scripts/hygiene/validate_link_shape_hygiene_index.py
+python scripts/hygiene/validate_generated_freshness.py
+python scripts/hygiene/validate_hygiene_suite.py
 ```
 
 For AGENTS mesh changes:
 
 ```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/agents_mesh/build_agents_mesh_index.py --check
+python scripts/agents_mesh/validate_agents_mesh_index.py
 ```
 
 For entry-surface validation changes:
 
 ```bash
-python scripts/validate_entry_surface_sync.py
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
+python scripts/center_entry/validate_entry_surface_sync.py
+python scripts/center_entry/build_center_entry_map.py --check
+python scripts/center_entry/validate_center_entry_map.py
 python -m pytest -q tests/test_entry_surface_sync.py tests/test_center_entry_map.py
 ```
 

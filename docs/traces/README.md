@@ -23,7 +23,7 @@ and no more specific owner home exists. Keep this README as the local gate.
 | [`HYGIENE_REPAIR_MANIFEST.json`](HYGIENE_REPAIR_MANIFEST.json) | link-repair trace written by the repair helper |
 
 `DOCS_THEMATIC_MOVE_MANIFEST.json` may appear here only as output from
-`scripts/plan_docs_thematic_cleanup.py --apply`.
+`scripts/docs_districts/plan_docs_thematic_cleanup.py --apply`.
 
 `conflicts/` may appear only when thematic migration preserves a conflicting
 source as a movement receipt.

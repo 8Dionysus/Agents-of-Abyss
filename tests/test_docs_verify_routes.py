@@ -9,7 +9,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from center_entry_map_common import BASELINE_VALIDATION_COMMANDS, VALIDATION_BASELINE_REF  # noqa: E402
+from scripts.center_entry.center_entry_map_common import BASELINE_VALIDATION_COMMANDS, VALIDATION_BASELINE_REF  # noqa: E402
 
 
 def read_text(relative_path: str) -> str:
@@ -53,7 +53,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
                     self.assertIn("AGENTS.md#validation", text)
                     text += "\n" + read_text(authority_ref)
                 has_inline_battery = (
-                    "python scripts/validate_ecosystem.py" in text
+                    "python scripts/root_registries/validate_ecosystem.py" in text
                     and "python -m pytest -q" in text
                 )
                 self.assertTrue(has_inline_battery or VALIDATION_BASELINE_REF in text)
@@ -360,8 +360,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn(VALIDATION_BASELINE_REF, readme)
         self.assertIn("generated/center_entry_map.min.json", posture)
         self.assertIn("AGENTS.md#validation", posture)
-        self.assertIn("python scripts/build_center_entry_map.py --check", posture_agents)
-        self.assertIn("python scripts/validate_center_entry_map.py", posture_agents)
+        self.assertIn("python scripts/center_entry/build_center_entry_map.py --check", posture_agents)
+        self.assertIn("python scripts/center_entry/validate_center_entry_map.py", posture_agents)
 
 
 if __name__ == "__main__":

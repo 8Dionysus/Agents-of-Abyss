@@ -23,8 +23,8 @@ The route modes are reflected in:
 - `CONTRIBUTING.md`
 - `generated/center_entry_map.min.json`
 - `schemas/center-entry-map.schema.json`
-- `scripts/center_entry_map_common.py`
-- `scripts/validate_center_entry_map.py`
+- `scripts/center_entry/center_entry_map_common.py`
+- `scripts/center_entry/validate_center_entry_map.py`
 - `tests/test_center_entry_map.py`
 
 If one of those surfaces changes the route order or adds a new route mode, the others must be updated in the same change.
@@ -265,26 +265,26 @@ there instead of repeating the full baseline command list inline.
 Run:
 
 ```bash
-python scripts/repair_known_link_drifts.py --check
-python scripts/validate_organ_contract.py
-python scripts/validate_traces_district.py
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_status_vocabulary.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_entry_surface_sync.py
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_mechanic_landing_logs.py
-python scripts/validate_generated_freshness.py
-python scripts/validate_hygiene_suite.py
-python scripts/validate_ecosystem.py
+python scripts/hygiene/repair_known_link_drifts.py --check
+python scripts/organ_contract/validate_organ_contract.py
+python scripts/docs_districts/validate_traces_district.py
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_markdown_shape.py
+python scripts/hygiene/validate_status_vocabulary.py
+python scripts/hygiene/build_link_shape_hygiene_index.py --check
+python scripts/hygiene/validate_link_shape_hygiene_index.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/agents_mesh/build_agents_mesh_index.py --check
+python scripts/agents_mesh/validate_agents_mesh_index.py
+python scripts/center_entry/validate_entry_surface_sync.py
+python scripts/center_entry/build_center_entry_map.py --check
+python scripts/center_entry/validate_center_entry_map.py
+python scripts/mechanics_topology/validate_mechanics_topology.py
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py
+python scripts/hygiene/validate_generated_freshness.py
+python scripts/hygiene/validate_hygiene_suite.py
+python scripts/root_registries/validate_ecosystem.py
 python -m pytest -q
 ```
 

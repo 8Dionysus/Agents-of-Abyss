@@ -50,8 +50,8 @@ class SparkLaneTestCase(unittest.TestCase):
                 temp_spark_root,
                 ignore=shutil.ignore_patterns("__pycache__"),
             )
-            (temp_root / "scripts").mkdir()
-            (temp_root / "scripts/release_check.py").write_text(
+            (temp_root / "scripts/release_gate").mkdir(parents=True)
+            (temp_root / "scripts/release_gate/release_check.py").write_text(
                 ".agents/spark/scripts/validate_spark_lane.py\n",
                 encoding="utf-8",
             )

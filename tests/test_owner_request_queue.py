@@ -17,17 +17,17 @@ def load(name: str, rel: str):
 
 class OwnerRequestQueueTests(unittest.TestCase):
     def test_owner_request_queue_validates(self):
-        module = load("validate_owner_request_queue", "scripts/validate_owner_request_queue.py")
+        module = load("validate_owner_request_queue", "scripts/owner_requests/validate_owner_request_queue.py")
         self.assertEqual(module.validate_queue(None), [])
 
     def test_owner_request_queue_generated_payload_current(self):
-        builder = load("build_owner_request_queue", "scripts/build_owner_request_queue.py")
+        builder = load("build_owner_request_queue", "scripts/owner_requests/build_owner_request_queue.py")
         expected = builder.dumps_min(builder.build_payload())
         actual = (ROOT / "generated/owner_request_queue.min.json").read_text(encoding="utf-8")
         self.assertEqual(actual, expected)
 
     def test_owner_request_queue_has_every_mechanic(self):
-        builder = load("build_owner_request_queue", "scripts/build_owner_request_queue.py")
+        builder = load("build_owner_request_queue", "scripts/owner_requests/build_owner_request_queue.py")
         payload = builder.build_payload()
         mechanics = {request["mechanic"] for request in payload["requests"]}
         self.assertEqual(
@@ -36,7 +36,7 @@ class OwnerRequestQueueTests(unittest.TestCase):
         )
 
     def test_growth_cycle_routes_reusable_practice_to_techniques(self):
-        builder = load("build_owner_request_queue", "scripts/build_owner_request_queue.py")
+        builder = load("build_owner_request_queue", "scripts/owner_requests/build_owner_request_queue.py")
         payload = builder.build_payload()
         request = next(
             item

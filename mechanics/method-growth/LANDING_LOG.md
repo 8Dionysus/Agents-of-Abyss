@@ -98,13 +98,13 @@ Surfaces:
 - `generated/mechanic_card_index.min.json`
 - `generated/owner_request_queue.min.json`
 - `generated/agents_mesh.min.json`
-- `scripts/validate_mechanic_landing_logs.py`
-- `scripts/validate_mechanic_artifact_topology.py`
-- `scripts/release_check.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
+- `scripts/mechanics_topology/validate_mechanic_artifact_topology.py`
+- `scripts/release_gate/release_check.py`
 - `tests/test_mechanic_landing_logs.py`
 - `CHANGELOG.md`
 
-Validation: `python mechanics/method-growth/scripts/validate_method_growth_mechanic.py`; `python scripts/validate_mechanic_landing_logs.py --mechanic method-growth`; `python scripts/validate_owner_request_queue.py --mechanic method-growth`; `python scripts/release_check.py`
+Validation: `python mechanics/method-growth/scripts/validate_method_growth_mechanic.py`; `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic method-growth`; `python scripts/owner_requests/validate_owner_request_queue.py --mechanic method-growth`; `python scripts/release_gate/release_check.py`
 
 Stop-lines: no center-owned final object truth, owner-local activation, proof
 verdict, memory canon, `candidate_ref` minting in center, `seed_ref` minting in
@@ -131,7 +131,7 @@ Surfaces:
 - `mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`
 - `mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md`
 
-Validation: `python scripts/validate_mechanics_topology.py --mechanic method-growth`
+Validation: `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic method-growth`
 
 Stop-lines: no final object truth, owner-local activation, or proof authority
 moves into the center through this package.

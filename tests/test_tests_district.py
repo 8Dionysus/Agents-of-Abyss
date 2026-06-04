@@ -23,7 +23,7 @@ def load_json(path: Path) -> dict:
 class TestsDistrictTestCase(unittest.TestCase):
     def test_tests_district_validator_passes(self) -> None:
         result = subprocess.run(
-            [sys.executable, "scripts/validate_tests_district.py"],
+            [sys.executable, "scripts/root_registries/validate_tests_district.py"],
             cwd=REPO_ROOT,
             check=False,
             text=True,
@@ -65,7 +65,7 @@ class TestsDistrictTestCase(unittest.TestCase):
             result = subprocess.run(
                 [
                     sys.executable,
-                    "scripts/validate_tests_district.py",
+                    "scripts/root_registries/validate_tests_district.py",
                     "--repo-root",
                     str(temp_root),
                 ],
@@ -86,7 +86,7 @@ class TestsDistrictTestCase(unittest.TestCase):
         self.assertIn("[`registry.json`](registry.json)", readme)
         self.assertIn("Test Families", readme)
         self.assertIn("tests/registry.json", agents)
-        self.assertIn("python scripts/validate_tests_district.py", agents)
+        self.assertIn("python scripts/root_registries/validate_tests_district.py", agents)
 
 
 if __name__ == "__main__":

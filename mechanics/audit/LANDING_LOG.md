@@ -83,9 +83,9 @@ Surfaces:
 - `mechanics/owner-request-queue.json`
 - `generated/mechanic_card_index.min.json`
 - `generated/owner_request_queue.min.json`
-- `scripts/validate_mechanics_topology.py`
-- `scripts/validate_mechanic_landing_logs.py`
-- `scripts/release_check.py`
+- `scripts/mechanics_topology/validate_mechanics_topology.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
+- `scripts/release_gate/release_check.py`
 - `tests/test_mechanic_landing_logs.py`
 - `CHANGELOG.md`
 

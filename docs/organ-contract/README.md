@@ -73,7 +73,7 @@ Use the validation lane in [`AGENTS`](AGENTS.md#validation). The local validator
 is:
 
 ```bash
-python scripts/validate_organ_contract.py
+python scripts/organ_contract/validate_organ_contract.py
 ```
 
 The center-wide baseline lives in

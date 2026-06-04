@@ -101,15 +101,15 @@ Surfaces:
 - `generated/mechanic_card_index.min.json`
 - `generated/owner_request_queue.min.json`
 - `quests/distillation/README.md`
-- `scripts/validate_mechanics_topology.py`
-- `scripts/validate_mechanic_landing_logs.py`
-- `scripts/validate_mechanic_artifact_topology.py`
-- `scripts/release_check.py`
+- `scripts/mechanics_topology/validate_mechanics_topology.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
+- `scripts/mechanics_topology/validate_mechanic_artifact_topology.py`
+- `scripts/release_gate/release_check.py`
 - `tests/test_mechanics_topology.py`
 - `tests/test_owner_request_queue.py`
 - `CHANGELOG.md`
 
-Validation: `python mechanics/distillation/scripts/validate_distillation_mechanic.py`; `python scripts/validate_mechanics_topology.py --mechanic distillation`; `python scripts/validate_mechanic_readme_cards.py --mechanic distillation`; `python scripts/validate_owner_request_queue.py --mechanic distillation`; `python scripts/release_check.py`
+Validation: `python mechanics/distillation/scripts/validate_distillation_mechanic.py`; `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic distillation`; `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic distillation`; `python scripts/owner_requests/validate_owner_request_queue.py --mechanic distillation`; `python scripts/release_gate/release_check.py`
 
 Stop-lines: no summarization as distillation, proof verdict, memory canon, runtime activation, owner acceptance, ToS canon or compost authority, raw deletion authority, generated or derived distillation authority.
 

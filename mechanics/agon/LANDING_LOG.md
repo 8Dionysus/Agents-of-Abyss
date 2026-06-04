@@ -83,9 +83,9 @@ Surfaces:
 Validation:
 
 - `python mechanics/agon/scripts/validate_agon_distillation.py`
-- `python scripts/validate_markdown_shape.py`
-- `python scripts/validate_mechanic_readme_cards.py --mechanic agon`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic agon`
+- `python scripts/hygiene/validate_markdown_shape.py`
+- `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic agon`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic agon`
 
 Stop-lines: root markdown surfaces must not become competing part maps,
 technical artifact ledgers, source-file inventories, or owner-acceptance
@@ -120,9 +120,9 @@ Surfaces:
 Validation:
 
 - `python mechanics/agon/scripts/validate_agon_distillation.py`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic agon`
-- `python scripts/validate_mechanics_topology.py --mechanic agon`
-- `python scripts/validate_links.py`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic agon`
+- `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic agon`
+- `python scripts/hygiene/validate_links.py`
 
 Stop-lines: do not make `mechanics/agon/legacy/raw/` the normal first route,
 do not delete raw provenance after distillation, and do not let raw packets
@@ -153,13 +153,13 @@ Surfaces:
 - `mechanics/agon/parts/*/tests/test_agon_*.py`
 - `mechanics/agon/scripts/validate_agon_distillation.py`
 - `mechanics/agon/tests/test_agon_distillation.py`
-- `scripts/validate_mechanic_artifact_topology.py`
+- `scripts/mechanics_topology/validate_mechanic_artifact_topology.py`
 
 Validation:
 
 - `python mechanics/agon/scripts/validate_agon_distillation.py`
-- `python scripts/validate_mechanic_artifact_topology.py --mechanic agon`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic agon`
+- `python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic agon`
 - `python -m pytest -q mechanics/agon/tests mechanics/agon/parts`
 
 Stop-lines: do not recreate flat aliases, do not let old wave names become the
@@ -195,7 +195,7 @@ Validation:
 - `find mechanics/agon/parts -path '*/scripts/build_agon_*.py' -exec python {} --check \;`
 - `find mechanics/agon/parts -path '*/scripts/validate_agon_*.py' -exec python {} \;`
 - `python mechanics/agon/scripts/validate_agon_distillation.py`
-- `python scripts/validate_mechanic_artifact_topology.py --mechanic agon`
+- `python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon`
 - `python -m pytest -q mechanics/agon/tests mechanics/agon/parts`
 
 Stop-lines: do not let active part artifacts direct agents into legacy raw
@@ -247,13 +247,13 @@ Surfaces:
 Validation:
 
 - `python mechanics/agon/scripts/validate_agon_distillation.py`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic agon`
-- `python scripts/validate_mechanics_topology.py --mechanic agon`
-- `python scripts/validate_mechanic_artifact_topology.py --mechanic agon`
-- `python scripts/validate_owner_request_queue.py --mechanic agon`
-- `python scripts/build_owner_request_queue.py --check`
-- `python scripts/validate_generated_owner_request_queue.py`
-- `python scripts/validate_owner_request_docs.py --mechanic agon`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic agon`
+- `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic agon`
+- `python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon`
+- `python scripts/owner_requests/validate_owner_request_queue.py --mechanic agon`
+- `python scripts/owner_requests/build_owner_request_queue.py --check`
+- `python scripts/owner_requests/validate_generated_owner_request_queue.py`
+- `python scripts/owner_requests/validate_owner_request_docs.py --mechanic agon`
 - `python -m pytest -q mechanics/agon/tests/test_agon_distillation.py`
 
 Stop-lines: active parts do not supersede owner repositories, activate a live
@@ -281,7 +281,7 @@ Surfaces:
 
 Validation:
 
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 
 Stop-lines: not a planted wave package, not a new sibling repository, no direct
 arena write path.
@@ -494,7 +494,7 @@ Surfaces:
 
 Validation:
 
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 - nearest `scripts/validate_agon_*.py` named by the changed generated surface
 - nearest `python -m pytest -q/test_agon_*.py`
 

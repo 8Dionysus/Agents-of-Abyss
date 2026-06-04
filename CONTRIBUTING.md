@@ -121,7 +121,7 @@ full command list:
 For release-facing or repo-wide changes, use the broad gate:
 
 ```bash
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```
 
 For local work, prefer the nearest `AGENTS.md`, README, builder, validator, or

@@ -24,7 +24,7 @@ Run:
 
 ```bash
 python mechanics/antifragility/scripts/validate_antifragility_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic antifragility
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic antifragility
 python -m pytest -q mechanics/antifragility/tests
 ```
 

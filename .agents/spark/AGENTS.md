@@ -52,16 +52,16 @@ Run the narrowest relevant checks first. Usual checks for this lane:
 ```bash
 python .agents/spark/scripts/validate_spark_lane.py
 python -m pytest -q .agents/spark/tests/test_spark_lane.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/agents_mesh/build_agents_mesh_index.py --check
+python scripts/agents_mesh/validate_agents_mesh_index.py
 ```
 
 For release-facing Spark lane changes, also run:
 
 ```bash
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```
 
 ## Closeout

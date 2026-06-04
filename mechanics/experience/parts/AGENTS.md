@@ -29,9 +29,9 @@ Run:
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
 ```
 
 <!-- centralized-child-validation:start -->
@@ -45,24 +45,24 @@ route to this section instead of carrying command blocks.
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py --part adoption-federation
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
 python mechanics/experience/parts/adoption-federation/scripts/validate_adoption_federation.py
 python -m pytest -q mechanics/experience/parts/adoption-federation/tests/test_adoption_federation.py
-python scripts/validate_owner_request_queue.py --mechanic experience
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic experience
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic experience
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic experience
 ```
 
 #### `mechanics/experience/parts/capture-kernel/VALIDATION.md`
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py --part capture-kernel
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
 python mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py
 python -m pytest -q mechanics/experience/parts/capture-kernel/tests/test_capture_kernel.py
 ```
@@ -71,9 +71,9 @@ python -m pytest -q mechanics/experience/parts/capture-kernel/tests/test_capture
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py --part certification-proof
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
 python mechanics/experience/parts/certification-proof/scripts/validate_certification_proof.py
 python -m pytest -q mechanics/experience/parts/certification-proof/tests/test_certification_proof.py
 ```
@@ -82,9 +82,9 @@ python -m pytest -q mechanics/experience/parts/certification-proof/tests/test_ce
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py --part compatibility-bridges
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
 python mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py
 python mechanics/experience/parts/compatibility-bridges/scripts/validate_agonic_pair_trials_bridge.py
 python mechanics/experience/parts/compatibility-bridges/scripts/validate_epistemic_duel_bridge.py
@@ -97,9 +97,9 @@ python -m pytest -q mechanics/experience/parts/compatibility-bridges/tests/test_
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py --part continuity-context
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
 python mechanics/experience/parts/continuity-context/scripts/validate_memory_rank_reputation.py
 python mechanics/experience/parts/continuity-context/scripts/validate_affective_economy.py
 python mechanics/experience/parts/continuity-context/scripts/validate_context_routing.py
@@ -114,9 +114,9 @@ python -m pytest -q mechanics/experience/parts/continuity-context/tests/test_con
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py --part governance-polis
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
 python mechanics/experience/parts/governance-polis/scripts/validate_governance_polis.py
 python -m pytest -q mechanics/experience/parts/governance-polis/tests/test_governance_polis.py mechanics/experience/parts/governance-polis/tests/test_governance_polis_seed_contracts.py
 ```
@@ -125,9 +125,9 @@ python -m pytest -q mechanics/experience/parts/governance-polis/tests/test_gover
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py --part office-operations
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
 python mechanics/experience/parts/office-operations/scripts/validate_office_operations.py
 python mechanics/experience/parts/office-operations/scripts/validate_office_role_pairs.py
 python -m pytest -q mechanics/experience/parts/office-operations/tests/test_office_operations.py
@@ -140,9 +140,9 @@ python -m pytest -q mechanics/experience/parts/office-operations/tests/test_offi
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py --part release-deployment
 python mechanics/experience/parts/release-deployment/scripts/validate_release_deployment.py
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
 python mechanics/experience/parts/office-operations/scripts/validate_office_operations.py
 python mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py
 python -m pytest -q mechanics/experience/parts/release-deployment/tests/test_release_deployment.py
@@ -155,9 +155,9 @@ python -m pytest -q mechanics/experience/parts/runtime-boundary/tests/test_runti
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py --part runtime-boundary
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
 python mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py
 python mechanics/experience/parts/continuity-context/scripts/validate_living_workspace_continuity.py
 python -m pytest -q mechanics/experience/parts/runtime-boundary/tests/test_runtime_boundary_bridge.py
@@ -168,9 +168,9 @@ python -m pytest -q mechanics/experience/parts/continuity-context/tests/test_liv
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py --part service-mesh
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_mechanics_topology.py --mechanic experience
-python scripts/validate_mechanic_readme_cards.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
 python mechanics/experience/parts/service-mesh/scripts/validate_service_mesh.py
 python -m pytest -q mechanics/experience/parts/service-mesh/tests/test_service_mesh.py
 ```

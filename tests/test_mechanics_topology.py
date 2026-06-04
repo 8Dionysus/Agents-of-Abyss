@@ -53,7 +53,7 @@ class MechanicsTopologyTests(unittest.TestCase):
             self.assertTrue((package / "docs").is_dir())
 
     def test_mechanics_topology_validator_accepts_all_mechanics(self) -> None:
-        result = run_script("scripts/validate_mechanics_topology.py")
+        result = run_script("scripts/mechanics_topology/validate_mechanics_topology.py")
         self.assertEqual(result.returncode, 0, result.stdout)
 
     def test_no_flat_agon_experience_or_rpg_docs_remain(self) -> None:

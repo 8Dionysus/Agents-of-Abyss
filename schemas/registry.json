@@ -19,14 +19,14 @@
       "path": "schemas/center-entry-map.schema.json",
       "publication_scope": "center-entry",
       "source_refs": [
-        "scripts/center_entry_map_common.py"
+        "scripts/center_entry/center_entry_map_common.py"
       ],
       "test_refs": [
         "tests/test_center_entry_map.py"
       ],
       "validator_refs": [
-        "scripts/build_center_entry_map.py",
-        "scripts/validate_center_entry_map.py"
+        "scripts/center_entry/build_center_entry_map.py",
+        "scripts/center_entry/validate_center_entry_map.py"
       ]
     },
     {
@@ -49,7 +49,7 @@
         "tests/test_validate_ecosystem.py"
       ],
       "validator_refs": [
-        "scripts/validate_ecosystem.py"
+        "scripts/root_registries/validate_ecosystem.py"
       ]
     },
     {
@@ -69,7 +69,7 @@
         "tests/test_validate_ecosystem.py"
       ],
       "validator_refs": [
-        "scripts/validate_ecosystem.py"
+        "scripts/root_registries/validate_ecosystem.py"
       ]
     }
   ],

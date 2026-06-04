@@ -51,7 +51,7 @@ Surfaces:
 - `mechanics/boundary-bridge/docs/TOS_LINEAGE_PILOT_SUPPORT.md`
 - `mechanics/boundary-bridge/docs/TOS_SOIL_PREP_SUPPORT.md`
 
-Validation: `python scripts/validate_mechanics_topology.py --mechanic boundary-bridge`
+Validation: `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic boundary-bridge`
 
 Stop-lines: no AoA-authored ToS canon, source interpretation authority, or
 owner-local implementation truth.
@@ -105,18 +105,18 @@ Surfaces:
 - `mechanics/owner-request-queue.json`
 - `generated/mechanic_card_index.min.json`
 - `generated/owner_request_queue.min.json`
-- `scripts/validate_mechanic_landing_logs.py`
-- `scripts/validate_mechanic_artifact_topology.py`
-- `scripts/release_check.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
+- `scripts/mechanics_topology/validate_mechanic_artifact_topology.py`
+- `scripts/release_gate/release_check.py`
 - `tests/test_mechanic_landing_logs.py`
 - `CHANGELOG.md`
 
 Validation:
 
 - `python mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py`
-- `python scripts/validate_mechanics_topology.py --mechanic boundary-bridge`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic boundary-bridge`
-- `python scripts/validate_owner_request_queue.py --mechanic boundary-bridge`
+- `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic boundary-bridge`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic boundary-bridge`
+- `python scripts/owner_requests/validate_owner_request_queue.py --mechanic boundary-bridge`
 
 Stop-lines: no identity claim, no owner acceptance without owner-local
 receipt, no derived projection as source truth, no ToS canon write from AoA,

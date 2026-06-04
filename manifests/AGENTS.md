@@ -33,10 +33,10 @@ repositories as stronger authority than a manifest receipt.
 Run the narrowest relevant checks first. Usual checks for this district:
 
 ```bash
-python scripts/validate_manifests_registry.py
+python scripts/root_registries/validate_manifests_registry.py
 python -m pytest -q tests/test_manifests_district.py
-python scripts/validate_links.py
-python scripts/validate_generated_freshness.py
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_generated_freshness.py
 python -m pytest -q
 ```
 

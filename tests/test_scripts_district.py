@@ -23,7 +23,7 @@ def load_json(path: Path) -> dict:
 class ScriptsDistrictTestCase(unittest.TestCase):
     def test_scripts_district_validator_passes(self) -> None:
         result = subprocess.run(
-            [sys.executable, "scripts/validate_scripts_district.py"],
+            [sys.executable, "scripts/root_registries/validate_scripts_district.py"],
             cwd=REPO_ROOT,
             check=False,
             text=True,
@@ -41,12 +41,12 @@ class ScriptsDistrictTestCase(unittest.TestCase):
         }
         discovered = {
             path.relative_to(REPO_ROOT).as_posix()
-            for path in SCRIPTS_ROOT.glob("*.py")
+            for path in SCRIPTS_ROOT.glob("*/*.py")
             if path.name != "__init__.py"
         }
         self.assertEqual(registered, discovered)
 
-    def test_unregistered_root_script_is_rejected(self) -> None:
+    def test_unregistered_family_script_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             temp_root = Path(temp)
             shutil.copytree(
@@ -54,14 +54,14 @@ class ScriptsDistrictTestCase(unittest.TestCase):
                 temp_root / "scripts",
                 ignore=shutil.ignore_patterns("__pycache__"),
             )
-            (temp_root / "scripts/temporary_unregistered.py").write_text(
+            (temp_root / "scripts/hygiene/temporary_unregistered.py").write_text(
                 "# temporary test script\n",
                 encoding="utf-8",
             )
             result = subprocess.run(
                 [
                     sys.executable,
-                    "scripts/validate_scripts_district.py",
+                    "scripts/root_registries/validate_scripts_district.py",
                     "--repo-root",
                     str(temp_root),
                 ],
@@ -72,8 +72,37 @@ class ScriptsDistrictTestCase(unittest.TestCase):
                 stderr=subprocess.STDOUT,
             )
         self.assertNotEqual(result.returncode, 0, result.stdout)
-        self.assertIn("root scripts missing from registry", result.stdout)
-        self.assertIn("scripts/temporary_unregistered.py", result.stdout)
+        self.assertIn("family scripts missing from registry", result.stdout)
+        self.assertIn("scripts/hygiene/temporary_unregistered.py", result.stdout)
+
+    def test_root_level_python_script_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            temp_root = Path(temp)
+            shutil.copytree(
+                SCRIPTS_ROOT,
+                temp_root / "scripts",
+                ignore=shutil.ignore_patterns("__pycache__"),
+            )
+            (temp_root / "scripts/temporary_root_script.py").write_text(
+                "# temporary root script\n",
+                encoding="utf-8",
+            )
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    "scripts/root_registries/validate_scripts_district.py",
+                    "--repo-root",
+                    str(temp_root),
+                ],
+                cwd=temp_root,
+                check=False,
+                text=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+            )
+        self.assertNotEqual(result.returncode, 0, result.stdout)
+        self.assertIn("root-level scripts Python files are no longer allowed", result.stdout)
+        self.assertIn("scripts/temporary_root_script.py", result.stdout)
 
     def test_readme_and_agents_name_registry_contract(self) -> None:
         readme = ROOT_README.read_text(encoding="utf-8")
@@ -82,7 +111,7 @@ class ScriptsDistrictTestCase(unittest.TestCase):
         self.assertIn("[`registry.json`](registry.json)", readme)
         self.assertIn("Script Families", readme)
         self.assertIn("scripts/registry.json", agents)
-        self.assertIn("python scripts/validate_scripts_district.py", agents)
+        self.assertIn("python scripts/root_registries/validate_scripts_district.py", agents)
 
 
 if __name__ == "__main__":

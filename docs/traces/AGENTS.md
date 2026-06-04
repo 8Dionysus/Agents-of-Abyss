@@ -47,11 +47,11 @@ After adding, moving, or deleting a trace:
 Use docs and hygiene guardrails:
 
 ```bash
-python scripts/validate_traces_district.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
+python scripts/docs_districts/validate_traces_district.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_markdown_shape.py
 python -m pytest -q
 ```
 

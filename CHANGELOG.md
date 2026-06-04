@@ -32,6 +32,9 @@ Tracking starts with the community-docs baseline for this repository.
 - `docs/decisions/` now uses canonical `AOA-CENTER-D-####` decision IDs,
   generated lookup indexes, and a release-check guard for stale decision
   read models.
+- root `scripts/` now uses family-scoped Python homes under
+  `scripts/<family>/`, with root-level Python command files rejected by the
+  scripts district validator.
 
 ## [0.4.0] - 2026-04-30
 

@@ -80,7 +80,7 @@ change does not affect its job.
 
 ## Validation
 
-Run `python scripts/validate_mechanics_topology.py --mechanic release-support`
+Run `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic release-support`
 after package changes.
 
 For active-part or transition-law changes, run:
@@ -100,40 +100,40 @@ route to this section instead of carrying command blocks.
 
 ```bash
 python mechanics/release-support/scripts/validate_release_support_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic release-support
-python scripts/release_check.py
-python scripts/validate_mechanic_readme_cards.py --mechanic release-support
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic release-support
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic release-support
-python scripts/validate_mechanic_landing_logs.py --mechanic release-support
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic release-support
+python scripts/release_gate/release_check.py
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic release-support
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic release-support
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic release-support
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic release-support
 ```
 
 #### `mechanics/release-support/DIRECTION.md`
 
 ```bash
 python mechanics/release-support/scripts/validate_release_support_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic release-support
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic release-support
 ```
 
 #### `mechanics/release-support/PARTS.md`
 
 ```bash
 python mechanics/release-support/scripts/validate_release_support_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic release-support
+python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic release-support
 ```
 
 #### `mechanics/release-support/OWNER_REQUESTS.md`
 
 ```bash
 python mechanics/release-support/scripts/validate_release_support_distillation.py
-python scripts/validate_owner_request_queue.py --mechanic release-support
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic release-support
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic release-support
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic release-support
 ```
 
 <!-- centralized-child-validation:end -->

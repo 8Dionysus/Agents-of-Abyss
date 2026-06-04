@@ -100,14 +100,14 @@ Surfaces:
 - `generated/owner_request_queue.min.json`
 - `generated/agents_mesh.min.json`
 - `generated/center_entry_map.min.json`
-- `scripts/center_entry_map_common.py`
-- `scripts/validate_ecosystem.py`
-- `scripts/validate_mechanic_artifact_topology.py`
-- `scripts/validate_mechanic_landing_logs.py`
-- `scripts/validate_mechanics_topology.py`
-- `scripts/validate_owner_request_docs.py`
-- `scripts/validate_owner_request_queue.py`
-- `scripts/release_check.py`
+- `scripts/center_entry/center_entry_map_common.py`
+- `scripts/root_registries/validate_ecosystem.py`
+- `scripts/mechanics_topology/validate_mechanic_artifact_topology.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
+- `scripts/mechanics_topology/validate_mechanics_topology.py`
+- `scripts/owner_requests/validate_owner_request_docs.py`
+- `scripts/owner_requests/validate_owner_request_queue.py`
+- `scripts/release_gate/release_check.py`
 - `tests/test_mechanic_landing_logs.py`
 - `tests/test_mechanics_topology.py`
 - `tests/test_owner_request_queue.py`
@@ -117,7 +117,7 @@ Validation:
 
 - `python mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py`
 - `python -m pytest -q mechanics/growth-cycle/tests`
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 
 Stop-lines: Growth Cycle must not claim hook implementation authority,
 executable skill truth, proof verdict, memory canon, runtime activation, owner

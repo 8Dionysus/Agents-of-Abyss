@@ -78,7 +78,7 @@ python "$AOA_MEMO_ROOT/scripts/memory/build_local_memo_port_index.py" --path mem
 For release-facing center changes, run:
 
 ```bash
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```
 
 ## Closeout

@@ -21,20 +21,20 @@ class MarkdownShapeTest(unittest.TestCase):
             }
         }), encoding="utf-8")
         scripts = self.tempdir / "scripts"
-        scripts.mkdir()
+        (scripts / "hygiene").mkdir(parents=True)
         repo_scripts = Path(__file__).resolve().parents[1] / "scripts"
-        shutil.copy(repo_scripts / "hygiene_common.py", scripts / "hygiene_common.py")
-        shutil.copy(repo_scripts / "validate_markdown_shape.py", scripts / "validate_markdown_shape.py")
+        shutil.copy(repo_scripts / "hygiene" / "hygiene_common.py", scripts / "hygiene" / "hygiene_common.py")
+        shutil.copy(repo_scripts / "hygiene" / "validate_markdown_shape.py", scripts / "hygiene" / "validate_markdown_shape.py")
 
     def tearDown(self) -> None:
         shutil.rmtree(self.tempdir)
 
     def test_shape_passes_and_fails(self) -> None:
         (self.tempdir / "README.md").write_text("# Root\n\n## Gate\n", encoding="utf-8")
-        ok = subprocess.run([sys.executable, "scripts/validate_markdown_shape.py"], cwd=self.tempdir)
+        ok = subprocess.run([sys.executable, "scripts/hygiene/validate_markdown_shape.py"], cwd=self.tempdir)
         self.assertEqual(ok.returncode, 0)
         (self.tempdir / "README.md").write_text("# Root\n", encoding="utf-8")
-        bad = subprocess.run([sys.executable, "scripts/validate_markdown_shape.py"], cwd=self.tempdir, text=True, capture_output=True)
+        bad = subprocess.run([sys.executable, "scripts/hygiene/validate_markdown_shape.py"], cwd=self.tempdir, text=True, capture_output=True)
         self.assertNotEqual(bad.returncode, 0)
         self.assertIn("missing second-level heading", bad.stdout)
 
@@ -43,14 +43,14 @@ class MarkdownShapeTest(unittest.TestCase):
         mechanic = self.tempdir / "mechanics/example"
         mechanic.mkdir(parents=True)
         (mechanic / "AGENTS.md").write_text(
-            "# AGENTS.md\n\n## Validation\n\n```bash\npython scripts/validate_links.py\n```\n",
+            "# AGENTS.md\n\n## Validation\n\n```bash\npython scripts/hygiene/validate_links.py\n```\n",
             encoding="utf-8",
         )
         child = mechanic / "README.md"
-        child.write_text("# Example\n\n## Validation\n\n`python scripts/validate_links.py`\n", encoding="utf-8")
+        child.write_text("# Example\n\n## Validation\n\n`python scripts/hygiene/validate_links.py`\n", encoding="utf-8")
 
         bad = subprocess.run(
-            [sys.executable, "scripts/validate_markdown_shape.py"],
+            [sys.executable, "scripts/hygiene/validate_markdown_shape.py"],
             cwd=self.tempdir,
             text=True,
             capture_output=True,
@@ -59,7 +59,7 @@ class MarkdownShapeTest(unittest.TestCase):
         self.assertNotEqual(bad.returncode, 0)
         self.assertIn("executable validation command belongs in nearest AGENTS.md", bad.stdout)
         child.write_text("# Example\n\n## Validation\n\nUse AGENTS.md#validation.\n", encoding="utf-8")
-        ok = subprocess.run([sys.executable, "scripts/validate_markdown_shape.py"], cwd=self.tempdir)
+        ok = subprocess.run([sys.executable, "scripts/hygiene/validate_markdown_shape.py"], cwd=self.tempdir)
         self.assertEqual(ok.returncode, 0)
 
     def test_child_docs_allow_non_validation_shell_fences(self) -> None:
@@ -73,7 +73,7 @@ class MarkdownShapeTest(unittest.TestCase):
         )
 
         ok = subprocess.run(
-            [sys.executable, "scripts/validate_markdown_shape.py"],
+            [sys.executable, "scripts/hygiene/validate_markdown_shape.py"],
             cwd=self.tempdir,
             text=True,
             capture_output=True,
@@ -85,7 +85,7 @@ class MarkdownShapeTest(unittest.TestCase):
         (self.tempdir / "README.md").write_text("# Root\n\n## Gate\n~~~\n", encoding="utf-8")
 
         bad = subprocess.run(
-            [sys.executable, "scripts/validate_markdown_shape.py"],
+            [sys.executable, "scripts/hygiene/validate_markdown_shape.py"],
             cwd=self.tempdir,
             text=True,
             capture_output=True,
@@ -100,12 +100,12 @@ class MarkdownShapeTest(unittest.TestCase):
         mechanic.mkdir(parents=True)
         (mechanic / "AGENTS.md").write_text("# AGENTS.md\n\n## Validation\n\nUse local checks.\n", encoding="utf-8")
         (mechanic / "README.md").write_text(
-            "# Example\n\n## Validation\n\n```text\n~~~\npython scripts/validate_links.py\n```\n",
+            "# Example\n\n## Validation\n\n```text\n~~~\npython scripts/hygiene/validate_links.py\n```\n",
             encoding="utf-8",
         )
 
         bad = subprocess.run(
-            [sys.executable, "scripts/validate_markdown_shape.py"],
+            [sys.executable, "scripts/hygiene/validate_markdown_shape.py"],
             cwd=self.tempdir,
             text=True,
             capture_output=True,

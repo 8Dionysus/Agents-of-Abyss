@@ -606,7 +606,7 @@
   "generated_freshness": [
     {
       "output": "generated/center_entry_map.min.json",
-      "builder": "scripts/build_center_entry_map.py",
+      "builder": "scripts/center_entry/build_center_entry_map.py",
       "check_args": [
         "--check"
       ],
@@ -614,7 +614,7 @@
     },
     {
       "output": "generated/mechanic_card_index.min.json",
-      "builder": "scripts/build_mechanic_card_index.py",
+      "builder": "scripts/mechanics_topology/build_mechanic_card_index.py",
       "check_args": [
         "--check"
       ],
@@ -654,7 +654,7 @@
     },
     {
       "output": "generated/owner_request_queue.min.json",
-      "builder": "scripts/build_owner_request_queue.py",
+      "builder": "scripts/owner_requests/build_owner_request_queue.py",
       "check_args": [
         "--check"
       ],
@@ -662,7 +662,7 @@
     },
     {
       "output": "generated/docs_thematic_index.min.json",
-      "builder": "scripts/build_docs_thematic_index.py",
+      "builder": "scripts/docs_districts/build_docs_thematic_index.py",
       "check_args": [
         "--check"
       ],
@@ -670,7 +670,7 @@
     },
     {
       "output": "generated/agents_mesh.min.json",
-      "builder": "scripts/build_agents_mesh_index.py",
+      "builder": "scripts/agents_mesh/build_agents_mesh_index.py",
       "check_args": [
         "--check"
       ],
@@ -678,7 +678,7 @@
     },
     {
       "output": "generated/link_shape_hygiene.min.json",
-      "builder": "scripts/build_link_shape_hygiene_index.py",
+      "builder": "scripts/hygiene/build_link_shape_hygiene_index.py",
       "check_args": [
         "--check"
       ],
@@ -686,27 +686,27 @@
     }
   ],
   "validation_commands": [
-    "python scripts/validate_config_registry.py",
-    "python scripts/repair_known_link_drifts.py --check",
-    "python scripts/validate_links.py",
-    "python scripts/validate_markdown_shape.py",
-    "python scripts/validate_status_vocabulary.py",
-    "python scripts/build_link_shape_hygiene_index.py --check",
-    "python scripts/validate_link_shape_hygiene_index.py",
+    "python scripts/root_registries/validate_config_registry.py",
+    "python scripts/hygiene/repair_known_link_drifts.py --check",
+    "python scripts/hygiene/validate_links.py",
+    "python scripts/hygiene/validate_markdown_shape.py",
+    "python scripts/hygiene/validate_status_vocabulary.py",
+    "python scripts/hygiene/build_link_shape_hygiene_index.py --check",
+    "python scripts/hygiene/validate_link_shape_hygiene_index.py",
     "python mechanics/experience/scripts/validate_experience_distillation.py",
-    "python scripts/validate_mechanic_artifact_topology.py",
+    "python scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
     "python mechanics/questbook/scripts/validate_questbook_lifecycle.py",
     "python mechanics/questbook/scripts/build_questbook_index.py --check",
     "python mechanics/questbook/scripts/validate_questbook_index.py",
     "python mechanics/questbook/scripts/validate_quest_relations.py",
     "python mechanics/questbook/scripts/build_ready_owner_routes.py --check",
     "python mechanics/questbook/scripts/validate_ready_owner_routes.py",
-    "python scripts/validate_agents_md_shape.py",
-    "python scripts/validate_agents_mesh.py",
-    "python scripts/build_agents_mesh_index.py --check",
-    "python scripts/validate_agents_mesh_index.py",
-    "python scripts/validate_generated_freshness.py",
-    "python scripts/validate_hygiene_suite.py",
+    "python scripts/agents_mesh/validate_agents_md_shape.py",
+    "python scripts/agents_mesh/validate_agents_mesh.py",
+    "python scripts/agents_mesh/build_agents_mesh_index.py --check",
+    "python scripts/agents_mesh/validate_agents_mesh_index.py",
+    "python scripts/hygiene/validate_generated_freshness.py",
+    "python scripts/hygiene/validate_hygiene_suite.py",
     "python -m pytest -q"
   ]
 }

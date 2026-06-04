@@ -15,7 +15,7 @@ Changes made:
 - Updated one link label.
 
 Validation run:
-- `python scripts/validate_links.py`
+- `python scripts/hygiene/validate_links.py`
 - `git diff --check`
 
 Skipped checks:

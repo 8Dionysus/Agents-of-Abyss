@@ -41,7 +41,7 @@ A district document may influence current law only through an explicit promotion
 
 ## Migration rule
 
-Use `docs/guardrails/thematic_districts.json` as the classifier and `scripts/plan_docs_thematic_cleanup.py` as the planner. If a file matches multiple districts, the classifier tie-break order decides where the historical surface lives.
+Use `docs/guardrails/thematic_districts.json` as the classifier and `scripts/docs_districts/plan_docs_thematic_cleanup.py` as the planner. If a file matches multiple districts, the classifier tie-break order decides where the historical surface lives.
 
 Do not move source truth into this repository. The docs thematic cleanup only classifies center-local docs surfaces and routes mechanic-specific material back to the owning mechanic package.
 

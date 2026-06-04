@@ -8,14 +8,14 @@ The protocol lives in `LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`. The machine-facing m
 
 | Guardrail | Primary script | Source input | Output | Status |
 |---|---|---|---|---|
-| Known link repair | `scripts/repair_known_link_drifts.py` | `config/link_shape_hygiene.json` | repaired exact drift or check failure | active |
-| Local link validation | `scripts/validate_links.py` | Markdown files and config | broken-link report | active |
-| Markdown shape validation | `scripts/validate_markdown_shape.py` | configured Markdown targets | shape report | active |
-| Status vocabulary validation | `scripts/validate_status_vocabulary.py` | configured JSON status paths | vocabulary report | active |
-| Generated freshness validation | `scripts/validate_generated_freshness.py` | configured builders and outputs | stale-generated report | active |
-| Hygiene index build | `scripts/build_link_shape_hygiene_index.py` | protocol and config | `generated/link_shape_hygiene.min.json` | active |
-| Hygiene index validation | `scripts/validate_link_shape_hygiene_index.py` | generated capsule | structural report | active |
-| Traces district validation | `scripts/validate_traces_district.py` | `docs/traces/` | receipt placement report | active |
+| Known link repair | `scripts/hygiene/repair_known_link_drifts.py` | `config/link_shape_hygiene.json` | repaired exact drift or check failure | active |
+| Local link validation | `scripts/hygiene/validate_links.py` | Markdown files and config | broken-link report | active |
+| Markdown shape validation | `scripts/hygiene/validate_markdown_shape.py` | configured Markdown targets | shape report | active |
+| Status vocabulary validation | `scripts/hygiene/validate_status_vocabulary.py` | configured JSON status paths | vocabulary report | active |
+| Generated freshness validation | `scripts/hygiene/validate_generated_freshness.py` | configured builders and outputs | stale-generated report | active |
+| Hygiene index build | `scripts/hygiene/build_link_shape_hygiene_index.py` | protocol and config | `generated/link_shape_hygiene.min.json` | active |
+| Hygiene index validation | `scripts/hygiene/validate_link_shape_hygiene_index.py` | generated capsule | structural report | active |
+| Traces district validation | `scripts/docs_districts/validate_traces_district.py` | `docs/traces/` | receipt placement report | active |
 
 ## Source surfaces
 

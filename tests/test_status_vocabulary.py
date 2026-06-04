@@ -19,20 +19,20 @@ class StatusVocabularyTest(unittest.TestCase):
             "status_checks": [{"file": "mechanics/registry.json", "json_path": "mechanics.*.status", "vocabulary": "mechanic_status", "required": True}]
         }), encoding="utf-8")
         scripts = self.tempdir / "scripts"
-        scripts.mkdir()
+        (scripts / "hygiene").mkdir(parents=True)
         repo_scripts = Path(__file__).resolve().parents[1] / "scripts"
-        shutil.copy(repo_scripts / "hygiene_common.py", scripts / "hygiene_common.py")
-        shutil.copy(repo_scripts / "validate_status_vocabulary.py", scripts / "validate_status_vocabulary.py")
+        shutil.copy(repo_scripts / "hygiene" / "hygiene_common.py", scripts / "hygiene" / "hygiene_common.py")
+        shutil.copy(repo_scripts / "hygiene" / "validate_status_vocabulary.py", scripts / "hygiene" / "validate_status_vocabulary.py")
 
     def tearDown(self) -> None:
         shutil.rmtree(self.tempdir)
 
     def test_status_vocabulary(self) -> None:
         (self.tempdir / "mechanics/registry.json").write_text(json.dumps({"mechanics": {"agon": {"status": "landed"}}}), encoding="utf-8")
-        ok = subprocess.run([sys.executable, "scripts/validate_status_vocabulary.py"], cwd=self.tempdir)
+        ok = subprocess.run([sys.executable, "scripts/hygiene/validate_status_vocabulary.py"], cwd=self.tempdir)
         self.assertEqual(ok.returncode, 0)
         (self.tempdir / "mechanics/registry.json").write_text(json.dumps({"mechanics": {"agon": {"status": "magic"}}}), encoding="utf-8")
-        bad = subprocess.run([sys.executable, "scripts/validate_status_vocabulary.py"], cwd=self.tempdir, text=True, capture_output=True)
+        bad = subprocess.run([sys.executable, "scripts/hygiene/validate_status_vocabulary.py"], cwd=self.tempdir, text=True, capture_output=True)
         self.assertNotEqual(bad.returncode, 0)
         self.assertIn("magic", bad.stdout)
 

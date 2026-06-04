@@ -97,7 +97,7 @@ def test_validation_commands_are_centralized(monkeypatch) -> None:
 
     def fake_read(path: Path) -> str:
         if path == target:
-            return "## Validation\n\n```bash\npython scripts/validate_links.py\n```\n"
+            return "## Validation\n\n```bash\npython scripts/hygiene/validate_links.py\n```\n"
         return original_read(path)
 
     monkeypatch.setattr(module, "read", fake_read)
