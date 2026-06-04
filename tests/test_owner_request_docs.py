@@ -17,7 +17,7 @@ def load(name: str, rel: str):
 
 class OwnerRequestDocTests(unittest.TestCase):
     def test_owner_request_docs_validate(self):
-        module = load("validate_owner_request_docs", "scripts/validate_owner_request_docs.py")
+        module = load("validate_owner_request_docs", "scripts/owner_requests/validate_owner_request_docs.py")
         self.assertEqual(module.validate_docs(None), [])
 
     def test_owner_request_protocol_declines_center_activation(self):

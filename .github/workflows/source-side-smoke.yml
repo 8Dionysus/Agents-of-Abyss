@@ -24,7 +24,7 @@ jobs:
         run: python -m pip install -r requirements-dev.txt
 
       - name: Run ecosystem validator
-        run: python scripts/validate_ecosystem.py
+        run: python scripts/root_registries/validate_ecosystem.py
 
       - name: Run tests
         run: python -m pytest -q

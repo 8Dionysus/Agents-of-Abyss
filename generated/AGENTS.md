@@ -59,28 +59,28 @@ When a generated file begins to carry new meaning, update the owner source surfa
 Run the narrow checks for the touched surface:
 
 ```bash
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/build_docs_thematic_index.py --check
-python scripts/validate_docs_thematic_index.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_agents_md_shape.py
+python scripts/center_entry/build_center_entry_map.py --check
+python scripts/center_entry/validate_center_entry_map.py
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/docs_districts/build_docs_thematic_index.py --check
+python scripts/docs_districts/validate_docs_thematic_index.py
+python scripts/hygiene/build_link_shape_hygiene_index.py --check
+python scripts/hygiene/validate_link_shape_hygiene_index.py
+python scripts/agents_mesh/build_agents_mesh_index.py --check
+python scripts/agents_mesh/validate_agents_mesh_index.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/agents_mesh/validate_agents_md_shape.py
 python mechanics/questbook/scripts/build_questbook_index.py --check
 python mechanics/questbook/scripts/validate_questbook_index.py
-python scripts/validate_generated_freshness.py
-python scripts/validate_ecosystem.py
+python scripts/hygiene/validate_generated_freshness.py
+python scripts/root_registries/validate_ecosystem.py
 python -m pytest -q
 ```
 
-Run `python scripts/release_check.py` when generated, route, schema, AGENTS, or release-facing surfaces change together.
+Run `python scripts/release_gate/release_check.py` when generated, route, schema, AGENTS, or release-facing surfaces change together.
 
 ## Closeout
 

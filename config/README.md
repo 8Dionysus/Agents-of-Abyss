@@ -22,7 +22,7 @@ aliases or workstation-local defaults.
 
 | Surface | Consumed by | Role |
 |---|---|---|
-| `config/registry.json` | `scripts/validate_config_registry.py`, `tests/test_config_registry.py` | root config inventory and add-change contract |
+| `config/registry.json` | `scripts/root_registries/validate_config_registry.py`, `tests/test_config_registry.py` | root config inventory and add-change contract |
 | `config/link_shape_hygiene.json` | hygiene validators and `generated/link_shape_hygiene.min.json` | local link repair rules, Markdown shape targets, status vocabularies, and generated freshness checks |
 | `config/agents_mesh.json` | AGENTS mesh validators and `generated/agents_mesh.min.json` | required local AGENTS-card coverage, shape headings, exemptions, and compact mesh metadata |
 

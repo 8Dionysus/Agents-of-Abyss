@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from center_entry_map_common import (  # noqa: E402
+from scripts.center_entry.center_entry_map_common import (  # noqa: E402
     BASELINE_VALIDATION_COMMANDS,
     ENTRY_SURFACE_REFS,
     REQUIRED_ROUTE_MODES,
@@ -14,7 +14,7 @@ from center_entry_map_common import (  # noqa: E402
     build_payload,
     resolve_local_ref,
 )
-from validate_entry_surface_sync import (  # noqa: E402
+from scripts.center_entry.validate_entry_surface_sync import (  # noqa: E402
     SURFACE_ROUTE_MODE_EXEMPTIONS,
     SURFACE_VALIDATION_AUTHORITY_REFS,
     collect_problems,

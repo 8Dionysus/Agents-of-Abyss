@@ -30,9 +30,9 @@ Run wider package checks when part changes affect owner requests, registry, or
 generated maps:
 
 ```bash
-python scripts/validate_mechanics_topology.py --mechanic method-growth
-python scripts/validate_mechanic_readme_cards.py --mechanic method-growth
-python scripts/validate_mechanic_landing_logs.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic method-growth
 ```
 
 ## Closeout

@@ -70,7 +70,7 @@ Surfaces:
 - `QUESTBOOK.md`
 - `quests/README.md`
 
-Validation: `python scripts/validate_mechanics_topology.py --mechanic questbook`
+Validation: `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic questbook`
 
 Stop-lines: no second roadmap, private scratchpad, or owner-local task sink.
 
@@ -196,7 +196,7 @@ Validation:
 - `python mechanics/questbook/scripts/validate_questbook_lifecycle.py`
 - `python mechanics/questbook/scripts/build_questbook_index.py --check`
 - `python mechanics/questbook/scripts/validate_questbook_index.py`
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 
 Stop-lines: do not close owner-followthrough quests merely because center law
 landed, do not treat sibling file presence as owner acceptance unless a receipt
@@ -231,7 +231,7 @@ Validation:
 - `python mechanics/questbook/scripts/validate_questbook_lifecycle.py`
 - `python mechanics/questbook/scripts/build_questbook_index.py --check`
 - `python mechanics/questbook/scripts/validate_questbook_index.py`
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 
 Stop-lines: do not read Experience `done` as runtime activation, proof verdict,
 hidden memory sovereignty, KAG canon, ToS-authored meaning, or sibling-owner
@@ -263,14 +263,14 @@ Surfaces:
 
 Validation:
 
-- `python scripts/validate_owner_request_queue.py --mechanic experience`
-- `python scripts/build_owner_request_queue.py --check`
-- `python scripts/validate_generated_owner_request_queue.py`
-- `python scripts/validate_owner_request_docs.py --mechanic experience`
-- `python scripts/validate_mechanics_topology.py --mechanic experience`
-- `python scripts/validate_mechanic_readme_cards.py --mechanic experience`
-- `python scripts/build_mechanic_card_index.py --check`
-- `python scripts/validate_mechanic_card_index.py`
+- `python scripts/owner_requests/validate_owner_request_queue.py --mechanic experience`
+- `python scripts/owner_requests/build_owner_request_queue.py --check`
+- `python scripts/owner_requests/validate_generated_owner_request_queue.py`
+- `python scripts/owner_requests/validate_owner_request_docs.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic experience`
+- `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience`
+- `python scripts/mechanics_topology/build_mechanic_card_index.py --check`
+- `python scripts/mechanics_topology/validate_mechanic_card_index.py`
 
 Stop-lines: do not treat the new request packets as sibling-owner acceptance,
 and do not close Experience `ready` quests without owner-local receipts.
@@ -293,13 +293,13 @@ Surfaces:
 - `mechanics/questbook/scripts/validate_ready_owner_routes.py`
 - `mechanics/questbook/tests/test_questbook_lifecycle.py`
 - `quests/experience/README.md`
-- `scripts/release_check.py`
+- `scripts/release_gate/release_check.py`
 
 Validation:
 
 - `python mechanics/questbook/scripts/validate_ready_owner_routes.py`
 - `python mechanics/questbook/scripts/validate_questbook_lifecycle.py`
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 
 Stop-lines: the route index is not owner acceptance, not owner landing, and
 not permission to close ready quests without receipts.
@@ -364,14 +364,14 @@ Surfaces:
 
 Validation:
 
-- `python scripts/validate_mechanics_topology.py --mechanic questbook`
-- `python scripts/validate_mechanic_readme_cards.py --mechanic questbook`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic questbook`
-- `python scripts/validate_agents_md_shape.py`
-- `python scripts/validate_agents_mesh.py`
-- `python scripts/build_agents_mesh_index.py --check`
-- `python scripts/validate_agents_mesh_index.py`
-- `python scripts/validate_generated_freshness.py`
+- `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic questbook`
+- `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic questbook`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic questbook`
+- `python scripts/agents_mesh/validate_agents_md_shape.py`
+- `python scripts/agents_mesh/validate_agents_mesh.py`
+- `python scripts/agents_mesh/build_agents_mesh_index.py --check`
+- `python scripts/agents_mesh/validate_agents_mesh_index.py`
+- `python scripts/hygiene/validate_generated_freshness.py`
 
 Stop-lines: this pass does not move quest objects, change quest lifecycle
 state, update owner-request status, or reinterpret `sidequest`.
@@ -406,15 +406,15 @@ Surfaces:
 - `mechanics/questbook/DIRECTION.md`
 - `mechanics/questbook/ROADMAP.md`
 - `mechanics/registry.json`
-- `scripts/release_check.py`
+- `scripts/release_gate/release_check.py`
 
 Validation:
 
 - `python mechanics/questbook/scripts/build_ready_owner_routes.py --check`
 - `python mechanics/questbook/scripts/validate_ready_owner_routes.py`
-- `python scripts/validate_mechanics_topology.py --mechanic questbook`
-- `python scripts/validate_mechanic_readme_cards.py --mechanic questbook`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic questbook`
+- `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic questbook`
+- `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic questbook`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic questbook`
 
 Stop-lines: the Questbook model document remains the spine, not a monolith; generated
 ready-route Markdown is not edited by hand; route registries do not update
@@ -462,11 +462,11 @@ Surfaces:
 
 Validation:
 
-- `python scripts/validate_mechanics_topology.py --mechanic questbook`
-- `python scripts/validate_mechanic_readme_cards.py --mechanic questbook`
-- `python scripts/validate_mechanic_landing_logs.py --mechanic questbook`
-- `python scripts/validate_owner_request_queue.py --mechanic questbook`
-- `python scripts/validate_owner_request_docs.py --mechanic questbook`
+- `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic questbook`
+- `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic questbook`
+- `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic questbook`
+- `python scripts/owner_requests/validate_owner_request_queue.py --mechanic questbook`
+- `python scripts/owner_requests/validate_owner_request_docs.py --mechanic questbook`
 - `python mechanics/questbook/scripts/build_ready_owner_routes.py --check`
 - `python mechanics/questbook/scripts/validate_ready_owner_routes.py`
 
@@ -495,13 +495,13 @@ Surfaces:
 - `mechanics/questbook/parts/README.md`
 - `mechanics/questbook/PROVENANCE.md`
 - `mechanics/questbook/legacy/INDEX.md`
-- `scripts/release_check.py`
+- `scripts/release_gate/release_check.py`
 
 Validation:
 
 - `python mechanics/questbook/scripts/validate_questbook_distillation.py`
 - `python -m pytest -q mechanics/questbook/tests/test_questbook_distillation.py`
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 
 Stop-lines: the validator checks structure, indexes, direct legacy/raw leakage,
 and validation command targets; it does not judge owner acceptance, prove quest
@@ -533,14 +533,14 @@ Surfaces:
 - `mechanics/questbook/ROADMAP.md`
 - `quests/README.md`
 - `quests/AGENTS.md`
-- `scripts/release_check.py`
+- `scripts/release_gate/release_check.py`
 
 Validation:
 
 - `python mechanics/questbook/scripts/validate_questbook_source_contract.py`
 - `python mechanics/questbook/scripts/validate_questbook_distillation.py`
 - `python -m pytest -q mechanics/questbook/tests/test_questbook_source_contract.py`
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 
 Stop-lines: strict source contracts do not prove owner acceptance or closure.
 
@@ -567,7 +567,7 @@ Surfaces:
 - `mechanics/questbook/tests/test_questbook_source_contract.py`
 - `mechanics/questbook/DIRECTION.md`
 - `mechanics/questbook/ROADMAP.md`
-- `scripts/release_check.py`
+- `scripts/release_gate/release_check.py`
 
 Validation:
 
@@ -575,7 +575,7 @@ Validation:
 - `python -m pytest -q mechanics/questbook/tests/test_questbook_source_contract.py`
 - `python mechanics/questbook/scripts/build_questbook_index.py --check`
 - `python mechanics/questbook/scripts/validate_questbook_index.py`
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 
 Stop-lines: strict quest source shape is not owner acceptance, implementation
 truth, or closure proof. Do not reintroduce Markdown quest sources without
@@ -611,7 +611,7 @@ Validation:
 - `python mechanics/questbook/scripts/build_questbook_index.py --check`
 - `python mechanics/questbook/scripts/validate_questbook_index.py`
 - `python -m pytest -q mechanics/questbook/tests`
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 
 Stop-lines: do not reintroduce executable validation command blocks outside
 `mechanics/questbook/AGENTS.md`; do not expand generic lane/state defaults back
@@ -689,10 +689,10 @@ Validation:
 - `python mechanics/questbook/scripts/validate_questbook_distillation.py`
 - `python mechanics/rpg/scripts/validate_rpg_distillation.py`
 - `python -m pytest -q mechanics/questbook/tests/test_questbook_distillation.py mechanics/rpg/tests`
-- `python scripts/validate_mechanics_topology.py --mechanic questbook`
-- `python scripts/validate_mechanics_topology.py --mechanic rpg`
-- `python scripts/validate_mechanic_readme_cards.py --mechanic questbook`
-- `python scripts/validate_mechanic_readme_cards.py --mechanic rpg`
+- `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic questbook`
+- `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic rpg`
+- `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic questbook`
+- `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic rpg`
 
 Stop-lines: RPG readings do not change quest lifecycle, close quests, prove
 owner acceptance, replace source contracts, replace generated Questbook read

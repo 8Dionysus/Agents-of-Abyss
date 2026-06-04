@@ -23,7 +23,7 @@ If a task needs detailed source accounting, route through
 
 ```bash
 python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic agon
+python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon
 ```
 
 Run the nearest Agon builder, validator, and test when a part-specific model
@@ -108,8 +108,8 @@ python mechanics/agon/scripts/validate_agon_distillation.py
 python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check --strict-lawful_move-check
 python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py
 python -m pytest -q mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py
-python scripts/validate_owner_request_docs.py --mechanic agon
-python scripts/validate_owner_request_queue.py --mechanic agon
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic agon
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic agon
 python mechanics/agon/scripts/validate_agon_distillation.py
 ```
 

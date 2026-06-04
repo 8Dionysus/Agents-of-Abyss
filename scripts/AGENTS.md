@@ -9,7 +9,7 @@ nearer `AGENTS.md` narrows the lane.
 
 `scripts/` is the root validation and build seam for the AoA center. It keeps
 root-owned validators, builders, release checks, and shared helper modules
-visible without absorbing mechanic-owned tooling.
+visible as family-scoped directories without absorbing mechanic-owned tooling.
 
 ## Read before editing
 
@@ -22,7 +22,10 @@ Use `.agents/spark/AGENTS.md` for scripts under `.agents/spark/scripts/`.
 
 ## Boundaries
 
-- Root `scripts/` owns repo-relative center tooling.
+- Root `scripts/` owns repo-relative center tooling through registered family
+  directories.
+- Root-level `scripts/*.py` files are not command homes; use
+  `scripts/<family>/*.py` for root-owned Python tooling.
 - Mechanic-owned scripts belong with the owning mechanic or part.
 - Keep scripts deterministic and limited to dependencies in
   `requirements-dev.txt`.
@@ -40,21 +43,21 @@ Use `.agents/spark/AGENTS.md` for scripts under `.agents/spark/scripts/`.
 Run the narrowest relevant checks first. Usual checks for this district:
 
 ```bash
-python scripts/validate_scripts_district.py
+python scripts/root_registries/validate_scripts_district.py
 python -m pytest -q tests/test_scripts_district.py
-python scripts/validate_nested_agents.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_generated_freshness.py
-python scripts/validate_ecosystem.py
+python scripts/agents_mesh/validate_nested_agents.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/agents_mesh/build_agents_mesh_index.py --check
+python scripts/agents_mesh/validate_agents_mesh_index.py
+python scripts/hygiene/validate_generated_freshness.py
+python scripts/root_registries/validate_ecosystem.py
 ```
 
 For release-facing script changes, also run:
 
 ```bash
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```
 
 ## Closeout

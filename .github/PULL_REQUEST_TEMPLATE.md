@@ -67,15 +67,15 @@ Describe how you checked the change. Examples:
 - checked `mechanics/agon/LANDING_LOG.md` or `mechanics/experience/LANDING_LOG.md` when a mechanic landing changed
 - checked the relevant technical district README
 - checked `Spark/README.md` when the Spark lane changed
-- ran `python scripts/validate_hygiene_suite.py`
-- ran `python scripts/validate_agents_md_shape.py`
-- ran `python scripts/validate_agents_mesh.py`
-- ran `python scripts/build_agents_mesh_index.py --check`
-- ran `python scripts/validate_agents_mesh_index.py`
-- ran `python scripts/validate_markdown_shape.py`
-- ran `python scripts/validate_mechanics_topology.py`
-- ran `python scripts/validate_mechanic_landing_logs.py`
-- ran `python scripts/validate_ecosystem.py`
+- ran `python scripts/hygiene/validate_hygiene_suite.py`
+- ran `python scripts/agents_mesh/validate_agents_md_shape.py`
+- ran `python scripts/agents_mesh/validate_agents_mesh.py`
+- ran `python scripts/agents_mesh/build_agents_mesh_index.py --check`
+- ran `python scripts/agents_mesh/validate_agents_mesh_index.py`
+- ran `python scripts/hygiene/validate_markdown_shape.py`
+- ran `python scripts/mechanics_topology/validate_mechanics_topology.py`
+- ran `python scripts/mechanics_topology/validate_mechanic_landing_logs.py`
+- ran `python scripts/root_registries/validate_ecosystem.py`
 - ran the nearest Agon, Experience, schema, generated, or release validator
 - ran `python -m pytest -q`
 

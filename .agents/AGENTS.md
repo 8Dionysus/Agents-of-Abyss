@@ -30,8 +30,8 @@ Use the nearest README for local file purpose. Use source docs, schemas, generat
 Run the narrowest relevant checks first. Usual checks for this district:
 
 ```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
 python .agents/spark/scripts/validate_spark_lane.py
 ```
 

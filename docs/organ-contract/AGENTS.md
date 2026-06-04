@@ -51,20 +51,20 @@ district.
 Run:
 
 ```bash
-python scripts/validate_organ_contract.py
-python scripts/validate_entry_surface_sync.py
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/validate_docs_thematic_districts.py
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
+python scripts/organ_contract/validate_organ_contract.py
+python scripts/center_entry/validate_entry_surface_sync.py
+python scripts/center_entry/build_center_entry_map.py --check
+python scripts/center_entry/validate_center_entry_map.py
+python scripts/docs_districts/validate_docs_thematic_districts.py
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_markdown_shape.py
 python -m pytest -q tests/test_organ_contract.py tests/test_center_entry_map.py tests/test_entry_surface_sync.py
 ```
 
 For release-facing changes, also run:
 
 ```bash
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```
 
 ## Closeout

@@ -67,22 +67,22 @@ Use these commands after Audit mechanic changes:
 
 ```bash
 python mechanics/audit/scripts/validate_audit_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic audit
-python scripts/validate_mechanic_readme_cards.py --mechanic audit
-python scripts/validate_mechanic_landing_logs.py --mechanic audit
-python scripts/validate_owner_request_queue.py --mechanic audit
-python scripts/validate_owner_request_docs.py --mechanic audit
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic audit
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic audit
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic audit
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic audit
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic audit
 ```
 
 Use these commands after route, generated, or root docs references change:
 
 ```bash
-python scripts/build_mechanic_card_index.py --check
-python scripts/build_owner_request_queue.py --check
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_links.py
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/center_entry/build_center_entry_map.py --check
+python scripts/center_entry/validate_center_entry_map.py
+python scripts/hygiene/validate_markdown_shape.py
+python scripts/hygiene/validate_links.py
 ```
 
 <!-- centralized-child-validation:start -->
@@ -95,40 +95,40 @@ Executable validation commands from child docs live here. Child docs should rout
 
 ```bash
 python mechanics/audit/scripts/validate_audit_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic audit
-python scripts/validate_mechanic_readme_cards.py --mechanic audit
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic audit
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic audit
 ```
 
 #### `mechanics/audit/OWNER_REQUESTS.md`
 
 ```bash
-python scripts/validate_owner_request_queue.py --mechanic audit
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic audit
-python scripts/validate_mechanics_topology.py --mechanic audit
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic audit
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic audit
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic audit
 ```
 
 #### `mechanics/audit/PARTS.md`
 
 ```bash
 python mechanics/audit/scripts/validate_audit_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic audit
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic audit
 ```
 
 #### `mechanics/audit/README.md`
 
 ```bash
 python mechanics/audit/scripts/validate_audit_distillation.py
-python scripts/validate_mechanic_landing_logs.py --mechanic audit
-python scripts/validate_mechanics_topology.py --mechanic audit
-python scripts/validate_mechanic_readme_cards.py --mechanic audit
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic audit
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic audit
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic audit
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic audit
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic audit
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic audit
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic audit
 ```
 
 <!-- centralized-child-validation:end -->

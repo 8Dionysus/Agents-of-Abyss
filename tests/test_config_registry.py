@@ -15,7 +15,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 class ConfigRegistryTests(unittest.TestCase):
     def test_current_config_registry_is_valid(self) -> None:
         result = subprocess.run(
-            [sys.executable, "scripts/validate_config_registry.py"],
+            [sys.executable, "scripts/root_registries/validate_config_registry.py"],
             cwd=REPO_ROOT,
             check=False,
             text=True,
@@ -40,7 +40,7 @@ class ConfigRegistryTests(unittest.TestCase):
             shutil.copytree(REPO_ROOT / "tests", temp_root / "tests")
             (temp_root / "config/unregistered.json").write_text('{"status":"active"}\n', encoding="utf-8")
             result = subprocess.run(
-                [sys.executable, "scripts/validate_config_registry.py", "--repo-root", str(temp_root)],
+                [sys.executable, "scripts/root_registries/validate_config_registry.py", "--repo-root", str(temp_root)],
                 cwd=temp_root,
                 check=False,
                 text=True,

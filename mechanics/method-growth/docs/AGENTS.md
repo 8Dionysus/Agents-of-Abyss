@@ -38,12 +38,12 @@ Run package and link checks:
 
 ```bash
 python mechanics/method-growth/scripts/validate_method_growth_mechanic.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_links.py
-python scripts/validate_mechanic_readme_cards.py --mechanic method-growth
-python scripts/validate_mechanics_topology.py --mechanic method-growth
-python scripts/validate_mechanic_landing_logs.py --mechanic method-growth
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/hygiene/validate_links.py
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic method-growth
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic method-growth
 python -m pytest -q mechanics/method-growth/tests
 ```
 
@@ -60,10 +60,10 @@ route to this section instead of carrying command blocks.
 #### `mechanics/method-growth/docs/METHOD_GROWTH_OWNER_REPO_REQUESTS.md`
 
 ```bash
-python scripts/validate_owner_request_queue.py --mechanic method-growth
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic method-growth
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic method-growth
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic method-growth
 python mechanics/method-growth/scripts/validate_method_growth_mechanic.py
 ```
 

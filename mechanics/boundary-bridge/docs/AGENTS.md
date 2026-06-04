@@ -45,11 +45,11 @@ route to this section instead of carrying command blocks.
 #### `mechanics/boundary-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md`
 
 ```bash
-python scripts/validate_owner_request_queue.py --mechanic boundary-bridge
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic boundary-bridge
-python scripts/validate_mechanics_topology.py --mechanic boundary-bridge
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic boundary-bridge
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic boundary-bridge
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic boundary-bridge
 ```
 
 <!-- centralized-child-validation:end -->

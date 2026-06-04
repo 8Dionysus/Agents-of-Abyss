@@ -1,8 +1,8 @@
 # Scripts District
 
 `scripts/` holds root-owned builders, validators, release checks, and shared
-helper modules for the AoA center. Mechanic-owned tooling lives with the
-owning mechanic or part.
+helper modules for the AoA center as family-scoped directories. Mechanic-owned
+tooling lives with the owning mechanic or part.
 
 Scripts may build or validate compact surfaces. They do not create
 constitutional authority by themselves.
@@ -31,7 +31,7 @@ constitutional authority by themselves.
 
 | Home | Role |
 |---|---|
-| `scripts/*.py` | root-owned center tooling registered in `scripts/registry.json` |
+| `scripts/<family>/*.py` | root-owned center tooling registered in `scripts/registry.json` |
 | `mechanics/<slug>/scripts/` | mechanic-level tooling |
 | `mechanics/<slug>/parts/<part>/scripts/` | part-local mechanic tooling |
 | `.agents/spark/scripts/` | Codex Spark agent-lane validation |
@@ -47,10 +47,13 @@ When a script and another surface disagree, read authority in this order:
 
 ## Editing Route
 
-- Add root scripts here only for root-owned center tooling.
+- Add root scripts under the owning script-family directory only for
+  root-owned center tooling.
 - Add mechanic scripts under the owning mechanic or part.
 - Update `registry.json` when a root script or mechanic script-home route
   changes.
+- Do not add root-level `scripts/*.py`; Python files at the scripts root are
+  package markers only.
 - Keep builders deterministic and validators explicit about the surface they
   check.
 - Keep release-facing changes aligned with `release_check.py`.

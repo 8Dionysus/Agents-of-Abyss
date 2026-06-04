@@ -24,47 +24,47 @@
     {
       "action": "copy",
       "backup": null,
-      "path": "scripts/build_link_shape_hygiene_index.py"
+      "path": "scripts/hygiene/build_link_shape_hygiene_index.py"
     },
     {
       "action": "copy",
       "backup": null,
-      "path": "scripts/hygiene_common.py"
+      "path": "scripts/hygiene/hygiene_common.py"
     },
     {
       "action": "copy",
       "backup": null,
-      "path": "scripts/repair_known_link_drifts.py"
+      "path": "scripts/hygiene/repair_known_link_drifts.py"
     },
     {
       "action": "copy",
       "backup": null,
-      "path": "scripts/validate_generated_freshness.py"
+      "path": "scripts/hygiene/validate_generated_freshness.py"
     },
     {
       "action": "copy",
       "backup": null,
-      "path": "scripts/validate_hygiene_suite.py"
+      "path": "scripts/hygiene/validate_hygiene_suite.py"
     },
     {
       "action": "copy",
       "backup": null,
-      "path": "scripts/validate_link_shape_hygiene_index.py"
+      "path": "scripts/hygiene/validate_link_shape_hygiene_index.py"
     },
     {
       "action": "copy",
       "backup": null,
-      "path": "scripts/validate_links.py"
+      "path": "scripts/hygiene/validate_links.py"
     },
     {
       "action": "copy",
       "backup": null,
-      "path": "scripts/validate_markdown_shape.py"
+      "path": "scripts/hygiene/validate_markdown_shape.py"
     },
     {
       "action": "copy",
       "backup": null,
-      "path": "scripts/validate_status_vocabulary.py"
+      "path": "scripts/hygiene/validate_status_vocabulary.py"
     },
     {
       "action": "copy",

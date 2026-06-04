@@ -45,7 +45,7 @@ When a manifest and another surface disagree, read authority in this order:
 ## Validation
 
 ```bash
-python scripts/validate_manifests_registry.py
+python scripts/root_registries/validate_manifests_registry.py
 python -m pytest -q tests/test_manifests_district.py
-python scripts/validate_links.py
+python scripts/hygiene/validate_links.py
 ```

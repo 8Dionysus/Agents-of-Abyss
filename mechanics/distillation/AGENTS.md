@@ -98,13 +98,13 @@ change does not affect its job.
 
 ```bash
 python mechanics/distillation/scripts/validate_distillation_mechanic.py
-python scripts/validate_mechanics_topology.py --mechanic distillation
-python scripts/validate_mechanic_readme_cards.py --mechanic distillation
-python scripts/validate_owner_request_queue.py --mechanic distillation
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic distillation
-python scripts/validate_mechanic_landing_logs.py --mechanic distillation
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic distillation
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic distillation
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic distillation
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic distillation
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic distillation
 ```
 
 For release-bound changes, also run the central mechanics and release checks

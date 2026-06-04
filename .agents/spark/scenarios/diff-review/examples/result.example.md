@@ -2,10 +2,10 @@
 
 Scenario: diff-review
 Status: done
-Scope: PR diff for `scripts/release_check.py`
+Scope: PR diff for `scripts/release_gate/release_check.py`
 
 Files read:
-- `scripts/release_check.py`
+- `scripts/release_gate/release_check.py`
 - `scripts/README.md`
 
 Findings:

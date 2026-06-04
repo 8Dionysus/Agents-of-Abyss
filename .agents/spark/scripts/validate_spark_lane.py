@@ -286,7 +286,7 @@ def validate(root: Path) -> list[str]:
     if swarm.exists() and ".agents/spark/registry.json" not in swarm.read_text(encoding="utf-8"):
         problems.append(".agents/spark/SWARM.md does not mention .agents/spark/registry.json")
 
-    release_check = root / "scripts/release_check.py"
+    release_check = root / "scripts/release_gate/release_check.py"
     if release_check.exists():
         release_text = release_check.read_text(encoding="utf-8")
         if ".agents/spark/scripts/validate_spark_lane.py" not in release_text:

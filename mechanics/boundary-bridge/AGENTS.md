@@ -92,18 +92,18 @@ Run the narrow package lane after boundary-bridge changes:
 
 ```bash
 python mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic boundary-bridge
-python scripts/validate_mechanic_readme_cards.py --mechanic boundary-bridge
-python scripts/validate_mechanic_landing_logs.py --mechanic boundary-bridge
-python scripts/validate_owner_request_queue.py --mechanic boundary-bridge
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic boundary-bridge
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic boundary-bridge
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic boundary-bridge
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic boundary-bridge
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic boundary-bridge
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic boundary-bridge
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
 ```
 
-For release-facing changes, also run `python scripts/release_check.py`.
+For release-facing changes, also run `python scripts/release_gate/release_check.py`.
 
 <!-- centralized-child-validation:start -->
 
@@ -116,15 +116,15 @@ route to this section instead of carrying command blocks.
 
 ```bash
 python mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic boundary-bridge
-python scripts/validate_mechanic_readme_cards.py --mechanic boundary-bridge
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic boundary-bridge
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic boundary-bridge
-python scripts/validate_mechanic_landing_logs.py --mechanic boundary-bridge
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic boundary-bridge
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic boundary-bridge
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic boundary-bridge
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic boundary-bridge
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic boundary-bridge
 ```
 
 <!-- centralized-child-validation:end -->

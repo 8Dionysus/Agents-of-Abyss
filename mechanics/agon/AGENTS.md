@@ -76,10 +76,10 @@ plans into active part contracts, `LANDING_LOG.md`, or `PROVENANCE.md`.
 
 Use `python mechanics/agon/scripts/validate_agon_distillation.py` after
 active-part or provenance-route changes.
-Use `python scripts/validate_mechanic_artifact_topology.py --mechanic agon`
+Use `python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon`
 after schema, example, config, generated artifact, script, or test placement
 changes.
-Use `python scripts/validate_mechanic_landing_logs.py --mechanic agon` after
+Use `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic agon` after
 landing-log or surface-chain changes.
 Use the nearest part-local `scripts/*agon*.py` and `tests/test_agon_*.py` for
 generated or model-specific changes.
@@ -107,41 +107,41 @@ route to this section instead of carrying command blocks.
 
 ```bash
 python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic agon
-python scripts/validate_mechanic_readme_cards.py --mechanic agon
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic agon
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic agon
 ```
 
 #### `mechanics/agon/OWNER_REQUESTS.md`
 
 ```bash
-python scripts/validate_owner_request_queue.py --mechanic agon
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic agon
-python scripts/validate_mechanics_topology.py --mechanic agon
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic agon
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic agon
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic agon
 ```
 
 #### `mechanics/agon/PARTS.md`
 
 ```bash
 python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic agon
+python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon
 ```
 
 #### `mechanics/agon/README.md`
 
 ```bash
 python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic agon
-python scripts/validate_mechanic_landing_logs.py --mechanic agon
-python scripts/validate_mechanics_topology.py --mechanic agon
-python scripts/validate_mechanic_readme_cards.py --mechanic agon
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic agon
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic agon
+python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic agon
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic agon
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic agon
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic agon
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic agon
 ```
 
 <!-- centralized-child-validation:end -->

@@ -81,37 +81,37 @@ shape. If no record is needed, say so in closeout.
 For docs-root or guardrail topology changes:
 
 ```bash
-python scripts/plan_docs_thematic_cleanup.py --check
-python scripts/validate_docs_thematic_districts.py
-python scripts/validate_docs_migration_map.py
-python scripts/validate_traces_district.py
-python scripts/validate_organ_contract.py
-python scripts/validate_decision_records.py
-python scripts/build_docs_thematic_index.py --check
-python scripts/validate_docs_thematic_index.py
-python scripts/repair_known_link_drifts.py --check
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_status_vocabulary.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_generated_freshness.py
-python scripts/validate_hygiene_suite.py
+python scripts/docs_districts/plan_docs_thematic_cleanup.py --check
+python scripts/docs_districts/validate_docs_thematic_districts.py
+python scripts/docs_districts/validate_docs_migration_map.py
+python scripts/docs_districts/validate_traces_district.py
+python scripts/organ_contract/validate_organ_contract.py
+python scripts/docs_districts/validate_decision_records.py
+python scripts/docs_districts/build_docs_thematic_index.py --check
+python scripts/docs_districts/validate_docs_thematic_index.py
+python scripts/hygiene/repair_known_link_drifts.py --check
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_markdown_shape.py
+python scripts/hygiene/validate_status_vocabulary.py
+python scripts/hygiene/build_link_shape_hygiene_index.py --check
+python scripts/hygiene/validate_link_shape_hygiene_index.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/agents_mesh/build_agents_mesh_index.py --check
+python scripts/agents_mesh/validate_agents_mesh_index.py
+python scripts/hygiene/validate_generated_freshness.py
+python scripts/hygiene/validate_hygiene_suite.py
 ```
 
 If center route contracts, generated maps, or public claims changed, also run:
 
 ```bash
-python scripts/validate_entry_surface_sync.py
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_mechanic_landing_logs.py
-python scripts/validate_ecosystem.py
+python scripts/center_entry/validate_entry_surface_sync.py
+python scripts/center_entry/build_center_entry_map.py --check
+python scripts/center_entry/validate_center_entry_map.py
+python scripts/mechanics_topology/validate_mechanics_topology.py
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py
+python scripts/root_registries/validate_ecosystem.py
 python -m pytest -q
 ```
 

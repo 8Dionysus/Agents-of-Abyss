@@ -20,7 +20,7 @@ class MechanicArtifactTopologyTests(unittest.TestCase):
 
     def test_validator_accepts_current_topology(self) -> None:
         result = subprocess.run(
-            [sys.executable, "scripts/validate_mechanic_artifact_topology.py"],
+            [sys.executable, "scripts/mechanics_topology/validate_mechanic_artifact_topology.py"],
             cwd=REPO_ROOT,
             check=False,
             text=True,

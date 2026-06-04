@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import validate_decision_records as decisions  # noqa: E402
+from scripts.docs_districts import validate_decision_records as decisions  # noqa: E402
 
 
 class DecisionRecordTests(unittest.TestCase):

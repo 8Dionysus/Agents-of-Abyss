@@ -83,14 +83,14 @@ For package changes, run:
 
 ```bash
 python mechanics/antifragility/scripts/validate_antifragility_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic antifragility
-python scripts/validate_mechanic_readme_cards.py --mechanic antifragility
-python scripts/validate_mechanic_landing_logs.py --mechanic antifragility
-python scripts/validate_owner_request_queue.py --mechanic antifragility
-python scripts/validate_owner_request_docs.py --mechanic antifragility
-python scripts/build_mechanic_card_index.py --check
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic antifragility
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic antifragility
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic antifragility
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic antifragility
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic antifragility
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
 python -m pytest -q mechanics/antifragility/tests
 ```
 
@@ -108,14 +108,14 @@ route to this section instead of carrying command blocks.
 
 ```bash
 python mechanics/antifragility/scripts/validate_antifragility_distillation.py
-python scripts/validate_mechanics_topology.py --mechanic antifragility
-python scripts/validate_mechanic_readme_cards.py --mechanic antifragility
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_owner_request_queue.py --mechanic antifragility
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic antifragility
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic antifragility
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic antifragility
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic antifragility
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic antifragility
 ```
 
 <!-- centralized-child-validation:end -->

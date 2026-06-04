@@ -96,9 +96,9 @@ surfaces should route here instead of duplicating command blocks.
 Run the narrow checks for the touched surface:
 
 ```bash
-python scripts/validate_mechanics_topology.py --mechanic questbook
-python scripts/validate_mechanic_readme_cards.py --mechanic questbook
-python scripts/validate_mechanic_landing_logs.py --mechanic questbook
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic questbook
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic questbook
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic questbook
 python mechanics/questbook/scripts/validate_questbook_source_contract.py
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python mechanics/questbook/scripts/build_questbook_index.py --check
@@ -107,20 +107,20 @@ python mechanics/questbook/scripts/validate_quest_relations.py
 python mechanics/questbook/scripts/build_ready_owner_routes.py --check
 python mechanics/questbook/scripts/validate_ready_owner_routes.py
 python mechanics/questbook/scripts/validate_questbook_distillation.py
-python scripts/validate_owner_request_queue.py --mechanic questbook
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic questbook
-python scripts/validate_owner_request_queue.py --mechanic experience
-python scripts/validate_owner_request_docs.py --mechanic experience
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_ecosystem.py
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_generated_freshness.py
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic questbook
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic questbook
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic experience
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic experience
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/root_registries/validate_ecosystem.py
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_markdown_shape.py
+python scripts/hygiene/validate_generated_freshness.py
 python -m pytest -q mechanics/questbook/tests
 ```
 
-Use `python scripts/release_check.py` when route, generated, validation, or
+Use `python scripts/release_gate/release_check.py` when route, generated, validation, or
 release-facing surfaces change together.

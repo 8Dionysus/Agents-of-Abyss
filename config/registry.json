@@ -5,14 +5,14 @@
   "district_ref": "config/README.md",
   "agents_ref": "config/AGENTS.md",
   "validation_commands": [
-    "python scripts/validate_config_registry.py",
-    "python scripts/validate_hygiene_suite.py",
-    "python scripts/validate_agents_md_shape.py",
-    "python scripts/validate_agents_mesh.py",
-    "python scripts/build_agents_mesh_index.py --check",
-    "python scripts/validate_agents_mesh_index.py",
-    "python scripts/validate_generated_freshness.py",
-    "python scripts/release_check.py"
+    "python scripts/root_registries/validate_config_registry.py",
+    "python scripts/hygiene/validate_hygiene_suite.py",
+    "python scripts/agents_mesh/validate_agents_md_shape.py",
+    "python scripts/agents_mesh/validate_agents_mesh.py",
+    "python scripts/agents_mesh/build_agents_mesh_index.py --check",
+    "python scripts/agents_mesh/validate_agents_mesh_index.py",
+    "python scripts/hygiene/validate_generated_freshness.py",
+    "python scripts/release_gate/release_check.py"
   ],
   "configs": [
     {
@@ -24,11 +24,11 @@
       "source_ref": "config/README.md",
       "generated_refs": [],
       "consumers": [
-        "scripts/validate_config_registry.py",
+        "scripts/root_registries/validate_config_registry.py",
         "tests/test_config_registry.py"
       ],
       "validation_commands": [
-        "python scripts/validate_config_registry.py",
+        "python scripts/root_registries/validate_config_registry.py",
         "python -m pytest -q tests/test_config_registry.py"
       ],
       "must_not_claim": [
@@ -49,25 +49,25 @@
         "generated/link_shape_hygiene.min.json"
       ],
       "consumers": [
-        "scripts/hygiene_common.py",
-        "scripts/repair_known_link_drifts.py",
-        "scripts/validate_links.py",
-        "scripts/validate_markdown_shape.py",
-        "scripts/validate_status_vocabulary.py",
-        "scripts/build_link_shape_hygiene_index.py",
-        "scripts/validate_link_shape_hygiene_index.py",
-        "scripts/validate_generated_freshness.py",
-        "scripts/validate_hygiene_suite.py"
+        "scripts/hygiene/hygiene_common.py",
+        "scripts/hygiene/repair_known_link_drifts.py",
+        "scripts/hygiene/validate_links.py",
+        "scripts/hygiene/validate_markdown_shape.py",
+        "scripts/hygiene/validate_status_vocabulary.py",
+        "scripts/hygiene/build_link_shape_hygiene_index.py",
+        "scripts/hygiene/validate_link_shape_hygiene_index.py",
+        "scripts/hygiene/validate_generated_freshness.py",
+        "scripts/hygiene/validate_hygiene_suite.py"
       ],
       "validation_commands": [
-        "python scripts/repair_known_link_drifts.py --check",
-        "python scripts/validate_links.py",
-        "python scripts/validate_markdown_shape.py",
-        "python scripts/validate_status_vocabulary.py",
-        "python scripts/build_link_shape_hygiene_index.py --check",
-        "python scripts/validate_link_shape_hygiene_index.py",
-        "python scripts/validate_generated_freshness.py",
-        "python scripts/validate_hygiene_suite.py"
+        "python scripts/hygiene/repair_known_link_drifts.py --check",
+        "python scripts/hygiene/validate_links.py",
+        "python scripts/hygiene/validate_markdown_shape.py",
+        "python scripts/hygiene/validate_status_vocabulary.py",
+        "python scripts/hygiene/build_link_shape_hygiene_index.py --check",
+        "python scripts/hygiene/validate_link_shape_hygiene_index.py",
+        "python scripts/hygiene/validate_generated_freshness.py",
+        "python scripts/hygiene/validate_hygiene_suite.py"
       ],
       "must_not_claim": [
         "authored doctrine",
@@ -87,17 +87,17 @@
         "generated/agents_mesh.min.json"
       ],
       "consumers": [
-        "scripts/agents_mesh_common.py",
-        "scripts/validate_agents_md_shape.py",
-        "scripts/validate_agents_mesh.py",
-        "scripts/build_agents_mesh_index.py",
-        "scripts/validate_agents_mesh_index.py"
+        "scripts/agents_mesh/agents_mesh_common.py",
+        "scripts/agents_mesh/validate_agents_md_shape.py",
+        "scripts/agents_mesh/validate_agents_mesh.py",
+        "scripts/agents_mesh/build_agents_mesh_index.py",
+        "scripts/agents_mesh/validate_agents_mesh_index.py"
       ],
       "validation_commands": [
-        "python scripts/validate_agents_md_shape.py",
-        "python scripts/validate_agents_mesh.py",
-        "python scripts/build_agents_mesh_index.py --check",
-        "python scripts/validate_agents_mesh_index.py"
+        "python scripts/agents_mesh/validate_agents_md_shape.py",
+        "python scripts/agents_mesh/validate_agents_mesh.py",
+        "python scripts/agents_mesh/build_agents_mesh_index.py --check",
+        "python scripts/agents_mesh/validate_agents_mesh_index.py"
       ],
       "must_not_claim": [
         "AGENTS card authorship",

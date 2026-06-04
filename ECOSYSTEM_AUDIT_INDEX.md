@@ -44,7 +44,7 @@ This table is a triage lens, not an ownership contract. For exact ownership, use
 
 | Route | Audit class | First check | Watch for | Next route |
 |---|---|---|---|---|
-| `Agents-of-Abyss` | constitutional | `AGENTS.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md` | center absorbing owner-local truth, public promises without release support, root-surface sprawl | nearest center validator, then `python scripts/release_check.py` for repo-wide claims |
+| `Agents-of-Abyss` | constitutional | `AGENTS.md`, `CHARTER.md`, `ECOSYSTEM_MAP.md`, `ROADMAP.md` | center absorbing owner-local truth, public promises without release support, root-surface sprawl | nearest center validator, then `python scripts/release_gate/release_check.py` for repo-wide claims |
 | `Tree-of-Sophia` | meaning | ToS README and review route | provenance loss, canon flattening, derived text outranking authored source | ToS-owned docs |
 | `abyss-stack` | runtime | stack `AGENTS.md`, README, security/runbook surfaces | ports, secrets, lifecycle, profile, preset, deployment, or self-healing drift | runtime-owner checks in `abyss-stack` |
 | `aoa-techniques` | workflow | repo `AGENTS.md`, README, technique docs | shallow practice copies, missing evidence, technique/skill blur | `aoa-techniques` owner route |

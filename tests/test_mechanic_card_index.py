@@ -24,11 +24,11 @@ def run_script(*args: str) -> subprocess.CompletedProcess[str]:
 
 class MechanicCardIndexTests(unittest.TestCase):
     def test_mechanic_card_index_is_current(self) -> None:
-        result = run_script("scripts/build_mechanic_card_index.py", "--check")
+        result = run_script("scripts/mechanics_topology/build_mechanic_card_index.py", "--check")
         self.assertEqual(result.returncode, 0, result.stdout)
 
     def test_mechanic_card_index_validates(self) -> None:
-        result = run_script("scripts/validate_mechanic_card_index.py")
+        result = run_script("scripts/mechanics_topology/validate_mechanic_card_index.py")
         self.assertEqual(result.returncode, 0, result.stdout)
 
     def test_mechanic_card_index_matches_registry_slugs(self) -> None:

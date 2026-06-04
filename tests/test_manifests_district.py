@@ -9,7 +9,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-import validate_manifests_registry  # noqa: E402
+from scripts.root_registries import validate_manifests_registry  # noqa: E402
 
 MANIFESTS_ROOT = REPO_ROOT / "manifests"
 REGISTRY = MANIFESTS_ROOT / "registry.json"
@@ -55,7 +55,7 @@ class ManifestsDistrictTestCase(unittest.TestCase):
 
         self.assertIn("[`registry.json`](registry.json)", readme)
         self.assertIn("Registered Homes", readme)
-        self.assertIn("python scripts/validate_manifests_registry.py", readme)
+        self.assertIn("python scripts/root_registries/validate_manifests_registry.py", readme)
         self.assertIn("manifests/registry.json", agents)
         self.assertIn("Mechanic-owned component or hook records belong", agents)
 

@@ -86,12 +86,12 @@ change does not affect its job.
 Run the narrow checkpoint lane after package changes:
 
 ```bash
-python scripts/validate_mechanics_topology.py --mechanic checkpoint
-python scripts/validate_mechanic_readme_cards.py --mechanic checkpoint
-python scripts/build_mechanic_card_index.py --check
-python scripts/validate_mechanic_card_index.py
-python scripts/validate_mechanic_landing_logs.py --mechanic checkpoint
-python scripts/validate_mechanic_artifact_topology.py --mechanic checkpoint
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic checkpoint
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic checkpoint
+python scripts/mechanics_topology/build_mechanic_card_index.py --check
+python scripts/mechanics_topology/validate_mechanic_card_index.py
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic checkpoint
+python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic checkpoint
 python mechanics/checkpoint/scripts/validate_checkpoint_mechanic.py
 python -m pytest -q mechanics/checkpoint/tests
 ```
@@ -99,14 +99,14 @@ python -m pytest -q mechanics/checkpoint/tests
 If owner requests changed, also run:
 
 ```bash
-python scripts/validate_owner_request_queue.py --mechanic checkpoint
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic checkpoint
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic checkpoint
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic checkpoint
 ```
 
 For release-readiness or cross-mechanic edits, finish with:
 
 ```bash
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```

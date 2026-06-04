@@ -83,7 +83,7 @@ Surfaces:
 - `mechanics/rpg/legacy/raw/RPG_FIRST_WAVE.md`
 - `mechanics/rpg/legacy/raw/RPG_SECOND_WAVE.md`
 
-Validation: `python scripts/validate_mechanics_topology.py --mechanic rpg`
+Validation: `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic rpg`
 
 Stop-lines: no hidden ontology, runtime ledger, or role-canon mutation.
 
@@ -113,12 +113,12 @@ Surfaces:
 - `mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py`
 - `mechanics/rpg/parts/vocabulary-overlay/tests/test_vocabulary_overlay.py`
 - `mechanics/registry.json`
-- `scripts/validate_mechanic_landing_logs.py`
-- `scripts/release_check.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
+- `scripts/release_gate/release_check.py`
 - `tests/test_mechanic_landing_logs.py`
 - `CHANGELOG.md`
 
-Validation: `python mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py`; `python -m pytest -q mechanics/rpg/parts/vocabulary-overlay/tests`; `python scripts/validate_mechanic_landing_logs.py --mechanic rpg`; `python scripts/release_check.py`
+Validation: `python mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py`; `python -m pytest -q mechanics/rpg/parts/vocabulary-overlay/tests`; `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic rpg`; `python scripts/release_gate/release_check.py`
 
 Stop-lines: no hidden ontology, runtime ledger, role-canon mutation, owner-local activation, proof verdict, quest ownership transfer, or presentation-label overwrite of canonical keys.
 
@@ -140,10 +140,10 @@ Surfaces:
 - `mechanics/registry.json`
 - `generated/agents_mesh.min.json`
 - `generated/mechanic_card_index.min.json`
-- `scripts/validate_mechanic_landing_logs.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
 - `CHANGELOG.md`
 
-Validation: `python scripts/validate_mechanic_landing_logs.py --mechanic rpg`; `python scripts/release_check.py`
+Validation: `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic rpg`; `python scripts/release_gate/release_check.py`
 
 Stop-lines: no toy layer, decorative game skin, universal power score, hidden ontology, runtime ledger, role canon, proof verdict, quest ownership transfer, or presentation-label overwrite of canonical keys.
 
@@ -208,16 +208,16 @@ Surfaces:
 - `mechanics/rpg/tests/test_rpg_distillation.py`
 - `mechanics/registry.json`
 - `mechanics/owner-request-queue.json`
-- `scripts/validate_mechanic_artifact_topology.py`
-- `scripts/validate_mechanic_landing_logs.py`
-- `scripts/release_check.py`
-- `scripts/validate_ecosystem.py`
+- `scripts/mechanics_topology/validate_mechanic_artifact_topology.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
+- `scripts/release_gate/release_check.py`
+- `scripts/root_registries/validate_ecosystem.py`
 - `tests/test_validate_ecosystem.py`
 - `generated/owner_request_queue.min.json`
 - `generated/mechanic_card_index.min.json`
 - `CHANGELOG.md`
 
-Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py`; `python -m pytest -q mechanics/rpg/tests mechanics/rpg/parts/vocabulary-overlay/tests`; `python scripts/validate_mechanic_landing_logs.py --mechanic rpg`; `python scripts/release_check.py`
+Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py`; `python -m pytest -q mechanics/rpg/tests mechanics/rpg/parts/vocabulary-overlay/tests`; `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic rpg`; `python scripts/release_gate/release_check.py`
 
 Stop-lines: no active route starts from raw legacy, no flat `docs/RPG_*.md` source docs, no flat RPG artifact alias directories, no owner acceptance claim, no runtime activation claim, no universal power score, no presentation-label overwrite of canonical keys.
 
@@ -243,11 +243,11 @@ Surfaces:
 - `mechanics/rpg/parts/owner-handoffs/README.md`
 - `mechanics/rpg/scripts/validate_rpg_distillation.py`
 - `mechanics/rpg/tests/test_rpg_distillation.py`
-- `scripts/validate_ecosystem.py`
+- `scripts/root_registries/validate_ecosystem.py`
 - `tests/test_validate_ecosystem.py`
 - `CHANGELOG.md`
 
-Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python scripts/validate_ecosystem.py`; `python -m pytest -q mechanics/rpg/tests tests/test_validate_ecosystem.py`
+Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python scripts/root_registries/validate_ecosystem.py`; `python -m pytest -q mechanics/rpg/tests tests/test_validate_ecosystem.py`
 
 Stop-lines: no wave-era phrasing, raw-source filenames, direct legacy/raw routing, decorative slogans, owner acceptance claim, runtime activation claim, universal power score, or presentation-label overwrite of canonical keys in active RPG routes.
 
@@ -272,7 +272,7 @@ Surfaces:
 - `mechanics/registry.json`
 - `CHANGELOG.md`
 
-Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python -m pytest -q mechanics/rpg/tests`; `python scripts/validate_mechanics_topology.py --mechanic rpg`; `python scripts/validate_mechanic_readme_cards.py --mechanic rpg`; `python scripts/build_mechanic_card_index.py --check`; `python scripts/validate_mechanic_card_index.py`
+Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python -m pytest -q mechanics/rpg/tests`; `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic rpg`; `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic rpg`; `python scripts/mechanics_topology/build_mechanic_card_index.py --check`; `python scripts/mechanics_topology/validate_mechanic_card_index.py`
 
 Stop-lines: no decorative RPG layer, hidden owner transfer, runtime state claim, proof verdict, quest closure, universal power score, or presentation-label overwrite of canonical keys.
 
@@ -303,7 +303,7 @@ Surfaces:
 - `mechanics/registry.json`
 - `CHANGELOG.md`
 
-Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python mechanics/questbook/scripts/validate_questbook_distillation.py`; `python -m pytest -q mechanics/rpg/tests mechanics/questbook/tests/test_questbook_distillation.py`; `python scripts/validate_mechanics_topology.py --mechanic questbook`; `python scripts/validate_mechanics_topology.py --mechanic rpg`; `python scripts/validate_mechanic_readme_cards.py --mechanic questbook`; `python scripts/validate_mechanic_readme_cards.py --mechanic rpg`
+Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python mechanics/questbook/scripts/validate_questbook_distillation.py`; `python -m pytest -q mechanics/rpg/tests mechanics/questbook/tests/test_questbook_distillation.py`; `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic questbook`; `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic rpg`; `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic questbook`; `python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic rpg`
 
 Stop-lines: no RPG quest lifecycle authority, quest closure, proof completion, owner acceptance, reward authority, universal score, runtime state, or boilerplate RPG fields across quest sources.
 

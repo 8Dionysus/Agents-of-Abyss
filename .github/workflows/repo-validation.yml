@@ -23,4 +23,4 @@ jobs:
         run: python -m pip install -r requirements-dev.txt
 
       - name: Run release audit
-        run: python scripts/release_check.py
+        run: python scripts/release_gate/release_check.py

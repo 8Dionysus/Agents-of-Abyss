@@ -30,13 +30,13 @@ generated surface mirrors this document, read the builder and validator before e
 Run package and link checks:
 
 ```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_links.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/hygiene/validate_links.py
 python mechanics/release-support/scripts/validate_release_support_distillation.py
-python scripts/validate_mechanic_readme_cards.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_mechanic_landing_logs.py --mechanic release-support
+python scripts/mechanics_topology/validate_mechanic_readme_cards.py
+python scripts/mechanics_topology/validate_mechanics_topology.py
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic release-support
 python -m pytest -q
 ```
 
@@ -52,41 +52,41 @@ route to this section instead of carrying command blocks.
 #### `mechanics/release-support/docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md`
 
 ```bash
-python scripts/validate_owner_request_queue.py --mechanic release-support
-python scripts/build_owner_request_queue.py --check
-python scripts/validate_generated_owner_request_queue.py
-python scripts/validate_owner_request_docs.py --mechanic release-support
-python scripts/validate_mechanics_topology.py --mechanic release-support
+python scripts/owner_requests/validate_owner_request_queue.py --mechanic release-support
+python scripts/owner_requests/build_owner_request_queue.py --check
+python scripts/owner_requests/validate_generated_owner_request_queue.py
+python scripts/owner_requests/validate_owner_request_docs.py --mechanic release-support
+python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic release-support
 ```
 
 #### `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`
 
 ```bash
-python scripts/repair_known_link_drifts.py --check
-python scripts/validate_links.py
-python scripts/validate_markdown_shape.py
-python scripts/validate_status_vocabulary.py
-python scripts/build_link_shape_hygiene_index.py --check
-python scripts/validate_link_shape_hygiene_index.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_entry_surface_sync.py
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/validate_mechanics_topology.py
-python scripts/validate_mechanic_landing_logs.py
-python scripts/validate_generated_freshness.py
-python scripts/validate_hygiene_suite.py
-python scripts/validate_ecosystem.py
+python scripts/hygiene/repair_known_link_drifts.py --check
+python scripts/hygiene/validate_links.py
+python scripts/hygiene/validate_markdown_shape.py
+python scripts/hygiene/validate_status_vocabulary.py
+python scripts/hygiene/build_link_shape_hygiene_index.py --check
+python scripts/hygiene/validate_link_shape_hygiene_index.py
+python scripts/agents_mesh/validate_agents_md_shape.py
+python scripts/agents_mesh/validate_agents_mesh.py
+python scripts/agents_mesh/build_agents_mesh_index.py --check
+python scripts/agents_mesh/validate_agents_mesh_index.py
+python scripts/center_entry/validate_entry_surface_sync.py
+python scripts/center_entry/build_center_entry_map.py --check
+python scripts/center_entry/validate_center_entry_map.py
+python scripts/mechanics_topology/validate_mechanics_topology.py
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py
+python scripts/hygiene/validate_generated_freshness.py
+python scripts/hygiene/validate_hygiene_suite.py
+python scripts/root_registries/validate_ecosystem.py
 python -m pytest -q
 ```
 
 #### `mechanics/release-support/docs/RELEASING.md`
 
 ```bash
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```
 
 <!-- centralized-child-validation:end -->

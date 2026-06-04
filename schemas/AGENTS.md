@@ -34,18 +34,18 @@ Use mechanic package guidance for schemas under `mechanics/<slug>/`.
 Run the narrowest relevant checks first. Usual checks for this district:
 
 ```bash
-python scripts/validate_schema_registry.py
+python scripts/root_registries/validate_schema_registry.py
 python -m pytest -q tests/test_schema_district.py
-python scripts/validate_ecosystem.py
-python scripts/build_center_entry_map.py --check
-python scripts/validate_center_entry_map.py
-python scripts/validate_generated_freshness.py
+python scripts/root_registries/validate_ecosystem.py
+python scripts/center_entry/build_center_entry_map.py --check
+python scripts/center_entry/validate_center_entry_map.py
+python scripts/hygiene/validate_generated_freshness.py
 ```
 
 For release-facing schema changes, also run:
 
 ```bash
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```
 
 ## Closeout

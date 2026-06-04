@@ -239,13 +239,13 @@
     }
   ],
   "validation_refs": [
-    "python scripts/plan_docs_thematic_cleanup.py --check",
-    "python scripts/validate_docs_thematic_districts.py",
-    "python scripts/validate_docs_migration_map.py",
-    "python scripts/validate_traces_district.py",
-    "python scripts/validate_organ_contract.py",
-    "python scripts/build_docs_thematic_index.py --check",
-    "python scripts/validate_docs_thematic_index.py"
+    "python scripts/docs_districts/plan_docs_thematic_cleanup.py --check",
+    "python scripts/docs_districts/validate_docs_thematic_districts.py",
+    "python scripts/docs_districts/validate_docs_migration_map.py",
+    "python scripts/docs_districts/validate_traces_district.py",
+    "python scripts/organ_contract/validate_organ_contract.py",
+    "python scripts/docs_districts/build_docs_thematic_index.py --check",
+    "python scripts/docs_districts/validate_docs_thematic_index.py"
   ],
   "generated_index_ref": "generated/docs_thematic_index.min.json",
   "migration_manifest_ref": "docs/traces/DOCS_THEMATIC_MOVE_MANIFEST.json"

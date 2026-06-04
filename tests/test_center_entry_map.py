@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from center_entry_map_common import (
+from scripts.center_entry.center_entry_map_common import (
     BASELINE_VALIDATION_COMMANDS,
     ENTRY_SURFACE_REFS,
     REQUIRED_ROUTE_MODES,
@@ -78,14 +78,14 @@ class CenterEntryMapTests(unittest.TestCase):
         for ref in VALIDATION_REFS:
             self.assertIn(ref, payload["validation_refs"])
         self.assertIn(VALIDATION_BASELINE_REF, payload["validation_refs"])
-        self.assertIn("scripts/validate_organ_contract.py", payload["validation_refs"])
-        self.assertIn("scripts/validate_entry_surface_sync.py", payload["validation_refs"])
+        self.assertIn("scripts/organ_contract/validate_organ_contract.py", payload["validation_refs"])
+        self.assertIn("scripts/center_entry/validate_entry_surface_sync.py", payload["validation_refs"])
         self.assertIn("tests/test_entry_surface_sync.py", payload["validation_refs"])
 
     def test_baseline_validation_commands_are_named(self) -> None:
-        self.assertIn("python scripts/validate_organ_contract.py", BASELINE_VALIDATION_COMMANDS)
-        self.assertIn("python scripts/validate_entry_surface_sync.py", BASELINE_VALIDATION_COMMANDS)
-        self.assertIn("python scripts/build_center_entry_map.py --check", BASELINE_VALIDATION_COMMANDS)
+        self.assertIn("python scripts/organ_contract/validate_organ_contract.py", BASELINE_VALIDATION_COMMANDS)
+        self.assertIn("python scripts/center_entry/validate_entry_surface_sync.py", BASELINE_VALIDATION_COMMANDS)
+        self.assertIn("python scripts/center_entry/build_center_entry_map.py --check", BASELINE_VALIDATION_COMMANDS)
         self.assertIn("python -m pytest -q", BASELINE_VALIDATION_COMMANDS)
 
     def test_organ_alignment_route_preserves_owner_boundaries(self) -> None:

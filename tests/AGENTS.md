@@ -36,7 +36,7 @@ Use `.agents/spark/AGENTS.md` for tests under `.agents/spark/tests/`.
 Run the narrowest relevant checks first. Usual checks for this district:
 
 ```bash
-python scripts/validate_tests_district.py
+python scripts/root_registries/validate_tests_district.py
 python -m pytest -q tests/test_tests_district.py
 python -m pytest -q
 ```
@@ -44,7 +44,7 @@ python -m pytest -q
 For release-facing test changes, also run:
 
 ```bash
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```
 
 ## Closeout

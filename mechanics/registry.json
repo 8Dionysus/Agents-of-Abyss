@@ -104,15 +104,15 @@
       "title": "Method-growth",
       "validation_refs": [
         "mechanics/method-growth/scripts/validate_method_growth_mechanic.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py",
-        "scripts/validate_mechanic_landing_logs.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py"
       ]
     },
     {
@@ -198,13 +198,13 @@
       "title": "Distillation",
       "validation_refs": [
         "mechanics/distillation/scripts/validate_distillation_mechanic.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py",
-        "scripts/validate_mechanic_landing_logs.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py"
       ]
     },
     {
@@ -295,15 +295,15 @@
       "title": "Growth Cycle",
       "validation_refs": [
         "mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py",
-        "scripts/validate_mechanic_landing_logs.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py"
       ]
     },
     {
@@ -387,14 +387,14 @@
       "title": "Recurrence",
       "validation_refs": [
         "mechanics/recurrence/scripts/validate_recurrence_mechanic.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py"
       ]
     },
     {
@@ -475,16 +475,16 @@
       "title": "Checkpoint",
       "validation_refs": [
         "mechanics/checkpoint/scripts/validate_checkpoint_mechanic.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_mechanic_artifact_topology.py",
-        "scripts/validate_mechanic_landing_logs.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py"
       ]
     },
     {
@@ -575,16 +575,16 @@
       "title": "Experience",
       "validation_refs": [
         "mechanics/experience/scripts/validate_experience_distillation.py",
-        "scripts/validate_mechanic_artifact_topology.py",
-        "scripts/validate_mechanic_landing_logs.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py"
+        "scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py",
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py"
       ]
     },
     {
@@ -666,16 +666,16 @@
       "title": "Agon",
       "validation_refs": [
         "mechanics/agon/scripts/validate_agon_distillation.py",
-        "scripts/validate_mechanic_artifact_topology.py",
-        "scripts/validate_mechanic_landing_logs.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py"
+        "scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py",
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py"
       ]
     },
     {
@@ -748,15 +748,15 @@
       "title": "Antifragility",
       "validation_refs": [
         "mechanics/antifragility/scripts/validate_antifragility_distillation.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py",
-        "scripts/validate_mechanic_landing_logs.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py"
       ]
     },
     {
@@ -829,20 +829,20 @@
       "status": "landed",
       "title": "Questbook",
       "validation_refs": [
-        "scripts/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
         "mechanics/questbook/scripts/validate_questbook_lifecycle.py",
         "mechanics/questbook/scripts/build_questbook_index.py",
         "mechanics/questbook/scripts/validate_questbook_index.py",
         "mechanics/questbook/scripts/build_ready_owner_routes.py",
         "mechanics/questbook/scripts/validate_ready_owner_routes.py",
         "mechanics/questbook/scripts/validate_questbook_distillation.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py"
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py"
       ]
     },
     {
@@ -912,18 +912,18 @@
       "status": "landed",
       "title": "RPG",
       "validation_refs": [
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/validate_mechanic_landing_logs.py",
-        "scripts/validate_mechanic_artifact_topology.py",
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py",
+        "scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
         "mechanics/rpg/scripts/validate_rpg_distillation.py",
         "mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py"
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py"
       ]
     },
     {
@@ -1012,15 +1012,15 @@
       "title": "Boundary bridge",
       "validation_refs": [
         "mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py",
-        "scripts/validate_mechanic_landing_logs.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py"
       ]
     },
     {
@@ -1106,15 +1106,15 @@
       "title": "Audit",
       "validation_refs": [
         "mechanics/audit/scripts/validate_audit_distillation.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py",
-        "scripts/validate_mechanic_landing_logs.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py"
       ]
     },
     {
@@ -1197,16 +1197,16 @@
       "title": "Release support",
       "validation_refs": [
         "mechanics/release-support/scripts/validate_release_support_distillation.py",
-        "scripts/validate_mechanics_topology.py",
-        "scripts/release_check.py",
-        "scripts/validate_mechanic_readme_cards.py",
-        "scripts/build_mechanic_card_index.py",
-        "scripts/validate_mechanic_card_index.py",
-        "scripts/validate_owner_request_queue.py",
-        "scripts/build_owner_request_queue.py",
-        "scripts/validate_generated_owner_request_queue.py",
-        "scripts/validate_owner_request_docs.py",
-        "scripts/validate_mechanic_landing_logs.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/release_gate/release_check.py",
+        "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+        "scripts/mechanics_topology/build_mechanic_card_index.py",
+        "scripts/mechanics_topology/validate_mechanic_card_index.py",
+        "scripts/owner_requests/validate_owner_request_queue.py",
+        "scripts/owner_requests/build_owner_request_queue.py",
+        "scripts/owner_requests/validate_generated_owner_request_queue.py",
+        "scripts/owner_requests/validate_owner_request_docs.py",
+        "scripts/mechanics_topology/validate_mechanic_landing_logs.py"
       ]
     }
   ],
@@ -1245,10 +1245,10 @@
     "superseded": "The request has been replaced by another request ID and must point to that successor."
   },
   "owner_request_validation_refs": [
-    "scripts/validate_owner_request_queue.py",
-    "scripts/build_owner_request_queue.py",
-    "scripts/validate_generated_owner_request_queue.py",
-    "scripts/validate_owner_request_docs.py"
+    "scripts/owner_requests/validate_owner_request_queue.py",
+    "scripts/owner_requests/build_owner_request_queue.py",
+    "scripts/owner_requests/validate_generated_owner_request_queue.py",
+    "scripts/owner_requests/validate_owner_request_docs.py"
   ],
   "schema_version": "aoa_mechanics_registry_v1",
   "status_vocabulary": {

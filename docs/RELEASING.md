@@ -11,7 +11,7 @@ release.
 
 1. Prepare release surfaces: `CHANGELOG.md`, the `README.md` release banner,
    and the `ROADMAP.md` released contour.
-2. Run the broad local gate through `scripts/release_check.py`.
+2. Run the broad local gate through `scripts/release_gate/release_check.py`.
 3. Merge the release-prep PR to `main` after GitHub `Repo Validation` is green.
 4. Run federation release preflight for this repository.
 5. Publish through the bounded release helper, first as a dry run, then with
@@ -26,7 +26,7 @@ release.
 - `mechanics/release-support/docs/RELEASING.md`
 - `mechanics/release-support/docs/FEDERATION_RELEASE_PROTOCOL.md`
 - `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`
-- `scripts/release_check.py`
+- `scripts/release_gate/release_check.py`
 
 ## Boundary
 

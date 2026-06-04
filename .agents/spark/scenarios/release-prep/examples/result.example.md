@@ -6,7 +6,7 @@ Scope: local release gate
 
 Files read:
 - `mechanics/release-support/README.md`
-- `scripts/release_check.py`
+- `scripts/release_gate/release_check.py`
 
 Findings:
 - Release gate passed locally.
@@ -15,7 +15,7 @@ Changes made:
 - None.
 
 Validation run:
-- `python scripts/release_check.py`
+- `python scripts/release_gate/release_check.py`
 
 Skipped checks:
 - GitHub validation not run in this example.

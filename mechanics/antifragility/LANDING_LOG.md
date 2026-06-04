@@ -78,16 +78,16 @@ Surfaces:
 - `mechanics/owner-request-queue.json`
 - `generated/mechanic_card_index.min.json`
 - `generated/owner_request_queue.min.json`
-- `scripts/validate_mechanic_landing_logs.py`
-- `scripts/release_check.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
+- `scripts/release_gate/release_check.py`
 - `tests/test_mechanic_landing_logs.py`
 - `CHANGELOG.md`
 
 Validation:
 `python mechanics/antifragility/scripts/validate_antifragility_distillation.py`;
-`python scripts/validate_mechanics_topology.py --mechanic antifragility`;
-`python scripts/validate_mechanic_landing_logs.py --mechanic antifragility`;
-`python scripts/release_check.py`.
+`python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic antifragility`;
+`python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic antifragility`;
+`python scripts/release_gate/release_check.py`.
 
 Stop-lines: no one-score health, deletion theater, owner-local cleanup authority,
 public repair claim without proof, hidden runtime self-healing, or legacy/raw material in active parts except through the provenance bridge.
@@ -111,7 +111,7 @@ Surfaces:
 - `mechanics/antifragility/docs/ANTI_AUTHORITY_RULES.md`
 - `mechanics/antifragility/docs/ONE_IN_ONE_OUT.md`
 
-Validation: `python scripts/validate_mechanics_topology.py --mechanic antifragility`
+Validation: `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic antifragility`
 
 Stop-lines: no one-score health claim, deletion theater, or owner-local cleanup
 authority.

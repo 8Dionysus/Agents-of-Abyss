@@ -8,7 +8,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from validate_mechanic_landing_logs import validate_log
+from scripts.mechanics_topology.validate_mechanic_landing_logs import validate_log
 
 
 class MechanicLandingLogTests(unittest.TestCase):

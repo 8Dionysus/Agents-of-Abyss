@@ -15,7 +15,7 @@ Changes made:
 - None.
 
 Validation run:
-- `python scripts/validate_tests_district.py`
+- `python scripts/root_registries/validate_tests_district.py`
 
 Skipped checks:
 - Full release check skipped because this was read-only.

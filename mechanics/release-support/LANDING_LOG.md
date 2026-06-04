@@ -54,7 +54,7 @@ Surfaces:
 - `mechanics/release-support/docs/RELEASING.md`
 - `mechanics/release-support/docs/DIRECTION_SURFACES.md`
 
-Validation: `python scripts/validate_mechanics_topology.py --mechanic release-support`
+Validation: `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic release-support`
 
 Stop-lines: no unverified public claim, sibling release truth, or roadmap to
 changelog substitution.
@@ -99,12 +99,12 @@ Surfaces:
 - `mechanics/owner-request-queue.json`
 - `generated/mechanic_card_index.min.json`
 - `generated/owner_request_queue.min.json`
-- `scripts/release_check.py`
-- `scripts/validate_mechanic_landing_logs.py`
+- `scripts/release_gate/release_check.py`
+- `scripts/mechanics_topology/validate_mechanic_landing_logs.py`
 - `tests/test_mechanic_landing_logs.py`
 - `CHANGELOG.md`
 
-Validation: `python mechanics/release-support/scripts/validate_release_support_distillation.py`; `python scripts/validate_mechanics_topology.py --mechanic release-support`; `python scripts/validate_mechanic_landing_logs.py --mechanic release-support`; `python scripts/release_check.py`
+Validation: `python mechanics/release-support/scripts/validate_release_support_distillation.py`; `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic release-support`; `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic release-support`; `python scripts/release_gate/release_check.py`
 
 Stop-lines: no GitHub-only definition of release, unverified public claim,
 sibling acceptance without receipt, generated release authority, roadmap
@@ -133,7 +133,7 @@ Surfaces:
 - `docs/guardrails/thematic_districts.json`
 - `generated/docs_thematic_index.min.json`
 
-Validation: `python mechanics/release-support/scripts/validate_release_support_distillation.py`; `python scripts/validate_docs_thematic_districts.py`; `python scripts/release_check.py`
+Validation: `python mechanics/release-support/scripts/validate_release_support_distillation.py`; `python scripts/docs_districts/validate_docs_thematic_districts.py`; `python scripts/release_gate/release_check.py`
 
 Stop-lines: no generic docs postmortems shelf for one owner-bound release
 receipt, no raw retrospective as active release law, and no owner-repo release

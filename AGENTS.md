@@ -30,7 +30,7 @@ Do not use this lane to override owner-local truth, generated-source boundaries,
 
 ## Validation
 
-Run the nearest validator named by this card. For release-facing changes, also run `python scripts/release_check.py`.
+Run the nearest validator named by this card. For release-facing changes, also run `python scripts/release_gate/release_check.py`.
 
 ## Closeout
 
@@ -216,20 +216,20 @@ Run the narrowest relevant center check first. For release-facing or repo-wide
 changes, run the full gate:
 
 ```bash
-python scripts/release_check.py
+python scripts/release_gate/release_check.py
 ```
 
 The entry-surface baseline command set is
 `docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`. Keep that surface,
-`scripts/center_entry_map_common.py`, `scripts/validate_entry_surface_sync.py`,
-and `scripts/release_check.py` aligned when the center-wide validation route
+`scripts/center_entry/center_entry_map_common.py`, `scripts/center_entry/validate_entry_surface_sync.py`,
+and `scripts/release_gate/release_check.py` aligned when the center-wide validation route
 changes.
 
 If an Agon owner-binding or gate-routing surface changes, use
 `mechanics/agon/AGENTS.md` and `mechanics/agon/parts/AGENTS.md` for the
 matching builder, validator, and targeted tests.
 
-`scripts/release_check.py` owns the expanded default gate. Prefer keeping this
+`scripts/release_gate/release_check.py` owns the expanded default gate. Prefer keeping this
 root card short and using local `AGENTS.md` cards for lane-specific commands.
 
 ## Report

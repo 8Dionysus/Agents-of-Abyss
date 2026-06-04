@@ -36,7 +36,7 @@ route.
 Run the narrowest relevant checks first. Usual checks for this district:
 
 ```bash
-python scripts/validate_agents_mesh.py
+python scripts/agents_mesh/validate_agents_mesh.py
 python -m pytest -q
 ```
 

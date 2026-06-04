@@ -66,7 +66,7 @@
       "handoff_template_ref": ".agents/spark/scenarios/registry-sync/templates/handoff.md",
       "result_example_ref": ".agents/spark/scenarios/registry-sync/examples/result.example.md",
       "default_validation": [
-        "python scripts/release_check.py"
+        "python scripts/release_gate/release_check.py"
       ],
       "done_signal": "registered paths and local docs agree with validators",
       "stop_line": "do not create a new source of truth while syncing derived routes"
@@ -122,7 +122,7 @@
       "handoff_template_ref": ".agents/spark/scenarios/release-prep/templates/handoff.md",
       "result_example_ref": ".agents/spark/scenarios/release-prep/examples/result.example.md",
       "default_validation": [
-        "python scripts/release_check.py"
+        "python scripts/release_gate/release_check.py"
       ],
       "done_signal": "release risks, checks, and owner routes are named",
       "stop_line": "do not publish or tag from Spark without explicit user command"
@@ -131,6 +131,6 @@
   "validation_commands": [
     "python .agents/spark/scripts/validate_spark_lane.py",
     "python -m pytest -q .agents/spark/tests/test_spark_lane.py",
-    "python scripts/release_check.py"
+    "python scripts/release_gate/release_check.py"
   ]
 }

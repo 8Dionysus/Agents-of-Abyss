@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from validate_traces_district import validate_traces  # noqa: E402
+from scripts.docs_districts.validate_traces_district import validate_traces  # noqa: E402
 
 
 class ValidateTracesDistrictTests(unittest.TestCase):

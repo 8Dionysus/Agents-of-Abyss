@@ -23,7 +23,7 @@ def load_json(path: Path) -> dict:
 class SchemaDistrictTestCase(unittest.TestCase):
     def test_schema_registry_validator_passes(self) -> None:
         result = subprocess.run(
-            [sys.executable, "scripts/validate_schema_registry.py"],
+            [sys.executable, "scripts/root_registries/validate_schema_registry.py"],
             cwd=REPO_ROOT,
             check=False,
             text=True,
@@ -56,7 +56,7 @@ class SchemaDistrictTestCase(unittest.TestCase):
         self.assertIn("[`registry.json`](registry.json)", readme)
         self.assertIn("Root Contracts", readme)
         self.assertIn("schemas/registry.json", agents)
-        self.assertIn("python scripts/validate_schema_registry.py", agents)
+        self.assertIn("python scripts/root_registries/validate_schema_registry.py", agents)
 
 
 if __name__ == "__main__":
