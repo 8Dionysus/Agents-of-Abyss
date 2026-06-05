@@ -21,6 +21,7 @@ docs thematic cleanup, also read `docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md`
 - Keep provenance, dates, and source relationships explicit.
 - Route current mechanic doctrine to `mechanics/<slug>/` packages when a package owns the material.
 - Route owner-local truth to the owner repository instead of expanding the center.
+- Keep `modeled_surfaces` in `docs/decisions/indexes/index_contract.yaml` as a top-level list of normalized repo-relative paths under `docs/decisions/`; do not use it for root non-record Markdown.
 
 ## Decision Review Gate
 
