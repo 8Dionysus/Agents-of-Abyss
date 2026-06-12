@@ -135,6 +135,23 @@
       ]
     },
     {
+      "path": "evals/AGENTS.md",
+      "scope": "evals/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Local eval-pressure port card; central proof authority remains in aoa-evals.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
       "path": "generated/AGENTS.md",
       "scope": "generated/",
       "kind": "top-level-district-card",
