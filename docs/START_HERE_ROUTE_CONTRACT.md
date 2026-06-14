@@ -220,6 +220,7 @@ Local gates include:
 - `schemas/README.md`
 - `tests/README.md`
 - `config/README.md`
+- `evals/README.md`
 - `examples/README.md`
 - `manifests/README.md`
 - `quests/README.md`

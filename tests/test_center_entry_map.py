@@ -68,6 +68,12 @@ class CenterEntryMapTests(unittest.TestCase):
         self.assertIn("README.md", route["human_path"])
         self.assertTrue(any("replaces human docs" in item for item in route["must_not_claim"]))
 
+    def test_district_work_route_names_local_eval_port(self) -> None:
+        payload = build_payload()
+        route = next(route for route in payload["routes"] if route["route_id"] == "district-work")
+        self.assertIn("evals/README.md", route["human_path"])
+        self.assertIn("evals", route["need"])
+
     def test_entry_surface_refs_are_declared(self) -> None:
         self.assertIn("AGENTS.md", ENTRY_SURFACE_REFS)
         self.assertIn("mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md", ENTRY_SURFACE_REFS)
