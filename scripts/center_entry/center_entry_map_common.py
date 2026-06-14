@@ -370,7 +370,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "route_mode": "district-work",
         "priority": 10,
         "audience": ["coding-agent", "district-editor", "reviewer"],
-        "need": "work inside generated, scripts, schemas, tests, quests, manifests, config, or examples without confusing local gates with constitutional law",
+        "need": "work inside generated, scripts, schemas, tests, quests, manifests, config, evals, or examples without confusing local gates with constitutional law",
         "surface_ref": "docs/README.md",
         "human_path": [
             "README.md",
@@ -380,6 +380,7 @@ ROUTES: tuple[dict[str, object], ...] = (
             "schemas/README.md",
             "tests/README.md",
             "config/README.md",
+            "evals/README.md",
             "examples/README.md",
             "manifests/README.md",
             "quests/README.md",

@@ -143,6 +143,7 @@ Root-adjacent technical districts have local gates:
 | [schemas](schemas/README.md) | machine contracts |
 | [tests](tests/README.md) | regression surfaces |
 | [config](config/README.md) | repo-local validator and builder config |
+| [evals](evals/README.md) | center-local eval-pressure port; central proof authority stays in `aoa-evals` |
 | [examples](examples/README.md) | compact examples that teach current contracts |
 | [manifests](manifests/README.md) | repo-level manifest posture |
 | [quests](quests/README.md) | public durable obligations |
