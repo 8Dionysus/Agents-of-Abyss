@@ -104,10 +104,12 @@ python mechanics/experience/parts/continuity-context/scripts/validate_memory_ran
 python mechanics/experience/parts/continuity-context/scripts/validate_affective_economy.py
 python mechanics/experience/parts/continuity-context/scripts/validate_context_routing.py
 python mechanics/experience/parts/continuity-context/scripts/validate_context_memory_weaving.py
+python mechanics/experience/parts/continuity-context/scripts/validate_living_workspace_continuity.py
 python -m pytest -q mechanics/experience/parts/continuity-context/tests/test_memory_rank_reputation.py
 python -m pytest -q mechanics/experience/parts/continuity-context/tests/test_affective_economy.py
 python -m pytest -q mechanics/experience/parts/continuity-context/tests/test_context_routing.py
 python -m pytest -q mechanics/experience/parts/continuity-context/tests/test_context_memory_weaving.py
+python -m pytest -q mechanics/experience/parts/continuity-context/tests/test_living_workspace_continuity.py
 ```
 
 #### `mechanics/experience/parts/governance-polis/VALIDATION.md`
