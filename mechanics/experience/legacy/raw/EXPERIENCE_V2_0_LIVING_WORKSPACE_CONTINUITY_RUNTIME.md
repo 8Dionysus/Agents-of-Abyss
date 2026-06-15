@@ -71,6 +71,7 @@ source seed
   -> receipt-backed live reentry candidate
   -> replay and runtime integrity check
   -> canonical runtime boundary review
+  -> derived runtime observability candidate request
   -> owner landing or separate runtime-owner gate request
 ```
 
