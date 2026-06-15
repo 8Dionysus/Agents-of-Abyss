@@ -20,6 +20,11 @@ class AgentsMeshIndexTests(unittest.TestCase):
         self.assertGreaterEqual(data["card_count"], 30)
         self.assertFalse(data["missing_cards"])
 
+    def test_generated_agents_mesh_index_includes_recurrence_parts_card(self):
+        data = json.loads(Path("generated/agents_mesh.min.json").read_text(encoding="utf-8"))
+        paths = {card["path"] for card in data["cards"]}
+        self.assertIn("mechanics/recurrence/parts/AGENTS.md", paths)
+
 
 if __name__ == "__main__":
     unittest.main()

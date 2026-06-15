@@ -458,6 +458,23 @@
       ]
     },
     {
+      "path": "mechanics/recurrence/parts/AGENTS.md",
+      "scope": "mechanics/recurrence/parts/",
+      "kind": "mechanic-parts-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Active parts card for Recurrence.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
       "path": "mechanics/checkpoint/AGENTS.md",
       "scope": "mechanics/checkpoint/",
       "kind": "mechanic-package-card",
