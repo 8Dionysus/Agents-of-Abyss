@@ -43,7 +43,7 @@ def load_json(path: Path) -> dict[str, Any]:
 
 def request_packet_body(text: str, request_id: str) -> str | None:
     match = re.search(
-        rf"^### {re.escape(request_id)}\n(?P<body>.*?)(?=^## |\Z)",
+        rf"^### {re.escape(request_id)}\n(?P<body>.*?)(?=^#{{2,3}} |\Z)",
         text,
         re.MULTILINE | re.DOTALL,
     )
