@@ -69,6 +69,8 @@ Carry to: `aoa-skills`
 
 Status: `landed`; owner receipt linked.
 
+Receipt-backed status: `mechanics/owner-request-queue.json` carries `owner_landing_ref` and `owner_proof_ref` for this packet; this marks owner-local receipt state, not RPG authority over `aoa-skills`.
+
 Center asks for: skill-owned ability and feat truth that RPG may display as capability reflection without creating skill objects in the center.
 
 Why this owner: `aoa-skills` owns bounded execution workflows and skill-shaped objects; RPG may only name a readable ability layer around accepted skill truth.
