@@ -88,6 +88,25 @@ def test_experience_living_workspace_runtime_validator_passes() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
+def test_experience_living_workspace_runtime_legacy_core_law_keeps_stats_observability_step() -> (
+    None
+):
+    legacy_text = (
+        ROOT
+        / "mechanics"
+        / "experience"
+        / "legacy"
+        / "raw"
+        / "EXPERIENCE_V2_0_LIVING_WORKSPACE_CONTINUITY_RUNTIME.md"
+    ).read_text(encoding="utf-8")
+
+    assert (
+        "canonical runtime boundary review\n"
+        "  -> derived runtime observability candidate request\n"
+        "  -> owner landing or separate runtime-owner gate request"
+    ) in legacy_text
+
+
 def test_experience_living_workspace_runtime_requires_source_archive() -> None:
     validator = load_validator()
     payload = load_example()
