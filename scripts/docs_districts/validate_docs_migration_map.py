@@ -9,8 +9,10 @@ except ModuleNotFoundError:  # pragma: no cover - package import route
     from scripts.docs_districts.docs_thematic_common import REPO_ROOT, load_classifier, validate_classifier_shape
 
 
-def main() -> int:
-    classifier = load_classifier(REPO_ROOT)
+EXTERNAL_OWNER_ROUTE_DISTRICT = "traces"
+
+
+def validate_migration_map(classifier: dict, repo_root: Path = REPO_ROOT) -> list[str]:
     errors = validate_classifier_shape(classifier)
     districts = classifier.get("districts", {})
 
@@ -36,16 +38,28 @@ def main() -> int:
         if target_dir != district_path:
             if not external_owner_route:
                 errors.append(f"pattern migration target_dir {target_dir} does not match district {district}")
-            elif external_owner_route != target_dir:
-                errors.append(
-                    f"pattern migration external_owner_route {external_owner_route} must match target_dir {target_dir}"
-                )
-            elif not (REPO_ROOT / external_owner_route).is_dir():
-                errors.append(f"pattern migration external owner route does not exist: {external_owner_route}")
+            else:
+                if district != EXTERNAL_OWNER_ROUTE_DISTRICT:
+                    errors.append(
+                        f"pattern migration external owner route {source_glob} must use district "
+                        f"{EXTERNAL_OWNER_ROUTE_DISTRICT}, got {district}"
+                    )
+                if external_owner_route != target_dir:
+                    errors.append(
+                        f"pattern migration external_owner_route {external_owner_route} must match target_dir {target_dir}"
+                    )
+                elif not (repo_root / external_owner_route).is_dir():
+                    errors.append(f"pattern migration external owner route does not exist: {external_owner_route}")
 
         if source_glob.startswith("docs/") and "README" in source_glob.upper():
             errors.append(f"pattern migration must not catch README surfaces: {source_glob}")
 
+    return errors
+
+
+def main() -> int:
+    classifier = load_classifier(REPO_ROOT)
+    errors = validate_migration_map(classifier, REPO_ROOT)
     if errors:
         raise SystemExit("docs migration map validation failed:\n- " + "\n- ".join(errors))
     print("docs migration map validated")
