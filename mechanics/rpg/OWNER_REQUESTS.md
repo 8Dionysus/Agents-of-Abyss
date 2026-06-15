@@ -25,7 +25,9 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 
 ## Ready-to-carry packets
 
-These cards are portable handoff maps. They may be copied into an owner-local issue, document, branch, or receipt with the request ID intact. They do not mark the request accepted, landed, proved, or activated.
+These cards are portable handoff maps. Still-requested cards may be copied into an owner-local issue, document, branch, or receipt with the request ID intact, but they do not by themselves mark the request accepted, landed, proved, or activated.
+
+Receipt-backed cards may show `accepted` or `landed` only when the source queue links the owner-local receipt in `owner_landing_ref`; `landed` also requires `owner_proof_ref`. Those fields mark owner-local receipt state, not RPG authority over the stronger owner.
 
 ### ORQ-RPG-AGENTS-001
 

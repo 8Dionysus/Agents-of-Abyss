@@ -32,6 +32,7 @@ CENTRAL_DOCS = {
     "mechanics/OWNER_REQUEST_QUEUE.md": ("## Queue grammar", "## Request status vocabulary", "## How agents use the queue", "## Request index", "## Stop-lines", "## Validation"),
 }
 PACKAGE_HEADINGS = ("## Owner request packet", "## Requests", "## Center sources", "## Stop-lines", "## Validation", "## Next route")
+RECEIPT_BACKED_STATUSES = {"accepted", "landed"}
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -44,8 +45,12 @@ def validate_docs(selected: set[str] | None = None) -> list[str]:
     queue = load_json(QUEUE_PATH)
     registry = load_json(REGISTRY_PATH)
     requests_by_slug: dict[str, list[str]] = {slug: [] for slug in CANONICAL_SLUGS}
+    advanced_requests_by_slug: dict[str, list[dict[str, Any]]] = {slug: [] for slug in CANONICAL_SLUGS}
     for req in queue.get("requests", []):
-        requests_by_slug.setdefault(str(req.get("mechanic")), []).append(str(req.get("id")))
+        slug = str(req.get("mechanic"))
+        requests_by_slug.setdefault(slug, []).append(str(req.get("id")))
+        if req.get("queue_status") in RECEIPT_BACKED_STATUSES:
+            advanced_requests_by_slug.setdefault(slug, []).append(req)
     for rel, headings in CENTRAL_DOCS.items():
         path = REPO_ROOT / rel
         if not path.exists():
@@ -77,6 +82,14 @@ def validate_docs(selected: set[str] | None = None) -> list[str]:
                 problems.append(f"{rel}: missing request id {rid}")
         if "A request packet is not owner acceptance" not in text and "not owner acceptance" not in text:
             problems.append(f"{rel}: missing owner-acceptance stop-line")
+        advanced_requests = advanced_requests_by_slug.get(slug, [])
+        if advanced_requests and "## Ready-to-carry packets" in text:
+            if "receipt-backed" not in text.lower():
+                problems.append(f"{rel}: accepted/landed requests must distinguish still-requested handoffs from receipt-backed packets")
+            if "owner_landing_ref" not in text:
+                problems.append(f"{rel}: accepted/landed requests must name owner_landing_ref")
+            if any(req.get("queue_status") == "landed" for req in advanced_requests) and "owner_proof_ref" not in text:
+                problems.append(f"{rel}: landed requests must name owner_proof_ref")
     return problems
 
 
