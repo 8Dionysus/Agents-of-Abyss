@@ -315,6 +315,18 @@ def validate_worked_route_example(problems: list[str]) -> None:
         problems.append(f"{rel(path)} should not carry copy-paste command blocks")
 
 
+def owner_request_queue_statuses() -> dict[str, str]:
+    queue_path = REPO_ROOT / "mechanics" / "owner-request-queue.json"
+    if not queue_path.exists():
+        return {}
+    queue = json.loads(queue_path.read_text(encoding="utf-8"))
+    return {
+        request["id"]: request.get("queue_status", "")
+        for request in queue.get("requests", [])
+        if isinstance(request, dict) and isinstance(request.get("id"), str)
+    }
+
+
 def validate_owner_request_packets(problems: list[str]) -> None:
     path = RPG_ROOT / "OWNER_REQUESTS.md"
     text = read_text(path)
@@ -323,6 +335,7 @@ def validate_owner_request_packets(problems: list[str]) -> None:
         return
     if "They do not mark the request accepted, landed, proved, or activated." not in text:
         problems.append(f"{rel(path)}: missing no-acceptance rule for ready-to-carry packets")
+    queue_statuses = owner_request_queue_statuses()
     for request_id, owner_repo in OWNER_REQUEST_PACKETS:
         matches = list(re.finditer(
             rf"^### {re.escape(request_id)}\n(?P<body>.*?)(?=^### |\Z)",
@@ -341,8 +354,15 @@ def validate_owner_request_packets(problems: list[str]) -> None:
                 problems.append(f"{rel(path)}: {request_id} missing packet field {field}")
         if f"Carry to: `{owner_repo}`" not in body:
             problems.append(f"{rel(path)}: {request_id} does not carry to `{owner_repo}`")
-        if "Status: `requested`, not accepted." not in body:
-            problems.append(f"{rel(path)}: {request_id} must remain requested, not accepted")
+        queue_status = queue_statuses.get(request_id, "requested")
+        if queue_status == "requested":
+            if "Status: `requested`, not accepted." not in body:
+                problems.append(f"{rel(path)}: {request_id} must remain requested, not accepted")
+        elif queue_status == "landed":
+            if "Status: `landed`; owner receipt linked." not in body:
+                problems.append(f"{rel(path)}: {request_id} must match landed owner-request queue status")
+        elif f"Status: `{queue_status}`" not in body:
+            problems.append(f"{rel(path)}: {request_id} must match owner-request queue status `{queue_status}`")
         if "owner_landing_ref" not in body or "owner_proof_ref" not in body:
             problems.append(f"{rel(path)}: {request_id} return receipt must name owner landing/proof refs")
         if "generated/owner_request_queue.min.json" not in body:
