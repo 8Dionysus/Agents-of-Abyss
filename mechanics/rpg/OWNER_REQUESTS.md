@@ -65,7 +65,7 @@ Return receipt: update `mechanics/owner-request-queue.json` `owner_landing_ref` 
 
 Carry to: `aoa-skills`
 
-Status: `requested`, not accepted.
+Status: `landed`; owner receipt linked.
 
 Center asks for: skill-owned ability and feat truth that RPG may display as capability reflection without creating skill objects in the center.
 
