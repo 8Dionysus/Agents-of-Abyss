@@ -19,6 +19,11 @@ class AgentsMeshTests(unittest.TestCase):
         for mechanic in registry.get("mechanics", []):
             self.assertIn(mechanic["agents_ref"], paths)
 
+    def test_recurrence_parts_agents_ref_is_registered(self):
+        config = json.loads(Path("config/agents_mesh.json").read_text(encoding="utf-8"))
+        paths = {entry["path"] for entry in config["entries"]}
+        self.assertIn("mechanics/recurrence/parts/AGENTS.md", paths)
+
     def test_local_stack_readiness_requires_items(self):
         result = subprocess.run(
             [sys.executable, ".agents/skills/aoa-local-stack-bringup/scripts/readiness_summary.py"],
