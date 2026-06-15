@@ -333,8 +333,11 @@ def validate_owner_request_packets(problems: list[str]) -> None:
     if "## Ready-to-carry packets" not in text:
         problems.append(f"{rel(path)}: missing ready-to-carry packets section")
         return
-    if "They do not mark the request accepted, landed, proved, or activated." not in text:
-        problems.append(f"{rel(path)}: missing no-acceptance rule for ready-to-carry packets")
+    intro = text.split("### ORQ-RPG-AGENTS-001", 1)[0]
+    if "Still-requested cards" not in intro or "do not by themselves mark the request accepted, landed, proved, or activated" not in intro:
+        problems.append(f"{rel(path)}: missing no-acceptance rule for still-requested packets")
+    if "Receipt-backed cards" not in intro or "owner_landing_ref" not in intro or "owner_proof_ref" not in intro:
+        problems.append(f"{rel(path)}: missing receipt-backed status rule for accepted/landed packets")
     queue_statuses = owner_request_queue_statuses()
     for request_id, owner_repo in OWNER_REQUEST_PACKETS:
         matches = list(re.finditer(
