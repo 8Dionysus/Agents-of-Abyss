@@ -99,6 +99,30 @@ Receipt-backed status: `owner_landing_ref` and `owner_proof_ref` are generic lat
         self.assertIn("fake/OWNER_REQUESTS.md: ORQ-FAKE-SKILLS-001 must name owner_landing_ref in its packet", problems)
         self.assertIn("fake/OWNER_REQUESTS.md: ORQ-FAKE-SKILLS-001 must name owner_proof_ref in its packet", problems)
 
+    def test_request_packet_body_stops_before_next_h3_packet(self):
+        module = load("validate_owner_request_docs", "scripts/owner_requests/validate_owner_request_docs.py")
+        text = """## Ready-to-carry packets
+
+### ORQ-FAKE-SKILLS-001
+
+Status: `landed`; owner receipt linked.
+
+### ORQ-FAKE-SKILLS-002
+
+Receipt-backed status: `owner_landing_ref` and `owner_proof_ref` are linked here.
+"""
+        body = module.request_packet_body(text, "ORQ-FAKE-SKILLS-001")
+        self.assertIsNotNone(body)
+        self.assertNotIn("ORQ-FAKE-SKILLS-002", body)
+        problems = module.receipt_backed_packet_section_problems(
+            "fake/OWNER_REQUESTS.md",
+            text,
+            [{"id": "ORQ-FAKE-SKILLS-001", "queue_status": "landed"}],
+        )
+        self.assertIn("fake/OWNER_REQUESTS.md: ORQ-FAKE-SKILLS-001 must distinguish its receipt-backed status", problems)
+        self.assertIn("fake/OWNER_REQUESTS.md: ORQ-FAKE-SKILLS-001 must name owner_landing_ref in its packet", problems)
+        self.assertIn("fake/OWNER_REQUESTS.md: ORQ-FAKE-SKILLS-001 must name owner_proof_ref in its packet", problems)
+
     def test_owner_request_protocol_declines_center_activation(self):
         text = (ROOT / "mechanics/OWNER_REQUEST_PROTOCOL.md").read_text(encoding="utf-8")
         self.assertIn("A request packet is not owner acceptance", text)
