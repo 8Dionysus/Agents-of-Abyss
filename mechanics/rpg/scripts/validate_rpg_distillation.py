@@ -364,6 +364,8 @@ def validate_owner_request_packets(problems: list[str]) -> None:
         elif queue_status == "landed":
             if "Status: `landed`; owner receipt linked." not in body:
                 problems.append(f"{rel(path)}: {request_id} must match landed owner-request queue status")
+            if "Receipt-backed status:" not in body:
+                problems.append(f"{rel(path)}: {request_id} must name its receipt-backed status")
         elif f"Status: `{queue_status}`" not in body:
             problems.append(f"{rel(path)}: {request_id} must match owner-request queue status `{queue_status}`")
         if "owner_landing_ref" not in body or "owner_proof_ref" not in body:

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -38,6 +39,33 @@ RECEIPT_BACKED_STATUSES = {"accepted", "landed"}
 def load_json(path: Path) -> dict[str, Any]:
     with path.open(encoding="utf-8") as handle:
         return json.load(handle)
+
+
+def request_packet_body(text: str, request_id: str) -> str | None:
+    match = re.search(
+        rf"^### {re.escape(request_id)}\n(?P<body>.*?)(?=^### |\Z)",
+        text,
+        re.MULTILINE | re.DOTALL,
+    )
+    return match.group("body") if match else None
+
+
+def receipt_backed_packet_section_problems(rel: str, text: str, requests: list[dict[str, Any]]) -> list[str]:
+    problems: list[str] = []
+    if not requests or "## Ready-to-carry packets" not in text:
+        return problems
+    for req in requests:
+        request_id = str(req.get("id") or "")
+        body = request_packet_body(text, request_id)
+        if body is None:
+            continue
+        if "receipt-backed" not in body.lower():
+            problems.append(f"{rel}: {request_id} must distinguish its receipt-backed status")
+        if "owner_landing_ref" not in body:
+            problems.append(f"{rel}: {request_id} must name owner_landing_ref in its packet")
+        if req.get("queue_status") == "landed" and "owner_proof_ref" not in body:
+            problems.append(f"{rel}: {request_id} must name owner_proof_ref in its packet")
+    return problems
 
 
 def validate_docs(selected: set[str] | None = None) -> list[str]:
@@ -83,13 +111,7 @@ def validate_docs(selected: set[str] | None = None) -> list[str]:
         if "A request packet is not owner acceptance" not in text and "not owner acceptance" not in text:
             problems.append(f"{rel}: missing owner-acceptance stop-line")
         advanced_requests = advanced_requests_by_slug.get(slug, [])
-        if advanced_requests and "## Ready-to-carry packets" in text:
-            if "receipt-backed" not in text.lower():
-                problems.append(f"{rel}: accepted/landed requests must distinguish still-requested handoffs from receipt-backed packets")
-            if "owner_landing_ref" not in text:
-                problems.append(f"{rel}: accepted/landed requests must name owner_landing_ref")
-            if any(req.get("queue_status") == "landed" for req in advanced_requests) and "owner_proof_ref" not in text:
-                problems.append(f"{rel}: landed requests must name owner_proof_ref")
+        problems.extend(receipt_backed_packet_section_problems(rel, text, advanced_requests))
     return problems
 
 
