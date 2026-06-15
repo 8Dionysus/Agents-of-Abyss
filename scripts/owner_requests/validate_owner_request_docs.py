@@ -43,7 +43,7 @@ def load_json(path: Path) -> dict[str, Any]:
 
 def request_packet_body(text: str, request_id: str) -> str | None:
     match = re.search(
-        rf"^### {re.escape(request_id)}\n(?P<body>.*?)(?=^### |\Z)",
+        rf"^### {re.escape(request_id)}\n(?P<body>.*?)(?=^## |\Z)",
         text,
         re.MULTILINE | re.DOTALL,
     )
@@ -58,6 +58,7 @@ def receipt_backed_packet_section_problems(rel: str, text: str, requests: list[d
         request_id = str(req.get("id") or "")
         body = request_packet_body(text, request_id)
         if body is None:
+            problems.append(f"{rel}: {request_id} must have its own ready-to-carry packet section")
             continue
         if "receipt-backed" not in body.lower():
             problems.append(f"{rel}: {request_id} must distinguish its receipt-backed status")
