@@ -35,6 +35,9 @@ Tracking starts with the community-docs baseline for this repository.
 - root `scripts/` now uses family-scoped Python homes under
   `scripts/<family>/`, with root-level Python command files rejected by the
   scripts district validator.
+- the `district-work` center entry route now exposes the local `evals/` port
+  in public and docs-root route maps while keeping central proof authority in
+  `aoa-evals`.
 
 ## [0.4.0] - 2026-04-30
 
