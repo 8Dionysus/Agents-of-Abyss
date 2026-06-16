@@ -70,6 +70,7 @@ Guardrail operating surfaces:
 | [`quests/`](../quests/) | lane-first lifecycle item store for tracked obligations |
 | [`manifests/`](../manifests/) | owner-bound manifests and recurrence receipts |
 | [`config/`](../config/) | development and validator configuration |
+| [`evals/`](../evals/) | center-local eval-pressure port before central proof adoption in `aoa-evals` |
 | [`examples/`](../examples/) | public-safe examples |
 
 ## Claim Routes
