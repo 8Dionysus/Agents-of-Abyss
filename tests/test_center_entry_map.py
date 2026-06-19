@@ -9,6 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from scripts.center_entry.center_entry_map_common import (
     BASELINE_VALIDATION_COMMANDS,
+    CENTER_ENTRY_ARTIFACT_IDENTITY,
     ENTRY_SURFACE_REFS,
     REQUIRED_ROUTE_MODES,
     SURFACE_PAYLOAD,
@@ -28,6 +29,15 @@ class CenterEntryMapTests(unittest.TestCase):
         self.assertEqual(payload["authority_ref"], SURFACE_PAYLOAD["authority_ref"])
         self.assertEqual(payload["public_root_ref"], "README.md")
         self.assertEqual(payload["route_contract_ref"], "docs/START_HERE_ROUTE_CONTRACT.md")
+        self.assertEqual(payload["artifact_identity"], CENTER_ENTRY_ARTIFACT_IDENTITY)
+
+    def test_artifact_identity_marks_center_route_readmodel_contract(self) -> None:
+        identity = build_payload()["artifact_identity"]
+
+        self.assertEqual(identity["artifact_class"], "center_entry_route_readmodel")
+        self.assertEqual(identity["authority_ref"], "docs/START_HERE_ROUTE_CONTRACT.md")
+        self.assertEqual(identity["trust_layer"], ["abi_contract_signature", "w3c_prov_lineage"])
+        self.assertIn("owner-repo acceptance", identity["consumer_expectation"])
 
     def test_route_modes_are_complete_and_ordered(self) -> None:
         payload = build_payload()
