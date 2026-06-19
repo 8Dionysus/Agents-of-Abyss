@@ -38,6 +38,8 @@ Tracking starts with the community-docs baseline for this repository.
 - the `district-work` center entry route now exposes the local `evals/` port
   in public and docs-root route maps while keeping central proof authority in
   `aoa-evals`.
+- the machine-facing center entry route contract now publishes
+  `artifact_identity` with canonical `generated` surface-state vocabulary.
 
 ## [0.4.0] - 2026-04-30
 

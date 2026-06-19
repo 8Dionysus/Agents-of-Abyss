@@ -101,6 +101,43 @@ VALIDATION_REFS = (
 
 FORBIDDEN_LOW_CONTEXT_PREFIXES = ("src/", "scripts/")
 
+CENTER_ENTRY_ARTIFACT_IDENTITY = {
+    "artifact_class": "center_entry_route_readmodel",
+    "surface_state": "generated",
+    "owner_repo": "Agents-of-Abyss",
+    "authority_ref": ROUTE_CONTRACT_REF,
+    "producer": (
+        "scripts/center_entry/build_center_entry_map.py via "
+        "scripts/center_entry/center_entry_map_common.py from the center route "
+        "contract, route constants, and center entry refs"
+    ),
+    "consumer_expectation": (
+        "Verify schema_version, owner_repo, surface_kind, authority_ref, "
+        "route_contract_ref, registry_ref, supporting_inventory_ref, "
+        "artifact_identity, route refs, build_center_entry_map --check, "
+        "validate_center_entry_map, and entry-surface sync before using this "
+        "as compact center routing; do not treat it as owner-repo acceptance "
+        "or implementation truth."
+    ),
+    "privacy_boundary": (
+        "Public center route and source refs only; no private operator traces, "
+        "secrets, session transcripts, runtime state, sibling-repo hidden "
+        "evidence, or machine-local state."
+    ),
+    "content_identity": (
+        "generated/center_entry_map.min.json rendered from build_payload() and "
+        "compared by build_center_entry_map --check plus validate_center_entry_map."
+    ),
+    "abi_epoch": "aoa_center_entry_map_v2",
+    "contract_version": (
+        "scripts/center_entry/center_entry_map_common.py@"
+        "aoa_center_entry_map_v2#artifact_identity"
+    ),
+    "trust_layer": ["abi_contract_signature", "w3c_prov_lineage"],
+    "verification": list(VALIDATION_REFS),
+    "action": "ADD_CONSUMER_EXPECTATION",
+}
+
 SURFACE_PAYLOAD: dict[str, object] = {
     "schema_version": "aoa_center_entry_map_v2",
     "schema_ref": SCHEMA_REF,
@@ -109,6 +146,7 @@ SURFACE_PAYLOAD: dict[str, object] = {
     "authority_ref": "CHARTER.md",
     "public_root_ref": "README.md",
     "route_contract_ref": ROUTE_CONTRACT_REF,
+    "artifact_identity": CENTER_ENTRY_ARTIFACT_IDENTITY,
     "registry_ref": "generated/ecosystem_registry.min.json",
     "supporting_inventory_ref": "generated/federation_supporting_inventory.min.json",
     "validation_refs": list(VALIDATION_REFS),
@@ -456,6 +494,12 @@ def build_payload() -> dict[str, object]:
         validate_low_context_local_ref(str(SURFACE_PAYLOAD[key]), f"surface.{key}")
 
     for ref in SURFACE_PAYLOAD["validation_refs"]:
+        resolve_local_ref(str(ref))
+    artifact_identity = SURFACE_PAYLOAD["artifact_identity"]
+    if not isinstance(artifact_identity, dict):
+        raise ValueError("surface.artifact_identity must be an object")
+    resolve_local_ref(str(artifact_identity["authority_ref"]))
+    for ref in artifact_identity["verification"]:
         resolve_local_ref(str(ref))
 
     routes: list[dict[str, object]] = []

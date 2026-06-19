@@ -12,6 +12,7 @@
     "authority_ref",
     "public_root_ref",
     "route_contract_ref",
+    "artifact_identity",
     "registry_ref",
     "supporting_inventory_ref",
     "validation_refs",
@@ -39,6 +40,9 @@
     "route_contract_ref": {
       "$ref": "#/$defs/repoRelativeSurface"
     },
+    "artifact_identity": {
+      "$ref": "#/$defs/artifactIdentity"
+    },
     "registry_ref": {
       "$ref": "#/$defs/repoRelativeSurface"
     },
@@ -61,6 +65,85 @@
     }
   },
   "$defs": {
+    "artifactIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_class",
+        "surface_state",
+        "owner_repo",
+        "authority_ref",
+        "producer",
+        "consumer_expectation",
+        "privacy_boundary",
+        "content_identity",
+        "abi_epoch",
+        "contract_version",
+        "trust_layer",
+        "verification",
+        "action"
+      ],
+      "properties": {
+        "artifact_class": {
+          "type": "string",
+          "minLength": 3
+        },
+        "surface_state": {
+          "type": "string",
+          "minLength": 3
+        },
+        "owner_repo": {
+          "type": "string",
+          "const": "Agents-of-Abyss"
+        },
+        "authority_ref": {
+          "$ref": "#/$defs/repoRelativeSurface"
+        },
+        "producer": {
+          "type": "string",
+          "minLength": 3
+        },
+        "consumer_expectation": {
+          "type": "string",
+          "minLength": 3
+        },
+        "privacy_boundary": {
+          "type": "string",
+          "minLength": 3
+        },
+        "content_identity": {
+          "type": "string",
+          "minLength": 3
+        },
+        "abi_epoch": {
+          "type": "string",
+          "const": "aoa_center_entry_map_v2"
+        },
+        "contract_version": {
+          "type": "string",
+          "minLength": 3
+        },
+        "trust_layer": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 3
+          }
+        },
+        "verification": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/repoRelativeSurface"
+          }
+        },
+        "action": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    },
     "repoRelativeSurface": {
       "type": "string",
       "minLength": 1,

@@ -235,6 +235,7 @@ It must publish:
 
 - `schema_version`
 - `route_contract_ref`
+- `artifact_identity`
 - `authority_ref`
 - `public_root_ref`
 - `registry_ref`
