@@ -103,7 +103,7 @@ FORBIDDEN_LOW_CONTEXT_PREFIXES = ("src/", "scripts/")
 
 CENTER_ENTRY_ARTIFACT_IDENTITY = {
     "artifact_class": "center_entry_route_readmodel",
-    "surface_state": "public_source_generated_center_entry_capsule",
+    "surface_state": "generated",
     "owner_repo": "Agents-of-Abyss",
     "authority_ref": ROUTE_CONTRACT_REF,
     "producer": (

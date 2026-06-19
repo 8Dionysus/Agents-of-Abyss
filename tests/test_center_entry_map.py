@@ -35,9 +35,11 @@ class CenterEntryMapTests(unittest.TestCase):
         identity = build_payload()["artifact_identity"]
 
         self.assertEqual(identity["artifact_class"], "center_entry_route_readmodel")
+        self.assertEqual(identity["surface_state"], "generated")
         self.assertEqual(identity["authority_ref"], "docs/START_HERE_ROUTE_CONTRACT.md")
         self.assertEqual(identity["trust_layer"], ["abi_contract_signature", "w3c_prov_lineage"])
         self.assertIn("owner-repo acceptance", identity["consumer_expectation"])
+        self.assertIn("Public center route", identity["privacy_boundary"])
 
     def test_route_modes_are_complete_and_ordered(self) -> None:
         payload = build_payload()
