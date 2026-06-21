@@ -40,6 +40,24 @@ Use it when the question is not only "what exists?" but also:
 |---|---|---|
 | `aoa-sdk` | typed local-first consumer and orchestration surface for source-owned AoA repositories | routed from the center through `generated/federation_supporting_inventory.min.json`, but intentionally outside ecosystem registry v2 |
 
+## OS Abyss artifact trust-plane route
+
+The OS-level artifact trust contract is named in
+[`FEDERATION_RULES`](FEDERATION_RULES.md) as
+`os_abyss_artifact_trust_plane_v1`.
+
+| organ or repository | trust-plane role | first question |
+|---|---|---|
+| `Agents-of-Abyss` | center doctrine and owner split | what is the OS-wide authority boundary? |
+| `abyss-machine` | host enforcement, durable registry, trust-gate, trust root modes, update/transparency lane | may this host consume this artifact now? |
+| `.aoa` | session evidence routing, rehydration, graph/index projections, generated/export surfaces when machine-consumable | what evidence or session context routes to an owner, without becoming law? |
+| `aoa-sdk` | typed read/assert API for trust-plane JSON surfaces | how can an agent read the trust verdict safely? |
+| `aoa-evals` | proof scenarios and regression claims | which trust-plane behavior has been proven, and what blind spots remain? |
+| source-owner repositories | producer profiles, artifact sidecars, owner validators, release/export triggers | what artifact does this owner produce, and under what controls? |
+
+GitHub is only one producer adapter in this route. Host/runtime/workspace trust
+must remain legible outside GitHub as well.
+
 ## Routing rule of thumb
 
 When deciding where something belongs:

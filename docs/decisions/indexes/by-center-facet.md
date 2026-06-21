@@ -66,6 +66,7 @@
 ## organ alignment
 
 - [AOA-CENTER-D-0018 Organ Contract Center Law](../AOA-CENTER-D-0018-organ-contract-center-law.md) (`docs/decisions/AOA-CENTER-D-0018-organ-contract-center-law.md`)
+- [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
 
 ## release preflight
 
@@ -94,3 +95,7 @@
 ## decision index
 
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
+
+## federation boundary
+
+- [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)

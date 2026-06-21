@@ -220,3 +220,39 @@ It must not treat that as permission to absorb:
 
 Component refresh is owner-owned maintenance with explicit drift evidence, not
 mystical self-healing.
+
+## Rule 20: artifact trust is a hybrid OS Abyss contract
+
+The OS-level artifact trust contract is
+`os_abyss_artifact_trust_plane_v1`.
+
+That contract exists so agents, installers, runtime consumers, release
+consumers, and repo workflows do not consume a bundle, container, model, media
+export, eval report, generated read-model, or host-local evidence packet
+without an explicit trust verdict.
+
+Authority is split by organ:
+
+| Organ | Owns | Must not own |
+|---|---|---|
+| `Agents-of-Abyss` | center doctrine, owner split, federation stop-lines, and this contract name | host enforcement, source artifacts, proof verdicts, or session memory truth |
+| `abyss-machine` | host enforcement, durable artifact registry, trust gates, trust root modes, update/transparency lane, installed/runtime checks | federation doctrine or sibling source meaning |
+| `.aoa` | session evidence routing, rehydration, indexes, graph/session memory projections, and generated/export surfaces when they become machine-consumable artifacts | policy authority or reviewed owner law |
+| `aoa-sdk` | typed read/assert access to trust-plane JSON surfaces for agents and tools | host blocking decisions or evidence promotion authority |
+| `aoa-evals` | proof scenarios and regression claims for trust-plane behavior | workflow execution truth or host registry mutation |
+| source-owner repositories | their own producer artifacts, sidecars, release/export triggers, and owner-local validators | OS-wide enforcement or center doctrine |
+
+GitHub Actions, GitHub OIDC, GitHub Releases, OCI registries, Sigstore/Cosign,
+SLSA/in-toto, C2PA, SBOM/ML-BOM, TUF, and future SCITT lanes are adapters or
+evidence layers selected by artifact class. They are not the trust plane by
+themselves.
+
+The default consumer posture is fail-closed: if artifact class, subject digest,
+required controls, source owner, lifecycle state, trust root mode, freshness, or
+consumer intent cannot be checked, the consumer must stop or enter explicit
+manual review rather than silently treating the artifact as safe.
+
+This rule lets sibling repositories grow and refactor independently. A sibling
+may lag behind a changed ABI, SBOM, provenance, C2PA, or bundle profile, but the
+lag must be visible as drift, accepted lag, blocked-by-missing-sibling, or
+manual review instead of being flattened into a false green state.

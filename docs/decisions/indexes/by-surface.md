@@ -8,6 +8,7 @@
 - [AOA-CENTER-D-0008 Decision Note: Audit Becomes A Center Mechanic](../AOA-CENTER-D-0008-audit-mechanic-planting.md) (`docs/decisions/AOA-CENTER-D-0008-audit-mechanic-planting.md`)
 - [AOA-CENTER-D-0025 Decision Note: Root Design Surface](../AOA-CENTER-D-0025-root-design-surface.md) (`docs/decisions/AOA-CENTER-D-0025-root-design-surface.md`)
 - [AOA-CENTER-D-0026 Decision Note: Agent Surface Design Root](../AOA-CENTER-D-0026-agent-surface-design-root.md) (`docs/decisions/AOA-CENTER-D-0026-agent-surface-design-root.md`)
+- [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
 
 ## public contour
 
@@ -18,6 +19,7 @@
 ## federation contract
 
 - [AOA-CENTER-D-0002 ADR: Federation Release Contract](../AOA-CENTER-D-0002-federation-release-contract.md) (`docs/decisions/AOA-CENTER-D-0002-federation-release-contract.md`)
+- [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
 
 ## repository routing
 
@@ -25,6 +27,7 @@
 - [AOA-CENTER-D-0003 Decision Note: Reviewable Growth Refinery Uses A Narrow Cross-Layer Lineage Route](../AOA-CENTER-D-0003-growth-refinery-lineage-route.md) (`docs/decisions/AOA-CENTER-D-0003-growth-refinery-lineage-route.md`)
 - [AOA-CENTER-D-0005 Decision Note: Questbook Keeps A Model Spine And Registry-Backed Route Tables](../AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md) (`docs/decisions/AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md`)
 - [AOA-CENTER-D-0010 Docs Root Source Tightening](../AOA-CENTER-D-0010-docs-root-source-tightening.md) (`docs/decisions/AOA-CENTER-D-0010-docs-root-source-tightening.md`)
+- [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
 
 ## root surface
 

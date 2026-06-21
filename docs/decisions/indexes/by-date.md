@@ -63,3 +63,7 @@
 ## 2026-06-03
 
 - [AOA-CENTER-D-0029 Root Scripts Family Topology](../AOA-CENTER-D-0029-root-scripts-family-topology.md) (`docs/decisions/AOA-CENTER-D-0029-root-scripts-family-topology.md`)
+
+## 2026-06-21
+
+- [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)

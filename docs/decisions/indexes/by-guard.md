@@ -16,6 +16,7 @@
 - [AOA-CENTER-D-0025 Decision Note: Root Design Surface](../AOA-CENTER-D-0025-root-design-surface.md) (`docs/decisions/AOA-CENTER-D-0025-root-design-surface.md`)
 - [AOA-CENTER-D-0026 Decision Note: Agent Surface Design Root](../AOA-CENTER-D-0026-agent-surface-design-root.md) (`docs/decisions/AOA-CENTER-D-0026-agent-surface-design-root.md`)
 - [AOA-CENTER-D-0027 Codex Spark Agent Lane Home](../AOA-CENTER-D-0027-codex-spark-agent-lane-home.md) (`docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md`)
+- [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
 
 ## docs hygiene
 
@@ -66,6 +67,7 @@
 - [AOA-CENTER-D-0024 Spark Session Lane Contract](../AOA-CENTER-D-0024-spark-session-lane-contract.md) (`docs/decisions/AOA-CENTER-D-0024-spark-session-lane-contract.md`)
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
 - [AOA-CENTER-D-0029 Root Scripts Family Topology](../AOA-CENTER-D-0029-root-scripts-family-topology.md) (`docs/decisions/AOA-CENTER-D-0029-root-scripts-family-topology.md`)
+- [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
 
 ## mechanic topology
 
@@ -102,3 +104,4 @@
 
 - [AOA-CENTER-D-0001 Decision Note: `aoa-stats` Is Part Of The Public Federation Contour](../AOA-CENTER-D-0001-aoa-stats-public-layer.md) (`docs/decisions/AOA-CENTER-D-0001-aoa-stats-public-layer.md`)
 - [AOA-CENTER-D-0003 Decision Note: Reviewable Growth Refinery Uses A Narrow Cross-Layer Lineage Route](../AOA-CENTER-D-0003-growth-refinery-lineage-route.md) (`docs/decisions/AOA-CENTER-D-0003-growth-refinery-lineage-route.md`)
+- [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
