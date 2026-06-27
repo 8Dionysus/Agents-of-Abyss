@@ -22,7 +22,7 @@
   "source_owner": "Agents-of-Abyss",
   "provenance_mode": "strict_source_linked",
   "derived_method": "source-linked local KAG receipt over center doctrine and ecosystem registry",
-  "generated_or_authored": "generated_from_source",
+  "generated_or_authored": "authored_control",
   "status": "active",
   "owner_return_route": {
     "repo": "Agents-of-Abyss",
@@ -30,17 +30,17 @@
     "route_kind": "authored_meaning"
   },
   "freshness": {
-    "mode": "source_snapshot",
+    "mode": "validator_receipt",
     "state": "current",
-    "checked_ref": "docs/FEDERATION_RULES.md"
+    "checked_ref": "kag/manifest.json"
   },
   "builder": {
-    "route": "center registry builder",
-    "surface": "generated/ecosystem_registry.min.json"
+    "route": "local KAG provider authoring",
+    "surface": "kag/manifest.json"
   },
   "validator": {
-    "route": "scripts/release_gate/release_check.py",
-    "lane": "release"
+    "route": "aoa-kag:scripts/validate_kag.py",
+    "lane": "local-kag"
   },
   "storage_posture": {
     "git_surface": "receipt",
