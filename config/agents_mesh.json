@@ -169,6 +169,23 @@
       ]
     },
     {
+      "path": "kag/AGENTS.md",
+      "scope": "kag/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Local KAG provider card for center doctrine records and source-return routing.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
       "path": "manifests/AGENTS.md",
       "scope": "manifests/",
       "kind": "top-level-district-card",
