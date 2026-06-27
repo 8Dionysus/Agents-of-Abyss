@@ -48,6 +48,10 @@
     {
       "route": "scripts/release_gate/release_check.py",
       "lane": "release"
+    },
+    {
+      "route": "aoa-kag:scripts/validate_kag.py",
+      "lane": "local-kag"
     }
   ],
   "consumer_routes": [
