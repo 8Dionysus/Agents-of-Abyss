@@ -1,0 +1,46 @@
+{
+  "schema_version": "aoa-local-kag-record-v1",
+  "repo": "Agents-of-Abyss",
+  "local_id": "node:center:federation-rules",
+  "record_class": "node",
+  "source_refs": [
+    {
+      "repo": "Agents-of-Abyss",
+      "path": "docs/FEDERATION_RULES.md",
+      "source_class": "center_doctrine",
+      "role": "owner_route",
+      "authority": "authored_source"
+    }
+  ],
+  "source_owner": "Agents-of-Abyss",
+  "provenance_mode": "strict_source_linked",
+  "derived_method": "source-linked local KAG node over center doctrine and ecosystem registry",
+  "generated_or_authored": "authored_control",
+  "status": "active",
+  "owner_return_route": {
+    "repo": "Agents-of-Abyss",
+    "surface": "docs/FEDERATION_RULES.md",
+    "route_kind": "authored_meaning"
+  },
+  "freshness": {
+    "mode": "source_snapshot",
+    "state": "current",
+    "checked_ref": "docs/FEDERATION_RULES.md"
+  },
+  "builder": {
+    "route": "center registry builder",
+    "surface": "generated/ecosystem_registry.min.json"
+  },
+  "validator": {
+    "route": "scripts/release_gate/release_check.py",
+    "lane": "release"
+  },
+  "storage_posture": {
+    "git_surface": "portable_records",
+    "payload_class": "node",
+    "runtime_route": "source-repo"
+  },
+  "consumer_route": "aoa-kag registry",
+  "node_kind": "route_surface",
+  "label": "AoA federation rules"
+}
