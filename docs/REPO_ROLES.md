@@ -46,6 +46,11 @@ The OS-level artifact trust contract is named in
 [`FEDERATION_RULES`](FEDERATION_RULES.md) as
 `os_abyss_artifact_trust_plane_v1`.
 
+The center organ-by-organ posture matrix lives in
+[`ARTIFACT_TRUST_POSTURE`](ARTIFACT_TRUST_POSTURE.md). Use it to decide which
+minimum artifact controls fit each repository before entering the owner-local
+producer route or the `abyss-machine` trust-gate.
+
 | organ or repository | trust-plane role | first question |
 |---|---|---|
 | `Agents-of-Abyss` | center doctrine and owner split | what is the OS-wide authority boundary? |

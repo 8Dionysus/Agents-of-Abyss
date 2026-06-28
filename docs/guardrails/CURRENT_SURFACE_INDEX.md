@@ -8,6 +8,7 @@ This index explains which `docs/` surfaces are current and which districts hold 
 |---|---|---|
 | `docs/README.md` | docs district gate | local human and agent entrypoint |
 | `docs/AGENTS.md` | docs-local agent gate | nearest agent instruction surface for docs work |
+| `docs/ARTIFACT_TRUST_POSTURE.md` | artifact-trust posture matrix | current center route map for OS Abyss organ-specific artifact-trust minimums |
 | `docs/FEDERATION_RULES.md` | source-of-truth law | current center doctrine |
 | `docs/LAYERS.md` | layer map | current owner-routing support |
 | `docs/REPO_ROLES.md` | repo-role map | current owner-routing support |

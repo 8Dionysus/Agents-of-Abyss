@@ -26,6 +26,7 @@ Entry route modes are governed by [`START_HERE_ROUTE_CONTRACT`](START_HERE_ROUTE
 | Surface | Owns |
 |---|---|
 | [`AGENTS`](AGENTS.md) | local editing law for `docs/` |
+| [`ARTIFACT_TRUST_POSTURE`](ARTIFACT_TRUST_POSTURE.md) | OS Abyss artifact-trust organ posture matrix |
 | [`FEDERATION_RULES`](FEDERATION_RULES.md) | source-of-truth boundaries across the federation |
 | [`LAYERS`](LAYERS.md) | conceptual layer ownership |
 | [`REPO_ROLES`](REPO_ROLES.md) | compact repository routing |

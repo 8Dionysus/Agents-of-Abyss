@@ -4,6 +4,7 @@
   "current_root_allowlist": [
     "AGENTS.md",
     "README.md",
+    "ARTIFACT_TRUST_POSTURE.md",
     "FEDERATION_RULES.md",
     "LAYERS.md",
     "REPO_ROLES.md",
