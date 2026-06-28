@@ -226,6 +226,11 @@ mystical self-healing.
 The OS-level artifact trust contract is
 `os_abyss_artifact_trust_plane_v1`.
 
+The center posture matrix for this contract is
+[`ARTIFACT_TRUST_POSTURE`](ARTIFACT_TRUST_POSTURE.md). It gives agents the
+organ-by-organ minimum posture while leaving concrete enforcement in
+`abyss-machine` and owner-local producer routes.
+
 That contract exists so agents, installers, runtime consumers, release
 consumers, and repo workflows do not consume a bundle, container, model, media
 export, eval report, generated read-model, or host-local evidence packet
