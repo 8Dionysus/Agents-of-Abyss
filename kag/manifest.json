@@ -1,0 +1,65 @@
+{
+  "schema_version": "aoa-local-kag-manifest-v1",
+  "repo": "Agents-of-Abyss",
+  "owner_surface": "kag/AGENTS.md",
+  "source_surfaces": [
+    {
+      "repo": "Agents-of-Abyss",
+      "path": "generated/ecosystem_registry.min.json",
+      "source_class": "center_doctrine",
+      "role": "primary",
+      "authority": "derived_readmodel"
+    },
+    {
+      "repo": "Agents-of-Abyss",
+      "path": "docs/FEDERATION_RULES.md",
+      "source_class": "center_doctrine",
+      "role": "owner_route",
+      "authority": "authored_source"
+    },
+    {
+      "repo": "Agents-of-Abyss",
+      "path": "ECOSYSTEM_MAP.md",
+      "source_class": "center_doctrine",
+      "role": "supporting",
+      "authority": "authored_source"
+    },
+    {
+      "repo": "Agents-of-Abyss",
+      "path": "docs/organ-contract/README.md",
+      "source_class": "center_doctrine",
+      "role": "supporting",
+      "authority": "authored_source"
+    }
+  ],
+  "record_classes": [
+    "node",
+    "edge",
+    "index",
+    "projection",
+    "receipt"
+  ],
+  "storage_posture": {
+    "git_surface": "portable_records",
+    "payload_class": "manifest",
+    "runtime_route": "source-repo"
+  },
+  "validation_routes": [
+    {
+      "route": "scripts/release_gate/release_check.py",
+      "lane": "release"
+    }
+  ],
+  "consumer_routes": [
+    "aoa-kag registry",
+    "abyss-stack federation mirror",
+    "aoa-kag-mcp resource"
+  ],
+  "owner_return_routes": [
+    {
+      "repo": "Agents-of-Abyss",
+      "surface": "docs/FEDERATION_RULES.md",
+      "route_kind": "authored_meaning"
+    }
+  ]
+}
