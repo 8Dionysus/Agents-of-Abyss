@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -42,6 +43,11 @@ POSITIVE_SCHEDULER_AUTHORITY_MARKERS = (
     "owns the scheduler authority",
     "holds scheduler authority",
 )
+
+
+def marker_phrase_present(playbook_text: str, marker: str) -> bool:
+    pattern = re.compile(rf"(?<![a-z0-9_-]){re.escape(marker)}(?![a-z0-9_-])")
+    return pattern.search(playbook_text.lower()) is not None
 
 
 @dataclass(frozen=True)
@@ -88,11 +94,17 @@ def require_text(payload: dict[str, Any], key: str, label: str) -> str:
 
 
 def playbook_disclaims_scheduler_authority(playbook_text: str) -> bool:
-    return any(marker in playbook_text for marker in NEGATIVE_SCHEDULER_AUTHORITY_MARKERS)
+    return any(
+        marker_phrase_present(playbook_text, marker)
+        for marker in NEGATIVE_SCHEDULER_AUTHORITY_MARKERS
+    )
 
 
 def playbook_claims_scheduler_authority(playbook_text: str) -> bool:
-    return any(marker in playbook_text for marker in POSITIVE_SCHEDULER_AUTHORITY_MARKERS)
+    return any(
+        marker_phrase_present(playbook_text, marker)
+        for marker in POSITIVE_SCHEDULER_AUTHORITY_MARKERS
+    )
 
 
 def resolve_wave4_paths(workspace_root: Path) -> Wave4Paths:
