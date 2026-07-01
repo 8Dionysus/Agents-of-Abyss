@@ -129,6 +129,22 @@ class Wave4KernelAutomationValidatorTests(unittest.TestCase):
             ):
                 validate_wave4_kernel_automation(root)
 
+    def test_accepts_playbook_that_disclaims_scheduler_authority(self) -> None:
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.write_valid_workspace(root)
+            write_text(
+                root / "aoa-playbooks" / "playbooks" / "reviewed-automation-followthrough" / "PLAYBOOK.md",
+                (
+                    "This playbook is not a scheduler.\n"
+                    "This playbook disclaims scheduler authority for activation.\n"
+                ),
+            )
+
+            summary = validate_wave4_kernel_automation(root)
+
+        self.assertEqual(summary.recommended_next_skill, "aoa-automation-opportunity-scan")
+
     def test_rejects_automation_summary_schedule_activation_claim(self) -> None:
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
