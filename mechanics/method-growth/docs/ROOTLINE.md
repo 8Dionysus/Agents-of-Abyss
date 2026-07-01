@@ -39,8 +39,9 @@ The second-wave method spine is:
 
 1. method lives in playbooks
 2. donor refinement stays source-first
-3. practice lineage gains conceptual legitimacy without collapsing into ToS source nodes
-4. maturation stays evidence-backed rather than score-driven
+3. growth refinery stays reviewable through narrow candidate lineage
+4. practice lineage gains conceptual legitimacy without collapsing into ToS source nodes
+5. maturation stays evidence-backed rather than score-driven
 
 See [METHOD_SPINE](METHOD_SPINE.md) for the compact doctrine.
 

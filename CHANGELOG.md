@@ -40,6 +40,8 @@ Tracking starts with the community-docs baseline for this repository.
   `aoa-evals`.
 - the machine-facing center entry route contract now publishes
   `artifact_identity` with canonical `generated` surface-state vocabulary.
+- Method-growth rootline and method-spine doctrine now stay aligned through a
+  validator-backed second-wave spine invariant.
 
 ## [0.4.0] - 2026-04-30
 

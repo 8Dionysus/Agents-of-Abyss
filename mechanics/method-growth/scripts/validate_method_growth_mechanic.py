@@ -103,6 +103,11 @@ ACTIVE_PROVENANCE_TERMS = (
     "aoa-memo/",
 )
 
+SPINE_INTRO_RE = re.compile(
+    r"The (?:current )?second-wave method spine is:\n(?P<body>(?:\n?\d+\.\s+.+)+)",
+    re.IGNORECASE,
+)
+
 
 def rel(path: Path) -> str:
     return path.relative_to(REPO_ROOT).as_posix()
@@ -116,6 +121,27 @@ def contains_phrase(text: str, phrase: str) -> bool:
     compact_text = re.sub(r"\s+", " ", text).casefold()
     compact_phrase = re.sub(r"\s+", " ", phrase).casefold()
     return compact_phrase in compact_text
+
+
+def normalize_spine_item(item: str) -> str:
+    item = item.strip().strip("*").strip()
+    item = item.replace("**", "").replace("`", "")
+    return re.sub(r"\s+", " ", item).casefold()
+
+
+def extract_second_wave_spine(path: Path) -> list[str]:
+    match = SPINE_INTRO_RE.search(read(path))
+    if match is None:
+        raise ValueError(f"{rel(path)}: missing second-wave method spine list")
+    items: list[str] = []
+    for line in match.group("body").splitlines():
+        numbered = re.match(r"^\s*\d+\.\s+(.+?)\s*$", line)
+        if numbered is None:
+            continue
+        items.append(normalize_spine_item(numbered.group(1)))
+    if not items:
+        raise ValueError(f"{rel(path)}: second-wave method spine list is empty")
+    return items
 
 
 def validate_required_files(problems: list[str]) -> None:
@@ -275,6 +301,22 @@ def validate_landing_log(problems: list[str]) -> None:
         problems.append("mechanics/method-growth/LANDING_LOG.md: missing active-part distillation entry")
 
 
+def validate_method_spine_alignment(problems: list[str]) -> None:
+    method_spine_path = PACKAGE_ROOT / "docs" / "METHOD_SPINE.md"
+    rootline_path = PACKAGE_ROOT / "docs" / "ROOTLINE.md"
+    try:
+        method_spine_items = extract_second_wave_spine(method_spine_path)
+        rootline_items = extract_second_wave_spine(rootline_path)
+    except ValueError as exc:
+        problems.append(str(exc))
+        return
+    if rootline_items != method_spine_items:
+        problems.append(
+            "mechanics/method-growth/docs/ROOTLINE.md: second-wave method spine "
+            "must match mechanics/method-growth/docs/METHOD_SPINE.md"
+        )
+
+
 def validate() -> list[str]:
     problems: list[str] = []
     validate_required_files(problems)
@@ -287,6 +329,7 @@ def validate() -> list[str]:
     validate_provenance_boundary(problems)
     validate_registry(problems)
     validate_landing_log(problems)
+    validate_method_spine_alignment(problems)
     return problems
 
 
