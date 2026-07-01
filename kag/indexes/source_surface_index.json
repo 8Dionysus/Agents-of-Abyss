@@ -14,7 +14,7 @@
   },
   "index_identity": {
     "artifact_kind": "source_surface_index",
-    "content_digest": "a9c891472e6352487b303f7261dbf312e7425c5f72813c4a6944797d181bbf0d",
+    "content_digest": "992ac1ba88b63f2da16d022ed8ac4e32e7d05f9baa63f65b0de3bc8a56dbe9b4",
     "local_id": "index:repo-local:source-surfaces",
     "schema_ref": "aoa-kag:schemas/repo-local-kag-index.schema.json"
   },
@@ -195412,13 +195412,13 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "93171784d691cacdd6e9d738d98f0c672e05dd879e9d20c9099dde03dd93f5b2",
+        "content_hash": "363dfc2580ceb327984ea140cb60c117e658d424ce4a0075ac970e007cee2d1a",
         "git_ref": "git-index-source-tree",
         "id": "file:mechanics/release-support/docs/direction_surfaces.md:8a43c86b4d",
         "mime": "text/markdown",
         "path": "mechanics/release-support/docs/DIRECTION_SURFACES.md",
         "repo": "Agents-of-Abyss",
-        "size_bytes": 3489
+        "size_bytes": 3475
       },
       "mechanics_role": "mechanic_package",
       "observed_form": "file",
@@ -195480,7 +195480,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "93171784d691cacdd6e9d738d98f0c672e05dd879e9d20c9099dde03dd93f5b2",
+        "digest": "363dfc2580ceb327984ea140cb60c117e658d424ce4a0075ac970e007cee2d1a",
         "signature_ref": "",
         "verification_state": "digest-only"
       },
@@ -239596,13 +239596,13 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "6281f9a745342af81b7313b943b5d6e3143ea47aee58227b7d34fd7e6c3169ae",
+        "content_hash": "7aa0b7b63323cd3c7c7a3fdcf7bcdff76b297b2a25ec7a8c7fdb69f749c99815",
         "git_ref": "git-index-source-tree",
         "id": "file:tests/test_docs_verify_routes.py:aaf9ee4aef",
         "mime": "text/x-python",
         "path": "tests/test_docs_verify_routes.py",
         "repo": "Agents-of-Abyss",
-        "size_bytes": 20616
+        "size_bytes": 20833
       },
       "mechanics_role": "none",
       "observed_form": "command",
@@ -239635,7 +239635,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "6281f9a745342af81b7313b943b5d6e3143ea47aee58227b7d34fd7e6c3169ae",
+        "digest": "7aa0b7b63323cd3c7c7a3fdcf7bcdff76b297b2a25ec7a8c7fdb69f749c99815",
         "signature_ref": "",
         "verification_state": "digest-only"
       },

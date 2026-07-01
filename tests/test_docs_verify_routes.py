@@ -118,6 +118,9 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("| `aoa-sdk` | `ROADMAP.md` |", direction_surfaces)
         self.assertIn("| `Dionysus` | `ROADMAP.md` |", direction_surfaces)
         self.assertIn("| `8Dionysus` | `docs/PUBLIC_ENTRY_POSTURE.md` |", direction_surfaces)
+        self.assertIn("| `abyss-stack` | `ROADMAP.md` |", direction_surfaces)
+        self.assertNotIn("~/src/abyss-stack", direction_surfaces)
+        self.assertNotIn("/srv/AbyssOS/abyss-stack", direction_surfaces)
 
     def test_growth_refinery_routes_include_owner_landing_and_pruning_doctrine(self) -> None:
         readme = read_text("README.md")
