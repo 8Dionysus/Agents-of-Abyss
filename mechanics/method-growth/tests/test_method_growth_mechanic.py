@@ -58,3 +58,13 @@ def test_method_growth_owner_requests_are_root_surface() -> None:
         for problem in problems
         if "owner_request_doc_ref" in problem or "canonical_docs missing" in problem
     ]
+
+
+def test_rootline_and_method_spine_keep_same_second_wave_definition() -> None:
+    module = load_validator()
+    rootline = module.PACKAGE_ROOT / "docs" / "ROOTLINE.md"
+    method_spine = module.PACKAGE_ROOT / "docs" / "METHOD_SPINE.md"
+
+    assert module.extract_second_wave_spine(rootline) == module.extract_second_wave_spine(
+        method_spine
+    )

@@ -33,6 +33,33 @@ the PR why the change is not a landing change.
 
 ## Entries
 
+### Method spine alignment guard
+
+Status: landed
+
+Owner boundary: the center keeps Method-growth rootline and method-spine
+doctrine coherent without claiming owner-local method truth, proof verdicts,
+memory canon, runtime activation, or ToS-authored meaning.
+
+Surfaces:
+
+- `mechanics/method-growth/docs/ROOTLINE.md`
+- `mechanics/method-growth/docs/METHOD_SPINE.md`
+- `mechanics/method-growth/scripts/validate_method_growth_mechanic.py`
+- `mechanics/method-growth/tests/test_method_growth_mechanic.py`
+- `CHANGELOG.md`
+
+Validation: `python mechanics/method-growth/scripts/validate_method_growth_mechanic.py`; `python -m pytest -q mechanics/method-growth/tests`; `python scripts/release_gate/release_check.py`
+
+Stop-lines: this guard only checks the center's own second-wave doctrine
+surfaces; it does not mint candidate, seed, object, proof, memory, playbook,
+or owner-local implementation truth.
+
+Next route: keep future second-wave doctrine changes routed through
+`mechanics/method-growth/docs/METHOD_SPINE.md`,
+`mechanics/method-growth/docs/ROOTLINE.md`, and the Method-growth validator
+before moving owner-local packets.
+
 ### aoa-skills owner-request receipt sync
 
 Status: owner-request landed.
