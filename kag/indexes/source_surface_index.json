@@ -84,7 +84,7 @@
   },
   "index_identity": {
     "artifact_kind": "source_surface_index",
-    "content_digest": "2db90ddc8946c423f2390fdadb0f732c0be48ac94ed32adc388960c201098e1c",
+    "content_digest": "0392b370746eb9e3701f0bc20c26e7074760a38becbeeb8f30c308b6e00ff11d",
     "local_id": "index:repo-local:source-surfaces",
     "schema_ref": "aoa-kag:schemas/repo-local-kag-index.schema.json"
   },
@@ -29375,7 +29375,7 @@
         "content_hash": "cc1dd835cb2fd3bf559f16499256290cec1afd500160a80040e459a01718489e",
         "git_ref": "git-index-source-tree",
         "id": "file:.github/codeowners:3d36a1bf06",
-        "mime": "application/octet-stream",
+        "mime": "text/plain",
         "path": ".github/CODEOWNERS",
         "repo": "Agents-of-Abyss",
         "size_bytes": 800
@@ -29610,7 +29610,7 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "6ac52603d39279302fffdf14c7254660482eedc69de87e298298be295e53776f",
+        "content_hash": "56c22c206b71428c38bdb920483e1087fcf71167b231ab40300da02d9ec5bf5e",
         "git_ref": "git-index-source-tree",
         "id": "file:.github/workflows/repo-validation.yml:3affb923d0",
         "mime": "application/yaml",
@@ -29649,7 +29649,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "6ac52603d39279302fffdf14c7254660482eedc69de87e298298be295e53776f",
+        "digest": "56c22c206b71428c38bdb920483e1087fcf71167b231ab40300da02d9ec5bf5e",
         "signature_ref": "",
         "verification_state": "digest-only"
       },
@@ -29791,7 +29791,7 @@
         "content_hash": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
         "git_ref": "git-index-source-tree",
         "id": "file:.gitignore:bc37d034ba",
-        "mime": "application/octet-stream",
+        "mime": "text/plain",
         "path": ".gitignore",
         "repo": "Agents-of-Abyss",
         "size_bytes": 34
@@ -32669,7 +32669,7 @@
         "content_hash": "0b81e2ea9cf9c447b3317b84e5bbaca9f3cf98a5d08ef8d754a3286f21c3392a",
         "git_ref": "git-index-source-tree",
         "id": "file:license:c693279643",
-        "mime": "application/octet-stream",
+        "mime": "text/plain",
         "path": "LICENSE",
         "repo": "Agents-of-Abyss",
         "size_bytes": 10775
@@ -41046,7 +41046,7 @@
         "surface": "docs/decisions/indexes/README.md"
       },
       "provenance": {
-        "generated_by": "scripts/generate_decision_indexes.py",
+        "generated_by": "scripts/docs_districts/generate_decision_indexes.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -41148,7 +41148,7 @@
         "surface": "docs/decisions/indexes/by-center-facet.md"
       },
       "provenance": {
-        "generated_by": "scripts/generate_decision_indexes.py",
+        "generated_by": "scripts/docs_districts/generate_decision_indexes.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -41390,7 +41390,7 @@
         "surface": "docs/decisions/indexes/by-date.md"
       },
       "provenance": {
-        "generated_by": "scripts/generate_decision_indexes.py",
+        "generated_by": "scripts/docs_districts/generate_decision_indexes.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -41569,7 +41569,7 @@
         "surface": "docs/decisions/indexes/by-guard.md"
       },
       "provenance": {
-        "generated_by": "scripts/generate_decision_indexes.py",
+        "generated_by": "scripts/docs_districts/generate_decision_indexes.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -41769,7 +41769,7 @@
         "surface": "docs/decisions/indexes/by-mechanic.md"
       },
       "provenance": {
-        "generated_by": "scripts/generate_decision_indexes.py",
+        "generated_by": "scripts/docs_districts/generate_decision_indexes.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -41906,7 +41906,7 @@
         "surface": "docs/decisions/indexes/by-number.md"
       },
       "provenance": {
-        "generated_by": "scripts/generate_decision_indexes.py",
+        "generated_by": "scripts/docs_districts/generate_decision_indexes.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -42001,7 +42001,7 @@
         "surface": "docs/decisions/indexes/by-surface.md"
       },
       "provenance": {
-        "generated_by": "scripts/generate_decision_indexes.py",
+        "generated_by": "scripts/docs_districts/generate_decision_indexes.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -42215,7 +42215,7 @@
         "surface": "docs/decisions/indexes/index_contract.yaml"
       },
       "provenance": {
-        "generated_by": "scripts/generate_decision_indexes.py",
+        "generated_by": "scripts/docs_districts/generate_decision_indexes.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46012,7 +46012,7 @@
         "surface": "generated/README.md"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46135,7 +46135,7 @@
         "surface": "generated/agents_mesh.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46224,7 +46224,7 @@
         "surface": "generated/center_entry_map.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "scripts/center_entry/build_center_entry_map.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46313,7 +46313,7 @@
         "surface": "generated/docs_thematic_index.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46402,7 +46402,7 @@
         "surface": "generated/ecosystem_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46491,7 +46491,7 @@
         "surface": "generated/federation_supporting_inventory.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46580,7 +46580,7 @@
         "surface": "generated/link_shape_hygiene.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "scripts/hygiene/build_link_shape_hygiene_index.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46669,7 +46669,7 @@
         "surface": "generated/mechanic_card_index.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "scripts/mechanics_topology/build_mechanic_card_index.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46758,7 +46758,7 @@
         "surface": "generated/owner_request_queue.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "scripts/owner_requests/build_owner_request_queue.py",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46847,7 +46847,7 @@
         "surface": "generated/questbook_frontier.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -46936,7 +46936,7 @@
         "surface": "generated/questbook_index.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -47025,7 +47025,7 @@
         "surface": "generated/questbook_relations.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -63994,7 +63994,7 @@
         "surface": "mechanics/agon/parts/compatibility-bridges/generated/agon_ccs_law_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -64083,7 +64083,7 @@
         "surface": "mechanics/agon/parts/compatibility-bridges/generated/agon_slc_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -65757,7 +65757,7 @@
         "surface": "mechanics/agon/parts/duel-kernel/generated/agon_duel_kernel_model_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -65846,7 +65846,7 @@
         "surface": "mechanics/agon/parts/duel-kernel/generated/agon_mechanical_trial_suite_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -67698,7 +67698,7 @@
         "surface": "mechanics/agon/parts/epistemic-kag/generated/agon_epistemic_agon_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -67787,7 +67787,7 @@
         "surface": "mechanics/agon/parts/epistemic-kag/generated/agon_kag_promotion_path_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -73641,7 +73641,7 @@
         "surface": "mechanics/agon/parts/packet-arena/generated/agon_arena_session_model_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -73730,7 +73730,7 @@
         "surface": "mechanics/agon/parts/packet-arena/generated/agon_state_packet_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -81918,7 +81918,7 @@
         "surface": "mechanics/agon/parts/verdict-retention-rank/generated/agon_court_memo_stats_prebinding_request.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -82007,7 +82007,7 @@
         "surface": "mechanics/agon/parts/verdict-retention-rank/generated/agon_retention_rank_economy_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -82096,7 +82096,7 @@
         "surface": "mechanics/agon/parts/verdict-retention-rank/generated/agon_vds_bridge_registry.min.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -206414,7 +206414,7 @@
         "surface": "mechanics/rpg/parts/vocabulary-overlay/generated/dual_vocabulary_overlay.json"
       },
       "provenance": {
-        "generated_by": "scripts/generate_kag.py",
+        "generated_by": "",
         "materials": [],
         "observed_by": "aoa-kag:scripts/generate_repo_local_kag_index.py",
         "source_refs": [
@@ -207750,7 +207750,7 @@
         "content_hash": "f660a7996deacfbc7560e4240054a8ad82eb02fe25a95064257e07084bcacb85",
         "git_ref": "git-index-source-tree",
         "id": "file:memo/candidates/.gitkeep:7a4b28e1a9",
-        "mime": "application/octet-stream",
+        "mime": "text/plain",
         "path": "memo/candidates/.gitkeep",
         "repo": "Agents-of-Abyss",
         "size_bytes": 5
@@ -207837,7 +207837,7 @@
         "content_hash": "f660a7996deacfbc7560e4240054a8ad82eb02fe25a95064257e07084bcacb85",
         "git_ref": "git-index-source-tree",
         "id": "file:memo/exports/.gitkeep:d77c10c9ba",
-        "mime": "application/octet-stream",
+        "mime": "text/plain",
         "path": "memo/exports/.gitkeep",
         "repo": "Agents-of-Abyss",
         "size_bytes": 5
@@ -208013,7 +208013,7 @@
         "content_hash": "f660a7996deacfbc7560e4240054a8ad82eb02fe25a95064257e07084bcacb85",
         "git_ref": "git-index-source-tree",
         "id": "file:memo/local/.gitkeep:c612a98de6",
-        "mime": "application/octet-stream",
+        "mime": "text/plain",
         "path": "memo/local/.gitkeep",
         "repo": "Agents-of-Abyss",
         "size_bytes": 5
@@ -208100,7 +208100,7 @@
         "content_hash": "f660a7996deacfbc7560e4240054a8ad82eb02fe25a95064257e07084bcacb85",
         "git_ref": "git-index-source-tree",
         "id": "file:memo/receipts/.gitkeep:eb3b036b02",
-        "mime": "application/octet-stream",
+        "mime": "text/plain",
         "path": "memo/receipts/.gitkeep",
         "repo": "Agents-of-Abyss",
         "size_bytes": 5
@@ -208187,7 +208187,7 @@
         "content_hash": "8412d838e09c741bdc12a64db99e57213e47d225fda9c243734169c8a82085d6",
         "git_ref": "git-index-source-tree",
         "id": "file:pytest.ini:fb6a686182",
-        "mime": "application/octet-stream",
+        "mime": "text/plain",
         "path": "pytest.ini",
         "repo": "Agents-of-Abyss",
         "size_bytes": 234
