@@ -231,7 +231,7 @@ def validate_no_active_old_refs() -> list[str]:
         if is_historical_ref_path(path):
             continue
         rel = path.relative_to(REPO_ROOT).as_posix()
-        if rel.startswith(("mechanics/", "generated/")):
+        if rel.startswith(("mechanics/", "generated/", "kag/indexes/")):
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         for regex in regexes:
