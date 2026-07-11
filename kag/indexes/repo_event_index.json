@@ -1,0 +1,2495 @@
+{
+  "entries": [
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ad73d5ea4c22ef2f8c41",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-dry-run-first/scripts/dry_run_contract.py",
+      "source_record_id": "file:.agents/skills/aoa-dry-run-first/scripts/dry_run_contract.py:e1480fe2d2"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:2e4331abe4bd2cb77ae9",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-dry-run-first/scripts/preview_gap_check.py",
+      "source_record_id": "file:.agents/skills/aoa-dry-run-first/scripts/preview_gap_check.py:0ea89b83a2"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3332ab5f4c9df6ea1143",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-local-stack-bringup/scripts/bringup_contract.py",
+      "source_record_id": "file:.agents/skills/aoa-local-stack-bringup/scripts/bringup_contract.py:65fb7d4d41"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:794f8c62029f502592b8",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-local-stack-bringup/scripts/readiness_summary.py",
+      "source_record_id": "file:.agents/skills/aoa-local-stack-bringup/scripts/readiness_summary.py:b9778391e0"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:645b51aa73a6883c3100",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-safe-infra-change/scripts/infra_change_contract.py",
+      "source_record_id": "file:.agents/skills/aoa-safe-infra-change/scripts/infra_change_contract.py:f074327882"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:c5a0824e6a02592e6f60",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-safe-infra-change/scripts/risk_surface_scan.py",
+      "source_record_id": "file:.agents/skills/aoa-safe-infra-change/scripts/risk_surface_scan.py:4783038b81"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a207eab21b0d6066d1ac",
+      "observation_state": "declared",
+      "path": ".agents/spark/scripts/validate_spark_lane.py",
+      "source_record_id": "file:.agents/spark/scripts/validate_spark_lane.py:80adbf9807"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0b9db98649820d60aee1",
+      "observation_state": "declared",
+      "path": ".agents/spark/tests/test_spark_lane.py",
+      "source_record_id": "file:.agents/spark/tests/test_spark_lane.py:2b31a3041f"
+    },
+    {
+      "event_kind": "workflow_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:47896b18cfd6188830ea",
+      "observation_state": "declared",
+      "path": ".github/workflows/repo-validation.yml",
+      "source_record_id": "file:.github/workflows/repo-validation.yml:3affb923d0"
+    },
+    {
+      "event_kind": "workflow_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6472fc2e2d9c691b92fc",
+      "observation_state": "declared",
+      "path": ".github/workflows/source-side-smoke.yml",
+      "source_record_id": "file:.github/workflows/source-side-smoke.yml:0060e88d9a"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "020-2026-04-10",
+        "level": 2,
+        "line": 334,
+        "ref": "CHANGELOG.md#020-2026-04-10",
+        "title": "[0.2.0] - 2026-04-10"
+      },
+      "id": "event:repo:11541f78adf5b0a133be",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "021-2026-04-12",
+        "level": 2,
+        "line": 302,
+        "ref": "CHANGELOG.md#021-2026-04-12",
+        "title": "[0.2.1] - 2026-04-12"
+      },
+      "id": "event:repo:144e069388064eaec954",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "022-2026-04-19",
+        "level": 2,
+        "line": 271,
+        "ref": "CHANGELOG.md#022-2026-04-19",
+        "title": "[0.2.2] - 2026-04-19"
+      },
+      "id": "event:repo:54c250e5bbcd573535ef",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "040-2026-04-30",
+        "level": 2,
+        "line": 46,
+        "ref": "CHANGELOG.md#040-2026-04-30",
+        "title": "[0.4.0] - 2026-04-30"
+      },
+      "id": "event:repo:b4abfb73a4f7bee9e313",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "010-2026-04-01",
+        "level": 2,
+        "line": 378,
+        "ref": "CHANGELOG.md#010-2026-04-01",
+        "title": "[0.1.0] - 2026-04-01"
+      },
+      "id": "event:repo:dde5cfe67fbab9dd9f68",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "023-2026-04-23",
+        "level": 2,
+        "line": 194,
+        "ref": "CHANGELOG.md#023-2026-04-23",
+        "title": "[0.2.3] - 2026-04-23"
+      },
+      "id": "event:repo:fb266e29904d50bae5cd",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_lane",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "unreleased",
+        "level": 2,
+        "line": 8,
+        "ref": "CHANGELOG.md#unreleased",
+        "title": "[Unreleased]"
+      },
+      "id": "event:repo:9da1ba1dffb5a743dc3a",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:681107088aeac1b2912c",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0001-aoa-stats-public-layer.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0001-aoa-stats-public-layer.md:d286dd31f5"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:d2f3daf13e4801dd6e30",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0002-federation-release-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0002-federation-release-contract.md:be6274a9a8"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:240259f63934f490ea90",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0003-growth-refinery-lineage-route.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0003-growth-refinery-lineage-route.md:f00966e2ca"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:e38b1d1fa1f09e47cc51",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0004-mechanics-validation-command-authority.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0004-mechanics-validation-command-authority.md:03c0722147"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:62f1b15c00f1bcbde950",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0005-questbook-model-spine-and-route-registries.md:f0dff15ff6"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:802c0ceeeedf274adab8",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0006-questbook-source-contract-full-distillation.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0006-questbook-source-contract-full-distillation.md:52b43069d3"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:66ba3f8b5fcbf7f3bf55",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0007-docs-guardrails-and-mechanic-receipts.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0007-docs-guardrails-and-mechanic-receipts.md:b5957fed95"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:59daa31e57e53494b104",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0008-audit-mechanic-planting.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0008-audit-mechanic-planting.md:544d6f382d"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:0a51587a25e0b845d249",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0009-decision-memory-gate.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0009-decision-memory-gate.md:f9e7e140e1"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:731633d520aa9df8a881",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0010-docs-root-source-tightening.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0010-docs-root-source-tightening.md:edb1ee82de"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:b8ec9996e0bf9a29d981",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0011-ecosystem-registry-v2-landing.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0011-ecosystem-registry-v2-landing.md:38e62d6bc9"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:d8a459a2e0ced34e8c5c",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0012-generated-district-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0012-generated-district-contract.md:51c276e140"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:59c1eef3d0de28ff8ebe",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0013-root-examples-district-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0013-root-examples-district-contract.md:8ea9172e06"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:76d3b4b0fc42062e361a",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0014-root-manifest-district-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0014-root-manifest-district-contract.md:a25db31584"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:2fa4eeee3166f262440f",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0015-traces-mode-hardening.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0015-traces-mode-hardening.md:9c22d07196"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:7ee4e429ba396188e783",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0016-entry-validation-baseline.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0016-entry-validation-baseline.md:7137b033f3"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:aa3a0fc24f12dc0c6e42",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0017-github-landing-workflow.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0017-github-landing-workflow.md:4daacab9a5"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:58833f50b70df8806626",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0018-organ-contract-center-law.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0018-organ-contract-center-law.md:9a25eacc2d"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:26f20c911e8f6e3aefa8",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0019-release-preflight-route-surface.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0019-release-preflight-route-surface.md:f2c483ede7"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:7f859b8463b8ca72732f",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0020-roadmap-horizon-direction-route.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0020-roadmap-horizon-direction-route.md:884b2ca9a0"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:cf2a53155244ed3ce26f",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0021-root-schema-district-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0021-root-schema-district-contract.md:c55933229f"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:a4dec889c59658cea47c",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0022-root-scripts-district-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0022-root-scripts-district-contract.md:4275e6b1c1"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:67ba6f680834425698fe",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0023-root-tests-district-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0023-root-tests-district-contract.md:216740bf0b"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:cef03bd7483db729b94e",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0024-spark-session-lane-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0024-spark-session-lane-contract.md:998e8874b2"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:72e4149c62ad20c3c3b4",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0025-root-design-surface.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0025-root-design-surface.md:27cd79185e"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:e859031609bae4516933",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0026-agent-surface-design-root.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0026-agent-surface-design-root.md:b133229c9d"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:679ee1dfe142d8c1ab75",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0027-codex-spark-agent-lane-home.md:1beeef509d"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:a8ef4a5a099b998c18b1",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0028-canonical-decision-ids-and-indexes.md:cbabb583c1"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:4b4bb878177c586433d9",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0029-root-scripts-family-topology.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0029-root-scripts-family-topology.md:91cafa73dd"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:c025f777ee02d4c8b175",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md",
+      "source_record_id": "file:docs/decisions/aoa-center-d-0030-os-abyss-artifact-trust-plane.md:1ea0fe0ae3"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:f732e0d6468d598f5681",
+      "observation_state": "declared",
+      "path": "docs/decisions/TEMPLATE.md",
+      "source_record_id": "file:docs/decisions/template.md:874770b824"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:08a4b68c19db5caee6cc",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-center-facet.md",
+      "source_record_id": "file:docs/decisions/indexes/by-center-facet.md:d8b013c93d"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:561cc5e11ba8d31c0a3b",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-date.md",
+      "source_record_id": "file:docs/decisions/indexes/by-date.md:7f76a83a93"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:7d42e4f8007c9c360ff4",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-guard.md",
+      "source_record_id": "file:docs/decisions/indexes/by-guard.md:8ae406686a"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:f8f0c3f1753635e71d0e",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-mechanic.md",
+      "source_record_id": "file:docs/decisions/indexes/by-mechanic.md:ebd094489b"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:be5149cc9c238392c290",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-number.md",
+      "source_record_id": "file:docs/decisions/indexes/by-number.md:02e6940a39"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:c072e8b83f3d0b9cde91",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-surface.md",
+      "source_record_id": "file:docs/decisions/indexes/by-surface.md:acd156903f"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:ebe51ff49bc148ea97d6",
+      "observation_state": "observed",
+      "path": "kag/receipts/validation_receipt.json",
+      "source_record_id": "file:kag/receipts/validation_receipt.json:8e616be0cd"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:dc46bee98da40a53e3cb",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/compatibility-bridges/scripts/build_agon_ccs_law_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/compatibility-bridges/scripts/build_agon_ccs_law_registry.py:3657550f61"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0e74d4ef750100afc9b1",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/compatibility-bridges/scripts/build_agon_slc_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/compatibility-bridges/scripts/build_agon_slc_registry.py:e5f0e20977"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ede4fa3a0728ad068949",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/compatibility-bridges/scripts/validate_agon_ccs_laws.py",
+      "source_record_id": "file:mechanics/agon/parts/compatibility-bridges/scripts/validate_agon_ccs_laws.py:b5a89583a9"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:18b017e75b895eef81cb",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/compatibility-bridges/scripts/validate_agon_slc_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/compatibility-bridges/scripts/validate_agon_slc_registry.py:f56be53d98"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:150c992fddcb8295f71c",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/compatibility-bridges/tests/test_agon_ccs_laws.py",
+      "source_record_id": "file:mechanics/agon/parts/compatibility-bridges/tests/test_agon_ccs_laws.py:b82f53e7cc"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:09d5352a327323220b28",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/compatibility-bridges/tests/test_agon_slc_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/compatibility-bridges/tests/test_agon_slc_registry.py:01ec664446"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b458220c64a6ede93bd5",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/duel-kernel/scripts/build_agon_duel_kernel_model_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/duel-kernel/scripts/build_agon_duel_kernel_model_registry.py:32bf7bc29b"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3f53acf96e3a0dfb8df4",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/duel-kernel/scripts/build_agon_mechanical_trial_suite_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/duel-kernel/scripts/build_agon_mechanical_trial_suite_registry.py:74ac8425ec"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:26c113bc20834245f0d6",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/duel-kernel/scripts/validate_agon_duel_kernel_models.py",
+      "source_record_id": "file:mechanics/agon/parts/duel-kernel/scripts/validate_agon_duel_kernel_models.py:3224a79c06"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:fb6ef957b3adc615911a",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/duel-kernel/scripts/validate_agon_mechanical_trial_suites.py",
+      "source_record_id": "file:mechanics/agon/parts/duel-kernel/scripts/validate_agon_mechanical_trial_suites.py:eb76652290"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9409ed75ba85c6c5dacb",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/duel-kernel/tests/test_agon_duel_kernel_models.py",
+      "source_record_id": "file:mechanics/agon/parts/duel-kernel/tests/test_agon_duel_kernel_models.py:eecc21e76a"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:50687cf9bb3762cdc9fc",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/duel-kernel/tests/test_agon_mechanical_trial_suites.py",
+      "source_record_id": "file:mechanics/agon/parts/duel-kernel/tests/test_agon_mechanical_trial_suites.py:8e6f769720"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ab13bb384b1962fc0531",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/epistemic-kag/scripts/build_agon_epistemic_agon_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/epistemic-kag/scripts/build_agon_epistemic_agon_registry.py:8d0f22e2ac"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3c49468877ff2175af2d",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/epistemic-kag/scripts/build_agon_kag_promotion_path_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/epistemic-kag/scripts/build_agon_kag_promotion_path_registry.py:0346ead476"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:25d8999e0fe3a23bbf91",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/epistemic-kag/scripts/validate_agon_epistemic_agon.py",
+      "source_record_id": "file:mechanics/agon/parts/epistemic-kag/scripts/validate_agon_epistemic_agon.py:b585394b1c"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:598e03a4f7c0a421bd72",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/epistemic-kag/scripts/validate_agon_kag_promotion_path_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/epistemic-kag/scripts/validate_agon_kag_promotion_path_registry.py:f50ebd7c60"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:90f46ca62498fa15ffd0",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/epistemic-kag/tests/test_agon_epistemic_agon.py",
+      "source_record_id": "file:mechanics/agon/parts/epistemic-kag/tests/test_agon_epistemic_agon.py:89d04a4320"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:eca68288e50c799d6dea",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/epistemic-kag/tests/test_agon_kag_promotion_path_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/epistemic-kag/tests/test_agon_kag_promotion_path_registry.py:a3d93ad684"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:40b3fdbd1f5550bd3b32",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py",
+      "source_record_id": "file:mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py:d5a30a645d"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e53b3db374f256d91e47",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py",
+      "source_record_id": "file:mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py:fe70698168"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:8828c07892b8a3901d52",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py",
+      "source_record_id": "file:mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py:08cfc38e2d"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f75f5b90570eb47ce503",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/imposition-readiness/scripts/agon_imposition_common.py",
+      "source_record_id": "file:mechanics/agon/parts/imposition-readiness/scripts/agon_imposition_common.py:dee07bd697"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6a2cb350b9d4150490f7",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/imposition-readiness/scripts/build_agon_imposition_readiness.py",
+      "source_record_id": "file:mechanics/agon/parts/imposition-readiness/scripts/build_agon_imposition_readiness.py:e932729772"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ff2b7eb142e67261f5ef",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py",
+      "source_record_id": "file:mechanics/agon/parts/imposition-readiness/scripts/validate_agon_imposition_readiness.py:9d2d6f9e86"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3a1df653f4fcbc4b824c",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/imposition-readiness/tests/test_agon_imposition_readiness.py",
+      "source_record_id": "file:mechanics/agon/parts/imposition-readiness/tests/test_agon_imposition_readiness.py:668dd60ab0"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9f519e57fae7b4c5bff9",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/lawful-move-grammar/scripts/build_agon_lawful_move_registry.py:b90e76b12e"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:866a3718e58c87ff488f",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py",
+      "source_record_id": "file:mechanics/agon/parts/lawful-move-grammar/scripts/validate_agon_lawful_moves.py:db7b128a5c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:bb7ac80f56f49f3a3ea2",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/lawful-move-grammar/tests/test_agon_lawful_moves.py",
+      "source_record_id": "file:mechanics/agon/parts/lawful-move-grammar/tests/test_agon_lawful_moves.py:e3ec2aefc9"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:dc2af8d4377de7b23366",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py:2dc9485399"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b07288d466a5b11fe427",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py",
+      "source_record_id": "file:mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py:59297f1f5a"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:8aa4d5df39720b1e2c95",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py",
+      "source_record_id": "file:mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py:f3f96ea936"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:188def36cc77f023e17d",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/packet-arena/scripts/build_agon_arena_session_model_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/packet-arena/scripts/build_agon_arena_session_model_registry.py:96ae10c607"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ecbe26343d4034170fcd",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/packet-arena/scripts/build_agon_state_packet_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/packet-arena/scripts/build_agon_state_packet_registry.py:b537c67803"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:2cf69fda13ea100687c1",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/packet-arena/scripts/validate_agon_arena_session_models.py",
+      "source_record_id": "file:mechanics/agon/parts/packet-arena/scripts/validate_agon_arena_session_models.py:5560e6fefd"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:c722fa3d7cf0deb8f6b6",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/packet-arena/scripts/validate_agon_state_packets.py",
+      "source_record_id": "file:mechanics/agon/parts/packet-arena/scripts/validate_agon_state_packets.py:9f1f3aa3a2"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b49ea31d614cdbb83a98",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/packet-arena/tests/test_agon_arena_session_models.py",
+      "source_record_id": "file:mechanics/agon/parts/packet-arena/tests/test_agon_arena_session_models.py:f91d6025af"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:79a1b40316ee9c695ad4",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/packet-arena/tests/test_agon_state_packets.py",
+      "source_record_id": "file:mechanics/agon/parts/packet-arena/tests/test_agon_state_packets.py:cdee49e213"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:2a2d01e014c19d2f0f8f",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/recurrence-adapter/scripts/build_agon_recurrence_adapter_request.py",
+      "source_record_id": "file:mechanics/agon/parts/recurrence-adapter/scripts/build_agon_recurrence_adapter_request.py:081a0e4ab5"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:df54c5f3b99c00213c31",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_adapter_request.py",
+      "source_record_id": "file:mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_adapter_request.py:dd973803ac"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ce70e1b68bdcf5e42666",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_manifests.py",
+      "source_record_id": "file:mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_manifests.py:4cc558483c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a8bf17812b75eec33d4b",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/recurrence-adapter/tests/test_agon_recurrence_adapter_request.py",
+      "source_record_id": "file:mechanics/agon/parts/recurrence-adapter/tests/test_agon_recurrence_adapter_request.py:a415481286"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:dee6fc09a67523f7ce1f",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/recurrence-adapter/tests/test_agon_recurrence_manifests.py",
+      "source_record_id": "file:mechanics/agon/parts/recurrence-adapter/tests/test_agon_recurrence_manifests.py:7dc7f7ac3c"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:dccd43d593fe16e41a24",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/sophian-threshold/scripts/build_agon_sophian_threshold_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/sophian-threshold/scripts/build_agon_sophian_threshold_registry.py:0124df4f2e"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:c84d9b65a3062bc6b9a3",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/sophian-threshold/scripts/validate_agon_sophian_threshold_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/sophian-threshold/scripts/validate_agon_sophian_threshold_registry.py:7d46e59b2b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ee913062d686208cc8df",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/sophian-threshold/tests/test_agon_sophian_threshold_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/sophian-threshold/tests/test_agon_sophian_threshold_registry.py:5a5967ec77"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ad2e1a77e4fba8b07ff0",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/trial-handoff/scripts/build_agon_trial_playbook_request.py",
+      "source_record_id": "file:mechanics/agon/parts/trial-handoff/scripts/build_agon_trial_playbook_request.py:4b727906fa"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6b8151a1ce934caf165f",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/trial-handoff/scripts/validate_agon_trial_playbook_request.py",
+      "source_record_id": "file:mechanics/agon/parts/trial-handoff/scripts/validate_agon_trial_playbook_request.py:914a8b8330"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b6aad1155617d1376f19",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/trial-handoff/tests/test_agon_trial_playbook_request.py",
+      "source_record_id": "file:mechanics/agon/parts/trial-handoff/tests/test_agon_trial_playbook_request.py:0398540a9d"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:7a333a737d5b33ed9c2b",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/build_agon_court_memo_stats_prebinding_request.py",
+      "source_record_id": "file:mechanics/agon/parts/verdict-retention-rank/scripts/build_agon_court_memo_stats_prebinding_request.py:fdf24146d8"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3599cb27924b2c47d49e",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/build_agon_retention_rank_economy_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/verdict-retention-rank/scripts/build_agon_retention_rank_economy_registry.py:2f3cb3b10d"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:237145f7a918dc17eed7",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/build_agon_vds_bridge_registry.py",
+      "source_record_id": "file:mechanics/agon/parts/verdict-retention-rank/scripts/build_agon_vds_bridge_registry.py:0a06c7e79c"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:bb8b788c77a8434a417d",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_court_memo_stats_prebinding_request.py",
+      "source_record_id": "file:mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_court_memo_stats_prebinding_request.py:0aaf1918c4"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1e93026257080761d0d4",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_retention_rank_economy.py",
+      "source_record_id": "file:mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_retention_rank_economy.py:88f3ca6129"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:858e7249a7caa786ad16",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_vds_bridges.py",
+      "source_record_id": "file:mechanics/agon/parts/verdict-retention-rank/scripts/validate_agon_vds_bridges.py:6a47dd12d2"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9f049a5fb7d156a70231",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/verdict-retention-rank/tests/test_agon_court_memo_stats_prebinding_request.py",
+      "source_record_id": "file:mechanics/agon/parts/verdict-retention-rank/tests/test_agon_court_memo_stats_prebinding_request.py:45034f0835"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f87c5b993907891aea04",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/verdict-retention-rank/tests/test_agon_retention_rank_economy.py",
+      "source_record_id": "file:mechanics/agon/parts/verdict-retention-rank/tests/test_agon_retention_rank_economy.py:dea7f6a011"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e5145b89dbf44701df4f",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/verdict-retention-rank/tests/test_agon_vds_bridges.py",
+      "source_record_id": "file:mechanics/agon/parts/verdict-retention-rank/tests/test_agon_vds_bridges.py:f284100f17"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:47aae2879b3c39c1da26",
+      "observation_state": "declared",
+      "path": "mechanics/agon/scripts/validate_agon_distillation.py",
+      "source_record_id": "file:mechanics/agon/scripts/validate_agon_distillation.py:79fb1eb1c2"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b4e1735da6ac92465fa5",
+      "observation_state": "declared",
+      "path": "mechanics/agon/tests/test_agon_distillation.py",
+      "source_record_id": "file:mechanics/agon/tests/test_agon_distillation.py:e40005c8a0"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:d0e5011748f132a3f422",
+      "observation_state": "declared",
+      "path": "mechanics/antifragility/scripts/validate_antifragility_distillation.py",
+      "source_record_id": "file:mechanics/antifragility/scripts/validate_antifragility_distillation.py:d04dd447bf"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ce5d6334ab66dfec926e",
+      "observation_state": "declared",
+      "path": "mechanics/antifragility/tests/test_via_negativa_surfaces.py",
+      "source_record_id": "file:mechanics/antifragility/tests/test_via_negativa_surfaces.py:adf1512a78"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:25e6b2ff58e63fad5808",
+      "observation_state": "declared",
+      "path": "mechanics/audit/scripts/validate_audit_distillation.py",
+      "source_record_id": "file:mechanics/audit/scripts/validate_audit_distillation.py:e0897d7374"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6ca6a9a701d4246b4b90",
+      "observation_state": "declared",
+      "path": "mechanics/audit/tests/test_audit_distillation.py",
+      "source_record_id": "file:mechanics/audit/tests/test_audit_distillation.py:41b71658ea"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:93c0b7e56d82a5dbdbc0",
+      "observation_state": "declared",
+      "path": "mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py",
+      "source_record_id": "file:mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py:349e00b117"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6fa24f0542d241c9fa86",
+      "observation_state": "declared",
+      "path": "mechanics/boundary-bridge/tests/test_boundary_bridge_distillation.py",
+      "source_record_id": "file:mechanics/boundary-bridge/tests/test_boundary_bridge_distillation.py:864a265490"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:8b60d91690d1a3bdb283",
+      "observation_state": "declared",
+      "path": "mechanics/checkpoint/scripts/validate_checkpoint_mechanic.py",
+      "source_record_id": "file:mechanics/checkpoint/scripts/validate_checkpoint_mechanic.py:10e7ea3028"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f572394f40907984afa8",
+      "observation_state": "declared",
+      "path": "mechanics/checkpoint/tests/test_checkpoint_mechanic.py",
+      "source_record_id": "file:mechanics/checkpoint/tests/test_checkpoint_mechanic.py:b200cb6670"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e3b35d9e10914ca49521",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/scripts/validate_distillation_mechanic.py",
+      "source_record_id": "file:mechanics/distillation/scripts/validate_distillation_mechanic.py:c7bfa28f90"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:caf81dee1404c4be721a",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_mechanic.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_mechanic.py:32c2652f21"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:dd813442efcc1fcff01e",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/adoption-federation/scripts/validate_adoption_federation.py",
+      "source_record_id": "file:mechanics/experience/parts/adoption-federation/scripts/validate_adoption_federation.py:86be40dbd9"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:88f7ae32e32053739185",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/adoption-federation/tests/test_adoption_federation.py",
+      "source_record_id": "file:mechanics/experience/parts/adoption-federation/tests/test_adoption_federation.py:fcf896ce06"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:cbf53bf6c6c8f949f596",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py",
+      "source_record_id": "file:mechanics/experience/parts/capture-kernel/scripts/validate_capture_kernel.py:b829cd6760"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:774c524e61fdaeeabf20",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/capture-kernel/tests/test_capture_kernel.py",
+      "source_record_id": "file:mechanics/experience/parts/capture-kernel/tests/test_capture_kernel.py:c719e76b4d"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f461b074015731e1ec04",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/certification-proof/scripts/validate_certification_proof.py",
+      "source_record_id": "file:mechanics/experience/parts/certification-proof/scripts/validate_certification_proof.py:a8c620e754"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:23935b5a4e0a59bce231",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/certification-proof/tests/test_certification_proof.py",
+      "source_record_id": "file:mechanics/experience/parts/certification-proof/tests/test_certification_proof.py:035577adb4"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:723238b2406d359fd5f6",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/compatibility-bridges/scripts/validate_agonic_pair_trials_bridge.py",
+      "source_record_id": "file:mechanics/experience/parts/compatibility-bridges/scripts/validate_agonic_pair_trials_bridge.py:1a1a0a83c4"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3fb2cd935c1b50592fee",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/compatibility-bridges/scripts/validate_epistemic_duel_bridge.py",
+      "source_record_id": "file:mechanics/experience/parts/compatibility-bridges/scripts/validate_epistemic_duel_bridge.py:da2d809d30"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:c37e9bc3fff7bdd15e23",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/compatibility-bridges/tests/test_agonic_pair_trials_bridge.py",
+      "source_record_id": "file:mechanics/experience/parts/compatibility-bridges/tests/test_agonic_pair_trials_bridge.py:d4abe8c971"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:926448fcb4f33868e966",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/compatibility-bridges/tests/test_epistemic_duel_bridge.py",
+      "source_record_id": "file:mechanics/experience/parts/compatibility-bridges/tests/test_epistemic_duel_bridge.py:ad700ad98a"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3b226941d478cca00bad",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/continuity-context/scripts/validate_affective_economy.py",
+      "source_record_id": "file:mechanics/experience/parts/continuity-context/scripts/validate_affective_economy.py:c38ccf57af"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a75da432645a8ef01601",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/continuity-context/scripts/validate_context_memory_weaving.py",
+      "source_record_id": "file:mechanics/experience/parts/continuity-context/scripts/validate_context_memory_weaving.py:d860db0222"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e4ca8cecd6def6bc5aec",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/continuity-context/scripts/validate_context_routing.py",
+      "source_record_id": "file:mechanics/experience/parts/continuity-context/scripts/validate_context_routing.py:63b5f811eb"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:590c9ee6194cf10009aa",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/continuity-context/scripts/validate_living_workspace_continuity.py",
+      "source_record_id": "file:mechanics/experience/parts/continuity-context/scripts/validate_living_workspace_continuity.py:15382fec2c"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6d33c33a6be90394fd81",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/continuity-context/scripts/validate_memory_rank_reputation.py",
+      "source_record_id": "file:mechanics/experience/parts/continuity-context/scripts/validate_memory_rank_reputation.py:41afc67ff7"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:64500f8443d49ef79269",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/continuity-context/tests/test_affective_economy.py",
+      "source_record_id": "file:mechanics/experience/parts/continuity-context/tests/test_affective_economy.py:6ff9b6391a"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:eef38a96b4ed9000d51c",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/continuity-context/tests/test_context_memory_weaving.py",
+      "source_record_id": "file:mechanics/experience/parts/continuity-context/tests/test_context_memory_weaving.py:86a1e91e3a"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:2739f51110193538ecbf",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/continuity-context/tests/test_context_routing.py",
+      "source_record_id": "file:mechanics/experience/parts/continuity-context/tests/test_context_routing.py:8444172fc8"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:de33aeef52acdbcdacb3",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/continuity-context/tests/test_living_workspace_continuity.py",
+      "source_record_id": "file:mechanics/experience/parts/continuity-context/tests/test_living_workspace_continuity.py:14906b3ec5"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9cdd93f688ba51935328",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/continuity-context/tests/test_memory_rank_reputation.py",
+      "source_record_id": "file:mechanics/experience/parts/continuity-context/tests/test_memory_rank_reputation.py:c77592685e"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:148160b941c21e689e02",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/governance-polis/scripts/validate_governance_polis.py",
+      "source_record_id": "file:mechanics/experience/parts/governance-polis/scripts/validate_governance_polis.py:60520e20cd"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e7e8bc29fa460ba5ca0e",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/governance-polis/tests/test_governance_polis.py",
+      "source_record_id": "file:mechanics/experience/parts/governance-polis/tests/test_governance_polis.py:0197d4c577"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:5a2fc5aa31147262763d",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/governance-polis/tests/test_governance_polis_seed_contracts.py",
+      "source_record_id": "file:mechanics/experience/parts/governance-polis/tests/test_governance_polis_seed_contracts.py:b834f633e5"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6ded485f6cc626d7339a",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/office-operations/scripts/validate_office_operations.py",
+      "source_record_id": "file:mechanics/experience/parts/office-operations/scripts/validate_office_operations.py:1cfe012a5d"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:7390910413a27962c78d",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/office-operations/scripts/validate_office_role_pairs.py",
+      "source_record_id": "file:mechanics/experience/parts/office-operations/scripts/validate_office_role_pairs.py:7bd987b4a4"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:d3c6be95d7b6f402a86c",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/office-operations/tests/test_office_operations.py",
+      "source_record_id": "file:mechanics/experience/parts/office-operations/tests/test_office_operations.py:894ec5e5dd"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:96b0d9e71aa28c9d8fc8",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/office-operations/tests/test_office_operations_seed_contracts.py",
+      "source_record_id": "file:mechanics/experience/parts/office-operations/tests/test_office_operations_seed_contracts.py:1ec92941bb"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:930217b3fa265f679b09",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/office-operations/tests/test_office_role_pairs.py",
+      "source_record_id": "file:mechanics/experience/parts/office-operations/tests/test_office_role_pairs.py:5d2844b88a"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:c21bf2339510c65898b8",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/release-deployment/scripts/validate_release_deployment.py",
+      "source_record_id": "file:mechanics/experience/parts/release-deployment/scripts/validate_release_deployment.py:ead67d1fde"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:471ee807dcb0ee644b75",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/release-deployment/tests/test_release_deployment.py",
+      "source_record_id": "file:mechanics/experience/parts/release-deployment/tests/test_release_deployment.py:44f6d23219"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6e77b200e6f6152800fd",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py",
+      "source_record_id": "file:mechanics/experience/parts/runtime-boundary/scripts/validate_runtime_boundary_bridge.py:0941a1b207"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9fcafc6310de63dcb3cf",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/runtime-boundary/tests/test_runtime_boundary_bridge.py",
+      "source_record_id": "file:mechanics/experience/parts/runtime-boundary/tests/test_runtime_boundary_bridge.py:39f010ff74"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6c41a723031aa57c22ba",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/service-mesh/scripts/validate_service_mesh.py",
+      "source_record_id": "file:mechanics/experience/parts/service-mesh/scripts/validate_service_mesh.py:c93de0348a"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3c4c4a67a69481ac6adf",
+      "observation_state": "declared",
+      "path": "mechanics/experience/parts/service-mesh/tests/test_service_mesh.py",
+      "source_record_id": "file:mechanics/experience/parts/service-mesh/tests/test_service_mesh.py:e081160aca"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:c313021120092af5707c",
+      "observation_state": "declared",
+      "path": "mechanics/experience/scripts/validate_experience_distillation.py",
+      "source_record_id": "file:mechanics/experience/scripts/validate_experience_distillation.py:dd1530dc2c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e52cd4e4e19de54e995f",
+      "observation_state": "declared",
+      "path": "mechanics/experience/tests/test_experience_distillation.py",
+      "source_record_id": "file:mechanics/experience/tests/test_experience_distillation.py:01f8bb2bf2"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:eec7c7e0788ef49b87fb",
+      "observation_state": "declared",
+      "path": "mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py",
+      "source_record_id": "file:mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py:f29db1646a"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:89fd4a3ca42f052ff8bc",
+      "observation_state": "declared",
+      "path": "mechanics/growth-cycle/tests/test_growth_cycle_mechanic.py",
+      "source_record_id": "file:mechanics/growth-cycle/tests/test_growth_cycle_mechanic.py:767534eb30"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:144e360f7b283e54b953",
+      "observation_state": "declared",
+      "path": "mechanics/method-growth/scripts/validate_candidate_lineage_contract.py",
+      "source_record_id": "file:mechanics/method-growth/scripts/validate_candidate_lineage_contract.py:4b52560b03"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ffd71120223002e0c9d2",
+      "observation_state": "declared",
+      "path": "mechanics/method-growth/scripts/validate_method_growth_mechanic.py",
+      "source_record_id": "file:mechanics/method-growth/scripts/validate_method_growth_mechanic.py:7feffe4124"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e606a808d23741b55dc4",
+      "observation_state": "declared",
+      "path": "mechanics/method-growth/scripts/validate_wave4_kernel_automation.py",
+      "source_record_id": "file:mechanics/method-growth/scripts/validate_wave4_kernel_automation.py:e9546624c5"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0c8b7548e37af2e800d4",
+      "observation_state": "declared",
+      "path": "mechanics/method-growth/tests/test_method_growth_mechanic.py",
+      "source_record_id": "file:mechanics/method-growth/tests/test_method_growth_mechanic.py:651322b4a2"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3cb2c6cc3a9a4aa27757",
+      "observation_state": "declared",
+      "path": "mechanics/method-growth/tests/test_validate_candidate_lineage_contract.py",
+      "source_record_id": "file:mechanics/method-growth/tests/test_validate_candidate_lineage_contract.py:8371987a4b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a2ddd45f2a74baeec1c5",
+      "observation_state": "declared",
+      "path": "mechanics/method-growth/tests/test_validate_wave4_kernel_automation.py",
+      "source_record_id": "file:mechanics/method-growth/tests/test_validate_wave4_kernel_automation.py:b9929cae49"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f561834a052c4f37dcc5",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/scripts/build_questbook_index.py",
+      "source_record_id": "file:mechanics/questbook/scripts/build_questbook_index.py:68bf85ba01"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:5e0c33d1c8a83738bc05",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/scripts/build_ready_owner_routes.py",
+      "source_record_id": "file:mechanics/questbook/scripts/build_ready_owner_routes.py:9749ef5fb1"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:360c83d9f3471388e0ca",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/scripts/validate_quest_relations.py",
+      "source_record_id": "file:mechanics/questbook/scripts/validate_quest_relations.py:fb6f306d96"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:691ca44d8ecdde70ad99",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/scripts/validate_questbook_distillation.py",
+      "source_record_id": "file:mechanics/questbook/scripts/validate_questbook_distillation.py:baf7117088"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:06b361943efbceca9190",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/scripts/validate_questbook_index.py",
+      "source_record_id": "file:mechanics/questbook/scripts/validate_questbook_index.py:fdbd91bc9e"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:af91d324b59e2637eb16",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/scripts/validate_questbook_lifecycle.py",
+      "source_record_id": "file:mechanics/questbook/scripts/validate_questbook_lifecycle.py:273b266ff5"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:d01280223b97e057e661",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/scripts/validate_questbook_source_contract.py",
+      "source_record_id": "file:mechanics/questbook/scripts/validate_questbook_source_contract.py:388e27d2c9"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:13b8505287e3daec487f",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/scripts/validate_ready_owner_routes.py",
+      "source_record_id": "file:mechanics/questbook/scripts/validate_ready_owner_routes.py:7fb428136e"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a2ae8805d25fdd693c8d",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/tests/test_questbook_distillation.py",
+      "source_record_id": "file:mechanics/questbook/tests/test_questbook_distillation.py:4c5c492e06"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9dd0e2eca8b1fbb0c7f2",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/tests/test_questbook_lifecycle.py",
+      "source_record_id": "file:mechanics/questbook/tests/test_questbook_lifecycle.py:255395fcfd"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a4598028ca369e4bc675",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/tests/test_questbook_source_contract.py",
+      "source_record_id": "file:mechanics/questbook/tests/test_questbook_source_contract.py:c5f4634983"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:18903077811910649e32",
+      "observation_state": "declared",
+      "path": "mechanics/recurrence/scripts/validate_recurrence_mechanic.py",
+      "source_record_id": "file:mechanics/recurrence/scripts/validate_recurrence_mechanic.py:150791fe29"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b82f6c09fbf3021f66a6",
+      "observation_state": "declared",
+      "path": "mechanics/recurrence/tests/test_recurrence_mechanic.py",
+      "source_record_id": "file:mechanics/recurrence/tests/test_recurrence_mechanic.py:40013107dc"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ab0e8d539dfe5221b338",
+      "observation_state": "declared",
+      "path": "mechanics/release-support/scripts/validate_release_support_distillation.py",
+      "source_record_id": "file:mechanics/release-support/scripts/validate_release_support_distillation.py:fe2d1d55a6"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1a0b792467ad85803476",
+      "observation_state": "declared",
+      "path": "mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py",
+      "source_record_id": "file:mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py:0c63036bd3"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:da2dd2194b059c38e639",
+      "observation_state": "declared",
+      "path": "mechanics/rpg/parts/vocabulary-overlay/tests/test_vocabulary_overlay.py",
+      "source_record_id": "file:mechanics/rpg/parts/vocabulary-overlay/tests/test_vocabulary_overlay.py:f3891da9eb"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0b34d0237935177bdc98",
+      "observation_state": "declared",
+      "path": "mechanics/rpg/scripts/validate_rpg_distillation.py",
+      "source_record_id": "file:mechanics/rpg/scripts/validate_rpg_distillation.py:29aa604b1b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:c8badf76d3ff5a9c89e6",
+      "observation_state": "declared",
+      "path": "mechanics/rpg/tests/test_rpg_distillation.py",
+      "source_record_id": "file:mechanics/rpg/tests/test_rpg_distillation.py:fcedfe57be"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:a8d364f1b2904c44ac83",
+      "observation_state": "observed",
+      "path": "memo/receipts/.gitkeep",
+      "source_record_id": "file:memo/receipts/.gitkeep:eb3b036b02"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:83c04cd5b330cf604d12",
+      "observation_state": "declared",
+      "path": "scripts/agents_mesh/build_agents_mesh_index.py",
+      "source_record_id": "file:scripts/agents_mesh/build_agents_mesh_index.py:d6fe07bcef"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f4eb4f8c70374e1281f4",
+      "observation_state": "declared",
+      "path": "scripts/agents_mesh/validate_agents_md_shape.py",
+      "source_record_id": "file:scripts/agents_mesh/validate_agents_md_shape.py:80036871c7"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:cdce7a51afd785fc6e45",
+      "observation_state": "declared",
+      "path": "scripts/agents_mesh/validate_agents_mesh.py",
+      "source_record_id": "file:scripts/agents_mesh/validate_agents_mesh.py:53b3254ea9"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:32e93eca806bdac714f3",
+      "observation_state": "declared",
+      "path": "scripts/agents_mesh/validate_agents_mesh_index.py",
+      "source_record_id": "file:scripts/agents_mesh/validate_agents_mesh_index.py:c11f07a005"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0560b7a27daa292c7ed9",
+      "observation_state": "declared",
+      "path": "scripts/agents_mesh/validate_nested_agents.py",
+      "source_record_id": "file:scripts/agents_mesh/validate_nested_agents.py:a33b52ee16"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:5044bc7f115807d5bfa4",
+      "observation_state": "declared",
+      "path": "scripts/center_entry/build_center_entry_map.py",
+      "source_record_id": "file:scripts/center_entry/build_center_entry_map.py:0585ebce82"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:29bca57a6f3390cbfb3b",
+      "observation_state": "declared",
+      "path": "scripts/center_entry/center_entry_map_common.py",
+      "source_record_id": "file:scripts/center_entry/center_entry_map_common.py:c71af5c4a0"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:65624d347fdddfdf8182",
+      "observation_state": "declared",
+      "path": "scripts/center_entry/validate_center_entry_map.py",
+      "source_record_id": "file:scripts/center_entry/validate_center_entry_map.py:bf714f12cd"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:86bf084a972740d95f22",
+      "observation_state": "declared",
+      "path": "scripts/center_entry/validate_entry_surface_sync.py",
+      "source_record_id": "file:scripts/center_entry/validate_entry_surface_sync.py:e41dca9142"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ce816c387d06bf223c24",
+      "observation_state": "declared",
+      "path": "scripts/docs_districts/build_docs_thematic_index.py",
+      "source_record_id": "file:scripts/docs_districts/build_docs_thematic_index.py:917b666573"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1c065fe53ab23cb973a5",
+      "observation_state": "declared",
+      "path": "scripts/docs_districts/generate_decision_indexes.py",
+      "source_record_id": "file:scripts/docs_districts/generate_decision_indexes.py:feda6a022b"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:2e6c3329dd9bc9942f0c",
+      "observation_state": "declared",
+      "path": "scripts/docs_districts/plan_docs_thematic_cleanup.py",
+      "source_record_id": "file:scripts/docs_districts/plan_docs_thematic_cleanup.py:d04a25270a"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:7b41dc9fa5b2812a13cb",
+      "observation_state": "declared",
+      "path": "scripts/docs_districts/validate_decision_records.py",
+      "source_record_id": "file:scripts/docs_districts/validate_decision_records.py:cf86e3b02f"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3de5e33f888eac1c9b96",
+      "observation_state": "declared",
+      "path": "scripts/docs_districts/validate_docs_migration_map.py",
+      "source_record_id": "file:scripts/docs_districts/validate_docs_migration_map.py:1a543cf580"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f21e59c5ab05463b7ea7",
+      "observation_state": "declared",
+      "path": "scripts/docs_districts/validate_docs_thematic_districts.py",
+      "source_record_id": "file:scripts/docs_districts/validate_docs_thematic_districts.py:0bf4d6a98f"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:8f01fc89c02ac8cc0b29",
+      "observation_state": "declared",
+      "path": "scripts/docs_districts/validate_docs_thematic_index.py",
+      "source_record_id": "file:scripts/docs_districts/validate_docs_thematic_index.py:bfab4580e4"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9ac5503b03a7eb58b3d5",
+      "observation_state": "declared",
+      "path": "scripts/docs_districts/validate_traces_district.py",
+      "source_record_id": "file:scripts/docs_districts/validate_traces_district.py:c1fffdbfd9"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:5488fa063608880bee11",
+      "observation_state": "declared",
+      "path": "scripts/hygiene/build_link_shape_hygiene_index.py",
+      "source_record_id": "file:scripts/hygiene/build_link_shape_hygiene_index.py:bb6cb96fad"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:de11b1cf83cb6052c4aa",
+      "observation_state": "declared",
+      "path": "scripts/hygiene/hygiene_common.py",
+      "source_record_id": "file:scripts/hygiene/hygiene_common.py:319bc3028e"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0414718245ed2fdd3d87",
+      "observation_state": "declared",
+      "path": "scripts/hygiene/repair_known_link_drifts.py",
+      "source_record_id": "file:scripts/hygiene/repair_known_link_drifts.py:da2a85b00a"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a82e039685b8db670bac",
+      "observation_state": "declared",
+      "path": "scripts/hygiene/validate_generated_freshness.py",
+      "source_record_id": "file:scripts/hygiene/validate_generated_freshness.py:b58eadc8fa"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:54e486a239a39c217c73",
+      "observation_state": "declared",
+      "path": "scripts/hygiene/validate_hygiene_suite.py",
+      "source_record_id": "file:scripts/hygiene/validate_hygiene_suite.py:b7e10b6876"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:03a446e57c563c4abf1c",
+      "observation_state": "declared",
+      "path": "scripts/hygiene/validate_link_shape_hygiene_index.py",
+      "source_record_id": "file:scripts/hygiene/validate_link_shape_hygiene_index.py:da55b5b009"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3bd7ffa7b0acbede07f0",
+      "observation_state": "declared",
+      "path": "scripts/hygiene/validate_links.py",
+      "source_record_id": "file:scripts/hygiene/validate_links.py:cb072093f8"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0d7983aa9e64013c7f6b",
+      "observation_state": "declared",
+      "path": "scripts/hygiene/validate_markdown_shape.py",
+      "source_record_id": "file:scripts/hygiene/validate_markdown_shape.py:4b9819fbb0"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:5f9d89d27d35781ab2b9",
+      "observation_state": "declared",
+      "path": "scripts/hygiene/validate_status_vocabulary.py",
+      "source_record_id": "file:scripts/hygiene/validate_status_vocabulary.py:e319fecc43"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f95b9bafef4e8c656e68",
+      "observation_state": "declared",
+      "path": "scripts/mechanics_topology/build_mechanic_card_index.py",
+      "source_record_id": "file:scripts/mechanics_topology/build_mechanic_card_index.py:b4e89469ce"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:8e51d3ea62dfa5d772d6",
+      "observation_state": "declared",
+      "path": "scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
+      "source_record_id": "file:scripts/mechanics_topology/validate_mechanic_artifact_topology.py:60da616b0f"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ea66c7e3ae1e2591ff34",
+      "observation_state": "declared",
+      "path": "scripts/mechanics_topology/validate_mechanic_card_index.py",
+      "source_record_id": "file:scripts/mechanics_topology/validate_mechanic_card_index.py:5ecab74569"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:83c5cd8383b26c8839ab",
+      "observation_state": "declared",
+      "path": "scripts/mechanics_topology/validate_mechanic_landing_logs.py",
+      "source_record_id": "file:scripts/mechanics_topology/validate_mechanic_landing_logs.py:3d2ef501fa"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:60a6a11a2f4e2d2aa713",
+      "observation_state": "declared",
+      "path": "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
+      "source_record_id": "file:scripts/mechanics_topology/validate_mechanic_readme_cards.py:17bff3f21e"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:21ea2cca8766235fcfb6",
+      "observation_state": "declared",
+      "path": "scripts/mechanics_topology/validate_mechanics_topology.py",
+      "source_record_id": "file:scripts/mechanics_topology/validate_mechanics_topology.py:2a9f070c1a"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1dcd397d8886f1d474c1",
+      "observation_state": "declared",
+      "path": "scripts/organ_contract/validate_organ_contract.py",
+      "source_record_id": "file:scripts/organ_contract/validate_organ_contract.py:25fcd28513"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:22c3f1e4fefade0cccdc",
+      "observation_state": "declared",
+      "path": "scripts/owner_requests/build_owner_request_queue.py",
+      "source_record_id": "file:scripts/owner_requests/build_owner_request_queue.py:b18556015f"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:5d6a129ade1649b4fe02",
+      "observation_state": "declared",
+      "path": "scripts/owner_requests/validate_generated_owner_request_queue.py",
+      "source_record_id": "file:scripts/owner_requests/validate_generated_owner_request_queue.py:7c7c601b12"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:91ca9ca766e8e87f7745",
+      "observation_state": "declared",
+      "path": "scripts/owner_requests/validate_owner_request_docs.py",
+      "source_record_id": "file:scripts/owner_requests/validate_owner_request_docs.py:2434759b79"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9f1c62526c3104014eaa",
+      "observation_state": "declared",
+      "path": "scripts/owner_requests/validate_owner_request_queue.py",
+      "source_record_id": "file:scripts/owner_requests/validate_owner_request_queue.py:fbe1adbecc"
+    },
+    {
+      "event_kind": "validation_lane_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:08c8bf87751f72632b7b",
+      "observation_state": "declared",
+      "path": "scripts/release_gate/release_check.py",
+      "source_record_id": "file:scripts/release_gate/release_check.py:422f3c7842"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:500c5473e992708acf3b",
+      "observation_state": "declared",
+      "path": "scripts/root_registries/validate_config_registry.py",
+      "source_record_id": "file:scripts/root_registries/validate_config_registry.py:b5afc3a439"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0be0f35240cb10e3076f",
+      "observation_state": "declared",
+      "path": "scripts/root_registries/validate_ecosystem.py",
+      "source_record_id": "file:scripts/root_registries/validate_ecosystem.py:d3069e2c5c"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:fbf3be71dfa4edeb558a",
+      "observation_state": "declared",
+      "path": "scripts/root_registries/validate_manifests_registry.py",
+      "source_record_id": "file:scripts/root_registries/validate_manifests_registry.py:b03954ca54"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:164b2b538969a6ac292a",
+      "observation_state": "declared",
+      "path": "scripts/root_registries/validate_schema_registry.py",
+      "source_record_id": "file:scripts/root_registries/validate_schema_registry.py:b61cf96301"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ac57e929b2a2d5610d7b",
+      "observation_state": "declared",
+      "path": "scripts/root_registries/validate_scripts_district.py",
+      "source_record_id": "file:scripts/root_registries/validate_scripts_district.py:39deafdf54"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e1b93650eaf12c26c784",
+      "observation_state": "declared",
+      "path": "scripts/root_registries/validate_tests_district.py",
+      "source_record_id": "file:scripts/root_registries/validate_tests_district.py:b75331018b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1aedf4843d6bc41f1032",
+      "observation_state": "declared",
+      "path": "tests/test_agents_md_shape.py",
+      "source_record_id": "file:tests/test_agents_md_shape.py:08416e2235"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:7d818ae352e0603d5d43",
+      "observation_state": "declared",
+      "path": "tests/test_agents_mesh.py",
+      "source_record_id": "file:tests/test_agents_mesh.py:4ec817b9c1"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:4236a87ce93ff3a21bc9",
+      "observation_state": "declared",
+      "path": "tests/test_agents_mesh_index.py",
+      "source_record_id": "file:tests/test_agents_mesh_index.py:c6f72eb70a"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ad1b947245625d14abaf",
+      "observation_state": "declared",
+      "path": "tests/test_center_entry_map.py",
+      "source_record_id": "file:tests/test_center_entry_map.py:cc370f458f"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e062a8d54644def24ec3",
+      "observation_state": "declared",
+      "path": "tests/test_config_registry.py",
+      "source_record_id": "file:tests/test_config_registry.py:c5593221f6"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:11c625252378d2764ca9",
+      "observation_state": "declared",
+      "path": "tests/test_decision_indexes.py",
+      "source_record_id": "file:tests/test_decision_indexes.py:b90af86566"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:cce9e8e696b7cda78189",
+      "observation_state": "declared",
+      "path": "tests/test_decision_records.py",
+      "source_record_id": "file:tests/test_decision_records.py:111bd4e63c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:2d5ecd4614f6327efcb9",
+      "observation_state": "declared",
+      "path": "tests/test_docs_migration_map.py",
+      "source_record_id": "file:tests/test_docs_migration_map.py:a493d5783b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:50503ff553f6399152c1",
+      "observation_state": "declared",
+      "path": "tests/test_docs_thematic_cleanup.py",
+      "source_record_id": "file:tests/test_docs_thematic_cleanup.py:045173d292"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:078e62adbb78fffaa271",
+      "observation_state": "declared",
+      "path": "tests/test_docs_thematic_index.py",
+      "source_record_id": "file:tests/test_docs_thematic_index.py:6bd7f66952"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b91dcbc4d1dc37c65b3a",
+      "observation_state": "declared",
+      "path": "tests/test_docs_verify_routes.py",
+      "source_record_id": "file:tests/test_docs_verify_routes.py:aaf9ee4aef"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:7291b792acdccf3d59ce",
+      "observation_state": "declared",
+      "path": "tests/test_entry_surface_sync.py",
+      "source_record_id": "file:tests/test_entry_surface_sync.py:7f711f2829"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b5602485e5331cbdfa44",
+      "observation_state": "declared",
+      "path": "tests/test_examples_district.py",
+      "source_record_id": "file:tests/test_examples_district.py:36502d58a3"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:d56cf2e41de0fd5eba6f",
+      "observation_state": "declared",
+      "path": "tests/test_generated_district.py",
+      "source_record_id": "file:tests/test_generated_district.py:1e6b146f1a"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e14ad1992d8bb3016272",
+      "observation_state": "declared",
+      "path": "tests/test_generated_freshness.py",
+      "source_record_id": "file:tests/test_generated_freshness.py:a1a0084dd2"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f9f9c823d7e9803d5e38",
+      "observation_state": "declared",
+      "path": "tests/test_generated_owner_request_queue.py",
+      "source_record_id": "file:tests/test_generated_owner_request_queue.py:7a3529f0f8"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:502f2d3893d6bd9cdabb",
+      "observation_state": "declared",
+      "path": "tests/test_link_shape_hygiene_index.py",
+      "source_record_id": "file:tests/test_link_shape_hygiene_index.py:7b4050ede2"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:8940dc28f4812908009b",
+      "observation_state": "declared",
+      "path": "tests/test_manifests_district.py",
+      "source_record_id": "file:tests/test_manifests_district.py:a0c6e4512e"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3a0a233f2179c8c7e69b",
+      "observation_state": "declared",
+      "path": "tests/test_markdown_shape.py",
+      "source_record_id": "file:tests/test_markdown_shape.py:e1329ee011"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:617edb7488533c5292f4",
+      "observation_state": "declared",
+      "path": "tests/test_mechanic_artifact_topology.py",
+      "source_record_id": "file:tests/test_mechanic_artifact_topology.py:b448c6ab91"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:27fc077eb0ab810c991a",
+      "observation_state": "declared",
+      "path": "tests/test_mechanic_card_index.py",
+      "source_record_id": "file:tests/test_mechanic_card_index.py:4bb5627e9e"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f58e2a0eb69dbc57660b",
+      "observation_state": "declared",
+      "path": "tests/test_mechanic_landing_logs.py",
+      "source_record_id": "file:tests/test_mechanic_landing_logs.py:0f449435cf"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1b9fc3e0189c442a6154",
+      "observation_state": "declared",
+      "path": "tests/test_mechanic_readme_cards.py",
+      "source_record_id": "file:tests/test_mechanic_readme_cards.py:76801f201b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:4d912a0f0da5ea1ee77d",
+      "observation_state": "declared",
+      "path": "tests/test_mechanics_topology.py",
+      "source_record_id": "file:tests/test_mechanics_topology.py:915b0d0cb3"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:255e4ee0af00752a1df2",
+      "observation_state": "declared",
+      "path": "tests/test_organ_contract.py",
+      "source_record_id": "file:tests/test_organ_contract.py:11d3be6ae5"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:cc66b546bfe5001e291b",
+      "observation_state": "declared",
+      "path": "tests/test_owner_request_docs.py",
+      "source_record_id": "file:tests/test_owner_request_docs.py:7ab96f38b9"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:80ee772c15a6822cb435",
+      "observation_state": "declared",
+      "path": "tests/test_owner_request_queue.py",
+      "source_record_id": "file:tests/test_owner_request_queue.py:d3991c77de"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9c0ef083e69ae064f306",
+      "observation_state": "declared",
+      "path": "tests/test_repair_known_link_drifts.py",
+      "source_record_id": "file:tests/test_repair_known_link_drifts.py:0ebc7c3b08"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0ae97b662fcd75c4c896",
+      "observation_state": "declared",
+      "path": "tests/test_roadmap_parity.py",
+      "source_record_id": "file:tests/test_roadmap_parity.py:574915dc67"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1b046a6e6eb5a18a92df",
+      "observation_state": "declared",
+      "path": "tests/test_schema_district.py",
+      "source_record_id": "file:tests/test_schema_district.py:5aae78dec5"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:84551879612051f06157",
+      "observation_state": "declared",
+      "path": "tests/test_scripts_district.py",
+      "source_record_id": "file:tests/test_scripts_district.py:3401821748"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:fbc0ad7d237389b70453",
+      "observation_state": "declared",
+      "path": "tests/test_status_vocabulary.py",
+      "source_record_id": "file:tests/test_status_vocabulary.py:3f9a50fb5f"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1c65a0dbbb0a9d64dd5f",
+      "observation_state": "declared",
+      "path": "tests/test_tests_district.py",
+      "source_record_id": "file:tests/test_tests_district.py:15649c4ff3"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b34f071f423758b3c1b4",
+      "observation_state": "declared",
+      "path": "tests/test_validate_ecosystem.py",
+      "source_record_id": "file:tests/test_validate_ecosystem.py:4ac567f235"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:637cc79f1344ba82a746",
+      "observation_state": "declared",
+      "path": "tests/test_validate_links.py",
+      "source_record_id": "file:tests/test_validate_links.py:1fa12869f0"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ace0be8ed3ab54ea6e08",
+      "observation_state": "declared",
+      "path": "tests/test_validate_traces_district.py",
+      "source_record_id": "file:tests/test_validate_traces_district.py:4846727ead"
+    }
+  ],
+  "index_identity": {
+    "artifact_kind": "repository_event_index",
+    "content_digest": "677aa84a8ed8ba7fdccb5be0db045665decd59090d4b730ac4e29c4e42c45015",
+    "index_kind": "event",
+    "local_id": "index:repo-local:events",
+    "schema_ref": "aoa-kag:schemas/repo-local-kag-repository-index.schema.json"
+  },
+  "registry_output": {
+    "consumer": "aoa-kag-mcp",
+    "resource_shape": "repo-local-event-index",
+    "stable_fields": [
+      "id",
+      "event_kind",
+      "event_role",
+      "source_record_id",
+      "path",
+      "heading_ref"
+    ]
+  },
+  "repo": {
+    "git_ref": "git-index-source-tree",
+    "name": "Agents-of-Abyss",
+    "owner_type": "center",
+    "root": "."
+  },
+  "schema_version": "aoa-repo-local-kag-repository-index-v1",
+  "source_index": {
+    "content_digest": "1dc65bdf9308312cfaae5316aba8641a77782cde8fa65a7991028d749ab3cb43",
+    "local_id": "index:repo-local:source-surfaces",
+    "path": "kag/indexes/source_surface_index.json"
+  },
+  "summary": {
+    "entry_count": 267,
+    "kind_counts": {
+      "command_run": 11,
+      "decision_record": 37,
+      "generation_run": 27,
+      "release_declaration": 6,
+      "release_lane": 1,
+      "test_run": 91,
+      "validation_lane_run": 1,
+      "validation_receipt": 2,
+      "validation_run": 89,
+      "workflow_run": 2
+    }
+  }
+}
