@@ -48,7 +48,7 @@ or runtime evidence into the active route.
 - `aoa-memo/docs/RECURRENCE_MEMORY_SUPPORT_SURFACES.md`
 - `aoa-memo/docs/RUNTIME_WRITEBACK_SEAM.md`
 - `aoa-routing/docs/RECURRENCE_NAVIGATION_BOUNDARY.md`
-- `aoa-stats/docs/GROWTH_FUNNEL_SUMMARY.md`
+- `aoa-stats/mechanics/method-growth/parts/candidate-lineage/docs/GROWTH_FUNNEL_SUMMARY.md`
 - `aoa-techniques/techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md`
 - `Dionysus/reports/ecosystem-audits/README.md`
 - `Dionysus/scripts/validate_checkpoint_notes.py`

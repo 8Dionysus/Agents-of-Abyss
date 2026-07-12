@@ -2186,7 +2186,7 @@
     },
     {
       "artifact_kind": "document",
-      "content_hash": "34ac1b05a02ecc432b5a34a5214be72896acc19d83ec7dfe7c6bb24c1eebdd25",
+      "content_hash": "e61e9e2ac53b7c6d1199805bff63418e56f206b6b69a8151d2f66b1b3c02237f",
       "id": "artifact:file:changelog.md:06572a96a5",
       "path": "CHANGELOG.md",
       "source_record_id": "file:changelog.md:06572a96a5",
@@ -7290,7 +7290,7 @@
     },
     {
       "artifact_kind": "document",
-      "content_hash": "cc86f3cd67ec26679abc74c5033ac589e2964966a8618d4348a41c7dc733baaa",
+      "content_hash": "b393103000fdd3359ee2ad68994446570be8df07b22b3639fc734df2b7daff2f",
       "id": "artifact:file:mechanics/checkpoint/provenance.md:0f645191e8",
       "path": "mechanics/checkpoint/PROVENANCE.md",
       "source_record_id": "file:mechanics/checkpoint/provenance.md:0f645191e8",
@@ -13762,7 +13762,7 @@
     },
     {
       "artifact_kind": "document",
-      "content_hash": "e8bcfddb739f707f78d03e782fc57a9f1a918164564b1e15b5e59bd7f9c1233c",
+      "content_hash": "0cad4c39652bb58e3afcb5168b2b9b1e378273a7a47beebaf558015d338690c9",
       "id": "artifact:file:mechanics/recurrence/provenance.md:8876379d2e",
       "path": "mechanics/recurrence/PROVENANCE.md",
       "source_record_id": "file:mechanics/recurrence/provenance.md:8876379d2e",
@@ -17283,7 +17283,7 @@
   ],
   "index_identity": {
     "artifact_kind": "repository_artifact_index",
-    "content_digest": "f0177fb043ba302843d905d5f9a2a6a29bbd55a969e3eed7a6e64ac157ff5f3b",
+    "content_digest": "d8cc2aa886dd3064a0d065ca33ca2b0ce8b6e75aa7e471df395fb56d94222ca7",
     "index_kind": "artifact",
     "local_id": "index:repo-local:artifacts",
     "schema_ref": "aoa-kag:schemas/repo-local-kag-repository-index.schema.json"
@@ -17307,7 +17307,7 @@
   },
   "schema_version": "aoa-repo-local-kag-repository-index-v1",
   "source_index": {
-    "content_digest": "1dc65bdf9308312cfaae5316aba8641a77782cde8fa65a7991028d749ab3cb43",
+    "content_digest": "79724e2166cc81ee4905f3b44a2251cbcccb964fde6e79cafbf76e919cbf28db",
     "local_id": "index:repo-local:source-surfaces",
     "path": "kag/indexes/source_surface_index.json"
   },

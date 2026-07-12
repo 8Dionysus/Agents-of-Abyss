@@ -56,8 +56,8 @@ runtime evidence, manifests, or seed-pack receipts into the active route.
 - `aoa-evals/docs/RECURRENCE_PROOF_PROGRAM.md`
 - `aoa-evals/docs/RECURRENCE_CONTROL_PLANE_EVALS.md`
 - `aoa-evals/bundles/aoa-recurrence-control-plane-integrity/EVAL.md`
-- `aoa-stats/docs/RECURRENCE_DERIVED_SUMMARIES.md`
-- `aoa-stats/docs/COMPONENT_REFRESH_SUMMARIES.md`
+- `aoa-stats/mechanics/recurrence/parts/component-manifests/docs/RECURRENCE_DERIVED_SUMMARIES.md`
+- `aoa-stats/mechanics/recurrence/parts/component-refresh/docs/COMPONENT_REFRESH_SUMMARIES.md`
 - `aoa-kag/docs/RECURRENCE_REGROUNDING.md`
 - `aoa-kag/docs/RECURRENCE_PROJECTION_INPUTS.md`
 - `aoa-skills/docs/RECURRENCE_REVIEW_DECISION_CLOSURE.md`
