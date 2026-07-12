@@ -42,6 +42,9 @@ Tracking starts with the community-docs baseline for this repository.
   `artifact_identity` with canonical `generated` surface-state vocabulary.
 - Method-growth rootline and method-spine doctrine now stay aligned through a
   validator-backed second-wave spine invariant.
+- Checkpoint and Recurrence provenance now cite the current part-local
+  `aoa-stats` growth-funnel, recurrence-manifest, and component-refresh owner
+  docs instead of migration-era flat compatibility paths.
 
 ## [0.4.0] - 2026-04-30
 

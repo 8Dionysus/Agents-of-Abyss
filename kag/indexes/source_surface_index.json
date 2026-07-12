@@ -85,7 +85,7 @@
   },
   "index_identity": {
     "artifact_kind": "source_surface_index",
-    "content_digest": "1dc65bdf9308312cfaae5316aba8641a77782cde8fa65a7991028d749ab3cb43",
+    "content_digest": "79724e2166cc81ee4905f3b44a2251cbcccb964fde6e79cafbf76e919cbf28db",
     "local_id": "index:repo-local:source-surfaces",
     "schema_ref": "aoa-kag:schemas/repo-local-kag-index.schema.json"
   },
@@ -30123,13 +30123,13 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "34ac1b05a02ecc432b5a34a5214be72896acc19d83ec7dfe7c6bb24c1eebdd25",
+        "content_hash": "e61e9e2ac53b7c6d1199805bff63418e56f206b6b69a8151d2f66b1b3c02237f",
         "git_ref": "git-index-source-tree",
         "id": "file:changelog.md:06572a96a5",
         "mime": "text/markdown",
         "path": "CHANGELOG.md",
         "repo": "Agents-of-Abyss",
-        "size_bytes": 21142
+        "size_bytes": 21349
       },
       "mechanics_role": "none",
       "observed_form": "file",
@@ -30186,259 +30186,259 @@
           {
             "anchor": "040-2026-04-30",
             "level": 2,
-            "line": 46,
+            "line": 49,
             "ref": "CHANGELOG.md#040-2026-04-30",
             "title": "[0.4.0] - 2026-04-30"
           },
           {
             "anchor": "summary",
             "level": 3,
-            "line": 48,
+            "line": 51,
             "ref": "CHANGELOG.md#summary",
             "title": "Summary"
           },
           {
             "anchor": "added-1",
             "level": 3,
-            "line": 68,
+            "line": 71,
             "ref": "CHANGELOG.md#added-1",
             "title": "Added"
           },
           {
             "anchor": "changed-1",
             "level": 3,
-            "line": 103,
+            "line": 106,
             "ref": "CHANGELOG.md#changed-1",
             "title": "Changed"
           },
           {
             "anchor": "removed",
             "level": 3,
-            "line": 146,
+            "line": 149,
             "ref": "CHANGELOG.md#removed",
             "title": "Removed"
           },
           {
             "anchor": "validation",
             "level": 3,
-            "line": 160,
+            "line": 163,
             "ref": "CHANGELOG.md#validation",
             "title": "Validation"
           },
           {
             "anchor": "notes",
             "level": 3,
-            "line": 185,
+            "line": 188,
             "ref": "CHANGELOG.md#notes",
             "title": "Notes"
           },
           {
             "anchor": "023-2026-04-23",
             "level": 2,
-            "line": 194,
+            "line": 197,
             "ref": "CHANGELOG.md#023-2026-04-23",
             "title": "[0.2.3] - 2026-04-23"
           },
           {
             "anchor": "summary-1",
             "level": 3,
-            "line": 196,
+            "line": 199,
             "ref": "CHANGELOG.md#summary-1",
             "title": "Summary"
           },
           {
             "anchor": "added-2",
             "level": 3,
-            "line": 212,
+            "line": 215,
             "ref": "CHANGELOG.md#added-2",
             "title": "Added"
           },
           {
             "anchor": "changed-2",
             "level": 3,
-            "line": 232,
+            "line": 235,
             "ref": "CHANGELOG.md#changed-2",
             "title": "Changed"
           },
           {
             "anchor": "validation-1",
             "level": 3,
-            "line": 249,
+            "line": 252,
             "ref": "CHANGELOG.md#validation-1",
             "title": "Validation"
           },
           {
             "anchor": "notes-1",
             "level": 3,
-            "line": 265,
+            "line": 268,
             "ref": "CHANGELOG.md#notes-1",
             "title": "Notes"
           },
           {
             "anchor": "022-2026-04-19",
             "level": 2,
-            "line": 271,
+            "line": 274,
             "ref": "CHANGELOG.md#022-2026-04-19",
             "title": "[0.2.2] - 2026-04-19"
           },
           {
             "anchor": "summary-2",
             "level": 3,
-            "line": 273,
+            "line": 276,
             "ref": "CHANGELOG.md#summary-2",
             "title": "Summary"
           },
           {
             "anchor": "added-3",
             "level": 3,
-            "line": 282,
+            "line": 285,
             "ref": "CHANGELOG.md#added-3",
             "title": "Added"
           },
           {
             "anchor": "changed-3",
             "level": 3,
-            "line": 288,
+            "line": 291,
             "ref": "CHANGELOG.md#changed-3",
             "title": "Changed"
           },
           {
             "anchor": "validation-2",
             "level": 3,
-            "line": 293,
+            "line": 296,
             "ref": "CHANGELOG.md#validation-2",
             "title": "Validation"
           },
           {
             "anchor": "notes-2",
             "level": 3,
-            "line": 297,
+            "line": 300,
             "ref": "CHANGELOG.md#notes-2",
             "title": "Notes"
           },
           {
             "anchor": "021-2026-04-12",
             "level": 2,
-            "line": 302,
+            "line": 305,
             "ref": "CHANGELOG.md#021-2026-04-12",
             "title": "[0.2.1] - 2026-04-12"
           },
           {
             "anchor": "summary-3",
             "level": 3,
-            "line": 304,
+            "line": 307,
             "ref": "CHANGELOG.md#summary-3",
             "title": "Summary"
           },
           {
             "anchor": "added-4",
             "level": 3,
-            "line": 313,
+            "line": 316,
             "ref": "CHANGELOG.md#added-4",
             "title": "Added"
           },
           {
             "anchor": "changed-4",
             "level": 3,
-            "line": 321,
+            "line": 324,
             "ref": "CHANGELOG.md#changed-4",
             "title": "Changed"
           },
           {
             "anchor": "validation-3",
             "level": 3,
-            "line": 326,
+            "line": 329,
             "ref": "CHANGELOG.md#validation-3",
             "title": "Validation"
           },
           {
             "anchor": "notes-3",
             "level": 3,
-            "line": 330,
+            "line": 333,
             "ref": "CHANGELOG.md#notes-3",
             "title": "Notes"
           },
           {
             "anchor": "020-2026-04-10",
             "level": 2,
-            "line": 334,
+            "line": 337,
             "ref": "CHANGELOG.md#020-2026-04-10",
             "title": "[0.2.0] - 2026-04-10"
           },
           {
             "anchor": "summary-4",
             "level": 3,
-            "line": 336,
+            "line": 339,
             "ref": "CHANGELOG.md#summary-4",
             "title": "Summary"
           },
           {
             "anchor": "validation-4",
             "level": 3,
-            "line": 342,
+            "line": 345,
             "ref": "CHANGELOG.md#validation-4",
             "title": "Validation"
           },
           {
             "anchor": "notes-4",
             "level": 3,
-            "line": 346,
+            "line": 349,
             "ref": "CHANGELOG.md#notes-4",
             "title": "Notes"
           },
           {
             "anchor": "added-5",
             "level": 3,
-            "line": 350,
+            "line": 353,
             "ref": "CHANGELOG.md#added-5",
             "title": "Added"
           },
           {
             "anchor": "changed-5",
             "level": 3,
-            "line": 361,
+            "line": 364,
             "ref": "CHANGELOG.md#changed-5",
             "title": "Changed"
           },
           {
             "anchor": "included-in-this-release",
             "level": 3,
-            "line": 367,
+            "line": 370,
             "ref": "CHANGELOG.md#included-in-this-release",
             "title": "Included in this release"
           },
           {
             "anchor": "010-2026-04-01",
             "level": 2,
-            "line": 378,
+            "line": 381,
             "ref": "CHANGELOG.md#010-2026-04-01",
             "title": "[0.1.0] - 2026-04-01"
           },
           {
             "anchor": "summary-5",
             "level": 3,
-            "line": 384,
+            "line": 387,
             "ref": "CHANGELOG.md#summary-5",
             "title": "Summary"
           },
           {
             "anchor": "added-6",
             "level": 3,
-            "line": 390,
+            "line": 393,
             "ref": "CHANGELOG.md#added-6",
             "title": "Added"
           },
           {
             "anchor": "validation-5",
             "level": 3,
-            "line": 398,
+            "line": 401,
             "ref": "CHANGELOG.md#validation-5",
             "title": "Validation"
           },
           {
             "anchor": "notes-5",
             "level": 3,
-            "line": 402,
+            "line": 405,
             "ref": "CHANGELOG.md#notes-5",
             "title": "Notes"
           }
@@ -30450,7 +30450,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "34ac1b05a02ecc432b5a34a5214be72896acc19d83ec7dfe7c6bb24c1eebdd25",
+        "digest": "e61e9e2ac53b7c6d1199805bff63418e56f206b6b69a8151d2f66b1b3c02237f",
         "signature_ref": "",
         "verification_state": "digest-only"
       },
@@ -103057,13 +103057,13 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "cc86f3cd67ec26679abc74c5033ac589e2964966a8618d4348a41c7dc733baaa",
+        "content_hash": "b393103000fdd3359ee2ad68994446570be8df07b22b3639fc734df2b7daff2f",
         "git_ref": "git-index-source-tree",
         "id": "file:mechanics/checkpoint/provenance.md:0f645191e8",
         "mime": "text/markdown",
         "path": "mechanics/checkpoint/PROVENANCE.md",
         "repo": "Agents-of-Abyss",
-        "size_bytes": 2824
+        "size_bytes": 2872
       },
       "mechanics_role": "mechanic_package",
       "observed_form": "file",
@@ -103139,7 +103139,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "cc86f3cd67ec26679abc74c5033ac589e2964966a8618d4348a41c7dc733baaa",
+        "digest": "b393103000fdd3359ee2ad68994446570be8df07b22b3639fc734df2b7daff2f",
         "signature_ref": "",
         "verification_state": "digest-only"
       },
@@ -188633,13 +188633,13 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "e8bcfddb739f707f78d03e782fc57a9f1a918164564b1e15b5e59bd7f9c1233c",
+        "content_hash": "0cad4c39652bb58e3afcb5168b2b9b1e378273a7a47beebaf558015d338690c9",
         "git_ref": "git-index-source-tree",
         "id": "file:mechanics/recurrence/provenance.md:8876379d2e",
         "mime": "text/markdown",
         "path": "mechanics/recurrence/PROVENANCE.md",
         "repo": "Agents-of-Abyss",
-        "size_bytes": 4011
+        "size_bytes": 4103
       },
       "mechanics_role": "mechanic_package",
       "observed_form": "file",
@@ -188722,7 +188722,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "e8bcfddb739f707f78d03e782fc57a9f1a918164564b1e15b5e59bd7f9c1233c",
+        "digest": "0cad4c39652bb58e3afcb5168b2b9b1e378273a7a47beebaf558015d338690c9",
         "signature_ref": "",
         "verification_state": "digest-only"
       },
