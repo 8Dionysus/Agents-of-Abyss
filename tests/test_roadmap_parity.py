@@ -48,9 +48,9 @@ def test_roadmap_keeps_public_and_supporting_contour_aligned() -> None:
     registry = load_json("generated/ecosystem_registry.min.json")
     supporting = load_json("generated/federation_supporting_inventory.min.json")
 
-    assert "> Current release: `v0.4.0`" in readme
-    assert "## [0.4.0] - 2026-04-30" in changelog
-    assert "`v0.4.0`" in roadmap
+    assert "> Current release: `v0.5.0`" in readme
+    assert "## [0.5.0] - 2026-07-13" in changelog
+    assert "`v0.5.0`" in roadmap
     assert "route-law, mechanic-package, and validator-backed center repository" in " ".join(roadmap.split())
 
     registry_names = {entry["name"] for entry in registry["repos"]}

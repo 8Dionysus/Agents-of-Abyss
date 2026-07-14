@@ -14,7 +14,7 @@ Use this README as the public front door. Use the linked owner surfaces when the
 work becomes constitutional, directional, operational, mechanical, or
 repository-local.
 
-> Current release: `v0.4.0`. See [CHANGELOG](CHANGELOG.md) for release notes.
+> Current release: `v0.5.0`. See [CHANGELOG](CHANGELOG.md) for release notes.
 
 ## What This Repository Does
 
@@ -99,8 +99,10 @@ so this README can stay readable.
 
 ## Current Contour
 
-The released center contour for `v0.4.0` is the route-law, mechanic-package,
-and validator-backed center repository.
+The released center contour for `v0.5.0` adds explicit system and agent-surface
+design, bounded memo and eval ports, artifact-trust routing, and a canonical
+local KAG provider to the route-law, mechanic-package, and validator-backed
+center repository.
 
 Current anchors:
 
@@ -113,6 +115,10 @@ Current anchors:
 - [organ-contract](docs/organ-contract/README.md) for AbyssOS repo-organ
   alignment
 - [generated capsules](generated/README.md) for compact machine companions
+- [memo](memo/README.md), [evals](evals/README.md), and [KAG](kag/README.md)
+  for bounded center-local ports that return authority to stronger owners
+- [artifact trust posture](docs/ARTIFACT_TRUST_POSTURE.md) for the split between
+  owner production, host enforcement, and runtime consumption
 - [release support](mechanics/release-support/README.md) for public claims,
   state transitions, handoffs, rollback routes, and changelog/roadmap split
 

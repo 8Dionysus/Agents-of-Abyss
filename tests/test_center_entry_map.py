@@ -16,6 +16,8 @@ from scripts.center_entry.center_entry_map_common import (
     VALIDATION_BASELINE_REF,
     VALIDATION_REFS,
     build_payload,
+    load_schema,
+    validate_payload_schema,
 )
 
 
@@ -40,6 +42,20 @@ class CenterEntryMapTests(unittest.TestCase):
         self.assertEqual(identity["trust_layer"], ["abi_contract_signature", "w3c_prov_lineage"])
         self.assertIn("owner-repo acceptance", identity["consumer_expectation"])
         self.assertIn("Public center route", identity["privacy_boundary"])
+
+    def test_center_entry_schema_constrains_artifact_surface_state(self) -> None:
+        schema = load_schema()
+        surface_state_schema = schema["$defs"]["artifactIdentity"]["properties"]["surface_state"]
+        self.assertEqual(surface_state_schema["const"], "generated")
+
+        payload = build_payload()
+        payload["artifact_identity"] = {
+            **payload["artifact_identity"],
+            "surface_state": "generated-runtime",
+        }
+
+        with self.assertRaisesRegex(ValueError, "artifact_identity.surface_state"):
+            validate_payload_schema(payload)
 
     def test_route_modes_are_complete_and_ordered(self) -> None:
         payload = build_payload()

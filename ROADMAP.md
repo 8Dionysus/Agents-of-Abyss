@@ -68,8 +68,10 @@ The current center move is:
 
 ## Current Released Contour
 
-The released center contour for `v0.4.0` is the route-law, mechanic-package,
-and validator-backed center repository, not a new implementation layer.
+The released center contour for `v0.5.0` adds explicit system and agent-surface
+design, bounded memo and eval ports, artifact-trust routing, and a canonical
+local KAG provider to the route-law, mechanic-package, and validator-backed
+center repository; it is still not a new implementation layer.
 
 Current checked anchors:
 
@@ -79,6 +81,8 @@ Current checked anchors:
 | Direction and public-claim support | `ROADMAP.md`, `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`, `mechanics/release-support/docs/DIRECTION_SURFACES.md` |
 | AbyssOS organ alignment | `docs/organ-contract/README.md`, `docs/organ-contract/ORGAN_CONTRACT.md`, `docs/organ-contract/FIRST_CYCLE.md` |
 | Compact machine companions | `generated/center_entry_map.min.json`, `generated/ecosystem_registry.min.json`, `generated/federation_supporting_inventory.min.json` |
+| Bounded local ports | `memo/README.md`, `evals/README.md`, `kag/README.md`, `kag/manifest.json` |
+| Artifact trust owner split | `docs/ARTIFACT_TRUST_POSTURE.md`, `docs/FEDERATION_RULES.md`, `docs/REPO_ROLES.md` |
 | Growth and recurrence law | `mechanics/method-growth/README.md`, `mechanics/recurrence/README.md`, `mechanics/checkpoint/README.md`, `mechanics/growth-cycle/README.md` |
 | Mechanic landing ledgers | `mechanics/agon/LANDING_LOG.md`, `mechanics/experience/LANDING_LOG.md` |
 

@@ -17,6 +17,13 @@
       "source_class": "center_doctrine",
       "role": "owner_route",
       "authority": "authored_source"
+    },
+    {
+      "repo": "Agents-of-Abyss",
+      "path": "kag/manifest.json",
+      "source_class": "center_doctrine",
+      "role": "supporting",
+      "authority": "authored_source"
     }
   ],
   "source_owner": "Agents-of-Abyss",
