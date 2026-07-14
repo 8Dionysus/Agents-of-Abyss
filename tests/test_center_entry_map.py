@@ -98,9 +98,12 @@ class CenterEntryMapTests(unittest.TestCase):
     def test_district_work_route_names_local_eval_and_stats_ports(self) -> None:
         payload = build_payload()
         route = next(route for route in payload["routes"] if route["route_id"] == "district-work")
+        route_contract = Path("docs/START_HERE_ROUTE_CONTRACT.md").read_text(encoding="utf-8")
         self.assertIn("evals/README.md", route["human_path"])
         self.assertIn("stats/AGENTS.md", route["human_path"])
         self.assertIn("stats/README.md", route["human_path"])
+        self.assertIn("- `stats/AGENTS.md`", route_contract)
+        self.assertIn("- `stats/README.md`", route_contract)
         self.assertIn("evals", route["need"])
         self.assertIn("stats", route["need"])
 
