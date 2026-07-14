@@ -222,6 +222,8 @@ Local gates include:
 - `config/README.md`
 - `evals/README.md`
 - `examples/README.md`
+- `kag/AGENTS.md`
+- `kag/README.md`
 - `manifests/README.md`
 - `quests/README.md`
 

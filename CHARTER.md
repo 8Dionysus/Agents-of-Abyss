@@ -56,6 +56,7 @@ AoA exists to support sustained intellectual and technical work where:
 | scenario choreography and recurring method once operational | `aoa-playbooks` |
 | source canon for graph or retrieval projections | `aoa-kag` stays derived, `Tree-of-Sophia` owns ToS meaning |
 | typed helper, compatibility, activation, and control-plane implementation truth | `aoa-sdk` |
+| host-machine artifact enforcement, durable registry, trust-gates, and installed checks | `abyss-machine` |
 | runtime implementation, services, storage, workers, and daemons | `abyss-stack` |
 | ToS-authored knowledge meaning | `Tree-of-Sophia` |
 | public profile orientation and shared-root projection source truth | `8Dionysus` |

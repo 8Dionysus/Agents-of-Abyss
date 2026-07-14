@@ -7,44 +7,171 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-07-13
+
+### Summary
+
+- This release advances the AoA constitutional center from the `v0.4.0`
+  route-law and mechanic-package baseline into an explicitly designed,
+  agent-readable center with bounded memo, eval, artifact-trust, and KAG
+  ports.
+- Root and generated routes now distinguish center doctrine, compact read
+  models, host-machine artifact enforcement, runtime substrate ownership,
+  derived KAG publication, and sibling-owner truth instead of leaving those
+  boundaries implicit.
+- The release was reconstructed from Git rather than from the old
+  `[Unreleased]` prose: all 58 first-parent commits from `v0.4.0` through
+  `49f9943` are accounted for below, spanning 592 changed paths and 61,475
+  additions / 1,984 deletions. Only 11 of those 58 commits had touched this
+  changelog before release preparation.
+
 ### Added
 
 - `DESIGN.md` as the root system-form surface for AoA's long-horizon shape
-  toward OS Abyss.
-- `DESIGN.AGENTS.md` as the root design-form surface for agent-facing guidance,
-  AGENTS mesh growth, closeout posture, and portable agent guidance.
+  toward OS Abyss, plus `DESIGN.AGENTS.md` for agent-facing guidance, AGENTS
+  mesh growth, closeout posture, and portable agent guidance.
+- A portable `.agents/skills/` foundation, session-growth skill set, shared
+  skill refresh route, and hardened dry-run, traceability, summon,
+  self-diagnosis, and automation-opportunity support contracts.
+- A center-local `memo/` port with candidate, reviewed-landing, MCP service,
+  portability, and validation routes that keep durable memory authority in
+  `aoa-memo`.
+- A bounded local `evals/` port and center-entry route that expose local eval
+  pressure without moving verdict authority out of `aoa-evals`.
+- Canonical `AOA-CENTER-D-####` decision records and generated decision
+  indexes, including modeled-surface contracts that detect unknown or invalid
+  decision lanes.
+- Artifact identity for the compact center entry map, the OS Abyss artifact
+  trust-plane decision and posture matrix, and an explicit
+  `center_entry_route_readmodel` class for the generated center capsule.
+- A center-local KAG provider home and canonical seven-index repository family
+  for source surfaces, entities, artifacts, anchors, events, assertions, and
+  relations, with source-return boundaries back to center doctrine.
+- Host-machine artifact enforcement is now routed explicitly to
+  `abyss-machine`, while runtime substrate composition remains with
+  `abyss-stack`; the center route map also exposes the local KAG district.
 
 ### Changed
 
-- first-reading, root-surface law, center authority, repository-role routing,
-  roadmap, and generated entry-map routes now include `DESIGN.md` alongside
-  the charter, ecosystem map, and federation rules.
-- root AGENTS guidance, AGENTS mesh guardrails, and root-surface law now route
-  agent-card shape and mesh-form changes through `DESIGN.AGENTS.md`.
-- the Codex Spark lane now lives at `.agents/spark/`, with release, pytest,
+- First-reading, root-surface law, center authority, repository-role routing,
+  roadmap, and generated entry-map routes now include `DESIGN.md`; AGENTS mesh
+  law routes agent-card form through `DESIGN.AGENTS.md`.
+- The Codex Spark lane now lives at `.agents/spark/`, with release, pytest,
   registry, and AGENTS mesh routes updated to that home.
-- `aoa-skills` owner-request entries now cite the owner-local receipt surface,
-  with Method-growth, Growth Cycle, Checkpoint, and RPG marked `landed`, and
-  Distillation, Experience, and Audit marked `accepted`.
-- Markdown hygiene validators now track matching fence delimiter type, and
-  projected `aoa-skills` session-growth skill contracts are refreshed from the
-  owner source.
-- `docs/decisions/` now uses canonical `AOA-CENTER-D-####` decision IDs,
-  generated lookup indexes, and a release-check guard for stale decision
-  read models.
-- root `scripts/` now uses family-scoped Python homes under
-  `scripts/<family>/`, with root-level Python command files rejected by the
-  scripts district validator.
-- the `district-work` center entry route now exposes the local `evals/` port
-  in public and docs-root route maps while keeping central proof authority in
-  `aoa-evals`.
-- the machine-facing center entry route contract now publishes
-  `artifact_identity` with canonical `generated` surface-state vocabulary.
-- Method-growth rootline and method-spine doctrine now stay aligned through a
-  validator-backed second-wave spine invariant.
-- Checkpoint and Recurrence provenance now cite the current part-local
-  `aoa-stats` growth-funnel, recurrence-manifest, and component-refresh owner
-  docs instead of migration-era flat compatibility paths.
+- Markdown hygiene validators track matching fence delimiter type, projected
+  session-growth skill contracts are refreshed from their owner source, and
+  root Python commands now live in family-scoped `scripts/<family>/` homes.
+- Owner-request status and receipt handling now distinguish landed, accepted,
+  and packet-local evidence, preserve H3 packet boundaries, and reject
+  malformed or out-of-scope owner-request material.
+- RPG overlay/schema checks, Agon numbered-wave detection, Experience living
+  workspace continuity, wave4 scheduler authority markers, Method-growth
+  rootline invariants, docs migration boundaries, and current audit validators
+  are regression-checked rather than prose-only.
+- Repo-local KAG generation is CI-enforced, pinned, deterministic, complete
+  across the seven-index family, and published in compact canonical form.
+- Release-support direction now routes `abyss-stack` through its repository
+  roadmap, while Checkpoint and Recurrence stats provenance returns to current
+  part-local owner docs.
+
+### Fixed
+
+- Dry-run helpers retain malformed preview shapes for explicit validation
+  instead of normalizing evidence away.
+- Decision guidance and modeled decision paths now follow the family-scoped
+  script topology and reject unmodeled surfaces.
+- External docs migration checks no longer treat unrelated districts as local
+  migration targets.
+- Center-entry schema validation now constrains artifact `surface_state` to
+  the canonical `generated` value.
+
+### First-Parent Reconciliation (58/58)
+
+The ordered pre-release history is recorded explicitly so the 47 commits that
+were absent from the old changelog remain discoverable:
+
+1. `c8ba825` — Add root design surface.
+2. `2e7b5d5` — Sync aoa-skills owner request statuses.
+3. `9a233e7` — Install portable AoA skill foundation.
+4. `8110f35` — Roll out session-growth skills (#206).
+5. `c1462ec` — Harden portable skills and traceability (#207).
+6. `527c6cc` — Refresh session growth refs and readiness guard (#208).
+7. `9e692f4` — Guard dry run preview step shape (#209).
+8. `94d1efe` — Preserve dry run helper malformed shapes (#210).
+9. `1621f51` — Refresh shared AoA skill pack (#211).
+10. `aee5d0f` — Add agent surface design.
+11. `0716bdf` — Move Spark lane under agents.
+12. `d27df4e` — Address current Agents audit findings.
+13. `f997e71` — Refresh shared AoA skill pack (#215).
+14. `79be8a2` — Tighten markdown fence hygiene and skill projections (#216).
+15. `c0a325d` — Refresh aoa-summon skill export (#217).
+16. `f417436` — Refresh self-diagnose skill export.
+17. `7f528d4` — Validate RPG overlay against schema (#219).
+18. `1378ba5` — Refresh automation opportunity skill contracts (#220).
+19. `f997fe0` — Harden current Agents audit validators (#221).
+20. `b672571` — Add local memo port route (#222).
+21. `9a61028` — Update aoa memo MCP service route (#223).
+22. `5435a6a` — Wire center memo port route (#224).
+23. `5f24de0` — Add center memo candidate route (#225).
+24. `07fc51e` — Route memo reviewed landing.
+25. `4966661` — Make memo validation route portable (#227).
+26. `ab16e4c` — Canonicalize center decision indexes.
+27. `73d4f48` — Refactor scripts into family topology.
+28. `91fcb7d` — Fix decision guidance command paths (#230).
+29. `3b8776d` — Detect unmodeled decision lane surfaces (#231).
+30. `554ad39` — Honor modeled decision lane surfaces (#232).
+31. `e9890e1` — Normalize modeled decision surface paths (#233).
+32. `6c13ea6` — Add local eval port skeleton.
+33. `5fc0d18` — Register evals district in center entry routes (#235).
+34. `e242215` — Align RPG skills owner request status (#236).
+35. `a7eac64` — Register recurrence parts AGENTS in mesh (#237).
+36. `8e5bb4d` — Catch numbered Agon wave tokens in artifacts (#238).
+37. `35d65ae` — Add living workspace checks to continuity validation (#239).
+38. `9aa897b` — Constrain external docs migration districts (#240).
+39. `a8a822e` — Fix Experience runtime observability core law (#241).
+40. `d1f97c3` — Clarify RPG owner request receipt status (#242).
+41. `7a98bc2` — Scope owner request receipt validation to packets (#243).
+42. `8c3d693` — Harden owner request packet parsing (#244).
+43. `e6389ac` — Preserve owner request H3 packet boundaries (#245).
+44. `f084fb3` — Document evals district route (#246).
+45. `5beaf7c` — Add artifact identity to center entry map (#247).
+46. `d730f17` — Add OS Abyss artifact trust plane decision (#248).
+47. `3fc6c57` — Add center KAG provider home (#249).
+48. `ba0722f` — Align KAG provider validation route (#250).
+49. `1a37738` — Add OS artifact trust posture matrix (#252).
+50. `5e7ea38` — Add repo-local KAG indexes (#253).
+51. `e591f59` — Route abyss-stack direction through repo roadmap (#254).
+52. `314fec3` — Harden wave4 scheduler authority markers (#255).
+53. `f974095` — Align method spine rootline doctrine (#256).
+54. `e4e1925` — Enforce repo-local KAG index parity (#257).
+55. `9eab44d` — Pin deterministic repo-local KAG index gate (#258).
+56. `76e6272` — Add repository KAG index family (#259).
+57. `2646a3d` — Reroute stats documentation provenance (#261).
+58. `49f9943` — Publish canonical repository KAG indexes (#260).
+
+### Validation
+
+- Release preparation reconciled the exact `v0.4.0..49f9943` first-parent
+  history, changed-path inventory, old dirty-tree evidence, source/generated
+  center-entry parity, decision and district topology, owner-request and
+  mechanic invariants, artifact-trust boundaries, and all seven KAG indexes
+  rather than trusting `[Unreleased]` alone.
+- The root release gate validates docs, mechanics, local ports, generated
+  capsules, schemas, scripts, tests, decisions, KAG provider parity, and the
+  complete pytest suite through the executable owner routes recorded in this
+  repository.
+
+### Notes
+
+- Memo, eval, KAG, portable skill, and artifact-trust surfaces remain bounded
+  center ports or read models; they do not transfer durable memory, proof,
+  shared skill, graph, host enforcement, runtime, or sibling source authority
+  into this repository.
+- Release-prep completion adds the explicit host/runtime owner split, center
+  readmodel class, KAG district route and manifest provenance, strict generated
+  surface-state schema test, `v0.5.0` banners, changelog reconciliation, and
+  regenerated derived indexes after the 58 reconciled product/maintenance
+  commits; those release-only surfaces are not hidden inside the 58 count.
 
 ## [0.4.0] - 2026-04-30
 

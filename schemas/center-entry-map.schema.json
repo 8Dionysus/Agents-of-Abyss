@@ -90,7 +90,7 @@
         },
         "surface_state": {
           "type": "string",
-          "minLength": 3
+          "const": "generated"
         },
         "owner_repo": {
           "type": "string",

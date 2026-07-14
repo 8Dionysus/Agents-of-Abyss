@@ -92,6 +92,20 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("generated/ecosystem_registry.min.json", ecosystem_map)
         self.assertIn("generated/federation_supporting_inventory.min.json", ecosystem_map)
 
+    def test_artifact_trust_owner_maps_separate_machine_enforcement_from_stack_runtime(self) -> None:
+        charter = read_text("CHARTER.md")
+        ecosystem_map = read_text("ECOSYSTEM_MAP.md")
+        layers = read_text("docs/LAYERS.md")
+        federation_rules = read_text("docs/FEDERATION_RULES.md")
+
+        self.assertIn("host-machine artifact enforcement", charter)
+        self.assertIn("`abyss-machine` | host-machine artifact trust and maintenance surface", ecosystem_map)
+        self.assertIn("## Host-machine artifact enforcement", layers)
+        self.assertIn("Repository: `abyss-machine`", layers)
+        self.assertIn("Repository: `abyss-stack`", layers)
+        self.assertIn("`abyss-machine` | host enforcement, durable artifact registry", federation_rules)
+        self.assertIn("runtime implementation, services, storage, workers, and daemons | `abyss-stack`", charter)
+
     def test_docs_readme_routes_to_mechanics_and_decision_notes_remain_available(self) -> None:
         docs_readme = read_text("docs/README.md")
         mechanics = read_text("mechanics/README.md")
@@ -365,6 +379,13 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("AGENTS.md#validation", posture)
         self.assertIn("python scripts/center_entry/build_center_entry_map.py --check", posture_agents)
         self.assertIn("python scripts/center_entry/validate_center_entry_map.py", posture_agents)
+
+    def test_artifact_trust_posture_lists_center_entry_readmodel_class(self) -> None:
+        posture = read_text("docs/ARTIFACT_TRUST_POSTURE.md")
+
+        self.assertIn("center_entry_route_readmodel", posture)
+        self.assertIn("generated/center_entry_map.min.json", posture)
+        self.assertIn("no fake ABI for living doctrine", posture)
 
 
 if __name__ == "__main__":

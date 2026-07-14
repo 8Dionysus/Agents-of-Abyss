@@ -104,6 +104,19 @@ Purpose:
 Main question:
 - how should authoritative sources be lifted without replacing them?
 
+## Host-machine artifact enforcement
+
+Repository: `abyss-machine`
+
+Purpose:
+- make host-machine artifact consumption fail-closed through durable registries,
+  trust-gates, trust roots, public machine seed, and installed/runtime checks
+- keep enforcement evidence separate from federation doctrine and sibling
+  source meaning
+
+Main question:
+- is this concrete artifact safe for this host-machine consumer to admit now?
+
 ## Infrastructure substrate
 
 Repository: `abyss-stack`

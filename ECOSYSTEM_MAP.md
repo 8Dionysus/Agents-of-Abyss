@@ -79,6 +79,7 @@ If the question is "does the center have authority to say this?", return to
 | Repository | Role | Owns | Does not own | Current maturity | Growth direction |
 |---|---|---|---|---|---|
 | `Tree-of-Sophia` | source-first knowledge architecture counterpart | ToS-authored knowledge architecture, source-first structural meaning, lineage-aware conceptual discipline, and public tree-first tiny-entry seams | AoA center truth, AoA runtime infrastructure, AoA layer-owned operational truth | concept | seed source-first counterpart |
+| `abyss-machine` | host-machine artifact trust and maintenance surface | host enforcement, durable artifact registry, trust-gates, trust roots, public machine seed, and installed/runtime checks | federation doctrine, sibling source meaning, or runtime substrate composition | active | public source home for host-machine enforcement |
 | `abyss-stack` | infrastructure substrate | runtime, storage, deployment, service composition, system body, lifecycle, and infrastructure security posture | AoA constitutional truth, ToS-authored corpus truth | active | proven runtime substrate |
 
 ## Public projection surfaces
