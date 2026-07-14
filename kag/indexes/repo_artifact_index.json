@@ -269,7 +269,7 @@
     {"anchor_id":"aoa:agents-of-abyss:anchor:6ee2509dd2ae6bdedb804e97","artifact_kind":"document","content_hash":"c1c5f7bcd1ac341294c5d6f7326fe948b07b28197988766742bc789175682973","id":"aoa:agents-of-abyss:artifact:f0cbd6aa0372f04d8e3ab075","lineage_path":".github/AGENTS.md","mime":"text/markdown","path":".github/AGENTS.md","provenance_ref":"deterministic","surface_state":"authored_source","temporal_ref":"current","trust_ref":"deterministic","version_id":"aoa:agents-of-abyss:artifact-version:1d1cd0167d136e5c0fb46c47"},
     {"anchor_id":"aoa:agents-of-abyss:anchor:43b1f0cc3eb6f4cae5516e0e","artifact_kind":"owner_metadata","content_hash":"e8e00be352acbc2341873d10b0a28966bfca1115ad99201cee7b7788fcb5a99f","id":"aoa:agents-of-abyss:artifact:3d36a1bf06148bc6ba1ce2ed","lineage_path":".github/CODEOWNERS","mime":"text/plain","path":".github/CODEOWNERS","provenance_ref":"deterministic","surface_state":"authored_source","temporal_ref":"current","trust_ref":"deterministic","version_id":"aoa:agents-of-abyss:artifact-version:7b65b9a6f0a5178e1d5a37f3"},
     {"anchor_id":"aoa:agents-of-abyss:anchor:bc557c64279e66a4ec51255d","artifact_kind":"document","content_hash":"e7a0fe7717bb94718f7cde0a831d77d2d5cc69a5189f549c8a6c150d98439a0e","id":"aoa:agents-of-abyss:artifact:3d4f8bc378136dcdd47114dc","lineage_path":".github/PULL_REQUEST_TEMPLATE.md#generation-2","mime":"text/markdown","path":".github/PULL_REQUEST_TEMPLATE.md","provenance_ref":"deterministic","surface_state":"authored_source","temporal_ref":"current","trust_ref":"deterministic","version_id":"aoa:agents-of-abyss:artifact-version:1805e346f0b57f69f751b1e5"},
-    {"anchor_id":"aoa:agents-of-abyss:anchor:47d46a1fd8ff969f40f0aec1","artifact_kind":"config","content_hash":"dc8f5424dfdc5c8a0d845e2d0902f52df3c5217c4b2252cea3b05cbfec78bd1f","id":"aoa:agents-of-abyss:artifact:3affb923d04bc06217e2c3a1","lineage_path":".github/workflows/repo-validation.yml","mime":"application/yaml","path":".github/workflows/repo-validation.yml","provenance_ref":"deterministic","surface_state":"authored_source","temporal_ref":"current","trust_ref":"deterministic","version_id":"aoa:agents-of-abyss:artifact-version:35ddce38c4775f065420f2cb"},
+    {"anchor_id":"aoa:agents-of-abyss:anchor:47d46a1fd8ff969f40f0aec1","artifact_kind":"config","content_hash":"f54e8b40714fbc5d2198f44a1ed29711828f8996e05b97dc0e5c213be38f7a1c","id":"aoa:agents-of-abyss:artifact:3affb923d04bc06217e2c3a1","lineage_path":".github/workflows/repo-validation.yml","mime":"application/yaml","path":".github/workflows/repo-validation.yml","provenance_ref":"deterministic","surface_state":"authored_source","temporal_ref":"current","trust_ref":"deterministic","version_id":"aoa:agents-of-abyss:artifact-version:d54a85a2b715fe8274118a61"},
     {"anchor_id":"aoa:agents-of-abyss:anchor:b4935485065be26adf7b9009","artifact_kind":"config","content_hash":"4101ba8da712b0b8fa2eb93de8c865b39376cc3a5db49970c0f89adc71636791","id":"aoa:agents-of-abyss:artifact:0060e88d9ab89214dcbffc6d","lineage_path":".github/workflows/source-side-smoke.yml","mime":"application/yaml","path":".github/workflows/source-side-smoke.yml","provenance_ref":"deterministic","surface_state":"authored_source","temporal_ref":"current","trust_ref":"deterministic","version_id":"aoa:agents-of-abyss:artifact-version:c937eff945ae850363c80786"},
     {"anchor_id":"aoa:agents-of-abyss:anchor:560f34d8dd17b2ed8d2f0f02","artifact_kind":"owner_metadata","content_hash":"c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701","id":"aoa:agents-of-abyss:artifact:bc37d034bad564583790a46f","lineage_path":".gitignore","mime":"text/plain","path":".gitignore","provenance_ref":"deterministic","surface_state":"authored_source","temporal_ref":"current","trust_ref":"deterministic","version_id":"aoa:agents-of-abyss:artifact-version:cf157d16c5d53533b907406e"},
     {"anchor_id":"aoa:agents-of-abyss:anchor:bb5327b9f083a9918de7a25d","artifact_kind":"document","content_hash":"5405fffe6e43348e4d35a722583e9ee1e5231ba8441db0771c297397fb1aaf03","id":"aoa:agents-of-abyss:artifact:36a72687b6b4322369071168","lineage_path":"AGENTS.md#generation-2","mime":"text/markdown","path":"AGENTS.md","provenance_ref":"deterministic","surface_state":"authored_source","temporal_ref":"current","trust_ref":"deterministic","version_id":"aoa:agents-of-abyss:artifact-version:258b92a7b98a9533ea13ad21"},
@@ -2169,7 +2169,7 @@
   ],
   "index_identity": {
     "artifact_kind": "repository_artifact_index",
-    "content_digest": "4d09860d17535f112fc6e52bdf3d03e968b96d1d17bafe847822c999233b68a9",
+    "content_digest": "aaf666aa5d24053bfb261ace897ac864fafa1b3f1b075954d831b24d36d7cd15",
     "index_kind": "artifact",
     "local_id": "index:repo-local:artifacts",
     "schema_ref": "aoa-kag:schemas/repo-local-kag-repository-index.schema.json"
@@ -2255,7 +2255,7 @@
   },
   "schema_version": "aoa-repo-local-kag-repository-index-v2",
   "source_index": {
-    "content_digest": "fc63fad3fe6b5c9c994c8a6b9737dd9bf4f4fb9ac6365f8746efac77f218389f",
+    "content_digest": "9581c9ae1e76cd36651a65cc1311f663927db99e9f376ad6ede0e5912c0250bb",
     "local_id": "index:repo-local:source-surfaces",
     "path": "kag/indexes/source_surface_index.json"
   },
