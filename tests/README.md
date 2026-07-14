@@ -25,6 +25,7 @@ and do not grant authority beyond the claims they check.
 | `hygiene` | link, Markdown shape, status vocabulary, generated freshness, and known repair tests |
 | `mechanics-topology` | mechanic registry, cards, artifact homes, and landing ledger tests |
 | `owner-requests` | owner request queue and owner request document tests |
+| `local-stats` | center-local stats derivation, missingness, and reference-packet parity |
 | `ecosystem-contract` | ecosystem registry, Questbook center surface, and cross-mechanic route tests |
 | `tests-district` | tests district registry and route-shape tests |
 

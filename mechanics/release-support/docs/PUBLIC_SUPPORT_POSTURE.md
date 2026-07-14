@@ -107,7 +107,7 @@ The machine-facing center capsule has its own bounded rebuild loop:
 
 Use [release-support docs AGENTS](AGENTS.md#validation) for executable
 commands.
-Center entry-surface baseline commands live in
+The center entry-surface validation route lives in
 [`ENTRY_SURFACE_VALIDATION_BASELINE`](../../../docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md).
 
 PR and push validation live in `.github/workflows/repo-validation.yml`.

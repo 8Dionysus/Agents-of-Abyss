@@ -4,7 +4,11 @@ This is the human-first entrypoint for the `docs/` surface of `Agents-of-Abyss`.
 
 Use the root [`README`](../README.md) for the public front door. Use this file when you are already inside the center and need the doctrine, route-law, and map district.
 
-If you are editing files under `docs/`, read [`AGENTS.md`](AGENTS.md) first. Validation commands live in [`AGENTS.md#validation`](AGENTS.md#validation) and the nearest district `AGENTS.md`; this README stays a map.
+If you are editing files under `docs/`, read [`AGENTS.md`](AGENTS.md) first.
+Validation commands live in [`AGENTS.md#validation`](AGENTS.md#validation) and
+the nearest district `AGENTS.md`; the broad route is
+[`ENTRY_SURFACE_VALIDATION_BASELINE`](guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md),
+and this README stays a map.
 
 ## Start Here
 
@@ -72,6 +76,7 @@ Guardrail operating surfaces:
 | [`manifests/`](../manifests/) | owner-bound manifests and recurrence receipts |
 | [`config/`](../config/) | development and validator configuration |
 | [`evals/`](../evals/) | center-local eval-pressure port before central proof adoption in `aoa-evals` |
+| [`stats/`](../stats/) | center-local registry questions using the shared `aoa-stats` grammar |
 | [`examples/`](../examples/) | public-safe examples |
 
 ## Claim Routes
@@ -104,8 +109,10 @@ Use `docs/` root for current center doctrine and route maps. Use a named
 district for guardrail law, decisions, traces, and organ-contract law. Use
 `mechanics/<slug>/` for mechanic law, parts, landing history, provenance, owner
 requests, and legacy raw sources. Use sibling repositories for owner-local
-technique, skill, proof, memory, routing, role, playbook, KAG, stats, runtime,
-and ToS-authored meaning.
+technique, skill, proof, memory, routing, role, playbook, KAG, shared stats
+grammar, cross-owner composition, runtime, and ToS-authored meaning. A
+center-owned statistical question over center-owned evidence stays in the
+root `stats/` port.
 
 ## Notes
 

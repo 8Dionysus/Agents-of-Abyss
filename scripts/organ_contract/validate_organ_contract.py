@@ -179,13 +179,23 @@ def validate_entry_sync_refs(problems: list[str]) -> None:
     for rel in ENTRY_SURFACES:
         require_contains(problems, rel, "organ-alignment")
     for rel in (
-        "docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md",
         "docs/AGENTS.md",
         "scripts/release_gate/release_check.py",
         "scripts/registry.json",
         "tests/registry.json",
     ):
         require_contains(problems, rel, "scripts/organ_contract/validate_organ_contract.py")
+    for ref in (
+        "AGENTS.md",
+        "scripts/center_entry/center_entry_map_common.py",
+        "scripts/center_entry/validate_entry_surface_sync.py",
+        "scripts/release_gate/release_check.py",
+    ):
+        require_contains(
+            problems,
+            "docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md",
+            ref,
+        )
 
 
 def main() -> int:

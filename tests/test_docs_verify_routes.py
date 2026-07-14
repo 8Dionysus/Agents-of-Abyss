@@ -9,7 +9,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from scripts.center_entry.center_entry_map_common import BASELINE_VALIDATION_COMMANDS, VALIDATION_BASELINE_REF  # noqa: E402
+from scripts.center_entry.center_entry_map_common import VALIDATION_BASELINE_REF  # noqa: E402
 
 
 def read_text(relative_path: str) -> str:
@@ -34,8 +34,8 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
             "mechanics/README.md": "mechanics/AGENTS.md",
         }
         baseline_text = read_text(VALIDATION_BASELINE_REF)
-        for command in BASELINE_VALIDATION_COMMANDS:
-            self.assertIn(command, baseline_text)
+        self.assertIn("scripts/release_gate/release_check.py", baseline_text)
+        self.assertNotIn("```bash", baseline_text)
 
         for relative_path in (
             "README.md",
@@ -52,11 +52,11 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
                 if authority_ref:
                     self.assertIn("AGENTS.md#validation", text)
                     text += "\n" + read_text(authority_ref)
-                has_inline_battery = (
-                    "python scripts/root_registries/validate_ecosystem.py" in text
-                    and "python -m pytest -q" in text
+                self.assertTrue(
+                    VALIDATION_BASELINE_REF in text
+                    or "AGENTS.md#validation" in text
+                    or Path(relative_path).name == "AGENTS.md"
                 )
-                self.assertTrue(has_inline_battery or VALIDATION_BASELINE_REF in text)
 
     def test_readme_routes_sdk_registry_detail_to_ecosystem_map_and_inventory(self) -> None:
         readme = read_text("README.md")
@@ -78,7 +78,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
 
         self.assertIn("ECOSYSTEM_MAP.md", readme)
         self.assertIn("generated/ecosystem_registry.min.json", readme)
-        self.assertIn("`aoa-stats` owns derived views, not authority", charter)
+        self.assertIn("`aoa-stats` owns shared grammar and derived composition", charter)
         self.assertIn("`aoa-stats` | derived observability layer", ecosystem_map)
         self.assertIn("generated/ecosystem_registry.min.json", roadmap)
         self.assertIn("aoa-stats", registry_names)

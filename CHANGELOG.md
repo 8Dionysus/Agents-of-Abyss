@@ -7,6 +7,18 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+### Added
+
+- A center-local `stats/` port now publishes the reference-only
+  `public-registry-active-maturity-ratio` over the owner-validated ecosystem
+  registry v2 while leaving shared measurement grammar and cross-owner
+  composition in `aoa-stats`.
+
+### Changed
+
+- Validation and test command blocks now route to executable owners and local
+  `AGENTS.md` cards instead of being duplicated across weaker Markdown docs.
+
 ## [0.5.0] - 2026-07-13
 
 ### Summary
@@ -289,28 +301,9 @@ were absent from the old changelog remain discoverable:
 
 ### Validation
 
-- `aoa skills enter /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "prepare Agents-of-Abyss v0.4.0 release" --json`
-- `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "prepare Agents-of-Abyss v0.4.0 release public surfaces" --mutation-surface public-share --json`
-- `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "prepare Agents-of-Abyss v0.4.0 release repo config" --mutation-surface repo-config --json`
-- `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "polish unreleased changelog after root docs and mechanics release prep" --mutation-surface public-share --json`
-- `aoa skills guard /srv/AbyssOS/Agents-of-Abyss --root /srv/AbyssOS --intent-text "polish root pytest collection contract for current mechanics topology" --mutation-surface repo-config --json`
-- `python scripts/validate_markdown_shape.py --target CHANGELOG.md`
-- `python scripts/validate_markdown_shape.py --target docs/RELEASING.md`
-- `python scripts/plan_docs_thematic_cleanup.py --check`
-- `python scripts/validate_docs_thematic_districts.py`
-- `python scripts/validate_decision_records.py`
-- `python scripts/build_docs_thematic_index.py --check`
-- `python scripts/validate_docs_thematic_index.py`
-- `aoa release audit /srv/AbyssOS --phase preflight --repo Agents-of-Abyss --strict --json`
-- `python scripts/validate_tests_district.py`
-- `python scripts/validate_organ_contract.py`
-- `python scripts/validate_entry_surface_sync.py`
-- `python scripts/build_center_entry_map.py --check`
-- `python scripts/validate_center_entry_map.py`
-- `python scripts/validate_links.py`
-- `git diff --check`
-- `python -m pytest -q`
-- `python scripts/release_check.py`
+The release passed the then-current repository release gate and public landing
+checks. Exact command and session receipts remain in Git and CI history rather
+than in this release-history surface.
 
 ### Notes
 

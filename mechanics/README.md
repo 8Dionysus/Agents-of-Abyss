@@ -96,7 +96,7 @@ Machine companion:
 Validation:
 
 Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
-Center entry-surface baseline commands live in
+The center entry-surface validation route lives in
 [`ENTRY_SURFACE_VALIDATION_BASELINE`](../docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md).
 
 The generated card index reflects `mechanics/registry.json` and the package

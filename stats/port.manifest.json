@@ -1,0 +1,113 @@
+{
+  "schema_version": "aoa_stats_local_port_v1",
+  "contract_version": "1.0.0",
+  "owner_repo": "Agents-of-Abyss",
+  "status": "active",
+  "owner_boundary_ref": "CHARTER.md",
+  "central_contract_refs": [
+    "aoa-stats:stats/measurement-contract/measurement-contract.schema.json",
+    "aoa-stats:stats/measurement-contract/measurement-packet.schema.json"
+  ],
+  "evidence_posture": {
+    "live_state": "reference_only",
+    "privacy": "public",
+    "raw_content_allowed": false
+  },
+  "questions": [
+    {
+      "id": "question:public-registry-active-maturity-ratio",
+      "question": "What fraction of entries in the current public AoA ecosystem registry v2 carry the center-declared maturity label active?",
+      "consumer_refs": [
+        "stats/README.md",
+        "ECOSYSTEM_MAP.md",
+        "ROADMAP.md"
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "schema_version": "aoa_stats_measurement_contract_v1",
+      "measurement_id": "Agents-of-Abyss/public-registry-active-maturity-ratio",
+      "contract_version": "1.0.0",
+      "owner_repo": "Agents-of-Abyss",
+      "question_ref": "question:public-registry-active-maturity-ratio",
+      "semantic_class": "statistic",
+      "statistic": "ratio",
+      "object_kind": "ecosystem-registry-v2-entry",
+      "unit": {
+        "symbol": "1",
+        "quantity": "proportion"
+      },
+      "population": {
+        "subject": "current entries in the public AoA ecosystem registry v2",
+        "definition": "one unique repos record in generated/ecosystem_registry.min.json after owner validation against the center-owned public contour",
+        "inclusion_rule": "every valid unique record in the registry v2 repos array",
+        "exclusion_rule": "supporting inventory records, public projections outside registry v2, workspace checkouts, owner-local stats ports, runtime state, and deployment state",
+        "sampling": "census"
+      },
+      "window": {
+        "temporality": "instant",
+        "clock": "owner_defined"
+      },
+      "dimensions": {
+        "allowed": [],
+        "prohibited": [
+          "repo",
+          "role",
+          "relation",
+          "kind"
+        ]
+      },
+      "aggregation": {
+        "operator": "none",
+        "across": []
+      },
+      "missingness": {
+        "states": [
+          "missing",
+          "unknown",
+          "stale"
+        ],
+        "zero_is_observation": true
+      },
+      "uncertainty": {
+        "required": false,
+        "methods": [
+          "not_applicable"
+        ]
+      },
+      "provenance": {
+        "evidence_refs_required": true,
+        "source_revision_required": true
+      },
+      "lifecycle": {
+        "status": "active",
+        "compatible_with": []
+      },
+      "privacy": {
+        "classification": "public",
+        "raw_content_allowed": false,
+        "sensitive_dimensions_allowed": false
+      },
+      "live_state": {
+        "capability": "reference_only"
+      },
+      "authority_ceiling": "Reports only the fraction of current registry v2 entries carrying the literal center-authored maturity label active at one source revision; it does not establish repository health, implementation quality, owner acceptance, release readiness, current remote state, local stats-port coverage, or an ecosystem progress score."
+    }
+  ],
+  "exports": [
+    {
+      "measurement_id": "Agents-of-Abyss/public-registry-active-maturity-ratio",
+      "posture": "reference",
+      "packet_refs": [
+        "stats/packets/public-registry-active-maturity-ratio.reference.json"
+      ],
+      "evidence_refs": [
+        "ECOSYSTEM_MAP.md",
+        "generated/ecosystem_registry.min.json",
+        "schemas/ecosystem-registry.schema.json",
+        "scripts/root_registries/validate_ecosystem.py"
+      ]
+    }
+  ]
+}

@@ -22,6 +22,7 @@ Mark the primary surface changed by this PR:
 - [ ] mechanics atlas or center-level process surface
 - [ ] Spark session lane
 - [ ] machine-readable registry, schema, generated capsule, validator, or test
+- [ ] center-local stats port
 - [ ] technical district README
 - [ ] contributor or entrypoint guidance
 - [ ] other ecosystem-center surface
@@ -41,7 +42,7 @@ If this PR touches a center mechanic or technical district:
 
 - [ ] I checked `mechanics/README.md` and the relevant `mechanics/<slug>/README.md`.
 - [ ] If this touches a mechanic landing, I updated the relevant `mechanics/<slug>/LANDING_LOG.md` or explained why no landing changed.
-- [ ] I checked the local district README for `Spark/`, `generated/`, `scripts/`, `schemas/`, `tests/`, `config/`, `examples/`, `manifests/`, or `quests/` when applicable.
+- [ ] I checked the local district README for `Spark/`, `generated/`, `scripts/`, `schemas/`, `tests/`, `config/`, `evals/`, `stats/`, `kag/`, `examples/`, `manifests/`, or `quests/` when applicable.
 - [ ] If this touches links, generated capsules, validator config, or status vocabulary, I checked `docs/guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`.
 - [ ] If this touches `AGENTS.md` cards or durable directories, I checked `docs/guardrails/AGENTS_MESH_PROTOCOL.md` and ran the AGENTS mesh validators.
 - [ ] I confirmed the change does not grant live runtime authority, hidden memory sovereignty, proof authority, rank mutation, ToS canon write authority, or owner-local truth outside the proper owner repository.

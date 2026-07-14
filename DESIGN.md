@@ -136,6 +136,13 @@ authored surfaces. They should be reproducible.
 A new repository, layer, mechanic, or route is integrated only when it makes
 ownership, reviewability, and return clearer than before.
 
+### 9. Owner-local questions, shared statistical grammar
+
+Each organ owns what is meaningful to measure about its own objects, including
+the population, missingness, evidence route, privacy posture, and authority
+ceiling. `aoa-stats` owns the shared grammar and cross-owner composition; it
+does not take the local question or source meaning away from the owner.
+
 ## Good Design Feels Like
 
 A newcomer can find the front door.

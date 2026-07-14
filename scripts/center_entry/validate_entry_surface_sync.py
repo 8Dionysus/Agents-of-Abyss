@@ -8,7 +8,6 @@ from pathlib import Path
 
 try:
     from center_entry_map_common import (
-        BASELINE_VALIDATION_COMMANDS,
         CENTER_ENTRY_MAP_PATH,
         ENTRY_SURFACE_REFS,
         REQUIRED_ROUTE_MODES,
@@ -19,7 +18,6 @@ try:
     )
 except ModuleNotFoundError:  # pragma: no cover - package import route
     from scripts.center_entry.center_entry_map_common import (
-        BASELINE_VALIDATION_COMMANDS,
         CENTER_ENTRY_MAP_PATH,
         ENTRY_SURFACE_REFS,
         REQUIRED_ROUTE_MODES,
@@ -73,10 +71,20 @@ def collect_problems() -> list[str]:
     except Exception as exc:  # pragma: no cover - reported as data problem
         baseline_text = ""
         problems.append(f"{VALIDATION_BASELINE_REF}: cannot read validation baseline: {exc}")
-
-    for command in BASELINE_VALIDATION_COMMANDS:
-        if command not in baseline_text:
-            problems.append(f"{VALIDATION_BASELINE_REF}: missing baseline validation command '{command}'")
+    for owner_ref in (
+        "AGENTS.md",
+        "scripts/center_entry/center_entry_map_common.py",
+        "scripts/center_entry/validate_entry_surface_sync.py",
+        "scripts/release_gate/release_check.py",
+    ):
+        if owner_ref not in baseline_text:
+            problems.append(
+                f"{VALIDATION_BASELINE_REF}: missing executable or command owner ref '{owner_ref}'"
+            )
+    if "```bash" in baseline_text:
+        problems.append(
+            f"{VALIDATION_BASELINE_REF}: validation commands must stay in executable owners or AGENTS.md"
+        )
 
     for ref in ENTRY_SURFACE_REFS:
         try:
@@ -103,12 +111,7 @@ def collect_problems() -> list[str]:
             continue
         if has_validation_baseline_pointer(text):
             continue
-        for command in BASELINE_VALIDATION_COMMANDS:
-            if command not in text:
-                problems.append(
-                    f"{ref}: missing baseline validation command '{command}' "
-                    f"or pointer to {VALIDATION_BASELINE_REF}"
-                )
+        problems.append(f"{ref}: missing pointer to {VALIDATION_BASELINE_REF}")
 
     try:
         generated_payload = json.loads(CENTER_ENTRY_MAP_PATH.read_text(encoding="utf-8"))

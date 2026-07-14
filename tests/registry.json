@@ -176,6 +176,20 @@
       ]
     },
     {
+      "family_id": "local-stats",
+      "role": "center-local stats derivation, missingness, and reference-packet parity",
+      "source_ref": "stats/README.md",
+      "paths": [
+        "tests/test_local_stats_port.py"
+      ],
+      "validation_refs": [
+        "scripts/stats/validate_local_stats_port.py"
+      ],
+      "must_not_claim": [
+        "registry label distribution as ecosystem health, progress, or owner acceptance"
+      ]
+    },
+    {
       "family_id": "ecosystem-contract",
       "role": "ecosystem registry, Questbook center surface, and cross-mechanic route tests",
       "source_ref": "ECOSYSTEM_MAP.md",

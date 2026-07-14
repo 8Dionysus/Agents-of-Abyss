@@ -43,6 +43,7 @@ Purpose:
 - derive machine-first summary surfaces from owner-local receipts and bounded eval outputs
 - keep cross-repo movement legible without turning stats into authority
 - publish shared stats event-envelope and bounded summary contracts for derivation
+- validate compatible owner-local measurement ports without taking their question meaning from source owners
 
 Main question:
 - what movement is visible across owner-owned evidence without replacing it?
