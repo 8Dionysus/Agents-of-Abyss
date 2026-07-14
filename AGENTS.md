@@ -30,7 +30,8 @@ Do not use this lane to override owner-local truth, generated-source boundaries,
 
 ## Validation
 
-Run the nearest validator named by this card. For release-facing changes, also run `python scripts/release_gate/release_check.py`.
+Run the nearest validator named by this card. For release-facing changes, also
+run the full gate described under `Verify`.
 
 ## Closeout
 
@@ -214,7 +215,10 @@ Treat these as high-risk findings in this center repository:
 ## Verify
 
 Run the narrowest relevant center check first. For release-facing or repo-wide
-changes, run the full gate:
+changes, run the full gate. It includes compatibility validation owned by
+`aoa-stats`; provide a compatible checkout through `AOA_STATS_ROOT`,
+`.deps/aoa-stats`, or the sibling `../aoa-stats` path. CI supplies its pinned
+checkout explicitly, and an unavailable central validator is a failed check.
 
 ```bash
 python scripts/release_gate/release_check.py

@@ -37,7 +37,10 @@ remain owned by `aoa-stats`.
 
 ## Validation
 
-Inspect the registry and packet first, then run:
+Inspect the registry and packet first. The port validator requires a compatible
+`aoa-stats` checkout through `AOA_STATS_ROOT`, `.deps/aoa-stats`, or the sibling
+`../aoa-stats` path; CI supplies its pinned checkout explicitly, and an
+unavailable central validator is a failed check. Then run:
 
 ```bash
 python scripts/stats/validate_local_stats_port.py
