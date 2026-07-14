@@ -7,18 +7,6 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
-### Added
-
-- A center-local `stats/` port now publishes the reference-only
-  `public-registry-active-maturity-ratio` over the owner-validated ecosystem
-  registry v2 while leaving shared measurement grammar and cross-owner
-  composition in `aoa-stats`.
-
-### Changed
-
-- Validation and test command blocks now route to executable owners and local
-  `AGENTS.md` cards instead of being duplicated across weaker Markdown docs.
-
 ## [0.5.0] - 2026-07-13
 
 ### Summary
@@ -32,10 +20,11 @@ Tracking starts with the community-docs baseline for this repository.
   derived KAG publication, and sibling-owner truth instead of leaving those
   boundaries implicit.
 - The release was reconstructed from Git rather than from the old
-  `[Unreleased]` prose: all 58 first-parent commits from `v0.4.0` through
-  `49f9943` are accounted for below, spanning 592 changed paths and 61,475
-  additions / 1,984 deletions. Only 11 of those 58 commits had touched this
-  changelog before release preparation.
+  `[Unreleased]` prose: all 60 first-parent commits from `v0.4.0` through
+  `c9d7282` are accounted for below, spanning 601 changed paths and 62,446
+  additions / 2,098 deletions. Only 13 of those 60 commits touched this
+  changelog at all, and the earlier release preparation stopped before the
+  final center-local stats change.
 
 ### Added
 
@@ -62,6 +51,10 @@ Tracking starts with the community-docs baseline for this repository.
 - Host-machine artifact enforcement is now routed explicitly to
   `abyss-machine`, while runtime substrate composition remains with
   `abyss-stack`; the center route map also exposes the local KAG district.
+- A center-local `stats/` port now publishes the reference-only
+  `public-registry-active-maturity-ratio` over the owner-validated ecosystem
+  registry v2 while leaving shared measurement grammar and cross-owner
+  composition in `aoa-stats`.
 
 ### Changed
 
@@ -85,6 +78,8 @@ Tracking starts with the community-docs baseline for this repository.
 - Release-support direction now routes `abyss-stack` through its repository
   roadmap, while Checkpoint and Recurrence stats provenance returns to current
   part-local owner docs.
+- Validation and test command blocks now route to executable owners and local
+  `AGENTS.md` cards instead of being duplicated across weaker Markdown docs.
 
 ### Fixed
 
@@ -97,10 +92,11 @@ Tracking starts with the community-docs baseline for this repository.
 - Center-entry schema validation now constrains artifact `surface_state` to
   the canonical `generated` value.
 
-### First-Parent Reconciliation (58/58)
+### First-Parent Reconciliation (60/60)
 
-The ordered pre-release history is recorded explicitly so the 47 commits that
-were absent from the old changelog remain discoverable:
+The ordered pre-release history is recorded explicitly so the 47 original
+commits absent from the old changelog, the earlier release-preparation commit,
+and the post-preparation stats change all remain discoverable:
 
 1. `c8ba825` — Add root design surface.
 2. `2e7b5d5` — Sync aoa-skills owner request statuses.
@@ -160,10 +156,12 @@ were absent from the old changelog remain discoverable:
 56. `76e6272` — Add repository KAG index family (#259).
 57. `2646a3d` — Reroute stats documentation provenance (#261).
 58. `49f9943` — Publish canonical repository KAG indexes (#260).
+59. `62d62bd` — Prepare Agents-of-Abyss v0.5.0 (#262).
+60. `c9d7282` — Add center-local stats port (#263).
 
 ### Validation
 
-- Release preparation reconciled the exact `v0.4.0..49f9943` first-parent
+- Release preparation reconciled the exact `v0.4.0..c9d7282` first-parent
   history, changed-path inventory, old dirty-tree evidence, source/generated
   center-entry parity, decision and district topology, owner-request and
   mechanic invariants, artifact-trust boundaries, and all seven KAG indexes
@@ -179,11 +177,15 @@ were absent from the old changelog remain discoverable:
   center ports or read models; they do not transfer durable memory, proof,
   shared skill, graph, host enforcement, runtime, or sibling source authority
   into this repository.
-- Release-prep completion adds the explicit host/runtime owner split, center
-  readmodel class, KAG district route and manifest provenance, strict generated
-  surface-state schema test, `v0.5.0` banners, changelog reconciliation, and
-  regenerated derived indexes after the 58 reconciled product/maintenance
-  commits; those release-only surfaces are not hidden inside the 58 count.
+- The earlier release-preparation commit added the explicit host/runtime owner
+  split, center readmodel class, KAG district route and manifest provenance,
+  strict generated surface-state schema test, `v0.5.0` banners, changelog
+  reconciliation, and regenerated derived indexes; it is explicitly item 59
+  above instead of being hidden outside the history count.
+- This final reconciliation moves the landed stats work into `v0.5.0`, updates
+  the exact Git inventory, and regenerates derived indexes. Its own bounded
+  release-only commit is described here rather than misclassified as an
+  additional product change.
 
 ## [0.4.0] - 2026-04-30
 
