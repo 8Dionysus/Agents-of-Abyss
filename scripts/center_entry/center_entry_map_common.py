@@ -51,29 +51,6 @@ MACHINE_CONTRACT_REFS = (
     "tests/test_entry_surface_sync.py",
 )
 
-BASELINE_VALIDATION_COMMANDS = (
-    "python scripts/hygiene/repair_known_link_drifts.py --check",
-    "python scripts/organ_contract/validate_organ_contract.py",
-    "python scripts/hygiene/validate_links.py",
-    "python scripts/hygiene/validate_markdown_shape.py",
-    "python scripts/hygiene/validate_status_vocabulary.py",
-    "python scripts/hygiene/build_link_shape_hygiene_index.py --check",
-    "python scripts/hygiene/validate_link_shape_hygiene_index.py",
-    "python scripts/agents_mesh/validate_agents_md_shape.py",
-    "python scripts/agents_mesh/validate_agents_mesh.py",
-    "python scripts/agents_mesh/build_agents_mesh_index.py --check",
-    "python scripts/agents_mesh/validate_agents_mesh_index.py",
-    "python scripts/center_entry/validate_entry_surface_sync.py",
-    "python scripts/center_entry/build_center_entry_map.py --check",
-    "python scripts/center_entry/validate_center_entry_map.py",
-    "python scripts/mechanics_topology/validate_mechanics_topology.py",
-    "python scripts/mechanics_topology/validate_mechanic_landing_logs.py",
-    "python scripts/hygiene/validate_generated_freshness.py",
-    "python scripts/hygiene/validate_hygiene_suite.py",
-    "python scripts/root_registries/validate_ecosystem.py",
-    "python -m pytest -q",
-)
-
 VALIDATION_REFS = (
     VALIDATION_BASELINE_REF,
     "scripts/hygiene/repair_known_link_drifts.py",
@@ -408,7 +385,7 @@ ROUTES: tuple[dict[str, object], ...] = (
         "route_mode": "district-work",
         "priority": 10,
         "audience": ["coding-agent", "district-editor", "reviewer"],
-        "need": "work inside generated, scripts, schemas, tests, quests, manifests, config, evals, kag, or examples without confusing local gates with constitutional law",
+        "need": "work inside generated, scripts, schemas, tests, quests, manifests, config, evals, stats, kag, or examples without confusing local gates with constitutional law",
         "surface_ref": "docs/README.md",
         "human_path": [
             "README.md",
@@ -419,6 +396,8 @@ ROUTES: tuple[dict[str, object], ...] = (
             "tests/README.md",
             "config/README.md",
             "evals/README.md",
+            "stats/AGENTS.md",
+            "stats/README.md",
             "examples/README.md",
             "kag/AGENTS.md",
             "kag/README.md",

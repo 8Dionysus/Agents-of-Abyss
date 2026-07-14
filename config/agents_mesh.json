@@ -152,6 +152,23 @@
       ]
     },
     {
+      "path": "stats/AGENTS.md",
+      "scope": "stats/",
+      "kind": "top-level-district-card",
+      "status": "required",
+      "owner": "Agents-of-Abyss",
+      "notes": "Local stats port card for center-owned questions over center-owned registry evidence.",
+      "required_headings": [
+        "# AGENTS.md",
+        "## Applies to",
+        "## Role",
+        "## Read before editing",
+        "## Boundaries",
+        "## Validation",
+        "## Closeout"
+      ]
+    },
+    {
       "path": "generated/AGENTS.md",
       "scope": "generated/",
       "kind": "top-level-district-card",

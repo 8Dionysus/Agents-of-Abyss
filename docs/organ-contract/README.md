@@ -69,12 +69,8 @@ surface:
 
 ## Validation
 
-Use the validation lane in [`AGENTS`](AGENTS.md#validation). The local validator
-is:
-
-```bash
-python scripts/organ_contract/validate_organ_contract.py
-```
+Use the validation lane in [`AGENTS`](AGENTS.md#validation). The executable
+local owner is `scripts/organ_contract/validate_organ_contract.py`.
 
 The center-wide baseline lives in
 [`ENTRY_SURFACE_VALIDATION_BASELINE`](../guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md).

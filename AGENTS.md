@@ -50,11 +50,12 @@ This repository owns:
 
 - AoA charter, layer map, federation rules, and center-level roadmaps
 - ecosystem registry and compact center surfaces
+- center-local statistical questions over center-owned registries and maps
 - doctrine that keeps long-arc direction legible without absorbing specialized layers
 
 It does not own:
 
-- skills, techniques, evals, memory, routing, KAG, playbooks, stats, roles, or runtime implementation truth
+- skills, techniques, evals, memory, routing, KAG, playbooks, shared stats grammar, cross-owner statistical composition, roles, or runtime implementation truth
 - ToS authored meaning
 - quest, checkpoint, runtime, or progression state as live implementation
 
@@ -189,11 +190,11 @@ only the ones that moved; otherwise say no update was needed.
 - scenario, questline, campaign, raid, or reanchor posture belongs in `aoa-playbooks`
 - typed helpers, compatibility, activation, or handoff tooling belongs in `aoa-sdk`
 - runtime budgets, service state, storage, or frontend presentation belongs in `abyss-stack`
-- skill, technique, eval, memo, routing, KAG, or stats meaning belongs in its owner repo
+- skill, technique, eval, memo, routing, KAG, shared stats grammar, or cross-owner statistical composition belongs in its owner repo
 
 ## Hard no
 
-- Do not absorb technique, skill, eval, memo, role, playbook, routing, KAG, stats, runtime, or ToS source truth into the center.
+- Do not absorb technique, skill, eval, memo, role, playbook, routing, KAG, sibling-local statistical meaning, shared stats grammar, runtime, or ToS source truth into the center.
 - Do not let generated registries, routing tables, compact indexes, or derived reports masquerade as source authority.
 - Do not turn the root README, docs root, or CHANGELOG into an archive of every package, wave, or session note.
 - Do not hide semantic changes under "docs-only" or "metadata-only" wording.
@@ -219,11 +220,12 @@ changes, run the full gate:
 python scripts/release_gate/release_check.py
 ```
 
-The entry-surface baseline command set is
-`docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`. Keep that surface,
-`scripts/center_entry/center_entry_map_common.py`, `scripts/center_entry/validate_entry_surface_sync.py`,
-and `scripts/release_gate/release_check.py` aligned when the center-wide validation route
-changes.
+The entry-surface validation route is
+`docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`. The executable baseline
+is owned by `scripts/center_entry/center_entry_map_common.py`,
+`scripts/center_entry/validate_entry_surface_sync.py`, and
+`scripts/release_gate/release_check.py`; keep those surfaces aligned when the
+center-wide validation route changes.
 
 If an Agon owner-binding or gate-routing surface changes, use
 `mechanics/agon/AGENTS.md` and `mechanics/agon/parts/AGENTS.md` for the

@@ -118,11 +118,9 @@ Center entry surfaces may point to the current baseline instead of repeating the
 full command list:
 [docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md](docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md).
 
-For release-facing or repo-wide changes, use the broad gate:
-
-```bash
-python scripts/release_gate/release_check.py
-```
+For release-facing or repo-wide changes, use the broad gate named in root
+[`AGENTS.md#verify`](AGENTS.md#verify). Executable orchestration remains in
+`scripts/release_gate/release_check.py`.
 
 For local work, prefer the nearest `AGENTS.md`, README, builder, validator, or
 test named by the touched surface.

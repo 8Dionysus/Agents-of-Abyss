@@ -92,10 +92,11 @@ surface that can answer it.
 | Does this alter how a repository connects as an AbyssOS organ? | [organ-contract](docs/organ-contract/README.md) |
 | Does the machine route still match the human route? | [ENTRY_SURFACE_VALIDATION_BASELINE](docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md) |
 
-Use [release_check.py](scripts/release_gate/release_check.py) for broad release-facing or
-repo-wide validation. The baseline command set lives in
-[ENTRY_SURFACE_VALIDATION_BASELINE](docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md)
-so this README can stay readable.
+Use [release_check.py](scripts/release_gate/release_check.py) for broad
+release-facing or repo-wide validation. The compact route lives in
+[ENTRY_SURFACE_VALIDATION_BASELINE](docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md),
+while executable command ownership stays in the scripts and local `AGENTS.md`
+cards so this README can stay readable.
 
 ## Current Contour
 
@@ -150,6 +151,7 @@ Root-adjacent technical districts have local gates:
 | [tests](tests/README.md) | regression surfaces |
 | [config](config/README.md) | repo-local validator and builder config |
 | [evals](evals/README.md) | center-local eval-pressure port; central proof authority stays in `aoa-evals` |
+| [stats](stats/README.md) | center-local questions over center-owned registries; shared grammar and composition stay in `aoa-stats` |
 | [examples](examples/README.md) | compact examples that teach current contracts |
 | [manifests](manifests/README.md) | repo-level manifest posture |
 | [quests](quests/README.md) | public durable obligations |

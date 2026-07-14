@@ -7,7 +7,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from scripts.center_entry.center_entry_map_common import (  # noqa: E402
-    BASELINE_VALIDATION_COMMANDS,
     ENTRY_SURFACE_REFS,
     REQUIRED_ROUTE_MODES,
     VALIDATION_BASELINE_REF,
@@ -70,10 +69,13 @@ class EntrySurfaceSyncTests(unittest.TestCase):
         self.assertIn("mechanics/registry.json", route["machine_surface_refs"])
         self.assertNotIn("Agon, Experience", route["need"])
 
-    def test_validation_baseline_surface_names_all_baseline_commands(self) -> None:
+    def test_validation_baseline_routes_to_executable_owners_without_commands(self) -> None:
         text = resolve_local_ref(VALIDATION_BASELINE_REF).read_text(encoding="utf-8")
-        for command in BASELINE_VALIDATION_COMMANDS:
-            self.assertIn(command, text)
+        self.assertIn("AGENTS.md", text)
+        self.assertIn("scripts/center_entry/center_entry_map_common.py", text)
+        self.assertIn("scripts/center_entry/validate_entry_surface_sync.py", text)
+        self.assertIn("scripts/release_gate/release_check.py", text)
+        self.assertNotIn("```bash", text)
 
     def test_root_agents_can_point_to_validation_baseline(self) -> None:
         text = Path("AGENTS.md").read_text(encoding="utf-8")

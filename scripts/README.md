@@ -20,6 +20,7 @@ constitutional authority by themselves.
 | `release-gate` | public release check orchestration |
 | `center-entry` | center entry map building, route parity, and validation |
 | `root-registries` | root config, schema, manifest, technical district, and ecosystem registry validation |
+| `local-stats` | center-local stats port validation delegated to the shared `aoa-stats` contract owner |
 | `docs-districts` | root docs district cleanup, indexes, decisions, and trace receipts |
 | `organ-contract` | AbyssOS repo-organ contract validation |
 | `hygiene` | link, Markdown, status vocabulary, generated freshness, and known-repair guardrails |

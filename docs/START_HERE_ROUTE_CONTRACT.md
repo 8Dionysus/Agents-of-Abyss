@@ -260,37 +260,16 @@ Each route must publish:
 
 The compact route should be useful to an agent without encouraging it to skip human docs.
 
-The center-wide validation baseline lives in
-`docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`. Entry surfaces may point
-there instead of repeating the full baseline command list inline.
+The center-wide validation route lives in
+`docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`. Entry surfaces point
+there instead of repeating commands inline.
 
 ## Validation
 
-Run:
-
-```bash
-python scripts/hygiene/repair_known_link_drifts.py --check
-python scripts/organ_contract/validate_organ_contract.py
-python scripts/docs_districts/validate_traces_district.py
-python scripts/hygiene/validate_links.py
-python scripts/hygiene/validate_markdown_shape.py
-python scripts/hygiene/validate_status_vocabulary.py
-python scripts/hygiene/build_link_shape_hygiene_index.py --check
-python scripts/hygiene/validate_link_shape_hygiene_index.py
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/agents_mesh/build_agents_mesh_index.py --check
-python scripts/agents_mesh/validate_agents_mesh_index.py
-python scripts/center_entry/validate_entry_surface_sync.py
-python scripts/center_entry/build_center_entry_map.py --check
-python scripts/center_entry/validate_center_entry_map.py
-python scripts/mechanics_topology/validate_mechanics_topology.py
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py
-python scripts/hygiene/validate_generated_freshness.py
-python scripts/hygiene/validate_hygiene_suite.py
-python scripts/root_registries/validate_ecosystem.py
-python -m pytest -q
-```
+Use root `AGENTS.md#verify` for the broad command and the nearest local
+`AGENTS.md#validation` for a narrower lane. Executable orchestration remains in
+`scripts/release_gate/release_check.py`; this contract owns route meaning, not
+a duplicate command catalog.
 
 If a route change touches a mechanic package, quests, schemas, generated surfaces, or release posture, run the nearest specific validator and test as well.
 

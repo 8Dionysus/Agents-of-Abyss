@@ -11,7 +11,7 @@ A root surface is allowed only when it serves at least one durable role:
 1. **Civic law**: it names, governs, or maps the AoA center.
 2. **Public governance**: platforms and contributors expect it at root.
 3. **Thin civic index**: it routes to deeper districts without duplicating them.
-4. **Machine/developer district**: it is a top-level technical directory expected by tooling.
+4. **Machine/developer or bounded local-port district**: it is a top-level technical directory expected by tooling or a local port that returns shared authority to its stronger owner.
 5. **Agent lane**: it belongs to the agent-facing lane and is governed by that lane.
 
 A surface that is merely interesting, historical, local to one package, generated, experimental, or future-looking must not sit in root by default.
@@ -39,7 +39,7 @@ The docs thematic cleanup guardrails are defined by:
 | Public governance and legal | `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `LICENSE` | GitHub and contributors expect them there | must not become doctrine catalogs |
 | Thin civic indexes | `GLOSSARY.md`, `QUESTBOOK.md`, `ECOSYSTEM_AUDIT_INDEX.md` | they help humans and agents route quickly | must stay compact and link to deeper canonical docs |
 | Agent lane | `AGENTS.md`, `DESIGN.AGENTS.md`, `.agents/`, `.agents/spark/` | agent-facing work needs a stable local lane and a design form for that lane | must not become a substitute for civic docs |
-| Tooling and machine districts | `.github/`, `scripts/`, `schemas/`, `generated/`, `tests/`, `config/`, `examples/`, `manifests/`, `quests/`, `docs/`, `mechanics/` | tooling and repo structure expect stable directories | each district needs a local gate; generated objects stay generated; quests stay tracked obligations, not roadmap copies |
+| Tooling, machine, and bounded local-port districts | `.github/`, `scripts/`, `schemas/`, `generated/`, `tests/`, `config/`, `examples/`, `manifests/`, `quests/`, `docs/`, `mechanics/`, `evals/`, `memo/`, `kag/`, `stats/` | tooling, repo structure, and bounded owner-local integration expect stable directories | each district needs a local gate; generated objects stay generated; local ports keep shared authority with their stronger owner |
 | Development requirements | `.gitignore`, `requirements-dev.txt` | development hygiene | must stay technical and small |
 
 ## Surfaces that should not live in root

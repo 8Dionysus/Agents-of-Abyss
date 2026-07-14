@@ -8,7 +8,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from scripts.center_entry.center_entry_map_common import (
-    BASELINE_VALIDATION_COMMANDS,
     CENTER_ENTRY_ARTIFACT_IDENTITY,
     ENTRY_SURFACE_REFS,
     REQUIRED_ROUTE_MODES,
@@ -96,11 +95,14 @@ class CenterEntryMapTests(unittest.TestCase):
         self.assertIn("README.md", route["human_path"])
         self.assertTrue(any("replaces human docs" in item for item in route["must_not_claim"]))
 
-    def test_district_work_route_names_local_eval_port(self) -> None:
+    def test_district_work_route_names_local_eval_and_stats_ports(self) -> None:
         payload = build_payload()
         route = next(route for route in payload["routes"] if route["route_id"] == "district-work")
         self.assertIn("evals/README.md", route["human_path"])
+        self.assertIn("stats/AGENTS.md", route["human_path"])
+        self.assertIn("stats/README.md", route["human_path"])
         self.assertIn("evals", route["need"])
+        self.assertIn("stats", route["need"])
 
     def test_entry_surface_refs_are_declared(self) -> None:
         self.assertIn("AGENTS.md", ENTRY_SURFACE_REFS)
@@ -116,11 +118,16 @@ class CenterEntryMapTests(unittest.TestCase):
         self.assertIn("scripts/center_entry/validate_entry_surface_sync.py", payload["validation_refs"])
         self.assertIn("tests/test_entry_surface_sync.py", payload["validation_refs"])
 
-    def test_baseline_validation_commands_are_named(self) -> None:
-        self.assertIn("python scripts/organ_contract/validate_organ_contract.py", BASELINE_VALIDATION_COMMANDS)
-        self.assertIn("python scripts/center_entry/validate_entry_surface_sync.py", BASELINE_VALIDATION_COMMANDS)
-        self.assertIn("python scripts/center_entry/build_center_entry_map.py --check", BASELINE_VALIDATION_COMMANDS)
-        self.assertIn("python -m pytest -q", BASELINE_VALIDATION_COMMANDS)
+    def test_baseline_routes_to_executable_owners(self) -> None:
+        baseline = Path(VALIDATION_BASELINE_REF).read_text(encoding="utf-8")
+        release_gate = Path("scripts/release_gate/release_check.py").read_text(encoding="utf-8")
+
+        self.assertIn("scripts/center_entry/center_entry_map_common.py", baseline)
+        self.assertIn("scripts/center_entry/validate_entry_surface_sync.py", baseline)
+        self.assertIn("scripts/release_gate/release_check.py", baseline)
+        self.assertNotIn("```bash", baseline)
+        self.assertIn("scripts/organ_contract/validate_organ_contract.py", release_gate)
+        self.assertIn("python", Path("AGENTS.md").read_text(encoding="utf-8"))
 
     def test_organ_alignment_route_preserves_owner_boundaries(self) -> None:
         payload = build_payload()

@@ -10,6 +10,8 @@ jobs:
   release_audit:
     name: Repo Validation
     runs-on: ubuntu-latest
+    env:
+      AOA_STATS_ROOT: ${{ github.workspace }}/.deps/aoa-stats
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
@@ -19,6 +21,13 @@ jobs:
         with:
           history-ref: ${{ github.event.pull_request.base.sha || github.event.before || format('{0}^', github.sha) }}
           event-history-ref: ${{ github.event.pull_request.base.sha || github.event.before || format('{0}^', github.sha) }}
+
+      - name: Checkout aoa-stats contract owner
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: 8Dionysus/aoa-stats
+          ref: f8404db3893f2245cb7c11861f9d70850801f170
+          path: .deps/aoa-stats
 
       - name: Setup Python
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405

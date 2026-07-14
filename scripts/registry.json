@@ -58,6 +58,18 @@
       "family_dir": "root_registries"
     },
     {
+      "family_id": "local-stats",
+      "role": "center-local stats port validation through the shared aoa-stats contract owner",
+      "source_ref": "stats/README.md",
+      "paths": [
+        "scripts/stats/validate_local_stats_port.py"
+      ],
+      "must_not_claim": [
+        "central contract validation as proof of ecosystem health or owner acceptance"
+      ],
+      "family_dir": "stats"
+    },
+    {
       "family_id": "docs-districts",
       "role": "root docs district cleanup, indexes, decisions, and trace receipts",
       "source_ref": "docs/README.md",

@@ -31,6 +31,11 @@ It may also publish bounded federation-readiness spines or export contracts as d
 
 `aoa-stats` may hold machine-first summary surfaces, derived windows, and evidence-linked observability views built from owner-local receipts and bounded eval outputs.
 
+An owner-local `stats/` port may define a statistical question over evidence
+owned by that repository. The central contract may validate and compose the
+measurement without taking its population, source meaning, privacy decision,
+or authority ceiling away from the owner.
+
 Neither derived layer must silently replace source-authored meaning from `Tree-of-Sophia` or other source repositories.
 `aoa-stats` must not become proof, route, score, or quest authority.
 
