@@ -91,6 +91,7 @@
 - [AOA-CENTER-D-0024 Spark Session Lane Contract](../AOA-CENTER-D-0024-spark-session-lane-contract.md) (`docs/decisions/AOA-CENTER-D-0024-spark-session-lane-contract.md`)
 - [AOA-CENTER-D-0026 Decision Note: Agent Surface Design Root](../AOA-CENTER-D-0026-agent-surface-design-root.md) (`docs/decisions/AOA-CENTER-D-0026-agent-surface-design-root.md`)
 - [AOA-CENTER-D-0027 Codex Spark Agent Lane Home](../AOA-CENTER-D-0027-codex-spark-agent-lane-home.md) (`docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md`)
+- [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
 
 ## decision index
 
@@ -99,3 +100,4 @@
 ## federation boundary
 
 - [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
+- [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)

@@ -105,3 +105,15 @@
 - [AOA-CENTER-D-0001 Decision Note: `aoa-stats` Is Part Of The Public Federation Contour](../AOA-CENTER-D-0001-aoa-stats-public-layer.md) (`docs/decisions/AOA-CENTER-D-0001-aoa-stats-public-layer.md`)
 - [AOA-CENTER-D-0003 Decision Note: Reviewable Growth Refinery Uses A Narrow Cross-Layer Lineage Route](../AOA-CENTER-D-0003-growth-refinery-lineage-route.md) (`docs/decisions/AOA-CENTER-D-0003-growth-refinery-lineage-route.md`)
 - [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
+
+## manual admission
+
+- [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+
+## owner boundary
+
+- [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+
+## prompt visibility
+
+- [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)

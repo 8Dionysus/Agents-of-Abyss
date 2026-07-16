@@ -7,6 +7,18 @@ Tracking starts with the community-docs baseline for this repository.
 
 ## [Unreleased]
 
+### Changed
+
+- `.agents/` now states the owner-home and projection boundary explicitly:
+  shared AoA skills come from the user profile, while a future repository
+  projection requires a separately admitted owner skill home.
+
+### Removed
+
+- Removed 25 copied shared skill bundles from `.agents/skills/` and the root
+  test that treated one copied helper as center-owned behavior. The
+  constitutional center currently has no independently justified home skill.
+
 ## [0.5.0] - 2026-07-13
 
 ### Summary

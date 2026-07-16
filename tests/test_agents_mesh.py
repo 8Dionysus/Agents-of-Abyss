@@ -24,18 +24,5 @@ class AgentsMeshTests(unittest.TestCase):
         paths = {entry["path"] for entry in config["entries"]}
         self.assertIn("mechanics/recurrence/parts/AGENTS.md", paths)
 
-    def test_local_stack_readiness_requires_items(self):
-        result = subprocess.run(
-            [sys.executable, ".agents/skills/aoa-local-stack-bringup/scripts/readiness_summary.py"],
-            input=json.dumps({"readiness_items": []}),
-            text=True,
-            capture_output=True,
-        )
-        self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
-        payload = json.loads(result.stdout)
-        self.assertEqual(payload["overall"], "fail")
-        self.assertEqual(payload["counts"]["fail"], 1)
-
-
 if __name__ == "__main__":
     unittest.main()

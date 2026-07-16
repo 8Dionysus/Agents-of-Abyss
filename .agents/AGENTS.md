@@ -6,13 +6,19 @@ This card applies to `.agents/` and all descendants unless a nearer `AGENTS.md` 
 
 ## Role
 
-`.agents/` holds agent-lane skills, prompts, Codex Spark lanes, and local agent
-assets that help models operate inside this repository.
+`.agents/` holds repository-local agent projections, prompts, Codex Spark
+lanes, and local agent assets that help models operate inside this repository.
+
+No owner skill home is currently admitted for `Agents-of-Abyss`, so this lane
+has no `.agents/skills/` projection. Shared AoA skills arrive through the
+host-selected user profile and remain owned by `aoa-skills`.
 
 ## Read before editing
 
-Read root `AGENTS.md`, then inspect any local skill README, lane README, or
-manifest before changing prompt-like material.
+Read root `AGENTS.md`, then inspect the relevant lane README or manifest before
+changing prompt-like material. If a future owner skill home is admitted, read
+its top-level `skills/port.manifest.json` before touching the derived
+`.agents/skills/` projection.
 
 For Codex Spark work, read `.agents/spark/AGENTS.md` and
 `.agents/spark/registry.json`.
@@ -24,6 +30,10 @@ Use the nearest README for local file purpose. Use source docs, schemas, generat
 - Do not encode private memory, hidden authority, or unreviewable autonomy here.
 - Do not make this lane the source of constitutional law, owner truth, or runtime state.
 - Do not add prompt material that bypasses center route modes, validation, or owner boundaries.
+- Do not copy the shared AoA catalog into this repository or create an empty
+  skill home for structural symmetry.
+- A future `.agents/skills/` tree must be an exact generated projection of an
+  owner-admitted top-level `skills/` home, never the authored source.
 
 ## Validation
 

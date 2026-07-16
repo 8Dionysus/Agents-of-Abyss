@@ -132,3 +132,15 @@
 ## roadmap/direction
 
 - [AOA-CENTER-D-0020 Decision Note: Root Roadmap Uses Horizon Direction](../AOA-CENTER-D-0020-roadmap-horizon-direction-route.md) (`docs/decisions/AOA-CENTER-D-0020-roadmap-horizon-direction-route.md`)
+
+## agent guidance
+
+- [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+
+## projection boundary
+
+- [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+
+## repository topology
+
+- [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
