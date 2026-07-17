@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 54075492,
+  "allowed_tracked_bytes": 21935013,
+  "approved_by": "repository-owner",
+  "base_ref": "fe67c18163f40435e5413748f25dfe91e5b5a27d",
+  "changed_generated_bytes": 54075492,
+  "changed_generated_files": 660,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "4ff1a4094c5b1b7e4da1649faeff0fd2bc096355e1e009222a3c8b404d2af10c",
+  "reason": "One-time migration from tracked v2 monoliths to portable v3 content-addressed shards.",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "v2_to_v3_migration",
+  "tracked_bytes": 21935013,
+  "tracked_bytes_max": 25165824
+}
