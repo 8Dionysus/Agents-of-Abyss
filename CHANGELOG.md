@@ -9,6 +9,10 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- The broad release gate now executes each owned leaf command once, retains
+  generated-output and builder-declaration checks through a non-reentrant
+  `validate_generated_freshness.py --inputs-only` step, and keeps the full
+  generated-freshness and hygiene aggregate routes available for focused use.
 - The federation no longer routes candidates, donor residue, checkpoints, or
   recurrence through `Dionysus` as a seed-stage intermediary. Method-growth
   now uses `cluster_ref -> candidate_ref -> owner-local intake -> object_ref`;
