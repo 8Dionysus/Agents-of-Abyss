@@ -71,3 +71,7 @@
 ## 2026-07-16
 
 - [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+
+## 2026-07-25
+
+- [AOA-CENTER-D-0032 Organ Access Admission Law](../AOA-CENTER-D-0032-organ-access-admission-law.md) (`docs/decisions/AOA-CENTER-D-0032-organ-access-admission-law.md`)

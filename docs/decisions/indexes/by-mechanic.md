@@ -24,6 +24,7 @@
 ## organ-contract
 
 - [AOA-CENTER-D-0018 Organ Contract Center Law](../AOA-CENTER-D-0018-organ-contract-center-law.md) (`docs/decisions/AOA-CENTER-D-0018-organ-contract-center-law.md`)
+- [AOA-CENTER-D-0032 Organ Access Admission Law](../AOA-CENTER-D-0032-organ-access-admission-law.md) (`docs/decisions/AOA-CENTER-D-0032-organ-access-admission-law.md`)
 
 ## cross-mechanic
 

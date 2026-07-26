@@ -114,9 +114,9 @@ surfaces keep checked landings, validators, owner boundaries, and stop-lines.
 
 | Field | Direction |
 |---|---|
-| Current posture | AoA has planted a thin AbyssOS organ contract that names required route surfaces, surface states, first-cycle entry, and system events without becoming SDK, routing, or runtime implementation. |
-| Next honest move | Use the contract during sibling-repository descent, then decide whether a machine-readable organ registry is useful after real owner-local landings expose the stable shape. |
-| Guardrail | Organ alignment is connection law; `aoa-sdk`, `aoa-routing`, `abyss-stack`, and owner repositories carry implementation, dispatch, runtime, and local truth. |
+| Current posture | AoA now has an AbyssOS organ contract that names required route surfaces, deny-by-default access admission, explicit owner roles, effect families, access-form-specific evidence, and rollback law without becoming SDK, routing, proof, or runtime implementation. |
+| Next honest move | Carry the admitted contract into `aoa-sdk`, `abyss-stack`, `aoa-evals`, and owner repositories; let evidence-backed owner landings produce the private registry shape while `aoa-routing` remains authoritative until its explicit owner-switch receipt. |
+| Guardrail | Organ alignment is constitutional connection law; `aoa-sdk` carries typed control-plane implementation, `aoa-routing` carries dispatch until handoff, `abyss-stack` carries runtime, proof remains with its owner, and each source repository retains local truth. |
 
 ## Horizon: Mechanics Maturity
 

@@ -58,6 +58,86 @@ not part of its current function.
 AoA owns the shared mechanic law. Each repository owns its local use of that
 law.
 
+## Organ access posture
+
+An organ is not required to expose MCP. The owner must first choose whether its
+bounded access route is an MCP adapter, an SDK API, a CLI, a resource
+projection, a skill, a KAG or stats projection, or no separate access plane.
+Repository, package, process, listener, registration, and successful call
+presence are observations, not admission.
+
+When an organ does expose an agent access plane, keep these roles distinct:
+
+| Role | Owns |
+|---|---|
+| source owner | domain meaning and canonical data |
+| access owner | adapter contract and owner-specific payload |
+| control-plane owner | typed registry, discovery, and activation-plan projection |
+| runtime owner | package, deploy, process, endpoint, lifecycle, and rollback evidence |
+| proof owner | bounded evaluation and verdict meaning |
+| acceptance owner | durable source, memory, runtime, or external-effect acceptance |
+
+One repository may fill more than one role only when its local law says so.
+An access adapter never acquires source, proof, or acceptance authority merely
+because it can read or invoke the stronger owner.
+
+Admission is deny-by-default and progresses through explicit states:
+`declared`, `package_candidate`, `deploy_candidate`, `shadow`, `admitted`,
+`suspended`, `deprecated`, and `retired`. An admitted capability also names its
+effect family: `read`, `candidate`, `internal_effect`, or `external_effect`.
+Higher-effect admission never follows automatically from lower-effect
+admission.
+
+An `external_effect` capability must name the exact target and bounded
+operation. Execution requires explicit human approval scoped to that target and
+operation, with an expiry that the enforcing server checks. Caller
+authentication, tool annotations, a prepared plan, a previous approval, or
+model intent cannot substitute for that approval. A missing, mismatched, or
+expired approval denies the effect.
+
+The control-plane registry is a traceable projection of owner records, runtime
+observations, proof evidence, and acceptance receipts. It may decide whether a
+consumer is allowed to discover or activate a route; it must not author domain
+truth, infer proof, accept durable memory, or merge owners behind a semantic
+gateway. Direct owner connections remain valid when policy permits them.
+
+Every admitted route must make the evidence chain required by its selected
+access form inspectable:
+
+```text
+reviewed source
+  -> selected access artifact or owner-equivalent invocation route
+  -> access-form-specific availability evidence
+  -> registry observation when the route is registry-managed
+  -> consumer-observed contract or artifact identity
+  -> grounded canary
+  -> owner acceptance
+```
+
+For a service-backed MCP route, the selected artifact and availability links
+expand to package, deployed artifact, process, and endpoint evidence. For an SDK
+library, CLI, skill, static resource, or KAG projection, owner-equivalent
+package or artifact identity plus an invocation or retrieval check replaces
+process and endpoint evidence. A route is not required to invent service
+evidence for an access form that has no service.
+
+Missing links required by the selected access form remain `shadow`,
+`suspended`, or blocked; a general `healthy` label must not conceal them.
+
+## Rollback posture
+
+Rollback lowers or suspends admission first, then removes or denies new
+consumer activation, and only then rolls runtime or protocol state back through
+the named owner. Source records and compatibility surfaces remain available
+until consumer-zero is proven.
+
+Protocol rollback and authority rollback are separate changes. A protocol
+adapter may return to a prior compatible line without reversing an owner
+handoff, while a failed authority migration must restore the prior owner route
+without using protocol reachability as acceptance evidence. Every route names
+which rollback applies, the owner that executes it, and the evidence that
+closes it.
+
 ## Handoff posture
 
 When a change crosses an owner boundary, the handoff should name:
@@ -83,3 +163,7 @@ A repo-organ alignment is complete when:
   surfaces keep their state labels clear
 - the first cycle can be followed without skipping proof or record surfaces
 - handoff routes point to stronger owners before acceptance is claimed
+- any agent access plane has explicit source, access, control-plane, runtime,
+  proof, and acceptance owners
+- admission, effect family, freshness, provenance, and rollback posture are
+  visible without treating access-plane metadata as owner truth

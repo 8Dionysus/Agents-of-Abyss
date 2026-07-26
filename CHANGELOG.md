@@ -9,6 +9,11 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- The AbyssOS organ contract now defines deny-by-default access admission,
+  access-form-specific evidence chains, exact-target approval for external
+  effects, and separate protocol and authority rollback. Decision
+  `AOA-CENTER-D-0032` records the owner split and links its bounded pre-change
+  evidence ledger.
 - `.agents/` now states the owner-home and projection boundary explicitly:
   shared AoA skills come from the user profile, while a future repository
   projection requires a separately admitted owner skill home.

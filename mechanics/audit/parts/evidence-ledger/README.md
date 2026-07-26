@@ -20,6 +20,11 @@ Separate observed evidence, absent evidence, stale evidence, and derived signals
 - derived-signal note
 - proof route hint
 
+## Current Ledgers
+
+- [OS Abyss MCP R1 baseline, 2026-07-25](OS_ABYSS_MCP_R1_BASELINE_2026-07-25.md):
+  bounded public evidence for the organ-access admission decision.
+
 ## Next Route
 
 Route proof-strength claims to `aoa-evals`; route durable recall or memory writeback to `aoa-memo`.

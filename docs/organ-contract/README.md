@@ -18,6 +18,12 @@ Operational helpers, typed control-plane behavior, dispatch, runtime execution,
 role state, proof canon, memory objects, and ToS-authored meaning stay with
 their stronger owners.
 
+The center also defines the minimum admission law for an organ access plane:
+access is optional, admission is deny-by-default, effects do not inherit
+authority, and registry or runtime presence never substitutes for owner
+acceptance. Executable registry, discovery, runtime, and proof behavior stays
+with the stronger owners named in `ORGAN_CONTRACT`.
+
 The entry route mode is `organ-alignment` in
 [`START_HERE_ROUTE_CONTRACT`](../START_HERE_ROUTE_CONTRACT.md).
 
@@ -45,6 +51,9 @@ Route-mode context: `first-reading`, `root-editing`, `direction-change`,
 - a first cycle replaces local mechanic, release, audit, quest, or checkpoint
   routes
 - a public organ claim proves runtime behavior
+- an MCP package, process, endpoint, registry entry, or successful call admits
+  an organ
+- a control-plane projection owns the domain meaning it routes
 
 ## Promotion path
 
@@ -57,7 +66,7 @@ surface:
 | Need | Next owner |
 |---|---|
 | typed helper, compatibility, activation, or dashboard | `aoa-sdk` |
-| dispatch or navigation implementation | `aoa-routing` |
+| dispatch or navigation implementation during the accepted succession | `aoa-routing` while it remains authoritative; `aoa-sdk` only after the explicit owner-switch receipt lands |
 | role posture or agent handoff | `aoa-agents` |
 | recurring scenario or campaign composition | `aoa-playbooks` |
 | proof bundle or verdict logic | `aoa-evals` |
