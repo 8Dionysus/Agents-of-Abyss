@@ -60,7 +60,6 @@ OWNER_REQUEST_IDS = (
     "ORQ-GROWTHCYCLE-PLAYBOOKS-001",
     "ORQ-GROWTHCYCLE-STATS-001",
     "ORQ-GROWTHCYCLE-ROUTING-001",
-    "ORQ-GROWTHCYCLE-DIONYSUS-001",
     "ORQ-GROWTHCYCLE-STACK-001",
 )
 
@@ -74,7 +73,6 @@ OWNER_REPOS = (
     "aoa-playbooks",
     "aoa-stats",
     "aoa-routing",
-    "Dionysus",
     "abyss-stack",
 )
 

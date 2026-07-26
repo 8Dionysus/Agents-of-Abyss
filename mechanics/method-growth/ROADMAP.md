@@ -3,14 +3,14 @@
 ## Current Contour
 
 The package owns the center route from donor, checkpoint, or repeated work into
-candidate, seed, owner landing, proof, method, memory, derived summary, pruning,
-and closeout. Active parts now carry the working shape; docs carry deeper
-doctrine.
+candidate, owner-local intake and landing, proof, method, memory, derived
+summary, pruning, and closeout. Active parts now carry the working shape; docs
+carry deeper doctrine.
 
 ## Next Work
 
-- Keep candidate-lineage language aligned with `aoa-sdk`, `aoa-skills`,
-  `Dionysus`, and final owner repositories.
+- Keep candidate-lineage language aligned with `aoa-sdk`, `aoa-skills`, and
+  final owner repositories without restoring a seed intermediary.
 - Land owner-request packets in stronger owner repositories as the AoA organ
   pass moves repo by repo.
 - Add package-local receipts when growth-refinery contracts change.

@@ -180,7 +180,7 @@ MECHANICS: dict[str, dict[str, object]] = {
         "path": "mechanics/distillation/LANDING_LOG.md",
         "required_phrases": (
             "Center distillation mechanic landing",
-            "without moving technique, skill, playbook, runtime, memory, proof, seed",
+            "without moving technique, skill, playbook, runtime, memory, proof, intake",
             "no summarization as distillation",
             "ToS canon or compost authority",
             "land owner-local request packets",

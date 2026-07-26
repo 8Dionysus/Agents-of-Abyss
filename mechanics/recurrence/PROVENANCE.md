@@ -73,9 +73,6 @@ runtime evidence, manifests, or seed-pack receipts into the active route.
 - `ATM10-Agent/docs/RUNBOOK.md`
 - `8Dionysus/docs/SYSTEM_CAPABILITY_MAP.md`
 - `8Dionysus/docs/WORKSPACE_INSTALL.md`
-- `Dionysus/archive/seed_pack_exports/aoa-wave9-self-agency-continuity-pack-2026-04-12-summary.md`
-- `Dionysus/archive/seed_pack_exports/aoa-wave10-component-refresh-pack-2026-04-12-summary.md`
-
 ## Manifest evidence
 
 Recurrence manifests were observed across `Agents-of-Abyss`, `8Dionysus`,

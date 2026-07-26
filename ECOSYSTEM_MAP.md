@@ -87,7 +87,7 @@ If the question is "does the center have authority to say this?", return to
 | Surface | Role | Owns | Does not own |
 |---|---|---|---|
 | `8Dionysus` profile surfaces | public route map and selected shared-root projection source | profile orientation, entry posture, public-facing summary, and selected shared-root projection source truth | owner-local truth of AoA layers |
-| `Dionysus` seed garden | seed garden and staging surface | intake packs, seeds, staging traces, and planting trace before owner landing | final owner truth |
+| `Dionysus` conversational self-portrait protocol | public interview, consent, evidence, claim, review, and projection contracts | evidence-grounded, human-reviewed personal portrait protocols and purpose-bounded projections | private raw interview material, generic memory, proof verdicts, or automatic dossiers |
 
 ## Scope note
 

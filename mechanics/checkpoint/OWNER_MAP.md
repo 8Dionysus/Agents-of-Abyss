@@ -14,7 +14,7 @@ and where stronger truth lives.
 | Proof, regression, and verdict reading | judge checkpoint evidence | `aoa-evals` |
 | Re-entry hints | point back to source-owned surfaces | `aoa-routing` |
 | Derived visibility | summarize reviewed stages and receipts | `aoa-stats` |
-| Reviewed checkpoint snapshots and seed-stage lineage | preserve explicit promotion evidence | `Dionysus` |
+| Reviewed owner-local intake and landing | preserve explicit promotion evidence without a federation intermediary | final owning repository |
 | Runtime checkpoint exports and closeout receipts | operate runtime-local evidence and export plumbing | `abyss-stack` |
 | Operator startup checkpoints | expose local operator diagnostics | `ATM10-Agent` |
 | ToS restartable sidecars | keep checkpoint outside authored canon | `Tree-of-Sophia` |

@@ -62,7 +62,6 @@ OWNER_REQUEST_IDS = (
     "ORQ-DISTILLATION-MEMO-001",
     "ORQ-DISTILLATION-EVALS-001",
     "ORQ-DISTILLATION-SDK-001",
-    "ORQ-DISTILLATION-DIONYSUS-001",
     "ORQ-DISTILLATION-TOS-001",
     "ORQ-DISTILLATION-STACK-001",
 )
@@ -75,7 +74,6 @@ OWNER_REPOS = (
     "aoa-memo",
     "aoa-evals",
     "aoa-sdk",
-    "Dionysus",
     "Tree-of-Sophia",
     "abyss-stack",
 )

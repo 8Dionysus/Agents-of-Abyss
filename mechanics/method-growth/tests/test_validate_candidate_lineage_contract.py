@@ -54,20 +54,6 @@ class CandidateLineageContractValidatorTests(unittest.TestCase):
                 "evidence_refs": ["checkpoint:auto-capture:verify-green"],
             },
         )
-        write_json(
-            root / "Dionysus" / "examples" / "seed_lineage_entry.example.json",
-            {
-                "schema_version": "dionysus_seed_lineage_entry_v1",
-                "seed_ref": "seed:aoa:session-growth:reviewed-donor-harvest:v1",
-                "candidate_ref": candidate_ref,
-                "cluster_ref": cluster_ref,
-                "owner_hypothesis": "aoa-skills",
-                "status_posture": "stable",
-                "lifecycle_status": "staged",
-                "object_ref": None,
-            },
-        )
-
     def test_accepts_one_aligned_chain(self) -> None:
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -77,7 +63,6 @@ class CandidateLineageContractValidatorTests(unittest.TestCase):
 
         self.assertEqual(summary.cluster_ref, "cluster:growth:aoa-sdk-checkpoint-auto-capture-verify-green")
         self.assertEqual(summary.candidate_ref, "candidate:session-growth:reviewed-donor-harvest")
-        self.assertEqual(summary.seed_ref, "seed:aoa:session-growth:reviewed-donor-harvest:v1")
 
     def test_rejects_sdk_candidate_minting(self) -> None:
         with TemporaryDirectory() as tmp:

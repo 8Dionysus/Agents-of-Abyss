@@ -28,7 +28,7 @@ The mechanic should make growth legible in this order:
 2. refine it without importing foreign canon
 3. preserve a narrow lineage chain
 4. name the stronger owner
-5. request proof, method, memory, seed, technique, or skill landing from the
+5. request proof, method, memory, technique, or skill landing from the
    owning repository
 6. prune or reanchor what should not become a durable object
 7. close the route with the next owner path still visible
@@ -44,7 +44,7 @@ lives in `docs/`. Source lineage and sibling evidence live behind
 - It is not a new sovereign lineage layer.
 - It is not proof.
 - It is not memory canon.
-- It is not final technique, skill, playbook, seed, runtime, or ToS truth.
+- It is not final technique, skill, playbook, intake, runtime, or ToS truth.
 - It is not permission to promote a route without owner-local landing.
 
 ## Current Priority

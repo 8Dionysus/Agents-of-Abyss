@@ -5,6 +5,7 @@
 ## method-growth
 
 - [AOA-CENTER-D-0003 Decision Note: Reviewable Growth Refinery Uses A Narrow Cross-Layer Lineage Route](../AOA-CENTER-D-0003-growth-refinery-lineage-route.md) (`docs/decisions/AOA-CENTER-D-0003-growth-refinery-lineage-route.md`)
+- [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
 
 ## questbook
 
@@ -37,3 +38,19 @@
 - [AOA-CENTER-D-0024 Spark Session Lane Contract](../AOA-CENTER-D-0024-spark-session-lane-contract.md) (`docs/decisions/AOA-CENTER-D-0024-spark-session-lane-contract.md`)
 - [AOA-CENTER-D-0027 Codex Spark Agent Lane Home](../AOA-CENTER-D-0027-codex-spark-agent-lane-home.md) (`docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md`)
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
+
+## checkpoint
+
+- [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
+
+## distillation
+
+- [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
+
+## growth-cycle
+
+- [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
+
+## recurrence
+
+- [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)

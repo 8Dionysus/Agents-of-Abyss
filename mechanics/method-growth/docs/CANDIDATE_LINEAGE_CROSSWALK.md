@@ -9,10 +9,14 @@ new sovereign object classes.
 
 | stage | identifier | owner repo | scope | authority posture | must not do |
 |---|---|---|---|---|---|
-| checkpoint carry | `cluster_ref` | `aoa-sdk` | local checkpoint and reviewed-closeout preparation | provisional control-plane carry only | mint reviewed candidate identity or seed identity |
+| checkpoint carry | `cluster_ref` | `aoa-sdk` | local checkpoint and reviewed-closeout preparation | provisional control-plane carry only | mint reviewed candidate identity |
 | reviewed candidate | `candidate_ref` | `aoa-skills` | reviewed reusable candidate after donor harvest | reviewed candidate carry, not final owner truth | act as planted object truth |
-| seed staging | `seed_ref` | `Dionysus` | seed staging, dispatch, planting trace | seed-garden and dispatch identity only | replace final owner object identity |
+| owner-local intake | owner-local status or compatibility metadata | final owning repo | review, acceptance, merge, defer, or drop before landing | owner-local process only | become a federation intermediary or rewrite candidate history |
 | owner landing | `object_ref` | final owning repo | landed source-owned object | final owner truth for that object class | retroactively rewrite earlier stage meaning |
+
+An owner may retain `seed_ref` inside its own compatibility surface. The center
+does not require it, assign it to a separate repository, or treat it as owner
+acceptance.
 
 After `candidate_ref` exists, tracked owner status surfaces may record whether
 the route landed, reanchored, merged, deferred, or dropped.
@@ -51,7 +55,7 @@ The route may pass through:
 - `checkpointed`
 - `reviewed`
 - `harvested`
-- `seeded`
+- `accepted`
 - `planted`
 - `proved`
 - `promoted`

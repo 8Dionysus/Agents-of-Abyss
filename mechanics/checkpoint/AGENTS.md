@@ -24,7 +24,7 @@ from runtime-local `.aoa/` logs or sibling raw histories.
 - Do not treat center checkpoint wording as owner acceptance.
 - Do not promote raw checkpoint append history into center doctrine.
 - If checkpoint work needs owner-local implementation, proof, memory, runtime,
-  role, route, playbook, stats, or seed behavior, update the owner-request
+  role, route, playbook, stats, or intake behavior, update the owner-request
   surfaces instead of claiming it in the center.
 
 ## Closeout
@@ -71,7 +71,7 @@ Check whether the move changed:
 - `PARTS.md`: active part boundaries or functioning-part map.
 - `OWNER_MAP.md`: owner boundary, stop-line, or handoff target.
 - `OWNER_REQUESTS.md` and `mechanics/owner-request-queue.json`: runtime,
-  memory, proof, route, role, playbook, stats, or SDK asks.
+  memory, proof, route, role, playbook, stats, SDK, or final-owner asks.
 - `ROADMAP.md`: future route pressure or unresolved checkpoint contour.
 - `LANDING_LOG.md`: a checked landing or planted contract.
 - `PROVENANCE.md`: source bridge, receipt route, or archive map.

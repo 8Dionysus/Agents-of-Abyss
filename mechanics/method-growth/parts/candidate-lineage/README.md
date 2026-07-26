@@ -5,8 +5,8 @@ the center the minting authority.
 
 ## Use When
 
-- A growth object crosses checkpoint carry, reviewed candidate identity, seed
-  staging, and final owner landing.
+- A growth object crosses checkpoint carry, reviewed candidate identity,
+  owner-local intake, and final owner landing.
 - Stage identity or owner responsibility is unclear.
 - A validator or closeout needs the same biography across repositories.
 
@@ -18,8 +18,9 @@ the center the minting authority.
 
 ## Route Check
 
-Restore the chain `cluster_ref -> candidate_ref -> seed_ref -> object_ref` and
-ask which owner can honestly mint or resolve the current stage.
+Restore the chain
+`cluster_ref -> candidate_ref -> owner-local intake -> object_ref` and ask
+which owner can honestly mint or resolve the current stage.
 
 ## Active Outputs
 
@@ -31,5 +32,5 @@ ask which owner can honestly mint or resolve the current stage.
 ## Next Route
 
 Route provisional carry to `aoa-sdk`, reviewed candidate identity to
-`aoa-skills`, seed staging to `Dionysus`, final object truth to the owner repo,
-and proof questions to `aoa-evals`.
+`aoa-skills`, intake and final object truth directly to the owner repo, and
+proof questions to `aoa-evals`.

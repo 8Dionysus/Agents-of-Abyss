@@ -19,8 +19,10 @@ evidence matters. Do not start from historical source trails.
 - Do not use this lane to override owner-local truth, generated-source
   boundaries, sibling-repo authority, release validation contracts, proof
   verdicts, memory canon, runtime activation, or ToS-authored meaning.
-- Do not mint `candidate_ref`, `seed_ref`, or `object_ref` in the center.
-  `aoa-skills`, `Dionysus`, and the final owner repository own those stages.
+- Do not mint `candidate_ref` or `object_ref` in the center.
+  `aoa-skills` and the final owner repository own those stages.
+- Do not restore a mandatory federation-wide seed intermediary. If an owner
+  keeps `seed_ref` for compatibility, it remains owner-local metadata.
 - Keep active parts light and route-shaped. Put deeper doctrine in `docs/`,
   historical lineage in `PROVENANCE.md`, and owner-local requests in
   `OWNER_REQUESTS.md`.

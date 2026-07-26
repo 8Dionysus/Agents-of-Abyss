@@ -47,7 +47,6 @@ OWNER_REQUEST_IDS = (
     "ORQ-CHECKPOINT-ROUTING-001",
     "ORQ-CHECKPOINT-STATS-001",
     "ORQ-CHECKPOINT-STACK-001",
-    "ORQ-CHECKPOINT-DIONYSUS-001",
 )
 
 MUST_NOT_CLAIM = (
@@ -67,7 +66,6 @@ OWNER_REPOS = (
     "aoa-evals",
     "aoa-routing",
     "aoa-stats",
-    "Dionysus",
     "abyss-stack",
 )
 

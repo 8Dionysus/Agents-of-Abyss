@@ -11,8 +11,8 @@ Status: `landed`
 
 ### Trigger
 
-Use when repeated work may become a reusable method, candidate object, seed,
-proof, memory lesson, derived summary, or owner-local doctrine.
+Use when repeated work may become a reusable method, candidate object, proof,
+memory lesson, derived summary, or owner-local doctrine.
 
 ### Center owns
 
@@ -23,25 +23,25 @@ owner landing/pruning rules.
 
 - `aoa-sdk` owns provisional carry and typed helper hints.
 - `aoa-skills` owns reviewed candidate identity and skill-shaped object truth.
-- `Dionysus` owns seed staging.
 - `aoa-evals` owns proof.
 - `aoa-playbooks` owns recurring method.
 - `aoa-techniques` owns reusable practice.
 - `aoa-stats` owns derived summary.
 - `aoa-memo` owns bounded memory and lessons.
+- `aoa-routing` owns navigation hints without lineage authority.
 - The final owner repository owns final object truth.
 
 ### Inputs
 
 - Repeated work, donor-route residue, checkpoint pressure, or candidate lineage
   needing owner landing.
-- A reviewable friction, seed, or object candidate with enough context to name a
+- A reviewable friction or object candidate with enough context to name a
   stronger owner.
 
 ### Outputs
 
-- Owner route, candidate reference, seed reference, proof request, method
-  request, memory request, or pruning decision.
+- Owner route, candidate reference, proof request, method request, memory
+  request, or pruning decision.
 - No final object truth until the final owner repository lands it.
 
 ### Must not claim
@@ -51,7 +51,7 @@ owner landing/pruning rules.
 - proof verdict
 - memory canon
 - candidate_ref minting in center
-- seed_ref minting in center
+- mandatory seed intermediary or seed_ref minting in center
 - object_ref minting in center
 
 ### Validation
@@ -117,12 +117,12 @@ Canonical doctrine refs: [ROOTLINE](docs/ROOTLINE.md),
 
 ## Owner boundary
 
-Center route from repeated work to candidate, seed, owner landing, proof,
-method, memory, derived summary, and pruning; final object truth remains
+Center route from repeated work to candidate, owner-local intake and landing,
+proof, method, memory, derived summary, and pruning; final object truth remains
 owner-local.
 
 AoA owns growth-route law. Owner repositories own local method, technique,
-skill, proof, memory, seed, and runtime truth.
+skill, proof, memory, intake, and runtime truth.
 
 Generated surfaces may reflect method-growth cards, queues, indexes, or
 manifests, but they do not author method-growth meaning.
@@ -132,5 +132,5 @@ manifests, but they do not author method-growth meaning.
 When this mechanic changes, preserve a clean active route: update the relevant
 functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
 accounting behind `PROVENANCE.md`, and route proof, memory, reusable practice,
-bounded execution, recurring method, seed, runtime, and final object truth to
-their stronger owners.
+bounded execution, recurring method, owner-local intake, runtime, and final
+object truth to their stronger owners.

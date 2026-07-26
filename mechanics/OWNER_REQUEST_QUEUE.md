@@ -41,7 +41,6 @@ source JSON, validators, generated queue, and package request docs together.
 |---|---|---|---|---|---|
 | `ORQ-METHOD-SKILLS-001` | `method-growth` | `aoa-skills` | `landed` | `P1` | Candidate skill identity and bounded execution shape |
 | `ORQ-METHOD-SDK-001` | `method-growth` | `aoa-sdk` | `requested` | `P2` | Provisional carry and typed helper hints |
-| `ORQ-METHOD-DIONYSUS-001` | `method-growth` | `Dionysus` | `requested` | `P1` | Seed staging for candidate objects before owner landing |
 | `ORQ-METHOD-EVALS-001` | `method-growth` | `aoa-evals` | `requested` | `P1` | Proof route for promoted candidates and reusable method claims |
 | `ORQ-METHOD-PLAYBOOKS-001` | `method-growth` | `aoa-playbooks` | `requested` | `P1` | Recurring method choreography after repeated work stabilizes |
 | `ORQ-METHOD-MEMO-001` | `method-growth` | `aoa-memo` | `requested` | `P2` | Lessons, memory, and pruning receipts after owner landing |
@@ -54,7 +53,6 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-DISTILLATION-MEMO-001` | `distillation` | `aoa-memo` | `requested` | `P1` | Memory writeback candidates |
 | `ORQ-DISTILLATION-EVALS-001` | `distillation` | `aoa-evals` | `requested` | `P0` | Provenance-preservation and abstraction proof |
 | `ORQ-DISTILLATION-SDK-001` | `distillation` | `aoa-sdk` | `requested` | `P2` | Typed helpers and control-panel support |
-| `ORQ-DISTILLATION-DIONYSUS-001` | `distillation` | `Dionysus` | `requested` | `P2` | Seed and donor staging preservation |
 | `ORQ-DISTILLATION-TOS-001` | `distillation` | `Tree-of-Sophia` | `requested` | `P0` | Compost and canon boundary |
 | `ORQ-DISTILLATION-STACK-001` | `distillation` | `abyss-stack` | `requested` | `P2` | Runtime storage and export plumbing |
 | `ORQ-GROWTHCYCLE-SDK-001` | `growth-cycle` | `aoa-sdk` | `requested` | `P0` | Checkpoint hooks, ledgers, and closeout context |
@@ -65,7 +63,6 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-GROWTHCYCLE-PLAYBOOKS-001` | `growth-cycle` | `aoa-playbooks` | `requested` | `P1` | Recurring cycle choreography |
 | `ORQ-GROWTHCYCLE-STATS-001` | `growth-cycle` | `aoa-stats` | `requested` | `P2` | Derived cycle visibility |
 | `ORQ-GROWTHCYCLE-ROUTING-001` | `growth-cycle` | `aoa-routing` | `requested` | `P2` | Re-entry and next-route hints |
-| `ORQ-GROWTHCYCLE-DIONYSUS-001` | `growth-cycle` | `Dionysus` | `requested` | `P2` | Reviewed snapshots and seed lineage |
 | `ORQ-GROWTHCYCLE-STACK-001` | `growth-cycle` | `abyss-stack` | `requested` | `P1` | Runtime exports and health receipts |
 | `ORQ-RECURRENCE-SDK-001` | `recurrence` | `aoa-sdk` | `requested` | `P0` | Control-plane carry for recurrence manifests and reviewed handoffs |
 | `ORQ-RECURRENCE-ROUTING-001` | `recurrence` | `aoa-routing` | `requested` | `P1` | Re-entry route graph and return dispatch |
@@ -85,7 +82,6 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-CHECKPOINT-ROUTING-001` | `checkpoint` | `aoa-routing` | `requested` | `P2` | Re-entry hints |
 | `ORQ-CHECKPOINT-STATS-001` | `checkpoint` | `aoa-stats` | `requested` | `P2` | Derived checkpoint visibility |
 | `ORQ-CHECKPOINT-STACK-001` | `checkpoint` | `abyss-stack` | `requested` | `P1` | Runtime checkpoint exports and closeout receipts |
-| `ORQ-CHECKPOINT-DIONYSUS-001` | `checkpoint` | `Dionysus` | `requested` | `P2` | Reviewed checkpoint snapshots and seed-stage lineage |
 | `ORQ-EXPERIENCE-STACK-001` | `experience` | `abyss-stack` | `requested` | `P0` | Living workspace runtime and office infrastructure |
 | `ORQ-EXPERIENCE-MEMO-001` | `experience` | `aoa-memo` | `requested` | `P0` | Experience memory, provenance, recall, and continuity loom objects |
 | `ORQ-EXPERIENCE-ROUTING-001` | `experience` | `aoa-routing` | `requested` | `P1` | Context router and live route behavior for experience flows |
@@ -141,11 +137,11 @@ source JSON, validators, generated queue, and package request docs together.
 
 ## Mechanic request docs
 
-- `method-growth` -> [OWNER_REQUESTS.md](method-growth/OWNER_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `Dionysus`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`, `aoa-techniques`, `aoa-stats`
-- `distillation` -> [OWNER_REQUESTS.md](distillation/OWNER_REQUESTS.md); owners: `aoa-techniques`, `aoa-skills`, `aoa-playbooks`, `aoa-agents`, `aoa-memo`, `aoa-evals`, `aoa-sdk`, `Dionysus`, `Tree-of-Sophia`, `abyss-stack`
-- `growth-cycle` -> [OWNER_REQUESTS.md](growth-cycle/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-evals`, `aoa-memo`, `aoa-playbooks`, `aoa-stats`, `aoa-routing`, `Dionysus`, `abyss-stack`
+- `method-growth` -> [OWNER_REQUESTS.md](method-growth/OWNER_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`, `aoa-techniques`, `aoa-stats`
+- `distillation` -> [OWNER_REQUESTS.md](distillation/OWNER_REQUESTS.md); owners: `aoa-techniques`, `aoa-skills`, `aoa-playbooks`, `aoa-agents`, `aoa-memo`, `aoa-evals`, `aoa-sdk`, `Tree-of-Sophia`, `abyss-stack`
+- `growth-cycle` -> [OWNER_REQUESTS.md](growth-cycle/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-evals`, `aoa-memo`, `aoa-playbooks`, `aoa-stats`, `aoa-routing`, `abyss-stack`
 - `recurrence` -> [OWNER_REQUESTS.md](recurrence/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `aoa-stats`, `aoa-kag`, `abyss-stack`
-- `checkpoint` -> [OWNER_REQUESTS.md](checkpoint/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-routing`, `aoa-stats`, `abyss-stack`, `Dionysus`
+- `checkpoint` -> [OWNER_REQUESTS.md](checkpoint/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-routing`, `aoa-stats`, `abyss-stack`
 - `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`, `aoa-playbooks`, `aoa-sdk`, `aoa-stats`, `aoa-skills`, `aoa-techniques`
 - `agon` -> [OWNER_REQUESTS.md](agon/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-routing`, `aoa-agents`, `abyss-stack`, `aoa-kag`, `Tree-of-Sophia`
 - `antifragility` -> [OWNER_REQUESTS.md](antifragility/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-playbooks`

@@ -6,7 +6,7 @@ without minting final object truth.
 ## Use When
 
 - Repeated work produced a reusable unit after reviewed closeout.
-- A skill, technique, playbook, seed, proof, memory lesson, or owner object may
+- A skill, technique, playbook, proof, memory lesson, or owner object may
   be worth carrying.
 - The source still needs provenance and owner boundaries.
 
@@ -32,5 +32,5 @@ stronger owner before claiming that identity.
 ## Next Route
 
 Route executable workflow candidates to `aoa-skills`, reusable practice to
-`aoa-techniques`, recurring scenarios to `aoa-playbooks`, seed staging to
-`Dionysus`, and final object truth to the final owner repository.
+`aoa-techniques`, recurring scenarios to `aoa-playbooks`, and intake plus final
+object truth directly to the final owner repository.

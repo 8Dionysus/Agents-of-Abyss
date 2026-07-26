@@ -10,7 +10,7 @@ meaning.
 |---|---|---|
 | [Checkpoint Intake](parts/checkpoint-intake/README.md) | read checkpoint carry as provisional evidence and choose the next reviewed stage | `aoa-sdk`, `aoa-skills`, `aoa-agents` |
 | [Reviewed Closeout Chain](parts/reviewed-closeout-chain/README.md) | require reviewed closeout before harvest, progression, repair, quest, or memory claims | `aoa-skills`, `aoa-sdk`, `aoa-evals` |
-| [Donor Harvest](parts/donor-harvest/README.md) | route reusable residue into candidate owner shapes without minting final object truth | `aoa-skills`, `aoa-techniques`, `Dionysus`, final owner repos |
+| [Donor Harvest](parts/donor-harvest/README.md) | route reusable residue into candidate owner shapes without minting final object truth | `aoa-skills`, `aoa-techniques`, and final owner repos |
 | [Progression Lift](parts/progression-lift/README.md) | lift evidence-backed movement without reducing growth to a universal score | `aoa-agents`, `aoa-evals`, `aoa-stats` |
 | [Route Forks](parts/route-forks/README.md) | name material next choices, costs, risks, and stop conditions | `aoa-skills`, `aoa-playbooks`, `aoa-routing` |
 | [Automation Opportunity](parts/automation-opportunity/README.md) | detect automation seeds without activating hidden schedulers | `aoa-skills`, `aoa-sdk`, `abyss-stack` |

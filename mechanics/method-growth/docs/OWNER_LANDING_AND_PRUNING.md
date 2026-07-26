@@ -11,7 +11,7 @@ existing owners.
 
 Wave 1 made the growth route legible through:
 
-`cluster_ref -> candidate_ref -> seed_ref -> object_ref`
+`cluster_ref -> candidate_ref -> owner-local intake -> object_ref`
 
 Wave 2 added derived funnel summaries, proof bundles, recurring method, and
 bounded memo support.
@@ -56,8 +56,9 @@ Keep the post-candidate route owner-first:
 
 - `aoa-skills` may carry reviewed owner landing and bounded follow-through
   decisions
-- `Dionysus` may trace how a `seed_ref` did or did not lead into owner landing
-- final owner repos still own landed objects and `object_ref`
+- final owner repos own intake status, landed objects, and `object_ref`
+- an owner-local `seed_ref` may survive as compatibility metadata, but it does
+  not create an intermediary or a separate authority
 
 The center names the doctrine and vocabulary.
 It does not become the home of owner status surfaces themselves.
@@ -66,10 +67,10 @@ It does not become the home of owner status surfaces themselves.
 
 Do not:
 
-- let `aoa-stats` infer owner truth from seed staging or turnover summaries
+- let `aoa-stats` infer owner truth from intake status or turnover summaries
 - let `aoa-memo` turn prune or recovery writeback into landing authority
 - let `aoa-routing` treat owner-status hints as stronger than owner-local review
-- let `Dionysus` pretend seed staging is the same thing as final owner landing
+- let compatibility metadata pretend to be final owner landing
 - let the center claim that tracked status is equivalent to landed object truth
 
 ## Reading Rule

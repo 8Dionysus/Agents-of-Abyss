@@ -79,6 +79,7 @@
 - [AOA-CENTER-D-0006 Questbook Source Contract Full Distillation](../AOA-CENTER-D-0006-questbook-source-contract-full-distillation.md) (`docs/decisions/AOA-CENTER-D-0006-questbook-source-contract-full-distillation.md`)
 - [AOA-CENTER-D-0007 ADR: Docs Guardrails and Mechanic Receipts](../AOA-CENTER-D-0007-docs-guardrails-and-mechanic-receipts.md) (`docs/decisions/AOA-CENTER-D-0007-docs-guardrails-and-mechanic-receipts.md`)
 - [AOA-CENTER-D-0008 Decision Note: Audit Becomes A Center Mechanic](../AOA-CENTER-D-0008-audit-mechanic-planting.md) (`docs/decisions/AOA-CENTER-D-0008-audit-mechanic-planting.md`)
+- [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
 
 ## schema/contract
 
@@ -146,9 +147,17 @@
 
 - [AOA-CENTER-D-0032 Organ Access Admission Law](../AOA-CENTER-D-0032-organ-access-admission-law.md) (`docs/decisions/AOA-CENTER-D-0032-organ-access-admission-law.md`)
 
+## federation route
+
+- [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
+
 ## projection boundary
 
 - [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+
+## repository role
+
+- [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
 
 ## repository topology
 

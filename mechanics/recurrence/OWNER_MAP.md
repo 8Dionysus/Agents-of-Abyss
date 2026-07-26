@@ -16,7 +16,7 @@ and where stronger truth lives.
 | Derived regrounding toward stronger source refs | keep KAG from becoming source truth | `aoa-kag` |
 | Reusable return practices | keep practice objects separate from center law | `aoa-techniques` |
 | Skill-level checkpoint and closeout bridge behavior | keep execution procedures explicit and bounded | `aoa-skills` |
-| Seed packs, staged recurrence waves, and planting receipts | preserve lineage without declaring owner acceptance | `Dionysus` |
+| Owner-local re-entry artifacts and landing receipts | preserve lineage without declaring owner acceptance | final owning repository |
 | Runtime return policy, context rebuild, and return-event logs | operate runtime-local recovery after owner gates | `abyss-stack` |
 | Operator-facing return evidence and product-local recovery UI | expose operator recovery without federation runtime-policy authority | `ATM10-Agent` |
 | Source meaning when recurrence crosses ToS-authored surfaces | keep authored meaning in the source owner | `Tree-of-Sophia` |

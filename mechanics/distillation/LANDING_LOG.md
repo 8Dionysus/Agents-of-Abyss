@@ -7,9 +7,7 @@ Canonical landing ledger for the Distillation mechanic.
 Read this index before scanning the full ledger. It names the current shape of
 Distillation without requiring every older landing entry to be re-read.
 
-- Distillation landed as center law, active parts, owner map, and owner-request
-  route without moving technique, skill, playbook, runtime, memory, proof, seed,
-  SDK, ToS, or infrastructure authority into `Agents-of-Abyss`.
+- Distillation landed as center law, active parts, and owner map without moving technique, skill, playbook, runtime, memory, proof, intake, SDK, ToS, or infrastructure authority into `Agents-of-Abyss`.
 - Current active route: `mechanics/distillation/README.md`,
   `mechanics/distillation/DIRECTION.md`, `mechanics/distillation/PARTS.md`,
   `mechanics/distillation/parts/README.md`, and the relevant part README.
@@ -34,6 +32,29 @@ validators, or tests, update the relevant entry here or explain in the PR why
 the change is not a landing change.
 
 ## Entries
+
+### Source-local preservation and direct owner intake
+
+Status: landed
+
+Owner boundary: source repositories and their local legacy districts preserve
+raw material; final owner repositories own intake and landing without a
+federation staging owner.
+
+Surfaces: `mechanics/distillation/README.md`,
+`mechanics/distillation/AGENTS.md`, `mechanics/distillation/PARTS.md`,
+`mechanics/distillation/OWNER_MAP.md`,
+`mechanics/distillation/OWNER_REQUESTS.md`, the package validator, the center
+owner-request queue, and decision `AOA-CENTER-D-0033`.
+
+Validation: distillation package tests, mechanic card and topology checks,
+owner-request queue validation, and release check.
+
+Stop-lines: preservation does not grant owner acceptance, proof, memory canon,
+runtime activation, or deletion authority.
+
+Next route: preserve material with its source owner and carry reviewed
+candidates directly to the final owner repository.
 
 ### aoa-skills owner-request receipt sync
 

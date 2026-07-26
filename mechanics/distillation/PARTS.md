@@ -8,7 +8,7 @@ not a source-file inventory.
 | Part | Owns | Stronger owner route |
 |---|---|---|
 | [Raw Intake](parts/raw-intake/README.md) | identify source material, review state, and intake boundary | source owner keeps source meaning |
-| [Raw Preservation](parts/raw-preservation/README.md) | preserve raw route without making it active law | `Dionysus`, source repo, or local legacy district owns preservation |
+| [Raw Preservation](parts/raw-preservation/README.md) | preserve raw route without making it active law | source repo or its local legacy district owns preservation |
 | [Provenance Bridge](parts/provenance-bridge/README.md) | keep route back to source evidence through controlled bridges | source owner and `aoa-evals` own proof-facing claims |
 | [Active Extraction](parts/active-extraction/README.md) | extract surviving function into active parts | final object owner lands operational truth |
 | [Noise Pruning](parts/noise-pruning/README.md) | remove duplicate, stale, or packet-scaffold load from active routes | proof or retention claims route to stronger owners |

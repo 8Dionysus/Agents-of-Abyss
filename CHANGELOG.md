@@ -9,6 +9,12 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- The federation no longer routes candidates, donor residue, checkpoints, or
+  recurrence through `Dionysus` as a seed-stage intermediary. Method-growth
+  now uses `cluster_ref -> candidate_ref -> owner-local intake -> object_ref`;
+  decision `AOA-CENTER-D-0033` records the supersession boundary.
+- The current `Dionysus` route now names its conversational interview,
+  consent, evidence, review, and personal portrait projection role.
 - The AbyssOS organ contract now defines deny-by-default access admission,
   access-form-specific evidence chains, exact-target approval for external
   effects, and separate protocol and authority rollback. Decision
@@ -20,6 +26,8 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Removed
 
+- Removed four obsolete Dionysus owner requests and the Method-growth
+  cross-repository validator dependency on a Dionysus seed example.
 - Removed 25 copied shared skill bundles from `.agents/skills/` and the root
   test that treated one copied helper as center-owned behavior. The
   constitutional center currently has no independently justified home skill.
