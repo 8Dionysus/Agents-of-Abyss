@@ -81,9 +81,39 @@ class GeneratedFreshnessTest(unittest.TestCase):
         self.assertIn("scripts/build_out.py", problems[0])
         self.assertIn("shared builder stale", problems[0])
 
+    def test_inputs_only_rejects_missing_required_output_without_running_builder(self) -> None:
+        with tempfile.TemporaryDirectory() as tempdir:
+            root = Path(tempdir)
+            (root / "config").mkdir()
+            (root / "scripts").mkdir()
+            (root / "scripts/build_out.py").write_text("", encoding="utf-8")
+            (root / "config/link_shape_hygiene.json").write_text(
+                json.dumps(
+                    {
+                        "generated_freshness": [
+                            {
+                                "output": "generated/missing.txt",
+                                "builder": "scripts/build_out.py",
+                                "required": True,
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            with patch.object(freshness.subprocess, "run") as run:
+                problems = freshness.validate(root, run_builders=False)
+
+        run.assert_not_called()
+        self.assertEqual(
+            problems,
+            ["required generated freshness input missing: generated/missing.txt"],
+        )
+
     def test_release_owns_every_leaf_without_wrapper_reentry(self) -> None:
         release = [normalized(command) for _label, command in RELEASE_COMMANDS]
-        self.assertEqual(len(release), 59)
+        self.assertEqual(len(release), 60)
         self.assertEqual(len(release), len(set(release)))
 
         expected_suite = [
@@ -97,7 +127,16 @@ class GeneratedFreshnessTest(unittest.TestCase):
         self.assertEqual(hygiene_suite.COMMANDS, expected_suite)
         release_paths = [command[1] for command in release]
         self.assertNotIn("scripts/hygiene/validate_hygiene_suite.py", release_paths)
-        self.assertNotIn("scripts/hygiene/validate_generated_freshness.py", release_paths)
+        self.assertIn(
+            normalized(
+                [
+                    sys.executable,
+                    "scripts/hygiene/validate_generated_freshness.py",
+                    "--inputs-only",
+                ]
+            ),
+            release,
+        )
 
         direct_suite_leaves = {
             normalized([sys.executable, *command])

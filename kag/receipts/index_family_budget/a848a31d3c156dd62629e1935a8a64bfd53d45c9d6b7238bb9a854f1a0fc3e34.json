@@ -1,17 +1,17 @@
 {
-  "allowed_bytes": 7565359,
-  "allowed_tracked_bytes": 22066143,
+  "allowed_bytes": 7567882,
+  "allowed_tracked_bytes": 22068798,
   "approved_by": "repository-owner",
   "base_ref": "80ccb4552122c1f64cfac1ffb95b2d874aaf3e71",
-  "changed_generated_bytes": 7565359,
+  "changed_generated_bytes": 7567882,
   "changed_generated_files": 144,
   "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
   "default_limit_bytes": 1048576,
-  "head_family_digest": "976671161976876e251809122340c0c4b0cfa8f91e65a4fd6184ef9c02ada2c3",
-  "reason": "P-0017 release leaf ownership; preserve deterministic portable family while contracting repeated release execution",
+  "head_family_digest": "a848a31d3c156dd62629e1935a8a64bfd53d45c9d6b7238bb9a854f1a0fc3e34",
+  "reason": "Run each release leaf once while preserving required generated-output validation.",
   "repo": "Agents-of-Abyss",
   "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
   "scope": "generated_delta",
-  "tracked_bytes": 22066143,
+  "tracked_bytes": 22068798,
   "tracked_bytes_max": 25165824
 }
