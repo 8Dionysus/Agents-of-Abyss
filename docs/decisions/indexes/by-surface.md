@@ -128,14 +128,23 @@
 ## organ contract
 
 - [AOA-CENTER-D-0018 Organ Contract Center Law](../AOA-CENTER-D-0018-organ-contract-center-law.md) (`docs/decisions/AOA-CENTER-D-0018-organ-contract-center-law.md`)
+- [AOA-CENTER-D-0032 Organ Access Admission Law](../AOA-CENTER-D-0032-organ-access-admission-law.md) (`docs/decisions/AOA-CENTER-D-0032-organ-access-admission-law.md`)
 
 ## roadmap/direction
 
 - [AOA-CENTER-D-0020 Decision Note: Root Roadmap Uses Horizon Direction](../AOA-CENTER-D-0020-roadmap-horizon-direction-route.md) (`docs/decisions/AOA-CENTER-D-0020-roadmap-horizon-direction-route.md`)
 
+## access plane
+
+- [AOA-CENTER-D-0032 Organ Access Admission Law](../AOA-CENTER-D-0032-organ-access-admission-law.md) (`docs/decisions/AOA-CENTER-D-0032-organ-access-admission-law.md`)
+
 ## agent guidance
 
 - [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+
+## federation boundary
+
+- [AOA-CENTER-D-0032 Organ Access Admission Law](../AOA-CENTER-D-0032-organ-access-admission-law.md) (`docs/decisions/AOA-CENTER-D-0032-organ-access-admission-law.md`)
 
 ## projection boundary
 

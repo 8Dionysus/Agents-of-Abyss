@@ -58,6 +58,58 @@ not part of its current function.
 AoA owns the shared mechanic law. Each repository owns its local use of that
 law.
 
+## Organ access posture
+
+An organ is not required to expose MCP. The owner must first choose whether its
+bounded access route is an MCP adapter, an SDK API, a CLI, a resource
+projection, a skill, a KAG or stats projection, or no separate access plane.
+Repository, package, process, listener, registration, and successful call
+presence are observations, not admission.
+
+When an organ does expose an agent access plane, keep these roles distinct:
+
+| Role | Owns |
+|---|---|
+| source owner | domain meaning and canonical data |
+| access owner | adapter contract and owner-specific payload |
+| control-plane owner | typed registry, discovery, and activation-plan projection |
+| runtime owner | package, deploy, process, endpoint, lifecycle, and rollback evidence |
+| proof owner | bounded evaluation and verdict meaning |
+| acceptance owner | durable source, memory, runtime, or external-effect acceptance |
+
+One repository may fill more than one role only when its local law says so.
+An access adapter never acquires source, proof, or acceptance authority merely
+because it can read or invoke the stronger owner.
+
+Admission is deny-by-default and progresses through explicit states:
+`declared`, `package_candidate`, `deploy_candidate`, `shadow`, `admitted`,
+`suspended`, `deprecated`, and `retired`. An admitted capability also names its
+effect family: `read`, `candidate`, `internal_effect`, or `external_effect`.
+Higher-effect admission never follows automatically from lower-effect
+admission.
+
+The control-plane registry is a traceable projection of owner records, runtime
+observations, proof evidence, and acceptance receipts. It may decide whether a
+consumer is allowed to discover or activate a route; it must not author domain
+truth, infer proof, accept durable memory, or merge owners behind a semantic
+gateway. Direct owner connections remain valid when policy permits them.
+
+Every admitted route must make the following chain inspectable:
+
+```text
+reviewed source
+  -> package
+  -> deployed artifact
+  -> process and endpoint
+  -> registry observation
+  -> consumer-observed schema
+  -> grounded canary
+  -> owner acceptance
+```
+
+Missing links remain `shadow`, `suspended`, or blocked; a general `healthy`
+label must not conceal them.
+
 ## Handoff posture
 
 When a change crosses an owner boundary, the handoff should name:
@@ -83,3 +135,7 @@ A repo-organ alignment is complete when:
   surfaces keep their state labels clear
 - the first cycle can be followed without skipping proof or record surfaces
 - handoff routes point to stronger owners before acceptance is claimed
+- any agent access plane has explicit source, access, control-plane, runtime,
+  proof, and acceptance owners
+- admission, effect family, freshness, provenance, and rollback posture are
+  visible without treating access-plane metadata as owner truth

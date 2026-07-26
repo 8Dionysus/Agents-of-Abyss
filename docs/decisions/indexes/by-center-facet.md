@@ -67,6 +67,7 @@
 
 - [AOA-CENTER-D-0018 Organ Contract Center Law](../AOA-CENTER-D-0018-organ-contract-center-law.md) (`docs/decisions/AOA-CENTER-D-0018-organ-contract-center-law.md`)
 - [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
+- [AOA-CENTER-D-0032 Organ Access Admission Law](../AOA-CENTER-D-0032-organ-access-admission-law.md) (`docs/decisions/AOA-CENTER-D-0032-organ-access-admission-law.md`)
 
 ## release preflight
 
@@ -101,3 +102,4 @@
 
 - [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
 - [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+- [AOA-CENTER-D-0032 Organ Access Admission Law](../AOA-CENTER-D-0032-organ-access-admission-law.md) (`docs/decisions/AOA-CENTER-D-0032-organ-access-admission-law.md`)
