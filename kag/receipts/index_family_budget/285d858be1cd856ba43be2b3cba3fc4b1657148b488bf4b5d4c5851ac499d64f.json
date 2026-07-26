@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 7635706,
+  "allowed_tracked_bytes": 21974096,
+  "approved_by": "repository-owner",
+  "base_ref": "bfeb4bfb447b437f1360b814bbf4f1def5e62859",
+  "changed_generated_bytes": 7635706,
+  "changed_generated_files": 153,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "285d858be1cd856ba43be2b3cba3fc4b1657148b488bf4b5d4c5851ac499d64f",
+  "reason": "R2 organ-access admission review fixes and bounded audit evidence",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 21974096,
+  "tracked_bytes_max": 25165824
+}
