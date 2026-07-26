@@ -88,27 +88,55 @@ effect family: `read`, `candidate`, `internal_effect`, or `external_effect`.
 Higher-effect admission never follows automatically from lower-effect
 admission.
 
+An `external_effect` capability must name the exact target and bounded
+operation. Execution requires explicit human approval scoped to that target and
+operation, with an expiry that the enforcing server checks. Caller
+authentication, tool annotations, a prepared plan, a previous approval, or
+model intent cannot substitute for that approval. A missing, mismatched, or
+expired approval denies the effect.
+
 The control-plane registry is a traceable projection of owner records, runtime
 observations, proof evidence, and acceptance receipts. It may decide whether a
 consumer is allowed to discover or activate a route; it must not author domain
 truth, infer proof, accept durable memory, or merge owners behind a semantic
 gateway. Direct owner connections remain valid when policy permits them.
 
-Every admitted route must make the following chain inspectable:
+Every admitted route must make the evidence chain required by its selected
+access form inspectable:
 
 ```text
 reviewed source
-  -> package
-  -> deployed artifact
-  -> process and endpoint
-  -> registry observation
-  -> consumer-observed schema
+  -> selected access artifact or owner-equivalent invocation route
+  -> access-form-specific availability evidence
+  -> registry observation when the route is registry-managed
+  -> consumer-observed contract or artifact identity
   -> grounded canary
   -> owner acceptance
 ```
 
-Missing links remain `shadow`, `suspended`, or blocked; a general `healthy`
-label must not conceal them.
+For a service-backed MCP route, the selected artifact and availability links
+expand to package, deployed artifact, process, and endpoint evidence. For an SDK
+library, CLI, skill, static resource, or KAG projection, owner-equivalent
+package or artifact identity plus an invocation or retrieval check replaces
+process and endpoint evidence. A route is not required to invent service
+evidence for an access form that has no service.
+
+Missing links required by the selected access form remain `shadow`,
+`suspended`, or blocked; a general `healthy` label must not conceal them.
+
+## Rollback posture
+
+Rollback lowers or suspends admission first, then removes or denies new
+consumer activation, and only then rolls runtime or protocol state back through
+the named owner. Source records and compatibility surfaces remain available
+until consumer-zero is proven.
+
+Protocol rollback and authority rollback are separate changes. A protocol
+adapter may return to a prior compatible line without reversing an owner
+handoff, while a failed authority migration must restore the prior owner route
+without using protocol reachability as acceptance evidence. Every route names
+which rollback applies, the owner that executes it, and the evidence that
+closes it.
 
 ## Handoff posture
 

@@ -66,7 +66,7 @@ surface:
 | Need | Next owner |
 |---|---|
 | typed helper, compatibility, activation, or dashboard | `aoa-sdk` |
-| dispatch or navigation implementation during the accepted succession | `aoa-sdk`, with `aoa-routing` remaining authoritative until its explicit owner-switch receipt |
+| dispatch or navigation implementation during the accepted succession | `aoa-routing` while it remains authoritative; `aoa-sdk` only after the explicit owner-switch receipt lands |
 | role posture or agent handoff | `aoa-agents` |
 | recurring scenario or campaign composition | `aoa-playbooks` |
 | proof bundle or verdict logic | `aoa-evals` |

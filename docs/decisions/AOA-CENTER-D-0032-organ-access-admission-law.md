@@ -29,6 +29,12 @@ read and effectful tools, incomplete provenance, and large always-loaded
 catalogs. Treating package or runtime presence as admission would therefore
 merge distinct owner, proof, effect, and freshness states.
 
+The bounded public evidence ledger for that observation is
+[`OS_ABYSS_MCP_R1_BASELINE_2026-07-25`](../../mechanics/audit/parts/evidence-ledger/OS_ABYSS_MCP_R1_BASELINE_2026-07-25.md).
+It records the inspected owner and runtime surfaces, aggregate observations,
+raw-evidence digests, freshness limits, and the stronger proof route without
+publishing host-private connection details.
+
 ## Options considered
 
 1. Keep admission implicit in each MCP package and consumer configuration.
@@ -112,6 +118,7 @@ API, KAG projection, or no plane.
 
 - `docs/organ-contract/ORGAN_CONTRACT.md`
 - `docs/organ-contract/README.md`
+- `mechanics/audit/parts/evidence-ledger/OS_ABYSS_MCP_R1_BASELINE_2026-07-25.md`
 
 ## Follow-up route
 
