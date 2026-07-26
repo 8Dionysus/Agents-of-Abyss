@@ -107,6 +107,7 @@
 - [AOA-CENTER-D-0023 Root Tests District Contract](../AOA-CENTER-D-0023-root-tests-district-contract.md) (`docs/decisions/AOA-CENTER-D-0023-root-tests-district-contract.md`)
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
 - [AOA-CENTER-D-0029 Root Scripts Family Topology](../AOA-CENTER-D-0029-root-scripts-family-topology.md) (`docs/decisions/AOA-CENTER-D-0029-root-scripts-family-topology.md`)
+- [AOA-CENTER-D-0034 Release Leaf Command Ownership](../AOA-CENTER-D-0034-release-leaf-command-ownership.md) (`docs/decisions/AOA-CENTER-D-0034-release-leaf-command-ownership.md`)
 
 ## release workflow
 
@@ -114,6 +115,7 @@
 - [AOA-CENTER-D-0017 GitHub Landing Workflow](../AOA-CENTER-D-0017-github-landing-workflow.md) (`docs/decisions/AOA-CENTER-D-0017-github-landing-workflow.md`)
 - [AOA-CENTER-D-0019 Release Preflight Route Surface](../AOA-CENTER-D-0019-release-preflight-route-surface.md) (`docs/decisions/AOA-CENTER-D-0019-release-preflight-route-surface.md`)
 - [AOA-CENTER-D-0024 Spark Session Lane Contract](../AOA-CENTER-D-0024-spark-session-lane-contract.md) (`docs/decisions/AOA-CENTER-D-0024-spark-session-lane-contract.md`)
+- [AOA-CENTER-D-0034 Release Leaf Command Ownership](../AOA-CENTER-D-0034-release-leaf-command-ownership.md) (`docs/decisions/AOA-CENTER-D-0034-release-leaf-command-ownership.md`)
 
 ## agent lane
 
@@ -162,3 +164,7 @@
 ## repository topology
 
 - [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+
+## root script
+
+- [AOA-CENTER-D-0034 Release Leaf Command Ownership](../AOA-CENTER-D-0034-release-leaf-command-ownership.md) (`docs/decisions/AOA-CENTER-D-0034-release-leaf-command-ownership.md`)

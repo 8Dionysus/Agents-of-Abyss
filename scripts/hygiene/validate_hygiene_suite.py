@@ -11,9 +11,8 @@ COMMANDS = [
     ["scripts/hygiene/validate_links.py"],
     ["scripts/hygiene/validate_markdown_shape.py"],
     ["scripts/hygiene/validate_status_vocabulary.py"],
-    ["scripts/hygiene/build_link_shape_hygiene_index.py", "--check"],
-    ["scripts/hygiene/validate_link_shape_hygiene_index.py"],
     ["scripts/hygiene/validate_generated_freshness.py"],
+    ["scripts/hygiene/validate_link_shape_hygiene_index.py"],
 ]
 
 

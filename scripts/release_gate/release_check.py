@@ -65,8 +65,10 @@ COMMANDS = [
     ("validate mechanic card index", [sys.executable, "scripts/mechanics_topology/validate_mechanic_card_index.py"]),
     ("check owner request queue", [sys.executable, "scripts/owner_requests/build_owner_request_queue.py", "--check"]),
     ("validate generated owner request queue", [sys.executable, "scripts/owner_requests/validate_generated_owner_request_queue.py"]),
-    ("validate generated freshness", [sys.executable, "scripts/hygiene/validate_generated_freshness.py"]),
-    ("validate hygiene suite", [sys.executable, "scripts/hygiene/validate_hygiene_suite.py"]),
+    (
+        "validate generated freshness inputs",
+        [sys.executable, "scripts/hygiene/validate_generated_freshness.py", "--inputs-only"],
+    ),
     ("validate mechanic landing logs", [sys.executable, "scripts/mechanics_topology/validate_mechanic_landing_logs.py"]),
     ("validate ecosystem", [sys.executable, "scripts/root_registries/validate_ecosystem.py"]),
     ("run tests", [sys.executable, "-m", "pytest", "-q"]),

@@ -32,6 +32,7 @@
 - [AOA-CENTER-D-0023 Root Tests District Contract](../AOA-CENTER-D-0023-root-tests-district-contract.md) (`docs/decisions/AOA-CENTER-D-0023-root-tests-district-contract.md`)
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
 - [AOA-CENTER-D-0029 Root Scripts Family Topology](../AOA-CENTER-D-0029-root-scripts-family-topology.md) (`docs/decisions/AOA-CENTER-D-0029-root-scripts-family-topology.md`)
+- [AOA-CENTER-D-0034 Release Leaf Command Ownership](../AOA-CENTER-D-0034-release-leaf-command-ownership.md) (`docs/decisions/AOA-CENTER-D-0034-release-leaf-command-ownership.md`)
 
 ## link/shape hygiene
 
@@ -49,6 +50,7 @@
 - [AOA-CENTER-D-0005 Decision Note: Questbook Keeps A Model Spine And Registry-Backed Route Tables](../AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md) (`docs/decisions/AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md`)
 - [AOA-CENTER-D-0011 Ecosystem Registry v2 Landing](../AOA-CENTER-D-0011-ecosystem-registry-v2-landing.md) (`docs/decisions/AOA-CENTER-D-0011-ecosystem-registry-v2-landing.md`)
 - [AOA-CENTER-D-0012 Generated District Contract](../AOA-CENTER-D-0012-generated-district-contract.md) (`docs/decisions/AOA-CENTER-D-0012-generated-district-contract.md`)
+- [AOA-CENTER-D-0034 Release Leaf Command Ownership](../AOA-CENTER-D-0034-release-leaf-command-ownership.md) (`docs/decisions/AOA-CENTER-D-0034-release-leaf-command-ownership.md`)
 
 ## ecosystem registry
 
@@ -68,6 +70,7 @@
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
 - [AOA-CENTER-D-0029 Root Scripts Family Topology](../AOA-CENTER-D-0029-root-scripts-family-topology.md) (`docs/decisions/AOA-CENTER-D-0029-root-scripts-family-topology.md`)
 - [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
+- [AOA-CENTER-D-0034 Release Leaf Command Ownership](../AOA-CENTER-D-0034-release-leaf-command-ownership.md) (`docs/decisions/AOA-CENTER-D-0034-release-leaf-command-ownership.md`)
 
 ## mechanic topology
 
