@@ -38,10 +38,14 @@ protected by rerunning those leaves.
 ## Decision
 
 The root release gate owns its 59 distinct leaf commands directly and executes
-each exact command once.
+each exact command once. One additional non-reentrant input-validation step
+keeps the generated-output existence and builder-declaration contract visible,
+for 60 top-level process nodes in total.
 
 `validate_hygiene_suite.py` and `validate_generated_freshness.py` remain
-standalone public routes. The broad release does not invoke either wrapper.
+standalone public routes. The broad release does not invoke the hygiene wrapper
+or the full generated-freshness route; it invokes
+`validate_generated_freshness.py --inputs-only` without running builders.
 Generated freshness groups outputs by exact builder argv and runs each group
 once; different argv remain different commands, and a grouped failure names
 every covered output.
@@ -60,8 +64,8 @@ that two different builder invocations are equivalent.
 
 ## Consequences
 
-- The broad release process graph contracts from 88 nodes to 59 without
-  removing a distinct check.
+- The broad release process graph contracts from 88 nodes to 60: 59 distinct
+  leaf commands plus the non-reentrant generated-freshness input check.
 - Standalone hygiene still runs later checks after a failure.
 - One builder may protect several generated outputs, and one failure reports
   all of them.
