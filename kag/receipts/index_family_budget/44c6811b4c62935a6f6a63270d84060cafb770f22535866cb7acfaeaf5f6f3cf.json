@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 8543602,
+  "allowed_tracked_bytes": 22069092,
+  "approved_by": "repository-owner",
+  "base_ref": "80ccb4552122c1f64cfac1ffb95b2d874aaf3e71",
+  "changed_generated_bytes": 8543602,
+  "changed_generated_files": 164,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "44c6811b4c62935a6f6a63270d84060cafb770f22535866cb7acfaeaf5f6f3cf",
+  "reason": "Deduplicate release leaf execution while preserving input validation, aligned decision evidence, and release-visible changelog coverage.",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 22069092,
+  "tracked_bytes_max": 25165824
+}
