@@ -38,7 +38,7 @@ signals into the active route.
   harvest, progression lift, route forks, automation opportunity scan,
   self-diagnosis, self-repair, and quest harvest workflows.
 - Sibling owner signals in `aoa-sdk`, `aoa-agents`, `aoa-evals`, `aoa-memo`,
-  `aoa-playbooks`, `aoa-stats`, `aoa-routing`, `Dionysus`, and `abyss-stack`.
+  `aoa-playbooks`, `aoa-stats`, `aoa-routing`, and `abyss-stack`.
 
 ## Distillation rule
 

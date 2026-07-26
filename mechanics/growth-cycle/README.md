@@ -35,8 +35,6 @@ and handoff route grammar for reviewed agent-process lifecycle.
 - `aoa-playbooks` owns recurring cycle choreography and campaign routes.
 - `aoa-stats` owns derived visibility from receipts and never raw authority.
 - `aoa-routing` owns re-entry and next-route hints without cycle meaning.
-- `Dionysus` owns reviewed snapshots and seed lineage when promotion is
-  explicit.
 - `abyss-stack` owns runtime exports, runtime health receipts, and plumbing
   after runtime gates.
 
@@ -80,8 +78,8 @@ Use the validation lane in [mechanics/growth-cycle/AGENTS.md](AGENTS.md#validati
 - For proof, route to `aoa-evals`; for memory, route to `aoa-memo`; for
   choreography, route to `aoa-playbooks`; for derived visibility, route to
   `aoa-stats`; for navigation hints, route to `aoa-routing`; for reviewed
-  snapshots and seeds, route to `Dionysus`; for runtime exports and health
-  receipts, route to `abyss-stack`; for unclear owner, return to
+  intake and landing, route directly to the final owner repository; for runtime
+  exports and health receipts, route to `abyss-stack`; for unclear owner, return to
   `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
 
 ## Active route
@@ -111,7 +109,7 @@ Use the validation lane in [mechanics/growth-cycle/AGENTS.md](AGENTS.md#validati
 
 Use [OWNER_REQUESTS](OWNER_REQUESTS.md) when this mechanic produces an
 owner-local hook, skill, technique, proof, memory, runtime, role, route,
-playbook, stats, seed, or quest request. The central queue source is
+playbook, stats, intake, or quest request. The central queue source is
 [`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the
 compact generated companion is
 [`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json).
@@ -155,5 +153,5 @@ practice, route to `aoa-techniques`; for self-agent posture, route to
 When this mechanic changes, preserve a clean active route: update the relevant
 functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
 accounting behind `PROVENANCE.md`, and route hook, skill, technique, proof,
-memory, runtime, role, route, playbook, stats, seed, and quest claims to their
-stronger owners.
+memory, runtime, role, route, playbook, stats, intake, and quest claims to
+their stronger owners.

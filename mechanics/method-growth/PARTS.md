@@ -9,7 +9,7 @@ implementation and meaning.
 | Part | Center function | Stronger owner route |
 |---|---|---|
 | [Donor Refinery](parts/donor-refinery/README.md) | extract reusable pattern while keeping provenance and rejecting contamination | source owner, `aoa-techniques`, `aoa-skills`, and `aoa-playbooks` own local objects |
-| [Candidate Lineage](parts/candidate-lineage/README.md) | keep `cluster_ref -> candidate_ref -> seed_ref -> object_ref` readable without minting identities in the center | `aoa-sdk`, `aoa-skills`, `Dionysus`, and final owner repos own stage identity |
+| [Candidate Lineage](parts/candidate-lineage/README.md) | keep `cluster_ref -> candidate_ref -> owner-local intake -> object_ref` readable without minting identities in the center | `aoa-sdk`, `aoa-skills`, and final owner repos own stage identity |
 | [Owner Landing](parts/owner-landing/README.md) | route reviewed candidates into owner-local acceptance, landing, or receipt posture | final owner repos own landed object truth |
 | [Pruning](parts/pruning/README.md) | make reanchor, merge, defer, drop, and supersession explicit | owner repos, `aoa-memo`, and `aoa-stats` own local receipts and derived summaries |
 | [Proof Route](parts/proof-route/README.md) | keep growth claims weaker than evidence until eval owners land proof | `aoa-evals` owns verdict and regression posture |

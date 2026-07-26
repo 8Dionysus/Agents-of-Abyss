@@ -5,11 +5,11 @@ and where stronger truth lives.
 
 | Concern | Center role | Stronger owner |
 |---|---|---|
-| Growth-route law and vocabulary | define donor, refinement, candidate, seed, owner landing, pruning, proof, method, memory, and closeout boundaries | `Agents-of-Abyss` |
+| Growth-route law and vocabulary | define donor, refinement, candidate, owner-local intake, owner landing, pruning, proof, method, memory, and closeout boundaries | `Agents-of-Abyss` |
 | Provisional carry and typed helper hints | name the carry boundary without making SDK helpers authoritative | `aoa-sdk` |
 | Reviewed candidate identity and bounded execution shape | require reviewed candidate posture before promotion | `aoa-skills` |
 | Reusable practice | separate technique from skill and keep practice reusable without scenario inflation | `aoa-techniques` |
-| Seed staging and planting trace | preserve origin, intended owner, and dispatch without final owner truth | `Dionysus` |
+| Owner-local intake and landing trace | preserve origin, intended owner, review state, and acceptance without a federation intermediary | final owning repository |
 | Proof route and promotion evidence | require evidence before claims harden | `aoa-evals` |
 | Recurring scenario-level method | move stable multi-step routes out of center doctrine | `aoa-playbooks` |
 | Bounded memory and lessons | retain provenance, recall, and pruning lessons without memory sovereignty | `aoa-memo` |
@@ -30,7 +30,7 @@ proof.
 - A donor pattern is not canon.
 - A `cluster_ref` is not reviewed candidate identity.
 - A `candidate_ref` is not final owner truth.
-- A `seed_ref` is not owner acceptance.
+- An owner-local `seed_ref`, when retained for compatibility, is not a federation stage or owner acceptance.
 - A stats summary is not proof.
 - A memo lesson is not memory canon for the center.
 - A technique, skill, or playbook claim must land in its owning repository.

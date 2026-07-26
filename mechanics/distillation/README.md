@@ -27,7 +27,8 @@ Center distillation law, vocabulary, stop-lines, provenance route grammar, activ
 - `aoa-memo` owns memory writeback candidates and durable memory review.
 - `aoa-evals` owns provenance-preservation proof and abstraction-quality verdicts.
 - `aoa-sdk` owns typed helpers, control-panel support, and compatible readers.
-- `Dionysus` owns seed, donor, and staging preservation.
+- Source and final owner repositories own raw preservation and owner-local
+  intake.
 - `Tree-of-Sophia` owns compost, principle, and canon-facing meaning.
 - `abyss-stack` owns runtime storage, execution, and export plumbing.
 
@@ -59,7 +60,13 @@ Use the validation lane in [mechanics/distillation/AGENTS.md](AGENTS.md#validati
 ### Next route
 
 - For reusable practice, route to `aoa-techniques`; for executable workflows, route to `aoa-skills`; for recurring scenarios, route to `aoa-playbooks`; for runtime artifact contracts, route to `aoa-agents`; for memory writeback, route to `aoa-memo`.
-- For proof, route to `aoa-evals`; for typed helpers, route to `aoa-sdk`; for seed or donor staging, route to `Dionysus`; for compost, principle, or canon-facing meaning, route to `Tree-of-Sophia`; for runtime storage or exports, route to `abyss-stack`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
+- For proof, route to `aoa-evals`; for typed helpers, route to `aoa-sdk`; for
+  raw preservation, route to the source repository or its local legacy
+  district; for owner-local intake, route directly to the final owner
+  repository; for compost, principle, or canon-facing meaning, route to
+  `Tree-of-Sophia`; for runtime storage or exports, route to `abyss-stack`;
+  for unclear owner, return to `docs/FEDERATION_RULES.md` and
+  `docs/REPO_ROLES.md`.
 
 ## Active route
 
@@ -87,7 +94,7 @@ Use the validation lane in [mechanics/distillation/AGENTS.md](AGENTS.md#validati
 ## Owner-request queue
 
 Use [OWNER_REQUESTS](OWNER_REQUESTS.md) when this mechanic produces an
-owner-local technique, skill, playbook, runtime, memo, proof, seed, SDK, or ToS
+owner-local technique, skill, playbook, runtime, memo, proof, intake, SDK, or ToS
 request. The central queue source is
 [`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the
 compact generated companion is
@@ -109,8 +116,8 @@ Canonical doctrine ref: [DISTILLATION_LAW](docs/DISTILLATION_LAW.md).
 ## Owner boundary
 
 AoA owns the center law and route grammar for distillation. Stronger owner
-repositories own technique, skill, playbook, runtime, memo, proof, seed, SDK,
-ToS, and infrastructure truth.
+repositories own technique, skill, playbook, runtime, memo, proof, intake,
+SDK, ToS, and infrastructure truth.
 
 Generated surfaces may reflect distillation cards, queues, or indexes, but they
 do not author distillation meaning.
@@ -120,5 +127,5 @@ do not author distillation meaning.
 When this mechanic changes, preserve a clean active route: update the relevant
 functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
 accounting behind `PROVENANCE.md`, and route technique, skill, playbook,
-runtime, memo, proof, seed, SDK, ToS, and infrastructure claims to their
+runtime, memo, proof, intake, SDK, ToS, and infrastructure claims to their
 stronger owners.

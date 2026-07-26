@@ -14,7 +14,7 @@ class GeneratedOwnerRequestQueueTests(unittest.TestCase):
         self.assertEqual(payload["schema_version"], "aoa_generated_owner_request_queue_v1")
         self.assertEqual(payload["request_count"], len(payload["requests"]))
         self.assertEqual(payload["mechanic_count"], len(registry["mechanics"]))
-        self.assertEqual(payload["status_counts"], {"accepted": 3, "landed": 4, "requested": 93})
+        self.assertEqual(payload["status_counts"], {"accepted": 3, "landed": 4, "requested": 89})
         self.assertEqual(sum(payload["status_counts"].values()), payload["request_count"])
 
 

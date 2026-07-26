@@ -26,7 +26,6 @@ Checkpoint law, vocabulary, owner map, stop-lines, and cross-owner route grammar
 - `aoa-evals` owns proof and regression readings.
 - `aoa-routing` owns re-entry hints without checkpoint meaning.
 - `aoa-stats` owns derived checkpoint visibility and never raw checkpoint authority.
-- `Dionysus` owns reviewed checkpoint snapshots and seed-stage lineage when promotion is explicit.
 - `abyss-stack` owns runtime checkpoint exports, runtime receipts, and runtime closeout plumbing after runtime gates.
 
 ### Inputs
@@ -54,7 +53,13 @@ Use the validation lane in [mechanics/checkpoint/AGENTS.md](AGENTS.md#validation
 ### Next route
 
 - For controls, hooks, local ledgers, and closeout-context builders, route to `aoa-sdk`; for checkpoint-note protocol and bridge skills, route to `aoa-skills`; for self-agent posture, route to `aoa-agents`.
-- For memory writeback, route to `aoa-memo`; for scenario choreography, route to `aoa-playbooks`; for proof, route to `aoa-evals`; for re-entry hints, route to `aoa-routing`; for derived visibility, route to `aoa-stats`; for reviewed snapshots or seed lineage, route to `Dionysus`; for runtime exports, route to `abyss-stack` after runtime gates; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
+- For memory writeback, route to `aoa-memo`; for scenario choreography, route
+  to `aoa-playbooks`; for proof, route to `aoa-evals`; for re-entry hints,
+  route to `aoa-routing`; for derived visibility, route to `aoa-stats`; for
+  reviewed owner-local intake or landing, route directly to the final owner
+  repository; for runtime exports, route to `abyss-stack` after runtime gates;
+  for unclear owner, return to `docs/FEDERATION_RULES.md` and
+  `docs/REPO_ROLES.md`.
 
 ## Active route
 
@@ -79,7 +84,7 @@ Use the validation lane in [mechanics/checkpoint/AGENTS.md](AGENTS.md#validation
 
 Use [OWNER_REQUESTS](OWNER_REQUESTS.md) when this mechanic produces an
 owner-local checkpoint, SDK, skill, memory, proof, runtime, routing, stats, or
-seed-stage request. The central queue source is
+final-owner request. The central queue source is
 [`mechanics/owner-request-queue.json`](../owner-request-queue.json), and the
 compact generated companion is
 [`generated/owner_request_queue.min.json`](../../generated/owner_request_queue.min.json).
@@ -113,4 +118,5 @@ do not author checkpoint meaning.
 When this mechanic changes, preserve a clean active route: update the relevant
 functioning part, preserve landing history in `LANDING_LOG.md`, keep historical
 accounting behind `PROVENANCE.md`, and route SDK, skill, memory, proof,
-runtime, routing, stats, seed, and owner-local claims to their stronger owners.
+runtime, routing, stats, intake, and owner-local claims to their stronger
+owners.

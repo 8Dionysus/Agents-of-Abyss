@@ -25,7 +25,7 @@ and handoff discipline.
 | `aoa-memo` | memory writeback candidates and durable memory review |
 | `aoa-evals` | provenance-preservation proof and abstraction-quality verdicts |
 | `aoa-sdk` | typed helpers, control-panel support, and compatible readers |
-| `Dionysus` | seed, donor, and staging preservation |
+| source and final owner repositories | raw preservation and owner-local intake |
 | `Tree-of-Sophia` | compost, principle, and canon-facing meaning |
 | `abyss-stack` | runtime storage, execution, and export plumbing |
 

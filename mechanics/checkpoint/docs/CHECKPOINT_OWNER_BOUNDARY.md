@@ -23,7 +23,7 @@ Every owner repository may express checkpoint according to its own lane:
 - Evals: proof and regression reading.
 - Routing: re-entry hints.
 - Stats: derived visibility.
-- Dionysus: reviewed snapshots and seed lineage.
+- Final owner repository: reviewed intake, acceptance, and landing evidence.
 - Runtime: export and receipt plumbing.
 
 ## Boundary failures

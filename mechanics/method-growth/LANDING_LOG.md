@@ -33,6 +33,38 @@ the PR why the change is not a landing change.
 
 ## Entries
 
+### Direct owner-intake route
+
+Status: landed
+
+Owner boundary: the center names
+`cluster_ref -> candidate_ref -> owner-local intake -> object_ref`; final owner
+repositories own intake, acceptance, and landed object truth.
+
+Surfaces: `mechanics/method-growth/README.md`,
+`mechanics/method-growth/AGENTS.md`,
+`mechanics/method-growth/DIRECTION.md`,
+`mechanics/method-growth/PARTS.md`,
+`mechanics/method-growth/OWNER_MAP.md`,
+`mechanics/method-growth/OWNER_REQUESTS.md`,
+`mechanics/method-growth/ROADMAP.md`,
+`mechanics/method-growth/parts/candidate-lineage/README.md`,
+`mechanics/method-growth/docs/METHOD_SPINE.md`,
+`mechanics/method-growth/docs/CANDIDATE_LINEAGE_CROSSWALK.md`,
+`mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md`,
+`mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md`, the lineage
+witness validator and tests, the center owner-request queue, and decision
+`AOA-CENTER-D-0033`.
+
+Validation: package validator, candidate-lineage unit tests, mechanic card and
+topology checks, owner-request queue validation, and release check.
+
+Stop-lines: no mandatory seed intermediary; owner-local `seed_ref`
+compatibility metadata is not a federation stage or owner acceptance.
+
+Next route: carry each reviewed candidate directly to its final owner
+repository and route proof claims to `aoa-evals`.
+
 ### Method spine alignment guard
 
 Status: landed

@@ -42,18 +42,21 @@ That refinery is strict about what gets extracted:
 
 ## Reviewable growth refinery
 
-When one growth object survives checkpoint carry, reviewed donor harvest, seed
-staging, and later owner landing, AoA should keep that route legible through a
-narrow explicit chain:
+When one growth object survives checkpoint carry, reviewed donor harvest,
+owner-local intake, and later owner landing, AoA should keep that route legible
+through a narrow explicit chain:
 
-`cluster_ref -> candidate_ref -> seed_ref -> object_ref`
+`cluster_ref -> candidate_ref -> owner-local intake -> object_ref`
 
 That route stays reviewable only if it remains split across existing owners:
 
 - `aoa-sdk` carries provisional `cluster_ref`
 - `aoa-skills` mints reviewed `candidate_ref`
-- `Dionysus` mints `seed_ref`
-- the final owner repo mints or resolves `object_ref`
+- the final owner repo accepts the candidate through its local intake and mints
+  or resolves `object_ref`
+
+An owner may preserve `seed_ref` as compatibility metadata, but it is not a
+mandatory federation stage and has no separate center-appointed owner.
 
 This is not a new lineage layer.
 It is one bounded refinery route that keeps the same object biography readable

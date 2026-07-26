@@ -60,7 +60,7 @@ AoA exists to support sustained intellectual and technical work where:
 | runtime implementation, services, storage, workers, and daemons | `abyss-stack` |
 | ToS-authored knowledge meaning | `Tree-of-Sophia` |
 | public profile orientation and shared-root projection source truth | `8Dionysus` |
-| seed intake, staging, and planting trace before owner landing | `Dionysus` |
+| conversational interview protocols, consent and review boundaries, and evidence-grounded personal portrait projections | `Dionysus` |
 
 ## Center discipline
 

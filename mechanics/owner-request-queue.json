@@ -109,33 +109,6 @@
         "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
       ],
       "center_status": "landed",
-      "handoff_surface_hint": "Dionysus/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-METHOD-DIONYSUS-001",
-      "id": "ORQ-METHOD-DIONYSUS-001",
-      "mechanic": "method-growth",
-      "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
-      "owner_landing_ref": "",
-      "owner_proof_ref": "",
-      "owner_repo": "Dionysus",
-      "owner_role": "seed garden and staging surface before owner landing",
-      "priority": "P1",
-      "proof_route": "Closure evidence should point back to owner landing and pruning receipts.",
-      "queue_status": "requested",
-      "required_owner_landing": "Seed packet or staging trace that preserves origin, source context, and intended owner without declaring final truth.",
-      "slice": "Seed staging for candidate objects before owner landing",
-      "stop_line": "`Dionysus` staging must not be read as final owner truth."
-    },
-    {
-      "center_sources": [
-        "mechanics/method-growth/README.md",
-        "mechanics/method-growth/DIRECTION.md",
-        "mechanics/method-growth/PARTS.md",
-        "mechanics/method-growth/OWNER_MAP.md",
-        "mechanics/method-growth/OWNER_REQUESTS.md",
-        "mechanics/method-growth/docs/METHOD_SPINE.md",
-        "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md",
-        "mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md"
-      ],
-      "center_status": "landed",
       "handoff_surface_hint": "aoa-evals/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-METHOD-EVALS-001",
       "id": "ORQ-METHOD-EVALS-001",
       "mechanic": "method-growth",
@@ -444,31 +417,6 @@
         "mechanics/distillation/docs/DISTILLATION_LAW.md"
       ],
       "center_status": "landed",
-      "handoff_surface_hint": "Dionysus/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-DISTILLATION-DIONYSUS-001",
-      "id": "ORQ-DISTILLATION-DIONYSUS-001",
-      "mechanic": "distillation",
-      "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
-      "owner_landing_ref": "",
-      "owner_proof_ref": "",
-      "owner_repo": "Dionysus",
-      "owner_role": "seed and donor staging",
-      "priority": "P2",
-      "proof_route": "Seed or promotion claims route to evals when public.",
-      "queue_status": "requested",
-      "required_owner_landing": "Seed-stage donor notes and preserved packets keep owner-choice questions explicit.",
-      "slice": "Seed and donor staging preservation",
-      "stop_line": "The center must not treat donor preservation as owner acceptance."
-    },
-    {
-      "center_sources": [
-        "mechanics/distillation/README.md",
-        "mechanics/distillation/DIRECTION.md",
-        "mechanics/distillation/PARTS.md",
-        "mechanics/distillation/OWNER_MAP.md",
-        "mechanics/distillation/OWNER_REQUESTS.md",
-        "mechanics/distillation/docs/DISTILLATION_LAW.md"
-      ],
-      "center_status": "landed",
       "handoff_surface_hint": "Tree-of-Sophia/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-DISTILLATION-TOS-001",
       "id": "ORQ-DISTILLATION-TOS-001",
       "mechanic": "distillation",
@@ -742,32 +690,6 @@
       "required_owner_landing": "Routing hints that point to source-owned Growth Cycle and owner surfaces without interpreting cycle meaning.",
       "slice": "Re-entry and next-route hints",
       "stop_line": "The center must not let routing reinterpret Growth Cycle meaning."
-    },
-    {
-      "center_sources": [
-        "mechanics/growth-cycle/README.md",
-        "mechanics/growth-cycle/DIRECTION.md",
-        "mechanics/growth-cycle/PARTS.md",
-        "mechanics/growth-cycle/OWNER_MAP.md",
-        "mechanics/growth-cycle/OWNER_REQUESTS.md",
-        "mechanics/growth-cycle/docs/GROWTH_CYCLE_LAW.md",
-        "mechanics/growth-cycle/docs/GROWTH_CYCLE_OWNER_REPO_REQUESTS.md"
-      ],
-      "center_status": "landed",
-      "handoff_surface_hint": "Dionysus/owner-local surface chosen by the repository, or an issue/receipt that names ORQ-GROWTHCYCLE-DIONYSUS-001",
-      "id": "ORQ-GROWTHCYCLE-DIONYSUS-001",
-      "mechanic": "growth-cycle",
-      "next_action": "Open, copy, or land this request in the owner repository without marking it accepted or landed in the center first.",
-      "owner_landing_ref": "",
-      "owner_proof_ref": "",
-      "owner_repo": "Dionysus",
-      "owner_role": "seed garden and staging surface",
-      "priority": "P2",
-      "proof_route": "Seed or promotion claims stay evidence-backed and route to evals when public.",
-      "queue_status": "requested",
-      "required_owner_landing": "Durable reviewed snapshots and seed lineage that preserve explicit promotion without raw append history.",
-      "slice": "Reviewed snapshots and seed lineage",
-      "stop_line": "The center must not preserve raw append history as durable seed or snapshot doctrine."
     },
     {
       "center_sources": [
@@ -1217,30 +1139,6 @@
       "required_owner_landing": "Runtime-owned checkpoint exports, return policy, and closeout receipts stay behind runtime gates and export contracts.",
       "slice": "Runtime checkpoint exports and closeout receipts",
       "stop_line": "The center must not claim runtime activation or runtime safety."
-    },
-    {
-      "center_sources": [
-        "mechanics/checkpoint/README.md",
-        "mechanics/checkpoint/PARTS.md",
-        "mechanics/checkpoint/OWNER_MAP.md",
-        "mechanics/checkpoint/docs/CHECKPOINT_LAW.md",
-        "mechanics/checkpoint/docs/CHECKPOINT_OWNER_BOUNDARY.md"
-      ],
-      "center_status": "landed",
-      "handoff_surface_hint": "Dionysus seed-stage checkpoint snapshot or promotion trace that names ORQ-CHECKPOINT-DIONYSUS-001",
-      "id": "ORQ-CHECKPOINT-DIONYSUS-001",
-      "mechanic": "checkpoint",
-      "next_action": "Route durable reviewed checkpoint snapshots or seed lineage to `Dionysus` before treating them as seed-stage receipts.",
-      "owner_landing_ref": "",
-      "owner_proof_ref": "",
-      "owner_repo": "Dionysus",
-      "owner_role": "reviewed checkpoint snapshots and seed-stage lineage",
-      "priority": "P2",
-      "proof_route": "Seed or promotion claims stay evidence-backed and route to evals when public.",
-      "queue_status": "requested",
-      "required_owner_landing": "Durable reviewed checkpoint snapshots and seed-stage lineage preserve explicit promotion without raw append history.",
-      "slice": "Reviewed checkpoint snapshots and seed-stage lineage",
-      "stop_line": "The center must not preserve raw append history as durable checkpoint doctrine."
     },
     {
       "center_sources": [

@@ -63,6 +63,8 @@ The current center move is:
   pressure
 - descend into sibling repositories through clean owner requests and the
   AbyssOS organ contract, not center-side implementation claims
+- route reviewed candidates directly into final-owner intake and landing;
+  `Dionysus` is no longer a federation seed intermediary
 - keep release-support, registry, entry, and generated capsules aligned with
   human-facing direction
 
@@ -106,7 +108,7 @@ surfaces keep checked landings, validators, owner boundaries, and stop-lines.
 
 | Field | Direction |
 |---|---|
-| Current posture | Center mechanics now produce owner requests and handoff packets, but most operational truth still belongs in sibling repositories. |
+| Current posture | Center mechanics now produce owner requests and handoff packets, reviewed candidates route directly to final-owner intake, and most operational truth still belongs in sibling repositories. |
 | Next honest move | After AoA root is clean, descend through owner repositories through `docs/organ-contract/` and land their local slices with repo-local validation. |
 | Guardrail | Center request does not become owner acceptance; sibling repositories carry implementation, proof, memory, runtime, role, and projection truth. |
 

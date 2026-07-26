@@ -57,7 +57,7 @@ This table is a triage lens, not an ownership contract. For exact ownership, use
 | `aoa-kag` | meaning | repo `AGENTS.md`, README | derived projection acting as source replacement | `aoa-kag`, then authored source owner |
 | `aoa-stats` | proof | repo `AGENTS.md`, README, generated stats surfaces | summary as authority, score drift, quest or proof status overclaim | `aoa-stats`, then proof/source owner |
 | `aoa-sdk` | workflow | repo `AGENTS.md`, README, typed helper surfaces | helper convenience becoming policy, activation, or owner acceptance | `aoa-sdk`, then owning source/runtime repo |
-| `Dionysus` | workflow | repo `AGENTS.md`, README, seed/staging surfaces | seed receipt promoted to final truth | final owner repository |
+| `Dionysus` | meaning | repo `AGENTS.md`, README, interview and portrait protocol surfaces | private raw material entering Git, unsupported portrait claims, consent or review boundary drift | `Dionysus` owner route; `aoa-evals` only for bounded proof questions |
 | `8Dionysus` | constitutional | profile README, profile glossary, workspace projection docs | public mirror outrunning center, projection source confusion | `8Dionysus` for profile/projection; AoA or owner repo for truth |
 
 ## Root-surface audit route

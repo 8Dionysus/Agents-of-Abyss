@@ -8,7 +8,8 @@ owner-aware.
 - [Donor Refinery](donor-refinery/README.md): donor intake, reusable pattern
   extraction, contamination stop-lines.
 - [Candidate Lineage](candidate-lineage/README.md): `cluster_ref` to
-  `candidate_ref` to `seed_ref` to `object_ref` without center minting.
+  `candidate_ref` to owner-local intake to `object_ref` without center
+  minting.
 - [Owner Landing](owner-landing/README.md): owner acceptance, landing receipts,
   and final truth handoff.
 - [Pruning](pruning/README.md): reanchor, merge, defer, drop, supersede, and

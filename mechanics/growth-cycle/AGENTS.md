@@ -25,7 +25,7 @@ from hook logs, generated summaries, or sibling implementation surfaces.
 - Do not make AoA the implementation owner for hooks, skills, evals, memo,
   runtime exports, playbooks, stats, or route dispatch.
 - If a cycle stage needs owner-local implementation, proof, memory, runtime,
-  role, route, playbook, stats, seed, or quest behavior, update the owner-request
+  role, route, playbook, stats, intake, or quest behavior, update the owner-request
   surfaces instead of claiming it in the center.
 
 ## Closeout
@@ -75,7 +75,7 @@ Check whether the move changed:
 - `PARTS.md`: active stage boundary or functioning-part map.
 - `OWNER_MAP.md`: owner boundary, stop-line, or handoff target.
 - `OWNER_REQUESTS.md` and `mechanics/owner-request-queue.json`: hook, skill,
-  proof, memory, runtime, role, route, playbook, stats, seed, or quest asks.
+  proof, memory, runtime, role, route, playbook, stats, intake, or quest asks.
 - `ROADMAP.md`: future route pressure or unresolved growth-cycle contour.
 - `LANDING_LOG.md`: a checked landing or planted contract.
 - `PROVENANCE.md`: source bridge, receipt route, or archive map.

@@ -9,6 +9,8 @@ Recurrence without requiring every older landing entry to be re-read.
 
 - Recurrence active-part distillation: root package, active parts, provenance
   bridge, owner map, owner requests, and package validation.
+- Direct final-owner re-entry: owner-local re-entry artifacts and landing
+  receipts no longer route through a federation seed intermediary.
 - Root mechanics topology migration: first center recurrence package landing.
 - Current active route: `mechanics/recurrence/README.md`,
   `mechanics/recurrence/DIRECTION.md`, `mechanics/recurrence/PARTS.md`,
@@ -34,6 +36,27 @@ validators, or tests, update the relevant entry here or explain in the PR why
 the change is not a landing change.
 
 ## Entries
+
+### Direct final-owner re-entry
+
+Status: landed
+
+Owner boundary: final owner repositories own re-entry artifacts and landing
+receipts; the center preserves recurrence law without appointing an
+intermediary.
+
+Surfaces: `mechanics/recurrence/OWNER_MAP.md`,
+`mechanics/recurrence/PROVENANCE.md`, the package validator, and decision
+`AOA-CENTER-D-0033`.
+
+Validation: recurrence package tests, mechanic card and topology checks, and
+release check.
+
+Stop-lines: re-entry evidence is not owner acceptance, proof, hidden memory,
+runtime self-healing, or automatic recursor spawn.
+
+Next route: carry each re-entry artifact to the final owner repository and
+keep runtime return with `abyss-stack`.
 
 ### Recurrence active-part distillation
 

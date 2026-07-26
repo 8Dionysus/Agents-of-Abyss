@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 14242232,
+  "allowed_tracked_bytes": 22029463,
+  "approved_by": "repository-owner",
+  "base_ref": "d7b1e46d6fa240416f9253f099a516da9fc5a53b",
+  "changed_generated_bytes": 14242232,
+  "changed_generated_files": 305,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "6992d05cdad4436913d2903d163a5f4d3d4f6bd34ad35419024a6184f2e2d301",
+  "reason": "Refresh portable KAG family after retiring the Dionysus seed intermediary and routing candidates directly to final owners.",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 22029463,
+  "tracked_bytes_max": 25165824
+}

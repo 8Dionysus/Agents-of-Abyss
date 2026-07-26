@@ -29,7 +29,6 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 | `ORQ-CHECKPOINT-ROUTING-001` | `aoa-routing` | `requested` | `P2` | Re-entry hints | Routing hints point back to source-owned checkpoint and return surfaces without interpreting checkpoint meaning. | Route behavior can be checked through evals if public. |
 | `ORQ-CHECKPOINT-STATS-001` | `aoa-stats` | `requested` | `P2` | Derived checkpoint visibility | Derived summaries use reviewed owner-local receipts and avoid raw checkpoint-note intake. | Counts remain descriptive and weaker than owner receipts. |
 | `ORQ-CHECKPOINT-STACK-001` | `abyss-stack` | `requested` | `P1` | Runtime checkpoint exports and closeout receipts | Runtime-owned checkpoint exports, return policy, and closeout receipts stay behind runtime gates and export contracts. | Runtime claims require runtime receipts and proof routes as needed. |
-| `ORQ-CHECKPOINT-DIONYSUS-001` | `Dionysus` | `requested` | `P2` | Reviewed checkpoint snapshots and seed-stage lineage | Durable reviewed checkpoint snapshots and seed-stage lineage preserve explicit promotion without raw append history. | Seed or promotion claims stay evidence-backed and route to evals when public. |
 
 ## Center sources
 
@@ -50,7 +49,6 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 - `ORQ-CHECKPOINT-ROUTING-001`: The center must not let routing reinterpret checkpoint meaning.
 - `ORQ-CHECKPOINT-STATS-001`: The center must not treat derived checkpoint counts as truth.
 - `ORQ-CHECKPOINT-STACK-001`: The center must not claim runtime activation or runtime safety.
-- `ORQ-CHECKPOINT-DIONYSUS-001`: The center must not preserve raw append history as durable checkpoint doctrine.
 
 ## Validation
 

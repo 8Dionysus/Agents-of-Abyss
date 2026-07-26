@@ -43,7 +43,7 @@ The center landing is intentionally thin:
 - choreography stays in `aoa-playbooks`
 - derived visibility stays in `aoa-stats`
 - route hints stay in `aoa-routing`
-- reviewed snapshots and seeds stay in `Dionysus`
+- reviewed intake and landing stay in the final owner repository
 - runtime exports stay in `abyss-stack`
 
 ## Growth rule

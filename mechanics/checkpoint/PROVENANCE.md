@@ -50,8 +50,6 @@ or runtime evidence into the active route.
 - `aoa-routing/docs/RECURRENCE_NAVIGATION_BOUNDARY.md`
 - `aoa-stats/mechanics/method-growth/parts/candidate-lineage/docs/GROWTH_FUNNEL_SUMMARY.md`
 - `aoa-techniques/techniques/agent-workflows/checkpoint-bound-self-repair/TECHNIQUE.md`
-- `Dionysus/reports/ecosystem-audits/README.md`
-- `Dionysus/scripts/validate_checkpoint_notes.py`
 - `aoa-kag/docs/REASONING_HANDOFF_PACK.md`
 
 ## Runtime and peripheral evidence

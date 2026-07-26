@@ -13,7 +13,9 @@ small center route, allowed outputs, stop-lines, and the next owner route.
 ## Boundaries
 
 - Do not turn part docs into sibling inventories or raw provenance logs.
-- Do not mint `candidate_ref`, `seed_ref`, or `object_ref` in a part.
+- Do not mint `candidate_ref` or `object_ref` in a part.
+- Do not promote owner-local `seed_ref` compatibility metadata into a
+  federation stage.
 - Do not claim proof, memory, runtime, technique, skill, playbook, or final
   owner truth from this package.
 - Route deeper source history through `../PROVENANCE.md`.

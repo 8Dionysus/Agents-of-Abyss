@@ -25,7 +25,7 @@ truth produced by any stage.
 | `aoa-playbooks` | recurring cycle choreography, campaigns, scenario routes, owner followthrough patterns |
 | `aoa-stats` | derived visibility from owner receipts and reviewed summaries |
 | `aoa-routing` | re-entry hints and next-route surfaces without cycle meaning |
-| `Dionysus` | reviewed snapshots, seed lineage, donor staging when promotion is explicit |
+| final owner repositories | reviewed intake, acceptance, and landing after donor harvest |
 | `abyss-stack` | runtime exports, health receipts, service plumbing, runtime checkpoint storage after runtime gates |
 | `aoa-techniques` | reusable practice that survives donor harvest as technique rather than skill or playbook |
 

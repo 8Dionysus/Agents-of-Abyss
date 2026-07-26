@@ -29,7 +29,6 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 | `ORQ-GROWTHCYCLE-PLAYBOOKS-001` | `aoa-playbooks` | `requested` | `P1` | Recurring cycle choreography | Playbooks for recurring reviewed closeout, harvest, repair, quest, and owner-followthrough routes. | Scenario closure proof routes to `aoa-evals`. |
 | `ORQ-GROWTHCYCLE-STATS-001` | `aoa-stats` | `requested` | `P2` | Derived cycle visibility | Derived summaries read owner receipts and reviewed closeouts without becoming proof, route authority, or memory. | Counts remain descriptive and weaker than owner receipts. |
 | `ORQ-GROWTHCYCLE-ROUTING-001` | `aoa-routing` | `requested` | `P2` | Re-entry and next-route hints | Routing hints point to source-owned Growth Cycle and owner surfaces without interpreting cycle meaning. | Route behavior can be checked through evals if public. |
-| `ORQ-GROWTHCYCLE-DIONYSUS-001` | `Dionysus` | `requested` | `P2` | Reviewed snapshots and seed lineage | Durable reviewed snapshots and seed lineage preserve explicit promotion without raw append history. | Seed or promotion claims stay evidence-backed and route to evals when public. |
 | `ORQ-GROWTHCYCLE-STACK-001` | `abyss-stack` | `requested` | `P1` | Runtime exports and health receipts | Runtime-owned cycle exports, health receipts, and closeout plumbing stay behind runtime gates and export contracts. | Runtime claims require runtime receipts and proof routes as needed. |
 
 ## Center sources
@@ -51,7 +50,6 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 - `ORQ-GROWTHCYCLE-PLAYBOOKS-001`: The center must not choreograph recurring routes as if playbooks accepted them.
 - `ORQ-GROWTHCYCLE-STATS-001`: The center must not treat derived cycle counts as proof or route authority.
 - `ORQ-GROWTHCYCLE-ROUTING-001`: The center must not let routing reinterpret Growth Cycle meaning.
-- `ORQ-GROWTHCYCLE-DIONYSUS-001`: The center must not preserve raw append history as durable seed or snapshot doctrine.
 - `ORQ-GROWTHCYCLE-STACK-001`: The center must not claim runtime activation or runtime safety.
 
 ## Validation

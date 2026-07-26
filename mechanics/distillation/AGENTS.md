@@ -19,8 +19,8 @@ legacy material.
 - `mechanics/distillation/` owns center law, route grammar, active parts, and
   owner request packets for distillation.
 - It does not own technique canon, executable skills, playbook scenarios,
-  runtime behavior, memory canon, proof verdicts, seed staging, SDK helpers, or
-  ToS-authored meaning.
+  runtime behavior, memory canon, proof verdicts, owner-local intake, SDK
+  helpers, or ToS-authored meaning.
 - Legacy and raw material stay behind provenance routes; active parts stay
   light and source-linked.
 
@@ -30,7 +30,7 @@ legacy material.
 - Keep raw inventories behind `PROVENANCE.md`, `legacy/INDEX.md`, and
   `legacy/DISTILLATION_LOG.md`.
 - Keep active docs free of raw-source catalogs and long packet tails.
-- Route technique, skill, playbook, runtime, memo, proof, seed, SDK, and ToS
+- Route technique, skill, playbook, runtime, memo, proof, intake, SDK, and ToS
   claims through `OWNER_REQUESTS.md`.
 - Update `ROADMAP.md` when a future route or unresolved owner pressure changes.
 - Update `LANDING_LOG.md` when a checked landing changes.
@@ -82,7 +82,7 @@ Check whether the move changed:
 - `PARTS.md`: active part boundaries or functioning-part map.
 - `OWNER_MAP.md`: owner boundary, stop-line, or handoff target.
 - `OWNER_REQUESTS.md` and `mechanics/owner-request-queue.json`: technique,
-  skill, playbook, runtime, memo, proof, seed, SDK, KAG, or ToS asks.
+  skill, playbook, runtime, memo, proof, intake, SDK, KAG, or ToS asks.
 - `ROADMAP.md`: future route pressure or unresolved distillation contour.
 - `LANDING_LOG.md`: a checked landing or planted contract.
 - `PROVENANCE.md`: source bridge, receipt route, or archive map.

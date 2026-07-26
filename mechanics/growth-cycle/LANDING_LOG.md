@@ -9,6 +9,7 @@ Growth Cycle without requiring every older landing entry to be re-read.
 
 | Entry | Status | Key point |
 |---|---|---|
+| [Direct final-owner donor handoff](#direct-final-owner-donor-handoff) | landed | Routes donor residue directly to final-owner intake without a seed intermediary. |
 | [aoa-skills owner-request receipt sync](#aoa-skills-owner-request-receipt-sync) | landed | Records skill-layer cycle stage receipt without making skills final harvest authority. |
 | [Center Growth Cycle landing](#center-growth-cycle-landing) | landed | Establishes the reviewed lifecycle route and owner split. |
 
@@ -32,6 +33,33 @@ validators, or tests, update the relevant entry here or explain in the PR why
 the change is not a landing change.
 
 ## Entries
+
+### Direct final-owner donor handoff
+
+Status: landed
+
+Owner boundary: donor harvest may produce a reviewed candidate, but intake,
+acceptance, and landing belong directly to the final owner repository.
+
+Surfaces: `mechanics/growth-cycle/README.md`,
+`mechanics/growth-cycle/AGENTS.md`,
+`mechanics/growth-cycle/DIRECTION.md`,
+`mechanics/growth-cycle/PARTS.md`,
+`mechanics/growth-cycle/OWNER_MAP.md`,
+`mechanics/growth-cycle/OWNER_REQUESTS.md`,
+`mechanics/growth-cycle/parts/donor-harvest/README.md`,
+`mechanics/growth-cycle/PROVENANCE.md`, the package validator, the center
+owner-request queue, and decision `AOA-CENTER-D-0033`.
+
+Validation: Growth Cycle package tests, mechanic card and topology checks,
+owner-request queue validation, and release check.
+
+Stop-lines: donor residue is not owner acceptance, proof, memory canon, or
+runtime activation.
+
+Next route: send executable candidates to `aoa-skills`, reusable practice to
+`aoa-techniques`, recurring scenarios to `aoa-playbooks`, and final intake to
+the final owner repository.
 
 ### aoa-skills owner-request receipt sync
 

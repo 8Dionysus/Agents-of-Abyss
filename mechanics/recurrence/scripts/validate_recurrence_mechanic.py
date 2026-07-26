@@ -76,7 +76,6 @@ OWNER_REPOS = (
     "aoa-kag",
     "aoa-techniques",
     "aoa-skills",
-    "Dionysus",
     "abyss-stack",
     "ATM10-Agent",
     "Tree-of-Sophia",
@@ -100,7 +99,6 @@ ACTIVE_PROVENANCE_TERMS = (
     "aoa-evals/docs/",
     "abyss-stack/",
     "ATM10-Agent/docs/",
-    "Dionysus/archive/",
 )
 
 

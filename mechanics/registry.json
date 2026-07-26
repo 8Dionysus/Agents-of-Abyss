@@ -50,28 +50,28 @@
         "center_owns": "Center growth route, lineage vocabulary, reviewable-growth discipline, and owner landing/pruning rules.",
         "inputs": [
           "Repeated work, donor-route residue, checkpoint pressure, or candidate lineage needing owner landing.",
-          "A reviewable friction, seed, or object candidate with enough context to name a stronger owner."
+          "A reviewable friction or object candidate with enough context to name a stronger owner."
         ],
         "next_route": [
           "For final object truth, route to the final owner repo before claiming activation.",
           "For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
         ],
         "outputs": [
-          "Owner route, candidate reference, seed reference, proof request, method request, memory request, or pruning decision.",
+          "Owner route, candidate reference, proof request, method request, memory request, or pruning decision.",
           "No final object truth until the final owner repository lands it."
         ],
         "stronger_owner_split": [
           "`aoa-sdk` owns provisional carry and typed helper hints.",
           "`aoa-skills` owns reviewed candidate identity and skill-shaped object truth.",
-          "`Dionysus` owns seed staging.",
           "`aoa-evals` owns proof.",
           "`aoa-playbooks` owns recurring method.",
           "`aoa-techniques` owns reusable practice.",
           "`aoa-stats` owns derived summary.",
           "`aoa-memo` owns bounded memory and lessons.",
+          "`aoa-routing` owns navigation hints without lineage authority.",
           "The final owner repository owns final object truth."
         ],
-        "trigger": "Use when repeated work may become a reusable method, candidate object, seed, proof, memory lesson, derived summary, or owner-local doctrine."
+        "trigger": "Use when repeated work may become a reusable method, candidate object, proof, memory lesson, derived summary, or owner-local doctrine."
       },
       "docs_path": "mechanics/method-growth/docs",
       "entry_ref": "mechanics/method-growth/README.md",
@@ -82,15 +82,14 @@
         "proof verdict",
         "memory canon",
         "candidate_ref minting in center",
-        "seed_ref minting in center",
+        "mandatory seed intermediary or seed_ref minting in center",
         "object_ref minting in center"
       ],
-      "owner_boundary": "Center route from repeated work to candidate, seed, owner landing, proof, method, memory, derived summary, and pruning; final object truth remains owner-local.",
+      "owner_boundary": "Center route from repeated work to candidate, owner-local intake and landing, proof, method, memory, derived summary, and pruning; final object truth remains owner-local.",
       "owner_request_doc_ref": "mechanics/method-growth/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-METHOD-SKILLS-001",
         "ORQ-METHOD-SDK-001",
-        "ORQ-METHOD-DIONYSUS-001",
         "ORQ-METHOD-EVALS-001",
         "ORQ-METHOD-PLAYBOOKS-001",
         "ORQ-METHOD-MEMO-001",
@@ -144,7 +143,7 @@
         ],
         "next_route": [
           "For reusable practice, route to `aoa-techniques`; for executable workflows, route to `aoa-skills`; for recurring scenarios, route to `aoa-playbooks`; for runtime artifact contracts, route to `aoa-agents`; for memory writeback, route to `aoa-memo`.",
-          "For proof, route to `aoa-evals`; for typed helpers, route to `aoa-sdk`; for seed or donor staging, route to `Dionysus`; for compost, principle, or canon-facing meaning, route to `Tree-of-Sophia`; for runtime storage or exports, route to `abyss-stack`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+          "For proof, route to `aoa-evals`; for typed helpers, route to `aoa-sdk`; for raw preservation, route to the source repository or its local legacy district; for owner-local intake, route directly to the final owner repository; for compost, principle, or canon-facing meaning, route to `Tree-of-Sophia`; for runtime storage or exports, route to `abyss-stack`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
         ],
         "outputs": [
           "Active extraction route, provenance bridge, receipt index, noise-pruning decision, candidate handoff, validation gate, runtime-pack boundary, compost-boundary note, or owner-request packet.",
@@ -158,7 +157,7 @@
           "`aoa-memo` owns memory writeback candidates and durable memory review.",
           "`aoa-evals` owns provenance-preservation proof and abstraction-quality verdicts.",
           "`aoa-sdk` owns typed helpers, control-panel support, and compatible readers.",
-          "`Dionysus` owns seed, donor, and staging preservation.",
+          "Source and final owner repositories own raw preservation and owner-local intake.",
           "`Tree-of-Sophia` owns compost, principle, and canon-facing meaning.",
           "`abyss-stack` owns runtime storage, execution, and export plumbing."
         ],
@@ -177,7 +176,7 @@
         "raw deletion authority",
         "generated or derived distillation authority"
       ],
-      "owner_boundary": "Center law and route grammar for turning raw, legacy, donor, checkpoint, runtime, or witness-facing material into active form; technique, skill, playbook, runtime, memo, proof, SDK, seed, ToS, and infrastructure truth remain owner-local.",
+      "owner_boundary": "Center law and route grammar for turning raw, legacy, donor, checkpoint, runtime, or witness-facing material into active form; technique, skill, playbook, runtime, memo, proof, SDK, intake, ToS, and infrastructure truth remain owner-local.",
       "owner_request_doc_ref": "mechanics/distillation/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-DISTILLATION-TECHNIQUES-001",
@@ -187,7 +186,6 @@
         "ORQ-DISTILLATION-MEMO-001",
         "ORQ-DISTILLATION-EVALS-001",
         "ORQ-DISTILLATION-SDK-001",
-        "ORQ-DISTILLATION-DIONYSUS-001",
         "ORQ-DISTILLATION-TOS-001",
         "ORQ-DISTILLATION-STACK-001"
       ],
@@ -237,7 +235,7 @@
         ],
         "next_route": [
           "For hooks, checkpoint ledgers, local control, and closeout context, route to `aoa-sdk`; for executable cycle steps, route to `aoa-skills`; for reusable practice, route to `aoa-techniques`; for self-agent posture, route to `aoa-agents`.",
-          "For proof, route to `aoa-evals`; for memory, route to `aoa-memo`; for choreography, route to `aoa-playbooks`; for derived visibility, route to `aoa-stats`; for navigation hints, route to `aoa-routing`; for reviewed snapshots and seeds, route to `Dionysus`; for runtime exports and health receipts, route to `abyss-stack`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+          "For proof, route to `aoa-evals`; for memory, route to `aoa-memo`; for choreography, route to `aoa-playbooks`; for derived visibility, route to `aoa-stats`; for navigation hints, route to `aoa-routing`; for reviewed intake and landing, route directly to the final owner repository; for runtime exports and health receipts, route to `abyss-stack`; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
         ],
         "outputs": [
           "Stage route, next-skill hint, proof request, repair or diagnosis route, quest promotion decision request, owner request packet, memo handoff, or stats handoff.",
@@ -253,7 +251,6 @@
           "`aoa-playbooks` owns recurring cycle choreography and campaign routes.",
           "`aoa-stats` owns derived visibility from receipts and never raw authority.",
           "`aoa-routing` owns re-entry and next-route hints without cycle meaning.",
-          "`Dionysus` owns reviewed snapshots and seed lineage when promotion is explicit.",
           "`abyss-stack` owns runtime exports, runtime health receipts, and plumbing after runtime gates."
         ],
         "trigger": "Use when a reviewed work cycle or agent process must move through checkpoint, reviewed closeout, donor harvest, progression, route choice, automation scan, diagnosis, repair, quest promotion, or owner handoff without letting any one stage pretend to be the whole system."
@@ -273,7 +270,7 @@
         "quest promotion authority without reviewed evidence",
         "method-growth final object truth"
       ],
-      "owner_boundary": "Center route law for reviewed agent-process growth across checkpoint, closeout, harvest, progression, route forks, automation scan, diagnosis, repair, quest promotion, and owner followthrough; hooks, skills, techniques, proof, memory, runtime, stats, playbooks, routes, seeds, and owner acceptance remain owner-local.",
+      "owner_boundary": "Center route law for reviewed agent-process growth across checkpoint, closeout, harvest, progression, route forks, automation scan, diagnosis, repair, quest promotion, and owner followthrough; hooks, skills, techniques, proof, memory, runtime, stats, playbooks, routes, intake, and owner acceptance remain owner-local.",
       "owner_request_doc_ref": "mechanics/growth-cycle/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-GROWTHCYCLE-SDK-001",
@@ -285,7 +282,6 @@
         "ORQ-GROWTHCYCLE-PLAYBOOKS-001",
         "ORQ-GROWTHCYCLE-STATS-001",
         "ORQ-GROWTHCYCLE-ROUTING-001",
-        "ORQ-GROWTHCYCLE-DIONYSUS-001",
         "ORQ-GROWTHCYCLE-STACK-001"
       ],
       "package_path": "mechanics/growth-cycle",
@@ -424,7 +420,7 @@
         ],
         "next_route": [
           "For controls, hooks, local ledgers, and closeout-context builders, route to `aoa-sdk`; for checkpoint-note protocol and bridge skills, route to `aoa-skills`; for self-agent posture, route to `aoa-agents`.",
-          "For memory writeback, route to `aoa-memo`; for scenario choreography, route to `aoa-playbooks`; for proof, route to `aoa-evals`; for re-entry hints, route to `aoa-routing`; for derived visibility, route to `aoa-stats`; for reviewed snapshots or seed lineage, route to `Dionysus`; for runtime exports, route to `abyss-stack` after runtime gates; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
+          "For memory writeback, route to `aoa-memo`; for scenario choreography, route to `aoa-playbooks`; for proof, route to `aoa-evals`; for re-entry hints, route to `aoa-routing`; for derived visibility, route to `aoa-stats`; for reviewed owner-local intake or landing, route directly to the final owner repository; for runtime exports, route to `abyss-stack` after runtime gates; for unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`."
         ],
         "outputs": [
           "Checkpoint route, review gate, return anchor, closeout bridge request, runtime export stop-line, owner handoff, or owner-request packet.",
@@ -439,7 +435,6 @@
           "`aoa-evals` owns proof and regression readings.",
           "`aoa-routing` owns re-entry hints without checkpoint meaning.",
           "`aoa-stats` owns derived checkpoint visibility and never raw checkpoint authority.",
-          "`Dionysus` owns reviewed checkpoint snapshots and seed-stage lineage when promotion is explicit.",
           "`abyss-stack` owns runtime checkpoint exports, runtime receipts, and runtime closeout plumbing after runtime gates."
         ],
         "trigger": "Use when work needs a bounded checkpoint for session carry, review gate, return and re-entry, closeout bridge, runtime export boundary, or owner handoff without turning the checkpoint into owner-local truth."
@@ -454,7 +449,7 @@
         "runtime activation or owner acceptance",
         "hidden scheduler or autonomous self-repair"
       ],
-      "owner_boundary": "Center checkpoint law, vocabulary, owner map, stop-lines, and cross-owner route grammar; controls, protocol, roles, memory, choreography, proof, routing, stats, snapshots, and runtime behavior remain owner-local.",
+      "owner_boundary": "Center checkpoint law, vocabulary, owner map, stop-lines, and cross-owner route grammar; controls, protocol, roles, memory, choreography, proof, routing, stats, intake, and runtime behavior remain owner-local.",
       "owner_request_doc_ref": "mechanics/checkpoint/OWNER_REQUESTS.md",
       "owner_request_ids": [
         "ORQ-CHECKPOINT-SDK-001",
@@ -465,8 +460,7 @@
         "ORQ-CHECKPOINT-EVALS-001",
         "ORQ-CHECKPOINT-ROUTING-001",
         "ORQ-CHECKPOINT-STATS-001",
-        "ORQ-CHECKPOINT-STACK-001",
-        "ORQ-CHECKPOINT-DIONYSUS-001"
+        "ORQ-CHECKPOINT-STACK-001"
       ],
       "package_path": "mechanics/checkpoint",
       "roadmap_ref": "mechanics/checkpoint/ROADMAP.md",

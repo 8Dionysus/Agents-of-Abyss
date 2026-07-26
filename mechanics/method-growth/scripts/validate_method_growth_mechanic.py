@@ -58,7 +58,6 @@ PART_README_HEADINGS = (
 OWNER_REQUEST_IDS = (
     "ORQ-METHOD-SKILLS-001",
     "ORQ-METHOD-SDK-001",
-    "ORQ-METHOD-DIONYSUS-001",
     "ORQ-METHOD-EVALS-001",
     "ORQ-METHOD-PLAYBOOKS-001",
     "ORQ-METHOD-MEMO-001",
@@ -70,7 +69,6 @@ OWNER_REPOS = (
     "aoa-sdk",
     "aoa-skills",
     "aoa-techniques",
-    "Dionysus",
     "aoa-evals",
     "aoa-playbooks",
     "aoa-memo",
@@ -95,7 +93,6 @@ MUST_NOT_CLAIM = (
 ACTIVE_PROVENANCE_TERMS = (
     "aoa-sdk/examples/checkpoint_lineage_hint.example.json",
     "aoa-skills/examples/session_growth_artifacts/",
-    "Dionysus/examples/seed_lineage_entry.example.json",
     "aoa-playbooks/playbooks/reviewed-automation-followthrough/PLAYBOOK.md",
     "aoa-stats/generated/session_growth_branch_summary.min.json",
     "aoa-techniques/techniques/",
@@ -213,7 +210,7 @@ def validate_owner_map(problems: list[str]) -> None:
         "A donor pattern is not canon.",
         "A `cluster_ref` is not reviewed candidate identity.",
         "A `candidate_ref` is not final owner truth.",
-        "A `seed_ref` is not owner acceptance.",
+        "An owner-local `seed_ref`, when retained for compatibility, is not a federation stage or owner acceptance.",
         "A stats summary is not proof.",
     ):
         if stop_line not in text:

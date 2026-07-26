@@ -35,6 +35,30 @@ the change is not a landing change.
 
 ## Entries
 
+### Direct final-owner checkpoint handoff
+
+Status: landed
+
+Owner boundary: reviewed checkpoint carry may route directly to the final
+owner's intake and landing surface; the center does not appoint a snapshot or
+seed intermediary.
+
+Surfaces: `mechanics/checkpoint/README.md`,
+`mechanics/checkpoint/AGENTS.md`, `mechanics/checkpoint/OWNER_MAP.md`,
+`mechanics/checkpoint/OWNER_REQUESTS.md`,
+`mechanics/checkpoint/docs/CHECKPOINT_OWNER_BOUNDARY.md`,
+`mechanics/checkpoint/PROVENANCE.md`, the package validator, the center
+owner-request queue, and decision `AOA-CENTER-D-0033`.
+
+Validation: checkpoint package tests, mechanic card and topology checks,
+owner-request queue validation, and release check.
+
+Stop-lines: checkpoint evidence is not owner acceptance, proof, memory canon,
+or runtime activation.
+
+Next route: send reviewed intake and landing decisions to the final owner
+repository; keep proof, memory, runtime, and stats with their stronger owners.
+
 ### aoa-skills owner-request receipt sync
 
 Status: owner-request landed

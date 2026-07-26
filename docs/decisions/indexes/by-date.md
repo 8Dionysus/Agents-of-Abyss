@@ -75,3 +75,4 @@
 ## 2026-07-25
 
 - [AOA-CENTER-D-0032 Organ Access Admission Law](../AOA-CENTER-D-0032-organ-access-admission-law.md) (`docs/decisions/AOA-CENTER-D-0032-organ-access-admission-law.md`)
+- [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
