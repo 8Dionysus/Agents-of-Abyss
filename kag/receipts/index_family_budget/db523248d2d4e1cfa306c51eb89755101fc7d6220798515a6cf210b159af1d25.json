@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 5938744,
+  "allowed_tracked_bytes": 21962380,
+  "approved_by": "repository-owner",
+  "base_ref": "bfeb4bfb447b437f1360b814bbf4f1def5e62859",
+  "changed_generated_bytes": 5938744,
+  "changed_generated_files": 117,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "db523248d2d4e1cfa306c51eb89755101fc7d6220798515a6cf210b159af1d25",
+  "reason": "Refresh the portable KAG family for the reviewed R2 organ-access admission decision; this digest-bound receipt authorizes only the measured generated projection delta.",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 21962380,
+  "tracked_bytes_max": 25165824
+}
