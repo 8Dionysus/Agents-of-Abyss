@@ -15,6 +15,7 @@ from hygiene_common import load_config  # noqa: E402
 def validate(root: Path) -> list[str]:
     config = load_config(root)
     problems: list[str] = []
+    checks: dict[tuple[str, ...], tuple[str, list[str]]] = {}
     for entry in config.get("generated_freshness", []):
         output = root / entry["output"]
         builder = root / entry["builder"]
@@ -28,11 +29,16 @@ def validate(root: Path) -> list[str]:
                     missing.append(entry["builder"])
                 problems.append(f"required generated freshness input missing: {', '.join(missing)}")
             continue
-        cmd = [sys.executable, str(builder), *entry.get("check_args", ["--check"])]
-        result = subprocess.run(cmd, cwd=root, text=True, capture_output=True)
+        command = (sys.executable, str(builder), *entry.get("check_args", ["--check"]))
+        if command not in checks:
+            checks[command] = (entry["builder"], [])
+        checks[command][1].append(entry["output"])
+
+    for command, (builder, outputs) in checks.items():
+        result = subprocess.run(command, cwd=root, text=True, capture_output=True)
         if result.returncode != 0:
             detail = (result.stdout + result.stderr).strip()
-            problems.append(f"{entry['output']}: freshness check failed via {entry['builder']}: {detail}")
+            problems.append(f"{', '.join(outputs)}: freshness check failed via {builder}: {detail}")
     return problems
 
 
