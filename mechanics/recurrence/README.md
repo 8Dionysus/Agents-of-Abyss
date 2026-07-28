@@ -18,16 +18,17 @@ Center return law, drift/anchor/re-entry vocabulary, component refresh boundary,
 
 ### Stronger owner split
 
-- `aoa-routing` owns local routing implementation and route graph behavior.
+- `aoa-sdk` owns local routing implementation, route graph behavior, typed
+  recurrence carry, manifests, graph closure, projections, and reviewed
+  handoff packets.
 - `aoa-memo` owns checkpoint, recall, and provenance.
 - `aoa-agents` owns role and handoff posture.
 - `aoa-playbooks` owns recurring return choreography.
 - `aoa-evals` owns drift and recovery-quality proof.
 - `abyss-stack` owns runtime wrappers after runtime-owner gates.
-- `aoa-sdk` owns typed recurrence carry, manifests, graph closure, projections,
-  and reviewed handoff packets.
 - `aoa-stats` owns derived recurrence visibility.
 - `aoa-kag` owns derived regrounding toward stronger source refs.
+- `aoa-techniques` owns reusable return practices after owner acceptance.
 
 ### Inputs
 
@@ -53,7 +54,7 @@ Use the validation lane in [mechanics/recurrence/AGENTS.md](AGENTS.md#validation
 
 ### Next route
 
-- For memory, route to `aoa-memo`; for routing behavior, route to `aoa-routing`; for runtime wrappers, route to `abyss-stack` after runtime gates.
+- For memory, route to `aoa-memo`; for routing behavior, route to `aoa-sdk`; for runtime wrappers, route to `abyss-stack` after runtime gates.
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.
 
 ## Active route

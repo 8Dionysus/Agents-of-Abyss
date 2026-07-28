@@ -324,7 +324,6 @@
         "aoa-playbooks",
         "aoa-evals",
         "aoa-memo",
-        "aoa-routing",
         "aoa-agents",
         "aoa-sdk",
         "abyss-stack"

@@ -34,7 +34,7 @@
     },
     {
       "kind": "owner_local_route_declared",
-      "owner_repo": "aoa-routing",
+      "owner_repo": "aoa-sdk",
       "authority_note": "routing dispatches to owners without authoring meaning"
     },
     {
@@ -164,19 +164,14 @@
       "must_not": "become proof or governance authority"
     },
     {
-      "repo": "aoa-routing",
-      "owns": "case, appeal, stay, and precedent dispatch hints",
-      "must_not": "author decisions or owner truth"
+      "repo": "aoa-sdk",
+      "owns": "case appeal stay and precedent dispatch hints plus typed helper calls for queues sealing replay and runtime API",
+      "must_not": "author decisions or owner truth and must not bypass owner consent or authority checks"
     },
     {
       "repo": "aoa-agents",
       "owns": "role posture, authority claims, release holds, and self-recharter blocks",
       "must_not": "let assistants vote on themselves"
-    },
-    {
-      "repo": "aoa-sdk",
-      "owns": "typed helper calls for queues, sealing, replay, and runtime API",
-      "must_not": "bypass owner consent or authority checks"
     },
     {
       "repo": "aoa-kag",

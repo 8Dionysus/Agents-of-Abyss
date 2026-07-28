@@ -83,7 +83,7 @@ EXPECTED_FLOW_OWNERS = [
     "aoa-agents",
     "aoa-evals",
     "aoa-memo",
-    "aoa-routing",
+    "aoa-sdk",
     "Agents-of-Abyss",
 ]
 
@@ -131,7 +131,6 @@ EXPECTED_OWNER_REPOS = {
     "aoa-kag",
     "aoa-memo",
     "aoa-playbooks",
-    "aoa-routing",
     "aoa-sdk",
     "aoa-skills",
     "aoa-stats",

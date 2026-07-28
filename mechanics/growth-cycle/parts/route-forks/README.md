@@ -32,5 +32,5 @@ what would make each choice wrong.
 ## Next Route
 
 Route executable fork skills to `aoa-skills`, recurring fork choreography to
-`aoa-playbooks`, route dispatch behavior to `aoa-routing`, and owner-local
+`aoa-playbooks`, route dispatch behavior to `aoa-sdk`, and owner-local
 truth to the chosen owner.

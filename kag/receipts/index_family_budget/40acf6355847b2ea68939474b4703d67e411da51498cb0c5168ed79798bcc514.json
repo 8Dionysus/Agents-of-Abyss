@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 15877988,
+  "allowed_tracked_bytes": 22165163,
+  "approved_by": "repository-owner",
+  "base_ref": "81f6ef479b14ff29684e1fa40aa499c6c6bd9b39",
+  "changed_generated_bytes": 15877988,
+  "changed_generated_files": 375,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "40acf6355847b2ea68939474b4703d67e411da51498cb0c5168ed79798bcc514",
+  "reason": "Refresh center repo-local KAG after correcting Agon examples to the canonical SDK gate-registry path and adding owner-source parity tests; no runtime, proof, or owner-cutover claim.",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 22165163,
+  "tracked_bytes_max": 25165824
+}

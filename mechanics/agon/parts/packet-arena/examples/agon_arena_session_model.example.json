@@ -50,7 +50,7 @@
   "lifecycle": [
     {
       "live_effect": "none",
-      "owner_hint": "aoa-routing",
+      "owner_hint": "aoa-sdk",
       "phase_id": "gate",
       "phase_status": "modeled_precondition_slot",
       "purpose": "Receives an Agon gate candidate from routing or trial pressure."

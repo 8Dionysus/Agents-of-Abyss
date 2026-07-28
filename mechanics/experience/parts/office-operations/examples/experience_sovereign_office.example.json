@@ -66,7 +66,7 @@
     },
     {
       "kind": "handoff_graph_receipts_required",
-      "owner_repo": "aoa-routing",
+      "owner_repo": "aoa-sdk",
       "authority_note": "handoffs require receipts and forbid hidden meaning edits"
     },
     {
@@ -195,14 +195,9 @@
       "must_not": "turn choreography into authority"
     },
     {
-      "repo": "aoa-routing",
-      "owns": "route gates, handoff packets, service-to-agon boundaries",
-      "must_not": "author routing meaning"
-    },
-    {
       "repo": "aoa-sdk",
-      "owns": "typed API calls and controlled orchestration",
-      "must_not": "absorb source-owned meaning"
+      "owns": "route gates handoff packets service-to-agon boundaries typed API calls and controlled orchestration",
+      "must_not": "author routing meaning or absorb source-owned meaning"
     },
     {
       "repo": "aoa-skills",

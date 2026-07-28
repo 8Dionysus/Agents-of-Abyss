@@ -17,4 +17,4 @@ protocol exists.
 ## Next route
 
 Route reusable practice to `aoa-techniques` or `aoa-skills`, choreography to
-`aoa-playbooks`, route behavior to `aoa-routing`, and proof to `aoa-evals`.
+`aoa-playbooks`, route behavior to `aoa-sdk`, and proof to `aoa-evals`.

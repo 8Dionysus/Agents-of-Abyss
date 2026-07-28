@@ -69,7 +69,6 @@ OWNER_REQUEST_IDS = (
 OWNER_REPOS = (
     "aoa-evals",
     "aoa-stats",
-    "aoa-routing",
     "aoa-sdk",
     "8Dionysus",
     "abyss-stack",

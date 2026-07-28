@@ -8,11 +8,11 @@ and meaning.
 
 | Part | Center function | Stronger owner route |
 |---|---|---|
-| [Anchor Return](parts/anchor-return/README.md) | name axis loss, valid anchors, return, re-entry, and safe stop | source owner, `aoa-routing`, `aoa-memo`, and `aoa-agents` own local return surfaces |
+| [Anchor Return](parts/anchor-return/README.md) | name axis loss, valid anchors, return, re-entry, and safe stop | source owner, `aoa-sdk`, `aoa-memo`, and `aoa-agents` own local return surfaces |
 | [Continuity Window](parts/continuity-window/README.md) | keep continuity tied to explicit revision windows and reanchor artifacts | `aoa-agents`, `aoa-playbooks`, `aoa-memo`, `aoa-evals`, and `aoa-sdk` own local continuity surfaces |
 | [Component Refresh](parts/component-refresh/README.md) | route drifting technical components through owner refresh law and receipts | component owner repos, `aoa-sdk`, `aoa-stats`, `aoa-playbooks`, and `aoa-memo` own local refresh behavior |
 | [Control Plane Carry](parts/control-plane-carry/README.md) | keep recurrence manifests, graph closure, projections, and handoff carry typed and review-only | `aoa-sdk` owns programmable carry and must stop before owner mutation |
-| [Reentry Routing](parts/reentry-routing/README.md) | keep return navigation thin and source-referring | `aoa-routing` owns navigation hints without recurrence meaning |
+| [Reentry Routing](parts/reentry-routing/README.md) | keep return navigation thin and source-referring | `aoa-sdk` owns navigation hints without recurrence meaning |
 | [Memory Recall](parts/memory-recall/README.md) | keep anchors, checkpoints, recall, and provenance explicit without memory sovereignty | `aoa-memo` owns memory objects and writeback meaning |
 | [Scenario Choreography](parts/scenario-choreography/README.md) | route recurring return patterns into scenario-owned method | `aoa-playbooks` owns repeatable choreography and fallback posture |
 | [Proof Gates](parts/proof-gates/README.md) | require proof before recovery, continuity, or control-plane claims harden | `aoa-evals` owns proof bundles and verdict boundaries |

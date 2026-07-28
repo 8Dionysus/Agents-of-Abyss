@@ -16,7 +16,7 @@ and soil preparation support.
 - Add a new part only when another bridge shape repeats across owner
   boundaries and cannot be handled by an existing part.
 - Keep owner requests portable enough to seed `Tree-of-Sophia`, `aoa-kag`,
-  `aoa-routing`, `aoa-memo`, `aoa-evals`, and `aoa-playbooks` without claiming
+  `aoa-sdk`, `aoa-memo`, `aoa-evals`, and `aoa-playbooks` without claiming
   acceptance.
 - If sibling repositories later create local `mechanics/boundary-bridge/`
   packages, keep their local scope narrower than this center doctrine.

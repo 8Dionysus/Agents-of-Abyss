@@ -50,7 +50,7 @@ AoA exists to support sustained intellectual and technical work where:
 | executable workflow truth | `aoa-skills` |
 | proof, verdict, scoring, and regression truth | `aoa-evals` |
 | owner-local statistical question meaning | the source owner defines its question and evidence boundary; `aoa-stats` owns shared grammar and derived composition, not source authority |
-| route hints as authored truth | `aoa-routing` routes, source owners author |
+| route hints as authored truth | `aoa-sdk` owns the routing control plane; source owners author meaning |
 | memory, retention, recall, or witness objects as primary truth | `aoa-memo` |
 | role, persona, standing, and handoff truth | `aoa-agents` |
 | scenario choreography and recurring method once operational | `aoa-playbooks` |

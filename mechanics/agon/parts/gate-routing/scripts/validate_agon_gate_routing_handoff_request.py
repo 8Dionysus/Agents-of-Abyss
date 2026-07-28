@@ -47,17 +47,26 @@ def main() -> int:
 
     require(request["schema_version"] == "agon_gate_routing_handoff_request.v1", "wrong schema version")
     require(request["owner_repo"] == "Agents-of-Abyss", "request must be center-owned")
-    require(request["routing_repo"] == "aoa-routing", "routing repo mismatch")
+    require(request["routing_repo"] == "aoa-sdk", "routing repo mismatch")
     require("agon_gate_candidate" in request["routing_may_emit"], "gate candidate output missing")
     missing = sorted(REQUIRED_ROUTING_STOP_LINES - set(request["routing_must_not"]))
     require(not missing, f"missing routing stop-lines: {missing}")
     require(request["required_stop_line"] == "routing hint is not arena activation", "missing required stop-line")
 
-    expected = ROOT.parent / "aoa-routing" / "generated" / "agon_gate_routing_registry.min.json"
+    expected = (
+        ROOT.parent
+        / "aoa-sdk"
+        / "src"
+        / "aoa_sdk"
+        / "control_plane"
+        / "routing"
+        / "data"
+        / "agon_gate_routing_registry.min.json"
+    )
     if expected.exists():
-        print("found aoa-routing gate registry")
+        print("found aoa-sdk gate registry")
     else:
-        print("optional aoa-routing gate registry not found")
+        print("optional aoa-sdk gate registry not found")
     print("Agon gate routing handoff request validation passed.")
     return 0
 

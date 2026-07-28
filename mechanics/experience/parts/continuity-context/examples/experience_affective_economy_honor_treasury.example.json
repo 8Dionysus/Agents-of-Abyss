@@ -109,7 +109,7 @@
     },
     {
       "request": "affective_routing_hint_review",
-      "owner": "aoa-routing",
+      "owner": "aoa-sdk",
       "input_boundary": "affect evidence route hint escalation threshold and human review posture",
       "output_candidate": "affective_routing_hint_candidate",
       "must_include": [
@@ -232,7 +232,7 @@
     {
       "order": 7,
       "kind": "affective_routing_hint_requested",
-      "owner": "aoa-routing",
+      "owner": "aoa-sdk",
       "authority_note": "routing may surface bounded hints and escalation pressure but cannot route as verdict or authority",
       "stop_lines": [
         "no route as verdict",
@@ -468,9 +468,9 @@
       "must_not": "convert assistant service affect into agonic standing or sovereign authority"
     },
     {
-      "repo": "aoa-routing",
-      "owns": "advisory affective route hints and escalation candidates only",
-      "must_not": "route as verdict or become rights authority"
+      "repo": "aoa-sdk",
+      "owns": "advisory affective route hints and escalation candidates plus typed helper calls recurrence review lanes and control-plane seams only",
+      "must_not": "route as verdict become rights authority hidden scheduler or semantic authority"
     },
     {
       "repo": "aoa-memo",
@@ -486,11 +486,6 @@
       "repo": "aoa-playbooks",
       "owns": "drills rehearsal routes and owner-review choreography only",
       "must_not": "become runtime treasury or verdict authority"
-    },
-    {
-      "repo": "aoa-sdk",
-      "owns": "typed helper calls recurrence review lanes and control-plane seams only",
-      "must_not": "become hidden scheduler or semantic authority"
     },
     {
       "repo": "aoa-kag",

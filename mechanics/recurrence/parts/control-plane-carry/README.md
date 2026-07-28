@@ -31,5 +31,6 @@ If it mutates owner truth, stop and route to the owner repository.
 
 ## Next Route
 
-Route programmable carry to `aoa-sdk`, thin projections to `aoa-routing`,
-`aoa-stats`, or `aoa-kag`, and owner decisions to the target owner repository.
+Route programmable carry and typed projections to `aoa-sdk`, observational
+projections to `aoa-stats` or `aoa-kag`, and owner decisions to the target
+owner repository.

@@ -50,13 +50,13 @@ This table is a triage lens, not an ownership contract. For exact ownership, use
 | `aoa-techniques` | workflow | repo `AGENTS.md`, README, technique docs | shallow practice copies, missing evidence, technique/skill blur | `aoa-techniques` owner route |
 | `aoa-skills` | workflow | repo `AGENTS.md`, README, target `SKILL.md` | workflow widening, technique truth copied into skills, proof posture overreach | `aoa-skills`, or route back to techniques/evals |
 | `aoa-evals` | proof | repo `AGENTS.md`, README, eval bundle docs | overclaiming, verdict mismatch, comparison drift, scoring as authority | `aoa-evals` proof route |
-| `aoa-routing` | constitutional | repo `AGENTS.md`, README | route hint promoted into source authority | `aoa-routing`, then source owner |
+| `aoa-routing` predecessor | historical | frozen repository docs and succession receipts | deprecated compatibility or history presented as current route authority | `aoa-sdk`, then source owner; archive remains operator-controlled |
 | `aoa-memo` | meaning | repo `AGENTS.md`, README | memory speaking as proof, recall without provenance | `aoa-memo`, or `aoa-evals` for proof |
 | `aoa-agents` | constitutional | repo `AGENTS.md`, README, role docs | role blur, persona inflation, agent layer swallowing skills/playbooks/evals | `aoa-agents` owner route |
 | `aoa-playbooks` | workflow | repo `AGENTS.md`, README | scenario as hidden orchestration or proof, playbook swallowing skill canon | `aoa-playbooks`, or route to skills/evals |
 | `aoa-kag` | meaning | repo `AGENTS.md`, README | derived projection acting as source replacement | `aoa-kag`, then authored source owner |
 | `aoa-stats` | proof | repo `AGENTS.md`, README, generated stats surfaces | summary as authority, score drift, quest or proof status overclaim | `aoa-stats`, then proof/source owner |
-| `aoa-sdk` | workflow | repo `AGENTS.md`, README, typed helper surfaces | helper convenience becoming policy, activation, or owner acceptance | `aoa-sdk`, then owning source/runtime repo |
+| `aoa-sdk` | workflow | repo `AGENTS.md`, README, routing control-plane and typed helper surfaces | route hints or helper convenience becoming source policy, activation, or owner acceptance | `aoa-sdk`, then owning source/runtime repo |
 | `Dionysus` | meaning | repo `AGENTS.md`, README, interview and portrait protocol surfaces | private raw material entering Git, unsupported portrait claims, consent or review boundary drift | `Dionysus` owner route; `aoa-evals` only for bounded proof questions |
 | `8Dionysus` | constitutional | profile README, profile glossary, workspace projection docs | public mirror outrunning center, projection source confusion | `8Dionysus` for profile/projection; AoA or owner repo for truth |
 

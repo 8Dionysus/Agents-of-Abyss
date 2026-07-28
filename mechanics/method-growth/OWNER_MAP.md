@@ -6,7 +6,7 @@ and where stronger truth lives.
 | Concern | Center role | Stronger owner |
 |---|---|---|
 | Growth-route law and vocabulary | define donor, refinement, candidate, owner-local intake, owner landing, pruning, proof, method, memory, and closeout boundaries | `Agents-of-Abyss` |
-| Provisional carry and typed helper hints | name the carry boundary without making SDK helpers authoritative | `aoa-sdk` |
+| Provisional carry, typed helpers, navigation, and dispatch hints | name the carry and route boundary without making SDK helpers authoritative or minting growth identity | `aoa-sdk` |
 | Reviewed candidate identity and bounded execution shape | require reviewed candidate posture before promotion | `aoa-skills` |
 | Reusable practice | separate technique from skill and keep practice reusable without scenario inflation | `aoa-techniques` |
 | Owner-local intake and landing trace | preserve origin, intended owner, review state, and acceptance without a federation intermediary | final owning repository |
@@ -14,7 +14,6 @@ and where stronger truth lives.
 | Recurring scenario-level method | move stable multi-step routes out of center doctrine | `aoa-playbooks` |
 | Bounded memory and lessons | retain provenance, recall, and pruning lessons without memory sovereignty | `aoa-memo` |
 | Derived growth visibility | summarize owner receipts without becoming route or proof authority | `aoa-stats` |
-| Navigation and dispatch hints | route readers to owner truth without minting growth identity | `aoa-routing` |
 | Derived regrounding toward source refs | keep projection weaker than source and owner truth | `aoa-kag` |
 | Runtime behavior after owner gates | enact validated growth-support behavior without authoring method meaning | `abyss-stack` |
 | Source meaning when growth touches ToS-authored surfaces | keep authored meaning in the source owner | `Tree-of-Sophia` |

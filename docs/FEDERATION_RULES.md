@@ -17,12 +17,17 @@ Examples:
 
 ## Rule 2: navigation layers do not become source-of-truth layers
 
-`aoa-routing` should remain a navigation and dispatch surface.
+The routing control plane in `aoa-sdk` should remain a navigation and dispatch
+surface.
 
 It may aggregate, compress, and route.
 It may also publish thin federation entry cards or ABI surfaces as additive orientation layers.
 
 It should not become the primary authoring home of techniques, skills, evals, memory objects, playbooks, or ToS corpus material.
+
+The predecessor `aoa-routing` repository is maintenance-only after succession.
+It remains preserved for history and rollback until a separate operator archive
+decision, but active consumers must not require it.
 
 ## Rule 3: derived layers stay derived and non-sovereign
 
@@ -173,9 +178,10 @@ This wave should not smuggle runtime implementation claims into the center.
 - public tiny-entry seams for human and small-model entry
 
 AoA support around those surfaces stays reviewable, names the ToS owner route,
-and keeps the human-reviewed boundary visible. `aoa-routing` may hand off into
-ToS seams, and `aoa-kag` may derive bounded readiness surfaces from them. Those
-support paths return readers to `Tree-of-Sophia` for authored meaning.
+and keeps the human-reviewed boundary visible. The `aoa-sdk` routing control
+plane may hand off into ToS seams, and `aoa-kag` may derive bounded readiness
+surfaces from them. Those support paths return readers to `Tree-of-Sophia` for
+authored meaning.
 
 ## Rule 18: self-agency continuity stays bounded by anchors and owner splits
 

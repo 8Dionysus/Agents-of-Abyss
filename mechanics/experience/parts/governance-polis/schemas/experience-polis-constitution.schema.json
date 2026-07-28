@@ -100,7 +100,7 @@
     },
     "owner_split": {
       "type": "array",
-      "minItems": 13,
+      "minItems": 12,
       "items": {
         "type": "object",
         "additionalProperties": false,

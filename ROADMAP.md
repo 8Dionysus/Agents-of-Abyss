@@ -116,9 +116,9 @@ surfaces keep checked landings, validators, owner boundaries, and stop-lines.
 
 | Field | Direction |
 |---|---|
-| Current posture | AoA now has an AbyssOS organ contract that names required route surfaces, deny-by-default access admission, explicit owner roles, effect families, access-form-specific evidence, and rollback law without becoming SDK, routing, proof, or runtime implementation. |
-| Next honest move | Carry the admitted contract into `aoa-sdk`, `abyss-stack`, `aoa-evals`, and owner repositories; let evidence-backed owner landings produce the private registry shape while `aoa-routing` remains authoritative until its explicit owner-switch receipt. |
-| Guardrail | Organ alignment is constitutional connection law; `aoa-sdk` carries typed control-plane implementation, `aoa-routing` carries dispatch until handoff, `abyss-stack` carries runtime, proof remains with its owner, and each source repository retains local truth. |
+| Current posture | AoA now has an AbyssOS organ contract that names required route surfaces, deny-by-default access admission, explicit owner roles, effect families, access-form-specific evidence, and rollback law; [`AOA-CENTER-D-0035`](docs/decisions/AOA-CENTER-D-0035-admit-routing-owner-switch.md) admits the exact [SDK G5 owner-switch receipt](https://github.com/8Dionysus/aoa-sdk/blob/7fba39d38cf5902c41dfbb7ae91f405b849880b7/mechanics/boundary-bridge/parts/consumed-surface-posture-gate/docs/routing-succession-g5-owner-switch.md), moving control-plane and dispatch authority into `aoa-sdk` without moving source meaning or runtime execution. |
+| Next honest move | Retarget every active consumer and public projection to the SDK-produced routing surface, observe landed CI/runtime evidence, and keep the predecessor maintenance-only and reversible until proven consumer-zero, compatibility exit, and separate exact archive authorization. |
+| Guardrail | Organ alignment is constitutional connection law; `aoa-sdk` carries routing and typed control-plane implementation, `abyss-stack` carries runtime, proof remains with its owner, each source repository retains local truth, and no repository archive is implied by succession. |
 
 ## Horizon: Mechanics Maturity
 

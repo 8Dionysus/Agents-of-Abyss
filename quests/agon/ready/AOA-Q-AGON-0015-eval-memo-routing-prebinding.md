@@ -8,7 +8,7 @@ Track the obligation named by this quest and route it through the reviewability 
 
 ## Intent
 
-Use the Wave IV owner binding registry as the input to later `aoa-evals`, `aoa-memo`, `aoa-routing`, `aoa-playbooks`, and `aoa-stats` preparation waves.
+Use the Wave IV owner binding registry as the input to later `aoa-evals`, `aoa-memo`, `aoa-sdk`, `aoa-playbooks`, and `aoa-stats` preparation waves.
 
 ## Not now
 
@@ -16,7 +16,7 @@ Do not create verdicts, scars, route gates, trial playbooks, or stats sovereignt
 
 ## Later targets
 
-- `aoa-routing`: Agon gate hints.
+- `aoa-sdk`: Agon gate hints.
 - `aoa-playbooks`: mechanical trial choreography hooks.
 - `aoa-evals`: adequacy and breach predicates.
 - `aoa-memo`: scar/delta candidate intake.

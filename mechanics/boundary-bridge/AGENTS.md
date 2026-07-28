@@ -21,7 +21,7 @@ start from legacy material.
 - Do not treat `support`, `analogy`, `projection`, or `compatibility` as proof
   of identity.
 - Keep ToS-authored meaning in `Tree-of-Sophia`.
-- Keep derived projection in `aoa-kag`, route behavior in `aoa-routing`,
+- Keep derived projection in `aoa-kag`, route behavior in `aoa-sdk`,
   memory and witness objects in `aoa-memo`, proof in `aoa-evals`, and
   choreography in `aoa-playbooks`.
 - If the bridge creates an owner-local request, update

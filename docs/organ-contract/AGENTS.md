@@ -27,9 +27,10 @@ Read root `AGENTS.md`, `docs/AGENTS.md`, this card, and then:
 ## Boundaries
 
 - This district owns organ alignment law for the center.
-- `aoa-sdk` owns typed helpers, compatibility, activation, and control-plane
-  implementation.
-- `aoa-routing` owns operational dispatch and navigation surfaces.
+- `aoa-sdk` owns typed helpers, compatibility, activation, routing
+  control-plane implementation, and operational dispatch/navigation surfaces.
+- the deprecated `aoa-routing` predecessor remains historical and
+  maintenance-only until a separate archive decision.
 - `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-kag`, and
   `aoa-stats` own their layer-local object classes.
 - `abyss-stack` owns runtime body, services, storage, workers, and deployed

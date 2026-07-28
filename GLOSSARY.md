@@ -101,7 +101,10 @@ Coordination, routing, generated, and derived layers should not quietly replace 
 
 A repository that helps readers or systems navigate across layers without owning all primary meaning itself.
 
-`Agents-of-Abyss` is the ecosystem-center coordination repository. `aoa-routing` is a lighter navigation-oriented coordination layer.
+`Agents-of-Abyss` is the ecosystem-center coordination repository. `aoa-sdk`
+is the typed navigation and control-plane coordination layer. `aoa-routing`
+is its deprecated maintenance predecessor, retained for history and reversible
+retirement until a separate archive decision.
 
 ### Derived layer
 
@@ -113,7 +116,8 @@ Derived layers may accelerate retrieval, comparison, or orientation, but they mu
 
 A repository or package that consumes AoA surfaces, provides typed helpers, or supports local orchestration without becoming a compact registry member or constitutional authority.
 
-`aoa-sdk` currently fits this posture.
+`aoa-sdk` fits this posture while also owning the canonical routing control
+plane; neither role grants it source-layer meaning or runtime authority.
 
 ### Adjacent system anchor
 
@@ -157,7 +161,9 @@ In the current public ecosystem, this role belongs to `aoa-evals`. Its main ques
 
 The layer that helps humans and models decide where to go next.
 
-In the current public ecosystem, this role belongs to `aoa-routing`. It should route and dispatch rather than become the primary authoring home of other layers.
+In the current public ecosystem, this role belongs to the routing control plane
+in `aoa-sdk`. It should route and dispatch rather than become the primary
+authoring home of other layers.
 
 ### Memory layer
 

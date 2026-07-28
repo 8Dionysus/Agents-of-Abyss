@@ -66,7 +66,7 @@ Not every lineage must reach every state.
 
 ## Derivative-layer rule
 
-`aoa-routing` and `aoa-kag` may later consume or summarize parts of this route.
+`aoa-sdk` and `aoa-kag` may later consume or summarize parts of this route.
 
 They stay derivative:
 

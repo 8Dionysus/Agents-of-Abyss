@@ -15,7 +15,7 @@ Use it when the question is not only "what exists?" but also:
 | `aoa-techniques` | practice canon | reusable techniques, origin evidence, checks, examples, technique-level derived surfaces | skill truth, eval truth, memory truth, cross-repo routing truth | `TECHNIQUE.md`, notes, checks, examples, technique catalogs | what practice is genuinely reusable? |
 | `aoa-skills` | execution canon | bounded agent-facing workflows, trigger boundaries, verification guidance, technique composition manifests | primary technique meaning, proof doctrine, memory objects, ecosystem-center governance | `SKILL.md`, `techniques.yaml`, agent policy files, skill support artifacts | how should an agent execute bounded work? |
 | `aoa-evals` | proof canon | bounded proof surfaces, verdict logic, scoring guidance, comparison modes, blind spots | workflow execution truth, technique truth, memory truth, ecosystem routing truth | `EVAL.md`, `eval.yaml`, evidence/support artifacts | what bounded claim can we honestly defend? |
-| `aoa-routing` | navigation layer | cross-repo dispatch, lightweight entrypoints, recommended paths, model-facing access surfaces | authored technique, skill, eval, or memory truth | router manifests, path surfaces, dispatch registries, `generated/federation_entrypoints.min.json`, `docs/FEDERATION_ENTRY_ABI.md` | where should a model or human go next? |
+| `aoa-routing` | deprecated routing predecessor | preserved route history, rollback evidence, and maintenance-only compatibility | new dispatch authority, new route contracts, or authored technique, skill, eval, or memory truth | frozen predecessor manifests, release receipts, and historical route surfaces | what must remain reversible until a separate archive decision? |
 | `aoa-stats` | derived observability layer | machine-first summaries, derived windows, shared stats event envelope, and bounded summary builders | workflow meaning, proof meaning, live route authority, quest-state authority | `generated/*.json`, `generated/summary_surface_catalog.min.json`, `schemas/stats-event-envelope.schema.json`, stats builders and validators | what movement is visible across owner-local evidence without turning stats into authority? |
 
 ## Emerging repositories
@@ -38,7 +38,7 @@ Use it when the question is not only "what exists?" but also:
 
 | repository | role in the wider system | registry posture |
 |---|---|---|
-| `aoa-sdk` | typed local-first consumer and orchestration surface for source-owned AoA repositories | routed from the center through `generated/federation_supporting_inventory.min.json`, but intentionally outside ecosystem registry v2 |
+| `aoa-sdk` | canonical typed routing/control-plane and local-first consumer for source-owned AoA repositories | routed from the center through `generated/federation_supporting_inventory.min.json`; routing authority does not transfer source meaning or runtime execution |
 
 ## OS Abyss artifact trust-plane route
 
@@ -72,7 +72,8 @@ When deciding where something belongs:
 3. If it defines proof or claim discipline, it probably belongs in `aoa-evals`.
 4. If it defines recall, provenance, or temporal memory, it probably belongs in `aoa-memo`.
 5. If it defines role-bearing agents, it probably belongs in `aoa-agents`.
-6. If it defines dispatch across layers, it probably belongs in `aoa-routing`.
+6. If it defines dispatch across layers, it probably belongs in the routing
+   control plane in `aoa-sdk`.
 7. If it defines machine-first summary surfaces or derived observability windows, it probably belongs in `aoa-stats`.
 8. If it defines ecosystem-level identity, system form, or federation boundaries, it belongs here.
 9. If it is mechanic-shaped, start with `mechanics/README.md` and the owning

@@ -95,7 +95,7 @@
     {
       "order": 7,
       "kind": "incident_reentry_routed",
-      "owner": "aoa-routing",
+      "owner": "aoa-sdk",
       "authority_note": "routing may suggest reentry and escalation paths; it does not own meaning",
       "stop_lines": [
         "routing is not owner",
@@ -205,14 +205,9 @@
       "must_not": "become proof or drill judgment authority"
     },
     {
-      "repo": "aoa-routing",
-      "owns": "advisory escalation incident reentry and service handoff routes",
-      "must_not": "become owner meaning or live summon authority"
-    },
-    {
       "repo": "aoa-sdk",
-      "owns": "typed helper contracts and service mesh API seams",
-      "must_not": "become service runtime or semantic authority"
+      "owns": "advisory escalation incident reentry and service handoff routes plus typed helper contracts and service mesh API seams",
+      "must_not": "become owner meaning live summon service runtime or semantic authority"
     },
     {
       "repo": "aoa-kag",

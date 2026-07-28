@@ -28,7 +28,7 @@ ownership.
 It must not become a sovereign score surface or dashboard court.
 
 ## Rule 6. Routing navigates, it does not narrate truth
-`aoa-routing` may suggest next hops and postures.
+`aoa-sdk` may suggest next hops and postures.
 It must not explain what happened in place of owner receipts or proof.
 
 ## Rule 7. Memo recalls, it does not certify

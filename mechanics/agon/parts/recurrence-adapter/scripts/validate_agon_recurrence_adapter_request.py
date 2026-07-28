@@ -58,7 +58,7 @@ def main() -> int:
     if len(refs) != len(set(refs)):
         return fail("duplicate component refs")
     repos = {c.get("target_repo") for c in comps}
-    required_repos = {"Agents-of-Abyss", "aoa-agents", "aoa-routing", "aoa-playbooks", "aoa-techniques", "aoa-skills"}
+    required_repos = {"Agents-of-Abyss", "aoa-agents", "aoa-sdk", "aoa-playbooks", "aoa-techniques", "aoa-skills"}
     if not required_repos.issubset(repos):
         return fail(f"missing target repos: {sorted(required_repos - repos)}")
     for comp in comps:

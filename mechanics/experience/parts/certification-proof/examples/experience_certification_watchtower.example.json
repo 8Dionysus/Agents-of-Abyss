@@ -81,7 +81,7 @@
     },
     {
       "kind": "incident_reentry_routed",
-      "owner_repo": "aoa-routing",
+      "owner_repo": "aoa-sdk",
       "authority_note": "routing remains advisory and returns incidents to the experience loop"
     },
     {
@@ -143,14 +143,9 @@
       "must_not": "become proof or release authority"
     },
     {
-      "repo": "aoa-routing",
-      "owns": "incident re-entry and owner dispatch hints",
-      "must_not": "approve release or choose durable rollback"
-    },
-    {
       "repo": "aoa-sdk",
-      "owns": "typed helper call contracts",
-      "must_not": "turn helper calls into deployment authority"
+      "owns": "incident re-entry and owner dispatch hints plus typed helper call contracts",
+      "must_not": "approve release choose durable rollback or turn helper calls into deployment authority"
     },
     {
       "repo": "aoa-kag",

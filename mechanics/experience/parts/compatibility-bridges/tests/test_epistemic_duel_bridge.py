@@ -584,7 +584,7 @@ def test_experience_epistemic_duel_rejects_routing_owner_authority_leak() -> Non
     owner_split = bad_payload["owner_split"]
     assert isinstance(owner_split, list)
     for entry in owner_split:
-        if entry.get("repo") == "aoa-routing":
+        if entry.get("repo") == "aoa-sdk":
             entry["owns"] = (
                 "live dispatch authority, route truth verdicts, and owner meaning"
             )

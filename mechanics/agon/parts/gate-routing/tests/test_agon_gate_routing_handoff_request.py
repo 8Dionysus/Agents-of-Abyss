@@ -26,11 +26,22 @@ def test_agon_gate_handoff_request_is_current():
     assert current == dump_min(config)
 
 
+def test_agon_gate_handoff_example_matches_owner_source():
+    config = load_json(ROOT / "mechanics" / "agon" / "parts" / "gate-routing" / "config" / "agon_gate_routing_handoff_request.seed.json")
+    example = load_json(ROOT / "mechanics" / "agon" / "parts" / "gate-routing" / "examples" / "agon_gate_routing_handoff_request.example.json")
+
+    assert example == config
+    assert example["expected_routing_surface"] == (
+        "aoa-sdk/src/aoa_sdk/control_plane/routing/data/"
+        "agon_gate_routing_registry.min.json"
+    )
+
+
 def test_agon_gate_handoff_preserves_center_law():
     request = load_json(ROOT / "mechanics" / "agon" / "parts" / "gate-routing" / "generated" / "agon_gate_routing_handoff_request.min.json")
 
     assert request["owner_repo"] == "Agents-of-Abyss"
-    assert request["routing_repo"] == "aoa-routing"
+    assert request["routing_repo"] == "aoa-sdk"
     assert "agon_gate_candidate" in request["routing_may_emit"]
     assert "create_arena_session" in request["routing_must_not"]
     assert "issue_verdict" in request["routing_must_not"]

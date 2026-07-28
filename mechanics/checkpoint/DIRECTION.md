@@ -35,13 +35,12 @@ every intermediate state honest:
 The center landing is intentionally thin:
 
 - center law and stop-lines live here
-- implementation controls stay in `aoa-sdk`
+- implementation controls and navigation hints stay in `aoa-sdk`
 - checkpoint-note protocol and bridge skill stay in `aoa-skills`
 - self-agent posture stays in `aoa-agents`
 - relaunch, recall, and writeback stay in `aoa-memo`
 - choreography stays in `aoa-playbooks`
 - proof stays in `aoa-evals`
-- navigation hints stay in `aoa-routing`
 - derived visibility stays in `aoa-stats`
 - runtime exports stay in `abyss-stack`
 

@@ -28,7 +28,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 | `ORQ-GROWTHCYCLE-MEMO-001` | `aoa-memo` | `requested` | `P1` | Memory writeback, recall, and failure lessons | Memo-side writeback and recall surfaces keep cycle residue out of memory canon until reviewed. | Memory durability claims route to `aoa-evals`. |
 | `ORQ-GROWTHCYCLE-PLAYBOOKS-001` | `aoa-playbooks` | `requested` | `P1` | Recurring cycle choreography | Playbooks for recurring reviewed closeout, harvest, repair, quest, and owner-followthrough routes. | Scenario closure proof routes to `aoa-evals`. |
 | `ORQ-GROWTHCYCLE-STATS-001` | `aoa-stats` | `requested` | `P2` | Derived cycle visibility | Derived summaries read owner receipts and reviewed closeouts without becoming proof, route authority, or memory. | Counts remain descriptive and weaker than owner receipts. |
-| `ORQ-GROWTHCYCLE-ROUTING-001` | `aoa-routing` | `requested` | `P2` | Re-entry and next-route hints | Routing hints point to source-owned Growth Cycle and owner surfaces without interpreting cycle meaning. | Route behavior can be checked through evals if public. |
+| `ORQ-GROWTHCYCLE-ROUTING-001` | `aoa-sdk` | `requested` | `P2` | Re-entry and next-route hints | Routing hints point to source-owned Growth Cycle and owner surfaces without interpreting cycle meaning. | Route behavior can be checked through evals if public. |
 | `ORQ-GROWTHCYCLE-STACK-001` | `abyss-stack` | `requested` | `P1` | Runtime exports and health receipts | Runtime-owned cycle exports, health receipts, and closeout plumbing stay behind runtime gates and export contracts. | Runtime claims require runtime receipts and proof routes as needed. |
 
 ## Center sources

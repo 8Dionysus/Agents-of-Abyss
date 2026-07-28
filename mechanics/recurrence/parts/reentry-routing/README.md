@@ -30,6 +30,6 @@ primary authority target is routing-owned generated output, stop and reroute.
 
 ## Next Route
 
-Route navigation implementation to `aoa-routing`, checkpoint continuity to
+Route navigation implementation to `aoa-sdk`, checkpoint continuity to
 `aoa-memo`, actor posture to `aoa-agents`, and runtime consumption to
 `abyss-stack` after runtime gates.

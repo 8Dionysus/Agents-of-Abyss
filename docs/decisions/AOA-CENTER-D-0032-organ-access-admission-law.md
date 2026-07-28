@@ -78,9 +78,12 @@ The target owner split is:
 
 The transitional topology keeps direct per-owner connections and the stable
 MCP protocol line. `aoa-sdk` may add discovery and compile activation plans but
-does not silently activate servers or proxy owner tools. `aoa-routing` remains
-the routing authority until its already-governed owner-switch receipt; the
-target architecture creates no separate long-lived `aoa-routing-mcp`.
+does not silently activate servers or proxy owner tools. The transitional
+`aoa-routing` authority clause was satisfied and narrowly superseded by
+[`AOA-CENTER-D-0035`](AOA-CENTER-D-0035-admit-routing-owner-switch.md):
+`aoa-sdk` is now the receipt-bound routing/control-plane owner, while the
+predecessor remains maintenance-only and reversible. The target architecture
+creates no separate long-lived `aoa-routing-mcp`.
 
 Every admitted route must carry traceable source, package, deploy, process,
 endpoint, registry, consumer-schema, canary, and acceptance evidence. A missing

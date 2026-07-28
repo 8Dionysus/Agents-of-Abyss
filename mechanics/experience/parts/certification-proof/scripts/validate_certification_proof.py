@@ -86,7 +86,6 @@ REQUIRED_OWNER_REPOS = {
     "aoa-kag",
     "aoa-memo",
     "aoa-playbooks",
-    "aoa-routing",
     "aoa-sdk",
     "aoa-stats",
 }

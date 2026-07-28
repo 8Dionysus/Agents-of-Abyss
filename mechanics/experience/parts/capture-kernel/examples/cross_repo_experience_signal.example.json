@@ -9,7 +9,7 @@
     "receipt://v0.6/cross_repo_experience_signal/example"
   ],
   "payload": {
-    "repo": "aoa-routing",
+    "repo": "aoa-sdk",
     "family": "wrong_surface",
     "surface": "owner_landing",
     "severity": "material",

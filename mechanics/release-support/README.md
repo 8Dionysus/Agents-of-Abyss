@@ -32,8 +32,8 @@ changelog/roadmap/landing-log split, and owner handoff stop-lines.
 - `aoa-evals` owns proof evidence for quality, regression, and public-claim
   support.
 - `aoa-stats` owns derived release and transition movement summaries.
-- `aoa-routing` owns route and entry ABI updates.
-- `aoa-sdk` owns typed helper and compatibility support for release consumers.
+- `aoa-sdk` owns route and entry ABI updates plus typed helper and compatibility
+  support for release consumers.
 - `8Dionysus` owns public projection after center and owner evidence align.
 - `abyss-stack` owns runtime deployment and rollback truth.
 - Generated surfaces reflect source truth but do not author release truth.
@@ -72,10 +72,10 @@ Use the validation lane in [AGENTS.md](AGENTS.md#validation).
 
 - For proof-dependent claims, route to `aoa-evals`; for sibling release truth
   or acceptance, route to the sibling repository.
-- For derived movement summaries, route to `aoa-stats`; for route/entry ABI
-  support, route to `aoa-routing`; for typed helper support, route to
-  `aoa-sdk`; for public projection, route to `8Dionysus`; for runtime
-  deployment or rollback, route to `abyss-stack`.
+- For derived movement summaries, route to `aoa-stats`; for route/entry ABI,
+  typed helper, and compatibility support, route to `aoa-sdk`; for public
+  projection, route to `8Dionysus`; for runtime deployment or rollback, route
+  to `abyss-stack`.
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and
   `docs/REPO_ROLES.md`.
 

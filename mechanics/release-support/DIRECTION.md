@@ -77,10 +77,9 @@ speculation.
 ## Next owner route
 
 Proof routes to `aoa-evals`. Derived release visibility routes to `aoa-stats`.
-Release routing routes to `aoa-routing`. Compatibility helpers route to
-`aoa-sdk`. Public projection routes to `8Dionysus`. Runtime deployment truth
-routes to `abyss-stack`. Mechanic-local content remains with the owning
-mechanic.
+Release routing and compatibility helpers route to `aoa-sdk`. Public
+projection routes to `8Dionysus`. Runtime deployment truth routes to
+`abyss-stack`. Mechanic-local content remains with the owning mechanic.
 
 ## Validation
 

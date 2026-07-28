@@ -30,7 +30,7 @@ Source repos keep ownership of what happened and what it means.
 - owner repos publish source-owned receipts and local interpretations
 - `aoa-evals` owns bounded proof surfaces
 - `aoa-stats` owns derived views
-- `aoa-routing` owns navigation
+- `aoa-sdk` owns navigation
 - `aoa-memo` owns explicit memory and recall, but memory is not proof
 
 Antifragility must not blur these lines.
@@ -93,7 +93,7 @@ Not every repo needs every axis, but the split matters.
 `aoa-stats` derives vector surfaces from source receipts and eval outputs without becoming an authority layer.
 
 ### Concrete owner repos
-Concrete repos such as `ATM10-Agent`, `abyss-stack`, `aoa-routing`, or `aoa-memo` emit local receipts and owner-local semantics.
+Concrete repos such as `ATM10-Agent`, `abyss-stack`, `aoa-sdk`, or `aoa-memo` emit local receipts and owner-local semantics.
 
 ## Anti-patterns
 

@@ -64,7 +64,6 @@ SYSTEM_EVENTS = (
 
 STRONGER_OWNER_REFS = (
     "aoa-sdk",
-    "aoa-routing",
     "aoa-agents",
     "aoa-playbooks",
     "aoa-evals",

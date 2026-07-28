@@ -113,13 +113,12 @@
     "downstream_repos": [
       "aoa-evals",
       "aoa-memo",
-      "aoa-routing",
+      "aoa-sdk",
       "aoa-stats"
     ],
     "non_authority_repos": [
       "Agents-of-Abyss",
       "aoa-stats",
-      "aoa-routing",
       "aoa-sdk"
     ],
     "routing_status": "owner_review_required"

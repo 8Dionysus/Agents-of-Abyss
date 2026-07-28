@@ -17,7 +17,7 @@ remain explicit owner-local requests until each target repository lands them.
 
 - `Agents-of-Abyss`
 - `aoa-agents`
-- `aoa-routing`
+- `aoa-sdk`
 - `aoa-playbooks`
 - `aoa-techniques`
 - `aoa-skills`

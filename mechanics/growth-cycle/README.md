@@ -23,7 +23,8 @@ and handoff route grammar for reviewed agent-process lifecycle.
 ### Stronger owner split
 
 - `aoa-sdk` owns hooks, checkpoint ledgers, closeout context, local control
-  panel behavior, and typed cycle helpers.
+  panel behavior, typed cycle helpers, and re-entry or next-route hints without
+  cycle meaning.
 - `aoa-skills` owns executable donor, progression, diagnosis, repair, quest,
   automation, and fork skills.
 - `aoa-agents` owns self-agent checkpoint, approval, rollback, health, role,
@@ -34,7 +35,6 @@ and handoff route grammar for reviewed agent-process lifecycle.
   memory boundaries.
 - `aoa-playbooks` owns recurring cycle choreography and campaign routes.
 - `aoa-stats` owns derived visibility from receipts and never raw authority.
-- `aoa-routing` owns re-entry and next-route hints without cycle meaning.
 - `abyss-stack` owns runtime exports, runtime health receipts, and plumbing
   after runtime gates.
 
@@ -77,7 +77,7 @@ Use the validation lane in [mechanics/growth-cycle/AGENTS.md](AGENTS.md#validati
   posture, route to `aoa-agents`.
 - For proof, route to `aoa-evals`; for memory, route to `aoa-memo`; for
   choreography, route to `aoa-playbooks`; for derived visibility, route to
-  `aoa-stats`; for navigation hints, route to `aoa-routing`; for reviewed
+  `aoa-stats`; for navigation hints, route to `aoa-sdk`; for reviewed
   intake and landing, route directly to the final owner repository; for runtime
   exports and health receipts, route to `abyss-stack`; for unclear owner, return to
   `docs/FEDERATION_RULES.md` and `docs/REPO_ROLES.md`.

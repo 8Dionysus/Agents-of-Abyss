@@ -6,7 +6,7 @@ This part owns context routing grammar, continuity loom, memory weaving, pattern
 
 ## Stronger owner split
 
-`aoa-memo` owns memory objects; `aoa-routing` owns live context router behavior; `aoa-evals` owns proof.
+`aoa-memo` owns memory objects; `aoa-sdk` owns live context router behavior; `aoa-evals` owns proof.
 
 ## Allowed outputs
 

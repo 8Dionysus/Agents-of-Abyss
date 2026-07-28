@@ -151,10 +151,10 @@ DOCUMENTED_REGISTRY_V2 = {
         "relation": "derived-layer",
     },
     "aoa-routing": {
-        "role": "navigation-layer",
+        "role": "routing-predecessor",
         "kind": "derived",
         "visibility": "public",
-        "maturity": "bootstrap",
+        "maturity": "deprecated",
         "relation": "routing-layer",
     },
     "aoa-kag": {
@@ -181,7 +181,7 @@ DOCUMENTED_REGISTRY_V2 = {
 }
 DOCUMENTED_SUPPORTING_SURFACES = {
     "aoa-sdk": {
-        "role": "typed-consumer-and-control-plane",
+        "role": "typed-routing-consumer-and-control-plane",
         "kind": "supporting-consumer",
     }
 }

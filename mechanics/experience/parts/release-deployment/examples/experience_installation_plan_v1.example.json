@@ -8,12 +8,11 @@
   "landing_order": [
     "Agents-of-Abyss",
     "aoa-agents",
-    "aoa-routing",
+    "aoa-sdk",
     "aoa-evals",
     "aoa-memo",
     "aoa-stats",
     "aoa-playbooks",
-    "aoa-sdk",
     "abyss-stack",
     "Tree-of-Sophia"
   ],

@@ -14,7 +14,7 @@ Review the Wave III move registry and decide which move families deserve follow-
 
 - `aoa-techniques`: reusable practice behind stance, trace, contradiction, closure, revision.
 - `aoa-skills`: bounded execution workflows for reviewed move families.
-- `aoa-routing`: future `agon_needed` gate hints.
+- `aoa-sdk`: future `agon_needed` gate hints.
 - `aoa-evals`: proof and breach checks.
 - `aoa-memo`: future scar and delta memory surfaces.
 - `aoa-playbooks`: early mechanical trial choreography.

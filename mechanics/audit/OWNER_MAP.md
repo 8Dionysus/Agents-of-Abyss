@@ -19,8 +19,7 @@ Audit routes what can be seen. Stronger owners decide what becomes proof, memory
 | `mechanics/distillation` | owns raw-to-active extraction when audit evidence is being distilled |
 | `mechanics/growth-cycle` | owns recurring cycle lift from audit into repair, harvest, or next route |
 | `abyss-stack` | owns runtime services, storage, deployment, and lifecycle |
-| `aoa-sdk` | owns typed helpers, control-panel support, and local integration |
-| `aoa-routing` | owns live route behavior and dispatch surfaces |
+| `aoa-sdk` | owns typed helpers, control-plane support, local integration, live route behavior, and dispatch surfaces |
 | `aoa-kag` | owns derived knowledge substrates |
 | `aoa-agents` | owns role posture, handoffs, and agent-facing contracts |
 | `8Dionysus` | owns public entry/profile route material |

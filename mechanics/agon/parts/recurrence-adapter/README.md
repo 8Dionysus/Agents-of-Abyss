@@ -19,4 +19,4 @@ re-enter through a valid route instead of becoming ambient continuity.
 ## Next route
 
 Route recurrence law to `mechanics/recurrence`, memory objects to `aoa-memo`,
-and live route behavior to `aoa-routing`.
+and live route behavior to `aoa-sdk`.

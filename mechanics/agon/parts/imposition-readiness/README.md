@@ -17,5 +17,5 @@ before lawful move or arena language is used.
 
 ## Next route
 
-Route proof questions to `aoa-evals`, review routing to `aoa-routing`, and
+Route proof questions to `aoa-evals`, review routing to `aoa-sdk`, and
 unclear owner boundaries back to `docs/FEDERATION_RULES.md`.

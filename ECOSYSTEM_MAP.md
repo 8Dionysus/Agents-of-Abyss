@@ -65,14 +65,14 @@ If the question is "does the center have authority to say this?", return to
 | Repository | Role | Owns | Does not own | Current maturity | Growth direction |
 |---|---|---|---|---|---|
 | `aoa-stats` | derived observability layer | machine-first summary surfaces, derived windows, shared stats receipt envelopes, and evidence-linked read models | workflow meaning, proof meaning, route authority, quest authority, score authority | bootstrap | seed derived observability layer |
-| `aoa-routing` | navigation and dispatch layer | cross-repo routing hints, dispatch surfaces, navigation posture, lightweight indexes, and a thin federation entry ABI | primary authored truth of other layers | bootstrap | seed navigation layer |
+| `aoa-routing` | deprecated routing predecessor | preserved routing history, rollback evidence, and maintenance-only compatibility while the repository remains unarchived | new dispatch authority, new route contracts, or primary authored truth of other layers | deprecated | preserve reversibility; archive only after separate operator approval |
 | `aoa-kag` | derived knowledge substrate | provenance-aware lifts, graph-ready projections, retrieval-ready structures, and bounded federation readiness surfaces derived from authoritative sources | source-authored truth of ToS or other layer-owned corpora | bootstrap | seed derived knowledge substrate |
 
 ## Supporting consumers outside ecosystem registry v2
 
 | Repository | Role | Owns | Does not own | Current maturity | Registry posture |
 |---|---|---|---|---|---|
-| `aoa-sdk` | typed local-first consumer and control-plane helper spine | loading, integration, compatibility helpers, typed helper seams, controlled orchestration support | constitutional authority, source-layer truth, owner-local implementation acceptance | proven | tracked in `generated/federation_supporting_inventory.min.json`, not ecosystem registry v2 |
+| `aoa-sdk` | canonical typed control-plane and routing spine | SDK-owned routing ABI, cross-repo route hints, loading, integration, compatibility helpers, typed seams, and controlled orchestration support | constitutional authority, source-layer meaning, runtime execution, or owner-local acceptance | proven | tracked in `generated/federation_supporting_inventory.min.json`; routing succession is recorded without promoting SDK helpers into source truth |
 
 ## Adjacent system anchors
 
@@ -110,7 +110,7 @@ When there is ambiguity, use this map as a route back to the owner:
 - organ contract law names reviewable connection shape
 - source-owned layers author their primary object class
 - derived layers derive from owner-owned evidence
-- routing layers dispatch without authoring layer truth
+- the SDK routing control plane dispatches without authoring layer truth
 - supporting consumers load, integrate, and activate without authority transfer
 - substrate layers run the system body
 - adjacent anchors keep their own authorship law

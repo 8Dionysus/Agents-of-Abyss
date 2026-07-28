@@ -25,7 +25,7 @@
       "fallback posture",
       "expected evidence posture"
     ],
-    "aoa-routing": [
+    "aoa-sdk": [
       "future gate hints and dispatch"
     ],
     "aoa-stats": [

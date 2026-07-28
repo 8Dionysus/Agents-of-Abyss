@@ -338,7 +338,7 @@ def test_experience_service_mesh_requires_all_owner_repos() -> None:
     owner_split = bad_payload["owner_split"]
     assert isinstance(owner_split, list)
     owner_split[:] = [
-        entry for entry in owner_split if entry.get("repo") != "aoa-routing"
+        entry for entry in owner_split if entry.get("repo") != "aoa-sdk"
     ]
 
     with pytest.raises(validator.ValidationError, match="owner_split|schema"):

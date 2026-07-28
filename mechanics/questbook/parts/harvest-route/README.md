@@ -21,7 +21,7 @@ Default harvest thresholds:
 - repeated scenario route -> `aoa-playbooks`
 - repeated role or handoff contract -> `aoa-agents`
 - repeated memory/writeback pattern -> `aoa-memo`
-- repeated thin navigation pattern -> `aoa-routing`
+- repeated thin navigation pattern -> `aoa-sdk`
 
 ## Public-Safety Rule
 

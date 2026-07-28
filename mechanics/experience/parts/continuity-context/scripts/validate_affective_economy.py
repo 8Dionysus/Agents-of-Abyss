@@ -140,7 +140,7 @@ EXPECTED_REQUESTS = [
     },
     {
         "request": "affective_routing_hint_review",
-        "owner": "aoa-routing",
+        "owner": "aoa-sdk",
         "input_boundary": "affect evidence route hint escalation threshold and human review posture",
         "output_candidate": "affective_routing_hint_candidate",
         "must_include": [
@@ -222,7 +222,7 @@ EXPECTED_FLOW_OWNERS = [
     "aoa-evals",
     "aoa-evals",
     "aoa-agents",
-    "aoa-routing",
+    "aoa-sdk",
     "aoa-memo",
     "aoa-evals",
     "aoa-stats",
@@ -442,9 +442,9 @@ EXPECTED_OWNER_SPLIT = [
         "must_not": "convert assistant service affect into agonic standing or sovereign authority",
     },
     {
-        "repo": "aoa-routing",
-        "owns": "advisory affective route hints and escalation candidates only",
-        "must_not": "route as verdict or become rights authority",
+        "repo": "aoa-sdk",
+        "owns": "advisory affective route hints and escalation candidates plus typed helper calls recurrence review lanes and control-plane seams only",
+        "must_not": "route as verdict become rights authority hidden scheduler or semantic authority",
     },
     {
         "repo": "aoa-memo",
@@ -460,11 +460,6 @@ EXPECTED_OWNER_SPLIT = [
         "repo": "aoa-playbooks",
         "owns": "drills rehearsal routes and owner-review choreography only",
         "must_not": "become runtime treasury or verdict authority",
-    },
-    {
-        "repo": "aoa-sdk",
-        "owns": "typed helper calls recurrence review lanes and control-plane seams only",
-        "must_not": "become hidden scheduler or semantic authority",
     },
     {
         "repo": "aoa-kag",

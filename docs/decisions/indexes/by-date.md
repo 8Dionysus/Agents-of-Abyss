@@ -80,3 +80,7 @@
 ## 2026-07-26
 
 - [AOA-CENTER-D-0034 Release Leaf Command Ownership](../AOA-CENTER-D-0034-release-leaf-command-ownership.md) (`docs/decisions/AOA-CENTER-D-0034-release-leaf-command-ownership.md`)
+
+## 2026-07-27
+
+- [AOA-CENTER-D-0035 Admit The Routing Owner Switch](../AOA-CENTER-D-0035-admit-routing-owner-switch.md) (`docs/decisions/AOA-CENTER-D-0035-admit-routing-owner-switch.md`)

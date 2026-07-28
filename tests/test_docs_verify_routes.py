@@ -160,7 +160,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("weaker than a landed owner object", owner_landing)
         self.assertIn("let `aoa-stats` infer owner truth", owner_landing)
         self.assertIn("let `aoa-memo` turn prune or recovery writeback into landing authority", owner_landing)
-        self.assertIn("let `aoa-routing` treat owner-status hints as stronger than owner-local review", owner_landing)
+        self.assertIn("let `aoa-sdk` treat owner-status hints as stronger than owner-local review", owner_landing)
 
     def test_self_agency_continuity_routes_stay_center_bounded(self) -> None:
         readme = read_text("README.md")

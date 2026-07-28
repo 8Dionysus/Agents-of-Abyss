@@ -6,13 +6,12 @@ and where stronger truth lives.
 | Concern | Center role | Stronger owner |
 |---|---|---|
 | Checkpoint law and vocabulary | define bounded intermediate-state grammar | `Agents-of-Abyss` |
-| Control panel, hooks, local ledgers, typed readers | route and operate checkpoint controls | `aoa-sdk` |
+| Control panel, hooks, local ledgers, typed readers, and re-entry hints | route and operate checkpoint controls while pointing back to source-owned surfaces | `aoa-sdk` |
 | Checkpoint note protocol and closeout bridge skill | define skill-level protocol and explicit bridge execution | `aoa-skills` |
 | Self-agent approval, rollback, health, iteration, improvement log | define actor-side checkpoint posture | `aoa-agents` |
 | Inquiry checkpoint, state capsule, recall anchor, writeback | preserve relaunch and memory targets | `aoa-memo` |
 | Session-growth, A2A return, and self-agent checkpoint choreography | coordinate recurring scenario routes | `aoa-playbooks` |
 | Proof, regression, and verdict reading | judge checkpoint evidence | `aoa-evals` |
-| Re-entry hints | point back to source-owned surfaces | `aoa-routing` |
 | Derived visibility | summarize reviewed stages and receipts | `aoa-stats` |
 | Reviewed owner-local intake and landing | preserve explicit promotion evidence without a federation intermediary | final owning repository |
 | Runtime checkpoint exports and closeout receipts | operate runtime-local evidence and export plumbing | `abyss-stack` |

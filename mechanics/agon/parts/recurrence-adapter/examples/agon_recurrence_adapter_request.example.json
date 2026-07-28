@@ -53,8 +53,8 @@
     },
     {
       "relation": "Agon gate-routing route Agon Gate Routing",
-      "repo": "aoa-routing",
-      "surface": "generated/agon_gate_routing_registry.min.json"
+      "repo": "aoa-sdk",
+      "surface": "src/aoa_sdk/control_plane/routing/data/agon_gate_routing_registry.min.json"
     },
     {
       "relation": "Agon trial-handoff route Trial Playbooks",
@@ -112,16 +112,16 @@
     },
     {
       "component_ref": "component:agon:gate-routing-surfaces",
-      "hook_manifest_path": "owner-local://aoa-routing/agon/recurrence/hooks/component.agon.gate-routing-surfaces.hooks.json",
+      "hook_manifest_path": "owner-local://aoa-sdk/agon/recurrence/hooks/component.agon.gate-routing-surfaces.hooks.json",
       "lineage_refs": [
         "gate-routing"
       ],
-      "manifest_path": "owner-local://aoa-routing/agon/recurrence/component.agon.gate-routing-surfaces.json",
+      "manifest_path": "owner-local://aoa-sdk/agon/recurrence/component.agon.gate-routing-surfaces.json",
       "observed_surfaces": [
-        "generated/agon_gate_routing_registry.min.json"
+        "src/aoa_sdk/control_plane/routing/data/agon_gate_routing_registry.min.json"
       ],
       "review_lane": "general",
-      "target_repo": "aoa-routing"
+      "target_repo": "aoa-sdk"
     },
     {
       "component_ref": "component:agon:trial-playbook-surfaces",

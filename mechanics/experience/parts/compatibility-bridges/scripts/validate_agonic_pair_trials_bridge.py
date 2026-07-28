@@ -148,7 +148,7 @@ EXPECTED_FLOW_OWNERS = [
     "aoa-agents",
     "aoa-evals",
     "aoa-evals",
-    "aoa-routing",
+    "aoa-sdk",
     "aoa-evals",
     "aoa-memo",
     "aoa-memo",
@@ -341,7 +341,6 @@ EXPECTED_OWNER_REPOS = {
     "aoa-kag",
     "aoa-memo",
     "aoa-playbooks",
-    "aoa-routing",
     "aoa-sdk",
     "aoa-skills",
     "aoa-stats",
@@ -380,14 +379,9 @@ EXPECTED_OWNER_SPLIT = [
         "must_not": "become proof score verdict rank honor or quest authority",
     },
     {
-        "repo": "aoa-routing",
-        "owns": "advisory arena-entry contested-closure and service-to-Agon escalation gate candidates",
-        "must_not": "open live gates own meaning grant summon authority or dispatch runtime arena sessions",
-    },
-    {
         "repo": "aoa-sdk",
-        "owns": "typed packet helpers API contracts validation helpers and control-plane seams only",
-        "must_not": "become semantic runtime verdict scar retention or storage authority",
+        "owns": "advisory arena-entry contested-closure and service-to-Agon escalation gate candidates plus typed packet helpers API contracts validation helpers and control-plane seams only",
+        "must_not": "open live gates own meaning grant summon authority dispatch runtime arena sessions or become semantic runtime verdict scar retention or storage authority",
     },
     {
         "repo": "aoa-kag",
@@ -645,10 +639,10 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         ):
             fail("aoa-memo owner_split entry must deny durable scar writes")
         if (
-            entry["repo"] == "aoa-routing"
+            entry["repo"] == "aoa-sdk"
             and "dispatch runtime arena sessions" not in entry["must_not"]
         ):
-            fail("aoa-routing owner_split entry must deny runtime dispatch")
+            fail("aoa-sdk owner_split entry must deny runtime dispatch")
         if (
             entry["repo"] == "abyss-stack"
             and "separate runtime-owner gate" not in entry["owns"]

@@ -17,14 +17,13 @@ truth produced by any stage.
 
 | Owner | Owns |
 |---|---|
-| `aoa-sdk` | hooks, checkpoint ledgers, closeout-context builders, local control panel behavior, typed helpers |
+| `aoa-sdk` | hooks, checkpoint ledgers, closeout-context builders, local control panel behavior, typed helpers, re-entry hints, and next-route surfaces without cycle meaning |
 | `aoa-skills` | executable donor harvest, progression lift, route fork, automation scan, diagnosis, repair, and quest-harvest skills |
 | `aoa-agents` | self-agent checkpoint posture, approvals, rollback, health, role boundaries, progression posture |
 | `aoa-evals` | proof, regression, verdicts, repair quality, progression quality, public claim discipline |
 | `aoa-memo` | memory writeback, recall, failure lessons, checkpoint-to-memory handoff |
 | `aoa-playbooks` | recurring cycle choreography, campaigns, scenario routes, owner followthrough patterns |
 | `aoa-stats` | derived visibility from owner receipts and reviewed summaries |
-| `aoa-routing` | re-entry hints and next-route surfaces without cycle meaning |
 | final owner repositories | reviewed intake, acceptance, and landing after donor harvest |
 | `abyss-stack` | runtime exports, health receipts, service plumbing, runtime checkpoint storage after runtime gates |
 | `aoa-techniques` | reusable practice that survives donor harvest as technique rather than skill or playbook |

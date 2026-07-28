@@ -178,7 +178,7 @@ def test_experience_continuity_loom_requires_memo_owned_thread_candidate() -> No
     bad_payload = copy.deepcopy(payload)
     requests = bad_payload["continuity_requests"]
     assert isinstance(requests, list)
-    requests[0]["owner"] = "aoa-routing"
+    requests[0]["owner"] = "aoa-sdk"
 
     with pytest.raises(validator.ValidationError, match="continuity_requests|schema"):
         validator.validate_payload(bad_payload, schema)
@@ -190,7 +190,7 @@ def test_experience_continuity_loom_schema_rejects_wrong_request_owner() -> None
     bad_payload = copy.deepcopy(payload)
     requests = bad_payload["continuity_requests"]
     assert isinstance(requests, list)
-    requests[0]["owner"] = "aoa-routing"
+    requests[0]["owner"] = "aoa-sdk"
 
     with pytest.raises(JSONSchemaValidationError):
         validate_schema_only(bad_payload, schema)

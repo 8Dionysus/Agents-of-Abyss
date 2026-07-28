@@ -152,8 +152,8 @@
     },
     "owner_split": {
       "type": "array",
-      "minItems": 15,
-      "maxItems": 15,
+      "minItems": 14,
+      "maxItems": 14,
       "items": {
         "$ref": "#/$defs/owner_entry"
       }
@@ -172,7 +172,6 @@
         "aoa-kag",
         "aoa-memo",
         "aoa-playbooks",
-        "aoa-routing",
         "aoa-sdk",
         "aoa-skills",
         "aoa-stats",

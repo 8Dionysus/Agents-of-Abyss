@@ -18,13 +18,13 @@ Checkpoint law, vocabulary, owner map, stop-lines, and cross-owner route grammar
 
 ### Stronger owner split
 
-- `aoa-sdk` owns checkpoint controls, hooks, local ledgers, typed readers, and closeout-context builders.
+- `aoa-sdk` owns checkpoint controls, hooks, local ledgers, typed readers,
+  closeout-context builders, and re-entry hints without checkpoint meaning.
 - `aoa-skills` owns checkpoint-note protocol and explicit closeout bridge skill.
 - `aoa-agents` owns self-agent checkpoint posture, roles, approval, rollback, health, and iteration boundaries.
 - `aoa-memo` owns inquiry checkpoints, state capsules, recall anchors, provenance, and checkpoint-to-memory writeback.
 - `aoa-playbooks` owns recurring checkpoint choreography and scenario routes.
 - `aoa-evals` owns proof and regression readings.
-- `aoa-routing` owns re-entry hints without checkpoint meaning.
 - `aoa-stats` owns derived checkpoint visibility and never raw checkpoint authority.
 - `abyss-stack` owns runtime checkpoint exports, runtime receipts, and runtime closeout plumbing after runtime gates.
 
@@ -55,7 +55,7 @@ Use the validation lane in [mechanics/checkpoint/AGENTS.md](AGENTS.md#validation
 - For controls, hooks, local ledgers, and closeout-context builders, route to `aoa-sdk`; for checkpoint-note protocol and bridge skills, route to `aoa-skills`; for self-agent posture, route to `aoa-agents`.
 - For memory writeback, route to `aoa-memo`; for scenario choreography, route
   to `aoa-playbooks`; for proof, route to `aoa-evals`; for re-entry hints,
-  route to `aoa-routing`; for derived visibility, route to `aoa-stats`; for
+  route to `aoa-sdk`; for derived visibility, route to `aoa-stats`; for
   reviewed owner-local intake or landing, route directly to the final owner
   repository; for runtime exports, route to `abyss-stack` after runtime gates;
   for unclear owner, return to `docs/FEDERATION_RULES.md` and

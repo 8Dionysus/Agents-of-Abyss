@@ -73,7 +73,6 @@ OWNER_REPOS = (
     "aoa-playbooks",
     "aoa-memo",
     "aoa-stats",
-    "aoa-routing",
     "aoa-kag",
     "abyss-stack",
     "Tree-of-Sophia",

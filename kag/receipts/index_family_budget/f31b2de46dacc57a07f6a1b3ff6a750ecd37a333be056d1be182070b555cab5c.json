@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 14969019,
+  "allowed_tracked_bytes": 22130533,
+  "approved_by": "repository-owner",
+  "base_ref": "81f6ef479b14ff29684e1fa40aa499c6c6bd9b39",
+  "changed_generated_bytes": 14969019,
+  "changed_generated_files": 356,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "f31b2de46dacc57a07f6a1b3ff6a750ecd37a333be056d1be182070b555cab5c",
+  "reason": "Refresh the portable KAG family for the reviewed aoa-routing to aoa-sdk consumer succession in the constitutional center; this digest-bound receipt authorizes only the measured generated projection delta.",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 22130533,
+  "tracked_bytes_max": 25165824
+}

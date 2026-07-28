@@ -11,12 +11,11 @@
   "repos": [
     "Agents-of-Abyss",
     "aoa-agents",
-    "aoa-routing",
+    "aoa-sdk",
     "aoa-playbooks",
     "aoa-evals",
     "aoa-memo",
     "aoa-stats",
-    "aoa-sdk",
     "abyss-stack",
     "aoa-skills",
     "aoa-techniques",

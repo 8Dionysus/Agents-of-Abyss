@@ -174,7 +174,7 @@
         },
         {
           "request": "receipt_backed_reentry_route_review",
-          "owner": "aoa-routing",
+          "owner": "aoa-sdk",
           "input_boundary": "reentry receipt route reason session budget and lawful return path",
           "output_candidate": "receipt_backed_reentry_candidate",
           "must_include": [
@@ -299,7 +299,7 @@
         {
           "order": 7,
           "kind": "receipt_backed_reentry_route_requested",
-          "owner": "aoa-routing",
+          "owner": "aoa-sdk",
           "authority_note": "routing may suggest a receipt-backed return path but may not declare continuity truth or direct runtime resume",
           "stop_lines": [
             "no route as continuity truth",
@@ -443,7 +443,7 @@
         "aoa-memo owns continuity thread lookup reentry stale decay forgetting and intake candidates only.",
         "aoa-agents owns assistant private and personal-context boundaries only.",
         "aoa-evals owns continuity legitimacy merge-split review and replay integrity checks only.",
-        "aoa-routing owns receipt-backed reentry hints only.",
+        "aoa-sdk owns receipt-backed reentry hints only.",
         "aoa-stats owns derived continuity summaries only.",
         "aoa-playbooks owns recurring reentry choreography only.",
         "aoa-sdk owns typed continuity helper seams only.",

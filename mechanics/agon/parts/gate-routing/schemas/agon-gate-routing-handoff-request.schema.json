@@ -37,7 +37,7 @@
       "type": "array"
     },
     "routing_repo": {
-      "const": "aoa-routing",
+      "const": "aoa-sdk",
       "type": "string"
     },
     "schema_version": {

@@ -474,14 +474,9 @@
       "must_not": "become proof score truth verdict rank reputation honor or quest authority"
     },
     {
-      "repo": "aoa-routing",
-      "owns": "advisory epistemic gate model-divergence false-consensus and owner-escalation route candidates",
-      "must_not": "open live gates own meaning grant dispatch authority or route as truth verdict"
-    },
-    {
       "repo": "aoa-sdk",
-      "owns": "typed packet helpers API contracts validation helpers and control-plane seams only",
-      "must_not": "become semantic runtime truth verdict memory scar retention rank or storage authority"
+      "owns": "advisory epistemic gate model-divergence false-consensus and owner-escalation route candidates plus typed packet helpers API contracts validation helpers and control-plane seams only",
+      "must_not": "open live gates own meaning grant dispatch authority route as truth verdict or become semantic runtime truth verdict memory scar retention rank or storage authority"
     },
     {
       "repo": "aoa-kag",

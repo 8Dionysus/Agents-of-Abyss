@@ -22,7 +22,7 @@ claim reviewable, owner-routed, and small enough to use in live work.
 - Keep owner-local recurrence packages light when sibling repositories receive
   their own `mechanics/recurrence/` homes.
 - Use `OWNER_REQUESTS.md` whenever a center recurrence part produces work that
-  belongs in `aoa-sdk`, `aoa-routing`, `aoa-memo`, `aoa-agents`,
+  belongs in `aoa-sdk`, `aoa-memo`, `aoa-agents`,
   `aoa-playbooks`, `aoa-evals`, `aoa-stats`, `aoa-kag`, `abyss-stack`, or
   `ATM10-Agent`.
 - Add machine-readable recurrence metadata only after the text part map proves

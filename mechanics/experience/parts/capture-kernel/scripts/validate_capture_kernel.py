@@ -219,7 +219,7 @@ def validate_flow(flow: dict[str, Any]) -> None:
     non_authority_repos = require_list(
         owner_route.get("non_authority_repos"), "owner_route.non_authority_repos"
     )
-    for repo in ("Agents-of-Abyss", "aoa-stats", "aoa-routing", "aoa-sdk"):
+    for repo in ("Agents-of-Abyss", "aoa-stats", "aoa-sdk"):
         if repo not in non_authority_repos:
             fail(f"owner_route.non_authority_repos must include {repo}")
 
