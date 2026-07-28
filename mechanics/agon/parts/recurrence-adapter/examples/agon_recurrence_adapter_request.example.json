@@ -54,7 +54,7 @@
     {
       "relation": "Agon gate-routing route Agon Gate Routing",
       "repo": "aoa-sdk",
-      "surface": "generated/agon_gate_routing_registry.min.json"
+      "surface": "src/aoa_sdk/control_plane/routing/data/agon_gate_routing_registry.min.json"
     },
     {
       "relation": "Agon trial-handoff route Trial Playbooks",
@@ -118,7 +118,7 @@
       ],
       "manifest_path": "owner-local://aoa-sdk/agon/recurrence/component.agon.gate-routing-surfaces.json",
       "observed_surfaces": [
-        "generated/agon_gate_routing_registry.min.json"
+        "src/aoa_sdk/control_plane/routing/data/agon_gate_routing_registry.min.json"
       ],
       "review_lane": "general",
       "target_repo": "aoa-sdk"

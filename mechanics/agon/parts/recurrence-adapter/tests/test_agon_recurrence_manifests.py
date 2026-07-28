@@ -20,6 +20,24 @@ REQUEST = (
     / "generated"
     / "agon_recurrence_adapter_request.min.json"
 )
+REQUEST_CONFIG = (
+    REPO_ROOT
+    / "mechanics"
+    / "agon"
+    / "parts"
+    / "recurrence-adapter"
+    / "config"
+    / "agon_recurrence_adapter_request.seed.json"
+)
+REQUEST_EXAMPLE = (
+    REPO_ROOT
+    / "mechanics"
+    / "agon"
+    / "parts"
+    / "recurrence-adapter"
+    / "examples"
+    / "agon_recurrence_adapter_request.example.json"
+)
 OLD_SERIES_WORD = "wa" + "ve"
 OLD_RAW_PATH = "legacy" + "/raw"
 OLD_SERIES_FILE_TOKEN = "AGON_" + "WA" + "VE"
@@ -62,6 +80,22 @@ def load_validator():
 
 
 class AgonRecurrenceManifestsTestCase(unittest.TestCase):
+    def test_adapter_request_example_matches_owner_source(self) -> None:
+        config = load_json(REQUEST_CONFIG)
+        example = load_json(REQUEST_EXAMPLE)
+
+        self.assertEqual(example, config)
+        sdk_route = next(
+            item
+            for item in example["depends_on"]
+            if item["repo"] == "aoa-sdk"
+            and "agon_gate_routing_registry" in item["surface"]
+        )
+        self.assertEqual(
+            sdk_route["surface"],
+            "src/aoa_sdk/control_plane/routing/data/agon_gate_routing_registry.min.json",
+        )
+
     def test_component_and_hook_pairs_match(self) -> None:
         components = {path.name.removesuffix(".json") for path in component_files()}
         hooks = {path.name.removesuffix(".hooks.json") for path in hook_files()}

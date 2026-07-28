@@ -6,7 +6,7 @@
     "future_contradiction_closure_summon_law",
     "future_terminal_outcomes"
   ],
-  "expected_routing_surface": "aoa-sdk/generated/agon_gate_routing_registry.min.json",
+  "expected_routing_surface": "aoa-sdk/src/aoa_sdk/control_plane/routing/data/agon_gate_routing_registry.min.json",
   "future_dependency": {
     "before_arena_session_model": [
       "aoa-sdk gate hints must stay pre-protocol",
@@ -30,6 +30,8 @@
     "write_scar",
     "schedule_retention",
     "mutate_rank",
+    "grant_closure",
+    "grant_summon_authority",
     "promote_to_tree_of_sophia",
     "author_agon_law"
   ],
