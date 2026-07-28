@@ -52,7 +52,7 @@ The center may:
 The center must not:
 
 - absorb repo-local quest detail
-- make `aoa-routing` the author of quest meaning
+- make `aoa-sdk` the author of quest meaning
 - confuse memory writeback with source truth
 - rename every local TODO into a tracked quest
 

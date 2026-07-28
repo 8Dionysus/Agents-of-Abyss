@@ -31,5 +31,5 @@ can restore them.
 
 ## Next Route
 
-Route navigation to `aoa-routing`, recall support to `aoa-memo`, actor handoff
+Route navigation to `aoa-sdk`, recall support to `aoa-memo`, actor handoff
 to `aoa-agents`, proof to `aoa-evals`, and source meaning to the source owner.

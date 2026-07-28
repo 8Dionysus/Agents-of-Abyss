@@ -150,7 +150,7 @@ When a change crosses an owner boundary, the handoff should name:
 - validation still needed by the target owner
 - rollback or re-entry route when the target owner does not accept it
 
-This is enough for a future `aoa-sdk` or `aoa-routing` tool to consume later
+This is enough for an `aoa-sdk` routing or organ-access tool to consume later
 while this district stays center law.
 
 ## Completion check

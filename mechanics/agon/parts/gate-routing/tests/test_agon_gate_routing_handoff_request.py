@@ -30,7 +30,7 @@ def test_agon_gate_handoff_preserves_center_law():
     request = load_json(ROOT / "mechanics" / "agon" / "parts" / "gate-routing" / "generated" / "agon_gate_routing_handoff_request.min.json")
 
     assert request["owner_repo"] == "Agents-of-Abyss"
-    assert request["routing_repo"] == "aoa-routing"
+    assert request["routing_repo"] == "aoa-sdk"
     assert "agon_gate_candidate" in request["routing_may_emit"]
     assert "create_arena_session" in request["routing_must_not"]
     assert "issue_verdict" in request["routing_must_not"]

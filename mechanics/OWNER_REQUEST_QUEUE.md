@@ -30,7 +30,8 @@ source JSON, validators, generated queue, and package request docs together.
 ## How agents use the queue
 
 1. Start from the mechanic card.
-2. Find the request ID by mechanic and owner.
+2. Find the request ID by mechanic and functional slice. One owner repository
+   may receive several stable request IDs after an owner succession.
 3. Carry the ID into the owner-local issue, document, receipt, or branch.
 4. Do not mark the request `accepted` or `landed` unless the owner repository provides the corresponding receipt.
 5. Rebuild and validate the generated queue after any change.
@@ -62,10 +63,10 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-GROWTHCYCLE-MEMO-001` | `growth-cycle` | `aoa-memo` | `requested` | `P1` | Memory writeback, recall, and failure lessons |
 | `ORQ-GROWTHCYCLE-PLAYBOOKS-001` | `growth-cycle` | `aoa-playbooks` | `requested` | `P1` | Recurring cycle choreography |
 | `ORQ-GROWTHCYCLE-STATS-001` | `growth-cycle` | `aoa-stats` | `requested` | `P2` | Derived cycle visibility |
-| `ORQ-GROWTHCYCLE-ROUTING-001` | `growth-cycle` | `aoa-routing` | `requested` | `P2` | Re-entry and next-route hints |
+| `ORQ-GROWTHCYCLE-ROUTING-001` | `growth-cycle` | `aoa-sdk` | `requested` | `P2` | Re-entry and next-route hints |
 | `ORQ-GROWTHCYCLE-STACK-001` | `growth-cycle` | `abyss-stack` | `requested` | `P1` | Runtime exports and health receipts |
 | `ORQ-RECURRENCE-SDK-001` | `recurrence` | `aoa-sdk` | `requested` | `P0` | Control-plane carry for recurrence manifests and reviewed handoffs |
-| `ORQ-RECURRENCE-ROUTING-001` | `recurrence` | `aoa-routing` | `requested` | `P1` | Re-entry route graph and return dispatch |
+| `ORQ-RECURRENCE-ROUTING-001` | `recurrence` | `aoa-sdk` | `requested` | `P1` | Re-entry route graph and return dispatch |
 | `ORQ-RECURRENCE-MEMO-001` | `recurrence` | `aoa-memo` | `requested` | `P0` | Anchor checkpoints, recall, and provenance for bounded continuity |
 | `ORQ-RECURRENCE-AGENTS-001` | `recurrence` | `aoa-agents` | `requested` | `P1` | Role and handoff posture for returns between actors |
 | `ORQ-RECURRENCE-PLAYBOOKS-001` | `recurrence` | `aoa-playbooks` | `requested` | `P1` | Recurring return choreography |
@@ -79,12 +80,12 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-CHECKPOINT-MEMO-001` | `checkpoint` | `aoa-memo` | `requested` | `P1` | Inquiry checkpoint, state capsule, and writeback |
 | `ORQ-CHECKPOINT-PLAYBOOKS-001` | `checkpoint` | `aoa-playbooks` | `requested` | `P1` | Recurring checkpoint choreography |
 | `ORQ-CHECKPOINT-EVALS-001` | `checkpoint` | `aoa-evals` | `requested` | `P1` | Proof and regression reading |
-| `ORQ-CHECKPOINT-ROUTING-001` | `checkpoint` | `aoa-routing` | `requested` | `P2` | Re-entry hints |
+| `ORQ-CHECKPOINT-ROUTING-001` | `checkpoint` | `aoa-sdk` | `requested` | `P2` | Re-entry hints |
 | `ORQ-CHECKPOINT-STATS-001` | `checkpoint` | `aoa-stats` | `requested` | `P2` | Derived checkpoint visibility |
 | `ORQ-CHECKPOINT-STACK-001` | `checkpoint` | `abyss-stack` | `requested` | `P1` | Runtime checkpoint exports and closeout receipts |
 | `ORQ-EXPERIENCE-STACK-001` | `experience` | `abyss-stack` | `requested` | `P0` | Living workspace runtime and office infrastructure |
 | `ORQ-EXPERIENCE-MEMO-001` | `experience` | `aoa-memo` | `requested` | `P0` | Experience memory, provenance, recall, and continuity loom objects |
-| `ORQ-EXPERIENCE-ROUTING-001` | `experience` | `aoa-routing` | `requested` | `P1` | Context router and live route behavior for experience flows |
+| `ORQ-EXPERIENCE-ROUTING-001` | `experience` | `aoa-sdk` | `requested` | `P1` | Context router and live route behavior for experience flows |
 | `ORQ-EXPERIENCE-EVALS-001` | `experience` | `aoa-evals` | `requested` | `P0` | Adoption proof, certification checks, and regression evidence |
 | `ORQ-EXPERIENCE-AGENTS-001` | `experience` | `aoa-agents` | `requested` | `P1` | Office, role-pair, actor, and handoff posture |
 | `ORQ-EXPERIENCE-KAG-001` | `experience` | `aoa-kag` | `requested` | `P2` | Derived workspace and experience-ready knowledge projections |
@@ -98,7 +99,7 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-AGON-EVALS-001` | `agon` | `aoa-evals` | `requested` | `P0` | Verdict proof, evaluation discipline, and regression evidence |
 | `ORQ-AGON-MEMO-001` | `agon` | `aoa-memo` | `requested` | `P0` | Scars, retention memory, and bounded lessons |
 | `ORQ-AGON-STATS-001` | `agon` | `aoa-stats` | `requested` | `P2` | Aggregate rank and reputation projections after proof gates |
-| `ORQ-AGON-ROUTING-001` | `agon` | `aoa-routing` | `requested` | `P1` | Gates, handoffs, and arena route behavior |
+| `ORQ-AGON-ROUTING-001` | `agon` | `aoa-sdk` | `requested` | `P1` | Gates, handoffs, and arena route behavior |
 | `ORQ-AGON-AGENTS-001` | `agon` | `aoa-agents` | `requested` | `P0` | Actor seats, role contracts, and contestant posture |
 | `ORQ-AGON-STACK-001` | `agon` | `abyss-stack` | `requested` | `P2` | Runtime session bodies after runtime-owner gates |
 | `ORQ-AGON-KAG-001` | `agon` | `aoa-kag` | `requested` | `P1` | Derived evidence bundles and KAG-ready pressure projections |
@@ -110,7 +111,7 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-QUESTBOOK-PLAYBOOKS-001` | `questbook` | `aoa-playbooks` | `requested` | `P1` | Recurring quest choreography and public obligation routes |
 | `ORQ-QUESTBOOK-EVALS-001` | `questbook` | `aoa-evals` | `requested` | `P1` | Proof obligations attached to quest closure |
 | `ORQ-QUESTBOOK-MEMO-001` | `questbook` | `aoa-memo` | `requested` | `P2` | Lessons retained after quest completion |
-| `ORQ-QUESTBOOK-ROUTING-001` | `questbook` | `aoa-routing` | `requested` | `P2` | Cross-repo obligation handoff and thin route surfaces |
+| `ORQ-QUESTBOOK-ROUTING-001` | `questbook` | `aoa-sdk` | `requested` | `P2` | Cross-repo obligation handoff and thin route surfaces |
 | `ORQ-RPG-AGENTS-001` | `rpg` | `aoa-agents` | `requested` | `P1` | Role, actor, and persona truth behind RPG reflection |
 | `ORQ-RPG-SKILLS-001` | `rpg` | `aoa-skills` | `landed` | `P1` | Skill and feat truth behind progression labels |
 | `ORQ-RPG-PLAYBOOKS-001` | `rpg` | `aoa-playbooks` | `requested` | `P1` | Campaign, scenario, and questline choreography |
@@ -119,7 +120,7 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-RPG-STATS-001` | `rpg` | `aoa-stats` | `requested` | `P2` | Derived progression summaries |
 | `ORQ-BRIDGE-TOS-001` | `boundary-bridge` | `Tree-of-Sophia` | `requested` | `P0` | ToS canon, source interpretation, and growth law touched by AoA support |
 | `ORQ-BRIDGE-KAG-001` | `boundary-bridge` | `aoa-kag` | `requested` | `P1` | Derived counterpart graph and bridge-ready projections |
-| `ORQ-BRIDGE-ROUTING-001` | `boundary-bridge` | `aoa-routing` | `requested` | `P1` | Boundary-aware handoff and bridge route surfaces |
+| `ORQ-BRIDGE-ROUTING-001` | `boundary-bridge` | `aoa-sdk` | `requested` | `P1` | Boundary-aware handoff and bridge route surfaces |
 | `ORQ-BRIDGE-MEMO-001` | `boundary-bridge` | `aoa-memo` | `requested` | `P1` | Witness memory, provenance, and compost-facing recall |
 | `ORQ-BRIDGE-EVALS-001` | `boundary-bridge` | `aoa-evals` | `requested` | `P1` | Integrity and provenance proof for bridge support |
 | `ORQ-BRIDGE-PLAYBOOKS-001` | `boundary-bridge` | `aoa-playbooks` | `requested` | `P2` | Witness, compost, and owner-handoff scenario routes |
@@ -131,7 +132,7 @@ source JSON, validators, generated queue, and package request docs together.
 | `ORQ-AUDIT-STATS-001` | `audit` | `aoa-stats` | `requested` | `P3` | Derived audit movement summaries |
 | `ORQ-RELEASE-EVALS-001` | `release-support` | `aoa-evals` | `requested` | `P0` | Public claim proof for release and state-transition support posture |
 | `ORQ-RELEASE-STATS-001` | `release-support` | `aoa-stats` | `requested` | `P2` | Derived release and transition movement summaries |
-| `ORQ-RELEASE-ROUTING-001` | `release-support` | `aoa-routing` | `requested` | `P2` | Release route, transition route, and federation entry ABI updates |
+| `ORQ-RELEASE-ROUTING-001` | `release-support` | `aoa-sdk` | `requested` | `P2` | Release route, transition route, and federation entry ABI updates |
 | `ORQ-RELEASE-SDK-001` | `release-support` | `aoa-sdk` | `requested` | `P3` | Compatibility helper support for release and transition consumers |
 | `ORQ-RELEASE-PROFILE-001` | `release-support` | `8Dionysus` | `requested` | `P2` | Public projection and profile-route alignment for release and transition claims |
 
@@ -139,17 +140,17 @@ source JSON, validators, generated queue, and package request docs together.
 
 - `method-growth` -> [OWNER_REQUESTS.md](method-growth/OWNER_REQUESTS.md); owners: `aoa-skills`, `aoa-sdk`, `aoa-evals`, `aoa-playbooks`, `aoa-memo`, `aoa-techniques`, `aoa-stats`
 - `distillation` -> [OWNER_REQUESTS.md](distillation/OWNER_REQUESTS.md); owners: `aoa-techniques`, `aoa-skills`, `aoa-playbooks`, `aoa-agents`, `aoa-memo`, `aoa-evals`, `aoa-sdk`, `Tree-of-Sophia`, `abyss-stack`
-- `growth-cycle` -> [OWNER_REQUESTS.md](growth-cycle/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-evals`, `aoa-memo`, `aoa-playbooks`, `aoa-stats`, `aoa-routing`, `abyss-stack`
-- `recurrence` -> [OWNER_REQUESTS.md](recurrence/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-routing`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `aoa-stats`, `aoa-kag`, `abyss-stack`
-- `checkpoint` -> [OWNER_REQUESTS.md](checkpoint/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-routing`, `aoa-stats`, `abyss-stack`
-- `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-routing`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`, `aoa-playbooks`, `aoa-sdk`, `aoa-stats`, `aoa-skills`, `aoa-techniques`
-- `agon` -> [OWNER_REQUESTS.md](agon/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-routing`, `aoa-agents`, `abyss-stack`, `aoa-kag`, `Tree-of-Sophia`
+- `growth-cycle` -> [OWNER_REQUESTS.md](growth-cycle/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-evals`, `aoa-memo`, `aoa-playbooks`, `aoa-stats`, `abyss-stack`
+- `recurrence` -> [OWNER_REQUESTS.md](recurrence/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-memo`, `aoa-agents`, `aoa-playbooks`, `aoa-evals`, `aoa-stats`, `aoa-kag`, `abyss-stack`
+- `checkpoint` -> [OWNER_REQUESTS.md](checkpoint/OWNER_REQUESTS.md); owners: `aoa-sdk`, `aoa-skills`, `aoa-agents`, `aoa-memo`, `aoa-playbooks`, `aoa-evals`, `aoa-stats`, `abyss-stack`
+- `experience` -> [OWNER_REQUESTS.md](experience/OWNER_REQUESTS.md); owners: `abyss-stack`, `aoa-memo`, `aoa-sdk`, `aoa-evals`, `aoa-agents`, `aoa-kag`, `Tree-of-Sophia`, `aoa-playbooks`, `aoa-stats`, `aoa-skills`, `aoa-techniques`
+- `agon` -> [OWNER_REQUESTS.md](agon/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-sdk`, `aoa-agents`, `abyss-stack`, `aoa-kag`, `Tree-of-Sophia`
 - `antifragility` -> [OWNER_REQUESTS.md](antifragility/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-stats`, `aoa-playbooks`
-- `questbook` -> [OWNER_REQUESTS.md](questbook/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-routing`
+- `questbook` -> [OWNER_REQUESTS.md](questbook/OWNER_REQUESTS.md); owners: `aoa-playbooks`, `aoa-evals`, `aoa-memo`, `aoa-sdk`
 - `rpg` -> [OWNER_REQUESTS.md](rpg/OWNER_REQUESTS.md); owners: `aoa-agents`, `aoa-skills`, `aoa-playbooks`, `aoa-evals`, `abyss-stack`, `aoa-stats`
-- `boundary-bridge` -> [OWNER_REQUESTS.md](boundary-bridge/OWNER_REQUESTS.md); owners: `Tree-of-Sophia`, `aoa-kag`, `aoa-routing`, `aoa-memo`, `aoa-evals`, `aoa-playbooks`
+- `boundary-bridge` -> [OWNER_REQUESTS.md](boundary-bridge/OWNER_REQUESTS.md); owners: `Tree-of-Sophia`, `aoa-kag`, `aoa-sdk`, `aoa-memo`, `aoa-evals`, `aoa-playbooks`
 - `audit` -> [OWNER_REQUESTS.md](audit/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-memo`, `aoa-playbooks`, `aoa-skills`, `aoa-agents`, `aoa-stats`
-- `release-support` -> [OWNER_REQUESTS.md](release-support/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-stats`, `aoa-routing`, `aoa-sdk`, `8Dionysus`
+- `release-support` -> [OWNER_REQUESTS.md](release-support/OWNER_REQUESTS.md); owners: `aoa-evals`, `aoa-stats`, `aoa-sdk`, `8Dionysus`
 
 ## Stop-lines
 

@@ -32,5 +32,5 @@ memo would become policy, router, proof, or runtime body, stop and reroute.
 ## Next Route
 
 Route memory objects and writeback meaning to `aoa-memo`, proof to `aoa-evals`,
-navigation to `aoa-routing`, runtime export to `abyss-stack`, and actor posture
+navigation to `aoa-sdk`, runtime export to `abyss-stack`, and actor posture
 to `aoa-agents`.

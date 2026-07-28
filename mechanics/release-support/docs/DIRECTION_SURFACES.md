@@ -32,10 +32,9 @@ to decide which entry surfaces must move.
 | `aoa-memo` | `ROADMAP.md` | canonical memory-layer direction surface |
 | `aoa-agents` | `ROADMAP.md` | canonical role-contract and handoff direction surface |
 | `aoa-playbooks` | `ROADMAP.md` | canonical scenario-layer direction surface |
-| `aoa-routing` | `ROADMAP.md` | canonical routing-layer direction surface |
+| `aoa-sdk` | `ROADMAP.md` | canonical routing and control-plane direction surface; `README.md` and repo docs remain current-state gates while `docs/blueprint.md` remains seed history |
 | `aoa-stats` | `ROADMAP.md` | the derived layer now keeps one root-level current-direction door while still routing shipped summary families through `README.md#current-v0-surface` and `docs/README.md` |
 | `aoa-kag` | `ROADMAP.md` | canonical derived-knowledge direction surface |
-| `aoa-sdk` | `ROADMAP.md` | the control-plane repo now keeps one root-level current-direction door while leaving `docs/blueprint.md` as seed history and `README.md` plus repo docs as current-state gates |
 | `Tree-of-Sophia` | `ROADMAP.md` | canonical knowledge-architecture direction surface |
 | `Dionysus` | `ROADMAP.md` | the conversational self-portrait protocol keeps one root-level direction door while private interview material stays outside Git |
 | `8Dionysus` | `docs/PUBLIC_ENTRY_POSTURE.md` | this is a profile and route-map repo, so a standalone roadmap would be a misleading center-claim |

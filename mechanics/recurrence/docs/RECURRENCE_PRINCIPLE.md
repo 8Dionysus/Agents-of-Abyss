@@ -74,7 +74,7 @@ Keep the owning roles explicit:
 - `Agents-of-Abyss` owns the federation-level law, vocabulary, and anti-collapse boundary
 - `aoa-techniques` may hold reusable recovery practices when they become stable practice objects
 - `aoa-skills` may hold bounded execution-time return procedures inside skill contracts
-- `aoa-routing` may point to re-entry surfaces and route back toward the smallest valid next object, but it does not own recurrence meaning
+- `aoa-sdk` may point to re-entry surfaces and route back toward the smallest valid next object, but it does not own recurrence meaning
 - `aoa-memo` owns checkpoint, recall, and provenance surfaces used for return
 - `aoa-agents` owns role-contract and handoff posture for return between actors, tiers, or operator states
 - `aoa-playbooks` owns scenario-level return routes, fallback posture, reroute posture, and escalation posture once return becomes recurring method

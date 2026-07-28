@@ -12,7 +12,7 @@ meaning.
 | [Reviewed Closeout Chain](parts/reviewed-closeout-chain/README.md) | require reviewed closeout before harvest, progression, repair, quest, or memory claims | `aoa-skills`, `aoa-sdk`, `aoa-evals` |
 | [Donor Harvest](parts/donor-harvest/README.md) | route reusable residue into candidate owner shapes without minting final object truth | `aoa-skills`, `aoa-techniques`, and final owner repos |
 | [Progression Lift](parts/progression-lift/README.md) | lift evidence-backed movement without reducing growth to a universal score | `aoa-agents`, `aoa-evals`, `aoa-stats` |
-| [Route Forks](parts/route-forks/README.md) | name material next choices, costs, risks, and stop conditions | `aoa-skills`, `aoa-playbooks`, `aoa-routing` |
+| [Route Forks](parts/route-forks/README.md) | name material next choices, costs, risks, and stop conditions | `aoa-skills`, `aoa-playbooks`, `aoa-sdk` |
 | [Automation Opportunity](parts/automation-opportunity/README.md) | detect automation seeds without activating hidden schedulers | `aoa-skills`, `aoa-sdk`, `abyss-stack` |
 | [Diagnosis Gate](parts/diagnosis-gate/README.md) | diagnose before repair and separate symptoms from causes | `aoa-skills`, `aoa-evals`, `aoa-agents` |
 | [Repair Cycle](parts/repair-cycle/README.md) | route the smallest repair packet with rollback and proof boundaries | `aoa-skills`, `aoa-evals`, `abyss-stack` |

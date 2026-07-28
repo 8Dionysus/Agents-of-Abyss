@@ -19,7 +19,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 | `ORQ-QUESTBOOK-PLAYBOOKS-001` | `aoa-playbooks` | `requested` | `P1` | Recurring quest choreography and public obligation routes | Playbook for recurring quest intake, review, fallback, closure, and evidence posture. | Closure proof routes to `aoa-evals` as needed. |
 | `ORQ-QUESTBOOK-EVALS-001` | `aoa-evals` | `requested` | `P1` | Proof obligations attached to quest closure | Eval surface for whether the quest was actually satisfied, with evidence and blind spots. | Proof lives in `aoa-evals` when the closure claim needs defense. |
 | `ORQ-QUESTBOOK-MEMO-001` | `aoa-memo` | `requested` | `P2` | Lessons retained after quest completion | Memory object for reusable lesson, provenance, recall, and forgetting after quest closure. | Lesson integrity may route to `aoa-evals`. |
-| `ORQ-QUESTBOOK-ROUTING-001` | `aoa-routing` | `requested` | `P2` | Cross-repo obligation handoff and thin route surfaces | Routing entry that sends repo-local obligations to their owners without centralizing task truth. | Route behavior can be checked through evals if public. |
+| `ORQ-QUESTBOOK-ROUTING-001` | `aoa-sdk` | `requested` | `P2` | Cross-repo obligation handoff and thin route surfaces | Routing entry that sends repo-local obligations to their owners without centralizing task truth. | Route behavior can be checked through evals if public. |
 
 ## Center sources
 

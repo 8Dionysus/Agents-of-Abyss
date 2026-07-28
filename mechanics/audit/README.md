@@ -24,7 +24,7 @@ Audit grammar, finding lifecycle, evidence-ledger posture, owner routing, valida
 - `aoa-techniques` owns reusable audit techniques.
 - `aoa-stats` owns derived observability and movement summaries.
 - `mechanics/release-support` owns release readiness, public-claim, and transition support.
-- `abyss-stack`, `aoa-sdk`, `aoa-routing`, `aoa-kag`, `aoa-agents`, `8Dionysus`, and `Tree-of-Sophia` own their local authority surfaces.
+- `abyss-stack`, `aoa-sdk`, `aoa-kag`, `aoa-agents`, `8Dionysus`, and `Tree-of-Sophia` own their local authority surfaces.
 
 ### Inputs
 

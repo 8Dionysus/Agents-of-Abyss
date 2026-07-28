@@ -21,14 +21,16 @@ owner landing/pruning rules.
 
 ### Stronger owner split
 
-- `aoa-sdk` owns provisional carry and typed helper hints.
+- `aoa-sdk` owns provisional carry, typed helper hints, and navigation hints
+  without lineage authority.
 - `aoa-skills` owns reviewed candidate identity and skill-shaped object truth.
 - `aoa-evals` owns proof.
 - `aoa-playbooks` owns recurring method.
 - `aoa-techniques` owns reusable practice.
 - `aoa-stats` owns derived summary.
 - `aoa-memo` owns bounded memory and lessons.
-- `aoa-routing` owns navigation hints without lineage authority.
+- `aoa-kag` owns derived regrounding toward stronger source refs without
+  becoming growth or owner truth.
 - The final owner repository owns final object truth.
 
 ### Inputs

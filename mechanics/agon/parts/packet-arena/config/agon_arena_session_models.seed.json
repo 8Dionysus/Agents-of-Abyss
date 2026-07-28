@@ -33,7 +33,7 @@
     "mechanics/agon/parts/trial-handoff/generated/agon_trial_playbook_request.min.json",
     "mechanics/agon/parts/verdict-retention-rank/generated/agon_court_memo_stats_prebinding_request.min.json",
     "aoa-agents/generated/agent_formation_trial.min.json",
-    "aoa-routing/generated/agon_gate_routing_registry.min.json",
+    "aoa-sdk/src/aoa_sdk/control_plane/routing/data/agon_gate_routing_registry.min.json",
     "aoa-playbooks/generated/agon_trial_playbook_registry.min.json"
   ],
   "runtime_effect": "none",
@@ -91,7 +91,7 @@
       "lifecycle": [
         {
           "live_effect": "none",
-          "owner_hint": "aoa-routing",
+          "owner_hint": "aoa-sdk",
           "phase_id": "gate",
           "phase_status": "modeled_precondition_slot",
           "purpose": "Receives an Agon gate candidate from routing or trial pressure."
@@ -380,7 +380,7 @@
       "lifecycle": [
         {
           "live_effect": "none",
-          "owner_hint": "aoa-routing",
+          "owner_hint": "aoa-sdk",
           "phase_id": "gate",
           "phase_status": "modeled_precondition_slot",
           "purpose": "Receives an Agon gate candidate from routing or trial pressure."
@@ -661,7 +661,7 @@
       "lifecycle": [
         {
           "live_effect": "none",
-          "owner_hint": "aoa-routing",
+          "owner_hint": "aoa-sdk",
           "phase_id": "gate",
           "phase_status": "modeled_precondition_slot",
           "purpose": "Receives an Agon gate candidate from routing or trial pressure."
@@ -950,7 +950,7 @@
       "lifecycle": [
         {
           "live_effect": "none",
-          "owner_hint": "aoa-routing",
+          "owner_hint": "aoa-sdk",
           "phase_id": "gate",
           "phase_status": "modeled_precondition_slot",
           "purpose": "Receives an Agon gate candidate from routing or trial pressure."
@@ -1233,7 +1233,7 @@
       "lifecycle": [
         {
           "live_effect": "none",
-          "owner_hint": "aoa-routing",
+          "owner_hint": "aoa-sdk",
           "phase_id": "gate",
           "phase_status": "modeled_precondition_slot",
           "purpose": "Receives an Agon gate candidate from routing or trial pressure."
@@ -1522,7 +1522,7 @@
       "lifecycle": [
         {
           "live_effect": "none",
-          "owner_hint": "aoa-routing",
+          "owner_hint": "aoa-sdk",
           "phase_id": "gate",
           "phase_status": "modeled_precondition_slot",
           "purpose": "Receives an Agon gate candidate from routing or trial pressure."
@@ -1636,7 +1636,7 @@
           "pressure_class": "assistant_boundary",
           "pressure_id": "assistant_scope_boundary",
           "purpose": "Models assistant scope breach and anti-drift alarm.",
-          "requires_future_owner": "aoa-agents + aoa-routing"
+          "requires_future_owner": "aoa-agents + aoa-sdk"
         },
         {
           "live_effect": "none",
@@ -1806,7 +1806,7 @@
       "lifecycle": [
         {
           "live_effect": "none",
-          "owner_hint": "aoa-routing",
+          "owner_hint": "aoa-sdk",
           "phase_id": "gate",
           "phase_status": "modeled_precondition_slot",
           "purpose": "Receives an Agon gate candidate from routing or trial pressure."
@@ -2087,7 +2087,7 @@
       "lifecycle": [
         {
           "live_effect": "none",
-          "owner_hint": "aoa-routing",
+          "owner_hint": "aoa-sdk",
           "phase_id": "gate",
           "phase_status": "modeled_precondition_slot",
           "purpose": "Receives an Agon gate candidate from routing or trial pressure."
@@ -2201,7 +2201,7 @@
           "pressure_class": "summon_cost",
           "pressure_id": "expensive_summon_intent",
           "purpose": "Models costly summon-intent review without live summon.",
-          "requires_future_owner": "Agents-of-Abyss + aoa-routing"
+          "requires_future_owner": "Agents-of-Abyss + aoa-sdk"
         },
         {
           "live_effect": "none",

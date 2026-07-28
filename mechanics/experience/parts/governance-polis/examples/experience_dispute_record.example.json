@@ -7,7 +7,7 @@
   "decision_refs": [],
   "disputants": [
     "aoa-agents.owner",
-    "aoa-routing.owner"
+    "aoa-sdk.owner"
   ],
   "evidence_refs": [
     "receipt:example:001"

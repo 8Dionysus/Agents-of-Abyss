@@ -539,7 +539,7 @@
         "aoa-evals": [
           "closure review verdict bundle"
         ],
-        "aoa-routing": [
+        "aoa-sdk": [
           "route to eval or future arena gate"
         ],
         "aoa-playbooks": [
@@ -593,7 +593,7 @@
         "Agents-of-Abyss": [
           "future summon law"
         ],
-        "aoa-routing": [
+        "aoa-sdk": [
           "future summon route hint"
         ],
         "aoa-evals": [
@@ -647,7 +647,7 @@
         "aoa-agents": [
           "witness-capable actor forms"
         ],
-        "aoa-routing": [
+        "aoa-sdk": [
           "witness route hint"
         ],
         "aoa-memo": [
@@ -864,7 +864,7 @@
         "aoa-playbooks": [
           "deferred follow-up choreography"
         ],
-        "aoa-routing": [
+        "aoa-sdk": [
           "follow-up route hint"
         ],
         "aoa-stats": [
@@ -921,7 +921,7 @@
         "Agents-of-Abyss": [
           "federation boundary law"
         ],
-        "aoa-routing": [
+        "aoa-sdk": [
           "owner route hint"
         ],
         "aoa-evals": [
@@ -975,7 +975,7 @@
         "agon_gate_hint"
       ],
       "future_owner_handoffs": {
-        "aoa-routing": [
+        "aoa-sdk": [
           "agon_needed dispatch gate"
         ],
         "Agents-of-Abyss": [

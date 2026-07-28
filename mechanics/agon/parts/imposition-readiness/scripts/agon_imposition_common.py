@@ -104,7 +104,7 @@ OWNER_HANDOFFS: tuple[dict[str, str], ...] = (
     },
     {
         "concern": "Arena entry detection",
-        "owner": "aoa-routing",
+        "owner": "aoa-sdk",
         "boundary": "Own thin gates and next-hop hints; do not judge truth or own session lifecycle.",
         "next_route": "After actor formation and protocol kernel",
     },

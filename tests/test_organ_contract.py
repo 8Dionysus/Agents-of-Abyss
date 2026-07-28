@@ -30,7 +30,7 @@ class OrganContractTests(unittest.TestCase):
 
     def test_contract_preserves_downstream_owners(self) -> None:
         text = (REPO_ROOT / "docs/organ-contract/README.md").read_text(encoding="utf-8")
-        for owner in ("aoa-sdk", "aoa-routing", "aoa-evals", "aoa-memo", "abyss-stack", "Tree-of-Sophia"):
+        for owner in ("aoa-sdk", "aoa-evals", "aoa-memo", "abyss-stack", "Tree-of-Sophia"):
             self.assertIn(owner, text)
 
 

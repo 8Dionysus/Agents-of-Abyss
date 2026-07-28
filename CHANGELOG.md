@@ -9,6 +9,10 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- Active routing, dispatch, Agon gate, and owner-request surfaces now target the
+  canonical typed routing/control-plane home in `aoa-sdk`. `aoa-routing`
+  remains a deprecated maintenance predecessor for history and rollback; this
+  succession does not archive or delete it.
 - The broad release gate now executes each owned leaf command once, retains
   generated-output and builder-declaration checks through a non-reentrant
   `validate_generated_freshness.py --inputs-only` step, and keeps the full

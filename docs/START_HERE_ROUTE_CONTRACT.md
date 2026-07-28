@@ -171,8 +171,10 @@ Read:
 Organ alignment changes must keep the center in its constitutional lane:
 
 - AoA may define the minimum reviewable organ shape.
-- `aoa-sdk` carries typed helpers, activation, compatibility, and control-plane implementation.
-- `aoa-routing` carries operational dispatch and navigation implementation.
+- `aoa-sdk` carries typed helpers, activation, compatibility, routing
+  control-plane, and operational dispatch/navigation implementation.
+- the deprecated `aoa-routing` predecessor carries history and reversible
+  maintenance only; active routes must not depend on it.
 - sibling repositories carry owner-local object classes, proof, memory, role,
   playbook, KAG, stats, runtime, and ToS-authored meaning.
 

@@ -25,7 +25,7 @@ ALLOWED_OWNER_REPOS = {
     "aoa-techniques",
     "aoa-skills",
     "aoa-evals",
-    "aoa-routing",
+    "aoa-sdk",
     "aoa-playbooks",
     "aoa-memo",
     "aoa-stats",

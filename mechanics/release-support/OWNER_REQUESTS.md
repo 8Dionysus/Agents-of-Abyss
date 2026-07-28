@@ -23,7 +23,7 @@ Generated companion:
 |---|---|---|---|---|---|---|
 | `ORQ-RELEASE-EVALS-001` | `aoa-evals` | `requested` | `P0` | Public claim proof for release and support posture | Eval surface for release claims, quality claims, regressions, and supportable-public-claim boundaries. | Proof lives in `aoa-evals`. |
 | `ORQ-RELEASE-STATS-001` | `aoa-stats` | `requested` | `P2` | Derived release movement summaries | Derived windows over owner-local release receipts and bounded eval outputs. | Stats claims cite source release and proof receipts. |
-| `ORQ-RELEASE-ROUTING-001` | `aoa-routing` | `requested` | `P2` | Release route and federation entry ABI updates | Routing update that directs humans and agents to current release/support surfaces. | Route correctness may be evaluated by `aoa-evals`. |
+| `ORQ-RELEASE-ROUTING-001` | `aoa-sdk` | `requested` | `P2` | Release route and federation entry ABI updates | Routing update that directs humans and agents to current release/support surfaces. | Route correctness may be evaluated by `aoa-evals`. |
 | `ORQ-RELEASE-SDK-001` | `aoa-sdk` | `requested` | `P3` | Compatibility helper support for release consumers | Typed helper or compatibility seam for loading release-adjacent generated surfaces without owning meaning. | Compatibility claims route to `aoa-evals`. |
 | `ORQ-RELEASE-PROFILE-001` | `8Dionysus` | `requested` | `P2` | Public projection and profile-route alignment | Profile or projection surface updated only after center support and owner evidence are aligned. | Public projection claims must cite center and owner evidence. |
 

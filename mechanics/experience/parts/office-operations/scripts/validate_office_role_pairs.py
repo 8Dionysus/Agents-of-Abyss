@@ -117,7 +117,7 @@ EXPECTED_FLOW_OWNERS = [
     "Agents-of-Abyss",
     "aoa-agents",
     "aoa-agents",
-    "aoa-routing",
+    "aoa-sdk",
     "aoa-evals",
     "aoa-memo",
     "Agents-of-Abyss",
@@ -227,7 +227,6 @@ EXPECTED_OWNER_REPOS = {
     "aoa-kag",
     "aoa-memo",
     "aoa-playbooks",
-    "aoa-routing",
     "aoa-sdk",
     "aoa-skills",
     "aoa-stats",
@@ -266,14 +265,9 @@ EXPECTED_OWNER_SPLIT = [
         "must_not": "become proof pair judgment or certification authority",
     },
     {
-        "repo": "aoa-routing",
-        "owns": "advisory pair routes explicit handoff candidates and service-to-Agon escalation hints",
-        "must_not": "define office meaning become owner or grant live summon authority",
-    },
-    {
         "repo": "aoa-sdk",
-        "owns": "typed helper calls kind-safe projections and pair lookup contracts",
-        "must_not": "become runtime or semantic authority",
+        "owns": "advisory pair routes explicit handoff candidates and service-to-Agon escalation hints plus typed helper calls kind-safe projections and pair lookup contracts",
+        "must_not": "define office meaning become owner grant live summon authority or become runtime or semantic authority",
     },
     {
         "repo": "aoa-kag",
@@ -563,10 +557,10 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
         if entry["repo"] == "aoa-evals" and "certify release" not in entry["must_not"]:
             fail("aoa-evals owner_split entry must deny certification authority")
         if (
-            entry["repo"] == "aoa-routing"
+            entry["repo"] == "aoa-sdk"
             and "define office meaning" not in entry["must_not"]
         ):
-            fail("aoa-routing owner_split entry must deny meaning ownership")
+            fail("aoa-sdk owner_split entry must deny meaning ownership")
         if (
             entry["repo"] == "abyss-stack"
             and "separate runtime-owner gate" not in entry["owns"]

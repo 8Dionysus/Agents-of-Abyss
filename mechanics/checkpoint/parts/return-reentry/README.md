@@ -31,5 +31,5 @@ stronger owner. If any are missing, safe-stop or route to `aoa-memo`.
 ## Next Route
 
 Route relaunch and recall surfaces to `aoa-memo`, navigation hints to
-`aoa-routing`, scenario choreography to `aoa-playbooks`, and actor handoffs to
+`aoa-sdk`, scenario choreography to `aoa-playbooks`, and actor handoffs to
 `aoa-agents`.

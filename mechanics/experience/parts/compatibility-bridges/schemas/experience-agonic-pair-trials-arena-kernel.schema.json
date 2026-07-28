@@ -163,8 +163,8 @@
     },
     "owner_split": {
       "type": "array",
-      "minItems": 15,
-      "maxItems": 15,
+      "minItems": 14,
+      "maxItems": 14,
       "items": {
         "$ref": "#/$defs/owner_split"
       }

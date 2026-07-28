@@ -32,7 +32,7 @@ recurrence into memory, runtime, verdict, rank, or ToS authority.
 ## Requested Owner Manifest Names
 
 The recurrence adapter request names future owner-local manifests for
-`aoa-agents`, `aoa-routing`, `aoa-playbooks`, `aoa-techniques`, and
+`aoa-agents`, `aoa-sdk`, `aoa-playbooks`, `aoa-techniques`, and
 `aoa-skills` with `owner-local://` paths. Those names are requests, not local
 placeholder files.
 

@@ -130,7 +130,7 @@
       "order": 9,
       "kind": "context_routing_nervous_system",
       "source_version": "v1.8",
-      "owner": "aoa-routing",
+      "owner": "aoa-sdk",
       "effect": "future advisory routing request",
       "stop_lines": [
         "routing is not owner",
@@ -265,14 +265,9 @@
       "must_not": "become proof authority"
     },
     {
-      "repo": "aoa-routing",
-      "owns": "advisory dispatch salience hints context route receipts and drift watch signals",
-      "must_not": "become owner authority"
-    },
-    {
       "repo": "aoa-sdk",
-      "owns": "typed helper contracts and control-plane seams",
-      "must_not": "become semantic authority"
+      "owns": "advisory dispatch salience hints context route receipts drift watch signals typed helper contracts and control-plane seams",
+      "must_not": "become owner or semantic authority"
     },
     {
       "repo": "aoa-kag",

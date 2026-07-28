@@ -9,7 +9,7 @@
     "receipt://v0.6/source_owner_consent_record/example"
   ],
   "payload": {
-    "owner_repo": "aoa-routing",
+    "owner_repo": "aoa-sdk",
     "consent": "approve",
     "dissent_reason": null
   }

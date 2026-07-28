@@ -8,13 +8,13 @@ source-docs stay outside the working path until a task needs provenance review.
 
 | Part | Center function | Stronger owner route |
 |---|---|---|
-| [Imposition Readiness](parts/imposition-readiness/README.md) | survival audit, doubt posture, pre-Agon baseline, and imposition stop-line | `aoa-evals` for proof discipline; `aoa-routing` for review routing |
-| [Lawful Move Grammar](parts/lawful-move-grammar/README.md) | lawful move vocabulary, move registry shape, and pre-protocol move stop-lines | `aoa-techniques`, `aoa-skills`, `aoa-playbooks`, and `aoa-routing` own practice or routing usage |
+| [Imposition Readiness](parts/imposition-readiness/README.md) | survival audit, doubt posture, pre-Agon baseline, and imposition stop-line | `aoa-evals` for proof discipline; `aoa-sdk` for review routing |
+| [Lawful Move Grammar](parts/lawful-move-grammar/README.md) | lawful move vocabulary, move registry shape, and pre-protocol move stop-lines | `aoa-techniques`, `aoa-skills`, `aoa-playbooks`, and `aoa-sdk` own practice or routing usage |
 | [Owner Binding](parts/owner-binding/README.md) | move-to-owner binding, owner request gravity, and no-acceptance boundary | target owner repositories accept or reject operational slices |
-| [Gate Routing](parts/gate-routing/README.md) | gate handoff, route request, and route stop-lines | `aoa-routing` owns live dispatch and gate behavior |
+| [Gate Routing](parts/gate-routing/README.md) | gate handoff, route request, and route stop-lines | `aoa-sdk` owns live dispatch and gate behavior |
 | [Trial Handoff](parts/trial-handoff/README.md) | trial contour, playbook request, and rehearsal stop-lines | `aoa-playbooks` owns choreography; `aoa-evals` owns trial proof |
-| [Recurrence Adapter](parts/recurrence-adapter/README.md) | recurrence bridge, return posture, and adapter stop-lines | `mechanics/recurrence`, `aoa-routing`, and `aoa-memo` own return and memory behavior |
-| [Packet Arena](parts/packet-arena/README.md) | state packet, session, charter, seat, and arena boundary grammar | `aoa-agents`, `aoa-routing`, and `abyss-stack` own live actors, routes, and runtime |
+| [Recurrence Adapter](parts/recurrence-adapter/README.md) | recurrence bridge, return posture, and adapter stop-lines | `mechanics/recurrence`, `aoa-sdk`, and `aoa-memo` own return and memory behavior |
+| [Packet Arena](parts/packet-arena/README.md) | state packet, session, charter, seat, and arena boundary grammar | `aoa-agents`, `aoa-sdk`, and `abyss-stack` own live actors, routes, and runtime |
 | [Duel Kernel](parts/duel-kernel/README.md) | duel kernel, mechanical trial, model-of-other, and sealed-commit grammar | `aoa-playbooks`, `aoa-evals`, and `aoa-agents` own live practice, proof, and roles |
 | [Verdict Retention Rank](parts/verdict-retention-rank/README.md) | verdict contour, scar request, retention, rank, and reputation boundary | `aoa-evals`, `aoa-memo`, and `aoa-stats` own proof, memory, and derived summaries |
 | [Epistemic KAG](parts/epistemic-kag/README.md) | epistemic pressure, evidence promotion boundary, and KAG handoff | `aoa-kag`, `aoa-evals`, and source owners keep derived-proof and source-truth authority |

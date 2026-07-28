@@ -420,7 +420,6 @@ EXPECTED_OWNER_REPOS = {
     "aoa-kag",
     "aoa-memo",
     "aoa-playbooks",
-    "aoa-routing",
     "aoa-sdk",
     "aoa-skills",
     "aoa-stats",
@@ -459,14 +458,9 @@ EXPECTED_OWNER_SPLIT = [
         "must_not": "become proof score truth verdict rank reputation honor or quest authority",
     },
     {
-        "repo": "aoa-routing",
-        "owns": "advisory epistemic gate model-divergence false-consensus and owner-escalation route candidates",
-        "must_not": "open live gates own meaning grant dispatch authority or route as truth verdict",
-    },
-    {
         "repo": "aoa-sdk",
-        "owns": "typed packet helpers API contracts validation helpers and control-plane seams only",
-        "must_not": "become semantic runtime truth verdict memory scar retention rank or storage authority",
+        "owns": "advisory epistemic gate model-divergence false-consensus and owner-escalation route candidates plus typed packet helpers API contracts validation helpers and control-plane seams only",
+        "must_not": "open live gates own meaning grant dispatch authority route as truth verdict or become semantic runtime truth verdict memory scar retention rank or storage authority",
     },
     {
         "repo": "aoa-kag",
@@ -753,8 +747,8 @@ def validate_payload(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     owners = {entry["repo"] for entry in payload["owner_split"]}
     if owners != EXPECTED_OWNER_REPOS:
         fail(f"owner_split repo set mismatch: {sorted(owners)}")
-    if len(payload["owner_split"]) != 15:
-        fail("owner_split must preserve the 15-owner center routing shape")
+    if len(payload["owner_split"]) != 14:
+        fail("owner_split must preserve the 14-owner center routing shape")
     if payload["owner_split"] != EXPECTED_OWNER_SPLIT:
         fail(
             "owner_split must preserve the exact v1.5 owner routing, ownership, and denial strings"

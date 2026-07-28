@@ -11,7 +11,7 @@
       ],
       "allowed_emitters": [
         "Agents-of-Abyss",
-        "aoa-routing"
+        "aoa-sdk"
       ],
       "lifecycle_slot": "gate",
       "next_allowed_packet_types": [
@@ -27,7 +27,7 @@
       "packet_type": "agon.open_draft",
       "purpose": "Carry a pre-protocol request from an Agon gate candidate into a draft arena session model.",
       "recommended_previous_surfaces": [
-        "generated/agon_gate_routing_registry.min.json",
+        "aoa-sdk/src/aoa_sdk/control_plane/routing/data/agon_gate_routing_registry.min.json",
         "mechanics/agon/parts/packet-arena/generated/agon_arena_session_model_registry.min.json"
       ],
       "required_payload_fields": [

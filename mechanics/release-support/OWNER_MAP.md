@@ -13,8 +13,7 @@ proof verdicts, public projection authority, or sibling acceptance.
 | Direction surface | Routes current course to the right doc | Repository owner | Direction maps must not outrun owner entry docs. |
 | Proof | Routes evidence and verdict needs | `aoa-evals` | Release support cannot become proof authority. |
 | Derived movement | Routes release windows and summaries | `aoa-stats` | Stats must not become release truth. |
-| Route ABI | Names release/public entry needs | `aoa-routing` | Routing must not author release claims. |
-| Compatibility helper | Names consumer loading needs | `aoa-sdk` | SDK helpers must not become release authority. |
+| Route ABI and compatibility helpers | Names release/public entry and consumer loading needs | `aoa-sdk` | Routing and SDK helpers must not become release authority. |
 | Public projection | Names public profile alignment | `8Dionysus` | Profile surfaces must not outrun center or owner evidence. |
 | Runtime deployment | Names release stop-lines only | `abyss-stack` | Runtime state and deployment truth are runtime-owned. |
 

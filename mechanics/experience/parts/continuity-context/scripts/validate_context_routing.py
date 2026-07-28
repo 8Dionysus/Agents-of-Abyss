@@ -90,7 +90,7 @@ EXPECTED_CONTEXT_ROUTING_LAW = [
 EXPECTED_REQUESTS = [
     {
         "request": "context_signal_collection_review",
-        "owner": "aoa-routing",
+        "owner": "aoa-sdk",
         "input_boundary": "task scope service state agonic pressure affect rank memory and canonical-risk signals",
         "output_candidate": "context_signal_candidate",
         "must_include": [
@@ -110,7 +110,7 @@ EXPECTED_REQUESTS = [
     },
     {
         "request": "salience_budget_review",
-        "owner": "aoa-routing",
+        "owner": "aoa-sdk",
         "input_boundary": "signal set salience ordering attention budget route reason and receipt requirement",
         "output_candidate": "salience_budget_candidate",
         "must_include": [
@@ -258,14 +258,14 @@ EXPECTED_FLOW = [
     {
         "order": 4,
         "kind": "context_signal_collection_requested",
-        "owner": "aoa-routing",
+        "owner": "aoa-sdk",
         "authority_note": "routing may collect bounded cross-layer signals but cannot author owner meaning or pull hidden context",
         "stop_lines": ["no hidden context pull", "no owner meaning theft"],
     },
     {
         "order": 5,
         "kind": "salience_and_budget_review_requested",
-        "owner": "aoa-routing",
+        "owner": "aoa-sdk",
         "authority_note": "salience and budget may prioritize layers but can never become authority or budgetless expansion",
         "stop_lines": ["no budgetless expansion", "no salience as authority"],
     },
@@ -410,7 +410,7 @@ EXPECTED_AUTHORITY = {
 
 EXPECTED_OWNER_SPLIT = [
     "Agents-of-Abyss owns this center law predecessor mapping layer grammar hard guards and authority stop-lines.",
-    "aoa-routing owns advisory route engine salience budget reroute loop-breaker and receipt mechanics only after owner-local landing.",
+    "aoa-sdk owns advisory route engine salience budget reroute loop-breaker and receipt mechanics only after owner-local landing.",
     "aoa-agents owns assistant and personal-context posture boundaries only.",
     "aoa-evals owns bounded route-integrity and escalation legitimacy checks only.",
     "aoa-memo owns recall re-entry and stale-context intake candidates only.",

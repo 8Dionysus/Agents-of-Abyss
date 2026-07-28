@@ -16,5 +16,5 @@ dispatch.
 
 ## Next route
 
-Route live dispatch and gate behavior to `aoa-routing`; route proof of route
+Route live dispatch and gate behavior to `aoa-sdk`; route proof of route
 behavior to `aoa-evals`.

@@ -6,7 +6,7 @@ This part owns the first bounded conversion of lived friction, incidents, candid
 
 ## Stronger owner split
 
-`aoa-memo` for memory objects, `aoa-evals` for proof, `aoa-routing` for live route behavior.
+`aoa-memo` for memory objects, `aoa-evals` for proof, `aoa-sdk` for live route behavior.
 
 ## Allowed outputs
 

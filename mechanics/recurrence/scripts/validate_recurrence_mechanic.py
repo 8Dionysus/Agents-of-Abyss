@@ -67,7 +67,6 @@ OWNER_REQUEST_IDS = (
 
 OWNER_REPOS = (
     "aoa-sdk",
-    "aoa-routing",
     "aoa-memo",
     "aoa-agents",
     "aoa-playbooks",

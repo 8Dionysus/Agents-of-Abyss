@@ -35,14 +35,13 @@ cycle readable:
 The center landing is intentionally thin:
 
 - center law and stage order live here
-- hooks and local control stay in `aoa-sdk`
+- hooks, local control, and route hints stay in `aoa-sdk`
 - executable stage skills stay in `aoa-skills`
 - self-agent posture stays in `aoa-agents`
 - proof and verdicts stay in `aoa-evals`
 - memory writeback stays in `aoa-memo`
 - choreography stays in `aoa-playbooks`
 - derived visibility stays in `aoa-stats`
-- route hints stay in `aoa-routing`
 - reviewed intake and landing stay in the final owner repository
 - runtime exports stay in `abyss-stack`
 

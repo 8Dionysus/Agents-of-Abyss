@@ -420,7 +420,6 @@ EXPECTED_OWNER_REPOS = {
     "aoa-kag",
     "aoa-memo",
     "aoa-playbooks",
-    "aoa-routing",
     "aoa-sdk",
     "aoa-skills",
     "aoa-stats",
@@ -459,14 +458,9 @@ EXPECTED_OWNER_SPLIT = [
         "must_not": "become proof score or reputation truth",
     },
     {
-        "repo": "aoa-routing",
-        "owns": "advisory route candidates only",
-        "must_not": "dispatch as owner truth or right-grant authority",
-    },
-    {
         "repo": "aoa-sdk",
-        "owns": "typed packet helpers validation helpers and control-plane seams only",
-        "must_not": "become semantic standing or runtime authority",
+        "owns": "advisory route candidates plus typed packet helpers validation helpers and control-plane seams only",
+        "must_not": "dispatch as owner truth become right-grant semantic standing or runtime authority",
     },
     {
         "repo": "aoa-kag",

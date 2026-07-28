@@ -69,7 +69,7 @@ Do not:
 
 - let `aoa-stats` infer owner truth from intake status or turnover summaries
 - let `aoa-memo` turn prune or recovery writeback into landing authority
-- let `aoa-routing` treat owner-status hints as stronger than owner-local review
+- let `aoa-sdk` treat owner-status hints as stronger than owner-local review
 - let compatibility metadata pretend to be final owner landing
 - let the center claim that tracked status is equivalent to landed object truth
 

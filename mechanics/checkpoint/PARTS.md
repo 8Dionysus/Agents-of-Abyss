@@ -10,7 +10,7 @@ meaning.
 |---|---|---|
 | [Session Carry](parts/session-carry/README.md) | preserve mid-session evidence, `cluster_ref` hints, and review posture without minting candidate truth | `aoa-sdk` controls carry; `aoa-skills` owns checkpoint-note protocol |
 | [Review Gate](parts/review-gate/README.md) | decide when checkpoint evidence must be reviewed before promotion or mutation continues | `aoa-agents`, `aoa-skills`, and `aoa-evals` own local gates and proof |
-| [Return Re-entry](parts/return-reentry/README.md) | use checkpoint as a valid return anchor and bounded re-entry note | `aoa-memo`, `aoa-routing`, `aoa-playbooks`, and `aoa-agents` own local return surfaces |
+| [Return Re-entry](parts/return-reentry/README.md) | use checkpoint as a valid return anchor and bounded re-entry note | `aoa-memo`, `aoa-sdk`, `aoa-playbooks`, and `aoa-agents` own local return surfaces |
 | [Closeout Bridge](parts/closeout-bridge/README.md) | bridge reviewed checkpoint evidence into explicit closeout chain without hiding harvest | `aoa-skills` owns the bridge skill; `aoa-sdk` builds context |
 | [Runtime Export](parts/runtime-export/README.md) | keep runtime checkpoint exports and receipts bounded by runtime-owner gates | `abyss-stack` owns runtime plumbing; `aoa-memo` owns writeback targets |
 | [Owner Handoff](parts/owner-handoff/README.md) | turn checkpoint pressure into owner-request packets and next-owner routes | target owner repositories accept or reject operational truth |

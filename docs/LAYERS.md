@@ -50,7 +50,7 @@ Main question:
 
 ## Navigation layer
 
-Repository: `aoa-routing`
+Repository: `aoa-sdk`
 
 Purpose:
 - route models and humans toward the right next surface
@@ -59,6 +59,10 @@ Purpose:
 
 Main question:
 - where should the next step go?
+
+The predecessor `aoa-routing` repository is a deprecated, maintenance-only
+lineage surface. It is not an active dependency and is not archived by this
+succession record.
 
 ## Memory layer
 

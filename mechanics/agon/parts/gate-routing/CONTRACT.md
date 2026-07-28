@@ -2,7 +2,7 @@
 
 ## Owner boundary
 
-`Agents-of-Abyss` owns the pre-protocol gate-routing request. `aoa-routing`
+`Agents-of-Abyss` owns the pre-protocol gate-routing request. `aoa-sdk`
 owns live route behavior after owner-local landing.
 
 ## Allowed outputs

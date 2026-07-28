@@ -18,11 +18,11 @@ Experience center contracts, release posture, stop-lines, adoption route languag
 
 - `abyss-stack` owns runtime activation and workspace infrastructure.
 - `aoa-memo` owns memory objects, recall, and provenance.
-- `aoa-routing` owns live routing behavior and context router implementation.
+- `aoa-sdk` owns live routing behavior, context router implementation, typed
+  helpers, and compatibility API surfaces.
 - `aoa-evals` owns adoption proof, certification checks, and regression evidence.
 - `aoa-agents` owns actor, office, role, and handoff posture.
 - `aoa-playbooks` owns recurring adoption, release, office, and service choreography.
-- `aoa-sdk` owns typed helper and compatibility API surfaces.
 - `aoa-stats` owns derived observability and movement summaries.
 - `aoa-skills` owns executable workflow skill truth.
 - `aoa-techniques` owns reusable practice and technique truth.

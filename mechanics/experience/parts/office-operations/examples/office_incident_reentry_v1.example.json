@@ -10,7 +10,7 @@
   "kind": "office_incident_reentry_v1",
   "notes": "Example artifact for office_incident_reentry_v1.",
   "owner_repo": "Agents-of-Abyss",
-  "owner_route": "aoa-routing",
+  "owner_route": "aoa-sdk",
   "status": "draft",
   "version": "1.1.0"
 }

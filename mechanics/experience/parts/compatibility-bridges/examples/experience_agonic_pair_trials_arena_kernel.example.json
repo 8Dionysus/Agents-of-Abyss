@@ -164,7 +164,7 @@
     {
       "order": 8,
       "kind": "summon_cost_gate_required",
-      "owner": "aoa-routing",
+      "owner": "aoa-sdk",
       "authority_note": "routing may request visible summon gates and costs only",
       "stop_lines": [
         "no hidden summon",
@@ -400,14 +400,9 @@
       "must_not": "become proof score verdict rank honor or quest authority"
     },
     {
-      "repo": "aoa-routing",
-      "owns": "advisory arena-entry contested-closure and service-to-Agon escalation gate candidates",
-      "must_not": "open live gates own meaning grant summon authority or dispatch runtime arena sessions"
-    },
-    {
       "repo": "aoa-sdk",
-      "owns": "typed packet helpers API contracts validation helpers and control-plane seams only",
-      "must_not": "become semantic runtime verdict scar retention or storage authority"
+      "owns": "advisory arena-entry contested-closure and service-to-Agon escalation gate candidates plus typed packet helpers API contracts validation helpers and control-plane seams only",
+      "must_not": "open live gates own meaning grant summon authority dispatch runtime arena sessions or become semantic runtime verdict scar retention or storage authority"
     },
     {
       "repo": "aoa-kag",

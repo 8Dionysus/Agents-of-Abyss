@@ -149,7 +149,7 @@
     },
     {
       "request": "live_session_reentry_route_review",
-      "owner": "aoa-routing",
+      "owner": "aoa-sdk",
       "input_boundary": "receipt-backed live session return route and loop guard posture",
       "output_candidate": "live_session_reentry_candidate",
       "must_include": [
@@ -312,7 +312,7 @@
     {
       "order": 9,
       "kind": "live_session_reentry_route_requested",
-      "owner": "aoa-routing",
+      "owner": "aoa-sdk",
       "authority_note": "routing may suggest receipt-backed return paths only as non-authoritative hints",
       "stop_lines": [
         "no route loop escalation",
@@ -442,7 +442,7 @@
     "8Dionysus owns shared-root projection law and the source-owned copies of AGENTS.md AOA_WORKSPACE_ROOT .agents and .codex only.",
     "aoa-sdk owns typed workspace discovery ingress guard and helper seams only.",
     "aoa-memo owns continuity and reentry candidates only never workspace sovereignty.",
-    "aoa-routing owns receipt-backed route hints only.",
+    "aoa-sdk owns receipt-backed route hints only.",
     "aoa-agents owns continuity-backed assistant posture only.",
     "aoa-evals owns replay integrity and runtime legitimacy proof only.",
     "aoa-stats owns derived summaries only.",

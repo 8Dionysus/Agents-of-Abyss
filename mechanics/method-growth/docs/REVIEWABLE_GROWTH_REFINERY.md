@@ -98,7 +98,7 @@ Do not:
 - require `seed_ref` as a federation stage
 - let `aoa-stats` become route or proof authority
 - let `aoa-memo` become lineage authority
-- let `aoa-routing` or `aoa-kag` become first-authoring homes for this route
+- let `aoa-sdk` or `aoa-kag` become first-authoring homes for this route
 - use one total score as the readout of growth
 
 ## What this doctrine is for

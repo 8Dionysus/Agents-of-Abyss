@@ -163,19 +163,14 @@
       "must_not": "become proof authority"
     },
     {
-      "repo": "aoa-routing",
-      "owns": "thin harvest and adoption navigation signals",
-      "must_not": "author meaning or approve adoption"
+      "repo": "aoa-sdk",
+      "owns": "thin harvest and adoption navigation signals plus typed helper contracts",
+      "must_not": "author meaning approve adoption or make owner-local adoption decisions"
     },
     {
       "repo": "aoa-agents",
       "owns": "agent role and adoption posture contracts",
       "must_not": "self-rewrite assistants or own runtime implementation"
-    },
-    {
-      "repo": "aoa-sdk",
-      "owns": "typed helper contracts",
-      "must_not": "make owner-local adoption decisions"
     },
     {
       "repo": "aoa-kag",

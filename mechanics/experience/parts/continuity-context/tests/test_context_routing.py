@@ -154,7 +154,7 @@ def test_experience_context_routing_requires_eval_owned_service_to_agon_gate() -
     bad_payload = copy.deepcopy(payload)
     flow = bad_payload["routing_flow"]
     assert isinstance(flow, list)
-    flow[7]["owner"] = "aoa-routing"
+    flow[7]["owner"] = "aoa-sdk"
 
     with pytest.raises(validator.ValidationError, match="routing_flow|schema"):
         validator.validate_payload(bad_payload, schema)
@@ -167,7 +167,7 @@ def test_experience_context_routing_requires_tos_owned_dossier_boundary() -> Non
     bad_payload = copy.deepcopy(payload)
     flow = bad_payload["routing_flow"]
     assert isinstance(flow, list)
-    flow[9]["owner"] = "aoa-routing"
+    flow[9]["owner"] = "aoa-sdk"
 
     with pytest.raises(validator.ValidationError, match="routing_flow|schema"):
         validator.validate_payload(bad_payload, schema)

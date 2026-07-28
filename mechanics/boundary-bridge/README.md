@@ -28,7 +28,7 @@ reference bridge.
 - `Tree-of-Sophia` owns ToS-authored meaning, source authority, node law,
   lineage, and canon-facing review.
 - `aoa-kag` owns derived projections without source authority.
-- `aoa-routing` owns dispatch and route behavior without authored meaning.
+- `aoa-sdk` owns dispatch and route behavior without authored meaning.
 - `aoa-memo` owns memory and witness objects without proof or canon.
 - `aoa-evals` owns proof, verdict, and regression evidence.
 - `aoa-playbooks` owns recurring scenario choreography.
@@ -71,7 +71,7 @@ Use the validation lane in [AGENTS.md](AGENTS.md#validation).
 - For ToS meaning, canon, or source interpretation, route to
   `Tree-of-Sophia`.
 - For derived projection, route to `aoa-kag`; for dispatch behavior, route to
-  `aoa-routing`; for memory or witness objects, route to `aoa-memo`; for
+  `aoa-sdk`; for memory or witness objects, route to `aoa-memo`; for
   proof, route to `aoa-evals`; for scenario choreography, route to
   `aoa-playbooks`.
 - For unclear owner, return to `docs/FEDERATION_RULES.md` and

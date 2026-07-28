@@ -261,7 +261,7 @@ def test_experience_living_workspace_runtime_schema_rejects_wrong_integrity_flow
     bad_payload = copy.deepcopy(payload)
     flow = bad_payload["runtime_flow"]
     assert isinstance(flow, list)
-    flow[9]["owner"] = "aoa-routing"
+    flow[9]["owner"] = "aoa-sdk"
 
     with pytest.raises(JSONSchemaValidationError):
         validate_schema_only(bad_payload, schema)

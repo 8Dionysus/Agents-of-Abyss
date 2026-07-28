@@ -6,8 +6,7 @@ and where stronger truth lives.
 | Concern | Center role | Stronger owner |
 |---|---|---|
 | Recurrence law and vocabulary | define axis, drift, anchor, return, re-entry, and safe stop | `Agents-of-Abyss` |
-| Typed recurrence carry, manifests, graph closure, projections, and reviewed handoff packets | name center stop-lines and owner routes | `aoa-sdk` |
-| Re-entry hints and return navigation | require source-referring navigation only | `aoa-routing` |
+| Typed recurrence carry, manifests, graph closure, projections, reviewed handoff packets, re-entry hints, and return navigation | name center stop-lines and require source-referring routes | `aoa-sdk` |
 | Anchors, checkpoints, recall contracts, state capsules, and provenance threads | require explicit memory support without ambient continuity | `aoa-memo` |
 | Role-facing continuity, handoff posture, and recursor readiness | name actor-side stop-lines | `aoa-agents` |
 | Scenario-level return, fallback, rollback, and safe-stop choreography | route recurring method out of center prose | `aoa-playbooks` |

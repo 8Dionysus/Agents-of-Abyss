@@ -35,8 +35,7 @@ direction is to make every return honest:
 The center landing is intentionally thin:
 
 - center law and vocabulary live here
-- typed carry and recurrence graph work stay in `aoa-sdk`
-- route hints stay in `aoa-routing`
+- typed carry, recurrence graph work, and route hints stay in `aoa-sdk`
 - anchors, recall, and provenance stay in `aoa-memo`
 - actor continuity posture stays in `aoa-agents`
 - recurring choreography stays in `aoa-playbooks`

@@ -64,7 +64,6 @@ OWNER_REPOS = (
     "aoa-memo",
     "aoa-playbooks",
     "aoa-evals",
-    "aoa-routing",
     "aoa-stats",
     "abyss-stack",
 )

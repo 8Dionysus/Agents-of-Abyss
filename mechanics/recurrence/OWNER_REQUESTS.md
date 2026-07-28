@@ -21,7 +21,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 | Request | Owner | Status | Priority | Slice | Required owner landing | Proof route |
 |---|---|---|---|---|---|---|
 | `ORQ-RECURRENCE-SDK-001` | `aoa-sdk` | `requested` | `P0` | Control-plane carry for recurrence manifests and reviewed handoffs | Typed recurrence carry packet, manifest reader, graph-closure hint, projection boundary, or reviewed handoff helper that does not own recurrence meaning. | Compatibility and carry claims may route to `aoa-evals` when public. |
-| `ORQ-RECURRENCE-ROUTING-001` | `aoa-routing` | `requested` | `P1` | Re-entry route graph and return dispatch | Navigation surface that points from drift to last valid anchor and explicit re-entry without authoring recurrence meaning. | Route behavior proof should go to `aoa-evals` when public claims are made. |
+| `ORQ-RECURRENCE-ROUTING-001` | `aoa-sdk` | `requested` | `P1` | Re-entry route graph and return dispatch | Navigation surface that points from drift to last valid anchor and explicit re-entry without authoring recurrence meaning. | Route behavior proof should go to `aoa-evals` when public claims are made. |
 | `ORQ-RECURRENCE-MEMO-001` | `aoa-memo` | `requested` | `P0` | Anchor checkpoints, recall, and provenance for bounded continuity | Memory surfaces for anchors, checkpoints, recall eligibility, forgetting, and re-entry provenance. | Continuity evidence routes to `aoa-evals` before durability claims. |
 | `ORQ-RECURRENCE-AGENTS-001` | `aoa-agents` | `requested` | `P1` | Role and handoff posture for returns between actors | Role-facing handoff contract that says who may resume, under what seat, and with which anchor. | Handoff quality proof routes to `aoa-evals` where needed. |
 | `ORQ-RECURRENCE-PLAYBOOKS-001` | `aoa-playbooks` | `requested` | `P1` | Recurring return choreography | Repeatable return scenario with safe stops, anchor checks, fallback posture, and expected evidence. | Scenario proof routes to `aoa-evals`. |
@@ -44,7 +44,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 ## Stop-lines
 
 - `ORQ-RECURRENCE-SDK-001`: The center must not treat SDK carry as owner acceptance, runtime activation, or recurrence truth.
-- `ORQ-RECURRENCE-ROUTING-001`: `aoa-routing` may dispatch but must not become source meaning.
+- `ORQ-RECURRENCE-ROUTING-001`: `aoa-sdk` may dispatch but must not become source meaning.
 - `ORQ-RECURRENCE-MEMO-001`: The center must not claim hidden memory sovereignty or ambient continuity.
 - `ORQ-RECURRENCE-AGENTS-001`: Continuity must not mutate role authority inside the center.
 - `ORQ-RECURRENCE-PLAYBOOKS-001`: The center must not own recurring continuity choreography once it is operational.

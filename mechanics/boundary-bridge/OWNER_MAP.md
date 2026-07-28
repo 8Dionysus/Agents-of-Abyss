@@ -8,7 +8,7 @@ Boundary bridge names crossings. It does not own the truth on either side.
 |---|---|---|---|
 | `Tree-of-Sophia` | ToS authored meaning, source interpretation, canon, node law, lineage, and growth law | route support, cite ToS-owned surfaces, prepare ToS-facing handoffs | author ToS meaning or force canon uptake |
 | `aoa-kag` | derived provenance-aware graph and retrieval projections | receive bounded projection requests | become source canon or proof authority |
-| `aoa-routing` | dispatch and route behavior | carry boundary-aware route entries | author meaning or owner acceptance |
+| `aoa-sdk` | dispatch and route behavior | carry boundary-aware route entries | author meaning or owner acceptance |
 | `aoa-memo` | memory, recall, provenance, witness objects | preserve witness-facing recall with limits | rewrite source meaning or proof verdicts |
 | `aoa-evals` | proof, verdict, regression, and public-claim evidence | evaluate bridge integrity and reversibility | author source meaning |
 | `aoa-playbooks` | recurring scenario choreography | carry witness, compost, or bridge handoff scenarios | become source canon or proof |

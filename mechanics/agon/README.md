@@ -25,7 +25,7 @@ handoff expectations.
 - `aoa-evals` owns verdict proof, evaluation discipline, and regression evidence.
 - `aoa-memo` owns scars, retention memory, and bounded lessons.
 - `aoa-stats` owns aggregate rank and reputation projections after proof gates.
-- `aoa-routing` owns gates, handoffs, and route behavior.
+- `aoa-sdk` owns gates, handoffs, and route behavior.
 - `aoa-agents` owns actor seats, role contracts, and contestant posture.
 - `abyss-stack` owns runtime session bodies after runtime-owner gates.
 - `aoa-kag` owns derived provenance-aware knowledge substrates.

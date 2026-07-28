@@ -109,7 +109,7 @@
     {
       "order": 5,
       "kind": "pair_handoff_contract_requested",
-      "owner": "aoa-routing",
+      "owner": "aoa-sdk",
       "authority_note": "routing may request explicit pair handoff packets; routing does not define office meaning",
       "stop_lines": [
         "no routing meaning theft",
@@ -299,14 +299,9 @@
       "must_not": "become proof pair judgment or certification authority"
     },
     {
-      "repo": "aoa-routing",
-      "owns": "advisory pair routes explicit handoff candidates and service-to-Agon escalation hints",
-      "must_not": "define office meaning become owner or grant live summon authority"
-    },
-    {
       "repo": "aoa-sdk",
-      "owns": "typed helper calls kind-safe projections and pair lookup contracts",
-      "must_not": "become runtime or semantic authority"
+      "owns": "advisory pair routes explicit handoff candidates and service-to-Agon escalation hints plus typed helper calls kind-safe projections and pair lookup contracts",
+      "must_not": "define office meaning become owner grant live summon authority or become runtime or semantic authority"
     },
     {
       "repo": "aoa-kag",

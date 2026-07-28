@@ -14,7 +14,7 @@
       "AOA-Q-EXP-0061"
     ],
     "fanout_repos": [
-      "aoa-routing",
+      "aoa-sdk",
       "aoa-evals",
       "aoa-memo"
     ]

@@ -309,14 +309,14 @@
         },
         {
           "candidate_refs": [
-            "candidate:aoa-routing:agon/request-evidence-route-hint"
+            "candidate:aoa-sdk:agon/request-evidence-route-hint"
           ],
           "does_not_own": [
             "verdict truth",
             "skill execution",
             "actor identity truth"
           ],
-          "owner_repo": "aoa-routing",
+          "owner_repo": "aoa-sdk",
           "owner_role": "gate_route_owner",
           "owns_later": [
             "gate signal",
@@ -684,14 +684,14 @@
         },
         {
           "candidate_refs": [
-            "candidate:aoa-routing:agon/deny-trace-closure-route-hint"
+            "candidate:aoa-sdk:agon/deny-trace-closure-route-hint"
           ],
           "does_not_own": [
             "verdict truth",
             "skill execution",
             "actor identity truth"
           ],
-          "owner_repo": "aoa-routing",
+          "owner_repo": "aoa-sdk",
           "owner_role": "gate_route_owner",
           "owns_later": [
             "gate signal",
@@ -1059,14 +1059,14 @@
         },
         {
           "candidate_refs": [
-            "candidate:aoa-routing:agon/deny-closure-route-hint"
+            "candidate:aoa-sdk:agon/deny-closure-route-hint"
           ],
           "does_not_own": [
             "verdict truth",
             "skill execution",
             "actor identity truth"
           ],
-          "owner_repo": "aoa-routing",
+          "owner_repo": "aoa-sdk",
           "owner_role": "gate_route_owner",
           "owns_later": [
             "gate signal",
@@ -1154,14 +1154,14 @@
         },
         {
           "candidate_refs": [
-            "candidate:aoa-routing:agon/request-closure-review-route-hint"
+            "candidate:aoa-sdk:agon/request-closure-review-route-hint"
           ],
           "does_not_own": [
             "verdict truth",
             "skill execution",
             "actor identity truth"
           ],
-          "owner_repo": "aoa-routing",
+          "owner_repo": "aoa-sdk",
           "owner_role": "gate_route_owner",
           "owns_later": [
             "gate signal",
@@ -1249,14 +1249,14 @@
         },
         {
           "candidate_refs": [
-            "candidate:aoa-routing:agon/request-summon-intent-route-hint"
+            "candidate:aoa-sdk:agon/request-summon-intent-route-hint"
           ],
           "does_not_own": [
             "verdict truth",
             "skill execution",
             "actor identity truth"
           ],
-          "owner_repo": "aoa-routing",
+          "owner_repo": "aoa-sdk",
           "owner_role": "gate_route_owner",
           "owns_later": [
             "gate signal",
@@ -1380,14 +1380,14 @@
         },
         {
           "candidate_refs": [
-            "candidate:aoa-routing:agon/request-witness-route-hint"
+            "candidate:aoa-sdk:agon/request-witness-route-hint"
           ],
           "does_not_own": [
             "verdict truth",
             "skill execution",
             "actor identity truth"
           ],
-          "owner_repo": "aoa-routing",
+          "owner_repo": "aoa-sdk",
           "owner_role": "gate_route_owner",
           "owns_later": [
             "gate signal",
@@ -1850,14 +1850,14 @@
         },
         {
           "candidate_refs": [
-            "candidate:aoa-routing:agon/defer-with-cost-route-hint"
+            "candidate:aoa-sdk:agon/defer-with-cost-route-hint"
           ],
           "does_not_own": [
             "verdict truth",
             "skill execution",
             "actor identity truth"
           ],
-          "owner_repo": "aoa-routing",
+          "owner_repo": "aoa-sdk",
           "owner_role": "gate_route_owner",
           "owns_later": [
             "gate signal",
@@ -1963,14 +1963,14 @@
         },
         {
           "candidate_refs": [
-            "candidate:aoa-routing:agon/flag-scope-breach-route-hint"
+            "candidate:aoa-sdk:agon/flag-scope-breach-route-hint"
           ],
           "does_not_own": [
             "verdict truth",
             "skill execution",
             "actor identity truth"
           ],
-          "owner_repo": "aoa-routing",
+          "owner_repo": "aoa-sdk",
           "owner_role": "gate_route_owner",
           "owns_later": [
             "gate signal",
@@ -2058,14 +2058,14 @@
       "owner_bindings": [
         {
           "candidate_refs": [
-            "candidate:aoa-routing:agon/escalate-to-agon-gate-route-hint"
+            "candidate:aoa-sdk:agon/escalate-to-agon-gate-route-hint"
           ],
           "does_not_own": [
             "verdict truth",
             "skill execution",
             "actor identity truth"
           ],
-          "owner_repo": "aoa-routing",
+          "owner_repo": "aoa-sdk",
           "owner_role": "gate_route_owner",
           "owns_later": [
             "gate signal",

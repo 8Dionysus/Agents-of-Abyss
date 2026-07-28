@@ -16,5 +16,5 @@ without opening a live arena.
 
 ## Next route
 
-Route actor seats to `aoa-agents`, live route behavior to `aoa-routing`, and
+Route actor seats to `aoa-agents`, live route behavior to `aoa-sdk`, and
 runtime session bodies to `abyss-stack`.

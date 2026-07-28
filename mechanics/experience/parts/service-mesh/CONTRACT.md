@@ -6,7 +6,7 @@ This part owns service mesh law, service operations, Agon and service release co
 
 ## Stronger owner split
 
-`abyss-stack` owns service runtime; `aoa-routing` owns live dispatch behavior after owner gates.
+`abyss-stack` owns service runtime; `aoa-sdk` owns live dispatch behavior after owner gates.
 
 ## Allowed outputs
 
@@ -18,7 +18,7 @@ This part owns service mesh law, service operations, Agon and service release co
 
 - Live service runtime or service dispatch.
 - Hidden memory sovereignty.
-- Live dispatch behavior before `aoa-routing` accepts it.
+- Live dispatch behavior before `aoa-sdk` accepts it.
 - Owner-local activation or acceptance.
 - Proof verdicts before the proof owner lands evidence.
 - ToS-authored meaning from an AoA center bridge.
