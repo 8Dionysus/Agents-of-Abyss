@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 12018355,
+  "allowed_tracked_bytes": 22329724,
+  "approved_by": "repository-owner",
+  "base_ref": "54e04c8826fe5f9b9c14d03c07929111738340a4",
+  "changed_generated_bytes": 12018355,
+  "changed_generated_files": 238,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "864d0fa3a4f23dbe3b782888b0602be677d3161c76aaea2ebc95243ca3dea867",
+  "reason": "Admit the bounded aoa-dashboard contour and synchronize center stats reference evidence with the resulting registry population.",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 22329724,
+  "tracked_bytes_max": 25165824
+}
