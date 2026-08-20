@@ -150,6 +150,13 @@ DOCUMENTED_REGISTRY_V2 = {
         "maturity": "bootstrap",
         "relation": "derived-layer",
     },
+    "aoa-dashboard": {
+        "role": "goal-space-operator-derived-layer",
+        "kind": "derived",
+        "visibility": "public",
+        "maturity": "bootstrap",
+        "relation": "derived-layer",
+    },
     "aoa-routing": {
         "role": "routing-predecessor",
         "kind": "derived",

@@ -15,11 +15,13 @@
 - [AOA-CENTER-D-0001 Decision Note: `aoa-stats` Is Part Of The Public Federation Contour](../AOA-CENTER-D-0001-aoa-stats-public-layer.md) (`docs/decisions/AOA-CENTER-D-0001-aoa-stats-public-layer.md`)
 - [AOA-CENTER-D-0002 ADR: Federation Release Contract](../AOA-CENTER-D-0002-federation-release-contract.md) (`docs/decisions/AOA-CENTER-D-0002-federation-release-contract.md`)
 - [AOA-CENTER-D-0011 Ecosystem Registry v2 Landing](../AOA-CENTER-D-0011-ecosystem-registry-v2-landing.md) (`docs/decisions/AOA-CENTER-D-0011-ecosystem-registry-v2-landing.md`)
+- [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
 
 ## federation contract
 
 - [AOA-CENTER-D-0002 ADR: Federation Release Contract](../AOA-CENTER-D-0002-federation-release-contract.md) (`docs/decisions/AOA-CENTER-D-0002-federation-release-contract.md`)
 - [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
+- [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
 
 ## repository routing
 
@@ -28,6 +30,7 @@
 - [AOA-CENTER-D-0005 Decision Note: Questbook Keeps A Model Spine And Registry-Backed Route Tables](../AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md) (`docs/decisions/AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md`)
 - [AOA-CENTER-D-0010 Docs Root Source Tightening](../AOA-CENTER-D-0010-docs-root-source-tightening.md) (`docs/decisions/AOA-CENTER-D-0010-docs-root-source-tightening.md`)
 - [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
+- [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
 
 ## root surface
 
@@ -62,6 +65,7 @@
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
 - [AOA-CENTER-D-0037 Keep Training And Model Memory Disabled](../AOA-CENTER-D-0037-keep-training-model-memory-disabled.md) (`docs/decisions/AOA-CENTER-D-0037-keep-training-model-memory-disabled.md`)
 - [AOA-CENTER-D-0038 Select Reduced Federated Memory Organ R1](../AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md) (`docs/decisions/AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md`)
+- [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
 
 ## root district
 
@@ -137,6 +141,7 @@
 - [AOA-CENTER-D-0035 Admit The Routing Owner Switch](../AOA-CENTER-D-0035-admit-routing-owner-switch.md) (`docs/decisions/AOA-CENTER-D-0035-admit-routing-owner-switch.md`)
 - [AOA-CENTER-D-0037 Keep Training And Model Memory Disabled](../AOA-CENTER-D-0037-keep-training-model-memory-disabled.md) (`docs/decisions/AOA-CENTER-D-0037-keep-training-model-memory-disabled.md`)
 - [AOA-CENTER-D-0038 Select Reduced Federated Memory Organ R1](../AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md) (`docs/decisions/AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md`)
+- [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
 
 ## roadmap/direction
 

@@ -133,7 +133,7 @@ surfaces keep checked landings, validators, owner boundaries, and stop-lines.
 | Field | Direction |
 |---|---|
 | Current posture | Ecosystem registry v2, supporting inventory, center entry map, AGENTS mesh, and docs guardrails keep human and machine entry aligned. |
-| Next honest move | Keep registry v2 stable through the root-document pass; consider registry v3 only after remaining root surfaces and technical districts finish review. |
+| Next honest move | Keep registry v2 as the current contract while real owner descent lands bounded entries such as `aoa-dashboard` with source contract, owner routes, validators, and GitHub evidence; keep private access, runtime, proof, and acceptance admission separate, and defer registry v3 until remaining root surfaces and technical districts finish review. |
 | Guardrail | Generated capsules reflect source docs and validators; they do not author center truth. |
 
 ## Horizon: Boundary Bridge

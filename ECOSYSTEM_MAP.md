@@ -65,6 +65,7 @@ If the question is "does the center have authority to say this?", return to
 | Repository | Role | Owns | Does not own | Current maturity | Growth direction |
 |---|---|---|---|---|---|
 | `aoa-stats` | derived observability layer | machine-first summary surfaces, derived windows, shared stats receipt envelopes, and evidence-linked read models | workflow meaning, proof meaning, route authority, quest authority, score authority | bootstrap | seed derived observability layer |
+| `aoa-dashboard` | Goal Space/operator derived layer | owner-bounded Goal Anchor, obligation, handoff, freshness, missingness, provenance, correlation, Pressure Inbox, and actor-activity projections plus non-executing annotations and action intents | roles, mandates, responsibility, wake, task DAG, RunPlan, runtime lifecycle, proof, memory meaning, stats meaning, KAG authority, owner acceptance, or execution | bootstrap | seed derived operator surface; any future access contour remains separately gated |
 | `aoa-routing` | deprecated routing predecessor | preserved routing history, rollback evidence, and maintenance-only compatibility while the repository remains unarchived | new dispatch authority, new route contracts, or primary authored truth of other layers | deprecated | preserve reversibility; archive only after separate operator approval |
 | `aoa-kag` | derived knowledge substrate | provenance-aware lifts, graph-ready projections, retrieval-ready structures, and bounded federation readiness surfaces derived from authoritative sources | source-authored truth of ToS or other layer-owned corpora | bootstrap | seed derived knowledge substrate |
 
@@ -97,10 +98,13 @@ outside ecosystem registry v2 by design and appear in the companion
 machine-readable supporting inventory at
 `generated/federation_supporting_inventory.min.json`.
 
-Registry v2 should stay stable during the current root-document pass. A future
-registry v3 belongs after the remaining root surfaces and technical districts
-finish their review, so the new contract can reflect the full repository shape
-rather than one document's wording.
+Registry v2 remains the current registry contract. Real owner descent may add a
+bounded public organ entry when its source contract, owner routes, validator,
+and landing evidence exist; that entry does not imply private access, runtime,
+proof, or acceptance admission. A future registry v3 belongs after the
+remaining root surfaces and technical districts finish their review, so the
+new contract can reflect the full repository shape rather than one document's
+wording.
 
 ## Reading rule
 
