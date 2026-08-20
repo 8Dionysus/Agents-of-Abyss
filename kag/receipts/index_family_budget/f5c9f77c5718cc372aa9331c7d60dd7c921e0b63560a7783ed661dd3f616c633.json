@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 12628643,
+  "allowed_tracked_bytes": 22339897,
+  "approved_by": "repository-owner",
+  "base_ref": "54e04c8826fe5f9b9c14d03c07929111738340a4",
+  "changed_generated_bytes": 12628643,
+  "changed_generated_files": 252,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "f5c9f77c5718cc372aa9331c7d60dd7c921e0b63560a7783ed661dd3f616c633",
+  "reason": "D1 center derived-layer federation rule and organ-contract owner route closure",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 22339897,
+  "tracked_bytes_max": 25165824
+}
