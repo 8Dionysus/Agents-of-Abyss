@@ -26,6 +26,8 @@
 
 - [AOA-CENTER-D-0018 Organ Contract Center Law](../AOA-CENTER-D-0018-organ-contract-center-law.md) (`docs/decisions/AOA-CENTER-D-0018-organ-contract-center-law.md`)
 - [AOA-CENTER-D-0032 Organ Access Admission Law](../AOA-CENTER-D-0032-organ-access-admission-law.md) (`docs/decisions/AOA-CENTER-D-0032-organ-access-admission-law.md`)
+- [AOA-CENTER-D-0037 Keep Training And Model Memory Disabled](../AOA-CENTER-D-0037-keep-training-model-memory-disabled.md) (`docs/decisions/AOA-CENTER-D-0037-keep-training-model-memory-disabled.md`)
+- [AOA-CENTER-D-0038 Select Reduced Federated Memory Organ R1](../AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md) (`docs/decisions/AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md`)
 
 ## cross-mechanic
 
@@ -50,6 +52,10 @@
 ## distillation
 
 - [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
+
+## experience
+
+- [AOA-CENTER-D-0036 Hash-Bound Operator Decision Envelope](../AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md) (`docs/decisions/AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md`)
 
 ## growth-cycle
 
