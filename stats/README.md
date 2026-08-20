@@ -9,7 +9,7 @@ stats organ.
 
 | Measurement | Question | Reference value |
 | --- | --- | --- |
-| `Agents-of-Abyss/public-registry-active-maturity-ratio` | What fraction of entries in the current public AoA ecosystem registry v2 carry the center-declared maturity label `active`? | `5 / 12` at evidence revision `62d62bd5f18d94debf85884b0abe91f47a6de16b` |
+| `Agents-of-Abyss/public-registry-active-maturity-ratio` | What fraction of entries in the current public AoA ecosystem registry v2 carry the center-declared maturity label `active`? | `5 / 13` at evidence revision `5983c45e877786923ce22f497216958c0d925ce5` |
 
 The population is a census of the unique records in `repos[]` from the
 owner-validated registry v2. Supporting consumers, public projections outside

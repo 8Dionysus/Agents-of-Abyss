@@ -71,7 +71,7 @@ class LocalStatsPortTests(unittest.TestCase):
 
         self.assertEqual(derived["status"], "observed")
         self.assertEqual(derived["numerator"], 0)
-        self.assertEqual(derived["denominator"], 12)
+        self.assertEqual(derived["denominator"], 13)
         self.assertEqual(derived["ratio"], 0.0)
 
     def test_supporting_inventory_does_not_enter_registry_population(self) -> None:
