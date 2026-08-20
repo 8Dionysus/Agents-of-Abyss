@@ -34,6 +34,9 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Added
 
+- `aoa-dashboard` is now registered as a bounded public bootstrap derived organ
+  for Goal Space/operator projections, with explicit source-owner separation,
+  SDK discovery, public route mapping, and no private organ-access admission.
 - Decision `AOA-CENTER-D-0038` selects Reduced Federated Two-Speed Organ R1:
   reviewed public pull-only is the admitted core, while selective proactive
   and agent-local contours remain disabled and separately gated.
