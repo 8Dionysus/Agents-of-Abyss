@@ -4,27 +4,27 @@
   "contract_version": "1.0.0",
   "measurement_id": "Agents-of-Abyss/public-registry-active-maturity-ratio",
   "writer_repo": "Agents-of-Abyss",
-  "observation_id": "Agents-of-Abyss:public-registry-active-maturity-ratio:62d62bd5f18d94de",
-  "observed_at": "2026-07-14T03:25:17Z",
+  "observation_id": "Agents-of-Abyss:public-registry-active-maturity-ratio:5983c45e87778692",
+  "observed_at": "2026-08-20T21:05:01Z",
   "object_ref": {
     "kind": "ecosystem-registry-v2-entry",
-    "id": "ecosystem-registry-v2:62d62bd5f18d94de",
-    "version": "62d62bd5f18d94debf85884b0abe91f47a6de16b"
+    "id": "ecosystem-registry-v2:5983c45e87778692",
+    "version": "5983c45e877786923ce22f497216958c0d925ce5"
   },
   "population": {
-    "id": "public-ecosystem-registry-v2:62d62bd5f18d94de",
+    "id": "public-ecosystem-registry-v2:5983c45e87778692",
     "definition_ref": "stats/port.manifest.json#/measurements/0/population",
-    "size": 12
+    "size": 13
   },
   "sample": {
-    "size": 12,
+    "size": 13,
     "selection": "census of unique repos records in the owner-validated public AoA ecosystem registry v2"
   },
   "cohort": null,
   "window": {
-    "id": "source-revision:62d62bd5f18d94debf85884b0abe91f47a6de16b",
-    "start": "2026-07-14T03:25:17Z",
-    "end": "2026-07-14T03:25:17Z",
+    "id": "source-revision:5983c45e877786923ce22f497216958c0d925ce5",
+    "start": "2026-08-20T21:05:01Z",
+    "end": "2026-08-20T21:05:01Z",
     "temporality": "instant"
   },
   "dimensions": {},
@@ -32,13 +32,13 @@
     "status": "observed",
     "kind": "ratio",
     "unit": "1",
-    "number": 0.4166666666666667,
+    "number": 0.38461538461538464,
     "numerator": 5,
-    "denominator": 12
+    "denominator": 13
   },
   "uncertainty": {
     "status": "not_applicable",
-    "sample_size": 12,
+    "sample_size": 13,
     "method": "not_applicable",
     "reason": "The reference observation is a census of the complete owner-validated registry v2 population."
   },
@@ -62,7 +62,7 @@
       }
     ],
     "derivation_ref": "stats/README.md#current-reference-measurement",
-    "source_revision": "62d62bd5f18d94debf85884b0abe91f47a6de16b"
+    "source_revision": "5983c45e877786923ce22f497216958c0d925ce5"
   },
   "reporting_rule": {
     "id": "Agents-of-Abyss/public-registry-active-maturity-ratio/reference-census",
@@ -76,7 +76,7 @@
   },
   "progress": {
     "state": "terminal",
-    "completed": 12,
-    "total": 12
+    "completed": 13,
+    "total": 13
   }
 }

@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 12503535,
+  "allowed_tracked_bytes": 22338470,
+  "approved_by": "repository-owner",
+  "base_ref": "54e04c8826fe5f9b9c14d03c07929111738340a4",
+  "changed_generated_bytes": 12503535,
+  "changed_generated_files": 249,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "bc3eb68cbf1c02d3caac5d4897728ff82ecd7b2666fd034d9630e00f87e99bd4",
+  "reason": "D1 dashboard derived-organ layer ownership, changelog, and immutable admission evidence",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 22338470,
+  "tracked_bytes_max": 25165824
+}

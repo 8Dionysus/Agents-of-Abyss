@@ -48,6 +48,22 @@ Purpose:
 Main question:
 - what movement is visible across owner-owned evidence without replacing it?
 
+## Goal Space/operator derived layer
+
+Repository: `aoa-dashboard`
+
+Purpose:
+- project owner-bounded Goal Space and operator read models with provenance,
+  freshness, missingness, correlation, and actor activity kept visible
+- carry non-executing annotations and deferred action intents without becoming
+  the role, routing, runtime, proof, memory, stats, KAG, or acceptance owner
+- give humans and agents a legible operator surface while preserving the
+  stronger owner routes behind each projection
+
+Main question:
+- what is the current operator view of owner-owned work, and what remains
+  unknown or deferred?
+
 ## Navigation layer
 
 Repository: `aoa-sdk`
