@@ -47,6 +47,7 @@ POLIS_CONTRACTS = (
     ),
     ("experience_governance_packet", "experience_governance_packet_v1.json"),
     ("experience_governance_state", "experience_governance_state_v1.json"),
+    ("operator_decision_packet", "operator_decision_packet_v1.json"),
     ("experience_operator_decision", "experience_operator_decision_v1.json"),
     ("experience_policy_change", "experience_policy_change_v1.json"),
     ("experience_policy_precedent", "experience_policy_precedent_v1.json"),

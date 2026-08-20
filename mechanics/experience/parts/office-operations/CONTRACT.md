@@ -11,6 +11,8 @@ This part owns sovereign office posture, operator console route, assistant relea
 ## Allowed outputs
 
 - office contour, operator stop-line, role-pair handoff, assistant invariant, and owner-local office request.
+- an emergency-stay-only `experience_operator_decision_v1`; do not widen it
+  into the generic C25 decision envelope owned by Governance Polis.
 - Center-side request packets, compatibility notes, and stop-lines.
 - Inert projections that explicitly name the owner-local gate required before activation.
 

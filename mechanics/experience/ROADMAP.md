@@ -17,6 +17,9 @@ repositories decide what they can honestly activate.
 - Keep `PROVENANCE.md` as the only active bridge back to historical accounting.
 - Keep validators, tests, schemas, and examples aligned with the active part
   that uses them.
+- Keep C25 operator decisions bound to exact owner-resolved artifact manifests;
+  separated AI review remains advisory and owner effects remain independently
+  gated.
 - Keep owner-local adoption links absent until sibling repositories land real
   proof or owner acceptance.
 
@@ -25,6 +28,8 @@ repositories decide what they can honestly activate.
 - Add owner-local adoption links only when sibling repositories land real proof
   or an accepted owner-local receipt.
 - Tighten part contracts where owner-request stop-lines become more specific.
+- Add owner-local C25 consumers only when the payload and effect owners can
+  resolve exact manifests, validate their extension, and prove rollback.
 - Keep incoming waves flowing through distillation instead of rebuilding flat docs.
 - Update this roadmap when a mechanic change alters future work, route shape, or owner pressure.
 

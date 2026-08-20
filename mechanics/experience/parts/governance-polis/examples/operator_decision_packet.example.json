@@ -1,0 +1,79 @@
+{
+  "schema_version": "operator_decision_packet_v1",
+  "contract_id": "C25",
+  "packet_id": "Agents-of-Abyss:operator-decision:active-organ-lab-v1",
+  "status": "operator_decided",
+  "created_at": "2026-07-28T23:00:00Z",
+  "constitutional_owner": "Agents-of-Abyss",
+  "artifact_set_id": "aoa-memo:active-organ:lab-candidate-v1",
+  "artifact_manifest_ref": "aoa-memo:artifact-manifest:active-organ-lab-candidate-v1",
+  "artifact_manifest_sha256": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "payload_owner": {
+    "owner_repo": "aoa-memo",
+    "payload_kind": "active-organ policy candidate",
+    "payload_schema_ref": "aoa-memo:C01-C17:active-organ-contracts-v1",
+    "payload_validation_ref": "aoa-memo:validation:active-organ-candidate-v1",
+    "effect_owner_ref": "aoa-sdk:active-organ-admission"
+  },
+  "review_funnel": {
+    "evidence_review_ref": "review:active-organ:evidence:run-001",
+    "authority_review_ref": "review:active-organ:authority:run-002",
+    "roles_separated": true,
+    "ai_advisory_only": true,
+    "final_decision_actor": "sole_operator",
+    "same_ai_run_may_finalize_and_widen_authority": false
+  },
+  "operator_ref": "operator:sole-owner",
+  "operator_decided_at": "2026-07-28T23:05:00Z",
+  "decision": "narrow",
+  "decision_scope": "narrowed_items",
+  "narrowed_items": [
+    {
+      "artifact_ref": "aoa-memo:active-organ:policy:recall-v1",
+      "artifact_sha256": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "disposition": "include"
+    },
+    {
+      "artifact_ref": "aoa-memo:active-organ:policy:ambient-write-v1",
+      "artifact_sha256": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+      "disposition": "exclude"
+    }
+  ],
+  "decision_reason_ref": "review:active-organ:operator-rationale:v1",
+  "evidence_refs": [
+    "aoa-evals:C22:active-organ-abc-v1",
+    "aoa-evals:C23:active-organ-run-set-v1"
+  ],
+  "condition_refs": [
+    "aoa-sdk:C07:bounded-observation-only",
+    "aoa-sdk:C24:rollback-before-widening"
+  ],
+  "binding": {
+    "manifest_resolution": "owner_resolved",
+    "hash_match_required": true,
+    "mismatch_or_unresolved_outcome": "no_decision"
+  },
+  "followup": {
+    "next_owner_ref": "aoa-sdk:active-organ-admission",
+    "owner_revalidation_required": true,
+    "automatic_effect": false,
+    "packet_effect": "operator_decision_only"
+  },
+  "content_minimization": {
+    "refs_only": true,
+    "prompt_content_persisted": false,
+    "memory_content_persisted": false,
+    "credential_content_persisted": false
+  },
+  "authority": {
+    "sole_operator_decision": true,
+    "ai_final_decision_authority": false,
+    "ai_authority_widening": false,
+    "center_payload_meaning_authority": false,
+    "named_owner_payload_authority": true,
+    "proof_verdict_authority": false,
+    "memory_semantic_authority": false,
+    "routing_authority": false,
+    "production_authority": "none"
+  }
+}

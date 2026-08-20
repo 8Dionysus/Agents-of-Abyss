@@ -53,6 +53,20 @@ def load_example() -> dict[str, object]:
     )
 
 
+def load_operator_packet() -> dict[str, object]:
+    return json.loads(
+        (
+            ROOT
+            / "mechanics"
+            / "experience"
+            / "parts"
+            / "governance-polis"
+            / "examples"
+            / "operator_decision_packet.example.json"
+        ).read_text()
+    )
+
+
 def test_experience_polis_constitution_validator_passes() -> None:
     result = subprocess.run(
         [
@@ -134,3 +148,87 @@ def test_experience_polis_constitution_requires_all_owner_repos() -> None:
 
     with pytest.raises(validator.ValidationError, match="owner_split is missing"):
         validator.validate_example(bad_flow)
+
+
+@pytest.mark.parametrize(
+    "decision",
+    ["approve", "reject", "defer", "narrow", "quarantine"],
+)
+def test_c25_supports_exact_operator_decisions(decision: str) -> None:
+    validator = load_validator()
+    packet = load_operator_packet()
+    if decision != "narrow":
+        packet["decision"] = decision
+        packet["decision_scope"] = "artifact_set"
+        packet["narrowed_items"] = []
+
+    validator.validate_operator_decision_packet(
+        packet,
+        resolved_manifest_sha256=packet["artifact_manifest_sha256"],
+        resolved_artifact_set_id=packet["artifact_set_id"],
+    )
+
+
+def test_c25_unresolved_or_mismatched_manifest_means_no_decision() -> None:
+    validator = load_validator()
+    packet = load_operator_packet()
+
+    with pytest.raises(validator.ValidationError, match="unresolved"):
+        validator.validate_operator_decision_packet(
+            packet,
+            resolved_manifest_sha256=None,
+            resolved_artifact_set_id=packet["artifact_set_id"],
+        )
+    with pytest.raises(validator.ValidationError, match="exact bytes"):
+        validator.validate_operator_decision_packet(
+            packet,
+            resolved_manifest_sha256="sha256:" + "9" * 64,
+            resolved_artifact_set_id=packet["artifact_set_id"],
+        )
+    with pytest.raises(validator.ValidationError, match="owner-resolved manifest"):
+        validator.validate_operator_decision_packet(
+            packet,
+            resolved_manifest_sha256=packet["artifact_manifest_sha256"],
+            resolved_artifact_set_id="aoa-memo:active-organ:different-candidate-v1",
+        )
+
+
+def test_c25_requires_procedurally_separated_ai_review_runs() -> None:
+    validator = load_validator()
+    packet = load_operator_packet()
+    review_funnel = packet["review_funnel"]
+    assert isinstance(review_funnel, dict)
+    review_funnel["authority_review_ref"] = review_funnel["evidence_review_ref"]
+
+    with pytest.raises(validator.ValidationError, match="distinct"):
+        validator.validate_operator_decision_packet(
+            packet,
+            resolved_manifest_sha256=packet["artifact_manifest_sha256"],
+            resolved_artifact_set_id=packet["artifact_set_id"],
+        )
+
+
+def test_c25_cannot_apply_effect_or_absorb_payload_authority() -> None:
+    validator = load_validator()
+    packet = load_operator_packet()
+
+    assert packet["followup"] == {
+        "next_owner_ref": "aoa-sdk:active-organ-admission",
+        "owner_revalidation_required": True,
+        "automatic_effect": False,
+        "packet_effect": "operator_decision_only",
+    }
+    authority = packet["authority"]
+    assert isinstance(authority, dict)
+    assert authority["sole_operator_decision"] is True
+    assert authority["ai_final_decision_authority"] is False
+    assert authority["ai_authority_widening"] is False
+    assert authority["center_payload_meaning_authority"] is False
+    assert authority["named_owner_payload_authority"] is True
+    assert authority["production_authority"] == "none"
+
+    validator.validate_operator_decision_packet(
+        packet,
+        resolved_manifest_sha256=packet["artifact_manifest_sha256"],
+        resolved_artifact_set_id=packet["artifact_set_id"],
+    )

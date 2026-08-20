@@ -1878,6 +1878,22 @@
       "kind": "example",
       "part": "governance-polis",
       "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/operator_decision_packet.example.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/operator_decision_packet.example.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/examples/operator_decision_packet.negative-examples.json",
+      "path": "mechanics/experience/parts/governance-polis/examples/operator_decision_packet.negative-examples.json",
+      "legacy_named": false
+    },
+    {
+      "kind": "example",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
       "old_path": "mechanics/experience/examples/governance_case_queue_v1.example.json",
       "path": "mechanics/experience/parts/governance-polis/examples/governance_case_queue_v1.example.json",
       "legacy_named": true
@@ -2034,6 +2050,14 @@
       "path": "mechanics/experience/parts/governance-polis/schemas/experience-polis-constitution.schema.json",
       "legacy_named": true,
       "renamed_from": "experience-wave4-polis-constitution.schema.json"
+    },
+    {
+      "kind": "schema",
+      "part": "governance-polis",
+      "status": "active-part-artifact",
+      "old_path": "mechanics/experience/schemas/operator_decision_packet_v1.json",
+      "path": "mechanics/experience/parts/governance-polis/schemas/operator_decision_packet_v1.json",
+      "legacy_named": false
     },
     {
       "kind": "schema",

@@ -37,6 +37,8 @@ Experience center contracts, release posture, stop-lines, adoption route languag
 ### Outputs
 
 - Reviewable contract, owner adoption request, stop-line, proof route, memory route, or inert projection.
+- Hash-bound constitutional operator decision envelope whose payload meaning
+  and effects remain with named owners.
 - No live workspace runtime until the stronger owner lands and validates it.
 
 ### Must not claim
@@ -45,6 +47,8 @@ Experience center contracts, release posture, stop-lines, adoption route languag
 - hidden memory sovereignty or recall authority
 - live router engine authority
 - owner-local activation, office installation, or adoption
+- AI final-decision authority, automatic effect, or owner payload authority
+  from a center operator envelope
 - proof verdicts, certification truth, or regression evidence before `aoa-evals` lands them
 - recurring choreography, helper availability, derived-summary proof, executable skill truth, or reusable technique truth
 - `aoa-kag` projections as source-authored meaning
