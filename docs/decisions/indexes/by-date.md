@@ -84,3 +84,12 @@
 ## 2026-07-27
 
 - [AOA-CENTER-D-0035 Admit The Routing Owner Switch](../AOA-CENTER-D-0035-admit-routing-owner-switch.md) (`docs/decisions/AOA-CENTER-D-0035-admit-routing-owner-switch.md`)
+
+## 2026-07-28
+
+- [AOA-CENTER-D-0036 Hash-Bound Operator Decision Envelope](../AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md) (`docs/decisions/AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md`)
+
+## 2026-07-29
+
+- [AOA-CENTER-D-0037 Keep Training And Model Memory Disabled](../AOA-CENTER-D-0037-keep-training-model-memory-disabled.md) (`docs/decisions/AOA-CENTER-D-0037-keep-training-model-memory-disabled.md`)
+- [AOA-CENTER-D-0038 Select Reduced Federated Memory Organ R1](../AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md) (`docs/decisions/AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md`)

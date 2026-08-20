@@ -1,0 +1,365 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa.local/Agents-of-Abyss/mechanics/experience/parts/governance-polis/schemas/operator_decision_packet_v1.json",
+  "title": "OperatorDecisionPacket V1",
+  "description": "C25 binds one sole-operator decision to an exact artifact manifest after procedurally separated AI review. It carries a constitutional envelope only; named owners retain payload meaning and effect admission.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "contract_id",
+    "packet_id",
+    "status",
+    "created_at",
+    "constitutional_owner",
+    "artifact_set_id",
+    "artifact_manifest_ref",
+    "artifact_manifest_sha256",
+    "payload_owner",
+    "review_funnel",
+    "operator_ref",
+    "operator_decided_at",
+    "decision",
+    "decision_scope",
+    "narrowed_items",
+    "decision_reason_ref",
+    "evidence_refs",
+    "condition_refs",
+    "binding",
+    "followup",
+    "content_minimization",
+    "authority"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "operator_decision_packet_v1"
+    },
+    "contract_id": {
+      "const": "C25"
+    },
+    "packet_id": {
+      "type": "string",
+      "pattern": "^Agents-of-Abyss:operator-decision:[A-Za-z0-9._:-]+$"
+    },
+    "status": {
+      "const": "operator_decided"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "constitutional_owner": {
+      "const": "Agents-of-Abyss"
+    },
+    "artifact_set_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_manifest_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_manifest_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "payload_owner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner_repo",
+        "payload_kind",
+        "payload_schema_ref",
+        "payload_validation_ref",
+        "effect_owner_ref"
+      ],
+      "properties": {
+        "owner_repo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload_kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload_schema_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload_validation_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "effect_owner_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "review_funnel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_review_ref",
+        "authority_review_ref",
+        "roles_separated",
+        "ai_advisory_only",
+        "final_decision_actor",
+        "same_ai_run_may_finalize_and_widen_authority"
+      ],
+      "properties": {
+        "evidence_review_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authority_review_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "roles_separated": {
+          "const": true
+        },
+        "ai_advisory_only": {
+          "const": true
+        },
+        "final_decision_actor": {
+          "const": "sole_operator"
+        },
+        "same_ai_run_may_finalize_and_widen_authority": {
+          "const": false
+        }
+      }
+    },
+    "operator_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator_decided_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "decision": {
+      "enum": [
+        "approve",
+        "reject",
+        "defer",
+        "narrow",
+        "quarantine"
+      ]
+    },
+    "decision_scope": {
+      "enum": [
+        "artifact_set",
+        "narrowed_items"
+      ]
+    },
+    "narrowed_items": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "artifact_ref",
+          "artifact_sha256",
+          "disposition"
+        ],
+        "properties": {
+          "artifact_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact_sha256": {
+            "$ref": "#/$defs/sha256"
+          },
+          "disposition": {
+            "enum": [
+              "include",
+              "exclude"
+            ]
+          }
+        }
+      }
+    },
+    "decision_reason_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "condition_refs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifest_resolution",
+        "hash_match_required",
+        "mismatch_or_unresolved_outcome"
+      ],
+      "properties": {
+        "manifest_resolution": {
+          "const": "owner_resolved"
+        },
+        "hash_match_required": {
+          "const": true
+        },
+        "mismatch_or_unresolved_outcome": {
+          "const": "no_decision"
+        }
+      }
+    },
+    "followup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "next_owner_ref",
+        "owner_revalidation_required",
+        "automatic_effect",
+        "packet_effect"
+      ],
+      "properties": {
+        "next_owner_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owner_revalidation_required": {
+          "const": true
+        },
+        "automatic_effect": {
+          "const": false
+        },
+        "packet_effect": {
+          "const": "operator_decision_only"
+        }
+      }
+    },
+    "supersedes_packet_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "content_minimization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "refs_only",
+        "prompt_content_persisted",
+        "memory_content_persisted",
+        "credential_content_persisted"
+      ],
+      "properties": {
+        "refs_only": {
+          "const": true
+        },
+        "prompt_content_persisted": {
+          "const": false
+        },
+        "memory_content_persisted": {
+          "const": false
+        },
+        "credential_content_persisted": {
+          "const": false
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sole_operator_decision",
+        "ai_final_decision_authority",
+        "ai_authority_widening",
+        "center_payload_meaning_authority",
+        "named_owner_payload_authority",
+        "proof_verdict_authority",
+        "memory_semantic_authority",
+        "routing_authority",
+        "production_authority"
+      ],
+      "properties": {
+        "sole_operator_decision": {
+          "const": true
+        },
+        "ai_final_decision_authority": {
+          "const": false
+        },
+        "ai_authority_widening": {
+          "const": false
+        },
+        "center_payload_meaning_authority": {
+          "const": false
+        },
+        "named_owner_payload_authority": {
+          "const": true
+        },
+        "proof_verdict_authority": {
+          "const": false
+        },
+        "memory_semantic_authority": {
+          "const": false
+        },
+        "routing_authority": {
+          "const": false
+        },
+        "production_authority": {
+          "const": "none"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "narrow"
+          }
+        },
+        "required": [
+          "decision"
+        ]
+      },
+      "then": {
+        "properties": {
+          "decision_scope": {
+            "const": "narrowed_items"
+          },
+          "narrowed_items": {
+            "minItems": 1
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "decision_scope": {
+            "const": "artifact_set"
+          },
+          "narrowed_items": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    }
+  }
+}

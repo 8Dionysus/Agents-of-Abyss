@@ -1,0 +1,78 @@
+{
+  "schema_version": "operator_decision_packet_negative_examples_v1",
+  "cases": [
+    {
+      "case_id": "missing_operator_ref",
+      "delete": [
+        "/operator_ref"
+      ],
+      "expected_error": "operator_ref"
+    },
+    {
+      "case_id": "manifest_hash_mismatch",
+      "resolved_manifest_sha256": "sha256:9999999999999999999999999999999999999999999999999999999999999999",
+      "expected_error": "artifact_manifest_sha256"
+    },
+    {
+      "case_id": "artifact_set_id_mismatch",
+      "resolved_artifact_set_id": "aoa-memo:active-organ:different-candidate-v1",
+      "expected_error": "artifact_set_id"
+    },
+    {
+      "case_id": "emergency_stay_schema_reuse",
+      "set": {
+        "/decision": "emergency_stay"
+      },
+      "expected_error": "decision"
+    },
+    {
+      "case_id": "same_ai_review_run",
+      "set": {
+        "/review_funnel/authority_review_ref": "review:active-organ:evidence:run-001"
+      },
+      "expected_error": "review_funnel"
+    },
+    {
+      "case_id": "ai_final_decision_authority",
+      "set": {
+        "/authority/ai_final_decision_authority": true
+      },
+      "expected_error": "authority/ai_final_decision_authority"
+    },
+    {
+      "case_id": "ai_authority_widening",
+      "set": {
+        "/authority/ai_authority_widening": true
+      },
+      "expected_error": "authority/ai_authority_widening"
+    },
+    {
+      "case_id": "narrow_without_items",
+      "set": {
+        "/narrowed_items": []
+      },
+      "expected_error": "narrowed_items"
+    },
+    {
+      "case_id": "approve_with_narrowed_scope",
+      "set": {
+        "/decision": "approve"
+      },
+      "expected_error": "decision_scope"
+    },
+    {
+      "case_id": "center_claims_payload_meaning",
+      "set": {
+        "/authority/center_payload_meaning_authority": true
+      },
+      "expected_error": "authority/center_payload_meaning_authority"
+    },
+    {
+      "case_id": "automatic_effect",
+      "set": {
+        "/followup/automatic_effect": true
+      },
+      "expected_error": "followup/automatic_effect"
+    }
+  ]
+}

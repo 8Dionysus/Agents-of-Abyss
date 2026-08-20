@@ -3,12 +3,14 @@
 
 from __future__ import annotations
 
+import copy
+from datetime import datetime
 import json
 import sys
 from pathlib import Path
 from typing import Any
 
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 
 
 def _repo_root() -> Path:
@@ -37,6 +39,33 @@ EXAMPLE_PATH = (
     / "governance-polis"
     / "examples"
     / "experience_polis_constitution.example.json"
+)
+OPERATOR_PACKET_SCHEMA_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "governance-polis"
+    / "schemas"
+    / "operator_decision_packet_v1.json"
+)
+OPERATOR_PACKET_EXAMPLE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "governance-polis"
+    / "examples"
+    / "operator_decision_packet.example.json"
+)
+OPERATOR_PACKET_NEGATIVE_PATH = (
+    ROOT
+    / "mechanics"
+    / "experience"
+    / "parts"
+    / "governance-polis"
+    / "examples"
+    / "operator_decision_packet.negative-examples.json"
 )
 
 EXPECTED_SOURCE_SEEDS = [
@@ -142,7 +171,13 @@ def require_list(value: Any, label: str) -> list[Any]:
 def require_files() -> None:
     missing = [
         path.relative_to(ROOT).as_posix()
-        for path in (SCHEMA_PATH, EXAMPLE_PATH)
+        for path in (
+            SCHEMA_PATH,
+            EXAMPLE_PATH,
+            OPERATOR_PACKET_SCHEMA_PATH,
+            OPERATOR_PACKET_EXAMPLE_PATH,
+            OPERATOR_PACKET_NEGATIVE_PATH,
+        )
         if not path.exists()
     ]
     if missing:
@@ -259,6 +294,184 @@ def validate_example(flow: dict[str, Any]) -> None:
         fail("owner_split is missing: " + ", ".join(sorted(missing_repos)))
 
 
+def _schema_error(
+    schema: dict[str, Any],
+    payload: dict[str, Any],
+) -> str | None:
+    Draft202012Validator.check_schema(schema)
+    errors = sorted(
+        Draft202012Validator(
+            schema,
+            format_checker=FormatChecker(),
+        ).iter_errors(payload),
+        key=lambda error: [str(part) for part in error.absolute_path],
+    )
+    if not errors:
+        return None
+    error = errors[0]
+    path = "/".join(str(part) for part in error.absolute_path) or "<root>"
+    return f"{path}: {error.message}"
+
+
+def _parse_timestamp(value: str) -> datetime:
+    return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
+def validate_operator_decision_packet(
+    packet: dict[str, Any],
+    *,
+    resolved_manifest_sha256: str | None,
+    resolved_artifact_set_id: str | None,
+    schema: dict[str, Any] | None = None,
+) -> None:
+    active_schema = schema or require_dict(
+        read_json(OPERATOR_PACKET_SCHEMA_PATH),
+        "operator decision packet schema",
+    )
+    schema_problem = _schema_error(active_schema, packet)
+    if schema_problem:
+        fail(schema_problem)
+
+    if resolved_manifest_sha256 is None:
+        fail(
+            "artifact_manifest_sha256 is unresolved; missing owner resolution "
+            "means no decision"
+        )
+    if packet["artifact_manifest_sha256"] != resolved_manifest_sha256:
+        fail(
+            "artifact_manifest_sha256 does not match owner-resolved exact bytes; "
+            "outcome is no decision"
+        )
+    if resolved_artifact_set_id is None:
+        fail(
+            "artifact_set_id is unresolved; missing owner resolution means "
+            "no decision"
+        )
+    if packet["artifact_set_id"] != resolved_artifact_set_id:
+        fail(
+            "artifact_set_id does not match the owner-resolved manifest; "
+            "outcome is no decision"
+        )
+
+    created_at = _parse_timestamp(packet["created_at"])
+    decided_at = _parse_timestamp(packet["operator_decided_at"])
+    if decided_at < created_at:
+        fail("operator_decided_at must not precede created_at")
+
+    review = require_dict(packet["review_funnel"], "review_funnel")
+    if review["evidence_review_ref"] == review["authority_review_ref"]:
+        fail("review_funnel requires distinct evidence and authority AI runs")
+
+    narrowed_items = require_list(packet["narrowed_items"], "narrowed_items")
+    artifact_refs = [
+        require_dict(item, f"narrowed_items[{index}]").get("artifact_ref")
+        for index, item in enumerate(narrowed_items)
+    ]
+    if len(artifact_refs) != len(set(artifact_refs)):
+        fail("narrowed_items artifact_ref values must be unique")
+
+    payload_owner = require_dict(packet["payload_owner"], "payload_owner")
+    followup = require_dict(packet["followup"], "followup")
+    if followup["next_owner_ref"] != payload_owner["effect_owner_ref"]:
+        fail("followup/next_owner_ref must equal payload_owner/effect_owner_ref")
+
+
+def _pointer_parts(pointer: str) -> list[str]:
+    if not pointer.startswith("/"):
+        fail(f"negative case pointer must start with '/': {pointer}")
+    return [
+        part.replace("~1", "/").replace("~0", "~")
+        for part in pointer.lstrip("/").split("/")
+    ]
+
+
+def _pointer_parent(payload: Any, pointer: str) -> tuple[Any, str]:
+    parts = _pointer_parts(pointer)
+    target = payload
+    for part in parts[:-1]:
+        target = target[int(part)] if isinstance(target, list) else target[part]
+    return target, parts[-1]
+
+
+def set_pointer(payload: Any, pointer: str, value: Any) -> None:
+    target, leaf = _pointer_parent(payload, pointer)
+    if isinstance(target, list):
+        target[int(leaf)] = value
+    else:
+        target[leaf] = value
+
+
+def delete_pointer(payload: Any, pointer: str) -> None:
+    target, leaf = _pointer_parent(payload, pointer)
+    if isinstance(target, list):
+        del target[int(leaf)]
+    else:
+        del target[leaf]
+
+
+def validate_operator_packet_negative_cases(
+    schema: dict[str, Any],
+    example: dict[str, Any],
+) -> int:
+    corpus = require_dict(
+        read_json(OPERATOR_PACKET_NEGATIVE_PATH),
+        "operator decision packet negative corpus",
+    )
+    cases = require_list(corpus.get("cases"), "negative cases")
+    if not cases:
+        fail("operator decision packet negative corpus must not be empty")
+    seen: set[str] = set()
+    for index, raw_case in enumerate(cases):
+        case = require_dict(raw_case, f"negative cases[{index}]")
+        case_id = case.get("case_id")
+        if not isinstance(case_id, str) or not case_id:
+            fail(f"negative cases[{index}].case_id must be non-empty")
+        if case_id in seen:
+            fail(f"duplicate operator decision negative case: {case_id}")
+        seen.add(case_id)
+
+        candidate = copy.deepcopy(example)
+        for pointer, value in require_dict(
+            case.get("set", {}),
+            f"negative cases/{case_id}/set",
+        ).items():
+            set_pointer(candidate, pointer, value)
+        for pointer in require_list(
+            case.get("delete", []),
+            f"negative cases/{case_id}/delete",
+        ):
+            delete_pointer(candidate, str(pointer))
+        resolved_sha = case.get(
+            "resolved_manifest_sha256",
+            candidate.get("artifact_manifest_sha256"),
+        )
+        resolved_set_id = case.get(
+            "resolved_artifact_set_id",
+            candidate.get("artifact_set_id"),
+        )
+        try:
+            validate_operator_decision_packet(
+                candidate,
+                resolved_manifest_sha256=(
+                    str(resolved_sha) if resolved_sha is not None else None
+                ),
+                resolved_artifact_set_id=(
+                    str(resolved_set_id) if resolved_set_id is not None else None
+                ),
+                schema=schema,
+            )
+        except ValidationError as exc:
+            expected = case.get("expected_error")
+            if not isinstance(expected, str) or expected not in str(exc):
+                fail(
+                    f"negative case {case_id} expected {expected!r}, "
+                    f"got {str(exc)!r}"
+                )
+        else:
+            fail(f"negative case {case_id} unexpectedly passed")
+    return len(cases)
+
+
 def run_validation() -> list[str]:
     try:
         require_files()
@@ -266,6 +479,23 @@ def run_validation() -> list[str]:
         example = require_dict(read_json(EXAMPLE_PATH), "example")
         validate_schema(schema, example)
         validate_example(example)
+        operator_schema = require_dict(
+            read_json(OPERATOR_PACKET_SCHEMA_PATH),
+            "operator decision packet schema",
+        )
+        operator_example = require_dict(
+            read_json(OPERATOR_PACKET_EXAMPLE_PATH),
+            "operator decision packet example",
+        )
+        validate_operator_decision_packet(
+            operator_example,
+            resolved_manifest_sha256=operator_example.get(
+                "artifact_manifest_sha256"
+            ),
+            resolved_artifact_set_id=operator_example.get("artifact_set_id"),
+            schema=operator_schema,
+        )
+        validate_operator_packet_negative_cases(operator_schema, operator_example)
     except ValidationError as exc:
         return [str(exc)]
     return []
@@ -277,7 +507,10 @@ def main() -> int:
         for error in errors:
             print(f"[error] {error}", file=sys.stderr)
         return 1
-    print("ok: Experience polis/constitution center is valid")
+    print(
+        "ok: Experience polis/constitution center and C25 operator decision "
+        "packet are valid"
+    )
     return 0
 
 

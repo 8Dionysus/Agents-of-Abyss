@@ -9,6 +9,9 @@ Use when Experience touches offices, operator posture, assistant boundaries, rol
 ## Active outputs
 
 - office contour, operator stop-line, role-pair handoff, assistant invariant, and owner-local office request.
+- the existing `experience_operator_decision_v1` remains an emergency-stay-only
+  office artifact; generic hash-bound operator decisions route to Governance
+  Polis C25.
 - Owner handoff language when the center cannot accept or prove the operational slice.
 - Stop-lines that keep Experience center law from becoming live runtime, memory, proof, or owner-local truth.
 

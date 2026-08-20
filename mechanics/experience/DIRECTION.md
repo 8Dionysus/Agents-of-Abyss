@@ -26,6 +26,9 @@ landing ledger, roadmap, owner-request packet, or provenance bridge.
   seed inputs, and sibling-owner surfaces through `provenance-receipts.json`.
 - Keep owner-local activation outside Experience center docs; runtime, memory,
   proof, routing, role, KAG, and ToS claims route to stronger owners.
+- Keep sole-operator decisions hash-bound and effectless at the center:
+  procedurally separated AI reviews advise, the sole human decides, and named
+  owners revalidate payload meaning and effects.
 - Keep landed history in `LANDING_LOG.md` and future pressure in `ROADMAP.md`.
 - Keep incoming packets distilled into a functioning part instead of rebuilding
   a flat docs lane.
@@ -56,6 +59,8 @@ A functioning part should make three things clear:
 - Do not claim live router engine authority.
 - Do not claim owner-local activation before the owner repository accepts and proves the slice.
 - Do not claim operational Experience adoption, KAG/source meaning transfer, or ToS canon from center docs.
+- Do not let an operator packet, AI review, or green validator imply automatic
+  effect, production admission, owner payload meaning, or proof.
 - Do not let historical packets become the primary route.
 
 ## Validation

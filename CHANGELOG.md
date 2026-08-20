@@ -32,6 +32,23 @@ Tracking starts with the community-docs baseline for this repository.
   shared AoA skills come from the user profile, while a future repository
   projection requires a separately admitted owner skill home.
 
+### Added
+
+- Decision `AOA-CENTER-D-0038` selects Reduced Federated Two-Speed Organ R1:
+  reviewed public pull-only is the admitted core, while selective proactive
+  and agent-local contours remain disabled and separately gated.
+- Decision `AOA-CENTER-D-0037` keeps training and model memory at explicit
+  consumer-zero until nonparametric natural benefit, a 30-day soak, a separate
+  owner, purge and unlearning contracts, frozen-predecessor proof, rollback,
+  and a new sole-operator decision all exist.
+- C25 `OperatorDecisionPacket` under Experience Governance Polis: one
+  hash-bound constitutional envelope for sole-operator `approve`, `reject`,
+  `defer`, `narrow`, or `quarantine` decisions after procedurally separated AI
+  review. It fails closed on unresolved or mismatched manifests and grants no
+  automatic effect, production, payload, proof, memory, or routing authority.
+- Decision `AOA-CENTER-D-0036` records why C25 is distinct from the
+  emergency-stay-only office contract and existing polis case/council packets.
+
 ### Removed
 
 - Removed four obsolete Dionysus owner requests and the Method-growth
