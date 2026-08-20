@@ -43,9 +43,11 @@ Keep this district compact and constitutional. Prefer reusable route grammar,
 surface-state vocabulary, and owner-boundary checks over repository-specific
 implementation detail.
 
-When a change would require executable discovery, activation, typed adapters,
-or dashboards, leave an owner route for `aoa-sdk` instead of growing this
-district.
+When a change would require executable discovery, activation, or typed adapters,
+leave an owner route for `aoa-sdk` instead of growing this district. Dashboard
+projection, annotation, correlation, and operator-surface implementation belong
+to `aoa-dashboard`; dashboard discovery and typed activation remain `aoa-sdk`
+routes.
 
 ## Validation
 

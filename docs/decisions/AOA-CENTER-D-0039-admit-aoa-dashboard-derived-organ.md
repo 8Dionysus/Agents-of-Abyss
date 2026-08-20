@@ -89,12 +89,12 @@ reversible and fail-closed.
 - `generated/ecosystem_registry.min.json`
 - [`aoa-dashboard` organ contract at `5988ec70d6fee05a5c40eb2a6117fffca8562bb7`](https://github.com/8Dionysus/aoa-dashboard/blob/5988ec70d6fee05a5c40eb2a6117fffca8562bb7/contracts/organ_contract.json)
 - [`aoa-dashboard` admission posture at `5988ec70d6fee05a5c40eb2a6117fffca8562bb7`](https://github.com/8Dionysus/aoa-dashboard/blob/5988ec70d6fee05a5c40eb2a6117fffca8562bb7/docs/ADMISSION.md)
-- [`aoa-sdk` workspace registration at `29f42e6111b7be54bd6190d27dcebb5086398398`](https://github.com/8Dionysus/aoa-sdk/blob/29f42e6111b7be54bd6190d27dcebb5086398398/.aoa/workspace.toml)
+- [`aoa-sdk` workspace registration at `8e3c886e1747b98fb358a3411f551a814ee84b55`](https://github.com/8Dionysus/aoa-sdk/blob/8e3c886e1747b98fb358a3411f551a814ee84b55/.aoa/workspace.toml)
 
 ## Immutable D1 landing evidence
 
 - Dashboard source landing: [`aoa-dashboard` main at `5988ec70d6fee05a5c40eb2a6117fffca8562bb7`](https://github.com/8Dionysus/aoa-dashboard/commit/5988ec70d6fee05a5c40eb2a6117fffca8562bb7); owner validation run [`32415261408`](https://github.com/8Dionysus/aoa-dashboard/actions/runs/32415261408).
-- SDK owner route: [`aoa-sdk` D1 pull request #259](https://github.com/8Dionysus/aoa-sdk/pull/259), exact reviewed head [`29f42e6111b7be54bd6190d27dcebb5086398398`](https://github.com/8Dionysus/aoa-sdk/commit/29f42e6111b7be54bd6190d27dcebb5086398398); the PR's required hosted validation must be green before center landing.
+- SDK owner route: [`aoa-sdk` D1 pull request #259](https://github.com/8Dionysus/aoa-sdk/pull/259), exact reviewed head [`8e3c886e1747b98fb358a3411f551a814ee84b55`](https://github.com/8Dionysus/aoa-sdk/commit/8e3c886e1747b98fb358a3411f551a814ee84b55); required hosted validation is [`32419273977`](https://github.com/8Dionysus/aoa-sdk/actions/runs/32419273977) and must be green before center landing.
 
 ## Follow-up route
 
