@@ -71,7 +71,8 @@ COMMANDS = [
     ),
     ("validate mechanic landing logs", [sys.executable, "scripts/mechanics_topology/validate_mechanic_landing_logs.py"]),
     ("validate ecosystem", [sys.executable, "scripts/root_registries/validate_ecosystem.py"]),
-    ("run tests", [sys.executable, "-m", "pytest", "-q"]),
+    # Keep owner validators serial and fail-fast; bound parallelism to the broad test leaf.
+    ("run tests", [sys.executable, "-m", "pytest", "-q", "-n", "2", "--dist=loadfile"]),
 ]
 
 

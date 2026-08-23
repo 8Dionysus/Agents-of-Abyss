@@ -154,6 +154,16 @@ class GeneratedFreshnessTest(unittest.TestCase):
         self.assertLess(labels.index("check docs thematic index"), labels.index("validate docs thematic index"))
         self.assertLess(labels.index("check link-shape hygiene index"), labels.index("validate link-shape hygiene index"))
 
+    def test_release_test_leaf_uses_declared_bounded_parallelism(self) -> None:
+        test_commands = [command for label, command in RELEASE_COMMANDS if label == "run tests"]
+        self.assertEqual(len(test_commands), 1)
+        self.assertEqual(
+            normalized(test_commands[0])[-3:],
+            ("-n", "2", "--dist=loadfile"),
+        )
+        requirements = (REPO_ROOT / "requirements-dev.txt").read_text(encoding="utf-8")
+        self.assertIn("pytest-xdist>=3.8,<4.0", requirements.splitlines())
+
     def test_hygiene_suite_runs_later_checks_after_failure(self) -> None:
         seen: list[str] = []
 
