@@ -52,10 +52,28 @@ The specialized responsibility split is:
 | `aoa-sdk` | typed provider-neutral observation requirements and control-plane seams | runtime execution or proof verdicts |
 | `abyss-stack` | raw runtime observation, session/tool lifecycle, and model/tool/queue/end-to-end timing | center doctrine or owner acceptance |
 | `aoa-stats` | shared measurement grammar and derived comparisons | source populations, proof, route authority, or acceptance |
-| `aoa-session-memory` | session-local token, compaction, and observation-gap evidence | proof or acceptance promotion |
+| `.aoa` | session-evidence routing, rehydration, graph/index projections, and evidence/context handoff | policy authority, source meaning, proof, or acceptance |
+| `aoa-session-memory` | portable session-memory kernel, memory-object lifecycle, and admitted portable exports | session-evidence routing, proof, or acceptance promotion |
 | `aoa-models` | provider/model/runtime/tokenizer/billing facts and realization identity | activation authority or owner routing |
 | `aoa-evals` | matched fixtures, blind spots, and bounded eval/net-benefit verdicts | runtime execution or source implementation |
 | `abyss-machine` | host resource, storage, artifact trust, and admission evidence | federation doctrine or sibling source meaning |
+
+## Baseline sufficiency and acceptance route
+
+The concrete sufficiency owner is the independent `goal-execution-reviewer`
+office in the Goal organization. The `d0-baseline` direction master assembles
+and binds the candidate but cannot self-accept it. The authoritative review
+receipt is `reviewer/cycles/<review-cycle>/review-result.json`, materialized in
+`reviewer-state.json`; its `d0-baseline` entry must carry `direction_id`,
+`reviewed_at`, `snapshot_digest`, an explicit baseline-sufficiency disposition,
+and `evidence_refs` that bind the candidate and both arms. A `baseline-ready.json`
+receipt is valid only when it names that exact review receipt and candidate
+digest. A missing, stale, unbound, or rework disposition is not acceptance.
+
+The Goal master owns the whole-direction return/closeout and final Goal/owner
+acceptance route. It does not replace the independent reviewer's baseline
+sufficiency decision. Runtime outcome, eval verdict, closeout, owner
+acceptance, and human acceptance continue to require their own receipts.
 
 The baseline gate requires one current governed Codex adapter and one current
 existing local-model route to run the same frozen, owner-approved fixture in a
@@ -106,9 +124,10 @@ instead of converting transport or partial runtime counters into economy claims.
 ## Follow-up route
 
 Each specialized owner carries the local contract and implementation slice in
-its own repository. `abyss-stack`, `abyss-machine`, and the measurement,
-session, model, role, SDK, and eval owners must provide their own current
-receipts before the direction emits `baseline-ready`. The independent Goal
-reviewer decides sufficiency; the Goal master remains the acceptance route for
-the whole direction, and no center source landing alone proves runtime, eval,
-closeout, or owner/human acceptance.
+its own repository or owner surface. `abyss-stack`, `abyss-machine`, `.aoa`,
+and the measurement, session-memory, model, role, SDK, and eval owners must
+provide their own current receipts before the direction emits `baseline-ready`.
+The independent Goal reviewer decides baseline sufficiency through the receipt
+route above; the Goal master remains the acceptance route for the whole
+direction, and no center source landing alone proves runtime, eval, closeout,
+or owner/human acceptance.

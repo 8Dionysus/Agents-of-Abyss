@@ -69,11 +69,12 @@ If the question is "does the center have authority to say this?", return to
 | `aoa-routing` | deprecated routing predecessor | preserved routing history, rollback evidence, and maintenance-only compatibility while the repository remains unarchived | new dispatch authority, new route contracts, or primary authored truth of other layers | deprecated | preserve reversibility; archive only after separate operator approval |
 | `aoa-kag` | derived knowledge substrate | provenance-aware lifts, graph-ready projections, retrieval-ready structures, and bounded federation readiness surfaces derived from authoritative sources | source-authored truth of ToS or other layer-owned corpora | bootstrap | seed derived knowledge substrate |
 
-## Supporting consumers outside ecosystem registry v2
+## Supporting and emerging owner surfaces outside ecosystem registry v2
 
 | Repository | Role | Owns | Does not own | Current maturity | Registry posture |
 |---|---|---|---|---|---|
 | `aoa-sdk` | canonical typed control-plane and routing spine | SDK-owned routing ABI, cross-repo route hints, loading, integration, compatibility helpers, typed seams, and controlled orchestration support | constitutional authority, source-layer meaning, runtime execution, or owner-local acceptance | proven | tracked in `generated/federation_supporting_inventory.min.json`; routing succession is recorded without promoting SDK helpers into source truth |
+| `aoa-models` | experimental model-realization owner | exact model identities and realizations, configuration-scoped model claims, provenance/currentness, model studies, and derived model-fit projections | runtime execution, role meaning, routing, proof verdicts, or acceptance | experimental | tracked in `generated/federation_supporting_inventory.min.json`; this route does not promote model-fit projections into activation or owner authority |
 
 ## Adjacent system anchors
 
@@ -93,9 +94,9 @@ If the question is "does the center have authority to say this?", return to
 ## Scope note
 
 Ecosystem registry v2 follows the center + public AoA layers + adjacent anchors
-contour in this file. Supporting consumer surfaces, such as `aoa-sdk`, remain
-outside ecosystem registry v2 by design and appear in the companion
-machine-readable supporting inventory at
+contour in this file. Supporting and emerging owner surfaces, such as `aoa-sdk`
+and `aoa-models`, remain outside ecosystem registry v2 by design and appear in
+the companion machine-readable supporting inventory at
 `generated/federation_supporting_inventory.min.json`.
 
 Registry v2 remains the current registry contract. Real owner descent may add a

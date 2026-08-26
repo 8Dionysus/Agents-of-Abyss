@@ -177,7 +177,8 @@ The program owner split is:
 | `aoa-sdk` | provider-neutral typed observation requirements and control-plane seams | does not execute runtime work or issue proof verdicts |
 | `abyss-stack` | raw runtime observation, session/tool lifecycle, and model/tool/queue/end-to-end timing | does not author center doctrine or owner acceptance |
 | `aoa-stats` | shared measurement grammar and derived comparisons | does not own source populations, proof, route authority, or acceptance |
-| `aoa-session-memory` | session-local token, compaction, and observation-gap evidence | does not promote raw session evidence into proof or acceptance |
+| `.aoa` | session-evidence routing, rehydration, graph/index projections, and evidence/context handoff | does not own policy authority, source meaning, proof, or acceptance |
+| `aoa-session-memory` | portable session-memory kernel, memory-object lifecycle, and admitted portable exports | does not own session-evidence routing or promote raw evidence into proof or acceptance |
 | `aoa-models` | provider/model/runtime/tokenizer/billing facts and realization identity | does not select activation or replace owner routing |
 | `aoa-evals` | matched fixtures, blind spots, and bounded eval/net-benefit verdicts | does not own runtime execution or source implementation |
 | `abyss-machine` | host resource, storage, artifact trust, and admission evidence | does not own federation doctrine or sibling source meaning |

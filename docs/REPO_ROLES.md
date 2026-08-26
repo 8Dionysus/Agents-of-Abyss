@@ -27,6 +27,7 @@ Use it when the question is not only "what exists?" but also:
 | `aoa-agents` | role and persona layer | agent profiles, role contracts, preferred skill families, handoff rules, model-fit notes | duplicate skill corpus, routing layer, or memory store |
 | `aoa-playbooks` | scenario-composition layer | recurring multi-layer routes, handoff-aware scenarios, fallback posture, expected evidence posture | single-skill home, hidden orchestration sprawl, or proof canon |
 | `aoa-kag` | derived knowledge substrate | provenance-aware lifts, chunk maps, node and edge projections, retrieval-ready surfaces, bounded federation readiness surfaces | authored source truth, routing center, or hidden graph empire |
+| `aoa-models` | model-realization owner | exact model identities and realizations, configuration-scoped model claims, provenance/currentness, model studies, and derived model-fit projections | runtime execution, role meaning, routing, proof verdicts, or acceptance |
 
 ## Related repositories
 
@@ -40,6 +41,13 @@ Use it when the question is not only "what exists?" but also:
 | repository | role in the wider system | registry posture |
 |---|---|---|
 | `aoa-sdk` | canonical typed routing/control-plane and local-first consumer for source-owned AoA repositories | routed from the center through `generated/federation_supporting_inventory.min.json`; routing authority does not transfer source meaning or runtime execution |
+
+### Session evidence owner surfaces
+
+| surface | role | owns | does not own |
+|---|---|---|---|
+| `.aoa` | session evidence route | session-evidence routing, rehydration, graph/index projections, and machine-consumable evidence/context handoff | policy authority, reviewed owner law, or source meaning |
+| `aoa-session-memory` | portable memory kernel | portable memory objects, memory lifecycle, and admitted portable memory exports | `.aoa` routing authority, proof verdicts, or acceptance promotion |
 
 ## OS Abyss artifact trust-plane route
 
