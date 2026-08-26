@@ -190,6 +190,10 @@ DOCUMENTED_SUPPORTING_SURFACES = {
     "aoa-sdk": {
         "role": "typed-routing-consumer-and-control-plane",
         "kind": "supporting-consumer",
+    },
+    "aoa-models": {
+        "role": "model-realization-and-facts-owner",
+        "kind": "supporting-consumer",
     }
 }
 

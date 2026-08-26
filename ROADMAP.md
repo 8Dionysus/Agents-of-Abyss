@@ -160,6 +160,29 @@ surfaces keep checked landings, validators, owner boundaries, and stop-lines.
 | Next honest move | Prepare runtime-facing contracts only after law, proof, memory, routing, owner receipts, and rollback paths are clear. |
 | Guardrail | Doctrine is not runtime. SDK helper shape is not constitutional authority. |
 
+## Horizon: Provider-Neutral Inference Economy
+
+| Field | Direction |
+|---|---|
+| Current posture | AoA is defining a provider-neutral harness and execution contour while keeping the center at the level of program direction and owner boundaries. A current paired Codex/local-model pre-change baseline is not yet admitted; historical observations and transport liveness are insufficient. |
+| Next honest move | Establish one matched, owner-approved baseline for a governed Codex adapter and one existing local-model route with explicit token, tool-schema, execution, timing, identity, missingness, and lifecycle evidence. Default-off contracts, adapters, tests, and wiring may land before that gate. |
+| Guardrail | Baseline must precede behavioral activation, pilot, promotion, and economy claims. Runtime outcome, eval verdict, closeout, owner acceptance, and human acceptance remain separate; Codex-specific behavior stays in the adapter layer. |
+
+The program owner split is:
+
+| Owner | Program responsibility | Boundary |
+|---|---|---|
+| `Agents-of-Abyss` | program direction, owner map, federation stop-lines, and baseline law | does not own sibling implementation, runtime, proof, memory, role, or shared measurement meaning |
+| `aoa-agents` | role, mandate, identity, and handoff meaning | does not own runtime or inference measurement |
+| `aoa-sdk` | provider-neutral typed observation requirements and control-plane seams | does not execute runtime work or issue proof verdicts |
+| `abyss-stack` | raw runtime observation, session/tool lifecycle, and model/tool/queue/end-to-end timing | does not author center doctrine or owner acceptance |
+| `aoa-stats` | shared measurement grammar and derived comparisons | does not own source populations, proof, route authority, or acceptance |
+| `.aoa` | session-evidence routing, rehydration, graph/index projections, and evidence/context handoff | does not own policy authority, source meaning, proof, or acceptance |
+| `aoa-session-memory` | portable session-memory kernel, memory-object lifecycle, and admitted portable exports | does not own session-evidence routing or promote raw evidence into proof or acceptance |
+| `aoa-models` | provider/model/runtime/tokenizer/billing facts and realization identity | does not select activation or replace owner routing |
+| `aoa-evals` | matched fixtures, blind spots, and bounded eval/net-benefit verdicts | does not own runtime execution or source implementation |
+| `abyss-machine` | host resource, storage, artifact trust, and admission evidence | does not own federation doctrine or sibling source meaning |
+
 ## Horizon: Growth Continuity
 
 | Field | Direction |

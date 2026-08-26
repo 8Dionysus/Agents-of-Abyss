@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 11354029,
+  "allowed_tracked_bytes": 22378297,
+  "approved_by": "repository-owner",
+  "base_ref": "55e83641d083b231ccf45185081a5226137b8d34",
+  "changed_generated_bytes": 11354029,
+  "changed_generated_files": 220,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "0f147adef76d31ebde4a9c2f5564635f46f95f74125dbf2fa33fb714fc4ad5d8",
+  "reason": "Refresh the portable owner-family after preserving supporting-inventory fixture order for the D0 inference-economy owner routes; this authorizes only the measured generated projection delta.",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 22378297,
+  "tracked_bytes_max": 25165824
+}

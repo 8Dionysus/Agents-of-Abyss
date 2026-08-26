@@ -22,6 +22,7 @@
 - [AOA-CENTER-D-0002 ADR: Federation Release Contract](../AOA-CENTER-D-0002-federation-release-contract.md) (`docs/decisions/AOA-CENTER-D-0002-federation-release-contract.md`)
 - [AOA-CENTER-D-0030 OS Abyss Artifact Trust Plane](../AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md) (`docs/decisions/AOA-CENTER-D-0030-os-abyss-artifact-trust-plane.md`)
 - [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
+- [AOA-CENTER-D-0040 Establish the Provider-Neutral Inference Economy Owner Split](../AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md) (`docs/decisions/AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md`)
 
 ## repository routing
 
@@ -66,6 +67,7 @@
 - [AOA-CENTER-D-0037 Keep Training And Model Memory Disabled](../AOA-CENTER-D-0037-keep-training-model-memory-disabled.md) (`docs/decisions/AOA-CENTER-D-0037-keep-training-model-memory-disabled.md`)
 - [AOA-CENTER-D-0038 Select Reduced Federated Memory Organ R1](../AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md) (`docs/decisions/AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md`)
 - [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
+- [AOA-CENTER-D-0040 Establish the Provider-Neutral Inference Economy Owner Split](../AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md) (`docs/decisions/AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md`)
 
 ## root district
 
@@ -174,6 +176,14 @@
 ## operator decision
 
 - [AOA-CENTER-D-0036 Hash-Bound Operator Decision Envelope](../AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md) (`docs/decisions/AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md`)
+
+## owner split
+
+- [AOA-CENTER-D-0040 Establish the Provider-Neutral Inference Economy Owner Split](../AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md) (`docs/decisions/AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md`)
+
+## program direction
+
+- [AOA-CENTER-D-0040 Establish the Provider-Neutral Inference Economy Owner Split](../AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md) (`docs/decisions/AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md`)
 
 ## projection boundary
 
