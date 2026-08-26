@@ -97,3 +97,7 @@
 ## 2026-08-20
 
 - [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
+
+## 2026-08-26
+
+- [AOA-CENTER-D-0040 Establish the Provider-Neutral Inference Economy Owner Split](../AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md) (`docs/decisions/AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md`)
