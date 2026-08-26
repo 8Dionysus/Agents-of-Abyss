@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 10374551,
+  "allowed_tracked_bytes": 22374932,
+  "approved_by": "repository-owner",
+  "base_ref": "55e83641d083b231ccf45185081a5226137b8d34",
+  "changed_generated_bytes": 10374551,
+  "changed_generated_files": 198,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "bbc28a66238615572bc97a108fc79b6c2fe6b03491baa04fff3b25e8538e5777",
+  "reason": "Regenerate the portable owner-family for the D0 provider-neutral inference-economy owner-split roadmap, decision record, and derived decision indexes; this authorizes only the measured generated projection delta.",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 22374932,
+  "tracked_bytes_max": 25165824
+}
