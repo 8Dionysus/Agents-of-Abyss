@@ -17,10 +17,12 @@ The AGENTS mesh gives every durable work district a local card. Root law stays a
 | `scripts/agents_mesh/validate_agents_mesh.py` | coverage and registry validator |
 | `scripts/agents_mesh/build_agents_mesh_index.py` | generated mesh builder |
 | `scripts/agents_mesh/validate_agents_mesh_index.py` | generated mesh validator |
+| `mechanics/validation-routes.json` | exact child validation argv kept out of inherited mechanics cards |
+| `scripts/mechanics_topology/validate_validation_routes.py` | routed-validation ownership and integrity guard |
 
 ## Growth posture
 
-A new durable district should never be a silent room. Give it a card, route it to a stronger owner, or mark it as temporary. The mesh should make self-agency safer by making local authority and local limits visible.
+A new durable district should never be a silent room. Give it a card, route it to a stronger owner, or mark it as temporary. Keep registered inherited chains inside the configured byte budget; large child procedure belongs behind an exact validated route. The mesh should make self-agency safer by making local authority and local limits visible.
 
 ## Release posture
 

@@ -142,7 +142,8 @@
         "tests/test_mechanic_card_index.py",
         "tests/test_mechanic_landing_logs.py",
         "tests/test_mechanic_readme_cards.py",
-        "tests/test_mechanics_topology.py"
+        "tests/test_mechanics_topology.py",
+        "tests/test_validation_routes.py"
       ],
       "validation_refs": [
         "scripts/mechanics_topology/build_mechanic_card_index.py",
@@ -150,7 +151,8 @@
         "scripts/mechanics_topology/validate_mechanic_card_index.py",
         "scripts/mechanics_topology/validate_mechanic_landing_logs.py",
         "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
-        "scripts/mechanics_topology/validate_mechanics_topology.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/validate_validation_routes.py"
       ],
       "must_not_claim": [
         "mechanic tests as owner acceptance in sibling repos"

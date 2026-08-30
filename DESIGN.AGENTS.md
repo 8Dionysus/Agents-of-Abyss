@@ -198,7 +198,7 @@ This shape is intentionally plain.
 
 Optional sections may be added when the lane needs them: `Purpose`, `Owner
 lane`, `Route modes`, `Source Surfaces`, `Post-change route review`, `Editing
-posture`, `Part evolution`, `Decision review`, `Centralized Child Validation`,
+posture`, `Part evolution`, `Decision review`, `Routed child validation`,
 or local equivalents.
 
 Optional sections should sharpen the route. They should not decorate it into
@@ -259,6 +259,17 @@ An agent may act, propose, validate, route, summarize, and hand off. Durable
 action should always preserve review, rollback, evidence, and a way back to the
 owner surface.
 
+### 11. Inherited context is a budgeted route surface
+
+Every descendant receives the applicable AGENTS chain, so repeated command
+catalogs and source prose become a recurring context cost. Keep owner
+boundaries, stop-lines, reading order, and the smallest executable entrypoint
+in the card. Put large child-specific command matrices in a validated owner
+manifest and retrieve only the exact route needed for the touched surface.
+
+Shorter is not automatically better. The budget protects locality and signal;
+it must not erase a contract that has no stronger source elsewhere.
+
 ## Good Agent Design Feels Like
 
 A low-context agent can find the nearest rule.
@@ -276,6 +287,7 @@ A repository can grow without turning its root into a labyrinth cupboard.
 - local cards that duplicate root doctrine instead of naming local risk;
 - instructions that cite no owner surface;
 - validation commands copied everywhere and allowed to drift;
+- inherited card chains that silently exceed their declared context budget;
 - generated indexes treated as source authority;
 - autonomous language without stop-lines;
 - mythic language replacing evidence;

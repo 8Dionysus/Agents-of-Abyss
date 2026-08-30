@@ -9,6 +9,10 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- Mechanics child validation now uses one source manifest and a no-shell exact
+  route runner instead of copying 405 commands into inherited `AGENTS.md`
+  chains. The AGENTS mesh now enforces and publishes a 32-KiB inherited-chain
+  budget; decision `AOA-CENTER-D-0041` records the route and authority split.
 - Active routing, dispatch, Agon gate, and owner-request surfaces now target the
   canonical typed routing/control-plane home in `aoa-sdk`. `aoa-routing`
   remains a deprecated maintenance predecessor for history and rollback; this

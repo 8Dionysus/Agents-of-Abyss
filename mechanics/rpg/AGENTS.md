@@ -110,29 +110,8 @@ For release-readiness or cross-mechanic edits, finish with:
 python scripts/release_gate/release_check.py
 ```
 
-<!-- centralized-child-validation:start -->
+### Routed child validation
 
-### Centralized Child Validation
-
-Executable validation commands from child docs live here. Child docs should
-route to this section instead of carrying command blocks.
-
-#### `mechanics/rpg/README.md`
-
-```bash
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic rpg
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic rpg
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic rpg
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic rpg
-python mechanics/rpg/scripts/validate_rpg_distillation.py
-python mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python -m pytest -q mechanics/rpg/tests mechanics/rpg/parts/vocabulary-overlay/tests
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic rpg
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic rpg
-```
-
-<!-- centralized-child-validation:end -->
+Child-specific commands are source-owned by `mechanics/validation-routes.json`.
+Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+add `--show` to inspect the route without executing it.

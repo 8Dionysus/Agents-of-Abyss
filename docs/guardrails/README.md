@@ -15,7 +15,7 @@ Guardrails keep route surfaces checkable. They do not author center doctrine, me
 | [`thematic_districts.json`](thematic_districts.json) | machine-readable docs cleanup classifier |
 | [`LINK_AND_SHAPE_HYGIENE_PROTOCOL`](LINK_AND_SHAPE_HYGIENE_PROTOCOL.md) | link, Markdown shape, status vocabulary, and generated freshness law |
 | [`HYGIENE_GUARDRAIL_INDEX`](HYGIENE_GUARDRAIL_INDEX.md) | thin index of hygiene scripts, config, generated mirror, and traces |
-| [`AGENTS_MESH_PROTOCOL`](AGENTS_MESH_PROTOCOL.md) | local AGENTS-card coverage and shape law |
+| [`AGENTS_MESH_PROTOCOL`](AGENTS_MESH_PROTOCOL.md) | local AGENTS-card coverage, inherited-chain budget, and shape law |
 | [`AGENTS_MESH_INDEX`](AGENTS_MESH_INDEX.md) | thin index of mesh config, generated mirror, validators, and cards |
 | [`ENTRY_SURFACE_VALIDATION_BASELINE`](ENTRY_SURFACE_VALIDATION_BASELINE.md) | baseline command set that entry surfaces may point to instead of repeating inline |
 

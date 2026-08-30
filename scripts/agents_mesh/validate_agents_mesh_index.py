@@ -20,7 +20,7 @@ def main() -> int:
         raise SystemExit(f"missing generated AGENTS mesh index: {path}")
     data = load_json(path)
     errors: list[str] = []
-    if data.get("schema_version") != "aoa_agents_mesh_index_v1":
+    if data.get("schema_version") != "aoa_agents_mesh_index_v2":
         errors.append("wrong schema_version")
     if data.get("source_ref") != "config/agents_mesh.json":
         errors.append("wrong source_ref")
@@ -28,6 +28,10 @@ def main() -> int:
         errors.append("authority_ref does not match config")
     if data.get("validation_commands") != config.get("validation_commands", []):
         errors.append("validation_commands does not match config")
+    if data.get("chain_budget_bytes") != config.get("chain_budget_bytes"):
+        errors.append("chain_budget_bytes does not match config")
+    if data.get("chains_over_budget"):
+        errors.append(f"chains_over_budget is not empty: {data.get('chains_over_budget')}")
     if data.get("missing_cards"):
         errors.append(f"missing_cards is not empty: {data.get('missing_cards')}")
     cards = data.get("cards", [])
@@ -41,6 +45,13 @@ def main() -> int:
             errors.append(f"bad sha256 for {card.get('path')}")
         if card.get("line_count", 0) < 8:
             errors.append(f"card too short in generated index: {card.get('path')}")
+        chain_paths = card.get("inherited_chain_paths")
+        if not isinstance(chain_paths, list) or not chain_paths:
+            errors.append(f"missing inherited chain paths for {card.get('path')}")
+        if card.get("inherited_chain_bytes", 0) <= 0:
+            errors.append(f"bad inherited chain byte count for {card.get('path')}")
+        if card.get("inherited_chain_over_budget"):
+            errors.append(f"card chain exceeds budget: {card.get('path')}")
     if errors:
         raise SystemExit("AGENTS mesh index validation failed:\n" + "\n".join(f"- {e}" for e in errors))
     print("generated AGENTS mesh index validated")

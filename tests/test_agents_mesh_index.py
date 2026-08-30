@@ -16,9 +16,12 @@ class AgentsMeshIndexTests(unittest.TestCase):
 
     def test_generated_agents_mesh_index_has_cards(self):
         data = json.loads(Path("generated/agents_mesh.min.json").read_text(encoding="utf-8"))
-        self.assertEqual(data["schema_version"], "aoa_agents_mesh_index_v1")
+        self.assertEqual(data["schema_version"], "aoa_agents_mesh_index_v2")
         self.assertGreaterEqual(data["card_count"], 30)
         self.assertFalse(data["missing_cards"])
+        self.assertEqual(data["chain_budget_bytes"], 32768)
+        self.assertFalse(data["chains_over_budget"])
+        self.assertLessEqual(data["chain_max_bytes"], data["chain_budget_bytes"])
 
     def test_generated_agents_mesh_index_includes_recurrence_parts_card(self):
         data = json.loads(Path("generated/agents_mesh.min.json").read_text(encoding="utf-8"))

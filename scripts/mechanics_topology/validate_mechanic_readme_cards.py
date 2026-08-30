@@ -12,6 +12,7 @@ from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
+VALIDATION_ROUTES_PATH = REPO_ROOT / "mechanics" / "validation-routes.json"
 DEFAULT_HEADINGS = (
     "## Mechanic card",
     "### Trigger",
@@ -36,6 +37,15 @@ CARD_KEYS = (
 def load_registry() -> dict[str, Any]:
     with REGISTRY_PATH.open(encoding="utf-8") as handle:
         return json.load(handle)
+
+
+def routed_validation_text(surface_ref: str) -> str:
+    if not VALIDATION_ROUTES_PATH.is_file():
+        return ""
+    data = json.loads(VALIDATION_ROUTES_PATH.read_text(encoding="utf-8"))
+    route = data.get("routes", {}).get(surface_ref, {})
+    commands = route.get("commands", []) if isinstance(route, dict) else []
+    return "\n".join(" ".join(command) for command in commands if isinstance(command, list))
 
 
 def normalize(value: str) -> str:
@@ -117,7 +127,15 @@ def validate_card(entry: dict[str, Any], required_headings: tuple[str, ...]) -> 
             agents_path = REPO_ROOT / agents_ref
             if agents_path.exists():
                 agents_text = agents_path.read_text(encoding="utf-8")
-        if ref not in text and Path(ref).name not in text and ref not in agents_text and Path(ref).name not in agents_text:
+        route_text = routed_validation_text(rel)
+        if (
+            ref not in text
+            and Path(ref).name not in text
+            and ref not in agents_text
+            and Path(ref).name not in agents_text
+            and ref not in route_text
+            and Path(ref).name not in route_text
+        ):
             problems.append(f"{rel}: validation ref not named: {ref}")
 
     if "docs/FEDERATION_RULES.md" not in text:

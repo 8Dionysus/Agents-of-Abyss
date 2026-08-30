@@ -113,7 +113,7 @@ class GeneratedFreshnessTest(unittest.TestCase):
 
     def test_release_owns_every_leaf_without_wrapper_reentry(self) -> None:
         release = [normalized(command) for _label, command in RELEASE_COMMANDS]
-        self.assertEqual(len(release), 60)
+        self.assertEqual(len(release), 61)
         self.assertEqual(len(release), len(set(release)))
 
         expected_suite = [
@@ -127,6 +127,7 @@ class GeneratedFreshnessTest(unittest.TestCase):
         self.assertEqual(hygiene_suite.COMMANDS, expected_suite)
         release_paths = [command[1] for command in release]
         self.assertNotIn("scripts/hygiene/validate_hygiene_suite.py", release_paths)
+        self.assertIn("scripts/mechanics_topology/validate_validation_routes.py", release_paths)
         self.assertIn(
             normalized(
                 [

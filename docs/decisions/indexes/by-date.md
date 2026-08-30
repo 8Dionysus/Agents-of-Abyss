@@ -101,3 +101,7 @@
 ## 2026-08-26
 
 - [AOA-CENTER-D-0040 Establish the Provider-Neutral Inference Economy Owner Split](../AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md) (`docs/decisions/AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md`)
+
+## 2026-08-30
+
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)

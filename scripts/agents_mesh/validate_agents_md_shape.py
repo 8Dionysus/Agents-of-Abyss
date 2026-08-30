@@ -4,9 +4,15 @@ import argparse
 from pathlib import Path
 
 try:
-    from agents_mesh_common import markdown_headings, read_config, relative_agent_paths, repo_root_from
+    from agents_mesh_common import inherited_chain_paths, markdown_headings, read_config, relative_agent_paths, repo_root_from
 except ModuleNotFoundError:  # pragma: no cover - package import route
-    from scripts.agents_mesh.agents_mesh_common import markdown_headings, read_config, relative_agent_paths, repo_root_from
+    from scripts.agents_mesh.agents_mesh_common import (
+        inherited_chain_paths,
+        markdown_headings,
+        read_config,
+        relative_agent_paths,
+        repo_root_from,
+    )
 
 
 def validate_card(repo_root: Path, rel: Path, required_headings: list[str], max_line_length: int, min_heading_count: int) -> list[str]:
@@ -47,13 +53,24 @@ def main() -> int:
     required = config.get("required_headings", [])
     max_line_length = int(config.get("max_line_length", 240))
     min_heading_count = int(config.get("min_heading_count", 7))
+    chain_budget_bytes = int(config.get("chain_budget_bytes", 32768))
+    registered_paths = relative_agent_paths(config)
     errors: list[str] = []
-    for rel in relative_agent_paths(config):
+    for rel in registered_paths:
         entry = next((e for e in config.get("entries", []) if e.get("path") == rel.as_posix()), {})
         entry_required = entry.get("required_headings") or ["# AGENTS.md", *required]
         # The first-line requirement is checked separately; remove it from normal heading search if present.
         entry_required = [h for h in entry_required if h != "# AGENTS.md"]
         errors.extend(validate_card(repo_root, rel, entry_required, max_line_length, min_heading_count))
+        chain_paths = inherited_chain_paths(rel, registered_paths)
+        if all((repo_root / path).is_file() for path in chain_paths):
+            chain_bytes = sum(len((repo_root / path).read_bytes()) for path in chain_paths)
+            if chain_bytes > chain_budget_bytes:
+                rendered_chain = " + ".join(path.as_posix() for path in chain_paths)
+                errors.append(
+                    f"{rel.as_posix()}: inherited AGENTS chain is {chain_bytes} bytes, "
+                    f"over {chain_budget_bytes}: {rendered_chain}"
+                )
     if errors:
         raise SystemExit("AGENTS.md shape validation failed:\n" + "\n".join(f"- {e}" for e in errors))
     print("AGENTS.md shape validation passed")

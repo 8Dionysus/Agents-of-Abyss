@@ -28,7 +28,9 @@ and `../../scripts/center_entry/validate_entry_surface_sync.py`.
 
 - Guardrails verify route shape; they do not author doctrine, mechanic law, generated meaning, or sibling-repo truth.
 - Do not recreate empty docs districts for mechanics. Route mechanic records to `mechanics/<slug>/legacy/` and active mechanic work to `mechanics/<slug>/`.
-- Keep validation commands here or in the nearest `AGENTS.md`; keep README surfaces map-like.
+- Keep compact validation entrypoints here or in the nearest `AGENTS.md`;
+  large child-specific command matrices require a validated owner manifest.
+  Keep README surfaces map-like.
 - Generated mirrors remain evidence only and must be rebuilt from their source config.
 - Do not add prose-only guardrails. A new guardrail family needs human law,
   source input, validator/test coverage, release-check coverage, and an owner

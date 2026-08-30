@@ -89,51 +89,8 @@ For active-part or transition-law changes, run:
 python mechanics/release-support/scripts/validate_release_support_distillation.py
 ```
 
-<!-- centralized-child-validation:start -->
+### Routed child validation
 
-### Centralized Child Validation
-
-Executable validation commands from child docs live here. Child docs should
-route to this section instead of carrying command blocks.
-
-#### `mechanics/release-support/README.md`
-
-```bash
-python mechanics/release-support/scripts/validate_release_support_distillation.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic release-support
-python scripts/release_gate/release_check.py
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic release-support
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic release-support
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic release-support
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic release-support
-```
-
-#### `mechanics/release-support/DIRECTION.md`
-
-```bash
-python mechanics/release-support/scripts/validate_release_support_distillation.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic release-support
-```
-
-#### `mechanics/release-support/PARTS.md`
-
-```bash
-python mechanics/release-support/scripts/validate_release_support_distillation.py
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic release-support
-```
-
-#### `mechanics/release-support/OWNER_REQUESTS.md`
-
-```bash
-python mechanics/release-support/scripts/validate_release_support_distillation.py
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic release-support
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic release-support
-```
-
-<!-- centralized-child-validation:end -->
+Child-specific commands are source-owned by `mechanics/validation-routes.json`.
+Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+add `--show` to inspect the route without executing it.

@@ -25,6 +25,7 @@
 ## mechanic validation
 
 - [AOA-CENTER-D-0004 Mechanics Validation Command Authority](../AOA-CENTER-D-0004-mechanics-validation-command-authority.md) (`docs/decisions/AOA-CENTER-D-0004-mechanics-validation-command-authority.md`)
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
 
 ## docs guardrail
 
@@ -100,6 +101,7 @@
 - [AOA-CENTER-D-0026 Decision Note: Agent Surface Design Root](../AOA-CENTER-D-0026-agent-surface-design-root.md) (`docs/decisions/AOA-CENTER-D-0026-agent-surface-design-root.md`)
 - [AOA-CENTER-D-0027 Codex Spark Agent Lane Home](../AOA-CENTER-D-0027-codex-spark-agent-lane-home.md) (`docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md`)
 - [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
 
 ## decision index
 

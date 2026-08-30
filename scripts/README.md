@@ -25,7 +25,7 @@ constitutional authority by themselves.
 | `organ-contract` | AbyssOS repo-organ contract validation |
 | `hygiene` | link, Markdown, status vocabulary, generated freshness, and known-repair guardrails |
 | `agents-mesh` | AGENTS-card shape, coverage, and compact mesh indexes |
-| `mechanics-topology` | mechanics package topology, cards, artifact homes, and landing logs |
+| `mechanics-topology` | mechanics package topology, cards, artifact homes, landing logs, and exact child validation routes |
 | `owner-requests` | center-side owner request queue building and validation |
 
 ## Script Homes

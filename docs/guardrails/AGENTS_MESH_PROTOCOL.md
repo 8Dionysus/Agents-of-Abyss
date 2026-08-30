@@ -22,6 +22,11 @@ Each card must include:
 
 Cards must be readable Markdown, not minified instruction blobs. They should make the next safe action obvious to a low-context agent.
 
+Registered inherited card chains must fit the byte budget declared in
+`config/agents_mesh.json`. The budget measures prompt pressure, not semantic
+quality: a necessary stop-line stays in the nearest card until a stronger
+source surface can carry it.
+
 ## Precedence
 
 1. Root `AGENTS.md` owns repository identity, route modes, and owner boundaries.
@@ -39,6 +44,13 @@ When a new durable directory appears, choose one of three actions in the same ch
 1. add a local `AGENTS.md`;
 2. register an explicit exemption in `config/agents_mesh.json` with a reason;
 3. prove it is temporary and should not be committed as a durable district.
+
+When child-specific executable procedure would repeat across descendants or
+push a registered inherited chain over budget, keep the smallest executable
+entrypoint in the nearest card and route exact argv through a validated owner
+manifest. For mechanics, that source is `mechanics/validation-routes.json` and
+its no-shell runner. Do not move command catalogs into README entry maps merely
+to make AGENTS shorter.
 
 ## Must not claim
 

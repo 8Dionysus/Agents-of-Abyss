@@ -31,7 +31,7 @@ Root `mechanics/*.md` files are route surfaces for the mechanics tree. Keep
 their ownership narrow:
 
 - `mechanics/AGENTS.md` owns mechanics-tree law, editing posture, closeout, and
-  centralized validation.
+  the compact validation entry route.
 - `mechanics/README.md` owns the atlas, compass, route contract, and mechanic
   card contract.
 - `mechanics/ARTIFACT_TOPOLOGY.md` owns artifact placement law for root
@@ -40,6 +40,8 @@ their ownership narrow:
   priority vocabulary, advancement rules, and queue stop-lines.
 - `mechanics/OWNER_REQUEST_QUEUE.md` owns the human request index and package
   request routes.
+- `mechanics/validation-routes.json` owns exact child-surface command argv;
+  its runner and validator own lookup, execution, and route integrity.
 
 Do not let these root files duplicate package doctrine. If a detail belongs to
 one mechanic, route to that package's `README.md`, `DIRECTION.md`, `PARTS.md`,
@@ -172,6 +174,7 @@ python scripts/mechanics_topology/build_mechanic_card_index.py --check
 python scripts/mechanics_topology/validate_mechanic_card_index.py
 python scripts/mechanics_topology/validate_mechanics_topology.py
 python scripts/mechanics_topology/validate_mechanic_artifact_topology.py
+python scripts/mechanics_topology/validate_validation_routes.py
 python scripts/owner_requests/validate_owner_request_queue.py
 python scripts/owner_requests/build_owner_request_queue.py --check
 python scripts/owner_requests/validate_generated_owner_request_queue.py
@@ -190,77 +193,8 @@ python scripts/root_registries/validate_ecosystem.py
 python -m pytest -q
 ```
 
-<!-- centralized-child-validation:start -->
+### Routed child validation
 
-### Centralized Child Validation
-
-Executable validation commands from child docs live here. Child docs should
-route to this section instead of carrying command blocks.
-
-#### `mechanics/ARTIFACT_TOPOLOGY.md`
-
-```bash
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py
-python mechanics/questbook/scripts/validate_questbook_lifecycle.py
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-python scripts/release_gate/release_check.py
-```
-
-#### `mechanics/OWNER_REQUEST_PROTOCOL.md`
-
-```bash
-python scripts/owner_requests/validate_owner_request_queue.py
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py
-python scripts/mechanics_topology/validate_mechanics_topology.py
-```
-
-#### `mechanics/OWNER_REQUEST_QUEUE.md`
-
-```bash
-python scripts/owner_requests/validate_owner_request_queue.py
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py
-python scripts/mechanics_topology/validate_mechanics_topology.py
-```
-
-#### `mechanics/README.md`
-
-```bash
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python scripts/mechanics_topology/validate_mechanics_topology.py
-python scripts/owner_requests/validate_owner_request_queue.py
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py
-python scripts/hygiene/repair_known_link_drifts.py --check
-python scripts/hygiene/validate_links.py
-python scripts/hygiene/validate_markdown_shape.py
-python scripts/hygiene/validate_status_vocabulary.py
-python scripts/hygiene/build_link_shape_hygiene_index.py --check
-python scripts/hygiene/validate_link_shape_hygiene_index.py
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/agents_mesh/build_agents_mesh_index.py --check
-python scripts/agents_mesh/validate_agents_mesh_index.py
-python scripts/center_entry/validate_entry_surface_sync.py
-python scripts/center_entry/build_center_entry_map.py --check
-python scripts/center_entry/validate_center_entry_map.py
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py
-python scripts/hygiene/validate_generated_freshness.py
-python scripts/hygiene/validate_hygiene_suite.py
-python scripts/root_registries/validate_ecosystem.py
-python -m pytest -q
-python mechanics/audit/scripts/validate_audit_distillation.py
-python mechanics/distillation/scripts/validate_distillation_mechanic.py
-python mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py
-python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv/AbyssOS
-python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv/AbyssOS
-```
-
-<!-- centralized-child-validation:end -->
+Child-specific commands are source-owned by `mechanics/validation-routes.json`.
+Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+add `--show` to inspect the route without executing it.

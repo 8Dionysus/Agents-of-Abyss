@@ -8,6 +8,7 @@
   ],
   "generated_card_index_ref": "generated/mechanic_card_index.min.json",
   "generated_owner_request_queue_ref": "generated/owner_request_queue.min.json",
+  "validation_routes_ref": "mechanics/validation-routes.json",
   "mechanic_card_required_headings": [
     "## Mechanic card",
     "### Trigger",
