@@ -40,6 +40,7 @@ COMMANDS = [
     ("validate center entry map", [sys.executable, "scripts/center_entry/validate_center_entry_map.py"]),
     ("validate mechanics topology", [sys.executable, "scripts/mechanics_topology/validate_mechanics_topology.py"]),
     ("validate mechanic artifact topology", [sys.executable, "scripts/mechanics_topology/validate_mechanic_artifact_topology.py"]),
+    ("validate mechanics validation routes", [sys.executable, "scripts/mechanics_topology/validate_validation_routes.py"]),
     ("validate Agon recurrence manifests", [sys.executable, "mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_manifests.py"]),
     ("validate Method-growth mechanic", [sys.executable, "mechanics/method-growth/scripts/validate_method_growth_mechanic.py"]),
     ("validate Distillation mechanic", [sys.executable, "mechanics/distillation/scripts/validate_distillation_mechanic.py"]),

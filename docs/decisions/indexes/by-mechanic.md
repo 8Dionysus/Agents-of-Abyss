@@ -41,6 +41,7 @@
 - [AOA-CENTER-D-0024 Spark Session Lane Contract](../AOA-CENTER-D-0024-spark-session-lane-contract.md) (`docs/decisions/AOA-CENTER-D-0024-spark-session-lane-contract.md`)
 - [AOA-CENTER-D-0027 Codex Spark Agent Lane Home](../AOA-CENTER-D-0027-codex-spark-agent-lane-home.md) (`docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md`)
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
 
 ## boundary-bridge
 

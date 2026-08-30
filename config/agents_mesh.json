@@ -1,9 +1,10 @@
 {
-  "schema_version": "aoa_agents_mesh_v1",
+  "schema_version": "aoa_agents_mesh_v2",
   "authority_ref": "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
   "root_agents_ref": "AGENTS.md",
   "route_contract_ref": "docs/START_HERE_ROUTE_CONTRACT.md",
   "generated_ref": "generated/agents_mesh.min.json",
+  "chain_budget_bytes": 32768,
   "required_headings": [
     "## Applies to",
     "## Role",

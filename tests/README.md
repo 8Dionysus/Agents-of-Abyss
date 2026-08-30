@@ -23,7 +23,7 @@ and do not grant authority beyond the claims they check.
 | `docs-districts` | docs migration, thematic indexes, decisions, and trace district tests |
 | `organ-contract` | AbyssOS repo-organ contract and route-mode tests |
 | `hygiene` | link, Markdown shape, status vocabulary, generated freshness, and known repair tests |
-| `mechanics-topology` | mechanic registry, cards, artifact homes, and landing ledger tests |
+| `mechanics-topology` | mechanic registry, cards, artifact homes, landing ledgers, and routed-validation tests |
 | `owner-requests` | owner request queue and owner request document tests |
 | `local-stats` | center-local stats derivation, missingness, and reference-packet parity |
 | `ecosystem-contract` | ecosystem registry, Questbook center surface, and cross-mechanic route tests |

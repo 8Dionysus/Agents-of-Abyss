@@ -65,7 +65,9 @@ When editing:
 - route readers to neighboring AoA repositories instead of restating their internals
 - keep AoA versus `Tree-of-Sophia` ownership boundaries explicit
 - update related center-layer documents coherently when terminology or doctrine changes
-- keep README surfaces map-like and keep validation command lists in `AGENTS.md`
+- keep README surfaces map-like; keep short validation entrypoints in
+  `AGENTS.md` and large child-specific command matrices in validated owner
+  manifests
 
 Do not let this directory become a shadow corpus for techniques, skills, evals, memory objects, runtime configs, mechanic packets, or ToS-authored meaning.
 

@@ -128,6 +128,9 @@ memo state, or route evidence into reviewed memory.
 - Start with this root card, then follow the nearest nested `AGENTS.md` for every touched path.
 - Root guidance owns repository identity, owner boundaries, route choice, and the shortest honest verification path.
 - Nested guidance owns local contracts, local risk, exact files, and local checks.
+- Keep each registered inherited AGENTS chain within the budget declared in
+  `config/agents_mesh.json`; route large child-specific command matrices through
+  a validated owner manifest instead of copying them into descendant context.
 - Authored source surfaces own meaning. Generated, exported, compact, derived, runtime, and adapter surfaces summarize, transport, or support meaning.
 - Self-agency, recurrence, quest, progression, checkpoint, or growth language must stay bounded, reviewable, evidence-linked, and reversible.
 - Report what changed, what was verified, what was not verified, and where the next agent should resume.

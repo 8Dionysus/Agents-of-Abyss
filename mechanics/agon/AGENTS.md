@@ -96,52 +96,8 @@ python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_hand
 python -m pytest -q mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py
 ```
 
-<!-- centralized-child-validation:start -->
+### Routed child validation
 
-### Centralized Child Validation
-
-Executable validation commands from child docs live here. Child docs should
-route to this section instead of carrying command blocks.
-
-#### `mechanics/agon/DIRECTION.md`
-
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic agon
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic agon
-```
-
-#### `mechanics/agon/OWNER_REQUESTS.md`
-
-```bash
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic agon
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic agon
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic agon
-```
-
-#### `mechanics/agon/PARTS.md`
-
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon
-```
-
-#### `mechanics/agon/README.md`
-
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic agon
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic agon
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic agon
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic agon
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic agon
-```
-
-<!-- centralized-child-validation:end -->
+Child-specific commands are source-owned by `mechanics/validation-routes.json`.
+Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+add `--show` to inspect the route without executing it.

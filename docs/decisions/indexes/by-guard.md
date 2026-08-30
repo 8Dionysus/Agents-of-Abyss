@@ -37,6 +37,7 @@
 ## link/shape hygiene
 
 - [AOA-CENTER-D-0015 Decision Note: Traces Stay Repo-Level Receipts](../AOA-CENTER-D-0015-traces-mode-hardening.md) (`docs/decisions/AOA-CENTER-D-0015-traces-mode-hardening.md`)
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
 
 ## schema validation
 
@@ -79,6 +80,7 @@
 - [AOA-CENTER-D-0004 Mechanics Validation Command Authority](../AOA-CENTER-D-0004-mechanics-validation-command-authority.md) (`docs/decisions/AOA-CENTER-D-0004-mechanics-validation-command-authority.md`)
 - [AOA-CENTER-D-0007 ADR: Docs Guardrails and Mechanic Receipts](../AOA-CENTER-D-0007-docs-guardrails-and-mechanic-receipts.md) (`docs/decisions/AOA-CENTER-D-0007-docs-guardrails-and-mechanic-receipts.md`)
 - [AOA-CENTER-D-0008 Decision Note: Audit Becomes A Center Mechanic](../AOA-CENTER-D-0008-audit-mechanic-planting.md) (`docs/decisions/AOA-CENTER-D-0008-audit-mechanic-planting.md`)
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
 
 ## quest contract
 
@@ -91,6 +93,7 @@
 - [AOA-CENTER-D-0024 Spark Session Lane Contract](../AOA-CENTER-D-0024-spark-session-lane-contract.md) (`docs/decisions/AOA-CENTER-D-0024-spark-session-lane-contract.md`)
 - [AOA-CENTER-D-0026 Decision Note: Agent Surface Design Root](../AOA-CENTER-D-0026-agent-surface-design-root.md) (`docs/decisions/AOA-CENTER-D-0026-agent-surface-design-root.md`)
 - [AOA-CENTER-D-0027 Codex Spark Agent Lane Home](../AOA-CENTER-D-0027-codex-spark-agent-lane-home.md) (`docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md`)
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
 
 ## GitHub landing
 

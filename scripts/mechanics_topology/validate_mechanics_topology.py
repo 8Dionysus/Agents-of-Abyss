@@ -108,6 +108,7 @@ def validate_registry_shape(registry: dict[str, Any], selected: set[str] | None)
     require_path(str(registry.get("generated_card_index_ref", "")), problems, "generated_card_index_ref")
     for key in ("owner_request_protocol_ref", "owner_request_queue_ref", "owner_request_source_ref", "generated_owner_request_queue_ref"):
         require_path(str(registry.get(key, "")), problems, key)
+    require_path(str(registry.get("validation_routes_ref", "")), problems, "validation_routes_ref")
     owner_request_status_vocabulary = registry.get("owner_request_status_vocabulary")
     if not isinstance(owner_request_status_vocabulary, dict) or not owner_request_status_vocabulary:
         problems.append("mechanics/registry.json: owner_request_status_vocabulary must be a non-empty object")

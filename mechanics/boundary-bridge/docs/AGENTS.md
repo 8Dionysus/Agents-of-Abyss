@@ -35,24 +35,12 @@ changing.
 
 Use the validation lane in [../AGENTS.md](../AGENTS.md#validation).
 
-<!-- centralized-child-validation:start -->
+### Routed child validation
 
-### Centralized Child Validation
+Child-specific commands are source-owned by `mechanics/validation-routes.json`.
+Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+add `--show` to inspect the route without executing it.
 
-Executable validation commands from child docs live here. Child docs should
-route to this section instead of carrying command blocks.
-
-#### `mechanics/boundary-bridge/docs/TOS_BRIDGE_OWNER_REPO_REQUESTS.md`
-
-```bash
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic boundary-bridge
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic boundary-bridge
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic boundary-bridge
-```
-
-<!-- centralized-child-validation:end -->
 
 ## Closeout
 

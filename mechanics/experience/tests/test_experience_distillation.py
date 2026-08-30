@@ -120,12 +120,12 @@ def test_active_artifacts_do_not_use_release_contour_identity() -> None:
     assert problems == []
 
 
-def test_part_validation_commands_live_in_parts_agents() -> None:
+def test_part_validation_commands_use_routed_manifest() -> None:
     module = load_validator()
     problems: list[str] = []
-    parts_agents = (
-        ROOT / "mechanics" / "experience" / "parts" / "AGENTS.md"
-    ).read_text(encoding="utf-8")
+    route_data = json.loads(
+        (ROOT / "mechanics" / "validation-routes.json").read_text(encoding="utf-8")
+    )
 
     module.validate_parts(None, problems)
 
@@ -135,7 +135,12 @@ def test_part_validation_commands_live_in_parts_agents() -> None:
             ROOT / "mechanics" / "experience" / "parts" / slug / "VALIDATION.md"
         ).read_text(encoding="utf-8")
         assert "Experience parts AGENTS" in validation
-        assert f"validate_experience_distillation.py --part {slug}" in parts_agents
+        route = route_data["routes"][
+            f"mechanics/experience/parts/{slug}/VALIDATION.md"
+        ]
+        route_text = "\n".join(" ".join(command) for command in route["commands"])
+        assert route["owner_card"] == "mechanics/experience/parts/AGENTS.md"
+        assert f"validate_experience_distillation.py --part {slug}" in route_text
 
 
 def test_raw_legacy_readme_uses_package_validator_route() -> None:

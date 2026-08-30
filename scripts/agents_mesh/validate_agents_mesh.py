@@ -25,8 +25,11 @@ def main() -> int:
         if isinstance(item, dict) and item.get("path")
     }
 
-    if config.get("schema_version") != "aoa_agents_mesh_v1":
-        errors.append("config schema_version must be aoa_agents_mesh_v1")
+    if config.get("schema_version") != "aoa_agents_mesh_v2":
+        errors.append("config schema_version must be aoa_agents_mesh_v2")
+    chain_budget_bytes = config.get("chain_budget_bytes")
+    if not isinstance(chain_budget_bytes, int) or chain_budget_bytes <= 0:
+        errors.append("config chain_budget_bytes must be a positive integer")
 
     paths = [entry.get("path") for entry in config.get("entries", [])]
     if len(paths) != len(set(paths)):

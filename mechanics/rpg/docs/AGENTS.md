@@ -23,19 +23,9 @@ Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/rpg/AGENTS.md`, `mechan
 ## Validation
 
 Use the package validation lane in `mechanics/rpg/AGENTS.md`.
-Run the owner-request block there when `mechanics/rpg/OWNER_REQUESTS.md` changes.
+For `mechanics/rpg/OWNER_REQUESTS.md`, use the exact route in
+`mechanics/validation-routes.json` through the package card.
 
-<!-- centralized-child-validation:start -->
-
-### Centralized Child Validation
-
-Executable validation commands from child docs live here. Child docs should route to this section instead of carrying command blocks.
-
-#### `mechanics/rpg/OWNER_REQUESTS.md`
-
-Use the RPG package AGENTS owner-request validation block.
-
-<!-- centralized-child-validation:end -->
 
 ## Closeout
 

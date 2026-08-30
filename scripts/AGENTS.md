@@ -50,6 +50,7 @@ python scripts/agents_mesh/validate_agents_md_shape.py
 python scripts/agents_mesh/validate_agents_mesh.py
 python scripts/agents_mesh/build_agents_mesh_index.py --check
 python scripts/agents_mesh/validate_agents_mesh_index.py
+python scripts/mechanics_topology/validate_validation_routes.py
 python scripts/hygiene/validate_generated_freshness.py
 python scripts/root_registries/validate_ecosystem.py
 ```

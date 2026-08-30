@@ -68,6 +68,7 @@
 - [AOA-CENTER-D-0038 Select Reduced Federated Memory Organ R1](../AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md) (`docs/decisions/AOA-CENTER-D-0038-select-reduced-federated-memory-organ-r1.md`)
 - [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
 - [AOA-CENTER-D-0040 Establish the Provider-Neutral Inference Economy Owner Split](../AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md) (`docs/decisions/AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md`)
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
 
 ## root district
 
@@ -88,6 +89,7 @@
 - [AOA-CENTER-D-0007 ADR: Docs Guardrails and Mechanic Receipts](../AOA-CENTER-D-0007-docs-guardrails-and-mechanic-receipts.md) (`docs/decisions/AOA-CENTER-D-0007-docs-guardrails-and-mechanic-receipts.md`)
 - [AOA-CENTER-D-0008 Decision Note: Audit Becomes A Center Mechanic](../AOA-CENTER-D-0008-audit-mechanic-planting.md) (`docs/decisions/AOA-CENTER-D-0008-audit-mechanic-planting.md`)
 - [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
 
 ## schema/contract
 
@@ -116,6 +118,7 @@
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
 - [AOA-CENTER-D-0029 Root Scripts Family Topology](../AOA-CENTER-D-0029-root-scripts-family-topology.md) (`docs/decisions/AOA-CENTER-D-0029-root-scripts-family-topology.md`)
 - [AOA-CENTER-D-0034 Release Leaf Command Ownership](../AOA-CENTER-D-0034-release-leaf-command-ownership.md) (`docs/decisions/AOA-CENTER-D-0034-release-leaf-command-ownership.md`)
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
 
 ## release workflow
 
@@ -131,6 +134,7 @@
 - [AOA-CENTER-D-0024 Spark Session Lane Contract](../AOA-CENTER-D-0024-spark-session-lane-contract.md) (`docs/decisions/AOA-CENTER-D-0024-spark-session-lane-contract.md`)
 - [AOA-CENTER-D-0026 Decision Note: Agent Surface Design Root](../AOA-CENTER-D-0026-agent-surface-design-root.md) (`docs/decisions/AOA-CENTER-D-0026-agent-surface-design-root.md`)
 - [AOA-CENTER-D-0027 Codex Spark Agent Lane Home](../AOA-CENTER-D-0027-codex-spark-agent-lane-home.md) (`docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md`)
+- [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
 
 ## memory/writeback
 

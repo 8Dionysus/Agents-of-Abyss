@@ -23,9 +23,10 @@ The root of `mechanics/` is a dispatcher, not a second doctrine store.
 
 | File | Owns | Must not become |
 |---|---|---|
-| [`mechanics/AGENTS.md`](AGENTS.md) | local law for the mechanics tree, editing posture, closeout contract, and centralized validation | mechanic doctrine or package-specific meaning |
+| [`mechanics/AGENTS.md`](AGENTS.md) | local law for the mechanics tree, editing posture, closeout contract, and routed validation entry | mechanic doctrine or package-specific meaning |
 | [`mechanics/README.md`](README.md) | this atlas, route contract, mechanic compass, and card contract | a duplicate of package `README.md`, `PARTS.md`, `OWNER_MAP.md`, or `LANDING_LOG.md` |
 | [`mechanics/ARTIFACT_TOPOLOGY.md`](ARTIFACT_TOPOLOGY.md) | where schemas, examples, config, generated companions, scripts, tests, and quests belong | a migration log or alias map |
+| [`mechanics/validation-routes.json`](validation-routes.json) | exact argv for child-specific validation, keyed by source surface and nearest owner card | mechanic meaning, proof, release acceptance, or a prompt-visible command wall |
 | [`mechanics/OWNER_REQUEST_PROTOCOL.md`](OWNER_REQUEST_PROTOCOL.md) | owner-request fields, status vocabulary, priority vocabulary, advancement rules, and stop-lines | the current request index |
 | [`mechanics/OWNER_REQUEST_QUEUE.md`](OWNER_REQUEST_QUEUE.md) | human queue index and package request routes | protocol vocabulary source, owner acceptance, or proof |
 
@@ -69,7 +70,7 @@ Each package README must include these headings in this order:
 | `### Inputs` | what may enter this mechanic |
 | `### Outputs` | what may leave this mechanic |
 | `### Must not claim` | stop-lines copied from the registry |
-| `### Validation` | exact commands for this mechanic card and topology |
+| `### Validation` | route to exact commands for this mechanic card and topology |
 | `### Next route` | where implementation, proof, memory, runtime, role, KAG, or ToS meaning goes next |
 
 After the mechanic card, the package README should stay a lightweight entry
@@ -95,7 +96,10 @@ Machine companion:
 
 Validation:
 
-Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for
+package checks. For one child surface, inspect or execute its exact route with
+`scripts/mechanics_topology/run_validation_route.py`; the argv source is
+`mechanics/validation-routes.json`.
 The center entry-surface validation route lives in
 [`ENTRY_SURFACE_VALIDATION_BASELINE`](../docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md).
 

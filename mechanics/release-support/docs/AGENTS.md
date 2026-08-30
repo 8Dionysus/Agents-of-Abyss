@@ -42,54 +42,12 @@ python -m pytest -q
 
 Run any targeted builder, validator, and test named by the generated or version-specific surface you touched.
 
-<!-- centralized-child-validation:start -->
+### Routed child validation
 
-### Centralized Child Validation
+Child-specific commands are source-owned by `mechanics/validation-routes.json`.
+Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+add `--show` to inspect the route without executing it.
 
-Executable validation commands from child docs live here. Child docs should
-route to this section instead of carrying command blocks.
-
-#### `mechanics/release-support/docs/RELEASE_SUPPORT_OWNER_REPO_REQUESTS.md`
-
-```bash
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic release-support
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic release-support
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic release-support
-```
-
-#### `mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md`
-
-```bash
-python scripts/hygiene/repair_known_link_drifts.py --check
-python scripts/hygiene/validate_links.py
-python scripts/hygiene/validate_markdown_shape.py
-python scripts/hygiene/validate_status_vocabulary.py
-python scripts/hygiene/build_link_shape_hygiene_index.py --check
-python scripts/hygiene/validate_link_shape_hygiene_index.py
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/agents_mesh/build_agents_mesh_index.py --check
-python scripts/agents_mesh/validate_agents_mesh_index.py
-python scripts/center_entry/validate_entry_surface_sync.py
-python scripts/center_entry/build_center_entry_map.py --check
-python scripts/center_entry/validate_center_entry_map.py
-python scripts/mechanics_topology/validate_mechanics_topology.py
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py
-python scripts/hygiene/validate_generated_freshness.py
-python scripts/hygiene/validate_hygiene_suite.py
-python scripts/root_registries/validate_ecosystem.py
-python -m pytest -q
-```
-
-#### `mechanics/release-support/docs/RELEASING.md`
-
-```bash
-python scripts/release_gate/release_check.py
-```
-
-<!-- centralized-child-validation:end -->
 
 ## Closeout
 

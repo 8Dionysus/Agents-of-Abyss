@@ -16,6 +16,11 @@ def read_text(relative_path: str) -> str:
     return (REPO_ROOT / relative_path).read_text(encoding="utf-8")
 
 
+def validation_route_text(surface: str) -> str:
+    data = json.loads((REPO_ROOT / "mechanics/validation-routes.json").read_text(encoding="utf-8"))
+    return "\n".join(" ".join(command) for command in data["routes"][surface]["commands"])
+
+
 def mechanic_slugs() -> list[str]:
     registry = json.loads((REPO_ROOT / "mechanics/registry.json").read_text(encoding="utf-8"))
     return [item["slug"] for item in registry["mechanics"]]
@@ -149,13 +154,16 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("mechanics/AGENTS.md", mechanics)
         mechanics_agents = read_text("mechanics/AGENTS.md")
         method_docs_agents = read_text("mechanics/method-growth/docs/AGENTS.md")
-        self.assertIn("python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv/AbyssOS", mechanics_agents)
-        self.assertIn("python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv/AbyssOS", mechanics_agents)
+        refinery_route = validation_route_text(
+            "mechanics/method-growth/docs/REVIEWABLE_GROWTH_REFINERY.md"
+        )
+        self.assertIn("mechanics/validation-routes.json", mechanics_agents)
+        self.assertIn("mechanics/validation-routes.json", method_docs_agents)
+        self.assertIn("python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv/AbyssOS", refinery_route)
+        self.assertIn("python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv/AbyssOS", refinery_route)
         self.assertIn("method-growth", docs_readme)
         self.assertIn("mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md", refinery_doc)
         self.assertIn("AGENTS.md#validation", refinery_doc)
-        self.assertIn("python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv/AbyssOS", method_docs_agents)
-        self.assertIn("python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv/AbyssOS", method_docs_agents)
         self.assertIn("mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md", crosswalk)
         self.assertIn("weaker than a landed owner object", owner_landing)
         self.assertIn("let `aoa-stats` infer owner truth", owner_landing)
@@ -377,8 +385,12 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn(VALIDATION_BASELINE_REF, readme)
         self.assertIn("generated/center_entry_map.min.json", posture)
         self.assertIn("AGENTS.md#validation", posture)
-        self.assertIn("python scripts/center_entry/build_center_entry_map.py --check", posture_agents)
-        self.assertIn("python scripts/center_entry/validate_center_entry_map.py", posture_agents)
+        self.assertIn("mechanics/validation-routes.json", posture_agents)
+        posture_route = validation_route_text(
+            "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md"
+        )
+        self.assertIn("python scripts/center_entry/build_center_entry_map.py --check", posture_route)
+        self.assertIn("python scripts/center_entry/validate_center_entry_map.py", posture_route)
 
     def test_artifact_trust_posture_lists_center_entry_readmodel_class(self) -> None:
         posture = read_text("docs/ARTIFACT_TRUST_POSTURE.md")

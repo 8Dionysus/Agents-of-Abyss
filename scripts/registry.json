@@ -149,7 +149,10 @@
         "scripts/mechanics_topology/validate_mechanic_card_index.py",
         "scripts/mechanics_topology/validate_mechanic_landing_logs.py",
         "scripts/mechanics_topology/validate_mechanic_readme_cards.py",
-        "scripts/mechanics_topology/validate_mechanics_topology.py"
+        "scripts/mechanics_topology/validate_mechanics_topology.py",
+        "scripts/mechanics_topology/run_validation_route.py",
+        "scripts/mechanics_topology/validate_validation_routes.py",
+        "scripts/mechanics_topology/validation_routes_common.py"
       ],
       "must_not_claim": [
         "mechanic validation as owner acceptance in sibling repos"

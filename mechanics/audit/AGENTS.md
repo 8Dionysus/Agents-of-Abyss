@@ -85,50 +85,8 @@ python scripts/hygiene/validate_markdown_shape.py
 python scripts/hygiene/validate_links.py
 ```
 
-<!-- centralized-child-validation:start -->
+### Routed child validation
 
-### Centralized Child Validation
-
-Executable validation commands from child docs live here. Child docs should route to this section instead of carrying command blocks.
-
-#### `mechanics/audit/DIRECTION.md`
-
-```bash
-python mechanics/audit/scripts/validate_audit_distillation.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic audit
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic audit
-```
-
-#### `mechanics/audit/OWNER_REQUESTS.md`
-
-```bash
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic audit
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic audit
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic audit
-```
-
-#### `mechanics/audit/PARTS.md`
-
-```bash
-python mechanics/audit/scripts/validate_audit_distillation.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic audit
-```
-
-#### `mechanics/audit/README.md`
-
-```bash
-python mechanics/audit/scripts/validate_audit_distillation.py
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic audit
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic audit
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic audit
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic audit
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic audit
-```
-
-<!-- centralized-child-validation:end -->
+Child-specific commands are source-owned by `mechanics/validation-routes.json`.
+Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+add `--show` to inspect the route without executing it.

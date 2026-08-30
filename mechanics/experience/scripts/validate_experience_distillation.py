@@ -29,6 +29,7 @@ REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 PROVENANCE_PATH = EXPERIENCE_ROOT / "PROVENANCE.md"
 MECHANICS_ATLAS_PATH = REPO_ROOT / "mechanics" / "README.md"
 THEMATIC_DISTRICTS_PATH = REPO_ROOT / "docs" / "guardrails" / "thematic_districts.json"
+VALIDATION_ROUTES_PATH = REPO_ROOT / "mechanics" / "validation-routes.json"
 
 PART_SLUGS = (
     "capture-kernel",
@@ -597,6 +598,11 @@ def validate_root_surfaces(problems: list[str]) -> None:
 
 
 def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
+    route_data = (
+        json.loads(VALIDATION_ROUTES_PATH.read_text(encoding="utf-8"))
+        if VALIDATION_ROUTES_PATH.is_file()
+        else {"routes": {}}
+    )
     slugs = [slug for slug in PART_SLUGS if selected is None or slug in selected]
     for slug in slugs:
         part_dir = PARTS_ROOT / slug
@@ -612,6 +618,11 @@ def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
         contract = read(contract_path) if contract_path.exists() else ""
         validation = read(validation_path) if validation_path.exists() else ""
         parts_agents = read(PARTS_AGENTS_PATH) if PARTS_AGENTS_PATH.exists() else ""
+        route = route_data.get("routes", {}).get(rel(validation_path), {})
+        route_commands = route.get("commands", []) if isinstance(route, dict) else []
+        route_text = "\n".join(
+            " ".join(command) for command in route_commands if isinstance(command, list)
+        )
         if "## Legacy raw sources" in readme or "## Primary raw provenance" in readme:
             problems.append(
                 f"{rel(readme_path)}: active part README carries archival source inventory"
@@ -626,6 +637,7 @@ def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
         if (
             f"validate_experience_distillation.py --part {slug}" not in validation
             and f"validate_experience_distillation.py --part {slug}" not in parts_agents
+            and f"validate_experience_distillation.py --part {slug}" not in route_text
         ):
             problems.append(
                 f"{rel(validation_path)}: missing targeted distillation command in validation route"

@@ -22,34 +22,16 @@ Run:
 
 ```bash
 python mechanics/experience/scripts/validate_experience_distillation.py
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-python scripts/validate_links.py
+python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
+python scripts/hygiene/validate_links.py
 ```
 
-<!-- centralized-child-validation:start -->
+### Routed child validation
 
-### Centralized Child Validation
+Child-specific commands are source-owned by `mechanics/validation-routes.json`.
+Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+add `--show` to inspect the route without executing it.
 
-Executable validation commands from child docs live here. Child docs should
-route to this section instead of carrying command blocks.
-
-#### `mechanics/experience/legacy/README.md`
-
-```bash
-python mechanics/experience/scripts/validate_experience_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic experience
-python scripts/validate_mechanic_landing_logs.py --mechanic experience
-```
-
-#### `mechanics/experience/legacy/artifacts/README.md`
-
-```bash
-python mechanics/experience/scripts/validate_experience_distillation.py
-python scripts/validate_mechanic_artifact_topology.py --mechanic experience
-python -m pytest -q mechanics/experience/tests mechanics/experience/parts
-```
-
-<!-- centralized-child-validation:end -->
 
 ## Closeout
 
