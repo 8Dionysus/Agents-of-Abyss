@@ -128,8 +128,9 @@ generate, or remove it only through the evidence law in
 
 Validators, tests, builders, and freshness checks make agency inspectable.
 
-A card that asks an agent to change something should also say how that change is
-checked, or where to find the check.
+A card that asks an agent to change something should name the applicable
+on-demand validation surface or lane. Exact executable procedure stays in that
+surface, a validated manifest and runner, or another named owner procedure.
 
 ### Generated companions
 
@@ -283,9 +284,10 @@ owner surface.
 
 Every descendant receives the applicable AGENTS chain, so repeated command
 catalogs and source prose become a recurring context cost. Keep owner
-boundaries, stop-lines, task-relevant source routes, and the smallest executable entrypoint
-in the card. Put large child-specific command matrices in a validated owner
-manifest and retrieve only the exact route needed for the touched surface.
+boundaries, stop-lines, task-relevant source routes, and the smallest validation
+route in the card. Put exact child-specific procedure in an on-demand
+`VALIDATION.md` or validated owner manifest and retrieve only the route needed
+for the touched surface.
 
 Shorter is not automatically better. The budget protects locality and signal;
 it must not erase a contract that has no stronger source elsewhere.

@@ -63,4 +63,5 @@ runs the decision record validators.
 
 ## Validation
 
-Use the nearest `AGENTS.md` for the current command lane.
+Use the decision lane in [root validation](../../VALIDATION.md); the local
+`AGENTS.md` keeps decision boundaries and the route, not executable commands.
