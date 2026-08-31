@@ -51,9 +51,9 @@ specifically audited that evidence in depth.
 
 ## Post-change route review
 
-After any recurrence change, check whether the next agent can start from
-`README.md`, `DIRECTION.md`, `PARTS.md`, and the relevant active part without
-opening sibling history or raw evidence.
+After any recurrence change, check whether the next agent can start from the
+current inherited `AGENTS.md` card, then `DIRECTION.md`, `PARTS.md`, and the
+relevant active part without opening sibling history or raw evidence.
 
 Check whether the move changed:
 

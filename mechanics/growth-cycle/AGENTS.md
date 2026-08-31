@@ -57,9 +57,9 @@ owner-local acceptance.
 
 ## Post-change route review
 
-After Growth Cycle changes, check whether the next agent can start from
-`README.md`, `DIRECTION.md`, `PARTS.md`, and the relevant active part without
-reading sibling logs or implementation histories.
+After Growth Cycle changes, check whether the next agent can start from the
+current inherited `AGENTS.md` card, then `DIRECTION.md`, `PARTS.md`, and the
+relevant active part without reading sibling logs or implementation histories.
 
 Check whether the move changed:
 

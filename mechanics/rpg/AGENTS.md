@@ -52,7 +52,9 @@ skills, playbooks, proof, quests, runtime state, or source meaning.
 
 ## Post-change route review
 
-After RPG changes, check whether the next agent can start from `README.md`, `DIRECTION.md`, `USAGE.md`, `PARTS.md`, and the relevant active part without reading raw legacy.
+After RPG changes, check whether the next agent can start from the current
+inherited `AGENTS.md` card, then `DIRECTION.md`, `USAGE.md`, `PARTS.md`, and the
+relevant active part without reading raw legacy.
 If an active part needs history, distill the rule into the part and route the evidence through `PROVENANCE.md`, `legacy/INDEX.md`, and `legacy/DISTILLATION_LOG.md`.
 
 Check whether the move changed:

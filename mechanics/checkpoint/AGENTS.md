@@ -53,9 +53,9 @@ runtime activation, route dispatch, stats truth, or owner-local acceptance.
 
 ## Post-change route review
 
-After checkpoint changes, check whether the next agent can start from
-`README.md`, `DIRECTION.md`, `PARTS.md`, and the relevant active part without
-reading raw runtime or sibling history.
+After checkpoint changes, check whether the next agent can start from the current
+inherited `AGENTS.md` card, then `DIRECTION.md`, `PARTS.md`, and the relevant active
+part without reading raw runtime or sibling history.
 
 Check whether the move changed:
 

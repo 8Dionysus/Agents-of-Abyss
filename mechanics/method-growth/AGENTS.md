@@ -54,9 +54,9 @@ It does not own final object truth for specialized repositories.
 
 ## Post-change route review
 
-After any method-growth change, check whether the next agent can start from
-`README.md`, `DIRECTION.md`, `PARTS.md`, and the relevant active part without
-opening donor history or sibling owner surfaces.
+After any method-growth change, check whether the next agent can start from the
+current inherited `AGENTS.md` card, then `DIRECTION.md`, `PARTS.md`, and the
+relevant active part without opening donor history or sibling owner surfaces.
 
 Check whether the move changed:
 

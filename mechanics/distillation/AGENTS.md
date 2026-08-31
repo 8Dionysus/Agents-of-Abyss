@@ -62,9 +62,9 @@ runtime activation.
 
 ## Post-change route review
 
-After any distillation change, check whether the next agent can start from
-`README.md`, `DIRECTION.md`, `PARTS.md`, and the relevant active part without
-opening `legacy/raw/`.
+After any distillation change, check whether the next agent can start from the
+current inherited `AGENTS.md` card, then `DIRECTION.md`, `PARTS.md`, and the
+relevant active part without opening `legacy/raw/`.
 
 Check whether the move changed:
 
