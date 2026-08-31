@@ -4,7 +4,7 @@
 
 ## Status
 
-Accepted.
+Superseded.
 
 ## Index Metadata
 
@@ -13,7 +13,7 @@ Accepted.
 - Center facets: github landing
 - Mechanic parents: release-support
 - Guard families: GitHub landing, release/tooling
-- Posture: accepted rationale
+- Posture: superseded prompt placement; landing workflow retained in an on-demand owner route
 
 ## Context
 
@@ -34,10 +34,16 @@ workflow guidance, not in each individual PR conversation.
 
 ## Decision
 
-Root `AGENTS.md` owns the GitHub landing workflow for this repository:
-branch from current `origin/main`, commit the intended diff, push, open a PR,
-wait for `Repo Validation`, merge through GitHub with an allowed method, then
-return to clean synced `main`.
+At the time of this decision, root `AGENTS.md` owned the complete GitHub landing
+workflow for this repository: branch from current `origin/main`, commit the
+intended diff, push, open a PR, wait for `Repo Validation`, merge through GitHub
+with an allowed method, then return to clean synced `main`.
+
+The prompt-placement part of this decision is superseded by
+[`AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes`](AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md).
+The landing contract survives in `docs/RELEASING.md`. Root `AGENTS.md` keeps a
+compact route and the stop-line for unobservable CI or merge authority instead
+of carrying the full procedure in inherited context.
 
 `.github/AGENTS.md` owns synchronization of GitHub-native files with that route.
 `.github/CODEOWNERS` and `.github/PULL_REQUEST_TEMPLATE.md` should track current
@@ -45,9 +51,11 @@ root districts and guardrail paths.
 
 ## Rationale
 
-The workflow applies to the whole repository, not only `.github/`. Root
-`AGENTS.md` is the surface every future agent reads before touching any lane, so
-it is the shortest reliable place for the rule.
+The workflow applies to the whole repository, not only `.github/`. The original
+placement made it visible to every future agent, but it also made an exact
+landing procedure recurring prompt context for work that never lands a change.
+The current split preserves discoverability through a compact root route and
+keeps the complete human procedure on demand.
 
 Keeping `.github/` focused on platform files avoids burying repo-wide behavior in
 a nested card that agents may not read when they are changing mechanics, docs,
@@ -56,6 +64,8 @@ tests, or generated surfaces.
 ## Consequences
 
 - Future "commit, push, merge" requests have a named route.
+- Root `AGENTS.md` names that route and its stop-line; `docs/RELEASING.md`
+  carries the complete procedure.
 - Merge-method uncertainty is handled explicitly: prefer merge commit when
   allowed, use the permitted GitHub method when repository settings require it,
   and report the landed method.
@@ -65,6 +75,7 @@ tests, or generated surfaces.
 ## Source surfaces
 
 - `AGENTS.md`
+- `docs/RELEASING.md`
 - `.github/AGENTS.md`
 - `.github/CODEOWNERS`
 - `.github/PULL_REQUEST_TEMPLATE.md`
@@ -72,6 +83,7 @@ tests, or generated surfaces.
 
 ## Follow-up route
 
-If release-support later grows a repo-wide GitHub automation part, it may
-reference this workflow, but root `AGENTS.md` remains the active route for
-ordinary branch, PR, CI, and merge landings.
+Keep the ordinary branch, PR, CI, merge, and post-landing sync procedure in
+`docs/RELEASING.md`, with release-publication detail routed to the
+release-support mechanic. If platform behavior changes, update the procedure,
+root route, `.github/` support surfaces, and their validators together.
