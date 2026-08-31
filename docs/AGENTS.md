@@ -54,6 +54,7 @@ Guardrail surfaces live in `guardrails/`:
 - `guardrails/HYGIENE_GUARDRAIL_INDEX.md`
 - `guardrails/AGENTS_MESH_PROTOCOL.md`
 - `guardrails/AGENTS_MESH_INDEX.md`
+- `guardrails/README_AGENTS_CORPUS_PROTOCOL.md`
 
 ## Editing posture
 

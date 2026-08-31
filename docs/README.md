@@ -62,6 +62,7 @@ Guardrail operating surfaces:
 - [`HYGIENE_GUARDRAIL_INDEX`](guardrails/HYGIENE_GUARDRAIL_INDEX.md)
 - [`AGENTS_MESH_PROTOCOL`](guardrails/AGENTS_MESH_PROTOCOL.md)
 - [`AGENTS_MESH_INDEX`](guardrails/AGENTS_MESH_INDEX.md)
+- [`README_AGENTS_CORPUS_PROTOCOL`](guardrails/README_AGENTS_CORPUS_PROTOCOL.md)
 
 ## Adjacent Routes
 
