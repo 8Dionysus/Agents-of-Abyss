@@ -24,8 +24,8 @@ Do not use this lane to override owner-local truth, generated-source boundaries,
 
 ## Validation
 
-Run the nearest validator named by this card. For release-facing changes, also
-run the full gate described under `Verify`.
+Use [`VALIDATION.md`](VALIDATION.md) for the narrowest applicable on-demand
+route. For release-facing changes, widen to the full gate named there.
 
 ## Closeout
 
@@ -167,25 +167,14 @@ Treat these as high-risk findings in this center repository:
 
 ## Verify
 
-Run the narrowest relevant center check first. For release-facing or repo-wide
-changes, run the full gate. It includes compatibility validation owned by
-`aoa-stats`; provide a compatible checkout through `AOA_STATS_ROOT`,
-`.deps/aoa-stats`, or the sibling `../aoa-stats` path. CI supplies its pinned
-checkout explicitly, and an unavailable central validator is a failed check.
+The executable routes, exact-surface mechanics runner, and full release gate
+are maintained in [`VALIDATION.md`](VALIDATION.md). A compatible `aoa-stats`
+checkout is required by the release compatibility step; an unavailable owner
+validator is a failed check, not permission to report a partial gate as green.
 
-The entry-surface validation route is
-`docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`. The executable baseline
-is owned by `scripts/center_entry/center_entry_map_common.py`,
-`scripts/center_entry/validate_entry_surface_sync.py`, and
-`scripts/release_gate/release_check.py`; keep those surfaces aligned when the
-center-wide validation route changes.
-
-If an Agon owner-binding or gate-routing surface changes, use
-`mechanics/agon/AGENTS.md` and `mechanics/agon/parts/AGENTS.md` for the
-matching builder, validator, and targeted tests.
-
-`scripts/release_gate/release_check.py` owns the expanded default gate. Prefer keeping this
-root card short and using local `AGENTS.md` cards for lane-specific commands.
+Keep this root card and nested cards limited to validation route, claim limit,
+and stop-line. Lane-specific procedure belongs in `VALIDATION.md`, a validated
+manifest and runner, or another named owner procedure surface.
 
 ## Report
 

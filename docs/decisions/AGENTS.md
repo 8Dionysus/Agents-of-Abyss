@@ -45,7 +45,8 @@ why; current source surfaces define what.
 
 ## Validation
 
-Use docs and hygiene guardrails:
+Use the decision, docs, and hygiene lanes in
+[`VALIDATION.md`](../../VALIDATION.md).
 
 If thematic district indexes or migration maps changed, run their matching builders and validators too.
 

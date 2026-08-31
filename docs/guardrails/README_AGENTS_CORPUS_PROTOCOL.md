@@ -36,6 +36,12 @@ registries define machine topology. `VALIDATION.md`, validated manifests,
 runners, and other named procedure surfaces own exact procedure. Generated
 views remain reproducible derivatives with explicit source return.
 
+An on-demand `VALIDATION.md` must route directly to its procedure authority. It
+must not send the reader back to `AGENTS.md` for executable commands after the
+inherited card has already selected the lane. When a validated manifest owns
+exact child commands, the local validation surface names its exact manifest key
+and runner route; the `AGENTS.md` keeps only the link and stop-line.
+
 ## Root exception
 
 Keep the repository root `README.md` by default. It is the civic and public
