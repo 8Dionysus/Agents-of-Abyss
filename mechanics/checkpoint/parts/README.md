@@ -23,4 +23,4 @@ handoff without becoming owner-local truth.
 
 Start from the part README, then read `CONTRACT.md` for boundaries and
 `VALIDATION.md` for local validation posture. Executable commands remain
-centralized in [Checkpoint AGENTS](../AGENTS.md#validation).
+centralized in [repository validation map](../../../VALIDATION.md).

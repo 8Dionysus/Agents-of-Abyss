@@ -6,8 +6,9 @@ This card applies to `mechanics/audit/` and every nested path under that scope u
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card, `README.md`, `DIRECTION.md`, and `PARTS.md` before changing files in this lane.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not use this lane to create proof verdicts, owner-local remediation authority, runtime authority, memory truth, release authority, generated authority, or archival authority.
@@ -65,28 +66,10 @@ plans into active part contracts, `LANDING_LOG.md`, or `PROVENANCE.md`.
 
 Use these commands after Audit mechanic changes:
 
-```bash
-python mechanics/audit/scripts/validate_audit_distillation.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic audit
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic audit
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic audit
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic audit
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic audit
-```
-
 Use these commands after route, generated, or root docs references change:
-
-```bash
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/center_entry/build_center_entry_map.py --check
-python scripts/center_entry/validate_center_entry_map.py
-python scripts/hygiene/validate_markdown_shape.py
-python scripts/hygiene/validate_links.py
-```
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.

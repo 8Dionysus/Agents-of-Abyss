@@ -16,4 +16,4 @@ Boundary bridge parts live here. Each part answers one crossing problem.
 
 ## Validation
 
-Use the validation lane in [../AGENTS.md](../AGENTS.md#validation).
+Use the validation lane in [repository validation map](../../../VALIDATION.md).

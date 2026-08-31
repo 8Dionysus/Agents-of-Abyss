@@ -56,7 +56,7 @@ Experience center contracts, release posture, stop-lines, adoption route languag
 
 ### Validation
 
-Use the validation lane in [mechanics/experience/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the [repository validation map](../../VALIDATION.md) for executable checks..
 
 ### Next route
 

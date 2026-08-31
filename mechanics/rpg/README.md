@@ -42,7 +42,7 @@ Adjunct RPG reflection posture, progression-reading vocabulary, boundary map, an
 
 ### Validation
 
-Use the validation lane in [mechanics/rpg/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the [repository validation map](../../VALIDATION.md) for executable checks..
 
 ### Next route
 

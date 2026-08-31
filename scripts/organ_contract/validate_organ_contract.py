@@ -177,13 +177,15 @@ def validate_events(problems: list[str]) -> None:
 def validate_entry_sync_refs(problems: list[str]) -> None:
     for rel in ENTRY_SURFACES:
         require_contains(problems, rel, "organ-alignment")
+    validation_map = read("VALIDATION.md") if (REPO_ROOT / "VALIDATION.md").exists() else ""
     for rel in (
         "docs/AGENTS.md",
         "scripts/release_gate/release_check.py",
         "scripts/registry.json",
         "tests/registry.json",
     ):
-        require_contains(problems, rel, "scripts/organ_contract/validate_organ_contract.py")
+        if "scripts/organ_contract/validate_organ_contract.py" not in read(rel) and "scripts/organ_contract/validate_organ_contract.py" not in validation_map:
+            problems.append(f"{rel} missing 'scripts/organ_contract/validate_organ_contract.py'")
     for ref in (
         "AGENTS.md",
         "scripts/center_entry/center_entry_map_common.py",

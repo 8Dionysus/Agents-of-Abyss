@@ -13,10 +13,9 @@ distilled into `parts/`.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/agon/AGENTS.md`,
-`mechanics/agon/DIRECTION.md`, `mechanics/agon/PARTS.md`, and `INDEX.md`
-before changing legacy files.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not treat raw legacy files as the primary active route. Do not delete
@@ -27,18 +26,11 @@ without indexing them and naming the active part they pressure.
 
 Run:
 
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic agon
-python scripts/hygiene/validate_links.py
-```
-
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.
-
 
 ## Closeout
 

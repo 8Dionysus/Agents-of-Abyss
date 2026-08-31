@@ -23,4 +23,4 @@ parts should not carry raw source tails.
 
 ## Validation
 
-Use [Release-support parts AGENTS](AGENTS.md#validation).
+Use [repository validation map](../../../VALIDATION.md).

@@ -12,11 +12,9 @@ contours after their active route has been distilled into `parts/`.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`,
-`mechanics/questbook/AGENTS.md`, `mechanics/questbook/DIRECTION.md`,
-`mechanics/questbook/PARTS.md`, `mechanics/questbook/PROVENANCE.md`, and
-`INDEX.md` before changing legacy files.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not treat raw legacy files as the primary active route. Do not delete

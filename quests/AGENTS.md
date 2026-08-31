@@ -12,13 +12,9 @@ Lane-first lifecycle directories are the source placement. Top-level `AOA-Q-*` a
 
 ## Read before editing
 
-Read root `AGENTS.md`, `QUESTBOOK.md`, `quests/README.md`, and
-`mechanics/questbook/README.md` before changing quest semantics. For source
-object shape, also read
-`mechanics/questbook/parts/source-contract/README.md`.
-
-Use the nearest README for local file purpose. Use source docs, schemas, generated builders, validators, and owner repos as stronger authority when they apply.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Quests are not a second roadmap.

@@ -10,8 +10,9 @@ Experience parts hold functioning contracts. They distill source pressure into r
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/experience/AGENTS.md`, `mechanics/experience/DIRECTION.md`, `mechanics/experience/PARTS.md`, and the part file you are changing.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not move archival inventories into active part docs wholesale. Do not claim runtime activation, hidden memory authority, owner acceptance, proof verdicts, or ToS-authored meaning from this lane.
@@ -27,19 +28,11 @@ requests, validators, and the landing log before closing.
 
 Run:
 
-```bash
-python mechanics/experience/scripts/validate_experience_distillation.py
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic experience
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic experience
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience
-```
-
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.
-
 
 ## Closeout
 

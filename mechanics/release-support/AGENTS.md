@@ -7,13 +7,9 @@ that scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
-`README.md`, `DIRECTION.md`, `PARTS.md`, `OWNER_MAP.md`, and
-`OWNER_REQUESTS.md` before changing files in this lane.
-
-Use `PROVENANCE.md` only when source lineage, release history, or transition
-evidence matters. Do not start from legacy material.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not use this lane to override owner-local truth, generated-source
@@ -80,17 +76,13 @@ change does not affect its job.
 
 ## Validation
 
-Run `python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic release-support`
+Run the applicable validation route
 after package changes.
 
 For active-part or transition-law changes, run:
 
-```bash
-python mechanics/release-support/scripts/validate_release_support_distillation.py
-```
-
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.

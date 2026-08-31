@@ -7,18 +7,9 @@ scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
-`README.md`, `DIRECTION.md`, `PARTS.md`, and the nearest route surface before
-changing files in this lane.
-
-For source-law changes, read `parts/model-spine/README.md` first, then the
-narrow part source it points to. For relation changes, also read
-`parts/relation-shape/README.md`. For ready-owner route changes, read
-`parts/lane-owner-routes/README.md`, edit the JSON registry, and rebuild the
-Markdown projection instead of editing generated route rows by hand.
-For source object shape changes, read `parts/source-contract/README.md` before
-touching quest files.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not use this lane to override owner-local truth, generated-source
@@ -88,39 +79,13 @@ Before closeout, review the changed route rather than only the changed file:
 - Card-facing route, owner boundary, validation refs, or public summaries
   changed: update `mechanics/registry.json` and generated indexes.
 
-Keep executable validation commands in this file. Other Questbook Markdown
-surfaces should route here instead of duplicating command blocks.
+Keep executable validation routes in the repository `VALIDATION.md` map. Other
+Questbook Markdown surfaces should route to the package route instead of
+duplicating command blocks.
 
 ## Validation
 
 Run the narrow checks for the touched surface:
 
-```bash
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic questbook
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic questbook
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic questbook
-python mechanics/questbook/scripts/validate_questbook_source_contract.py
-python mechanics/questbook/scripts/validate_questbook_lifecycle.py
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-python mechanics/questbook/scripts/validate_quest_relations.py
-python mechanics/questbook/scripts/build_ready_owner_routes.py --check
-python mechanics/questbook/scripts/validate_ready_owner_routes.py
-python mechanics/questbook/scripts/validate_questbook_distillation.py
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic questbook
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic questbook
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic experience
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic experience
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python scripts/root_registries/validate_ecosystem.py
-python scripts/hygiene/validate_links.py
-python scripts/hygiene/validate_markdown_shape.py
-python scripts/hygiene/validate_generated_freshness.py
-python -m pytest -q mechanics/questbook/tests
-```
-
-Use `python scripts/release_gate/release_check.py` when route, generated, validation, or
+Use the applicable validation route when route, generated, validation, or
 release-facing surfaces change together.

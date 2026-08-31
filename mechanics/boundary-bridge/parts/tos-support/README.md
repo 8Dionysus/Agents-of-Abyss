@@ -29,4 +29,4 @@ lineage, or soil-prep work while keeping ToS source authority in
 
 ## Validation
 
-Use the validation lane in [../../AGENTS.md](../../AGENTS.md#validation).
+Use the validation lane in [repository validation map](VALIDATION.md).

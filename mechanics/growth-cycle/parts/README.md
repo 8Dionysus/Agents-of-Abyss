@@ -18,4 +18,4 @@ implementation surface.
 
 ## Validation
 
-Use the validation lane in [mechanics/growth-cycle/AGENTS.md](../AGENTS.md#validation) for executable commands.
+Use the [repository validation map](../../../VALIDATION.md) for executable checks..

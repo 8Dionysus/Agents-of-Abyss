@@ -7,13 +7,9 @@ that scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
-`README.md`, `DIRECTION.md`, `PARTS.md`, and the nearest source surface before
-changing files in this lane.
-
-Use `PROVENANCE.md` only when source lineage, donor history, or prior route
-evidence matters. Do not start from historical source trails.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not use this lane to override owner-local truth, generated-source
@@ -87,36 +83,12 @@ change does not affect its job.
 
 Run the narrow package lane after changing Method-growth surfaces:
 
-```bash
-python mechanics/method-growth/scripts/validate_method_growth_mechanic.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic method-growth
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic method-growth
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic method-growth
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic method-growth
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic method-growth
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic method-growth
-```
-
 Run lineage witnesses when the growth-refinery chain changes:
 
-```bash
-python mechanics/method-growth/scripts/validate_candidate_lineage_contract.py --workspace-root /srv/AbyssOS
-python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv/AbyssOS
-```
-
 Run generated checks when registry, owner requests, or AGENTS surfaces change:
-
-```bash
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/agents_mesh/build_agents_mesh_index.py --check
-python scripts/agents_mesh/validate_agents_mesh_index.py
-```
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.

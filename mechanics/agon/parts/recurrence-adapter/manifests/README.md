@@ -38,4 +38,4 @@ placeholder files.
 
 ## Validation
 
-Executable validation commands live in [local AGENTS](AGENTS.md#validation).
+Executable validation commands live in [repository validation map](../VALIDATION.md).

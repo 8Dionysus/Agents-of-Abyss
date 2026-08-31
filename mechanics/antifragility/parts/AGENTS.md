@@ -22,12 +22,6 @@ route-shaped, and free of raw wave history.
 
 Run:
 
-```bash
-python mechanics/antifragility/scripts/validate_antifragility_distillation.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic antifragility
-python -m pytest -q mechanics/antifragility/tests
-```
-
 ## Closeout
 
 Name the active part changed, the owner route affected, whether `PROVENANCE.md`

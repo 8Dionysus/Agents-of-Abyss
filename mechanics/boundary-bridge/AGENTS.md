@@ -7,13 +7,9 @@ that scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, this card, and
-`mechanics/boundary-bridge/README.md`, `DIRECTION.md`, `PARTS.md`,
-`OWNER_MAP.md`, and `OWNER_REQUESTS.md` before changing files in this lane.
-
-Use `PROVENANCE.md` only when source lineage or bridge history matters. Do not
-start from legacy material.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Name both sides of a bridge before changing the bridge.
@@ -90,23 +86,10 @@ change does not affect its job.
 
 Run the narrow package lane after boundary-bridge changes:
 
-```bash
-python mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic boundary-bridge
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic boundary-bridge
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic boundary-bridge
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic boundary-bridge
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic boundary-bridge
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-```
-
-For release-facing changes, also run `python scripts/release_gate/release_check.py`.
+For release-facing changes, also run the applicable validation route.
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.

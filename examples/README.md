@@ -30,11 +30,11 @@ Each root example names:
 - the source surfaces it illustrates
 - the route or placement decision it demonstrates
 - the boundary that keeps the example illustrative
-- the local checks or AGENTS validation path to use after related edits
+- the local checks or repository validation map to use after related edits
 
 ## Before editing
 
 1. Identify the source surface that the example illustrates.
 2. Check whether the example belongs in a sibling repository instead.
 3. If the example belongs to a center mechanic, edit the mechanic-owned source path.
-4. Use [AGENTS.md#validation](AGENTS.md#validation) for local checks.
+4. Use [VALIDATION.md](../VALIDATION.md) for local checks.

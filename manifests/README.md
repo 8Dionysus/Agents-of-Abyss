@@ -44,5 +44,5 @@ When a manifest and another surface disagree, read authority in this order:
 
 ## Validation
 
-Use [`AGENTS.md#validation`](AGENTS.md#validation). The executable registry
+Use [`VALIDATION.md`](../VALIDATION.md). The executable registry
 owner is `scripts/root_registries/validate_manifests_registry.py`.

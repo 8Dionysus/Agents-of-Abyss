@@ -274,12 +274,14 @@ def validate(root: Path) -> list[str]:
     agents = root / ".agents/spark/AGENTS.md"
     if agents.exists():
         agents_text = agents.read_text(encoding="utf-8")
+        validation_path = root / "VALIDATION.md"
+        validation_map = validation_path.read_text(encoding="utf-8") if validation_path.exists() else ""
         for required in (
             "done-or-handoff",
             ".agents/spark/registry.json",
             "python .agents/spark/scripts/validate_spark_lane.py",
         ):
-            if required not in agents_text:
+            if required not in agents_text and required not in validation_map:
                 problems.append(f".agents/spark/AGENTS.md does not mention {required}")
 
     swarm = root / ".agents/spark/SWARM.md"

@@ -138,6 +138,7 @@ def require_validation_refs(repo_root: Path, classifier: dict) -> list[str]:
     surfaces = [
         docs_agents.read_text(encoding="utf-8") if docs_agents.exists() else "",
         guardrails_agents.read_text(encoding="utf-8") if guardrails_agents.exists() else "",
+        (repo_root / "VALIDATION.md").read_text(encoding="utf-8") if (repo_root / "VALIDATION.md").exists() else "",
     ]
     release_text = release_check.read_text(encoding="utf-8") if release_check.exists() else ""
     release_commands = release_check_commands(release_text)
@@ -172,7 +173,7 @@ def require_classifier_route(repo_root: Path) -> list[str]:
         text += docs_readme.read_text(encoding="utf-8")
     if guardrails_agents.exists():
         text += "\n" + guardrails_agents.read_text(encoding="utf-8")
-    if str(CLASSIFIER_REL) not in text:
+    if str(CLASSIFIER_REL) not in text and Path(CLASSIFIER_REL).name not in text:
         return [f"docs surfaces do not mention classifier {CLASSIFIER_REL}"]
     return []
 

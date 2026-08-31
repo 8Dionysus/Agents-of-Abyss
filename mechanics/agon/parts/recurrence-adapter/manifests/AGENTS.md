@@ -12,10 +12,9 @@ binding receipts for the recurrence adapter part.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/agon/parts/AGENTS.md`,
-`mechanics/agon/parts/recurrence-adapter/README.md`, local `README.md`, and
-`manifests/registry.json`.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Component receipts and hook receipts move as pairs.
@@ -26,12 +25,6 @@ Read root `AGENTS.md`, `mechanics/agon/parts/AGENTS.md`,
   them.
 
 ## Validation
-
-```bash
-python mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_manifests.py
-python mechanics/agon/parts/recurrence-adapter/scripts/validate_agon_recurrence_adapter_request.py
-python -m pytest -q mechanics/agon/parts/recurrence-adapter/tests/test_agon_recurrence_manifests.py
-```
 
 ## Closeout
 

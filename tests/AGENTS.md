@@ -11,15 +11,13 @@ narrows the path.
 fixtures for center routes, root districts, generated surfaces, mechanics
 topology, hygiene, and ecosystem claims.
 
+The authoritative family map is `tests/registry.json`.
+
 ## Read before editing
 
-Read root `AGENTS.md`, local `README.md`, `tests/registry.json`, and the source
-surface named by the relevant registry family.
-
-Use mechanic package guidance for tests under `mechanics/<slug>/tests/` or
-`mechanics/<slug>/parts/<part>/tests/`.
-Use `.agents/spark/AGENTS.md` for tests under `.agents/spark/tests/`.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Root `tests/` owns root-owned center tests.
@@ -35,17 +33,7 @@ Use `.agents/spark/AGENTS.md` for tests under `.agents/spark/tests/`.
 
 Run the narrowest relevant checks first. Usual checks for this district:
 
-```bash
-python scripts/root_registries/validate_tests_district.py
-python -m pytest -q tests/test_tests_district.py
-python -m pytest -q
-```
-
 For release-facing test changes, also run:
-
-```bash
-python scripts/release_gate/release_check.py
-```
 
 ## Closeout
 

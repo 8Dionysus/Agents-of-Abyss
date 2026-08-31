@@ -12,10 +12,9 @@ should stay concise and functional. Historical context routes through
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`,
-`mechanics/release-support/AGENTS.md`, `mechanics/release-support/DIRECTION.md`,
-and the part being changed.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not put raw release history or old packets in active parts.
@@ -28,10 +27,6 @@ and the part being changed.
 ## Validation
 
 Run the package validator after part changes:
-
-```bash
-python mechanics/release-support/scripts/validate_release_support_distillation.py
-```
 
 For release-facing changes, also run the release check named by the package
 AGENTS card.

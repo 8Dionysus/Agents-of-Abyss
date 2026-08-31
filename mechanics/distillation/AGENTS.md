@@ -7,13 +7,9 @@ nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
-`README.md`, `DIRECTION.md`, `PARTS.md`, `OWNER_MAP.md`, and
-`OWNER_REQUESTS.md` before changing files in this lane.
-
-Use `PROVENANCE.md` only when source lineage matters. Do not start by opening
-legacy material.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - `mechanics/distillation/` owns center law, route grammar, active parts, and
@@ -95,17 +91,6 @@ Only update a surface when its meaning moved. Leave it untouched when the
 change does not affect its job.
 
 ## Validation
-
-```bash
-python mechanics/distillation/scripts/validate_distillation_mechanic.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic distillation
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic distillation
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic distillation
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic distillation
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic distillation
-```
 
 For release-bound changes, also run the central mechanics and release checks
 from `mechanics/AGENTS.md`.

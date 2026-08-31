@@ -10,10 +10,9 @@ This card applies to `examples/` and all descendants unless a nearer `AGENTS.md`
 
 ## Read before editing
 
-Read root `AGENTS.md`, local README, and the source document the example illustrates.
-
-Use the nearest README for local file purpose. Use source docs, schemas, generated builders, validators, and owner repos as stronger authority when they apply.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Keep root examples centered on center routes, root placement, owner-routing, and public-entry posture.
@@ -39,13 +38,6 @@ The local README must index every root example file.
 ## Validation
 
 Run the narrowest relevant checks first. Usual checks for this district:
-
-```bash
-python scripts/hygiene/validate_links.py
-python scripts/hygiene/validate_markdown_shape.py
-python -m pytest -q tests/test_examples_district.py
-python -m pytest -q
-```
 
 If a listed validator is not present in the checkout yet, report that explicitly and run the closest available guardrail.
 

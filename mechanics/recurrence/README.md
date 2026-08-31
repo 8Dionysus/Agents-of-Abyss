@@ -50,7 +50,7 @@ Center return law, drift/anchor/re-entry vocabulary, component refresh boundary,
 
 ### Validation
 
-Use the validation lane in [mechanics/recurrence/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the [repository validation map](../../VALIDATION.md) for executable checks..
 
 ### Next route
 

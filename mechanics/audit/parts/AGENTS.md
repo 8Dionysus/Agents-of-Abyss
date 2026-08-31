@@ -10,8 +10,9 @@ Parts are the active working organs of the Audit mechanic. Keep them concise, fu
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/audit/AGENTS.md`, `mechanics/audit/PARTS.md`, and the part `README.md`, `CONTRACT.md`, and `VALIDATION.md`.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not add legacy source lists, raw audit protocols, or executable validation commands to part docs. Route archival questions to `PROVENANCE.md` and commands to package `AGENTS.md`.

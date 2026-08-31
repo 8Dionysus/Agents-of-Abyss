@@ -7,15 +7,9 @@ scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
-`mechanics/growth-cycle/README.md`, `mechanics/growth-cycle/DIRECTION.md`,
-`mechanics/growth-cycle/PARTS.md`, and the relevant active part before changing
-this package.
-
-For owner boundaries, start from `mechanics/growth-cycle/OWNER_MAP.md`.
-For source lineage, use `mechanics/growth-cycle/PROVENANCE.md`; do not start
-from hook logs, generated summaries, or sibling implementation surfaces.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not turn Growth Cycle into an always-on scheduler or hidden automation
@@ -89,28 +83,6 @@ change does not affect its job.
 
 Run the narrow Growth Cycle lane after package changes:
 
-```bash
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic growth-cycle
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic growth-cycle
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic growth-cycle
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic growth-cycle
-python mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py
-python -m pytest -q mechanics/growth-cycle/tests
-```
-
 If owner requests changed, also run:
 
-```bash
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic growth-cycle
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic growth-cycle
-```
-
 For release-readiness or cross-mechanic edits, finish with:
-
-```bash
-python scripts/release_gate/release_check.py
-```

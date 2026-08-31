@@ -6,12 +6,12 @@ This card applies to `mechanics/experience/` and every nested path under that sc
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card, `README.md`, `DIRECTION.md`, and `PARTS.md` before changing files in this lane.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not use this lane to override owner-local truth, generated-source boundaries, sibling-repo authority, release validation contracts, live runtime, hidden memory sovereignty, or ToS-authored meaning.
-
 
 ## Closeout
 
@@ -69,14 +69,14 @@ plans into active part contracts, `LANDING_LOG.md`, or `PROVENANCE.md`.
 
 ## Validation
 
-Use `python mechanics/experience/scripts/validate_experience_distillation.py` after active-part or provenance-route changes.
-Use `python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic experience` after schema, example, script, or test placement changes.
-Use `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic experience` after landing-log or surface-chain changes.
+Use the applicable validation route after active-part or provenance-route changes.
+Use the applicable validation route after schema, example, script, or test placement changes.
+Use the applicable validation route after landing-log or surface-chain changes.
 Use the nearest `parts/<part>/scripts/*.py` and `parts/<part>/tests/test_*.py`
 for part-specific artifact surfaces.
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.

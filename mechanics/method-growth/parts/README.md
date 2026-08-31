@@ -29,4 +29,4 @@ owner-aware.
 
 ## Validation
 
-Use the validation lane in [Method-growth parts AGENTS](AGENTS.md#validation).
+Use the validation lane in [repository validation map](../../../VALIDATION.md).

@@ -40,4 +40,4 @@ exists, the Markdown table is a projection and must not be edited by hand.
 
 ## Validation
 
-Use the central Questbook validation matrix in [Questbook AGENTS](../../AGENTS.md#validation).
+Use the central Questbook validation map(VALIDATION.md).

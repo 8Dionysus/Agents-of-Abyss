@@ -14,11 +14,9 @@ holds the deeper material.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`,
-`mechanics/method-growth/AGENTS.md`, `mechanics/method-growth/README.md`, and
-the specific source document you are changing. If a generated surface mirrors
-this document, read the builder and validator before editing.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Keep detailed doctrine package-local and linked from the package README when
@@ -36,26 +34,14 @@ this document, read the builder and validator before editing.
 
 Run package and link checks:
 
-```bash
-python mechanics/method-growth/scripts/validate_method_growth_mechanic.py
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/hygiene/validate_links.py
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic method-growth
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic method-growth
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic method-growth
-python -m pytest -q mechanics/method-growth/tests
-```
-
 Run any targeted builder, validator, and test named by the generated or
 version-specific surface you touched.
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.
-
 
 ## Closeout
 

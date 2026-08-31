@@ -31,4 +31,4 @@ owner keeps its lane.
 
 ## Validation
 
-Use the validation lane in [../../AGENTS.md](../../AGENTS.md#validation).
+Use the validation lane in [repository validation map](VALIDATION.md).

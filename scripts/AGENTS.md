@@ -10,16 +10,13 @@ nearer `AGENTS.md` narrows the lane.
 `scripts/` is the root validation and build seam for the AoA center. It keeps
 root-owned validators, builders, release checks, and shared helper modules
 visible as family-scoped directories without absorbing mechanic-owned tooling.
+The authoritative family map is `scripts/registry.json`.
 
 ## Read before editing
 
-Read root `AGENTS.md`, local `README.md`, `scripts/registry.json`, and the
-source surface named by the relevant registry family.
-
-Use mechanic package guidance for scripts under `mechanics/<slug>/scripts/` or
-`mechanics/<slug>/parts/<part>/scripts/`.
-Use `.agents/spark/AGENTS.md` for scripts under `.agents/spark/scripts/`.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Root `scripts/` owns repo-relative center tooling through registered family
@@ -42,24 +39,7 @@ Use `.agents/spark/AGENTS.md` for scripts under `.agents/spark/scripts/`.
 
 Run the narrowest relevant checks first. Usual checks for this district:
 
-```bash
-python scripts/root_registries/validate_scripts_district.py
-python -m pytest -q tests/test_scripts_district.py
-python scripts/agents_mesh/validate_nested_agents.py
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/agents_mesh/build_agents_mesh_index.py --check
-python scripts/agents_mesh/validate_agents_mesh_index.py
-python scripts/mechanics_topology/validate_validation_routes.py
-python scripts/hygiene/validate_generated_freshness.py
-python scripts/root_registries/validate_ecosystem.py
-```
-
 For release-facing script changes, also run:
-
-```bash
-python scripts/release_gate/release_check.py
-```
 
 ## Closeout
 

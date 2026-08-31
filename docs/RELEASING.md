@@ -9,14 +9,26 @@ release.
 
 ## Route
 
-1. Prepare release surfaces: `CHANGELOG.md`, the `README.md` release banner,
-   and the `ROADMAP.md` released contour.
-2. Run the broad local gate through `scripts/release_gate/release_check.py`.
-3. Merge the release-prep PR to `main` after GitHub `Repo Validation` is green.
-4. Run federation release preflight for this repository.
-5. Publish through the bounded release helper, first as a dry run, then with
+1. Start from a clean branch based on the current `origin/main`; keep the
+   release-prep diff limited to the named release surfaces.
+2. Prepare `CHANGELOG.md`, the `README.md` release banner, and the `ROADMAP.md`
+   released contour.
+3. Run the broad local gate through the repository validation map and inspect
+   the complete diff, status, and release metadata.
+4. Commit only the intended release-prep diff, push the branch, and open a PR
+   with changed surfaces, validation, skipped checks, and remaining risk.
+5. Wait for GitHub `Repo Validation` to finish. If it fails, fix the branch and
+   wait for the replacement result before continuing.
+6. Merge through GitHub using the currently allowed method (repository
+   settings reject merge commits today, so use squash unless that changes),
+   then return to `main` and fast-forward from `origin/main`.
+7. Run federation release preflight for this repository.
+8. Publish through the bounded release helper, first as a dry run, then with
    confirmation.
-6. Run federation postpublish audit and verify the tag and GitHub Release.
+9. Run federation postpublish audit and verify the tag and GitHub Release.
+10. Confirm the post-landing worktree is clean and report the method that
+    landed. If GitHub status or merge permission cannot be observed, stop and
+    report that blocker instead of guessing.
 
 ## Source Surfaces
 

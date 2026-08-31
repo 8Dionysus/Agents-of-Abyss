@@ -6,10 +6,9 @@ This card applies to `mechanics/agon/parts/` and every descendant active part.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/agon/AGENTS.md`,
-`mechanics/agon/DIRECTION.md`, and `mechanics/agon/PARTS.md` before changing an
-active part.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Active parts are concise working contracts. Do not turn them into source-doc
@@ -21,20 +20,14 @@ If a task needs detailed source accounting, route through
 
 ## Validation
 
-```bash
-python mechanics/agon/scripts/validate_agon_distillation.py
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon
-```
-
 Run the nearest Agon builder, validator, and test when a part-specific model
 artifact changes.
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.
-
 
 ## Closeout
 

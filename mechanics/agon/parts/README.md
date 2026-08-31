@@ -20,4 +20,4 @@ owner boundary, validation, and next route.
 
 ## Validation
 
-Use the validation lane in [mechanics/agon/parts/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the [repository validation map](../../../VALIDATION.md) for executable checks..

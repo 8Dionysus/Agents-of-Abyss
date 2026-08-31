@@ -7,13 +7,9 @@ scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
-`README.md`, `DIRECTION.md`, `PARTS.md`, and the nearest nested route surface
-before changing files in this lane.
-
-Read `PROVENANCE.md` only when you need source lineage, sibling evidence, or a
-receipt trail. Do not pull provenance inventories into active part docs.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Role
 
 Recurrence owns bounded return, anchor recovery, re-entry, continuity windows,
@@ -84,16 +80,11 @@ change does not affect its job.
 
 Run the recurrence package validator after package changes:
 
-```bash
-python mechanics/recurrence/scripts/validate_recurrence_mechanic.py
-python -m pytest -q mechanics/recurrence/tests/test_recurrence_mechanic.py
-```
-
 For registry, card, queue, or release-facing changes, also use the relevant
 commands below.
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.

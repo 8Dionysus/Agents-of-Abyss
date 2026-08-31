@@ -6,9 +6,9 @@ This card applies to `mechanics/` and every nested path under that scope until a
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or protocol surface before changing files in this lane.
-
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Closeout
 
 Closeout must name changed surfaces, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
@@ -115,7 +115,6 @@ Use these homes when an artifact only makes sense inside the mechanic's owner
 boundary. Keep root technical districts for repository-wide contracts only, as
 defined by `mechanics/ARTIFACT_TOPOLOGY.md`.
 
-
 ## Owner-request law
 
 Owner-request queue surfaces are center-side handoff contracts. They may name requests, stop-lines, source refs, proof routes, and next actions. They must not claim owner acceptance or owner-local landing without an owner-local receipt.
@@ -153,7 +152,7 @@ When editing a mechanic:
 7. Update `mechanics/registry.json` when a package, owner boundary, card field, required surface, or validation route changes.
 8. Rebuild the generated card index when card-facing registry fields change.
 9. Rebuild the owner-request queue when request-facing registry or queue fields change.
-10. Run `scripts/mechanics_topology/validate_mechanic_artifact_topology.py` when schemas,
+10. Use the mechanic artifact-topology validation route when schemas,
     examples, config, generated artifacts, scripts, tests, or quest routing move
     between root districts and mechanic homes.
 11. Run a decision review when a mechanic change alters topology, owner split,
@@ -168,33 +167,10 @@ change only the files whose future-facing meaning actually moved.
 
 Run the narrow mechanic validators:
 
-```bash
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python scripts/mechanics_topology/validate_mechanics_topology.py
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py
-python scripts/mechanics_topology/validate_validation_routes.py
-python scripts/owner_requests/validate_owner_request_queue.py
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py
-python mechanics/audit/scripts/validate_audit_distillation.py
-python mechanics/distillation/scripts/validate_distillation_mechanic.py
-python mechanics/growth-cycle/scripts/validate_growth_cycle_mechanic.py
-```
-
 For release-bound mechanics changes, also run:
-
-```bash
-python scripts/hygiene/validate_markdown_shape.py
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py
-python scripts/root_registries/validate_ecosystem.py
-python -m pytest -q
-```
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.

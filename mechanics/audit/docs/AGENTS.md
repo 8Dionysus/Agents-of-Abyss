@@ -10,8 +10,9 @@ This card applies to `mechanics/audit/docs/` and all descendant source documents
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/audit/AGENTS.md`, `mechanics/audit/README.md`, and the specific source document you are changing.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not put legacy inventories, raw source catalogs, or executable validation commands here. Use `PROVENANCE.md` for archive bridges and package `AGENTS.md` for commands.

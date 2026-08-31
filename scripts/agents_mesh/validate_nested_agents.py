@@ -17,7 +17,7 @@ REQUIRED_AGENTS: dict[str, tuple[str, ...]] = {
         "mechanics/<slug>",
         "mechanic receipts",
         "Tree-of-Sophia",
-        "python scripts/root_registries/validate_ecosystem.py",
+        "VALIDATION.md",
     ),
     "generated/AGENTS.md": (
         "ecosystem_registry.min.json",
@@ -26,7 +26,7 @@ REQUIRED_AGENTS: dict[str, tuple[str, ...]] = {
         "maturity",
         "relation",
         "not a hidden second charter",
-        "python scripts/root_registries/validate_ecosystem.py",
+        "VALIDATION.md",
     ),
     "schemas/AGENTS.md": (
         "ecosystem-registry.schema.json",
@@ -43,7 +43,7 @@ REQUIRED_AGENTS: dict[str, tuple[str, ...]] = {
         "requirements-dev.txt",
         "repo-relative",
         "Python 3.12",
-        "python scripts/root_registries/validate_ecosystem.py",
+        "VALIDATION.md",
     ),
 }
 

@@ -80,4 +80,4 @@ Each lane may contain:
 
 ## Validation
 
-Use the central Questbook validation matrix in [Questbook AGENTS](../mechanics/questbook/AGENTS.md#validation).
+Use the central Questbook validation map(../VALIDATION.md).

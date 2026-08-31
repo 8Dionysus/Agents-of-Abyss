@@ -12,10 +12,9 @@ the entry card; active operation routes through package `PARTS.md`.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/antifragility/AGENTS.md`,
-`mechanics/antifragility/README.md`, and the specific source document you are changing. If a
-generated surface mirrors this document, read the builder and validator before editing.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Keep detailed doctrine package-local and linked from the package README when it becomes an entry path.
@@ -33,9 +32,8 @@ Use the validation lane in
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.
-
 
 ## Closeout
 

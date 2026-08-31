@@ -184,10 +184,12 @@ def validate_part_files(part: dict[str, Any], selected: set[str] | None, problem
 
     if QUESTBOOK_AGENTS_PATH.is_file():
         agents_text = read(QUESTBOOK_AGENTS_PATH)
+        validation_path = REPO_ROOT / "VALIDATION.md"
+        validation_map = read(validation_path) if validation_path.is_file() else ""
         commands = part.get("validation_commands", [])
         if isinstance(commands, list):
             for command in commands:
-                if isinstance(command, str) and command not in agents_text:
+                if isinstance(command, str) and command not in agents_text and command not in validation_map:
                     problems.append(f"{rel(QUESTBOOK_AGENTS_PATH)} missing registry command: {command}")
 
 

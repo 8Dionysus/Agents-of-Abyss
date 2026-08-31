@@ -18,4 +18,4 @@ conversion pressure and keep raw source accounting behind `PROVENANCE.md`.
 
 ## Route
 
-Use the package validator through [Distillation AGENTS](../AGENTS.md#validation).
+Use the package validator through the repository validation map(../../../VALIDATION.md).

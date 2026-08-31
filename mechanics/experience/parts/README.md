@@ -18,4 +18,4 @@ duplicate or stale paths.
 
 ## Validation
 
-Use [Experience parts AGENTS](AGENTS.md#validation) for executable commands.
+Use [repository validation map](../../../VALIDATION.md) for executable commands.

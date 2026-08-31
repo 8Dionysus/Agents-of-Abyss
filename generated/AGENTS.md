@@ -10,10 +10,9 @@ This card applies to `generated/` and every nested path under that scope until a
 
 ## Read before editing
 
-Read root `AGENTS.md`, this card, `generated/README.md`, and the source surface named for the generated file.
-
-For manual registry summaries, read the relevant schema and center prose before editing. For Questbook read models, read `mechanics/questbook/AGENTS.md` and rebuild with the Questbook builder.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not treat generated files as stronger than source docs, schemas, source registries, quest source files, validators, or owner repositories.
@@ -25,7 +24,8 @@ For manual registry summaries, read the relevant schema and center prose before 
 
 ## Editing posture
 
-Use the surface table in `generated/README.md` before changing any file here.
+The surface table in `generated/README.md` is the human map when its package
+meaning or generated-surface relationship is material to the task.
 
 Root-built surfaces:
 
@@ -58,29 +58,7 @@ When a generated file begins to carry new meaning, update the owner source surfa
 
 Run the narrow checks for the touched surface:
 
-```bash
-python scripts/center_entry/build_center_entry_map.py --check
-python scripts/center_entry/validate_center_entry_map.py
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/docs_districts/build_docs_thematic_index.py --check
-python scripts/docs_districts/validate_docs_thematic_index.py
-python scripts/hygiene/build_link_shape_hygiene_index.py --check
-python scripts/hygiene/validate_link_shape_hygiene_index.py
-python scripts/agents_mesh/build_agents_mesh_index.py --check
-python scripts/agents_mesh/validate_agents_mesh_index.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/agents_mesh/validate_agents_md_shape.py
-python mechanics/questbook/scripts/build_questbook_index.py --check
-python mechanics/questbook/scripts/validate_questbook_index.py
-python scripts/hygiene/validate_generated_freshness.py
-python scripts/root_registries/validate_ecosystem.py
-python -m pytest -q
-```
-
-Run `python scripts/release_gate/release_check.py` when generated, route, schema, AGENTS, or release-facing surfaces change together.
+Run the applicable validation route when generated, route, schema, AGENTS, or release-facing surfaces change together.
 
 ## Closeout
 

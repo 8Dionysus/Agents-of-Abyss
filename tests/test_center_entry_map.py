@@ -130,7 +130,7 @@ class CenterEntryMapTests(unittest.TestCase):
         self.assertIn("scripts/release_gate/release_check.py", baseline)
         self.assertNotIn("```bash", baseline)
         self.assertIn("scripts/organ_contract/validate_organ_contract.py", release_gate)
-        self.assertIn("python", Path("AGENTS.md").read_text(encoding="utf-8"))
+        self.assertIn("python", Path("VALIDATION.md").read_text(encoding="utf-8"))
 
     def test_organ_alignment_route_preserves_owner_boundaries(self) -> None:
         payload = build_payload()

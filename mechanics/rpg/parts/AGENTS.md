@@ -10,8 +10,9 @@ RPG parts are the active, concise working contracts for world grammar. They shou
 
 ## Read before editing
 
-Read `mechanics/rpg/AGENTS.md`, `mechanics/rpg/DIRECTION.md`, `mechanics/rpg/PARTS.md`, and the local part `README.md` before changing a part.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not pull detailed source inventories into part docs.
@@ -22,12 +23,6 @@ Read `mechanics/rpg/AGENTS.md`, `mechanics/rpg/DIRECTION.md`, `mechanics/rpg/PAR
 ## Validation
 
 Run the RPG part lane after part changes:
-
-```bash
-python mechanics/rpg/scripts/validate_rpg_distillation.py
-python mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py
-python -m pytest -q mechanics/rpg/tests mechanics/rpg/parts/vocabulary-overlay/tests
-```
 
 For release-readiness, use the package validation lane in `mechanics/rpg/AGENTS.md`.
 

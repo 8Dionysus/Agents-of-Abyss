@@ -14,4 +14,4 @@ Functioning RPG parts live here. Each part keeps the active route light and leav
 
 ## Validation
 
-Use the RPG package AGENTS validation lane.
+Use the RPG package repository validation map.

@@ -56,7 +56,8 @@ class SchemaDistrictTestCase(unittest.TestCase):
         self.assertIn("[`registry.json`](registry.json)", readme)
         self.assertIn("Root Contracts", readme)
         self.assertIn("schemas/registry.json", agents)
-        self.assertIn("python scripts/root_registries/validate_schema_registry.py", agents)
+        validation = (REPO_ROOT / "VALIDATION.md").read_text(encoding="utf-8")
+        self.assertIn("python scripts/root_registries/validate_schema_registry.py", validation)
 
 
 if __name__ == "__main__":
