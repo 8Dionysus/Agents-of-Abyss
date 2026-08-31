@@ -36,6 +36,11 @@ The owner surface keeps truth.
 The validator tests the claim.
 The closeout returns the work to memory.
 
+Human documentation is a neighboring layer, not inherited agent law.
+README surfaces may explain purpose, use, navigation, provenance, and public
+posture on demand. An agent card points to one only when that human surface is
+material to the work.
+
 ## Design as Appearance
 
 Agent guidance should appear as a readable road network, not a buried control
@@ -106,6 +111,19 @@ human-authored maps own meaning.
 `AGENTS.md` cards route agents to source truth. They do not become source truth
 by repetition.
 
+### Human and public surfaces
+
+README files introduce, explain, and connect a surface for humans and public
+callers. They may be valuable without being mandatory agent context. A README
+does not become an owner contract merely because it is conventional, and an
+AGENTS card does not need to repeat it merely because both files share a
+directory.
+
+Keep a README when it carries a real public entrypoint, usage path, package map,
+example route, provenance bridge, or compatibility function. Merge, move,
+generate, or remove it only through the evidence law in
+`docs/guardrails/README_AGENTS_CORPUS_PROTOCOL.md`.
+
 ### Validation surfaces
 
 Validators, tests, builders, and freshness checks make agency inspectable.
@@ -125,9 +143,9 @@ reproducible, and avoid authoring new meaning.
 
 A safe agent move follows a route before it touches content.
 
-1. Read the root card.
+1. Receive the applicable root card.
 2. Read the nearest local card for every touched path.
-3. Read the owner source surfaces named by those cards.
+3. Follow only the task-relevant owner source routes named by those cards.
 4. Make the smallest change that preserves the owner boundary.
 5. Run the narrowest relevant validation first.
 6. Run broader gates when the change is release-facing, route-facing, generated,
@@ -146,7 +164,7 @@ It may:
 - route work;
 - name local risks;
 - name owner surfaces;
-- require reading order;
+- require task-relevant owner routes;
 - require validation;
 - set closeout shape;
 - prevent common unsafe claims.
@@ -191,7 +209,9 @@ This shape is intentionally plain.
 
 `Applies to` tells the agent where the card rules.
 `Role` tells the agent what this lane is for.
-`Read before editing` names the minimum orientation path.
+`Read before editing` selects the minimum owner surfaces that can change the
+interpretation of work in this lane. It is not permission to require the
+nearest README or repeat a generic repository reading list.
 `Boundaries` prevents authority drift.
 `Validation` turns action into checkable work.
 `Closeout` preserves handoff memory.
@@ -263,7 +283,7 @@ owner surface.
 
 Every descendant receives the applicable AGENTS chain, so repeated command
 catalogs and source prose become a recurring context cost. Keep owner
-boundaries, stop-lines, reading order, and the smallest executable entrypoint
+boundaries, stop-lines, task-relevant source routes, and the smallest executable entrypoint
 in the card. Put large child-specific command matrices in a validated owner
 manifest and retrieve only the exact route needed for the touched surface.
 
@@ -287,6 +307,8 @@ A repository can grow without turning its root into a labyrinth cupboard.
 - local cards that duplicate root doctrine instead of naming local risk;
 - instructions that cite no owner surface;
 - validation commands copied everywhere and allowed to drift;
+- the nearest README required by convention rather than task relevance;
+- human overview moved into inherited cards to lower the README count;
 - inherited card chains that silently exceed their declared context budget;
 - generated indexes treated as source authority;
 - autonomous language without stop-lines;
@@ -304,6 +326,8 @@ A repository can grow without turning its root into a labyrinth cupboard.
 `AGENTS.md` routes agent work in the repository.
 Nested `AGENTS.md` cards narrow local work.
 `docs/guardrails/AGENTS_MESH_PROTOCOL.md` defines the current mesh contract.
+`docs/guardrails/README_AGENTS_CORPUS_PROTOCOL.md` defines the boundary between
+inherited agent routes and on-demand human README surfaces.
 `config/agents_mesh.json` registers required cards.
 `generated/agents_mesh.min.json` mirrors mesh coverage for machines.
 
@@ -336,7 +360,7 @@ Agents should consult this file when a change alters:
 
 - the shape of any `AGENTS.md` card;
 - the root-to-local precedence model;
-- route modes or reading order;
+- route modes or owner-source selection;
 - validation authority;
 - generated agent-mesh companions;
 - closeout requirements;
@@ -355,6 +379,7 @@ move:
 - root `AGENTS.md`;
 - affected nested `AGENTS.md` cards;
 - `docs/guardrails/AGENTS_MESH_PROTOCOL.md`;
+- `docs/guardrails/README_AGENTS_CORPUS_PROTOCOL.md`;
 - `config/agents_mesh.json`;
 - generated agent-mesh companions;
 - validators for card shape, mesh coverage, generated freshness, and release

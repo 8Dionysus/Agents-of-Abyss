@@ -20,6 +20,9 @@ For AGENTS mesh work, read `../../DESIGN.AGENTS.md`,
 `AGENTS_MESH_PROTOCOL.md`, `AGENTS_MESH_INDEX.md`, and
 `../../config/agents_mesh.json`.
 
+For README/AGENTS role, disposition, or removal work, read
+`README_AGENTS_CORPUS_PROTOCOL.md` and decision `AOA-CENTER-D-0042`.
+
 For entry-surface validation work, read
 `ENTRY_SURFACE_VALIDATION_BASELINE.md`, `../../scripts/center_entry/center_entry_map_common.py`,
 and `../../scripts/center_entry/validate_entry_surface_sync.py`.

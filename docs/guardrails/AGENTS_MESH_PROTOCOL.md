@@ -7,6 +7,10 @@ The AGENTS mesh makes agent guidance local without letting local cards steal aut
 `DESIGN.AGENTS.md` describes the design form of this agent-facing layer. This
 protocol defines the current checkable mesh contract.
 
+`README_AGENTS_CORPUS_PROTOCOL.md` defines the role boundary between inherited
+agent routes and on-demand human README surfaces, including the evidence needed
+before a file is merged, moved, generated, or removed.
+
 ## Contract
 
 Every durable district that agents may edit should have a local `AGENTS.md` or an explicit exemption in `config/agents_mesh.json`.
@@ -21,6 +25,11 @@ Each card must include:
 - `## Closeout`
 
 Cards must be readable Markdown, not minified instruction blobs. They should make the next safe action obvious to a low-context agent.
+
+`Read before editing` is a conditional owner-route section, not a standing
+reading list. A card may name a README when its human explanation, package map,
+provenance, or compatibility route is material to the task. It must not require
+the nearest README only because the file exists.
 
 Registered inherited card chains must fit the byte budget declared in
 `config/agents_mesh.json`. The budget measures prompt pressure, not semantic
@@ -51,6 +60,12 @@ entrypoint in the nearest card and route exact argv through a validated owner
 manifest. For mechanics, that source is `mechanics/validation-routes.json` and
 its no-shell runner. Do not move command catalogs into README entry maps merely
 to make AGENTS shorter.
+
+Do not move human overview or usage prose into AGENTS to reduce the README
+count. Do not move local stop-lines into README to reduce inherited bytes. Apply
+the dispositions and review evidence from
+`README_AGENTS_CORPUS_PROTOCOL.md` before merging, moving, generating, or
+removing either surface class.
 
 ## Must not claim
 
