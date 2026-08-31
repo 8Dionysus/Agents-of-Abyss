@@ -71,6 +71,14 @@ procedure belongs in an owner `VALIDATION.md`, validated manifest, runner, or
 other named procedure surface. Generated views remain reproducible derivatives
 that point back to their sources.
 
+This placement supersedes only the part of `AOA-CENTER-D-0041` that retained a
+compact executable entrypoint in the nearest `AGENTS.md` or routed a
+`VALIDATION.md` back through that inherited card. `AOA-CENTER-D-0041` continues
+to own the validated `mechanics/validation-routes.json` command manifest, the
+no-shell exact-surface runner, nearest-owner binding, route integrity checks,
+and inherited-chain budget. An `AGENTS.md` names the validation surface or lane;
+the on-demand validation surface names the exact runner invocation.
+
 Keep the repository root README by default because it is the public civic front
 door. For every other README and AGENTS file, record an owner-aware disposition
 before changing or removing it. The review must account for human/public
