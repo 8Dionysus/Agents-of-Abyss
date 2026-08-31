@@ -14,10 +14,9 @@ This docs directory holds deeper law.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/recurrence/AGENTS.md`,
-`mechanics/recurrence/README.md`, and the specific source document you are changing. If a generated
-surface mirrors this document, read the builder and validator before editing.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Keep detailed doctrine package-local and linked from the package README when it becomes an entry path.
@@ -30,17 +29,6 @@ surface mirrors this document, read the builder and validator before editing.
 ## Validation
 
 Run package and link checks:
-
-```bash
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/hygiene/validate_links.py
-python mechanics/recurrence/scripts/validate_recurrence_mechanic.py
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py
-python scripts/mechanics_topology/validate_mechanics_topology.py
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic recurrence
-python -m pytest -q
-```
 
 Run any targeted builder, validator, and test named by the generated or version-specific surface you touched.
 

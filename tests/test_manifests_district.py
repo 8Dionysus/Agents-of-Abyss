@@ -57,7 +57,8 @@ class ManifestsDistrictTestCase(unittest.TestCase):
         self.assertIn("Registered Homes", readme)
         self.assertIn("scripts/root_registries/validate_manifests_registry.py", readme)
         self.assertNotIn("```bash", readme)
-        self.assertIn("python scripts/root_registries/validate_manifests_registry.py", agents)
+        validation = (REPO_ROOT / "VALIDATION.md").read_text(encoding="utf-8")
+        self.assertIn("python scripts/root_registries/validate_manifests_registry.py", validation)
         self.assertIn("manifests/registry.json", agents)
         self.assertIn("Mechanic-owned component or hook records belong", agents)
 

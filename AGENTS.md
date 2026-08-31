@@ -15,15 +15,9 @@ It is the agent-facing route law for this repository. It does not replace
 
 ## Read before editing
 
-Read this root card first. Then read the nearest nested `AGENTS.md` for every
-touched path, followed by the route-mode surface and the nearest
-`README.md`, protocol, schema, builder, validator, or source surface that owns
-the local claim.
-
-For changes to `AGENTS.md` card shape, root-to-local precedence, generated
-agent-mesh companions, or portable agent guidance, also read
-`DESIGN.AGENTS.md`.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not use this lane to override owner-local truth, generated-source boundaries, sibling-repo authority, or release validation contracts.
@@ -59,37 +53,6 @@ It does not own:
 - skills, techniques, evals, memory, routing, KAG, playbooks, shared stats grammar, cross-owner statistical composition, roles, or runtime implementation truth
 - ToS authored meaning
 - quest, checkpoint, runtime, or progression state as live implementation
-
-## Start here
-
-Entry routing is governed by `docs/START_HERE_ROUTE_CONTRACT.md`.
-
-For first reading or outside orientation, use the canonical first-reading route:
-
-1. `README.md`
-2. `CHARTER.md`
-3. `DESIGN.md`
-4. `ECOSYSTEM_MAP.md`
-5. `docs/FEDERATION_RULES.md`
-
-For agent editing, use the operational route:
-
-1. this `AGENTS.md`
-2. nearest nested `AGENTS.md` for every touched path
-3. route-mode surface from the table below
-4. nearest local `README.md`, protocol, schema, builder, validator, or source
-   surface
-5. narrowest relevant validator before broader gates
-
-For center authority surfaces, also read:
-
-1. `CHARTER.md`
-2. `DESIGN.md`
-3. `ECOSYSTEM_MAP.md`
-4. `docs/LAYERS.md`
-5. `docs/FEDERATION_RULES.md`
-6. `ROADMAP.md`
-7. `README.md`
 
 ## Route modes
 
@@ -143,28 +106,15 @@ decision record to understand why the path was chosen. Use
 `docs/decisions/AGENTS.md` and `docs/decisions/README.md` for the local rule.
 If no record is needed, say so in closeout.
 
-## GitHub landing workflow
+## GitHub landing route
 
 Root `AGENTS.md` owns the repository-wide branch, PR, CI, and merge route.
 `.github/AGENTS.md` owns the GitHub-native files that support it.
 
-When the user asks to commit, push, and merge in this repository, use this route:
-
-1. Start from a clean branch based on current `origin/main`.
-2. Commit only the intended diff with a message that names the changed surface.
-3. Push the branch and open a pull request with changed surfaces, validation,
-   skipped checks, and remaining risk.
-4. Wait for GitHub `Repo Validation` to finish. If it fails, fix the branch and
-   wait for the new result.
-5. Merge through GitHub after green validation. Current repository settings
-   reject merge commits; use squash unless settings change. If GitHub reports a
-   different allowed method for a future PR, use the allowed method and report
-   which method landed.
-6. Return to `main`, fast-forward from `origin/main`, and confirm the worktree is
-   clean before closeout.
-
-If GitHub status or merge permissions cannot be observed, stop the landing route
-and report the exact blocker instead of guessing.
+The complete ordinary landing procedure is maintained in
+[`docs/RELEASING.md`](docs/RELEASING.md). If GitHub status or merge permission
+cannot be observed, stop the landing route and report the exact blocker instead
+of guessing.
 
 ## Post-change route review
 
@@ -222,10 +172,6 @@ changes, run the full gate. It includes compatibility validation owned by
 `aoa-stats`; provide a compatible checkout through `AOA_STATS_ROOT`,
 `.deps/aoa-stats`, or the sibling `../aoa-stats` path. CI supplies its pinned
 checkout explicitly, and an unavailable central validator is a failed check.
-
-```bash
-python scripts/release_gate/release_check.py
-```
 
 The entry-surface validation route is
 `docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`. The executable baseline

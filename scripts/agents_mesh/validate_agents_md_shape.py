@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 
 try:
@@ -13,6 +14,65 @@ except ModuleNotFoundError:  # pragma: no cover - package import route
         relative_agent_paths,
         repo_root_from,
     )
+
+
+RUNNABLE_AGENT_LINE_RE = re.compile(
+    r"^[ \t]*(?:(?:[-*]|\d+[.)])[ \t]+)?`?\$?[ \t]*(?:"
+    r"python3?(?:[ \t]+-m)?[ \t]+|pytest(?=[ \t`])|"
+    r"uv[ \t]+run[ \t]+(?:pytest|python)\b|pip3?[ \t]+|"
+    r"git[ \t]+(?:status|diff|commit|push|fetch|checkout|switch|merge|tag)\b|"
+    r"ruff[ \t]+(?:check|format)\b|mypy(?=[ \t]))",
+    re.IGNORECASE,
+)
+INLINE_AGENT_COMMAND_RE = re.compile(
+    r"`(?:python3?(?:\s+-m)?\s+|pytest(?=\s)|"
+    r"uv\s+run\s+(?:pytest|python)\b|pip3?\s+|"
+    r"git\s+(?:status|diff|commit|push|fetch|checkout|switch|merge|tag)\b|"
+    r"ruff\s+(?:check|format)\b|mypy\s+)[^`\n]+`",
+    re.IGNORECASE,
+)
+IMPERATIVE_SCRIPT_RE = re.compile(
+    r"\b(?:run|execute|invoke|call|validate with|check with|regenerate with)\s+"
+    r"(?:the\s+)?`(?:[^`]+/)+[^`]+\.(?:py|sh)`",
+    re.IGNORECASE,
+)
+READ_SECTION_RE = re.compile(r"^##\s+(?:read\s+before\s+editing|read\s+first|reading\s+order|required\s+reading|start\s+here)\b", re.IGNORECASE)
+HEADING_RE = re.compile(r"^#{1,6}\s+")
+
+
+def validate_prompt_light_rules(rel: Path, text: str) -> list[str]:
+    errors: list[str] = []
+    if "```" in text or "~~~" in text:
+        errors.append(f"{rel.as_posix()}: AGENTS cards must not contain fenced blocks")
+    for line_number, line in enumerate(text.splitlines(), start=1):
+        if RUNNABLE_AGENT_LINE_RE.search(line):
+            errors.append(f"{rel.as_posix()}:{line_number}: runnable command must live in an on-demand validation surface")
+            break
+        if INLINE_AGENT_COMMAND_RE.search(line):
+            errors.append(f"{rel.as_posix()}:{line_number}: inline runnable command must live in an on-demand validation surface")
+            break
+        if IMPERATIVE_SCRIPT_RE.search(line):
+            errors.append(f"{rel.as_posix()}:{line_number}: imperative script procedure must live in an on-demand validation surface")
+            break
+
+    lines = text.splitlines()
+    for index, line in enumerate(lines):
+        if not READ_SECTION_RE.match(line):
+            continue
+        body: list[str] = []
+        for candidate in lines[index + 1 :]:
+            if HEADING_RE.match(candidate) and candidate.startswith("## "):
+                break
+            body.append(candidate)
+        section = "\n".join(body)
+        if "README.md" in section and not re.search(
+            r"\b(?:when|if|only|task|relevant|material|conditional|optional)\b",
+            section,
+            re.IGNORECASE,
+        ):
+            errors.append(f"{rel.as_posix()}: README route under Read before editing must be task-conditional")
+            break
+    return errors
 
 
 def validate_card(repo_root: Path, rel: Path, required_headings: list[str], max_line_length: int, min_heading_count: int) -> list[str]:
@@ -35,6 +95,7 @@ def validate_card(repo_root: Path, rel: Path, required_headings: list[str], max_
             errors.append(f"{rel.as_posix()}:{idx}: line longer than {max_line_length} chars")
             break
     body = text.lower()
+    errors.extend(validate_prompt_light_rules(rel, text))
     if "do not" not in body and "must not" not in body:
         errors.append(f"{rel.as_posix()}: card must contain explicit negative boundary language")
     if "validation" not in body:

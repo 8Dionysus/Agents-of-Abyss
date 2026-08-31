@@ -55,11 +55,11 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
                 text = read_text(relative_path)
                 authority_ref = authority_by_surface.get(relative_path)
                 if authority_ref:
-                    self.assertIn("AGENTS.md#validation", text)
-                    text += "\n" + read_text(authority_ref)
+                    self.assertIn("VALIDATION.md", text)
+                    text += "\n" + read_text("VALIDATION.md")
                 self.assertTrue(
                     VALIDATION_BASELINE_REF in text
-                    or "AGENTS.md#validation" in text
+                    or "VALIDATION.md" in text
                     or Path(relative_path).name == "AGENTS.md"
                 )
 

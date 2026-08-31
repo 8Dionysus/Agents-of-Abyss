@@ -50,7 +50,10 @@ Audit grammar, finding lifecycle, evidence-ledger posture, owner routing, valida
 
 ### Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the [repository validation map](../../VALIDATION.md) for executable checks.
+
+The active route retains the [legacy agent card](legacy/AGENTS.md) and
+[legacy README](legacy/README.md) as distinct archival surfaces.
 
 ### Next route
 

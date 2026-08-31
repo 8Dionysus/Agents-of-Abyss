@@ -16,11 +16,9 @@ Its core execution rule is done-or-handoff.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `.agents/spark/README.md`, this card, `.agents/spark/registry.json`, and
-the scenario `README.md` plus `PROMPT.md` for the lane being touched.
-
-Use `.agents/spark/SWARM.md` only when a Spark swarm is explicitly requested.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - One Spark session uses one scenario and one bounded scope.
@@ -49,20 +47,7 @@ Every scenario must be registered in `.agents/spark/registry.json` and must prov
 
 Run the narrowest relevant checks first. Usual checks for this lane:
 
-```bash
-python .agents/spark/scripts/validate_spark_lane.py
-python -m pytest -q .agents/spark/tests/test_spark_lane.py
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/agents_mesh/build_agents_mesh_index.py --check
-python scripts/agents_mesh/validate_agents_mesh_index.py
-```
-
 For release-facing Spark lane changes, also run:
-
-```bash
-python scripts/release_gate/release_check.py
-```
 
 ## Closeout
 

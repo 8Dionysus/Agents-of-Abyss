@@ -74,6 +74,7 @@ def validate_card(entry: dict[str, Any], required_headings: tuple[str, ...]) -> 
     if not path.exists():
         return [f"{slug}: entry_ref missing: {rel}"]
     text = path.read_text(encoding="utf-8")
+    validation_map = (REPO_ROOT / "VALIDATION.md").read_text(encoding="utf-8") if (REPO_ROOT / "VALIDATION.md").is_file() else ""
     if not text.endswith("\n"):
         problems.append(f"{rel}: missing final newline")
 
@@ -135,6 +136,8 @@ def validate_card(entry: dict[str, Any], required_headings: tuple[str, ...]) -> 
             and Path(ref).name not in agents_text
             and ref not in route_text
             and Path(ref).name not in route_text
+            and ref not in validation_map
+            and Path(ref).name not in validation_map
         ):
             problems.append(f"{rel}: validation ref not named: {ref}")
 

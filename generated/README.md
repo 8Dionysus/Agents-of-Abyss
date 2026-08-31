@@ -42,4 +42,4 @@ Use mechanic-local `generated/` directories when a generated file serves one mec
 - Validate manual published summaries against their schema and source docs.
 - Keep root-published Questbook read models aligned with the Questbook builder and the root `quests/` source store.
 - Move new meaning back to the owner source surface before regenerating.
-- Use [AGENTS.md#validation](AGENTS.md#validation) for the current command lane.
+- Use [VALIDATION.md](../VALIDATION.md) for the current command lane.

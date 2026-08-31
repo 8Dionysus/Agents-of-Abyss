@@ -29,4 +29,4 @@ Make center-side bridge packets portable without claiming owner acceptance.
 
 ## Validation
 
-Use the validation lane in [../../AGENTS.md](../../AGENTS.md#validation).
+Use the validation lane in [repository validation map](VALIDATION.md).

@@ -7,14 +7,9 @@ until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
-`mechanics/rpg/README.md`, `mechanics/rpg/DIRECTION.md`,
-`mechanics/rpg/PARTS.md`, and `mechanics/rpg/USAGE.md` before changing this
-package.
-For active doctrine, start from `mechanics/rpg/PARTS.md` and the relevant part under `mechanics/rpg/parts/`.
-For historical evidence, use `mechanics/rpg/PROVENANCE.md` first; consult `legacy/raw/` only through that route.
-For vocabulary artifacts, read `mechanics/rpg/parts/vocabulary-overlay/TERMINOLOGY.md` before touching schema, example, generated overlay, or validator files.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not turn RPG terms into hidden ontology, runtime ledger authority, role canon, proof verdicts, or quest ownership.
@@ -83,35 +78,12 @@ change does not affect its job.
 
 Run the narrow RPG lane after package changes:
 
-```bash
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic rpg
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic rpg
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic rpg
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic rpg
-python mechanics/rpg/scripts/validate_rpg_distillation.py
-python mechanics/rpg/parts/vocabulary-overlay/scripts/validate_vocabulary_overlay.py
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python -m pytest -q mechanics/rpg/tests mechanics/rpg/parts/vocabulary-overlay/tests
-```
-
 If owner requests changed, also run:
 
-```bash
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic rpg
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic rpg
-```
-
 For release-readiness or cross-mechanic edits, finish with:
-
-```bash
-python scripts/release_gate/release_check.py
-```
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.

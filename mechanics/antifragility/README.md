@@ -52,7 +52,7 @@ pressure, and fragility blacklist posture.
 
 ### Validation
 
-Use the validation lane in [AGENTS.md](AGENTS.md#validation) for executable
+Use the validation lane in [repository validation map](../../VALIDATION.md) for executable
 commands.
 
 ### Next route

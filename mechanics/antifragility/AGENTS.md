@@ -7,13 +7,9 @@ scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
-`README.md`, `DIRECTION.md`, `PARTS.md`, `OWNER_MAP.md`, and
-`OWNER_REQUESTS.md` before changing files in this lane.
-
-Use [`PROVENANCE.md`](PROVENANCE.md) as the only default bridge into source
-history.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not turn antifragility into one-score health.
@@ -81,24 +77,11 @@ change does not affect its job.
 
 For package changes, run:
 
-```bash
-python mechanics/antifragility/scripts/validate_antifragility_distillation.py
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic antifragility
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic antifragility
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic antifragility
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic antifragility
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic antifragility
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python -m pytest -q mechanics/antifragility/tests
-```
-
 Run wider checks when registry, generated, root route, or release surfaces
 change.
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.

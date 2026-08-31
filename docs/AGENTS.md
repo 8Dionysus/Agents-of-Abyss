@@ -12,15 +12,9 @@ It keeps the federation legible without absorbing mechanic truth, sibling-repo t
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, this card, and the nearest `README.md` or protocol surface before changing files in this lane.
-
-For root or docs placement work, read `ROOT_SURFACE_LAW.md`, `README.md`, and `guardrails/README.md`.
-
-For repo-organ alignment, read `organ-contract/AGENTS.md` and
-`organ-contract/README.md`.
-
-For mechanic work, leave this lane and read `../mechanics/AGENTS.md` plus the nearest `../mechanics/<slug>/AGENTS.md`.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not use `docs/` to override owner-local truth, generated-source boundaries, sibling-repo authority, or release validation contracts.
@@ -83,40 +77,7 @@ shape. If no record is needed, say so in closeout.
 
 For docs-root or guardrail topology changes:
 
-```bash
-python scripts/docs_districts/plan_docs_thematic_cleanup.py --check
-python scripts/docs_districts/validate_docs_thematic_districts.py
-python scripts/docs_districts/validate_docs_migration_map.py
-python scripts/docs_districts/validate_traces_district.py
-python scripts/organ_contract/validate_organ_contract.py
-python scripts/docs_districts/validate_decision_records.py
-python scripts/docs_districts/build_docs_thematic_index.py --check
-python scripts/docs_districts/validate_docs_thematic_index.py
-python scripts/hygiene/repair_known_link_drifts.py --check
-python scripts/hygiene/validate_links.py
-python scripts/hygiene/validate_markdown_shape.py
-python scripts/hygiene/validate_status_vocabulary.py
-python scripts/hygiene/build_link_shape_hygiene_index.py --check
-python scripts/hygiene/validate_link_shape_hygiene_index.py
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/agents_mesh/build_agents_mesh_index.py --check
-python scripts/agents_mesh/validate_agents_mesh_index.py
-python scripts/hygiene/validate_generated_freshness.py
-python scripts/hygiene/validate_hygiene_suite.py
-```
-
 If center route contracts, generated maps, or public claims changed, also run:
-
-```bash
-python scripts/center_entry/validate_entry_surface_sync.py
-python scripts/center_entry/build_center_entry_map.py --check
-python scripts/center_entry/validate_center_entry_map.py
-python scripts/mechanics_topology/validate_mechanics_topology.py
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py
-python scripts/root_registries/validate_ecosystem.py
-python -m pytest -q
-```
 
 Use the owning mechanic `AGENTS.md` for mechanic-specific validators.
 

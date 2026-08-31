@@ -52,4 +52,4 @@ aliases or workstation-local defaults.
 
 ## Validation
 
-Use the validation lane in [`config/AGENTS.md`](AGENTS.md#validation).
+Use the validation lane in [repository validation map](../VALIDATION.md).

@@ -12,13 +12,9 @@ remain owned by `aoa-stats`.
 
 ## Read before editing
 
-1. Root `AGENTS.md`, `CHARTER.md`, and `DESIGN.md`.
-2. `ECOSYSTEM_MAP.md`, `ROADMAP.md`, and `docs/FEDERATION_RULES.md`.
-3. `stats/README.md` and `stats/port.manifest.json`.
-4. `generated/ecosystem_registry.min.json`, its schema, and its owner
-   validator.
-5. The central measurement and packet contracts under `aoa-stats/stats/`.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - The registry v2 `repos` array defines the exact population. Supporting
@@ -41,11 +37,6 @@ Inspect the registry and packet first. The port validator requires a compatible
 `aoa-stats` checkout through `AOA_STATS_ROOT`, `.deps/aoa-stats`, or the sibling
 `../aoa-stats` path; CI supplies its pinned checkout explicitly, and an
 unavailable central validator is a failed check. Then run:
-
-```bash
-python scripts/stats/validate_local_stats_port.py
-python -m pytest -q tests/test_local_stats_port.py
-```
 
 Use the root route for repository-wide validation.
 

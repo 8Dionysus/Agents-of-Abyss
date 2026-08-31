@@ -182,13 +182,14 @@ def validate(root: Path) -> list[str]:
                 problems.append(f"scripts/README.md does not mention family: {family_id}")
     if agents.exists():
         agents_text = agents.read_text(encoding="utf-8")
+        validation_map = (root / "VALIDATION.md").read_text(encoding="utf-8") if (root / "VALIDATION.md").exists() else ""
         for required in (
             "scripts/registry.json",
             "python scripts/root_registries/validate_scripts_district.py",
             "requirements-dev.txt",
             "Python 3.12",
         ):
-            if required not in agents_text:
+            if required not in agents_text and required not in validation_map:
                 problems.append(f"scripts/AGENTS.md does not mention {required}")
 
     release_check = root / "scripts/release_gate/release_check.py"

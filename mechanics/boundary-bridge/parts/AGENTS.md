@@ -20,10 +20,6 @@ stay shorter and clearer than source doctrine.
 
 Use the package validator from the mechanic root:
 
-```bash
-python mechanics/boundary-bridge/scripts/validate_boundary_bridge_distillation.py
-```
-
 ## Closeout
 
 Name changed parts, owner boundaries touched, source doctrine consulted through

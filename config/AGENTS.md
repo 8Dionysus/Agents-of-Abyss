@@ -14,10 +14,9 @@ validation route.
 
 ## Read before editing
 
-Read root `AGENTS.md`, then the relevant protocol doc for the config being changed.
-
-Use the nearest README for local file purpose. Use source docs, schemas, generated builders, validators, and owner repos as stronger authority when they apply.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Config may drive checks; it must not silently become constitutional law.
@@ -30,22 +29,7 @@ Use the nearest README for local file purpose. Use source docs, schemas, generat
 
 Run the narrowest relevant checks first. Usual checks for this district:
 
-```bash
-python scripts/root_registries/validate_config_registry.py
-python scripts/hygiene/validate_hygiene_suite.py
-python scripts/hygiene/validate_status_vocabulary.py
-python scripts/hygiene/validate_generated_freshness.py
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/agents_mesh/build_agents_mesh_index.py --check
-python scripts/agents_mesh/validate_agents_mesh_index.py
-```
-
 For release-facing config changes, also run:
-
-```bash
-python scripts/release_gate/release_check.py
-```
 
 If a listed validator is not present in the checkout yet, report that explicitly and run the closest available guardrail.
 

@@ -166,7 +166,8 @@ def validate_parts(problems: list[str]) -> None:
                         problems.append(f"{rel(path)}: missing heading {heading}")
             if file_name == "VALIDATION.md" and "Release-support parts AGENTS" not in text:
                 problems.append(f"{rel(path)}: must route executable validation to Release-support parts AGENTS")
-    if "validate_release_support_distillation.py" not in parts_agents:
+    validation_map = read(REPO_ROOT / "VALIDATION.md") if (REPO_ROOT / "VALIDATION.md").is_file() else ""
+    if "validate_release_support_distillation.py" not in parts_agents and "validate_release_support_distillation.py" not in validation_map:
         problems.append("mechanics/release-support/parts/AGENTS.md: missing package validator command")
 
 

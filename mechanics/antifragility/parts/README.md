@@ -23,4 +23,4 @@ owner-aware, and lighter than the doctrine docs it distills.
 
 ## Validation
 
-Use the validation lane in [Antifragility parts AGENTS](AGENTS.md#validation).
+Use the validation lane in [repository validation map](../../../VALIDATION.md).

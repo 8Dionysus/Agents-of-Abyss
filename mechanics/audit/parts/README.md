@@ -15,4 +15,4 @@ Functioning Audit parts live here. Each part stays focused on one working route.
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../AGENTS.md#validation).
+Use the [repository validation map](../../../VALIDATION.md) for executable checks.

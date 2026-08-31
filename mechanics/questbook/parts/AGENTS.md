@@ -12,10 +12,9 @@ law, relation shape, owner-route maps, and generated read-model routes.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`,
-`mechanics/questbook/AGENTS.md`, `mechanics/questbook/PARTS.md`, and the
-specific part `README.md` before changing this lane.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not pull legacy/raw inventories into active part docs. Do not claim owner

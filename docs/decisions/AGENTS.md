@@ -10,10 +10,9 @@ This card applies to `docs/decisions/` and all descendants unless a nearer `AGEN
 
 ## Read before editing
 
-Read root `AGENTS.md`, then `docs/AGENTS.md`, then `docs/README.md`. If this district is affected by
-docs thematic cleanup, also read `docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md` and
-`docs/guardrails/CURRENT_SURFACE_INDEX.md` when present.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not treat this district as stronger than its source surfaces.
@@ -47,16 +46,6 @@ why; current source surfaces define what.
 ## Validation
 
 Use docs and hygiene guardrails:
-
-```bash
-python scripts/docs_districts/validate_decision_records.py
-python scripts/docs_districts/generate_decision_indexes.py --check
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-python scripts/hygiene/validate_links.py
-python scripts/hygiene/validate_markdown_shape.py
-python -m pytest -q
-```
 
 If thematic district indexes or migration maps changed, run their matching builders and validators too.
 

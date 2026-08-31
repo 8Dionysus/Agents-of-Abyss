@@ -64,7 +64,11 @@ reference bridge.
 
 ### Validation
 
-Use the validation lane in [AGENTS.md](AGENTS.md#validation).
+Use the validation lane in [repository validation map](../../VALIDATION.md).
+
+The active route retains the [legacy agent card](legacy/AGENTS.md),
+[legacy README](legacy/README.md), and [legacy raw README](legacy/raw/README.md)
+as distinct archival surfaces.
 
 ### Next route
 

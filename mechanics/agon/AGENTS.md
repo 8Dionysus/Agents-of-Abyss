@@ -6,16 +6,15 @@ This card applies to `mechanics/agon/` and every nested path under that scope un
 
 ## Read before editing
 
-Read the repository root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
-`README.md`, `DIRECTION.md`, and `PARTS.md` before changing files in this lane.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not use this lane to override owner-local truth, generated-source
 boundaries, sibling-repo authority, release validation contracts, live arena
 execution, assistant contestant authority, live rank mutation, KAG canon, or ToS
 canon writes.
-
 
 ## Closeout
 
@@ -74,12 +73,12 @@ plans into active part contracts, `LANDING_LOG.md`, or `PROVENANCE.md`.
 
 ## Validation
 
-Use `python mechanics/agon/scripts/validate_agon_distillation.py` after
+Use the applicable validation route after
 active-part or provenance-route changes.
-Use `python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic agon`
+Use the applicable validation route
 after schema, example, config, generated artifact, script, or test placement
 changes.
-Use `python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic agon` after
+Use the applicable validation route after
 landing-log or surface-chain changes.
 Use the nearest part-local `scripts/*agon*.py` and `tests/test_agon_*.py` for
 generated or model-specific changes.
@@ -87,17 +86,8 @@ generated or model-specific changes.
 High-risk Agon part checks that used to be preserved in the old root reference
 now live here:
 
-```bash
-python mechanics/agon/parts/owner-binding/scripts/build_agon_move_owner_binding_registry.py --check
-python mechanics/agon/parts/owner-binding/scripts/validate_agon_move_owner_bindings.py
-python -m pytest -q mechanics/agon/parts/owner-binding/tests/test_agon_move_owner_bindings.py
-python mechanics/agon/parts/gate-routing/scripts/build_agon_gate_routing_handoff_request.py --check
-python mechanics/agon/parts/gate-routing/scripts/validate_agon_gate_routing_handoff_request.py
-python -m pytest -q mechanics/agon/parts/gate-routing/tests/test_agon_gate_routing_handoff_request.py
-```
-
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run `python scripts/mechanics_topology/run_validation_route.py --surface <repo-relative-path>`;
+Run the applicable validation route;
 add `--show` to inspect the route without executing it.

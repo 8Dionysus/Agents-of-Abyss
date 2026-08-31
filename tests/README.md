@@ -38,9 +38,9 @@ and do not grant authority beyond the claims they check.
 | `mechanics/<slug>/parts/<part>/tests/` | part-local mechanic tests |
 | `.agents/spark/tests/` | Codex Spark agent-lane tests |
 
-Root `pytest.ini` keeps `python -m pytest -q` broad enough to collect active
-test homes while excluding legacy, cache, and build directories from default
-collection.
+Root `pytest.ini` keeps the broad test route scoped to active test homes while
+excluding legacy, cache, and build directories from default collection. Execute
+that route through the repository [`VALIDATION.md`](../VALIDATION.md) map.
 
 ## Source Order
 
@@ -61,4 +61,4 @@ When a test and another surface disagree, read authority in this order:
 
 ## Validation
 
-Use the validation lane in [`AGENTS.md`](AGENTS.md#validation).
+Use the validation lane in [repository validation map](../VALIDATION.md).

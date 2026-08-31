@@ -11,8 +11,9 @@ Active RPG doctrine lives in `mechanics/rpg/parts/`; historical raw sources live
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/rpg/AGENTS.md`, `mechanics/rpg/README.md`, `mechanics/rpg/PARTS.md`, and the specific active part you are routing to.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Keep detailed doctrine in active parts, not in this compatibility directory.
@@ -25,7 +26,6 @@ Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/rpg/AGENTS.md`, `mechan
 Use the package validation lane in `mechanics/rpg/AGENTS.md`.
 For `mechanics/rpg/OWNER_REQUESTS.md`, use the exact route in
 `mechanics/validation-routes.json` through the package card.
-
 
 ## Closeout
 

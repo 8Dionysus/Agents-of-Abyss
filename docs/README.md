@@ -5,7 +5,7 @@ This is the human-first entrypoint for the `docs/` surface of `Agents-of-Abyss`.
 Use the root [`README`](../README.md) for the public front door. Use this file when you are already inside the center and need the doctrine, route-law, and map district.
 
 If you are editing files under `docs/`, read [`AGENTS.md`](AGENTS.md) first.
-Validation entrypoints live in [`AGENTS.md#validation`](AGENTS.md#validation)
+Validation entrypoints live in [`VALIDATION.md`](../VALIDATION.md)
 and the nearest district `AGENTS.md`; exact mechanics child routes may live in
 the validated owner manifest. The broad route is
 [`ENTRY_SURFACE_VALIDATION_BASELINE`](guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md),

@@ -66,7 +66,7 @@ changelog/roadmap/landing-log split, and owner handoff stop-lines.
 
 ### Validation
 
-Use the validation lane in [AGENTS.md](AGENTS.md#validation).
+Use the validation lane in [repository validation map](../../VALIDATION.md).
 
 ### Next route
 

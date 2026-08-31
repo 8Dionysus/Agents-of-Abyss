@@ -48,7 +48,7 @@ Checkpoint law, vocabulary, owner map, stop-lines, and cross-owner route grammar
 
 ### Validation
 
-Use the validation lane in [mechanics/checkpoint/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the [repository validation map](../../VALIDATION.md) for executable checks..
 
 ### Next route
 

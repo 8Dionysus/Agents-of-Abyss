@@ -12,12 +12,9 @@ candidates, receipts, exports, and local notes before reviewed landing in
 
 ## Read before editing
 
-1. Root `AGENTS.md`
-2. `DESIGN.md`
-3. `docs/FEDERATION_RULES.md`
-4. This `README.md`
-5. `aoa-memo` memory operation contracts when a candidate should move centrally
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Use this port for `write_candidate_only` work. Do not turn local notes into
@@ -33,31 +30,12 @@ for review or handoff traces, `exports/` for packets meant for `aoa-memo`, and
 Create center-local candidates through the stack MCP helper from the
 `abyss-stack` source checkout:
 
-```bash
-AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
-PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli create-candidate \
-  --repo Agents-of-Abyss \
-  --evidence-ref docs/FEDERATION_RULES.md \
-  --claim "Agents-of-Abyss memory should move through reviewed local candidates before aoa-memo landing."
-```
-
 Then validate the emitted candidate path:
-
-```bash
-AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
-PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli validate-candidate path/to/candidate.json
-```
 
 ## Reviewed Landing Route
 
 When an export is ready to move from this local port toward durable reviewed
 memory, inspect it through the same MCP access plane:
-
-```bash
-AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
-PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli pending-exports --repo Agents-of-Abyss
-PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli landing-plan --repo Agents-of-Abyss --export-ref exports/path.reviewed-intake.json --run-dry-run
-```
 
 The landing plan is a readiness/dry-run route. The actual durable memory object
 lands only in `aoa-memo` through its reviewed intake script, generated read
@@ -67,19 +45,7 @@ models, validators, and review.
 
 For local candidate checks through the stack MCP access plane:
 
-```bash
-AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
-PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli brief --repo Agents-of-Abyss --intent "local memory route"
-AOA_MEMO_ROOT="${AOA_MEMO_ROOT:-/srv/AbyssOS/aoa-memo}"
-python "$AOA_MEMO_ROOT/scripts/memory/validate_local_memo_port.py" --path memo
-python "$AOA_MEMO_ROOT/scripts/memory/build_local_memo_port_index.py" --path memo --check
-```
-
 For release-facing center changes, run:
-
-```bash
-python scripts/release_gate/release_check.py
-```
 
 ## Closeout
 

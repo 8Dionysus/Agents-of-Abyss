@@ -11,8 +11,9 @@ been distilled. It is not the default operating surface.
 
 ## Read before editing
 
-Read `../AGENTS.md`, `../PROVENANCE.md`, and the raw file being changed.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not route agents here by default from active parts.

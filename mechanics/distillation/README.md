@@ -55,7 +55,7 @@ Center distillation law, vocabulary, stop-lines, provenance route grammar, activ
 
 ### Validation
 
-Use the validation lane in [mechanics/distillation/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the [repository validation map](../../VALIDATION.md) for executable checks..
 
 ### Next route
 

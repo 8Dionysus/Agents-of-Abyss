@@ -49,7 +49,7 @@ quest item placement, generated read models, and obligation lifecycle language.
 
 ### Validation
 
-Use the central Questbook validation matrix in [Questbook AGENTS](AGENTS.md#validation).
+Use the [central Questbook validation map](../../VALIDATION.md).
 
 ### Next route
 

@@ -10,8 +10,9 @@ This directory is now a compatibility route only. Active Experience direction li
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/experience/AGENTS.md`, `../DIRECTION.md`, and `../PARTS.md` before editing this lane.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not add new heavy doctrine here. Do not use this route to bypass active part contracts, owner requests, landing logs, or provenance accounting.
@@ -19,12 +20,6 @@ Do not add new heavy doctrine here. Do not use this route to bypass active part 
 ## Validation
 
 Run:
-
-```bash
-python mechanics/experience/scripts/validate_experience_distillation.py
-python scripts/agents_mesh/validate_agents_md_shape.py
-python scripts/agents_mesh/validate_agents_mesh.py
-```
 
 ## Closeout
 

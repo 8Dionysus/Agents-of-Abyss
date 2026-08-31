@@ -86,7 +86,8 @@ class TestsDistrictTestCase(unittest.TestCase):
         self.assertIn("[`registry.json`](registry.json)", readme)
         self.assertIn("Test Families", readme)
         self.assertIn("tests/registry.json", agents)
-        self.assertIn("python scripts/root_registries/validate_tests_district.py", agents)
+        validation = (REPO_ROOT / "VALIDATION.md").read_text(encoding="utf-8")
+        self.assertIn("python scripts/root_registries/validate_tests_district.py", validation)
 
 
 if __name__ == "__main__":

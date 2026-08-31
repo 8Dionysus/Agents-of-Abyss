@@ -12,18 +12,9 @@ the SDK, router, runtime, role layer, proof layer, or owner-local executor.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `docs/AGENTS.md`, this card, and then:
-
-1. `README.md`
-2. `ORGAN_CONTRACT.md`
-3. `SURFACE_STATES.md`
-4. `FIRST_CYCLE.md`
-5. `EVENTS.md`
-6. `CHARTER.md`
-7. `ECOSYSTEM_MAP.md`
-8. `docs/START_HERE_ROUTE_CONTRACT.md`
-9. `docs/REPO_ROLES.md`
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - This district owns organ alignment law for the center.
@@ -53,22 +44,7 @@ routes.
 
 Run:
 
-```bash
-python scripts/organ_contract/validate_organ_contract.py
-python scripts/center_entry/validate_entry_surface_sync.py
-python scripts/center_entry/build_center_entry_map.py --check
-python scripts/center_entry/validate_center_entry_map.py
-python scripts/docs_districts/validate_docs_thematic_districts.py
-python scripts/hygiene/validate_links.py
-python scripts/hygiene/validate_markdown_shape.py
-python -m pytest -q tests/test_organ_contract.py tests/test_center_entry_map.py tests/test_entry_surface_sync.py
-```
-
 For release-facing changes, also run:
-
-```bash
-python scripts/release_gate/release_check.py
-```
 
 ## Closeout
 

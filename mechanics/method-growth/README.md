@@ -58,7 +58,7 @@ owner landing/pruning rules.
 
 ### Validation
 
-Use the validation lane in [mechanics/method-growth/AGENTS.md](AGENTS.md#validation)
+Use the [repository validation map](../../VALIDATION.md) for executable checks.
 for executable commands.
 
 ### Next route

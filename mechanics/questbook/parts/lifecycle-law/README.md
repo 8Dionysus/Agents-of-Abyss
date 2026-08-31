@@ -89,4 +89,4 @@ event-driven.
 
 ## Validation
 
-Use the central Questbook validation matrix in [Questbook AGENTS](../../AGENTS.md#validation).
+Use the central Questbook validation map(VALIDATION.md).

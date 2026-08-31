@@ -11,13 +11,13 @@ nearer `AGENTS.md` narrows the lane.
 agents to schema homes. It keeps root shape contracts visible without absorbing
 mechanic-owned schemas.
 
+The authoritative registry is `schemas/registry.json`.
+
 ## Read before editing
 
-Read root `AGENTS.md`, local `README.md`, `schemas/registry.json`, and the
-source surface named by the schema registry entry.
-
-Use mechanic package guidance for schemas under `mechanics/<slug>/`.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Root `schemas/` owns root center contracts.
@@ -33,20 +33,7 @@ Use mechanic package guidance for schemas under `mechanics/<slug>/`.
 
 Run the narrowest relevant checks first. Usual checks for this district:
 
-```bash
-python scripts/root_registries/validate_schema_registry.py
-python -m pytest -q tests/test_schema_district.py
-python scripts/root_registries/validate_ecosystem.py
-python scripts/center_entry/build_center_entry_map.py --check
-python scripts/center_entry/validate_center_entry_map.py
-python scripts/hygiene/validate_generated_freshness.py
-```
-
 For release-facing schema changes, also run:
-
-```bash
-python scripts/release_gate/release_check.py
-```
 
 ## Closeout
 

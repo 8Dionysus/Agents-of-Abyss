@@ -18,4 +18,4 @@ an owner-local implementation.
 
 ## Validation
 
-Executable validation commands live in [Recurrence parts AGENTS](AGENTS.md#validation).
+Executable validation commands live in [repository validation map](../../../VALIDATION.md).

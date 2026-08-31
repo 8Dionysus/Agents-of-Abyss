@@ -7,15 +7,9 @@ scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, this card,
-`mechanics/checkpoint/README.md`, `mechanics/checkpoint/DIRECTION.md`,
-`mechanics/checkpoint/PARTS.md`, and the relevant active part before changing
-this package.
-
-For owner boundaries, start from `mechanics/checkpoint/OWNER_MAP.md`.
-For evidence lineage, use `mechanics/checkpoint/PROVENANCE.md`; do not start
-from runtime-local `.aoa/` logs or sibling raw histories.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Do not turn checkpoint into a hidden scheduler, autonomous self-repair loop,
@@ -85,28 +79,6 @@ change does not affect its job.
 
 Run the narrow checkpoint lane after package changes:
 
-```bash
-python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic checkpoint
-python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic checkpoint
-python scripts/mechanics_topology/build_mechanic_card_index.py --check
-python scripts/mechanics_topology/validate_mechanic_card_index.py
-python scripts/mechanics_topology/validate_mechanic_landing_logs.py --mechanic checkpoint
-python scripts/mechanics_topology/validate_mechanic_artifact_topology.py --mechanic checkpoint
-python mechanics/checkpoint/scripts/validate_checkpoint_mechanic.py
-python -m pytest -q mechanics/checkpoint/tests
-```
-
 If owner requests changed, also run:
 
-```bash
-python scripts/owner_requests/validate_owner_request_queue.py --mechanic checkpoint
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
-python scripts/owner_requests/validate_owner_request_docs.py --mechanic checkpoint
-```
-
 For release-readiness or cross-mechanic edits, finish with:
-
-```bash
-python scripts/release_gate/release_check.py
-```

@@ -170,7 +170,8 @@ def validate_parts(problems: list[str]) -> None:
                         problems.append(f"{rel(path)}: missing heading {heading}")
             if file_name == "VALIDATION.md" and "Recurrence parts AGENTS" not in text:
                 problems.append(f"{rel(path)}: must route executable validation to recurrence parts AGENTS")
-    if "validate_recurrence_mechanic.py" not in parts_agents:
+    validation_map = (REPO_ROOT / "VALIDATION.md").read_text(encoding="utf-8") if (REPO_ROOT / "VALIDATION.md").is_file() else ""
+    if "validate_recurrence_mechanic.py" not in parts_agents and "validate_recurrence_mechanic.py" not in validation_map:
         problems.append("mechanics/recurrence/parts/AGENTS.md: missing package validator command")
 
 

@@ -15,10 +15,9 @@ reports, and source refs.
 
 ## Read before editing
 
-Read the root `AGENTS.md`, then this card, `README.md`, `PORT.yaml`, and the
-nearest intake, suites, or reports surface you will touch. For central proof
-adoption rules, read the local eval-port standard in `aoa-evals`.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 - Keep ecosystem identity, layer map, federation rules, and center direction in
@@ -29,10 +28,6 @@ adoption rules, read the local eval-port standard in `aoa-evals`.
 - Do not place private traces, secrets, or unreduced operator evidence here.
 
 ## Validation
-
-```bash
-python ../aoa-evals/scripts/validate_local_eval_port.py --target-root .
-```
 
 ## Closeout
 

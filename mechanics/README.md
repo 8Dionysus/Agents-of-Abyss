@@ -96,8 +96,8 @@ Machine companion:
 
 Validation:
 
-Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for
-package checks. For one child surface, inspect or execute its exact route with
+Use the [repository validation map](../VALIDATION.md) for executable package
+checks. For one child surface, inspect or execute its exact route with
 `scripts/mechanics_topology/run_validation_route.py`; the argv source is
 `mechanics/validation-routes.json`.
 The center entry-surface validation route lives in
@@ -214,7 +214,7 @@ root districts and mechanic homes.
 ## Validation
 
 Executable commands for this atlas live in
-[mechanics/AGENTS.md](AGENTS.md#validation).
+[repository validation map](../VALIDATION.md).
 
 For package-local work, start with the nearest package `AGENTS.md` and add the
 central validation lane only when the change touches registry, owner queue,

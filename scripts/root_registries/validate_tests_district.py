@@ -178,12 +178,16 @@ def validate(root: Path) -> list[str]:
                 problems.append(f"tests/README.md does not mention family: {family_id}")
     if agents.exists():
         agents_text = agents.read_text(encoding="utf-8")
+        validation_map = ""
+        validation_path = root / "VALIDATION.md"
+        if validation_path.exists():
+            validation_map = validation_path.read_text(encoding="utf-8")
         for required in (
             "tests/registry.json",
             "python scripts/root_registries/validate_tests_district.py",
             "python -m pytest -q",
         ):
-            if required not in agents_text:
+            if required not in agents_text and required not in validation_map:
                 problems.append(f"tests/AGENTS.md does not mention {required}")
 
     release_check = root / "scripts/release_gate/release_check.py"

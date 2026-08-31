@@ -78,7 +78,7 @@ surface:
 
 ## Validation
 
-Use the validation lane in [`AGENTS`](AGENTS.md#validation). The executable
+Use the validation lane in [repository validation map](../../VALIDATION.md). The executable
 local owner is `scripts/organ_contract/validate_organ_contract.py`.
 
 The center-wide baseline lives in

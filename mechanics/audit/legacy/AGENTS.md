@@ -10,8 +10,9 @@ Legacy Audit material preserves source trace after active routes have been disti
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/audit/AGENTS.md`, and `mechanics/audit/PROVENANCE.md`.
-
+Select only the source, contract, or owner route that can change the interpretation of the named task.
+A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
+Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
 Do not promote legacy text into active law by reference. If a legacy source contains useful material, distill the active meaning into the relevant part and update `PROVENANCE.md`.
