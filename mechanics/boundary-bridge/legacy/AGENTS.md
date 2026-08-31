@@ -17,4 +17,4 @@ the active operating route.
 
 ## Validation
 
-Use the validation lane in `../AGENTS.md`.
+Use the package route in the repository [`VALIDATION.md`](../../../VALIDATION.md).

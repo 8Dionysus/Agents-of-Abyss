@@ -22,7 +22,8 @@ contracts, owner requests, landing logs, or provenance accounting.
 
 ## Validation
 
-Use the central Questbook validation matrix in [Questbook AGENTS](../AGENTS.md#validation).
+Use the direct route in the repository [`VALIDATION.md`](../../../VALIDATION.md);
+it names the applicable manifest key and no-shell runner.
 
 ## Closeout
 

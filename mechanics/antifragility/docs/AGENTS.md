@@ -27,13 +27,13 @@ Exact executable checks belong to the applicable `VALIDATION.md`, validated mani
 ## Validation
 
 Use the validation lane in
-[`mechanics/antifragility/AGENTS.md`](../AGENTS.md#validation).
+the repository [`VALIDATION.md`](../../../VALIDATION.md).
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
 Run the applicable validation route;
-add `--show` to inspect the route without executing it.
+Inspect the exact manifest-keyed route before execution.
 
 ## Closeout
 

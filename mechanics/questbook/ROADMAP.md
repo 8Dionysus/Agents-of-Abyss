@@ -20,8 +20,8 @@ lifecycle, execution-passport, harvest, and lane-owner route contract details
 live in narrow part packages. `parts/source-contract/` now owns source object
 reviewability for YAML and Markdown quest sources. `legacy/` preserves
 first-contour provenance behind `PROVENANCE.md`. Executable validation commands
-live in `mechanics/questbook/AGENTS.md`; part docs and route surfaces point
-there instead of duplicating command blocks.
+are keyed by the repository `VALIDATION.md` map; part docs and route surfaces
+name the applicable manifest route instead of duplicating command blocks.
 
 ## Next Work
 
@@ -39,7 +39,7 @@ there instead of duplicating command blocks.
   per-part contracts, validation routes, and the legacy index.
 - Keep relation visibility useful while preventing `sidequest` from becoming
   ownership, dependency, or automatic closure.
-- Keep validation command lists centralized in `AGENTS.md`; update the
+- Keep validation routes centralized in the repository `VALIDATION.md` map; update the
   post-change route review when a new route consequence appears.
 - Harvest repeated quest families into owner-local mechanics, playbooks, evals,
   or memo surfaces instead of letting open quest lists become noisy.

@@ -88,6 +88,11 @@ def check_mechanic_child_validation_routes(root: Path) -> list[str]:
     problems: list[str] = []
     for path in active_mechanic_markdown_paths(root):
         rel = path.relative_to(root).as_posix()
+        # VALIDATION.md is the executable owner surface. Its direct runner
+        # route is intentionally allowed to contain argv; other mechanic
+        # Markdown must remain descriptive and route through the owner map.
+        if path.name == "VALIDATION.md":
+            continue
         lines = path.read_text(encoding="utf-8").splitlines()
         active_fence: tuple[str, int] | None = None
         fence_start = 0
@@ -104,7 +109,7 @@ def check_mechanic_child_validation_routes(root: Path) -> list[str]:
                 if marker_type == active_fence[0] and marker_len >= active_fence[1]:
                     if VALIDATION_COMMAND_RE.search("\n".join(fence_lines)):
                         problems.append(
-                            f"{rel}:{fence_start}: executable validation command belongs in nearest AGENTS.md"
+                            f"{rel}:{fence_start}: executable validation command belongs in VALIDATION.md"
                         )
                     active_fence = None
                     fence_lines = []
@@ -114,11 +119,11 @@ def check_mechanic_child_validation_routes(root: Path) -> list[str]:
                 continue
             if VALIDATION_COMMAND_RE.search(line):
                 problems.append(
-                    f"{rel}:{line_number}: executable validation command belongs in nearest AGENTS.md"
+                    f"{rel}:{line_number}: executable validation command belongs in VALIDATION.md"
                 )
         if active_fence is not None and VALIDATION_COMMAND_RE.search("\n".join(fence_lines)):
             problems.append(
-                f"{rel}:{fence_start}: executable validation command belongs in nearest AGENTS.md"
+                f"{rel}:{fence_start}: executable validation command belongs in VALIDATION.md"
             )
     return problems
 

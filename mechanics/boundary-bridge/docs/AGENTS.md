@@ -31,13 +31,13 @@ Exact executable checks belong to the applicable `VALIDATION.md`, validated mani
 
 ## Validation
 
-Use the validation lane in [../AGENTS.md](../AGENTS.md#validation).
+Use the direct route in the repository [`VALIDATION.md`](../../../VALIDATION.md).
 
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
 Run the applicable validation route;
-add `--show` to inspect the route without executing it.
+Inspect the exact manifest-keyed route before execution.
 
 ## Closeout
 

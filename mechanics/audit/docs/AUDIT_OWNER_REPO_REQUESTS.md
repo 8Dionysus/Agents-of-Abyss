@@ -6,4 +6,4 @@ This compatibility surface exists so source-doc readers can find the request rou
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../VALIDATION.md) map for executable routes.

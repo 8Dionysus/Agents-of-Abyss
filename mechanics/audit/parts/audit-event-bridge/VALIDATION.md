@@ -13,4 +13,4 @@ Report event, crossed mechanic, owner boundary, handoff reason, and closure rout
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route.

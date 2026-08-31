@@ -50,6 +50,6 @@ To add a status vocabulary, add the vocabulary, then add a status check entry th
 
 ## Validation
 
-Use `AGENTS.md` in this directory for the current command lane.
+Use the repository `VALIDATION.md` map for the current command route.
 
 A future agent should be able to add a district or generated capsule by changing the config and tests, not by memorizing a private checklist.

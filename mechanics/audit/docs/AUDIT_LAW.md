@@ -33,4 +33,4 @@ Validation reports name checks run, checks skipped, known blind spots, and resid
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../VALIDATION.md) map for executable routes.

@@ -53,4 +53,4 @@ pollution and should be returned to the owner map before more text is added.
 
 ## Validation
 
-Use the validation lane in [mechanics/boundary-bridge/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

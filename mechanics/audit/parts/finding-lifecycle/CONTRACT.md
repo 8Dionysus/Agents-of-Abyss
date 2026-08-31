@@ -20,4 +20,4 @@ This part owns state movement for center-visible audit findings. Owner-local exe
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for executable routes.

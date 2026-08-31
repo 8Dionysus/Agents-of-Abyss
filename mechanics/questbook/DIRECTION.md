@@ -34,7 +34,7 @@ or provenance bridge.
 - Keep source object reviewability in `parts/source-contract/`, with rich
   YAML and strict Markdown contracts required for source quest files.
 - Keep repeated quest route defaults in lane READMEs, not in every quest file.
-- Keep executable validation commands in `AGENTS.md`; other Markdown surfaces
+- Keep executable validation routes in the repository `VALIDATION.md` map; other Markdown surfaces
   route there.
 - Keep ready owner-route tables generated from registries instead of
   hand-maintaining route rows.
@@ -82,9 +82,9 @@ or provenance bridge.
 - Do not edit generated ready owner-route tables by hand.
 - Do not create or retain Markdown quest sources outside the strict source
   contract.
-- Do not duplicate validation command blocks outside Questbook `AGENTS.md`.
+- Do not duplicate validation command blocks outside the repository `VALIDATION.md` map.
 - Do not repeat generic lane/state defaults inside every quest source.
 
 ## Validation
 
-Use the validation lane in [mechanics/questbook/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

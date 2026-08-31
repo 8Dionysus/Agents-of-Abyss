@@ -168,7 +168,9 @@ Treat these as high-risk findings in this center repository:
 ## Verify
 
 The executable routes, exact-surface mechanics runner, and full release gate
-are maintained in [`VALIDATION.md`](VALIDATION.md). A compatible `aoa-stats`
+are maintained in [`VALIDATION.md`](VALIDATION.md); the entry-surface baseline
+is [`docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md`](docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md).
+A compatible `aoa-stats`
 checkout is required by the release compatibility step; an unavailable owner
 validator is a failed check, not permission to report a partial gate as green.
 

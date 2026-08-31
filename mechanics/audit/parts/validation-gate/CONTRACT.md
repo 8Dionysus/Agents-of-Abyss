@@ -20,4 +20,4 @@ This part owns check-report posture for center audit. It does not own proof, CI 
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for executable routes.

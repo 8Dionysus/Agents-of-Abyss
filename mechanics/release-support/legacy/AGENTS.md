@@ -22,7 +22,7 @@ Exact executable checks belong to the applicable `VALIDATION.md`, validated mani
 
 ## Validation
 
-Use the package validation lane in `../AGENTS.md`.
+Use the package route in the repository [`VALIDATION.md`](../../../VALIDATION.md).
 
 ## Closeout
 

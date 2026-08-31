@@ -12,7 +12,7 @@ Do not update request status here.
 
 ## Validation
 
-Use the validation lane in [mechanics/recurrence/AGENTS.md](../AGENTS.md#validation)
+Use the repository [VALIDATION.md](../../../VALIDATION.md) map for executable routes.
 for executable commands.
 
 ## Next route

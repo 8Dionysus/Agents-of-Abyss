@@ -270,8 +270,8 @@ there instead of repeating commands inline.
 
 ## Validation
 
-Use root `AGENTS.md#verify` for the broad command and the nearest local
-`AGENTS.md#validation` for a narrower lane. Executable orchestration remains in
+Use the repository `VALIDATION.md` map for the broad command and the applicable
+manifest-keyed local validation route for a narrower lane. Executable orchestration remains in
 `scripts/release_gate/release_check.py`; this contract owns route meaning, not
 a duplicate command catalog.
 

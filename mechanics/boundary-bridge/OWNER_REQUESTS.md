@@ -50,7 +50,7 @@ Generated companion:
 
 ## Validation
 
-Use the validation lane in [AGENTS.md](AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.
 
 ## Next route
 

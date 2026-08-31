@@ -13,7 +13,7 @@ stay shorter and clearer than source doctrine.
 
 - Do not cite `legacy/raw/` directly.
 - Use `../PROVENANCE.md` for source trace.
-- Keep validation routed through `../AGENTS.md`.
+- Keep validation routed through the repository `VALIDATION.md` map.
 - Keep owner-local truth outside AoA center.
 
 ## Validation

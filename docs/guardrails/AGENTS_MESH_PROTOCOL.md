@@ -73,4 +73,4 @@ The AGENTS mesh must not claim hidden autonomy, memory sovereignty, live runtime
 
 ## Validation
 
-Use `AGENTS.md` in this directory for the current command lane.
+Use the repository `VALIDATION.md` map for the current command route.

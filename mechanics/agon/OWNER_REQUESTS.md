@@ -61,7 +61,7 @@ distilled; do not treat detailed source-doc accounting as owner acceptance.
 
 ## Validation
 
-Use the validation lane in [mechanics/agon/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.
 
 ## Next route
 

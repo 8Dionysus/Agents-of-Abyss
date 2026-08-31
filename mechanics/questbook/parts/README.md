@@ -27,7 +27,8 @@ Each part should keep three working surfaces:
 - `README.md`: purpose, current source, and first route.
 - `CONTRACT.md`: owner boundary, allowed outputs, and stop-lines.
 - `VALIDATION.md`: route to the central validation matrix in
-  `../AGENTS.md`; executable command lists live there, not in each part.
+  the repository `VALIDATION.md` map; executable command lists live in the
+  manifest and are invoked through the direct runner route.
 
 [`registry.json`](registry.json) is the machine-checked list of active parts.
 It must stay synchronized with this index and `../PARTS.md`.

@@ -179,8 +179,8 @@ def validate_part_files(part: dict[str, Any], selected: set[str] | None, problem
                 if heading not in text:
                     problems.append(f"{rel(path)} must include {heading}")
         elif filename == "VALIDATION.md":
-            if "AGENTS.md#validation" not in text:
-                problems.append(f"{rel(path)} must route validation through Questbook AGENTS.md")
+            if "VALIDATION.md" not in text:
+                problems.append(f"{rel(path)} must route validation through the repository VALIDATION.md map")
 
     if QUESTBOOK_AGENTS_PATH.is_file():
         agents_text = read(QUESTBOOK_AGENTS_PATH)
@@ -264,7 +264,7 @@ def validate_validation_commands_are_centralized(problems: list[str]) -> None:
             continue
         text = read(path)
         if VALIDATION_COMMAND_RE.search(text):
-            problems.append(f"{rel(path)} must route validation commands through {rel(QUESTBOOK_AGENTS_PATH)}")
+            problems.append(f"{rel(path)} must route validation commands through the repository VALIDATION.md map")
 
 
 def validate_no_direct_raw_links(problems: list[str]) -> None:

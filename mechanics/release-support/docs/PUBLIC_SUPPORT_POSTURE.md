@@ -99,13 +99,13 @@ Use the tiers below when you need to verify center claims:
 
 | tier | purpose | surface |
 |---|---|---|
-| Tier 1 | compact center contract validation | Release-support docs AGENTS validation lane |
-| Tier 2 | bounded repository regression battery | Release-support docs AGENTS validation lane |
+| Tier 1 | compact center contract validation | repository `VALIDATION.md` route |
+| Tier 2 | bounded repository regression battery | repository `VALIDATION.md` route |
 | Tier 3 | source-side scheduled truth check | `.github/workflows/source-side-smoke.yml` |
 
 The machine-facing center capsule has its own bounded rebuild loop:
 
-Use [release-support docs AGENTS](AGENTS.md#validation) for executable
+Use the repository [VALIDATION.md](../../../VALIDATION.md) map for executable
 commands.
 The center entry-surface validation route lives in
 [`ENTRY_SURFACE_VALIDATION_BASELINE`](../../../docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md).

@@ -1,6 +1,6 @@
 # Growth Closeout Validation
 
-Use the validation lane in [Method-growth parts AGENTS](../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route.
 
 Manual review should confirm the closeout names changed active parts,
 provenance use, owner requests, checks run, checks skipped, remaining risk, and

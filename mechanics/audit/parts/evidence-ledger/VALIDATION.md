@@ -13,4 +13,4 @@ Report evidence, gaps, freshness, confidence limit, and proof or memory route.
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route.

@@ -33,4 +33,4 @@ This file is the controlled bridge from old audit surfaces into the active Audit
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

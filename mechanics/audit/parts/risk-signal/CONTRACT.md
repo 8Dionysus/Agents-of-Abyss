@@ -20,4 +20,4 @@ This part owns the center signal that a risk is visible. It does not own remedia
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for executable routes.

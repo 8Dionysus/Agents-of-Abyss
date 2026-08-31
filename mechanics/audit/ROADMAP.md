@@ -18,4 +18,4 @@ Audit is planted as a center mechanic. The active route now lives in `mechanics/
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

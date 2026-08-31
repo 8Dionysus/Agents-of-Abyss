@@ -34,7 +34,7 @@ final object truth, proof verdicts, memory canon, or runtime activation.
 ## Validation
 
 Use the validation lane in
-[`mechanics/method-growth/docs/AGENTS.md`](AGENTS.md#validation) for executable
+the repository [`VALIDATION.md`](../../../VALIDATION.md) map for executable
 commands.
 
 ## Next route

@@ -117,7 +117,7 @@ When an agent touches links, shape, status, generated capsules, or known repairs
 
 ## Validation
 
-Use `AGENTS.md` in this directory for the current command lane.
+Use the repository `VALIDATION.md` map for the current command route.
 
 The broader repository suite may add ecosystem, mechanic, owner-request, or thematic-district checks around those commands.
 

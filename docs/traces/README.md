@@ -71,4 +71,4 @@ runs the docs thematic cleanup validators.
 
 ## Validation
 
-Use the nearest `AGENTS.md` for the current command lane.
+Use the repository `VALIDATION.md` map for the current command route.

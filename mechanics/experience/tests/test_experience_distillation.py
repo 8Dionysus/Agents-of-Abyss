@@ -134,7 +134,8 @@ def test_part_validation_commands_use_routed_manifest() -> None:
         validation = (
             ROOT / "mechanics" / "experience" / "parts" / slug / "VALIDATION.md"
         ).read_text(encoding="utf-8")
-        assert "Experience parts AGENTS" in validation
+        assert "mechanics/validation-routes.json" in validation
+        assert "run_validation_route.py --surface" in validation
         route = route_data["routes"][
             f"mechanics/experience/parts/{slug}/VALIDATION.md"
         ]

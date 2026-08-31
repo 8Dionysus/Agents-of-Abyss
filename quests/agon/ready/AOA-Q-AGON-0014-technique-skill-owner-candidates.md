@@ -21,11 +21,11 @@ Land the companion candidate request surfaces in `aoa-techniques` and `aoa-skill
 
 In `aoa-techniques`:
 
-Use the central Questbook validation matrix in [Questbook AGENTS](../../../mechanics/questbook/AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../VALIDATION.md) map for executable routes.
 
 In `aoa-skills`:
 
-Use the central Questbook validation matrix in [Questbook AGENTS](../../../mechanics/questbook/AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../VALIDATION.md) map for executable routes.
 
 ## Owner Route
 

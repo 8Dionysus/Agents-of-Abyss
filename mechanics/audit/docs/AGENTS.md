@@ -15,11 +15,11 @@ A nearby human README is on-demand: use it when its explanation, package map, pr
 Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
 ## Boundaries
 
-Do not put legacy inventories, raw source catalogs, or executable validation commands here. Use `PROVENANCE.md` for archive bridges and package `AGENTS.md` for commands.
+Do not put legacy inventories, raw source catalogs, or executable validation commands here. Use `PROVENANCE.md` for archive bridges and the repository `VALIDATION.md` map for commands.
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../AGENTS.md#validation).
+Use the direct route in the repository [`VALIDATION.md`](../../../VALIDATION.md).
 
 ## Closeout
 

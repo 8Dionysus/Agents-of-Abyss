@@ -13,4 +13,4 @@ Report scope, surfaces, owners, finding index, checks, and closeout route.
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route.

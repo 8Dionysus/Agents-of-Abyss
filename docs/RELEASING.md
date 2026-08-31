@@ -48,5 +48,5 @@ acceptance, proof, runtime, SDK, and rollback surfaces.
 
 ## Validation
 
-Use root `AGENTS.md`, `docs/AGENTS.md`, and
-`mechanics/release-support/AGENTS.md` for executable validation commands.
+Use the repository [`VALIDATION.md`](../VALIDATION.md) map for executable
+validation routes and the applicable release-support procedure.

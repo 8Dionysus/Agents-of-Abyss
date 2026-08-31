@@ -16,8 +16,8 @@ cards own human command entrypoints.
 
 ## Baseline route
 
-Use root `AGENTS.md#verify` for the broad human entrypoint. Use the nearest
-local `AGENTS.md#validation` for a narrower district or mechanic lane. The
+Use the repository `VALIDATION.md` map for the broad human entrypoint. Use the
+applicable manifest-keyed local validation route for a narrower district or mechanic lane. The
 release gate remains the single executable orchestration source for the broad
 battery; individual builders and validators remain the executable owners of
 their own behavior.
@@ -26,4 +26,4 @@ their own behavior.
 
 This baseline does not replace local validators. It gives entry surfaces a
 compact route to executable owners while local `AGENTS.md` cards continue to
-own lane-specific commands.
+own lane-specific boundaries and the manifest owns command argv.

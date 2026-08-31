@@ -164,11 +164,11 @@ def validate_parts(problems: list[str]) -> None:
                 for heading in PART_README_HEADINGS:
                     if heading not in text:
                         problems.append(f"{rel(path)}: missing heading {heading}")
-            if file_name == "VALIDATION.md" and "Release-support parts AGENTS" not in text:
-                problems.append(f"{rel(path)}: must route executable validation to Release-support parts AGENTS")
+            if file_name == "VALIDATION.md" and "../../../../VALIDATION.md" not in text:
+                problems.append(f"{rel(path)}: must link the repository VALIDATION.md map")
     validation_map = read(REPO_ROOT / "VALIDATION.md") if (REPO_ROOT / "VALIDATION.md").is_file() else ""
     if "validate_release_support_distillation.py" not in parts_agents and "validate_release_support_distillation.py" not in validation_map:
-        problems.append("mechanics/release-support/parts/AGENTS.md: missing package validator command")
+        problems.append("mechanics/release-support/parts/AGENTS.md: missing package validator route")
 
 
 def validate_owner_map(problems: list[str]) -> None:

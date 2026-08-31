@@ -25,7 +25,8 @@ Exact executable checks belong to the applicable `VALIDATION.md`, validated mani
 
 Run the narrowest relevant checks first. Usual checks for this district:
 
-Use the central Questbook validation matrix in [Questbook AGENTS](../mechanics/questbook/AGENTS.md#validation).
+Use the direct route in the repository [`VALIDATION.md`](../VALIDATION.md); it
+names the applicable manifest key and no-shell runner.
 
 If a listed validator is not present in the checkout yet, report that explicitly and run the closest available guardrail.
 

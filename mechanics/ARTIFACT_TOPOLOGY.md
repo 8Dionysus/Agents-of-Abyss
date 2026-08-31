@@ -81,4 +81,4 @@ roadmap duplication.
 
 ## Validation
 
-Use the validation lane in [mechanics/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../VALIDATION.md) map for executable routes.

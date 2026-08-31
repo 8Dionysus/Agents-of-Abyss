@@ -41,7 +41,8 @@ version-specific surface you touched.
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
 Run the applicable validation route;
-add `--show` to inspect the route without executing it.
+Inspect the exact manifest-keyed route in the repository
+[`VALIDATION.md`](../../../VALIDATION.md) before execution.
 
 ## Closeout
 

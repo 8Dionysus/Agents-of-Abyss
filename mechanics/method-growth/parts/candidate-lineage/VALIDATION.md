@@ -1,6 +1,6 @@
 # Candidate Lineage Validation
 
-Use the validation lane in [Method-growth parts AGENTS](../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route.
 
 When the lineage example changes, also run the candidate-lineage witness command
-from [Method-growth AGENTS](../../AGENTS.md#validation).
+from the applicable manifest-keyed route.

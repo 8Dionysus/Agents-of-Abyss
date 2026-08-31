@@ -131,8 +131,8 @@ def validate_parts(problems: list[str]) -> None:
                 for heading in PART_README_HEADINGS:
                     if heading not in text:
                         problems.append(f"{rel(path)}: missing heading {heading}")
-            if file_name == "VALIDATION.md" and "AGENTS.md#validation" not in text:
-                problems.append(f"{rel(path)}: must route executable validation to checkpoint AGENTS")
+            if file_name == "VALIDATION.md" and "VALIDATION.md" not in text:
+                problems.append(f"{rel(path)}: must route executable validation to the repository VALIDATION.md map")
 
 
 def validate_owner_requests(problems: list[str]) -> None:

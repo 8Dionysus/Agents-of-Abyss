@@ -1,3 +1,14 @@
 # Owner Binding Validation
 
-Executable validation commands live in [Agon parts AGENTS](../AGENTS.md#validation). Use the part-specific route named there.
+This on-demand route is keyed by `mechanics/validation-routes.json` as
+`mechanics/agon/parts/owner-binding/VALIDATION.md`. Inspect the exact argv before execution:
+
+```text
+python scripts/mechanics_topology/run_validation_route.py --surface mechanics/agon/parts/owner-binding/VALIDATION.md --show
+```
+
+Execute that inspected route with:
+
+```text
+python scripts/mechanics_topology/run_validation_route.py --surface mechanics/agon/parts/owner-binding/VALIDATION.md
+```

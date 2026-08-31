@@ -33,8 +33,9 @@ Run any targeted builder, validator, and test named by the generated or version-
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run the applicable validation route;
-add `--show` to inspect the route without executing it.
+Use the direct route in the repository [`VALIDATION.md`](../../../VALIDATION.md);
+it names the applicable manifest key and no-shell runner. Inspect it before
+execution.
 
 ## Closeout
 

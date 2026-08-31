@@ -60,6 +60,32 @@ class ValidationRoutesTests(unittest.TestCase):
             text = card.read_text(encoding="utf-8")
             self.assertNotIn("centralized-child-validation", text, card.as_posix())
 
+    def test_manifest_keyed_validation_surfaces_use_direct_runner_routes(self) -> None:
+        data = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        for surface in data["routes"]:
+            if not surface.endswith("VALIDATION.md"):
+                continue
+            text = (REPO_ROOT / surface).read_text(encoding="utf-8")
+            self.assertIn("mechanics/validation-routes.json", text, surface)
+            self.assertIn(
+                f"run_validation_route.py --surface {surface} --show", text, surface
+            )
+            self.assertIn(
+                f"run_validation_route.py --surface {surface}", text, surface
+            )
+            self.assertNotRegex(text, r"AGENTS\.md#(?:validation|verify)", surface)
+
+    def test_active_route_residue_guard_passes(self) -> None:
+        result = subprocess.run(
+            [sys.executable, "scripts/mechanics_topology/validate_validation_routes.py"],
+            cwd=REPO_ROOT,
+            check=False,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

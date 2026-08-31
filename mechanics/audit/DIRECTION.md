@@ -33,4 +33,4 @@ Audit now serves as the center route for reviewable seeing. It gives agents a li
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

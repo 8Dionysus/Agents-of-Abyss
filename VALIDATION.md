@@ -100,9 +100,10 @@ python scripts/owner_requests/validate_generated_owner_request_queue.py
 python scripts/owner_requests/validate_owner_request_docs.py
 ```
 
-Existing part-local `VALIDATION.md` surfaces retain their exact command
-tokens. Do not copy those command lists into an inherited card; route through
-the manifest and the nearest part owner.
+Part-local `VALIDATION.md` surfaces name their exact key in
+`mechanics/validation-routes.json` and the no-shell runner route. The manifest
+owns the underlying argv lists; do not copy those commands into an inherited
+card or imply that a local surface is an independent command authority.
 
 Package registry validation refs remain addressable from this map:
 

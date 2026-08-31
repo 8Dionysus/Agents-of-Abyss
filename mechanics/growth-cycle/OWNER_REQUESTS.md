@@ -54,7 +54,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 
 ## Validation
 
-Use the central Growth Cycle validation matrix in [Growth Cycle AGENTS](AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.
 
 ## Next route
 

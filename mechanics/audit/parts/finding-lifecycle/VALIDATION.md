@@ -13,4 +13,4 @@ Report state, evidence, owner route, request, closure condition, and residual ri
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route.
