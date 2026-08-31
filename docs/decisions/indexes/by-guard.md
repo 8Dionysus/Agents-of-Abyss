@@ -33,11 +33,13 @@
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
 - [AOA-CENTER-D-0029 Root Scripts Family Topology](../AOA-CENTER-D-0029-root-scripts-family-topology.md) (`docs/decisions/AOA-CENTER-D-0029-root-scripts-family-topology.md`)
 - [AOA-CENTER-D-0034 Release Leaf Command Ownership](../AOA-CENTER-D-0034-release-leaf-command-ownership.md) (`docs/decisions/AOA-CENTER-D-0034-release-leaf-command-ownership.md`)
+- [AOA-CENTER-D-0042 Separate Inherited Agent Routes From Human README Surfaces](../AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md) (`docs/decisions/AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md`)
 
 ## link/shape hygiene
 
 - [AOA-CENTER-D-0015 Decision Note: Traces Stay Repo-Level Receipts](../AOA-CENTER-D-0015-traces-mode-hardening.md) (`docs/decisions/AOA-CENTER-D-0015-traces-mode-hardening.md`)
 - [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
+- [AOA-CENTER-D-0042 Separate Inherited Agent Routes From Human README Surfaces](../AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md) (`docs/decisions/AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md`)
 
 ## schema validation
 
@@ -94,6 +96,7 @@
 - [AOA-CENTER-D-0026 Decision Note: Agent Surface Design Root](../AOA-CENTER-D-0026-agent-surface-design-root.md) (`docs/decisions/AOA-CENTER-D-0026-agent-surface-design-root.md`)
 - [AOA-CENTER-D-0027 Codex Spark Agent Lane Home](../AOA-CENTER-D-0027-codex-spark-agent-lane-home.md) (`docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md`)
 - [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
+- [AOA-CENTER-D-0042 Separate Inherited Agent Routes From Human README Surfaces](../AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md) (`docs/decisions/AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md`)
 
 ## GitHub landing
 
@@ -174,6 +177,7 @@
 ## prompt visibility
 
 - [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
+- [AOA-CENTER-D-0042 Separate Inherited Agent Routes From Human README Surfaces](../AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md) (`docs/decisions/AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md`)
 
 ## receipt admission
 
