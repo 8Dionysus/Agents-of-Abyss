@@ -7,9 +7,7 @@ nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+
 ## Boundaries
 
 - `mechanics/distillation/` owns center law, route grammar, active parts, and
@@ -32,10 +30,6 @@ Exact executable checks belong to the applicable `VALIDATION.md`, validated mani
 - Update `LANDING_LOG.md` when a checked landing changes.
 
 ## Closeout
-
-Closeout must name changed active parts, whether `PROVENANCE.md` was consulted,
-owner requests affected, checks run, checks skipped, remaining risk, and the
-next owner route if this lane was only a waypoint.
 
 If `PROVENANCE.md` was consulted, name only the relevant source bridge,
 archive map, or distillation log section. Do not enumerate raw files unless the

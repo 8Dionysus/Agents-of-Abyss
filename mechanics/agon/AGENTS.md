@@ -6,9 +6,7 @@ This card applies to `mechanics/agon/` and every nested path under that scope un
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+
 ## Boundaries
 
 Do not use this lane to override owner-local truth, generated-source
@@ -18,9 +16,6 @@ canon writes.
 
 ## Closeout
 
-Closeout must name changed active parts, whether `PROVENANCE.md` was consulted,
-owner requests affected, checks run, checks skipped, remaining risk, and the
-next owner route if this lane was only a waypoint.
 
 If `PROVENANCE.md` was not consulted, say so explicitly. If it was consulted,
 name only the relevant source-doc family or map section. Do not enumerate
@@ -73,6 +68,8 @@ plans into active part contracts, `LANDING_LOG.md`, or `PROVENANCE.md`.
 
 ## Validation
 
+Child routes remain keyed by `mechanics/validation-routes.json`.
+
 Use the applicable validation route after
 active-part or provenance-route changes.
 Use the applicable validation route
@@ -85,10 +82,3 @@ generated or model-specific changes.
 
 High-risk Agon part checks that used to be preserved in the old root reference
 now live here:
-
-### Routed child validation
-
-Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Use the direct route in the repository [`VALIDATION.md`](../../VALIDATION.md);
-it names the exact manifest key and no-shell runner. Inspect that route before
-execution and keep the manifest as argv authority.

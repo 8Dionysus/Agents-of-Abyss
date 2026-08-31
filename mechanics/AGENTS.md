@@ -6,12 +6,16 @@ This card applies to `mechanics/` and every nested path under that scope until a
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+
 ## Closeout
 
 Closeout must name changed surfaces, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
+
+For mechanic packages, the shared closeout contract is:
+
+Closeout must name changed active parts, whether `PROVENANCE.md` was consulted,
+owner requests affected, checks run, checks skipped, remaining risk, and the
+next owner route if this lane was only a waypoint.
 
 ## Role
 

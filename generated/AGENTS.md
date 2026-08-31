@@ -10,9 +10,10 @@ This card applies to `generated/` and every nested path under that scope until a
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+For generated, route, or release-facing changes, consult the repository
+`VALIDATION.md` route.
+
+
 ## Boundaries
 
 - Do not treat generated files as stronger than source docs, schemas, source registries, quest source files, validators, or owner repositories.

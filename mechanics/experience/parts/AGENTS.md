@@ -10,9 +10,7 @@ Experience parts hold functioning contracts. They distill source pressure into r
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+
 ## Boundaries
 
 Do not move archival inventories into active part docs wholesale. Do not claim runtime activation, hidden memory authority, owner acceptance, proof verdicts, or ToS-authored meaning from this lane.
@@ -26,16 +24,10 @@ requests, validators, and the landing log before closing.
 
 ## Validation
 
-Run:
-
-### Routed child validation
-
-Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run the applicable validation route;
-Inspect the exact manifest-keyed route in the repository
-[`VALIDATION.md`](../../../VALIDATION.md) before execution.
+Child routes remain keyed by `mechanics/validation-routes.json`.
 
 ## Closeout
+
 
 Report the active part changed, whether `PROVENANCE.md` was consulted, owner requests affected, checks run, and any unresolved distillation risk.
 

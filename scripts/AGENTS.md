@@ -14,9 +14,9 @@ The authoritative family map is `scripts/registry.json`.
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+For root tooling changes, consult the repository `VALIDATION.md` route.
+
+
 ## Boundaries
 
 - Root `scripts/` owns repo-relative center tooling through registered family
