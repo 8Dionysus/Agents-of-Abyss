@@ -96,8 +96,7 @@ Use [release_check.py](scripts/release_gate/release_check.py) for broad
 release-facing or repo-wide validation. The compact route lives in
 [ENTRY_SURFACE_VALIDATION_BASELINE](docs/guardrails/ENTRY_SURFACE_VALIDATION_BASELINE.md),
 while executable command ownership stays in the scripts and repository
-`VALIDATION.md` routes
-cards so this README can stay readable.
+`VALIDATION.md` routes, so this README can stay readable.
 
 ## Current Contour
 
