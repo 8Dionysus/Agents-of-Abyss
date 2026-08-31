@@ -6,16 +6,13 @@ This card applies to `mechanics/experience/` and every nested path under that sc
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+
 ## Boundaries
 
 Do not use this lane to override owner-local truth, generated-source boundaries, sibling-repo authority, release validation contracts, live runtime, hidden memory sovereignty, or ToS-authored meaning.
 
 ## Closeout
 
-Closeout must name changed active parts, whether `PROVENANCE.md` was consulted, owner requests affected, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
 
 If `PROVENANCE.md` was not consulted, say so explicitly. If it was consulted,
 name only the relevant provenance bridge or archive map/log section. Do not
@@ -69,15 +66,10 @@ plans into active part contracts, `LANDING_LOG.md`, or `PROVENANCE.md`.
 
 ## Validation
 
+Child routes remain keyed by `mechanics/validation-routes.json`.
+
 Use the applicable validation route after active-part or provenance-route changes.
 Use the applicable validation route after schema, example, script, or test placement changes.
 Use the applicable validation route after landing-log or surface-chain changes.
 Use the nearest `parts/<part>/scripts/*.py` and `parts/<part>/tests/test_*.py`
 for part-specific artifact surfaces.
-
-### Routed child validation
-
-Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Use the direct route in the repository [`VALIDATION.md`](../../VALIDATION.md);
-it names the exact manifest key and no-shell runner. Inspect that route before
-execution and keep the manifest as argv authority.

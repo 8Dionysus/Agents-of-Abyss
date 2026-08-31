@@ -7,9 +7,7 @@ that scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+
 ## Boundaries
 
 - Do not use this lane to override owner-local truth, generated-source
@@ -28,9 +26,6 @@ Exact executable checks belong to the applicable `VALIDATION.md`, validated mani
 
 ## Closeout
 
-Closeout must name changed active parts, whether `PROVENANCE.md` was consulted,
-owner requests affected, checks run, checks skipped, remaining risk, and the
-next owner route if this lane was only a waypoint.
 
 If `PROVENANCE.md` was consulted, name only the relevant lineage bridge or
 receipt section. Do not enumerate donor or historical sources unless the task
@@ -81,15 +76,10 @@ change does not affect its job.
 
 ## Validation
 
+Child routes remain keyed by `mechanics/validation-routes.json`.
+
 Run the narrow package lane after changing Method-growth surfaces:
 
 Run lineage witnesses when the growth-refinery chain changes:
 
 Run generated checks when registry, owner requests, or AGENTS surfaces change:
-
-### Routed child validation
-
-Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Use the direct route in the repository [`VALIDATION.md`](../../VALIDATION.md);
-it names the exact manifest key and no-shell runner. Inspect that route before
-execution and keep the manifest as argv authority.

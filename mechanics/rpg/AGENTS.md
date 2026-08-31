@@ -7,9 +7,7 @@ until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+
 ## Boundaries
 
 - Do not turn RPG terms into hidden ontology, runtime ledger authority, role canon, proof verdicts, or quest ownership.
@@ -19,6 +17,7 @@ Exact executable checks belong to the applicable `VALIDATION.md`, validated mani
 - If RPG creates a stronger-owner request, update `mechanics/rpg/OWNER_REQUESTS.md` and the owner-request queue surfaces instead of pretending the owner accepted it.
 
 ## Closeout
+
 
 Closeout must name changed RPG active parts, whether `PROVENANCE.md` was
 consulted, whether vocabulary or owner requests changed, checks run, checks
@@ -76,15 +75,10 @@ change does not affect its job.
 
 ## Validation
 
+Child routes remain keyed by `mechanics/validation-routes.json`.
+
 Run the narrow RPG lane after package changes:
 
 If owner requests changed, also run:
 
 For release-readiness or cross-mechanic edits, finish with:
-
-### Routed child validation
-
-Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Use the direct route in the repository [`VALIDATION.md`](../../VALIDATION.md);
-it names the exact manifest key and no-shell runner. Inspect that route before
-execution and keep the manifest as argv authority.

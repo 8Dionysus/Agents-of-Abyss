@@ -6,16 +6,13 @@ This card applies to `mechanics/audit/` and every nested path under that scope u
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+
 ## Boundaries
 
 Do not use this lane to create proof verdicts, owner-local remediation authority, runtime authority, memory truth, release authority, generated authority, or archival authority.
 
 ## Closeout
 
-Closeout must name changed active parts, whether `PROVENANCE.md` was consulted, owner requests affected, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
 
 If `PROVENANCE.md` was not consulted, say so explicitly. If it was consulted,
 name only the relevant provenance bridge or legacy map section. Do not enumerate
@@ -64,13 +61,8 @@ plans into active part contracts, `LANDING_LOG.md`, or `PROVENANCE.md`.
 
 ## Validation
 
+Child routes remain keyed by `mechanics/validation-routes.json`.
+
 Use these commands after Audit mechanic changes:
 
 Use these commands after route, generated, or root docs references change:
-
-### Routed child validation
-
-Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Use the direct route in the repository [`VALIDATION.md`](../../VALIDATION.md);
-it names the exact manifest key and no-shell runner. Inspect that route before
-execution and keep the manifest as argv authority.

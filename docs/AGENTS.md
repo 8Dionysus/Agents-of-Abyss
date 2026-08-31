@@ -12,9 +12,10 @@ It keeps the federation legible without absorbing mechanic truth, sibling-repo t
 
 ## Read before editing
 
-Select only the source, contract, or owner route that can change the interpretation of the named task.
-A nearby human README is on-demand: use it when its explanation, package map, provenance, compatibility, or usage contract is material to the task.
-Exact executable checks belong to the applicable `VALIDATION.md`, validated manifest, runner, or stronger owner procedure surface.
+For docs-root or guardrail topology changes, consult the repository
+`VALIDATION.md` route.
+
+
 ## Boundaries
 
 - Do not use `docs/` to override owner-local truth, generated-source boundaries, sibling-repo authority, or release validation contracts.
