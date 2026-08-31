@@ -7,6 +7,7 @@
 - [AOA-CENTER-D-0001 Decision Note: `aoa-stats` Is Part Of The Public Federation Contour](../AOA-CENTER-D-0001-aoa-stats-public-layer.md) (`docs/decisions/AOA-CENTER-D-0001-aoa-stats-public-layer.md`)
 - [AOA-CENTER-D-0011 Ecosystem Registry v2 Landing](../AOA-CENTER-D-0011-ecosystem-registry-v2-landing.md) (`docs/decisions/AOA-CENTER-D-0011-ecosystem-registry-v2-landing.md`)
 - [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
+- [AOA-CENTER-D-0042 Separate Inherited Agent Routes From Human README Surfaces](../AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md) (`docs/decisions/AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md`)
 
 ## release contract
 
@@ -102,6 +103,7 @@
 - [AOA-CENTER-D-0027 Codex Spark Agent Lane Home](../AOA-CENTER-D-0027-codex-spark-agent-lane-home.md) (`docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md`)
 - [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
 - [AOA-CENTER-D-0041 Route Child Validation Out of Inherited AGENTS Cards](../AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md) (`docs/decisions/AOA-CENTER-D-0041-route-child-validation-out-of-inherited-agents-cards.md`)
+- [AOA-CENTER-D-0042 Separate Inherited Agent Routes From Human README Surfaces](../AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md) (`docs/decisions/AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md`)
 
 ## decision index
 
