@@ -13,4 +13,4 @@ Report owner, request, stop-line, proof route, and next action.
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route.

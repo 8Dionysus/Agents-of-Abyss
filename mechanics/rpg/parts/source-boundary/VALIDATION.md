@@ -1,3 +1,3 @@
 # Source Boundary Validation
 
-Use RPG parts AGENTS validation. This part is checked by the package distillation validator for owner-boundary and no-hidden-ontology language.
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route. This part is checked by the package distillation validator for owner-boundary and no-hidden-ontology language.

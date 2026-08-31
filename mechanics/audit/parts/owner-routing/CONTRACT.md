@@ -20,4 +20,4 @@ This part owns center-side route grammar for audit findings. It does not grant o
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for executable routes.

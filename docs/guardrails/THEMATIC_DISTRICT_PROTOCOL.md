@@ -58,4 +58,4 @@ validator is an audit or roadmap signal, not an active guardrail.
 
 ## Validation
 
-Use `AGENTS.md` in this directory for the current command lane.
+Use the repository `VALIDATION.md` map for the current command route.

@@ -56,4 +56,4 @@ mechanics and does not create a public or owner-local claim.
 
 ## Validation
 
-Use the validation lane in [mechanics/checkpoint/AGENTS.md](../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../VALIDATION.md) map for executable routes.

@@ -1,3 +1,3 @@
 # Repair Proof Validation
 
-Use the validation lane in [Antifragility parts AGENTS](../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route.

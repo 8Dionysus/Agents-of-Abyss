@@ -36,7 +36,7 @@ This file illustrates route behavior. It does not replace the route contract, ge
 
 ## Checks
 
-Use [examples/AGENTS.md#validation](AGENTS.md#validation) for the local validation route. When this example changes a route contract, also run the validators named by [START_HERE_ROUTE_CONTRACT](../docs/START_HERE_ROUTE_CONTRACT.md#validation).
+Use the repository [VALIDATION.md](../VALIDATION.md) map for the local validation route. When this example changes a route contract, also run the validators named by [START_HERE_ROUTE_CONTRACT](../docs/START_HERE_ROUTE_CONTRACT.md#validation).
 
 ## Closeout
 

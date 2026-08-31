@@ -17,7 +17,7 @@ Exact executable checks belong to the applicable `VALIDATION.md`, validated mani
 
 - Guardrails verify route shape; they do not author doctrine, mechanic law, generated meaning, or sibling-repo truth.
 - Do not recreate empty docs districts for mechanics. Route mechanic records to `mechanics/<slug>/legacy/` and active mechanic work to `mechanics/<slug>/`.
-- Keep compact validation entrypoints here or in the nearest `AGENTS.md`;
+- Keep compact validation entrypoints here or in the nearest `VALIDATION.md`;
   large child-specific command matrices require a validated owner manifest.
   Keep README surfaces map-like.
 - Generated mirrors remain evidence only and must be rebuilt from their source config.

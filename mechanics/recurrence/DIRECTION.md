@@ -66,4 +66,4 @@ Use this block for future work that is likely but not yet worth landing:
 
 ## Validation
 
-Use the validation lane in [mechanics/recurrence/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

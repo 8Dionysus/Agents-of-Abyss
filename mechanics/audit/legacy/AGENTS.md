@@ -19,7 +19,7 @@ Do not promote legacy text into active law by reference. If a legacy source cont
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../AGENTS.md#validation).
+Use the package route in the repository [`VALIDATION.md`](../../../VALIDATION.md).
 
 ## Closeout
 

@@ -38,7 +38,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 
 ## Validation
 
-Use the central Questbook validation matrix in [Questbook AGENTS](AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.
 
 ## Next route
 

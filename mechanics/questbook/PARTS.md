@@ -45,4 +45,4 @@ active part. Active part docs should not grow source-file inventories.
 
 ## Validation
 
-Use the central Questbook validation matrix in [Questbook AGENTS](AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

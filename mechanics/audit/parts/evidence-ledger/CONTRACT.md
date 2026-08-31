@@ -20,4 +20,4 @@ This part owns evidence posture for center audit. It does not turn evidence into
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for executable routes.

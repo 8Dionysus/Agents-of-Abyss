@@ -13,10 +13,10 @@ The center is allowed to name the city. It is not allowed to swallow every distr
 This charter is the center's authority boundary. It answers whether a claim may
 be made by `Agents-of-Abyss` at all.
 
-Operational routes, local editing rules, and validation commands live in
-`AGENTS.md`, local `AGENTS.md` cards, route contracts, validators, and package
-surfaces. This charter gives those routes their center boundary; it does not
-replace them.
+Operational routes, local editing rules, and validation procedures live in
+`AGENTS.md`, the repository `VALIDATION.md` map, route contracts, validators,
+and package surfaces. This charter gives those routes their center boundary; it
+does not replace them.
 
 ## Mission
 

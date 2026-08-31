@@ -52,7 +52,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 
 ## Validation
 
-Use the central Checkpoint validation matrix in [Checkpoint AGENTS](AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.
 
 ## Next route
 

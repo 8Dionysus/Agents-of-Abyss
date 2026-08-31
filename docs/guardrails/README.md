@@ -43,4 +43,4 @@ reviewable validation path.
 
 ## Validation
 
-Use [`AGENTS.md`](AGENTS.md) for the current command lane.
+Use the repository [`VALIDATION.md`](../../VALIDATION.md) map for the current command route.

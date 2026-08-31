@@ -166,7 +166,8 @@ surface that matches the work:
 
 | Surface | Use for |
 |---|---|
-| `AGENTS.md` | local law, post-change route review, closeout, validation |
+| `AGENTS.md` | local law, post-change route review, and closeout |
+| `VALIDATION.md` | exact executable validation routes and full-gate entry |
 | `DIRECTION.md` | current operating contour |
 | `PARTS.md` | active functioning parts and part routes |
 | `OWNER_MAP.md` | center role and stronger owner split |

@@ -21,5 +21,5 @@ No open candidate items.
 
 ## Agent Route
 
-Executable validation and rebuild commands live in the nearest `AGENTS.md` for this memo port.
+Executable validation and rebuild routes are named by the repository `VALIDATION.md` map and the applicable owner procedure.
 This generated index is a read model; it does not own the operational route.

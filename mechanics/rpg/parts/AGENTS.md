@@ -17,14 +17,16 @@ Exact executable checks belong to the applicable `VALIDATION.md`, validated mani
 
 - Do not pull detailed source inventories into part docs.
 - Do not turn RPG labels into owner-local truth.
-- Do not add executable validation commands outside AGENTS surfaces.
+- Do not add executable validation commands outside VALIDATION.md surfaces or
+  the source manifest.
 - Keep technical artifacts inside the owning part.
 
 ## Validation
 
 Run the RPG part lane after part changes:
 
-For release-readiness, use the package validation lane in `mechanics/rpg/AGENTS.md`.
+For release-readiness, use the package route in the repository
+[`VALIDATION.md`](../../../VALIDATION.md).
 
 ## Closeout
 

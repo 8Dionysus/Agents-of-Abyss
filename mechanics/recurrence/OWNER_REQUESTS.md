@@ -55,7 +55,7 @@ Generated companion: [`generated/owner_request_queue.min.json`](../../generated/
 
 ## Validation
 
-Use the validation lane in [mechanics/recurrence/AGENTS.md](AGENTS.md#validation)
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.
 for executable commands.
 
 ## Next route

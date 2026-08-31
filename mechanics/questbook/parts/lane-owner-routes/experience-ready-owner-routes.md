@@ -79,4 +79,4 @@ or a replacement for `mechanics/experience/OWNER_REQUESTS.md`.
 
 ## Validation
 
-Use the central Questbook validation matrix in [Questbook AGENTS](../../AGENTS.md#validation).
+Use the repository validation map in [VALIDATION.md](../../../../VALIDATION.md).

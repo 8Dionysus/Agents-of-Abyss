@@ -49,4 +49,4 @@ When boundary failure appears:
 
 ## Validation
 
-Use the validation lane in [mechanics/checkpoint/AGENTS.md](../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../VALIDATION.md) map for executable routes.

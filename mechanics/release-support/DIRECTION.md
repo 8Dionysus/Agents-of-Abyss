@@ -83,4 +83,4 @@ projection routes to `8Dionysus`. Runtime deployment truth routes to
 
 ## Validation
 
-Use the validation lane in [mechanics/release-support/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

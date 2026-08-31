@@ -258,7 +258,7 @@ Return receipt: update `mechanics/owner-request-queue.json` `owner_landing_ref` 
 
 ## Validation
 
-Use the validation lane in [mechanics/rpg/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.
 
 ## Next route
 

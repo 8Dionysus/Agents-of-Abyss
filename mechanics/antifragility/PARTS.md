@@ -43,6 +43,6 @@ easier to follow, not merely smaller.
 
 ## Validation
 
-Use the validation lane in [mechanics/antifragility/AGENTS.md](AGENTS.md#validation)
-for package commands and [parts/AGENTS.md](parts/AGENTS.md#validation) for part
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for package and part
+executable routes.
 commands.

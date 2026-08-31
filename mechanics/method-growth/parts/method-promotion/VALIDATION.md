@@ -1,6 +1,6 @@
 # Method Promotion Validation
 
-Use the validation lane in [Method-growth parts AGENTS](../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route.
 
 Manual review should confirm scenario method routes to `aoa-playbooks` and does
 not stay as inflated center doctrine.

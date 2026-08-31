@@ -22,7 +22,7 @@ Every part keeps three working surfaces:
 
 - `README.md`: what the part is for and where to start.
 - `CONTRACT.md`: owner boundary, stop-lines, and allowed outputs.
-- `VALIDATION.md`: validation route, with executable commands centralized in `AGENTS.md`.
+- `VALIDATION.md`: validation route, keyed to the manifest and direct no-shell runner.
 
 Every part `README.md` should stay short and use the same active-route shape:
 
@@ -48,6 +48,6 @@ Detailed source-doc accounting is deliberately outside part docs. Use [PROVENANC
 
 ## Validation
 
-Use the validation lane in [mechanics/rpg/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.
 
 Use `OWNER_REQUESTS.md` for owner-request queue validation and `parts/vocabulary-overlay/` for the checked dual-vocabulary overlay.

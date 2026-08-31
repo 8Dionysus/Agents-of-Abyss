@@ -31,4 +31,4 @@ The center may name a route and carry a request packet. The target owner must st
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

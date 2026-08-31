@@ -89,8 +89,8 @@ def render_markdown(registry: dict[str, Any], output: Path = DEFAULT_OUTPUT) -> 
             "",
             "## Validation",
             "",
-            "Use the central Questbook validation matrix in "
-            "[Questbook AGENTS](../../AGENTS.md#validation).",
+            "Use the repository validation map in "
+            "[VALIDATION.md](../../../../VALIDATION.md).",
             "",
         ]
     )

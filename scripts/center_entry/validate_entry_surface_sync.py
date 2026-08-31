@@ -83,7 +83,7 @@ def collect_problems() -> list[str]:
             )
     if "```bash" in baseline_text:
         problems.append(
-            f"{VALIDATION_BASELINE_REF}: validation commands must stay in executable owners or AGENTS.md"
+            f"{VALIDATION_BASELINE_REF}: validation commands must stay in executable owners or VALIDATION.md"
         )
 
     for ref in ENTRY_SURFACE_REFS:

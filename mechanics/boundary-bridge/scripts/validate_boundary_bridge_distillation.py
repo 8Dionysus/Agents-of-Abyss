@@ -152,7 +152,7 @@ def validate_parts(problems: list[str]) -> None:
                 problems.append(f"{rel(path)}: missing package validator route")
     validation_map = read(REPO_ROOT / "VALIDATION.md") if (REPO_ROOT / "VALIDATION.md").is_file() else ""
     if "validate_boundary_bridge_distillation.py" not in parts_agents and "validate_boundary_bridge_distillation.py" not in validation_map:
-        problems.append("mechanics/boundary-bridge/parts/AGENTS.md: missing package validator command")
+        problems.append("mechanics/boundary-bridge/parts/AGENTS.md: missing package validator route")
 
 
 def validate_owner_requests(problems: list[str]) -> None:

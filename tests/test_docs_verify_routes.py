@@ -163,7 +163,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("python mechanics/method-growth/scripts/validate_wave4_kernel_automation.py --workspace-root /srv/AbyssOS", refinery_route)
         self.assertIn("method-growth", docs_readme)
         self.assertIn("mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md", refinery_doc)
-        self.assertIn("AGENTS.md#validation", refinery_doc)
+        self.assertIn("VALIDATION.md", refinery_doc)
         self.assertIn("mechanics/method-growth/docs/OWNER_LANDING_AND_PRUNING.md", crosswalk)
         self.assertIn("weaker than a landed owner object", owner_landing)
         self.assertIn("let `aoa-stats` infer owner truth", owner_landing)
@@ -384,7 +384,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("generated/center_entry_map.min.json", readme)
         self.assertIn(VALIDATION_BASELINE_REF, readme)
         self.assertIn("generated/center_entry_map.min.json", posture)
-        self.assertIn("AGENTS.md#validation", posture)
+        self.assertIn("VALIDATION.md", posture)
         self.assertIn("mechanics/validation-routes.json", posture_agents)
         posture_route = validation_route_text(
             "mechanics/release-support/docs/PUBLIC_SUPPORT_POSTURE.md"

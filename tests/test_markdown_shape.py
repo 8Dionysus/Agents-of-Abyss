@@ -57,7 +57,7 @@ class MarkdownShapeTest(unittest.TestCase):
         )
 
         self.assertNotEqual(bad.returncode, 0)
-        self.assertIn("executable validation command belongs in nearest AGENTS.md", bad.stdout)
+        self.assertIn("executable validation command belongs in VALIDATION.md", bad.stdout)
         child.write_text("# Example\n\n## Validation\n\nUse AGENTS.md#validation.\n", encoding="utf-8")
         ok = subprocess.run([sys.executable, "scripts/hygiene/validate_markdown_shape.py"], cwd=self.tempdir)
         self.assertEqual(ok.returncode, 0)

@@ -1,6 +1,6 @@
 # Owner Landing Validation
 
-Use the validation lane in [Method-growth parts AGENTS](../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for the executable route.
 
 Owner-request changes must also pass the owner-request queue and docs validators
-named in [Method-growth AGENTS](../../AGENTS.md#validation).
+named in the applicable manifest-keyed route.

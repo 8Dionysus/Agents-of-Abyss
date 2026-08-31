@@ -32,7 +32,7 @@ Audit owner requests carry center-visible review pressure into repositories that
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.
 
 ## Next route
 

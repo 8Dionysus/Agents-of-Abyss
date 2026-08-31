@@ -55,4 +55,4 @@ discarded, but the route must remain reviewable.
 
 ## Validation
 
-Use the validation lane in [mechanics/method-growth/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

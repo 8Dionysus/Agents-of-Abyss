@@ -20,4 +20,4 @@ This part owns center-side audit event handoff. The crossed mechanic keeps its o
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for executable routes.

@@ -56,4 +56,4 @@ source-linked, and owner-routable.
 
 ## Validation
 
-Use the validation lane in [mechanics/distillation/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

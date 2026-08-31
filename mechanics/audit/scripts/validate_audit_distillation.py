@@ -176,10 +176,10 @@ def validate_active_cleanliness(problems: list[str]) -> None:
         text = read(path)
         if re.search(r"\baudit\s+is\s+not\b", text, re.IGNORECASE):
             problems.append(f"{path_ref}: use positive audit grammar instead of 'audit is not' phrasing")
-        if path.name != "AGENTS.md" and "```bash" in text:
-            problems.append(f"{path_ref}: executable command blocks belong in AGENTS.md")
-        if path.name != "AGENTS.md" and re.search(r"(?:^|`)python (?:scripts|mechanics)/", text, re.MULTILINE):
-            problems.append(f"{path_ref}: executable validation commands belong in AGENTS.md")
+        if path.name not in {"AGENTS.md", "VALIDATION.md"} and "```bash" in text:
+            problems.append(f"{path_ref}: executable command blocks belong in VALIDATION.md")
+        if path.name not in {"AGENTS.md", "VALIDATION.md"} and re.search(r"(?:^|`)python (?:scripts|mechanics)/", text, re.MULTILINE):
+            problems.append(f"{path_ref}: executable validation commands belong in VALIDATION.md")
 
 
 def validate_registry_and_queue(problems: list[str]) -> None:

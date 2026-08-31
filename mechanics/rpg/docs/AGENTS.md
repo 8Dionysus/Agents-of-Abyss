@@ -23,7 +23,7 @@ Exact executable checks belong to the applicable `VALIDATION.md`, validated mani
 
 ## Validation
 
-Use the package validation lane in `mechanics/rpg/AGENTS.md`.
+Use the package route in the repository [`VALIDATION.md`](../../../VALIDATION.md).
 For `mechanics/rpg/OWNER_REQUESTS.md`, use the exact route in
 `mechanics/validation-routes.json` through the package card.
 

@@ -101,7 +101,7 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 
 ## Docs cleanup validation
 
-Use `docs/AGENTS.md` and `docs/guardrails/AGENTS.md` for the current validation lane.
+Use the repository [`VALIDATION.md`](../VALIDATION.md) map for the current validation lane.
 
 ## Final rule
 

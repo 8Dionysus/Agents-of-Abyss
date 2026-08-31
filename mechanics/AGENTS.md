@@ -172,5 +172,6 @@ For release-bound mechanics changes, also run:
 ### Routed child validation
 
 Child-specific commands are source-owned by `mechanics/validation-routes.json`.
-Run the applicable validation route;
-add `--show` to inspect the route without executing it.
+Use the direct route in the repository [`VALIDATION.md`](../VALIDATION.md); it
+names the exact manifest key and no-shell runner. Inspect that route before
+execution and keep the manifest as argv authority.

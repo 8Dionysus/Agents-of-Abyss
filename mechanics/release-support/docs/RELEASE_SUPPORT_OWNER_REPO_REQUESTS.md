@@ -10,4 +10,4 @@ routes, stop-lines, and next actions. A request packet is not owner acceptance.
 
 ## Validation
 
-Use the validation lane in [release-support AGENTS](../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../VALIDATION.md) map for executable routes.

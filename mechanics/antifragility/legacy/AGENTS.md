@@ -17,4 +17,4 @@ the relevant owner request.
 
 ## Validation
 
-Use the validation lane in `mechanics/antifragility/AGENTS.md`.
+Use the package route in the repository [`VALIDATION.md`](../../../VALIDATION.md).

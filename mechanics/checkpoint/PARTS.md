@@ -39,4 +39,4 @@ part docs should not carry raw runtime histories or sibling inventories.
 
 ## Validation
 
-Use the validation lane in [mechanics/checkpoint/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

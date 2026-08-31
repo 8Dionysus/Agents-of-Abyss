@@ -65,4 +65,4 @@ A functioning part should make three things clear:
 
 ## Validation
 
-Use the validation lane in [mechanics/experience/AGENTS.md](AGENTS.md#validation) for executable commands.
+Use the repository [VALIDATION.md](../../VALIDATION.md) map for executable routes.

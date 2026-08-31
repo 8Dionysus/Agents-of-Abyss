@@ -20,4 +20,4 @@ This part owns center-level source orientation for audit work. It does not own t
 
 ## Validation
 
-Use the validation lane in [mechanics/audit/AGENTS.md](../../AGENTS.md#validation).
+Use the repository [VALIDATION.md](../../../../VALIDATION.md) map for executable routes.
