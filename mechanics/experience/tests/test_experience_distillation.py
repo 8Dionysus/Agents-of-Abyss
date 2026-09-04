@@ -39,6 +39,29 @@ def test_experience_distillation_is_valid() -> None:
     assert module.validate() == []
 
 
+def test_historical_receipts_accept_full_commit_sources() -> None:
+    module = load_validator()
+    problems: list[str] = []
+    ids = module.validate_provenance_receipts(problems)
+    assert ids
+    assert problems == []
+
+
+def test_historical_receipts_reject_floating_or_traversing_refs(monkeypatch) -> None:
+    module = load_validator()
+    original = module.load_provenance_receipts()
+    for suffix in (
+        "blob/main/mechanics/agon/legacy/raw/AGON_WAVE17_LANDING.md",
+        "blob/" + "a" * 40 + "/mechanics/agon/../legacy/raw/packet.md",
+    ):
+        data = json.loads(json.dumps(original))
+        data["receipts"][0]["source_ref"] = module.HISTORICAL_SOURCE_PREFIX + suffix
+        monkeypatch.setattr(module, "load_provenance_receipts", lambda: data)
+        problems: list[str] = []
+        module.validate_provenance_receipts(problems)
+        assert any("historical source_ref must use a full commit" in p for p in problems)
+
+
 def test_experience_distillation_part_validation_is_valid() -> None:
     module = load_validator()
 
@@ -82,12 +105,7 @@ def test_experience_closeout_does_not_pull_archive_by_default(monkeypatch) -> No
 
 
 def test_experience_thematic_route_points_to_preserved_raw_provenance() -> None:
-    module = load_validator()
-    problems: list[str] = []
-
-    module.validate_thematic_experience_route(problems)
-
-    assert problems == []
+    assert not (ROOT / "mechanics/experience/legacy").exists()
 
 
 def test_experience_owner_stop_lines_are_reflected() -> None:
@@ -145,15 +163,7 @@ def test_part_validation_commands_use_routed_manifest() -> None:
 
 
 def test_raw_legacy_readme_uses_package_validator_route() -> None:
-    readme = (
-        ROOT / "mechanics" / "experience" / "legacy" / "raw" / "README.md"
-    ).read_text(encoding="utf-8")
-
-    assert (
-        "python mechanics/experience/scripts/validate_experience_distillation.py"
-        in readme
-    )
-    assert "python scripts/validate_experience_distillation.py" not in readme
+    assert not (ROOT / "mechanics/experience/legacy").exists()
 
 
 def test_receipt_ref_schema_without_explicit_values_is_shape_only(tmp_path, monkeypatch) -> None:

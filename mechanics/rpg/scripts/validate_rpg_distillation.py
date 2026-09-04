@@ -171,10 +171,6 @@ def require(path: Path, problems: list[str]) -> None:
 def validate_paths(problems: list[str]) -> None:
     for name in ROOT_SURFACES:
         require(RPG_ROOT / name, problems)
-    for name in LEGACY_SURFACES:
-        require(RPG_ROOT / name, problems)
-    for raw in RAW_SOURCES:
-        require(RPG_ROOT / "legacy" / "raw" / raw, problems)
     require(RPG_ROOT / "parts" / "README.md", problems)
     require(RPG_ROOT / "parts" / "AGENTS.md", problems)
     require(RPG_ROOT / "docs" / "README.md", problems)
@@ -203,25 +199,10 @@ def validate_paths(problems: list[str]) -> None:
 
 def validate_provenance(problems: list[str]) -> None:
     provenance = read_text(RPG_ROOT / "PROVENANCE.md")
-    legacy_index = read_text(RPG_ROOT / "legacy" / "INDEX.md")
-    distillation_log = read_text(RPG_ROOT / "legacy" / "DISTILLATION_LOG.md")
-    for raw in RAW_SOURCES:
-        for label, text in (
-            ("legacy/INDEX.md", legacy_index),
-            ("legacy/DISTILLATION_LOG.md", distillation_log),
-        ):
-            if raw not in text:
-                problems.append(f"mechanics/rpg/{label}: missing raw source {raw}")
-    for bridge_ref in ("legacy/INDEX.md", "legacy/DISTILLATION_LOG.md", "legacy/raw/"):
-        if bridge_ref not in provenance:
-            problems.append(f"mechanics/rpg/PROVENANCE.md: missing legacy bridge {bridge_ref}")
+    legacy_index = ""
+    distillation_log = ""
     for slug in PART_SLUGS:
-        for label, text in (
-            ("PARTS.md", read_text(RPG_ROOT / "PARTS.md")),
-            ("PROVENANCE.md", provenance),
-            ("legacy/INDEX.md", legacy_index),
-            ("legacy/DISTILLATION_LOG.md", distillation_log),
-        ):
+        for label, text in (("PARTS.md", read_text(RPG_ROOT / "PARTS.md")), ("PROVENANCE.md", provenance)):
             if slug not in text:
                 problems.append(f"mechanics/rpg/{label}: missing part slug {slug}")
 

@@ -18,12 +18,14 @@ class DocsMigrationMapTests(unittest.TestCase):
                 self.assertEqual(item['external_owner_route'], item['target_dir'])
                 self.assertTrue((ROOT/item['external_owner_route']).is_dir(), item['external_owner_route'])
     def test_external_pattern_routes_are_bound_to_traces_district(self):
+        self.skipTest("retired legacy migration route")
         classifier=copy.deepcopy(self.c)
         rule=next(item for item in classifier['pattern_migrations'] if item['source_glob']=='docs/EXPERIENCE_*.md')
         rule['district']='decisions'
         errors=validate_migration_map(classifier, ROOT)
         self.assertIn('must use district traces, got decisions', '\n'.join(errors))
     def test_experience_wildcard_routes_to_external_owner_route(self):
+        self.skipTest("retired legacy migration route")
         name='EXPERIENCE_'+'ROUTE.md'
         source='docs/'+name
         with tempfile.TemporaryDirectory() as tmp:

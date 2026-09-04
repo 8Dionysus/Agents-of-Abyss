@@ -24,8 +24,8 @@ the active route.
 
 | Raw source | Distilled into | Notes |
 |---|---|---|
-| [ANTIFRAGILITY_FIRST_WAVE](legacy/raw/ANTIFRAGILITY_FIRST_WAVE.md) | `DIRECTION.md`, `OWNER_MAP.md`, `OWNER_REQUESTS.md`, `parts/stress-review`, `parts/repair-proof`, `parts/memory-return` | Preserves the first concrete stressor family and cross-repo wave shape. |
-| [VIA_NEGATIVA_CHECKLIST](legacy/raw/VIA_NEGATIVA_CHECKLIST.md) | `PARTS.md`, `parts/via-negativa`, `parts/sprawl-control`, `parts/owner-handoff` | Preserves the old checklist after the active route became part-based. |
+| [ANTIFRAGILITY_FIRST_WAVE](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/antifragility/legacy/raw/ANTIFRAGILITY_FIRST_WAVE.md) | `DIRECTION.md`, `OWNER_MAP.md`, `OWNER_REQUESTS.md`, `parts/stress-review`, `parts/repair-proof`, `parts/memory-return` | Preserves the first concrete stressor family and cross-repo wave shape. |
+| [VIA_NEGATIVA_CHECKLIST](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/antifragility/legacy/raw/VIA_NEGATIVA_CHECKLIST.md) | `PARTS.md`, `parts/via-negativa`, `parts/sprawl-control`, `parts/owner-handoff` | Preserves the old checklist after the active route became part-based. |
 
 ## Active doctrine sources
 

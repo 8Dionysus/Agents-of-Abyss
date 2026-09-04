@@ -111,6 +111,10 @@
 
 - [AOA-CENTER-D-0028 Canonical Decision IDs And Indexes](../AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-CENTER-D-0028-canonical-decision-ids-and-indexes.md`)
 
+## active owner routes
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+
 ## constitutional authority
 
 - [AOA-CENTER-D-0036 Hash-Bound Operator Decision Envelope](../AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md) (`docs/decisions/AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md`)
@@ -141,3 +145,7 @@
 ## runtime readiness
 
 - [AOA-CENTER-D-0040 Establish the Provider-Neutral Inference Economy Owner Split](../AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md) (`docs/decisions/AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md`)
+
+## source history
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)

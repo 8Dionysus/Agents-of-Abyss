@@ -257,30 +257,6 @@
         "require_h2": true
       },
       {
-        "path": "mechanics/experience/legacy/README.md",
-        "required": true,
-        "min_lines": 20,
-        "max_line_length": 900,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
-        "path": "mechanics/experience/legacy/INDEX.md",
-        "required": true,
-        "min_lines": 120,
-        "max_line_length": 900,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
-        "path": "mechanics/experience/legacy/DISTILLATION_LOG.md",
-        "required": true,
-        "min_lines": 25,
-        "max_line_length": 900,
-        "require_h1": true,
-        "require_h2": true
-      },
-      {
         "path": "mechanics/experience/parts/README.md",
         "required": true,
         "min_lines": 15,

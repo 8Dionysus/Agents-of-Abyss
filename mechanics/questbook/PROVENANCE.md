@@ -19,13 +19,13 @@ the active route.
 
 ## Legacy map
 
-- [legacy index](legacy/INDEX.md): preserved source contours mapped to active
+- [legacy index](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/questbook/legacy/INDEX.md): preserved source contours mapped to active
   Questbook parts.
-- [distillation log](legacy/DISTILLATION_LOG.md): dated accounting for
+- [distillation log](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/questbook/legacy/DISTILLATION_LOG.md): dated accounting for
   raw-to-active distillation decisions.
-- [raw source district](legacy/raw/README.md): preserved historical source
+- [raw source district](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/questbook/legacy/raw/README.md): preserved historical source
   documents.
-- [first wave contour](legacy/raw/QUESTBOOK_FIRST_WAVE.md): original first
+- [first wave contour](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md): original first
   contour source now routed through active parts.
 
 ## Distillation rule

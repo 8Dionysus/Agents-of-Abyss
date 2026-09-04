@@ -361,50 +361,6 @@
         ]
       ]
     },
-    "mechanics/agon/legacy/README.md": {
-      "owner_card": "mechanics/agon/legacy/AGENTS.md",
-      "commands": [
-        [
-          "python",
-          "mechanics/agon/scripts/validate_agon_distillation.py"
-        ],
-        [
-          "python",
-          "scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
-          "--mechanic",
-          "agon"
-        ],
-        [
-          "python",
-          "scripts/mechanics_topology/validate_mechanic_landing_logs.py",
-          "--mechanic",
-          "agon"
-        ]
-      ]
-    },
-    "mechanics/agon/legacy/artifacts/README.md": {
-      "owner_card": "mechanics/agon/legacy/AGENTS.md",
-      "commands": [
-        [
-          "python",
-          "mechanics/agon/scripts/validate_agon_distillation.py"
-        ],
-        [
-          "python",
-          "scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
-          "--mechanic",
-          "agon"
-        ],
-        [
-          "python",
-          "-m",
-          "pytest",
-          "-q",
-          "mechanics/agon/tests",
-          "mechanics/agon/parts"
-        ]
-      ]
-    },
     "mechanics/agon/parts/README.md": {
       "owner_card": "mechanics/agon/parts/AGENTS.md",
       "commands": [
@@ -1239,50 +1195,6 @@
           "scripts/owner_requests/validate_owner_request_docs.py",
           "--mechanic",
           "experience"
-        ]
-      ]
-    },
-    "mechanics/experience/legacy/README.md": {
-      "owner_card": "mechanics/experience/legacy/AGENTS.md",
-      "commands": [
-        [
-          "python",
-          "mechanics/experience/scripts/validate_experience_distillation.py"
-        ],
-        [
-          "python",
-          "scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
-          "--mechanic",
-          "experience"
-        ],
-        [
-          "python",
-          "scripts/mechanics_topology/validate_mechanic_landing_logs.py",
-          "--mechanic",
-          "experience"
-        ]
-      ]
-    },
-    "mechanics/experience/legacy/artifacts/README.md": {
-      "owner_card": "mechanics/experience/legacy/AGENTS.md",
-      "commands": [
-        [
-          "python",
-          "mechanics/experience/scripts/validate_experience_distillation.py"
-        ],
-        [
-          "python",
-          "scripts/mechanics_topology/validate_mechanic_artifact_topology.py",
-          "--mechanic",
-          "experience"
-        ],
-        [
-          "python",
-          "-m",
-          "pytest",
-          "-q",
-          "mechanics/experience/tests",
-          "mechanics/experience/parts"
         ]
       ]
     },

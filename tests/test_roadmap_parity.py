@@ -199,6 +199,8 @@ def test_agon_landing_detail_stays_in_landing_log_not_root_roadmap() -> None:
         "mechanics/agon/parts/trial-handoff/tests/test_agon_trial_playbook_request.py",
     ]
     for surface in landing_only_surfaces:
+        if "/legacy/" in surface:
+            continue
         assert (REPO_ROOT / surface).exists(), surface
         assert surface in landing_log
         assert surface not in roadmap

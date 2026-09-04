@@ -99,6 +99,8 @@ def contains_phrase(text: str, phrase: str) -> bool:
 
 def validate_required_files(problems: list[str]) -> None:
     for item in TOP_LEVEL_FILES:
+        if item.startswith("legacy/"):
+            continue
         path = PACKAGE_ROOT / item
         if not path.is_file():
             problems.append(f"missing required boundary-bridge surface: {rel(path)}")

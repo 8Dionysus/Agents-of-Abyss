@@ -155,7 +155,7 @@ Root-adjacent technical districts have local gates:
 | [examples](examples/README.md) | compact examples that teach current contracts |
 | [manifests](manifests/README.md) | repo-level manifest posture |
 | [quests](quests/README.md) | public durable obligations |
-| [.agents](.agents/AGENTS.md) | agent-lane assets, including [Codex Spark](.agents/spark/README.md) |
+| [.agents](.agents/AGENTS.md) | agent-lane assets, including [Codex Spark](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/.agents/spark/README.md) |
 
 District gates explain local handling. They do not replace center authority,
 mechanic packages, or owner repositories.

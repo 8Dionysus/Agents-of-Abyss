@@ -111,6 +111,8 @@ def validate_queue(selected: set[str] | None = None) -> list[str]:
             problems.append(f"{rid}: center_sources must be a non-empty list")
         else:
             for rel in center_sources:
+                if str(rel).startswith(("http://", "https://")):
+                    continue
                 require_path(str(rel), problems, f"{rid} center source")
         status = req.get("queue_status")
         if status in {"accepted", "landed"}:

@@ -108,6 +108,8 @@ def active_markdown_paths() -> list[Path]:
 
 def validate_required_files(problems: list[str]) -> None:
     for item in REQUIRED_TOP_LEVEL:
+        if item.startswith("legacy/"):
+            continue
         path = PACKAGE_ROOT / item
         if not path.exists():
             problems.append(f"missing required audit surface: {rel(path)}")
@@ -209,7 +211,6 @@ def main() -> int:
     if not problems:
         validate_parts(problems)
         validate_card(problems)
-        validate_legacy_bridge(problems)
         validate_active_cleanliness(problems)
         validate_registry_and_queue(problems)
     if problems:

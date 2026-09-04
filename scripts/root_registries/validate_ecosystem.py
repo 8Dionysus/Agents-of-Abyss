@@ -24,6 +24,8 @@ SUPPORTING_INVENTORY_PATH = REPO_ROOT / "generated" / "federation_supporting_inv
 SUPPORTING_SCHEMA_PATH = REPO_ROOT / "schemas" / "federation-supporting-inventory.schema.json"
 QUESTBOOK_PATH = REPO_ROOT / "QUESTBOOK.md"
 QUESTBOOK_MODEL_PATH = REPO_ROOT / "mechanics" / "questbook" / "parts" / "model-spine" / "README.md"
+# Retained as a test-fixture compatibility seam; retired historical payloads
+# are no longer loaded by the active validator.
 QUESTBOOK_FIRST_WAVE_PATH = REPO_ROOT / "mechanics" / "questbook" / "legacy" / "raw" / "QUESTBOOK_FIRST_WAVE.md"
 QUESTS_PATH = REPO_ROOT / "quests"
 REQUIRED_QUEST_IDS = ("AOA-Q-0001", "AOA-Q-0002", "AOA-Q-0003")
@@ -623,7 +625,6 @@ def collect_quest_paths() -> dict[str, Path]:
 def validate_questbook_surface() -> None:
     questbook_text = read_text(QUESTBOOK_PATH)
     read_text(QUESTBOOK_MODEL_PATH)
-    first_wave_text = read_text(QUESTBOOK_FIRST_WAVE_PATH)
     questbook_bands, ids_in_unmapped_sections = parse_questbook_bands(questbook_text)
 
     quest_paths = collect_quest_paths()
@@ -757,17 +758,6 @@ def validate_questbook_surface() -> None:
         if not isinstance(schema_payload, dict):
             fail("mechanics/rpg/parts/vocabulary-overlay/schemas/dual_vocabulary_overlay.schema.json must be a JSON object")
         validate_dual_vocabulary_generated_payload(generated_payload, schema_payload)
-
-    if "ATM10-Agent" in first_wave_text:
-        fail("mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md must not reference ATM10-Agent")
-
-    required_phrase = "It is a foundation pass, not a new numbered AoA wave."
-    if required_phrase not in first_wave_text:
-        fail(
-            "mechanics/questbook/legacy/raw/QUESTBOOK_FIRST_WAVE.md must state that the contour is not "
-            "a new numbered AoA wave"
-        )
-
 
 def main() -> int:
     try:

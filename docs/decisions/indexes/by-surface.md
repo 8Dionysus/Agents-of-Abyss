@@ -167,6 +167,7 @@
 - [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
 - [AOA-CENTER-D-0042 Separate Inherited Agent Routes From Human README Surfaces](../AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md) (`docs/decisions/AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md`)
 - [AOA-CENTER-D-0043 One Human Owner Per Executable Validation Route](../AOA-CENTER-D-0043-one-human-owner-per-executable-validation-route.md) (`docs/decisions/AOA-CENTER-D-0043-one-human-owner-per-executable-validation-route.md`)
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
 
 ## center contract
 
@@ -183,6 +184,10 @@
 
 - [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
 - [AOA-CENTER-D-0035 Admit The Routing Owner Switch](../AOA-CENTER-D-0035-admit-routing-owner-switch.md) (`docs/decisions/AOA-CENTER-D-0035-admit-routing-owner-switch.md`)
+
+## mechanics topology
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
 
 ## operator decision
 
@@ -204,6 +209,10 @@
 
 - [AOA-CENTER-D-0031 Keep The Center Without A Skill Home](../AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md) (`docs/decisions/AOA-CENTER-D-0031-keep-the-center-without-a-skill-home.md`)
 
+## provenance
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+
 ## repository role
 
 - [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
@@ -216,3 +225,7 @@
 ## root script
 
 - [AOA-CENTER-D-0034 Release Leaf Command Ownership](../AOA-CENTER-D-0034-release-leaf-command-ownership.md) (`docs/decisions/AOA-CENTER-D-0034-release-leaf-command-ownership.md`)
+
+## validation
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)

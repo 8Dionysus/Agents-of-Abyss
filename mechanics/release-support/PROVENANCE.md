@@ -33,7 +33,7 @@ context into the active route.
 
 | Raw source | Distilled into | Notes |
 |---|---|---|
-| [FEDERATION_RELEASE_ROLLOUT_RETROSPECTIVE_2026_04_10](legacy/raw/FEDERATION_RELEASE_ROLLOUT_RETROSPECTIVE_2026_04_10.md) | `parts/release-runbook`, `parts/sibling-evidence-route`, `parts/state-transition-gate`, `parts/rollback-return` | Historical federation release retrospective; use only when auditing why release-support treats release as a complete state transition. |
+| [FEDERATION_RELEASE_ROLLOUT_RETROSPECTIVE_2026_04_10](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/release-support/legacy/raw/FEDERATION_RELEASE_ROLLOUT_RETROSPECTIVE_2026_04_10.md) | `parts/release-runbook`, `parts/sibling-evidence-route`, `parts/state-transition-gate`, `parts/rollback-return` | Historical federation release retrospective; use only when auditing why release-support treats release as a complete state transition. |
 
 Future historical release packets belong under `legacy/raw/` and should be
 listed here before any active part cites them.

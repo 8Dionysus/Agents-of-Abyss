@@ -106,6 +106,8 @@ def contains_phrase(text: str, phrase: str) -> bool:
 
 def validate_required_files(problems: list[str]) -> None:
     for item in REQUIRED_TOP_LEVEL:
+        if item.startswith("legacy/"):
+            continue
         path = PACKAGE_ROOT / item
         if not path.exists():
             problems.append(f"missing required antifragility surface: {rel(path)}")

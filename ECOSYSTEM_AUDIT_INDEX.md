@@ -77,7 +77,7 @@ Use this route when the question is not only "is the claim true?" but "should th
 
 Current root-surface cleanup evidence is preserved through
 [audit provenance](mechanics/audit/PROVENANCE.md) and the raw receipt
-[ROOT_SURFACE_AUDIT_2026_04_24](mechanics/audit/legacy/raw/ROOT_SURFACE_AUDIT_2026_04_24.md).
+[ROOT_SURFACE_AUDIT_2026_04_24](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/audit/legacy/raw/ROOT_SURFACE_AUDIT_2026_04_24.md).
 
 ## Drift signatures worth flagging immediately
 

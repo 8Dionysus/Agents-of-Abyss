@@ -125,6 +125,10 @@
 - [AOA-CENTER-D-0039 Admit aoa-dashboard as a Bounded Derived Organ](../AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md) (`docs/decisions/AOA-CENTER-D-0039-admit-aoa-dashboard-derived-organ.md`)
 - [AOA-CENTER-D-0040 Establish the Provider-Neutral Inference Economy Owner Split](../AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md) (`docs/decisions/AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md`)
 
+## active part contracts
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+
 ## archive stop line
 
 - [AOA-CENTER-D-0035 Admit The Routing Owner Switch](../AOA-CENTER-D-0035-admit-routing-owner-switch.md) (`docs/decisions/AOA-CENTER-D-0035-admit-routing-owner-switch.md`)
@@ -186,9 +190,17 @@
 
 - [AOA-CENTER-D-0035 Admit The Routing Owner Switch](../AOA-CENTER-D-0035-admit-routing-owner-switch.md) (`docs/decisions/AOA-CENTER-D-0035-admit-routing-owner-switch.md`)
 
+## receipt indirection
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+
 ## release and acceptance separation
 
 - [AOA-CENTER-D-0040 Establish the Provider-Neutral Inference Economy Owner Split](../AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md) (`docs/decisions/AOA-CENTER-D-0040-provider-neutral-inference-economy-owner-split.md`)
+
+## source/history preservation
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
 
 ## validation ownership
 

@@ -333,7 +333,6 @@ def validate(selected: set[str] | None = None) -> list[str]:
     validate_no_direct_raw_links(problems)
     validate_validation_commands_are_centralized(problems)
     validate_provenance_bridge(problems)
-    validate_legacy_index(problems)
     if selected is None or "model-spine" in selected:
         validate_rpg_playable_reading_bridge(problems)
     if selected:

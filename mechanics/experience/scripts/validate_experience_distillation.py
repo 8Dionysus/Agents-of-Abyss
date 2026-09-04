@@ -25,6 +25,11 @@ PARTS_ROOT = EXPERIENCE_ROOT / "parts"
 PARTS_AGENTS_PATH = PARTS_ROOT / "AGENTS.md"
 ARTIFACT_MAP_PATH = EXPERIENCE_ROOT / "artifact-map.json"
 PROVENANCE_RECEIPTS_PATH = EXPERIENCE_ROOT / "provenance-receipts.json"
+HISTORICAL_SOURCE_PREFIX = "https://github.com/8Dionysus/Agents-of-Abyss/"
+HISTORICAL_SOURCE_RE = re.compile(
+    re.escape(HISTORICAL_SOURCE_PREFIX)
+    + r"blob/[0-9a-f]{40}/mechanics/[A-Za-z0-9_./-]+(?:#[A-Za-z0-9_-]+)?$"
+)
 REGISTRY_PATH = REPO_ROOT / "mechanics" / "registry.json"
 PROVENANCE_PATH = EXPERIENCE_ROOT / "PROVENANCE.md"
 MECHANICS_ATLAS_PATH = REPO_ROOT / "mechanics" / "README.md"
@@ -545,8 +550,6 @@ def validate_root_surfaces(problems: list[str]) -> None:
         require_file(EXPERIENCE_ROOT / name, problems)
     require_file(ARTIFACT_MAP_PATH, problems)
     require_file(PROVENANCE_RECEIPTS_PATH, problems)
-    for name in LEGACY_SURFACES:
-        require_file(LEGACY_ROOT / name, problems)
     require_file(EXPERIENCE_ROOT / "docs" / "AGENTS.md", problems)
     require_file(EXPERIENCE_ROOT / "docs" / "README.md", problems)
     require_file(PARTS_ROOT / "AGENTS.md", problems)
@@ -577,16 +580,6 @@ def validate_root_surfaces(problems: list[str]) -> None:
         if slug not in readme:
             problems.append(f"mechanics/experience/README.md: missing part slug {slug}")
     provenance = read(PROVENANCE_PATH) if PROVENANCE_PATH.exists() else ""
-    for needle in (
-        "legacy/INDEX.md",
-        "legacy/DISTILLATION_LOG.md",
-        "legacy/artifacts/README.md",
-        "legacy/raw/README.md",
-    ):
-        if needle not in provenance:
-            problems.append(
-                f"mechanics/experience/PROVENANCE.md: missing archive route {needle}"
-            )
     if "only active Experience surface" not in provenance:
         problems.append(
             "mechanics/experience/PROVENANCE.md: must declare itself the only active archive bridge"
@@ -938,6 +931,16 @@ def validate_provenance_receipts(problems: list[str]) -> set[str]:
                 f"{rel(PROVENANCE_RECEIPTS_PATH)}: duplicate source_ref {source_ref}"
             )
         sources.add(source_ref)
+        if source_ref.startswith(HISTORICAL_SOURCE_PREFIX):
+            source_path = source_ref.split("#", 1)[0]
+            if (
+                not HISTORICAL_SOURCE_RE.fullmatch(source_ref)
+                or any(part in (".", "..") for part in source_path.split("/"))
+            ):
+                problems.append(
+                    f"{rel(PROVENANCE_RECEIPTS_PATH)}: historical source_ref must use "
+                    f"a full commit and literal original mechanics path: {source_ref}"
+                )
         if source_ref.startswith("mechanics/") or source_ref.startswith("docs/"):
             source_path = source_ref.split("#", 1)[0]
             if not (REPO_ROOT / source_path).is_file():
@@ -1163,28 +1166,6 @@ def validate_route_surfaces(problems: list[str]) -> None:
             )
 
 
-def validate_thematic_experience_route(problems: list[str]) -> None:
-    if not THEMATIC_DISTRICTS_PATH.exists():
-        problems.append(f"missing file: {rel(THEMATIC_DISTRICTS_PATH)}")
-        return
-    data = json.loads(read(THEMATIC_DISTRICTS_PATH))
-    matches = [
-        item
-        for item in data.get("pattern_migrations", [])
-        if isinstance(item, dict) and item.get("source_glob") == "docs/EXPERIENCE_*.md"
-    ]
-    if len(matches) != 1:
-        problems.append(
-            "docs/guardrails/thematic_districts.json: expected one docs/EXPERIENCE_*.md migration route"
-        )
-        return
-    target = matches[0].get("target_dir")
-    if target != "mechanics/experience/legacy/raw":
-        problems.append(
-            "docs/guardrails/thematic_districts.json: docs/EXPERIENCE_*.md must route to mechanics/experience/legacy/raw"
-        )
-
-
 def validate_registry(problems: list[str]) -> None:
     registry = load_registry()
     experience = next(
@@ -1283,15 +1264,12 @@ def validate(selected: set[str] | None = None) -> list[str]:
     receipt_ids = validate_provenance_receipts(problems)
     validate_root_surfaces(problems)
     validate_parts(selected, problems)
-    validate_raw_sources(problems)
-    validate_raw_source_requirements(problems)
     validate_artifact_map(problems)
     validate_active_receipt_refs(receipt_ids, problems)
     validate_active_artifact_names(problems)
     validate_no_stale_active_refs(problems)
     validate_active_docs_are_lean(problems)
     validate_route_surfaces(problems)
-    validate_thematic_experience_route(problems)
     validate_registry(problems)
     return problems
 

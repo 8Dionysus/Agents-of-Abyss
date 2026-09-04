@@ -113,3 +113,4 @@
 ## 2026-09-04
 
 - [AOA-CENTER-D-0043 One Human Owner Per Executable Validation Route](../AOA-CENTER-D-0043-one-human-owner-per-executable-validation-route.md) (`docs/decisions/AOA-CENTER-D-0043-one-human-owner-per-executable-validation-route.md`)
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)

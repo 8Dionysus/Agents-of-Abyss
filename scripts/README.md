@@ -35,7 +35,6 @@ constitutional authority by themselves.
 | `scripts/<family>/*.py` | root-owned center tooling registered in `scripts/registry.json` |
 | `mechanics/<slug>/scripts/` | mechanic-level tooling |
 | `mechanics/<slug>/parts/<part>/scripts/` | part-local mechanic tooling |
-| `.agents/spark/scripts/` | Codex Spark agent-lane validation |
 
 ## Source Order
 
