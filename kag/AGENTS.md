@@ -13,7 +13,7 @@ composition, and MCP consumers.
 
 ## Read before editing
 
-
+Read the relevant registry and source map only when KAG routing changes.
 ## Boundaries
 
 Keep authored meaning with `Agents-of-Abyss` source surfaces. Keep shared KAG schema,

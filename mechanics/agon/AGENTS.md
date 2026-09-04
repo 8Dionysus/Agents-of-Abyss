@@ -6,7 +6,7 @@ This card applies to `mechanics/agon/` and every nested path under that scope un
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when Agon meaning changes.
 ## Boundaries
 
 Do not use this lane to override owner-local truth, generated-source
@@ -80,5 +80,4 @@ landing-log or surface-chain changes.
 Use the nearest part-local `scripts/*agon*.py` and `tests/test_agon_*.py` for
 generated or model-specific changes.
 
-High-risk Agon part checks that used to be preserved in the old root reference
-now live here:
+High-risk Agon part checks that used to be preserved in the old root reference are defined by `mechanics/validation-routes.json` and the repository [`VALIDATION.md`](../../VALIDATION.md).

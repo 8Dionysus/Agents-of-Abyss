@@ -42,6 +42,13 @@ inherited card has already selected the lane. When a validated manifest owns
 exact child commands, the local validation surface names its exact manifest key
 and runner route; the `AGENTS.md` keeps only the link and stop-line.
 
+Within one repository, an exact executable invocation has one human-authored
+procedure owner. Other validation maps link to that owner, lane, runner, or
+manifest key instead of copying the invocation. Root and parent validation maps
+may compose named lanes, but must not become recursive archives of child leaf
+commands. An intentional exception needs owner-local rationale and a distinct
+audience or execution contract.
+
 ## Root exception
 
 Keep the repository root `README.md` by default. It is the civic and public
@@ -114,6 +121,8 @@ Measure before and after:
 - inherited-chain median, p95, maximum, and budget violations;
 - unconditional README-read count and byte fanout;
 - cards carrying fenced procedure or large repeated blocks;
+- exact duplicate executable invocations across active authored validation
+  surfaces, plus reviewed owner-local exceptions;
 - human/public navigation coverage and broken local links.
 
 These measurements expose pressure and regressions. They do not determine

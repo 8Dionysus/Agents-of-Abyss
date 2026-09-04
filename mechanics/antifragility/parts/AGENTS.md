@@ -20,7 +20,7 @@ route-shaped, and free of raw wave history.
 
 ## Validation
 
-Run:
+The antifragility package route is defined in the repository [`VALIDATION.md`](../../../VALIDATION.md).
 
 ## Closeout
 

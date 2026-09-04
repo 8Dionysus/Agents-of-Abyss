@@ -10,7 +10,7 @@ RPG parts are the active, concise working contracts for world grammar. They shou
 
 ## Read before editing
 
-
+Read the relevant active part contract and owner route only when part semantics change.
 ## Boundaries
 
 - Do not pull detailed source inventories into part docs.

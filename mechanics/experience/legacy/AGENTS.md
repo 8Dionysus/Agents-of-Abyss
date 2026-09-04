@@ -10,7 +10,7 @@ Legacy preserves Experience provenance. `legacy/raw/` holds long wave, law, brid
 
 ## Read before editing
 
-
+Read `PROVENANCE.md` and the relevant archive map only when historical evidence is material.
 ## Boundaries
 
 Do not treat raw legacy files as the primary active route. Do not delete provenance to make the active surface look clean. Do not add new raw packets without indexing them and naming the active part they pressure.

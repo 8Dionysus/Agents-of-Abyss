@@ -109,3 +109,7 @@
 ## 2026-08-31
 
 - [AOA-CENTER-D-0042 Separate Inherited Agent Routes From Human README Surfaces](../AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md) (`docs/decisions/AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md`)
+
+## 2026-09-04
+
+- [AOA-CENTER-D-0043 One Human Owner Per Executable Validation Route](../AOA-CENTER-D-0043-one-human-owner-per-executable-validation-route.md) (`docs/decisions/AOA-CENTER-D-0043-one-human-owner-per-executable-validation-route.md`)

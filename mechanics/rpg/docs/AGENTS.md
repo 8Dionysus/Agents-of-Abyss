@@ -11,7 +11,7 @@ Active RPG doctrine lives in `mechanics/rpg/parts/`; historical raw sources live
 
 ## Read before editing
 
-
+Read the parent package route and `PROVENANCE.md` only when compatibility routing changes.
 ## Boundaries
 
 - Keep detailed doctrine in active parts, not in this compatibility directory.

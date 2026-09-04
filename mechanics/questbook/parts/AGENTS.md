@@ -12,7 +12,7 @@ law, relation shape, owner-route maps, and generated read-model routes.
 
 ## Read before editing
 
-
+Read the relevant active part contract and owner route only when part semantics change.
 ## Boundaries
 
 Do not pull legacy/raw inventories into active part docs. Do not claim owner

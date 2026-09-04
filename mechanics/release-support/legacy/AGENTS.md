@@ -11,7 +11,7 @@ been distilled. It is not the default operating surface.
 
 ## Read before editing
 
-
+Read `PROVENANCE.md` and the relevant archive map only when historical evidence is material.
 ## Boundaries
 
 - Do not route agents here by default from active parts.

@@ -12,7 +12,7 @@ binding receipts for the recurrence adapter part.
 
 ## Read before editing
 
-
+Read the recurrence-adapter part contract and manifest route only when receipt mapping changes.
 ## Boundaries
 
 - Component receipts and hook receipts move as pairs.
@@ -24,6 +24,7 @@ binding receipts for the recurrence adapter part.
 
 ## Validation
 
+The recurrence-adapter validation route is defined in the local [`VALIDATION.md`](../VALIDATION.md).
 ## Closeout
 
 Report manifest records changed, source surfaces consulted, generated adapter

@@ -6,7 +6,7 @@ This card applies to `mechanics/agon/parts/` and every descendant active part.
 
 ## Read before editing
 
-
+Read the relevant active part contract and owner route only when part semantics change.
 ## Boundaries
 
 Active parts are concise working contracts. Do not turn them into source-doc

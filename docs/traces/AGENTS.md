@@ -14,7 +14,7 @@ decide what the moved material means.
 
 ## Read before editing
 
-
+Read the relevant trace route and source contract only when trace placement changes.
 ## Boundaries
 
 - Do not treat this district as stronger than its source surfaces.

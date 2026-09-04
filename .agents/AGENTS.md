@@ -13,9 +13,10 @@ No owner skill home is currently admitted for `Agents-of-Abyss`, so this lane
 has no `.agents/skills/` projection. Shared AoA skills arrive through the
 host-selected user profile and remain owned by `aoa-skills`.
 
+
 ## Read before editing
 
-
+Read the relevant local projection or route contract only when the task changes that surface.
 ## Boundaries
 
 - Do not encode private memory, hidden authority, or unreviewable autonomy here.

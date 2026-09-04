@@ -13,7 +13,7 @@ remain the default operating route.
 
 ## Read before editing
 
-
+Read the parent package route and `PROVENANCE.md` only when compatibility routing changes.
 ## Boundaries
 
 - Keep detailed doctrine package-local and linked through `PROVENANCE.md` when

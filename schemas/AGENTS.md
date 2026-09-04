@@ -15,7 +15,7 @@ The authoritative registry is `schemas/registry.json`.
 
 ## Read before editing
 
-
+Read the relevant schema and registry route only when a contract changes.
 ## Boundaries
 
 - Root `schemas/` owns root center contracts.
@@ -31,7 +31,7 @@ The authoritative registry is `schemas/registry.json`.
 
 Run the narrowest relevant checks first. Usual checks for this district:
 
-For release-facing schema changes, also run:
+The release route for release-facing schema changes is defined in the repository [`VALIDATION.md`](../VALIDATION.md).
 
 ## Closeout
 

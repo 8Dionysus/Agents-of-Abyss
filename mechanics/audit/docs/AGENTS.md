@@ -10,7 +10,7 @@ This card applies to `mechanics/audit/docs/` and all descendant source documents
 
 ## Read before editing
 
-
+Read the parent package route and `PROVENANCE.md` only when compatibility routing changes.
 ## Boundaries
 
 Do not put legacy inventories, raw source catalogs, or executable validation commands here. Use `PROVENANCE.md` for archive bridges and the repository `VALIDATION.md` map for commands.

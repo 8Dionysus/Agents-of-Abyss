@@ -14,7 +14,7 @@ validation route.
 
 ## Read before editing
 
-
+Read the relevant source config and validator route only when config meaning changes.
 ## Boundaries
 
 - Config may drive checks; it must not silently become constitutional law.

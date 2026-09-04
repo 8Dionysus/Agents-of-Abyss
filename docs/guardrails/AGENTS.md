@@ -10,7 +10,7 @@ This card applies to `docs/guardrails/` and all descendants unless a nearer `AGE
 
 ## Read before editing
 
-
+Read the relevant guardrail source and validation route only when a guardrail contract changes.
 ## Boundaries
 
 - Guardrails verify route shape; they do not author doctrine, mechanic law, generated meaning, or sibling-repo truth.
@@ -31,7 +31,7 @@ For link, shape, status, and freshness guardrail changes:
 
 For AGENTS mesh changes:
 
-For entry-surface validation changes:
+The entry-surface route is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
 ## Closeout
 

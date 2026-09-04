@@ -7,7 +7,7 @@ that scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when Method-growth meaning changes.
 ## Boundaries
 
 - Do not use this lane to override owner-local truth, generated-source
@@ -78,8 +78,8 @@ change does not affect its job.
 
 Child routes remain keyed by `mechanics/validation-routes.json`.
 
-Run the narrow package lane after changing Method-growth surfaces:
+The narrow Method-growth package route is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
-Run lineage witnesses when the growth-refinery chain changes:
+The applicable Method-growth route for growth-refinery lineage changes is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
-Run generated checks when registry, owner requests, or AGENTS surfaces change:
+The applicable Method-growth generated-surface route for registry, owner-request, or AGENTS changes is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).

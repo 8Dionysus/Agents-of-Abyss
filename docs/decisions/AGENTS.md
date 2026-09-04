@@ -10,7 +10,7 @@ This card applies to `docs/decisions/` and all descendants unless a nearer `AGEN
 
 ## Read before editing
 
-
+Read the relevant decision record and source contract only when rationale or placement changes.
 ## Boundaries
 
 - Do not treat this district as stronger than its source surfaces.

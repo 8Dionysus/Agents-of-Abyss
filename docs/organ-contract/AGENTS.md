@@ -12,7 +12,7 @@ the SDK, router, runtime, role layer, proof layer, or owner-local executor.
 
 ## Read before editing
 
-
+Read the organ contract and named owner source only when route or ownership meaning changes.
 ## Boundaries
 
 - This district owns organ alignment law for the center.
@@ -40,9 +40,9 @@ routes.
 
 ## Validation
 
-Run:
+The organ-contract route is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
-For release-facing changes, also run:
+The release route for organ-contract changes is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
 ## Closeout
 

@@ -10,7 +10,7 @@ Parts are the active working organs of the Audit mechanic. Keep them concise, fu
 
 ## Read before editing
 
-
+Read the relevant active part contract and owner route only when part semantics change.
 ## Boundaries
 
 Do not add legacy source lists, raw audit protocols, or executable validation commands to part docs. Route archival questions to `PROVENANCE.md` and commands to the repository `VALIDATION.md` map.

@@ -132,17 +132,12 @@ Questbook part registry commands remain addressable from this map:
 ```text
 python scripts/mechanics_topology/validate_mechanics_topology.py --mechanic questbook
 python scripts/mechanics_topology/validate_mechanic_readme_cards.py --mechanic questbook
-python scripts/hygiene/validate_links.py
-python scripts/root_registries/validate_ecosystem.py
 python mechanics/questbook/scripts/validate_questbook_lifecycle.py
 python mechanics/questbook/scripts/build_questbook_index.py --check
 python mechanics/questbook/scripts/validate_questbook_index.py
 python mechanics/questbook/scripts/validate_questbook_source_contract.py
 python mechanics/questbook/scripts/validate_quest_relations.py
-python scripts/hygiene/validate_generated_freshness.py
 python scripts/owner_requests/validate_owner_request_queue.py --mechanic questbook
-python scripts/owner_requests/build_owner_request_queue.py --check
-python scripts/owner_requests/validate_generated_owner_request_queue.py
 python scripts/owner_requests/validate_owner_request_docs.py --mechanic questbook
 python mechanics/questbook/scripts/build_ready_owner_routes.py --check
 python mechanics/questbook/scripts/validate_ready_owner_routes.py
@@ -150,16 +145,23 @@ python scripts/owner_requests/validate_owner_request_queue.py --mechanic experie
 python scripts/owner_requests/validate_owner_request_docs.py --mechanic experience
 ```
 
+Shared hygiene and generated-freshness routes remain under
+[Documentation and hygiene](#documentation-and-hygiene).
+The shared ecosystem route remains under
+[Center and registry lanes](#center-and-registry-lanes).
+Shared owner-request queue routes remain under [Mechanics](#mechanics).
+
 ## Focused districts
 
 The following owner routes are available when the named district changes:
 
 ```text
 python scripts/stats/validate_local_stats_port.py
-python scripts/hygiene/validate_links.py
-python scripts/hygiene/validate_markdown_shape.py
 python .agents/spark/scripts/validate_spark_lane.py
 ```
+
+Shared link and Markdown-shape routes remain under
+[Documentation and hygiene](#documentation-and-hygiene).
 
 Use the nearest district validator and focused test module named by its source
 registry. The broad test route is:

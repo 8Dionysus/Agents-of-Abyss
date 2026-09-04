@@ -18,7 +18,7 @@ stay shorter and clearer than source doctrine.
 
 ## Validation
 
-Use the package validator from the mechanic root:
+The boundary-bridge package route is defined in the repository [`VALIDATION.md`](../../../VALIDATION.md).
 
 ## Closeout
 

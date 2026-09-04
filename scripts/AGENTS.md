@@ -39,7 +39,7 @@ For root tooling changes, consult the repository `VALIDATION.md` route.
 
 Run the narrowest relevant checks first. Usual checks for this district:
 
-For release-facing script changes, also run:
+The release route for release-facing script changes is defined in the repository [`VALIDATION.md`](../VALIDATION.md).
 
 ## Closeout
 

@@ -22,10 +22,9 @@ small center route, allowed outputs, stop-lines, and the next owner route.
 
 ## Validation
 
-Run the package validator after part changes:
+The Method-growth package route is defined in the repository [`VALIDATION.md`](../../../VALIDATION.md) for part changes.
 
-Run wider package checks when part changes affect owner requests, registry, or
-generated maps:
+The wider Method-growth package route is defined in the repository [`VALIDATION.md`](../../../VALIDATION.md) when part changes affect owner requests, the registry, or generated maps.
 
 ## Closeout
 

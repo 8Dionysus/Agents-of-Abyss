@@ -7,7 +7,7 @@ that scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when boundary-bridge meaning changes.
 ## Boundaries
 
 - Name both sides of a bridge before changing the bridge.

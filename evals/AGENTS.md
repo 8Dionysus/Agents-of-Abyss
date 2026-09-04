@@ -15,7 +15,7 @@ reports, and source refs.
 
 ## Read before editing
 
-
+Read the local eval port and `aoa-evals` route only when eval pressure or adoption changes.
 ## Boundaries
 
 - Keep ecosystem identity, layer map, federation rules, and center direction in
@@ -27,6 +27,7 @@ reports, and source refs.
 
 ## Validation
 
+The local eval validation route is defined in the repository [`VALIDATION.md`](../VALIDATION.md).
 ## Closeout
 
 Report changed eval surfaces, current `PORT.yaml` status, validation run, any

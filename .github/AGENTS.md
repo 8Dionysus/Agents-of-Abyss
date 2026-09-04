@@ -10,7 +10,7 @@ This card applies to `.github/` and all descendants unless a nearer `AGENTS.md` 
 
 ## Read before editing
 
-
+Read the relevant workflow or template only when platform behavior changes.
 ## Boundaries
 
 - Do not encode doctrine in workflows that is absent from source docs.
