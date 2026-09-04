@@ -12,7 +12,7 @@ Lane-first lifecycle directories are the source placement. Top-level `AOA-Q-*` a
 
 ## Read before editing
 
-
+Read the quest port contract and owner route only when lifecycle or placement changes.
 ## Boundaries
 
 - Quests are not a second roadmap.

@@ -11,7 +11,7 @@ It is a reading lane for audit and recovery, not the active mechanic route.
 
 ## Read before editing
 
-
+Read `PROVENANCE.md` and the relevant archive map only when historical evidence is material.
 ## Boundaries
 
 - Do not cite `legacy/raw/` as current RPG law without going through `mechanics/rpg/PROVENANCE.md`.

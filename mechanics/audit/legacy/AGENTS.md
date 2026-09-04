@@ -10,7 +10,7 @@ Legacy Audit material preserves source trace after active routes have been disti
 
 ## Read before editing
 
-
+Read `PROVENANCE.md` and the relevant archive map only when historical evidence is material.
 ## Boundaries
 
 Do not promote legacy text into active law by reference. If a legacy source contains useful material, distill the active meaning into the relevant part and update `PROVENANCE.md`.

@@ -12,7 +12,7 @@ should stay concise and functional. Historical context routes through
 
 ## Read before editing
 
-
+Read the relevant active part contract and owner route only when part semantics change.
 ## Boundaries
 
 - Do not put raw release history or old packets in active parts.

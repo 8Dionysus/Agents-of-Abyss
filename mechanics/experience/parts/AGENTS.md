@@ -10,7 +10,7 @@ Experience parts hold functioning contracts. They distill source pressure into r
 
 ## Read before editing
 
-
+Read the relevant active part contract and owner route only when part semantics change.
 ## Boundaries
 
 Do not move archival inventories into active part docs wholesale. Do not claim runtime activation, hidden memory authority, owner acceptance, proof verdicts, or ToS-authored meaning from this lane.

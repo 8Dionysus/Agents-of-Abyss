@@ -15,7 +15,7 @@ The authoritative registry is `manifests/registry.json`.
 
 ## Read before editing
 
-
+Read the manifest registry and owner route only when placement or validation mapping changes.
 ## Boundaries
 
 - Root `manifests/` owns registry and route shape.

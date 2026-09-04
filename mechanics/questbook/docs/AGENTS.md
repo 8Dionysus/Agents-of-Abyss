@@ -12,7 +12,7 @@ accounting is routed through `../PROVENANCE.md`.
 
 ## Read before editing
 
-
+Read the parent package route and `PROVENANCE.md` only when compatibility routing changes.
 ## Boundaries
 
 Do not add new heavy doctrine here. Do not use this route to bypass active part

@@ -6,7 +6,7 @@ This card applies to `mechanics/` and every nested path under that scope until a
 
 ## Read before editing
 
-
+Read `mechanics/README.md` and the nearest package card only when package topology or mechanic routing changes.
 ## Closeout
 
 Closeout must name changed surfaces, checks run, checks skipped, remaining risk, and the next owner route if this lane was only a waypoint.
@@ -171,7 +171,7 @@ change only the files whose future-facing meaning actually moved.
 
 Run the narrow mechanic validators:
 
-For release-bound mechanics changes, also run:
+The release route for release-bound mechanics changes is defined in the repository [`VALIDATION.md`](../VALIDATION.md).
 
 ### Routed child validation
 

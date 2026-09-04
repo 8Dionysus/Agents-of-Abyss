@@ -12,7 +12,7 @@ contours after their active route has been distilled into `parts/`.
 
 ## Read before editing
 
-
+Read `PROVENANCE.md` and the relevant archive map only when historical evidence is material.
 ## Boundaries
 
 Do not treat raw legacy files as the primary active route. Do not delete

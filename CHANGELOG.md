@@ -9,6 +9,9 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- The root agent card is now a compact center route: repeated entry, closeout,
+  owner, and validation prose was collapsed while constitutional boundaries,
+  fail-closed landing, and on-demand validation remain explicit.
 - Mechanics child validation now uses one source manifest and a no-shell exact
   route runner instead of copying 405 commands into inherited `AGENTS.md`
   chains. The AGENTS mesh now enforces and publishes a 32-KiB inherited-chain

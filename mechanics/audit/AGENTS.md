@@ -6,7 +6,7 @@ This card applies to `mechanics/audit/` and every nested path under that scope u
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when Audit meaning changes.
 ## Boundaries
 
 Do not use this lane to create proof verdicts, owner-local remediation authority, runtime authority, memory truth, release authority, generated authority, or archival authority.
@@ -63,6 +63,6 @@ plans into active part contracts, `LANDING_LOG.md`, or `PROVENANCE.md`.
 
 Child routes remain keyed by `mechanics/validation-routes.json`.
 
-Use these commands after Audit mechanic changes:
+The Audit mechanic route is defined in the repository [`VALIDATION.md`](../../VALIDATION.md) for Audit mechanic changes.
 
-Use these commands after route, generated, or root docs references change:
+The applicable route for route, generated, or root docs reference changes is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).

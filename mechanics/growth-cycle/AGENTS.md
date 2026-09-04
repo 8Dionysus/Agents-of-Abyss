@@ -7,7 +7,7 @@ scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when Growth Cycle meaning changes.
 ## Boundaries
 
 - Do not turn Growth Cycle into an always-on scheduler or hidden automation
@@ -79,8 +79,8 @@ change does not affect its job.
 
 ## Validation
 
-Run the narrow Growth Cycle lane after package changes:
+The narrow Growth Cycle package route is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
-If owner requests changed, also run:
+The owner-request route for Growth Cycle changes is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
-For release-readiness or cross-mechanic edits, finish with:
+The release route for release-readiness or cross-mechanic edits is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).

@@ -12,7 +12,7 @@ candidates, receipts, exports, and local notes before reviewed landing in
 
 ## Read before editing
 
-
+Read `PORT.yaml` and the relevant candidate or export route only when memory-port behavior changes.
 ## Boundaries
 
 Use this port for `write_candidate_only` work. Do not turn local notes into
@@ -25,10 +25,9 @@ for review or handoff traces, `exports/` for packets meant for `aoa-memo`, and
 
 ## Candidate Route
 
-Create center-local candidates through the stack MCP helper from the
-`abyss-stack` source checkout:
+The candidate route for creating center-local candidates through the stack MCP helper from the `abyss-stack` source checkout is defined in the repository [`VALIDATION.md`](../VALIDATION.md).
 
-Then validate the emitted candidate path:
+The emitted candidate path is validated through the candidate route in the repository [`VALIDATION.md`](../VALIDATION.md).
 
 ## Reviewed Landing Route
 
@@ -41,9 +40,9 @@ models, validators, and review.
 
 ## Validation
 
-For local candidate checks through the stack MCP access plane:
+The local candidate-check route through the stack MCP access plane is defined in the repository [`VALIDATION.md`](../VALIDATION.md).
 
-For release-facing center changes, run:
+The release route for release-facing center changes is defined in the repository [`VALIDATION.md`](../VALIDATION.md).
 
 ## Closeout
 

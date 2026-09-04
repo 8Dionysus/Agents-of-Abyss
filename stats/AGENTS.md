@@ -12,7 +12,7 @@ remain owned by `aoa-stats`.
 
 ## Read before editing
 
-
+Read the registry and packet source only when the center-owned measurement question changes.
 ## Boundaries
 
 - The registry v2 `repos` array defines the exact population. Supporting

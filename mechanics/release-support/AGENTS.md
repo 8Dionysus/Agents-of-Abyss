@@ -7,7 +7,7 @@ that scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when release-support meaning changes.
 ## Boundaries
 
 - Do not use this lane to override owner-local truth, generated-source
@@ -80,4 +80,4 @@ Child routes remain keyed by `mechanics/validation-routes.json`.
 Run the applicable validation route
 after package changes.
 
-For active-part or transition-law changes, run:
+The active-part or transition-law route is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).

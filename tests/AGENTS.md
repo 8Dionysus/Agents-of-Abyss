@@ -15,7 +15,7 @@ The authoritative family map is `tests/registry.json`.
 
 ## Read before editing
 
-
+Read the relevant test registry and source contract only when coverage or fixture meaning changes.
 ## Boundaries
 
 - Root `tests/` owns root-owned center tests.
@@ -31,7 +31,7 @@ The authoritative family map is `tests/registry.json`.
 
 Run the narrowest relevant checks first. Usual checks for this district:
 
-For release-facing test changes, also run:
+The release route for release-facing test changes is defined in the repository [`VALIDATION.md`](../VALIDATION.md).
 
 ## Closeout
 

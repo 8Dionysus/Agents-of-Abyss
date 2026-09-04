@@ -13,7 +13,7 @@ history into the active path.
 
 ## Read before editing
 
-
+Read the relevant active part contract and owner route only when part semantics change.
 ## Boundaries
 
 - Do not copy owner-local implementation into center parts.
@@ -25,6 +25,7 @@ history into the active path.
 
 ## Validation
 
+The recurrence part routes are defined in the repository [`VALIDATION.md`](../../../VALIDATION.md).
 ## Closeout
 
 Name changed parts, owner routes affected, whether `PROVENANCE.md` was actually

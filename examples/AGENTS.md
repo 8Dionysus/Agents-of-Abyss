@@ -10,7 +10,7 @@ This card applies to `examples/` and all descendants unless a nearer `AGENTS.md`
 
 ## Read before editing
 
-
+Read the referencing source or README only when example usage changes.
 ## Boundaries
 
 - Keep root examples centered on center routes, root placement, owner-routing, and public-entry posture.

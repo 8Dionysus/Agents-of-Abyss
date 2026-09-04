@@ -6,7 +6,7 @@ This card applies to `mechanics/experience/` and every nested path under that sc
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when Experience meaning changes.
 ## Boundaries
 
 Do not use this lane to override owner-local truth, generated-source boundaries, sibling-repo authority, release validation contracts, live runtime, hidden memory sovereignty, or ToS-authored meaning.

@@ -16,7 +16,7 @@ Its core execution rule is done-or-handoff.
 
 ## Read before editing
 
-
+Read the relevant scenario contract only when the task changes Spark lane behavior.
 ## Boundaries
 
 - One Spark session uses one scenario and one bounded scope.
@@ -45,7 +45,7 @@ Every scenario must be registered in `.agents/spark/registry.json` and must prov
 
 Run the narrowest relevant checks first. Usual checks for this lane:
 
-For release-facing Spark lane changes, also run:
+The release route for Spark lane changes is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
 ## Closeout
 

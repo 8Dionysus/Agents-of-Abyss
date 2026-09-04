@@ -7,7 +7,7 @@ scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when Recurrence meaning changes.
 ## Role
 
 Recurrence owns bounded return, anchor recovery, re-entry, continuity windows,

@@ -14,7 +14,7 @@ holds the deeper material.
 
 ## Read before editing
 
-
+Read the parent package route and `PROVENANCE.md` only when compatibility routing changes.
 ## Boundaries
 
 - Keep detailed doctrine package-local and linked from the package README when

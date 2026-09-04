@@ -7,7 +7,7 @@ until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when RPG meaning changes.
 ## Boundaries
 
 - Do not turn RPG terms into hidden ontology, runtime ledger authority, role canon, proof verdicts, or quest ownership.
@@ -79,8 +79,8 @@ change does not affect its job.
 
 Child routes remain keyed by `mechanics/validation-routes.json`.
 
-Run the narrow RPG lane after package changes:
+The narrow RPG package route is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
-If owner requests changed, also run:
+The owner-request route for RPG changes is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
-For release-readiness or cross-mechanic edits, finish with:
+The release route for release-readiness or cross-mechanic edits is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).

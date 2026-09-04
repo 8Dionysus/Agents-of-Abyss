@@ -10,7 +10,7 @@ This card applies to `assets/` and all descendants unless a nearer `AGENTS.md` n
 
 ## Read before editing
 
-
+Read the referencing README or docs only when an asset path or usage contract changes.
 ## Boundaries
 
 - Assets support meaning; they do not prove or author meaning.

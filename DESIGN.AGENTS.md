@@ -132,6 +132,12 @@ A card that asks an agent to change something should name the applicable
 on-demand validation surface or lane. Exact executable procedure stays in that
 surface, a validated manifest and runner, or another named owner procedure.
 
+One exact executable invocation has one human-authored procedure owner inside
+a repository. Other validation surfaces preserve local discoverability by
+linking to that owner, named lane, runner, or manifest key instead of copying
+the command. A broad gate owns composition; it does not become a second owner
+of every leaf it composes.
+
 ### Generated companions
 
 Generated indexes and compact capsules may help low-context agents navigate the

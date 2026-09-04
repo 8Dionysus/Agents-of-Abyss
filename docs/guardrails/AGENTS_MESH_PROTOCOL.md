@@ -55,11 +55,12 @@ When a new durable directory appears, choose one of three actions in the same ch
 3. prove it is temporary and should not be committed as a durable district.
 
 When child-specific executable procedure would repeat across descendants or
-push a registered inherited chain over budget, keep the smallest executable
-entrypoint in the nearest card and route exact argv through a validated owner
-manifest. For mechanics, that source is `mechanics/validation-routes.json` and
-its no-shell runner. Do not move command catalogs into README entry maps merely
-to make AGENTS shorter.
+push a registered inherited chain over budget, keep only a compact validation
+route in the nearest card and route exact argv through its single owner
+procedure. For mechanics, that source is `mechanics/validation-routes.json` and
+its no-shell runner. Other validation surfaces name the route or manifest key
+instead of copying the command. Do not move command catalogs into README entry
+maps merely to make AGENTS shorter.
 
 Do not move human overview or usage prose into AGENTS to reduce the README
 count. Do not move local stop-lines into README to reduce inherited bytes. Apply

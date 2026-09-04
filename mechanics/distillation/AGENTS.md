@@ -7,7 +7,7 @@ nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when distillation meaning changes.
 ## Boundaries
 
 - `mechanics/distillation/` owns center law, route grammar, active parts, and

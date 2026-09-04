@@ -7,7 +7,7 @@ scope until a nearer `AGENTS.md` narrows the lane.
 
 ## Read before editing
 
-
+Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when checkpoint meaning changes.
 ## Boundaries
 
 - Do not turn checkpoint into a hidden scheduler, autonomous self-repair loop,
@@ -75,8 +75,8 @@ change does not affect its job.
 
 ## Validation
 
-Run the narrow checkpoint lane after package changes:
+The narrow checkpoint package route is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
-If owner requests changed, also run:
+The owner-request route for checkpoint changes is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
 
-For release-readiness or cross-mechanic edits, finish with:
+The release route for release-readiness or cross-mechanic edits is defined in the repository [`VALIDATION.md`](../../VALIDATION.md).
