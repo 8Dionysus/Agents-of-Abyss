@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 15007301,
+  "allowed_tracked_bytes": 22696624,
+  "approved_by": "repository-owner",
+  "base_ref": "2e51f2308868f805b39e81aa664417ae5d797482",
+  "changed_generated_bytes": 15007301,
+  "changed_generated_files": 319,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "0f0bdafe4bf3fbb3f1313b5fd09bf1fe370f8686ff3dbc082722c02e6e07ca41",
+  "reason": "Refresh the portable owner-family for the reviewed README/AGENTS source changes; this repository-owner receipt authorizes only the measured generated delta.",
+  "repo": "Agents-of-Abyss",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 22696624,
+  "tracked_bytes_max": 25165824
+}
