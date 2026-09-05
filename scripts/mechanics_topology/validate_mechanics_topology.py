@@ -140,12 +140,11 @@ def validate_registry_shape(registry: dict[str, Any], selected: set[str] | None)
             continue
         for file_name in REQUIRED_PACKAGE_FILES:
             require_path(f"{package_path}/{file_name}", problems, f"{slug} package file")
-        docs_path = entry.get("docs_path")
-        if docs_path is not None:
-            docs_path = str(docs_path).strip()
-            if not docs_path:
-                problems.append(f"{slug}: docs_path must be non-empty when declared")
-            elif docs_path != f"mechanics/{slug}/docs" or not (REPO_ROOT / docs_path).is_dir():
+        if "docs_path" in entry:
+            docs_path = entry.get("docs_path")
+            if not isinstance(docs_path, str) or not docs_path.strip():
+                problems.append(f"{slug}: docs_path must be a non-empty string when declared")
+            elif docs_path.strip() != f"mechanics/{slug}/docs" or not (REPO_ROOT / docs_path.strip()).is_dir():
                 problems.append(f"{slug}: docs_path must be a valid package-local directory")
         for key in ("entry_ref", "roadmap_ref", "landing_log_ref", "agents_ref", "owner_request_doc_ref"):
             require_path(str(entry.get(key, "")), problems, f"{slug} {key}")

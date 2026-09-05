@@ -1,25 +1,25 @@
 {
-  "allowed_bytes": 13595785,
-  "allowed_tracked_bytes": 20146086,
+  "allowed_bytes": 13950216,
+  "allowed_tracked_bytes": 20167874,
   "approved_by": "repository-owner",
   "base_ref": "da07fef15a6db979e7d1b1c79f90db7b988e75d8",
   "candidate_identity": {
     "algorithm": "sha256:canonical-json-file-inventory-v2",
     "base_ref": "da07fef15a6db979e7d1b1c79f90db7b988e75d8",
     "contract_version": "aoa-kag:budget-receipt-candidate-identity-v2",
-    "excluded_path": "kag/receipts/index_family_budget/05e7a4fc013b075a41f539c40f11416e8ee39f35b4cd27b91c26568f673e2830.json",
-    "family_digest": "05e7a4fc013b075a41f539c40f11416e8ee39f35b4cd27b91c26568f673e2830",
-    "file_count": 2287,
-    "seal": "7a6f7af56ceec43eb4cf88acdd50c4376430c3be8e9fd527a7f700c36a34471e",
-    "source_epoch": "sha256:1d7fde3e1e401bddfeee3402a35eed4ddb79212d55ea7b45b51fc8413a058823",
-    "source_snapshot": "sha256:37d9ad05d261a2eeae14f72f3e7cea569c8cc1c35fbcf2e97ace05f6569533de"
+    "excluded_path": "kag/receipts/index_family_budget/9ee1265fa366d4056cfeae4f7a0f3b6885134dfe3f3da3246f28f0f8ab452214.json",
+    "family_digest": "9ee1265fa366d4056cfeae4f7a0f3b6885134dfe3f3da3246f28f0f8ab452214",
+    "file_count": 2300,
+    "seal": "0b6c40c92469c305e1b1c591897fc4ab439fb495f32a87086da239aaa94531c8",
+    "source_epoch": "sha256:5bdf0d4f3b9260d1c05c46e752ccb97808ea09bc13f0cebcb09cc601db0bcea8",
+    "source_snapshot": "sha256:7ff3e5b09c8d61ab2715a892b9adbe032edbe55dba9fd433bd3c72500876e6f5"
   },
-  "changed_generated_bytes": 13595785,
-  "changed_generated_files": 297,
+  "changed_generated_bytes": 13950216,
+  "changed_generated_files": 313,
   "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
   "default_limit_bytes": 1048576,
-  "head_family_digest": "05e7a4fc013b075a41f539c40f11416e8ee39f35b4cd27b91c26568f673e2830",
-  "head_source_snapshot": "sha256:37d9ad05d261a2eeae14f72f3e7cea569c8cc1c35fbcf2e97ace05f6569533de",
+  "head_family_digest": "9ee1265fa366d4056cfeae4f7a0f3b6885134dfe3f3da3246f28f0f8ab452214",
+  "head_source_snapshot": "sha256:7ff3e5b09c8d61ab2715a892b9adbe032edbe55dba9fd433bd3c72500876e6f5",
   "producer_identity": {
     "action": {
       "bytes": 5200,
@@ -1362,10 +1362,10 @@
     "revision_binding": "content-addressed-procedure-import-closure-portable-runtime-contract-and-descriptor-io-v1",
     "source_digest": "4882f50ab3a09b04b02715510f2e5dbec13fa60a5032f98e9e043dc9e79f812e"
   },
-  "reason": "AOA-CENTER-D-0045 approved removal of duplicate content-free mechanic docs route cards; active canonical sources and immutable Git recovery retained.",
+  "reason": "AOA-CENTER-D-0045 docs_path validation and focused negative fixtures; active canonical sources retained; remove one confirmed orphan validator constant.",
   "repo": "Agents-of-Abyss",
   "schema_version": "aoa-repo-local-kag-budget-receipt-v2",
   "scope": "generated_delta",
-  "tracked_bytes": 20146086,
+  "tracked_bytes": 20167874,
   "tracked_bytes_max": 25165824
 }
