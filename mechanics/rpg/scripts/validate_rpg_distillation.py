@@ -173,8 +173,6 @@ def validate_paths(problems: list[str]) -> None:
         require(RPG_ROOT / name, problems)
     require(RPG_ROOT / "parts" / "README.md", problems)
     require(RPG_ROOT / "parts" / "AGENTS.md", problems)
-    require(RPG_ROOT / "docs" / "README.md", problems)
-    require(RPG_ROOT / "docs" / "AGENTS.md", problems)
 
     for slug in PART_SLUGS:
         part = RPG_ROOT / "parts" / slug

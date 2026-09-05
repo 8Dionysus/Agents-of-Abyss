@@ -50,7 +50,7 @@ their ownership narrow:
 Do not let these root files duplicate package doctrine. If a detail belongs to
 one mechanic, route to that package's `README.md`, `DIRECTION.md`, `PARTS.md`,
 `OWNER_MAP.md`, `OWNER_REQUESTS.md`, `PROVENANCE.md`, `LANDING_LOG.md`,
-`ROADMAP.md`, `docs/`, or part-local surface.
+`ROADMAP.md`, optional content-bearing `docs/`, or part-local surface.
 
 ## Package law
 
@@ -60,7 +60,6 @@ Every `mechanics/<slug>/` package must contain:
 - `README.md`
 - `ROADMAP.md`
 - `LANDING_LOG.md`
-- `docs/`
 
 The package `README.md` is the mechanic entry card. It must contain the
 mechanic card contract headings defined in `mechanics/README.md` and reflected
@@ -86,8 +85,9 @@ audited. The package `ROADMAP.md` is the forward contour, including a
 condition-based "When Time Comes" block when future work is likely but not
 ready. The package `LANDING_LOG.md` is the checked landing ledger and should
 begin with a route index plus update contract when it grows beyond one entry.
-The package `docs/` directory holds detailed mechanic-owned doctrine, models,
-waves, handoffs, or support notes.
+When present, the package `docs/` directory holds detailed mechanic-owned
+doctrine, models, waves, handoffs, or support notes; it is not mandatory
+scaffolding.
 
 The package `AGENTS.md` is the local route law. It must name the active source
 surfaces, the post-change route review, the closeout contract, and the local

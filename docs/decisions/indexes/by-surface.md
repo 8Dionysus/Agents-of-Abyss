@@ -168,6 +168,7 @@
 - [AOA-CENTER-D-0042 Separate Inherited Agent Routes From Human README Surfaces](../AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md) (`docs/decisions/AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md`)
 - [AOA-CENTER-D-0043 One Human Owner Per Executable Validation Route](../AOA-CENTER-D-0043-one-human-owner-per-executable-validation-route.md) (`docs/decisions/AOA-CENTER-D-0043-one-human-owner-per-executable-validation-route.md`)
 - [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+- [AOA-CENTER-D-0045 Content-Bearing Mechanic Docs Without Route Scaffolding](../AOA-CENTER-D-0045-content-bearing-mechanic-docs.md) (`docs/decisions/AOA-CENTER-D-0045-content-bearing-mechanic-docs.md`)
 
 ## center contract
 
@@ -188,6 +189,7 @@
 ## mechanics topology
 
 - [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+- [AOA-CENTER-D-0045 Content-Bearing Mechanic Docs Without Route Scaffolding](../AOA-CENTER-D-0045-content-bearing-mechanic-docs.md) (`docs/decisions/AOA-CENTER-D-0045-content-bearing-mechanic-docs.md`)
 
 ## operator decision
 
@@ -212,6 +214,7 @@
 ## provenance
 
 - [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+- [AOA-CENTER-D-0045 Content-Bearing Mechanic Docs Without Route Scaffolding](../AOA-CENTER-D-0045-content-bearing-mechanic-docs.md) (`docs/decisions/AOA-CENTER-D-0045-content-bearing-mechanic-docs.md`)
 
 ## repository role
 
@@ -229,3 +232,4 @@
 ## validation
 
 - [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+- [AOA-CENTER-D-0045 Content-Bearing Mechanic Docs Without Route Scaffolding](../AOA-CENTER-D-0045-content-bearing-mechanic-docs.md) (`docs/decisions/AOA-CENTER-D-0045-content-bearing-mechanic-docs.md`)

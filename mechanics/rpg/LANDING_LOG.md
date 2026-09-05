@@ -384,3 +384,22 @@ Validation: `python mechanics/rpg/scripts/validate_rpg_distillation.py`; `python
 Stop-lines: ready-to-carry packets are not owner acceptance, owner landing, proof verdict, runtime activation, stats authority, role canon, skill canon, playbook choreography, or quest closure.
 
 Next route: carry the relevant `ORQ-RPG-*` card into the owner repository only when that owner is ready to accept or decline the slice, then return an owner-local receipt before updating queue refs.
+
+### RPG content-bearing docs cleanup
+
+Status: landed.
+
+Owner boundary: active RPG parts and presentation boundaries remain unchanged;
+duplicate route-card scaffolding is removed.
+
+Surfaces: `mechanics/registry.json`, active RPG routes, and historical docs-card
+paths retained only as immutable baseline recovery references.
+
+Validation: RPG source, mechanics topology, landing-log, and generated parity
+checks are the applicable routes.
+
+Stop-lines: no ontology, runtime ledger, role, proof, quest, or owner meaning
+change.
+
+Next route: use `mechanics/rpg/PROVENANCE.md` and immutable Git history for retired route-card
+history when needed.

@@ -700,3 +700,22 @@ models, or turn `sidequest` into dependency, owner transfer, or closure proof.
 
 Next route: use the reciprocal bridge only when a quest needs a playable
 reading; do not add RPG readings to every quest source as boilerplate.
+
+### Questbook content-bearing docs cleanup
+
+Status: landed.
+
+Owner boundary: active Questbook parts, quest sources, and generated views remain
+unchanged; duplicate route-card scaffolding is removed.
+
+Surfaces: `mechanics/registry.json`, active Questbook routes, and historical
+docs-card paths retained only as immutable baseline recovery references.
+
+Validation: Questbook/RPG source checks, mechanics topology, landing-log, and
+generated parity checks are the applicable routes.
+
+Stop-lines: no quest lifecycle, owner acceptance, proof, runtime, or RPG meaning
+change.
+
+Next route: use `mechanics/questbook/PROVENANCE.md` and immutable Git history for retired route-card
+history when needed.

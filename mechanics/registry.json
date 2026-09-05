@@ -531,7 +531,6 @@
         ],
         "trigger": "Use when lived work, friction, releases, offices, incidents, service posture, seed intake, duel pressure, continuity loom, or living-workspace boundaries must become reviewable contracts."
       },
-      "docs_path": "mechanics/experience/docs",
       "entry_ref": "mechanics/experience/README.md",
       "landing_log_ref": "mechanics/experience/LANDING_LOG.md",
       "must_not_claim": [
@@ -629,7 +628,6 @@
         ],
         "trigger": "Use when conflict, contradiction, bounded pressure, survival tests, lawful moves, arena or duel grammar, packets, verdicts, retention, rank, schools, canon promotion, or ToS thresholds are involved."
       },
-      "docs_path": "mechanics/agon/docs",
       "entry_ref": "mechanics/agon/README.md",
       "landing_log_ref": "mechanics/agon/LANDING_LOG.md",
       "must_not_claim": [
@@ -799,7 +797,6 @@
         ],
         "trigger": "Use when an obligation must survive the current session as a public, reviewable follow-up without becoming a second roadmap or private scratchpad."
       },
-      "docs_path": "mechanics/questbook/docs",
       "entry_ref": "mechanics/questbook/README.md",
       "landing_log_ref": "mechanics/questbook/LANDING_LOG.md",
       "must_not_claim": [
@@ -880,7 +877,6 @@
         ],
         "trigger": "Use when progression, questlines, campaigns, roles, skills, feats, or readable adjunct reflection need to be interpreted without rewriting ownership."
       },
-      "docs_path": "mechanics/rpg/docs",
       "entry_ref": "mechanics/rpg/README.md",
       "landing_log_ref": "mechanics/rpg/LANDING_LOG.md",
       "must_not_claim": [

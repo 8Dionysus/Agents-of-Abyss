@@ -784,3 +784,21 @@ Next route: future archival-packet audits update the package provenance gate and
 `mechanics/experience/PROVENANCE.md` bridge; future part behavior changes update
 the owning part validator, tests, artifact map, and this ledger when the landing
 surface moves.
+
+### Experience content-bearing docs cleanup
+
+Status: landed.
+
+Owner boundary: active Experience parts and provenance remain center-owned; this
+source cleanup removes duplicate route-card scaffolding only.
+
+Surfaces: `mechanics/registry.json`, active Experience routes, and historical
+docs-card paths retained only as immutable baseline recovery references.
+
+Validation: Experience source, mechanics topology, landing-log, and generated
+parity checks are the applicable routes.
+
+Stop-lines: no runtime, owner acceptance, proof, or service-mesh meaning change.
+
+Next route: use `mechanics/experience/PROVENANCE.md` and immutable Git history for retired route-card
+history when needed.

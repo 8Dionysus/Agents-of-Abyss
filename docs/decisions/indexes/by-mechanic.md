@@ -12,6 +12,7 @@
 - [AOA-CENTER-D-0005 Decision Note: Questbook Keeps A Model Spine And Registry-Backed Route Tables](../AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md) (`docs/decisions/AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md`)
 - [AOA-CENTER-D-0006 Questbook Source Contract Full Distillation](../AOA-CENTER-D-0006-questbook-source-contract-full-distillation.md) (`docs/decisions/AOA-CENTER-D-0006-questbook-source-contract-full-distillation.md`)
 - [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+- [AOA-CENTER-D-0045 Content-Bearing Mechanic Docs Without Route Scaffolding](../AOA-CENTER-D-0045-content-bearing-mechanic-docs.md) (`docs/decisions/AOA-CENTER-D-0045-content-bearing-mechanic-docs.md`)
 
 ## audit
 
@@ -51,6 +52,7 @@
 ## agon
 
 - [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+- [AOA-CENTER-D-0045 Content-Bearing Mechanic Docs Without Route Scaffolding](../AOA-CENTER-D-0045-content-bearing-mechanic-docs.md) (`docs/decisions/AOA-CENTER-D-0045-content-bearing-mechanic-docs.md`)
 
 ## antifragility
 
@@ -74,6 +76,7 @@
 
 - [AOA-CENTER-D-0036 Hash-Bound Operator Decision Envelope](../AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md) (`docs/decisions/AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md`)
 - [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+- [AOA-CENTER-D-0045 Content-Bearing Mechanic Docs Without Route Scaffolding](../AOA-CENTER-D-0045-content-bearing-mechanic-docs.md) (`docs/decisions/AOA-CENTER-D-0045-content-bearing-mechanic-docs.md`)
 
 ## growth-cycle
 
@@ -86,3 +89,4 @@
 ## rpg
 
 - [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+- [AOA-CENTER-D-0045 Content-Bearing Mechanic Docs Without Route Scaffolding](../AOA-CENTER-D-0045-content-bearing-mechanic-docs.md) (`docs/decisions/AOA-CENTER-D-0045-content-bearing-mechanic-docs.md`)
