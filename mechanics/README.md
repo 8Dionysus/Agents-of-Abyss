@@ -177,7 +177,7 @@ surface that matches the work:
 | `ROADMAP.md` | next contour and condition-based future work |
 | `docs/` | detailed mechanic-owned doctrine and support notes |
 | `parts/` | functioning sub-mechanics and part-local artifacts |
-| `legacy/` | preserved source history that should not burden active routes |
+| closed historical source | immutable owner Git commit and original path reached through `PROVENANCE.md` or `LANDING_LOG.md`; no active archive directory is required |
 
 If a package has a part-local `AGENTS.md`, follow it after the package card.
 

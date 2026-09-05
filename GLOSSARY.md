@@ -72,18 +72,21 @@ A thin index should stay small enough to remain an entrance, not become a second
 A historical seed, package, or landing record that shows what was planted, why
 it belonged, and how it was validated.
 
-Landing receipts belong under the owning `mechanics/<slug>/legacy/raw/` route
-when a mechanic owns them, or under `docs/traces/` for generic movement
-evidence. They do not belong at repository root.
+Closed landing receipts recover through the owning repository's immutable Git
+commit and original path, reached from its `PROVENANCE.md` or `LANDING_LOG.md`.
+Current receipts and candidate ledgers stay with the active mechanic or its
+declared receipt manifest; generic movement evidence belongs under
+`docs/traces/`. They do not belong at repository root.
 
 ### Audit artifact
 
 A reviewable cleanup, drift, pruning, or verification artifact.
 
-Audit route grammar belongs under `mechanics/audit/`. Historical audit receipts
-belong under `mechanics/audit/legacy/raw/` unless another owner has a more
-specific legacy route. Compact root indexes such as `ECOSYSTEM_AUDIT_INDEX.md`
-may stay flat only while they remain route surfaces.
+Audit route grammar belongs under `mechanics/audit/`. Closed historical audit
+receipts recover through the immutable owner Git commit and original path named
+by audit provenance; current findings and ledgers remain with the audit owner.
+Compact root indexes such as `ECOSYSTEM_AUDIT_INDEX.md` may stay flat only
+while they remain route surfaces.
 
 ### Source repository
 

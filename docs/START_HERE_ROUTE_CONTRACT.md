@@ -87,7 +87,7 @@ Root-editing changes must state the root surface class:
 - agent lane
 - development requirement
 
-Root-editing changes must not create root files merely because a package, note, audit, or future idea feels important. Mechanic receipts belong in the owning `mechanics/<slug>/legacy/raw/` route. Generic movement traces belong in `docs/traces/`. Audit artifacts belong in `mechanics/audit/` or `mechanics/audit/legacy/raw/`. Registry evolution belongs in the aligned schema, generated capsule, validator, source docs, and decision-record route when it changes public interpretation. Generated objects belong in `generated/`.
+Root-editing changes must not create root files merely because a package, note, audit, or future idea feels important. Closed mechanic receipts recover through the owning repository's immutable Git commit and original path, reached from `PROVENANCE.md` or `LANDING_LOG.md`; current receipts stay with the active mechanic or declared receipt manifest. Generic movement traces belong in `docs/traces/`. Current audit artifacts belong in the owning audit route. Registry evolution belongs in the aligned schema, generated capsule, validator, source docs, and decision-record route when it changes public interpretation. Generated objects belong in `generated/`.
 
 ## Direction-change route
 

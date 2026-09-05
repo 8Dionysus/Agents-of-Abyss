@@ -69,8 +69,8 @@ Use this route when the question is not only "is the claim true?" but "should th
 | civic law or public map | root |
 | contributor, security, conduct, or license surface | root |
 | compact civic index | root only while compact |
-| historical seed or package receipt | owning `mechanics/<slug>/legacy/raw/` for mechanic-specific receipts, or `docs/traces/` for generic movement evidence |
-| audit candidate list or cleanup evidence | `mechanics/audit/` and `mechanics/audit/legacy/raw/` |
+| closed historical seed or package receipt | immutable owner Git commit plus original path, reached from `PROVENANCE.md` or `LANDING_LOG.md` |
+| current audit candidate list or cleanup evidence | owning `mechanics/audit/` route and its declared receipt manifest |
 | registry contract change | `schemas/`, `generated/`, validators, aligned source docs, and `docs/decisions/` when the route changes |
 | generated compact machine surface | `generated/` |
 | owner-local semantic change | owning repository |
