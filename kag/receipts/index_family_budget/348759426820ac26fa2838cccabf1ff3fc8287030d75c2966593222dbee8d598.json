@@ -9,8 +9,8 @@
     "contract_version": "aoa-kag:budget-receipt-candidate-identity-v2",
     "excluded_path": "kag/receipts/index_family_budget/348759426820ac26fa2838cccabf1ff3fc8287030d75c2966593222dbee8d598.json",
     "family_digest": "348759426820ac26fa2838cccabf1ff3fc8287030d75c2966593222dbee8d598",
-    "file_count": 2297,
-    "seal": "04a17ac28262dc3766dc647b765097edbe4a4a1ff73ecef96f965a62efa716b2",
+    "file_count": 2293,
+    "seal": "23f4820f20bf083be1e59d453c9eb3a59cd853d117fbfe52e377b50cd7376423",
     "source_epoch": "sha256:0b23e9af9d0e4ed9700a808638cfc821c44e4c5b1d85c3f6504956d2a7316053",
     "source_snapshot": "sha256:3e5b878a4838ccd6f3fb59d5b8a52db5b2ae179d72c9e0cd2f68cd36e7d99068"
   },
@@ -1362,7 +1362,7 @@
     "revision_binding": "content-addressed-procedure-import-closure-portable-runtime-contract-and-descriptor-io-v1",
     "source_digest": "df3b43c667409671f5b5fc71b847a54b0f5aed3b4d9cafb2ca7046896f5c2c37"
   },
-  "reason": "approved retirement archive-route semantics and canonical parity",
+  "reason": "approved retirement canonical receipt rebind",
   "repo": "Agents-of-Abyss",
   "schema_version": "aoa-repo-local-kag-budget-receipt-v2",
   "scope": "generated_delta",
