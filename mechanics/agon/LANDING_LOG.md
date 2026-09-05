@@ -504,3 +504,22 @@ sovereignty, or direct ToS canon writes.
 
 Next route: update this log when a later wave becomes the active release
 contour or when its owner-request surface changes.
+
+### Agon content-bearing docs cleanup
+
+Status: landed.
+
+Owner boundary: center-owned Agon doctrine remains on active package and part
+surfaces; this source cleanup removes duplicate route-card scaffolding only.
+
+Surfaces: `mechanics/registry.json`, active Agon route cards, and the historical
+docs-card paths retained only as immutable baseline recovery references.
+
+Validation: mechanics topology, landing-log, Agon source, and generated parity
+checks are the applicable routes.
+
+Stop-lines: no active Agon meaning, owner authority, runtime, proof, or ToS
+contract changes.
+
+Next route: use `mechanics/agon/PROVENANCE.md` and immutable Git history when retired route-card
+history is material.

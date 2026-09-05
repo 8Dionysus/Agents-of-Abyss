@@ -871,7 +871,17 @@ def looks_like_surface(ref: str) -> bool:
 
 def is_retired_surface(ref: str) -> bool:
     """Historical landing references may point to retired archive roots."""
-    return ref == ".agents/spark" or "/legacy/" in ref or ref.endswith("/legacy")
+    retired_docs = {
+        "mechanics/agon/docs/README.md",
+        "mechanics/agon/docs/AGENTS.md",
+        "mechanics/experience/docs/README.md",
+        "mechanics/experience/docs/AGENTS.md",
+        "mechanics/questbook/docs/README.md",
+        "mechanics/questbook/docs/AGENTS.md",
+        "mechanics/rpg/docs/README.md",
+        "mechanics/rpg/docs/AGENTS.md",
+    }
+    return ref in retired_docs or ref == ".agents/spark" or "/legacy/" in ref or ref.endswith("/legacy")
 
 
 def validate_log(mechanic: str) -> list[str]:

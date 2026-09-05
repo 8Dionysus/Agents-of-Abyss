@@ -43,8 +43,8 @@ writes.
 - `LANDING_LOG.md`: canonical Agon landing ledger.
 - `PROVENANCE.md`: controlled bridge to detailed source-doc accounting.
 - `artifact-map.json`: old flat artifact path to active part-home receipts.
-- `legacy/`: provenance and artifact receipts; enter through `PROVENANCE.md`.
-- `docs/`: compatibility route only.
+- Historical source and artifact receipts: enter through `PROVENANCE.md` and
+  immutable Git history; no local legacy directory is an active route.
 
 ## Post-change route review
 

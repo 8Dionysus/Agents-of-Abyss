@@ -157,21 +157,6 @@ def validate_card(problems: list[str]) -> None:
             problems.append(f"mechanics/audit/README.md: missing must-not-claim {claim!r}")
 
 
-def validate_legacy_bridge(problems: list[str]) -> None:
-    provenance = read(PACKAGE_ROOT / "PROVENANCE.md")
-    legacy_index = read(PACKAGE_ROOT / "legacy" / "INDEX.md")
-    raw_readme = read(PACKAGE_ROOT / "legacy" / "raw" / "README.md")
-    for item in LEGACY_RAW:
-        path = PACKAGE_ROOT / "legacy" / "raw" / item
-        if not path.exists():
-            problems.append(f"missing audit raw source: {rel(path)}")
-        for label, text in (("PROVENANCE.md", provenance), ("legacy/INDEX.md", legacy_index), ("legacy/raw/README.md", raw_readme)):
-            if item not in text:
-                problems.append(f"mechanics/audit/{label}: missing raw source {item}")
-    if (REPO_ROOT / "docs" / "audits").exists():
-        problems.append("docs/audits must not exist after audit mechanic landing")
-
-
 def validate_active_cleanliness(problems: list[str]) -> None:
     for path in active_markdown_paths():
         path_ref = rel(path)

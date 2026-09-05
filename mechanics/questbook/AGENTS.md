@@ -51,10 +51,11 @@ absent.
 - `ROADMAP.md`: current and next questbook contour.
 - `LANDING_LOG.md`: checked questbook landing ledger.
 - `PROVENANCE.md`: controlled bridge to legacy and source accounting.
-- `legacy/`: archival source material, not active law.
+- Historical source material is reached through `PROVENANCE.md` and immutable
+  Git history, not a local legacy directory.
 - `quests/`: source quest item store outside the mechanic package.
 - `generated/`: generated questbook views that mirror source quest files.
-- `docs/`: detailed doctrine and support notes.
+- Optional content-bearing `docs/` may hold detailed doctrine and support notes.
 
 ## Post-change route review
 

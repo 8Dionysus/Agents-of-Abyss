@@ -9,6 +9,10 @@ Tracking starts with the community-docs baseline for this repository.
 
 ### Changed
 
+- Retired duplicate Agon, Experience, Questbook, and RPG docs route cards;
+  active canonical sources remain required while content-bearing docs are
+  optional, with historical recovery through immutable Git paths.
+
 - The root agent card is now a compact center route: repeated entry, closeout,
   owner, and validation prose was collapsed while constitutional boundaries,
   fail-closed landing, and on-demand validation remain explicit.

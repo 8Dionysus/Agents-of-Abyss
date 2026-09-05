@@ -550,8 +550,6 @@ def validate_root_surfaces(problems: list[str]) -> None:
         require_file(EXPERIENCE_ROOT / name, problems)
     require_file(ARTIFACT_MAP_PATH, problems)
     require_file(PROVENANCE_RECEIPTS_PATH, problems)
-    require_file(EXPERIENCE_ROOT / "docs" / "AGENTS.md", problems)
-    require_file(EXPERIENCE_ROOT / "docs" / "README.md", problems)
     require_file(PARTS_ROOT / "AGENTS.md", problems)
     require_file(PARTS_ROOT / "README.md", problems)
 
@@ -640,41 +638,6 @@ def validate_parts(selected: set[str] | None, problems: list[str]) -> None:
                 problems.append(
                     f"{rel(validation_path)}: vague validation phrase {phrase!r}"
                 )
-
-
-def validate_raw_sources(problems: list[str]) -> None:
-    raw_docs = sorted(RAW_ROOT.glob("EXPERIENCE_*.md"))
-    if len(raw_docs) < 140:
-        problems.append(
-            f"{rel(RAW_ROOT)}: expected at least 140 raw Experience sources, found {len(raw_docs)}"
-        )
-    old_docs = sorted((EXPERIENCE_ROOT / "docs").glob("EXPERIENCE_*.md"))
-    if old_docs:
-        for path in old_docs[:10]:
-            problems.append(
-                f"active docs directory still contains raw Experience source: {rel(path)}"
-            )
-        if len(old_docs) > 10:
-            problems.append(
-                f"active docs directory has {len(old_docs) - 10} more raw Experience sources"
-            )
-
-    index_path = LEGACY_ROOT / "INDEX.md"
-    index = read(index_path) if index_path.exists() else ""
-    for raw in raw_docs:
-        if raw.name not in index:
-            problems.append(f"{rel(index_path)}: missing raw source {raw.name}")
-    indexed = set(re.findall(r"`(EXPERIENCE_[A-Z0-9_]+\.md)`", index))
-    existing = {path.name for path in raw_docs}
-    stale = sorted(indexed - existing)
-    for name in stale[:10]:
-        problems.append(
-            f"{rel(index_path)}: indexed raw source missing on disk: {name}"
-        )
-    if len(stale) > 10:
-        problems.append(
-            f"{rel(index_path)}: {len(stale) - 10} more stale raw index entries"
-        )
 
 
 def validate_raw_source_requirements(problems: list[str]) -> None:

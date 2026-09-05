@@ -77,7 +77,8 @@ After the mechanic card, the package README should stay a lightweight entry
 route: `## Active route`, `## Functioning parts`, `## Owner-request queue`,
 `## Historical provenance`, `## Owner boundary`, and `## Growth posture`.
 Deeper doctrine belongs in `DIRECTION.md`, `PARTS.md`, `OWNER_MAP.md`,
-`OWNER_REQUESTS.md`, `PROVENANCE.md`, `LANDING_LOG.md`, `ROADMAP.md`, `docs/`,
+`OWNER_REQUESTS.md`, `PROVENANCE.md`, `LANDING_LOG.md`, `ROADMAP.md`, optional
+content-bearing `docs/`,
 or part-local files.
 
 Status vocabulary:
@@ -175,7 +176,7 @@ surface that matches the work:
 | `PROVENANCE.md` | active-first bridge to historical or sibling evidence |
 | `LANDING_LOG.md` | checked landings, validation anchors, and stop-lines |
 | `ROADMAP.md` | next contour and condition-based future work |
-| `docs/` | detailed mechanic-owned doctrine and support notes |
+| `docs/` (when present) | detailed mechanic-owned doctrine and support notes |
 | `parts/` | functioning sub-mechanics and part-local artifacts |
 | closed historical source | immutable owner Git commit and original path reached through `PROVENANCE.md` or `LANDING_LOG.md`; no active archive directory is required |
 

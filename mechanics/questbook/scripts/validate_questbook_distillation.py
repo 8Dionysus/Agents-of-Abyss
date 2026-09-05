@@ -292,20 +292,6 @@ def validate_provenance_bridge(problems: list[str]) -> None:
             problems.append(f"{rel(PROVENANCE_PATH)} must say: {phrase}")
 
 
-def validate_legacy_index(problems: list[str]) -> None:
-    if not LEGACY_INDEX_PATH.is_file():
-        problems.append(f"{rel(LEGACY_INDEX_PATH)}: missing legacy index")
-        return
-    text = read(LEGACY_INDEX_PATH)
-    raw_files = sorted(path for path in RAW_ROOT.glob("*") if path.is_file() and path.name != "README.md")
-    for raw_file in raw_files:
-        raw_ref = f"raw/{raw_file.name}"
-        if raw_ref not in text:
-            problems.append(f"{rel(LEGACY_INDEX_PATH)} does not map {raw_ref}")
-    if raw_files and "parts/" not in text:
-        problems.append(f"{rel(LEGACY_INDEX_PATH)} must map raw sources to active parts")
-
-
 def validate_rpg_playable_reading_bridge(problems: list[str]) -> None:
     if not RPG_PLAYABLE_READING_PATH.is_file():
         problems.append(f"{rel(RPG_PLAYABLE_READING_PATH)}: missing RPG playable reading bridge")

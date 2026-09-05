@@ -47,7 +47,8 @@ skills, playbooks, proof, quests, runtime state, or source meaning.
 - `ROADMAP.md`: current and next RPG contour.
 - `LANDING_LOG.md`: checked RPG landing ledger.
 - `PROVENANCE.md`: controlled bridge to immutable Git history and current source accounting.
-- `docs/`: detailed doctrine and support notes.
+- Optional content-bearing `docs/` may hold detailed doctrine and support notes;
+  historical material is reached through `PROVENANCE.md` and immutable Git history.
 
 ## Post-change route review
 

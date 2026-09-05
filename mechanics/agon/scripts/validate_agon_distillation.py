@@ -239,7 +239,6 @@ def validate() -> list[str]:
     provenance = read_text("PROVENANCE.md")
     landing_log = read_text("LANDING_LOG.md")
     owner_requests = read_text("OWNER_REQUESTS.md")
-    compatibility = read_text("docs/README.md")
     legacy_index = ""
 
     for rel in ("DIRECTION.md", "PARTS.md", "OWNER_REQUESTS.md", "PROVENANCE.md"):
@@ -259,14 +258,6 @@ def validate() -> list[str]:
     for rid in OWNER_REQUEST_IDS:
         if rid not in owner_requests:
             problems.append(f"OWNER_REQUESTS.md: missing request id {rid}")
-
-    for rel in ("../DIRECTION.md", "../PARTS.md", "../PROVENANCE.md", "../OWNER_REQUESTS.md"):
-        if rel not in compatibility:
-            problems.append(f"docs/README.md: must route to {rel}")
-
-    docs_files = sorted(path.name for path in (AGON_ROOT / "docs").glob("*.md"))
-    if docs_files != ["AGENTS.md", "README.md"]:
-        problems.append("docs/: must contain only AGENTS.md and README.md compatibility surfaces")
 
     raw_docs = []
     for name in raw_docs:

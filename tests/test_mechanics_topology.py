@@ -50,7 +50,9 @@ class MechanicsTopologyTests(unittest.TestCase):
             self.assertTrue((package / "README.md").exists())
             self.assertTrue((package / "ROADMAP.md").exists())
             self.assertTrue((package / "LANDING_LOG.md").exists())
-            self.assertTrue((package / "docs").is_dir())
+            docs_path = entry.get("docs_path")
+            if docs_path:
+                self.assertTrue((REPO_ROOT / docs_path).is_dir())
 
     def test_mechanics_topology_validator_accepts_all_mechanics(self) -> None:
         result = run_script("scripts/mechanics_topology/validate_mechanics_topology.py")

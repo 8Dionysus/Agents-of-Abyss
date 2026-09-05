@@ -39,7 +39,8 @@ It does not activate live workspace runtime, owner-local offices, hidden memory 
 - `provenance-receipts.json`: machine-readable receipt IDs for old packets,
   sibling surfaces, and staged seed inputs referenced by active artifacts.
 - `PROVENANCE.md`: controlled bridge to archival accounting.
-- `docs/`: compatibility route only.
+- Optional content-bearing docs remain package-local when present; historical
+  source accounting is reached through `PROVENANCE.md` and immutable Git history.
 
 ## Post-change route review
 
