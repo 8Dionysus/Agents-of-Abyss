@@ -55,7 +55,6 @@ runtime activation.
 - `OWNER_REQUESTS.md`: center-side owner request packet.
 - `ROADMAP.md`: current and next distillation contour.
 - `LANDING_LOG.md`: checked distillation landing ledger.
-- `PROVENANCE.md`: controlled bridge to legacy and source accounting.
 - `PROVENANCE.md`: immutable Git recovery map for closed history and current
   receipt ownership.
 - `docs/`: detailed doctrine and support notes.

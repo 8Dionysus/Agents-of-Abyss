@@ -52,7 +52,7 @@ The docs thematic cleanup guardrails are defined by:
 | Registry contract change | `schemas/`, `generated/`, validators, and a decision record when the route changes | registry evolution becomes real only when the machine contract and source docs move together |
 | Audit candidate list | `mechanics/audit/` and its declared receipt manifest | current review evidence belongs to the audit owner, not a civic front-door peer |
 | Generated artifact | `generated/` | generated surfaces must remain machine-facing and reproducible |
-| Experiment or scratchpad | owner repo, mechanic legacy, or untracked local notes | the root must not preserve every thought as public law |
+| Experiment or scratchpad | owning active experiment/candidate surface or untracked local notes | closed historical material is recovered from Git; the root must not preserve every thought as public law |
 | Repo-local semantic change | owner repository | the center must not absorb layer truth |
 | Duplicate platform file | one canonical platform file | duplicate names with different casing create review and platform ambiguity |
 
@@ -72,8 +72,8 @@ If the answer to any of questions 1-3 is no, or question 4 is yes, do not place 
 
 | Existing surface | Decision | New home or status | Why |
 |---|---|---|---|
-| `SEED_MANIFEST.md` | historical move recorded | pinned baseline path `mechanics/agon/legacy/raw/AGON_WAVE3_SEED_MANIFEST.md` in the reviewed Git history; current receipts stay with Agon |
-| `DELETION_CANDIDATES.json` | historical move recorded | pinned baseline path `mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` in the reviewed Git history; current audit evidence stays with audit |
+| `SEED_MANIFEST.md` | historical move recorded | [`mechanics/agon/legacy/raw/AGON_WAVE3_SEED_MANIFEST.md` at baseline `d318820`](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/agon/legacy/raw/AGON_WAVE3_SEED_MANIFEST.md) is recoverable history; current receipts stay with Agon | it is an Agon Wave III receipt, not a root manifest for the whole repository |
+| `DELETION_CANDIDATES.json` | historical move recorded | [`mechanics/audit/legacy/raw/DELETION_CANDIDATES.json` at baseline `d318820`](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/audit/legacy/raw/DELETION_CANDIDATES.json) is recoverable history; current audit evidence stays with audit | it is an inspect-first audit artifact, not a civic root surface |
 | `.github/pull_request_template.md` | remove | keep `.github/PULL_REQUEST_TEMPLATE.md` | duplicate PR templates with different casing create template ambiguity |
 | `FRAGILITY_BLACKLIST.md` | remove | `mechanics/antifragility/FRAGILITY_BLACKLIST.md` | active fragile-pattern routing belongs in the antifragility mechanic; no root route door is needed |
 | `QUESTBOOK.md` | keep, narrow | root quest index | useful only while it stays federation-level and does not become a second roadmap |
