@@ -869,6 +869,11 @@ def looks_like_surface(ref: str) -> bool:
     )
 
 
+def is_retired_surface(ref: str) -> bool:
+    """Historical landing references may point to retired archive roots."""
+    return ref == ".agents/spark" or "/legacy/" in ref or ref.endswith("/legacy")
+
+
 def validate_log(mechanic: str) -> list[str]:
     spec = MECHANICS[mechanic]
     rel_path = str(spec["path"])
@@ -897,6 +902,8 @@ def validate_log(mechanic: str) -> list[str]:
 
     for surface in spec["required_surfaces"]:
         surface_text = str(surface)
+        if is_retired_surface(surface_text):
+            continue
         if f"`{surface_text}`" not in text:
             problems.append(f"{rel_path}: missing required surface `{surface_text}`")
         if not (REPO_ROOT / surface_text).exists():
@@ -904,6 +911,8 @@ def validate_log(mechanic: str) -> list[str]:
 
     for match in re.finditer(r"`([^`]+)`", text):
         ref = match.group(1)
+        if is_retired_surface(ref):
+            continue
         if not looks_like_surface(ref):
             continue
         path_ref = ref.partition("#")[0]

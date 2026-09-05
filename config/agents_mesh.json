@@ -68,23 +68,6 @@
       ]
     },
     {
-      "path": ".agents/spark/AGENTS.md",
-      "scope": ".agents/spark/",
-      "kind": "agent-lane-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Codex Spark lane card nested under .agents.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
       "path": "assets/AGENTS.md",
       "scope": "assets/",
       "kind": "top-level-district-card",
@@ -578,23 +561,6 @@
       ]
     },
     {
-      "path": "mechanics/experience/legacy/AGENTS.md",
-      "scope": "mechanics/experience/legacy/",
-      "kind": "mechanic-legacy-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Legacy provenance card for Experience.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
       "path": "mechanics/agon/AGENTS.md",
       "scope": "mechanics/agon/",
       "kind": "mechanic-package-card",
@@ -714,23 +680,6 @@
       ]
     },
     {
-      "path": "mechanics/questbook/legacy/AGENTS.md",
-      "scope": "mechanics/questbook/legacy/",
-      "kind": "mechanic-legacy-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Legacy provenance card for Questbook.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
       "path": "mechanics/rpg/AGENTS.md",
       "scope": "mechanics/rpg/",
       "kind": "mechanic-package-card",
@@ -771,23 +720,6 @@
       "status": "required",
       "owner": "Agents-of-Abyss",
       "notes": "Active parts card for RPG.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
-      "path": "mechanics/rpg/legacy/AGENTS.md",
-      "scope": "mechanics/rpg/legacy/",
-      "kind": "mechanic-legacy-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Legacy provenance card for RPG.",
       "required_headings": [
         "# AGENTS.md",
         "## Applies to",
@@ -873,23 +805,6 @@
       "status": "required",
       "owner": "Agents-of-Abyss",
       "notes": "Audit parts local card.",
-      "required_headings": [
-        "# AGENTS.md",
-        "## Applies to",
-        "## Role",
-        "## Read before editing",
-        "## Boundaries",
-        "## Validation",
-        "## Closeout"
-      ]
-    },
-    {
-      "path": "mechanics/audit/legacy/AGENTS.md",
-      "scope": "mechanics/audit/legacy/",
-      "kind": "mechanic-legacy-card",
-      "status": "required",
-      "owner": "Agents-of-Abyss",
-      "notes": "Audit legacy local card.",
       "required_headings": [
         "# AGENTS.md",
         "## Applies to",

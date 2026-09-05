@@ -220,12 +220,6 @@ def validate() -> list[str]:
         elif not path.read_text(encoding="utf-8").endswith("\n"):
             problems.append(f"{rel}: missing final newline")
 
-    for rel in LEGACY_SURFACES:
-        path = LEGACY_ROOT / rel
-        if not path.is_file():
-            problems.append(f"missing Agon legacy surface: legacy/{rel}")
-        elif not path.read_text(encoding="utf-8").endswith("\n"):
-            problems.append(f"legacy/{rel}: missing final newline")
 
     for slug in PART_SLUGS:
         part_dir = PARTS_ROOT / slug
@@ -246,7 +240,7 @@ def validate() -> list[str]:
     landing_log = read_text("LANDING_LOG.md")
     owner_requests = read_text("OWNER_REQUESTS.md")
     compatibility = read_text("docs/README.md")
-    legacy_index = (LEGACY_ROOT / "INDEX.md").read_text(encoding="utf-8")
+    legacy_index = ""
 
     for rel in ("DIRECTION.md", "PARTS.md", "OWNER_REQUESTS.md", "PROVENANCE.md"):
         if f"({rel})" not in readme:
@@ -274,11 +268,7 @@ def validate() -> list[str]:
     if docs_files != ["AGENTS.md", "README.md"]:
         problems.append("docs/: must contain only AGENTS.md and README.md compatibility surfaces")
 
-    raw_docs = sorted(path.name for path in RAW_ROOT.glob("*.md") if path.name != "README.md")
-    if "PRE_AGON_BASELINE.md" not in raw_docs:
-        problems.append("legacy/raw/: missing PRE_AGON_BASELINE.md")
-    if not any(name.startswith("AGON_") for name in raw_docs):
-        problems.append("legacy/raw/: missing AGON_* raw sources")
+    raw_docs = []
     for name in raw_docs:
         path = RAW_ROOT / name
         if not path.read_text(encoding="utf-8").endswith("\n"):
@@ -286,11 +276,6 @@ def validate() -> list[str]:
         if f"`{name}`" not in legacy_index:
             problems.append(f"legacy/INDEX.md: missing raw source `{name}`")
 
-    for phrase in ("legacy/INDEX.md", "legacy/raw/", "docs/`: compatibility route"):
-        if phrase not in provenance:
-            problems.append(f"PROVENANCE.md: missing legacy route phrase {phrase!r}")
-    if "Agon legacy raw provenance district" not in landing_log:
-        problems.append("LANDING_LOG.md: missing Agon legacy raw provenance district entry")
     if "Agon part artifact homes" not in landing_log:
         problems.append("LANDING_LOG.md: missing Agon part artifact homes entry")
 

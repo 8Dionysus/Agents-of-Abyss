@@ -19,11 +19,11 @@ the active route.
 
 ## Legacy map
 
-- [legacy index](legacy/INDEX.md): preserved source contours mapped to active
+- [legacy index](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/distillation/legacy/INDEX.md): preserved source contours mapped to active
   Distillation parts.
-- [distillation log](legacy/DISTILLATION_LOG.md): dated accounting for
+- [distillation log](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/distillation/legacy/DISTILLATION_LOG.md): dated accounting for
   raw-to-active distillation decisions.
-- [raw source district](legacy/raw/README.md): preserved historical source
+- [raw source district](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/distillation/legacy/raw/README.md): preserved historical source
   documents when future packets are moved here.
 
 ## Current source evidence

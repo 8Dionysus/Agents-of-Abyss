@@ -11,7 +11,7 @@ and do not grant authority beyond the claims they check.
 | Surface | Role |
 |---|---|
 | [`registry.json`](registry.json) | canonical map of root test families, root test files, and mechanic test-home routes |
-| [`../pytest.ini`](../pytest.ini) | root-level pytest collection contract for active root, mechanic, and Codex Spark test homes |
+| [`../pytest.ini`](../pytest.ini) | root-level pytest collection contract for active root and mechanic test homes |
 
 ## Test Families
 
@@ -36,7 +36,6 @@ and do not grant authority beyond the claims they check.
 | `tests/test*.py` | root-owned center tests registered in `tests/registry.json` |
 | `mechanics/<slug>/tests/` | mechanic-level tests |
 | `mechanics/<slug>/parts/<part>/tests/` | part-local mechanic tests |
-| `.agents/spark/tests/` | Codex Spark agent-lane tests |
 
 Root `pytest.ini` keeps the broad test route scoped to active test homes while
 excluding legacy, cache, and build directories from default collection. Execute

@@ -24,7 +24,6 @@ COMMANDS = [
     ("validate scripts district", [sys.executable, "scripts/root_registries/validate_scripts_district.py"]),
     ("validate tests district", [sys.executable, "scripts/root_registries/validate_tests_district.py"]),
     ("validate owner-local stats port", [sys.executable, "scripts/stats/validate_local_stats_port.py"]),
-    ("validate Spark lane", [sys.executable, ".agents/spark/scripts/validate_spark_lane.py"]),
     ("check known link repairs", [sys.executable, "scripts/hygiene/repair_known_link_drifts.py", "--check"]),
     ("validate local markdown links", [sys.executable, "scripts/hygiene/validate_links.py"]),
     ("validate markdown shape", [sys.executable, "scripts/hygiene/validate_markdown_shape.py"]),

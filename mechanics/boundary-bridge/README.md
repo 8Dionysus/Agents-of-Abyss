@@ -66,8 +66,8 @@ reference bridge.
 
 Use the validation lane in [repository validation map](../../VALIDATION.md).
 
-The active route retains the [legacy agent card](legacy/AGENTS.md),
-[legacy README](legacy/README.md), and [legacy raw README](legacy/raw/README.md)
+The active route retains the [legacy agent card](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/boundary-bridge/legacy/AGENTS.md),
+[legacy README](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/boundary-bridge/legacy/README.md), and [legacy raw README](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/boundary-bridge/legacy/raw/README.md)
 as distinct archival surfaces.
 
 ### Next route

@@ -25,14 +25,14 @@ The receipt layer and detailed archive account live here:
   schemas, examples, validators, and tests when they must cite older packets,
   staged seed inputs, or sibling-owner surfaces without pulling those names into
   the active route. This is an active receipt registry, not an active contract.
-- [legacy index](legacy/INDEX.md): preserved source packets mapped to active
+- [legacy index](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/experience/legacy/INDEX.md): preserved source packets mapped to active
   Experience parts.
-- [distillation log](legacy/DISTILLATION_LOG.md): what was distilled, where it
+- [distillation log](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/experience/legacy/DISTILLATION_LOG.md): what was distilled, where it
   landed, and which boundaries survived.
-- [artifact receipt](legacy/artifacts/README.md): how old flat schemas,
+- [artifact receipt](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/experience/legacy/artifacts/README.md): how old flat schemas,
   examples, validators, and tests were moved into active part homes.
-- [legacy overview](legacy/README.md): archive role, stop-lines, and validation.
-- [raw packet district](legacy/raw/README.md): preserved source packet storage.
+- [legacy overview](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/experience/legacy/README.md): archive role, stop-lines, and validation.
+- [raw packet district](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/experience/legacy/raw/README.md): preserved source packet storage.
 
 ## Distillation rule
 

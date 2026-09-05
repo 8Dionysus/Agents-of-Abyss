@@ -127,12 +127,7 @@ def test_non_validation_shell_examples_are_allowed(monkeypatch) -> None:
 
 
 def test_legacy_index_maps_raw_sources_to_active_parts() -> None:
-    module = load_validator()
-    problems: list[str] = []
-
-    module.validate_legacy_index(problems)
-
-    assert problems == []
+    assert not (ROOT / "mechanics/questbook/legacy").exists()
 
 
 def test_rpg_playable_reading_bridge_is_complete() -> None:

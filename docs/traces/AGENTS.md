@@ -21,8 +21,9 @@ Read the relevant trace route and source contract only when trace placement chan
 - Traces are receipts; do not handwave them into current authority.
 - Keep provenance, dates, and source relationships explicit.
 - Route current mechanic doctrine to `mechanics/<slug>/` packages when a package owns the material.
-- Route mechanic-specific source traces to `mechanics/<slug>/legacy/raw/`
-  through that mechanic's `PROVENANCE.md` or `LANDING_LOG.md`.
+- Route current mechanic-specific source traces to the owning active mechanic
+  or declared receipt manifest. Recover closed historical traces through the
+  immutable owner Git path named by `PROVENANCE.md` or `LANDING_LOG.md`.
 - Route audit evidence to `mechanics/audit/`.
 - Route decision rationale to `docs/decisions/`.
 - Route owner-local truth to the owner repository instead of expanding the center.

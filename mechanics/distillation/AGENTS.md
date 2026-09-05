@@ -15,14 +15,14 @@ Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when distilla
 - It does not own technique canon, executable skills, playbook scenarios,
   runtime behavior, memory canon, proof verdicts, owner-local intake, SDK
   helpers, or ToS-authored meaning.
-- Legacy and raw material stay behind provenance routes; active parts stay
-  light and source-linked.
+- Closed legacy and raw material remains recoverable through immutable owner Git
+  paths named by provenance; active parts stay light and source-linked.
 
 ## Editing posture
 
 - Change the active part first when behavior changes.
-- Keep raw inventories behind `PROVENANCE.md`, `legacy/INDEX.md`, and
-  `legacy/DISTILLATION_LOG.md`.
+- Keep current receipt inventories in the declared owner manifest and use
+  `PROVENANCE.md` to name immutable Git paths for closed history.
 - Keep active docs free of raw-source catalogs and long packet tails.
 - Route technique, skill, playbook, runtime, memo, proof, intake, SDK, and ToS
   claims through `OWNER_REQUESTS.md`.
@@ -31,9 +31,9 @@ Read `DIRECTION.md`, `PARTS.md`, and the relevant owner route only when distilla
 
 ## Closeout
 
-If `PROVENANCE.md` was consulted, name only the relevant source bridge,
-archive map, or distillation log section. Do not enumerate raw files unless the
-task specifically audited archive evidence in depth.
+If `PROVENANCE.md` was consulted, name only the relevant immutable Git source
+bridge or receipt section. Do not enumerate raw files unless the task
+specifically audited closed historical evidence in depth.
 
 ## Role
 
@@ -55,16 +55,15 @@ runtime activation.
 - `OWNER_REQUESTS.md`: center-side owner request packet.
 - `ROADMAP.md`: current and next distillation contour.
 - `LANDING_LOG.md`: checked distillation landing ledger.
-- `PROVENANCE.md`: controlled bridge to legacy and source accounting.
-- `legacy/INDEX.md`: archive map.
-- `legacy/DISTILLATION_LOG.md`: archival distillation record.
+- `PROVENANCE.md`: immutable Git recovery map for closed history and current
+  receipt ownership.
 - `docs/`: detailed doctrine and support notes.
 
 ## Post-change route review
 
 After any distillation change, check whether the next agent can start from the
 current inherited `AGENTS.md` card, then `DIRECTION.md`, `PARTS.md`, and the
-relevant active part without opening `legacy/raw/`.
+relevant active part without opening closed historical material.
 
 Check whether the move changed:
 
@@ -75,9 +74,9 @@ Check whether the move changed:
   skill, playbook, runtime, memo, proof, intake, SDK, KAG, or ToS asks.
 - `ROADMAP.md`: future route pressure or unresolved distillation contour.
 - `LANDING_LOG.md`: a checked landing or planted contract.
-- `PROVENANCE.md`: source bridge, receipt route, or archive map.
-- `legacy/INDEX.md` and `legacy/DISTILLATION_LOG.md`: archival accounting,
-  only when archive evidence moved.
+- `PROVENANCE.md`: immutable Git source bridge or current receipt route.
+- declared receipt manifest: current accounting, only when receipt ownership
+  moved.
 - `mechanics/registry.json` and generated indexes: card-facing route, owner
   boundary, validation refs, or public summaries.
 

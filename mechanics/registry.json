@@ -942,10 +942,7 @@
         "mechanics/boundary-bridge/parts/derived-projection/README.md",
         "mechanics/boundary-bridge/parts/owner-handoff/README.md",
         "mechanics/boundary-bridge/parts/proof-review-route/README.md",
-        "mechanics/boundary-bridge/parts/compatibility-route/README.md",
-        "mechanics/boundary-bridge/legacy/AGENTS.md",
-        "mechanics/boundary-bridge/legacy/README.md",
-        "mechanics/boundary-bridge/legacy/raw/README.md"
+        "mechanics/boundary-bridge/parts/compatibility-route/README.md"
       ],
       "card": {
         "center_owns": "AoA center owns boundary-crossing doctrine, non-identity stop-lines, counterpart vocabulary, owner-handoff packets, and the first ToS-support reference bridge.",
@@ -1033,11 +1030,7 @@
         "mechanics/audit/parts/owner-routing/README.md",
         "mechanics/audit/parts/validation-gate/README.md",
         "mechanics/audit/parts/campaign-route/README.md",
-        "mechanics/audit/parts/audit-event-bridge/README.md",
-        "mechanics/audit/legacy/AGENTS.md",
-        "mechanics/audit/legacy/README.md",
-        "mechanics/audit/legacy/INDEX.md",
-        "mechanics/audit/legacy/raw/README.md"
+        "mechanics/audit/parts/audit-event-bridge/README.md"
       ],
       "card": {
         "center_owns": "Audit grammar, finding lifecycle, evidence-ledger posture, owner routing, validation honesty, and campaign route language for center work.",

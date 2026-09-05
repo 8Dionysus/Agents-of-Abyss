@@ -45,7 +45,7 @@ def test_raw_sources_are_preserved_only_in_legacy() -> None:
 
     assert not list((module.RPG_ROOT / "docs").glob("RPG_*.md"))
     for raw in module.RAW_SOURCES:
-        assert (module.RPG_ROOT / "legacy" / "raw" / raw).is_file()
+        assert not (module.RPG_ROOT / "legacy" / "raw" / raw).exists()
 
 
 def test_active_route_rejects_direct_raw_legacy_refs(tmp_path, monkeypatch) -> None:

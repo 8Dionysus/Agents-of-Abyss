@@ -143,69 +143,6 @@
   ],
   "pattern_migrations": [
     {
-      "source_glob": "DELETION_CANDIDATES.json",
-      "target_dir": "mechanics/audit/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/audit/legacy/raw",
-      "reason": "root deletion-candidate evidence routes to Audit legacy before active distillation"
-    },
-    {
-      "source_glob": "docs/*DELETION_CANDIDATES*",
-      "target_dir": "mechanics/audit/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/audit/legacy/raw",
-      "reason": "deletion-candidate evidence routes to Audit legacy before active distillation"
-    },
-    {
-      "source_glob": "docs/*RETROSPECTIVE*.md",
-      "target_dir": "mechanics/audit/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/audit/legacy/raw",
-      "reason": "flat retrospective records route to Audit legacy before active distillation"
-    },
-    {
-      "source_glob": "docs/*RETRO*.md",
-      "target_dir": "mechanics/audit/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/audit/legacy/raw",
-      "reason": "flat retrospective records route to Audit legacy before active distillation"
-    },
-    {
-      "source_glob": "docs/*POSTMORTEM*.md",
-      "target_dir": "mechanics/audit/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/audit/legacy/raw",
-      "reason": "flat postmortem-style review records route to Audit legacy before active distillation"
-    },
-    {
-      "source_glob": "docs/*REVIEW*.md",
-      "target_dir": "mechanics/audit/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/audit/legacy/raw",
-      "reason": "flat review records route to Audit legacy before active distillation"
-    },
-    {
-      "source_glob": "docs/*DRIFT*.md",
-      "target_dir": "mechanics/audit/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/audit/legacy/raw",
-      "reason": "flat drift review records route to Audit legacy before active distillation"
-    },
-    {
-      "source_glob": "docs/*CLEANUP*.md",
-      "target_dir": "mechanics/audit/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/audit/legacy/raw",
-      "reason": "flat cleanup review records route to Audit legacy before active distillation"
-    },
-    {
-      "source_glob": "docs/*AUDIT*.md",
-      "target_dir": "mechanics/audit/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/audit/legacy/raw",
-      "reason": "flat audit records route to Audit legacy before active distillation"
-    },
-    {
       "source_glob": "docs/*LANDING*.md",
       "target_dir": "docs/traces",
       "district": "traces",
@@ -216,27 +153,6 @@
       "target_dir": "docs/traces",
       "district": "traces",
       "reason": "flat generic seed receipts move to docs/traces unless a mechanic owns them"
-    },
-    {
-      "source_glob": "docs/AGON_*.md",
-      "target_dir": "mechanics/agon/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/agon/legacy/raw",
-      "reason": "flat Agon records route to Agon legacy before active distillation"
-    },
-    {
-      "source_glob": "docs/EXPERIENCE_*.md",
-      "target_dir": "mechanics/experience/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/experience/legacy/raw",
-      "reason": "flat Experience records route to Experience legacy before active distillation"
-    },
-    {
-      "source_glob": "docs/RPG_*.md",
-      "target_dir": "mechanics/rpg/legacy/raw",
-      "district": "traces",
-      "external_owner_route": "mechanics/rpg/legacy/raw",
-      "reason": "flat RPG records route to RPG legacy before active distillation"
     }
   ],
   "validation_refs": [

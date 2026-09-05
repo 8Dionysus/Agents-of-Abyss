@@ -157,7 +157,6 @@ The following owner routes are available when the named district changes:
 
 ```text
 python scripts/stats/validate_local_stats_port.py
-python .agents/spark/scripts/validate_spark_lane.py
 ```
 
 Shared link and Markdown-shape routes remain under

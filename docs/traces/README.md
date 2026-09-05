@@ -39,7 +39,7 @@ source as a movement receipt.
 
 | Material | Route |
 |---|---|
-| mechanic-specific source trace | `mechanics/<slug>/legacy/raw/` plus that mechanic `PROVENANCE.md` or `LANDING_LOG.md` |
+| closed mechanic-specific source trace | immutable owner Git commit plus original path, reached from that mechanic's `PROVENANCE.md` or `LANDING_LOG.md` |
 | audit evidence, drift review, deletion candidates, or cleanup findings | `mechanics/audit/` or `mechanics/audit/legacy/raw/` |
 | decision rationale | `docs/decisions/` |
 | generated read model | `generated/` |
@@ -60,8 +60,9 @@ Traces explain movement, not meaning.
 
 Do not use this district to absorb owner-local truth from sibling repositories.
 
-Do not put mechanic-specific receipts here when a mechanic package can own
-`legacy/raw/` and `PROVENANCE.md`.
+Do not put current mechanic-specific receipts here when an active mechanic or
+declared receipt manifest can own them. Closed history is recovered through the
+owner's immutable Git path and provenance bridge.
 
 ## Promotion path
 

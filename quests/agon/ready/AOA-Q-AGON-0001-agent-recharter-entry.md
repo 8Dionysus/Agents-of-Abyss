@@ -13,7 +13,7 @@ Ensure Wave I starts from Agon scrutiny rather than from compatibility comfort.
 ## Required inputs
 
 - `Agents-of-Abyss/mechanics/agon/PROVENANCE.md`
-- `Agents-of-Abyss/mechanics/agon/legacy/INDEX.md`
+- [`mechanics/agon/legacy/INDEX.md` at the reviewed baseline](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/agon/legacy/INDEX.md)
 - `Agents-of-Abyss/mechanics/agon/parts/imposition-readiness/README.md`
 - `Agents-of-Abyss/mechanics/agon/parts/imposition-readiness/generated/agon_imposition_readiness.min.json`
 - `aoa-agents/docs/AGENT_SUBJECT_PREP.md`

@@ -138,9 +138,11 @@ When a mechanic output would become runtime, proof, memory, role, playbook, KAG,
 - `CHARTER.md`, `ECOSYSTEM_MAP.md`, `docs/FEDERATION_RULES.md`, `docs/LAYERS.md`, and `docs/REPO_ROLES.md` remain governance surfaces.
 - `QUESTBOOK.md` remains a root public obligation index; `mechanics/questbook/` owns questbook mechanics.
 - `quests/` remains the quest item store; lane-first lifecycle directories own source placement, and top-level `AOA-Q-*` aliases are intentionally absent.
-- Mechanic receipts remain in the owning `mechanics/<slug>/legacy/raw/` route and provenance bridge, not in empty docs districts.
-- Generic repo movement traces may live in `docs/traces/`; mechanic-specific
-  source traces stay in the owning mechanic's legacy/provenance route.
+- Current mechanic receipts remain with the owning active mechanic, part, or
+  declared receipt manifest, not in empty docs districts. Closed historical
+  receipts recover through immutable owner Git paths named by provenance.
+- Generic repo movement traces may live in `docs/traces/`; current
+  mechanic-specific evidence stays with its owning active surface.
 - Generated card indexes reflect package entries; they do not author mechanic truth.
 
 ## Editing posture

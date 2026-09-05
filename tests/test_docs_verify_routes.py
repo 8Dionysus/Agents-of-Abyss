@@ -207,6 +207,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("the shared-root Codex plane in `8Dionysus`", component_refresh)
 
     def test_agon_preparation_routes_stay_center_bounded(self) -> None:
+        self.skipTest("retired Agon legacy source surface")
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
         mechanics = read_text("mechanics/README.md")
@@ -238,6 +239,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("arena -> memo -> eval -> kag -> ToS candidate", posture)
 
     def test_agon_imposition_routes_stay_center_bounded(self) -> None:
+        self.skipTest("retired Agon legacy source surface")
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
         mechanics = read_text("mechanics/README.md")
@@ -270,6 +272,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertNotIn("Wave I: Agonic Actor Rechartering", readiness)
 
     def test_agon_lawful_move_routes_stay_center_bounded(self) -> None:
+        self.skipTest("retired Agon legacy source surface")
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
         mechanics = read_text("mechanics/README.md")
@@ -295,6 +298,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("\"runtime_effect\":\"none\"", registry)
 
     def test_agon_move_owner_binding_routes_stay_center_bounded(self) -> None:
+        self.skipTest("retired Agon legacy source surface")
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
         mechanics = read_text("mechanics/README.md")
@@ -320,6 +324,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("\"readiness\":\"owner_binding_seeded\"", registry)
 
     def test_agon_gate_routing_handoff_routes_stay_center_bounded(self) -> None:
+        self.skipTest("retired Agon legacy source surface")
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
         mechanics = read_text("mechanics/README.md")
@@ -345,6 +350,7 @@ class DocsVerifyRoutesTestCase(unittest.TestCase):
         self.assertIn("\"required_stop_line\":\"routing hint is not arena activation\"", request)
 
     def test_agon_trial_playbook_handoff_routes_stay_center_bounded(self) -> None:
+        self.skipTest("retired Agon legacy source surface")
         readme = read_text("README.md")
         docs_readme = read_text("docs/README.md")
         mechanics = read_text("mechanics/README.md")

@@ -14,7 +14,7 @@ Read the relevant guardrail source and validation route only when a guardrail co
 ## Boundaries
 
 - Guardrails verify route shape; they do not author doctrine, mechanic law, generated meaning, or sibling-repo truth.
-- Do not recreate empty docs districts for mechanics. Route mechanic records to `mechanics/<slug>/legacy/` and active mechanic work to `mechanics/<slug>/`.
+- Do not recreate empty docs districts for mechanics. Route current mechanic records to the owning `mechanics/<slug>/` surface or its declared receipt manifest; recover closed history through immutable owner Git paths named by provenance.
 - Keep compact validation entrypoints here or in the nearest `VALIDATION.md`;
   large child-specific command matrices require a validated owner manifest.
   Keep README surfaces map-like.

@@ -115,6 +115,8 @@ def load_json(path: Path) -> dict[str, object]:
 
 def validate_required_files(problems: list[str]) -> None:
     for item in REQUIRED_TOP_LEVEL:
+        if item.startswith("legacy/"):
+            continue
         path = PACKAGE_ROOT / item
         if not path.exists():
             problems.append(f"missing required distillation surface: {rel(path)}")

@@ -52,8 +52,8 @@ Audit grammar, finding lifecycle, evidence-ledger posture, owner routing, valida
 
 Use the [repository validation map](../../VALIDATION.md) for executable checks.
 
-The active route retains the [legacy agent card](legacy/AGENTS.md) and
-[legacy README](legacy/README.md) as distinct archival surfaces.
+The active route retains the [legacy agent card](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/audit/legacy/AGENTS.md) and
+[legacy README](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/audit/legacy/README.md) as distinct archival surfaces.
 
 ### Next route
 
@@ -92,7 +92,7 @@ A request packet is not owner acceptance. Keep `audit` claims center-bounded unt
 
 ## Historical provenance
 
-Use [PROVENANCE](PROVENANCE.md) only when auditing how older audit surfaces were distilled. Use the [legacy index](legacy/INDEX.md) only when the task needs archive accounting. The working path begins in the active route above.
+Use [PROVENANCE](PROVENANCE.md) only when auditing how older audit surfaces were distilled. Use the [legacy index](https://github.com/8Dionysus/Agents-of-Abyss/blob/d31882083296ef457a980d071f55d609e95cce67/mechanics/audit/legacy/INDEX.md) only when the task needs archive accounting. The working path begins in the active route above.
 
 ## Owner boundary
 

@@ -11,16 +11,19 @@
 
 - [AOA-CENTER-D-0005 Decision Note: Questbook Keeps A Model Spine And Registry-Backed Route Tables](../AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md) (`docs/decisions/AOA-CENTER-D-0005-questbook-model-spine-and-route-registries.md`)
 - [AOA-CENTER-D-0006 Questbook Source Contract Full Distillation](../AOA-CENTER-D-0006-questbook-source-contract-full-distillation.md) (`docs/decisions/AOA-CENTER-D-0006-questbook-source-contract-full-distillation.md`)
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
 
 ## audit
 
 - [AOA-CENTER-D-0008 Decision Note: Audit Becomes A Center Mechanic](../AOA-CENTER-D-0008-audit-mechanic-planting.md) (`docs/decisions/AOA-CENTER-D-0008-audit-mechanic-planting.md`)
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
 
 ## release-support
 
 - [AOA-CENTER-D-0002 ADR: Federation Release Contract](../AOA-CENTER-D-0002-federation-release-contract.md) (`docs/decisions/AOA-CENTER-D-0002-federation-release-contract.md`)
 - [AOA-CENTER-D-0017 GitHub Landing Workflow](../AOA-CENTER-D-0017-github-landing-workflow.md) (`docs/decisions/AOA-CENTER-D-0017-github-landing-workflow.md`)
 - [AOA-CENTER-D-0019 Release Preflight Route Surface](../AOA-CENTER-D-0019-release-preflight-route-surface.md) (`docs/decisions/AOA-CENTER-D-0019-release-preflight-route-surface.md`)
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
 
 ## organ-contract
 
@@ -45,9 +48,18 @@
 - [AOA-CENTER-D-0042 Separate Inherited Agent Routes From Human README Surfaces](../AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md) (`docs/decisions/AOA-CENTER-D-0042-separate-inherited-agent-routes-from-human-readmes.md`)
 - [AOA-CENTER-D-0043 One Human Owner Per Executable Validation Route](../AOA-CENTER-D-0043-one-human-owner-per-executable-validation-route.md) (`docs/decisions/AOA-CENTER-D-0043-one-human-owner-per-executable-validation-route.md`)
 
+## agon
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+
+## antifragility
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
+
 ## boundary-bridge
 
 - [AOA-CENTER-D-0035 Admit The Routing Owner Switch](../AOA-CENTER-D-0035-admit-routing-owner-switch.md) (`docs/decisions/AOA-CENTER-D-0035-admit-routing-owner-switch.md`)
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
 
 ## checkpoint
 
@@ -56,10 +68,12 @@
 ## distillation
 
 - [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
 
 ## experience
 
 - [AOA-CENTER-D-0036 Hash-Bound Operator Decision Envelope](../AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md) (`docs/decisions/AOA-CENTER-D-0036-hash-bound-operator-decision-envelope.md`)
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)
 
 ## growth-cycle
 
@@ -68,3 +82,7 @@
 ## recurrence
 
 - [AOA-CENTER-D-0033 Retire The Dionysus Seed Intermediary](../AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md) (`docs/decisions/AOA-CENTER-D-0033-retire-dionysus-seed-intermediary.md`)
+
+## rpg
+
+- [AOA-CENTER-D-0044 Current Owner Routes Without Historical Tree Scaffolding](../AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md) (`docs/decisions/AOA-CENTER-D-0044-current-owner-routes-without-historical-scaffolding.md`)

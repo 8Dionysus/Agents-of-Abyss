@@ -22,7 +22,7 @@ For docs-root or guardrail topology changes, consult the repository
 - Keep flat `docs/` files limited to current center doctrine, current route law, owner maps, and compatibility routes.
 - Put docs guardrail law under `guardrails/`.
 - Put audit evidence in `../mechanics/audit/`, put decisions and traces in their named districts, and land registry contract changes through schemas, generated capsules, validators, and source docs together.
-- Put mechanic receipts and mechanic legacy under `../mechanics/<slug>/legacy/`, not under empty `docs/<slug>/` doors.
+- Keep current mechanic receipts with `../mechanics/<slug>/` or its declared receipt manifest, not under empty `docs/<slug>/` doors; closed history is recovered through immutable owner Git paths named by provenance.
 
 ## Role of this directory
 
